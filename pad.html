@@ -1,0 +1,267 @@
+<!doctype html>
+<html lang="en">
+<head>
+
+<meta charset="utf-8">
+<meta name="viewport" content="initial-scale=1, width=device-width">
+<title>Pad</title>
+
+<style>
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    font-size: 1rem;
+    line-height: 1.4;
+    font-family: Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    height: 100%;
+}
+
+.pad {
+    border: 2px solid #000;
+    height: 500px;
+
+    position: relative;
+}
+
+.token {
+    --color: 255 0 0;
+    width: 60px;
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+    border: 2px solid rgb(var(--color));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(var(--color) / 20%);
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+
+    position: absolute;
+    cursor: move;
+}
+</style>
+
+</head>
+<body>
+
+<h1>Pocket Grimoire</h1>
+
+<div class="pad"></div>
+<button type="button" id="add-token">Add token</button>
+
+<script>
+
+const pad = document.querySelector(".pad");
+const noop = () => {};
+let dragHandler = noop;
+let xOffset = 0;
+let yOffset = 0;
+let {
+    left: padLeft,
+    top: padTop,
+    width: padWidth,
+    height: padHeight
+} = pad.getBoundingClientRect();
+
+function clamp(min, value, max) {
+    return Math.max(min, Math.min(value, max));
+}
+
+function startDrag(element, event) {
+
+    const {
+        type,
+        clientX,
+        clientY,
+        targetTouches
+    } = event;
+    const {
+        left,
+        top
+    } = element.getBoundingClientRect();
+
+    dragHandler = (event) => dragObject(element, event);
+
+    if (type === "mousedown") {
+
+        xOffset = clientX - left + padLeft;
+        yOffset = clientY - top + padTop;
+        window.addEventListener("mousemove", dragHandler);
+
+    } else if (type === "touchstart" && targetTouches.length) {
+
+        xOffset = targetTouches[0].clientX - left + padLeft;
+        yOffset = targetTouches[0].clientY - top + padTop;
+        window.addEventListener("touchmove", dragHandler, { passive: false });
+
+    }
+
+}
+
+function dragObject(element, event) {
+
+    event.preventDefault();
+
+    const {
+        type,
+        clientX,
+        clientY,
+        targetTouches
+    } = event;
+    let leftValue = 0;
+    let topValue = 0;
+    const {
+        width,
+        height
+    } = element.getBoundingClientRect();
+
+    if (type === "mousemove") {
+
+        leftValue = clientX - xOffset;
+        topValue = clientY - yOffset;
+
+    } else if (type === "touchmove" && targetTouches.length) {
+
+        leftValue = targetTouches[0].clientX - xOffset;
+        topValue = targetTouches[0].clientY - yOffset;
+
+    }
+
+    element.style.left = `${clamp(0, leftValue, padWidth - width)}px`;
+    element.style.top = `${clamp(0, topValue, padHeight - height)}px`;
+
+}
+
+const documentEvents = {
+
+    onMousedown(token, e) {
+
+        if (token) {
+            startDrag(token, e);
+        }
+
+    },
+
+    onClick(token, e) {
+
+        if (token) {
+            window.alert(token.textContent.trim());
+        }
+
+    },
+
+    handleEvent(e) {
+
+        const token = e.target.closest(".token");
+
+        switch (e.type) {
+
+        case "mousedown":
+        case "touchstart":
+            this.onMousedown(token, e);
+            break;
+
+        case "click":
+            this.onClick(token, e);
+            break;
+
+        }
+
+    }
+
+};
+document.addEventListener("mousedown", documentEvents);
+document.addEventListener("touchstart", documentEvents);
+document.addEventListener("click", documentEvents);
+
+// document.addEventListener("mousedown", (e) => {
+//
+//     const token = e.target.closest(".token");
+//
+//     if (token) {
+//         startDrag(token, e);
+//     }
+//
+// });
+//
+// document.addEventListener("touchstart", (e) => {
+//
+//     const token = e.target.closest(".token");
+//
+//     if (token) {
+//         startDrag(token, e);
+//     }
+//
+// });
+//
+// document.addEventListener("click", (e) => {
+//
+//     const token = e.target.closest(".token");
+//
+//     if (token) {
+//         alert(token.textContent.trim());
+//     }
+//
+// });
+
+document.addEventListener("mouseup", () => {
+
+    if (dragHandler !== noop) {
+
+        window.removeEventListener("mousemove", dragHandler);
+        window.removeEventListener("touchmove", dragHandler, { passive: false });
+        dragHandler = noop;
+
+    }
+
+});
+
+document.addEventListener("touchend", () => {
+
+    if (dragHandler !== noop) {
+
+        window.removeEventListener("mousemove", dragHandler);
+        window.removeEventListener("touchmove", dragHandler, { passive: false });
+        dragHandler = noop;
+
+    }
+
+});
+
+window.addEventListener("resize", () => {
+
+    const rect = pad.getBoundingClientRect();
+
+    padLeft = rect.left;
+    padTop = rect.top;
+    padWidth = rect.width;
+    padHeight = rect.height;
+
+});
+
+let tokens = 1;
+
+document.getElementById("add-token").addEventListener("click", () => {
+
+    const token = document.createElement("button");
+    token.type = "button";
+    token.classList.add("token");
+    token.textContent = tokens;
+    tokens += 1;
+
+    pad.append(token);
+
+});
+
+</script>
+
+</body>
+</html>

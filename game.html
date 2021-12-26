@@ -33,7 +33,7 @@ body {
 <ul>
     <li><button type="button" id="select-edition">Select edition</button></li>
     <li><button type="button" id="add-player">Add player</button></li>
-    <li><button type="button" id="remove-all-players">Remove all player</button></li>
+    <li><button type="button" id="remove-all-players">Remove all players</button></li>
 </ul>
 
 <dialog id="edition">
@@ -45,7 +45,7 @@ body {
 </dialog>
 
 <h2>Grimoire</h2>
-<ul id="players"></ul>
+<ol id="players"></ol>
 
 <h2>Night Order</h2>
 <h3>First night</h3>
@@ -55,7 +55,7 @@ body {
 
 <template id="player">
     <li data-id="">
-        <button type="button" class="js--player--setup"></button>
+        <!-- <button type="button" class="js--player--setup"></button> -->
         <button type="button" class="js--player--token"></button>
         <div class="js--player--tokens">
             <button type="button" class="js--player--add-reminder">+</button>
@@ -63,17 +63,18 @@ body {
     </li>
 </template>
 
-<dialog id="player-setup">
+<!-- <dialog id="player-setup">
     <ul>
         <li><button type="button" class="js--player-setup--ghost-vote">Toggle Ghost Vote</button></li>
         <li><button type="button" class="js--player-setup--rename">Rename Player</button></li>
         <li><button type="button" class="js--player-setup--remove">Remove Player</button></li>
     </ul>
-</dialog>
+</dialog> -->
 
 <dialog id="character-setup">
     <ul>
         <li><button type="button" class="js--character-setup--shroud">Toggle Shroud</button></li>
+        <li><button type="button" class="js--character-setup--ghost-vote">Toggle Ghost Vote</button></li>
         <li><button type="button" class="js--character-setup--token">Change Token</button></li>
     </ul>
 </dialog>
@@ -257,7 +258,8 @@ document.getElementById("select-edition").addEventListener("click", () => {
 });
 
 document.getElementById("add-player").addEventListener("click", () => {
-    addPlayer(window.prompt("Player name"));
+    // addPlayer(window.prompt("Player name"));
+    addPlayer();
 });
 
 document.getElementById("remove-all-players").addEventListener("click", () => {
@@ -268,31 +270,32 @@ const playersHolder = document.getElementById("players");
 const playerTemplate = document.getElementById("player");
 let playerId = 0;
 
-function addPlayer(name) {
+// function addPlayer(name) {
+function addPlayer() {
 
-    if (!name) {
-        return;
-    }
+    // if (!name) {
+    //     return;
+    // }
 
     const clone = playerTemplate.content.cloneNode(true);
 
     clone.querySelector("[data-id]").dataset.id = playerId;
     playerId += 1;
-    clone.querySelector(".js--player--setup").textContent = name;
+    // clone.querySelector(".js--player--setup").textContent = name;
 
     playersHolder.append(clone);
 
 }
 
-function renamePlayer(id, name) {
-
-    if (!name) {
-        return;
-    }
-
-    playersHolder.querySelector(`[data-id="${id}"] .js--player--setup`).textContent = name;
-
-}
+// function renamePlayer(id, name) {
+//
+//     if (!name) {
+//         return;
+//     }
+//
+//     playersHolder.querySelector(`[data-id="${id}"] .js--player--setup`).textContent = name;
+//
+// }
 
 function removePlayer(id) {
 
@@ -338,39 +341,39 @@ function removeReminder(reminder) {
     reminder.remove();
 }
 
-const playerSetupDialog = document.getElementById("player-setup");
-
-playerSetupDialog.addEventListener("click", () => playerSetupDialog.close());
-playerSetupDialog.addEventListener("click", ({ target }) => {
-
-    const button = target.closest("button");
-    const playerId = target.closest("[data-player-id]");
-
-    if (!button || !playerId) {
-        return;
-    }
-
-    const id = playerId.dataset.playerId;
-
-    if (button.matches(".js--player-setup--ghost-vote")) {
-        return alert("Ghost vote");
-    }
-
-    if (button.matches(".js--player-setup--rename")) {
-
-        const name = playersHolder
-            .querySelector(`[data-id="${id}"] .js--player--setup`)
-            .textContent;
-
-        return renamePlayer(id, window.prompt("Rename player", name));
-
-    }
-
-    if (button.matches(".js--player-setup--remove")) {
-        return removePlayer(id);
-    }
-
-});
+// const playerSetupDialog = document.getElementById("player-setup");
+//
+// playerSetupDialog.addEventListener("click", () => playerSetupDialog.close());
+// playerSetupDialog.addEventListener("click", ({ target }) => {
+//
+//     const button = target.closest("button");
+//     const playerId = target.closest("[data-player-id]");
+//
+//     if (!button || !playerId) {
+//         return;
+//     }
+//
+//     const id = playerId.dataset.playerId;
+//
+//     if (button.matches(".js--player-setup--ghost-vote")) {
+//         return alert("Ghost vote");
+//     }
+//
+//     // if (button.matches(".js--player-setup--rename")) {
+//     //
+//     //     const name = playersHolder
+//     //         .querySelector(`[data-id="${id}"] .js--player--setup`)
+//     //         .textContent;
+//     //
+//     //     return renamePlayer(id, window.prompt("Rename player", name));
+//     //
+//     // }
+//
+//     if (button.matches(".js--player-setup--remove")) {
+//         return removePlayer(id);
+//     }
+//
+// });
 
 const charactersDialog = document.getElementById("characters");
 
@@ -419,6 +422,10 @@ characterSetupDialog.addEventListener("click", ({ target }) => {
 
     }
 
+    if (button.matches(".js--character-setup--ghost-vote")) {
+        return alert("Ghost vote");
+    }
+
     if (button.matches(".js--character-setup--token")) {
 
         charactersDialog.dataset.playerId = id;
@@ -438,12 +445,12 @@ playersHolder.addEventListener("click", ({ target }) => {
 
     const id = target.closest("[data-id]").dataset.id;
 
-    if (button.matches(".js--player--setup")) {
-
-        playerSetupDialog.dataset.playerId = id;
-        return playerSetupDialog.showModal();
-
-    }
+    // if (button.matches(".js--player--setup")) {
+    //
+    //     playerSetupDialog.dataset.playerId = id;
+    //     return playerSetupDialog.showModal();
+    //
+    // }
 
     if (button.matches(".js--player--token")) {
 
