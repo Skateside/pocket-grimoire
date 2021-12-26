@@ -140,27 +140,23 @@ function dragObject(element, event) {
 
 }
 
-const documentEvents = {
+const tokenEvents = {
 
     onMousedown(token, e) {
-
-        if (token) {
-            startDrag(token, e);
-        }
-
+        startDrag(token, e);
     },
 
     onClick(token, e) {
-
-        if (token) {
-            window.alert(token.textContent.trim());
-        }
-
+        window.alert(token.textContent.trim());
     },
 
     handleEvent(e) {
 
         const token = e.target.closest(".token");
+
+        if (!token) {
+            return;
+        }
 
         switch (e.type) {
 
@@ -178,9 +174,9 @@ const documentEvents = {
     }
 
 };
-document.addEventListener("mousedown", documentEvents);
-document.addEventListener("touchstart", documentEvents);
-document.addEventListener("click", documentEvents);
+document.addEventListener("mousedown", tokenEvents);
+document.addEventListener("touchstart", tokenEvents);
+document.addEventListener("click", tokenEvents);
 
 // document.addEventListener("mousedown", (e) => {
 //
