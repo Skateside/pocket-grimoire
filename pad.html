@@ -225,7 +225,7 @@ document.addEventListener("mousedown", tokenEvents);
 document.addEventListener("touchstart", tokenEvents);
 document.addEventListener("click", tokenEvents);
 
-document.addEventListener("mouseup", () => {
+function endDragging() {
 
     if (dragHandler !== noop) {
 
@@ -235,19 +235,10 @@ document.addEventListener("mouseup", () => {
 
     }
 
-});
+}
 
-document.addEventListener("touchend", () => {
-
-    if (dragHandler !== noop) {
-
-        window.removeEventListener("mousemove", dragHandler);
-        window.removeEventListener("touchmove", dragHandler, { passive: false });
-        dragHandler = noop;
-
-    }
-
-});
+document.addEventListener("mouseup", endDragging);
+document.addEventListener("touchend", endDragging);
 
 function updatePadDimensions() {
 
