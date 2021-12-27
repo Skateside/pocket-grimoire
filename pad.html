@@ -25,13 +25,40 @@ body {
 
 .pad {
     border: 2px solid #000;
-    height: 500px;
+    height: 80vh;
 
+    position: relative;
+    resize: vertical;
+    overflow: scroll;
+    background-color: #333;
+}
+
+/* .pad::-webkit-scrollbar {
+    width: 1.2em;
+    height: 1.2em;
+    background-color: transparent;
+}
+
+.pad::-webkit-resizer {
+    background-color: #000;
+} */
+
+.pad-wrapper {
     position: relative;
 }
 
+.pad-wrapper__icon {
+    color: #fff;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    pointer-events: none;
+    width: 1em;
+    aspect-ratio: 1 / 1;
+}
+
 .token {
-    --color: 255 0 0;
+    --color: 0 0 0;
     width: 60px;
     aspect-ratio: 1 / 1;
     border-radius: 50%;
@@ -47,6 +74,16 @@ body {
     position: absolute;
     cursor: move;
 }
+
+.token--character {
+    --color: 255 0 0;
+    width: clamp(60px, 100vw / 6, 150px);
+}
+
+.token--reminder {
+    --color: 0 0 255;
+    width: clamp(45px, 100vw / 9, 125px);
+}
 </style>
 
 </head>
@@ -54,8 +91,13 @@ body {
 
 <h1>Pocket Grimoire</h1>
 
-<div class="pad"></div>
+<div class="pad-wrapper">
+    <div class="pad"></div>
+    <svg aria-hidden="true" focusable="false" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512" class="pad-wrapper__icon"><path fill="currentColor" d="M214.059 377.941H168V134.059h46.059c21.382 0 32.09-25.851 16.971-40.971L144.971 7.029c-9.373-9.373-24.568-9.373-33.941 0L24.971 93.088c-15.119 15.119-4.411 40.971 16.971 40.971H88v243.882H41.941c-21.382 0-32.09 25.851-16.971 40.971l86.059 86.059c9.373 9.373 24.568 9.373 33.941 0l86.059-86.059c15.12-15.119 4.412-40.971-16.97-40.971z" class=""></path></svg>
+</div>
+
 <button type="button" id="add-token">Add token</button>
+<button type="button" id="add-reminder">Add reminder</button>
 
 <script>
 
@@ -142,8 +184,13 @@ function dragObject(element, event) {
 
 const tokenEvents = {
 
+    zIndex: 1,
+
     onMousedown(token, e) {
+
         startDrag(token, e);
+        token.style.zIndex = this.zIndex++;
+
     },
 
     onClick(token, e) {
@@ -178,36 +225,6 @@ document.addEventListener("mousedown", tokenEvents);
 document.addEventListener("touchstart", tokenEvents);
 document.addEventListener("click", tokenEvents);
 
-// document.addEventListener("mousedown", (e) => {
-//
-//     const token = e.target.closest(".token");
-//
-//     if (token) {
-//         startDrag(token, e);
-//     }
-//
-// });
-//
-// document.addEventListener("touchstart", (e) => {
-//
-//     const token = e.target.closest(".token");
-//
-//     if (token) {
-//         startDrag(token, e);
-//     }
-//
-// });
-//
-// document.addEventListener("click", (e) => {
-//
-//     const token = e.target.closest(".token");
-//
-//     if (token) {
-//         alert(token.textContent.trim());
-//     }
-//
-// });
-
 document.addEventListener("mouseup", () => {
 
     if (dragHandler !== noop) {
@@ -232,7 +249,7 @@ document.addEventListener("touchend", () => {
 
 });
 
-window.addEventListener("resize", () => {
+function updatePadDimensions() {
 
     const rect = pad.getBoundingClientRect();
 
@@ -241,6 +258,13 @@ window.addEventListener("resize", () => {
     padWidth = rect.width;
     padHeight = rect.height;
 
+}
+
+window.addEventListener("resize", updatePadDimensions);
+const styleObserver = new MutationObserver(updatePadDimensions);
+styleObserver.observe(pad, {
+    attributes: true,
+    attributeFilter: ["style"]
 });
 
 let tokens = 1;
@@ -249,7 +273,7 @@ document.getElementById("add-token").addEventListener("click", () => {
 
     const token = document.createElement("button");
     token.type = "button";
-    token.classList.add("token");
+    token.classList.add("token", "token--character");
     token.textContent = tokens;
     tokens += 1;
 
@@ -257,6 +281,19 @@ document.getElementById("add-token").addEventListener("click", () => {
 
 });
 
+const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("");
+let letterIndex = 0;
+
+document.getElementById("add-reminder").addEventListener("click", () => {
+
+    const reminder = document.createElement("div");
+    reminder.classList.add("token", "token--reminder");
+    reminder.textContent = letters[letterIndex];
+    letterIndex = (letterIndex + 1) % letters.length;
+
+    pad.append(reminder);
+
+});
 </script>
 
 </body>
