@@ -33,16 +33,6 @@ body {
     background-color: #333;
 }
 
-/* .pad::-webkit-scrollbar {
-    width: 1.2em;
-    height: 1.2em;
-    background-color: transparent;
-}
-
-.pad::-webkit-resizer {
-    background-color: #000;
-} */
-
 .pad-wrapper {
     position: relative;
 }
@@ -51,7 +41,7 @@ body {
     color: #fff;
     position: absolute;
     right: 0;
-    bottom: 0;
+    bottom: 2px;
     pointer-events: none;
     width: 1em;
     aspect-ratio: 1 / 1;
@@ -59,6 +49,9 @@ body {
 
 .token {
     --color: 0 0 0;
+    --left: 0;
+    --top: 0;
+    --z-index: 0;
     width: 60px;
     aspect-ratio: 1 / 1;
     border-radius: 50%;
@@ -73,6 +66,9 @@ body {
 
     position: absolute;
     cursor: move;
+    left: calc(var(--left) * 1px);
+    top: calc(var(--top) * 1px);
+    z-index: var(--z-index);
 }
 
 .token--character {
@@ -93,6 +89,7 @@ body {
 
 <div class="pad-wrapper">
     <div class="pad"></div>
+    <!-- https://fontawesome.com/v5.15/icons/arrows-alt-v?style=solid -->
     <svg aria-hidden="true" focusable="false" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512" class="pad-wrapper__icon"><path fill="currentColor" d="M214.059 377.941H168V134.059h46.059c21.382 0 32.09-25.851 16.971-40.971L144.971 7.029c-9.373-9.373-24.568-9.373-33.941 0L24.971 93.088c-15.119 15.119-4.411 40.971 16.971 40.971H88v243.882H41.941c-21.382 0-32.09 25.851-16.971 40.971l86.059 86.059c9.373 9.373 24.568 9.373 33.941 0l86.059-86.059c15.12-15.119 4.412-40.971-16.97-40.971z" class=""></path></svg>
 </div>
 
@@ -177,8 +174,8 @@ function dragObject(element, event) {
 
     }
 
-    element.style.left = `${clamp(0, leftValue, padWidth - width)}px`;
-    element.style.top = `${clamp(0, topValue, padHeight - height)}px`;
+    element.style.setProperty("--left", clamp(0, leftValue, padWidth - width));
+    element.style.setProperty("--top", clamp(0, topValue, padHeight - height));
 
 }
 
@@ -189,7 +186,8 @@ const tokenEvents = {
     onMousedown(token, e) {
 
         startDrag(token, e);
-        token.style.zIndex = this.zIndex++;
+        token.style.setProperty("--z-index", this.zIndex);
+        this.zIndex += 1;
 
     },
 
