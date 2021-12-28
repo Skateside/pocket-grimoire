@@ -95,6 +95,7 @@ body {
 
 <button type="button" id="add-token">Add token</button>
 <button type="button" id="add-reminder">Add reminder</button>
+<button type="button" id="reset-height">Reset pad height</button>
 
 <script>
 
@@ -109,6 +110,7 @@ let {
     width: padWidth,
     height: padHeight
 } = pad.getBoundingClientRect();
+let isDragging = false;
 
 function clamp(min, value, max) {
     return Math.max(min, Math.min(value, max));
@@ -166,6 +168,7 @@ function dragObject(element, event) {
 
         leftValue = clientX - xOffset;
         topValue = clientY - yOffset;
+        isDragging = true;
 
     } else if (type === "touchmove" && targetTouches.length) {
 
@@ -192,7 +195,13 @@ const tokenEvents = {
     },
 
     onClick(token, e) {
+
+        if (isDragging) {
+            return;
+        }
+
         window.alert(token.textContent.trim());
+
     },
 
     handleEvent(e) {
@@ -230,6 +239,12 @@ function endDragging() {
         window.removeEventListener("mousemove", dragHandler);
         window.removeEventListener("touchmove", dragHandler, { passive: false });
         dragHandler = noop;
+
+        // The order of events is mousedown -> mouseup -> click. This means that
+        // we need to delay the resetting of `isDragging` so that the handler
+        // attached to the click event listener doesn't trigger after dragging.
+        // This only seems to be an issue on desktop, mobile seems to be fine.
+        window.requestAnimationFrame(() => isDragging = false);
 
     }
 
@@ -282,6 +297,10 @@ document.getElementById("add-reminder").addEventListener("click", () => {
 
     pad.append(reminder);
 
+});
+
+document.getElementById("reset-height").addEventListener("click", () => {
+    pad.style.height = "";
 });
 </script>
 
