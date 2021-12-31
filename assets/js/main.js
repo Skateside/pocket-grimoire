@@ -1,36 +1,18 @@
 import Dialog from "./classes/Dialog.js";
-import { getCached } from "./utils/getCached.js";
+import {
+    getCached
+} from "./utils/getCached.js";
+import {
+    lookup,
+    lookupOne,
+    lookupCached,
+    lookupOneCached,
+    identify
+} from "./utils/elements.js";
 
-// const editionDialog = Dialog.createFromTrigger(
-//     document.getElementById("select-edition")
-// );
-
-document.querySelectorAll("[data-dialog]").forEach((trigger) => {
+lookupCached("[data-dialog]").forEach((trigger) => {
     trigger.dialog = Dialog.createFromTrigger(trigger);
 });
-
-// getCached("/assets/data/characters.json");
-
-const lookupCache = new WeakMap();
-
-function lookup(selector, context = document) {
-
-    let cache = lookupCache.get(context);
-
-    if (!cache) {
-
-        cache = Object.create(null);
-        lookupCache.set(context, cache);
-
-    }
-
-    if (!cache[selector]) {
-        cache[selector] = [...context.querySelectorAll(selector)];
-    }
-
-    return cache[selector];
-
-}
 
 class CharacterData {
 
@@ -38,9 +20,13 @@ class CharacterData {
         this.lookup = getCached(url);
     }
 
+    then(handler) {
+        return this.lookup.then(handler);
+    }
+
     getEdition(edition) {
 
-        return this.lookup.then((characters) => (
+        return this.then((characters) => (
             characters.filter((character) => character.edition === edition)
         ));
 
@@ -50,73 +36,24 @@ class CharacterData {
 
         const idList = ids.map(({ id }) => id);
 
-        return this.lookup.then((characters) => (
+        return this.then((characters) => (
             characters.filter((character) => idList.includes(character.id))
         ));
 
     }
 
-    then(handler) {
-        return this.lookup.then(handler);
-    }
-
 }
 
-const selectChacters = document.getElementById("select-characters");
+const selectChacters = lookupOne("#select-characters");
 const characterData = new CharacterData("/assets/data/characters.json");
 
 characterData.then(() => selectChacters.disabled = false);
 
-// populate the character popup here.
-// <fieldset class="character-select__group" data-team="townsfolk">
-//     <legend class="character-select__title">Townsfolk</legend>
-//     <div class="character-select__score">
-//         <div class="character-select__score-box">
-//             <span class="js--character-select--count"></span> / <span class="js--character-select--total"></span>
-//         </div>
-//     </div>
-//     <div class="character-select__characters js--character-select--list"></div>
-// </fieldset>
 
-// <dialog class="dialog dialog--blur-background" id="edition-list" data-dialog-hide-on-click-backdrop>
-//     <div class="dialog__content">
-//         <button class="dialog__hide" type="button" data-dialog-hide>&times;</button>
-//         <ul>
-//             <li><button type="button" data-edition="tb">Trouble Brewing</button></li>
-//             <li><button type="button" data-edition="bmr">Bad Moon Rising</button></li>
-//             <li><button type="button" data-edition="snv">Sects and Violets</button></li>
-//         </ul>
-//     </div>
-// </dialog>
-
-let identifyCounter = 0;
-
-export function identify(element, prefix = "anonymous-element-") {
-
-    let {
-        id
-    } = element;
-
-    if (!id) {
-
-        do {
-
-            id = `${prefix}${identifyCounter}`;
-            identifyCounter += 1;
-
-        } while (document.getElementById(id));
-
-        element.id = id;
-
-    }
-
-    return id;
-
-}
-
-
-const editionList = document.getElementById("edition-list");
+const editionList = lookupOne("#edition-list");
 const editionListDialog = Dialog.create(editionList);
+const characterSelectTemplate = lookupOne("#character-select-template");
+
 editionList.addEventListener("click", ({ target }) => {
 
     const button = target.closest("[data-edition]");
@@ -131,29 +68,37 @@ editionList.addEventListener("click", ({ target }) => {
 
     characterData.getEdition(edition).then((characters) => {
 
-        lookup("[data-team]").forEach((wrapper) => {
+        lookupCached("[data-team]").forEach((wrapper) => {
 
-            const team = wrapper.dataset.team;
-            const list = lookup(".js--character-select--list", wrapper)[0];
+            const wrapperTeam = wrapper.dataset.team;
+            const list = lookupOneCached(".js--character-select--list", wrapper);
 
             list.innerHTML = "";
             const frag = document.createDocumentFragment();
 
-            characters.forEach((character) => {
+            characters.forEach(({
+                id,
+                team,
+                image,
+                name
+            }) => {
 
-                if (character.team !== team) {
+                if (team !== wrapperTeam) {
                     return;
                 }
 
-                const input = document.createElement("input");
-                input.type = "checkbox";
-                input.name = "character";
-                const label = document.createElement("label");
-                label.htmlFor = identify(input)
-                label.textContent = character.name;
+                const clone = characterSelectTemplate.content.cloneNode(true);
+                const label = clone.querySelector(".js--character-select--label");
+                const input = clone.querySelector(".js--character-select--input");
+                const img = clone.querySelector(".js--character-select--image");
+                const text = clone.querySelector(".js--character-select--name");
 
-                frag.append(input);
-                frag.append(label);
+                label.htmlFor = identify(input);
+                input.value = id;
+                img.src = image;
+                text.textContent = name;
+
+                frag.append(clone);
 
             });
 
@@ -167,8 +112,23 @@ editionList.addEventListener("click", ({ target }) => {
 
 });
 
-const playerCount = document.getElementById("player-count");
-const playerCountOutput = document.getElementById("player-count-output");
+lookupCached("[data-team]").forEach((wrapper) => {
+
+    const countElement = lookupOneCached(".js--character-select--count", wrapper);
+
+    wrapper.addEventListener("change", () => {
+
+        countElement.textContent = lookup(
+            "input[type=\"checkbox\"]:checked",
+            wrapper
+        ).length;
+
+    });
+
+});
+
+const playerCount = lookupOne("#player-count");
+const playerCountOutput = lookupOne("#player-count-output");
 
 playerCount.addEventListener("input", () => playerCountOutput.value = playerCount.value);
 
@@ -182,13 +142,9 @@ class GameData {
         return this.lookup.then(handler);
     }
 
-    getTable() {
-        return this.lookup;
-    }
-
     getRow(players) {
 
-        return this.lookup.then((data) => {
+        return this.then((data) => {
             return data[Math.min(players - 5, data.length - 1)];
         });
 
@@ -205,7 +161,7 @@ function setTotals() {
 
         Object.entries(data).forEach(([team, count]) => {
 
-            lookup(`[data-team="${team}"] .js--character-select--total`).forEach((element) => {
+            lookupCached(`[data-team="${team}"] .js--character-select--total`).forEach((element) => {
                 element.textContent = count;
             });
 

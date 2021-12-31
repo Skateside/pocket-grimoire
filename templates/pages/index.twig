@@ -15,8 +15,12 @@
         <ul>
             <li><button type="button" id="select-edition" data-dialog="#edition-list">Select Edition</button></li>
             <li><button type="button" id="select-characters" data-dialog="#character-select" disabled>Select Characters</button></li>
+            {# Show a QR code for the characters in this game: #}
             <li><button type="button" id="qr-code" disabled>QR Code</button></li>
-            <!-- <li><button type="button" id="player-select" disabled>Player Select</button></li> -->
+            {# Show a randomised series of tokens so the players can pick their character: #}
+            <li><button type="button" id="qr-code" disabled>Player Select</button></li>
+            {# Clear the localStorage (and refresh the page) to get more up-to-date data: #}
+            <li><button type="button" id="reset" disabled>Clear saved data</button></li>
         </ul>
 
     </div>
@@ -29,6 +33,7 @@
             <li><button type="button" data-edition="tb">Trouble Brewing</button></li>
             <li><button type="button" data-edition="bmr">Bad Moon Rising</button></li>
             <li><button type="button" data-edition="snv">Sects and Violets</button></li>
+            <li><button type="button" data-edition="custom" disabled>Custom Script</button></li>
         </ul>
     </div>
 </dialog>
@@ -44,24 +49,27 @@
         <form>
 
             <div class="character-select__players">
-                <input type="range" min="5" max="20" step="1" value="7" id="player-count" aria-label="Number of players">
+                <label for="player-count">Number of players</label>
+                <input type="range" min="5" max="20" step="1" value="7" name="player-count" id="player-count">
                 <output id="player-count-output">7</output>
             </div>
 
             <fieldset class="character-select__group" data-team="townsfolk">
                 <legend class="character-select__title">Townsfolk</legend>
                 <div class="character-select__score">
+                    {# This should be sticky so it's always visible #}
                     <div class="character-select__score-box">
-                        <span class="js--character-select--count"></span> / <span class="js--character-select--total"></span>
+                        <span class="js--character-select--count">0</span> / <span class="js--character-select--total"></span>
                     </div>
                 </div>
+                {# This should allow a couple of tokens to appear next to each other #}
                 <div class="character-select__characters js--character-select--list"></div>
             </fieldset>
             <fieldset class="character-select__group" data-team="outsider">
                 <legend class="character-select__title">Outsiders</legend>
                 <div class="character-select__score">
                     <div class="character-select__score-box">
-                        <span class="js--character-select--count"></span> / <span class="js--character-select--total"></span>
+                        <span class="js--character-select--count">0</span> / <span class="js--character-select--total"></span>
                     </div>
                 </div>
                 <div class="character-select__characters js--character-select--list"></div>
@@ -70,7 +78,7 @@
                 <legend class="character-select__title">Minions</legend>
                 <div class="character-select__score">
                     <div class="character-select__score-box">
-                        <span class="js--character-select--count"></span> / <span class="js--character-select--total"></span>
+                        <span class="js--character-select--count">0</span> / <span class="js--character-select--total"></span>
                     </div>
                 </div>
                 <div class="character-select__characters js--character-select--list"></div>
@@ -79,7 +87,7 @@
                 <legend class="character-select__title">Demons</legend>
                 <div class="character-select__score">
                     <div class="character-select__score-box">
-                        <span class="js--character-select--count"></span> / <span class="js--character-select--total"></span>
+                        <span class="js--character-select--count">0</span> / <span class="js--character-select--total"></span>
                     </div>
                 </div>
                 <div class="character-select__characters js--character-select--list"></div>
@@ -91,6 +99,14 @@
 
     </div>
 </dialog>
+
+<template id="character-select-template">
+    <label class="character-select__character js--character-select--label" for="">
+        <input type="checkbox" name="character" value="" class="character-select__input js--character-select--input">
+        <img src="" alt="" aria-hidden="true" class="character-select__image js--character-select--image">
+        <span class="character-select__name js--character-select--name"></span>
+    </label>
+</template>
 
 <details>
     <summary>Grimoire</summary>

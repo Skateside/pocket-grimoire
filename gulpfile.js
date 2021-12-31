@@ -8,7 +8,7 @@ const commonjs      = require("rollup-plugin-commonjs");
 const uglify        = require("gulp-uglify");
 const jsonminify    = require("gulp-jsonminify");
 const noop          = require("gulp-noop");
-const sass          = require("gulp-sass")(require("sass"))
+const sass          = require("gulp-sass")(require("sass"));
 const autoprefixer  = require("gulp-autoprefixer");
 const cleanCSS      = require("gulp-clean-css");
 const twig          = require("gulp-twig");
@@ -278,11 +278,11 @@ gulp.task(
         "env:dev",
         gulp.parallel(
             gulp.series("scripts", "scripts:watch"),
-            gulp.series("data", "data:watch"),
             gulp.series("styles", "styles:watch"),
             gulp.series("images", "images:watch"),
             gulp.series("fonts", "fonts:watch"),
-            gulp.series("pages", "pages:watch")
+            gulp.series("pages", "pages:watch"),
+            gulp.series("data", "data:watch")
         )
     )
 );
@@ -293,11 +293,11 @@ gulp.task(
         "env:prod",
         gulp.parallel(
             "scripts",
-            "data",
             "styles",
             "images",
             "fonts",
-            "pages"
+            "pages",
+            "data"
         )
     )
 );
