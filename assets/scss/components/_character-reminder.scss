@@ -1,0 +1,103 @@
+.character,
+.reminder {
+    border-radius: 50%;
+    display: grid;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+}
+
+.character {
+    --no-leaf: url("data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7");
+    --top-leaf: var(--no-leaf);
+    --left-leaf: var(--no-leaf);
+    --right-leaf: var(--no-leaf);
+    --setup-leaf: var(--no-leaf);
+
+    background-color: #fffef0;
+    background-image:
+        var(--left-leaf),
+        var(--top-leaf),
+        var(--right-leaf),
+        var(--setup-leaf),
+        url("../img/token/character-token-noise.png");
+    background-repeat: no-repeat;
+    background-size:
+        contain,
+        contain,
+        contain,
+        contain,
+        cover;
+    box-shadow: inset 0 0 0.7em #8a4d0f;
+}
+
+.character--top-1 { --top-leaf: url("../img/token/top-1.png"); }
+.character--top-2 { --top-leaf: url("../img/token/top-2.png"); }
+.character--top-3 { --top-leaf: url("../img/token/top-3.png"); }
+.character--top-4 { --top-leaf: url("../img/token/top-4.png"); }
+.character--top-5 { --top-leaf: url("../img/token/top-5.png"); }
+.character--top-6 { --top-leaf: url("../img/token/top-6.png"); }
+.character--left-1 { --left-leaf: url("../img/token/left-1.png"); }
+.character--right-1 { --right-leaf: url("../img/token/right-1.png"); }
+.character--right-2 { --right-leaf: url("../img/token/right-2.png"); }
+.character--setup { --setup-leaf: url("../img/token/setup.png"); }
+
+.character::before {
+    content: "";
+    background-image: url("../img/token/clockface.png");
+    background-size: 60%;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    opacity: 0.1;
+    grid-area: 1 / -1;
+    width: 100%;
+    height: 100%;
+}
+
+.reminder {
+    background-color: #101128;
+    box-shadow:
+        inset 0 0 1em #111324,
+        inset 0 0 0.5em #111324;
+}
+
+.character__image,
+.character__text,
+.reminder__image,
+.reminder__text {
+    grid-area: 1 / -1;
+    z-index: 1;
+}
+
+.character__image,
+.reminder__image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.character__icon {
+    width: 90%;
+}
+
+.character__name {
+    font-family: Metamorphous, "Times New Roman", Times, serif;
+    font-weight: bold;
+    letter-spacing: 0.1em;
+    text-shadow:
+        0 0 0.15em #fffef0,
+        0 0 0.2em #fffef0,
+        0 0 0.25em #fffef0;
+}
+
+.reminder__text {
+    color: #fff;
+    font-size: 1.2em;
+    letter-spacing: 0.05em;
+    text-shadow:
+        0 0 0.15em #111324,
+        0 0 0.2em #111324;
+}
+
+.reminder__icon {
+    width: 70%;
+}

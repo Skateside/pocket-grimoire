@@ -1,0 +1,144 @@
+{% extends "../base.twig" %}
+
+{% block title %}Game{% endblock %}
+
+{# % set body_class = 'body-list' % #}
+
+{% block body %}
+
+<h1>Pocket Grimoire</h1>
+
+<details open>
+    <summary>Setup</summary>
+    <div>
+
+        <ul>
+            <li><button type="button" id="select-edition" data-dialog="#edition-list">Select Edition</button></li>
+            <li><button type="button" id="select-characters" data-dialog="#character-select" disabled>Select Characters</button></li>
+            <li><button type="button" id="qr-code" disabled>QR Code</button></li>
+            <!-- <li><button type="button" id="player-select" disabled>Player Select</button></li> -->
+        </ul>
+
+    </div>
+</details>
+
+<dialog class="dialog dialog--blur-background" id="edition-list" data-dialog-hide-on-click-backdrop>
+    <div class="dialog__content">
+        <button class="dialog__hide" type="button" data-dialog-hide>&times;</button>
+        <ul>
+            <li><button type="button" data-edition="tb">Trouble Brewing</button></li>
+            <li><button type="button" data-edition="bmr">Bad Moon Rising</button></li>
+            <li><button type="button" data-edition="snv">Sects and Violets</button></li>
+        </ul>
+    </div>
+</dialog>
+
+<dialog class="dialog dialog--blur-background" id="character-select" data-dialog-hide-on-click-backdrop>
+    <div class="dialog__content">
+
+        <div class="dialog__header">
+            <h2 class="dialog__title">Select Characters</h2>
+            <button class="dialog__hide" type="button" data-dialog-hide>&times;</button>
+        </div>
+
+        <form>
+
+            <div class="character-select__players">
+                <input type="range" min="5" max="20" step="1" value="7" id="player-count" aria-label="Number of players">
+                <output id="player-count-output">7</output>
+            </div>
+
+            <fieldset class="character-select__group" data-team="townsfolk">
+                <legend class="character-select__title">Townsfolk</legend>
+                <div class="character-select__score">
+                    <div class="character-select__score-box">
+                        <span class="js--character-select--count"></span> / <span class="js--character-select--total"></span>
+                    </div>
+                </div>
+                <div class="character-select__characters js--character-select--list"></div>
+            </fieldset>
+            <fieldset class="character-select__group" data-team="outsider">
+                <legend class="character-select__title">Outsiders</legend>
+                <div class="character-select__score">
+                    <div class="character-select__score-box">
+                        <span class="js--character-select--count"></span> / <span class="js--character-select--total"></span>
+                    </div>
+                </div>
+                <div class="character-select__characters js--character-select--list"></div>
+            </fieldset>
+            <fieldset class="character-select__group" data-team="minion">
+                <legend class="character-select__title">Minions</legend>
+                <div class="character-select__score">
+                    <div class="character-select__score-box">
+                        <span class="js--character-select--count"></span> / <span class="js--character-select--total"></span>
+                    </div>
+                </div>
+                <div class="character-select__characters js--character-select--list"></div>
+            </fieldset>
+            <fieldset class="character-select__group" data-team="demon">
+                <legend class="character-select__title">Demons</legend>
+                <div class="character-select__score">
+                    <div class="character-select__score-box">
+                        <span class="js--character-select--count"></span> / <span class="js--character-select--total"></span>
+                    </div>
+                </div>
+                <div class="character-select__characters js--character-select--list"></div>
+            </fieldset>
+
+            <button type="submit" id="player-select" disabled>Select</button>
+
+        </form>
+
+    </div>
+</dialog>
+
+<details>
+    <summary>Grimoire</summary>
+    <div>
+
+        <div class="pad-wrapper">
+            <div class="pad"></div>
+            <!-- https://fontawesome.com/v5.15/icons/arrows-alt-v?style=solid -->
+            <svg aria-hidden="true" focusable="false" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512" class="pad-wrapper__icon"><path fill="currentColor" d="M214.059 377.941H168V134.059h46.059c21.382 0 32.09-25.851 16.971-40.971L144.971 7.029c-9.373-9.373-24.568-9.373-33.941 0L24.971 93.088c-15.119 15.119-4.411 40.971 16.971 40.971H88v243.882H41.941c-21.382 0-32.09 25.851-16.971 40.971l86.059 86.059c9.373 9.373 24.568 9.373 33.941 0l86.059-86.059c15.12-15.119 4.412-40.971-16.97-40.971z" class=""></path></svg>
+        </div>
+
+        <button type="button" id="add-token" data-dialog="#character-list">Add token</button>
+        <button type="button" id="add-reminder">Add reminder</button>
+        <button type="button" id="reset-height">Reset pad height</button>
+        <button type="button" id="clear-grimoire">Clear Grimoire</button>
+
+    </div>
+</details>
+
+<dialog class="dialog dialog--blur-background" id="character-list" data-dialog-hide-on-click-backdrop>
+    <div class="dialog__content">
+        <button class="dialog__hide" type="button" data-dialog-hide>&times;</button>
+        <ul id="character-list__list"></ul>
+    </div>
+</dialog>
+
+<template id="character-list-template">
+    <li>
+        <button type="button" class="token token--character // js--character-list--button"></button>
+    </li>
+</template>
+
+<template id="character-template">
+    <span class="character js--character--leaves">
+        <span class="character__image">
+            <img src="" alt="" class="character__icon js--character--image">
+        </span>
+        <svg viewBox="0 0 150 150" class="character__text">
+            <path d="M 13 75 C 13 160, 138 160, 138 75" id="curve" fill="transparent"></path>
+            <text width="150" x="66.6%" text-anchor="middle" class="character__name">
+                <textPath xlink:href="#curve" style="fill: currentColor;" class="js--character--name"></textPath>
+            </text>
+        </svg>
+    </span>
+</template>
+
+{% endblock %}
+
+{% block javascript %}
+<script src="./assets/js/main.js"></script>
+{% endblock %}

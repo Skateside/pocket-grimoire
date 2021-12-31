@@ -1,0 +1,22 @@
+.pad {
+    border: 2px solid #000;
+    height: 80vh;
+    position: relative;
+    resize: vertical;
+    overflow: scroll;
+    background-color: #333;
+}
+
+.pad-wrapper {
+    position: relative;
+}
+
+.pad-wrapper__icon {
+    color: #fff;
+    position: absolute;
+    right: 0;
+    bottom: 2px;
+    pointer-events: none;
+    width: 1em;
+    aspect-ratio: 1 / 1;
+}

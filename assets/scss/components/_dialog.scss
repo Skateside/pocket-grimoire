@@ -1,0 +1,44 @@
+.dialog {
+    padding: 0;
+    border: none;
+    background-color: transparent;
+}
+
+// .dialog--transparent {
+//     background-color: transparent;
+//     border: none;
+// }
+
+.dialog--blur-background::backdrop {
+    background-image: radial-gradient(circle at center, rgb(0 0 0 / 50%) 20%, rgb(0 0 0 / 70%) 100%);
+    backdrop-filter: blur(0.5em);
+}
+
+.dialog--hide-background::backdrop {
+    background-color: #000;
+    background-image: url("../img/background-img3.png");
+}
+
+// .dialog--full {
+//     padding: 0;
+//     max-width: none;
+// }
+//
+// .dialog--light {
+//     background-image: url("../img/background-img.jpg");
+//     border: 0.1em solid #000;
+//     padding: 1em;
+// }
+
+.dialog__content {
+    border: 0.2em solid #000;
+    padding: 1em;
+    background-color: #fff;
+    position: relative;
+}
+
+.dialog__hide {
+    position: absolute;
+    right: 0;
+    top: 0;
+}

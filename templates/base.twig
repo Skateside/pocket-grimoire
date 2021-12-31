@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+
+{% block dns_prefetch %}{% endblock %}
+
+{#
+We set a global variable `whole_title` to be the contents of the `whole_title`
+block. This allows some of the meta includes to reference the contents while
+also allowing developers to create a unique title if they need to.
+#}
+<title>{% set whole_title -%}
+    {% block whole_title %}{% block title %}{% endblock %} - Pocket Grimoire{% endblock %}
+{% endset -%}{{ whole_title }}</title>
+{% block meta -%}
+    {%- include './includes/meta/tags.twig' -%}
+{%- endblock %}
+
+<!-- <link rel="icon" type="image/svg+xml" href="./assets/img/logo.svg"> -->
+<link rel="stylesheet" href="./assets/css/main.css">
+{% block styles %}{% endblock %}
+
+</head>
+<body class="{{ body_class|default('') }}">
+
+{# % include 'includes/header.twig' % #}
+
+<main role="main" id="main">{% block body %}{% endblock %}</main>
+{# % include 'includes/footer.twig' % #}
+
+{# % block templates -%}
+    {% include './templates/character-token.twig' %}
+{%- endblock % #}
+
+{# <script src="./assets/js/main.js"></script> #}
+{% block javascript %}{% endblock %}
+
+</body>
+</html>
