@@ -4,18 +4,17 @@
     --z-index: 0;
     width: 60px;
     aspect-ratio: 1 / 1;
+    border: none;
+    padding: 0;
     border-radius: 50%;
-    box-shadow:
-        inset 0.1em 0.1em 0.2em rgba(255 255 255 / 0.2),
-        0.1em 0.1em 0.2em rgba(0 0 0 / 0.8);
     display: flex;
     align-items: center;
     justify-content: center;
     font-family: inherit;
     font-size: inherit;
     line-height: inherit;
-    position: absolute;
     cursor: move;
+    position: absolute;
     left: calc(var(--left) * 1px);
     top: calc(var(--top) * 1px);
     z-index: var(--z-index);

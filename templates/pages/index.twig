@@ -119,7 +119,7 @@
         </div>
 
         <button type="button" id="add-token" data-dialog="#character-list">Add token</button>
-        <button type="button" id="add-reminder">Add reminder</button>
+        <button type="button" id="add-reminder" data-dialog="#reminder-list">Add reminder</button>
         <button type="button" id="reset-height">Reset pad height</button>
         <button type="button" id="clear-grimoire">Clear Grimoire</button>
 
@@ -128,15 +128,36 @@
 
 <dialog class="dialog dialog--blur-background" id="character-list" data-dialog-hide-on-click-backdrop>
     <div class="dialog__content">
-        <button class="dialog__hide" type="button" data-dialog-hide>&times;</button>
+        <div class="dialog__header">
+            <h2 class="dialog__title">Select Character</h2>
+            <button class="dialog__hide" type="button" data-dialog-hide>&times;</button>
+        </div>
         <ul id="character-list__list"></ul>
     </div>
 </dialog>
 
 <template id="character-list-template">
     <li>
-        <button type="button" class="token token--character // js--character-list--button"></button>
+        <button type="button" class="js--character-list--button">
+            <img src="" alt="" class="character-list__image js--character-list--image" aria-hidden="true">
+            <span class="js--character-list--name"></span>
+            <span class="js--character-list--ability"></span>
+        </button>
     </li>
+</template>
+
+<dialog class="dialog dialog--blur-background" id="reminder-list" data-dialog-hide-on-click-backdrop>
+    <div class="dialog__content">
+        <div class="dialog__header">
+            <h2 class="dialog__title">Select Reminder</h2>
+            <button class="dialog__hide" type="button" data-dialog-hide>&times;</button>
+        </div>
+        <ul id="reminder-list__list"></ul>
+    </div>
+</dialog>
+
+<template id="token-template">
+    <button type="button" class="token js--token--wrapper"></button>
 </template>
 
 <template id="character-template">

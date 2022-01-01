@@ -290,7 +290,8 @@ let letterIndex = 0;
 
 document.getElementById("add-reminder").addEventListener("click", () => {
 
-    const reminder = document.createElement("div");
+    const reminder = document.createElement("button");
+    reminder.type = "button";
     reminder.classList.add("token", "token--reminder");
     reminder.textContent = letters[letterIndex];
     letterIndex = (letterIndex + 1) % letters.length;
