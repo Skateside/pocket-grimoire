@@ -227,7 +227,9 @@ export default class Tokens {
             return;
         }
 
-        window.alert(token.dataset.id);
+        const type = token.closest("[data-token]");
+
+        window.alert(`${type.dataset.token}: ${token.textContent.trim()}`);
 
     }
 

@@ -3,7 +3,7 @@ import Observer from "./classes/Observer.js";
 import Tokens from "./classes/Tokens.js";
 import {
     getCached
-} from "./utils/getCached.js";
+} from "./utils/fetch.js";
 import {
     lookup,
     lookupOne,
@@ -56,11 +56,8 @@ class CharacterData {
 
 const gameObserver = Observer.create("game");
 
-// const selectChacters = lookupOne("#select-characters");
 const characterData = new CharacterData("/assets/data/characters.json");
-
 characterData.then((characters) => gameObserver.trigger("characters-loaded", characters));
-// characterData.then(() => selectChacters.disabled = false);
 
 gameObserver.on("characters-loaded", () => {
     lookupOne("#select-characters").disabled = false;
@@ -207,13 +204,12 @@ gameObserver.on("characters-selected", ({ detail: characters }) => {
 
         const clone = template.content.cloneNode(true);
         const button = clone.querySelector(".js--character-list--button");
-        const image = clone.querySelector(".js--character-list--image");
-        const name = clone.querySelector(".js--character-list--name");
         const ability = clone.querySelector(".js--character-list--ability");
+        const token = clone.querySelector(".js--character-list--token");
 
         button.dataset.id = character.id;
-        image.src = character.image;
-        name.textContent = character.name;
+        button.dataset.character = JSON.stringify(character);
+        token.append(drawCharacter(character));
         ability.textContent = character.ability;
 
         frag.append(clone);
@@ -263,17 +259,15 @@ lookupOneCached("#character-list__list").addEventListener("click", ({ target }) 
         return;
     }
 
-    characterData.get(button.dataset.id).then((character) => {
+    const character = JSON.parse(button.dataset.character);
+    const tokenTemplate = lookupOneCached("#token-template").content.cloneNode(true);
+    const wrapper = tokenTemplate.querySelector(".js--token--wrapper");
+    wrapper.dataset.id = character.id;
+    wrapper.dataset.token = "character";
+    wrapper.append(drawCharacter(character));
 
-        const tokenTemplate = lookupOneCached("#token-template").content.cloneNode(true);
-        const wrapper = tokenTemplate.querySelector(".js--token--wrapper");
-        wrapper.classList.add("token--character");
-        wrapper.dataset.id = character.id;
-        wrapper.append(drawCharacter(character));
-
-        lookupOneCached(".pad").append(wrapper);
-
-    });
+    lookupOneCached(".pad").append(wrapper);
+    gameObserver.trigger("character-added", character);
 
     Dialog.create(button.closest(".dialog")).hide();
 
@@ -289,5 +283,101 @@ lookup("details").forEach((details) => {
     details.addEventListener("toggle", ({ target }) => {
         pad.tokens.updatePadDimensions();
     });
+
+});
+
+function drawReminder({
+    id,
+    image,
+    text
+}) {
+
+    const clone = lookupOneCached("#reminder-template").content.cloneNode(true);
+    clone.querySelector(".js--reminder--image").src = image;
+    clone.querySelector(".js--reminder--text").textContent = text;
+
+    return clone;
+
+}
+
+function drawReminderEntry(reminder) {
+
+    const clone = lookupOneCached("#reminder-list-template").content.cloneNode(true);
+    const button = clone.querySelector(".js--reminder-list--button");
+    button.dataset.id = reminder.id;
+    button.dataset.reminder = JSON.stringify(reminder);
+    button.append(drawReminder(reminder));
+
+    return clone;
+
+}
+
+gameObserver.on("characters-selected", ({ detail: characters }) => {
+
+    const frag = document.createDocumentFragment();
+
+    characters.forEach(({
+        id,
+        image,
+        reminders = [],
+        remindersGlobal = []
+    }) => {
+
+        const allReminders = [].concat(reminders, remindersGlobal);
+
+        allReminders.forEach((reminder) => {
+
+            frag.append(drawReminderEntry({
+                image,
+                id,
+                text: reminder
+            }));
+
+        });
+
+    });
+
+    const reminders = lookupOneCached("#reminder-list__list");
+    reminders.innerHTML = "";
+    reminders.append(frag);
+
+});
+
+lookupOneCached("#reminder-list__list").addEventListener("click", ({ target }) => {
+
+    const button = target.closest("[data-id]");
+
+    if (!button) {
+        return;
+    }
+
+    const reminder = JSON.parse(button.dataset.reminder);
+    const tokenTemplate = lookupOneCached("#token-template").content.cloneNode(true);
+    const wrapper = tokenTemplate.querySelector(".js--token--wrapper");
+    wrapper.dataset.id = reminder.id;
+    wrapper.dataset.token = "reminder";
+    wrapper.append(drawReminder(reminder));
+
+    lookupOneCached(".pad").append(wrapper);
+    gameObserver.trigger("reminder-added", reminder);
+
+    Dialog.create(button.closest(".dialog")).hide();
+
+});
+
+lookupOne("#reset-height").addEventListener("click", () => {
+    lookupOneCached(".pad").style.height = "";
+});
+
+lookupOne("#clear-grimoire").addEventListener("click", () => {
+
+    if (window.confirm("Are you sure you want to clear all the tokens?")) {
+
+        const pad = lookupOneCached(".pad");
+
+        pad.innerHTML = "";
+        pad.tokens.reset();
+
+    }
 
 });

@@ -18,12 +18,12 @@
     left: calc(var(--left) * 1px);
     top: calc(var(--top) * 1px);
     z-index: var(--z-index);
-}
 
-.token--character {
-    width: clamp(60px, 100vw / 6, 150px);
-}
+    &[data-token="character"] {
+        width: clamp(60px, 100vw / 6, 150px);
+    }
 
-.token--reminder {
-    width: clamp(45px, 100vw / 9, 125px);
+    &[data-token="reminder"] {
+        width: clamp(45px, 100vw / 9, 125px);
+    }
 }

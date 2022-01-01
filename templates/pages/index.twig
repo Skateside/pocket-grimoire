@@ -17,8 +17,6 @@
             <li><button type="button" id="select-characters" data-dialog="#character-select" disabled>Select Characters</button></li>
             {# Show a QR code for the characters in this game: #}
             <li><button type="button" id="qr-code" disabled>QR Code</button></li>
-            {# Show a randomised series of tokens so the players can pick their character: #}
-            <li><button type="button" id="qr-code" disabled>Player Select</button></li>
             {# Clear the localStorage (and refresh the page) to get more up-to-date data: #}
             <li><button type="button" id="reset" disabled>Clear saved data</button></li>
         </ul>
@@ -28,7 +26,10 @@
 
 <dialog class="dialog dialog--blur-background" id="edition-list" data-dialog-hide-on-click-backdrop>
     <div class="dialog__content">
-        <button class="dialog__hide" type="button" data-dialog-hide>&times;</button>
+        <div class="dialog__header">
+            <h2 class="dialog__title">Select Edition</h2>
+            <button class="dialog__hide" type="button" data-dialog-hide>&times;</button>
+        </div>
         <ul>
             <li><button type="button" data-edition="tb">Trouble Brewing</button></li>
             <li><button type="button" data-edition="bmr">Bad Moon Rising</button></li>
@@ -93,6 +94,7 @@
                 <div class="character-select__characters js--character-select--list"></div>
             </fieldset>
 
+            {# This should take show the "player token select" dialog #}
             <button type="submit" id="player-select" disabled>Select</button>
 
         </form>
@@ -118,10 +120,15 @@
             <svg aria-hidden="true" focusable="false" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512" class="pad-wrapper__icon"><path fill="currentColor" d="M214.059 377.941H168V134.059h46.059c21.382 0 32.09-25.851 16.971-40.971L144.971 7.029c-9.373-9.373-24.568-9.373-33.941 0L24.971 93.088c-15.119 15.119-4.411 40.971 16.971 40.971H88v243.882H41.941c-21.382 0-32.09 25.851-16.971 40.971l86.059 86.059c9.373 9.373 24.568 9.373 33.941 0l86.059-86.059c15.12-15.119 4.412-40.971-16.97-40.971z" class=""></path></svg>
         </div>
 
-        <button type="button" id="add-token" data-dialog="#character-list">Add token</button>
-        <button type="button" id="add-reminder" data-dialog="#reminder-list">Add reminder</button>
-        <button type="button" id="reset-height">Reset pad height</button>
-        <button type="button" id="clear-grimoire">Clear Grimoire</button>
+        <ul>
+            <li><button type="button" id="add-token" data-dialog="#character-list">Add token</button></li>
+            <li><button type="button" id="add-reminder" data-dialog="#reminder-list">Add reminder</button></li>
+            <li><button type="button" id="reset-height">Reset pad height</button></li>
+            <li><button type="button" id="toggle-night" disabled>Toggle night order</button></li>
+        </ul>
+        <ul>
+            <li><button type="button" id="clear-grimoire">Clear Grimoire</button></li>
+        </ul>
 
     </div>
 </details>
@@ -139,8 +146,7 @@
 <template id="character-list-template">
     <li>
         <button type="button" class="js--character-list--button">
-            <img src="" alt="" class="character-list__image js--character-list--image" aria-hidden="true">
-            <span class="js--character-list--name"></span>
+            <span class="js--character-list--token"></span>
             <span class="js--character-list--ability"></span>
         </button>
     </li>
@@ -173,6 +179,52 @@
         </svg>
     </span>
 </template>
+
+<template id="reminder-list-template">
+    <li>
+        <button type="button" class="js--reminder-list--button"></button>
+    </li>
+</template>
+
+<template id="reminder-template">
+    <span class="reminder">
+        <span class="reminder__image">
+            <img src="" alt="" class="reminder__icon js--reminder--image">
+        </span>
+        <svg viewBox="0 0 150 150" class="reminder__text">
+            <path d="M 13 75 C 13 160, 138 160, 138 75" id="curve" fill="transparent"></path>
+            <text width="150" x="66.6%" text-anchor="middle" class="reminder__name">
+                <textPath xlink:href="#curve" style="fill: currentColor;" class="js--reminder--text"></textPath>
+            </text>
+        </svg>
+    </span>
+</template>
+
+<details class="details">
+    <summary>Night Order</summary>
+    <div>
+        <p>(TODO)</p>
+    </div>
+</details>
+
+<details class="details">
+    <summary>Info Tokens</summary>
+    <div>
+        <p>(TODO)</p>
+    </div>
+</details>
+
+<details class="details">
+    <summary>Acknowledgements</summary>
+    <div>
+        <p><a href="https://bloodontheclocktower.com/" target="_blank" rel="noopener noreferrer">Blood on the Clocktower</a> is a trademark of Steven Medway and <a href="https://www.thepandemoniuminstitute.com/" target="_blank" rel="noopener noreferrer">The Pandemonium Institute</a>.</p>
+        <p>Night reminders and other auxiliary text written by <a href="http://bignose.whitetree.org/projects/botc/diy/" target="_blank" rel="noopener noreferrer">Ben Finney</a>.</p>
+        <p>Icons are taken from <a href="https://fontawesome.com/v5.15/icons" target="_blank" rel="noopener noreferrer">Font Awesome</a>.</p>
+        <p>Many images and data are taken from <a href="https://www.clocktower.online" target="_blank" rel="noopener noreferrer">Clocktower.online</a>.</p>
+        <p>This is an unofficial virtual grimoire for Blood on the Clocktower. This project is free and the source code can be found on <a href="#" target="_blank" rel="noopener noreferrer">GitHub</a>. This project is not affiliated with the Pandemonium Institute. If you enjoy playing Blood on the Clocktower, <a href="https://bloodontheclocktower.com/pages/where-to-buy" target="_blank" rel="noopener noreferrer">please consider buying your own grimoire</a> - as well as being more flexible than this digital version, it also supports the creators.</p>
+        <p><small>Version 0.2.0 alpha</small></p>
+    </div>
+</details>
 
 {% endblock %}
 
