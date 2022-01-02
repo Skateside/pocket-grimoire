@@ -1,0 +1,23 @@
+@charset "UTF-8";
+
+@import "./base/fonts";
+@import "./base/elements";
+
+html {
+    background-color: #fffef0;
+    background-image: url("../img/token/character-token-noise.png");
+}
+
+body {
+    background-color: transparent;
+    margin: 0;
+    padding: 1em;
+}
+
+a {
+    color: #337ab7;
+}
+
+@import "./components/edition";
+@import "./components/action";
+@import "./components/dialog";

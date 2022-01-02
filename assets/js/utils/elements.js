@@ -15,16 +15,15 @@ export function lookup(selector, context = document) {
 }
 
 /**
-* A helper function for looking up a single element, optionally from with a
-* specified context element.
-*
-* @param  {String} selector
-*         CSS selector to identify the elements.
-* @param  {Element} [context=document]
-*         Optional context, defaults to the document.
-* @return {Element[]}
-*         An array of elements matching the selector and within the given
-*         context. If there are no matches, an empty array is returned.
+ * A helper function for looking up a single element, optionally from with a
+ * specified context element.
+ *
+ * @param  {String} selector
+ *         CSS selector to identify the elements.
+ * @param  {Element} [context=document]
+ *         Optional context, defaults to the document.
+ * @return {Element|undefined}
+ *         The first matching element or undefined if no element can be found.
  */
 export function lookupOne(selector, context = document) {
     return lookup(selector, context)[0];
@@ -76,9 +75,8 @@ export function lookupCached(selector, context = document) {
  *         CSS selector to identify the elements.
  * @param  {Element} [context=document]
  *         Optional context, defaults to the document.
- * @return {Element[]}
- *         An array of elements matching the selector and within the given
- *         context. If there are no matches, an empty array is returned.
+ * @return {Element|undefined}
+ *         The first matching element or undefined if no element can be found.
  */
 export function lookupOneCached(selector, context = document) {
     return lookupCached(selector, context)[0];

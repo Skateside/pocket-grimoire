@@ -1,0 +1,28 @@
+.action {
+    font-family: inherit;
+    font-size: 1.2em;
+    line-height: inherit;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.5em;
+    border-width: 0.1em;
+    border-style: solid;
+    padding: 0.25em 0.5em;
+}
+
+.action--red {
+    background-color: #fe000010;
+    color: #fe0000;
+    border-color: #fe0000;
+}
+
+.action--blue {
+    background-color: #337ab710;
+    color: #337ab7;
+    border-color: #337ab7;
+}
+
+.action__icon {
+    width: 1em;
+}

@@ -1,9 +1,8 @@
 import Dialog from "./classes/Dialog.js";
 import Observer from "./classes/Observer.js";
 import Tokens from "./classes/Tokens.js";
-import {
-    getCached
-} from "./utils/fetch.js";
+import CharacterData from "./classes/CharacterData.js";
+import GameData from "./classes/GameData.js";
 import {
     lookup,
     lookupOne,
@@ -16,47 +15,11 @@ lookupCached("[data-dialog]").forEach((trigger) => {
     trigger.dialog = Dialog.createFromTrigger(trigger);
 });
 
-class CharacterData {
 
-    constructor(url) {
-        this.lookup = getCached(url);
-    }
-
-    then(handler) {
-        return this.lookup.then(handler);
-    }
-
-    getEdition(edition) {
-
-        return this.then((characters) => (
-            characters.filter((character) => character.edition === edition)
-        ));
-
-    }
-
-    getIds(ids) {
-
-        const idList = ids.map(({ id }) => id);
-
-        return this.then((characters) => (
-            characters.filter((character) => idList.includes(character.id))
-        ));
-
-    }
-
-    get(id) {
-
-        return this.then((characters) => (
-            characters.find((character) => character.id === id)
-        ));
-
-    }
-
-}
 
 const gameObserver = Observer.create("game");
 
-const characterData = new CharacterData("/assets/data/characters.json");
+const characterData = CharacterData.create();
 characterData.then((characters) => gameObserver.trigger("characters-loaded", characters));
 
 gameObserver.on("characters-loaded", () => {
@@ -154,28 +117,9 @@ const playerCountOutput = lookupOne("#player-count-output");
 
 playerCount.addEventListener("input", () => playerCountOutput.value = playerCount.value);
 
-class GameData {
-
-    constructor(url) {
-        this.lookup = getCached(url);
-    }
-
-    then(handler) {
-        return this.lookup.then(handler);
-    }
-
-    getRow(players) {
-
-        return this.then((data) => {
-            return data[Math.min(players - 5, data.length - 1)];
-        });
-
-    }
-
-}
 
 
-const gameData = new GameData("/assets/data/game.json");
+const gameData = GameData.create();
 
 function setTotals() {
 

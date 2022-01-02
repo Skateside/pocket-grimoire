@@ -17,13 +17,14 @@ const htmlmin       = require("gulp-htmlmin");
 const ENTRY_POINTS = {
     js: [
         "./assets/js/main.js",
-        // "./assets/js/list.js"
+        "./assets/js/list.js"
     ],
     data: [
         "./assets/data/**/*.json"
     ],
     scss: [
-        "./assets/scss/main.scss"
+        "./assets/scss/main.scss",
+        "./assets/scss/list.scss"
     ],
     twig: [
         "./templates/pages/**/*.twig"
