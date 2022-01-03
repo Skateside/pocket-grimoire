@@ -56,7 +56,7 @@
 <template id="character-template">
     <span class="character js--character--leaves">
         <span class="character__image">
-            <img src="" alt="" class="character__icon js--character--image">
+            <img src="" alt="" class="character__icon js--character--image" loading="lazy">
         </span>
         <svg viewBox="0 0 150 150" class="character__text">
             <path d="M 13 75 C 13 160, 138 160, 138 75" id="curve" fill="transparent"></path>
@@ -64,6 +64,7 @@
                 <textPath xlink:href="#curve" style="fill: currentColor;" class="js--character--name"></textPath>
             </text>
         </svg>
+        <span class="character__shroud"></span>
     </span>
 </template>
 
@@ -76,7 +77,7 @@
 <template id="reminder-template">
     <span class="reminder">
         <span class="reminder__image">
-            <img src="" alt="" class="reminder__icon js--reminder--image">
+            <img src="" alt="" class="reminder__icon js--reminder--image" loading="lazy">
         </span>
         <svg viewBox="0 0 150 150" class="reminder__text">
             <path d="M 13 75 C 13 160, 138 160, 138 75" id="curve" fill="transparent"></path>
@@ -86,3 +87,18 @@
         </svg>
     </span>
 </template>
+
+{% embed '../includes/dialog.twig' with {
+    id: 'character-show',
+    background: 'hide',
+    title: 'Token'
+} %}
+    {% block body %}
+    <div id="character-show-token"></div>
+    <p id="character-show-ability"></p>
+    <ul>
+        <li><button type="button" id="character-shroud-toggle" disabled>Toggle Shroud</button></li>
+        <li><button type="button" id="character-remove" disabled>Remove Token</button></li>
+    </ul>
+    {% endblock %}
+{% endembed %}

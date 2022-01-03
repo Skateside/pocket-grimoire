@@ -1,9 +1,16 @@
 @charset "UTF-8";
 
 @import "./base/fonts";
+@import "./base/root";
 @import "./base/elements";
 
 @import "./components/pad";
 @import "./components/token";
 @import "./components/character-reminder";
 @import "./components/dialog";
+@import "./components/info-token";
+@import "./components/carousel";
+@import "./components/night-order";
+
+// This should be its own component, and it shouldn't be an ID.
+#character-show-token { max-width: 12em; margin: 0 auto; }

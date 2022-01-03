@@ -8,7 +8,7 @@ html,
 body {
     font-size: 1rem;
     line-height: 1.4;
-    font-family: Helvetica, Arial, sans-serif;
+    font-family: var(--sans-font);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     background-color: #fff;

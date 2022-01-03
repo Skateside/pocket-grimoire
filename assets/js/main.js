@@ -18,9 +18,12 @@ lookupCached("[data-dialog]").forEach((trigger) => {
 
 
 const gameObserver = Observer.create("game");
+const tokenObserver = Observer.create("token");
 
 const characterData = CharacterData.create();
-characterData.then((characters) => gameObserver.trigger("characters-loaded", characters));
+characterData.then((characters) => {
+    gameObserver.trigger("characters-loaded", characters);
+});
 
 gameObserver.on("characters-loaded", () => {
     lookupOne("#select-characters").disabled = false;
@@ -115,7 +118,9 @@ lookupCached("[data-team]").forEach((wrapper) => {
 const playerCount = lookupOne("#player-count");
 const playerCountOutput = lookupOne("#player-count-output");
 
-playerCount.addEventListener("input", () => playerCountOutput.value = playerCount.value);
+playerCount.addEventListener("input", () => {
+    playerCountOutput.value = playerCount.value;
+});
 
 
 
@@ -127,9 +132,10 @@ function setTotals() {
 
         Object.entries(data).forEach(([team, count]) => {
 
-            lookupCached(`[data-team="${team}"] .js--character-select--total`).forEach((element) => {
-                element.textContent = count;
-            });
+            lookupCached(`[data-team="${team}"] .js--character-select--total`)
+                .forEach((element) => {
+                    element.textContent = count;
+                });
 
         });
 
@@ -208,10 +214,14 @@ lookupOneCached("#character-list__list").addEventListener("click", ({ target }) 
     const wrapper = tokenTemplate.querySelector(".js--token--wrapper");
     wrapper.dataset.id = character.id;
     wrapper.dataset.token = "character";
+    wrapper.dataset.character = JSON.stringify(character);
     wrapper.append(drawCharacter(character));
 
     lookupOneCached(".pad").append(wrapper);
-    gameObserver.trigger("character-added", character);
+    tokenObserver.trigger("character-added", {
+        data: character,
+        element: wrapper
+    });
 
     Dialog.create(button.closest(".dialog")).hide();
 
@@ -300,10 +310,14 @@ lookupOneCached("#reminder-list__list").addEventListener("click", ({ target }) =
     const wrapper = tokenTemplate.querySelector(".js--token--wrapper");
     wrapper.dataset.id = reminder.id;
     wrapper.dataset.token = "reminder";
+    wrapper.dataset.reminder = JSON.stringify(reminder);
     wrapper.append(drawReminder(reminder));
 
     lookupOneCached(".pad").append(wrapper);
-    gameObserver.trigger("reminder-added", reminder);
+    gameObserver.trigger("reminder-added", {
+        data: reminder,
+        element: wrapper
+    });
 
     Dialog.create(button.closest(".dialog")).hide();
 
@@ -325,3 +339,208 @@ lookupOne("#clear-grimoire").addEventListener("click", () => {
     }
 
 });
+
+tokenObserver.on("reminder-click", ({ detail }) => {
+
+    const {
+        element
+    } = detail;
+
+    element.remove();
+    tokenObserver.trigger("reminder-removed", detail);
+
+});
+
+class CharacterDialog extends Dialog {
+
+    addListeners() {
+
+        super.addListeners();
+
+        this.buttonShroud = lookupOneCached("#character-shroud-toggle");
+        this.buttonRemove = lookupOneCached("#character-remove");
+        this.tokenWrapper = lookupOneCached("#character-show-token");
+        this.abilityText = lookupOneCached("#character-show-ability");
+
+        this.buttonShroud.addEventListener("click", () => {
+            this.toggleShroud();
+        });
+
+        this.buttonRemove.addEventListener("click", () => {
+            this.removeToken();
+        });
+
+        this.dialog.addEventListener(this.constructor.HIDE, () => {
+
+            this.buttonShroud.disabled = true;
+            this.buttonRemove.disabled = true;
+            this.tokenWrapper.innerHTML = "";
+            this.abilityText.textContent = "";
+
+        });
+
+    }
+
+    setTokenData(tokenData) {
+
+        this.tokenData = tokenData;
+        this.token = lookupOneCached(
+            ".js--character--leaves",
+            tokenData.element
+        );
+
+        const clone = this.token.cloneNode(true);
+        clone.removeAttribute("data-first-night");
+        clone.removeAttribute("data-other-nights");
+        clone.classList.remove("is-dead");
+        this.tokenWrapper.append(clone);
+        this.abilityText.textContent = tokenData.data.ability;
+
+        this.buttonShroud.disabled = false;
+        this.buttonRemove.disabled = false;
+
+    }
+
+    toggleShroud() {
+
+        const isDead = this.token.classList.toggle("is-dead");
+
+        tokenObserver.trigger("character-shroud-change", {
+            ...this.tokenData,
+            isDead
+        });
+        this.hide();
+
+    }
+
+    removeToken() {
+
+        const {
+            tokenData
+        } = this;
+
+        tokenData.element.remove();
+        tokenObserver.trigger("character-removed", tokenData);
+        this.hide();
+
+    }
+
+}
+
+tokenObserver.on("character-click", ({ detail }) => {
+
+    const dialogElement = lookupOneCached("#character-show");
+    const dialog = CharacterDialog.create(dialogElement);
+
+    dialog.setTokenData(detail);
+    dialog.show();
+
+});
+
+// Night Order.
+
+function drawNightOrder({
+    id,
+    name,
+    image,
+    text
+}) {
+
+    const clone = lookupOneCached("#night-info-template").content.cloneNode(true);
+
+    lookupOne(".js--night-info--wrapper", clone).dataset.id = id;
+    lookupOne(".js--night-info--icon", clone).src = image;
+    lookupOne(".js--night-info--role", clone).textContent = name;
+    lookupOne(".js--night-info--ability", clone).textContent = text;
+
+    return clone;
+
+}
+
+gameObserver.on("characters-selected", ({ detail: characters }) => {
+
+    const nights = [[], []];
+
+    characters.forEach(({
+        id,
+        name,
+        image,
+        firstNight,
+        firstNightReminder,
+        otherNight,
+        otherNightReminder
+    }) => {
+
+        const data = {
+            id,
+            name,
+            image,
+        };
+
+        if (firstNight) {
+
+            data.text = firstNightReminder;
+            nights[0][firstNight] = data;
+
+        }
+
+        if (otherNight) {
+
+            data.text = otherNightReminder;
+            nights[1][otherNight] = data;
+
+        }
+
+    });
+
+    const firstNight = lookupOneCached("#first-night")
+    firstNight.innerHTML = "";
+    nights[0].forEach((data) => {
+        firstNight.append(drawNightOrder(data));
+    });
+
+    const otherNights = lookupOneCached("#other-nights")
+    otherNights.innerHTML = "";
+    nights[1].forEach((data) => {
+        otherNights.append(drawNightOrder(data));
+    });
+
+});
+
+tokenObserver.on("character-added", ({ detail }) => {
+
+    const {
+        id
+    } = detail.data;
+    const firstNight = lookupOne(`#first-night [data-id="${id}"]`);
+    const otherNights = lookupOne(`#other-nights [data-id="${id}"]`);
+
+    if (firstNight) {
+        firstNight.classList.add("is-playing");
+    }
+
+    if (otherNights) {
+        otherNights.classList.add("is-playing");
+    }
+
+});
+
+tokenObserver.on("character-removed", ({ detail }) => {
+
+    const {
+        id
+    } = detail.data;
+    const firstNight = lookupOne(`#first-night [data-id="${id}"]`);
+    const otherNights = lookupOne(`#other-nights [data-id="${id}"]`);
+
+    if (firstNight) {
+        firstNight.classList.remove("is-playing");
+    }
+
+    if (otherNights) {
+        otherNights.classList.remove("is-playing");
+    }
+
+});
+
+// End of Night Order.

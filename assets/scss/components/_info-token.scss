@@ -1,0 +1,17 @@
+.info-token {
+    width: min(80%, 40rem);
+    text-align: center;
+}
+
+.info-token__text {
+    font-size: clamp(1rem, 10vw, 3rem);
+    margin: 0;
+
+    > strong {
+        font-family: var(--serif-font);
+        font-size: 1.1em;
+        font-variant: small-caps;
+        letter-spacing: 0.1em;
+        display: inline-block;
+    }
+}

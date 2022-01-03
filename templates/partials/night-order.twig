@@ -2,6 +2,28 @@
     summary: 'Night Order'
 } %}
     {% block body %}
-    <p>(TODO)</p>
+    <p>Swipe to change nights.</p>
+    <div class="carousel">
+        <div class="carousel__item">
+            <p>First night</p>
+            <ol id="first-night" class="night-order"></ol>
+        </div>
+        <div class="carousel__item">
+            <p>Other nights</p>
+            <ol id="other-nights" class="night-order"></ol>
+        </div>
+    </div>
     {% endblock %}
 {% endembed %}
+
+<template id="night-info-template">
+    <li class="night-order__item js--night-info--wrapper">
+        <div class="night-order__heading">
+            <div>
+                <img src="" alt="" class="night-order__icon js--night-info--icon" loading="lazy">
+            </div>
+            <p class="night-order__role js--night-info--role"></p>
+        </div>
+        <p class="night-order__ability js--night-info--ability"></p>
+    </li>
+</template>

@@ -1,3 +1,4 @@
+import Observer from "./Observer.js";
 import {
     clamp
 } from "../utils/numbers.js";
@@ -5,6 +6,8 @@ import {
     noop,
     rafThrottle
 } from "../utils/functions.js";
+
+const tokenObserver = Observer.create("token");
 
 /**
  * Handles the tokens being draggable.
@@ -228,8 +231,13 @@ export default class Tokens {
         }
 
         const type = token.closest("[data-token]");
+        const tokenType = type.dataset.token;
 
-        window.alert(`${type.dataset.token}: ${token.textContent.trim()}`);
+        // character-click or reminder-click event.
+        tokenObserver.trigger(`${tokenType}-click`, {
+            element: type,
+            data: JSON.parse(type.dataset[tokenType])
+        });
 
     }
 
