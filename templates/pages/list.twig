@@ -6,9 +6,11 @@
 <link rel="stylesheet" href="./assets/css/list.css">
 {% endblock %}
 
+{% set body_class = 'body-list' %}
+
 {% block body %}
 
-<h1 id="title" class="edition-title"></h1>
+<h1 id="title" class="title"></h1>
 
 {% for type, text in {
     townsfolk: 'Townsfolk',

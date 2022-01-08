@@ -18,10 +18,10 @@
     id: 'info-tokens'
 } %}
     {% block body %}
-    <ul>
+    <ul class="button-list">
         {% for id, markup in infoTokens %}
         <li>
-            <button type="button" data-dialog="#info-token-{{ id }}">{{ markup|striptags }}</button>
+            <button type="button" class="button" data-dialog="#info-token-{{ id }}">{{ markup|striptags }}</button>
         </li>
         {% endfor %}
     </ul>

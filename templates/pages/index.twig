@@ -6,9 +6,11 @@
 <link rel="stylesheet" href="./assets/css/main.css">
 {% endblock %}
 
+{% set body_class = 'body-grimoire' %}
+
 {% block body %}
 
-<h1>Pocket Grimoire</h1>
+<h1 class="title">Pocket Grimoire</h1>
 
 {% include '../partials/setup.twig' %}
 {% include '../partials/grimoire.twig' %}

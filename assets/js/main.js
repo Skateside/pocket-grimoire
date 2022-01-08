@@ -154,13 +154,11 @@ gameObserver.on("characters-selected", ({ detail: characters }) => {
 
         const clone = template.content.cloneNode(true);
         const button = clone.querySelector(".js--character-list--button");
-        const ability = clone.querySelector(".js--character-list--ability");
         const token = clone.querySelector(".js--character-list--token");
 
         button.dataset.id = character.id;
         button.dataset.character = JSON.stringify(character);
         token.append(drawCharacter(character));
-        ability.textContent = character.ability;
 
         frag.append(clone);
 

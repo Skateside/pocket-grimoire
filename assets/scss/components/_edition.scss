@@ -9,16 +9,6 @@
     }
 }
 
-.edition-title {
-    font-size: clamp(1.5em, 5vw, 3em);
-    font-family: var(--serif-font);
-    font-weight: bold;
-    letter-spacing: 0.05em;
-    text-shadow:
-        -0.05em -0.05em 0.1em rgb(255 255 255 / 80%),
-        0.05em 0.05em 0.1em rgb(0 0 0 / 40%);
-}
-
 @media (min-width: 1024px) {
     .edition__team {
         display: flex;

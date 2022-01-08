@@ -1,7 +1,8 @@
 .dialog {
-    padding: 0;
-    border: none;
     background-color: transparent;
+    border: none;
+    margin: auto;
+    padding: 0;
 }
 
 // .dialog--transparent {
@@ -35,6 +36,8 @@
     padding: 1em;
     background-color: #fff;
     position: relative;
+    width: min(80vw, 30em);
+    box-shadow: 0.5em 0.5em 1em rgb(0 0 0 / 30%);
 }
 
 .dialog__hide {
@@ -43,6 +46,6 @@
     top: 0;
 }
 
-#qr-code-dialog > .dialog__content {
-    width: min(80vw, 30em);
-}
+// #qr-code-dialog > .dialog__content {
+//     width: min(80vw, 30em);
+// }

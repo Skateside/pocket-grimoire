@@ -3,13 +3,13 @@
     summary: 'Setup'
 } %}
     {% block body %}
-    <ul>
-        <li><button type="button" id="select-edition" data-dialog="#edition-list">Select Edition</button></li>
-        <li><button type="button" id="select-characters" data-dialog="#character-select" disabled>Select Characters</button></li>
+    <ul class="button-list">
+        <li><button type="button" class="button" id="select-edition" data-dialog="#edition-list">Select Edition</button></li>
+        <li><button type="button" class="button" id="select-characters" data-dialog="#character-select" disabled>Select Characters</button></li>
         {# Show a QR code for the characters in this game: #}
-        <li><button type="button" id="qr-code" disabled>QR Code</button></li>
+        <li><button type="button" class="button" id="qr-code" disabled>QR Code</button></li>
         {# Clear the localStorage (and refresh the page) to get more up-to-date data: #}
-        <li><button type="button" id="reset" disabled>Clear saved data</button></li>
+        <li><button type="button" class="button" id="reset" disabled>Clear saved data</button></li>
     </ul>
     {% endblock %}
 {% endembed %}

@@ -1,0 +1,17 @@
+%slot,
+.slot {
+    --columns: 1;
+    --gap: 1em;
+    display: flex;
+    flex-flow: row wrap;
+    gap: var(--gap);
+
+    > * {
+        margin: 0;
+        width: calc((100% / var(--columns)) - (var(--gap) * ((var(--columns) - 1) / var(--columns))));
+    }
+}
+
+.slot--2 { --columns: 2; }
+.slot--3 { --columns: 3; }
+.slot--4 { --columns: 4; }

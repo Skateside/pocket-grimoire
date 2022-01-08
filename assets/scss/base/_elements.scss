@@ -2,6 +2,7 @@
 *::before,
 *::after {
     box-sizing: border-box;
+    margin: 0;
 }
 
 html,
@@ -13,10 +14,33 @@ body {
     -moz-osx-font-smoothing: grayscale;
     background-color: #fff;
     color: #000;
-    min-height: 100%;
+    min-height: 100vh;
+}
+
+body {
+    padding: 1em;
 }
 
 img {
     display: block;
     max-width: 100%;
+}
+
+a {
+    color: #679fd0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+li {
+    margin-bottom: 1rem;
+
+    &:is(:last-child) {
+        margin-bottom: 0;
+    }
 }

@@ -6,19 +6,26 @@
 
 .night-order__item {
     padding: 0.5em 0;
-}
+    margin: 0;
 
-.night-order__item + .night-order__item {
-    border-top: 1px solid rgb(255 255 255 / 60%);
+    @at-root {
+        #{&} + #{&} {
+            border-top: 1px solid rgb(255 255 255 / 60%);
+        }
+    }
 }
 
 .night-order__heading {
     display: flex;
     flex-flow: row nowrap;
     gap: 1em;
+    padding-left: 0.25em;
+    margin-bottom: 0.5em;
 }
 
 .night-order__icon {
+    background-image: radial-gradient(rgb(255 255 255 / 60%), transparent 50%);
+    filter: drop-shadow(0 0 0.1em white);
     width: 2em;
 }
 

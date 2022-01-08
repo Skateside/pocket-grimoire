@@ -1,0 +1,26 @@
+.button-list {
+    @extend %slot;
+    @extend %no-list;
+
+    --columns: 2;
+
+    @media (min-width: 650px) {
+        --columns: 3;
+    }
+
+    @media (min-width: 1024px) {
+        --columns: 4;
+    }
+}
+
+.button-list--reminder {
+    --columns: 3;
+
+    @media (min-width: 650px) {
+        --columns: 4;
+    }
+
+    @media (min-width: 1024px) {
+        --columns: 6;
+    }
+}
