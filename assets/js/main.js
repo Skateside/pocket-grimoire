@@ -447,7 +447,7 @@ tokenObserver.on("character-click", ({ detail }) => {
 });
 
 // Night Order.
-
+//*
 function drawNightOrder({
     id,
     name,
@@ -551,5 +551,5 @@ tokenObserver.on("character-removed", ({ detail }) => {
     }
 
 });
-
+//*/
 // End of Night Order.

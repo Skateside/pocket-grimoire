@@ -7,6 +7,11 @@
 .night-order__item {
     padding: 0.5em 0;
     margin: 0;
+    opacity: 0.6;
+
+    &.is-playing {
+        opacity: 1;
+    }
 
     @at-root {
         #{&} + #{&} {
@@ -24,9 +29,14 @@
 }
 
 .night-order__icon {
-    background-image: radial-gradient(rgb(255 255 255 / 60%), transparent 50%);
-    filter: drop-shadow(0 0 0.1em white);
     width: 2em;
+
+    @at-root {
+        .is-playing #{&} {
+            background-image: radial-gradient(rgb(255 255 255 / 60%), transparent 50%);
+            filter: drop-shadow(0 0 0.1em white);
+        }
+    }
 }
 
 .night-order__role {
