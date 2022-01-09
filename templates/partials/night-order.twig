@@ -3,14 +3,20 @@
 } %}
     {% block body %}
     <div class="carousel">
+        {% set nights = {
+            'first-night': 'First night',
+            'other-nights': 'Other nights'
+        } %}
+        {% for id, text in nights %}
         <div class="carousel__item">
-            <p>First night</p>
-            <ol id="first-night" class="night-order"></ol>
+            <div class="sidebar sidebar--full {% if id == 'other-nights' %}sidebar--reverse{% endif %}">
+                <p class="sidebar__side"><span class="sidebar__side-content">{{ text }}</span></p>
+                <div class="sidebar__body">
+                    <ol id="{{ id }}" class="night-order"></ol>
+                </div>
+            </div>
         </div>
-        <div class="carousel__item">
-            <p>Other nights</p>
-            <ol id="other-nights" class="night-order"></ol>
-        </div>
+        {% endfor %}
     </div>
     <p><small>Swipe to change nights.</small></p>
     {% endblock %}

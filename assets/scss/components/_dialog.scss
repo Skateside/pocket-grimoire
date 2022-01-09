@@ -5,11 +5,6 @@
     padding: 0;
 }
 
-// .dialog--transparent {
-//     background-color: transparent;
-//     border: none;
-// }
-
 .dialog--blur-background::backdrop {
     background-image: radial-gradient(circle at center, rgb(0 0 0 / 50%) 20%, rgb(0 0 0 / 70%) 100%);
     backdrop-filter: blur(0.5em);
@@ -20,32 +15,45 @@
     background-image: url("../img/background-img3.png");
 }
 
-// .dialog--full {
-//     padding: 0;
-//     max-width: none;
-// }
-//
-// .dialog--light {
-//     background-image: url("../img/background-img.jpg");
-//     border: 0.1em solid #000;
-//     padding: 1em;
-// }
-
 .dialog__content {
     border: 0.2em solid #000;
-    padding: 1em;
     background-color: #fff;
     position: relative;
     width: min(80vw, 30em);
-    box-shadow: 0.5em 0.5em 1em rgb(0 0 0 / 30%);
+    background-image: url("../img/background-img.jpg");
+}
+
+.dialog__header {
+    padding: 1em;
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+}
+
+.dialog__title {
+    font-family: var(--serif-font);
+    text-shadow:
+        -0.05em -0.05em 0.1em rgb(255 255 255 / 80%),
+        0.05em 0.05em 0.1em rgb(0 0 0 / 40%);
+    margin: 0;
+    flex-grow: 1;
 }
 
 .dialog__hide {
-    position: absolute;
-    right: 0;
-    top: 0;
+    @extend %no-btn;
+    font-size: 2em;
+    line-height: 1;
+    text-shadow:
+        -0.05em -0.05em 0.1em rgb(255 255 255 / 80%),
+        0.05em 0.05em 0.1em rgb(0 0 0 / 40%);
 }
 
-// #qr-code-dialog > .dialog__content {
-//     width: min(80vw, 30em);
-// }
+.dialog__body {
+    padding: 1em;
+
+    @at-root {
+        .dialog__header + #{&} {
+            padding-top: 0;
+        }
+    }
+}

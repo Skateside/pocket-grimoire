@@ -7,6 +7,7 @@
 @import "./objects/slot";
 @import "./objects/no-btn";
 @import "./objects/no-list";
+@import "./objects/sr-only";
 
 @import "./components/body";
 @import "./components/title";
@@ -22,5 +23,7 @@
 @import "./components/button-list";
 @import "./components/character-list";
 @import "./components/character-show";
+@import "./components/sidebar";
+@import "./components/character-select";
 
 @import "./overrides/margin";

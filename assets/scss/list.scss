@@ -8,8 +8,10 @@ a {
     color: #337ab7;
 }
 
+@import "./objects/no-btn";
+
 @import "./components/body";
 @import "./components/title";
 @import "./components/edition";
-@import "./components/action";
+@import "./components/button";
 @import "./components/dialog";

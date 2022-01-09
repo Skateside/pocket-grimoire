@@ -87,9 +87,9 @@
 
 {% embed '../includes/dialog.twig' with {
     id: 'character-show',
-    background: 'hide',
-    title: 'Token'
+    background: 'hide'
 } %}
+    {% block title %}<span id="character-show-name">Token</span>{% endblock %}
     {% block body %}
     <div id="character-show-token" class="character-show__token"></div>
     <p id="character-show-ability" class="character-show__ability"></p>

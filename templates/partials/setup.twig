@@ -20,11 +20,11 @@
     title: 'Select Edition'
 } %}
     {% block body %}
-    <ul>
-        <li><button type="button" data-edition="tb">Trouble Brewing</button></li>
-        <li><button type="button" data-edition="bmr">Bad Moon Rising</button></li>
-        <li><button type="button" data-edition="snv">Sects and Violets</button></li>
-        <li><button type="button" data-edition="custom" disabled>Custom Script</button></li>
+    <ul class="button-list">
+        <li><button type="button" class="button" data-edition="tb">Trouble Brewing</button></li>
+        <li><button type="button" class="button" data-edition="bmr">Bad Moon Rising</button></li>
+        <li><button type="button" class="button" data-edition="snv">Sects and Violets</button></li>
+        <li><button type="button" class="button" data-edition="custom" disabled>Custom Script</button></li>
     </ul>
     {% endblock %}
 {% endembed %}
@@ -38,52 +38,34 @@
     <form>
 
         <div class="character-select__players">
-            <label for="player-count">Number of players</label>
-            <input type="range" min="5" max="20" step="1" value="7" name="player-count" id="player-count">
-            <output id="player-count-output">7</output>
+            <label for="player-count" class="character-select__label">Number of players</label>
+            <input type="range" min="5" max="20" step="1" value="7" name="player-count" id="player-count" class="character-select__range">
+            <output id="player-count-output" class="character-select__output">7</output>
         </div>
 
-        <fieldset class="character-select__group" data-team="townsfolk">
-            <legend class="character-select__title">Townsfolk</legend>
-            <div class="character-select__score">
-                {# This should be sticky so it's always visible #}
-                <div class="character-select__score-box">
-                    <span class="js--character-select--count">0</span> / <span class="js--character-select--total"></span>
+        {% set teams = {
+            townsfolk: 'Townsfolk',
+            outsider: 'Outsiders',
+            minion: 'Minions',
+            demon: 'Demons'
+        } %}
+        {% for team, name in teams %}
+        <fieldset class="sidebar character-select__group" data-team="{{ team }}">
+            <legend class="sr-only">{{ name }}</legend>
+            <div class="sidebar__side character-select__score">
+                <div class="sidebar__side-content character-select__heading">
+                    <div class="character-select__title" aria-hidden="true">{{ name }}</div>
+                    <div class="character-select__score-box">
+                        <span class="js--character-select--count">0</span>-<span class="js--character-select--total"></span>
+                    </div>
                 </div>
             </div>
-            {# This should allow a couple of tokens to appear next to each other #}
-            <div class="character-select__characters js--character-select--list"></div>
+            <div class="sidebar__body character-select__characters js--character-select--list"></div>
         </fieldset>
-        <fieldset class="character-select__group" data-team="outsider">
-            <legend class="character-select__title">Outsiders</legend>
-            <div class="character-select__score">
-                <div class="character-select__score-box">
-                    <span class="js--character-select--count">0</span> / <span class="js--character-select--total"></span>
-                </div>
-            </div>
-            <div class="character-select__characters js--character-select--list"></div>
-        </fieldset>
-        <fieldset class="character-select__group" data-team="minion">
-            <legend class="character-select__title">Minions</legend>
-            <div class="character-select__score">
-                <div class="character-select__score-box">
-                    <span class="js--character-select--count">0</span> / <span class="js--character-select--total"></span>
-                </div>
-            </div>
-            <div class="character-select__characters js--character-select--list"></div>
-        </fieldset>
-        <fieldset class="character-select__group" data-team="demon">
-            <legend class="character-select__title">Demons</legend>
-            <div class="character-select__score">
-                <div class="character-select__score-box">
-                    <span class="js--character-select--count">0</span> / <span class="js--character-select--total"></span>
-                </div>
-            </div>
-            <div class="character-select__characters js--character-select--list"></div>
-        </fieldset>
+        {% endfor %}
 
         {# This should take show the "player token select" dialog #}
-        <button type="submit" id="player-select" disabled>Select</button>
+        <button type="submit" class="button" id="player-select" disabled>Select</button>
 
     </form>
     {% endblock %}
@@ -91,8 +73,9 @@
 
 <template id="character-select-template">
     <label class="character-select__character js--character-select--label" for="">
-        <input type="checkbox" name="character" value="" class="character-select__input js--character-select--input">
-        <img src="" alt="" aria-hidden="true" class="character-select__image js--character-select--image" loading="lazy">
-        <span class="character-select__name js--character-select--name"></span>
+        <input type="checkbox" name="character" value="" class="sr-only character-select__input js--character-select--input">
+        <img src="" alt="" aria-hidden="true" class="character-select__part character-select__part--image js--character-select--image" loading="lazy">
+        <span class="character-select__part character-select__part--name js--character-select--name"></span>
+        <span class="character-select__part character-select__part--ability js--character-select--ability"></span>
     </label>
 </template>

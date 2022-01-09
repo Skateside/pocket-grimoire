@@ -65,7 +65,9 @@ gameObserver.on("characters-selected", ({ detail: characters }) => {
             id,
             team,
             image,
-            name
+            name,
+            ability,
+            setup
         }) => {
 
             if (team !== wrapperTeam) {
@@ -76,12 +78,18 @@ gameObserver.on("characters-selected", ({ detail: characters }) => {
             const label = clone.querySelector(".js--character-select--label");
             const input = clone.querySelector(".js--character-select--input");
             const img = clone.querySelector(".js--character-select--image");
-            const text = clone.querySelector(".js--character-select--name");
+            const nameText = clone.querySelector(".js--character-select--name");
+            const abilityText = clone.querySelector(".js--character-select--ability");
 
             label.htmlFor = identify(input);
             input.value = id;
             img.src = image;
-            text.textContent = name;
+            nameText.textContent = name;
+            abilityText.textContent = ability;
+
+            if (setup) {
+                nameText.classList.add("is-setup");
+            }
 
             frag.append(clone);
 
@@ -358,6 +366,7 @@ class CharacterDialog extends Dialog {
         this.buttonShroud = lookupOneCached("#character-shroud-toggle");
         this.buttonRemove = lookupOneCached("#character-remove");
         this.tokenWrapper = lookupOneCached("#character-show-token");
+        this.nameText = lookupOneCached("#character-show-name");
         this.abilityText = lookupOneCached("#character-show-ability");
 
         this.buttonShroud.addEventListener("click", () => {
@@ -373,6 +382,7 @@ class CharacterDialog extends Dialog {
             this.buttonShroud.disabled = true;
             this.buttonRemove.disabled = true;
             this.tokenWrapper.innerHTML = "";
+            this.nameText.textContent = "";
             this.abilityText.textContent = "";
 
         });
@@ -392,6 +402,7 @@ class CharacterDialog extends Dialog {
         clone.removeAttribute("data-other-nights");
         clone.classList.remove("is-dead");
         this.tokenWrapper.append(clone);
+        this.nameText.textContent = tokenData.data.name;
         this.abilityText.textContent = tokenData.data.ability;
 
         this.buttonShroud.disabled = false;

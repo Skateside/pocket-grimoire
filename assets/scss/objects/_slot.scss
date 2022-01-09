@@ -8,7 +8,10 @@
 
     > * {
         margin: 0;
-        width: calc((100% / var(--columns)) - (var(--gap) * ((var(--columns) - 1) / var(--columns))));
+        width: calc(
+            (100% / var(--columns))
+            - (var(--gap) * ((var(--columns) - 1) / var(--columns)))
+        );
     }
 }
 
