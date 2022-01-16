@@ -25,7 +25,8 @@ const ENTRY_POINTS = {
     ],
     scss: [
         "./assets/scss/main.scss",
-        "./assets/scss/list.scss"
+        "./assets/scss/list.scss",
+        "./assets/scss/dialog.scss"
     ],
     twig: [
         "./templates/pages/**/*.twig"

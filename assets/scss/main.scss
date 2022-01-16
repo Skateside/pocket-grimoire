@@ -3,7 +3,6 @@
 @import "./base/fonts";
 @import "./base/root";
 @import "./base/elements";
-@import "./base/dialog";
 
 @import "./objects/slot";
 @import "./objects/no-btn";
@@ -26,5 +25,22 @@
 @import "./components/character-show";
 @import "./components/sidebar";
 @import "./components/character-select";
+
+.character-choice {
+    @extend %no-btn;
+    width: 100%;
+
+    &[disabled] {
+        opacity: 0.5;
+        filter: grayscale(1) brightness(0.7)
+    }
+}
+
+.character__unknown {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3em;
+}
 
 @import "./overrides/margin";

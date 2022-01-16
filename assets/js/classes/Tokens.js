@@ -325,10 +325,10 @@ export default class Tokens {
             clientY,
             targetTouches
         } = event;
-        const {
-            width,
-            height
-        } = element.getBoundingClientRect();
+        // const {
+        //     width,
+        //     height
+        // } = element.getBoundingClientRect();
         let leftValue = 0;
         let topValue = 0;
 
@@ -345,14 +345,38 @@ export default class Tokens {
 
         }
 
+        this.moveTo(element, leftValue, topValue);
+
+        // element.style.setProperty(
+        //     "--left",
+        //     clamp(0, leftValue, this.padWidth - width)
+        // );
+        // element.style.setProperty(
+        //     "--top",
+        //     clamp(0, topValue, this.padHeight - height)
+        // );
+
+    }
+
+    moveTo(element, left, top, includeZIndex = false) {
+
+        const {
+            width,
+            height
+        } = element.getBoundingClientRect();
+
         element.style.setProperty(
             "--left",
-            clamp(0, leftValue, this.padWidth - width)
+            clamp(0, left, this.padWidth - width)
         );
         element.style.setProperty(
             "--top",
-            clamp(0, topValue, this.padHeight - height)
+            clamp(0, top, this.padHeight - height)
         );
+
+        if (includeZIndex) {
+            element.style.setProperty("--z-index", this.getNextZIndex());
+        }
 
     }
 

@@ -10,6 +10,9 @@ import {
     lookupOneCached,
     identify
 } from "./utils/elements.js";
+import {
+    shuffle
+} from "./utils/arrays.js";
 import qrcode from "./lib/qrcode.js";
 
 lookupCached("[data-dialog]").forEach((trigger) => {
@@ -172,7 +175,57 @@ gameObserver.on("characters-selected", ({ detail }) => {
 });
 
 
+lookupOne("#player-select").addEventListener("submit", (e) => {
 
+    e.preventDefault();
+    lookupOneCached("#character-choice-wrapper").innerHTML = "";
+
+    shuffle(
+        lookup("input:checked", e.target).reduce((chars, { value }) => {
+            chars.push(value);
+            return chars;
+        }, [])
+    ).forEach((id) => {
+
+        const template = lookupOneCached("#character-choice-template")
+            .content
+            .cloneNode(true);
+
+        lookupOne("[data-id]", template).dataset.id = id;
+        lookupOneCached("#character-choice-wrapper").append(template);
+
+    });
+
+    Dialog.create(e.target.closest(".dialog")).hide();
+    Dialog.create(lookupOneCached("#character-choice")).show();
+
+});
+
+lookupOneCached("#character-choice").addEventListener("click", (e) => {
+
+    const button = e.target.closest("[data-id]");
+
+    if (!button || button.disabled) {
+        return;
+    }
+
+    const {
+        id
+    } = button.dataset;
+
+    characterData.get(id).then((character) => {
+
+        if (!character) {
+            throw new ReferenceError(`Unable to find the "${id}" character.`);
+        }
+
+window.alert(`You are the ${character.name}.`);
+        button.disabled = true;
+        gameObserver.trigger("player-selected-character", { character });
+
+    });
+
+});
 
 
 const gameData = GameData.create();
@@ -254,15 +307,8 @@ function drawCharacter({
 
 }
 
-lookupOneCached("#character-list__list").addEventListener("click", ({ target }) => {
+function addCharacter(character) {
 
-    const button = target.closest("[data-id]");
-
-    if (!button) {
-        return;
-    }
-
-    const character = JSON.parse(button.dataset.character);
     const tokenTemplate = lookupOneCached("#token-template").content.cloneNode(true);
     const wrapper = tokenTemplate.querySelector(".js--token--wrapper");
     wrapper.dataset.id = character.id;
@@ -276,6 +322,17 @@ lookupOneCached("#character-list__list").addEventListener("click", ({ target }) 
         element: wrapper
     });
 
+}
+
+lookupOneCached("#character-list__list").addEventListener("click", ({ target }) => {
+
+    const button = target.closest("[data-character]");
+
+    if (!button) {
+        return;
+    }
+
+    addCharacter(JSON.parse(button.dataset.character));
     Dialog.create(button.closest(".dialog")).hide();
 
 });

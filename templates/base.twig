@@ -36,6 +36,11 @@ also allowing developers to create a unique title if they need to.
 <script>
 if (!("showModal" in document.createElement("dialog"))) {
 
+    const link = document.createElement("link");
+    link.rel = "stylesheet";
+    link.href = "./assets/css/dialog.css";
+    document.head.append(link);
+
     const script = document.createElement("script");
     script.src = "./assets/js/dialog.js";
     document.body.append(script);

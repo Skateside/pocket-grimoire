@@ -35,7 +35,7 @@
     title: 'Select Characters'
 } %}
     {% block body %}
-    <form>
+    <form id="player-select">
 
         <div class="character-select__players">
             <label for="player-count" class="character-select__label">Number of players</label>
@@ -65,9 +65,41 @@
         {% endfor %}
 
         {# This should take show the "player token select" dialog #}
-        <button type="submit" class="button" id="player-select" disabled>Select</button>
+        <button type="submit" class="button">Select</button>
 
     </form>
+    {% endblock %}
+{% endembed %}
+
+{% embed '../includes/dialog.twig' with {
+    id: 'character-choice',
+    background: 'hide',
+    title: 'Select Your Character'
+} %}
+    {% block body %}
+    <p>Tap one of the lit tokens to choose your character. Darker ones have already been chosen.</p>
+    <div id="character-choice-wrapper" class="slot slot--3">
+    </div>
+    {% endblock %}
+{% endembed %}
+
+<template id="character-choice-template">
+    <div>
+        <button type="button" data-id="" class="character-choice">
+            <span class="character"></span>
+        </button>
+    </div>
+</template>
+
+{% embed '../includes/dialog.twig' with {
+    id: 'character-decision',
+    background: 'hide',
+    title: 'Remember Your Character'
+} %}
+    {% block body %}
+    <div id="character-decision-wrapper">
+    </div>
+    <p><button type="button" class="button" data-dialog-hide>OK</button></p>
     {% endblock %}
 {% endembed %}
 
