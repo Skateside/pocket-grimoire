@@ -9,7 +9,7 @@ export default class CharacterData extends CachedData {
      * @inheritDoc
      */
     static create() {
-        return new this("/assets/data/characters.json");
+        return new this("./assets/data/characters.json");
     }
 
     /**

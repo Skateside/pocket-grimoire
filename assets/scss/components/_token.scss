@@ -18,6 +18,7 @@
     left: calc(var(--left) * 1px);
     top: calc(var(--top) * 1px);
     z-index: var(--z-index);
+    touch-action: none;
 
     &[data-token="character"] {
         width: clamp(60px, 100vw / 6, 150px);

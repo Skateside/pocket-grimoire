@@ -9,7 +9,7 @@ export default class GameData extends CachedData {
      * @inheritDoc
      */
     static create() {
-        return new this("/assets/data/game.json");
+        return new this("./assets/data/game.json");
     }
 
     /**
