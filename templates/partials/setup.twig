@@ -7,9 +7,9 @@
         <li><button type="button" class="button" id="select-edition" data-dialog="#edition-list">Select Edition</button></li>
         <li><button type="button" class="button" id="select-characters" data-dialog="#character-select" disabled>Select Characters</button></li>
         {# Show a QR code for the characters in this game: #}
-        <li><button type="button" class="button" id="qr-code" disabled>QR Code</button></li>
+        <li><button type="button" class="button" id="qr-code-button" data-dialog="#qr-code-dialog" disabled>QR Code</button></li>
         {# Clear the localStorage (and refresh the page) to get more up-to-date data: #}
-        <li><button type="button" class="button" id="reset" disabled>Clear saved data</button></li>
+        <li><button type="button" class="button" id="reset" disabled>Clear cache</button></li>
     </ul>
     {% endblock %}
 {% endembed %}
@@ -79,3 +79,15 @@
         <span class="character-select__part character-select__part--ability js--character-select--ability"></span>
     </label>
 </template>
+
+{% embed '../includes/dialog.twig' with {
+    id: 'qr-code-dialog',
+    background: 'hide',
+    title: 'Get the character list'
+} %}
+    {% block body %}
+        <a href="" target="_blank" rel="noopener noreferrer" id="qr-code-link">
+            <span id="qr-code"></span>
+        </a>
+    {% endblock %}
+{% endembed %}

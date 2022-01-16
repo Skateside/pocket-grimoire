@@ -30,13 +30,6 @@
 
 .night-order__icon {
     width: 2em;
-
-    @at-root {
-        .is-playing #{&} {
-            background-image: radial-gradient(rgb(255 255 255 / 60%), transparent 50%);
-            filter: drop-shadow(0 0 0.1em white);
-        }
-    }
 }
 
 .night-order__role {

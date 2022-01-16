@@ -21,10 +21,10 @@
     touch-action: none;
 
     &[data-token="character"] {
-        width: clamp(60px, 100vw / 6, 150px);
+        width: clamp(70px, 100vw / 6, 150px);
     }
 
     &[data-token="reminder"] {
-        width: clamp(45px, 100vw / 9, 125px);
+        width: clamp(55px, 100vw / 9, 125px);
     }
 }
