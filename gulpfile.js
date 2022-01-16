@@ -17,7 +17,8 @@ const htmlmin       = require("gulp-htmlmin");
 const ENTRY_POINTS = {
     js: [
         "./assets/js/main.js",
-        "./assets/js/list.js"
+        "./assets/js/list.js",
+        "./assets/js/dialog.js",
     ],
     data: [
         "./assets/data/**/*.json"
