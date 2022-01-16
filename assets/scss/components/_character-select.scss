@@ -32,6 +32,10 @@
     display: inline-block;
 }
 
+.character-select__score-box {
+    margin-top: 1em;
+}
+
 .character-select__characters {
     @extend %slot;
     --columns: 2;
