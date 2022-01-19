@@ -39,9 +39,12 @@
 
         <div class="character-select__players">
             <label for="player-count" class="character-select__label">Number of players</label>
-            <input type="range" min="5" max="20" step="1" value="7" name="player-count" id="player-count" class="character-select__range">
+            {# TODO: travellers, so that the max can go up to 20 again #}
+            <input type="range" min="5" max="15" step="1" value="7" name="player-count" id="player-count" class="character-select__range">
             <output id="player-count-output" class="character-select__output">7</output>
         </div>
+
+        <p><button type="button" class="button" id="player-select-random">Highlight random</button></p>
 
         {% set teams = {
             townsfolk: 'Townsfolk',
@@ -86,7 +89,9 @@
 <template id="character-choice-template">
     <div>
         <button type="button" data-id="" class="character-choice">
-            <span class="character"></span>
+            <span class="character">
+                <span class="character__unknown js--character-choice--number"></span>
+            </span>
         </button>
     </div>
 </template>

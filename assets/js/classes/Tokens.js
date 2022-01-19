@@ -130,12 +130,22 @@ export default class Tokens {
     }
 
     /**
+     * Exposes {@link Tokens#zIndex}.
+     *
+     * @return {Number}
+     *         The current value of {@link Tokens#zIndex}.
+     */
+    getZIndex() {
+        return this.zIndex;
+    }
+
+    /**
      * Increases {@link Tokens#zIndex} before returning it.
      *
      * @return {Number}
      *         The next value of {@link Tokens#zIndex}.
      */
-    getNextZIndex() {
+    advanceZIndex() {
 
         this.zIndex += 1;
 
@@ -202,7 +212,7 @@ export default class Tokens {
         }
 
         this.startDrag(token, e);
-        token.style.setProperty("--z-index", this.getNextZIndex());
+        token.style.setProperty("--z-index", this.advanceZIndex());
 
     }
 
@@ -325,10 +335,10 @@ export default class Tokens {
             clientY,
             targetTouches
         } = event;
-        // const {
-        //     width,
-        //     height
-        // } = element.getBoundingClientRect();
+        const {
+            width,
+            height
+        } = element.getBoundingClientRect();
         let leftValue = 0;
         let topValue = 0;
 
@@ -345,7 +355,12 @@ export default class Tokens {
 
         }
 
-        this.moveTo(element, leftValue, topValue);
+        // this.moveTo(element, leftValue, topValue);
+        this.moveTo(
+            element,
+            clamp(0, leftValue, this.padWidth - width),
+            clamp(0, topValue, this.padHeight - height)
+        );
 
         // element.style.setProperty(
         //     "--left",
@@ -358,24 +373,13 @@ export default class Tokens {
 
     }
 
-    moveTo(element, left, top, includeZIndex = false) {
+    moveTo(element, left, top, zIndex) {
 
-        const {
-            width,
-            height
-        } = element.getBoundingClientRect();
+        element.style.setProperty("--left", left);
+        element.style.setProperty("--top", top);
 
-        element.style.setProperty(
-            "--left",
-            clamp(0, left, this.padWidth - width)
-        );
-        element.style.setProperty(
-            "--top",
-            clamp(0, top, this.padHeight - height)
-        );
-
-        if (includeZIndex) {
-            element.style.setProperty("--z-index", this.getNextZIndex());
+        if (typeof zIndex === "number" && !Number.isNaN(zIndex)) {
+            element.style.setProperty("--z-index", zIndex);
         }
 
     }

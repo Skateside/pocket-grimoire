@@ -28,6 +28,7 @@
 
 .character-choice {
     @extend %no-btn;
+    display: block;
     width: 100%;
 
     &[disabled] {
@@ -41,6 +42,12 @@
     align-items: center;
     justify-content: center;
     font-size: 3em;
+
+    @at-root {
+        [disabled] #{&} {
+            display: none;
+        }
+    }
 }
 
 @import "./overrides/margin";

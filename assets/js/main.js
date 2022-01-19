@@ -185,19 +185,58 @@ lookupOne("#player-select").addEventListener("submit", (e) => {
             chars.push(value);
             return chars;
         }, [])
-    ).forEach((id) => {
+    ).forEach((id, i) => {
 
         const template = lookupOneCached("#character-choice-template")
             .content
             .cloneNode(true);
 
         lookupOne("[data-id]", template).dataset.id = id;
+        lookupOne(".js--character-choice--number", template).textContent = i + 1;
         lookupOneCached("#character-choice-wrapper").append(template);
 
     });
 
     Dialog.create(e.target.closest(".dialog")).hide();
     Dialog.create(lookupOneCached("#character-choice")).show();
+
+});
+
+lookupOne("#player-select-random").addEventListener("click", () => {
+
+    gameData.getRow(playerCount.value).then((data) => {
+
+        Object.entries(data).forEach(([team, count]) => {
+
+            const inputs = lookup(`[data-team="${team}"] [name="character"]`);
+
+            if (!inputs.length) {
+                return;
+            }
+
+            const ids = shuffle(inputs.map(({ value }) => value))
+                .slice(0, count);
+
+            inputs.forEach((input) => {
+
+                const isChecked = input.checked;
+
+                input.checked = ids.includes(input.value);
+
+                if (input.checked !== isChecked) {
+
+                    input.dispatchEvent(new Event("change", {
+                        bubbles: true
+                    }));
+
+                }
+
+            });
+
+
+        });
+
+    });
 
 });
 
@@ -243,7 +282,7 @@ function setTotals() {
 
         });
 
-    })
+    });
 
 }
 
@@ -307,14 +346,23 @@ function drawCharacter({
 
 }
 
-function addCharacter(character) {
+function drawWrappedCharacter(character) {
 
     const tokenTemplate = lookupOneCached("#token-template").content.cloneNode(true);
     const wrapper = tokenTemplate.querySelector(".js--token--wrapper");
+
     wrapper.dataset.id = character.id;
     wrapper.dataset.token = "character";
     wrapper.dataset.character = JSON.stringify(character);
     wrapper.append(drawCharacter(character));
+
+    return wrapper;
+
+}
+
+function addCharacter(character) {
+
+    const wrapper = drawWrappedCharacter(character);
 
     lookupOneCached(".pad").append(wrapper);
     tokenObserver.trigger("character-added", {
@@ -322,7 +370,30 @@ function addCharacter(character) {
         element: wrapper
     });
 
+    return wrapper;
+
 }
+
+gameObserver.on("player-selected-character", ({ detail }) => {
+
+    const {
+        character
+    } = detail;
+    const {
+        tokens
+    } = lookupOneCached(".pad")
+
+    if (!tokens) {
+        return;
+    }
+
+    const added = addCharacter(character);
+    const zIndex = tokens.advanceZIndex();
+    const offset = 15;
+
+    tokens.moveTo(added, offset * zIndex, offset, zIndex);
+
+});
 
 lookupOneCached("#character-list__list").addEventListener("click", ({ target }) => {
 
