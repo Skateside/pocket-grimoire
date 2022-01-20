@@ -7,7 +7,7 @@
         <li><button type="button" class="button" id="select-edition" data-dialog="#edition-list">Select Edition</button></li>
         <li><button type="button" class="button" id="select-characters" data-dialog="#character-select" disabled>Select Characters</button></li>
         {# Show a QR code for the characters in this game: #}
-        <li><button type="button" class="button" id="qr-code-button" data-dialog="#qr-code-dialog" disabled>QR Code</button></li>
+        <li><button type="button" class="button" id="qr-code-button" data-dialog="#qr-code-dialog" disabled>Character Sheet</button></li>
         {# Clear the localStorage (and refresh the page) to get more up-to-date data: #}
         <li><button type="button" class="button" id="reset" disabled>Clear cache</button></li>
     </ul>
@@ -67,8 +67,7 @@
         </fieldset>
         {% endfor %}
 
-        {# This should take show the "player token select" dialog #}
-        <button type="submit" class="button">Select</button>
+        <button type="submit" class="button">Draw Characters</button>
 
     </form>
     {% endblock %}
@@ -120,9 +119,10 @@
 {% embed '../includes/dialog.twig' with {
     id: 'qr-code-dialog',
     background: 'hide',
-    title: 'Get the character list'
+    title: 'Character sheet'
 } %}
     {% block body %}
+        <p>Scan this QR code to see the character sheet.</p>
         <a href="" target="_blank" rel="noopener noreferrer" id="qr-code-link">
             <span id="qr-code"></span>
         </a>

@@ -34,18 +34,23 @@ also allowing developers to create a unique title if they need to.
 {# <script src="./assets/js/main.js"></script> #}
 {% block javascript %}{% endblock %}
 <script>
-if (!("showModal" in document.createElement("dialog"))) {
+// This needs to be written in ES5 so that the HTML minifier can minify it.
+(function (isDialogSupported, doc, link, script) {
 
-    const link = document.createElement("link");
+    if (isDialogSupported) {
+        return;
+    }
+
+    link = doc.createElement("link");
     link.rel = "stylesheet";
     link.href = "./assets/css/dialog.css";
-    document.head.append(link);
+    doc.head.append(link);
 
-    const script = document.createElement("script");
+    script = doc.createElement("script");
     script.src = "./assets/js/dialog.js";
-    document.body.append(script);
+    doc.body.append(script);
 
-}
+}("showModal" in document.createElement("dialog"), document));
 </script>
 
 </body>

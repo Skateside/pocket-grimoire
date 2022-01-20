@@ -409,7 +409,7 @@ lookupOneCached("#character-list__list").addEventListener("click", ({ target }) 
 });
 
 const pad = lookupOneCached(".pad");
-pad.tokens = new Tokens(pad);
+pad.tokens = new Tokens(pad, tokenObserver);
 
 // If the elements are within a closed <details> element then their height and
 // width will be 0. Listen for the pad becoming visible and update the class.

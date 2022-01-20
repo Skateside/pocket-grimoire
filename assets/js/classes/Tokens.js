@@ -1,4 +1,4 @@
-import Observer from "./Observer.js";
+// import Observer from "./Observer.js";
 import {
     clamp
 } from "../utils/numbers.js";
@@ -7,7 +7,7 @@ import {
     rafThrottle
 } from "../utils/functions.js";
 
-const tokenObserver = Observer.create("token");
+// const tokenObserver = Observer.create("token");
 
 /**
  * Handles the tokens being draggable.
@@ -17,14 +17,22 @@ export default class Tokens {
     /**
      * @param {Element} pad
      *        The pad that the tokens are dragged around within.
+     * @param {Observer} observer
+     *        An observer that triggers events at key times.
      */
-    constructor(pad) {
+    constructor(pad, observer) {
 
         /**
          * The pad that thte tokens are in.
          * @type {Element}
          */
         this.pad = pad;
+
+        /**
+         * An observer that triggers events at key times.
+         * @type {Observer}
+         */
+        this.observer = observer;
 
         this.reset();
         this.updatePadDimensions();
@@ -212,7 +220,13 @@ export default class Tokens {
         }
 
         this.startDrag(token, e);
-        token.style.setProperty("--z-index", this.advanceZIndex());
+
+        const zIndex = this.advanceZIndex();
+        token.style.setProperty("--z-index", zIndex);
+
+        this.observer.trigger("zindex", {
+            zIndex
+        });
 
     }
 
@@ -244,7 +258,7 @@ export default class Tokens {
         const tokenType = type.dataset.token;
 
         // character-click or reminder-click event.
-        tokenObserver.trigger(`${tokenType}-click`, {
+        this.observer.trigger(`${tokenType}-click`, {
             element: type,
             data: JSON.parse(type.dataset[tokenType])
         });
@@ -325,9 +339,10 @@ export default class Tokens {
         // Sometimes attempting to drag a token will scroll the page. I'm not
         // sure why that happens, but this check is designed to prevent errors
         // being thrown when it does.
-        if (event.cancelable) {
+        // Commented out the check because I _think_ that I fixed this bug.
+        // if (event.cancelable) {
             event.preventDefault();
-        }
+        // }
 
         const {
             type,
@@ -355,21 +370,11 @@ export default class Tokens {
 
         }
 
-        // this.moveTo(element, leftValue, topValue);
         this.moveTo(
             element,
             clamp(0, leftValue, this.padWidth - width),
             clamp(0, topValue, this.padHeight - height)
         );
-
-        // element.style.setProperty(
-        //     "--left",
-        //     clamp(0, leftValue, this.padWidth - width)
-        // );
-        // element.style.setProperty(
-        //     "--top",
-        //     clamp(0, topValue, this.padHeight - height)
-        // );
 
     }
 
@@ -380,7 +385,16 @@ export default class Tokens {
 
         if (typeof zIndex === "number" && !Number.isNaN(zIndex)) {
             element.style.setProperty("--z-index", zIndex);
+        } else {
+            zIndex = this.zIndex;
         }
+
+        this.observer.trigger("move", {
+            element,
+            left,
+            top,
+            zIndex
+        });
 
     }
 

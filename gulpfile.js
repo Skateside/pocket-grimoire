@@ -215,7 +215,8 @@ gulp.task("pages", () => {
                 collapseWhitespace: true,
                 collapseBooleanAttributes: true,
                 removeAttributeQuotes: true,
-                removeComments: true
+                removeComments: true,
+                minifyJS: true
             })
             : noop()
         )

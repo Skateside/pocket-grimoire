@@ -9,6 +9,10 @@
     }
 }
 
+.edition.is-empty {
+    display: none;
+}
+
 @media (min-width: 1024px) {
     .edition__team {
         display: flex;
@@ -104,13 +108,13 @@
     box-shadow: inset 0 0 0.5em #8a4d0f;
 
     &::before {
-        content: "+";
+        content: "▸";
         margin-right: 0.5em;
     }
 
     @at-root {
         [open] &::before {
-            content: "-";
+            content: "▾";
         }
     }
 }

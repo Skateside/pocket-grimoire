@@ -15,3 +15,116 @@ a {
 @import "./components/edition";
 @import "./components/button";
 @import "./components/dialog";
+
+@media print {
+
+    @page {
+        margin: 0.5cm 0.5cm 1cm;
+    }
+
+    html,
+    body {
+        font-size: 9pt;
+        margin: 0;
+    }
+
+    a[href] {
+        color: #000;
+        text-decoration: none;
+
+        &::after {
+            content: " (" attr(href) ")";
+        }
+    }
+
+    small {
+        font-size: 7pt;
+    }
+
+    p {
+        margin: 0;
+    }
+
+    footer {
+        position: fixed;
+        bottom: 0;
+    }
+
+    :last-child {
+        page-break-after: auto;
+    }
+
+    .body-list {
+        background-color: #fff;
+        background-image: none;
+    }
+
+    .title {
+        text-shadow: none;
+        font-size: 14pt;
+        color: #000;
+    }
+
+    .edition {
+        page-break-inside: avoid;
+    }
+
+    .edition > summary {
+        font-size: 12pt;
+        text-align: left;
+        color: #000;
+    }
+
+    .edition__heading-text {
+        border: none;
+        background-color: #fff;
+        margin: 0;
+        padding-left: 0;
+        box-shadow: none;
+
+        &::before {
+            display: none;
+        }
+    }
+
+    // .edition__team {
+    //     display: flex;
+    //     flex-flow: row wrap;
+    //     gap: 0 4pt;
+    // }
+    //
+    // .edition__role {
+    //     width: calc(50% - 2pt);
+    // }
+
+    .edition__role {
+        grid-template-areas: "token name ability";
+        grid-template-columns: 25pt 80pt 1fr;
+        grid-template-rows: -webkit-min-content;
+        grid-template-rows: min-content;
+        gap: 4pt;
+        padding: 2pt 0;
+        page-break-inside: avoid;
+    }
+
+    .edition__role + .edition__role {
+        border: none;
+    }
+
+    .edition__image {
+        width: 50pt;
+    }
+
+    .edition__name {
+        font-size: 10pt;
+    }
+
+    .edition__ability {
+        font-size: 9pt;
+    }
+
+    .button {
+        display: none;
+    }
+
+}
