@@ -9,7 +9,7 @@
         {# Show a QR code for the characters in this game: #}
         <li><button type="button" class="button" id="qr-code-button" data-dialog="#qr-code-dialog" disabled>Character Sheet</button></li>
         {# Clear the localStorage (and refresh the page) to get more up-to-date data: #}
-        <li><button type="button" class="button" id="reset" disabled>Clear cache</button></li>
+        <li><button type="button" class="button" id="reset" disabled>Clear Cache</button></li>
     </ul>
     {% endblock %}
 {% endembed %}
@@ -76,7 +76,8 @@
 {% embed '../includes/dialog.twig' with {
     id: 'character-choice',
     background: 'hide',
-    title: 'Select Your Character'
+    title: 'Select Your Character',
+    hideClickBackground: false
 } %}
     {% block body %}
     <p>Tap one of the lit tokens to choose your character. Darker ones have already been chosen.</p>
