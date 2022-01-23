@@ -259,8 +259,7 @@ export default class Tokens {
 
         // character-click or reminder-click event.
         this.observer.trigger(`${tokenType}-click`, {
-            element: type,
-            data: JSON.parse(type.dataset[tokenType])
+            element: type
         });
 
     }

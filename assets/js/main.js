@@ -1,5 +1,6 @@
 import Observer from "./classes/Observer.js";
 import Dialog from "./classes/Dialog.js";
+import Tokens from "./classes/Tokens.js";
 import {
     lookup,
     lookupOne,
@@ -41,6 +42,10 @@ export default class Template {
 
     static setSrc(element, content) {
         element.src = content;
+    }
+
+    static append(element, content) {
+        element.append(content);
     }
 
     constructor(template) {
@@ -117,7 +122,13 @@ class Token {
     }
 
     getData(key) {
+
+        if (!Object.prototype.hasOwnProperty.call(this.data, key)) {
+            throw new ReferenceError(`Unrecognised property "${key}"`);
+        }
+
         return this.data[key];
+
     }
 
 }
@@ -134,6 +145,22 @@ class CharacterToken extends Token {
 
     getReminders() {
         return this.reminders || [];
+    }
+
+    toggleDead(state) {
+
+        if (state === undefined) {
+            state = !this.isDead;
+        }
+
+        this.isDead = state;
+
+        return this.getIsDead();
+
+    }
+
+    getIsDead() {
+        return Boolean(this.isDead);
     }
 
     draw() {
@@ -228,6 +255,7 @@ class CharacterToken extends Token {
         // #night-info-template
 
         const {
+            id,
             name,
             image,
             firstNightReminder,
@@ -235,6 +263,11 @@ class CharacterToken extends Token {
         } = this.data;
 
         return this.constructor.templates.nightOrder.draw([
+            [
+                ".js--night-info--wrapper",
+                id,
+                (element, content) => element.dataset.id = content
+            ],
             [
                 ".js--night-info--icon",
                 image,
@@ -319,6 +352,10 @@ class TokenStore {
         return this.promise;
     }
 
+    static ready(handler) {
+        return this.get().then(handler);
+    }
+
     constructor(data) {
 
         this.data = data;
@@ -359,11 +396,18 @@ class TokenStore {
 
         const {
             id,
-            text
+            text,
+            image
         } = data;
-        const reminder = new ReminderToken(data);
+        const reminderId = `${id}: ${text}`;
+        const reminder = new ReminderToken({
+            text,
+            image,
+            id: reminderId,
+            characterId: id
+        });
 
-        this.reminders[`${id}__${text}`] = reminder;
+        this.reminders[reminderId] = reminder;
 
         return reminder;
 
@@ -381,16 +425,12 @@ class TokenStore {
 
     }
 
-    getReminder(id, text) {
+    getReminder(id) {
 
-        const reminder = this.reminders[`${id}__${text}`];
+        const reminder = this.reminders[id];
 
         if (!reminder) {
-
-            throw new ReferenceError(
-                `Unable to find the "${text}" reminder for the "${id}" character`
-            );
-
+            throw new ReferenceError(`Unable to find the "${id}" reminder`);
         }
 
         return reminder.clone();
@@ -401,35 +441,76 @@ class TokenStore {
 
 class Pad {
 
-    constructor(element, observer) {
-        this.element = element;
-        this.observer = observer;
-        this.characters = new Set();
-        this.reminders = new Set();
+    static get OFFSET() {
+        return 15;
     }
 
-    // setTokens(tokens) {
-    //     this.tokens = tokens;
-    // }
-    // setDragger(Dragger) {
-    //     this.dragger = new Dragger(this.element);
-    // }
+    constructor(element, observer) {
+
+        this.element = element;
+        this.observer = observer;
+        this.tokens = new Tokens(element, observer);
+        this.template = Template.create(lookupOne("#token-template"));
+
+        this.characters = [];
+        this.reminders = [];
+
+    }
 
     addCharacter(character) {
 
         const {
+            element,
             characters,
-            observer
+            observer,
+            template
         } = this;
 
-        if (characters.has(character)) {
-            return false;
-        }
+        element.append(
+            template.draw([
+                [
+                    ".js--token--wrapper",
+                    character.draw(),
+                    Template.append
+                ],
+                [
+                    ".js--token--wrapper",
+                    "character",
+                    (element, content) => element.dataset.token = content
+                ]
+            ])
+        );
 
-        characters.add(character);
-        observer.trigger("character-add", { character });
+        const token = element.lastElementChild;
+        const info = Object.freeze({
+            character,
+            token
+        });
 
-        return true;
+        characters.push(info);
+        observer.trigger("character-add", info);
+
+        return info;
+
+    }
+
+    addNewCharacter(character) {
+
+        const {
+            tokens,
+            characters
+        } = this;
+        const {
+            token
+        } = this.addCharacter(character);
+        const offset = this.constructor.OFFSET;
+
+        tokens.moveTo(
+            token,
+            characters.length * offset,
+            offset,
+            tokens.advanceZIndex()
+        );
 
     }
 
@@ -439,34 +520,100 @@ class Pad {
             characters,
             observer
         } = this;
+        const index = characters
+            .findIndex((info) => info.character === character);
 
-        if (!characters.has(character)) {
-            return false;
+        if (index < 0) {
+            return;
         }
 
-        characters.delete(character);
-        observer.trigger("character-remove", { character });
+        const {
+            token
+        } = characters[index];
 
-        return true;
+        token.remove();
+        characters.splice(index, 1);
+        observer.trigger("character-remove", {
+            character,
+            token
+        });
 
+    }
 
+    getCharacterByToken(token) {
+        return this.characters.find((info) => info.token === token)?.character;
+    }
+
+    removeCharacterByToken(token) {
+        this.removeCharacter(this.getCharacterByToken(token));
+    }
+
+    toggleDead(character) {
+
+        const {
+            characters,
+            observer
+        } = this;
+        const info = characters.find((info) => info.character === character);
+
+        if (!info) {
+            return;
+        }
+
+        const {
+            token
+        } = info;
+
+        const isDead = character.toggleDead();
+        lookupOneCached(".js--character--leaves", token)
+            .classList
+            .toggle("is-dead", isDead);
+        observer.trigger("shroud-toggle", {
+            isDead,
+            token,
+            character
+        });
+
+    }
+
+    toggleDeadByToken(token) {
+        this.toggleDead(this.getCharacterByToken(token));
     }
 
     addReminder(reminder) {
 
         const {
+            element,
             reminders,
-            observer
+            observer,
+            template
         } = this;
 
-        if (reminders.has(reminder)) {
-            return false;
-        }
+        element.append(
+            template.draw([
+                [
+                    ".js--token--wrapper",
+                    reminder.draw(),
+                    Template.append
+                ],
+                [
+                    ".js--token--wrapper",
+                    "reminder",
+                    (element, content) => element.dataset.token = content
+                ]
+            ])
+        );
 
-        reminders.add(reminder);
-        observer.trigger("reminder-add", { reminder });
+        const token = element.lastElementChild;
+        const info = Object.freeze({
+            reminder,
+            token
+        });
 
-        return true;
+        reminders.push(info);
+        observer.trigger("reminder-add", info);
+
+        return info;
 
     }
 
@@ -476,22 +623,42 @@ class Pad {
             reminders,
             observer
         } = this;
+        const index = reminders.findIndex((info) => info.reminder === reminder);
 
-        if (!reminders.has(reminder)) {
-            return false;
+        if (index < 0) {
+            return;
         }
 
-        reminders.delete(reminder);
-        observer.trigger("reminder-remove", { reminder });
+        const {
+            token
+        } = reminders[index];
 
-        return true;
+        token.remove();
+        reminders.splice(index, 1);
+        observer.trigger("reminder-remove", {
+            reminder,
+            token
+        });
 
+    }
+
+    getReminderByToken(token) {
+        return this.reminders.find((info) => info.token === token)?.reminder;
+    }
+
+    removeReminderByToken(token) {
+        this.removeReminder(this.getReminderByToken(token));
     }
 
     reset() {
 
-        this.characters.forEach((character) => this.removeCharacter(character));
-        this.reminders.forEach((reminder) => this.removeReminder(reminder));
+        this.characters.forEach(({ character }) => {
+            this.removeCharacter(character);
+        });
+        this.reminders.forEach(({ reminder }) => {
+            this.removeReminder(reminder);
+        });
+        this.tokens.reset();
 
     }
 
@@ -565,31 +732,31 @@ class Store {
 
     }
 
-    setCharacters(characters) {
-
-        this.data.characters = characters;
-        this.write();
-
-    }
-
-    updateTokenPosition(token, left, top) {
-
-        if (!this.tokens) {
-            this.tokens = [];
-        }
-
-        const index = this.tokens.indexOf(token) || this.tokens.length;
-
-        this.data.tokens[index] = [
-            {
-                type: "character|reminder",
-                content: "?"
-            },
-            left,
-            top
-        ];
-
-    }
+    // setCharacters(characters) {
+    //
+    //     this.data.characters = characters;
+    //     this.write();
+    //
+    // }
+    //
+    // updateTokenPosition(token, left, top) {
+    //
+    //     if (!this.tokens) {
+    //         this.tokens = [];
+    //     }
+    //
+    //     const index = this.tokens.indexOf(token) || this.tokens.length;
+    //
+    //     this.data.tokens[index] = [
+    //         {
+    //             type: "character|reminder",
+    //             content: "?"
+    //         },
+    //         left,
+    //         top
+    //     ];
+    //
+    // }
 
 }
 
@@ -662,11 +829,6 @@ const store = Store.create("pocket-grimoire");
 const gameObserver = Observer.create("game");
 const tokenObserver = Observer.create("token");
 
-// const pad = new Pad(
-//     lookupOne(".pad"),
-//     Observer.create("token")
-// );
-
 fetchFromStore("./assets/data/characters.json", store).then((characters) => {
     gameObserver.trigger("characters-loaded", { characters });
 });
@@ -692,6 +854,8 @@ lookupCached("[data-dialog]").forEach((trigger) => {
     trigger.dialog = Dialog.createFromTrigger(trigger);
 });
 
+// TODO: load data from the store.
+
 // "Select Edition" dialog.
 
 lookupOneCached("#edition-list").addEventListener("click", ({ target }) => {
@@ -707,7 +871,7 @@ lookupOneCached("#edition-list").addEventListener("click", ({ target }) => {
     } = button.dataset;
     const name = button.textContent.trim();
 
-    TokenStore.get().then(({ characters }) => {
+    TokenStore.ready(({ characters }) => {
 
         const filtered = Object
             .values(characters)
@@ -869,7 +1033,7 @@ lookupOne("#player-select").addEventListener("submit", (e) => {
 
     const ids = lookup(":checked", e.target).map(({ value }) => value);
 
-    TokenStore.get().then(({ characters }) => {
+    TokenStore.ready(({ characters }) => {
 
         const filtered = Object
             .values(characters)
@@ -953,7 +1117,7 @@ lookupOneCached("#character-choice").addEventListener("click", ({ target }) => {
         return;
     }
 
-    TokenStore.get().then((tokenStore) => {
+    TokenStore.ready((tokenStore) => {
 
         gameObserver.trigger("character-drawn", {
             element,
@@ -975,6 +1139,149 @@ gameObserver.on("character-drawn", ({ detail }) => {
 
 });
 
+// Grimoire.
+
+const pad = new Pad(lookupOne(".pad"), tokenObserver);
+
+gameObserver.on("characters-selected", ({ detail }) => {
+
+    const characterTemplate = Template.create(
+        lookupOneCached("#character-list-template")
+    );
+    const {
+        characters
+    } = detail;
+
+    replaceContentsMany(
+        lookupOneCached("#character-list__list"),
+        characters.map((character) => characterTemplate.draw([
+            [
+                ".js--character-list--button",
+                character.getId(),
+                (element, content) => element.dataset.tokenId = content
+            ],
+            [
+                ".js--character-list--token",
+                character.draw(),
+                Template.append
+            ]
+        ]))
+    );
+
+    const reminders = characters.reduce((reminders, character) => {
+        return reminders.concat(character.getReminders());
+    }, []);
+    const reminderTemplate = Template.create(
+        lookupOneCached("#reminder-list-template")
+    );
+
+    replaceContentsMany(
+        lookupOneCached("#reminder-list__list"),
+        reminders.map((reminder) => reminderTemplate.draw([
+            [
+                ".js--reminder-list--button",
+                reminder.getId(),
+                (element, content) => element.dataset.reminderId = content
+            ],
+            [
+                ".js--reminder-list--button",
+                reminder.draw(),
+                Template.append
+            ]
+        ]))
+    );
+
+});
+
+// TODO: populate reminders in "Add reminder" dialog.
+
+lookupOneCached("#character-list__list").addEventListener("click", ({ target }) => {
+
+    const button = target.closest("[data-token-id]");
+
+    if (!button) {
+        return;
+    }
+
+    TokenStore.ready((tokenStore) => {
+
+        pad.addCharacter(tokenStore.getCharacter(button.dataset.tokenId));
+        Dialog.create(lookupOneCached("#character-list")).hide();
+
+    });
+
+});
+
+lookupOneCached("#reminder-list__list").addEventListener("click", ({ target }) => {
+
+    const button = target.closest("[data-reminder-id]");
+
+    if (!button) {
+        return;
+    }
+
+    TokenStore.ready((tokenStore) => {
+
+        pad.addReminder(tokenStore.getReminder(button.dataset.reminderId));
+        Dialog.create(lookupOneCached("#reminder-list")).hide();
+
+    });
+
+});
+
+gameObserver.on("character-drawn", ({ detail }) => {
+    pad.addNewCharacter(detail.character);
+});
+
+tokenObserver.on("character-click", ({ detail }) => {
+
+    const {
+        element
+    } = detail;
+    const character = pad.getCharacterByToken(element);
+    const dialog = lookupOneCached("#character-show");
+    dialog.dataset.token = `#${identify(element)}`;
+
+    empty(lookupOneCached("#character-show-token")).append(character.draw());
+    lookupOneCached("#character-show-ability").textContent = character.getAbility();
+
+    Dialog.create(dialog).show();
+
+});
+
+lookupOne("#character-shroud-toggle").addEventListener("click", ({ target }) => {
+
+    pad.toggleDeadByToken(
+        lookupOne(target.closest("[data-token]").dataset.token)
+    );
+    Dialog.create(target.closest(".dialog")).hide();
+
+});
+
+lookupOne("#character-remove").addEventListener("click", ({ target }) => {
+
+    pad.removeCharacterByToken(
+        lookupOne(target.closest("[data-token]").dataset.token)
+    );
+    Dialog.create(target.closest(".dialog")).hide();
+
+});
+
+tokenObserver.on("reminder-click", ({ detail }) => {
+    pad.removeReminderByToken(detail.element);
+});
+
+lookupOne("#reset-height").addEventListener("click", () => {
+    lookupOneCached(".pad").style.height = "";
+});
+
+lookupOne("#clear-grimoire").addEventListener("click", () => {
+
+    if (window.confirm("Are you sure you want to clear all the tokens?")) {
+        pad.reset();
+    }
+
+});
 
 // Night Order.
 
@@ -1002,41 +1309,56 @@ gameObserver.on("characters-selected", ({ detail }) => {
 
 });
 
-// tokenObserver.on("character-added", ({ detail }) => {
-//
-//     const {
-//         id
-//     } = detail.data;
-//     const firstNight = lookupOne(`#first-night [data-id="${id}"]`);
-//     const otherNights = lookupOne(`#other-nights [data-id="${id}"]`);
-//
-//     if (firstNight) {
-//         firstNight.classList.add("is-playing");
-//     }
-//
-//     if (otherNights) {
-//         otherNights.classList.add("is-playing");
-//     }
-//
-// });
-//
-// tokenObserver.on("character-removed", ({ detail }) => {
-//
-//     const {
-//         id
-//     } = detail.data;
-//     const firstNight = lookupOne(`#first-night [data-id="${id}"]`);
-//     const otherNights = lookupOne(`#other-nights [data-id="${id}"]`);
-//
-//     if (firstNight) {
-//         firstNight.classList.remove("is-playing");
-//     }
-//
-//     if (otherNights) {
-//         otherNights.classList.remove("is-playing");
-//     }
-//
-// });
+tokenObserver.on("character-add", ({ detail }) => {
 
-// Debugging.
-TokenStore.get().then((tokenStore) => console.log({ tokenStore }));
+    const id = detail.character.getId();
+
+    const firstNight = lookupOne(`#first-night [data-id="${id}"]`);
+    const otherNights = lookupOne(`#other-nights [data-id="${id}"]`);
+
+    if (firstNight) {
+
+        firstNight.dataset.count = (Number(firstNight.dataset.count) || 0) + 1;
+        firstNight.classList.add("is-playing");
+
+    }
+
+    if (otherNights) {
+
+        otherNights.dataset.count = (Number(otherNights.dataset.count) || 0) + 1;
+        otherNights.classList.add("is-playing");
+
+    }
+
+});
+
+tokenObserver.on("character-remove", ({ detail }) => {
+
+    const id = detail.character.getId();
+
+    const firstNight = lookupOne(`#first-night [data-id="${id}"]`);
+    const otherNights = lookupOne(`#other-nights [data-id="${id}"]`);
+
+    if (firstNight) {
+
+        const count = (Number(firstNight.dataset.count) || 1) - 1;
+        firstNight.dataset.count = count;
+
+        if (count === 0) {
+            firstNight.classList.remove("is-playing");
+        }
+
+    }
+
+    if (otherNights) {
+
+        const count = (Number(otherNights.dataset.count) || 1) - 1;
+        otherNights.dataset.count = count;
+
+        if (count === 0) {
+            otherNights.classList.remove("is-playing");
+        }
+
+    }
+
+});
