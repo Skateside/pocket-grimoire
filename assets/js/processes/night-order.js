@@ -1,113 +1,87 @@
 import Observer from "../classes/Observer.js";
 import {
     lookupOne,
-    lookupOneCached
-} from "./utils/elements.js";
+    lookupOneCached,
+    replaceContentsMany
+} from "../utils/elements.js";
 
 const gameObserver = Observer.create("game");
 const tokenObserver = Observer.create("token");
 
+gameObserver.on("characters-selected", ({ detail }) => {
 
-function drawNightOrder({
-    id,
-    name,
-    image,
-    text
-}) {
+    const {
+        characters
+    } = detail;
 
-    const clone = lookupOneCached("#night-info-template").content.cloneNode(true);
+    replaceContentsMany(
+        lookupOneCached("#first-night"),
+        characters
+            .filter((character) => character.getFirstNight())
+            .sort((a, b) => a.getFirstNight() - b.getFirstNight())
+            .map((character) => character.drawNightOrder(true))
+    );
 
-    lookupOne(".js--night-info--wrapper", clone).dataset.id = id;
-    lookupOne(".js--night-info--icon", clone).src = image;
-    lookupOne(".js--night-info--role", clone).textContent = name;
-    lookupOne(".js--night-info--ability", clone).textContent = text;
-
-    return clone;
-
-}
-
-gameObserver.on("characters-selected", ({ detail: characters }) => {
-
-    const nights = [[], []];
-
-    characters.forEach(({
-        id,
-        name,
-        image,
-        firstNight,
-        firstNightReminder,
-        otherNight,
-        otherNightReminder
-    }) => {
-
-        const data = {
-            id,
-            name,
-            image,
-        };
-
-        if (firstNight) {
-
-            data.text = firstNightReminder;
-            nights[0][firstNight] = data;
-
-        }
-
-        if (otherNight) {
-
-            data.text = otherNightReminder;
-            nights[1][otherNight] = data;
-
-        }
-
-    });
-
-    const firstNight = lookupOneCached("#first-night")
-    firstNight.innerHTML = "";
-    nights[0].forEach((data) => {
-        firstNight.append(drawNightOrder(data));
-    });
-
-    const otherNights = lookupOneCached("#other-nights")
-    otherNights.innerHTML = "";
-    nights[1].forEach((data) => {
-        otherNights.append(drawNightOrder(data));
-    });
+    replaceContentsMany(
+        lookupOneCached("#other-nights"),
+        characters
+            .filter((character) => character.getOtherNight())
+            .sort((a, b) => a.getOtherNight() - b.getOtherNight())
+            .map((character) => character.drawNightOrder(false))
+    );
 
 });
 
-tokenObserver.on("character-added", ({ detail }) => {
+tokenObserver.on("character-add", ({ detail }) => {
 
-    const {
-        id
-    } = detail.data;
+    const id = detail.character.getId();
+
     const firstNight = lookupOne(`#first-night [data-id="${id}"]`);
     const otherNights = lookupOne(`#other-nights [data-id="${id}"]`);
 
     if (firstNight) {
+
+        firstNight.dataset.count = (Number(firstNight.dataset.count) || 0) + 1;
         firstNight.classList.add("is-playing");
+
     }
 
     if (otherNights) {
+
+        otherNights.dataset.count = (Number(otherNights.dataset.count) || 0) + 1;
         otherNights.classList.add("is-playing");
+
     }
 
 });
 
-tokenObserver.on("character-removed", ({ detail }) => {
+tokenObserver.on("character-remove", ({ detail }) => {
 
-    const {
-        id
-    } = detail.data;
+    const id = detail.character.getId();
+
     const firstNight = lookupOne(`#first-night [data-id="${id}"]`);
     const otherNights = lookupOne(`#other-nights [data-id="${id}"]`);
 
     if (firstNight) {
-        firstNight.classList.remove("is-playing");
+
+        const count = (Number(firstNight.dataset.count) || 1) - 1;
+        firstNight.dataset.count = count;
+
+        if (count === 0) {
+            firstNight.classList.remove("is-playing");
+        }
+
     }
 
     if (otherNights) {
-        otherNights.classList.remove("is-playing");
+
+        const count = (Number(otherNights.dataset.count) || 1) - 1;
+        otherNights.dataset.count = count;
+
+        if (count === 0) {
+            otherNights.classList.remove("is-playing");
+        }
+
     }
 
 });

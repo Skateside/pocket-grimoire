@@ -1,5 +1,7 @@
 import CachedData from "./CachedData.js";
 
+console.warn("GameData is deprecated. Use fetchFromStore instead");
+
 /**
  * A version of {@link CachedData} that loads the game setup data.
  */

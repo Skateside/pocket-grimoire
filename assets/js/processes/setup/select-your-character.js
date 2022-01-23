@@ -1,0 +1,69 @@
+import Observer from "../../classes/Observer.js";
+import Dialog from "../../classes/Dialog.js";
+import TokenStore from "../../classes/TokenStore.js";
+import Template from "../../classes/Template.js";
+import {
+    lookupOneCached,
+    replaceContentsMany
+} from "../../utils/elements.js";
+import {
+    shuffle
+} from "../../utils/arrays.js";
+
+const gameObserver = Observer.create("game");
+
+gameObserver.on("character-draw", ({ detail }) => {
+
+    const template = Template.create(
+        lookupOneCached("#character-choice-template")
+    );
+
+    replaceContentsMany(
+        lookupOneCached("#character-choice-wrapper"),
+        shuffle(detail.characters)
+            .map((character, i) => template.draw([
+                [
+                    "[data-id]",
+                    character.getId(),
+                    (element, content) => element.dataset.id = content
+                ],
+                [
+                    ".js--character-choice--number",
+                    i + 1
+                ]
+            ]))
+    );
+
+    Dialog.create(lookupOneCached("#character-choice")).show();
+
+});
+
+lookupOneCached("#character-choice").addEventListener("click", ({ target }) => {
+
+    const element = target.closest("[data-id]");
+
+    if (!element || element.disabled) {
+        return;
+    }
+
+    TokenStore.ready((tokenStore) => {
+
+        gameObserver.trigger("character-drawn", {
+            element,
+            character: tokenStore.getCharacter(element.dataset.id)
+        });
+
+    });
+
+});
+
+gameObserver.on("character-drawn", ({ detail }) => {
+    detail.element.disabled = true;
+});
+
+gameObserver.on("character-drawn", ({ detail }) => {
+
+    // TODO: do something better.
+    window.alert(`You are the ${detail.character.getName()}`);
+
+});

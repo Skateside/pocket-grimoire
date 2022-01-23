@@ -2,6 +2,8 @@ import {
     getCached
 } from "../utils/fetch.js";
 
+console.warn("CachedData is deprecated. Use fetchFromStore instead");
+
 /**
  * Gets data but caches it so that it can be quickly retrieved again.
  */

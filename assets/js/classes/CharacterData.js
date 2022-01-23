@@ -1,5 +1,7 @@
 import CachedData from "./CachedData.js";
 
+console.warn("CharacterData is deprecated. Use fetchFromStore instead");
+
 /**
  * A version of {@link CachedData} that gets character role information.
  */

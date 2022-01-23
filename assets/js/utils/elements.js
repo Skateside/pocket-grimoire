@@ -122,3 +122,57 @@ export function identify(element, prefix = "anonymous-element-") {
     return id;
 
 }
+
+/**
+ * Appends all the entries in the given list to the given target.
+ *
+ * @param  {Element} target
+ *         Element that should have all the entries appended to it.
+ * @param  {Array} list
+ *         Items that should be appended to the target.
+ * @return {Element}
+ *         The given target.
+ */
+export function appendMany(target, list) {
+
+    target.append(
+        list.reduce((fragment, item) => {
+
+            fragment.append(item);
+            return fragment;
+
+        }, document.createDocumentFragment())
+    );
+
+    return target;
+
+}
+
+/**
+ * Empties the given element before returning it.
+ *
+ * @param  {Element} element
+ *         Element that should be emptied.
+ * @return {Element}
+ *         Emptied element.
+ */
+export function empty(element) {
+    element.innerHTML = "";
+    return element;
+}
+
+/**
+ * Replaces the contents with all the items that have been given. This is a
+ * combination of {@link empty} and {@link appendMany}.
+ *
+ * @param  {Element} target
+ *         Element that should have all the entries appended to it after it's
+ *         been emptied.
+ * @param  {Array} list
+ *         Items that should be appended to the target.
+ * @return {Element}
+ *         The given target.
+ */
+export function replaceContentsMany(target, list) {
+    return appendMany(empty(target), list);
+}
