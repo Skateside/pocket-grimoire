@@ -219,7 +219,7 @@ export default class Pad {
         } = info;
 
         const isDead = character.toggleDead();
-        lookupOneCached(".js--character--leaves", token)
+        lookupOneCached(".js--character", token)
             .classList
             .toggle("is-dead", isDead);
         observer.trigger("shroud-toggle", {
@@ -264,12 +264,12 @@ export default class Pad {
                 [
                     ".js--token--wrapper",
                     reminder.draw(),
-                    Template.append
-                ],
-                [
-                    ".js--token--wrapper",
-                    "reminder",
-                    (element, content) => element.dataset.token = content
+                    (element, content) => {
+
+                        Template.append(element, content);
+                        element.dataset.token = "reminder";
+
+                    }
                 ]
             ])
         );
