@@ -1,6 +1,7 @@
 import Observer from "../classes/Observer.js";
 import {
     lookupOne,
+    lookupCached,
     lookupOneCached,
     replaceContentsMany
 } from "../utils/elements.js";
@@ -83,5 +84,19 @@ tokenObserver.on("character-remove", ({ detail }) => {
         }
 
     }
+
+});
+
+lookupOne("#show-all").addEventListener("change", ({ target }) => {
+
+    const showAll = target.checked;
+
+    lookupCached(".night-order").forEach((list) => {
+        list.classList.toggle("is-show-all", showAll);
+    });
+
+    gameObserver.trigger("night-order-show-all", {
+        showAll
+    });
 
 });

@@ -160,10 +160,9 @@ lookupOne("#reset-height").addEventListener("click", () => {
     lookupOneCached(".pad").style.height = "";
 });
 
-lookupOne("#clear-grimoire").addEventListener("click", () => {
+lookupOne("#clear-grimoire").addEventListener("click", ({ target }) => {
 
-    // TODO: get this text out of the JS and into the HTML so it can be localised.
-    if (window.confirm("Are you sure you want to clear all the tokens?")) {
+    if (window.confirm(target.dataset.confirm)) {
         pad.reset();
     }
 

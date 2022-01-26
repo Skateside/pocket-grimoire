@@ -138,6 +138,19 @@
         0 0 0.25em #fffef0;
 }
 
+.character__unknown {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3em;
+
+    @at-root {
+        [disabled] #{&} {
+            display: none;
+        }
+    }
+}
+
 .reminder__text {
     color: #fff;
     font-size: 1.2em;

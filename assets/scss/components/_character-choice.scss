@@ -1,0 +1,10 @@
+.character-choice {
+    @extend %no-btn;
+    display: block;
+    width: 100%;
+
+    &[disabled] {
+        opacity: 0.5;
+        filter: grayscale(1) brightness(0.7)
+    }
+}

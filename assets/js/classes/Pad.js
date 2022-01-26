@@ -186,7 +186,11 @@ export default class Pad {
         } = characters[index];
 
         token.remove();
-        characters.splice(index, 1);
+
+        if (!this.preserveReference) {
+            characters.splice(index, 1);
+        }
+
         observer.trigger("character-remove", {
             character,
             token
@@ -333,7 +337,11 @@ export default class Pad {
         } = reminders[index];
 
         token.remove();
-        reminders.splice(index, 1);
+
+        if (!this.preserveReference) {
+            reminders.splice(index, 1);
+        }
+
         observer.trigger("reminder-remove", {
             reminder,
             token
@@ -372,12 +380,33 @@ export default class Pad {
      */
     reset() {
 
-        this.characters.forEach(({ character }) => {
+        const {
+            characters,
+            reminders
+        } = this;
+
+        /**
+         * A flag that prevents the arrays {@link Pad#characters} and
+         * {@link Pad#reminders} being modified through
+         * {@link Pad#removeCharacter} and {@link Pad#removeReminder}.
+         * Preserving the reference allows the characters and reminders to be
+         * removed with a loop and without entries being skipped.
+         * @type {Boolean}
+         */
+        this.preserveReference = true;
+
+        characters.forEach(({ character }) => {
             this.removeCharacter(character);
         });
-        this.reminders.forEach(({ reminder }) => {
+        characters.length = 0;
+
+        reminders.forEach(({ reminder }) => {
             this.removeReminder(reminder);
         });
+        reminders.length = 0;
+
+        this.preserveReference = false;
+
         this.tokens.reset();
 
     }

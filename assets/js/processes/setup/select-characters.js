@@ -79,7 +79,14 @@ gameObserver.on("team-breakdown-loaded", ({ detail }) => {
     const playerCountOutput = lookupOne("#player-count-output");
 
     playerCount.addEventListener("input", () => {
-        playerCountOutput.value = playerCount.value;
+
+        const count = Number(playerCount.value);
+
+        playerCountOutput.value = count;
+        gameObserver.trigger("player-count", {
+            count
+        });
+
     });
 
     function getBreakdown() {

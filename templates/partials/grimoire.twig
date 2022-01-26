@@ -12,8 +12,9 @@
         <li><button type="button" class="button" id="add-token" data-dialog="#character-list">Add token</button></li>
         <li><button type="button" class="button" id="add-reminder" data-dialog="#reminder-list">Add reminder</button></li>
         <li><button type="button" class="button" id="reset-height">Reset pad height</button></li>
-        <li><button type="button" class="button" id="toggle-night" disabled>Toggle night order</button></li>
-        <li><button type="button" class="button button--warning" id="clear-grimoire">Clear Grimoire</button></li>
+        {# NOTE: this should be a toggle switch, if anything #}
+        {# <li><button type="button" class="button" id="toggle-night" disabled>Toggle night order</button></li> #}
+        <li><button type="button" class="button button--warning" id="clear-grimoire" data-confirm="Are you sure you want to clear all the tokens?">Clear Grimoire</button></li>
     </ul>
     {% endblock %}
 {% endembed %}

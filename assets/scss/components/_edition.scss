@@ -31,9 +31,12 @@
         "token ability";
     padding: 0.5em;
     width: 100%;
-    animation-name: edition-reveal;
-    animation-duration: 0.3s;
-    animation-fill-mode: forwards;
+
+    @media (prefers-reduced-motion: no-preference) {
+        animation-name: edition-reveal;
+        animation-duration: 0.3s;
+        animation-fill-mode: forwards;
+    }
 
     @at-root {
 
