@@ -19,6 +19,28 @@ export default class Pad {
     }
 
     /**
+     * Returns the actual character token from the given token button.
+     *
+     * @param  {Element} button
+     *         Button whose token should be returned.
+     * @return {Element}
+     *         Token that was found.
+     * @throws {ReferenceError}
+     *         The given button must contain a token.
+     */
+    static getToken(button) {
+
+        const token = lookupOneCached(".js--character", button);
+
+        if (!token) {
+            throw new ReferenceError("Unable to find character token");
+        }
+
+        return token;
+
+    }
+
+    /**
      * @param {Element} element
      *        The main pad element.
      * @param {Observer} observer
@@ -219,7 +241,8 @@ export default class Pad {
         } = info;
 
         const isDead = character.toggleDead();
-        lookupOneCached(".js--character", token)
+        this.constructor
+            .getToken(token)
             .classList
             .toggle("is-dead", isDead);
         observer.trigger("shroud-toggle", {

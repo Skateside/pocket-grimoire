@@ -54,7 +54,7 @@
 .character--setup { --setup-leaf: url("../img/token/setup.png"); }
 
 .character[data-first-night]::before,
-.character[data-other-nights]::after {
+.character[data-other-night]::after {
     border-radius: 50%;
     color: #fff;
     font-weight: bold;
@@ -63,7 +63,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: clamp(0.5em, 10%, 2em);
+    font-size: clamp(0.5em, 3.5vw - 0.5em, 2em);
     line-height: 1;
     grid-area: 1 / -1;
     margin-top: 5%;
@@ -76,8 +76,8 @@
     margin-right: auto;
 }
 
-.character[data-other-nights]::after {
-    content: attr(data-other-nights);
+.character[data-other-night]::after {
+    content: attr(data-other-night);
     background-image: linear-gradient(to bottom, #600, #c00);
     margin-left: auto;
     margin-right: 5%;

@@ -168,3 +168,123 @@ lookupOne("#clear-grimoire").addEventListener("click", () => {
     }
 
 });
+
+// Update the night order on the tokens.
+const nightOrder = {
+    first: [],
+    other: []
+};
+
+function updateTokens() {
+
+    let firstCount = 0;
+
+    nightOrder.first.forEach((tokens) => {
+
+        firstCount += 1;
+
+        tokens.forEach(({ character, token }) => {
+            Pad.getToken(token).dataset.firstNight = firstCount;
+        });
+
+    });
+
+    let otherCount = 0;
+
+    nightOrder.other.forEach((tokens) => {
+
+        otherCount += 1;
+
+        tokens.forEach(({ character, token }) => {
+            Pad.getToken(token).dataset.otherNight = otherCount;
+        });
+
+    });
+
+}
+
+tokenObserver.on("character-add", ({ detail }) => {
+
+    const {
+        character,
+        token
+    } = detail;
+
+    const firstNight = character.getFirstNight();
+
+    if (firstNight) {
+
+        if (!nightOrder.first[firstNight]) {
+            nightOrder.first[firstNight] = [];
+        }
+
+        nightOrder.first[firstNight].push({
+            character,
+            token
+        });
+
+    }
+
+    const otherNight = character.getOtherNight();
+
+    if (otherNight) {
+
+        if (!nightOrder.other[otherNight]) {
+            nightOrder.other[otherNight] = [];
+        }
+
+        nightOrder.other[otherNight].push({
+            character,
+            token
+        });
+
+    }
+
+    updateTokens();
+
+});
+
+tokenObserver.on("character-remove", ({ detail }) => {
+
+    const {
+        character,
+        token
+    } = detail;
+
+    const firstNight = character.getFirstNight();
+    const firstArray = nightOrder.first[firstNight];
+
+    if (firstArray) {
+
+        const index = firstArray.findIndex((info) => info.token === token);
+
+        if (index > -1) {
+            firstArray.splice(index, 1);
+        }
+
+        if (!firstArray.length) {
+            delete nightOrder.first[firstNight];
+        }
+
+    }
+
+    const otherNight = character.getOtherNight();
+    const otherArray = nightOrder.other[otherNight];
+
+    if (otherArray) {
+
+        const index = otherArray.findIndex((info) => info.token === token);
+
+        if (index > -1) {
+            otherArray.splice(index, 1);
+        }
+
+        if (!otherArray.length) {
+            delete nightOrder.other[otherNight];
+        }
+
+    }
+
+    updateTokens();
+
+});
