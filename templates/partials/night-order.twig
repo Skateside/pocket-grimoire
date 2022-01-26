@@ -21,10 +21,16 @@
     <p><small>Swipe to change nights.</small></p>
     <p>
         <label for="show-all">Show characters not in play</label>
+        {{ forms.toggle({
+            name: "show-all",
+            id: "show-all"
+        }) }}
+        {#
         <span class="toggle-switch">
             <input type="checkbox" name="show-all" id="show-all" class="toggle-switch__input">
-            <span class="toggle-switch__render"></span>
+            <span class="toggle-switch__render" aria-hidden="true"></span>
         </span>
+        #}
     </p>
     {% endblock %}
 {% endembed %}

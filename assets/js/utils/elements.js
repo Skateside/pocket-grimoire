@@ -176,3 +176,54 @@ export function empty(element) {
 export function replaceContentsMany(target, list) {
     return appendMany(empty(target), list);
 }
+
+/**
+ * Gets the label for the given input element.
+ *
+ * @param  {Element} input
+ *         Input element whose label should be returned.
+ * @return {Element|undefined}
+ *         Either the input's label or undefined if the label cannot be found.
+ */
+export function getLabel(input) {
+
+    const aria = input.getAttribute("aria-labelledby");
+
+    if (typeof aria === "string") {
+        return lookupOne(`#${aria}`);
+    }
+
+    const id = input.getAttribute("id");
+
+    if (typeof id === "string") {
+        return lookupOne(`label[for="${id}"]`);
+    }
+
+    const closest = input.closest("label");
+
+    if (closest) {
+        return closest;
+    }
+
+}
+
+/**
+ * Gets the trimmed text of the label for the given input.
+ *
+ * @param  {Element} input
+ *         Input whose label text should be returned.
+ * @return {String}
+ *         The input's label text. If the label cannot be found, an empty string
+ *         is returned.
+ */
+export function getLabelText(input) {
+
+    const aria = input.getAttribute("aria-label");
+
+    if (typeof aria === "string") {
+        return aria.trim();
+    }
+
+    return getLabel(input)?.textContent.trim() || "";
+
+}

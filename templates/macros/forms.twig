@@ -1,0 +1,32 @@
+{% macro toggle(settings) %}
+<span class="toggle-switch">
+    <input type="checkbox"
+        class="toggle-switch__input"
+        name="{{ settings.name }}"
+        {% if settings.id|default(false) %}id="{{ settings.id }}"{% endif %}
+        {% if settings.value|default(false) %}value="{{ settings.value }}"{% endif %}
+    >
+    <span class="toggle-switch__render" aria-hidden="true"></span>
+</span>
+{% endmacro %}
+
+{% macro file(settings) %}
+<span class="file-upload">
+    <input type="file"
+        class="file-upload__input"
+        name="{{ settings.name }}"
+        {% if settings.id|default(false) %}id="{{ settings.id }}"{% endif %}
+        {% if settings.accept|default(false) %}accept="{{ settings.accept }}"{% endif %}
+        {% if settings.required|default(false) %}required{% endif %}
+        {% for name, value in settings.attributes|default({}) %}
+            {{ name }}="{{ value }}"
+        {% endfor %}
+    >
+    <span class="file-upload__render"
+        aria-hidden="true"
+        data-placeholder="{{ settings.placeholder|default('Choose file') }}"
+        data-value="{{ settings.value|default(settings.placeholder|default('Choose file')) }}"
+        data-button="{{ settings.button|default('Browse') }}"
+    ></span>
+</span>
+{% endmacro %}

@@ -6,7 +6,6 @@
     <ul class="button-list">
         <li><button type="button" class="button" id="select-edition" data-dialog="#edition-list">Select Edition</button></li>
         <li><button type="button" class="button" id="select-characters" data-dialog="#character-select" disabled>Select Characters</button></li>
-        {# Show a QR code for the characters in this game: #}
         <li><button type="button" class="button" id="qr-code-button" data-dialog="#qr-code-dialog" disabled>Character Sheet</button></li>
         {# Clear the localStorage (and refresh the page) to get more up-to-date data: #}
         <li><button type="button" class="button" id="reset" disabled>Clear Cache</button></li>
@@ -20,12 +19,68 @@
     title: 'Select Edition'
 } %}
     {% block body %}
+
+    <form id="select-edition-form">
+
+        <ul>
+            <li>
+                <label for="edition-tb">
+                    <input type="radio" name="edition" value="tb" id="edition-tb" required>
+                    Trouble Brewing
+                </label>
+            </li>
+            <li>
+                <label for="edition-bmr">
+                    <input type="radio" name="edition" value="bmr" id="edition-bmr">
+                    Bad Moon Rising
+                </label>
+            </li>
+            <li>
+                <label for="edition-snv">
+                    <input type="radio" name="edition" value="snv" id="edition-snv">
+                    Sects and Violets
+                </label>
+            </li>
+            <li>
+                <label for="edition-custom">
+                    <input type="radio" name="edition" value="custom" id="edition-custom">
+                    Custom Script
+                </label>
+            </li>
+        </ul>
+
+        <p id="custom-script-upload" hidden>
+            <label for="custom-script" class="sr-only">Upload a custom script</label>
+            {{ forms.file({
+                name: "custom-script",
+                id: "custom-script",
+                accept: "application/json",
+                attributes: {
+                    "data-invalid-script": "The script format has not been recognised"
+                }
+            }) }}
+        </p>
+
+        <p><button type="submit" class="button">Select</button></p>
+
+    </form>
+
+    {#
     <ul class="button-list">
         <li><button type="button" class="button" data-edition="tb">Trouble Brewing</button></li>
         <li><button type="button" class="button" data-edition="bmr">Bad Moon Rising</button></li>
         <li><button type="button" class="button" data-edition="snv">Sects and Violets</button></li>
-        <li><button type="button" class="button" data-edition="custom" disabled>Custom Script</button></li>
+        <!-- <li><button type="button" class="button" data-edition="custom" disabled>Custom Script</button></li> -->
     </ul>
+    <h3>... or ...</h3>
+    <form id="custom-script-form">
+        <p>
+            <label for="custom-script">Upload a custom script</label>
+            <input type="file" name="custom-script" id="custom-script" accept="application/json" data-invalid-script="The script format has not been recognised" required>
+        </p>
+        <p><button type="submit" class="button">Select</button></p>
+    </form>
+    #}
     {% endblock %}
 {% endembed %}
 

@@ -15,12 +15,16 @@
     {% set attributes = attributes|merge(['id="' ~ id ~ '"']) %}
 {% endif %}
 
+{% set hide = [] %}
 {% if hideClickBackground|default(true) %}
-    {% set attributes = attributes|merge(['data-dialog-hide-on-click-backdrop']) %}
+    {# % set attributes = attributes|merge(['data-dialog-hide-on-click-backdrop']) % #}
+    {% set hide = hide|merge(['backdrop']) %}
 {% endif %}
 {% if hideClick|default(false) %}
-    {% set attributes = attributes|merge(['data-dialog-hide-on-click']) %}
+    {# % set attributes = attributes|merge(['data-dialog-hide-on-click']) % #}
+    {% set hide = hide|merge(['click']) %}
 {% endif %}
+{% set attributes = attributes|merge(['data-dialog-hide-on="' ~ hide|join(' ') ~ '"']) %}
 
 <dialog {{ attributes|join(' ') }}>
     <div class="dialog__content">

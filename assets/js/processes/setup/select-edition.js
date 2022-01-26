@@ -2,36 +2,124 @@ import Observer from "../../classes/Observer.js";
 import TokenStore from "../../classes/TokenStore.js";
 import Dialog from "../../classes/Dialog.js";
 import {
-    lookupOneCached
+    lookup,
+    lookupOne,
+    lookupOneCached,
+    getLabelText
 } from "../../utils/elements.js";
 
-const gameObserver = Observer.create("game");
+function isScriptJson(json) {
 
-lookupOneCached("#edition-list").addEventListener("click", ({ target }) => {
+    return (
+        Array.isArray(json)
+        && json.length
+        && json.every((item) => (
+            typeof item === "object"
+            && typeof item?.id === "string"
+        ))
+    );
 
-    const button = target.closest("[data-edition]");
+}
 
-    if (!button) {
+function announceScript(name, characters) {
+
+    Observer.create("game").trigger("characters-selected", {
+        name,
+        characters
+    });
+    Dialog.create(lookupOneCached("#edition-list")).hide();
+
+}
+
+const form = lookupOne("#select-edition-form");
+const fileInput = lookupOne("#custom-script");
+const fileInputRender = fileInput.nextElementSibling;
+const uploader = lookupOne("#custom-script-upload");
+const radios = lookup("[name=\"edition\"]", form);
+
+radios.forEach((radio) => {
+
+    radio.addEventListener("input", ({ target }) => {
+        uploader.hidden = target.value !== "custom";
+    });
+
+});
+
+form.addEventListener("submit", (e) => {
+
+    e.preventDefault();
+
+    const radio = radios.find(({ checked }) => checked);
+    const edition = radio?.value;
+
+    if (!edition) {
         return;
     }
 
-    const {
-        edition
-    } = button.dataset;
-    const name = button.textContent.trim();
-
     TokenStore.ready(({ characters }) => {
 
-        const filtered = Object
-            .values(characters)
-            .filter((character) => character.getEdition() === edition);
+        if (edition === "custom") {
 
-        gameObserver.trigger("characters-selected", {
-            name,
-            characters: filtered
-        });
-        Dialog.create(lookupOneCached("#edition-list")).hide();
+            const reader = new FileReader();
+
+            reader.addEventListener("load", ({ target }) => {
+
+                const json = JSON.parse(target.result);
+
+                if (!isScriptJson(json)) {
+
+                    fileInput.setCustomValidity(
+                        fileInput.dataset.invalidScript
+                    );
+                    form.reportValidity();
+                    return;
+
+                }
+
+                let name = "";
+                const metaIndex = json.findIndex(({ id }) => id === "_meta");
+
+                if (metaIndex > -1) {
+
+                    name = json[metaIndex].name;
+                    json.splice(metaIndex, 1);
+
+                }
+
+                announceScript(
+                    name,
+                    json.map(({ id }) => characters[id]).filter(Boolean)
+                );
+
+            });
+
+            reader.readAsBinaryString(fileInput.files[0]);
+
+        } else {
+
+            announceScript(
+                getLabelText(radio),
+                Object.values(characters)
+                    .filter((character) => character.getEdition() === edition)
+            );
+
+        }
 
     });
+
+});
+
+fileInput.addEventListener("input", () => {
+
+    const {
+        value
+    } = fileInput;
+
+    fileInput.setCustomValidity("");
+    fileInputRender.dataset.value = (
+        value
+        ? value.slice(value.lastIndexOf("\\") + 1)
+        : fileInputRender.dataset.placeholder
+    );
 
 });

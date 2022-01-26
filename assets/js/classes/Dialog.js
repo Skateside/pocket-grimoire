@@ -131,12 +131,15 @@ export default class Dialog {
         const {
             dialog
         } = this;
+        const hideOn = (
+            dialog.getAttribute("data-dialog-hide-on")?.trim().split(/\s/) || []
+        );
 
-        if (dialog.hasAttribute("data-dialog-hide-on-click")) {
+        if (hideOn.includes("click")) {
             dialog.addEventListener("click", () => this.hide());
         }
 
-        if (dialog.hasAttribute("data-dialog-hide-on-click-backdrop")) {
+        if (hideOn.includes("backdrop")) {
 
             dialog.addEventListener("click", ({ target }) => {
 
