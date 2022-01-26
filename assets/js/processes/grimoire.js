@@ -209,16 +209,20 @@ tokenObserver.on("character-add", ({ detail }) => {
         character,
         token
     } = detail;
+    const {
+        first,
+        other
+    } = nightOrder;
 
     const firstNight = character.getFirstNight();
 
     if (firstNight) {
 
-        if (!nightOrder.first[firstNight]) {
-            nightOrder.first[firstNight] = [];
+        if (!first[firstNight]) {
+            first[firstNight] = [];
         }
 
-        nightOrder.first[firstNight].push({
+        first[firstNight].push({
             character,
             token
         });
@@ -229,11 +233,11 @@ tokenObserver.on("character-add", ({ detail }) => {
 
     if (otherNight) {
 
-        if (!nightOrder.other[otherNight]) {
-            nightOrder.other[otherNight] = [];
+        if (!other[otherNight]) {
+            other[otherNight] = [];
         }
 
-        nightOrder.other[otherNight].push({
+        other[otherNight].push({
             character,
             token
         });
