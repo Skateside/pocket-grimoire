@@ -1,10 +1,18 @@
-import CharacterData from "./classes/CharacterData.js";
+import Template from "./classes/Template.js";
+import CharacterToken from "./classes/CharacterToken.js";
+import Observer from "./classes/Observer.js";
+import Store from "./classes/Store.js";
+import TokenStore from "./classes/TokenStore.js";
 import Dialog from "./classes/Dialog.js";
+import {
+    fetchFromStore
+} from "./utils/fetch.js";
 import {
     lookup,
     lookupOne,
     lookupCached,
-    lookupOneCached
+    lookupOneCached,
+    replaceContentsMany
 } from "./utils/elements.js";
 import qrcode from "./lib/qrcode.js";
 
@@ -16,39 +24,38 @@ const title = lookupOne("#title");
 title.textContent = name;
 title.hidden = !name;
 
-// Load the list of characters.
-CharacterData
-    .create()
-    .getIds(
-        (url.searchParams.get("characters")?.split(",") || [])
-            .map((id) => ({ id }))
-    )
-    .then((characters) => {
+// Draw the character list.
+const store = Store.create("pocket-grimoire");
+const gameObserver = Observer.create("game");
 
-        characters.forEach(({
-            name,
-            image,
-            team,
-            ability
-        }) => {
+CharacterToken.setTemplates({
+    sheet: Template.create(lookupOne("#edition-template"))
+});
 
-            const clone = lookupOneCached("#edition-template")
-                .content
-                .cloneNode(true);
-            const nameElement = clone.querySelector(".js--edition--name");
-            const imageElement = clone.querySelector(".js--edition--image");
-            const abilityElement = clone.querySelector(".js--edition--ability");
+fetchFromStore("./assets/data/characters.json", store).then((characters) => {
+    gameObserver.trigger("characters-loaded", { characters });
+});
 
-            nameElement.textContent = name;
-            imageElement.src = image;
-            abilityElement.textContent = ability;
+gameObserver.on("characters-loaded", ({ detail }) => {
+    TokenStore.create(detail.characters);
+});
+
+TokenStore.ready(({ characters }) => {
+
+    const ids = url.searchParams.get("characters")?.split(",") || [];
+
+    Object.values(characters)
+        .filter((character) => ids.includes(character.getId()))
+        .forEach((character) => {
+
+            const team = character.getTeam();
 
             lookupOneCached(`#wrapper-${team}`).classList.remove("is-empty");
-            lookupOneCached(`#team-${team}`).append(clone);
+            lookupOneCached(`#team-${team}`).append(character.drawSheet());
 
         });
 
-    });
+});
 
 // Generate the QR code.
 const qr = new qrcode(0, "H");

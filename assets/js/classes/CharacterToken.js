@@ -230,4 +230,36 @@ export default class CharacterToken extends Token {
 
     }
 
+    /**
+     * Draws the character's entry in the character sheet.
+     *
+     * @return {DocumentFragment}
+     *         Populated sheet entry.
+     */
+    drawSheet() {
+
+        const {
+            name,
+            image,
+            ability
+        } = this.data;
+
+        return this.constructor.templates.sheet.draw([
+            [
+                ".js--edition--name",
+                name
+            ],
+            [
+                ".js--edition--image",
+                image,
+                Template.setSrc
+            ],
+            [
+                ".js--edition--ability",
+                ability
+            ]
+        ]);
+
+    }
+
 }
