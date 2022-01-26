@@ -11,8 +11,7 @@ import {
     lookup,
     lookupOne,
     lookupCached,
-    lookupOneCached,
-    replaceContentsMany
+    lookupOneCached
 } from "./utils/elements.js";
 import qrcode from "./lib/qrcode.js";
 
