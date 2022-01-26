@@ -6,6 +6,7 @@ import Dialog from "../classes/Dialog.js";
 import {
     empty,
     identify,
+    lookup,
     lookupOne,
     lookupOneCached,
     replaceContentsMany
@@ -28,6 +29,16 @@ const styleObserver = new MutationObserver((mutations) => {
 styleObserver.observe(padElement, {
     attributes: true,
     attributeFilter: ["style"]
+});
+
+// If the elements are within a closed <details> element then their height and
+// width will be 0. Listen for the pad becoming visible and update the class.
+lookup("details").forEach((details) => {
+
+    details.addEventListener("toggle", () => {
+        pad.updateDimensions();
+    });
+
 });
 
 gameObserver.on("characters-selected", ({ detail }) => {

@@ -411,4 +411,8 @@ export default class Pad {
 
     }
 
+    updateDimensions() {
+        this.tokens.updatePadDimensions();
+    }
+
 }
