@@ -26,6 +26,32 @@ export default class CharacterToken extends Token {
     }
 
     /**
+     * @inheritDoc
+     */
+    processData(data) {
+
+        // Provide some default values so that .get() methods don't worry about
+        // missing data and instead worry about typos.
+
+        return {
+            id: "",
+            name: "",
+            edition: "",
+            team: "",
+            firstNight: 0,
+            firstNightReminder: "",
+            otherNight: 0,
+            otherNightReminder: "",
+            reminders: [],
+            setup: true,
+            ability: "",
+            image: "",
+            ...data
+        };
+
+    }
+
+    /**
      * Sets the reminders that this character has.
      *
      * @param {Array.<ReminderToken>} reminders

@@ -40,7 +40,12 @@ const radios = lookup("[name=\"edition\"]", form);
 radios.forEach((radio) => {
 
     radio.addEventListener("input", ({ target }) => {
-        uploader.hidden = target.value !== "custom";
+
+        const isCustom = target.value === "custom";
+
+        uploader.hidden = !isCustom;
+        fileInput.required = isCustom;
+
     });
 
 });

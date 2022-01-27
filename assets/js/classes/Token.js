@@ -32,7 +32,7 @@ export default class Token {
          * The data to access.
          * @type {Object}
          */
-        this.data = data;
+        this.data = this.processData(data);
 
         const constructor = this.constructor;
 
@@ -54,6 +54,19 @@ export default class Token {
 
         });
 
+    }
+
+    /**
+     * Processes the data. This method mainly exists so that it can be easily
+     * modified in sub-classes.
+     *
+     * @param  {Object} data
+     *         Original data.
+     * @return {Object}
+     *         Processed data.
+     */
+    processData(data) {
+        return data;
     }
 
     /**
