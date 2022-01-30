@@ -138,6 +138,16 @@ export default class Tokens {
     }
 
     /**
+     * Set the zIndex value.
+     *
+     * @param {Number} zindex
+     *        Z-index to set.
+     */
+    setZIndex(zIndex) {
+        this.zIndex = zIndex;
+    }
+
+    /**
      * Exposes {@link Tokens#zIndex}.
      *
      * @return {Number}
@@ -225,7 +235,8 @@ export default class Tokens {
         token.style.setProperty("--z-index", zIndex);
 
         this.observer.trigger("zindex", {
-            zIndex
+            zIndex,
+            element: token
         });
 
     }

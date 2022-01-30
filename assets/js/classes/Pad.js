@@ -163,6 +163,22 @@ export default class Pad {
     }
 
     /**
+     * Exposes the ability to move a token to the correct place.
+     *
+     * @param {Element} token
+     *        Token to move.
+     * @param {Number} left
+     *        Left position, in pixels.
+     * @param {Number} top
+     *        Top position, in pixels.
+     * @param {Number} [zIndex]
+     *        Optional z-index.
+     */
+    moveToken(token, left, top, zIndex) {
+        this.tokens.moveTo(token, left, top, zIndex);
+    }
+
+    /**
      * Removes a character from {@link Pad#element}
      *
      * @param {CharacterToken} character
@@ -227,8 +243,10 @@ export default class Pad {
      *
      * @param {CharacterToken} character
      *        The character whose dead state should be toggled.
+     * @param {Boolean} [deadState]
+     *        Optional dead state to set.
      */
-    toggleDead(character) {
+    toggleDead(character, deadState) {
 
         const {
             characters,
@@ -244,7 +262,7 @@ export default class Pad {
             token
         } = info;
 
-        const isDead = character.toggleDead();
+        const isDead = character.toggleDead(deadState);
         this.constructor
             .getToken(token)
             .classList
@@ -264,9 +282,11 @@ export default class Pad {
      * @param {Element} token
      *        Element whose associated character should have their dead state
      *        toggled.
+     * @param {Boolean} [deadState]
+     *        Optional dead state to set.
      */
-    toggleDeadByToken(token) {
-        this.toggleDead(this.getCharacterByToken(token));
+    toggleDeadByToken(token, deadState) {
+        this.toggleDead(this.getCharacterByToken(token), deadState);
     }
 
     /**
@@ -413,6 +433,10 @@ export default class Pad {
 
     updateDimensions() {
         this.tokens.updatePadDimensions();
+    }
+
+    setZIndex(zIndex) {
+        this.tokens.setZIndex(zIndex);
     }
 
 }

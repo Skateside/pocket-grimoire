@@ -14,6 +14,13 @@
 {% if id|default('') != '' %}
     {% set attributes = attributes|merge(['id="' ~ id ~ '"']) %}
 {% endif %}
+{% if style|default('') != '' %}
+    {% set styleString = '' %}
+    {% for rule, property in style %}
+        {% set styleString = styleString ~ rule ~ ': ' ~ property ~ ';' %}
+    {% endfor %}
+    {% set attributes = attributes|merge(['style="' ~ styleString ~ '"']) %}
+{% endif %}
 
 {% set hide = [] %}
 {% if hideClickBackground|default(true) %}

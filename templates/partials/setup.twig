@@ -7,8 +7,7 @@
         <li><button type="button" class="button" id="select-edition" data-dialog="#edition-list">Select Edition</button></li>
         <li><button type="button" class="button" id="select-characters" data-dialog="#character-select" disabled>Select Characters</button></li>
         <li><button type="button" class="button" id="qr-code-button" data-dialog="#qr-code-dialog" disabled>Character Sheet</button></li>
-        {# Clear the localStorage (and refresh the page) to get more up-to-date data: #}
-        <li><button type="button" class="button" id="reset" disabled>Clear Cache</button></li>
+        <li><button type="button" class="button button--warning" id="clear-cache" data-reset="This will clear the cache and the grimoire. Would you like to continue?" disabled>Clear Cache</button></li>
     </ul>
     {% endblock %}
 {% endembed %}

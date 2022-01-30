@@ -1,17 +1,65 @@
-{% set infoTokens = {
-    isdemon: 'This is the <strong>Demon</strong>',
-    isminion: 'There are your <strong>Minions</strong>',
-    inplay: 'These characters are <strong>in play</strong>',
-    notinplay: 'These characters are <strong>not in play</strong>',
-    nominatetoday: 'Did you <strong>nominate</strong> today?',
-    abilitytargetted: 'This <strong>ability</strong> targetted you',
-    playeris: 'This <strong>player</strong> is',
-    haveability: 'You have this <strong>ability</strong>',
-    votetoday: 'Did you <strong>vote</strong> today',
-    choice: 'Your <strong>choice</strong>?',
-    abilitynow: 'Use your <strong>ability</strong> now?',
-    youare: '<strong>You</strong> are'
-} %}
+{% set infoTokens = [
+    {
+        id: 'isdemon',
+        colour: 'brown',
+        markup: 'This is the <strong>Demon</strong>'
+    },
+    {
+        id: 'isminion',
+        colour: 'red',
+        markup: 'There are your <strong>Minions</strong>'
+    },
+    {
+        id: 'inplay',
+        colour: 'cyan',
+        markup: 'These characters are <strong>in play</strong>'
+    },
+    {
+        id: 'notinplay',
+        colour: 'blue',
+        markup: 'These characters are <strong>not in play</strong>'
+    },
+    {
+        id: 'nominatetoday',
+        colour: 'dark-orange',
+        markup: 'Did you <strong>nominate</strong> today?'
+    },
+    {
+        id: 'abilitytargetted',
+        colour: 'green',
+        markup: 'This <strong>ability</strong> targetted you'
+    },
+    {
+        id: 'playeris',
+        colour: 'dark-purple',
+        markup: 'This <strong>player</strong> is'
+    },
+    {
+        id: 'haveability',
+        colour: 'lime',
+        markup: 'You have this <strong>ability</strong>'
+    },
+    {
+        id: 'votetoday',
+        colour: 'orange',
+        markup: 'Did you <strong>vote</strong> today'
+    },
+    {
+        id: 'choice',
+        colour: 'yellow',
+        markup: 'Your <strong>choice</strong>?'
+    },
+    {
+        id: 'abilitynow',
+        colour: 'dark-yellow',
+        markup: 'Use your <strong>ability</strong> now?'
+    },
+    {
+        id: 'youare',
+        colour: 'purple',
+        markup: '<strong>You</strong> are'
+     }
+] %}
 
 {% embed '../includes/details.twig' with {
     summary: 'Info Tokens',
@@ -19,25 +67,28 @@
 } %}
     {% block body %}
     <ul class="button-list">
-        {% for id, markup in infoTokens %}
+        {% for info in infoTokens %}
         <li>
-            <button type="button" class="button" data-dialog="#info-token-{{ id }}">{{ markup|striptags }}</button>
+            <button type="button" class="button" data-dialog="#info-token-{{ info.id }}" style="--bg-colour: var(--{{ info.colour }});">{{ info.markup|striptags }}</button>
         </li>
         {% endfor %}
     </ul>
     {% endblock %}
 {% endembed %}
 
-{% for id, markup in infoTokens %}
+{% for info in infoTokens %}
     {% embed '../includes/dialog.twig' with {
-        id: 'info-token-' ~ id,
-        class: 'info-token',
+        id: 'info-token-' ~ info.id,
+        class: 'info-token info-token--' ~ info.colour,
         background: 'hide',
         hideClick: true,
-        includeHeader: false
+        includeHeader: false,
+        style: {
+            '--colour': 'var(--' ~ info.colour ~ ')'
+        }
     } %}
         {% block body %}
-        <p class="info-token__text">{{ markup|raw }}</p>
+        <p class="info-token__text">{{ info.markup|raw }}</p>
         {% endblock %}
     {% endembed %}
 {% endfor %}

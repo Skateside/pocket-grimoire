@@ -1,6 +1,11 @@
 .info-token {
     width: min(80%, 40rem);
     text-align: center;
+
+    > .dialog__content {
+        border-width: 0.5em;
+        border-color: var(--colour, #000);
+    }
 }
 
 .info-token__text {
@@ -13,5 +18,7 @@
         font-variant: small-caps;
         letter-spacing: 0.1em;
         display: inline-block;
+        color: var(--colour, currentColor);
+        filter: brightness(0.6);
     }
 }

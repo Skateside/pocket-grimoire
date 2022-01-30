@@ -59,6 +59,8 @@ export default class Store {
          */
         this.data = this.read();
 
+        this.tokens = [];
+
     }
 
     /**
@@ -76,11 +78,20 @@ export default class Store {
      */
     read() {
 
-        return JSON.parse(window.localStorage.getItem(this.key)) || {
+        return {
             lookup: {},
-            characters: {}
-        };
+            characters: {},
+            tokens: [],
+            ...(JSON.parse(window.localStorage.getItem(this.key)) || {})
+        }
 
+    }
+
+    /**
+     * Removes all the contents stored in localStorage.
+     */
+    clear() {
+        delete window.localStorage[this.key];
     }
 
     /**
@@ -120,13 +131,21 @@ export default class Store {
 
     }
 
-    // setCharacters(characters) {
-    //
-    //     this.data.characters = characters;
-    //     this.write();
-    //
-    // }
-    //
+    setCharacters(name, characters) {
+
+        const data = {
+            characters
+        };
+
+        if (name) {
+            data.name = name;
+        }
+
+        this.data.characters = data;
+        this.write();
+
+    }
+
     // updateTokenPosition(token, left, top) {
     //
     //     if (!this.tokens) {
@@ -145,5 +164,96 @@ export default class Store {
     //     ];
     //
     // }
+
+    addToken(token) {
+
+        const {
+            data,
+            tokens
+        } = this;
+        const index = tokens.length;
+
+        tokens.push(token);
+        data.tokens[index] = {
+            id: token.getId()
+        };
+        this.write();
+
+        return index;
+
+    }
+
+    removeToken(token) {
+
+        const {
+            data,
+            tokens
+        } = this;
+        const index = tokens.indexOf(token);
+
+        if (index < 0) {
+            return;
+        }
+
+        data.tokens.splice(index, 1);
+        tokens.splice(index, 1);
+        this.write();
+
+    }
+
+    moveToken(token, left, top, zIndex) {
+
+        const {
+            data,
+            tokens
+        } = this;
+        let index = tokens.indexOf(token);
+
+        if (index < 0) {
+            index = this.addToken(token);
+        }
+
+        Object.assign(data.tokens[index], {
+            left,
+            top,
+            zIndex
+        });
+        this.write();
+
+    }
+
+    alignToken(token, zIndex) {
+
+        const {
+            data,
+            tokens
+        } = this;
+        let index = tokens.indexOf(token);
+
+        if (index < 0) {
+            index = this.addToken(token);
+        }
+
+        data.tokens[index].zIndex = zIndex;
+        this.write();
+
+    }
+
+    toggleDead(token, isDead) {
+
+        const {
+            data,
+            tokens
+        } = this;
+        let index = tokens.indexOf(token);
+
+        if (index < 0) {
+            return;
+        }
+
+        data.tokens[index].isDead = isDead;
+        this.write();
+
+    }
 
 }

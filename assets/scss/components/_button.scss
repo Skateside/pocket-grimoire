@@ -4,7 +4,7 @@
     line-height: inherit;
     width: 100%;
     padding: 0;
-    background-color: #679fd0;
+    background-color: var(--bg-colour, var(--blue));
     border: 0.1em solid #000;
     border-radius: 0.2em;
     box-shadow:
@@ -23,5 +23,5 @@
 }
 
 .button--warning {
-    background-color: #d09f67;
+    background-color: var(--orange);
 }

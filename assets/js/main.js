@@ -7,3 +7,5 @@ import "./processes/setup/character-sheet.js";
 import "./processes/grimoire.js";
 
 import "./processes/night-order.js";
+
+import "./processes/store.js";

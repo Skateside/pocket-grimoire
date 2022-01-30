@@ -15,8 +15,9 @@ import {
 const gameObserver = Observer.create("game");
 const tokenObserver = Observer.create("token");
 
-const padElement = lookupOne(".pad");
+const padElement = lookupOneCached(".pad");
 const pad = new Pad(padElement, tokenObserver);
+padElement.pad = pad;
 
 const styleObserver = new MutationObserver((mutations) => {
 

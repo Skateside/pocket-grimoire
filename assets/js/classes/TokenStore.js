@@ -38,6 +38,32 @@ export default class TokenStore {
     }
 
     /**
+     * Checks to see if the given ID looks like it's the ID for a character or
+     * not.
+     *
+     * @param  {String} id
+     *         ID to check.
+     * @return {Boolean}
+     *         true if the ID looks like a character id, false if it doesn't.
+     */
+    static isCharacterId(id) {
+        return !this.isReminderId(id);
+    }
+
+    /**
+     * Checks to see if the given ID looks like it's the ID for a reminder or
+     * not.
+     *
+     * @param  {String} id
+     *         ID to check.
+     * @return {Boolean}
+     *         true if the ID looks like a reminder id, false if it doesn't.
+     */
+    static isReminderId(id) {
+        return (/^\w+:\s/).test(id);
+    }
+
+    /**
      * Executes the given function when {@link TokenStore.promise} has resolved.
      * Be aware that this is always asynchronous.
      *
