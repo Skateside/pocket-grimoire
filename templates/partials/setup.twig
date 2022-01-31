@@ -21,7 +21,7 @@
 
     <form id="select-edition-form">
 
-        <ul>
+        <ul class="no-list mb-4">
             <li>
                 <label for="edition-tb">
                     <input type="radio" name="edition" value="tb" id="edition-tb" required>
@@ -63,23 +63,6 @@
         <p><button type="submit" class="button">Select</button></p>
 
     </form>
-
-    {#
-    <ul class="button-list">
-        <li><button type="button" class="button" data-edition="tb">Trouble Brewing</button></li>
-        <li><button type="button" class="button" data-edition="bmr">Bad Moon Rising</button></li>
-        <li><button type="button" class="button" data-edition="snv">Sects and Violets</button></li>
-        <!-- <li><button type="button" class="button" data-edition="custom" disabled>Custom Script</button></li> -->
-    </ul>
-    <h3>... or ...</h3>
-    <form id="custom-script-form">
-        <p>
-            <label for="custom-script">Upload a custom script</label>
-            <input type="file" name="custom-script" id="custom-script" accept="application/json" data-invalid-script="The script format has not been recognised" required>
-        </p>
-        <p><button type="submit" class="button">Select</button></p>
-    </form>
-    #}
     {% endblock %}
 {% endembed %}
 
@@ -96,6 +79,15 @@
             {# TODO: travellers, so that the max can go up to 20 again #}
             <input type="range" min="5" max="15" step="1" value="7" name="player-count" id="player-count" class="character-select__range">
             <output id="player-count-output" class="character-select__output">7</output>
+        </div>
+
+        <div class="mb-4">
+            <label for="toggle-abilities">Show character abilities</label>
+            {{ forms.toggle({
+                name: 'toggle-abilities',
+                id: 'toggle-abilities',
+                checked: true
+            }) }}
         </div>
 
         <p><button type="button" class="button" id="player-select-random">Highlight random</button></p>
@@ -117,7 +109,9 @@
                     </div>
                 </div>
             </div>
-            <div class="sidebar__body character-select__characters js--character-select--list"></div>
+            <div class="sidebar__body">
+                <div class="character-select__characters js--character-select--list"></div>
+            </div>
         </fieldset>
         {% endfor %}
 

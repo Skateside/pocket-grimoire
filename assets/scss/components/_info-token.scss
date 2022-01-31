@@ -3,14 +3,38 @@
     text-align: center;
 
     > .dialog__content {
-        border-width: 0.5em;
-        border-color: var(--colour, #000);
+        // Darken the hex colour by making it semi-transparent and putting it
+        // between the box and its content.
+        background-color: #000;
+        background-image: none;
+        border-style: none;
+        display: grid;
+
+        &::before {
+            content: "";
+            grid-area: 1 / 1;
+            background-color: var(--colour, #000);
+            opacity: 0.4;
+        }
+
+        &::after {
+            content: "";
+            grid-area: 1 / 1;
+            border: 0.1em solid #fff;
+            margin: 0.5em;
+        }
+
+        > .dialog__body {
+            grid-area: 1 / 1;
+            z-index: 1;
+        }
     }
 }
 
 .info-token__text {
     font-size: clamp(1rem, 10vw, 3rem);
     margin: 0;
+    color: #fff;
 
     > strong {
         font-family: var(--serif-font);
@@ -18,7 +42,5 @@
         font-variant: small-caps;
         letter-spacing: 0.1em;
         display: inline-block;
-        color: var(--colour, currentColor);
-        filter: brightness(0.6);
     }
 }

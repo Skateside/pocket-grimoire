@@ -5,6 +5,7 @@
         name="{{ settings.name }}"
         {% if settings.id|default(false) %}id="{{ settings.id }}"{% endif %}
         {% if settings.value|default(false) %}value="{{ settings.value }}"{% endif %}
+        {% if settings.checked|default(false) %}checked{% endif %}
     >
     <span class="toggle-switch__render" aria-hidden="true"></span>
 </span>

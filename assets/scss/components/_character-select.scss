@@ -59,11 +59,18 @@
     display: block;
     font-size: 0.9em;
     font-weight: bold;
+    text-align: center;
 }
 
 .character-select__part--ability {
     display: block;
     font-size: 0.75em;
+
+    @at-root {
+        .is-hide-abilities #{&} {
+            display: none;
+        }
+    }
 }
 
 :checked ~ .character-select__part--name.is-setup {

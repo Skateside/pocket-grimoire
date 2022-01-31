@@ -140,6 +140,14 @@ gameObserver.on("characters-selected", ({ detail }) => {
 
 });
 
+lookupOne("#toggle-abilities").addEventListener("input", ({ target }) => {
+
+    lookupCached("[data-team]").forEach((wrapper) => {
+        wrapper.classList.toggle("is-hide-abilities", !target.checked);
+    });
+
+});
+
 lookupCached("[data-team]").forEach((wrapper) => {
 
     wrapper.addEventListener("change", ({ target }) => {

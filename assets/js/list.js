@@ -35,24 +35,74 @@ fetchFromStore("./assets/data/characters.json", store).then((characters) => {
     gameObserver.trigger("characters-loaded", { characters });
 });
 
-gameObserver.on("characters-loaded", ({ detail }) => {
-    TokenStore.create(detail.characters);
+fetchFromStore("./assets/data/jinx.json", store).then((jinxes) => {
+    gameObserver.trigger("jinxes-loaded", { jinxes });
 });
 
-TokenStore.ready(({ characters }) => {
+Promise.all([
+    new Promise((resolve) => {
+        gameObserver.on("characters-loaded", ({ detail }) => {
+            resolve(detail.characters);
+        });
+    }),
+    new Promise((resolve) => {
+        gameObserver.on("jinxes-loaded", ({ detail }) => {
+            resolve(detail.jinxes);
+        });
+    })
+]).then(([ characters, jinxes ]) => {
+
+    TokenStore.create({
+        characters,
+        jinxes
+    });
+
+});
+
+// gameObserver.on("characters-loaded", ({ detail }) => {
+//     TokenStore.create(detail.characters);
+// });
+
+TokenStore.ready(({ characters, jinxes }) => {
 
     const ids = url.searchParams.get("characters")?.split(",") || [];
+    const script = Object.values(characters)
+        .filter((character) => ids.includes(character.getId()));
+    const scriptMap = script.reduce((map, character) => {
 
-    Object.values(characters)
-        .filter((character) => ids.includes(character.getId()))
-        .forEach((character) => {
+        map[character.getId()] = character;
 
-            const team = character.getTeam();
+        return map;
 
-            lookupOneCached(`#wrapper-${team}`).classList.remove("is-empty");
-            lookupOneCached(`#team-${team}`).append(character.drawSheet());
+    }, Object.create(null));
+
+    script.forEach((character) => {
+
+        const jinxList = jinxes[character.getId()]?.map(({ id }) => id);
+
+        if (!jinxList || !jinxList.length) {
+            return;
+        }
+
+        jinxList.forEach((id) => {
+
+            if (scriptMap[id]) {
+                character.activateJinxById(id);
+            }
 
         });
+
+    });
+
+    script.forEach((character) => {
+
+        const team = character.getTeam();
+
+        lookupOneCached(`#wrapper-${team}`).classList.remove("is-empty");
+// TODO: add jinxes to .drawSheet()
+        lookupOneCached(`#team-${team}`).append(character.drawSheet());
+
+    });
 
 });
 

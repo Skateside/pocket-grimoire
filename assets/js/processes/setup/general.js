@@ -20,6 +20,10 @@ fetchFromStore("./assets/data/characters.json", store).then((characters) => {
     gameObserver.trigger("characters-loaded", { characters });
 });
 
+fetchFromStore("./assets/data/jinx.json", store).then((jinxes) => {
+    gameObserver.trigger("jinxes-loaded", { jinxes });
+});
+
 fetchFromStore("./assets/data/game.json", store).then((breakdown) => {
     gameObserver.trigger("team-breakdown-loaded", { breakdown });
 });
@@ -33,9 +37,29 @@ ReminderToken.setTemplate(
     Template.create(lookupOne("#reminder-template"))
 );
 
-gameObserver.on("characters-loaded", ({ detail }) => {
-    TokenStore.create(detail.characters);
+Promise.all([
+    new Promise((resolve) => {
+        gameObserver.on("characters-loaded", ({ detail }) => {
+            resolve(detail.characters);
+        });
+    }),
+    new Promise((resolve) => {
+        gameObserver.on("jinxes-loaded", ({ detail }) => {
+            resolve(detail.jinxes);
+        });
+    })
+]).then(([ characters, jinxes ]) => {
+
+    TokenStore.create({
+        characters,
+        jinxes
+    });
+
 });
+
+// gameObserver.on("characters-loaded", ({ detail }) => {
+//     TokenStore.create(detail.characters);
+// });
 
 lookupCached("[data-dialog]").forEach((trigger) => {
     trigger.dialog = Dialog.createFromTrigger(trigger);

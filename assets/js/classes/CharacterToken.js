@@ -114,6 +114,65 @@ export default class CharacterToken extends Token {
         return Boolean(this.isDead);
     }
 
+    addJinx({
+        reason,
+        character
+    }) {
+
+        if (!this.jinxes) {
+            this.jinxes = Object.create(null);
+        }
+
+        this.jinxes[character.getId()] = {
+            reason,
+            character,
+            isActive: false
+        };
+
+    }
+
+    activateJinx(character) {
+        this.activateJinxById(character.getId());
+    }
+
+    activateJinxById(id) {
+
+        const jinx = this.jinxes?.[id];
+
+        if (jinx) {
+            jinx.isActive = true;
+        }
+
+    }
+
+    deactivateJinx(character) {
+        this.deactivateJinxById(character.getId());
+    }
+
+    deactivateJinxById(id) {
+
+        const jinx = this.jinxes?.[id];
+
+        if (jinx) {
+            jinx.isActive = false;
+        }
+
+    }
+
+    deactivateAllJinxes() {
+
+        Object.keys(this.jinxes || {})
+            .forEach((id) => this.deactivateJinxById(id));
+
+    }
+
+    getActiveJinxes() {
+
+        return Object.values(this.jinxes || {})
+            .filter(({ isActive }) => isActive);
+
+    }
+
     /**
      * Draws the token that can be shown on the grimoire.
      *

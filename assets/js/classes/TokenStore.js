@@ -78,16 +78,23 @@ export default class TokenStore {
     }
 
     /**
-     * @param {Array.<Object>} data
+     * @param {Object} data
+     *        Data to store.
+     * @param {Array.<Object>} data.characters
      *        Character data.
+     * @param {Array.<Object>} data.jinxes
+     *        Jinx data.
      */
-    constructor(data) {
+    constructor({
+        characters,
+        jinxes
+    }) {
 
         /**
          * Character data.
          * @type {Array.<Object>}
          */
-        this.data = data;
+        // this.data = data;
 
         /**
          * A list of all the {@link CharacterToken} instances.
@@ -101,7 +108,38 @@ export default class TokenStore {
          */
         this.reminders = Object.create(null);
 
-        data.forEach((datum) => this.createCharacter(datum));
+        characters.forEach((character) => this.createCharacter(character));
+        jinxes.forEach(({ id, jinx }) => {
+
+            jinx.forEach((trick) => this.characters[id].addJinx({
+                character: this.characters[trick.id],
+                reason: trick.reason,
+            }));
+
+        });
+
+        /**
+         * A list of all jinxes in the form ID => array of jinxes.
+         * @type {Object}
+         */
+        this.jinxes = jinxes.reduce((jinxMap, jinx) => {
+
+            jinxMap[jinx.id] = jinx.jinx;
+
+            return jinxMap;
+
+        }, Object.create(null));
+
+        // Object.entries(this.jinxes).forEach(([ id, jinxes ]) => {
+        //
+        //     jinxes.forEach((jinx) => {
+        //         this.characters[id].addJinx({
+        //             character: this.characters[jinx.id],
+        //             reason: jinx.reason,
+        //         });
+        //     });
+        //
+        // });
 
     }
 
