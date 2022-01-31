@@ -12,7 +12,7 @@ export function shuffle(array) {
 
     let currentIndex = array.length;
     let randomIndex = -1;
-    const shuffled = array.concat();
+    const shuffled = [...array];
 
     while (currentIndex !== 0) {
 
