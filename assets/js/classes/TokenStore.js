@@ -91,12 +91,6 @@ export default class TokenStore {
     }) {
 
         /**
-         * Character data.
-         * @type {Array.<Object>}
-         */
-        // this.data = data;
-
-        /**
          * A list of all the {@link CharacterToken} instances.
          * @type {Object}
          */
@@ -129,17 +123,6 @@ export default class TokenStore {
             return jinxMap;
 
         }, Object.create(null));
-
-        // Object.entries(this.jinxes).forEach(([ id, jinxes ]) => {
-        //
-        //     jinxes.forEach((jinx) => {
-        //         this.characters[id].addJinx({
-        //             character: this.characters[jinx.id],
-        //             reason: jinx.reason,
-        //         });
-        //     });
-        //
-        // });
 
     }
 

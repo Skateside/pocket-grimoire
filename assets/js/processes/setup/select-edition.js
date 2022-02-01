@@ -91,9 +91,17 @@ form.addEventListener("submit", (e) => {
 
                 }
 
+                // The script tool creates IDs differently from our data.
+                // Examples: script = lil_monsta, data = lilmonsta
+                // Examples: script = al-hadikhia, data = alhadikhia
+                // The .replace() here is designed to convert their IDs to ours.
                 announceScript(
                     name,
-                    json.map(({ id }) => characters[id]).filter(Boolean)
+                    json
+                        .map(({ id }) => {
+                            return characters[id.replace(/[-_]/g, "")];
+                        })
+                        .filter(Boolean)
                 );
 
             });

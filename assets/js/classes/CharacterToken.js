@@ -1,7 +1,8 @@
 import Token from "./Token.js";
 import Template from "./Template.js";
 import {
-    identify
+    identify,
+    appendMany
 } from "../utils/elements.js";
 
 /**
@@ -328,8 +329,12 @@ export default class CharacterToken extends Token {
             image,
             ability
         } = this.data;
+        const {
+            sheet,
+            jinx
+        } = this.constructor.templates;
 
-        return this.constructor.templates.sheet.draw([
+        return sheet.draw([
             [
                 ".js--edition--name",
                 name
@@ -342,6 +347,26 @@ export default class CharacterToken extends Token {
             [
                 ".js--edition--ability",
                 ability
+            ],
+            [
+                ".js--edition--jinxes",
+                this.getActiveJinxes().map(({
+                    reason,
+                    character
+                }) => jinx.draw([
+                    [
+                        ".js--edition-jinx--image",
+                        "",
+                        (element) => {
+
+                            element.src = character.getImage();
+                            element.alt += character.getName();
+                            element.title = reason;
+
+                        }
+                    ]
+                ])),
+                (element, content) => appendMany(element, content)
             ]
         ]);
 

@@ -28,7 +28,8 @@ const store = Store.create("pocket-grimoire");
 const gameObserver = Observer.create("game");
 
 CharacterToken.setTemplates({
-    sheet: Template.create(lookupOne("#edition-template"))
+    sheet: Template.create(lookupOne("#edition-template")),
+    jinx: Template.create(lookupOne("#edition-template-jinx"))
 });
 
 fetchFromStore("./assets/data/characters.json", store).then((characters) => {
@@ -68,13 +69,9 @@ TokenStore.ready(({ characters, jinxes }) => {
     const ids = url.searchParams.get("characters")?.split(",") || [];
     const script = Object.values(characters)
         .filter((character) => ids.includes(character.getId()));
-    const scriptMap = script.reduce((map, character) => {
-
-        map[character.getId()] = character;
-
-        return map;
-
-    }, Object.create(null));
+    const scriptMap = Object.fromEntries(
+        script.map((character) => [character.getId(), character])
+    );
 
     script.forEach((character) => {
 
@@ -99,7 +96,6 @@ TokenStore.ready(({ characters, jinxes }) => {
         const team = character.getTeam();
 
         lookupOneCached(`#wrapper-${team}`).classList.remove("is-empty");
-// TODO: add jinxes to .drawSheet()
         lookupOneCached(`#team-${team}`).append(character.drawSheet());
 
     });

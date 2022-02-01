@@ -28,7 +28,8 @@
     gap: 0 1em;
     grid-template-areas:
         "token name"
-        "token ability";
+        "token ability"
+        "jinxes ability";
     padding: 0.5em;
     width: 100%;
 
@@ -52,10 +53,12 @@
     }
 
     @media (min-width: 650px) {
-        grid-template-areas: "token name ability";
+        grid-template-areas:
+            "token name ability"
+            "token jinxes ability";
         grid-template-columns: 4em 7.5em 1fr;
-        grid-template-rows: min-content;
-        gap: 0.5em;
+        grid-template-rows: 1fr min-content;
+        gap: 0 0.5em;
     }
 
     @media (min-width: 1024px) {
@@ -76,6 +79,24 @@
 
 .edition__ability {
     grid-area: ability;
+}
+
+.edition__jinxes {
+    grid-area: jinxes;
+    display: flex;
+    flex-flow: row wrap;
+    gap: 0.25em;
+    margin-top: 0.25em;
+
+    // This seems to be the best way of lining up the name again.
+    &:empty {
+        height: 0;
+        margin-top: 0;
+    }
+}
+
+.edition__jinx {
+    width: 1.5em;
 }
 
 .edition > summary {

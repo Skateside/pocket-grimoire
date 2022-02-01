@@ -98,10 +98,12 @@ a {
     // }
 
     .edition__role {
-        grid-template-areas: "token name ability";
+        grid-template-areas:
+            "token name ability"
+            "token jinxes ability";
         grid-template-columns: 25pt 80pt 1fr;
         grid-template-rows: -webkit-min-content;
-        grid-template-rows: min-content;
+        grid-template-rows: 1fr min-content;
         gap: 4pt;
         padding: 2pt 0;
         page-break-inside: avoid;
@@ -121,6 +123,15 @@ a {
 
     .edition__ability {
         font-size: 9pt;
+    }
+
+    .edition__jinxes {
+        gap: 2pt;
+        margin-top: 2pt;
+    }
+
+    .edition__jinx {
+        width: 8pt;
     }
 
     .button {
