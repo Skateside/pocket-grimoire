@@ -58,6 +58,20 @@ export default class CharacterToken extends Token {
     setup() {
 
         /**
+         * A flag showing whether or not the character is dead.
+         * @type {Boolean}
+         */
+        this.isDead = false;
+
+        /**
+         * A flag showing whether or not the character is upside down,
+         * indicating that the character is the opposite alignment (or on the
+         * evil team if it's a traveller).
+         * @type {Boolean}
+         */
+        this.isUpsideDown = false;
+
+        /**
          * A collection of all jinxes that affect this character.
          * @type {Object}
          */
@@ -110,10 +124,6 @@ export default class CharacterToken extends Token {
             state = !this.isDead;
         }
 
-        /**
-         * A flag showing whether or not the character is dead.
-         * @type {Boolean}
-         */
         this.isDead = state;
 
         return this.getIsDead();
@@ -128,6 +138,37 @@ export default class CharacterToken extends Token {
      */
     getIsDead() {
         return Boolean(this.isDead);
+    }
+
+    /**
+     * Toggles the upside-down state for this character. The state can be forced
+     * by passing a boolean to this method.
+     *
+     * @param  {Boolean} [state]
+     *         Optional state to set. If ommitted, the state is toggled.
+     * @return {Boolean}
+     *         The new state.
+     */
+    rotate(state) {
+
+        if (state === undefined) {
+            state = !this.isUpsideDown;
+        }
+
+        this.isUpsideDown = state;
+
+        return this.getIsUpsideDown();
+
+    }
+
+    /**
+     * Exposes {@link CharacterToken#isUpsideDown}.
+     *
+     * @return {Boolean}
+     *         true if the character is upside-down, false otherwise.
+     */
+    getIsUpsideDown() {
+        return Boolean(this.isUpsideDown);
     }
 
     /**

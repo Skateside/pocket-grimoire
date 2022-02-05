@@ -110,9 +110,10 @@ export function identify(element, prefix = "anonymous-element-") {
 
         do {
 
-            id = `${prefix}${identifyCounter}`;
+            id = prefix + identifyCounter;
             identifyCounter += 1;
 
+        // document.getElementById() is faster than our lookupOne().
         } while (document.getElementById(id));
 
         element.id = id;
@@ -225,5 +226,28 @@ export function getLabelText(input) {
     }
 
     return getLabel(input)?.textContent.trim() || "";
+
+}
+
+/**
+ * Triggers the appropriate events for an input hacing changed, in the correct
+ * (or, at least, a consisten) order. If the given input does not exist or is
+ * not an input then nothing happens.
+ *
+ * @param {Element} input
+ *        Input element.
+ */
+export function announceInput(input) {
+
+    if (!input || input.nodeName?.toLowerCase() !== "input") {
+        return;
+    }
+
+    input.dispatchEvent(new Event("input", {
+        bubbles: true
+    }));
+    input.dispatchEvent(new Event("change", {
+        bubbles: true
+    }));
 
 }

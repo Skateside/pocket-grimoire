@@ -1,13 +1,16 @@
 {% embed '../includes/details.twig' with {
     open: true,
-    summary: 'Setup'
+    summary: 'Setup',
+    id: 'setup'
 } %}
     {% block body %}
     <ul class="button-list">
         <li><button type="button" class="button" id="select-edition" data-dialog="#edition-list">Select Edition</button></li>
         <li><button type="button" class="button" id="select-characters" data-dialog="#character-select" disabled>Select Characters</button></li>
         <li><button type="button" class="button" id="qr-code-button" data-dialog="#qr-code-dialog" disabled>Character Sheet</button></li>
+        {#
         <li><button type="button" class="button button--warning" id="clear-cache" data-reset="This will clear the cache and the grimoire. Would you like to continue?" disabled>Clear Cache</button></li>
+        #}
     </ul>
     {% endblock %}
 {% endembed %}

@@ -12,6 +12,7 @@
     --left-leaf: var(--no-leaf);
     --right-leaf: var(--no-leaf);
     --setup-leaf: var(--no-leaf);
+    --offset: 2.5%;
 
     background-color: #fffef0;
     background-image:
@@ -40,6 +41,14 @@
         inset 0.1em 0.1em 0.2em rgb(255 255 255 / 0.2),
         inset 0 0 0.7em #8a4d0f,
         0.1em 0.1em 0.2em rgb(0 0 0 / 0.8);
+
+    &.is-upside-down {
+        box-shadow:
+            inset 0.1em 0.1em 0.2em rgb(255 255 255 / 0.2),
+            inset 0 0 0.7em #8a4d0f,
+            -0.1em -0.1em 0.2em rgb(0 0 0 / 0.8);
+        transform: rotate(180deg);
+    }
 }
 
 .character--top-1 { --top-leaf: url("../img/token/top-1.png"); }
@@ -58,29 +67,48 @@
     border-radius: 50%;
     color: #fff;
     font-weight: bold;
-    width: 20%;
+    width: 25%;
     aspect-ratio: 1 / 1;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: clamp(0.5em, 3.5vw - 0.5em, 2em);
+    font-size: clamp(0.75em, 3.5vw - 0.5em, 2em);
     line-height: 1;
     grid-area: 1 / -1;
-    margin-top: 5%;
+    z-index: 2;
+    margin-top: var(--offset);
+}
+
+.character.is-upside-down[data-first-night]::before,
+.character.is-upside-down[data-other-night]::after {
+    transform: rotate(180deg);
+    margin-top: 0;
+    margin-bottom: var(--offset);
+    align-self: flex-end;
 }
 
 .character[data-first-night]::before {
     content: attr(data-first-night);
     background-image: linear-gradient(to bottom, #006, #00c);
-    margin-left: 5%;
+    margin-left: var(--offset);
     margin-right: auto;
+}
+
+.character.is-upside-down[data-first-night]::before {
+    margin-left: auto;
+    margin-right: var(--offset);
 }
 
 .character[data-other-night]::after {
     content: attr(data-other-night);
     background-image: linear-gradient(to bottom, #600, #c00);
     margin-left: auto;
-    margin-right: 5%;
+    margin-right: var(--offset);
+}
+
+.character.is-upside-down[data-other-night]::after {
+    margin-left: var(--offset);
+    margin-right: auto;
 }
 
 .reminder {
@@ -118,6 +146,10 @@
     display: none;
 
     @at-root {
+        .is-upside-down > #{&} {
+            transform: rotate(180deg);
+        }
+
         .is-dead > #{&} {
             display: block;
         }

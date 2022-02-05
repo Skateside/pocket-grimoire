@@ -6,7 +6,8 @@ import {
     lookupOne,
     lookupCached,
     lookupOneCached,
-    replaceContentsMany
+    replaceContentsMany,
+    announceInput
 } from "../../utils/elements.js";
 import {
     shuffle,
@@ -62,11 +63,7 @@ function highlightRandomInTeam(team, count) {
         input.checked = chosen.includes(input);
 
         if (input.checked !== isChecked) {
-
-            input.dispatchEvent(new Event("change", {
-                bubbles: true
-            }));
-
+            announceInput(input);
         }
 
     });

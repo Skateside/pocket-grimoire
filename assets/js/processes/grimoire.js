@@ -155,6 +155,15 @@ lookupOne("#character-shroud-toggle").addEventListener("click", ({ target }) => 
 
 });
 
+lookupOne("#character-rotate").addEventListener("click", ({ target }) => {
+
+    pad.rotateByToken(
+        lookupOne(target.closest("[data-token]").dataset.token)
+    );
+    Dialog.create(target.closest(".dialog")).hide();
+
+});
+
 lookupOne("#character-remove").addEventListener("click", ({ target }) => {
 
     pad.removeCharacterByToken(

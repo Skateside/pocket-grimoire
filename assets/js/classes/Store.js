@@ -2,6 +2,9 @@ import {
     deepClone,
     deepFreeze
 } from "../utils/objects.js";
+import {
+    lookup
+} from "../utils/elements.js";
 
 /**
  * Stores data in localStorage so it can be quickly retrieved.
@@ -86,6 +89,8 @@ export default class Store {
             lookup: {},
             characters: {},
             tokens: [],
+            inputs: {},
+            details: {},
             ...(JSON.parse(window.localStorage.getItem(this.key)) || {})
         }
 
@@ -285,6 +290,113 @@ export default class Store {
         }
 
         data.tokens[index].isDead = isDead;
+        this.write();
+
+    }
+
+    /**
+     * Toggles the "upside-down" state of the given character.
+     *
+     * @param {CharacterToken} token
+     *        Character whose upside-down state should be updated in the store.
+     * @param {Boolean} isDead
+     *        The upside-down state to store.
+     */
+    rotate(token, isUpsideDown) {
+
+        const {
+            data,
+            tokens
+        } = this;
+        let index = tokens.indexOf(token);
+
+        if (index < 0) {
+            return;
+        }
+
+        data.tokens[index].isUpsideDown = isUpsideDown;
+        this.write();
+
+    }
+
+    /**
+     * Saves the state of the given input.
+     *
+     * @param {Element} input
+     *        Input element whose value or checked state should be saved.
+     */
+    saveInput(input) {
+
+        const {
+            name,
+            form,
+            type,
+            value,
+            checked
+        } = (input || {});
+
+        if (!name || type === "file") {
+            return;
+        }
+
+        let selector = `input[name="${name}"]`;
+        const isCheckbox = type === "checkbox";
+
+        if (isCheckbox && input.hasAttribute("value")) {
+            selector += `[value="${value}"]`;
+        }
+
+        const formId = form?.id;
+        if (formId) {
+            selector = `#${formId} ${selector}`;
+        }
+
+        this.data.inputs[selector] = (
+            isCheckbox
+            ? checked
+            : value
+        );
+        this.write();
+
+    }
+
+    /**
+     * Removes all inputs from the data that don't exist. This can be useful for
+     * times when a lot of inputs have been removed, such as when the list of
+     * characters has changed.
+     */
+    removeStaleInputs() {
+
+        const {
+            data
+        } = this;
+
+        data.inputs = Object.fromEntries(
+            Object.entries(data.inputs).filter(([selector]) => lookup(selector))
+        );
+        this.write();
+
+    }
+
+    /**
+     * Saves information about the open/closed state of the given details
+     * element.
+     *
+     * @param {Element} details
+     *        The details element whose open/closed state should be saved.
+     */
+    saveDetails(details) {
+
+        const {
+            id,
+            open
+        } = details || {};
+
+        if (!id) {
+            return;
+        }
+
+        this.data.details[`#${id}`] = open;
         this.write();
 
     }

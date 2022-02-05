@@ -290,6 +290,57 @@ export default class Pad {
     }
 
     /**
+     * Toggles the rotated state for the character that's been given.
+     *
+     * @param {CharacterToken} character
+     *        The character whose rotated state should be toggled.
+     * @param {Boolean} [rotateState]
+     *        Optional rotated state to set.
+     */
+    rotate(character, rotateState) {
+
+        const {
+            characters,
+            observer
+        } = this;
+        const info = characters.find((info) => info.character === character);
+
+        if (!info) {
+            return;
+        }
+
+        const {
+            token
+        } = info;
+
+        const isUpsideDown = character.rotate(rotateState);
+        this.constructor
+            .getToken(token)
+            .classList
+            .toggle("is-upside-down", isUpsideDown);
+        observer.trigger("rotate-toggle", {
+            isUpsideDown,
+            token,
+            character
+        });
+
+    }
+
+    /**
+     * A helper function for toggling the rotated state of a character by their
+     * element rather than the {@link CharacterToken} instance.
+     *
+     * @param {Element} token
+     *        Element whose associated character should have their rotated state
+     *        toggled.
+     * @param {Boolean} [deadState]
+     *        Optional rotated state to set.
+     */
+    rotateByToken(token, rotateState) {
+        this.rotate(this.getCharacterByToken(token), rotateState);
+    }
+
+    /**
      * Adds a reminder to {@link Pad#element}.
      *
      * @param  {ReminderToken} reminder

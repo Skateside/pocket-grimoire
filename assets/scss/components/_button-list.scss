@@ -8,9 +8,9 @@
         --columns: 3;
     }
 
-    @media (min-width: 1024px) {
-        --columns: 4;
-    }
+    // @media (min-width: 1024px) {
+    //     --columns: 4;
+    // }
 }
 
 .button-list--reminder {
@@ -23,4 +23,8 @@
     @media (min-width: 1024px) {
         --columns: 6;
     }
+}
+
+.button-list--tokens {
+    --columns: 3;
 }

@@ -2,7 +2,10 @@ import Store from "../classes/Store.js";
 import Observer from "../classes/Observer.js";
 import TokenStore from "../classes/TokenStore.js";
 import {
-    lookupOneCached
+    lookup,
+    lookupOne,
+    lookupOneCached,
+    announceInput
 } from "../utils/elements.js";
 
 const store = Store.create("pocket-grimoire");
@@ -17,6 +20,7 @@ gameObserver.on("characters-selected", ({ detail }) => {
         detail.name,
         detail.characters.map((character) => character.getId())
     );
+    store.removeStaleInputs();
 
 });
 
@@ -72,12 +76,32 @@ tokenObserver.on("shroud-toggle", ({ detail }) => {
     store.toggleDead(pad.getCharacterByToken(detail.token), detail.isDead);
 });
 
+tokenObserver.on("rotate-toggle", ({ detail }) => {
+    store.rotate(pad.getCharacterByToken(detail.token), detail.isUpsideDown);
+});
+
+const {
+    body
+} = document;
+
+body.addEventListener("input", ({ target }) => {
+    store.saveInput(target.closest("input"));
+});
+
+body.addEventListener("toggle", ({ target }) => {
+    store.saveDetails(target.closest("details"));
+}, {
+    capture: true
+});
+
 const storeData = store.read();
 
 TokenStore.ready(({
     characters,
     reminders
 }) => {
+
+    // Re-select the characters.
 
     const info = storeData.characters;
 
@@ -92,6 +116,8 @@ TokenStore.ready(({
 
     }
 
+    // Re-place the tokens.
+
     let finalZIndex = 0;
 
     storeData.tokens.forEach(({
@@ -99,7 +125,8 @@ TokenStore.ready(({
         left,
         top,
         zIndex,
-        isDead
+        isDead,
+        isUpsideDown
     }) => {
 
         const isCharacter = TokenStore.isCharacterId(id);
@@ -112,7 +139,10 @@ TokenStore.ready(({
         pad.moveToken(info.token, left, top, zIndex);
 
         if (isCharacter) {
+
             pad.toggleDead(info.character, Boolean(isDead));
+            pad.rotate(info.character, Boolean(isUpsideDown));
+
         }
 
         if (zIndex > finalZIndex) {
@@ -123,6 +153,60 @@ TokenStore.ready(({
 
     pad.setZIndex(finalZIndex);
 
+    // Re-populate the inputs.
+
+    Object.entries(storeData.inputs).forEach(([selector, value]) => {
+
+        const inputs = lookup(selector);
+
+        const type = inputs[0]?.type;
+        const isRadio = type === "radio";
+        const input = (
+            isRadio
+            ? inputs.find((input) => input.value === value)
+            : inputs[0]
+        );
+
+        if (!input) {
+            return;
+        }
+
+        if (isRadio) {
+            input.checked = true;
+        } else if (type === "checkbox") {
+            input.checked = value;
+        } else {
+            input.value = value;
+        }
+
+        announceInput(input);
+
+    });
+
+    // Re-open or re-close the details.
+
+    Object.entries(storeData.details).forEach(([selector, isOpen]) => {
+
+        const details = lookupOne(selector);
+
+        if (!details) {
+            return;
+        }
+
+        const isOpenNow = details.hasAttribute("open");
+        details.open = isOpen;
+
+        if (isOpenNow !== isOpen) {
+
+            details.dispatchEvent(new Event("toggle", {
+                bubbles: false
+            }));
+
+        }
+
+    });
+
 });
 
-// TODO: store input values (player count and night order preference) and re-load it.
+// TODO: Pad height.
+// TODO: Scroll amount?
