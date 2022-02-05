@@ -55,6 +55,12 @@
     }
 
     @at-root {
+        :focus-visible + #{&} {
+            outline: Highlight auto 1px;
+            outline: -webkit-focus-ring-color auto 1px;
+            outline-offset: 2px;
+        }
+
         :checked + #{&} {
             background-color: #679fd0;
 

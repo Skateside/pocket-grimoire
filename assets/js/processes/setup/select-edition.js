@@ -98,9 +98,7 @@ form.addEventListener("submit", (e) => {
                 announceScript(
                     name,
                     json
-                        .map(({ id }) => {
-                            return characters[id.replace(/[-_]/g, "")];
-                        })
+                        .map(({ id }) => characters[id.replace(/[-_]/g, "")])
                         .filter(Boolean)
                 );
 

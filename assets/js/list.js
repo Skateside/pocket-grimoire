@@ -60,10 +60,6 @@ Promise.all([
 
 });
 
-// gameObserver.on("characters-loaded", ({ detail }) => {
-//     TokenStore.create(detail.characters);
-// });
-
 TokenStore.ready(({ characters, jinxes }) => {
 
     const ids = url.searchParams.get("characters")?.split(",") || [];

@@ -57,10 +57,6 @@ Promise.all([
 
 });
 
-// gameObserver.on("characters-loaded", ({ detail }) => {
-//     TokenStore.create(detail.characters);
-// });
-
 lookupCached("[data-dialog]").forEach((trigger) => {
     trigger.dialog = Dialog.createFromTrigger(trigger);
 });

@@ -3,6 +3,7 @@ import Dialog from "../../classes/Dialog.js";
 import TokenStore from "../../classes/TokenStore.js";
 import Template from "../../classes/Template.js";
 import {
+    empty,
     lookupOneCached,
     replaceContentsMany
 } from "../../utils/elements.js";
@@ -63,7 +64,16 @@ gameObserver.on("character-drawn", ({ detail }) => {
 
 gameObserver.on("character-drawn", ({ detail }) => {
 
-    // TODO: do something better.
-    window.alert(`You are the ${detail.character.getName()}`);
+    const {
+        character
+    } = detail;
+
+    empty(lookupOneCached("#character-decision-wrapper")).append(
+        character.drawToken()
+    );
+    lookupOneCached("#character-decision-ability").textContent = (
+        character.getAbility()
+    );
+    Dialog.create(lookupOneCached("#character-decision")).show();
 
 });

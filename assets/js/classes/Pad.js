@@ -109,7 +109,7 @@ export default class Pad {
             template.draw([
                 [
                     ".js--token--wrapper",
-                    character.draw(),
+                    character.drawToken(),
                     (element, content) => {
 
                         Template.append(element, content);
@@ -310,7 +310,7 @@ export default class Pad {
             template.draw([
                 [
                     ".js--token--wrapper",
-                    reminder.draw(),
+                    reminder.drawToken(),
                     (element, content) => {
 
                         Template.append(element, content);

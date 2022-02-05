@@ -29,7 +29,7 @@ export default class ReminderToken extends Token {
      * @return {DocumentFragment}
      *         Populated token.
      */
-    draw() {
+    drawToken() {
 
         const {
             image,

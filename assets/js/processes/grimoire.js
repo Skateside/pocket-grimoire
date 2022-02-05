@@ -61,7 +61,7 @@ gameObserver.on("characters-selected", ({ detail }) => {
             ],
             [
                 ".js--character-list--token",
-                character.draw(),
+                character.drawToken(),
                 Template.append
             ]
         ]))
@@ -84,7 +84,7 @@ gameObserver.on("characters-selected", ({ detail }) => {
             ],
             [
                 ".js--reminder-list--button",
-                reminder.draw(),
+                reminder.drawToken(),
                 Template.append
             ]
         ]))
@@ -139,7 +139,7 @@ tokenObserver.on("character-click", ({ detail }) => {
     const dialog = lookupOneCached("#character-show");
     dialog.dataset.token = `#${identify(element)}`;
 
-    empty(lookupOneCached("#character-show-token")).append(character.draw());
+    empty(lookupOneCached("#character-show-token")).append(character.drawToken());
     lookupOneCached("#character-show-ability").textContent = character.getAbility();
 
     Dialog.create(dialog).show();

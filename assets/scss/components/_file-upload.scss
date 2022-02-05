@@ -47,4 +47,12 @@
             inset -0.1em -0.1em 0.2em rgb(0 0 0 / 30%);
         padding: 0 0.3em;
     }
+
+    @at-root {
+        :focus-visible + #{&} {
+            outline: Highlight auto 1px;
+            outline: -webkit-focus-ring-color auto 1px;
+            outline-offset: 2px;
+        }
+    }
 }

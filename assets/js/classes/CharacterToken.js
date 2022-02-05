@@ -53,6 +53,21 @@ export default class CharacterToken extends Token {
     }
 
     /**
+     * @inheritDoc
+     */
+    setup() {
+
+        /**
+         * A collection of all jinxes that affect this character.
+         * @type {Object}
+         */
+        this.jinxes = Object.create(null);
+
+        this.setReminders([]);
+
+    }
+
+    /**
      * Sets the reminders that this character has.
      *
      * @param {Array.<ReminderToken>} reminders
@@ -77,7 +92,7 @@ export default class CharacterToken extends Token {
      *         All the reminders for this character.
      */
     getReminders() {
-        return this.reminders || [];
+        return this.reminders;
     }
 
     /**
@@ -115,14 +130,20 @@ export default class CharacterToken extends Token {
         return Boolean(this.isDead);
     }
 
+    /**
+     * Adds a jinx to the character.
+     *
+     * @param {Object} jinx
+     *        Information about the jinx.
+     * @param {String} reason
+     *        The reason for the jinx.
+     * @param {CharacterToken} character
+     *        The character that this character is jinxed with.
+     */
     addJinx({
         reason,
         character
     }) {
-
-        if (!this.jinxes) {
-            this.jinxes = Object.create(null);
-        }
 
         this.jinxes[character.getId()] = {
             reason,
@@ -132,13 +153,26 @@ export default class CharacterToken extends Token {
 
     }
 
+    /**
+     * Activates the jinx for the given character.
+     *
+     * @param {CharacterToken} character
+     *        The character that's jinxed with the current character and whose
+     *        jinx should be activated.
+     */
     activateJinx(character) {
         this.activateJinxById(character.getId());
     }
 
+    /**
+     * Activates the jinx for the given character ID.
+     *
+     * @param {String} id
+     *        The ID of the character whose jinx should be activated.
+     */
     activateJinxById(id) {
 
-        const jinx = this.jinxes?.[id];
+        const jinx = this.jinxes[id];
 
         if (jinx) {
             jinx.isActive = true;
@@ -146,13 +180,26 @@ export default class CharacterToken extends Token {
 
     }
 
+    /**
+     * Deactivates a jinx for the given character.
+     *
+     * @param {CharacterToken} character
+     *        The character that's jinxed with the current character and whose
+     *        jinx should be deactivated.
+     */
     deactivateJinx(character) {
         this.deactivateJinxById(character.getId());
     }
 
+    /**
+     * Deactivates the jinx for the given character ID.
+     *
+     * @param {String} id
+     *        The ID of the character whose jinx should be deactivated.
+     */
     deactivateJinxById(id) {
 
-        const jinx = this.jinxes?.[id];
+        const jinx = this.jinxes[id];
 
         if (jinx) {
             jinx.isActive = false;
@@ -160,18 +207,21 @@ export default class CharacterToken extends Token {
 
     }
 
+    /**
+     * Deactivates all the jinxes for this character.
+     */
     deactivateAllJinxes() {
-
-        Object.keys(this.jinxes || {})
-            .forEach((id) => this.deactivateJinxById(id));
-
+        Object.keys(this.jinxes).forEach((id) => this.deactivateJinxById(id));
     }
 
+    /**
+     * Gets all the active jinxes for this character.
+     *
+     * @return {Array.<Object>}
+     *         Gets information about all the active jinxes.
+     */
     getActiveJinxes() {
-
-        return Object.values(this.jinxes || {})
-            .filter(({ isActive }) => isActive);
-
+        return Object.values(this.jinxes).filter(({ isActive }) => isActive);
     }
 
     /**
@@ -180,7 +230,7 @@ export default class CharacterToken extends Token {
      * @return {DocumentFragment}
      *         Populated token.
      */
-    draw() {
+    drawToken() {
 
         const {
             name,

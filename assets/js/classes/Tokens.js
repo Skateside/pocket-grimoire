@@ -346,13 +346,7 @@ export default class Tokens {
      */
     dragObject(element, event) {
 
-        // Sometimes attempting to drag a token will scroll the page. I'm not
-        // sure why that happens, but this check is designed to prevent errors
-        // being thrown when it does.
-        // Commented out the check because I _think_ that I fixed this bug.
-        // if (event.cancelable) {
-            event.preventDefault();
-        // }
+        event.preventDefault();
 
         const {
             type,

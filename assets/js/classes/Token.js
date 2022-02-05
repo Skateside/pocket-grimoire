@@ -34,6 +34,8 @@ export default class Token {
          */
         this.data = this.processData(data);
 
+        this.setup();
+
         const constructor = this.constructor;
 
         return new Proxy(this, {
@@ -54,6 +56,14 @@ export default class Token {
 
         });
 
+    }
+
+    /**
+     * A function called before the magic methods are created, allowing
+     * sub-classes to adjust the setup.
+     */
+    setup() {
+        return;
     }
 
     /**

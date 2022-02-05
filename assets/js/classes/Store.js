@@ -59,6 +59,10 @@ export default class Store {
          */
         this.data = this.read();
 
+        /**
+         * All the token elements that are being remembered.
+         * @type {Array.<Element>}
+         */
         this.tokens = [];
 
     }
@@ -131,6 +135,14 @@ export default class Store {
 
     }
 
+    /**
+     * Stores the character list and the name of the script.
+     *
+     * @param {String|undefined} name
+     *        Name of the script, which may be blank.
+     * @param {Array.<String>} characters
+     *        Array of all the character IDs that are in this script.
+     */
     setCharacters(name, characters) {
 
         const data = {
@@ -146,25 +158,12 @@ export default class Store {
 
     }
 
-    // updateTokenPosition(token, left, top) {
-    //
-    //     if (!this.tokens) {
-    //         this.tokens = [];
-    //     }
-    //
-    //     const index = this.tokens.indexOf(token) || this.tokens.length;
-    //
-    //     this.data.tokens[index] = [
-    //         {
-    //             type: "character|reminder",
-    //             content: "?"
-    //         },
-    //         left,
-    //         top
-    //     ];
-    //
-    // }
-
+    /**
+     * Adds a token to the store so it's existence can be remembered.
+     *
+     * @param {Token} token
+     *        Token to add.
+     */
     addToken(token) {
 
         const {
@@ -183,6 +182,12 @@ export default class Store {
 
     }
 
+    /**
+     * Removes the token so it's no longer remembered.
+     *
+     * @param {Token} token
+     *        Token to stop remembering.
+     */
     removeToken(token) {
 
         const {
@@ -201,6 +206,18 @@ export default class Store {
 
     }
 
+    /**
+     * Stores the location of the given token.
+     *
+     * @param {Token} token
+     *        Token whose position should be stored.
+     * @param {Number} left
+     *        The X position of the token.
+     * @param {Number} top
+     *        The Y position of the token.
+     * @param {Number} zIndex
+     *        The Z position of the token.
+     */
     moveToken(token, left, top, zIndex) {
 
         const {
@@ -222,6 +239,14 @@ export default class Store {
 
     }
 
+    /**
+     * Updates the Z position of the given token.
+     *
+     * @param {Token} token
+     *        Token whose Z position should be updated.
+     * @param {Number} zIndex
+     *        The Z positiong of the token.
+     */
     alignToken(token, zIndex) {
 
         const {
@@ -239,6 +264,14 @@ export default class Store {
 
     }
 
+    /**
+     * Toggles the "dead" state of the given character.
+     *
+     * @param {CharacterToken} token
+     *        Character whose dead state should be updated in the store.
+     * @param {Boolean} isDead
+     *        The dead state to store.
+     */
     toggleDead(token, isDead) {
 
         const {
