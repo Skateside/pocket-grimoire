@@ -11,6 +11,14 @@ import {
 export default class TokenStore {
 
     /**
+     * An ID that will only match an empty character.
+     * @type {String}
+     */
+    static get EMPTY() {
+        return "";
+    }
+
+    /**
      * The promise that resolves when the tokens data is loaded.
      * @type {Promise}
      */
@@ -20,11 +28,13 @@ export default class TokenStore {
      * Resolves {@link TokenStore.promise} with an instance of
      * {@link TokenStore} that has the data passed to it.
      *
-     * @param {Array.<Object>} data
-     *        Data for the characters.
+     * @param  {Array.<Object>} data
+     *         Data for the characters.
+     * @return {Promise}
+     *         The promise that resolves with an instance of {@link TokenStore}.
      */
     static create(data) {
-        this.promise.resolve(new this(data));
+        return this.promise.resolve(new this(data));
     }
 
     /**

@@ -1,7 +1,9 @@
 import Store from "../classes/Store.js";
 import Observer from "../classes/Observer.js";
 import TokenStore from "../classes/TokenStore.js";
+import Bluffs from "../classes/Bluffs.js";
 import {
+    empty,
     lookup,
     lookupOne,
     lookupOneCached,
@@ -12,7 +14,7 @@ const store = Store.create("pocket-grimoire");
 const gameObserver = Observer.create("game");
 const tokenObserver = Observer.create("token");
 
-const padElement = lookupOneCached(".pad");
+const padElement = lookupOneCached(".js--pad");
 const pad = padElement.pad;
 
 gameObserver.on("characters-selected", ({ detail }) => {
@@ -83,6 +85,10 @@ tokenObserver.on("shroud-toggle", ({ detail }) => {
 
 tokenObserver.on("rotate-toggle", ({ detail }) => {
     store.rotate(pad.getCharacterByToken(detail.token), detail.isUpsideDown);
+});
+
+tokenObserver.on("bluff", ({ detail }) => {
+    store.setBluff(detail.button, detail.character);
 });
 
 const {
@@ -157,6 +163,23 @@ TokenStore.ready(({
     });
 
     pad.setZIndex(finalZIndex);
+
+    // Re-set the bluffs.
+
+    Object.entries(storeData.bluffs).forEach(([selector, characterId]) => {
+
+        // const button = lookupOne(selector);
+        const character = characters[characterId];
+
+        // if (!button || !character) {
+        if (!character || !Bluffs.instance) {
+            return;
+        }
+
+        // empty(button).append(character.drawToken());
+        Bluffs.instance.display(selector, character);
+
+    });
 
     // Re-populate the inputs.
 

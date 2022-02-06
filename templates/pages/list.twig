@@ -19,11 +19,11 @@
     outsider: 'Outsiders',
     minion: 'Minions',
     demon: 'Demons',
-    travellers: 'Travellers',
+    traveller: 'Travellers',
     fabled: 'Fabled'
 } %}
     {% embed '../includes/details.twig' with {
-        open: type != 'travellers',
+        open: type != 'traveller',
         id: 'wrapper-' ~ type,
         class: 'edition is-empty'
     } %}

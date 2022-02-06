@@ -51,7 +51,14 @@ Promise.all([
 ]).then(([ characters, jinxes ]) => {
 
     TokenStore.create({
-        characters,
+        characters: [
+            // Create an empty character which we can use as a token placeholder.
+            {
+                id: TokenStore.EMPTY,
+                image: "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+            },
+            ...characters
+        ],
         jinxes
     });
 

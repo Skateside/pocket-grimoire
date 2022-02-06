@@ -44,7 +44,7 @@ export default class CharacterToken extends Token {
             otherNight: 0,
             otherNightReminder: "",
             reminders: [],
-            setup: true,
+            setup: false,
             ability: "",
             image: "",
             ...data

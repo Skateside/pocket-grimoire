@@ -3,11 +3,14 @@ import Template from "../classes/Template.js";
 import Observer from "../classes/Observer.js";
 import TokenStore from "../classes/TokenStore.js";
 import Dialog from "../classes/Dialog.js";
+import Bluff from "../classes/Bluff.js";
+import Bluffs from "../classes/Bluffs.js";
 import {
     empty,
     identify,
     lookup,
     lookupOne,
+    lookupCached,
     lookupOneCached,
     replaceContentsMany
 } from "../utils/elements.js";
@@ -15,7 +18,7 @@ import {
 const gameObserver = Observer.create("game");
 const tokenObserver = Observer.create("token");
 
-const padElement = lookupOneCached(".pad");
+const padElement = lookupOneCached(".js--pad");
 const pad = new Pad(padElement, tokenObserver);
 padElement.pad = pad;
 
@@ -173,142 +176,176 @@ lookupOne("#character-remove").addEventListener("click", ({ target }) => {
 
 });
 
+// Reminders.
+
 tokenObserver.on("reminder-click", ({ detail }) => {
     pad.removeReminderByToken(detail.element);
 });
 
+// Demon Bluffs.
+
+const bluffs = new Bluffs(
+    lookupCached(".js--character-list--bluff").map((button) => new Bluff(button)),
+    tokenObserver
+);
+Bluffs.instance = bluffs;
+
+TokenStore.ready(({ characters }) => {
+
+    const noCharacter = characters[TokenStore.EMPTY];
+
+    bluffs.setNoCharacter(noCharacter);
+    bluffs.reset(false);
+
+});
+
+gameObserver.on("characters-selected", ({ detail }) => {
+
+    TokenStore.ready((tokenStore) => {
+
+        const characterTemplate = Template.create(
+            lookupOneCached("#character-list-template")
+        );
+        const characters = [
+            tokenStore.characters[TokenStore.EMPTY],
+            ...detail.characters
+        ];
+
+        replaceContentsMany(
+            lookupOneCached("#character-list__bluffs"),
+            characters.map((character) => characterTemplate.draw([
+                [
+                    ".js--character-list--item",
+                    {
+                        id: character.getId(),
+                        team: character.getTeam()
+                    },
+                    (element, { id, team }) => {
+
+                        element.dataset.characterId = id;
+                        element.dataset.team = team;
+
+                    }
+                ],
+                [
+                    ".js--character-list--button",
+                    character.getId(),
+                    (element, content) => element.dataset.tokenId = content
+                ],
+                [
+                    ".js--character-list--token",
+                    character.drawToken(),
+                    Template.append
+                ]
+            ]))
+        );
+
+    });
+
+});
+
+function markInPlay(character, shouldAdd = true) {
+
+    const inPlay = lookupOne(
+        `#character-list__bluffs [data-character-id="${character.getId()}"]`
+    );
+
+    if (inPlay) {
+        inPlay.classList.toggle("is-in-play", shouldAdd === true);
+    }
+
+}
+
+gameObserver.on("character-drawn", ({ detail }) => {
+    markInPlay(detail.character);
+});
+
+tokenObserver.on("character-add", ({ detail }) => {
+    markInPlay(detail.character);
+});
+
+tokenObserver.on("character-remove", ({ detail }) => {
+    markInPlay(detail.character, false);
+});
+
+lookupOne("#show-existing").addEventListener("change", ({ target }) => {
+
+    lookupOneCached("#character-list__bluffs")
+        .classList
+        .toggle("is-show-existing", target.checked)
+
+});
+
+lookupOne("#show-travellers").addEventListener("change", ({ target }) => {
+
+    lookupOneCached("#character-list__bluffs")
+        .classList
+        .toggle("is-show-travellers", target.checked)
+
+});
+
+lookupOne("#show-evil").addEventListener("change", ({ target }) => {
+
+    lookupOneCached("#character-list__bluffs")
+        .classList
+        .toggle("is-show-evil", target.checked)
+
+});
+
+const bluffWrapper = lookupOneCached("#bluff-list");
+const bluffList = lookupOneCached("#character-list__bluffs");
+
+lookupCached(".js--character-list--bluff").forEach((button) => {
+
+    button.addEventListener("click", ({ target }) => {
+
+        const button = target.closest("button");
+
+        if (!button) {
+            return;
+        }
+
+        bluffList.dataset.button = `#${identify(button)}`;
+
+    });
+
+});
+
+const bluffDialog = Dialog.create(bluffWrapper);
+
+bluffList.addEventListener("click", ({ target }) => {
+
+    const characterId = target.closest("[data-character-id]").dataset.characterId;
+    const buttonSelector = bluffList.dataset.button;
+
+    TokenStore.ready(({ characters }) => {
+
+        const character = characters[characterId];
+
+        if (!character) {
+            return;
+        }
+
+        bluffs.display(buttonSelector, character);
+        bluffDialog.hide();
+
+    });
+
+});
+
+// Reset Buttons.
+
 lookupOne("#reset-height").addEventListener("click", () => {
-    lookupOneCached(".pad").style.height = "";
+    lookupOneCached(".js--pad").style.height = "";
 });
 
 lookupOne("#clear-grimoire").addEventListener("click", ({ target }) => {
 
     if (window.confirm(target.dataset.confirm)) {
+
         pad.reset();
-    }
-
-});
-
-// Update the night order on the tokens.
-const nightOrder = {
-    first: [],
-    other: []
-};
-
-function updateTokens() {
-
-    let firstCount = 0;
-
-    nightOrder.first.forEach((tokens) => {
-
-        firstCount += 1;
-
-        tokens.forEach(({ character, token }) => {
-            Pad.getToken(token).dataset.firstNight = firstCount;
-        });
-
-    });
-
-    let otherCount = 0;
-
-    nightOrder.other.forEach((tokens) => {
-
-        otherCount += 1;
-
-        tokens.forEach(({ character, token }) => {
-            Pad.getToken(token).dataset.otherNight = otherCount;
-        });
-
-    });
-
-}
-
-tokenObserver.on("character-add", ({ detail }) => {
-
-    const {
-        character,
-        token
-    } = detail;
-    const {
-        first,
-        other
-    } = nightOrder;
-
-    const firstNight = character.getFirstNight();
-
-    if (firstNight) {
-
-        if (!first[firstNight]) {
-            first[firstNight] = [];
-        }
-
-        first[firstNight].push({
-            character,
-            token
-        });
+        bluffs.reset();
 
     }
-
-    const otherNight = character.getOtherNight();
-
-    if (otherNight) {
-
-        if (!other[otherNight]) {
-            other[otherNight] = [];
-        }
-
-        other[otherNight].push({
-            character,
-            token
-        });
-
-    }
-
-    updateTokens();
-
-});
-
-tokenObserver.on("character-remove", ({ detail }) => {
-
-    const {
-        character,
-        token
-    } = detail;
-
-    const firstNight = character.getFirstNight();
-    const firstArray = nightOrder.first[firstNight];
-
-    if (firstArray) {
-
-        const index = firstArray.findIndex((info) => info.token === token);
-
-        if (index > -1) {
-            firstArray.splice(index, 1);
-        }
-
-        if (!firstArray.length) {
-            delete nightOrder.first[firstNight];
-        }
-
-    }
-
-    const otherNight = character.getOtherNight();
-    const otherArray = nightOrder.other[otherNight];
-
-    if (otherArray) {
-
-        const index = otherArray.findIndex((info) => info.token === token);
-
-        if (index > -1) {
-            otherArray.splice(index, 1);
-        }
-
-        if (!otherArray.length) {
-            delete nightOrder.other[otherNight];
-        }
-
-    }
-
-    updateTokens();
 
 });

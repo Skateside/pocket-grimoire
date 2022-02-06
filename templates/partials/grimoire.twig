@@ -4,9 +4,18 @@
 } %}
     {% block body %}
     <div class="pad-wrapper">
-        <div class="pad"></div>
+        <div class="pad pad--growable js--pad"></div>
         <!-- https://fontawesome.com/v5.15/icons/arrows-alt-v?style=solid -->
         <svg aria-hidden="true" focusable="false" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512" class="pad-wrapper__icon"><path fill="currentColor" d="M214.059 377.941H168V134.059h46.059c21.382 0 32.09-25.851 16.971-40.971L144.971 7.029c-9.373-9.373-24.568-9.373-33.941 0L24.971 93.088c-15.119 15.119-4.411 40.971 16.971 40.971H88v243.882H41.941c-21.382 0-32.09 25.851-16.971 40.971l86.059 86.059c9.373 9.373 24.568 9.373 33.941 0l86.059-86.059c15.12-15.119 4.412-40.971-16.97-40.971z" class=""></path></svg>
+    </div>
+
+    <div class="pad pad--bluffs">
+        <h3 class="pad__title">Demon Bluffs</h3>
+        <div style="display: flex; flex-direction: row; justify-content: space-between;">
+            {% for i in 1..3 %}
+                <button type="button" id="bluff-{{ i }}" class="token token--bluff js--character-list--bluff" data-token="character" data-dialog="#bluff-list"></button>
+            {% endfor %}
+        </div>
     </div>
 
     <ul class="button-list mt-4">
@@ -31,8 +40,8 @@
 {% endembed %}
 
 <template id="character-list-template">
-    <li>
-        <button type="button" class="no-btn js--character-list--button">
+    <li class="js--character-list--item">
+        <button type="button" class="no-btn w-full js--character-list--button">
             <span class="character-list__token js--character-list--token"></span>
         </button>
     </li>
@@ -49,7 +58,7 @@
 {% endembed %}
 
 <template id="token-template">
-    <button type="button" class="token js--token--wrapper"></button>
+    <button type="button" class="token token--movable js--token--wrapper"></button>
 </template>
 
 <template id="character-template">
@@ -100,5 +109,43 @@
         <li><button type="button" class="no-btn button" id="character-rotate">Rotate</button></li>
         <li><button type="button" class="no-btn button button--warning" id="character-remove">Remove</button></li>
     </ul>
+    {% endblock %}
+{% endembed %}
+
+{% embed '../includes/dialog.twig' with {
+    id: 'bluff-list',
+    background: 'blur',
+    title: 'Select Bluff'
+} %}
+    {% block body %}
+    <ul id="character-list__bluffs" class="button-list character-list mb-4"></ul>
+
+    <ul class="no-list">
+        <li>
+            {{ forms.toggle({
+                name: 'show',
+                id: 'show-existing',
+                value: 'existing'
+            }) }}
+            <label for="show-existing">Show existing characters</label>
+        </li>
+        <li>
+            {{ forms.toggle({
+                name: 'show',
+                id: 'show-travellers',
+                value: 'traveller'
+            }) }}
+            <label for="show-travellers">Show travellers</label>
+        </li>
+        <li>
+            {{ forms.toggle({
+                name: 'show',
+                id: 'show-evil',
+                value: 'evil'
+            }) }}
+            <label for="show-evil">Show evil characters</label>
+        </li>
+    </ul>
+
     {% endblock %}
 {% endembed %}

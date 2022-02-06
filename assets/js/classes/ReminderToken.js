@@ -24,6 +24,24 @@ export default class ReminderToken extends Token {
     }
 
     /**
+     * @inheritDoc
+     */
+    processData(data) {
+
+        // Provide some default values so that .get() methods don't worry about
+        // missing data and instead worry about typos.
+
+        return {
+            id: "",
+            text: "",
+            image: "",
+            characterId: "",
+            ...data
+        };
+
+    }
+
+    /**
      * Draws the reminder token.
      *
      * @return {DocumentFragment}

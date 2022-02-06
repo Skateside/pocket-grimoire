@@ -3,9 +3,6 @@ import qrcode from "../../lib/qrcode.js";
 import {
     lookupOneCached
 } from "../../utils/elements.js";
-import {
-    memoise
-} from "../../utils/functions.js";
 
 const gameObserver = Observer.create("game");
 const characterStore = Object.create(null);
@@ -36,7 +33,7 @@ function drawQRCode() {
     ];
 
     if (lookupOneCached("#include-travellers").checked) {
-        teams.push("travellers");
+        teams.push("traveller");
     }
 
     if (lookupOneCached("#include-fabled").checked) {

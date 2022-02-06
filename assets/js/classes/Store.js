@@ -18,6 +18,7 @@ export default class Store {
     static defaults = {
         lookup: {},
         characters: {},
+        bluffs: {},
         tokens: [],
         inputs: {},
         details: {},
@@ -105,6 +106,13 @@ export default class Store {
 
     }
 
+    /**
+     * Deletes the information for the given key from {@link Store#data},
+     * setting that key back to its default value.
+     *
+     * @param {String} key
+     *        Key for the data to remove.
+     */
     delete(key) {
 
         const {
@@ -118,13 +126,19 @@ export default class Store {
         this.data[key] = deepClone(defaults[key]);
 
         if (key === "tokens") {
+
             this.tokens.length = 0;
+            this.data.bluffs = deepClone(defaults.bluffs);
+
         }
 
         this.write();
 
     }
 
+    /**
+     * Restores all the data in {@link Store#data} to its default value.
+     */
     deleteAll() {
 
         Object
@@ -132,13 +146,6 @@ export default class Store {
             .forEach((key) => this.delete(key));
 
     }
-
-    /**
-     * Removes all the contents stored in localStorage.
-     */
-    // clear() {
-    //     delete window.localStorage[this.key];
-    // }
 
     /**
      * Gets a copy of {@link Store#data} that can't be modified.
@@ -447,6 +454,13 @@ export default class Store {
     setHeight(height) {
 
         this.data.height = height;
+        this.write();
+
+    }
+
+    setBluff(buttonSelector, characterId) {
+
+        this.data.bluffs[buttonSelector] = characterId;
         this.write();
 
     }

@@ -14,8 +14,15 @@ export function defer() {
         rej = reject;
     });
 
-    promise.resolve = res;
-    promise.reject = rej;
+    promise.resolve = (value) => {
+        res(value);
+        return promise;
+    };
+
+    promise.reject = (reason) => {
+        rej(reason);
+        return promise;
+    };
 
     return promise;
 

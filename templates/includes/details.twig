@@ -12,7 +12,9 @@
 {% endif %}
 
 <details {{ attributes|join(' ') }}>
-    <summary class="details__summary">{% block summary %}{{ summary|default('') }}{% endblock %}</summary>
+    <summary class="details__summary">
+        <h2 class="details__heading">{% block summary %}{{ summary|default('') }}{% endblock %}</h2>
+    </summary>
     <div class="details__body">
         {% block body %}
         {% endblock %}

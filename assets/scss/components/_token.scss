@@ -1,7 +1,4 @@
 .token {
-    --left: 0;
-    --top: 0;
-    --z-index: 0;
     width: 60px;
     aspect-ratio: 1 / 1;
     border: none;
@@ -13,12 +10,6 @@
     font-family: inherit;
     font-size: inherit;
     line-height: inherit;
-    cursor: move;
-    position: absolute;
-    left: calc(var(--left) * 1px);
-    top: calc(var(--top) * 1px);
-    z-index: var(--z-index);
-    touch-action: none;
 
     &[data-token="character"] {
         width: clamp(70px, 100vw / 6, 150px);
@@ -27,4 +18,16 @@
     &[data-token="reminder"] {
         width: clamp(55px, 100vw / 9, 125px);
     }
+}
+
+.token--movable {
+    --left: 0;
+    --top: 0;
+    --z-index: 0;
+    cursor: move;
+    position: absolute;
+    left: calc(var(--left) * 1px);
+    top: calc(var(--top) * 1px);
+    z-index: var(--z-index);
+    touch-action: none;
 }
