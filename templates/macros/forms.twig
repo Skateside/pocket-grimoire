@@ -5,6 +5,9 @@
         name="{{ settings.name }}"
         {% if settings.id|default(false) %}id="{{ settings.id }}"{% endif %}
         {% if settings.value|default(false) %}value="{{ settings.value }}"{% endif %}
+        {% for name, value in settings.attributes|default({}) %}
+            {{ name }}="{{ value }}"
+        {% endfor %}
         {% if settings.checked|default(false) %}checked{% endif %}
     >
     <span class="toggle-switch__render" aria-hidden="true"></span>
@@ -18,10 +21,10 @@
         name="{{ settings.name }}"
         {% if settings.id|default(false) %}id="{{ settings.id }}"{% endif %}
         {% if settings.accept|default(false) %}accept="{{ settings.accept }}"{% endif %}
-        {% if settings.required|default(false) %}required{% endif %}
         {% for name, value in settings.attributes|default({}) %}
             {{ name }}="{{ value }}"
         {% endfor %}
+        {% if settings.required|default(false) %}required{% endif %}
     >
     <span class="file-upload__render"
         aria-hidden="true"

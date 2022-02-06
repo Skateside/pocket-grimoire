@@ -3,15 +3,51 @@ import qrcode from "../../lib/qrcode.js";
 import {
     lookupOneCached
 } from "../../utils/elements.js";
+import {
+    memoise
+} from "../../utils/functions.js";
 
 const gameObserver = Observer.create("game");
+const characterStore = Object.create(null);
+const qrCodeCache = Object.create(null);
 
-gameObserver.on("characters-selected", ({ detail }) => {
+function makeQRCode(url) {
 
-    const {
-        name,
-        characters
-    } = detail;
+    if (!qrCodeCache[url]) {
+
+        const qr = new qrcode(0, "H");
+        qr.addData(url);
+        qr.make();
+        qrCodeCache[url] = qr.createSvgTag({});
+
+    }
+
+    return qrCodeCache[url];
+
+}
+
+function drawQRCode() {
+
+    const teams = [
+        "townsfolk",
+        "outsider",
+        "minion",
+        "demon"
+    ];
+
+    if (lookupOneCached("#include-travellers").checked) {
+        teams.push("travellers");
+    }
+
+    if (lookupOneCached("#include-fabled").checked) {
+        teams.push("fabled");
+    }
+
+    const qrCode = lookupOneCached("#qr-code");
+
+    const ids = characterStore[qrCode.dataset.characters]
+        .filter((character) => teams.includes(character.getTeam()))
+        .map((character) => character.getId());
 
     const url = new URL(window.location.href);
     const {
@@ -20,18 +56,51 @@ gameObserver.on("characters-selected", ({ detail }) => {
     const page = pathname.slice(0, pathname.lastIndexOf("/") + 1);
     url.pathname = `${page}list.html`;
 
+    const name = qrCode.dataset.name;
     if (name) {
         url.searchParams.append("name", name);
     }
 
-    const ids = characters.map((character) => character.getId()).join(",");
     url.searchParams.append("characters", ids);
 
-    const qr = new qrcode(0, "H");
-    qr.addData(url.toString());
-    qr.make();
-    lookupOneCached("#qr-code").innerHTML = qr.createSvgTag({});
+    const cacheKey = url.searchParams.toString();
+    let qrSVG = qrCodeCache[cacheKey]
+
+    qrCode.innerHTML = makeQRCode(url.toString());
     lookupOneCached("#qr-code-button").disabled = false;
     lookupOneCached("#qr-code-link").href = url.toString();
 
+}
+
+gameObserver.on("characters-selected", ({ detail }) => {
+
+    const {
+        name,
+        characters
+    } = detail;
+    const ids = JSON.stringify(
+        characters.map((character) => character.getId())
+    );
+
+    characterStore[ids] = characters;
+
+    const qrCode = lookupOneCached("#qr-code");
+
+    if (name) {
+        qrCode.dataset.name = name;
+    } else {
+        delete qrCode.dataset.name;
+    }
+
+    qrCode.dataset.characters = ids;
+    drawQRCode();
+
+});
+
+lookupOneCached("#include-travellers").addEventListener("change", () => {
+    drawQRCode();
+});
+
+lookupOneCached("#include-fabled").addEventListener("change", () => {
+    drawQRCode();
 });

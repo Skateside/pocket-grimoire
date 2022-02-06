@@ -12,6 +12,19 @@ import {
 export default class Store {
 
     /**
+     * The default, empty information from localStorage.
+     * @type {Object}
+     */
+    static defaults = {
+        lookup: {},
+        characters: {},
+        tokens: [],
+        inputs: {},
+        details: {},
+        height: ""
+    };
+
+    /**
      * A cache of any instances created.
      * @type {Object}
      */
@@ -86,22 +99,46 @@ export default class Store {
     read() {
 
         return {
-            lookup: {},
-            characters: {},
-            tokens: [],
-            inputs: {},
-            details: {},
+            ...deepClone(this.constructor.defaults),
             ...(JSON.parse(window.localStorage.getItem(this.key)) || {})
+        };
+
+    }
+
+    delete(key) {
+
+        const {
+            defaults
+        } = this.constructor;
+
+        if (!Object.prototype.hasOwnProperty.call(defaults, key)) {
+            return;
         }
+
+        this.data[key] = deepClone(defaults[key]);
+
+        if (key === "tokens") {
+            this.tokens.length = 0;
+        }
+
+        this.write();
+
+    }
+
+    deleteAll() {
+
+        Object
+            .keys(this.constructor.defaults)
+            .forEach((key) => this.delete(key));
 
     }
 
     /**
      * Removes all the contents stored in localStorage.
      */
-    clear() {
-        delete window.localStorage[this.key];
-    }
+    // clear() {
+    //     delete window.localStorage[this.key];
+    // }
 
     /**
      * Gets a copy of {@link Store#data} that can't be modified.
@@ -397,6 +434,19 @@ export default class Store {
         }
 
         this.data.details[`#${id}`] = open;
+        this.write();
+
+    }
+
+    /**
+     * Saves the height of the pad.
+     *
+     * @param {String} height
+     *        Height of the pad, in pixels.
+     */
+    setHeight(height) {
+
+        this.data.height = height;
         this.write();
 
     }

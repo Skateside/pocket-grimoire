@@ -8,9 +8,7 @@
         <li><button type="button" class="button" id="select-edition" data-dialog="#edition-list">Select Edition</button></li>
         <li><button type="button" class="button" id="select-characters" data-dialog="#character-select" disabled>Select Characters</button></li>
         <li><button type="button" class="button" id="qr-code-button" data-dialog="#qr-code-dialog" disabled>Character Sheet</button></li>
-        {#
-        <li><button type="button" class="button button--warning" id="clear-cache" data-reset="This will clear the cache and the grimoire. Would you like to continue?" disabled>Clear Cache</button></li>
-        #}
+        <li><button type="button" class="button" id="clear-cache-button" data-dialog="#clear-cache">Clear Cache</button></li>
     </ul>
     {% endblock %}
 {% endembed %}
@@ -85,12 +83,12 @@
         </div>
 
         <div class="mb-4">
-            <label for="toggle-abilities">Show character abilities</label>
             {{ forms.toggle({
                 name: 'toggle-abilities',
                 id: 'toggle-abilities',
                 checked: true
             }) }}
+            <label for="toggle-abilities">Show character abilities</label>
         </div>
 
         <p><button type="button" class="button" id="player-select-random">Highlight random</button></p>
@@ -178,5 +176,113 @@
         <a href="" target="_blank" rel="noopener noreferrer" id="qr-code-link">
             <span id="qr-code"></span>
         </a>
+
+        <p class="mt-4" id="include-groups">Include:</p>
+        <div class="slot slot--2">
+            <div>
+                {{ forms.toggle({
+                    name: 'include-travellers',
+                    id: 'include-travellers',
+                    checked: true,
+                    attributes: {
+                        'aria-describedby': 'include-groups'
+                    }
+                }) }}
+                <label for="include-travellers">Travellers</label>
+            </div>
+            <div>
+                {{ forms.toggle({
+                    name: 'include-fabled',
+                    id: 'include-fabled',
+                    checked: true,
+                    attributes: {
+                        'aria-describedby': 'include-groups'
+                    }
+                }) }}
+                <label for="include-fabled">Fabled</label>
+            </div>
+        </div>
+    {% endblock %}
+{% endembed %}
+
+{% embed '../includes/dialog.twig' with {
+    id: 'clear-cache',
+    background: 'blur',
+    title: 'Clear Cache'
+} %}
+    {% block body %}
+        <form id="cache-form">
+
+            <p>
+                {{ forms.toggle({
+                    name: 'clear-all',
+                    id: 'clear-all',
+                    checked: true
+                }) }}
+                <label for="clear-all">Clear everything</label>
+                <small class="d-block">Turning this off will allow inividual parts of the cache to be cleared.</small>
+            </p>
+
+            <ul id="clear-individual" class="no-list mb-4 p-2 bd-dark" hidden>
+                {% set clears = [
+                    {
+                        value: 'lookup',
+                        label: 'Clear data',
+                        note: 'The data for the jinxes, team breakdown, and character information.'
+                    },
+                    {
+                        value: 'characters',
+                        label: 'Clear edition',
+                        note: 'The edition, or script, that\'s been selected and loaded.'
+                    },
+                    {
+                        value: 'tokens',
+                        label: 'Clear tokens',
+                        note: 'The position of the tokens in the grimoire.'
+                    },
+                    {
+                        value: 'inputs',
+                        label: 'Clear inputs',
+                        note: 'User settings for this website.'
+                    },
+                    {
+                        value: 'details',
+                        label: 'Clear open/closed',
+                        note: 'Which sections are open or closed.'
+                    },
+                    {
+                        value: 'height',
+                        label: 'Clear pad height',
+                        note: 'The height of the pad in the grimoire.'
+                    },
+                ] %}
+                {% for clear in clears %}
+                    <li>
+                        {{ forms.toggle({
+                            name: 'clear',
+                            id: 'clear-' ~ clear.value,
+                            value: clear.value,
+                            checked: true
+                        }) }}
+                        <label for="clear-{{ clear.value }}">{{ clear.label }}</label>
+                        <small class="d-block">{{ clear.note }}</small>
+                    </li>
+                {% endfor %}
+            </ul>
+
+            <p>
+                {{ forms.toggle({
+                    name: 'clear-refresh',
+                    id: 'clear-refresh',
+                    checked: true
+                }) }}
+                <label for="clear-refresh">Refresh afterwards</label>
+                <small class="d-block">Refreshing will load in new data for anything that's been cleared.</small>
+            </p>
+
+            <p id="token-warning"><small><strong>Warning:</strong> any tokens that have been placed on the grimoire will be forgotten.</small></p>
+            <p><button type="submit" class="button">Clear Cache</button></p>
+
+        </form>
     {% endblock %}
 {% endembed %}

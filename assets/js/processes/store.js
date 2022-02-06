@@ -12,7 +12,8 @@ const store = Store.create("pocket-grimoire");
 const gameObserver = Observer.create("game");
 const tokenObserver = Observer.create("token");
 
-const pad = lookupOneCached(".pad").pad;
+const padElement = lookupOneCached(".pad");
+const pad = padElement.pad;
 
 gameObserver.on("characters-selected", ({ detail }) => {
 
@@ -22,6 +23,10 @@ gameObserver.on("characters-selected", ({ detail }) => {
     );
     store.removeStaleInputs();
 
+});
+
+gameObserver.on("pad-height-change", ({ detail }) => {
+    store.setHeight(detail.height);
 });
 
 tokenObserver.on("character-add", ({ detail }) => {
@@ -206,7 +211,15 @@ TokenStore.ready(({
 
     });
 
+    // Re-set the height of the pad.
+    // CSS `resize` works by changing the `height` style on the element itself
+    // which is why we're setting it like this instead of setting a CSS custom
+    // property and referring to it in the style sheet.
+
+    if (storeData.height) {
+        padElement.style.height = storeData.height;
+    }
+
 });
 
-// TODO: Pad height.
 // TODO: Scroll amount?

@@ -482,10 +482,21 @@ export default class Pad {
 
     }
 
+    /**
+     * Helper function for executing {@link Tokens#updatePadDimensions} on
+     * {@link Pad#tokens}.
+     */
     updateDimensions() {
         this.tokens.updatePadDimensions();
     }
 
+    /**
+     * Helper function for executing {@link Tokens#zetZIndex} on
+     * {@link Pad#tokens}.
+     *
+     * @param {Number} zIndex
+     *        Z-index to set.
+     */
     setZIndex(zIndex) {
         this.tokens.setZIndex(zIndex);
     }

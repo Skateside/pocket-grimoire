@@ -60,17 +60,3 @@ Promise.all([
 lookupCached("[data-dialog]").forEach((trigger) => {
     trigger.dialog = Dialog.createFromTrigger(trigger);
 });
-
-/*
-const clearCacheButton = lookupOne("#clear-cache");
-
-clearCacheButton.addEventListener("click", () => {
-
-    store.clear();
-
-    // if (window.confirm(clearCacheButton.dataset.reset)) {
-    //     window.location.reload();
-    // }
-
-});
-*/

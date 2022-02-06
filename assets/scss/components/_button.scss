@@ -12,8 +12,11 @@
         inset -0.1em -0.1em 0.2em rgb(0 0 0 / 30%),
         0.1em 0.1em 0.2em rgb(0 0 0 / 40%);
     color: #000;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
 
     &[disabled] {
+    // &[aria-disabled="true"] {
         opacity: 0.7;
         box-shadow: none;
         color: #333;
@@ -24,4 +27,8 @@
 
 .button--warning {
     background-color: var(--orange);
+}
+
+.button--full-height {
+    height: 100%;
 }

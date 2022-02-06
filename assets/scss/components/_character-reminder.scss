@@ -12,7 +12,10 @@
     --left-leaf: var(--no-leaf);
     --right-leaf: var(--no-leaf);
     --setup-leaf: var(--no-leaf);
-    --offset: 2.5%;
+    --reminder-offset: 2.5%;
+    --shadow-offset: 0.1em;
+    --shadow-rotation: 1;
+    --shadow-amount: calc(var(--shadow-offset) * var(--shadow-rotation));
 
     background-color: #fffef0;
     background-image:
@@ -40,13 +43,10 @@
     box-shadow:
         inset 0.1em 0.1em 0.2em rgb(255 255 255 / 0.2),
         inset 0 0 0.7em #8a4d0f,
-        0.1em 0.1em 0.2em rgb(0 0 0 / 0.8);
+        var(--shadow-amount) var(--shadow-amount) 0.2em rgb(0 0 0 / 0.8);
 
     &.is-upside-down {
-        box-shadow:
-            inset 0.1em 0.1em 0.2em rgb(255 255 255 / 0.2),
-            inset 0 0 0.7em #8a4d0f,
-            -0.1em -0.1em 0.2em rgb(0 0 0 / 0.8);
+        --shadow-rotation: -1;
         transform: rotate(180deg);
     }
 }
@@ -76,38 +76,38 @@
     line-height: 1;
     grid-area: 1 / -1;
     z-index: 2;
-    margin-top: var(--offset);
+    margin-top: var(--reminder-offset);
 }
 
 .character.is-upside-down[data-first-night]::before,
 .character.is-upside-down[data-other-night]::after {
     transform: rotate(180deg);
     margin-top: 0;
-    margin-bottom: var(--offset);
+    margin-bottom: var(--reminder-offset);
     align-self: flex-end;
 }
 
 .character[data-first-night]::before {
     content: attr(data-first-night);
     background-image: linear-gradient(to bottom, #006, #00c);
-    margin-left: var(--offset);
+    margin-left: var(--reminder-offset);
     margin-right: auto;
 }
 
 .character.is-upside-down[data-first-night]::before {
     margin-left: auto;
-    margin-right: var(--offset);
+    margin-right: var(--reminder-offset);
 }
 
 .character[data-other-night]::after {
     content: attr(data-other-night);
     background-image: linear-gradient(to bottom, #600, #c00);
     margin-left: auto;
-    margin-right: var(--offset);
+    margin-right: var(--reminder-offset);
 }
 
 .character.is-upside-down[data-other-night]::after {
-    margin-left: var(--offset);
+    margin-left: var(--reminder-offset);
     margin-right: auto;
 }
 
