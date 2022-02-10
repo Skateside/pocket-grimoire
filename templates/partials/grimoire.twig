@@ -13,7 +13,7 @@
         <h3 class="pad__title">Demon Bluffs</h3>
         <div style="display: flex; flex-direction: row; justify-content: space-between;">
             {% for i in 1..3 %}
-                <button type="button" id="bluff-{{ i }}" class="token token--bluff js--character-list--bluff" data-token="character" data-dialog="#bluff-list"></button>
+                <button type="button" id="bluff-{{ i }}" class="token token--bluff js--character-list--bluff" data-token="character" data-bluff-dialog="#bluff-show"></button>
             {% endfor %}
         </div>
     </div>
@@ -113,12 +113,24 @@
 {% endembed %}
 
 {% embed '../includes/dialog.twig' with {
+    id: 'bluff-show',
+    background: 'hide'
+} %}
+    {% block title %}<span id="bluff-show-name" data-no-character="Empty">Token</span>{% endblock %}
+    {% block body %}
+    <div id="bluff-show-token" class="character-show__token"></div>
+    <p id="bluff-show-ability" class="character-show__ability"></p>
+    <button type="button" class="no-btn button" id="bluff-change">Change token</button>
+    {% endblock %}
+{% endembed %}
+
+{% embed '../includes/dialog.twig' with {
     id: 'bluff-list',
     background: 'blur',
     title: 'Select Bluff'
 } %}
     {% block body %}
-    <ul id="character-list__bluffs" class="button-list character-list mb-4"></ul>
+    <ul id="character-list__bluffs" class="button-list button-list--reminder character-list mb-4"></ul>
 
     <ul class="no-list">
         <li>

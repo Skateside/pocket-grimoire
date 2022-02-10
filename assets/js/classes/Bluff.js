@@ -6,11 +6,26 @@ import {
 export default class Bluff {
 
     constructor(button) {
+
         this.button = button;
+        this.character = null;
+
     }
 
     setObserver(observer) {
         this.observer = observer;
+    }
+
+    setCharacter(character) {
+        this.character = character;
+    }
+
+    getCharacter() {
+        return this.character;
+    }
+
+    hasCharacter() {
+        return Boolean(this.character);
     }
 
     getSelector() {
@@ -19,6 +34,7 @@ export default class Bluff {
 
     display(character, triggerEvent = true) {
 
+        this.setCharacter(character);
         empty(this.button).append(character.drawToken());
 
         if (triggerEvent) {

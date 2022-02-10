@@ -5,6 +5,8 @@ import TokenStore from "../classes/TokenStore.js";
 import Dialog from "../classes/Dialog.js";
 import Bluff from "../classes/Bluff.js";
 import Bluffs from "../classes/Bluffs.js";
+import BluffList from "../classes/BluffList.js";
+import BluffDialog from "../classes/BluffDialog.js";
 import {
     empty,
     identify,
@@ -142,6 +144,7 @@ tokenObserver.on("character-click", ({ detail }) => {
     const dialog = lookupOneCached("#character-show");
     dialog.dataset.token = `#${identify(element)}`;
 
+    lookupOneCached("#character-show-name").textContent = character.getName();
     empty(lookupOneCached("#character-show-token")).append(character.drawToken());
     lookupOneCached("#character-show-ability").textContent = character.getAbility();
 
@@ -184,11 +187,10 @@ tokenObserver.on("reminder-click", ({ detail }) => {
 
 // Demon Bluffs.
 
-const bluffs = new Bluffs(
+const bluffs = Bluffs.create(
     lookupCached(".js--character-list--bluff").map((button) => new Bluff(button)),
     tokenObserver
 );
-Bluffs.instance = bluffs;
 
 TokenStore.ready(({ characters }) => {
 
@@ -197,6 +199,10 @@ TokenStore.ready(({ characters }) => {
     bluffs.setNoCharacter(noCharacter);
     bluffs.reset(false);
 
+});
+
+lookupCached("[data-bluff-dialog]").forEach((trigger) => {
+    trigger.dialog = BluffDialog.createFromTrigger(trigger);
 });
 
 gameObserver.on("characters-selected", ({ detail }) => {
@@ -292,8 +298,11 @@ lookupOne("#show-evil").addEventListener("change", ({ target }) => {
 
 });
 
-const bluffWrapper = lookupOneCached("#bluff-list");
-const bluffList = lookupOneCached("#character-list__bluffs");
+// const bluffListWrapper = lookupOneCached("#bluff-list");
+const bluffList = new BluffList(
+    lookupOneCached("#character-list__bluffs"),
+    BluffDialog.create(lookupOneCached("#bluff-show"))
+);
 
 lookupCached(".js--character-list--bluff").forEach((button) => {
 
@@ -305,14 +314,40 @@ lookupCached(".js--character-list--bluff").forEach((button) => {
             return;
         }
 
-        bluffList.dataset.button = `#${identify(button)}`;
+        // bluffList.dataset.button = `#${identify(button)}`;
+        bluffList.open(button);
 
     });
 
 });
 
-const bluffDialog = Dialog.create(bluffWrapper);
+// lookupOneCached("#bluff-change").addEventListener("click", () => {
+//
+//     // show bluff list dialog.
+//     //
+//
+// });
 
+// delegate click events.
+
+// const bluffListDialog = Dialog.create(bluffListWrapper);
+// const bluffListDialog = Dialog.create(lookupOne("#bluff-list"));
+
+// {% embed '../includes/dialog.twig' with {
+//     id: 'bluff-show',
+//     background: 'hide'
+// } %}
+//     {% block title %}<span id="bluff-show-name">Token</span>{% endblock %}
+//     {% block body %}
+//     <div id="bluff-show-token" class="character-show__token"></div>
+//     <p id="bluff-show-ability" class="character-show__ability"></p>
+//     <button type="button" class="no-btn button" id="bluff-change">Change token</button>
+//     {% endblock %}
+// {% endembed %}
+
+// #bluff-change
+
+//*
 bluffList.addEventListener("click", ({ target }) => {
 
     const characterId = target.closest("[data-character-id]").dataset.characterId;
@@ -326,12 +361,14 @@ bluffList.addEventListener("click", ({ target }) => {
             return;
         }
 
-        bluffs.display(buttonSelector, character);
-        bluffDialog.hide();
+        // bluffs.display(buttonSelector, character);
+        // bluffListDialog.hide();
+        bluffList.select(character);
 
     });
 
 });
+//*/
 
 // Reset Buttons.
 

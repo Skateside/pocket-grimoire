@@ -166,18 +166,20 @@ TokenStore.ready(({
 
     // Re-set the bluffs.
 
+    const bluffs = Bluffs.get();
+
     Object.entries(storeData.bluffs).forEach(([selector, characterId]) => {
 
         // const button = lookupOne(selector);
         const character = characters[characterId];
 
         // if (!button || !character) {
-        if (!character || !Bluffs.instance) {
+        if (!character || !bluffs) {
             return;
         }
 
         // empty(button).append(character.drawToken());
-        Bluffs.instance.display(selector, character);
+        bluffs.display(selector, character);
 
     });
 
