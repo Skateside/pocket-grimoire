@@ -145,9 +145,21 @@ lookupOne("#toggle-abilities").addEventListener("input", ({ target }) => {
 
 });
 
+// lookupOne("#toggle-duplicates").addEventListener("input", ({ target }) => {
+//
+//     lookupCached("[data-team]").forEach((wrapper) => {
+//         wrapper.classList.toggle("is-hide-duplicates", !target.checked);
+//     });
+//
+// });
+
 lookupCached("[data-team]").forEach((wrapper) => {
 
     wrapper.addEventListener("change", ({ target }) => {
+
+        // if (!target.matches("input[name=\"character\"]")) {
+        //     return;
+        // }
 
         gameObserver.trigger("character-toggle", {
             element: target,
@@ -156,6 +168,20 @@ lookupCached("[data-team]").forEach((wrapper) => {
         });
 
     });
+
+    // wrapper.addEventListener("change", ({ target }) => {
+    //
+    //     if (!target.matches("input[name=\"count\"]")) {
+    //         return;
+    //     }
+    //
+    //     gameObserver.trigger("character-count-change", {
+    //         element: target,
+    //         id: target.data.for,
+    //         count: Number(target.value)
+    //     });
+    //
+    // });
 
 });
 
@@ -170,11 +196,19 @@ gameObserver.on("character-toggle", ({ detail }) => {
         ".js--character-select--count",
         element.closest("[data-team]")
     );
+    // const countInput = lookupOneCached(`[data-for="${element.id}"]`);
+    // const quantity = Number(countInput.value) || 1;
     let count = Number(countElement.textContent) || 0;
 
     if (active) {
+
+        // countInput.value = quantity;
+        // count += quantity;
         count += 1;
     } else if (count > 0) {
+
+        // countInput.value = 0;
+        // count -= quantity;
         count -= 1;
     }
 

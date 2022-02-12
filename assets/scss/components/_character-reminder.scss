@@ -69,7 +69,8 @@
     font-weight: bold;
     width: 25%;
     aspect-ratio: 1 / 1;
-    display: flex;
+    // display: flex;
+    display: var(--night-order-display, flex);
     justify-content: center;
     align-items: center;
     font-size: clamp(0.75em, 3.5vw - 0.5em, 2em);

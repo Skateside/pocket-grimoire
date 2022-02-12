@@ -99,3 +99,14 @@
     background-image: radial-gradient(rgb(255 255 255 / 60%), transparent 50%);
     filter: drop-shadow(0 0 0.1em white);
 }
+
+.character-select__count {
+    width: 100%;
+    text-align: center;
+
+    @at-root {
+        .is-hide-duplicates #{&} {
+            display: none;
+        }
+    }
+}

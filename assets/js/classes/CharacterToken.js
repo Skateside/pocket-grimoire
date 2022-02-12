@@ -355,6 +355,12 @@ export default class CharacterToken extends Token {
                     element.value = content;
                     element.closest("label").htmlFor = identify(element);
 
+                    // const countInput = element
+                    //     .closest(".js--character-select")
+                    //     .querySelector(".js--character-select--count");
+                    // countInput.name += content;
+                    // countInput.dataset.for = content;
+
                 }
             ]
         ]);

@@ -26,6 +26,16 @@
         {# <li><button type="button" class="button" id="toggle-night" disabled>Toggle night order</button></li> #}
         <li><button type="button" class="button button--warning" id="clear-grimoire" data-confirm="Are you sure you want to clear all the tokens?">Clear Grimoire</button></li>
     </ul>
+
+    <div class="mt-4">
+        {{ forms.toggle({
+            name: 'show-night-order',
+            id: 'show-night-order',
+            checked: true
+        }) }}
+        <label for="show-night-order">Show night order</label>
+    </div>
+
     {% endblock %}
 {% endembed %}
 

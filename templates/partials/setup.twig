@@ -90,6 +90,13 @@
             }) }}
             <label for="toggle-abilities">Show character abilities</label>
         </div>
+        {# <div class="mb-4">
+            {{ forms.toggle({
+                name: 'toggle-duplicates',
+                id: 'toggle-duplicates'
+            }) }}
+            <label for="toggle-duplicates">Allow duplicate characters</label>
+        </div> #}
 
         <p><button type="button" class="button" id="player-select-random">Highlight random</button></p>
 
@@ -100,7 +107,7 @@
             demon: 'Demons'
         } %}
         {% for team, name in teams %}
-        <fieldset class="sidebar character-select__group" data-team="{{ team }}">
+        <fieldset class="sidebar character-select__group is-hide-duplicates" data-team="{{ team }}">
             <legend class="sr-only">{{ name }}</legend>
             <div class="sidebar__side character-select__score">
                 <div class="sidebar__side-content character-select__heading">
@@ -158,12 +165,15 @@
 {% endembed %}
 
 <template id="character-select-template">
-    <label class="character-select__character js--character-select--label" for="">
-        <input type="checkbox" name="character" value="" class="sr-only character-select__input js--character-select--input">
-        <img src="" alt="" aria-hidden="true" class="character-select__part character-select__part--image js--character-select--image" loading="lazy">
-        <span class="character-select__part character-select__part--name js--character-select--name"></span>
-        <span class="character-select__part character-select__part--ability js--character-select--ability"></span>
-    </label>
+    <div class="character-select__character js--character-select">
+        <label class="js--character-select--label" for="">
+            <input type="checkbox" name="character" value="" class="sr-only character-select__input js--character-select--input">
+            <img src="" alt="" aria-hidden="true" class="character-select__part character-select__part--image js--character-select--image" loading="lazy">
+            <span class="character-select__part character-select__part--name js--character-select--name"></span>
+            <span class="character-select__part character-select__part--ability js--character-select--ability"></span>
+        </label>
+        {#<input type="number" step="1" min="0" value="0" name="count-" aria-label="Number of tokens" class="character-select__count js--character-select--count">#}
+    </div>
 </template>
 
 {% embed '../includes/dialog.twig' with {

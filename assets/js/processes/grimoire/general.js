@@ -5,6 +5,7 @@ import TokenStore from "../../classes/TokenStore.js";
 import Dialog from "../../classes/Dialog.js";
 import {
     lookup,
+    lookupOne,
     lookupOneCached,
     replaceContentsMany
 } from "../../utils/elements.js";
@@ -108,4 +109,15 @@ lookupOneCached("#character-list__list").addEventListener("click", ({ target }) 
 
 gameObserver.on("character-drawn", ({ detail }) => {
     pad.addNewCharacter(detail.character);
+});
+
+
+lookupOne("#show-night-order").addEventListener("change", ({ target }) => {
+
+    padElement.style[
+        target.checked
+        ? "removeProperty"
+        : "setProperty"
+    ]("--night-order-display", "none");
+
 });
