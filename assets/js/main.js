@@ -5,7 +5,11 @@ import "./processes/setup/select-your-character.js";
 import "./processes/setup/character-sheet.js";
 import "./processes/setup/clear-cache.js";
 
-import "./processes/grimoire.js";
+import "./processes/grimoire/general.js";
+import "./processes/grimoire/characters.js";
+import "./processes/grimoire/reminders.js";
+import "./processes/grimoire/demon-bluffs.js";
+import "./processes/grimoire/reset.js";
 
 import "./processes/night-order.js";
 

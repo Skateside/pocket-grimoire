@@ -118,9 +118,12 @@
 } %}
     {% block title %}<span id="bluff-show-name" data-no-character="Empty">Token</span>{% endblock %}
     {% block body %}
-    <div id="bluff-show-token" class="character-show__token"></div>
+    <div>
+        <button id="bluff-show-token" class="no-btn character-show__token" data-dialog="#bluff-list"></button>
+    </div>
+    {# <div id="bluff-show-token" class="character-show__token"></div> #}
     <p id="bluff-show-ability" class="character-show__ability"></p>
-    <button type="button" class="no-btn button" id="bluff-change">Change token</button>
+    <button type="button" class="no-btn button" data-dialog="#bluff-list">Change token</button>
     {% endblock %}
 {% endembed %}
 

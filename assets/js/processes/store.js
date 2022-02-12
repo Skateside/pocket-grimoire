@@ -3,7 +3,6 @@ import Observer from "../classes/Observer.js";
 import TokenStore from "../classes/TokenStore.js";
 import Bluffs from "../classes/Bluffs.js";
 import {
-    empty,
     lookup,
     lookupOne,
     lookupOneCached,
@@ -170,15 +169,12 @@ TokenStore.ready(({
 
     Object.entries(storeData.bluffs).forEach(([selector, characterId]) => {
 
-        // const button = lookupOne(selector);
         const character = characters[characterId];
 
-        // if (!button || !character) {
         if (!character || !bluffs) {
             return;
         }
 
-        // empty(button).append(character.drawToken());
         bluffs.display(selector, character);
 
     });
