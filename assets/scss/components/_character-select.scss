@@ -73,6 +73,45 @@
     }
 }
 
+:checked ~ .character-select__part--name {
+
+    &.is-setup,
+    &.is-jinx {
+        position: relative;
+    }
+
+    &.is-setup::before,
+    &.is-jinx::after {
+        font-weight: bold;
+        width: 1em;
+        height: 1em;
+        position: absolute;
+        top: -1.25em;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0.25em;
+        line-height: 1;
+    }
+
+    &.is-setup::before {
+        content: "!";
+        background-color: red;
+        color: white;
+        left: 0;
+    }
+
+    &.is-jinx::after {
+        content: "✦";
+        background-color: yellow;
+        color: black;
+        right: 0;
+    }
+
+}
+
+/*
 :checked ~ .character-select__part--name.is-setup {
     position: relative;
 
@@ -94,6 +133,7 @@
         line-height: 1;
     }
 }
+*/
 
 :checked ~ .character-select__part--image {
     background-image: radial-gradient(rgb(255 255 255 / 60%), transparent 50%);

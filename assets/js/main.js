@@ -13,4 +13,6 @@ import "./processes/grimoire/reset.js";
 
 import "./processes/night-order.js";
 
+import "./processes/jinxes.js";
+
 import "./processes/store.js";

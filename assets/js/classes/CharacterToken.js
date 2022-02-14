@@ -256,6 +256,54 @@ export default class CharacterToken extends Token {
     }
 
     /**
+     * Toggles a jinx for the given character. Optionally, the state can be set
+     * by passing in a boolean value.
+     *
+     * @param {CharacterToken} character
+     *        The character whose jinxed state should be toggled.
+     * @param {Boolean} [state]
+     *        Optional state - true to activate the jinx, false to deactivate
+     *        it.
+     */
+    toggleJinx(character, state) {
+        this.toggleJinxById(character.getId(), state);
+    }
+
+    /**
+     * Toggles a jinx for the given character OD. Optionally, the state can be
+     * set by passing in a boolean value.
+     *
+     * @param {String} id
+     *        ID of the character whose jinxed state should be toggled.
+     * @param {Boolean} [state]
+     *        Optional state - true to activate the jinx, false to deactivate
+     *        it.
+     */
+    toggleJinxById(id, state) {
+
+        const jinx = this.jinxes[id];
+
+        if (!jinx) {
+            return;
+        }
+
+        if (state === undefined) {
+            state = !jinx.isActive;
+        }
+
+        if (state === jinx.isActive) {
+            return;
+        }
+
+        this[
+            state
+            ? "activateJinxById"
+            : "deactivateJinxById"
+        ](id);
+
+    }
+
+    /**
      * Gets all the active jinxes for this character.
      *
      * @return {Array.<Object>}
