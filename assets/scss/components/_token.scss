@@ -18,6 +18,15 @@
     &[data-token="reminder"] {
         width: clamp(55px, 100vw / 9, 125px);
     }
+
+    &[disabled] {
+    // &[aria-disabled="true"] {
+        opacity: 0.7;
+
+        > .character {
+            --shadow-amount: 0;
+        }
+    }
 }
 
 .token--movable {

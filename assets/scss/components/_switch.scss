@@ -1,0 +1,9 @@
+.switch {
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 0.5em;
+}
+
+.switch__label {
+    width: 100%;
+}

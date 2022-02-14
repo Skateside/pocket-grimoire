@@ -11,29 +11,31 @@
 
     <div class="pad pad--bluffs">
         <h3 class="pad__title">Demon Bluffs</h3>
-        <div style="display: flex; flex-direction: row; justify-content: space-between;">
+        <div class="bluffs">
             {% for i in 1..3 %}
-                <button type="button" id="bluff-{{ i }}" class="token token--bluff js--character-list--bluff" data-token="character" data-bluff-dialog="#bluff-show"></button>
+                <button type="button" id="bluff-{{ i }}" class="token token--bluff js--character-list--bluff" data-token="character" data-bluff-dialog="#bluff-show" disabled></button>
             {% endfor %}
         </div>
     </div>
 
     <ul class="button-list mt-4">
-        <li><button type="button" class="button" id="add-token" data-dialog="#character-list">Add token</button></li>
-        <li><button type="button" class="button" id="add-reminder" data-dialog="#reminder-list">Add reminder</button></li>
+        <li><button type="button" class="button" id="add-token" data-dialog="#character-list" disabled>Add token</button></li>
+        <li><button type="button" class="button" id="add-reminder" data-dialog="#reminder-list" disabled>Add reminder</button></li>
         <li><button type="button" class="button" id="reset-height">Reset pad height</button></li>
-        {# NOTE: this should be a toggle switch, if anything #}
-        {# <li><button type="button" class="button" id="toggle-night" disabled>Toggle night order</button></li> #}
         <li><button type="button" class="button button--warning" id="clear-grimoire" data-confirm="Are you sure you want to clear all the tokens?">Clear Grimoire</button></li>
     </ul>
 
     <div class="mt-4">
-        {{ forms.toggle({
-            name: 'show-night-order',
-            id: 'show-night-order',
-            checked: true
-        }) }}
-        <label for="show-night-order">Show night order</label>
+        <div class="switch">
+            <div class="switch__input">
+                {{ forms.toggle({
+                    name: 'show-night-order',
+                    id: 'show-night-order',
+                    checked: true
+                }) }}
+            </div>
+            <label for="show-night-order" class="switch__label">Show night order</label>
+        </div>
     </div>
 
     {% endblock %}
@@ -146,29 +148,35 @@
     <ul id="character-list__bluffs" class="button-list button-list--reminder character-list mb-4"></ul>
 
     <ul class="no-list">
-        <li>
-            {{ forms.toggle({
-                name: 'show',
-                id: 'show-existing',
-                value: 'existing'
-            }) }}
-            <label for="show-existing">Show existing characters</label>
+        <li class="switch">
+            <div class="switch__input">
+                {{ forms.toggle({
+                    name: 'show',
+                    id: 'show-existing',
+                    value: 'existing'
+                }) }}
+            </div>
+            <label for="show-existing" class="switch__label">Show existing characters</label>
         </li>
-        <li>
-            {{ forms.toggle({
-                name: 'show',
-                id: 'show-travellers',
-                value: 'traveller'
-            }) }}
-            <label for="show-travellers">Show travellers</label>
+        <li class="switch">
+            <div class="switch__input">
+                {{ forms.toggle({
+                    name: 'show',
+                    id: 'show-travellers',
+                    value: 'traveller'
+                }) }}
+            </div>
+            <label for="show-travellers" class="switch__label">Show travellers</label>
         </li>
-        <li>
-            {{ forms.toggle({
-                name: 'show',
-                id: 'show-evil',
-                value: 'evil'
-            }) }}
-            <label for="show-evil">Show evil characters</label>
+        <li class="switch">
+            <div class="switch__input">
+                {{ forms.toggle({
+                    name: 'show',
+                    id: 'show-evil',
+                    value: 'evil'
+                }) }}
+            </div>
+            <label for="show-evil" class="switch__label">Show evil characters</label>
         </li>
     </ul>
 

@@ -1,4 +1,6 @@
 .character-show__token {
+    // Note: max(100%, 12em) seems to give a different result from max-width.
+    width: 100%;
     max-width: 12em;
     margin: 0 auto;
     display: block;

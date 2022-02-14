@@ -3,6 +3,7 @@ import Observer from "../../classes/Observer.js";
 import Pad from "../../classes/Pad.js";
 import {
     empty,
+    identify,
     lookupOne,
     lookupCached,
     lookupOneCached

@@ -77,6 +77,10 @@ gameObserver.on("characters-selected", ({ detail }) => {
             ]))
         );
 
+        lookupCached(".js--character-list--bluff").forEach((button) => {
+            button.disabled = false;
+        });
+
     });
 
 });

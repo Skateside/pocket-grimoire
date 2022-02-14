@@ -20,12 +20,14 @@
         {% endfor %}
     </div>
     <p><small>Swipe to change nights.</small></p>
-    <p>
-        {{ forms.toggle({
-            name: "show-all",
-            id: "show-all"
-        }) }}
-        <label for="show-all">Show characters not in play</label>
+    <p class="switch">
+        <span class="switch__input">
+            {{ forms.toggle({
+                name: "show-all",
+                id: "show-all"
+            }) }}
+        </span>
+        <label for="show-all" class="switch__label">Show characters not in play</label>
     </p>
     {% endblock %}
 {% endembed %}

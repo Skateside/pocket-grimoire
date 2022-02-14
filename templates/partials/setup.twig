@@ -82,20 +82,24 @@
             <output id="player-count-output" class="character-select__output">7</output>
         </div>
 
-        <div class="mb-4">
-            {{ forms.toggle({
-                name: 'toggle-abilities',
-                id: 'toggle-abilities',
-                checked: true
-            }) }}
-            <label for="toggle-abilities">Show character abilities</label>
+        <div class="mb-4 switch">
+            <div class="switch__input">
+                {{ forms.toggle({
+                    name: 'toggle-abilities',
+                    id: 'toggle-abilities',
+                    checked: true
+                }) }}
+            </div>
+            <label for="toggle-abilities" class="switch__label">Show character abilities</label>
         </div>
-        {# <div class="mb-4">
-            {{ forms.toggle({
-                name: 'toggle-duplicates',
-                id: 'toggle-duplicates'
-            }) }}
-            <label for="toggle-duplicates">Allow duplicate characters</label>
+        {# <div class="mb-4 switch">
+            <div class="switch__input">
+                {{ forms.toggle({
+                    name: 'toggle-duplicates',
+                    id: 'toggle-duplicates'
+                }) }}
+            </div>
+            <label for="toggle-duplicates" class="switch__label">Allow duplicate characters</label>
         </div> #}
 
         <p><button type="button" class="button" id="player-select-random">Highlight random</button></p>
@@ -189,27 +193,31 @@
 
         <p class="mt-4" id="include-groups">Include:</p>
         <div class="slot slot--2">
-            <div>
-                {{ forms.toggle({
-                    name: 'include-travellers',
-                    id: 'include-travellers',
-                    checked: true,
-                    attributes: {
-                        'aria-describedby': 'include-groups'
-                    }
-                }) }}
-                <label for="include-travellers">Travellers</label>
+            <div class="switch">
+                <div class="switch__input">
+                    {{ forms.toggle({
+                        name: 'include-travellers',
+                        id: 'include-travellers',
+                        checked: true,
+                        attributes: {
+                            'aria-describedby': 'include-groups'
+                        }
+                    }) }}
+                </div>
+                <label for="include-travellers" class="switch__label">Travellers</label>
             </div>
-            <div>
-                {{ forms.toggle({
-                    name: 'include-fabled',
-                    id: 'include-fabled',
-                    checked: true,
-                    attributes: {
-                        'aria-describedby': 'include-groups'
-                    }
-                }) }}
-                <label for="include-fabled">Fabled</label>
+            <div class="switch">
+                <div class="switch__input">
+                    {{ forms.toggle({
+                        name: 'include-fabled',
+                        id: 'include-fabled',
+                        checked: true,
+                        attributes: {
+                            'aria-describedby': 'include-groups'
+                        }
+                    }) }}
+                </div>
+                <label for="include-fabled" class="switch__label">Fabled</label>
             </div>
         </div>
     {% endblock %}
@@ -224,12 +232,16 @@
         <form id="cache-form">
 
             <p>
-                {{ forms.toggle({
-                    name: 'clear-all',
-                    id: 'clear-all',
-                    checked: true
-                }) }}
-                <label for="clear-all">Clear everything</label>
+                <span class="switch">
+                    <span class="switch__input">
+                        {{ forms.toggle({
+                            name: 'clear-all',
+                            id: 'clear-all',
+                            checked: true
+                        }) }}
+                    </span>
+                    <label for="clear-all" class="switch__label">Clear everything</label>
+                </span>
                 <small class="d-block">Turning this off will allow inividual parts of the cache to be cleared.</small>
             </p>
 
@@ -268,25 +280,33 @@
                 ] %}
                 {% for clear in clears %}
                     <li>
-                        {{ forms.toggle({
-                            name: 'clear',
-                            id: 'clear-' ~ clear.value,
-                            value: clear.value,
-                            checked: true
-                        }) }}
-                        <label for="clear-{{ clear.value }}">{{ clear.label }}</label>
+                        <div class="switch">
+                            <div class="switch__input">
+                                {{ forms.toggle({
+                                    name: 'clear',
+                                    id: 'clear-' ~ clear.value,
+                                    value: clear.value,
+                                    checked: true
+                                }) }}
+                            </div>
+                            <label for="clear-{{ clear.value }}" class="switch__label">{{ clear.label }}</label>
+                        </div>
                         <small class="d-block">{{ clear.note }}</small>
                     </li>
                 {% endfor %}
             </ul>
 
             <p>
-                {{ forms.toggle({
-                    name: 'clear-refresh',
-                    id: 'clear-refresh',
-                    checked: true
-                }) }}
-                <label for="clear-refresh">Refresh afterwards</label>
+                <span class="switch">
+                    <span class="switch__input">
+                        {{ forms.toggle({
+                            name: 'clear-refresh',
+                            id: 'clear-refresh',
+                            checked: true
+                        }) }}
+                    </span>
+                    <label for="clear-refresh" class="switch__label">Refresh afterwards</label>
+                </span>
                 <small class="d-block">Refreshing will load in new data for anything that's been cleared.</small>
             </p>
 

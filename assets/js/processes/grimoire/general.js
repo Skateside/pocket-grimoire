@@ -88,6 +88,9 @@ gameObserver.on("characters-selected", ({ detail }) => {
         ]))
     );
 
+    lookupOneCached("#add-token").disabled = false;
+    lookupOneCached("#add-reminder").disabled = false;
+
 });
 
 lookupOneCached("#character-list__list").addEventListener("click", ({ target }) => {
