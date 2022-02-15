@@ -149,6 +149,7 @@ export default class TokenStore {
 
         const {
             id,
+            name,
             image,
             reminders = [],
             remindersGlobal = []
@@ -160,6 +161,7 @@ export default class TokenStore {
                 .concat(remindersGlobal)
                 .map((text) => this.createReminder({
                     id,
+                    name,
                     image,
                     text
                 }))
@@ -184,6 +186,7 @@ export default class TokenStore {
 
         const {
             id,
+            name,
             text,
             image
         } = data;
@@ -192,7 +195,8 @@ export default class TokenStore {
             text,
             image,
             id: reminderId,
-            characterId: id
+            characterId: id,
+            characterName: name
         });
 
         this.reminders[reminderId] = reminder;

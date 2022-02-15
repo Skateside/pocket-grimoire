@@ -100,9 +100,15 @@
             <img src="" alt="" class="reminder__icon js--reminder--image" loading="lazy">
         </span>
         <svg viewBox="0 0 150 150" class="reminder__text">
-            <path d="M 13 75 C 13 160, 138 160, 138 75" id="curve" fill="transparent"></path>
+            <path d="M 13 75 C 13 -10, 138 -10, 138 75" id="curve-top" fill="transparent"></path>
+            <text width="150" x="66.6%" text-anchor="middle" class="reminder__name" dominant-baseline="hanging">
+                <textPath xlink:href="#curve-top" style="fill: currentColor;" class="js--reminder--name"></textPath>
+            </text>
+        </svg>
+        <svg viewBox="0 0 150 150" class="reminder__text">
+            <path d="M 13 75 C 13 160, 138 160, 138 75" id="curve-base" fill="transparent"></path>
             <text width="150" x="66.6%" text-anchor="middle" class="reminder__name">
-                <textPath xlink:href="#curve" style="fill: currentColor;" class="js--reminder--text"></textPath>
+                <textPath xlink:href="#curve-base" style="fill: currentColor;" class="js--reminder--text"></textPath>
             </text>
         </svg>
     </span>

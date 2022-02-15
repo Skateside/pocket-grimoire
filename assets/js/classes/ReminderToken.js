@@ -36,6 +36,7 @@ export default class ReminderToken extends Token {
             text: "",
             image: "",
             characterId: "",
+            characterName: "",
             ...data
         };
 
@@ -51,10 +52,15 @@ export default class ReminderToken extends Token {
 
         const {
             image,
-            text
+            text,
+            characterName
         } = this.data;
 
         return this.constructor.template.draw([
+            [
+                ".js--reminder--name",
+                characterName
+            ],
             [
                 ".js--reminder--text",
                 text
