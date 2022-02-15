@@ -116,6 +116,10 @@
     &::-webkit-details-marker {
         display: none;
     }
+
+    > h2 {
+        font-size: inherit;
+    }
 }
 
 .edition__heading-text {

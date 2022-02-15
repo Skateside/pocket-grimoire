@@ -17,6 +17,13 @@ body {
     min-height: 100vh;
 }
 
+html {
+    // https://css-tricks.com/your-css-reset-needs-text-size-adjust-probably/
+    -moz-text-size-adjust: none;
+    -webkit-text-size-adjust: none;
+    text-size-adjust: none;
+}
+
 body {
     padding: 1em;
 }
@@ -40,7 +47,7 @@ p,
 li {
     margin-bottom: 1rem;
 
-    &:is(:last-child) {
+    &:where(:last-child) {
         margin-bottom: 0;
     }
 }
