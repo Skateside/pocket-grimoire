@@ -106,10 +106,7 @@ body.addEventListener("toggle", ({ target }) => {
 
 const storeData = store.read();
 
-TokenStore.ready(({
-    characters,
-    reminders
-}) => {
+TokenStore.ready((tokenStore) => {
 
     // Re-select the characters.
 
@@ -120,7 +117,7 @@ TokenStore.ready(({
         gameObserver.trigger("characters-selected", {
             name: info.name,
             characters: info.characters
-                .map((id) => characters[id])
+                .map((id) => tokenStore.getCharacter(id))
                 .filter(Boolean)
         });
 
@@ -142,8 +139,8 @@ TokenStore.ready(({
         const isCharacter = TokenStore.isCharacterId(id);
         const info = (
             isCharacter
-            ? pad.addCharacter(characters[id])
-            : pad.addReminder(reminders[id])
+            ? pad.addCharacter(tokenStore.getCharacterClone(id))
+            : pad.addReminder(tokenStore.getReminderClone(id))
         );
 
         pad.moveToken(info.token, left, top, zIndex);
@@ -169,7 +166,7 @@ TokenStore.ready(({
 
     Object.entries(storeData.bluffs).forEach(([selector, characterId]) => {
 
-        const character = characters[characterId];
+        const character = tokenStore.getCharacter(characterId);
 
         if (!character || !bluffs) {
             return;

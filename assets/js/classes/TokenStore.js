@@ -210,14 +210,26 @@ export default class TokenStore {
      *
      * @param  {String} id
      *         ID of the character to get.
+     * @return {CharacterToken|undefined}
+     *         The matching instance or undefined if the character isn't found.
+     */
+    getCharacter(id) {
+        return this.characters[id];
+    }
+
+    /**
+     * Gets a clone of the character for the given ID.
+     *
+     * @param  {String} id
+     *         ID of the character to get.
      * @return {CharacterToken}
      *         A clone of the matching instance.
      * @throws {ReferenceError}
      *         The id must match an existing character.
      */
-    getCharacter(id) {
+    getCharacterClone(id) {
 
-        const character = this.characters[id];
+        const character = this.getCharacter(id);
 
         if (!character) {
             throw new ReferenceError(`Unable to find "${id}" character`);
@@ -228,7 +240,29 @@ export default class TokenStore {
     }
 
     /**
+     * Gets an array of all characters.
+     *
+     * @return {Array.<CharacterToken>}
+     *         Collection of all characters.
+     */
+    getAllCharacters() {
+        return Object.values(this.characters);
+    }
+
+    /**
      * Gets the reminder for the given ID.
+     *
+     * @param  {String} id
+     *         ID of the reminder to get.
+     * @return {ReminderToken|undefined}
+     *         The matching instance or undefined if the reminder isn't found.
+     */
+    getReminder(id) {
+        return this.reminders[id];
+    }
+
+    /**
+     * Gets a clone of the reminder for the given ID.
      *
      * @param  {String} id
      *         ID of the reminder to get.
@@ -237,9 +271,9 @@ export default class TokenStore {
      * @throws {ReferenceError}
      *         The id must match an existing reminder.
      */
-    getReminder(id) {
+    getReminderClone(id) {
 
-        const reminder = this.reminders[id];
+        const reminder = this.getReminder(id);
 
         if (!reminder) {
             throw new ReferenceError(`Unable to find the "${id}" reminder`);
@@ -248,5 +282,19 @@ export default class TokenStore {
         return reminder.clone();
 
     }
+
+    /**
+     * Gets an array of all reminders.
+     *
+     * @return {Array.<ReminderToken>}
+     *         Collection of all reminders.
+     */
+    getAllReminders() {
+        return Object.values(this.reminders);
+    }
+
+    // getJinxes(id) {
+    //     return this.jinxes[id];
+    // }
 
 }

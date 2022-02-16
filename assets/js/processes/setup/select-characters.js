@@ -222,10 +222,14 @@ lookupOne("#player-select").addEventListener("submit", (e) => {
 
     const ids = lookup(":checked", e.target).map(({ value }) => value);
 
-    TokenStore.ready(({ characters }) => {
+    // TokenStore.ready(({ characters }) => {
+    TokenStore.ready((tokenStore) => {
 
-        const filtered = Object
-            .values(characters)
+        // const filtered = Object
+        //     .values(characters)
+        //     .filter((character) => ids.includes(character.getId()));
+        const filtered = tokenStore
+            .getAllCharacters()
             .filter((character) => ids.includes(character.getId()));
 
         gameObserver.trigger("character-draw", {

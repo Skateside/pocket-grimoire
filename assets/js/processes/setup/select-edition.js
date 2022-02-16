@@ -61,7 +61,8 @@ form.addEventListener("submit", (e) => {
         return;
     }
 
-    TokenStore.ready(({ characters }) => {
+    // TokenStore.ready(({ characters }) => {
+    TokenStore.ready((tokenStore) => {
 
         if (edition === "custom") {
 
@@ -98,7 +99,8 @@ form.addEventListener("submit", (e) => {
                 announceScript(
                     name,
                     json
-                        .map(({ id }) => characters[id.replace(/[-_]/g, "")])
+                        // .map(({ id }) => characters[id.replace(/[-_]/g, "")])
+                        .map(({ id }) => tokenStore.getCharacter(id.replace(/[-_]/g, "")))
                         .filter(Boolean)
                 );
 
@@ -110,7 +112,8 @@ form.addEventListener("submit", (e) => {
 
             announceScript(
                 getLabelText(radio),
-                Object.values(characters)
+                // Object.values(characters)
+                tokenStore.getAllCharacters()
                     .filter((character) => character.getEdition() === edition)
             );
 

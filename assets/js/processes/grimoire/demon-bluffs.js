@@ -21,9 +21,11 @@ const bluffs = Bluffs.create(
     tokenObserver
 );
 
-TokenStore.ready(({ characters }) => {
+// TokenStore.ready(({ characters }) => {
+TokenStore.ready((tokenStore) => {
 
-    const noCharacter = characters[TokenStore.EMPTY];
+    // const noCharacter = characters[TokenStore.EMPTY];
+    const noCharacter = tokenStore.getCharacterClone(TokenStore.EMPTY);
 
     bluffs.setNoCharacter(noCharacter);
     bluffs.reset(false);
@@ -153,11 +155,15 @@ const bluffListDialog = Dialog.create(lookupOne("#bluff-list"));
 
 lookupOneCached("#character-list__bluffs").addEventListener("click", ({ target }) => {
 
-    TokenStore.ready(({ characters }) => {
+    // TokenStore.ready(({ characters }) => {
+    TokenStore.ready((tokenStore) => {
 
-        const character = characters[
+        // const character = characters[
+        //     target.closest("[data-character-id]").dataset.characterId
+        // ];
+        const character = tokenStore.getCharacter(
             target.closest("[data-character-id]").dataset.characterId
-        ];
+        );
 
         if (!character) {
             return;

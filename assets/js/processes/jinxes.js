@@ -8,9 +8,16 @@ const gameObserver = Observer.create("game");
 
 gameObserver.on("characters-selected", ({ detail }) => {
 
-    TokenStore.ready(({ characters }) => {
+    // TokenStore.ready(({ characters }) => {
+    //
+    //     Object.values(characters).forEach((character) => {
+    //         character.deactivateAllJinxes();
+    //     });
+    //
+    // });
+    TokenStore.ready((tokenStore) => {
 
-        Object.values(characters).forEach((character) => {
+        tokenStore.getAllCharacters().forEach((character) => {
             character.deactivateAllJinxes();
         });
 
@@ -18,6 +25,7 @@ gameObserver.on("characters-selected", ({ detail }) => {
 
 });
 
+// TODO: expose the jinxes in a method.
 TokenStore.ready(({ characters, jinxes }) => {
 
     let inputs = [];
