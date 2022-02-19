@@ -51,7 +51,7 @@ function drawQRCode() {
         pathname
     } = url;
     const page = pathname.slice(0, pathname.lastIndexOf("/") + 1);
-    url.pathname = `${page}list.html`;
+    url.pathname = `${page}sheet.html`;
 
     const name = qrCode.dataset.name;
     if (name) {

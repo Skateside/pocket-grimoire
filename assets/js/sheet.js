@@ -23,7 +23,11 @@ const title = lookupOne("#title");
 title.textContent = name;
 title.hidden = !name;
 
-// Draw the character list.
+if (name) {
+    document.title = `${name} - ${document.title}`;
+}
+
+// Draw the character sheet.
 const store = Store.create("pocket-grimoire");
 const gameObserver = Observer.create("game");
 

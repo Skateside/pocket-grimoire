@@ -1,12 +1,12 @@
 {% extends "../base.twig" %}
 
-{% block title %}Character List{% endblock %}
+{% block title %}Character Sheet{% endblock %}
 
 {% block styles %}
-<link rel="stylesheet" href="./assets/css/list.css">
+<link rel="stylesheet" href="./assets/css/sheet.css">
 {% endblock %}
 
-{% set body_class = 'body-list' %}
+{% set body_class = 'body-sheet' %}
 
 {% block body %}
 
@@ -55,14 +55,14 @@
 
 <footer>
     <p><small>* Each night except the first night.</small></p>
-    <p><button type="button" class="button" data-dialog="#qr-code-dialog">Get the QR code for this list</button></p>
+    <p><button type="button" class="button" data-dialog="#qr-code-dialog">Get the QR code for this sheet</button></p>
     <p><small><a href="https://bloodontheclocktower.com/" target="_blank" rel="noopener noreferrer">Blood on the Clocktower</a> is a trademark of Steven Medway and <a href="https://www.thepandemoniuminstitute.com/" target="_blank" rel="noopener noreferrer">The Pandemonium Institute</a>.</small></p>
 </footer>
 
 {% embed '../includes/dialog.twig' with {
     id: 'qr-code-dialog',
     background: 'blur',
-    title: 'Get this list'
+    title: 'Get this sheet'
 } %}
     {% block body %}
         <div id="qr-code"></div>
@@ -72,5 +72,5 @@
 {% endblock %}
 
 {% block javascript %}
-<script src="./assets/js/list.js"></script>
+<script src="./assets/js/sheet.js"></script>
 {% endblock %}
