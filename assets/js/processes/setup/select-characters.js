@@ -49,6 +49,10 @@ function setTotals(breakdown) {
  */
 function highlightRandomInTeam(team, count) {
 
+    if (!count) {
+        return;
+    }
+
     // Don't cache this since they will change if a different edition is chosen.
     const inputs = lookup(`[data-team="${team}"] [name="character"]`);
 
@@ -73,7 +77,7 @@ function highlightRandomInTeam(team, count) {
 
 gameObserver.on("team-breakdown-loaded", ({ detail }) => {
 
-    const playerCount = lookupOne("#player-count");
+    const playerCount = lookupOneCached("#player-count");
     const playerCountOutput = lookupOne("#player-count-output");
 
     playerCount.addEventListener("input", () => {
@@ -102,9 +106,16 @@ gameObserver.on("team-breakdown-loaded", ({ detail }) => {
 
     lookupOne("#player-select-random").addEventListener("click", () => {
 
+        let total = 0;
+
         Object.entries(getBreakdown()).forEach(([team, count]) => {
+
             highlightRandomInTeam(team, count);
+            total += count;
+
         });
+
+        highlightRandomInTeam("traveller", playerCount.value - total);
 
     });
 
@@ -112,10 +123,10 @@ gameObserver.on("team-breakdown-loaded", ({ detail }) => {
 
 gameObserver.on("characters-selected", ({ detail }) => {
 
-    const teams = groupBy(
-        detail.characters,
-        (character) => character.getTeam()
-    );
+    const {
+        characters
+    } = detail;
+    const teams = groupBy(characters, (character) => character.getTeam());
 
     lookupCached("[data-team]").forEach((wrapper) => {
 
@@ -123,18 +134,28 @@ gameObserver.on("characters-selected", ({ detail }) => {
         const isTeamPopulated = Array.isArray(teams[team]);
         wrapper.hidden = !isTeamPopulated;
 
-        if (!isTeamPopulated) {
-            return;
-        }
-
         replaceContentsMany(
             lookupOneCached(".js--character-select--list", wrapper),
-            teams[team].map((character) => character.drawSelect())
+            (teams[team] || []).map((character) => character.drawSelect())
         );
 
     });
 
     lookupOneCached("#select-characters").disabled = false;
+
+    let maxPlayers = 15;
+    maxPlayers += Math.min((teams.traveller || []).length, 5);
+    maxPlayers = Math.min(maxPlayers, characters.length);
+    const playerCount = lookupOneCached("#player-count");
+
+    playerCount.max = maxPlayers;
+
+    if (playerCount.value >= maxPlayers) {
+
+        playerCount.value = maxPlayers;
+        announceInput(playerCount);
+
+    }
 
 });
 

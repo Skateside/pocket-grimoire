@@ -416,7 +416,9 @@ export default class Store {
         } = this;
 
         data.inputs = Object.fromEntries(
-            Object.entries(data.inputs).filter(([selector]) => lookup(selector))
+            Object
+                .entries(data.inputs)
+                .filter(([selector]) => lookup(selector).length)
         );
         this.write();
 

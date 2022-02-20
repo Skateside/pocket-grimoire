@@ -108,7 +108,8 @@
             townsfolk: 'Townsfolk',
             outsider: 'Outsiders',
             minion: 'Minions',
-            demon: 'Demons'
+            demon: 'Demons',
+            traveller: 'Travellers'
         } %}
         {% for team, name in teams %}
         <fieldset class="sidebar character-select__group is-hide-duplicates" data-team="{{ team }}">
@@ -117,7 +118,7 @@
                 <div class="sidebar__side-content character-select__heading">
                     <div class="character-select__title" aria-hidden="true">{{ name }}</div>
                     <div class="character-select__score-box">
-                        <span class="js--character-select--count">0</span>-<span class="js--character-select--total"></span>
+                        <span class="js--character-select--count">0</span>-<span class="js--character-select--total">X</span>
                     </div>
                 </div>
             </div>
