@@ -1,5 +1,6 @@
 import CharacterToken from "./CharacterToken.js";
 import ReminderToken from "./ReminderToken.js";
+import Jinx from "./Jinx.js";
 import {
     defer
 } from "../utils/promises.js";
@@ -113,26 +114,38 @@ export default class TokenStore {
         this.reminders = Object.create(null);
 
         characters.forEach((character) => this.createCharacter(character));
-        jinxes.forEach(({ id, jinx }) => {
-
-            jinx.forEach((trick) => this.characters[id].addJinx({
-                character: this.characters[trick.id],
-                reason: trick.reason,
-            }));
-
-        });
 
         /**
-         * A list of all jinxes in the form ID => array of jinxes.
-         * @type {Object}
+         * A collection of all jinxes.
+         * @type {Array.<Jinx>}
          */
-        this.jinxes = jinxes.reduce((jinxMap, jinx) => {
+        this.jinxes = [];
 
-            jinxMap[jinx.id] = jinx.jinx;
+        // Add all jines but leave them theoretical.
+        jinxes.forEach(({ id, jinx }) => {
 
-            return jinxMap;
+            const character = this.getCharacter(id);
 
-        }, Object.create(null));
+            if (!character) {
+                return;
+            }
+
+            jinx.forEach((trick) => {
+
+                const trickCharacter = this.getCharacter(trick.id);
+
+                if (!trickCharacter) {
+                    return;
+                }
+
+                const newJinx = new Jinx(trickCharacter, trick.reason);
+
+                character.addJinx(newJinx);
+                this.jinxes.push(newJinx);
+
+            });
+
+        });
 
     }
 
@@ -293,8 +306,14 @@ export default class TokenStore {
         return Object.values(this.reminders);
     }
 
-    // getJinxes(id) {
-    //     return this.jinxes[id];
-    // }
+    /**
+     * Gets an array of all the jinxes.
+     *
+     * @return {Array.<Jinx>}
+     *         Collection of all jinxes.
+     */
+    getAllJinxes() {
+        return this.jinxes;
+    }
 
 }

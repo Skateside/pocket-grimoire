@@ -72,10 +72,10 @@ export default class CharacterToken extends Token {
         this.isUpsideDown = false;
 
         /**
-         * A collection of all jinxes that affect this character.
-         * @type {Object}
+         * A collection of all jinxes that may affect this character.
+         * @type {Array.<Jinx>}
          */
-        this.jinxes = Object.create(null);
+        this.jinxes = [];
 
         this.setReminders([]);
 
@@ -172,145 +172,133 @@ export default class CharacterToken extends Token {
     }
 
     /**
-     * Adds a jinx to the character.
+     * Checks to see if the given character matches this one. It may not be the
+     * same object, it may be a clone.
      *
-     * @param {Object} jinx
-     *        Information about the jinx.
-     * @param {String} reason
-     *        The reason for the jinx.
-     * @param {CharacterToken} character
-     *        The character that this character is jinxed with.
+     * @param  {CharacterToken} character
+     *         Character to check.
+     * @return {Boolean}
+     *         true if the character matches, false if it doesn't.
      */
-    addJinx({
-        reason,
-        character
-    }) {
+    matches(character) {
+        return character === this || character.getId() === this.getId();
+    }
 
-        this.jinxes[character.getId()] = {
-            reason,
-            character,
-            isActive: false
-        };
+    /**
+     * Adds a jinx top {@link CharacterToken#jinxes}.
+     *
+     * @param {Jinx} jinx
+     *        Jinx to add.
+     */
+    addJinx(jinx) {
+
+        jinx.setTarget(this);
+
+        this.jinxes.push(jinx);
 
     }
 
     /**
-     * Activates the jinx for the given character.
+     * Sets any jinxes that match any of the given characters "ready".
      *
-     * @param {CharacterToken} character
-     *        The character that's jinxed with the current character and whose
-     *        jinx should be activated.
+     * @param {Array.<CharacterToken>} characters
+     *        Characters that may be tricks in a jinx.
      */
-    activateJinx(character) {
-        this.activateJinxById(character.getId());
-    }
+    readyAllJinxes(characters) {
 
-    /**
-     * Activates the jinx for the given character ID.
-     *
-     * @param {String} id
-     *        The ID of the character whose jinx should be activated.
-     */
-    activateJinxById(id) {
-
-        const jinx = this.jinxes[id];
-
-        if (jinx) {
-            jinx.isActive = true;
-        }
+        characters.forEach((character) => {
+            this.toggleJinxReady(character, true);
+        });
 
     }
 
     /**
-     * Deactivates a jinx for the given character.
-     *
-     * @param {CharacterToken} character
-     *        The character that's jinxed with the current character and whose
-     *        jinx should be deactivated.
+     * Sets all jinxes in {@link CharacterToken#jinxes} to unready.
      */
-    deactivateJinx(character) {
-        this.deactivateJinxById(character.getId());
+    unreadyAllJinxes() {
+        this.jinxes.forEach((jinx) => jinx.toggleReady(false));
     }
 
     /**
-     * Deactivates the jinx for the given character ID.
+     * Toggles the ready state of a jinx. Optionally the state can be defined.
      *
-     * @param {String} id
-     *        The ID of the character whose jinx should be deactivated.
-     */
-    deactivateJinxById(id) {
-
-        const jinx = this.jinxes[id];
-
-        if (jinx) {
-            jinx.isActive = false;
-        }
-
-    }
-
-    /**
-     * Deactivates all the jinxes for this character.
-     */
-    deactivateAllJinxes() {
-        Object.keys(this.jinxes).forEach((id) => this.deactivateJinxById(id));
-    }
-
-    /**
-     * Toggles a jinx for the given character. Optionally, the state can be set
-     * by passing in a boolean value.
-     *
-     * @param {CharacterToken} character
-     *        The character whose jinxed state should be toggled.
+     * @param {Character} character
+     *        Character that has a jinx with this character.
      * @param {Boolean} [state]
-     *        Optional state - true to activate the jinx, false to deactivate
-     *        it.
+     *        Optional state to force. If ommitted, the state is toggled.
      */
-    toggleJinx(character, state) {
-        this.toggleJinxById(character.getId(), state);
+    toggleJinxReady(character, state) {
+
+        this.jinxes.forEach((jinx) => {
+
+            if (jinx.matches(character)) {
+                jinx.toggleReady(state);
+            }
+
+        });
+
     }
 
     /**
-     * Toggles a jinx for the given character OD. Optionally, the state can be
-     * set by passing in a boolean value.
+     * Toggles the active state of a jinx. Optionally the state can be defined.
      *
-     * @param {String} id
-     *        ID of the character whose jinxed state should be toggled.
+     * @param {CharacterToken} trick
+     *        Character that has a jinx with this character.
      * @param {Boolean} [state]
-     *        Optional state - true to activate the jinx, false to deactivate
-     *        it.
+     *        Optional state to force. If ommitted, the state is toggled.
      */
-    toggleJinxById(id, state) {
+    toggleJinxTrick(trick, state) {
 
-        const jinx = this.jinxes[id];
+        this.jinxes.forEach((jinx) => {
 
-        if (!jinx) {
-            return;
-        }
+            if (jinx.matches(trick)) {
+                jinx.toggleTrick(state);
+            }
 
-        if (state === undefined) {
-            state = !jinx.isActive;
-        }
-
-        if (state === jinx.isActive) {
-            return;
-        }
-
-        this[
-            state
-            ? "activateJinxById"
-            : "deactivateJinxById"
-        ](id);
+        });
 
     }
 
     /**
-     * Gets all the active jinxes for this character.
+     * Sets the target state for all the jinxes in
+     * {@link CharacterToken#jinxes}.
      *
-     * @return {Array.<Object>}
-     *         Gets information about all the active jinxes.
+     * @param {Boolean} [state]
+     *        Optional state to set. If ommited, the state of each of the jinxes
+     *        will be toggled.
+     */
+    toggleJinxTarget(state) {
+        this.jinxes.forEach((jinx) => jinx.toggleTarget(state));
+    }
+
+    /**
+     * Exposes {@link CharacterToken#jinxes}.
+     *
+     * @return {Array.<Jinx>}
+     *         Collection of all jinxes.
+     */
+    getJinxes() {
+        return this.jinxes;
+    }
+
+    /**
+     * Exposes all the ready jinxes.
+     *
+     * @return {Array.<Jinx>}
+     *         Collection of all ready jinxes.
+     */
+    getReadyJinxes() {
+        return this.jinxes.filter((jinx) => jinx.isReady());
+    }
+
+    /**
+     * Exposes all the active jinxes.
+     *
+     * @return {Array.<Jinx>}
+     *         Collection of all active jinxes.
      */
     getActiveJinxes() {
-        return Object.values(this.jinxes).filter(({ isActive }) => isActive);
+        return this.jinxes.filter((jinx) => jinx.isActive());
     }
 
     /**
@@ -495,17 +483,17 @@ export default class CharacterToken extends Token {
             ],
             [
                 ".js--edition--jinxes",
-                this.getActiveJinxes().map(({
+                this.getReadyJinxes().map(({
                     reason,
-                    character
+                    trick
                 }) => jinx.draw([
                     [
                         ".js--edition-jinx--image",
                         "",
                         (element) => {
 
-                            element.src = character.getImage();
-                            element.alt += character.getName();
+                            element.src = trick.getImage();
+                            element.alt += trick.getName();
                             element.title = reason;
 
                         }

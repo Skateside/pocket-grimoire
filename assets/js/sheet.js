@@ -64,28 +64,24 @@ Promise.all([
 
 });
 
-TokenStore.ready(({ characters, jinxes }) => {
+TokenStore.ready((tokenStore) => {
 
     const ids = url.searchParams.get("characters")?.split(",") || [];
-    const script = Object.values(characters)
+    const script = tokenStore
+        .getAllCharacters()
         .filter((character) => ids.includes(character.getId()));
-    const scriptMap = Object.fromEntries(
-        script.map((character) => [character.getId(), character])
-    );
 
     script.forEach((character) => {
 
-        const jinxList = jinxes[character.getId()]?.map(({ id }) => id);
+        character.getJinxes().forEach((jinx) => {
 
-        if (!jinxList || !jinxList.length) {
-            return;
-        }
+            const trick = script.find((char) => jinx.matches(char));
 
-        jinxList.forEach((id) => {
-
-            if (scriptMap[id]) {
-                character.activateJinxById(id);
+            if (!trick) {
+                return
             }
+
+            character.toggleJinxReady(trick, true);
 
         });
 

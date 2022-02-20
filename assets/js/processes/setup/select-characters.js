@@ -18,6 +18,7 @@ import {
 } from "../../utils/numbers.js";
 
 const gameObserver = Observer.create("game");
+const tokenObserver = Observer.create("token");
 
 /**
  * Sets the totals for each team based on the breakdown that#s given.
@@ -222,12 +223,8 @@ lookupOne("#player-select").addEventListener("submit", (e) => {
 
     const ids = lookup(":checked", e.target).map(({ value }) => value);
 
-    // TokenStore.ready(({ characters }) => {
     TokenStore.ready((tokenStore) => {
 
-        // const filtered = Object
-        //     .values(characters)
-        //     .filter((character) => ids.includes(character.getId()));
         const filtered = tokenStore
             .getAllCharacters()
             .filter((character) => ids.includes(character.getId()));
@@ -239,5 +236,26 @@ lookupOne("#player-select").addEventListener("submit", (e) => {
         Dialog.create(lookupOneCached("#character-select")).hide();
 
     });
+
+});
+
+tokenObserver.on("toggle-jinx-active", ({ detail }) => {
+
+    const {
+        target,
+        state
+    } = detail;
+    const input = lookupOne(
+        `.js--character-select--input[value="${target?.getId()}"]`
+    );
+
+    if (input) {
+
+        input
+            .closest(".js--character-select--label")
+            ?.querySelector(".js--character-select--name")
+            ?.classList.toggle("is-jinx", state);
+
+    }
 
 });
