@@ -128,6 +128,7 @@ gameObserver.on("characters-selected", ({ detail }) => {
     } = detail;
     const teams = groupBy(characters, (character) => character.getTeam());
 
+    // Populate the team sections.
     lookupCached("[data-team]").forEach((wrapper) => {
 
         const team = wrapper.dataset.team;
@@ -141,8 +142,18 @@ gameObserver.on("characters-selected", ({ detail }) => {
 
     });
 
-    lookupOneCached("#select-characters").disabled = false;
+    // Deselect any checkboxes and set the counts to zero.
+    lookupCached("[data-team]").forEach((wrapper) => {
 
+        lookup(".js--character-select--input", wrapper).forEach((input) => {
+            input.checked = false;
+        });
+
+        lookupOneCached(".js--character-select--count", wrapper).textContent = 0;
+
+    });
+
+    // Make sure the Number of players can't exceed the number of characters.
     let maxPlayers = 15;
     maxPlayers += Math.min((teams.traveller || []).length, 5);
     maxPlayers = Math.min(maxPlayers, characters.length);
@@ -156,6 +167,9 @@ gameObserver.on("characters-selected", ({ detail }) => {
         announceInput(playerCount);
 
     }
+
+    // Enable the "Select Characters" button.
+    lookupOneCached("#select-characters").disabled = false;
 
 });
 
@@ -235,6 +249,21 @@ gameObserver.on("character-toggle", ({ detail }) => {
     }
 
     countElement.textContent = count;
+
+});
+
+// The "character-toggle" script can give misleading numbers when all the inputs
+// are re-populated. This call corrects the number when the inputs have finished
+// re-populating.
+gameObserver.on("inputs-repopulated", () => {
+
+    lookupCached("[data-team]").forEach((wrapper) => {
+
+        lookupOneCached(".js--character-select--count", wrapper).textContent = (
+            lookup(":checked", wrapper).length
+        );
+
+    });
 
 });
 

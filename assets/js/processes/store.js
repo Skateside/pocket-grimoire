@@ -2,12 +2,19 @@ import Store from "../classes/Store.js";
 import Observer from "../classes/Observer.js";
 import TokenStore from "../classes/TokenStore.js";
 import Bluffs from "../classes/Bluffs.js";
+import Dialog from "../classes/Dialog.js";
 import {
     lookup,
     lookupOne,
     lookupOneCached,
     announceInput
 } from "../utils/elements.js";
+import {
+    VERSION
+} from "../constants/version.js";
+import {
+    compareVersions
+} from "../utils/numbers.js";
 
 const store = Store.create("pocket-grimoire");
 const gameObserver = Observer.create("game");
@@ -89,6 +96,18 @@ tokenObserver.on("rotate-toggle", ({ detail }) => {
 tokenObserver.on("bluff", ({ detail }) => {
     store.setBluff(detail.button, detail.character);
 });
+
+const savedVersion = store.getVersion();
+
+if (!savedVersion || compareVersions(savedVersion, VERSION) === -1) {
+
+    if (window.confirm(lookupOne("#version-change-message").textContent)) {
+        Dialog.create(lookupOneCached("#clear-cache")).show();
+    }
+
+    store.setVersion(VERSION);
+
+}
 
 const {
     body
@@ -205,6 +224,8 @@ TokenStore.ready((tokenStore) => {
         announceInput(input);
 
     });
+
+    gameObserver.trigger("inputs-repopulated");
 
     // Re-open or re-close the details.
 

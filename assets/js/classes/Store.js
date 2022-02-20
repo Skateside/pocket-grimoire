@@ -22,7 +22,8 @@ export default class Store {
         tokens: [],
         inputs: {},
         details: {},
-        height: ""
+        height: "",
+        version: ""
     };
 
     /**
@@ -460,11 +461,42 @@ export default class Store {
 
     }
 
+    /**
+     * Saves a bluff.
+     *
+     * @param {String} buttonSelector
+     *        A CSS selector that identifies the bluff button.
+     * @param {String} characterId
+     *        The ID of the character serving as the demon bluff.
+     */
     setBluff(buttonSelector, characterId) {
 
         this.data.bluffs[buttonSelector] = characterId;
         this.write();
 
+    }
+
+    /**
+     * Saves the current version.
+     *
+     * @param {String} version
+     *        The version number, in semver.
+     */
+    setVersion(version) {
+
+        this.data.version = version;
+        this.write();
+
+    }
+
+    /**
+     * Exposes the currently saved version.
+     *
+     * @return {String}
+     *         The saved version number, in semver.
+     */
+    getVersion() {
+        return this.data.version;
     }
 
 }

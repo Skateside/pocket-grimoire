@@ -11,8 +11,10 @@ import "./processes/grimoire/reminders.js";
 import "./processes/grimoire/demon-bluffs.js";
 import "./processes/grimoire/reset.js";
 
+import "./processes/jinxes.js";
+
 import "./processes/night-order.js";
 
-import "./processes/jinxes.js";
+import "./processes/acknowledgements.js";
 
 import "./processes/store.js";

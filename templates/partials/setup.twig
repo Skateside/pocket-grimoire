@@ -77,7 +77,6 @@
 
         <div class="character-select__players">
             <label for="player-count" class="character-select__label">Number of players</label>
-            {# TODO: travellers, so that the max can go up to 20 again #}
             <input type="range" min="5" max="15" step="1" value="7" name="player-count" id="player-count" class="character-select__range">
             <output id="player-count-output" class="character-select__output">7</output>
         </div>
@@ -317,3 +316,5 @@
         </form>
     {% endblock %}
 {% endembed %}
+
+<div id="version-change-message" hidden>This app has updated its version. Because your data may not be correct, we recommend that you clear everything in the "Clear Cache" dialog. Press "OK" to open the dialog or "Cancel" to close this message.</div>
