@@ -125,8 +125,7 @@ export default class Jinx {
         state[name] = forceState;
 
         this.observer?.trigger(`toggle-jinx-${name}`, {
-            target: this.target,
-            trick: this.trick,
+            jinx: this,
             state: forceState
         });
 
@@ -143,7 +142,11 @@ export default class Jinx {
      *        The optional state to force.
      */
     toggleReady(forceState) {
-        this.toggleState("ready", forceState);
+
+        if (this.toggleState("ready", forceState) === false) {
+            this.toggleState("active", false);
+        }
+
     }
 
     /**
@@ -266,6 +269,99 @@ export default class Jinx {
      */
     getReason() {
         return this.reason;
+    }
+
+    /**
+     * Sets the template that can be used to draw the jinx.
+     *
+     * @param {Template} template
+     *        The template that will draw the jinx.
+     */
+    setTemplate(template) {
+
+        /**
+         * The template to draw the jinx.
+         * @type {Template}
+         */
+        this.template = template;
+
+    }
+
+    /**
+     * Helper function for drawing the jinx character icon.
+     *
+     * @param {Element} element
+     *        Image element to modify.
+     * @param {CharacterToken} character
+     *        Character whose data should be sued to populate the image.
+     */
+    static drawImg(element, character) {
+
+        element.src = character.getImage();
+        element.alt = character.getName();
+        element.title = character.getName();
+
+    }
+
+    /**
+     * Gets an ID for the jinx.
+     *
+     * @return {String}
+     *         An ID for the jinx.
+     */
+    getId() {
+        return `jinx--${this.target.getId()}-${this.trick.getId()}`;
+    }
+
+    /**
+     * Draws the jinx.
+     *
+     * @return {DocumentFragment}
+     *         The jinx markup.
+     */
+    draw() {
+
+        const {
+            target,
+            trick,
+            reason,
+            template
+        } = this;
+
+        // if (!template) {
+        //     throw new Error("Jinx template has not been set.");
+        // }
+
+        return template.draw([
+            [
+                ".js--jinx-table--jinx",
+                this.getId(),
+                (element, content) => element.id = content
+            ],
+            [
+                ".js--jinx-table--target",
+                target,
+                this.constructor.drawImg
+            ],
+            [
+                ".js--jinx-table--target-name",
+                target.getName()
+            ],
+            [
+                ".js--jinx-table--trick",
+                trick,
+                this.constructor.drawImg
+            ],
+            [
+                ".js--jinx-table--trick-name",
+                trick.getName()
+            ],
+            [
+                ".js--jinx-table--reason",
+                reason
+            ]
+        ]);
+
     }
 
 }

@@ -242,11 +242,11 @@ lookupOne("#player-select").addEventListener("submit", (e) => {
 tokenObserver.on("toggle-jinx-active", ({ detail }) => {
 
     const {
-        target,
+        jinx,
         state
     } = detail;
     const input = lookupOne(
-        `.js--character-select--input[value="${target?.getId()}"]`
+        `.js--character-select--input[value="${jinx.getTarget()?.getId()}"]`
     );
 
     if (input) {
