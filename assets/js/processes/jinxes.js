@@ -102,8 +102,8 @@ TokenStore.ready((tokenStore) => {
 
     });
 
-    lookupOne("#show-active-jinxes").addEventListener("change", ({ target }) => {
-        jinxTable.classList.toggle("is-show-active", target.checked);
+    lookupOne("#show-all-jinxes").addEventListener("change", ({ target }) => {
+        jinxTable.classList.toggle("is-show-all", target.checked);
     });
 
 });

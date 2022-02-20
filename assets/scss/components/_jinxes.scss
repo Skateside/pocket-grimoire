@@ -4,26 +4,25 @@
 
 .jinxes__jinx {
     opacity: 0.6;
+    display: none;
 
     &.is-active {
         opacity: 1;
+        display: table-row;
     }
 
     @at-root {
-        #{&} ~ #{&} > .jinxes__cell {
+        #{&}.is-active ~ #{&}.is-active > .jinxes__cell,
+        .is-show-all > #{&} ~ #{&} > .jinxes__cell {
             border-top: 1px solid rgb(255 255 255 / 60%);
         }
 
-        .is-show-active > #{&} > .jinxes__cell {
-            border-top: none;
-        }
-
-        .is-show-active > #{&}:not(.is-active) {
-            display: none;
-        }
-
-        .is-show-active > #{&}.is-active ~ #{&}.is-active > .jinxes__cell {
+        .is-show-all > #{&} ~ #{&} > .jinxes__cell {
             border-top: 1px solid rgb(255 255 255 / 60%);
+        }
+
+        .is-show-all > #{&} {
+            display: table-row;
         }
     }
 }

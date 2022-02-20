@@ -11,18 +11,17 @@
                 <th scope="col">Reason</th>
             </tr>
         </thead>
-        <tbody id="jinx-table" class="is-show-active"></tbody>
+        <tbody id="jinx-table"></tbody>
     </table>
 
     <p class="switch mt-4">
         <span class="switch__input">
             {{ forms.toggle({
-                name: "show-active-jinxes",
-                id: "show-active-jinxes",
-                checked: true
+                name: "show-all-jinxes",
+                id: "show-all-jinxes"
             }) }}
         </span>
-        <label for="show-active-jinxes" class="switch__label">Only show active jinxes</label>
+        <label for="show-all-jinxes" class="switch__label">Show jinxes not in play</label>
     </p>
     {% endblock %}
 {% endembed %}
