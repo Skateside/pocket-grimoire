@@ -101,7 +101,10 @@ const savedVersion = store.getVersion();
 
 if (!savedVersion || compareVersions(savedVersion, VERSION) === -1) {
 
-    if (window.confirm(lookupOne("#version-change-message").textContent)) {
+    if (
+        savedVersion
+        && window.confirm(lookupOne("#version-change-message").textContent)
+    ) {
         Dialog.create(lookupOneCached("#clear-cache")).show();
     }
 
