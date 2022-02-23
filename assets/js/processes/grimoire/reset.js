@@ -13,7 +13,7 @@ lookupOne("#reset-height").addEventListener("click", () => {
 lookupOne("#clear-grimoire").addEventListener("click", ({ target }) => {
 
     if (window.confirm(target.dataset.confirm)) {
-        gameObserver.trigger("reset");
+        gameObserver.trigger("clear");
     }
 
 });

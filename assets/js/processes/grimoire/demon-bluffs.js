@@ -118,7 +118,7 @@ TokenStore.ready((tokenStore) => {
 
     });
 
-    gameObserver.on("reset", () => {
+    gameObserver.on("clear", () => {
 
         bluffs.reset();
 

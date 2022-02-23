@@ -51,18 +51,20 @@ gameObserver.on("characters-selected", ({ detail }) => {
 
     replaceContentsMany(
         lookupOneCached("#character-list__list"),
-        characters.map((character) => characterTemplate.draw([
-            [
-                ".js--character-list--button",
-                character.getId(),
-                (element, content) => element.dataset.tokenId = content
-            ],
-            [
-                ".js--character-list--token",
-                character.drawToken(),
-                Template.append
-            ]
-        ]))
+        characters
+            .filter((character) => character.getTeam() !== "fabled")
+            .map((character) => characterTemplate.draw([
+                [
+                    ".js--character-list--button",
+                    character.getId(),
+                    (element, content) => element.dataset.tokenId = content
+                ],
+                [
+                    ".js--character-list--token",
+                    character.drawToken(),
+                    Template.append
+                ]
+            ]))
     );
 
     const reminders = characters.reduce((reminders, character) => {
@@ -125,4 +127,4 @@ lookupOne("#show-night-order").addEventListener("change", ({ target }) => {
 
 });
 
-gameObserver.on("reset", () => pad.reset());
+gameObserver.on("clear", () => pad.reset());
