@@ -36,9 +36,9 @@ lookupCached("[data-bluff-dialog]").forEach((trigger) => {
 
 const bluffDialog = BluffDialog.create(lookupOne("#bluff-show"));
 
-gameObserver.on("characters-selected", ({ detail }) => {
+TokenStore.ready((tokenStore) => {
 
-    TokenStore.ready((tokenStore) => {
+    gameObserver.on("characters-selected", ({ detail }) => {
 
         const characterTemplate = Template.create(
             lookupOneCached("#character-list-template")
@@ -83,30 +83,40 @@ gameObserver.on("characters-selected", ({ detail }) => {
 
     });
 
-});
+    function markInPlay(character, shouldAdd = true) {
 
-function markInPlay(character, shouldAdd = true) {
+        const inPlay = lookupOne(
+            `#character-list__bluffs [data-character-id="${character.getId()}"]`
+        );
 
-    const inPlay = lookupOne(
-        `#character-list__bluffs [data-character-id="${character.getId()}"]`
-    );
+        if (inPlay) {
+            inPlay.classList.toggle("is-in-play", shouldAdd);
+        }
 
-    if (inPlay) {
-        inPlay.classList.toggle("is-in-play", shouldAdd === true);
     }
 
-}
+    gameObserver.on("character-drawn", ({ detail }) => {
+        markInPlay(detail.character);
+    });
 
-gameObserver.on("character-drawn", ({ detail }) => {
-    markInPlay(detail.character);
-});
+    tokenObserver.on("character-add", ({ detail }) => {
+        markInPlay(detail.character);
+    });
 
-tokenObserver.on("character-add", ({ detail }) => {
-    markInPlay(detail.character);
-});
+    tokenObserver.on("character-remove", ({ detail }) => {
+        markInPlay(detail.character, false);
+    });
 
-tokenObserver.on("character-remove", ({ detail }) => {
-    markInPlay(detail.character, false);
+    tokenObserver.on("bluff", ({ detail }) => {
+
+        const character = tokenStore.getCharacter(detail.character);
+
+        if (character.getId()) {
+            markInPlay(character);
+        }
+
+    });
+
 });
 
 function toggleBluffListClass(className, state) {
