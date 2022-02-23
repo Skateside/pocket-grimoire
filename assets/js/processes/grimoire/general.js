@@ -116,7 +116,6 @@ gameObserver.on("character-drawn", ({ detail }) => {
     pad.addNewCharacter(detail.character);
 });
 
-
 lookupOne("#show-night-order").addEventListener("change", ({ target }) => {
 
     padElement.style[

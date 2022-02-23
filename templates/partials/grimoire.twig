@@ -131,6 +131,17 @@
 {% endembed %}
 
 {% embed '../includes/dialog.twig' with {
+    id: 'reminder-show',
+    background: 'hide'
+} %}
+{% block title %}<span id="reminder-show-name">Reminder</span>{% endblock %}
+    {% block body %}
+    <div id="reminder-show-token" class="character-show__token"></div>
+    <p class="mt-4"><button type="button" class="no-btn button button--warning" id="reminder-remove">Remove</button></p>
+    {% endblock %}
+{% endembed %}
+
+{% embed '../includes/dialog.twig' with {
     id: 'bluff-show',
     background: 'hide'
 } %}

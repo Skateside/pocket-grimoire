@@ -366,6 +366,7 @@ export default class Pad {
 
                         Template.append(element, content);
                         element.dataset.token = "reminder";
+                        element.dataset.reminder = reminder.getId();
 
                     }
                 ]
