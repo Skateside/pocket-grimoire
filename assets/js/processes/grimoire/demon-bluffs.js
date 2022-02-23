@@ -7,6 +7,7 @@ import TokenStore from "../../classes/TokenStore.js";
 import Template from "../../classes/Template.js";
 import Observer from "../../classes/Observer.js";
 import {
+    lookup,
     lookupCached,
     lookupOne,
     lookupOneCached,
@@ -114,6 +115,16 @@ TokenStore.ready((tokenStore) => {
         if (character.getId()) {
             markInPlay(character);
         }
+
+    });
+
+    gameObserver.on("reset", () => {
+
+        bluffs.reset();
+
+        lookup("#character-list__bluffs .is-in-play").forEach((token) => {
+            token.classList.remove("is-in-play");
+        });
 
     });
 

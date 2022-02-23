@@ -124,3 +124,5 @@ lookupOne("#show-night-order").addEventListener("change", ({ target }) => {
     ]("--night-order-display", "none");
 
 });
+
+gameObserver.on("reset", () => pad.reset());
