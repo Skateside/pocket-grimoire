@@ -262,6 +262,22 @@ gulp.task("fonts:watch", () => {
 
 });
 
+gulp.task("copy", () => {
+
+    return gulp
+        .src("./.htaccess")
+        .pipe(gulp.dest(OUTPUTS.html));
+
+});
+
+gulp.task("copy:watch", () => {
+
+    return gulp.watch([
+        "./.htaccess"
+    ], gulp.series("copy"));
+
+});
+
 gulp.task("env:dev", (callback) => {
 
     process.env.NODE_ENV = "development";
@@ -286,7 +302,8 @@ gulp.task(
             gulp.series("images", "images:watch"),
             gulp.series("fonts", "fonts:watch"),
             gulp.series("pages", "pages:watch"),
-            gulp.series("data", "data:watch")
+            gulp.series("data", "data:watch"),
+            gulp.series("copy", "copy:watch")
         )
     )
 );
@@ -301,7 +318,8 @@ gulp.task(
             "images",
             "fonts",
             "pages",
-            "data"
+            "data",
+            "copy"
         )
     )
 );
