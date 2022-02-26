@@ -6,6 +6,7 @@ import Dialog from "../../classes/Dialog.js";
 import TokenStore from "../../classes/TokenStore.js";
 import Template from "../../classes/Template.js";
 import Observer from "../../classes/Observer.js";
+import CharacterToken from "../../classes/CharacterToken.js";
 import {
     lookup,
     lookupCached,
@@ -125,6 +126,22 @@ TokenStore.ready((tokenStore) => {
         lookup("#character-list__bluffs .is-in-play").forEach((token) => {
             token.classList.remove("is-in-play");
         });
+
+    });
+
+    lookupOneCached(
+        "#bluff-show-token",
+        bluffDialog.getElement()
+    ).addEventListener("click", ({ target }) => {
+
+        const id = target.closest("[data-character-id]")?.dataset.characterId;
+
+        if (!id) {
+            return;
+        }
+
+        CharacterToken.show(tokenStore.getCharacter(id));
+        bluffDialog.hide();
 
     });
 

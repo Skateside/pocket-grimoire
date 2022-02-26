@@ -1,6 +1,5 @@
 import Dialog from "./Dialog.js";
 import {
-    empty,
     lookupOneCached
 } from "../utils/elements.js";
 
@@ -30,6 +29,7 @@ export default class BluffDialog extends Dialog {
         const {
             dialog
         } = this;
+        const showTokenButton = lookupOneCached("#bluff-show-token", dialog);
 
         lookupOneCached(
             "#bluff-show-name",
@@ -39,9 +39,8 @@ export default class BluffDialog extends Dialog {
             "#bluff-show-ability",
             dialog
         ).textContent = character.getAbility();
-        empty(lookupOneCached("#bluff-show-token", dialog)).append(
-            character.drawToken()
-        );
+        showTokenButton.disabled = character.isEmpty();
+        showTokenButton.dataset.characterId = character.getId();
 
     }
 

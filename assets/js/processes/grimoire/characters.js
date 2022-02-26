@@ -1,14 +1,17 @@
 import Dialog from "../../classes/Dialog.js";
 import Observer from "../../classes/Observer.js";
 import Pad from "../../classes/Pad.js";
+import Template from "../../classes/Template.js";
+import TokenStore from "../../classes/TokenStore.js";
+import CharacterToken from "../../classes/CharacterToken.js";
 import {
-    empty,
     identify,
     lookupOne,
-    lookupCached,
-    lookupOneCached
+    lookupOneCached,
+    replaceContentsMany
 } from "../../utils/elements.js";
 
+const gameObserver = Observer.create("game");
 const tokenObserver = Observer.create("token");
 const pad = lookupOneCached(".js--pad").pad;
 
@@ -22,7 +25,6 @@ tokenObserver.on("character-click", ({ detail }) => {
     dialog.dataset.token = `#${identify(element)}`;
 
     lookupOneCached("#character-show-name").textContent = character.getName();
-    empty(lookupOneCached("#character-show-token")).append(character.drawToken());
     lookupOneCached("#character-show-ability").textContent = character.getAbility();
 
     Dialog.create(dialog).show();
@@ -36,6 +38,17 @@ function getToken(target) {
 function hideDialog(target) {
     Dialog.create(target.closest(".dialog")).hide();
 }
+
+TokenStore.ready((tokenStore) => {
+
+    lookupOne("#character-show-token").addEventListener("click", ({ target }) => {
+
+        CharacterToken.show(pad.getCharacterByToken(getToken(target)));
+        hideDialog(target);
+
+    });
+
+});
 
 lookupOne("#character-shroud-toggle").addEventListener("click", ({ target }) => {
 
@@ -183,5 +196,49 @@ tokenObserver.on("character-remove", ({ detail }) => {
     }
 
     updateTokens();
+
+});
+
+// List of tokens.
+
+const tokenListTemplate = Template.create(lookupOne("#token-list-template"));
+const tokenList = lookupOne("#token-list__list");
+
+gameObserver.on("characters-selected", ({ detail }) => {
+
+    replaceContentsMany(
+        tokenList,
+        detail.characters.map((character) => tokenListTemplate.draw([
+            [
+                ".js--token-list--button",
+                character.getId(),
+                (element, content) => element.dataset.tokenId = content
+            ],
+            [
+                ".js--token-list--token",
+                character.drawToken(),
+                Template.append
+            ]
+        ]))
+    );
+
+});
+
+TokenStore.ready((tokenStore) => {
+
+    const tokenListDialog = Dialog.create(lookupOne("#token-list"));
+
+    tokenList.addEventListener("click", ({ target }) => {
+
+        const button = target.closest("[data-token-id]");
+
+        if (!button) {
+            return;
+        }
+
+        CharacterToken.show(tokenStore.getCharacter(button.dataset.tokenId));
+        tokenListDialog.hide();
+
+    });
 
 });

@@ -1,14 +1,28 @@
 import Token from "./Token.js";
 import Template from "./Template.js";
+import Dialog from "./Dialog.js";
 import {
+    empty,
     identify,
-    appendMany
+    appendMany,
+    lookupOneCached
 } from "../utils/elements.js";
+
+const emptyProperty = Symbol("empty");
 
 /**
  * A version of {@link Token} that handles character information.
  */
 export default class CharacterToken extends Token {
+
+    /**
+     * A property that we use to work out if this token is the empty character.
+     * @type {Symbol}
+     * @constant
+     */
+    static get empty() {
+        return emptyProperty;
+    }
 
     /**
      * Sets the templates that will be access when drawing views.
@@ -23,6 +37,28 @@ export default class CharacterToken extends Token {
          * @type {Object}
          */
         this.templates = templates;
+
+    }
+
+    /**
+     * Shows a dialog that displays the character token and their ability, so
+     * that it can be shown to a player.
+     *
+     * @param  {CharacterToken} character
+     *         The character to show.
+     * @throws {Error}
+     *         The character has to exist.
+     */
+    static show(character) {
+
+        if (!character) {
+            throw new Error("No character given, cannot show");
+        }
+
+        lookupOneCached("#token-name").textContent = character.getName();
+        empty(lookupOneCached("#token-show")).append(character.drawToken());
+        lookupOneCached("#token-ability").textContent = character.getAbility();
+        Dialog.create(lookupOneCached("#token")).show();
 
     }
 
@@ -299,6 +335,16 @@ export default class CharacterToken extends Token {
      */
     getActiveJinxes() {
         return this.jinxes.filter((jinx) => jinx.isActive());
+    }
+
+    /**
+     * Checks to see if this is the empty character token.
+     *
+     * @return {Boolean}
+     *         true if this is the empty character token, false otherwise.
+     */
+    isEmpty() {
+        return Boolean(this.data[emptyProperty]);
     }
 
     /**

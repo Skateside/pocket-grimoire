@@ -21,6 +21,7 @@
     <ul class="button-list mt-4">
         <li><button type="button" class="button" id="add-token" data-dialog="#character-list" disabled>Add token</button></li>
         <li><button type="button" class="button" id="add-reminder" data-dialog="#reminder-list" disabled>Add reminder</button></li>
+        <li><button type="button" class="button" id="show-tokens" data-dialog="#token-list" disabled>Show tokens</button></li>
         <li><button type="button" class="button" id="reset-height">Reset pad height</button></li>
         <li><button type="button" class="button button--warning" id="clear-grimoire" data-confirm="Are you sure you want to clear all the tokens?">Clear Grimoire</button></li>
     </ul>
@@ -116,13 +117,13 @@
 
 {% embed '../includes/dialog.twig' with {
     id: 'character-show',
-    background: 'hide'
+    background: 'blur'
 } %}
     {% block title %}<span id="character-show-name">Token</span>{% endblock %}
     {% block body %}
-    <div id="character-show-token" class="character-show__token"></div>
     <p id="character-show-ability" class="character-show__ability"></p>
-    <ul class="button-list button-list--tokens">
+    <ul class="button-list">
+        <li><button type="button" class="no-btn button" id="character-show-token">Show</button></li>
         <li><button type="button" class="no-btn button" id="character-shroud-toggle">Shroud</button></li>
         <li><button type="button" class="no-btn button" id="character-rotate">Rotate</button></li>
         <li><button type="button" class="no-btn button button--warning" id="character-remove">Remove</button></li>
@@ -132,7 +133,7 @@
 
 {% embed '../includes/dialog.twig' with {
     id: 'reminder-show',
-    background: 'hide'
+    background: 'blur'
 } %}
 {% block title %}<span id="reminder-show-name">Reminder</span>{% endblock %}
     {% block body %}
@@ -143,16 +144,15 @@
 
 {% embed '../includes/dialog.twig' with {
     id: 'bluff-show',
-    background: 'hide'
+    background: 'blur'
 } %}
     {% block title %}<span id="bluff-show-name" data-no-character="Empty">Token</span>{% endblock %}
     {% block body %}
-    <div>
-        <button id="bluff-show-token" class="no-btn character-show__token" data-dialog="#bluff-list"></button>
-    </div>
-    {# <div id="bluff-show-token" class="character-show__token"></div> #}
     <p id="bluff-show-ability" class="character-show__ability"></p>
-    <button type="button" class="no-btn button" data-dialog="#bluff-list">Change token</button>
+    <ul class="button-list">
+        <li><button type="button" class="no-btn button" id="bluff-show-token">Show</button></li>
+        <li><button type="button" class="no-btn button" data-dialog="#bluff-list">Change</button></li>
+    </ul>
     {% endblock %}
 {% endembed %}
 
@@ -197,5 +197,34 @@
         </li>
     </ul>
 
+    {% endblock %}
+{% endembed %}
+
+{% embed '../includes/dialog.twig' with {
+    id: 'token-list',
+    background: 'blur',
+    title: 'Characters'
+} %}
+    {% block body %}
+        <ul id="token-list__list" class="button-list button-list--reminder"></ul>
+    {% endblock %}
+{% endembed %}
+
+<template id="token-list-template">
+    <li class="js--token-list--item">
+        <button type="button" class="no-btn w-full js--token-list--button">
+            <span class="character-list__token js--token-list--token"></span>
+        </button>
+    </li>
+</template>
+
+{% embed '../includes/dialog.twig' with {
+    id: 'token',
+    background: 'hide'
+} %}
+    {% block title %}<span id="token-name">Token</span>{% endblock %}
+    {% block body %}
+        <div id="token-show"></div>
+        <p id="token-ability" class="character-show__ability mt-4"></p>
     {% endblock %}
 {% endembed %}
