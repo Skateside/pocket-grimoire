@@ -5,6 +5,8 @@ const rollup        = require("gulp-better-rollup");
 const babel         = require("rollup-plugin-babel");
 const resolve       = require("rollup-plugin-node-resolve");
 const commonjs      = require("rollup-plugin-commonjs");
+const replace       = require("gulp-string-replace");
+const fs            = require("fs");
 const uglify        = require("gulp-uglify");
 const jsonminify    = require("gulp-jsonminify");
 const noop          = require("gulp-noop");
@@ -13,6 +15,8 @@ const autoprefixer  = require("gulp-autoprefixer");
 const cleanCSS      = require("gulp-clean-css");
 const twig          = require("gulp-twig");
 const htmlmin       = require("gulp-htmlmin");
+
+const packageJson = JSON.parse(fs.readFileSync("./package.json"));
 
 const ENTRY_POINTS = {
     js: [
@@ -90,6 +94,11 @@ gulp.task("scripts", () => Promise.all(
                     notify.onError((err) => "JavaScript Error: " + err.message)
                 )
             )
+            .pipe(replace(/<%=\s*(\w+)\s*%>/g, (ignore, key) => (
+                typeof packageJson[key] === "string"
+                ? packageJson[key]
+                : key
+            )))
             .pipe(
                 isProduction
                 ? noop()
