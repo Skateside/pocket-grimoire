@@ -26,6 +26,8 @@ a {
     body {
         font-size: 9pt;
         margin: 0;
+        background-color: #fff !important;
+        background-image: none !important;
     }
 
     a[href] {
@@ -87,16 +89,6 @@ a {
         }
     }
 
-    // .edition__team {
-    //     display: flex;
-    //     flex-flow: row wrap;
-    //     gap: 0 4pt;
-    // }
-    //
-    // .edition__role {
-    //     width: calc(50% - 2pt);
-    // }
-
     .edition__role {
         grid-template-areas:
             "token name ability"
@@ -104,7 +96,7 @@ a {
         grid-template-columns: 25pt 80pt 1fr;
         grid-template-rows: -webkit-min-content;
         grid-template-rows: 1fr min-content;
-        gap: 4pt;
+        gap: 0 4pt;
         padding: 2pt 0;
         page-break-inside: avoid;
     }
