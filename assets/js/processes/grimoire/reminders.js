@@ -55,4 +55,61 @@ TokenStore.ready((tokenStore) => {
 
     });
 
+    const counts = Object.create(null);
+    const list = lookupOneCached("#reminder-list__list");
+
+    tokenObserver.on("character-add", ({ detail }) => {
+
+        const {
+            character
+        } = detail;
+        const characterId = character.getId();
+
+        if (!counts[characterId]) {
+            counts[characterId] = 0;
+        }
+
+        counts[characterId] += 1;
+
+        character.getReminders().forEach((reminder) => {
+
+            lookupOne(
+                `[data-reminder-id="${reminder.getId()}"]`,
+                list
+            ).classList.add("is-in-play");
+
+        });
+
+    });
+
+    tokenObserver.on("character-remove", ({ detail }) => {
+
+        const {
+            character
+        } = detail;
+        const characterId = character.getId();
+
+        if (counts[characterId]) {
+            counts[characterId] -= 1;
+        }
+
+        if (!counts[characterId]) {
+
+            character.getReminders().forEach((reminder) => {
+
+                lookupOne(
+                    `[data-reminder-id="${reminder.getId()}"]`,
+                    list
+                ).classList.remove("is-in-play");
+
+            });
+
+        }
+
+    });
+
+    lookupOne("#show-all-reminders").addEventListener("change", ({ target }) => {
+        list.classList.toggle("is-show-all", target.checked);
+    });
+
 });

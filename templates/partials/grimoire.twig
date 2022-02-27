@@ -67,6 +67,16 @@
 } %}
     {% block body %}
     <ul id="reminder-list__list" class="button-list button-list--reminder"></ul>
+    <p class="switch mt-4">
+        <span class="switch__input">
+            {{ forms.toggle({
+                name: 'show',
+                id: 'show-all-reminders',
+                value: 'all-reminders'
+            }) }}
+        </span>
+        <label for="show-all-reminders" class="switch__label">Show all reminders</label>
+    </p>
     {% endblock %}
 {% endembed %}
 
@@ -90,7 +100,7 @@
 </template>
 
 <template id="reminder-list-template">
-    <li>
+    <li class="reminder-list__item js--reminder-list--item">
         <button type="button" class="no-btn js--reminder-list--button"></button>
     </li>
 </template>
@@ -123,10 +133,10 @@
     {% block body %}
     <p id="character-show-ability" class="character-show__ability"></p>
     <ul class="button-list">
-        <li><button type="button" class="no-btn button" id="character-show-token">Show</button></li>
-        <li><button type="button" class="no-btn button" id="character-shroud-toggle">Shroud</button></li>
-        <li><button type="button" class="no-btn button" id="character-rotate">Rotate</button></li>
-        <li><button type="button" class="no-btn button button--warning" id="character-remove">Remove</button></li>
+        <li><button type="button" class="button" id="character-show-token">Show</button></li>
+        <li><button type="button" class="button" id="character-shroud-toggle">Shroud</button></li>
+        <li><button type="button" class="button" id="character-rotate">Rotate</button></li>
+        <li><button type="button" class="button button--warning" id="character-remove">Remove</button></li>
     </ul>
     {% endblock %}
 {% endembed %}
@@ -135,10 +145,10 @@
     id: 'reminder-show',
     background: 'blur'
 } %}
-{% block title %}<span id="reminder-show-name">Reminder</span>{% endblock %}
+    {% block title %}<span id="reminder-show-name">Reminder</span>{% endblock %}
     {% block body %}
     <div id="reminder-show-token" class="character-show__token"></div>
-    <p class="mt-4"><button type="button" class="no-btn button button--warning" id="reminder-remove">Remove</button></p>
+    <p class="mt-4"><button type="button" class="button button--warning" id="reminder-remove">Remove</button></p>
     {% endblock %}
 {% endembed %}
 
@@ -150,8 +160,8 @@
     {% block body %}
     <p id="bluff-show-ability" class="character-show__ability"></p>
     <ul class="button-list">
-        <li><button type="button" class="no-btn button" id="bluff-show-token">Show</button></li>
-        <li><button type="button" class="no-btn button" data-dialog="#bluff-list">Change</button></li>
+        <li><button type="button" class="button" id="bluff-show-token">Show</button></li>
+        <li><button type="button" class="button" data-dialog="#bluff-list">Change</button></li>
     </ul>
     {% endblock %}
 {% endembed %}

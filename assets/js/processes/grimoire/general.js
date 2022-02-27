@@ -78,9 +78,16 @@ gameObserver.on("characters-selected", ({ detail }) => {
         lookupOneCached("#reminder-list__list"),
         reminders.map((reminder) => reminderTemplate.draw([
             [
-                ".js--reminder-list--button",
+                ".js--reminder-list--item,.js--reminder-list--button",
                 reminder.getId(),
                 (element, content) => element.dataset.reminderId = content
+            ],
+            [
+                ".js--reminder-list--item",
+                reminder.getIsGlobal(),
+                (element, content) => {
+                    element.classList.toggle("is-global", content);
+                }
             ],
             [
                 ".js--reminder-list--button",

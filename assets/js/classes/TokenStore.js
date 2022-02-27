@@ -169,16 +169,21 @@ export default class TokenStore {
         } = data;
         const character = new CharacterToken(data);
 
-        character.setReminders(
-            reminders
-                .concat(remindersGlobal)
-                .map((text) => this.createReminder({
-                    id,
-                    name,
-                    image,
-                    text
-                }))
-        );
+        reminders
+            .concat(remindersGlobal)
+            .forEach((text) => {
+
+                character.addReminder(
+                    this.createReminder({
+                        id,
+                        name,
+                        image,
+                        text,
+                        isGlobal: remindersGlobal.includes(text)
+                    })
+                );
+
+            });
 
         this.characters[id] = character;
 
@@ -201,12 +206,14 @@ export default class TokenStore {
             id,
             name,
             text,
-            image
+            image,
+            isGlobal
         } = data;
-        const reminderId = `${id}: ${text}`;
+        const reminderId = `${id}:${text}`.toLowerCase().replace(/\s+/g, "-");
         const reminder = new ReminderToken({
             text,
             image,
+            isGlobal,
             id: reminderId,
             characterId: id,
             characterName: name

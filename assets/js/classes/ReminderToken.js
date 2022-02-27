@@ -37,6 +37,7 @@ export default class ReminderToken extends Token {
             image: "",
             characterId: "",
             characterName: "",
+            isGlobal: false,
             ...data
         };
 

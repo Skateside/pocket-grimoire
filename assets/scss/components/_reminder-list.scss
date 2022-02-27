@@ -1,0 +1,14 @@
+.reminder-list__item {
+    display: none;
+
+    &.is-global,
+    &.is-in-play {
+        display: block;
+    }
+
+    @at-root {
+        .is-show-all > #{&} {
+            display: block;
+        }
+    }
+}

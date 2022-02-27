@@ -113,25 +113,37 @@ export default class CharacterToken extends Token {
          */
         this.jinxes = [];
 
-        this.setReminders([]);
-
-    }
-
-    /**
-     * Sets the reminders that this character has.
-     *
-     * @param {Array.<ReminderToken>} reminders
-     *        Instances of {@link ReminderToken} for each of the reminders that
-     *        this character has.
-     */
-    setReminders(reminders) {
-
         /**
          * Collection of all reminders that this character uses.
          * @type {Array.<ReminderToken>}
          */
-        this.reminders = reminders;
+        this.reminders = [];
 
+    }
+
+    /**
+     * @inheritDoc
+     */
+    clone() {
+
+        const clone = super.clone();
+
+        this.getReminders().forEach((reminder) => {
+            clone.addReminder(reminder.clone());
+        });
+
+        return clone;
+
+    }
+
+    /**
+     * Adds a reminder for this character.
+     *
+     * @param {ReminderToken} reminder
+     *        Instance of {@link ReminderToken} for the reminder.
+     */
+    addReminder(reminder) {
+        this.reminders.push(reminder);
     }
 
     /**
