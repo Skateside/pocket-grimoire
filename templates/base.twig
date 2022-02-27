@@ -26,8 +26,19 @@ also allowing developers to create a unique title if they need to.
 <main role="main" id="main">{% block body %}{% endblock %}</main>
 
 {% block javascript %}{% endblock %}
+{# This needs to be written in ES5 so that the HTML minifier can minify it. #}
 <script>
-// This needs to be written in ES5 so that the HTML minifier can minify it.
+// TODO: Get PWA stuff working to help with offline mode.
+// (function (nav) {
+//
+//     if (!nav || !("serviceWorker" in nav)) {
+//         return;
+//     }
+//
+//     nav.serviceWorker.register("./cache.js");
+//
+// }(window.navigator));
+
 (function (isDialogSupported, doc, link, script) {
 
     if (isDialogSupported) {

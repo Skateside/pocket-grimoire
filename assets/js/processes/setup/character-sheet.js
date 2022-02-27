@@ -66,6 +66,7 @@ function drawQRCode() {
     qrCode.innerHTML = makeQRCode(url.toString());
     lookupOneCached("#qr-code-button").disabled = false;
     lookupOneCached("#qr-code-link").href = url.toString();
+    lookupOneCached("#qr-code-link").disabled = false;
 
 }
 

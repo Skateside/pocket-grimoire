@@ -55,6 +55,10 @@ const GLOBS = {
     ],
     fonts: [
         "./assets/fonts/**/*"
+    ],
+    copy: [
+        "./public/**/*",
+        "./public/**/.*"
     ]
 };
 
@@ -273,16 +277,16 @@ gulp.task("fonts:watch", () => {
 
 gulp.task("copy", () => {
 
-    return gulp
-        .src("./.htaccess")
+    return gulp.src(GLOBS.copy, { dot: true })
         .pipe(gulp.dest(OUTPUTS.html));
 
 });
 
+
 gulp.task("copy:watch", () => {
 
     return gulp.watch([
-        "./.htaccess"
+        ...GLOBS.copy
     ], gulp.series("copy"));
 
 });
