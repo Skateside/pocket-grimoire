@@ -456,6 +456,14 @@ export default class CharacterToken extends Token {
                     // countInput.dataset.for = content;
 
                 }
+            ],
+            [
+                ".js--character-select--count",
+                id,
+                (element, content) => {
+                    element.name += content;
+                    element.dataset.for = content;
+                }
             ]
         ]);
 

@@ -181,21 +181,21 @@ lookupOne("#toggle-abilities").addEventListener("input", ({ target }) => {
 
 });
 
-// lookupOne("#toggle-duplicates").addEventListener("input", ({ target }) => {
-//
-//     lookupCached("[data-team]").forEach((wrapper) => {
-//         wrapper.classList.toggle("is-hide-duplicates", !target.checked);
-//     });
-//
-// });
+lookupOne("#toggle-duplicates").addEventListener("input", ({ target }) => {
+
+    lookupCached("[data-team]").forEach((wrapper) => {
+        wrapper.classList.toggle("is-hide-duplicates", !target.checked);
+    });
+
+});
 
 lookupCached("[data-team]").forEach((wrapper) => {
 
     wrapper.addEventListener("change", ({ target }) => {
 
-        // if (!target.matches("input[name=\"character\"]")) {
-        //     return;
-        // }
+        if (!target.matches("input[name=\"character\"]")) {
+            return;
+        }
 
         gameObserver.trigger("character-toggle", {
             element: target,
@@ -205,19 +205,19 @@ lookupCached("[data-team]").forEach((wrapper) => {
 
     });
 
-    // wrapper.addEventListener("change", ({ target }) => {
-    //
-    //     if (!target.matches("input[name=\"count\"]")) {
-    //         return;
-    //     }
-    //
-    //     gameObserver.trigger("character-count-change", {
-    //         element: target,
-    //         id: target.data.for,
-    //         count: Number(target.value)
-    //     });
-    //
-    // });
+    wrapper.addEventListener("input", ({ target }) => {
+
+        if (!target.matches("input[name=\"count\"]")) {
+            return;
+        }
+
+        gameObserver.trigger("character-count-change", {
+            element: target,
+            id: target.dataset.for,
+            count: Number(target.value)
+        });
+
+    });
 
 });
 
@@ -225,27 +225,65 @@ gameObserver.on("character-toggle", ({ detail }) => {
 
     const {
         element,
-        active
+        active,
+        id
     } = detail;
 
     const countElement = lookupOneCached(
         ".js--character-select--count",
         element.closest("[data-team]")
     );
-    // const countInput = lookupOneCached(`[data-for="${element.id}"]`);
-    // const quantity = Number(countInput.value) || 1;
+    const countInput = lookupOneCached(`[data-for="${id}"]`);
+    const quantity = Number(countInput.value) || 1;
     let count = Number(countElement.textContent) || 0;
 
     if (active) {
 
-        // countInput.value = quantity;
-        // count += quantity;
-        count += 1;
+        countInput.value = quantity;
+        count += quantity;
+        // count += 1;
+
     } else if (count > 0) {
 
-        // countInput.value = 0;
-        // count -= quantity;
-        count -= 1;
+        countInput.value = 0;
+        count -= quantity;
+        // count -= 1;
+
+    }
+
+    countElement.textContent = count;
+
+});
+
+gameObserver.on("character-count-change", ({ detail }) => {
+
+    const {
+        element,
+        active,
+        id
+    } = detail;
+
+    const countElement = lookupOneCached(
+        ".js--character-select--count",
+        element.closest("[data-team]")
+    );
+    // const countInput = lookupOneCached(`[data-for="${id}"]`);
+    const countInput = element;
+    const quantity = Number(countInput.value) || 1;
+    let count = Number(countElement.textContent) || 0;
+console.log({ element, quantity, count });
+    if (active) {
+
+        countInput.value = quantity;
+        count += quantity;
+        // count += 1;
+
+    } else if (count > 0) {
+
+        countInput.value = 0;
+        count -= quantity;
+        // count -= 1;
+
     }
 
     countElement.textContent = count;

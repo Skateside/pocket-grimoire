@@ -47,12 +47,10 @@ also allowing developers to create a unique title if they need to.
 
     link = doc.createElement("link");
     link.rel = "stylesheet";
-    // link.href = "./assets/css/dialog.css";
     link.href = "{{ asset('css/dialog.css') }}";
     doc.head.append(link);
 
     script = doc.createElement("script");
-    // script.src = "./assets/js/dialog.js";
     script.src = "{{ asset('js/dialog.js') }}";
     doc.body.append(script);
 

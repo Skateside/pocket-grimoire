@@ -111,30 +111,6 @@
 
 }
 
-/*
-:checked ~ .character-select__part--name.is-setup {
-    position: relative;
-
-    &::before {
-        content: "!";
-        font-weight: bold;
-        width: 1em;
-        height: 1em;
-        position: absolute;
-        left: 0;
-        top: -1.25em;
-        border-radius: 50%;
-        background-color: red;
-        color: white;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        padding: 0.25em;
-        line-height: 1;
-    }
-}
-*/
-
 :checked ~ .character-select__part--image {
     background-image: radial-gradient(rgb(255 255 255 / 60%), transparent 50%);
     filter: drop-shadow(0 0 0.1em white);
