@@ -15,8 +15,11 @@ const autoprefixer  = require("gulp-autoprefixer");
 const cleanCSS      = require("gulp-clean-css");
 const twig          = require("gulp-twig");
 const htmlmin       = require("gulp-htmlmin");
+const rename        = require("gulp-rename");
+const crypto        = require("crypto");
 
 const packageJson = JSON.parse(fs.readFileSync("./package.json"));
+const randomHash = crypto.randomBytes(8).toString("hex").slice(0, 8);
 
 const ENTRY_POINTS = {
     js: [
@@ -113,6 +116,13 @@ gulp.task("scripts", () => Promise.all(
                 ? uglify()
                 : noop()
             )
+            .pipe(
+                isProduction
+                ? rename({
+                    suffix: `.${randomHash}`
+                })
+                : noop()
+            )
             .pipe(gulp.dest(OUTPUTS.js))
             .on("end", resolve);
 
@@ -190,6 +200,13 @@ gulp.task("styles", () => Promise.all(
                 ? cleanCSS()
                 : noop()
             )
+            .pipe(
+                isProduction
+                ? rename({
+                    suffix: `.${randomHash}`
+                })
+                : noop()
+            )
             .pipe(gulp.dest(OUTPUTS.css))
             .on("end", resolve);
 
@@ -220,7 +237,26 @@ gulp.task("pages", () => {
                         : "dev"
                     )
                 }
-            }
+            },
+            functions: [
+                {
+                    name: "asset",
+                    func(path) {
+
+                        let assetPath = `./assets/${path}`;
+
+                        if (isProduction) {
+
+                            const index = assetPath.lastIndexOf(".");
+                            assetPath = `${assetPath.slice(0, index)}.${randomHash}${assetPath.slice(index)}`;
+
+                        }
+
+                        return assetPath;
+
+                    }
+                }
+            ]
         }))
         .pipe(
             isProduction
@@ -291,6 +327,16 @@ gulp.task("copy:watch", () => {
 
 });
 
+gulp.task("empty", (callback) => {
+
+    fs.rmSync(OUTPUTS.html, {
+        force: true,
+        recursive: true
+    });
+    callback();
+
+});
+
 gulp.task("env:dev", (callback) => {
 
     process.env.NODE_ENV = "development";
@@ -325,6 +371,7 @@ gulp.task(
     "prod",
     gulp.series(
         "env:prod",
+        "empty",
         gulp.parallel(
             "scripts",
             "styles",

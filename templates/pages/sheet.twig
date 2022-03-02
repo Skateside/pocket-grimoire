@@ -4,7 +4,7 @@
 {% set meta_description = 'The character sheet for this edition of Blood on the Clocktower' %}
 
 {% block styles %}
-<link rel="stylesheet" href="./assets/css/sheet.css">
+<link rel="stylesheet" href="{{ asset('css/sheet.css') }}">
 {% endblock %}
 
 {% set body_class = 'body-sheet' %}
@@ -73,5 +73,5 @@
 {% endblock %}
 
 {% block javascript %}
-<script src="./assets/js/sheet.js"></script>
+<script src="{{ asset('js/sheet.js') }}"></script>
 {% endblock %}
