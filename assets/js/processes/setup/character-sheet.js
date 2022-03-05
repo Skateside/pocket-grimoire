@@ -1,27 +1,12 @@
 import Observer from "../../classes/Observer.js";
-import qrcode from "../../lib/qrcode.js";
+import QRCode from "../../lib/qrcode-svg.js";
 import {
+    empty,
     lookupOneCached
 } from "../../utils/elements.js";
 
 const gameObserver = Observer.create("game");
 const characterStore = Object.create(null);
-const qrCodeCache = Object.create(null);
-
-function makeQRCode(url) {
-
-    if (!qrCodeCache[url]) {
-
-        const qr = new qrcode(0, "H");
-        qr.addData(url);
-        qr.make();
-        qrCodeCache[url] = qr.createSvgTag({});
-
-    }
-
-    return qrCodeCache[url];
-
-}
 
 function drawQRCode() {
 
@@ -60,10 +45,10 @@ function drawQRCode() {
 
     url.searchParams.append("characters", ids);
 
-    const cacheKey = url.searchParams.toString();
-    let qrSVG = qrCodeCache[cacheKey]
-
-    qrCode.innerHTML = makeQRCode(url.toString());
+    empty(qrCode).append(QRCode({
+        msg: url.toString(),
+        ecl: "L"
+    }));
     lookupOneCached("#qr-code-button").disabled = false;
     lookupOneCached("#qr-code-link").href = url.toString();
     lookupOneCached("#qr-code-link").disabled = false;

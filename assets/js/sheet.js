@@ -13,7 +13,8 @@ import {
     lookupCached,
     lookupOneCached
 } from "./utils/elements.js";
-import qrcode from "./lib/qrcode.js";
+// import qrcode from "./lib/qrcode.js";
+import QRCode from "./lib/qrcode-svg.js";
 
 const url = new URL(window.location.href);
 const name = url.searchParams.get("name") || "";
@@ -99,10 +100,10 @@ TokenStore.ready((tokenStore) => {
 });
 
 // Generate the QR code.
-const qr = new qrcode(0, "H");
-qr.addData(window.location.href);
-qr.make();
-lookupOne("#qr-code").innerHTML = qr.createSvgTag({});
+lookupOne("#qr-code").append(QRCode({
+    msg: window.location.href,
+    ecl: "L"
+}));
 
 // Activate the dialogs.
 lookup("[data-dialog]").forEach((trigger) => {
