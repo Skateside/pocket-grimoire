@@ -113,14 +113,6 @@
     text-align: right;
     list-style: none;
 
-    &::-webkit-details-marker {
-        display: none;
-    }
-
-    &::marker {
-        display: none;
-    }
-
     > h2 {
         font-size: inherit;
     }
