@@ -116,29 +116,62 @@
     filter: drop-shadow(0 0 0.1em white);
 }
 
-/*
-.character-select__count {
-    width: 100%;
-    text-align: center;
-
-    @at-root {
-        .is-hide-duplicates #{&} {
-            display: none;
-        }
-    }
-}
-*/
-
 .character-select__character {
     position: relative;
 }
 
 .character-select__duplicate {
     display: none;
+    position: absolute;
+    top: -1em;
+    z-index: 1;
 
     @at-root {
         .is-show-duplicates .is-selected > #{&} {
             display: block;
         }
     }
+}
+
+.character-select__count {
+    width: 100%;
+    text-align: center;
+    border: none;
+    background-color: transparent;
+    font-family: var(--serif-font);
+    font-size: 2em;
+    text-shadow:
+        0 0 0.1em rgb(255 255 255),
+        0 0 0.25em rgb(255 255 255),
+        0 0 0.5em rgb(255 255 255);
+
+    &[tabindex="-1"] {
+        pointer-events: none;
+    }
+}
+
+.character-select__button {
+    @extend %no-btn;
+    padding: 0.5em;
+    position: absolute;
+    top: 0;
+
+    // // &[aria-disabled="true"],
+    // &[disabled] {
+    //     opacity: 0.7;
+    // }
+}
+
+.character-select__button--prev {
+    left: 0;
+}
+
+.character-select__button--next {
+    right: 0;
+}
+
+.character-select__icon {
+    width: 1em;
+    color: inherit;
+    display: block;
 }

@@ -15,8 +15,8 @@
     padding-left: 0.5em;
     padding-right: 0.5em;
 
+    // &[aria-disabled="true"],
     &[disabled] {
-    // &[aria-disabled="true"] {
         opacity: 0.7;
         box-shadow: none;
         color: #333;

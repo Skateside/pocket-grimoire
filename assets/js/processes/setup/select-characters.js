@@ -190,8 +190,33 @@ lookupOne("#toggle-abilities").addEventListener("input", ({ target }) => {
 
 lookupOne("#toggle-duplicates").addEventListener("input", ({ target }) => {
 
+    const {
+        checked
+    } = target;
+
     lookupCached("[data-team]").forEach((wrapper) => {
-        wrapper.classList.toggle("is-show-duplicates", target.checked);
+
+        wrapper.classList.toggle("is-show-duplicates", checked);
+
+        if (!checked) {
+
+            lookup("[name^=\"count-\"]", wrapper).forEach((input) => {
+
+                const {
+                    value
+                } = input;
+
+                if (value > 1) {
+
+                    input.value = 1;
+                    announceInput(input);
+
+                }
+
+            });
+
+        }
+
     });
 
 });
@@ -223,6 +248,41 @@ lookupCached("[data-team]").forEach((wrapper) => {
             id: target.dataset.for,
             count: Number(target.value)
         });
+
+    });
+
+    wrapper.addEventListener("click", ({ target }) => {
+
+        const button = target.closest("[data-quantity-amount]");
+
+        if (!button) {
+            return;
+        }
+
+        const input = button.input || lookupOne(
+            ".js--character-select--count",
+            button.closest(".js--character-select--duplicate-wrapper")
+        );
+        button.input = input;
+
+        const value = Number(input.value) || 0;
+        const delta = Number(button.dataset.quantityAmount) || 0;
+        const amount = value + delta;
+
+        input.value = amount;
+
+        if (amount) {
+            announceInput(input);
+        } else {
+
+            const checkbox = lookupOne(
+                ".js--character-select--input",
+                button.closest(".js--character-select")
+            );
+            checkbox.checked = false;
+            announceInput(checkbox);
+
+        }
 
     });
 

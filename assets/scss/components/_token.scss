@@ -19,8 +19,8 @@
         width: clamp(55px, 100vw / 9, 125px);
     }
 
+    // &[aria-disabled="true"],
     &[disabled] {
-    // &[aria-disabled="true"] {
         opacity: 0.7;
 
         > .character {
