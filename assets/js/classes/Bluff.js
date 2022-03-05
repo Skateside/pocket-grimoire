@@ -49,6 +49,8 @@ export default class Bluff {
      */
     setCharacter(character, triggerEvent = true) {
 
+        const previous = this.character;
+
         /**
          * The character for this bluff.
          * @type {CharacterToken}
@@ -59,7 +61,8 @@ export default class Bluff {
 
             this.observer.trigger("bluff", {
                 button: this.getSelector(),
-                character: character.getId()
+                character: character.getId(),
+                previous: previous?.getId()
             });
 
         }

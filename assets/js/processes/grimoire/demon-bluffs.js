@@ -117,6 +117,12 @@ TokenStore.ready((tokenStore) => {
             markInPlay(character);
         }
 
+        const previous = tokenStore.getCharacter(detail.previous);
+
+        if (previous && previous.getId() && !previous.isEmpty()) {
+            markInPlay(previous, false);
+        }
+
     });
 
     gameObserver.on("clear", () => {
