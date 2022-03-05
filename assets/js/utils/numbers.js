@@ -59,3 +59,44 @@ export function compareVersions(version1, version2) {
     return clamp(-1, number, 1);
 
 }
+
+/**
+ * Converts the given number to its positive integer.
+ *
+ * @param  {Number} number
+ *         Number to convert.
+ * @return {Number}
+ *         Positive integer, or NaN if the number can't be parsed.
+ */
+export function toPosInt(number) {
+    return Math.floor(Math.abs(number));
+}
+
+/**
+ * Executes a handler a set number of times. The number of times is converted
+ * into a positive integer (ses {@link toPosInt}) and returned.
+ *
+ * @param  {Number} number
+ *         Number of times to execute the given handler.
+ * @param  {Function} handler
+ *         Handler to execute.
+ * @param  {?} [context]
+ *         Optional context for the handler.
+ * @return {Number}
+ *         The number of times that the handler was executed.
+ */
+export function times(number, handler, context) {
+
+    const max = toPosInt(number) || 0;
+    let index = 0;
+
+    while (index < max) {
+
+        handler.call(context, index);
+        index += 1;
+
+    }
+
+    return max;
+
+}

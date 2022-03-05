@@ -14,7 +14,8 @@ import {
     groupBy
 } from "../../utils/arrays.js";
 import {
-    clamp
+    clamp,
+    times
 } from "../../utils/numbers.js";
 
 const gameObserver = Observer.create("game");
@@ -66,6 +67,10 @@ function highlightRandomInTeam(team, count) {
 
         const isChecked = input.checked;
         input.checked = chosen.includes(input);
+
+        if (isChecked) {
+            lookupOne(`input[name="count-${input.value}"]`).value = 1;
+        }
 
         if (input.checked !== isChecked) {
             announceInput(input);
@@ -128,9 +133,9 @@ gameObserver.on("characters-selected", ({ detail }) => {
     } = detail;
     const teams = groupBy(characters, (character) => character.getTeam());
 
-    // Populate the team sections.
     lookupCached("[data-team]").forEach((wrapper) => {
 
+        // Populate the team sections.
         const team = wrapper.dataset.team;
         const isTeamPopulated = Array.isArray(teams[team]);
         wrapper.hidden = !isTeamPopulated;
@@ -140,16 +145,18 @@ gameObserver.on("characters-selected", ({ detail }) => {
             (teams[team] || []).map((character) => character.drawSelect())
         );
 
-    });
-
-    // Deselect any checkboxes and set the counts to zero.
-    lookupCached("[data-team]").forEach((wrapper) => {
-
+        // Deselect any checkboxes and set the counts to zero.
         lookup(".js--character-select--input", wrapper).forEach((input) => {
             input.checked = false;
         });
 
         lookupOneCached(".js--character-select--count", wrapper).textContent = 0;
+
+        // Store the "count" inputs.
+        // This allows us to quickly add all the values together to get the
+        // number of tokens selected in this group, regardless of whether tokens
+        // have been added, removed, or duplicated.
+        wrapper.countInputs = lookup("input[name^=\"count\"]", wrapper);
 
     });
 
@@ -184,7 +191,7 @@ lookupOne("#toggle-abilities").addEventListener("input", ({ target }) => {
 lookupOne("#toggle-duplicates").addEventListener("input", ({ target }) => {
 
     lookupCached("[data-team]").forEach((wrapper) => {
-        wrapper.classList.toggle("is-hide-duplicates", !target.checked);
+        wrapper.classList.toggle("is-show-duplicates", target.checked);
     });
 
 });
@@ -207,7 +214,7 @@ lookupCached("[data-team]").forEach((wrapper) => {
 
     wrapper.addEventListener("input", ({ target }) => {
 
-        if (!target.matches("input[name=\"count\"]")) {
+        if (!target.matches("input[name^=\"count\"]")) {
             return;
         }
 
@@ -224,84 +231,47 @@ lookupCached("[data-team]").forEach((wrapper) => {
 gameObserver.on("character-toggle", ({ detail }) => {
 
     const {
-        element,
+        id,
         active,
-        id
+        element
     } = detail;
 
-    const countElement = lookupOneCached(
-        ".js--character-select--count",
-        element.closest("[data-team]")
-    );
-    const countInput = lookupOneCached(`[data-for="${id}"]`);
-    const quantity = Number(countInput.value) || 1;
-    let count = Number(countElement.textContent) || 0;
+    const input = lookupOne(`input[name="count-${id}"]`);
+    const value = Number(input.value);
+
+    element
+        .closest(".js--character-select")
+        .classList
+        .toggle("is-selected", active);
 
     if (active) {
 
-        countInput.value = quantity;
-        count += quantity;
-        // count += 1;
+        if (value < 1) {
+            input.value = 1;
+        }
 
-    } else if (count > 0) {
-
-        countInput.value = 0;
-        count -= quantity;
-        // count -= 1;
-
+    } else {
+        input.value = 0;
     }
 
-    countElement.textContent = count;
+    announceInput(input);
 
 });
 
 gameObserver.on("character-count-change", ({ detail }) => {
 
     const {
-        element,
-        active,
-        id
+        element
     } = detail;
-
+    const wrapper = element.closest("[data-team]");
     const countElement = lookupOneCached(
         ".js--character-select--count",
-        element.closest("[data-team]")
+        wrapper
     );
-    // const countInput = lookupOneCached(`[data-for="${id}"]`);
-    const countInput = element;
-    const quantity = Number(countInput.value) || 1;
-    let count = Number(countElement.textContent) || 0;
-console.log({ element, quantity, count });
-    if (active) {
 
-        countInput.value = quantity;
-        count += quantity;
-        // count += 1;
-
-    } else if (count > 0) {
-
-        countInput.value = 0;
-        count -= quantity;
-        // count -= 1;
-
-    }
-
-    countElement.textContent = count;
-
-});
-
-// The "character-toggle" script can give misleading numbers when all the inputs
-// are re-populated. This call corrects the number when the inputs have finished
-// re-populating.
-gameObserver.on("inputs-repopulated", () => {
-
-    lookupCached("[data-team]").forEach((wrapper) => {
-
-        lookupOneCached(".js--character-select--count", wrapper).textContent = (
-            lookup(":checked", wrapper).length
-        );
-
-    });
+    countElement.textContent = wrapper.countInputs.reduce((total, input) => {
+        return total + Number(input.value);
+    }, 0);
 
 });
 
@@ -315,7 +285,23 @@ lookupOne("#player-select").addEventListener("submit", (e) => {
 
         const filtered = tokenStore
             .getAllCharacters()
-            .filter((character) => ids.includes(character.getId()));
+            .filter((character) => ids.includes(character.getId()))
+            .map((character) => {
+
+                // We use times() instead of Array#fill() here because fill()
+                // didn't seem to work correctly.
+
+                const duplicates = [];
+
+                times(
+                    lookupOne(`input[name="count-${character.getId()}"]`).value,
+                    () => duplicates.push(character)
+                );
+
+                return duplicates;
+
+            })
+            .flat();
 
         gameObserver.trigger("character-draw", {
             characters: filtered

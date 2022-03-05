@@ -116,6 +116,7 @@
     filter: drop-shadow(0 0 0.1em white);
 }
 
+/*
 .character-select__count {
     width: 100%;
     text-align: center;
@@ -123,6 +124,21 @@
     @at-root {
         .is-hide-duplicates #{&} {
             display: none;
+        }
+    }
+}
+*/
+
+.character-select__character {
+    position: relative;
+}
+
+.character-select__duplicate {
+    display: none;
+
+    @at-root {
+        .is-show-duplicates .is-selected > #{&} {
+            display: block;
         }
     }
 }

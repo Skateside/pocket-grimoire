@@ -49,9 +49,12 @@ lookupOneCached("#character-choice").addEventListener("click", ({ target }) => {
 
     TokenStore.ready((tokenStore) => {
 
+        // Add a clone of the character so that duplicated characters are still
+        // considered unique.
+
         gameObserver.trigger("character-drawn", {
             element,
-            character: tokenStore.getCharacter(element.dataset.id)
+            character: tokenStore.getCharacter(element.dataset.id).clone()
         });
 
     });
