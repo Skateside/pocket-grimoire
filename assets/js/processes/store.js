@@ -117,7 +117,13 @@ const {
 } = document;
 
 body.addEventListener("input", ({ target }) => {
-    store.saveInput(target.closest("input"));
+
+    const input = target.closest("input");
+
+    if (!input.hasAttribute("data-no-store")) {
+        store.saveInput(input);
+    }
+
 });
 
 body.addEventListener("toggle", ({ target }) => {

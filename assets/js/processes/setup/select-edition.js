@@ -5,7 +5,8 @@ import {
     lookup,
     lookupOne,
     lookupOneCached,
-    getLabelText
+    getLabelText,
+    announceInput
 } from "../../utils/elements.js";
 
 function isScriptJson(json) {
@@ -31,10 +32,60 @@ function announceScript(name, characters) {
 
 }
 
+function showInputError(input, error) {
+
+    input.setCustomValidity(error);
+    input.form.reportValidity();
+
+}
+
+function processJSON({
+    json,
+    input,
+    store
+}) {
+
+    if (!isScriptJson(json)) {
+
+        showInputError(input, lookupOneCached("#invalid-script").textContent);
+        return;
+
+    }
+
+    let name = "";
+    const metaIndex = json.findIndex(({ id }) => id === "_meta");
+
+    if (metaIndex > -1) {
+
+        name = json[metaIndex].name;
+        json.splice(metaIndex, 1);
+
+    }
+
+    // The script tool creates IDs differently from our data.
+    // Examples: script = lil_monsta, data = lilmonsta
+    // Examples: script = al-hadikhia, data = alhadikhia
+    // The .replace() here is designed to convert their IDs to ours.
+    const characters = json
+        .map(({ id }) => store.getCharacter(id.replace(/[-_]/g, "")))
+        .filter(Boolean);
+
+    if (!characters.length) {
+
+        showInputError(input, lookupOneCached("#no-characters").textContent);
+        return;
+
+    }
+
+    announceScript(name, characters);
+
+}
+
 const form = lookupOne("#select-edition-form");
-const fileInput = lookupOne("#custom-script");
+const fileInput = lookupOne("#custom-script-upload");
 const fileInputRender = fileInput.nextElementSibling;
-const uploader = lookupOne("#custom-script-upload");
+const urlInput = lookupOne("#custom-script-url");
+const uploader = lookupOne("#custom-script");
 const radios = lookup("[name=\"edition\"]", form);
 
 radios.forEach((radio) => {
@@ -45,7 +96,16 @@ radios.forEach((radio) => {
 
         uploader.hidden = !isCustom;
         fileInput.required = isCustom;
+        urlInput.required = isCustom;
 
+    });
+
+    fileInput.addEventListener("input", () => {
+        urlInput.required = !fileInput.value;
+    });
+
+    urlInput.addEventListener("input", () => {
+        fileInput.required = !urlInput.value;
     });
 
 });
@@ -65,46 +125,30 @@ form.addEventListener("submit", (e) => {
 
         if (edition === "custom") {
 
-            const reader = new FileReader();
+            if (urlInput.value) {
 
-            reader.addEventListener("load", ({ target }) => {
+                fetch(urlInput.value)
+                    .catch((error) => showInputError(urlInput, error.message))
+                    .then((response) => response.json())
+                    .then((json) => processJSON({
+                        json,
+                        input: urlInput,
+                        store: tokenStore
+                    }));
 
-                const json = JSON.parse(target.result);
+            } else if (fileInput.files.length) {
 
-                if (!isScriptJson(json)) {
+                const reader = new FileReader();
 
-                    fileInput.setCustomValidity(
-                        fileInput.dataset.invalidScript
-                    );
-                    form.reportValidity();
-                    return;
+                reader.addEventListener("load", ({ target }) => processJSON({
+                    json: JSON.parse(target.result),
+                    input: fileInput,
+                    store: tokenStore
+                }));
 
-                }
+                reader.readAsBinaryString(fileInput.files[0]);
 
-                let name = "";
-                const metaIndex = json.findIndex(({ id }) => id === "_meta");
-
-                if (metaIndex > -1) {
-
-                    name = json[metaIndex].name;
-                    json.splice(metaIndex, 1);
-
-                }
-
-                // The script tool creates IDs differently from our data.
-                // Examples: script = lil_monsta, data = lilmonsta
-                // Examples: script = al-hadikhia, data = alhadikhia
-                // The .replace() here is designed to convert their IDs to ours.
-                announceScript(
-                    name,
-                    json
-                        .map(({ id }) => tokenStore.getCharacter(id.replace(/[-_]/g, "")))
-                        .filter(Boolean)
-                );
-
-            });
-
-            reader.readAsBinaryString(fileInput.files[0]);
+            }
 
         } else {
 
@@ -132,5 +176,25 @@ fileInput.addEventListener("input", () => {
         ? value.slice(value.lastIndexOf("\\") + 1)
         : fileInputRender.dataset.placeholder
     );
+
+    if (value && urlInput.value) {
+
+        urlInput.value = "";
+        announceInput(urlInput);
+
+    }
+
+});
+
+urlInput.addEventListener("input", () => {
+
+    urlInput.setCustomValidity("");
+
+    if (urlInput.value && fileInput.value) {
+
+        fileInput.value = "";
+        announceInput(fileInput);
+
+    }
 
 });

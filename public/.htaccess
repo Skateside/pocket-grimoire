@@ -14,7 +14,7 @@
     RewriteRule (.*) https://www.%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 </IfModule>
 
-# Cache files
+# Cache files for 365 days
 <IfModule mod_headers.c>
     <FilesMatch "\.(jpg|jpeg|png|gif|woff|woff2|json|js|css)$">
         Header set Cache-Control "max-age=22896000, public"
