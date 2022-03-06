@@ -24,6 +24,8 @@ As your players are familiarising themselves with the script, you can close that
 
 ![A series of tokens with numbers on them, from one to seven](https://www.pocketgrimoire.co.uk/docs/select-characters.jpg)
 
+> :information_source: If you select the character and a red exclamation mark appears then the character changes the setup of the game. This may mean that other characters need to be selected. A yellow star means that a the character is jinxed with another one - including that character will add a section to the main screen that explains the effect of the Jinx on this game.
+
 When you're happy with the selection, tap the "Draw Characters" button to let your players draw their tokens.
 
 ![A series of tokens with numbers on them, from one to seven](https://www.pocketgrimoire.co.uk/docs/select-numbers.jpg)
