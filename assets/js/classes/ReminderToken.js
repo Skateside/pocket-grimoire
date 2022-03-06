@@ -24,6 +24,33 @@ export default class ReminderToken extends Token {
     }
 
     /**
+     * A collection of all global reminders - reminders that aren't attached to
+     * any character but might still be useful for play.
+     * @type {Array.<ReminderToken>}
+     */
+    static global = [];
+
+    /**
+     * Adds a reminder to {@link ReminderToken.global}.
+     *
+     * @param {ReminderToken} reminder
+     *        Global reminder to add.
+     */
+    static addGlobal(reminder) {
+        this.global.push(reminder);
+    }
+
+    /**
+     * Exposes {@link ReminderToken.global}.
+     *
+     * @return {Array.<ReminderToken>}
+     *         All global reminders.
+     */
+    static getGlobal() {
+        return this.global;
+    }
+
+    /**
      * @inheritDoc
      */
     processData(data) {

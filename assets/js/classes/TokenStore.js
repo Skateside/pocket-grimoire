@@ -71,7 +71,7 @@ export default class TokenStore {
      *         true if the ID looks like a reminder id, false if it doesn't.
      */
     static isReminderId(id) {
-        return (/^\w+:\s/).test(id);
+        return (/^\w*:[\w-]+$/).test(id);
     }
 
     /**
@@ -93,11 +93,14 @@ export default class TokenStore {
      *        Data to store.
      * @param {Array.<Object>} data.characters
      *        Character data.
+     * @param {Array.<Object>} data.reminders
+     *        Data for reminders that aren't attached to any character.
      * @param {Array.<Object>} data.jinxes
      *        Jinx data.
      */
     constructor({
         characters,
+        reminders,
         jinxes
     }) {
 
@@ -114,6 +117,9 @@ export default class TokenStore {
         this.reminders = Object.create(null);
 
         characters.forEach((character) => this.createCharacter(character));
+        reminders.forEach((reminder) => {
+            ReminderToken.addGlobal(this.createReminder(reminder));
+        });
 
         /**
          * A collection of all jinxes.

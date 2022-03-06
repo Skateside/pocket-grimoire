@@ -2,6 +2,7 @@ import Pad from "../../classes/Pad.js";
 import Template from "../../classes/Template.js";
 import Observer from "../../classes/Observer.js";
 import TokenStore from "../../classes/TokenStore.js";
+import ReminderToken from "../../classes/ReminderToken.js";
 import Dialog from "../../classes/Dialog.js";
 import {
     lookup,
@@ -69,7 +70,7 @@ gameObserver.on("characters-selected", ({ detail }) => {
 
     const reminders = characters.reduce((reminders, character) => {
         return reminders.concat(character.getReminders());
-    }, []);
+    }, ReminderToken.getGlobal());
     const reminderTemplate = Template.create(
         lookupOneCached("#reminder-list-template")
     );

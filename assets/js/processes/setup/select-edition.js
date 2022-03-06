@@ -154,7 +154,8 @@ form.addEventListener("submit", (e) => {
 
             announceScript(
                 getLabelText(radio),
-                tokenStore.getAllCharacters()
+                tokenStore
+                    .getAllCharacters()
                     .filter((character) => character.getEdition() === edition)
             );
 

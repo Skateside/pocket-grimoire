@@ -61,6 +61,22 @@ Promise.all([
             },
             ...characters
         ],
+        reminders: [
+            {
+                id: TokenStore.EMPTY,
+                name: "",
+                text: lookupOne("#good-team").textContent,
+                image: "./assets/img/icon/townsfolk.png",
+                isGlobal: true
+            },
+            {
+                id: TokenStore.EMPTY,
+                name: "",
+                text: lookupOne("#evil-team").textContent,
+                image: "./assets/img/icon/demon.png",
+                isGlobal: true
+            }
+        ],
         jinxes
     });
 
