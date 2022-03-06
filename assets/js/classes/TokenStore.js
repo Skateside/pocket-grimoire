@@ -117,7 +117,7 @@ export default class TokenStore {
         this.reminders = Object.create(null);
 
         characters.forEach((character) => this.createCharacter(character));
-        reminders.forEach((reminder) => {
+        reminders?.forEach((reminder) => {
             ReminderToken.addGlobal(this.createReminder(reminder));
         });
 
