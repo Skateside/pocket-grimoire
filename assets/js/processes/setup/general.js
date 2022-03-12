@@ -9,8 +9,10 @@ import {
     fetchFromStore
 } from "../../utils/fetch.js";
 import {
+    lookup,
     lookupOne,
-    lookupCached
+    lookupCached,
+    lookupOneCached
 } from "../../utils/elements.js";
 
 const store = Store.create("pocket-grimoire");
@@ -30,12 +32,14 @@ fetchFromStore("./assets/data/game.json", store).then((breakdown) => {
 
 CharacterToken.setTemplates({
     token: Template.create(lookupOne("#character-template")),
+    list: Template.create(lookupOne("#character-list-template")),
     select: Template.create(lookupOne("#character-select-template")),
     nightOrder: Template.create(lookupOne("#night-info-template"))
 });
-ReminderToken.setTemplate(
-    Template.create(lookupOne("#reminder-template"))
-);
+ReminderToken.setTemplates({
+    token: Template.create(lookupOne("#reminder-template")),
+    list: Template.create(lookupOne("#reminder-list-template"))
+});
 
 Promise.all([
     new Promise((resolve) => {
@@ -84,4 +88,20 @@ Promise.all([
 
 lookupCached("[data-dialog]").forEach((trigger) => {
     trigger.dialog = Dialog.createFromTrigger(trigger);
+});
+
+lookup("input[data-filter-list]").forEach((input) => {
+
+    input.addEventListener("change", ({ target }) => {
+
+        const list = lookupOneCached(target.dataset.filterList);
+
+        if (!list) {
+            return;
+        }
+
+        list.classList.toggle("is-show-all", target.checked);
+
+    });
+
 });

@@ -405,6 +405,33 @@ export default class CharacterToken extends Token {
     }
 
     /**
+     * Draws the character token list item.
+     *
+     * @return {DocumentFragment}
+     *         Populated character token list item.
+     */
+    drawList() {
+
+        const {
+            id
+        } = this.data;
+
+        return this.constructor.templates.list.draw([
+            [
+                ".js--character-list--button",
+                id,
+                (element, content) => element.dataset.tokenId = content
+            ],
+            [
+                ".js--character-list--token",
+                this.drawToken(),
+                Template.append
+            ]
+        ]);
+
+    }
+
+    /**
      * Draws the character's icon, name, and ability for the "Select Characters"
      * dialog box.
      *
@@ -484,15 +511,29 @@ export default class CharacterToken extends Token {
             id,
             name,
             image,
+            firstNight,
             firstNightReminder,
+            otherNight,
             otherNightReminder
         } = this.data;
 
         return this.constructor.templates.nightOrder.draw([
             [
                 ".js--night-info--wrapper",
-                id,
-                (element, content) => element.dataset.id = content
+                [
+                    id,
+                    (
+                        isFirst
+                        ? firstNight
+                        : otherNight
+                    )
+                ],
+                (element, [id, order]) => {
+
+                    element.dataset.id = id;
+                    element.dataset.order = order;
+
+                }
             ],
             [
                 ".js--night-info--icon",

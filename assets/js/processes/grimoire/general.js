@@ -1,5 +1,4 @@
 import Pad from "../../classes/Pad.js";
-import Template from "../../classes/Template.js";
 import Observer from "../../classes/Observer.js";
 import TokenStore from "../../classes/TokenStore.js";
 import ReminderToken from "../../classes/ReminderToken.js";
@@ -43,59 +42,23 @@ lookup("details").forEach((details) => {
 
 gameObserver.on("characters-selected", ({ detail }) => {
 
-    const characterTemplate = Template.create(
-        lookupOneCached("#character-list-template")
-    );
-    const {
-        characters
-    } = detail;
+    const characters = detail.characters.filter((character) => {
+        const team = character.getTeam();
+        return team !== "fabled" && team !== "traveller";
+    });
 
     replaceContentsMany(
         lookupOneCached("#character-list__list"),
-        characters
-            .filter((character) => character.getTeam() !== "fabled")
-            .map((character) => characterTemplate.draw([
-                [
-                    ".js--character-list--button",
-                    character.getId(),
-                    (element, content) => element.dataset.tokenId = content
-                ],
-                [
-                    ".js--character-list--token",
-                    character.drawToken(),
-                    Template.append
-                ]
-            ]))
+        characters.map((character) => character.drawList())
     );
 
     const reminders = characters.reduce((reminders, character) => {
         return reminders.concat(character.getReminders());
     }, ReminderToken.getGlobal());
-    const reminderTemplate = Template.create(
-        lookupOneCached("#reminder-list-template")
-    );
 
     replaceContentsMany(
         lookupOneCached("#reminder-list__list"),
-        reminders.map((reminder) => reminderTemplate.draw([
-            [
-                ".js--reminder-list--item,.js--reminder-list--button",
-                reminder.getId(),
-                (element, content) => element.dataset.reminderId = content
-            ],
-            [
-                ".js--reminder-list--item",
-                reminder.getIsGlobal(),
-                (element, content) => {
-                    element.classList.toggle("is-global", content);
-                }
-            ],
-            [
-                ".js--reminder-list--button",
-                reminder.drawToken(),
-                Template.append
-            ]
-        ]))
+        reminders.map((reminder) => reminder.drawList())
     );
 
     lookupOneCached("#add-token").disabled = false;

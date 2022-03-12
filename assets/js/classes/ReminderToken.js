@@ -8,18 +8,18 @@ import Template from "./Template.js";
 export default class ReminderToken extends Token {
 
     /**
-     * Sets the template that all instances refer to.
+     * Sets the templates that will be access when drawing views.
      *
-     * @param {Template} template
-     *        Template instance.
+     * @param {Object} templates
+     *        A map of keys to {@link Template} instances.
      */
-    static setTemplate(template) {
+    static setTemplates(templates) {
 
         /**
-         * Instance of {@link Template} that all instances will use.
-         * @type {Template}
+         * The templates that all instances will access.
+         * @type {Object}
          */
-        this.template = template;
+        this.templates = templates;
 
     }
 
@@ -84,7 +84,7 @@ export default class ReminderToken extends Token {
             characterName
         } = this.data;
 
-        return this.constructor.template.draw([
+        return this.constructor.templates.token.draw([
             [
                 ".js--reminder--name",
                 characterName
@@ -101,5 +101,41 @@ export default class ReminderToken extends Token {
         ]);
 
     }
+
+    /**
+     * Draws the reminder list item.
+     *
+     * @return {DocumentFragment}
+     *         Populated reminder list item.
+     */
+    drawList() {
+
+        const {
+            id,
+            isGlobal
+        } = this.data;
+
+        return this.constructor.templates.list.draw([
+            [
+                ".js--reminder-list--item,.js--reminder-list--button",
+                id,
+                (element, content) => element.dataset.reminderId = content
+            ],
+            [
+                ".js--reminder-list--item",
+                isGlobal,
+                (element, content) => {
+                    element.classList.toggle("is-global", content);
+                }
+            ],
+            [
+                ".js--reminder-list--button",
+                this.drawToken(),
+                Template.append
+            ]
+        ]);
+
+    }
+
 
 }

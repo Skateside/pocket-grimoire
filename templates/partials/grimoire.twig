@@ -20,6 +20,7 @@
     <ul class="button-list mt-4">
         <li><button type="button" class="button" id="add-token" data-dialog="#character-list" disabled>Add token</button></li>
         <li><button type="button" class="button" id="add-reminder" data-dialog="#reminder-list" disabled>Add reminder</button></li>
+        <li><button type="button" class="button" id="add-traveller" data-dialog="#traveller-list" disabled>Add traveller</button></li>
         <li><button type="button" class="button" id="show-tokens" data-dialog="#token-list" disabled>Show tokens</button></li>
         <li><button type="button" class="button" id="reset-height">Reset pad height</button></li>
         <li><button type="button" class="button button--warning" id="clear-grimoire" data-confirm="Are you sure you want to clear all the tokens?">Clear Grimoire</button></li>
@@ -226,6 +227,29 @@
         </button>
     </li>
 </template>
+
+{% embed '../includes/dialog.twig' with {
+    id: 'traveller-list',
+    background: 'blur',
+    title: 'Travellers'
+} %}
+    {% block body %}
+        <ul id="traveller-list__list" class="filter-list button-list button-list--reminder"></ul>
+        <p class="switch mt-4">
+            <span class="switch__input">
+                {{ forms.toggle({
+                    name: 'show',
+                    id: 'show-all-travellers',
+                    attributes: {
+                        'data-filter-list': '#traveller-list__list'
+                    }
+                }) }}
+            </span>
+            <label for="show-all-travellers" class="switch__label">Show all travellers</label>
+        </p>
+    {% endblock %}
+{% endembed %}
+
 
 {% embed '../includes/dialog.twig' with {
     id: 'token',

@@ -1,0 +1,12 @@
+%filter-list,
+.filter-list {
+
+    &:not(.is-show-all) {
+        > * {
+            &:not(.is-included) {
+                display: none;
+            }
+        }
+    }
+
+}

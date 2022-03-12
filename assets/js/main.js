@@ -10,6 +10,7 @@ import "./processes/grimoire/characters.js";
 import "./processes/grimoire/reminders.js";
 import "./processes/grimoire/demon-bluffs.js";
 import "./processes/grimoire/reset.js";
+import "./processes/grimoire/travellers.js";
 
 import "./processes/jinxes.js";
 

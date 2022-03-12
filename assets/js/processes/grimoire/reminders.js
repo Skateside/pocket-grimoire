@@ -76,7 +76,7 @@ TokenStore.ready((tokenStore) => {
             lookupOne(
                 `[data-reminder-id="${reminder.getId()}"]`,
                 list
-            ).classList.add("is-in-play");
+            )?.classList.add("is-in-play");
 
         });
 
@@ -100,7 +100,7 @@ TokenStore.ready((tokenStore) => {
                 lookupOne(
                     `[data-reminder-id="${reminder.getId()}"]`,
                     list
-                ).classList.remove("is-in-play");
+                )?.classList.remove("is-in-play");
 
             });
 

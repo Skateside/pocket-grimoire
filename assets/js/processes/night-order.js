@@ -11,9 +11,10 @@ const tokenObserver = Observer.create("token");
 
 gameObserver.on("characters-selected", ({ detail }) => {
 
-    const {
-        characters
-    } = detail;
+    const characters = detail.characters.filter((character) => {
+        const team = character.getTeam();
+        return team !== "traveller";
+    });
 
     replaceContentsMany(
         lookupOneCached("#first-night"),

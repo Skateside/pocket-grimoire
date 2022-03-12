@@ -200,15 +200,21 @@ tokenObserver.on("character-remove", ({ detail }) => {
 });
 
 // List of tokens.
+// TODO: could we use character.drawList() here?
 
 const tokenListTemplate = Template.create(lookupOne("#token-list-template"));
 const tokenList = lookupOne("#token-list__list");
 
 gameObserver.on("characters-selected", ({ detail }) => {
 
+    const characters = detail.characters.filter((character) => {
+        const team = character.getTeam();
+        return team !== "traveller";
+    });
+
     replaceContentsMany(
         tokenList,
-        detail.characters.map((character) => tokenListTemplate.draw([
+        characters.map((character) => tokenListTemplate.draw([
             [
                 ".js--token-list--button",
                 character.getId(),
