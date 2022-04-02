@@ -382,16 +382,31 @@ export default class Tokens {
 
     }
 
+    /**
+     * Moves the given token element to the co-ordinates given.
+     *
+     * @param {Element} element
+     *        Element to move.
+     * @param {Number} left
+     *        X co-ordinate.
+     * @param {Number} top
+     *        Y co-ordinate.
+     * @param {Number} [zIndex=this.zIndex]
+     *        Optional Z co-ordinate. If ommitted, it defaults to
+     *        {@link Tokens#zIndex}.
+     */
     moveTo(element, left, top, zIndex) {
 
         element.style.setProperty("--left", left);
         element.style.setProperty("--top", top);
-
-        if (typeof zIndex === "number" && !Number.isNaN(zIndex)) {
-            element.style.setProperty("--z-index", zIndex);
-        } else {
-            zIndex = this.zIndex;
-        }
+        element.style.setProperty(
+            "--z-index",
+            (
+                (typeof zIndex !== "number" || Number.isNaN(zIndex))
+                ? this.zIndex
+                : zIndex
+            )
+        );
 
         this.observer.trigger("move", {
             element,
@@ -399,6 +414,35 @@ export default class Tokens {
             top,
             zIndex
         });
+
+    }
+
+    /**
+     * Exposes the co-ordinates for the given element.
+     *
+     * @param  {Element} element
+     *         Element whose co-ordinates should be returned.
+     * @return {coord}
+     *         Co-ordinates for the element.
+     */
+    getPosition(element) {
+
+        /**
+         * @typedef  {Object} coord
+         * @property {Number} x
+         *           The left value in pixels.
+         * @property {Number} y
+         *           The top value in pixels.
+         * @property {Number} z
+         *           The z-index in pixels.
+         */
+        const coord = {
+            x: Number(element.style.getPropertyValue("--left")) || 0,
+            y: Number(element.style.getPropertyValue("--top")) || 0,
+            z: Number(element.style.getPropertyValue("--z-index")) || 0
+        };
+
+        return coord;
 
     }
 

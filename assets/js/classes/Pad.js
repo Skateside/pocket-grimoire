@@ -179,6 +179,18 @@ export default class Pad {
     }
 
     /**
+     * Exposes the given token's position. See {@link Tokens#getPosition}.
+     *
+     * @param  {Element} token
+     *         Token whose position should be returned.
+     * @return {Object}
+     *         Co-ordinates for the token.
+     */
+    getTokenPosition(token) {
+        return this.tokens.getPosition(token);
+    }
+
+    /**
      * Removes a character from {@link Pad#element}
      *
      * @param {CharacterToken} character

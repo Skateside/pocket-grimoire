@@ -10,6 +10,8 @@ import {
 
 const tokenObserver = Observer.create("token");
 const pad = lookupOneCached(".js--pad").pad;
+const reminderList = lookupOneCached("#reminder-list");
+const reminderListDialog = Dialog.create(reminderList);
 
 TokenStore.ready((tokenStore) => {
 
@@ -21,8 +23,16 @@ TokenStore.ready((tokenStore) => {
             return;
         }
 
-        pad.addReminder(tokenStore.getReminder(button.dataset.reminderId));
-        Dialog.create(lookupOneCached("#reminder-list")).hide();
+        const {
+            token
+        } = pad.addReminder(tokenStore.getReminder(button.dataset.reminderId));
+        const coords = JSON.parse(reminderList.dataset.coords || "null");
+
+        if (coords) {
+            pad.moveToken(token, coords.x, coords.y);
+        }
+
+        reminderListDialog.hide();
 
     });
 
@@ -112,4 +122,8 @@ TokenStore.ready((tokenStore) => {
         list.classList.toggle("is-show-all", target.checked);
     });
 
+});
+
+reminderListDialog.on(Dialog.HIDE, ({ target }) => {
+    target.removeAttribute("data-coords");
 });

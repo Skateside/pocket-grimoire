@@ -64,6 +64,17 @@ lookupOne("#character-rotate").addEventListener("click", ({ target }) => {
 
 });
 
+lookupOne("#character-reminder").addEventListener("click", ({ target }) => {
+
+    const reminder = lookupOneCached("#reminder-list");
+    const token = getToken(target);
+
+    reminder.dataset.coords = JSON.stringify(pad.getTokenPosition(token));
+    Dialog.create(reminder).show();
+    hideDialog(target);
+
+});
+
 lookupOne("#character-remove").addEventListener("click", ({ target }) => {
 
     pad.removeCharacterByToken(getToken(target));
