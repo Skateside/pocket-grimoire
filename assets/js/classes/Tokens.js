@@ -399,14 +399,12 @@ export default class Tokens {
 
         element.style.setProperty("--left", left);
         element.style.setProperty("--top", top);
-        element.style.setProperty(
-            "--z-index",
-            (
-                (typeof zIndex !== "number" || Number.isNaN(zIndex))
-                ? this.zIndex
-                : zIndex
-            )
-        );
+
+        if (typeof zIndex !== "number" || Number.isNaN(zIndex)) {
+            zIndex = this.zIndex;
+        }
+
+        element.style.setProperty("--z-index", zIndex);
 
         this.observer.trigger("move", {
             element,

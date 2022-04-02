@@ -23,9 +23,10 @@ TokenStore.ready((tokenStore) => {
             return;
         }
 
+        const clone = tokenStore.getReminderClone(button.dataset.reminderId);
         const {
             token
-        } = pad.addReminder(tokenStore.getReminder(button.dataset.reminderId));
+        } = pad.addReminder(clone);
         const coords = JSON.parse(reminderList.dataset.coords || "null");
 
         if (coords) {

@@ -77,7 +77,7 @@ lookupOneCached("#character-list__list").addEventListener("click", ({ target }) 
 
     TokenStore.ready((tokenStore) => {
 
-        pad.addCharacter(tokenStore.getCharacter(button.dataset.tokenId));
+        pad.addCharacter(tokenStore.getCharacterClone(button.dataset.tokenId));
         Dialog.create(lookupOneCached("#character-list")).hide();
 
     });
