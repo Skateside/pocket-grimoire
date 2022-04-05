@@ -13,33 +13,55 @@ const pad = lookupOneCached(".js--pad").pad;
 const reminderList = lookupOneCached("#reminder-list");
 const reminderListDialog = Dialog.create(reminderList);
 
+function getCoords(element) {
+    return JSON.parse(element.dataset.coords || "null");
+}
+
+function addReminderQuick(target, tokenStore, coords) {
+
+    const button = target.closest("[data-reminder-id]");
+
+    if (!button) {
+        return;
+    }
+
+    const clone = tokenStore.getReminderClone(button.dataset.reminderId);
+    const {
+        token
+    } = pad.addReminder(clone);
+
+    if (coords) {
+        pad.moveToken(token, coords.x, coords.y);
+    }
+
+    reminderListDialog.hide();
+
+}
+
 TokenStore.ready((tokenStore) => {
 
+    // Add a reminder to the page if it's clicked from the list.
     lookupOneCached("#reminder-list__list").addEventListener("click", ({ target }) => {
 
-        const button = target.closest("[data-reminder-id]");
-
-        if (!button) {
-            return;
-        }
-
-        const clone = tokenStore.getReminderClone(button.dataset.reminderId);
-        const {
-            token
-        } = pad.addReminder(clone);
-        const coords = JSON.parse(reminderList.dataset.coords || "null");
-
-        if (coords) {
-            pad.moveToken(token, coords.x, coords.y);
-        }
-
+        addReminderQuick(target, tokenStore, getCoords(reminderList));
         reminderListDialog.hide();
+
+    });
+
+    const recentReminders = lookupOneCached("#character-show-reminders");
+
+    // Add a reminder token to the page if the recently-added-reminder is clicked.
+    recentReminders.addEventListener("click", ({ target }) => {
+
+        addReminderQuick(target, tokenStore, getCoords(recentReminders));
+        Dialog.create(lookupOneCached("#character-show")).hide();
 
     });
 
     const reminderDialog = Dialog.create(lookupOne("#reminder-show"));
     const reminderHolder = lookupOne("#reminder-show-token");
 
+    // Populate the reminder dialog as a reminder is clicked.
     tokenObserver.on("reminder-click", ({ detail }) => {
 
         const {
@@ -53,6 +75,7 @@ TokenStore.ready((tokenStore) => {
 
     });
 
+    // Remove a reminder when its "remove" button is clicked.
     lookupOne("#reminder-remove").addEventListener("click", () => {
 
         const token = lookupOne(reminderHolder.dataset.token);
@@ -69,6 +92,8 @@ TokenStore.ready((tokenStore) => {
     const counts = Object.create(null);
     const list = lookupOneCached("#reminder-list__list");
 
+    // If a character is added to the grimoire, make sure that its reminders are
+    // visible in the list.
     tokenObserver.on("character-add", ({ detail }) => {
 
         const {
@@ -93,6 +118,8 @@ TokenStore.ready((tokenStore) => {
 
     });
 
+    // If a character is removed from the grimoire, and there are no other
+    // copies of that character in the grimoire, hide its reminders.
     tokenObserver.on("character-remove", ({ detail }) => {
 
         const {

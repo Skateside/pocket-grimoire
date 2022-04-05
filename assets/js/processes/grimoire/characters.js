@@ -6,6 +6,7 @@ import TokenStore from "../../classes/TokenStore.js";
 import CharacterToken from "../../classes/CharacterToken.js";
 import {
     identify,
+    lookup,
     lookupOne,
     lookupOneCached,
     replaceContentsMany
@@ -14,7 +15,9 @@ import {
 const gameObserver = Observer.create("game");
 const tokenObserver = Observer.create("token");
 const pad = lookupOneCached(".js--pad").pad;
+const recentReminders = lookupOneCached("#character-show-reminders");
 
+// Set up the token dialog when a character token is clicked.
 tokenObserver.on("character-click", ({ detail }) => {
 
     const {
@@ -26,8 +29,32 @@ tokenObserver.on("character-click", ({ detail }) => {
 
     lookupOneCached("#character-show-name").textContent = character.getName();
     lookupOneCached("#character-show-ability").textContent = character.getAbility();
+    recentReminders.dataset.coords = JSON.stringify(pad.getTokenPosition(element));
 
     Dialog.create(dialog).show();
+
+});
+
+// Update the recently-added-reminders list as a reminder is added.
+tokenObserver.on("reminder-add", ({ detail }) => {
+
+    const {
+        reminder
+    } = detail;
+    const id = reminder.getId();
+    const items = lookup(".js--reminder-list--item", recentReminders);
+
+    const existing = items.find(({ dataset }) => dataset.reminderId === id);
+
+    if (existing && existing === items[0]) {
+        return;
+    }
+
+    if (items.length > 2 || (existing && existing !== items[0])) {
+        (existing || items[items.length - 1]).remove();
+    }
+
+    recentReminders.prepend(reminder.drawList());
 
 });
 
@@ -41,6 +68,7 @@ function hideDialog(target) {
 
 TokenStore.ready((tokenStore) => {
 
+    // Show a token as it's clicked from the "show tokens" dialog.
     lookupOne("#character-show-token").addEventListener("click", ({ target }) => {
 
         CharacterToken.show(pad.getCharacterByToken(getToken(target)));

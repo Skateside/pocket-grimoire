@@ -137,8 +137,10 @@
         <li><button type="button" class="button" id="character-shroud-toggle">Shroud</button></li>
         <li><button type="button" class="button" id="character-rotate">Rotate</button></li>
         <li><button type="button" class="button" id="character-reminder">Reminder</button></li>
-        <li><button type="button" class="button button--warning" id="character-remove">Remove</button></li>
     </ul>
+    <p class="mt-4"><small>Most recently added reminders:</small></p>
+    <ul id="character-show-reminders" class="button-list button-list--reminder is-show-all"></ul>
+    <p class="mt-4"><button type="button" class="button button--warning" id="character-remove">Remove token</button></p>
     {% endblock %}
 {% endembed %}
 
