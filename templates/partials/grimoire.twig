@@ -254,7 +254,8 @@
 
 {% embed '../includes/dialog.twig' with {
     id: 'token',
-    background: 'hide'
+    background: 'hide',
+    hideClickBackground: false
 } %}
     {% block title %}<span id="token-name">Token</span>{% endblock %}
     {% block body %}

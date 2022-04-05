@@ -81,13 +81,14 @@
         id: 'info-token-' ~ info.id,
         class: 'info-token info-token--' ~ info.colour,
         background: 'hide',
-        hideClick: true,
+        hideClickBackground: false,
         includeHeader: false,
         style: {
             '--colour': 'var(--' ~ info.colour ~ ')'
         }
     } %}
         {% block body %}
+        <button class="info-token__hide" type="button" aria-label="Close" data-dialog-hide>&times;</button>
         <p class="info-token__text">{{ info.markup|raw }}</p>
         {% endblock %}
     {% endembed %}
