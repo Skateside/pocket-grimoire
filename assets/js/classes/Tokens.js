@@ -123,6 +123,7 @@ export default class Tokens {
         document.addEventListener("mouseup", this);
         document.addEventListener("touchend", this);
         document.addEventListener("click", this);
+        document.addEventListener("contextmenu", this);
         window.addEventListener("resize", this);
         window.addEventListener("scroll", this);
 
@@ -196,6 +197,7 @@ export default class Tokens {
 
         case "mouseup":
         case "touchend":
+        case "contextmenu":
             this.onMouseup(e);
             break;
 
