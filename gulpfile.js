@@ -18,8 +18,11 @@ const htmlmin       = require("gulp-htmlmin");
 const rename        = require("gulp-rename");
 const crypto        = require("crypto");
 
-const packageJson = JSON.parse(fs.readFileSync("./package.json"));
 const randomHash = crypto.randomBytes(8).toString("hex").slice(0, 8);
+const packageJson = {
+    pocketGrimoireHash: randomHash,
+    ...JSON.parse(fs.readFileSync("./package.json"))
+};
 
 const ENTRY_POINTS = {
     js: [
@@ -79,6 +82,10 @@ gulp.task("scripts", () => Promise.all(
     ENTRY_POINTS.js.map((entryPoints) => new Promise((resolve) => {
 
         const isProduction = (process.env.NODE_ENV === "production");
+
+        if (!isProduction) {
+            packageJson.pocketGrimoireHash = "";
+        }
 
         gulp.src(entryPoints)
             .pipe(
@@ -149,6 +156,13 @@ gulp.task("data", () => Promise.all(
             .pipe(
                 isProduction
                 ? jsonminify()
+                : noop()
+            )
+            .pipe(
+                isProduction
+                ? rename({
+                    suffix: `.${randomHash}`
+                })
                 : noop()
             )
             .pipe(gulp.dest(OUTPUTS.data))

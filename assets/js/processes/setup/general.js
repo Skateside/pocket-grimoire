@@ -14,19 +14,34 @@ import {
     lookupCached,
     lookupOneCached
 } from "../../utils/elements.js";
+import {
+    hash
+} from "../../utils/strings.js";
 
 const store = Store.create("pocket-grimoire");
 const gameObserver = Observer.create("game");
 
-fetchFromStore("./assets/data/characters.json", store).then((characters) => {
+fetchFromStore(
+    "characters",
+    hash("./assets/data/characters.json"),
+    store
+).then((characters) => {
     gameObserver.trigger("characters-loaded", { characters });
 });
 
-fetchFromStore("./assets/data/jinx.json", store).then((jinxes) => {
+fetchFromStore(
+    "jinx",
+    hash("./assets/data/jinx.json"),
+    store
+).then((jinxes) => {
     gameObserver.trigger("jinxes-loaded", { jinxes });
 });
 
-fetchFromStore("./assets/data/game.json", store).then((breakdown) => {
+fetchFromStore(
+    "game",
+    hash("./assets/data/game.json"),
+    store
+).then((breakdown) => {
     gameObserver.trigger("team-breakdown-loaded", { breakdown });
 });
 
