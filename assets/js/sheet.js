@@ -13,7 +13,9 @@ import {
     lookupCached,
     lookupOneCached
 } from "./utils/elements.js";
-// import qrcode from "./lib/qrcode.js";
+import {
+    hash
+} from "./utils/strings.js";
 import QRCode from "./lib/qrcode-svg.js";
 
 const url = new URL(window.location.href);
@@ -37,11 +39,19 @@ CharacterToken.setTemplates({
     jinx: Template.create(lookupOne("#edition-template-jinx"))
 });
 
-fetchFromStore("./assets/data/characters.json", store).then((characters) => {
+fetchFromStore(
+    "characters",
+    hash("./assets/data/characters.json"),
+    store
+).then((characters) => {
     gameObserver.trigger("characters-loaded", { characters });
 });
 
-fetchFromStore("./assets/data/jinx.json", store).then((jinxes) => {
+fetchFromStore(
+    "jinx",
+    hash("./assets/data/jinx.json"),
+    store
+).then((jinxes) => {
     gameObserver.trigger("jinxes-loaded", { jinxes });
 });
 
