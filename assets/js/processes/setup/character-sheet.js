@@ -40,10 +40,12 @@ function drawQRCode() {
 
     const name = qrCode.dataset.name;
     if (name) {
-        url.searchParams.append("name", name);
+        url.searchParams.set("name", name);
+    } else {
+        url.searchParams.delete("name");
     }
 
-    url.searchParams.append("characters", ids);
+    url.searchParams.set("characters", ids);
 
     empty(qrCode).append(QRCode({
         msg: url.toString(),
