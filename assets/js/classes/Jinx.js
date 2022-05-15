@@ -118,16 +118,16 @@ export default class Jinx {
             forceState = !state[name];
         }
 
-        if (forceState === state[name]) {
-            return;
+        if (forceState !== state[name]) {
+
+            state[name] = forceState;
+
+            this.observer?.trigger(`toggle-jinx-${name}`, {
+                jinx: this,
+                state: forceState
+            });
+
         }
-
-        state[name] = forceState;
-
-        this.observer?.trigger(`toggle-jinx-${name}`, {
-            jinx: this,
-            state: forceState
-        });
 
         return forceState;
 

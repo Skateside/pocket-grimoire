@@ -102,6 +102,52 @@ TokenStore.ready((tokenStore) => {
 
     });
 
+    // Activate and deactivate the jinxes as characters are added to the
+    // grimoire pad.
+    const characters = [];
+
+    tokenObserver.on("character-add", ({ detail }) => {
+
+        const {
+            character
+        } = detail;
+        const jinxes = Object.create(null);
+
+        character.getJinxes().forEach((jinx) => {
+
+            jinx.toggleTarget(true);
+            jinxes[jinx.getTrick().getId()] = jinx;
+
+        });
+        characters.forEach((char) => {
+
+            char.toggleJinxTrick(character, true);
+            jinxes[char.getId()]?.toggleTrick(true);
+
+        });
+        characters.push(character);
+
+    });
+
+    tokenObserver.on("character-remove", ({ detail }) => {
+
+        const {
+            character
+        } = detail;
+        const id = character.getId();
+
+        characters.splice(characters.indexOf(character), 1);
+
+        if (!characters.find((char) => char.getId() === id)) {
+
+            character.getJinxes().forEach((jinx) => jinx.toggleTarget(false));
+            characters.forEach((char) => char.toggleJinxTrick(character, false));
+
+        }
+
+    });
+
+    // Allow all Jinxes to be shown based on user preference.
     lookupOne("#show-all-jinxes").addEventListener("change", ({ target }) => {
         jinxTable.classList.toggle("is-show-all", target.checked);
     });

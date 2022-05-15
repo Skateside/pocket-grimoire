@@ -132,6 +132,10 @@ export default class CharacterToken extends Token {
             clone.addReminder(reminder.clone());
         });
 
+        this.getJinxes().forEach((jinx) => {
+            clone.addJinx(jinx);
+        });
+
         return clone;
 
     }
