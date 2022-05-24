@@ -1,0 +1,95 @@
+{% set infoTokens = [
+    {
+        id: 'isdemon',
+        colour: 'brown',
+        markup: 'info_tokens.info_tokens.isdemon'|trans
+    },
+    {
+        id: 'isminion',
+        colour: 'red',
+        markup: 'info_tokens.info_tokens.isminion'|trans
+    },
+    {
+        id: 'inplay',
+        colour: 'cyan',
+        markup: 'info_tokens.info_tokens.inplay'|trans
+    },
+    {
+        id: 'notinplay',
+        colour: 'blue',
+        markup: 'info_tokens.info_tokens.notinplay'|trans
+    },
+    {
+        id: 'nominatetoday',
+        colour: 'dark-orange',
+        markup: 'info_tokens.info_tokens.nominatetoday'|trans
+    },
+    {
+        id: 'abilitytargetted',
+        colour: 'green',
+        markup: 'info_tokens.info_tokens.abilitytargetted'|trans
+    },
+    {
+        id: 'playeris',
+        colour: 'dark-purple',
+        markup: 'info_tokens.info_tokens.playeris'|trans
+    },
+    {
+        id: 'haveability',
+        colour: 'lime',
+        markup: 'info_tokens.info_tokens.haveability'|trans
+    },
+    {
+        id: 'votetoday',
+        colour: 'orange',
+        markup: 'info_tokens.info_tokens.votetoday'|trans
+    },
+    {
+        id: 'choice',
+        colour: 'yellow',
+        markup: 'info_tokens.info_tokens.choice'|trans
+    },
+    {
+        id: 'abilitynow',
+        colour: 'dark-yellow',
+        markup: 'info_tokens.info_tokens.abilitynow'|trans
+    },
+    {
+        id: 'youare',
+        colour: 'purple',
+        markup: 'info_tokens.info_tokens.youare'|trans
+     }
+] %}
+
+{% embed 'includes/details.html.twig' with {
+    summary: 'info_tokens.title'|trans,
+    id: 'info-tokens'
+} %}
+    {% block body %}
+    <ul class="button-list">
+        {% for info in infoTokens %}
+        <li>
+            <button type="button" class="button button--full-height" data-dialog="#info-token-{{ info.id }}" style="--bg-colour: var(--{{ info.colour }});">{{ info.markup|striptags }}</button>
+        </li>
+        {% endfor %}
+    </ul>
+    {% endblock %}
+{% endembed %}
+
+{% for info in infoTokens %}
+    {% embed 'includes/dialog.html.twig' with {
+        id: 'info-token-' ~ info.id,
+        class: 'info-token info-token--' ~ info.colour,
+        background: 'hide',
+        hideClickBackground: false,
+        includeHeader: false,
+        style: {
+            '--colour': 'var(--' ~ info.colour ~ ')'
+        }
+    } %}
+        {% block body %}
+        <button class="info-token__hide" type="button" aria-label="{{ 'dialog.close'|trans }}" data-dialog-hide>&times;</button>
+        <p class="info-token__text">{{ info.markup|raw }}</p>
+        {% endblock %}
+    {% endembed %}
+{% endfor %}

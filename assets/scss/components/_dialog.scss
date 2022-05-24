@@ -17,12 +17,12 @@
 
 .dialog--hide-background::backdrop {
     background-color: #000;
-    background-image: url("../img/background-img3.png");
+    background-image: url("../../img/background-img3.png");
 }
 
 .dialog--hide-background + .backdrop {
     background-color: #000;
-    background-image: url("../img/background-img3.png");
+    background-image: url("../../img/background-img3.png");
 }
 
 .dialog__content {
@@ -30,7 +30,7 @@
     background-color: #fff;
     position: relative;
     width: min(80vw, 30em);
-    background-image: url("../img/background-img.jpg");
+    background-image: url("../../img/background-img.jpg");
 
     @at-root {
         .dialog--polyfilled > #{&} {

@@ -117,8 +117,8 @@ export default class TokenStore {
         this.reminders = Object.create(null);
 
         characters.forEach((character) => this.createCharacter(character));
-        reminders?.forEach((reminder) => {
-            ReminderToken.addGlobal(this.createReminder(reminder));
+        reminders?.forEach((reminder, index) => {
+            ReminderToken.addGlobal(this.createReminder(reminder, index));
         });
 
         /**
@@ -177,7 +177,7 @@ export default class TokenStore {
 
         reminders
             .concat(remindersGlobal)
-            .forEach((text) => {
+            .forEach((text, index) => {
 
                 character.addReminder(
                     this.createReminder({
@@ -186,7 +186,7 @@ export default class TokenStore {
                         image,
                         text,
                         isGlobal: remindersGlobal.includes(text)
-                    })
+                    }, index)
                 );
 
             });
@@ -203,10 +203,13 @@ export default class TokenStore {
      *
      * @param  {Object} data
      *         Reminder data.
+     * @param  {Number} index
+     *         The index of this reminder - used to identify the reminder while
+     *         still allowing for localisation.
      * @return {ReminderToken}
      *         ReminderToken instance for the data.
      */
-    createReminder(data) {
+    createReminder(data, index) {
 
         const {
             id,
@@ -215,7 +218,7 @@ export default class TokenStore {
             image,
             isGlobal
         } = data;
-        const reminderId = `${id}:${text}`.toLowerCase().replace(/\s+/g, "-");
+        const reminderId = `${id}:${index}`.toLowerCase().replace(/\s+/g, "-");
         const reminder = new ReminderToken({
             text,
             image,

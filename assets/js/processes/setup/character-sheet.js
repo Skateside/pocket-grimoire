@@ -31,12 +31,8 @@ function drawQRCode() {
         .filter((character) => teams.includes(character.getTeam()))
         .map((character) => character.getId());
 
-    const url = new URL(window.location.href);
-    const {
-        pathname
-    } = url;
-    const page = pathname.slice(0, pathname.lastIndexOf("/") + 1);
-    url.pathname = `${page}sheet.html`;
+    const anchor = lookupOneCached("#qr-code-link");
+    const url = new URL(anchor.href);
 
     const name = qrCode.dataset.name;
     if (name) {
@@ -52,7 +48,7 @@ function drawQRCode() {
         ecl: "L"
     }));
     lookupOneCached("#qr-code-button").disabled = false;
-    lookupOneCached("#qr-code-link").href = url.toString();
+    anchor.href = url.toString();
     lookupOneCached("#qr-code-link").disabled = false;
 
 }

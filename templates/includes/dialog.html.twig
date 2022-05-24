@@ -1,0 +1,49 @@
+{% set attributes = [] %}
+{% set classes = ['dialog'] %}
+{% if class is defined and class != '' %}
+    {% set classes = classes|merge([class]) %}
+{% endif %}
+{% set bg = background|default('') %}
+{% if bg == 'blur' %}
+    {% set classes = classes|merge(['dialog--blur-background']) %}
+{% elseif bg == 'hide' %}
+    {% set classes = classes|merge(['dialog--hide-background']) %}
+{% endif %}
+
+{% set attributes = attributes|merge(['class="' ~ classes|join(' ') ~ '"']) %}
+{% if id is defined and id != '' %}
+    {% set attributes = attributes|merge(['id="' ~ id ~ '"']) %}
+{% endif %}
+{% if style is defined and style != '' %}
+    {% set styleString = '' %}
+    {% for rule, property in style %}
+        {% set styleString = styleString ~ rule ~ ': ' ~ property ~ ';' %}
+    {% endfor %}
+    {% set attributes = attributes|merge(['style="' ~ styleString ~ '"']) %}
+{% endif %}
+
+{% set hide = [] %}
+{% if hideClickBackground is not defined or hideClickBackground == true %}
+    {% set hide = hide|merge(['backdrop']) %}
+{% endif %}
+{% if hideClick is defined and hideClick == true %}
+    {% set hide = hide|merge(['click']) %}
+{% endif %}
+{% set attributes = attributes|merge(['data-dialog-hide-on="' ~ hide|join(' ') ~ '"']) %}
+
+{% set headerId = 'header-' ~ random() %}
+{% set attributes = attributes|merge(['aria-described-by="' ~ headerId ~ '"', 'tabindex="-1"']) %}
+
+<dialog {{ attributes|join(' ')|raw }}>
+    <div class="dialog__content">
+        {% if includeHeader is not defined or includeHeader != false %}
+        <div class="dialog__header">
+            <h2 id="{{ headerId }}" class="dialog__title">{% block title %}{{ title|default('') }}{% endblock %}</h2>
+            <div class="dialog__hide-wrapper">
+                <button class="dialog__hide" type="button" aria-label="{{ 'dialog.close'|trans }}" data-dialog-hide>&times;</button>
+            </div>
+        </div>
+        {% endif %}
+        <div class="dialog__body">{% block body %}{% endblock %}</div>
+    </div>
+</dialog>

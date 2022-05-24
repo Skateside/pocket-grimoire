@@ -1,0 +1,42 @@
+{% embed 'includes/details.html.twig' with {
+    summary: 'jinxes.title'|trans,
+    id: 'jinxes'
+} %}
+    {% import 'macros/forms.html.twig' as forms %}
+    {% block body %}
+    <table class="jinxes">
+        <thead class="sr-only">
+            <tr>
+                <th scope="col">{{ 'jinxes.target'|trans }}</th>
+                <th scope="col">{{ 'jinxes.trick'|trans }}</th>
+                <th scope="col">{{ 'jinxes.reason'|trans }}</th>
+            </tr>
+        </thead>
+        <tbody id="jinx-table"></tbody>
+    </table>
+
+    <p class="switch mt-4">
+        <span class="switch__input">
+            {{ forms.toggle({
+                name: "show-all-jinxes",
+                id: "show-all-jinxes"
+            }) }}
+        </span>
+        <label for="show-all-jinxes" class="switch__label">{{ 'jinxes.show'|trans }}</label>
+    </p>
+    {% endblock %}
+{% endembed %}
+
+<template id="jinx-table-template">
+    <tr class="jinxes__jinx js--jinx-table--jinx">
+        <td class="jinxes__cell">
+            <img class="jinxes__icon js--jinx-table--target">
+            <span class="jinxes__name js--jinx-table--target-name" aria-hidden="true"></span>
+        </td>
+        <td class="jinxes__cell">
+            <img class="jinxes__icon js--jinx-table--trick">
+            <span class="jinxes__name js--jinx-table--trick-name" aria-hidden="true"></span>
+        </td>
+        <td class="jinxes__cell jinxes__cell--text js--jinx-table--reason"></td>
+    </tr>
+</template>

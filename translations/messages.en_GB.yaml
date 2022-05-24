@@ -1,0 +1,204 @@
+title: Pocket Grimoire
+
+forms:
+    file:
+        placeholder: Choose file
+        button: Browse
+
+dialog:
+    close: Close
+
+index:
+    title: Game
+    description: A virtual grimoire for Blood on the Clocktower
+
+sheet:
+    title: Character Sheet
+    description: The character sheet for this edition of Blood on the Clocktower
+    jinx: Jinx
+    each_night: "* Each night except the first night."
+    get_qr_code: Get the QR code for this sheet
+    credit: <a href="https://bloodontheclocktower.com/" target="_blank" rel="noopener noreferrer">Blood on the Clocktower</a> is a trademark of Steven Medway and <a href="https://www.thepandemoniuminstitute.com/" target="_blank" rel="noopener noreferrer">The Pandemonium Institute</a>
+
+groups:
+    townsfolk: Townsfolk
+    outsider: Outsiders
+    minion: Minions
+    demon: Demons
+    traveller: Travellers
+    fabled: Fabled
+
+messages:
+    good_team: Good team
+    evil_team: Evil team
+    empty_character_ability: This is an empty character.
+    version_change_message: This app has updated its version. Because your data may not be correct, we recommend that you clear everything in the "Clear Cache" dialog. Press "OK" to open the dialog or "Cancel" to close this message.
+    invalid_script: The script format has not been recognised.
+    no_characters: The script doesn't contain any recognised characters.
+
+setup:
+
+    title: Setup
+
+    buttons:
+        select_edition: Select Edition
+        select_characters: Select Characters
+        qr_code_button: Character Sheet
+        clear_cache_button: Clear Cache
+        language: Language
+        set_language: Set Language
+
+    editions:
+        title: Select Edition
+        trouble_brewing: Trouble Brewing
+        bad_moon_rising: Bad Moon Rising
+        sects_and_violets: Sects and Violets
+        custom_script: Custom Script
+        custom_note: Either upload a custom script or enter the URL of a custom script.
+        custom_warning: Only load custom JSON files from sources that you trust!
+        upload: Upload a custom script
+        url: Enter a URL
+        unsupported: Please note that the Pocket Grimoire currently doesn't support homebrew or localised scripts.
+        select: Select
+
+    character_select:
+        title: Select Characters
+        number_players: Number of players
+        toggle_abilities: Show character abilities
+        toggle_duplicates: Allow duplicate characters
+        highlight_random: Highlight random
+        draw_characters: Draw Characters
+
+    character_choice:
+        title: Select Your Character
+        description: Tap any of the numbered tokens to choose your character. Darker ones have already been chosen.
+
+    character_decision:
+        title: Remember Your Character
+        return: Return to Character Select
+
+    qr_code:
+        title: Character sheet
+        intro: Scan this QR code to see the character sheet
+        include: 'Include:'
+        travellers: Travellers
+        fabled: Fabled
+
+    clear_cache:
+        title: Clear Cache
+        clear_all: Clear everything
+        clear_description: Turning this off will allow inividual parts of the cache to be cleared.
+        lookup_label: Clear data
+        lookup_note: The data for the jinxes, team breakdown, and character information.
+        characters_label: Clear edition
+        characters_note: The edition, or script, that's been selected and loaded.
+        tokens_label: Clear tokens
+        tokens_note: The position of the tokens in the grimoire.
+        inputs_label: Clear inputs
+        inputs_note: User settings for this website.
+        details_label: Clear open/closed
+        details_note: Which sections are open or closed.
+        height_label: Clear pad height
+        height_note: The height of the pad in the grimoire.
+        clear_refresh_label: Refresh afterwards
+        clear_refresh_note: Refreshing will load in new data for anything that's been cleared.
+        warning: "<strong>Warning:</strong> any tokens that have been placed on the grimoire will be forgotten."
+        clear_cache: Clear Cache
+
+grimoire:
+
+    title: Grimoire
+
+    grimoire:
+        bluffs: Demon Bluffs
+        add_token: Add token
+        add_reminder: Add reminder
+        add_traveller: Add traveller
+        show_tokens: Show tokens
+        reset_height: Reset pad height
+        clear_grimoire: Clear Grimoire
+        clear_grimoire_warning: Are you sure you want to clear all the tokens?
+        show_night_order: Show night order
+
+    character_list:
+        title: Select Character
+
+    reminder_list:
+        title: Select Reminder
+        show: Show all reminders
+
+    character_show:
+        title: Token
+        show: Show
+        shroud: Shroud
+        rotate: Rotate
+        reminder: Reminder
+        remove: Remove token
+        recent_reminders: 'Most recently added reminders:'
+
+    reminder_show:
+        title: Reminder
+        remove: Remove
+
+    bluff_show:
+        title: Token
+        empty: Empty
+        show: Show
+        change: Change
+
+    bluff_list:
+        title: Select Bluff
+        show_existing: Show existing characters
+        show_travellers: Show travellers
+        show_evil: Show evil characters
+
+    token_list:
+        title: Characters
+
+    traveller_list:
+        title: Travellers
+        show_all: Show all travellers
+
+    token:
+        title: Token
+
+jinxes:
+    title: Jinxes
+    target: Target
+    trick: Trick
+    reason: Reason
+    show: Show jinxes not in play
+
+night_order:
+    title: Night Order
+    first_night: First night
+    other_night: Other nights
+    swipe_change: Swipe to change nights.
+    show: Show characters not in play
+
+info_tokens:
+    title: Info Tokens
+    info_tokens:
+        isdemon: This is the <strong>Demon</strong>
+        isminion: These are your <strong>Minions</strong>
+        inplay: These characters are <strong>in play</strong>
+        notinplay: These characters are <strong>not in play</strong>
+        nominatetoday: Did you <strong>nominate</strong> today?
+        abilitytargetted: This <strong>ability</strong> targetted you
+        playeris: This <strong>player</strong> is
+        haveability: You have this <strong>ability</strong>
+        votetoday: Did you <strong>vote</strong> today
+        choice: Your <strong>choice</strong>?
+        abilitynow: Use your <strong>ability</strong> now?
+        youare: "<strong>You</strong> are"
+
+acknowledgements:
+    title: Acknowledgements
+    acknowledgements:
+        - <a href="https://bloodontheclocktower.com/" target="_blank" rel="noopener noreferrer">Blood on the Clocktower</a> is a trademark of Steven Medway and <a href="https://www.thepandemoniuminstitute.com/" target="_blank" rel="noopener noreferrer">The Pandemonium Institute</a>.
+        - Night reminders and other auxiliary text written by <a href="http://bignose.whitetree.org/projects/botc/diy/" target="_blank" rel="noopener noreferrer">Ben Finney</a>.
+        - Icons are taken from <a href="https://fontawesome.com/v5.15/icons" target="_blank" rel="noopener noreferrer">Font Awesome</a>.
+        - Many images and data are taken from <a href="https://www.clocktower.online" target="_blank" rel="noopener noreferrer">Clocktower.online</a> and the <a href="https://bloodontheclocktower.com/" target="_blank" rel="noopener noreferrer">Blood on the Clocktower website</a>.
+        - This is an unofficial virtual grimoire for Blood on the Clocktower. This project is free and the source code can be found on <a href="https://github.com/Skateside/pocket-grimoire" target="_blank" rel="noopener noreferrer">GitHub</a>. This project is not affiliated with the Pandemonium Institute. If you enjoy playing Blood on the Clocktower, <a href="https://bloodontheclocktower.com/pages/where-to-buy" target="_blank" rel="noopener noreferrer">please consider buying your own grimoire</a> - as well as being more flexible than this digital version, it also supports the creators.
+        - Noticed a bug or have an improvement suggestion? Let me know in the <a href="https://discord.com/channels/569683781800296501/708509594758152203" target="_blank" rel="noopener noreferrer">toolmakers channel on the unofficial discord server</a> (my name on there is "Skateside") or <a href="https://github.com/Skateside/pocket-grimoire/issues" target="_blank" rel="noopener noreferrer">raise an issue in GitHub</a>.
+        - <small>Version <span id="version"></span></small>

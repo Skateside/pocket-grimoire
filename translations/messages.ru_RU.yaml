@@ -1,0 +1,204 @@
+title: Карманный Гримуар
+
+forms:
+    file:
+        placeholder: Выберите файл
+        button: Обзор
+
+dialog:
+    close: Закрыть
+
+index:
+    title: Игра
+    description: Виртуальный гримуар для Blood on the Clocktower
+
+sheet:
+    title: Список ролей
+    description: Список ролей для данного сценария Blood on the Clocktower
+    jinx: Сглаз
+    each_night: '* Каждой ночью, кроме первой'
+    get_qr_code: Отобразить QR-код для данного списка
+    credit: Торговая марка <a href="https://bloodontheclocktower.com/" target="_blank" rel="noopener noreferrer">Blood on the Clocktower</a> принадлежит Стивену Медвею и компании <a href="https://www.thepandemoniuminstitute.com/" target="_blank" rel="noopener noreferrer">The Pandemonium Institute</a>
+
+groups:
+    townsfolk: Горожане
+    outsider: Изгои
+    minion: Приспешники
+    demon: Демоны
+    traveller: Странники
+    fabled: Мифы
+
+messages:
+    good_team: Добро
+    evil_team: Зло
+    empty_character_ability: Роль не выбрана.
+    version_change_message: Приложение обновлено. Так как это могло повлиять на сохраненные данные, рекомендуем вам очистить их в диалоговом окне "Очистить кэш". Нажмите ОК, чтобы открыть этот диалог, или Отмена, чтобы закрыть данное уведомление.
+    invalid_script: Не удалось распознать формат сценария.
+    no_characters: В сценарии не обнаружено распознанных ролей.
+
+setup:
+
+    title: Подготовка
+
+    buttons:
+        select_edition: Выбрать сценарий
+        select_characters: Выбрать роли
+        qr_code_button: Список ролей
+        clear_cache_button: Очистить кэш
+        language: Язык
+        set_language: Выбрать язык
+
+    editions:
+        title: Выбрать сценарий
+        trouble_brewing: Trouble Brewing
+        bad_moon_rising: Bad Moon Rising
+        sects_and_violets: Sects and Violets
+        custom_script: Свой сценарий
+        custom_note: Загрузите свой сценарий или введите URL-адрес
+        custom_warning: Загружайте JSON-файлы только из доверенных источников!
+        upload: Загрузите свой сценарий
+        url: Введите URL-адрес
+        unsupported: Просим учитывать, что Карманный Гримуар на данный момент не поддерживает нестандартные и локализованные роли.
+        select: Выбрать
+
+    character_select:
+        title: Выбрать роли
+        number_players: Количество игроков
+        toggle_abilities: Показать способности ролей
+        toggle_duplicates: Разрешить дублирование ролей
+        highlight_random: Выбрать случайные
+        draw_characters: Начать раздачу ролей
+
+    character_choice:
+        title: Выберите свою роль
+        description: Нажмите на один из пронумерованных жетонов, чтобы выбрать роль. Затемненные жетоны уже были выбраны.
+
+    character_decision:
+        title: Запомните свою роль
+        return: Вернуться к выбору ролей
+
+    qr_code:
+        title: Список ролей
+        intro: Отсканируйте QR-код, чтобы увидеть список ролей
+        include: 'Включить:'
+        travellers: Странников
+        fabled: Мифы
+
+    clear_cache:
+        title: Очистить кэш
+        clear_all: Очистить все
+        clear_description: Отключите, чтобы очистить только определенные части кэша.
+        lookup_label: Очистить данные
+        lookup_note: Данные о сглазах, командах и информация о ролях.
+        characters_label: Очистить сценарий
+        characters_note: Выбранный и загруженный сценарий (издание).
+        tokens_label: Очистить жетоны
+        tokens_note: Расположение жетонов в гримуаре.
+        inputs_label: Очистить настройки
+        inputs_note: Пользовательские настройки для данного сайта.
+        details_label: Очистить открытое/закрытое
+        details_note: Секции, которые открыты/закрыты.
+        height_label: Очистить высоту
+        height_note: Высота рабочего пространства Гримуара.
+        clear_refresh_label: Обновить после очищения
+        clear_refresh_note: Обновление страницы загрузит новые данные взамен очищенных.
+        warning: '<strong>Внимание:</strong> все жетоны, размещенные в Гримуаре, будут потеряны.'
+        clear_cache: Очистить кэш
+
+grimoire:
+
+    title: Гримуар
+
+    grimoire:
+        bluffs: Маски Демона
+        add_token: Добавить жетон
+        add_reminder: Добавить напоминание
+        add_traveller: Добавить Странника
+        show_tokens: Показать жетоны
+        reset_height: Сбросить высоту пространства
+        clear_grimoire: Очистить Гримуар
+        clear_grimoire_warning: Вы действительно хотите очистить все жетоны?
+        show_night_order: Показать порядок ночных действий
+
+    character_list:
+        title: Выберите роль
+
+    reminder_list:
+        title: Выберите напоминание
+        show: Показать все напоминания
+
+    character_show:
+        title: Жетон
+        show: Показать
+        shroud: Завеса смерти
+        rotate: Повернуть
+        reminder: Напоминание
+        remove: Убрать жетон
+        recent_reminders: Последние добавленные напоминания
+
+    reminder_show:
+        title: Напоминание
+        remove: Убрать
+
+    bluff_show:
+        title: Жетон
+        empty: Пусто
+        show: Показать
+        change: Изменить
+
+    bluff_list:
+        title: Выбрать маску
+        show_existing: Показать существующие роли
+        show_travellers: Показать Странников
+        show_evil: Показать злые роли
+
+    token_list:
+        title: Роли
+
+    traveller_list:
+        title: Странники
+        show_all: Показать всех Странников
+
+    token:
+        title: Жетон
+
+jinxes:
+    title: Сглазы
+    target: Цель
+    trick: Осложнение
+    reason: Правило
+    show: Показать недействующие сглазы
+
+night_order:
+    title: Порядок ночных действий
+    first_night: Первая ночь
+    other_night: Другие ночи
+    swipe_change: Проведите, чтобы поменять ночи.
+    show: Показать роли, находящиеся вне игры
+
+info_tokens:
+    title: Информационные таблички
+    info_tokens:
+        isdemon: Этот игрок - <strong>Демон</strong>
+        isminion: Это - ваши <strong>Приспешники</strong>
+        inplay: Эти роли находятся <strong>в игре</strong>
+        notinplay: Эти роли находятся <strong>вне игры</strong>
+        nominatetoday: Вы сегодня <strong>выдвигали?</strong>
+        abilitytargetted: Вы - цель данной <strong>способности</strong>
+        playeris: Роль этого <strong>игрока</strong>
+        haveability: Вы владеете этой <strong>способностью</strong>
+        votetoday: Вы сегодня <strong>голосовали?</strong>
+        choice: Ваш <strong>выбор?</strong>
+        abilitynow: Применить <strong>способность</strong> сейчас?
+        youare: <strong>Ваша</strong> роль
+
+acknowledgements:
+    title: Права
+    acknowledgements:
+        - Торговая марка <a href="https://bloodontheclocktower.com/" target="_blank" rel="noopener noreferrer">Blood on the Clocktower</a> принадлежит Стивену Медвею и компании <a href="https://www.thepandemoniuminstitute.com/" target="_blank" rel="noopener noreferrer">The Pandemonium Institute</a>.
+        - Напоминания о ночных действиях и прочая дополнительная информация за авторством <a href="http://bignose.whitetree.org/projects/botc/diy/" target="_blank" rel="noopener noreferrer">Бена Финни</a>.
+        - Источник иконок - <a href="https://fontawesome.com/v5.15/icons" target="_blank" rel="noopener noreferrer">Font Awesome</a>.
+        - Многие изображения и данные взяты с сайта <a href="https://www.clocktower.online" target="_blank" rel="noopener noreferrer">clocktower.online</a> и официального <a href="https://bloodontheclocktower.com/" target="_blank" rel="noopener noreferrer">сайта Blood on the Clocktower</a>.
+        - Это - неофициальный виртуальный гримуар для Blood on the Clocktower. Это некоммерческий проект, исходный код которого можно найти на <a href="https://github.com/Skateside/pocket-grimoire" target="_blank" rel="noopener noreferrer">GitHub</a>. Этот проект не имеет связи с компанией The Pandemonium Institute. Если вам нравится игра Blood on the Clocktower, настоятельно рекомендуем приобрести физическую версию, чтобы не только играть с большим удобством, но и поддержать создателей.
+        - 'У вас есть информация об ошибках или предложения? Дайте мне знать <a href="https://discord.com/channels/569683781800296501/708509594758152203" target="_blank" rel="noopener noreferrer">в канале #toolmakers на неофициальном discord-сервере игры</a> (мой никнейм там - Skateside) или <a href="https://github.com/Skateside/pocket-grimoire/issues" target="_blank" rel="noopener noreferrer">подайте заявку на GitHub</a>.'
+        - <small>Версия <span id="version"></span></small>

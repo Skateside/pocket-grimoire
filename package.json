@@ -1,54 +1,22 @@
 {
-    "name": "pocket-grimoire",
-    "version": "0.4.7",
-    "description": "A virtual version of the Blood on the Clocktower grimoire",
-    "author": "James \"Skateside\" Long",
-    "license": "GPL-3.0-only",
-    "bugs": {
-        "url": "https://github.com/Skateside/pocket-grimoire/issues"
-    },
-    "homepage": "https://www.pocketgrimoire.co.uk",
-    "keywords": [
-        "botc",
-        "blood",
-        "clocktower",
-        "grimoire",
-        "pocket",
-        "scss",
-        "vanilla",
-        "twig"
-    ],
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/Skateside/pocket-grimoire.git"
-    },
     "devDependencies": {
-        "@babel/core": "^7.15.5",
-        "@babel/plugin-proposal-class-properties": "^7.14.5",
-        "@babel/preset-env": "^7.15.6",
-        "@barba/core": "^2.9.7",
-        "autoprefixer": "^10.3.6",
-        "crypto": "^1.0.1",
-        "flexboxgrid-sass": "^8.0.5",
-        "gulp": "^4.0.2",
-        "gulp-autoprefixer": "^8.0.0",
-        "gulp-babel": "^8.0.0",
-        "gulp-better-rollup": "^4.0.1",
-        "gulp-clean-css": "^4.3.0",
-        "gulp-htmlmin": "^5.0.1",
-        "gulp-jsonminify": "^1.1.0",
-        "gulp-noop": "^1.0.1",
-        "gulp-notify": "^4.0.0",
-        "gulp-rename": "^2.0.0",
-        "gulp-sass": "^5.0.0",
-        "gulp-sourcemaps": "^3.0.0",
-        "gulp-string-replace": "^1.1.2",
-        "gulp-twig": "^1.2.0",
-        "gulp-uglify": "^3.0.2",
-        "rollup": "^2.58.0",
-        "rollup-plugin-babel": "^4.4.0",
-        "rollup-plugin-commonjs": "^10.1.0",
-        "rollup-plugin-node-resolve": "^5.2.0",
-        "sass": "^1.42.1"
+        "@hotwired/stimulus": "^3.0.0",
+        "@symfony/stimulus-bridge": "^3.0.0",
+        "@symfony/webpack-encore": "^1.7.0",
+        "core-js": "^3.0.0",
+        "file-loader": "^6.0.0",
+        "postcss-loader": "^6.0.0",
+        "regenerator-runtime": "^0.13.2",
+        "sass": "^1.50.0",
+        "sass-loader": "^12.0.0",
+        "webpack-notifier": "^1.6.0"
+    },
+    "license": "UNLICENSED",
+    "private": true,
+    "scripts": {
+        "dev-server": "encore dev-server",
+        "dev": "encore dev",
+        "watch": "encore dev --watch",
+        "build": "encore production --progress"
     }
 }

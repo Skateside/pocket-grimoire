@@ -1,0 +1,36 @@
+{% extends "base.html.twig" %}
+
+{% block title %}{{ 'index.title'|trans }}{% endblock %}
+{% set meta_description = 'index.description'|trans %}
+
+{% block styles %}
+<link rel="stylesheet" href="{{ asset('build/css/main.css') }}">
+{% endblock %}
+
+{% set body_class = 'body-grimoire' %}
+
+{% block body %}
+
+<h1 class="title">{{ 'title'|trans }}</h1>
+
+{% include 'partials/messages.html.twig' %}
+{% include 'partials/setup.html.twig' %}
+{% include 'partials/grimoire.html.twig' %}
+{% include 'partials/jinxes.html.twig' %}
+{% include 'partials/night-order.html.twig' %}
+{% include 'partials/info-tokens.html.twig' %}
+{% include 'partials/acknowledgements.html.twig' %}
+
+{% endblock %}
+
+{% block javascript %}
+{% set version = hash(4) %}
+<script>
+var URLS = {
+    characters: "{{ path('data_characters', { version: version })|e('js') }}",
+    jinxes: "{{ path('data_jinx', { version: version })|e('js') }}",
+    game: "{{ path('data_game')|e('js') }}"
+};
+</script>
+{{ encore_entry_script_tags('js/main') }}
+{% endblock %}

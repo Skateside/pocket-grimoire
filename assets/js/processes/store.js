@@ -118,7 +118,7 @@ const {
 
 body.addEventListener("input", ({ target }) => {
 
-    const input = target.closest("input");
+    const input = target.closest("input,select");
 
     if (!input.hasAttribute("data-no-store")) {
         store.saveInput(input);

@@ -23,8 +23,8 @@
         var(--top-leaf),
         var(--right-leaf),
         var(--setup-leaf),
-        url("../img/token/clockface-2.png"),
-        url("../img/token/character-token-noise.png");
+        url("../../img/token/clockface-2.png"),
+        url("../../img/token/character-token-noise.png");
     background-position: 50% 50%;
     background-repeat:
         no-repeat,
@@ -51,16 +51,16 @@
     }
 }
 
-.character--top-1 { --top-leaf: url("../img/token/top-1.png"); }
-.character--top-2 { --top-leaf: url("../img/token/top-2.png"); }
-.character--top-3 { --top-leaf: url("../img/token/top-3.png"); }
-.character--top-4 { --top-leaf: url("../img/token/top-4.png"); }
-.character--top-5 { --top-leaf: url("../img/token/top-5.png"); }
-.character--top-6 { --top-leaf: url("../img/token/top-6.png"); }
-.character--left-1 { --left-leaf: url("../img/token/left-1.png"); }
-.character--right-1 { --right-leaf: url("../img/token/right-1.png"); }
-.character--right-2 { --right-leaf: url("../img/token/right-2.png"); }
-.character--setup { --setup-leaf: url("../img/token/setup.png"); }
+.character--top-1 { --top-leaf: url("../../img/token/top-1.png"); }
+.character--top-2 { --top-leaf: url("../../img/token/top-2.png"); }
+.character--top-3 { --top-leaf: url("../../img/token/top-3.png"); }
+.character--top-4 { --top-leaf: url("../../img/token/top-4.png"); }
+.character--top-5 { --top-leaf: url("../../img/token/top-5.png"); }
+.character--top-6 { --top-leaf: url("../../img/token/top-6.png"); }
+.character--left-1 { --left-leaf: url("../../img/token/left-1.png"); }
+.character--right-1 { --right-leaf: url("../../img/token/right-1.png"); }
+.character--right-2 { --right-leaf: url("../../img/token/right-2.png"); }
+.character--setup { --setup-leaf: url("../../img/token/setup.png"); }
 
 .character[data-first-night]::before,
 .character[data-other-night]::after {
@@ -140,7 +140,7 @@
 
 .character__shroud {
     z-index: 2;
-    background-image: url("../img/token/shroud.png");
+    background-image: url("../../img/token/shroud.png");
     background-repeat: no-repeat;
     background-position: 50% 0;
     background-size: auto 75%;

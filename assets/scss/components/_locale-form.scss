@@ -1,0 +1,44 @@
+.locale-form {
+    --gap: 1em;
+    display: flex;
+    flex-flow: row nowrap;
+    gap: var(--gap);
+    margin-top: var(--gap);
+
+    @media print {
+        display: none;
+    }
+}
+
+.locale-form--setup {
+    border-top: 1px solid #ccc;
+    padding-top: var(--gap);
+}
+
+.locale-form--sheet {
+    margin-bottom: var(--gap);
+}
+
+.locale-form__label,
+.locale-form__action {
+    display: flex;
+    justify-content: center;
+}
+
+.locale-form__action {
+    flex: 0 0 1em;
+}
+
+.locale-form__dropdown {
+    flex: 1 1 auto;
+}
+
+.locale-form__label-icon {
+    width: 1.25em;
+}
+
+.locale-form__icon {
+    margin-top: 0.2em;
+    margin-bottom: 0.2em;
+    width: 0.85em;
+}

@@ -1,0 +1,204 @@
+title: Grimoire de poche
+
+forms:
+    file:
+        placeholder: Choisir fichier
+        button: Parcourir
+
+dialog:
+    close: Fermer
+
+index:
+    title: Partie
+    description: Un grimoire virtuel pour Blood on the Clocktower
+
+sheet:
+    title: Fiche de personnages
+    description: La fiche de personnages pour cette édition de Blood on the Clocktower
+    jinx: Jinx
+    each_night: "* Chaque nuit, sauf la première"
+    get_qr_code: Obtenir le QR code pour cette fiche
+    credit: <a href="https://bloodontheclocktower.com/" target="_blank" rel="noopener noreferrer">Blood on the Clocktower</a> est une marque déposée de Steven Medway et <a href="https://www.thepandemoniuminstitute.com/" target="_blank" rel="noopener noreferrer">The Pandemonium Institute</a>
+
+groups:
+    townsfolk: Villageois
+    outsider: Étrangers
+    minion: Sbires
+    demon: Démons
+    traveller: Voyageurs
+    fabled: Légendaires
+
+messages:
+    good_team: Équipe du bien
+    evil_team: Équipe maléfique
+    empty_character_ability: Ceci est un personnage vide
+    version_change_message: Cette application a été mise à jour. Étant donné que vos données peuvent ne pas être correctes, nous recommandons de tout effacer dans la boîte de dialogue "Effacer le cache". Appuyes sur "OK" pour ouvrir la boîte de dialogue ou sur "Annuler" pour fermer ce message.
+    invalid_script: Le format de ce script n'a pas été reconnu
+    no_characters: Ce script ne contient pas de personnages connus
+
+setup:
+
+    title: Mise en place
+
+    buttons:
+        select_edition: Choisir Édition
+        select_characters: Choisir Personnages
+        qr_code_button: Fiche de personnages
+        clear_cache_button: Effacer le cache
+        language: Langage
+        set_language: Choisir Langage
+
+    editions:
+        title: Choisir Édition
+        trouble_brewing: Trouble Brewing
+        bad_moon_rising: Bad Moon Rising
+        sects_and_violets: Sects and Violets
+        custom_script: Script personnalisé
+        custom_note: Télécharge ou entre une URL vers un script personnalisé.
+        custom_warning: Faire attention à utiliser des fichiers JSON provenant d'une source de confiance !
+        upload: Télécharger un script personnalisé
+        url: Entrer une URL
+        unsupported: "Note : Le Grimoire de Poche ne gère pas encore les scripts faits maison ou traduits"
+        select: Choisir
+
+    character_select:
+        title: Choisir Personnages
+        number_players: Nombre de joueurs
+        toggle_abilities: Monter les capacités des personnages
+        toggle_duplicates: Autoriser les doublons
+        highlight_random: Mettre en valeur aléatoirement
+        draw_characters: Dessiner Personnages
+
+    character_choice:
+        title: Sélectionne ton Personnage
+        description: Toucher l'un des jetons numérotés pour choisir un personnage. Ceux qui sont sombres ont déjà été choisis.
+
+    character_decision:
+        title: Se souvenir de ton Personnage
+        return: Retour à la Sélection de Personnage
+
+    qr_code:
+        title: Fiche de personnage
+        intro: Scanne ce QR code pour voir la fiche de personnage
+        include: "Inclure :"
+        travellers: Voyageurs
+        fabled: Légendaires
+
+    clear_cache:
+        title: Effacer le Cache
+        clear_all: Tout Éffacer
+        clear_description: La désactivation de cette option permettra d'effacer des parties individuelles du cache.
+        lookup_label: Effacer données
+        lookup_note: Infos sur les jinxs, composition d'équipe, et personnages.
+        characters_label: Effacer édition
+        characters_note: L'édition, ou le script, qui a été chargé
+        tokens_label: Effacer jetons
+        tokens_note: La position des jetons dans le grimoire.
+        inputs_label: Effacer champs
+        inputs_note: Paramètres utilisateur pour ce site.
+        details_label: Effacer ouvert/fermé
+        details_note: Quelles sections sont ouvertes ou fermées.
+        height_label: Effacer la hauteur du bloc
+        height_note: La hauteur du bloc dans le grimoire.
+        clear_refresh_label: Raffraîchir après.
+        clear_refresh_note: Raffraîchir rechargera les donnés pour tous les éléments qui ont été effacés.
+        warning: "Attention : les jetons placés sur le grimoire seront oubliés"
+        clear_cache: Effacer le Cache
+
+grimoire:
+
+    title: Grimoire
+
+    grimoire:
+        bluffs: Bluffs Démon
+        add_token: Ajouter jeton
+        add_reminder: Ajouter rappel
+        add_traveller: Ajouter voyageur
+        show_tokens: Montrer jetons
+        reset_height: Réinitialiser taille du bloc
+        clear_grimoire: Effacer Grimoire
+        clear_grimoire_warning: Es-tu sûr de vouloir effacer tous les jetons ?
+        show_night_order: Montrer ordre de nuit
+
+    character_list:
+        title: Choisir Personnage
+
+    reminder_list:
+        title: Choisir Rappel
+        show: Montrer tous les rappels
+
+    character_show:
+        title: Jeton
+        show: Montrer
+        shroud: Linceul
+        rotate: Tourner
+        reminder: Rappel
+        remove: Enlever jeton
+        recent_reminders: Jeton rappel le plus récent
+
+    reminder_show:
+        title: Rappel
+        remove: Enlever
+
+    bluff_show:
+        title: Jeton
+        empty: Vide
+        show: Montrer
+        change: Changer
+
+    bluff_list:
+        title: Sélectionner Bluff
+        show_existing: Montrer personnages existants
+        show_travellers: Montrer voyageurs
+        show_evil: Montrer personnages maléfiques
+
+    token_list:
+        title: Personnages
+
+    traveller_list:
+        title: Voyageurs
+        show_all: Montrer tous voyageurs
+
+    token:
+        title: Jetons
+
+jinxes:
+    title: Jinxs
+    target: Cible
+    trick: Piège
+    reason: Raison
+    show: Montrer les jinxs hors-jeu
+
+night_order:
+    title: Ordre de nuit
+    first_night: Première nuit
+    other_night: Autres nuits
+    swipe_change: Balayer pour changer de nuits.
+    show: Montrer les personnages hors-jeu
+
+info_tokens:
+    title: Jetons info
+    info_tokens:
+        isdemon: Voici le <strong>Démon</strong>
+        isminion: Voici tes <strong>Sbires</strong>
+        inplay: Ces personnages sont <strong>en jeu</strong>
+        notinplay: Ces personnages ne sont <strong>pas en jeu</strong>
+        nominatetoday: As-tu <strong>nommé</strong> aujourd'hui ?
+        abilitytargetted: Cette <strong>compétence</strong> t'a ciblé
+        playeris: Ce <strong>joueur</strong> est
+        haveability: Tu as cette <strong>capacité</strong>
+        votetoday: As-tu <strong>voté</strong> aujourd'hui ?
+        choice: Ton <strong>choix</strong> ?
+        abilitynow: Utiliser ta <strong>compétence</strong> maintenant ?
+        youare: <strong>Tu</strong> es
+
+acknowledgements:
+    title: Remerciements
+    acknowledgements:
+        - <a href="https://bloodontheclocktower.com/" target="_blank" rel="noopener noreferrer">Blood on the Clocktower</a> est une marque déposée de Steven Medway et <a href="https://www.thepandemoniuminstitute.com/" target="_blank" rel="noopener noreferrer">The Pandemonium Institute</a>.
+        - Rappels de nuit et textes auxiliaires écrits par <a href="http://bignose.whitetree.org/projects/botc/diy/" target="_blank" rel="noopener noreferrer">Ben Finney</a>.
+        - Les icônes viennent de <a href="https://fontawesome.com/v5.15/icons" target="_blank" rel="noopener noreferrer">Font Awesome</a>.
+        - De nombreuses images et données sont récupérées de <a href="https://www.clocktower.online" target="_blank" rel="noopener noreferrer">Clocktower.online</a> et le <a href="https://bloodontheclocktower.com/" target="_blank" rel="noopener noreferrer">site de Blood on the Clocktower</a>.
+        - Il s'agit d'un grimoire virtuel non officiel pour Blood on the Clocktower. Ce projet est gratuit et le code source peut être trouvé sur <a href="https://github.com/Skateside/pocket-grimoire" target="_blank" rel="noopener noreferrer">GitHub</a>. Ce projet n'est pas affilié à The Pandemonium Institute. Si tu aimes jouer à Blood on the Clocktower, <a href="https://bloodontheclocktower.com/pages/where-to-buy" target="_blank" rel="noopener noreferrer">considères l'achat ton propre grimoire</a> - en plus d'être plus flexible que cette version numérique, il soutient également les créateurs.
+        - Tu as remarqué un bug ou as une suggestion d'amélioration ? Fais-le moi savoir sur le salon <a href="https://discord.com/channels/569683781800296501/708509594758152203" target="_blank" rel="noopener noreferrer">"toolmakers" sur le serveur discord non officiel</a> (mon nom y est "Skateside") ou <a href="https://github.com/Skateside/pocket-grimoire/issues" target="_blank" rel="noopener noreferrer">ouvre un ticket sur GitHub</a>.
+        - <small>Version <span id="version"></span></small>

@@ -1,0 +1,99 @@
+{% extends "base.html.twig" %}
+
+{% block title %}{{ 'sheet.title'|trans }}{% endblock %}
+{% set meta_description = 'sheet.description'|trans %}
+
+{% block styles %}
+<link rel="stylesheet" href="{{ asset('build/css/sheet.css') }}">
+{% endblock %}
+
+{% set body_class = 'body-sheet' %}
+
+{% block body %}
+
+<header>
+    <h1 id="title" class="title"></h1>
+</header>
+
+{% for type, text in {
+    townsfolk: 'groups.townsfolk'|trans,
+    outsider: 'groups.outsider'|trans,
+    minion: 'groups.minion'|trans,
+    demon: 'groups.demon'|trans,
+    traveller: 'groups.traveller'|trans,
+    fabled: 'groups.fabled'|trans
+} %}
+    {% embed 'includes/details.html.twig' with {
+        open: type != 'traveller',
+        id: 'wrapper-' ~ type,
+        class: 'edition is-empty'
+    } %}
+        {% block summary %}
+        <span class="edition__heading-text">{{ text }}</span>
+        {% endblock %}
+        {% block body %}
+        <div id="team-{{ type }}" class="edition__team"></div>
+        {% endblock %}
+    {% endembed %}
+{% endfor %}
+
+<template id="edition-template">
+    <div class="edition__role">
+        <p class="edition__name js--edition--name"></p>
+        <div class="edition__icon">
+            <img src="" alt="" class="edition__image js--edition--image" width="177" height="124" aria-hidden="true">
+        </div>
+        <div class="edition__ability js--edition--ability"></div>
+        <div class="edition__jinxes js--edition--jinxes"></div>
+    </div>
+</template>
+
+<template id="edition-template-jinx">
+    <div class="edition__jinx">
+        <img src="" alt="Jinx: " title="" class="js--edition-jinx--image" width="177" height="124">
+    </div>
+</template>
+
+<footer>
+    <p><small>{{ 'sheet.each_night'|trans }}</small></p>
+    <p><button type="button" class="button" data-dialog="#qr-code-dialog">{{ 'sheet.get_qr_code'|trans }}</button></p>
+    <form id="locale-form" class="locale-form locale-form--sheet">
+        <select name="select-locale" id="select-locale" class="locale-form__dropdown" aria-label="{{ 'setup.buttons.language'|trans }}" data-no-store>
+            {% set params = { characters: app.request.get('characters') } %}
+            {% if app.request.get('name') is not empty %}
+                {% set params = params|merge({ name: app.request.get('name') }) %}
+            {% endif %}
+            {% for locale in locales() %}
+                <option value="{{ path('sheet', params|merge({ '_locale': locale[0] })) }}" lang="{{ locale[0]|replace({ '_': '-' }) }}" {{ app.request.locale == locale[0] ? 'selected' }}>{{ locale[1] }}</option>
+            {% endfor %}
+        </select>
+        <button type="submit" class="button locale-form__action">
+            <span>{{ 'setup.buttons.set_language'|trans }}</span>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="locale-form__icon"><!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path fill="currentColor" d="M438.6 278.6l-160 160C272.4 444.9 264.2 448 256 448s-16.38-3.125-22.62-9.375c-12.5-12.5-12.5-32.75 0-45.25L338.8 288H32C14.33 288 .0016 273.7 .0016 256S14.33 224 32 224h306.8l-105.4-105.4c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l160 160C451.1 245.9 451.1 266.1 438.6 278.6z"/></svg>
+        </button>
+    </form>
+    <p><small>{{ 'sheet.credit'|trans|raw }}</small></p>
+</footer>
+
+{% embed 'includes/dialog.html.twig' with {
+    id: 'qr-code-dialog',
+    background: 'blur',
+    title: 'Get this sheet'
+} %}
+    {% block body %}
+        <div id="qr-code" class="qr"></div>
+    {% endblock %}
+{% endembed %}
+
+{% endblock %}
+
+{% block javascript %}
+{% set version = hash(4) %}
+<script>
+var URLS = {
+    characters: "{{ path('data_characters', { version: version })|e('js') }}",
+    jinxes: "{{ path('data_jinx', { version: version })|e('js') }}"
+};
+</script>
+{{ encore_entry_script_tags('js/sheet') }}
+{% endblock %}

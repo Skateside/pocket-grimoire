@@ -13,9 +13,6 @@ import {
     lookupCached,
     lookupOneCached
 } from "./utils/elements.js";
-import {
-    hash
-} from "./utils/strings.js";
 import QRCode from "./lib/qrcode-svg.js";
 
 const url = new URL(window.location.href);
@@ -39,19 +36,13 @@ CharacterToken.setTemplates({
     jinx: Template.create(lookupOne("#edition-template-jinx"))
 });
 
-fetchFromStore(
-    "characters",
-    hash("./assets/data/characters.json"),
-    store
-).then((characters) => {
+const lang = document.documentElement.lang || "en-GB";
+
+fetchFromStore(`characters_${lang}`, URLS.characters, store).then((characters) => {
     gameObserver.trigger("characters-loaded", { characters });
 });
 
-fetchFromStore(
-    "jinx",
-    hash("./assets/data/jinx.json"),
-    store
-).then((jinxes) => {
+fetchFromStore(`jinxes_${lang}`, URLS.jinxes, store).then((jinxes) => {
     gameObserver.trigger("jinxes-loaded", { jinxes });
 });
 
@@ -168,3 +159,9 @@ if (printQuery.matches) {
 
 window.addEventListener("beforeprint", openAllDetails);
 window.addEventListener("afterprint", closeDetails);
+
+// Change Language.
+lookupOne("#locale-form").addEventListener("submit", (e) => {
+    e.preventDefault();
+    window.location.href = lookupOne("#select-locale").value;
+});

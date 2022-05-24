@@ -1,0 +1,22 @@
+{% set attributes = [] %}
+{% if class|default('') != '' %}
+    {% set attributes = attributes|merge(['class="details ' ~ class ~ '"']) %}
+{% else %}
+    {% set attributes = attributes|merge(['class="details"']) %}
+{% endif %}
+{% if id|default('') != '' %}
+    {% set attributes = attributes|merge(['id="' ~ id ~ '"']) %}
+{% endif %}
+{% if open|default(false) %}
+    {% set attributes = attributes|merge(['open']) %}
+{% endif %}
+
+<details {{ attributes|join(' ')|raw }}>
+    <summary class="details__summary">
+        <h2 class="details__heading">{% block summary %}{{ summary|default('') }}{% endblock %}</h2>
+    </summary>
+    <div class="details__body">
+        {% block body %}
+        {% endblock %}
+    </div>
+</details>

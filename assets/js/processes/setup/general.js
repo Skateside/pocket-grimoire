@@ -14,34 +14,20 @@ import {
     lookupCached,
     lookupOneCached
 } from "../../utils/elements.js";
-import {
-    hash
-} from "../../utils/strings.js";
 
 const store = Store.create("pocket-grimoire");
 const gameObserver = Observer.create("game");
+const lang = document.documentElement.lang || "en-GB";
 
-fetchFromStore(
-    "characters",
-    hash("./assets/data/characters.json"),
-    store
-).then((characters) => {
+fetchFromStore(`characters_${lang}`, URLS.characters, store).then((characters) => {
     gameObserver.trigger("characters-loaded", { characters });
 });
 
-fetchFromStore(
-    "jinx",
-    hash("./assets/data/jinx.json"),
-    store
-).then((jinxes) => {
+fetchFromStore(`jinxes_${lang}`, URLS.jinxes, store).then((jinxes) => {
     gameObserver.trigger("jinxes-loaded", { jinxes });
 });
 
-fetchFromStore(
-    "game",
-    hash("./assets/data/game.json"),
-    store
-).then((breakdown) => {
+fetchFromStore("game", URLS.game, store).then((breakdown) => {
     gameObserver.trigger("team-breakdown-loaded", { breakdown });
 });
 
@@ -85,14 +71,14 @@ Promise.all([
                 id: TokenStore.EMPTY,
                 name: "",
                 text: lookupOne("#good-team").textContent,
-                image: "./assets/img/icon/townsfolk.png",
+                image: "/build/img/icon/townsfolk.png",
                 isGlobal: true
             },
             {
                 id: TokenStore.EMPTY,
                 name: "",
                 text: lookupOne("#evil-team").textContent,
-                image: "./assets/img/icon/demon.png",
+                image: "/build/img/icon/demon.png",
                 isGlobal: true
             }
         ],
@@ -119,4 +105,9 @@ lookup("input[data-filter-list]").forEach((input) => {
 
     });
 
+});
+
+lookupOne("#locale-form").addEventListener("submit", (e) => {
+    e.preventDefault();
+    window.location.href = lookupOne("#select-locale").value;
 });

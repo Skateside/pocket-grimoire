@@ -1,0 +1,46 @@
+{% embed 'includes/details.html.twig' with {
+    summary: 'night_order.title'|trans,
+    id: 'night-order'
+} %}
+    {% import 'macros/forms.html.twig' as forms %}
+    {% block body %}
+    <div class="carousel">
+        {% set nights = {
+            'first-night': 'night_order.first_night'|trans,
+            'other-nights': 'night_order.other_night'|trans
+        } %}
+        {% for id, text in nights %}
+        <div class="carousel__item">
+            <div class="sidebar sidebar--full {% if id == 'other-nights' %}sidebar--reverse{% endif %}">
+                <p class="sidebar__side"><span class="sidebar__side-content">{{ text }}</span></p>
+                <div class="sidebar__body">
+                    <ol id="{{ id }}" class="night-order"></ol>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+    <p><small>{{ 'night_order.swipe_change'|trans }}</small></p>
+    <p class="switch">
+        <span class="switch__input">
+            {{ forms.toggle({
+                name: "show-all",
+                id: "show-all"
+            }) }}
+        </span>
+        <label for="show-all" class="switch__label">{{ 'night_order.show'|trans }}</label>
+    </p>
+    {% endblock %}
+{% endembed %}
+
+<template id="night-info-template">
+    <li class="night-order__item js--night-info--wrapper">
+        <div class="night-order__heading">
+            <div>
+                <img src="" alt="" class="night-order__icon js--night-info--icon" loading="lazy">
+            </div>
+            <p class="night-order__role js--night-info--role"></p>
+        </div>
+        <p class="night-order__ability js--night-info--ability"></p>
+    </li>
+</template>

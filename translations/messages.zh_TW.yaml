@@ -1,0 +1,204 @@
+title: 口袋魔典
+
+forms:
+    file:
+        placeholder: 選擇檔案
+        button: 瀏覽
+
+dialog:
+    close: 關閉
+
+index:
+    title: 遊戲
+    description: 用來進行Blood on the Clocktower血染鐘塔遊戲的虛擬魔典
+
+sheet:
+    title: 角色表
+    description: 血染鐘塔中用於這個版本的角色表
+    jinx: Jinx
+    each_night: '* 除了第一晚之外的所有晚上'
+    get_qr_code: 取得這張表格的 QR code
+    credit: <a href="https://bloodontheclocktower.com/" target="_blank" rel="noopener noreferrer">Blood on the Clocktower</a> 是屬於 Steven Medway 和 <a href="https://www.thepandemoniuminstitute.com/" target="_blank" rel="noopener noreferrer">The Pandemonium Institute</a> 的商標。
+
+groups:
+    townsfolk: 鎮民
+    outsider: 城外人
+    minion: 僕從
+    demon: 惡魔
+    traveller: 旅行者
+    fabled: 傳奇
+
+messages:
+    good_team: 好人隊伍
+    evil_team: 邪惡隊伍
+    empty_character_ability: 這是一個空的角色。
+    version_change_message: 這個應用程式的版本已經更新，由於您的資料可能不正確，我們建議您在「清除快取」對話窗中清除所有資料。點擊「OK」來開啟對話窗或點擊「Cancel」來關閉這則訊息。
+    invalid_script: 無法辨認此劇本格式。
+    no_characters: 無法從這個劇本辨認出任何角色。
+
+setup:
+
+    title: 設置
+
+    buttons:
+        select_edition: 選擇遊戲版本
+        select_characters: 選擇角色
+        qr_code_button: 角色表
+        clear_cache_button: 清除快取
+        language: 語言
+        set_language: 設定語言
+
+    editions:
+        title: 選擇遊戲版本
+        trouble_brewing: 麻煩之釀
+        bad_moon_rising: 惡月升起
+        sects_and_violets: 教派與紫羅蘭
+        custom_script: 自訂劇本
+        custom_note: 上傳一個自訂劇本或是輸入一個自訂劇本的網址。
+        custom_warning: 只從您信任的來源載入自訂.json檔案!
+        upload: 上傳自訂劇本
+        url: 輸入網址
+        unsupported: 請注意口袋魔典目前不支援自製或本地化劇本。
+        select: 選擇
+
+    character_select:
+        title: 選擇角色
+        number_players: 玩家數量
+        toggle_abilities: 顯示角色能力
+        toggle_duplicates: 允許重覆的角色
+        highlight_random: 隨機選擇
+        draw_characters: 抽取角色
+
+    character_choice:
+        title: 選擇你的角色
+        description: 點擊任何有數字的代幣來選擇你的角色，較暗的代幣表示已經被選擇。
+
+    character_decision:
+        title: 記住你的角色
+        return: 回到角色選擇
+
+    qr_code:
+        title: 角色表
+        intro: 掃描 QR code 來查看角色表
+        include: '包含：'
+        travellers: 旅行者
+        fabled: 傳奇
+
+    clear_cache:
+        title: 清除快取
+        clear_all: 清除所有資料
+        clear_description: 若關閉此項，則可以選擇要清除快取的細項。
+        lookup_label: 清除資料
+        lookup_note: 關於 Jinxes 及角色資訊的資料。
+        characters_label: 清除版本
+        characters_note: 已選擇並載入的遊戲版本或劇本。
+        tokens_label: 清除代幣
+        tokens_note: 所有代幣在魔典內的位置。
+        inputs_label: 清除使用者輸入
+        inputs_note: 使用者對此網站的設定。
+        details_label: 清除開閉
+        details_note: 展開或收合的區塊。
+        height_label: 清除寬度
+        height_note: 魔典的寬度
+        clear_refresh_label: 清除後刷新
+        clear_refresh_note: 刷新將為清除的內容載入新資料。
+        warning: <strong>警告：</strong>任何已放置在魔典內的代幣將會被移除。
+        clear_cache: 清除快取
+
+grimoire:
+
+    title: 魔典
+
+    grimoire:
+        bluffs: 惡魔偽裝
+        add_token: 添加角色代幣
+        add_reminder: 添加標記
+        add_traveller: 添加旅行者
+        show_tokens: 展示角色代幣
+        reset_height: 重置寬度
+        clear_grimoire: 清除魔典
+        clear_grimoire_warning: 確定要清除所有代幣及標記嗎?
+        show_night_order: 顯示夜晚行動順序
+
+    character_list:
+        title: 選擇角色
+
+    reminder_list:
+        title: 選擇標記
+        show: 顯示所有標記
+
+    character_show:
+        title: 角色代幣
+        show: 展示
+        shroud: 死亡標記
+        rotate: 轉向
+        reminder: 標記
+        remove: 移除角色代幣
+        recent_reminders: '最近新增的標記：'
+
+    reminder_show:
+        title: 標記
+        remove: 移除標記
+
+    bluff_show:
+        title: 角色代幣
+        empty: 空
+        show: 展示
+        change: 替換
+
+    bluff_list:
+        title: 選擇偽裝
+        show_existing: 顯示存在的角色
+        show_travellers: 顯示旅行者
+        show_evil: 顯示邪惡的角色
+
+    token_list:
+        title: 角色
+
+    traveller_list:
+        title: 旅行者
+        show_all: 顯示所有旅行者
+
+    token:
+        title: 角色代幣
+
+jinxes:
+    title: Jinxes
+    target: 角色1
+    trick: 角色2
+    reason: 內容
+    show: 顯示不在遊戲中的 Jinxes
+
+night_order:
+    title: 夜晚順序
+    first_night: 第一晚
+    other_night: 其他夜晚
+    swipe_change: 滑動來變換夜晚
+    show: 顯示不在遊戲中的角色
+
+info_tokens:
+    title: 提示卡
+    info_tokens:
+        isdemon: 這是<strong>惡魔</strong>
+        isminion: 這些是你的<strong>僕從</strong>
+        inplay: 這些角色<strong>在遊戲中</strong>
+        notinplay: 這些角色<strong>不在遊戲中</strong>
+        nominatetoday: 你今天<strong>提名</strong>了嗎?
+        abilitytargetted: 這個<strong>能力</strong>指定你
+        playeris: <strong>這位玩家</strong>是
+        haveability: 你擁有這個<strong>能力</strong>
+        votetoday: 你今天<strong>投票</strong>了嗎?
+        choice: 你的<strong>選擇</strong>是?
+        abilitynow: 要使用你的<strong>能力</strong>嗎?
+        youare: <strong>你</strong>是
+
+acknowledgements:
+    title: 致謝
+    acknowledgements:
+        - <a href="https://bloodontheclocktower.com/" target="_blank" rel="noopener noreferrer">Blood on the Clocktower</a> 是屬於 Steven Medway 和 <a href="https://www.thepandemoniuminstitute.com/" target="_blank" rel="noopener noreferrer">The Pandemonium Institute</a> 的商標。
+        - <a href="http://bignose.whitetree.org/projects/botc/diy/" target="_blank" rel="noopener noreferrer">Ben Finney</a> 撰寫夜間標記和其他輔助文本。
+        - 圖標取自 <a href="https://fontawesome.com/v5.15/icons" target="_blank" rel="noopener noreferrer">Font Awesome</a>。
+        - 許多圖檔資料取自 <a href="https://www.clocktower.online" target="_blank" rel="noopener noreferrer">Clocktower.online</a> 以及 <a href="https://bloodontheclocktower.com/" target="_blank" rel="noopener noreferrer">Blood on the Clocktower website</a>。
+        - 這是一個非官方的虛擬魔典，用於 Blood on the Clocktower 血染鐘塔遊戲。這份專案為免費使用並且可在 <a href="https://github.com/Skateside/pocket-grimoire" target="_blank" rel="noopener noreferrer">GitHub</a> 上找到原始碼。這份專案不附屬於 Pandemonium Institute。如果你享受於遊玩 Blood on the Clocktower，請考慮<a href="https://bloodontheclocktower.com/pages/where-to-buy" target="_blank" rel="noopener noreferrer">購買你自己的魔典</a> - 除了比這個數位版本更靈活，還能支持遊戲創作者。
+        - 發現漏洞或是有改善建議? 在<a href="https://discord.com/channels/569683781800296501/708509594758152203" target="_blank" rel="noopener noreferrer">非官方Discord伺服器上的 "toolmakers" 頻道</a>上讓我知道(我的使用者名稱是 "Skateside")，或是<a href="https://github.com/Skateside/pocket-grimoire/issues" target="_blank" rel="noopener noreferrer">在 GitHub 上提出 issue</a>。
+        - <small>版本：<span id="version"></span></small>
