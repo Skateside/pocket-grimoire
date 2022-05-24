@@ -45,6 +45,10 @@
     margin: 0;
     color: #fff;
 
+    &:lang(ru) {
+        font-size: clamp(1rem, 8vw, 3rem);
+    }
+
     > strong {
         font-family: var(--serif-font);
         font-size: 1.1em;
