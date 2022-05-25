@@ -4,7 +4,8 @@
 {% set meta_description = 'index.description'|trans %}
 
 {% block styles %}
-<link rel="stylesheet" href="{{ asset('build/css/main.css') }}">
+{# <link rel="stylesheet" href="{{ asset('build/css/main.css') }}"> #}
+{{ encore_entry_link_tags('css/main') }}
 {% endblock %}
 
 {% set body_class = 'body-grimoire' %}

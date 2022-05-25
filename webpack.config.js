@@ -53,13 +53,16 @@ Encore
 
     .configureBabel((config) => {
         config.plugins.push("@babel/plugin-proposal-class-properties");
+    // }, {
+    //     useBuiltIns: "usage",
+    //     corejs: 3
     })
 
     // enables @babel/preset-env polyfills
-    .configureBabelPresetEnv((config) => {
-        config.useBuiltIns = "usage";
-        config.corejs = 3;
-    })
+    // .configureBabelPresetEnv((config) => {
+    //     config.useBuiltIns = "usage";
+    //     config.corejs = 3;
+    // })
 
     // enables Sass/SCSS support
     .enableSassLoader()
@@ -74,10 +77,10 @@ Encore
         from: "./assets/img",
         to: "img/[path][name].[ext]"
     })
-    .copyFiles({
-        from: "./assets/data",
-        to: "data/[path][name].[ext]"
-    })
+    // .copyFiles({
+    //     from: "./assets/data",
+    //     to: "data/[path][name].[ext]"
+    // })
 
     // uncomment if you use TypeScript
     //.enableTypeScriptLoader()
@@ -87,7 +90,7 @@ Encore
 
     // uncomment to get integrity="..." attributes on your script & link tags
     // requires WebpackEncoreBundle 1.4 or higher
-    //.enableIntegrityHashes(Encore.isProduction())
+    .enableIntegrityHashes(Encore.isProduction())
 
     // uncomment if you're having problems with a jQuery plugin
     //.autoProvidejQuery()

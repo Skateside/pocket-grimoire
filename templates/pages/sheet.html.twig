@@ -4,7 +4,8 @@
 {% set meta_description = 'sheet.description'|trans %}
 
 {% block styles %}
-<link rel="stylesheet" href="{{ asset('build/css/sheet.css') }}">
+{# <link rel="stylesheet" href="{{ asset('build/css/sheet.css') }}"> #}
+{{ encore_entry_link_tags('css/sheet') }}
 {% endblock %}
 
 {% set body_class = 'body-sheet' %}
