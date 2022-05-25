@@ -3,57 +3,80 @@
 {% block title %}{{ 'sheet.title'|trans }}{% endblock %}
 {% set meta_description = 'sheet.description'|trans %}
 
-{% block styles %}
-{# <link rel="stylesheet" href="{{ asset('build/css/sheet.css') }}"> #}
-{{ encore_entry_link_tags('css/sheet') }}
-{% endblock %}
+{% block styles %}{{ encore_entry_link_tags('css/sheet') }}{% endblock %}
 
 {% set body_class = 'body-sheet' %}
 
 {% block body %}
 
+{% if name is defined and name|length %}
 <header>
-    <h1 id="title" class="title"></h1>
+    <h1 id="title" class="title">{{ name }}</h1>
 </header>
+{% endif %}
 
-{% for type, text in {
-    townsfolk: 'groups.townsfolk'|trans,
-    outsider: 'groups.outsider'|trans,
-    minion: 'groups.minion'|trans,
-    demon: 'groups.demon'|trans,
-    traveller: 'groups.traveller'|trans,
-    fabled: 'groups.fabled'|trans
-} %}
+{% for data in groups %}
+    {% set team = data.team %}
+    {% set teamId = team.identifier %}
     {% embed 'includes/details.html.twig' with {
-        open: type != 'traveller',
-        id: 'wrapper-' ~ type,
-        class: 'edition is-empty'
+        open: teamId != 'traveller',
+        id: 'wrapper-' ~ teamId,
+        class: 'edition' ~ (data.characters|length ? '' : ' is-empty')
     } %}
         {% block summary %}
-        <span class="edition__heading-text">{{ text }}</span>
+        <span class="edition__heading-text">{{ team.name }}</span>
         {% endblock %}
         {% block body %}
-        <div id="team-{{ type }}" class="edition__team"></div>
+        <div id="team-{{ teamId }}" class="edition__team">
+            {% for character in data.characters %}
+                <div class="edition__role">
+                    <p class="edition__name">{{ character.name }}</p>
+                    <div class="edition__icon">
+                        <img src="{{ character.image }}" alt="" class="edition__image" width="177" height="124" aria-hidden="true" loading="lazy">
+                    </div>
+                    <div class="edition__ability">{{ character.ability }}</div>
+                    <div class="edition__jinxes">
+                        {% for jinx in character.jinxes %}
+                            {% if jinx.active %}
+                                <div class="edition__jinx">
+                                    <img src="{{ jinx.trick.image }}" alt="{{ 'sheet.jinx'|trans }}: {{ jinx.trick.name }}" title="{{ jinx.reason }}" width="177" height="124" loading="lazy">
+                                </div>
+                            {% endif %}
+                        {% endfor %}
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
         {% endblock %}
     {% endembed %}
 {% endfor %}
 
-<template id="edition-template">
-    <div class="edition__role">
-        <p class="edition__name js--edition--name"></p>
-        <div class="edition__icon">
-            <img src="" alt="" class="edition__image js--edition--image" width="177" height="124" aria-hidden="true">
-        </div>
-        <div class="edition__ability js--edition--ability"></div>
-        <div class="edition__jinxes js--edition--jinxes"></div>
-    </div>
-</template>
-
-<template id="edition-template-jinx">
-    <div class="edition__jinx">
-        <img src="" alt="Jinx: " title="" class="js--edition-jinx--image" width="177" height="124">
-    </div>
-</template>
+{% if jinxes|length %}
+    {% embed 'includes/details.html.twig' with {
+        open: true,
+        id: 'wrapper-jinx',
+        class: 'edition edition--jinx'
+    } %}
+        {% block summary %}
+        <span class="edition__heading-text">{{ 'jinxes.title'|trans }}</span>
+        {% endblock %}
+        {% block body %}
+            <div id="team-jinx" class="edition__team">
+                {% for jinx in jinxes %}
+                    <div class="edition__role edition__role--jinx">
+                        <div class="edition__icon edition__icon--target">
+                            <img src="{{ jinx.target.image }}" alt="{{ jinx.target.name }}" width="177" height="124" loading="lazy">
+                        </div>
+                        <div class="edition__icon edition__icon--trick">
+                            <img src="{{ jinx.trick.image }}" alt="{{ jinx.trick.name }}" width="177" height="124" loading="lazy">
+                        </div>
+                        <div class="edition__ability">{{ jinx.reason }}</div>
+                    </div>
+                {% endfor %}
+            </div>
+        {% endblock %}
+    {% endembed %}
+{% endif %}
 
 <footer>
     <p><small>{{ 'sheet.each_night'|trans }}</small></p>
@@ -93,10 +116,10 @@
 {% block javascript %}
 {% set version = hash(4) %}
 <script>
-var URLS = {
-    characters: "{{ path('data_characters', { version: version })|e('js') }}",
-    jinxes: "{{ path('data_jinx', { version: version })|e('js') }}"
-};
+// var URLS = {
+//     characters: "{{ path('data_characters', { version: version })|e('js') }}",
+//     jinxes: "{{ path('data_jinx', { version: version })|e('js') }}"
+// };
 </script>
 {{ encore_entry_script_tags('js/sheet') }}
 {% endblock %}

@@ -82,7 +82,7 @@ class PopulateTeamsCommand extends Command
 
                 $team
                     ->setTranslatableLocale($locale)
-                    ->setName($data['name']);
+                    ->setName($rawTeam['name']);
                 $this->em->persist($team);
                 $listing[] = "Team '{$team->getIdentifier()}' updated for locale {$locale}";
 

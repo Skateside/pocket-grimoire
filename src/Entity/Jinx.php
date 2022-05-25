@@ -44,6 +44,13 @@ class Jinx
     private $locale;
 
     /**
+     * @var bool
+     * Not mapped to any field, used to work out if the jinx should appear on
+     * the character sheet.
+     */
+    private $active = false;
+
+    /**
      * Exposes the ID.
      *
      * @return int
@@ -118,7 +125,6 @@ class Jinx
      */
     public function getReason(): string
     {
-if (is_null($this->reason)) { dump(['target' => $this->target->getId(), 'trick' => $this->trick->getId()]); }
         return $this->reason;
     }
 
@@ -129,6 +135,28 @@ if (is_null($this->reason)) { dump(['target' => $this->target->getId(), 'trick' 
     {
         $this->locale = $locale;
         return $this;
+    }
+
+    /**
+     * Sets whether or not the jinx is active.
+     *
+     * @param bool $active
+     * @return self
+     */
+    public function setActive(bool $active): self
+    {
+        $this->active = $active;
+        return $this;
+    }
+
+    /**
+     * Exposes whether or not the jinx is active.
+     *
+     * @return bool
+     */
+    public function getActive(): bool
+    {
+        return $this->active;
     }
 
 }

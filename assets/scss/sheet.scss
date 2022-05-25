@@ -103,6 +103,12 @@ a {
         page-break-inside: avoid;
     }
 
+    .edition__role--jinx {
+        grid-template-areas:
+            "target trick ability";
+        grid-template-columns: 25pt 25pt 1fr;
+    }
+
     .edition__role + .edition__role {
         border: none;
     }

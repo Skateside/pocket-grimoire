@@ -66,6 +66,21 @@
     }
 }
 
+.edition__role--jinx {
+    grid-template-areas:
+        "target ability"
+        "trick ability";
+    grid-template-columns: 5em 1fr;
+    gap: 0.5em 1em;
+
+    @media (min-width: 550px) {
+        grid-template-areas:
+            "target trick ability";
+        grid-template-columns: 4em 4em 1fr;
+        grid-template-rows: 1fr min-content;
+    }
+}
+
 .edition__icon,
 .edition__name,
 .edition__ability {
@@ -75,6 +90,14 @@
 
 .edition__icon {
     grid-area: token;
+}
+
+.edition__icon--target {
+    grid-area: target;
+}
+
+.edition__icon--trick {
+    grid-area: trick;
 }
 
 .edition__ability {
