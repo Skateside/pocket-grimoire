@@ -15,7 +15,7 @@ index:
 sheet:
     title: Fiche de personnages
     description: La fiche de personnages pour cette édition de Blood on the Clocktower
-    jinx: Jinx
+    jinx: Chips
     each_night: "* Chaque nuit, sauf la première"
     get_qr_code: Obtenir le QR code pour cette fiche
     get_sheet: Obtenir cette fiche
@@ -27,7 +27,7 @@ groups:
     minion: Sbires
     demon: Démons
     traveller: Voyageurs
-    fabled: Légendaires
+    fabled: Mythiques
 
 messages:
     good_team: Équipe du bien
@@ -55,7 +55,7 @@ setup:
         bad_moon_rising: Bad Moon Rising
         sects_and_violets: Sects and Violets
         custom_script: Script personnalisé
-        custom_note: Télécharge ou entre une URL vers un script personnalisé.
+        custom_note: Télécharge ou entré une URL vers un script personnalisé.
         custom_warning: Faire attention à utiliser des fichiers JSON provenant d'une source de confiance !
         upload: Télécharger un script personnalisé
         url: Entrer une URL
@@ -72,7 +72,7 @@ setup:
 
     character_choice:
         title: Sélectionne ton Personnage
-        description: Toucher l'un des jetons numérotés pour choisir un personnage. Ceux qui sont sombres ont déjà été choisis.
+        description: Toucher l'un des jetons numérotés pour choisir un personnage. Ceux qui sont assombries ont déjà été choisis.
 
     character_decision:
         title: Se souvenir de ton Personnage
@@ -99,7 +99,7 @@ setup:
         inputs_note: Paramètres utilisateur pour ce site.
         details_label: Effacer ouvert/fermé
         details_note: Quelles sections sont ouvertes ou fermées.
-        height_label: Effacer la hauteur du bloc
+        height_label: Rénitialiser la hauteur du bloc
         height_note: La hauteur du bloc dans le grimoire.
         clear_refresh_label: Raffraîchir après.
         clear_refresh_note: Raffraîchir rechargera les donnés pour tous les éléments qui ont été effacés.
@@ -135,7 +135,7 @@ grimoire:
         rotate: Tourner
         reminder: Rappel
         remove: Enlever jeton
-        recent_reminders: Jeton rappel le plus récent
+        recent_reminders: 'Jetons rappel les plus récent :'
 
     reminder_show:
         title: Rappel
@@ -164,7 +164,7 @@ grimoire:
         title: Jetons
 
 jinxes:
-    title: Jinxs
+    title: Chips
     target: Cible
     trick: Piège
     reason: Raison
@@ -174,7 +174,7 @@ night_order:
     title: Ordre de nuit
     first_night: Première nuit
     other_night: Autres nuits
-    swipe_change: Balayer pour changer de nuits.
+    swipe_change: Glisser pour changer de nuits.
     show: Montrer les personnages hors-jeu
 
 info_tokens:
@@ -187,17 +187,17 @@ info_tokens:
         nominatetoday: As-tu <strong>nommé</strong> aujourd'hui ?
         abilitytargetted: Cette <strong>compétence</strong> t'a ciblé
         playeris: Ce <strong>joueur</strong> est
-        haveability: Tu as cette <strong>capacité</strong>
+        haveability: Tu as cette <strong>compétence</strong>
         votetoday: As-tu <strong>voté</strong> aujourd'hui ?
         choice: Ton <strong>choix</strong> ?
-        abilitynow: Utiliser ta <strong>compétence</strong> maintenant ?
+        abilitynow: Tu utilise ta <strong>compétence</strong> maintenant ?
         youare: <strong>Tu</strong> es
 
 acknowledgements:
     title: Remerciements
     acknowledgements:
         - <a href="https://bloodontheclocktower.com/" target="_blank" rel="noopener noreferrer">Blood on the Clocktower</a> est une marque déposée de Steven Medway et <a href="https://www.thepandemoniuminstitute.com/" target="_blank" rel="noopener noreferrer">The Pandemonium Institute</a>.
-        - Rappels de nuit et textes auxiliaires écrits par <a href="http://bignose.whitetree.org/projects/botc/diy/" target="_blank" rel="noopener noreferrer">Ben Finney</a>.
+        - Rappels de nuit et textes auxiliaires anglais écrits par <a href="http://bignose.whitetree.org/projects/botc/diy/" target="_blank" rel="noopener noreferrer">Ben Finney</a>.
         - Les icônes viennent de <a href="https://fontawesome.com/v5.15/icons" target="_blank" rel="noopener noreferrer">Font Awesome</a>.
         - De nombreuses images et données sont récupérées de <a href="https://www.clocktower.online" target="_blank" rel="noopener noreferrer">Clocktower.online</a> et le <a href="https://bloodontheclocktower.com/" target="_blank" rel="noopener noreferrer">site de Blood on the Clocktower</a>.
         - Il s'agit d'un grimoire virtuel non officiel pour Blood on the Clocktower. Ce projet est gratuit et le code source peut être trouvé sur <a href="https://github.com/Skateside/pocket-grimoire" target="_blank" rel="noopener noreferrer">GitHub</a>. Ce projet n'est pas affilié à The Pandemonium Institute. Si tu aimes jouer à Blood on the Clocktower, <a href="https://bloodontheclocktower.com/pages/where-to-buy" target="_blank" rel="noopener noreferrer">considères l'achat ton propre grimoire</a> - en plus d'être plus flexible que cette version numérique, il soutient également les créateurs.
