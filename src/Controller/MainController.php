@@ -29,7 +29,7 @@ class MainController extends AbstractController
      */
     public function indexStubAction(Request $request): Response
     {
-        return $this->redirectToRoute('index', $request->query->all());
+        return $this->redirectToRoute('index', $request->query->all(), 301);
     }
 
     /**
@@ -37,7 +37,7 @@ class MainController extends AbstractController
      */
     public function sheetStubAction(Request $request): Response
     {
-        return $this->redirectToRoute('sheet', $request->query->all());
+        return $this->redirectToRoute('sheet', $request->query->all(), 301);
     }
 
     /**
