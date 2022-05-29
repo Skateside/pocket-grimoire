@@ -11,7 +11,7 @@ import {
 export default class Pad {
 
     /**
-     * The offset for the tokens that are automatically added.
+     * The minimum offset for the tokens that are automatically added.
      * @type {Number}
      */
     static get OFFSET() {
@@ -145,11 +145,15 @@ export default class Pad {
     addNewCharacter(character) {
 
         const {
+            element,
             tokens,
             characters
         } = this;
         const info = this.addCharacter(character);
-        const offset = this.constructor.OFFSET;
+        const offset = Math.max(
+            this.constructor.OFFSET,
+            element.offsetWidth / 25
+        );
 
         tokens.moveTo(
             info.token,
