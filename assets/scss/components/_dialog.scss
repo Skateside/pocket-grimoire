@@ -58,6 +58,7 @@
 
 .dialog__hide {
     @extend %no-btn;
+    cursor: pointer;
     font-size: 2em;
     line-height: 1;
     text-shadow:
