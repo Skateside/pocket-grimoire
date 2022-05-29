@@ -34,3 +34,23 @@
     ></span>
 </span>
 {% endmacro %}
+
+{% macro range(settings) %}
+<div class="range">
+    <label for="{{ settings.id }}" class="range__label">{{ settings.label }}</label>
+    <input
+        type="range"
+        name="{{ settings.name }}"
+        id="{{ settings.id }}"
+        class="range__input"
+        {% if settings.min|default(false) %}min="{{ settings.min }}"{% endif %}
+        {% if settings.max|default(false) %}max="{{ settings.max }}"{% endif %}
+        {% if settings.step|default(false) %}step="{{ settings.step }}"{% endif %}
+        {% if settings.value|default(false) %}value="{{ settings.value }}"{% endif %}
+        {% if settings.output|default(false) %}data-output="#{{ settings.output }}"{% endif %}
+    >
+    {% if settings.output|default(false) %}
+        <output id="{{ settings.output }}" class="range__output">{% if settings.value|default(false) %}{{ settings.value }}{% endif %}</output>
+    {% endif %}
+</div>
+{% endmacro %}

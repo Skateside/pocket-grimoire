@@ -95,11 +95,16 @@
     {% block body %}
     <form id="player-select">
 
-        <div class="character-select__players">
-            <label for="player-count" class="character-select__label">{{ 'setup.character_select.number_players'|trans }}</label>
-            <input type="range" min="5" max="15" step="1" value="7" name="player-count" id="player-count" class="character-select__range">
-            <output id="player-count-output" class="character-select__output">7</output>
-        </div>
+        {{ forms.range({
+            label: 'setup.character_select.number_players'|trans,
+            name: 'player-count',
+            id: 'player-count',
+            output: 'player-count-output',
+            min: 5,
+            max: 15,
+            step: 1,
+            value: 7
+        }) }}
 
         <div class="mb-4 switch">
             <div class="switch__input">

@@ -1,0 +1,23 @@
+.range {
+    display: grid;
+    grid-template-columns: 1fr 1.5em;
+    grid-template-rows: min-content 1fr;
+    gap: 0.5em 1em;
+    grid-template-areas:
+        "label label"
+        "range output";
+    margin-bottom: 1em;
+}
+
+.range__label {
+    grid-area: label;
+}
+
+.range__input {
+    grid-area: range;
+}
+
+.range__output {
+    grid-area: output;
+    text-align: right;
+}

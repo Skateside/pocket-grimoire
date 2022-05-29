@@ -83,15 +83,11 @@ function highlightRandomInTeam(team, count) {
 gameObserver.on("team-breakdown-loaded", ({ detail }) => {
 
     const playerCount = lookupOneCached("#player-count");
-    const playerCountOutput = lookupOne("#player-count-output");
 
     playerCount.addEventListener("input", () => {
 
-        const count = Number(playerCount.value);
-
-        playerCountOutput.value = count;
         gameObserver.trigger("player-count", {
-            count
+            count: Number(playerCount.value)
         });
 
     });

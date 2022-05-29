@@ -111,3 +111,13 @@ lookupOne("#locale-form").addEventListener("submit", (e) => {
     e.preventDefault();
     window.location.href = lookupOne("#select-locale").value;
 });
+
+lookup("input[type=\"range\"][data-output]").forEach((input) => {
+
+    const output = lookupOne(input.dataset.output);
+
+    if (output) {
+        input.addEventListener("input", () => output.value = input.value);
+    }
+
+});

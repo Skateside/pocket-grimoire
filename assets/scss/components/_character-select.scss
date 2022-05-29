@@ -1,27 +1,3 @@
-.character-select__players {
-    display: grid;
-    grid-template-columns: 1fr 1.5em;
-    grid-template-rows: min-content 1fr;
-    gap: 0.5em 1em;
-    grid-template-areas:
-        "label label"
-        "range output";
-    margin-bottom: 1em;
-}
-
-.character-select__label {
-    grid-area: label;
-}
-
-.character-select__range {
-    grid-area: range;
-}
-
-.character-select__output {
-    grid-area: output;
-    text-align: right;
-}
-
 .character-select__fieldset {
     border: none;
     padding: 0;
