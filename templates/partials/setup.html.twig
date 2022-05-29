@@ -96,6 +96,7 @@
     <form id="player-select">
 
         {{ forms.range({
+            classes: 'mb-4',
             label: 'setup.character_select.number_players'|trans,
             name: 'player-count',
             id: 'player-count',
@@ -106,25 +107,23 @@
             value: 7
         }) }}
 
-        <div class="mb-4 switch">
-            <div class="switch__input">
-                {{ forms.toggle({
-                    name: 'toggle-abilities',
-                    id: 'toggle-abilities',
-                    checked: true
-                }) }}
-            </div>
-            <label for="toggle-abilities" class="switch__label">{{ 'setup.character_select.toggle_abilities'|trans }}</label>
-        </div>
-        <div class="mb-4 switch">
-            <div class="switch__input">
-                {{ forms.toggle({
-                    name: 'toggle-duplicates',
-                    id: 'toggle-duplicates'
-                }) }}
-            </div>
-            <label for="toggle-duplicates" class="switch__label">{{ 'setup.character_select.toggle_duplicates'|trans }}</label>
-        </div>
+        {{ forms.switch({
+            node: 'div',
+            classes: 'mb-4',
+            label: 'setup.character_select.toggle_abilities'|trans,
+            name: 'toggle-abilities',
+            id: 'toggle-abilities',
+            checked: true
+        }) }}
+
+        {{ forms.switch({
+            node: 'div',
+            classes: 'mb-4',
+            label: 'setup.character_select.toggle_duplicates'|trans,
+            name: 'toggle-duplicates',
+            id: 'toggle-duplicates',
+            checked: true
+        }) }}
 
         <p><button type="button" class="button" id="player-select-random">{{ 'setup.character_select.highlight_random'|trans }}</button></p>
 
@@ -228,32 +227,26 @@
 
         <p class="mt-4" id="include-groups">{{ 'setup.qr_code.include'|trans }}</p>
         <div class="slot slot--2">
-            <div class="switch">
-                <div class="switch__input">
-                    {{ forms.toggle({
-                        name: 'include-travellers',
-                        id: 'include-travellers',
-                        checked: true,
-                        attributes: {
-                            'aria-describedby': 'include-groups'
-                        }
-                    }) }}
-                </div>
-                <label for="include-travellers" class="switch__label">{{ 'setup.qr_code.travellers'|trans }}</label>
-            </div>
-            <div class="switch">
-                <div class="switch__input">
-                    {{ forms.toggle({
-                        name: 'include-fabled',
-                        id: 'include-fabled',
-                        checked: true,
-                        attributes: {
-                            'aria-describedby': 'include-groups'
-                        }
-                    }) }}
-                </div>
-                <label for="include-fabled" class="switch__label">{{ 'setup.qr_code.fabled'|trans }}</label>
-            </div>
+            {{ forms.switch({
+                node: 'div',
+                label: 'setup.qr_code.travellers'|trans,
+                name: 'include-travellers',
+                id: 'include-travellers',
+                checked: true,
+                attributes: {
+                    'aria-describedby': 'include-groups'
+                }
+            }) }}
+            {{ forms.switch({
+                node: 'div',
+                label: 'setup.qr_code.fabled'|trans,
+                name: 'include-fabled',
+                id: 'include-fabled',
+                checked: true,
+                attributes: {
+                    'aria-describedby': 'include-groups'
+                }
+            }) }}
         </div>
     {% endblock %}
 {% endembed %}
@@ -268,16 +261,12 @@
         <form id="cache-form">
 
             <p>
-                <span class="switch">
-                    <span class="switch__input">
-                        {{ forms.toggle({
-                            name: 'clear-all',
-                            id: 'clear-all',
-                            checked: true
-                        }) }}
-                    </span>
-                    <label for="clear-all" class="switch__label">{{ 'setup.clear_cache.clear_all'|trans }}</label>
-                </span>
+                {{ forms.switch({
+                    label: 'setup.clear_cache.clear_all'|trans,
+                    name: 'clear-all',
+                    id: 'clear-all',
+                    checked: true
+                }) }}
                 <small class="d-block">{{ 'setup.clear_cache.clear_description'|trans }}</small>
             </p>
 
@@ -316,33 +305,26 @@
                 ] %}
                 {% for clear in clears %}
                     <li>
-                        <div class="switch">
-                            <div class="switch__input">
-                                {{ forms.toggle({
-                                    name: 'clear',
-                                    id: 'clear-' ~ clear.value,
-                                    value: clear.value,
-                                    checked: true
-                                }) }}
-                            </div>
-                            <label for="clear-{{ clear.value }}" class="switch__label">{{ clear.label }}</label>
-                        </div>
+                        {{ forms.switch({
+                            node: 'div',
+                            label: clear.label,
+                            name: 'clear',
+                            id: 'clear-' ~ clear.value,
+                            value: clear.value,
+                            checked: true
+                        }) }}
                         <small class="d-block">{{ clear.note }}</small>
                     </li>
                 {% endfor %}
             </ul>
 
             <p>
-                <span class="switch">
-                    <span class="switch__input">
-                        {{ forms.toggle({
-                            name: 'clear-refresh',
-                            id: 'clear-refresh',
-                            checked: true
-                        }) }}
-                    </span>
-                    <label for="clear-refresh" class="switch__label">{{ 'setup.clear_cache.clear_refresh_label'|trans }}</label>
-                </span>
+                {{ forms.switch({
+                    label: 'setup.clear_cache.clear_refresh_label'|trans,
+                    name: 'clear-refresh',
+                    id: 'clear-refresh',
+                    checked: true
+                }) }}
                 <small class="d-block">{{ 'setup.clear_cache.clear_refresh_note'|trans }}</small>
             </p>
 

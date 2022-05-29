@@ -28,16 +28,40 @@
     </ul>
 
     <div class="mt-4">
-        <div class="switch">
-            <div class="switch__input">
-                {{ forms.toggle({
-                    name: 'show-night-order',
-                    id: 'show-night-order',
-                    checked: true
-                }) }}
-            </div>
-            <label for="show-night-order" class="switch__label">{{ 'grimoire.grimoire.show_night_order'|trans }}</label>
-        </div>
+        {{ forms.switch({
+            node: 'div',
+            label: 'grimoire.grimoire.show_night_order'|trans,
+            name: 'show-night-order',
+            id: 'show-night-order',
+            checked: true
+        }) }}
+    </div>
+
+    <div class="mt-4">
+{# TRANSLATION NEEDED #}
+        {{ forms.range({
+            label: 'grimoire.grimoire.character_size'|trans,
+            name: 'token-size',
+            id: 'token-size',
+            output: 'token-size-output',
+            min: 0.5,
+            max: 2,
+            step: 0.1,
+            value: 1
+        }) }}
+    </div>
+    <div class="mt-4">
+{# TRANSLATION NEEDED #}
+        {{ forms.range({
+            label: 'grimoire.grimoire.reminder_token'|trans,
+            name: 'reminder-size',
+            id: 'reminder-size',
+            output: 'reminder-size-output',
+            min: 0.5,
+            max: 2,
+            step: 0.1,
+            value: 1
+        }) }}
     </div>
 
     {% endblock %}
@@ -69,16 +93,14 @@
     {% import 'macros/forms.html.twig' as forms %}
     {% block body %}
     <ul id="reminder-list__list" class="button-list button-list--reminder"></ul>
-    <p class="switch mt-4">
-        <span class="switch__input">
-            {{ forms.toggle({
-                name: 'show',
-                id: 'show-all-reminders',
-                value: 'all-reminders'
-            }) }}
-        </span>
-        <label for="show-all-reminders" class="switch__label">{{ 'grimoire.reminder_list.show'|trans }}</label>
-    </p>
+    {{ forms.switch({
+        node: 'p',
+        classes: 'mt-4',
+        label: 'grimoire.reminder_list.show'|trans,
+        name: 'show',
+        id: 'show-all-reminders',
+        value: 'all-reminders'
+    }) }}
     {% endblock %}
 {% endembed %}
 
@@ -181,36 +203,27 @@
     <ul id="character-list__bluffs" class="button-list button-list--reminder character-list mb-4"></ul>
 
     <ul class="no-list">
-        <li class="switch">
-            <div class="switch__input">
-                {{ forms.toggle({
-                    name: 'show',
-                    id: 'show-existing',
-                    value: 'existing'
-                }) }}
-            </div>
-            <label for="show-existing" class="switch__label">{{ 'grimoire.bluff_list.show_existing'|trans }}</label>
-        </li>
-        <li class="switch">
-            <div class="switch__input">
-                {{ forms.toggle({
-                    name: 'show',
-                    id: 'show-travellers',
-                    value: 'traveller'
-                }) }}
-            </div>
-            <label for="show-travellers" class="switch__label">{{ 'grimoire.bluff_list.show_travellers'|trans }}</label>
-        </li>
-        <li class="switch">
-            <div class="switch__input">
-                {{ forms.toggle({
-                    name: 'show',
-                    id: 'show-evil',
-                    value: 'evil'
-                }) }}
-            </div>
-            <label for="show-evil" class="switch__label">{{ 'grimoire.bluff_list.show_evil'|trans }}</label>
-        </li>
+        {{ forms.switch({
+            node: 'li',
+            label: 'grimoire.bluff_list.show_existing'|trans,
+            name: 'show',
+            id: 'show-existing',
+            value: 'existing'
+        }) }}
+        {{ forms.switch({
+            node: 'li',
+            label: 'grimoire.bluff_list.show_travellers'|trans,
+            name: 'show',
+            id: 'show-travellers',
+            value: 'traveller'
+        }) }}
+        {{ forms.switch({
+            node: 'li',
+            label: 'grimoire.bluff_list.show_evil'|trans,
+            name: 'show',
+            id: 'show-evil',
+            value: 'evil'
+        }) }}
     </ul>
 
     {% endblock %}
@@ -242,18 +255,16 @@
     {% import 'macros/forms.html.twig' as forms %}
     {% block body %}
         <ul id="traveller-list__list" class="filter-list button-list button-list--reminder"></ul>
-        <p class="switch mt-4">
-            <span class="switch__input">
-                {{ forms.toggle({
-                    name: 'show',
-                    id: 'show-all-travellers',
-                    attributes: {
-                        'data-filter-list': '#traveller-list__list'
-                    }
-                }) }}
-            </span>
-            <label for="show-all-travellers" class="switch__label">{{ 'grimoire.traveller_list.show_all'|trans }}</label>
-        </p>
+        {{ forms.switch({
+            node: 'p',
+            classes: 'mt-4',
+            label: 'grimoire.traveller_list.show_all'|trans,
+            name: 'show',
+            id: 'show-all-travellers',
+            attributes: {
+                'data-filter-list': '#traveller-list__list'
+            }
+        }) }}
     {% endblock %}
 {% endembed %}
 

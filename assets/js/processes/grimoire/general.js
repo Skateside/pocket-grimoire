@@ -99,3 +99,15 @@ lookupOne("#show-night-order").addEventListener("change", ({ target }) => {
 });
 
 gameObserver.on("clear", () => pad.reset());
+
+// Character and Reminder token sizes.
+
+const html = document.documentElement;
+
+lookupOne("#token-size").addEventListener("input", ({ target }) => {
+    html.style.setProperty("--token-size", target.value);
+});
+
+lookupOne("#reminder-size").addEventListener("input", ({ target }) => {
+    html.style.setProperty("--reminder-size", target.value);
+});

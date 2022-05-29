@@ -112,12 +112,51 @@ lookupOne("#locale-form").addEventListener("submit", (e) => {
     window.location.href = lookupOne("#select-locale").value;
 });
 
+function setTrackWidth(input) {
+
+    const {
+        min,
+        max,
+        value
+    } = input;
+
+    input.style.setProperty(
+        "--size",
+        ((value - min) * 100) / (max - min)
+    );
+
+}
+
+const rangeObserver = new MutationObserver((entries) => {
+
+    entries.forEach(({ type, target }) => {
+
+        if (type == "attributes") {
+            setTrackWidth(target);
+        }
+
+    });
+
+});
+
 lookup("input[type=\"range\"][data-output]").forEach((input) => {
 
     const output = lookupOne(input.dataset.output);
 
-    if (output) {
-        input.addEventListener("input", () => output.value = input.value);
-    }
+    input.addEventListener("input", () => {
+
+        setTrackWidth(input);
+
+        if (output) {
+            output.value = input.value
+        }
+
+    });
+
+    setTrackWidth(input);
+    rangeObserver.observe(input, {
+        attributes: true,
+        attributeFilter: ["min", "max", "value"]
+    });
 
 });

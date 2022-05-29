@@ -6,15 +6,68 @@
     grid-template-areas:
         "label label"
         "range output";
-    margin-bottom: 1em;
 }
 
 .range__label {
     grid-area: label;
 }
 
+@mixin track {
+    width: 100%;
+    cursor: pointer;
+}
+
+@mixin thumb {
+    -webkit-appearance: none;
+    width: 1em;
+    height: 1em;
+    border-radius: 50%;
+    background-color: #f5f5f5;
+    box-shadow:
+        inset 0.1em 0.1em 0.2em rgb(255 255 255 / 30%),
+        inset -0.1em -0.1em 0.2em rgb(0 0 0 / 30%),
+        0.1em 0.1em 0.2em rgb(0 0 0 / 40%);
+}
+
 .range__input {
     grid-area: range;
+
+    -webkit-appearance: none;
+    background-color: transparent;
+    background-color: #333;
+    background-image: linear-gradient(#679fd0, #679fd0);
+    background-size: calc(var(--size, 50) * 1%) 100%;
+    background-repeat: no-repeat;
+    height: 0.5em;
+    margin-top: calc((1.4em / 2) - (0.5em / 2));
+    border-radius: 0.25em;
+    box-shadow:
+        inset 0.1em 0.1em 0.2em rgb(0 0 0 / 90%),
+        0.05em 0.05em 0.1em rgb(255 255 255 / 20%);
+
+    &::-webkit-slider-runnable-track {
+        @include track;
+    }
+    &::-webkit-slider-thumb {
+        @include thumb;
+    }
+
+    &::-moz-range-track {
+        @include track;
+    }
+    &::-moz-range-thumb {
+        @include thumb;
+    }
+
+    // Untested.
+    // &::-ms-fill-lower {
+    // }
+    // &::-ms-fill-upper {
+    // }
+    // &::-ms-thumb {
+    //     @include thumb;
+    // }
+
 }
 
 .range__output {

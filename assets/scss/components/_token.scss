@@ -13,10 +13,12 @@
 
     &[data-token="character"] {
         width: clamp(70px, 100vw / 6, 150px);
+        transform: scale(var(--token-size, 1));
     }
 
     &[data-token="reminder"] {
         width: clamp(55px, 100vw / 9, 125px);
+        transform: scale(var(--reminder-size, 1));
     }
 
     // &[aria-disabled="true"],
@@ -39,4 +41,8 @@
     top: calc(var(--top) * 1px);
     z-index: var(--z-index);
     touch-action: none;
+}
+
+.token--bluff[data-token] {
+    transform: none;
 }

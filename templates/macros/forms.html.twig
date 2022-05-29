@@ -14,6 +14,15 @@
 </span>
 {% endmacro %}
 
+{% macro switch(settings) %}
+<{{ settings.node|default('span') }} class="switch {{ settings.classes|default('') }}">
+    <span class="switch__input">
+        {{ _self.toggle(settings) }}
+    </span>
+    <label for="{{ settings.id }}" class="switch__label">{{ settings.label }}</label>
+</{{ settings.node|default('span') }}>
+{% endmacro %}
+
 {% macro file(settings) %}
 <span class="file-upload">
     <input type="file"
@@ -36,7 +45,7 @@
 {% endmacro %}
 
 {% macro range(settings) %}
-<div class="range">
+<div class="range {{ settings.classes|default('') }}">
     <label for="{{ settings.id }}" class="range__label">{{ settings.label }}</label>
     <input
         type="range"

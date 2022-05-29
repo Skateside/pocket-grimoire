@@ -21,15 +21,13 @@
         {% endfor %}
     </div>
     <p><small>{{ 'night_order.swipe_change'|trans }}</small></p>
-    <p class="switch">
-        <span class="switch__input">
-            {{ forms.toggle({
-                name: "show-all",
-                id: "show-all"
-            }) }}
-        </span>
-        <label for="show-all" class="switch__label">{{ 'night_order.show'|trans }}</label>
-    </p>
+    {{ forms.switch({
+        node: 'p',
+        label: 'night_order.show'|trans,
+        name: 'show-all',
+        id: 'show-all',
+        checked: true
+    }) }}
     {% endblock %}
 {% endembed %}
 

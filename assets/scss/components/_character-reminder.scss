@@ -49,6 +49,10 @@
         --shadow-rotation: -1;
         transform: rotate(180deg);
     }
+
+    &.is-dead {
+        filter: grayscale(1) brightness(1.5);
+    }
 }
 
 .character--top-1 { --top-leaf: url("../../img/token/top-1.png"); }
@@ -69,7 +73,6 @@
     font-weight: bold;
     width: 25%;
     aspect-ratio: 1 / 1;
-    // display: flex;
     display: var(--night-order-display, flex);
     justify-content: center;
     align-items: center;
