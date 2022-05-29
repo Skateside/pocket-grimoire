@@ -16,7 +16,7 @@ sheet:
     title: Fiche de personnages
     description: La fiche de personnages pour cette édition de Blood on the Clocktower
     jinx: Chips
-    each_night: "* Chaque nuit, sauf la première"
+    each_night: '* Chaque nuit, sauf la première'
     get_qr_code: Obtenir le QR code pour cette fiche
     get_sheet: Obtenir cette fiche
     credit: <a href="https://bloodontheclocktower.com/" target="_blank" rel="noopener noreferrer">Blood on the Clocktower</a> est une marque déposée de Steven Medway et <a href="https://www.thepandemoniuminstitute.com/" target="_blank" rel="noopener noreferrer">The Pandemonium Institute</a>
@@ -59,7 +59,7 @@ setup:
         custom_warning: Faire attention à utiliser des fichiers JSON provenant d'une source de confiance !
         upload: Télécharger un script personnalisé
         url: Entrer une URL
-        unsupported: "Note : Le Grimoire de Poche ne gère pas encore les scripts faits maison ou traduits"
+        unsupported: 'Note : Le Grimoire de Poche ne gère pas encore les scripts faits maison ou traduits'
         select: Choisir
 
     character_select:
@@ -67,21 +67,21 @@ setup:
         number_players: Nombre de joueurs
         toggle_abilities: Monter les capacités des personnages
         toggle_duplicates: Autoriser les doublons
-        highlight_random: Mettre en valeur aléatoirement
-        draw_characters: Dessiner Personnages
+        highlight_random: Choisir aléatoirement
+        draw_characters: Piocher Personnages
 
     character_choice:
         title: Sélectionne ton Personnage
         description: Touches l'un des jetons numérotés pour choisir un personnage. Ceux qui sont assombries ont déjà été choisis.
 
     character_decision:
-        title: Se souvenir de ton Personnage
+        title: Souviens-toi de ton Personnage
         return: Retour à la Sélection de Personnage
 
     qr_code:
         title: Fiche de personnage
         intro: Scanne ce QR code pour voir la fiche de personnage
-        include: "Inclure :"
+        include: 'Inclure :'
         travellers: Voyageurs
         fabled: Légendaires
 
@@ -103,7 +103,7 @@ setup:
         height_note: La hauteur du bloc dans le grimoire.
         clear_refresh_label: Raffraîchir après.
         clear_refresh_note: Raffraîchir rechargera les donnés pour tous les éléments qui ont été effacés.
-        warning: "Attention : les jetons placés sur le grimoire seront oubliés"
+        warning: '<strong>Attention :</strong> les jetons placés sur le grimoire seront oubliés'
         clear_cache: Effacer le Cache
 
 grimoire:
