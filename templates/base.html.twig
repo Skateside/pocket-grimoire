@@ -17,7 +17,6 @@ also allowing developers to create a unique title if they need to.
     {%- include 'includes/meta/favicon.html.twig' -%}
 {%- endblock %}
 
-<!-- <link rel="icon" type="image/svg+xml" href="./assets/img/logo.svg"> -->
 {% block styles %}{% endblock %}
 
 </head>
@@ -29,17 +28,6 @@ also allowing developers to create a unique title if they need to.
 {% block javascript %}{% endblock %}
 {# This needs to be written in ES5 so that the HTML minifier can minify it. #}
 <script>
-// TODO: Get PWA stuff working to help with offline mode.
-// (function (nav) {
-//
-//     if (!nav || !("serviceWorker" in nav)) {
-//         return;
-//     }
-//
-//     nav.serviceWorker.register("./cache.js");
-//
-// }(window.navigator));
-
 (function (isDialogSupported, doc, link, script) {
 
     if (isDialogSupported) {
