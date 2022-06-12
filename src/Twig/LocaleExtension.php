@@ -20,6 +20,7 @@ class LocaleExtension extends AbstractExtension
         return [
             ['en_GB', 'English'],
             ['fr_FR', 'Français'],
+            ['pt_BR', 'Português brasileiro'],
             ['ru_RU', 'Русский'],
             ['zh_CN', '简体中文'],
             ['zh_TW', '繁體中文']
