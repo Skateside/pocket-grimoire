@@ -1,0 +1,357 @@
+[
+    {
+        "target": "chambermaid",
+        "trick": "mathematician",
+        "reason": "Chambermaid får reda på om Mathematician vaknar inatt eller inte, trots att Chambermaid vaknar först."
+    },
+    {
+        "target": "butler",
+        "trick": "cannibal",
+        "reason": "Om Kanibalen får Butlerns förmåga, får Kanibalen reda på det."
+    },
+    {
+        "target": "lunatic",
+        "trick": "mathematician",
+        "reason": "The Mathematician learns if the Lunatic attacks a different player(s) than the real Demon attacked."
+    },
+    {
+        "target": "pithag",
+        "trick": "heretic",
+        "reason": "A Pit-Hag can not create a Heretic."
+    },
+    {
+        "target": "pithag",
+        "trick": "damsel",
+        "reason": "If a Pit-Hag creates a Damsel, the Storyteller chooses which player it is."
+    },
+    {
+        "target": "pithag",
+        "trick": "politician",
+        "reason": "A Pit-hag can not create an evil Politician."
+    },
+    {
+        "target": "cerenovus",
+        "trick": "goblin",
+        "reason": "The Cerenovus may choose to make a player mad that they are the Goblin."
+    },
+    {
+        "target": "leviathan",
+        "trick": "soldier",
+        "reason": "If Leviathan nominates and executes the Soldier, the Soldier does not die."
+    },
+    {
+        "target": "leviathan",
+        "trick": "monk",
+        "reason": "If Leviathan nominates and executes the player the Monk chose, that player does not die."
+    },
+    {
+        "target": "leviathan",
+        "trick": "innkeeper",
+        "reason": "If Leviathan nominates and executes a player the Innkeeper chose, that player does not die."
+    },
+    {
+        "target": "leviathan",
+        "trick": "ravenkeeper",
+        "reason": "If Leviathan is in play & the Ravenkeeper dies by execution, they wake that night to use their ability."
+    },
+    {
+        "target": "leviathan",
+        "trick": "sage",
+        "reason": "If Leviathan is in play & the Sage dies by execution, they wake that night to use their ability."
+    },
+    {
+        "target": "leviathan",
+        "trick": "farmer",
+        "reason": "If Leviathan is in play & a Farmer dies by execution, a good player becomes a Farmer that night."
+    },
+    {
+        "target": "leviathan",
+        "trick": "mayor",
+        "reason": "If Leviathan is in play & no execution occurs on day 5, good wins."
+    },
+    {
+        "target": "lilmonsta",
+        "trick": "poppygrower",
+        "reason": "If the Poppy Grower is in play, Minions don't wake together. They are woken one by one, until one of them chooses to take the Lil' Monsta token."
+    },
+    {
+        "target": "lilmonsta",
+        "trick": "magician",
+        "reason": "Only 1 jinxed character can be in play."
+    },
+    {
+        "target": "lilmonsta",
+        "trick": "scarletwoman",
+        "reason": "If there are 5 or more players alive and the player holding the Lil' Monsta token dies, the Scarlet Woman is given the Lil' Monsta token tonight."
+    },
+    {
+        "target": "lycanthrope",
+        "trick": "gambler",
+        "reason": "If the Lycanthrope is alive and the Gambler kills themself at night, no other players can die tonight."
+    },
+    {
+        "target": "legion",
+        "trick": "engineer",
+        "reason": "Legion and the Engineer can not both be in play at the start of the game. If the Engineer creates Legion, most players (including all evil players) become evil Legion."
+    },
+    {
+        "target": "legion",
+        "trick": "preacher",
+        "reason": "Only 1 jinxed character can be in play."
+    },
+    {
+        "target": "fanggu",
+        "trick": "scarletwoman",
+        "reason": "If the Fang Gu chooses an Outsider and dies, the Scarlet Woman does not become the Fang Gu."
+    },
+    {
+        "target": "spy",
+        "trick": "alchemist",
+        "reason": "The Alchemist can not have the Spy ability."
+    },
+    {
+        "target": "spy",
+        "trick": "magician",
+        "reason": "When the Spy sees the Grimoire, the Demon and Magician's character tokens are removed."
+    },
+    {
+        "target": "spy",
+        "trick": "poppygrower",
+        "reason": "If the Poppy Grower is in play, the Spy does not see the Grimoire until the Poppy Grower dies."
+    },
+    {
+        "target": "spy",
+        "trick": "damsel",
+        "reason": "Only 1 jinxed character can be in play."
+    },
+    {
+        "target": "spy",
+        "trick": "heretic",
+        "reason": "Only 1 jinxed character can be in play."
+    },
+    {
+        "target": "widow",
+        "trick": "alchemist",
+        "reason": "The Alchemist can not have the Widow ability."
+    },
+    {
+        "target": "widow",
+        "trick": "magician",
+        "reason": "When the Widow sees the Grimoire, the Demon and Magician's character tokens are removed."
+    },
+    {
+        "target": "widow",
+        "trick": "poppygrower",
+        "reason": "If the Poppy Grower is in play, the Widow does not see the Grimoire until the Poppy Grower dies."
+    },
+    {
+        "target": "widow",
+        "trick": "damsel",
+        "reason": "Only 1 jinxed character can be in play."
+    },
+    {
+        "target": "widow",
+        "trick": "heretic",
+        "reason": "Only 1 jinxed character can be in play."
+    },
+    {
+        "target": "godfather",
+        "trick": "heretic",
+        "reason": "Only 1 jinxed character can be in play."
+    },
+    {
+        "target": "baron",
+        "trick": "heretic",
+        "reason": "The Baron might only add 1 Outsider, not 2."
+    },
+    {
+        "target": "marionette",
+        "trick": "lilmonsta",
+        "reason": "The Marionette neighbors a Minion, not the Demon. The Marionette is not woken to choose who takes the Lil' Monsta token, and does not learn they are the Marionette if they have the Lil' Monsta token."
+    },
+    {
+        "target": "marionette",
+        "trick": "poppygrower",
+        "reason": "When the Poppy Grower dies, the Demon learns the Marionette but the Marionette learns nothing."
+    },
+    {
+        "target": "marionette",
+        "trick": "snitch",
+        "reason": "The Marionette does not learn 3 not in-play characters. The Demon learns an extra 3 instead."
+    },
+    {
+        "target": "marionette",
+        "trick": "balloonist",
+        "reason": "If the Marionette thinks that they are the Balloonist, +1 Outsider was added."
+    },
+    {
+        "target": "marionette",
+        "trick": "damsel",
+        "reason": "The Marionette does not learn that a Damsel is in play."
+    },
+    {
+        "target": "marionette",
+        "trick": "huntsman",
+        "reason": "If the Marionette thinks that they are the Huntsman, the Damsel was added."
+    },
+    {
+        "target": "lleech",
+        "trick": "mastermind",
+        "reason": "If the Mastermind is alive and the Lleech's host dies by execution, the Lleech lives but loses their ability."
+    },
+    {
+        "target": "lleech",
+        "trick": "slayer",
+        "reason": "If the Slayer slays the Lleech's host, the host dies."
+    },
+    {
+        "target": "lleech",
+        "trick": "heretic",
+        "reason": "If the Lleech has poisoned the Heretic then the Lleech dies, the Heretic remains poisoned."
+    },
+    {
+        "target": "riot",
+        "trick": "engineer",
+        "reason": "Riot and the Engineer can not both be in play at the start of the game. If the Engineer creates Riot, the evil players become Riot."
+    },
+    {
+        "target": "riot",
+        "trick": "golem",
+        "reason": "If The Golem nominates Riot, the Riot player does not die."
+    },
+    {
+        "target": "riot",
+        "trick": "snitch",
+        "reason": "If the Snitch is in play, each Riot player gets an extra 3 bluffs."
+    },
+    {
+        "target": "riot",
+        "trick": "saint",
+        "reason": "If a good player nominates and kills the Saint, the Saint's team loses."
+    },
+    {
+        "target": "riot",
+        "trick": "butler",
+        "reason": "The Butler can not nominate their master."
+    },
+    {
+        "target": "riot",
+        "trick": "pithag",
+        "reason": "If the Pit-Hag creates Riot, all evil players become Riot. If the Pit-Hag creates Riot after day 3, the game continues for one more day."
+    },
+    {
+        "target": "riot",
+        "trick": "mayor",
+        "reason": "If the 3rd day begins with just three players alive, the players may choose (as a group) not to nominate at all. If so (and a Mayor is alive) then the Mayor's team wins."
+    },
+    {
+        "target": "riot",
+        "trick": "monk",
+        "reason": "If a Riot player nominates and kills the Monk-protected-player, the Monk-protected-player does not die."
+    },
+    {
+        "target": "riot",
+        "trick": "farmer",
+        "reason": "If a Riot player nominates and kills a Farmer, the Farmer uses their ability tonight."
+    },
+    {
+        "target": "riot",
+        "trick": "innkeeper",
+        "reason": "If a Riot player nominates an Innkeeper-protected-player, the Innkeeper-protected-player does not die."
+    },
+    {
+        "target": "riot",
+        "trick": "sage",
+        "reason": "If a Riot player nominates and kills a Sage, the Sage uses their ability tonight."
+    },
+    {
+        "target": "riot",
+        "trick": "ravenkeeper",
+        "reason": "If a Riot player nominates and kills the Ravenkeeper, the Ravenkeeper uses their ability tonight."
+    },
+    {
+        "target": "riot",
+        "trick": "soldier",
+        "reason": "If a Riot player nominates the Soldier, the Soldier does not die."
+    },
+    {
+        "target": "riot",
+        "trick": "grandmother",
+        "reason": "If a Riot player nominates and kills the Grandchild, the Grandmother dies too."
+    },
+    {
+        "target": "riot",
+        "trick": "king",
+        "reason": "If a Riot player nominates and kills the King and the Choirboy is alive, the Choirboy uses their ability tonight."
+    },
+    {
+        "target": "riot",
+        "trick": "exorcist",
+        "reason": "Only 1 jinxed character can be in play."
+    },
+    {
+        "target": "riot",
+        "trick": "minstrel",
+        "reason": "Only 1 jinxed character can be in play."
+    },
+    {
+        "target": "riot",
+        "trick": "flowergirl",
+        "reason": "Only 1 jinxed character can be in play."
+    },
+    {
+        "target": "riot",
+        "trick": "undertaker",
+        "reason": "Players that die by nomination register as being executed to the Undertaker."
+    },
+    {
+        "target": "riot",
+        "trick": "cannibal",
+        "reason": "Players that die by nomination register as being executed to the Cannibal."
+    },
+    {
+        "target": "riot",
+        "trick": "pacifist",
+        "reason": "Players that die by nomination register as being executed to the Pacifist."
+    },
+    {
+        "target": "riot",
+        "trick": "devilsadvocate",
+        "reason": "Players that die by nomination register as being executed to the Devil's Advocate."
+    },
+    {
+        "target": "riot",
+        "trick": "investigator",
+        "reason": "Riot registers as a Minion to the Investigator."
+    },
+    {
+        "target": "riot",
+        "trick": "clockmaker",
+        "reason": "Riot registers as a Minion to the Clockmaker."
+    },
+    {
+        "target": "riot",
+        "trick": "towncrier",
+        "reason": "Riot registers as a Minion to the Town Crier."
+    },
+    {
+        "target": "riot",
+        "trick": "damsel",
+        "reason": "Riot registers as a Minion to the Damsel."
+    },
+    {
+        "target": "riot",
+        "trick": "preacher",
+        "reason": "Riot registers as a Minion to the Preacher."
+    },
+    {
+        "target": "alhadikhia",
+        "trick": "scarletwoman",
+        "reason": "If there are two living Al-Hadikhias, the Scarlet Woman Al-Hadikhia becomes the Scarlet Woman again."
+    },
+    {
+        "target": "alhadikhia",
+        "trick": "mastermind",
+        "reason": "Only 1 jinxed character can be in play. Evil players start knowing which player and character it is."
+    }
+]

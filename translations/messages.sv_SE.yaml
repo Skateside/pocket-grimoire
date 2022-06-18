@@ -1,0 +1,207 @@
+title: Pocket Grimoire
+
+forms:
+    file:
+        placeholder: Välj fil
+        button: Bläddra
+
+dialog:
+    close: Stäng
+
+index:
+    title: Spel
+    description: En virituell grimoire för Blood on the Clocktower
+
+sheet:
+    title: Karaktärslista
+    description: Karaktärslistan för den här upplagan av Blood on the Clocktower
+    jinx: Förhäxningar
+    each_night: '* Varje natt förutom den första natten.'
+    get_qr_code: Få QR-koden för den här karaktärslistan
+    get_sheet: Get this sheet
+    credit: <a href="https://bloodontheclocktower.com/" target="_blank" rel="noopener noreferrer">Blood on the Clocktower</a> är ett varumärke av Steven Medway och <a href="https://www.thepandemoniuminstitute.com/" target="_blank" rel="noopener noreferrer">The Pandemonium Institute</a>
+
+groups:
+    townsfolk: Bybo
+    outsider: Outsiders
+    minion: Minions
+    demon: Demoner
+    traveller: Travellers
+    fabled: Fabel
+
+messages:
+    good_team: Goda laget
+    evil_team: Onda laget
+    empty_character_ability: Det här är en tom karaktär.
+    version_change_message: Den här appen har uppdaterat sin version. Eftersom din data inte behöver vara korrekt, rekommenderar vi att du rensar allt genom "Rensa cache" rutan. Klicka på "OK" för att öppna rutan eller "Avbryt" för att stänga ner det här meddelandet.
+    invalid_script: Scriptformatet kändes inte igen.
+    no_characters: Scriptet innehåller inte några igenkända karaktärer.
+
+setup:
+
+    title: Uppsättning
+
+    buttons:
+        select_edition: Välj upplaga
+        select_characters: Välj karaktärer
+        qr_code_button: Karaktärslista
+        clear_cache_button: Rensa cache
+        language: Språk
+        set_language: Välj språk
+
+    editions:
+        title: Välj upplaga
+        trouble_brewing: Trouble Brewing
+        bad_moon_rising: Bad Moon Rising
+        sects_and_violets: Sects and Violets
+        custom_script: Custom Script
+        custom_note: Ladda antingen upp ett custom script eller skriv in en URL för ditt custom script.
+        custom_warning: Ladda bara custom JSON-filer från källor du litar på!
+        upload: Ladda upp ett custom script
+        url: Fyll i en URL
+        unsupported: Vänligen tänk på att Pocket Grimoire för tillfället stödjer hemmagjorda eller lokaliserade scripts.
+        select: Välj
+
+    character_select:
+        title: Välj karaktärer
+        number_players: Antal spelare
+        toggle_abilities: Visa karaktärers förmågor
+        toggle_duplicates: Tillåt dubbla karaktärer
+        highlight_random: Markera slumpmässig
+        draw_characters: Dra karaktärer
+
+    character_choice:
+        title: Välj din karaktär
+        description: Tryck på valfri numrerad markör för att välja din karaktär. Mörkare markörer har redan blivit valda.
+
+    character_decision:
+        title: Kom ihåg din karaktär
+        return: Gå tillbaka till karaktärsval
+
+    qr_code:
+        title: Karaktärlista
+        intro: Scanna QR-koden för att se karaktärslistanScan this QR code to see the character sheet
+        include: 'Inkludera:'
+        travellers: Travellers
+        fabled: Fabel
+
+    clear_cache:
+        title: Rensa Cache
+        clear_all: Rensa allt
+        clear_description: Stänga av detta kommer tillåta indivudella delar av cache att rensas.
+        lookup_label: Rensa data
+        lookup_note: Datan för jinxes, laguppställning och karaktärsinformation.
+        characters_label: Rensa upplaga
+        characters_note: Upplagan eller scriptet som är valt och laddat.
+        tokens_label: Rensa markörer
+        tokens_note: Positionerna av markörerna i grimoaren.
+        inputs_label: Rensa inputs
+        inputs_note: Användarinställningar för denna hemsida.
+        details_label: Rensa öppen/stängd
+        details_note: Vilka sektioner är öppna och stängda.
+        height_label: Rensa pad-höjd
+        height_note: Höjden av paddan i grimoaren.
+        clear_refresh_label: Uppdatera efteråt
+        clear_refresh_note: Uppdatera kommer ladda in ny data för allt som har blivit rensat.
+        warning: '<strong>Warning:</strong> markörer som har blivit placerade i grimoaren kommer bli glömda.'
+        clear_cache: Rensa Cache
+
+grimoire:
+
+    title: Grimoire
+
+    grimoire:
+        bluffs: Demon-bluffar
+        add_token: Lägg till markör
+        add_reminder: Lägg till påminnelse
+        add_traveller: Lägg till Traveller
+        show_tokens: Visa markörer
+        reset_height: Återställ pad-höjd
+        clear_grimoire: Rensa grimoire
+        clear_grimoire_warning: Är du säker på att du vill rensa alla markörer?
+        show_night_order: Visa nattordning
+        character_size: Karaktärsmarkörstorlek
+        reminder_size: Påminnelsemarkörsstorlek
+
+    character_list:
+        title: Välj karaktär
+
+    reminder_list:
+        title: Välj påminnelse
+        show: Visa alla påminnelser
+
+    character_show:
+        title: Markör
+        show: Visa
+        shroud: Dödsmarkör
+        rotate: Rotera
+        reminder: Påminnelse
+        remove: Ta bort markör
+        recent_reminders: 'Senast tillagda påminnelser:'
+
+    reminder_show:
+        title: Påminnelse
+        remove: Ta bort
+
+    bluff_show:
+        title: Markör
+        empty: Tom
+        show: Visa
+        change: Ändra
+
+    bluff_list:
+        title: Välj bluff
+        show_existing: Visa existerande karaktärer
+        show_travellers: Visa Travellers
+        show_evil: Visa onda karaktärer
+
+    token_list:
+        title: Karaktärer
+
+    traveller_list:
+        title: Travellers
+        show_all: Visa alla travellers
+
+    token:
+        title: Markör
+
+jinxes:
+    title: Jinxes
+    target: Mål
+    trick: Trick
+    reason: Anledning
+    show: Visa Jinxes som inte är i spel
+
+night_order:
+    title: Nattordning
+    first_night: Första natten
+    other_night: Andra nätter
+    swipe_change: Swipea för att ändra natt.
+    show: Visa karaktärer som inte är i spel
+
+info_tokens:
+    title: Info Markörer
+    info_tokens:
+        isdemon: Det här är <strong>Demonen</strong>
+        isminion: De här är dina <strong>Minions</strong>
+        inplay: De här karaktärerna är <strong>i spel</strong>
+        notinplay: De här karaktärerna är inte <strong>I spel</strong>
+        nominatetoday: <strong>Nominerade</strong> du idag?
+        abilitytargetted: Den här <strong>förmågan</strong> användes på dig
+        playeris: Den här <strong>spelaren</strong> är
+        haveability: Du har den här <strong>förmågan</strong>
+        votetoday: <strong>Röstade</strong> du idag?
+        choice: Ditt <strong>val</strong>?
+        abilitynow: Använd din <strong>förmåga</strong> nu?
+        youare: <strong>Du</strong> är
+
+acknowledgements:
+    title: Erkännanden
+    acknowledgements:
+        - <a href="https://bloodontheclocktower.com/" target="_blank" rel="noopener noreferrer">Blood on the Clocktower</a> är ett varumärke av Steven Medway och <a href="https://www.thepandemoniuminstitute.com/" target="_blank" rel="noopener noreferrer">The Pandemonium Institute</a>.
+        - Nattpåminnelser och annan text är skriven av <a href="http://bignose.whitetree.org/projects/botc/diy/" target="_blank" rel="noopener noreferrer">Ben Finney</a>.
+        - Iconer är tagna från <a href="https://fontawesome.com/v5.15/icons" target="_blank" rel="noopener noreferrer">Font Awesome</a>.
+        - Många bilder och data är tagen från <a href="https://www.clocktower.online" target="_blank" rel="noopener noreferrer">Clocktower.online</a> och <a href="https://bloodontheclocktower.com/" target="_blank" rel="noopener noreferrer">Blood on the Clocktower website</a>.
+        - Det här är en inofficiel virituell grimoire för Blood on the Clocktower. Det här projektet är ratis och koden kan hittas på <a href="https://github.com/Skateside/pocket-grimoire" target="_blank" rel="noopener noreferrer">GitHub</a>. Det här projektet är inte i sammarbete med the Pandemonium Institute. Om du gillar att spela Blood on the Clocktower, <a href="https://bloodontheclocktower.com/pages/where-to-buy" target="_blank" rel="noopener noreferrer">vänligen överväg att köpa din egen grimoire</a> - utöver att vara mer flexibel än det här digitala verktyget, stödjer det även skaparna.
+        - Märkt ett bug eller har ett förbättringsförslag? Låt mig veta i <a href="https://discord.com/channels/569683781800296501/708509594758152203" target="_blank" rel="noopener noreferrer">toolmakers channel on the unofficial discord server</a> (mitt namn där är "Skateside") eller <a href="https://github.com/Skateside/pocket-grimoire/issues" target="_blank" rel="noopener noreferrer">lyft ett problem i GitHub</a>.
+        - <small>Version <span id="version"></span></small>
