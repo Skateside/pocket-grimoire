@@ -114,12 +114,5 @@
 {% endblock %}
 
 {% block javascript %}
-{% set version = hash(4) %}
-<script>
-// var URLS = {
-//     characters: "{{ path('data_characters', { version: version })|e('js') }}",
-//     jinxes: "{{ path('data_jinx', { version: version })|e('js') }}"
-// };
-</script>
 {{ encore_entry_script_tags('js/sheet') }}
 {% endblock %}
