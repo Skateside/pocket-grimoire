@@ -38,28 +38,33 @@
 
         <ul class="no-list mb-4">
             <li>
-                <label for="edition-tb">
-                    <input type="radio" name="edition" value="tb" id="edition-tb" required>
-                    {{ 'setup.editions.trouble_brewing'|trans }}
-                </label>
+                {{ forms.radio({
+                    name: 'edition',
+                    value: 'tb',
+                    label: 'setup.editions.trouble_brewing'|trans,
+                    required: true
+                }) }}
             </li>
             <li>
-                <label for="edition-bmr">
-                    <input type="radio" name="edition" value="bmr" id="edition-bmr">
-                    {{ 'setup.editions.bad_moon_rising'|trans }}
-                </label>
+                {{ forms.radio({
+                    name: 'edition',
+                    value: 'bmr',
+                    label: 'setup.editions.bad_moon_rising'|trans
+                }) }}
             </li>
             <li>
-                <label for="edition-snv">
-                    <input type="radio" name="edition" value="snv" id="edition-snv">
-                    {{ 'setup.editions.sects_and_violets'|trans }}
-                </label>
+                {{ forms.radio({
+                    name: 'edition',
+                    value: 'snv',
+                    label: 'setup.editions.sects_and_violets'|trans
+                }) }}
             </li>
             <li>
-                <label for="edition-custom">
-                    <input type="radio" name="edition" value="custom" id="edition-custom">
-                    {{ 'setup.editions.custom_script'|trans }}
-                </label>
+                {{ forms.radio({
+                    name: 'edition',
+                    value: 'custom',
+                    label: 'setup.editions.custom_script'|trans
+                }) }}
             </li>
         </ul>
 

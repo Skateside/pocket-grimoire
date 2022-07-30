@@ -39,7 +39,7 @@
         aria-hidden="true"
         data-placeholder="{{ settings.placeholder|default( 'forms.file.placeholder'|trans ) }}"
         data-value="{{ settings.value|default(settings.placeholder|default( 'forms.file.button'|trans )) }}"
-        data-button="{{ settings.button|default('Browse') }}"
+        data-button="{{ settings.button|default( 'forms.file.button'|trans ) }}"
     ></span>
 </span>
 {% endmacro %}
@@ -62,4 +62,22 @@
         <output id="{{ settings.output }}" class="range__output">{% if settings.value|default(false) %}{{ settings.value }}{% endif %}</output>
     {% endif %}
 </div>
+{% endmacro %}
+
+{% macro radio(settings) %}
+<label for="{{ settings.id|default(settings.name ~ '-' ~ settings.value) }}" class="radio">
+    <span class="radio__wrapper">
+        <input
+            type="radio"
+            name="{{ settings.name }}"
+            value="{{ settings.value }}"
+            id="{{ settings.id|default(settings.name ~ '-' ~ settings.value) }}"
+            class="radio__input"
+            {% if settings.required|default(false) %}required{% endif %}
+            {% if settings.checked|default(false) %}checked{% endif %}
+        >
+        <span class="radio__render"></span>
+    </span>
+    <span class="radio__label">{{ settings.label }}</span>
+</label>
 {% endmacro %}
