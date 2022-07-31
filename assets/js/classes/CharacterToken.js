@@ -9,6 +9,7 @@ import {
 } from "../utils/elements.js";
 
 const emptyProperty = Symbol("empty");
+const customProperty = Symbol("custom");
 
 /**
  * A version of {@link Token} that handles character information.
@@ -22,6 +23,15 @@ export default class CharacterToken extends Token {
      */
     static get empty() {
         return emptyProperty;
+    }
+
+    /**
+     * A property that we use to work out if this token is a custom character.
+     * @type {Symbol}
+     * @constant
+     */
+    static get custom() {
+        return customProperty;
     }
 
     /**
@@ -364,6 +374,16 @@ export default class CharacterToken extends Token {
     }
 
     /**
+     * Checks to see if this is a custom character token.
+     *
+     * @return {Boolean}
+     *         true if this is a custom character token, false otherwise.
+     */
+    isCustom() {
+        return Boolean(this.data[customProperty]);
+    }
+
+    /**
      * Draws the token that can be shown on the grimoire.
      *
      * @return {DocumentFragment}
@@ -479,12 +499,6 @@ export default class CharacterToken extends Token {
 
                     element.value = content;
                     element.closest("label").htmlFor = identify(element);
-
-                    // const countInput = element
-                    //     .closest(".js--character-select")
-                    //     .querySelector(".js--character-select--count");
-                    // countInput.name += content;
-                    // countInput.dataset.for = content;
 
                 }
             ],

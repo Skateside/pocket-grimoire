@@ -109,4 +109,15 @@ export default class Token {
 
     }
 
+    /**
+     * Returns a clone of {@link Token#data}, although any Symbol that was added
+     * will be missing.
+     *
+     * @return {Object}
+     *         Cloned data.
+     */
+    getAllData() {
+        return JSON.parse(JSON.stringify(this.data));
+    }
+
 }

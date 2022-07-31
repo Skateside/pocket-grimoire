@@ -198,6 +198,25 @@ export default class TokenStore {
     }
 
     /**
+     * Creates a {@link CharacterToken} for a custom character by passing the
+     * data to {@link TokenStore#createCharacter} but with a flag denoting the
+     * fact that it's custom.
+     *
+     * @param  {Object} data
+     *         Character data.
+     * @return {CharacterToken}
+     *         CharacterToken instance for the data.
+     */
+    createCustomCharacter(data) {
+
+        return this.createCharacter({
+            [CharacterToken.custom]: true,
+            ...data
+        });
+
+    }
+
+    /**
      * Creates a {@link ReminderToken} instance for the given data and stores
      * it in {@link TokenStore#reminders} before returning it.
      *

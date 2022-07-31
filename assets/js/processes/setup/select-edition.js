@@ -8,7 +8,18 @@ import {
     getLabelText,
     announceInput
 } from "../../utils/elements.js";
+import {
+    readUTF8
+} from "../../utils/strings.js";
 
+/**
+ * Checks to see if the given data looks like a script.
+ *
+ * @param  {Array.<Object>} json
+ *         Data to check.
+ * @return {Boolean}
+ *         true if the data looks like a script, false if it doesn't.
+ */
 function isScriptJson(json) {
 
     return (
@@ -22,6 +33,14 @@ function isScriptJson(json) {
 
 }
 
+/**
+ * Announces that a script has been added to the grimoire.
+ *
+ * @param {String} name
+ *        Name of the script. This may be an empty string.
+ * @param {Array.<Object>} characters
+ *        Characters in the script.
+ */
 function announceScript(name, characters) {
 
     Observer.create("game").trigger("characters-selected", {
@@ -32,6 +51,14 @@ function announceScript(name, characters) {
 
 }
 
+/**
+ * Shows the given error message on the given input.
+ *
+ * @param {Element} input
+ *        Element that should show an error.
+ * @param {String} error
+ *        Error message to show.
+ */
 function showInputError(input, error) {
 
     input.setCustomValidity(error);
@@ -39,6 +66,18 @@ function showInputError(input, error) {
 
 }
 
+/**
+ * Processes the JSON to set up the game.
+ *
+ * @param {Object} json
+ *        JSON to process.
+ * @param {Array.<Object>} json.json
+ *        Script to process.
+ * @param {Element} json.input
+ *        File input that uploads scripts.
+ * @param {TokenStore} json.store
+ *        Store for any data.
+ */
 function processJSON({
     json,
     input,
@@ -66,9 +105,10 @@ function processJSON({
     // Examples: script = lil_monsta, data = lilmonsta
     // Examples: script = al-hadikhia, data = alhadikhia
     // The .replace() here is designed to convert their IDs to ours.
-    const characters = json
-        .map(({ id }) => store.getCharacter(id.replace(/[-_]/g, "")))
-        .filter(Boolean);
+    const characters = json.map((item) => (
+        store.getCharacter(item.id.replace(/[-_]/g, ""))
+        || store.createCustomCharacter(item)
+    ));
 
     if (!characters.length) {
 
@@ -141,7 +181,7 @@ form.addEventListener("submit", (e) => {
                 const reader = new FileReader();
 
                 reader.addEventListener("load", ({ target }) => processJSON({
-                    json: JSON.parse(target.result),
+                    json: JSON.parse(readUTF8(target.result)),
                     input: fileInput,
                     store: tokenStore
                 }));

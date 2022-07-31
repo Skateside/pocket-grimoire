@@ -27,7 +27,11 @@ gameObserver.on("characters-selected", ({ detail }) => {
 
     store.setCharacters(
         detail.name,
-        detail.characters.map((character) => character.getId())
+        detail.characters.map((character) => (
+            character.isCustom()
+            ? character.getAllData()
+            : character.getId()
+        ))
     );
     store.removeStaleInputs();
 
@@ -145,7 +149,11 @@ TokenStore.ready((tokenStore) => {
         gameObserver.trigger("characters-selected", {
             name: info.name,
             characters: info.characters
-                .map((id) => tokenStore.getCharacter(id))
+                .map((item) => (
+                    typeof item === "string"
+                    ? tokenStore.getCharacter(id)
+                    : tokenStore.createCustomCharacter(item)
+                ))
                 .filter(Boolean)
         });
 
