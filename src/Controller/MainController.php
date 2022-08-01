@@ -54,13 +54,42 @@ class MainController extends AbstractController
     public function sheetAction(Request $request): Response
     {
 
-        $ids = explode(',', $request->query->get('characters'));
+        // $ids = explode(',', $request->query->get('characters'));
         $groups = [];
         $jinxes = [];
 
-        foreach ($ids as $id) {
+        if ($characters = $request->query->get('characters')) {
 
-            $character = $this->roleRepo->findOneBy(['identifier' => $id]);
+            $this->discoverCharacters(
+                array_map(function ($id) {
+                    return $this->roleRepo->findOneBy(['identifier' => $id]);
+                }, explode(',', $characters)),
+                $groups,
+                $jinxes
+            );
+
+        } else if ($game = $request->query->get('game')) {
+
+            // Get information from the HomebrewRecord instances.
+
+        }
+
+        return $this->render('pages/sheet.html.twig', [
+            'name' => $request->query->get('name'),
+            'groups' => $groups,
+            'jinxes' => $jinxes
+        ]);
+
+    }
+
+    private function discoverCharacters(
+        array $characters,
+        array &$groups,
+        array &$jinxes
+    ) {
+
+        foreach ($characters as $character) {
+
             $team = $character->getTeam();
             $teamId = $team->getIdentifier();
 
@@ -90,12 +119,6 @@ class MainController extends AbstractController
             }
 
         }
-
-        return $this->render('pages/sheet.html.twig', [
-            'name' => $request->query->get('name'),
-            'groups' => $groups,
-            'jinxes' => $jinxes
-        ]);
 
     }
 
