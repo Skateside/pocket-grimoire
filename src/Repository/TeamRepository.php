@@ -20,4 +20,23 @@ class TeamRepository extends ServiceEntityRepository
         parent::__construct($registry, Team::class);
     }
 
+    public function getTeamIds($includeAll = false)
+    {
+
+        $ids = array_map(function ($team) {
+            return $team->getIdentifier();
+        }, $this->findAll());
+
+        if (!$includeAll) {
+
+            $ids = array_filter($ids, function ($id) {
+                return !is_array($id, ['traveller', 'fabled']);
+            });
+
+        }
+
+        return $ids;
+
+    }
+
 }
