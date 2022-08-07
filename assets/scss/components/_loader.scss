@@ -1,0 +1,54 @@
+// https://css-tricks.com/single-element-loaders-the-bars/
+
+@keyframes loader {
+
+    0% {
+        background-size:
+            20% 100%,
+            20% 100%,
+            20% 100%;
+    }
+
+    33% {
+        background-size:
+            20% 10%,
+            20% 100%,
+            20% 100%;
+    }
+
+    50% {
+        background-size:
+            20% 100%,
+            20% 10%,
+            20% 100%;
+    }
+
+    66% {
+        background-size:
+            20% 100%,
+            20% 100%,
+            20% 10%;
+    }
+
+    100% {
+        background-size:
+            20% 100%,
+            20% 100%,
+            20% 100%;
+    }
+
+}
+
+.loader {
+    --c: no-repeat linear-gradient(currentColor 0 0);
+    width: 1em;
+    aspect-ratio: 1;
+    background:
+        var(--c) 0% 50%,
+        var(--c) 50% 50%,
+        var(--c) 100% 50%;
+    background-size: 20% 100%;
+    animation: loader 1s infinite linear;
+    display: inline-block;
+    vertical-align: middle;
+}

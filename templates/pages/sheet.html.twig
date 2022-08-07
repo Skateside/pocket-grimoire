@@ -19,7 +19,7 @@
     {% set team = data.team %}
     {% set teamId = team.identifier %}
     {% embed 'includes/details.html.twig' with {
-        open: teamId != 'traveller',
+        open: teamId not in ['traveller', 'fabled'],
         id: 'wrapper-' ~ teamId,
         class: 'edition' ~ (data.characters|length ? '' : ' is-empty')
     } %}
@@ -36,7 +36,7 @@
                     </div>
                     <div class="edition__ability">{{ character.ability }}</div>
                     <div class="edition__jinxes">
-                        {% for jinx in character.jinxes %}
+                        {% for jinx in character.jinxes|default([]) %}
                             {% if jinx.active %}
                                 <div class="edition__jinx">
                                     <img src="{{ jinx.trick.image }}" alt="{{ 'sheet.jinx'|trans }}: {{ jinx.trick.name }}" title="{{ jinx.reason }}" width="177" height="124" loading="lazy">

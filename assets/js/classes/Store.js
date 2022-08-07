@@ -23,7 +23,8 @@ export default class Store {
         inputs: {},
         details: {},
         height: "",
-        version: ""
+        version: "",
+        game: null
     };
 
     /**
@@ -497,6 +498,19 @@ export default class Store {
      */
     getVersion() {
         return this.data.version;
+    }
+
+    setGame(game) {
+        this.data.game = game;
+        this.write();
+    }
+
+    unsetGame() {
+        this.setGame(null);
+    }
+
+    hasGame() {
+        return Boolean(this.data.game);
     }
 
 }

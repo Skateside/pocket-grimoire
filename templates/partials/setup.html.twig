@@ -82,10 +82,16 @@
                 <label for="custom-script-url">{{ 'setup.editions.url'|trans }}</label>
                 <input type="url" name="custom-script-url" id="custom-script-url" class="input" placeholder="https://www.example.com/script.json" data-no-store>
             </p>
-            <p><small>{{ 'setup.editions.unsupported'|trans }}</small></p>
         </div>
 
-        <p><button type="submit" class="button">{{ 'setup.editions.select'|trans }}</button></p>
+        <p>
+            <button type="submit" class="button">
+                <span class="button__text">{{ 'setup.editions.select'|trans }}</span>
+                <span class="button__loader" role="progressbar" aria-valuetext="Loading" aria-busy="false" aria-live="assertive" aria-valuemin="0" aria-valuemax="1">
+                    <span class="loader" aria-hidden="true"></span>
+                </span>
+            </button>
+        </p>
 
     </form>
     {% endblock %}

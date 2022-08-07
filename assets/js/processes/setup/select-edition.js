@@ -11,6 +11,9 @@ import {
 import {
     readUTF8
 } from "../../utils/strings.js";
+import {
+    post
+} from "../../utils/fetch.js";
 
 /**
  * Checks to see if the given data looks like a script.
@@ -30,6 +33,23 @@ function isScriptJson(json) {
             && typeof item?.id === "string"
         ))
     );
+
+}
+
+/**
+ * Checks to see if the data given looks like a homebrew script. This function
+ * assumes that the same data has already been checked by {@link isScriptJson}.
+ *
+ * @param  {Array.<Object>} json
+ *         Data to check.
+ * @return {Boolean}
+ *         true if the data looks like a homebrew script, false if it doesn't.
+ */
+function isHomebrewJson(json) {
+
+    return json.every(({ id, ability }) => (
+        typeof ability === "string" || id === "_meta"
+    ));
 
 }
 
@@ -66,11 +86,99 @@ function showInputError(input, error) {
 
 }
 
+// A map of any common mistakes that we find in the homebrew code.
+const normalMap = {
+    team: {
+        // The American spelling has one L, but I'm British and I use two L's.
+        "traveler": "traveller"
+    }
+};
+
+/**
+ * Fixes any common mistakes in the homebrew code.
+ *
+ * @param  {Array} json
+ *         Homebrew JSON.
+ * @return {Array}
+ *         The homebrew JSON, mapped so that it works with our system.
+ */
+function normaliseHomebrew(json) {
+
+    return json.map((entry) => {
+
+        Object.entries(normalMap).forEach(([key, map]) => {
+            entry[key] = map[entry[key]] || entry[key];
+        });
+
+        return entry;
+
+    });
+
+}
+
+/**
+ * Removes the "_meta" entry from the given JSON data, if it exists, and returns
+ * the name within that entry. If the entry isn't found, an empty string is
+ * returned.
+ *
+ * @param  {Array.<Object>} json
+ *         JSON data whose "_meta" entry should be removed.
+ * @return {String}
+ *         Name of the script, taking from the "_meta" entry, or an empty string
+ *         if the name cannot be found.
+ */
+function extractMetaEntry(json) {
+
+    let name = "";
+    const metaIndex = json.findIndex(({ id }) => id === "_meta");
+
+    if (metaIndex > -1) {
+
+        name = json[metaIndex].name;
+        json.splice(metaIndex, 1);
+
+    }
+
+    return name;
+
+}
+
+/**
+ * Sets the loading state of the form, setting the state of the loading
+ * animation in the submit button.
+ *
+ * @param {Element} form
+ *        Form whose loading state should be set.
+ * @param {Boolean} state
+ *        true if the form is loading, false if it's not.
+ */
+function setFormLoadingState(form, state) {
+
+    form.dataset.isLoading = state;
+
+    const submit = lookupOneCached("[type=\"submit\"]", form);
+    submit.classList.toggle("is-loading", state);
+
+    const progress = lookupOneCached("[role=\"progressbar\"]", submit);
+    progress.setAttribute("aria-busy", state);
+    progress.setAttribute(
+        "aria-valuenow",
+        (
+            state
+            ? "0"
+            : progress.getAttribute("aria-valuemax")
+        )
+    );
+
+}
+
 /**
  * Processes the JSON to set up the game.
  *
  * @param {Object} json
  *        JSON to process.
+ * @param {Element} json.form
+ *        The form that was submitted so the JSON could be processed.
  * @param {Array.<Object>} json.json
  *        Script to process.
  * @param {Element} json.input
@@ -79,6 +187,7 @@ function showInputError(input, error) {
  *        Store for any data.
  */
 function processJSON({
+    form,
     json,
     input,
     store
@@ -91,15 +200,37 @@ function processJSON({
 
     }
 
-    let name = "";
-    const metaIndex = json.findIndex(({ id }) => id === "_meta");
+    if (isHomebrewJson(json)) {
 
-    if (metaIndex > -1) {
+        const normalised = normaliseHomebrew(json);
 
-        name = json[metaIndex].name;
-        json.splice(metaIndex, 1);
+        setFormLoadingState(form, true);
+
+        return post(URLS.homebrew, normalised).then((response) => {
+console.log(response);
+
+            setFormLoadingState(form, false);
+
+            if (response.success) {
+
+                // const name = extractMetaEntry(normalised);
+                // store.setGame(response.game);
+                // announceScript(name, normalised);
+
+                Observer.create("game").trigger("game-selected", {
+                    game: response.game
+                });
+                Dialog.create(lookupOneCached("#edition-list")).hide();
+
+            } else {
+                showInputError(input, response.message);
+            }
+
+        });
 
     }
+
+    const name = extractMetaEntry(json);
 
     // The script tool creates IDs differently from our data.
     // Examples: script = lil_monsta, data = lilmonsta
@@ -154,6 +285,10 @@ form.addEventListener("submit", (e) => {
 
     e.preventDefault();
 
+    if (form.dataset.isLoading === "true") {
+        return;
+    }
+
     const radio = radios.find(({ checked }) => checked);
     const edition = radio?.value;
 
@@ -171,6 +306,7 @@ form.addEventListener("submit", (e) => {
                     .catch((error) => showInputError(urlInput, error.message))
                     .then((response) => response.json())
                     .then((json) => processJSON({
+                        form,
                         json,
                         input: urlInput,
                         store: tokenStore
@@ -180,8 +316,13 @@ form.addEventListener("submit", (e) => {
 
                 const reader = new FileReader();
 
+                // 1. Accented characters were getting mangled. This fix allows
+                //    them to be included. Noticed when trying to upload a
+                //    homebrew Spanish script.
+
                 reader.addEventListener("load", ({ target }) => processJSON({
-                    json: JSON.parse(readUTF8(target.result)),
+                    form,
+                    json: JSON.parse(readUTF8(target.result)), // [1]
                     input: fileInput,
                     store: tokenStore
                 }));

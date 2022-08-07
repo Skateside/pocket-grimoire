@@ -7,9 +7,11 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\Routing\Annotation\Route;
+use Doctrine\ORM\EntityManagerInterface;
 
 use App\Repository\RoleRepository;
 use App\Repository\JinxRepository;
+use App\Repository\TeamRepository;
 use App\Repository\HomebrewRepository;
 use App\Entity\Homebrew;
 use App\Model\HomebrewModel;
@@ -19,17 +21,20 @@ class MainController extends AbstractController
 
     private $roleRepo;
     private $jinxRepo;
+    private $teamRepo;
     private $homebrewRepo;
     private $homebrewModel;
 
     public function __construct(
         RoleRepository $roleRepo,
         JinxRepository $jinxRepo,
+        TeamRepository $teamRepo,
         HomebrewRepository $homebrewRepo,
         HomebrewModel $homebrewModel
     ) {
         $this->roleRepo = $roleRepo;
         $this->jinxRepo = $jinxRepo;
+        $this->teamRepo = $teamRepo;
         $this->homebrewRepo = $homebrewRepo;
         $this->homebrewModel = $homebrewModel;
     }
@@ -64,32 +69,98 @@ class MainController extends AbstractController
     public function sheetAction(Request $request): Response
     {
 
-        // $ids = explode(',', $request->query->get('characters'));
+
         $groups = [];
         $jinxes = [];
+        $name = '';
 
         if ($characters = $request->query->get('characters')) {
 
-            $data = $this->discoverCharacters(array_map(function ($id) {
-                return $this->roleRepo->findOneBy(['identifier' => $id]);
-            }, explode(',', $characters)));
+            $ids = explode(',', $characters);
+            foreach ($ids as $id) {
 
-            $groups = $data['groups'];
-            $jinxes = $data['jinxes'];
+                $character = $this->roleRepo->findOneBy(['identifier' => $id]);
+                $team = $character->getTeam();
+                $teamId = $team->getIdentifier();
+
+                if (!array_key_exists($teamId, $groups)) {
+
+                    $groups[$teamId] = [
+                        'team' => $team,
+                        'characters' => []
+                    ];
+
+                }
+
+                $groups[$teamId]['characters'][] = $character;
+
+                foreach ($character->getJinxes() as $jinx) {
+
+                    if (
+                        in_array($jinx->getTarget()->getIdentifier(), $ids)
+                        && in_array($jinx->getTrick()->getIdentifier(), $ids)
+                    ) {
+
+                        $jinx->setActive(true);
+                        $jinxes[] = $jinx;
+
+                    }
+
+                }
+
+            }
+
+            // $data = $this->discoverCharacters(array_map(function ($id) {
+            //     return $this->roleRepo->findOneBy(['identifier' => $id]);
+            // }, explode(',', $characters)));
+
+            // $groups = $data['groups'];
+            // $jinxes = $data['jinxes'];
+            $name = $request->query->get('name');
 
         } else if (
             ($game = $request->query->get('game'))
             && ($homebrew = $this->homebrewRepo->findOneBy(['uuid' => $game]))
         ) {
 
-            // Get information from the Homebrew instances.
+            // Cache the teams so that we're not constantly looking them up.
+            // Might save a little processing power.
+            $teamMap = [];
 
+            foreach ($homebrew->getJson() as $character) {
 
+                if ($this->homebrewModel->isMetaEntry($character)) {
+
+                    $name = $character['name'];
+                    continue;
+
+                }
+
+                $teamId = $character['team'];
+
+                if (!array_key_exists($teamId, $teamMap)) {
+                    $teamMap[$teamId] = $this->teamRepo->findOneBy(['identifier' => $teamId]);
+                }
+
+                $team = $teamMap[$teamId];
+
+                if (!array_key_exists($teamId, $groups)) {
+
+                    $groups[$teamId] = [
+                        'team' => $team,
+                        'characters' => []
+                    ];
+
+                }
+
+                $groups[$teamId]['characters'][] = $character;
+
+            }
 
         }
 
         return $this->render('pages/sheet.html.twig', [
-            'name' => $request->query->get('name'),
+            'name' => $name,
             'groups' => $groups,
             'jinxes' => $jinxes
         ]);
@@ -104,7 +175,7 @@ class MainController extends AbstractController
         EntityManagerInterface $em
     ): Response {
 
-        if ($data = $request->request->get('homebrew')) {
+        if ($data = json_decode($request->getContent(), true)) {
 
             if (!$this->homebrewModel->validateAllEntries($data)) {
 
@@ -127,7 +198,7 @@ class MainController extends AbstractController
 
             return new JsonResponse([
                 'success' => true,
-                'uuid' => $homebrew->getUuid()
+                'game' => $homebrew->getUuid()
             ]);
 
         }
@@ -136,51 +207,6 @@ class MainController extends AbstractController
             'success' => false,
             'message' => 'No data sent' // TODO: translate
         ]);
-
-    }
-
-    private function discoverCharacters(array $characters)
-    {
-
-        $groups = [];
-        $jinxes = [];
-
-        foreach ($characters as $character) {
-
-            $team = $character->getTeam();
-            $teamId = $team->getIdentifier();
-
-            if (!array_key_exists($teamId, $groups)) {
-
-                $groups[$teamId] = [
-                    'team' => $team,
-                    'characters' => []
-                ];
-
-            }
-
-            $groups[$teamId]['characters'][] = $character;
-
-            foreach ($character->getJinxes() as $jinx) {
-
-                if (
-                    in_array($jinx->getTarget()->getIdentifier(), $ids)
-                    && in_array($jinx->getTrick()->getIdentifier(), $ids)
-                ) {
-
-                    $jinx->setActive(true);
-                    $jinxes[] = $jinx;
-
-                }
-
-            }
-
-        }
-
-        return [
-            'groups' => $groups,
-            'jinxes' => $jinxes
-        ];
 
     }
 

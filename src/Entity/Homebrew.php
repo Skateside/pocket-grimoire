@@ -1,5 +1,10 @@
 <?php
 
+namespace App\Entity;
+
+use App\Repository\HomebrewRepository;
+use Doctrine\ORM\Mapping as ORM;
+
 /*
 We can store the custom JSON in this table, making it easy for other people to
 access the data (for the character sheet). If we update the date whenever it's

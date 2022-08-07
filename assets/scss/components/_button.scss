@@ -34,3 +34,21 @@
 .button--full-height {
     height: 100%;
 }
+
+.is-loading > .button__text {
+    display: none;
+}
+
+.button__loader {
+    position: absolute;
+    opacity: 0;
+
+    @at-root {
+
+        .is-loading > & {
+            position: static;
+            opacity: 1;
+        }
+
+    }
+}

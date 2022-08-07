@@ -22,6 +22,24 @@ class HomebrewModel
     }
 
     /**
+     * Checks to see if the entry contains the meta information about the
+     * script.
+     *
+     * @param  array $entry
+     * @return bool
+     */
+    public function isMetaEntry(array $entry): bool
+    {
+
+        return (
+            array_key_exists('id', $entry)
+            && $entry['id'] === '_meta'
+             && array_key_exists('name', $entry)
+        );
+
+    }
+
+    /**
      * Validates a single entry to make sure that it has all the required keys
      * and that it's part of a recognised team.
      *
@@ -33,6 +51,10 @@ class HomebrewModel
 
         $isValid = true;
         $teams = [];
+
+        if ($this->isMetaEntry($entry)) {
+            return $isValid;
+        }
 
         foreach ($this->requiredKeys as $key) {
 
@@ -47,7 +69,7 @@ class HomebrewModel
 
         if (
             $isValid
-            && !$this->teamRepo->findOneBy(['identifier' => $entry['key']])
+            && !$this->teamRepo->findOneBy(['identifier' => $entry['team']])
         ) {
             $isValid = false;
         }
@@ -73,6 +95,10 @@ class HomebrewModel
 
         foreach ($entries as $entry) {
 
+            if ($this->isMetaEntry($entry)) {
+                continue;
+            }
+
             if (!$this->validateEntry($entry)) {
 
                 $isValid = false;
@@ -86,7 +112,7 @@ class HomebrewModel
 
         }
 
-        if ($isValid && in_array($teams, 0)) {
+        if ($isValid && in_array(0, array_values($teams))) {
             $isValid = false;
         }
 
@@ -102,6 +128,14 @@ class HomebrewModel
      */
     public function filterEntry(array $entry): array
     {
+
+        if ($this->isMetaEntry($entry)) {
+
+            return array_filter($entry, function ($key) {
+                return in_array($key, ['id', 'name']);
+            }, ARRAY_FILTER_USE_KEY);
+
+        }
 
         return array_filter($entry, function ($key) {
             return in_array($key, $this->requiredKeys);
