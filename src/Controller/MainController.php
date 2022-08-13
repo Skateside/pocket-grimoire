@@ -7,6 +7,7 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Contracts\Translation\TranslatorInterface;
 use Doctrine\ORM\EntityManagerInterface;
 
 use App\Repository\RoleRepository;
@@ -66,8 +67,10 @@ class MainController extends AbstractController
     /**
      * @Route("/{_locale}/sheet", name="sheet")
      */
-    public function sheetAction(Request $request): Response
-    {
+    public function sheetAction(
+        Request $request,
+        EntityManagerInterface $em
+    ): Response {
 
 
         $groups = [];
@@ -110,12 +113,6 @@ class MainController extends AbstractController
 
             }
 
-            // $data = $this->discoverCharacters(array_map(function ($id) {
-            //     return $this->roleRepo->findOneBy(['identifier' => $id]);
-            // }, explode(',', $characters)));
-
-            // $groups = $data['groups'];
-            // $jinxes = $data['jinxes'];
             $name = $request->query->get('name');
 
         } else if (
@@ -157,6 +154,18 @@ class MainController extends AbstractController
 
             }
 
+            if ((int) $request->query->get('traveller', 0) !== 1) {
+                unset($groups['traveller']);
+            }
+
+            if ((int) $request->query->get('fabled', 0) !== 1) {
+                unset($groups['fabled']);
+            }
+
+            $homebrew->setAccessed(new \DateTime());
+            $em->persist($homebrew);
+            $em->flush();
+
         }
 
         return $this->render('pages/sheet.html.twig', [
@@ -172,16 +181,20 @@ class MainController extends AbstractController
      */
     public function homebrewAction(
         Request $request,
-        EntityManagerInterface $em
+        EntityManagerInterface $em,
+        TranslatorInterface $translator
     ): Response {
 
         if ($data = json_decode($request->getContent(), true)) {
 
-            if (!$this->homebrewModel->validateAllEntries($data)) {
+            if (
+                !is_array($data)
+                || !$this->homebrewModel->validateAllEntries($data)
+            ) {
 
                 return new JsonResponse([
                     'success' => false,
-                    'message' => 'Invalid data' // TODO: translate
+                    'message' => $translator->trans('messages.invalid_data')
                 ]);
 
             }
@@ -205,7 +218,7 @@ class MainController extends AbstractController
 
         return new JsonResponse([
             'success' => false,
-            'message' => 'No data sent' // TODO: translate
+            'message' => $translator->trans('messages.no_data')
         ]);
 
     }

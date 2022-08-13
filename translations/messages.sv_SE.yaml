@@ -36,6 +36,8 @@ messages:
     version_change_message: Den här appen har uppdaterat sin version. Eftersom din data inte behöver vara korrekt, rekommenderar vi att du rensar allt genom "Rensa cache" rutan. Klicka på "OK" för att öppna rutan eller "Avbryt" för att stänga ner det här meddelandet.
     invalid_script: Scriptformatet kändes inte igen.
     no_characters: Scriptet innehåller inte några igenkända karaktärer.
+    invalid_data: Ogiltiga data.
+    no_data: Ingen data skickad.
 
 setup:
 
@@ -59,7 +61,6 @@ setup:
         custom_warning: Ladda bara custom JSON-filer från källor du litar på!
         upload: Ladda upp ett custom script
         url: Fyll i en URL
-        unsupported: Vänligen tänk på att Pocket Grimoire för tillfället stödjer hemmagjorda eller lokaliserade scripts.
         select: Välj
 
     character_select:

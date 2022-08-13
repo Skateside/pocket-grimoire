@@ -61,7 +61,7 @@ Promise.all([
             {
                 id: TokenStore.EMPTY,
                 image: "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
-                ability: lookupOne("#empty-character-ability").textContent,
+                ability: I18N.emptyCharacterAbility,
                 [CharacterToken.empty]: true,
             },
             ...characters
@@ -70,14 +70,14 @@ Promise.all([
             {
                 id: TokenStore.EMPTY,
                 name: "",
-                text: lookupOne("#good-team").textContent,
+                text: I18N.goodTeam,
                 image: "/build/img/icon/townsfolk.png",
                 isGlobal: true
             },
             {
                 id: TokenStore.EMPTY,
                 name: "",
-                text: lookupOne("#evil-team").textContent,
+                text: I18N.evilTeam,
                 image: "/build/img/icon/demon.png",
                 isGlobal: true
             }

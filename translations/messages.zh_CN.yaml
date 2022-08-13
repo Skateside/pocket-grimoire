@@ -36,6 +36,8 @@ messages:
     version_change_message: 此应用程序已更新其版本。由于您的数据可能不正确，我们建议您清除《清除缓存》对话框中的所有内容。按《确定》打开对话框或按《取消》关闭此消息。
     invalid_script: 脚本格式未被识别。
     no_characters: 该脚本不包含任何可识别的字符。
+    invalid_data: 无效数据。
+    no_data: 没有发送数据。
 
 setup:
 
@@ -59,7 +61,6 @@ setup:
         custom_warning: 仅从您信任的来源加载自定义 JSON 文件！
         upload: 上传自定义脚本
         url: 输入网址
-        unsupported: 请注意，《袖珍魔典》目前不支持自制或本地化脚本。
         select: 选择
 
     character_select:

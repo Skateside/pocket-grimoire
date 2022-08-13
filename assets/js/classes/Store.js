@@ -23,8 +23,7 @@ export default class Store {
         inputs: {},
         details: {},
         height: "",
-        version: "",
-        game: null
+        version: ""
     };
 
     /**
@@ -193,8 +192,11 @@ export default class Store {
      *        Name of the script, which may be blank.
      * @param {Array.<String>} characters
      *        Array of all the character IDs that are in this script.
+     * @param {String|null} game
+     *        The ID of the homebrew game being used. This will be null for any
+     *        game that only consists of recognised characters.
      */
-    setCharacters(name, characters) {
+    setCharacters(name, characters, game) {
 
         const data = {
             characters
@@ -202,6 +204,10 @@ export default class Store {
 
         if (name) {
             data.name = name;
+        }
+
+        if (game) {
+            data.game = game;
         }
 
         this.data.characters = data;
@@ -498,19 +504,6 @@ export default class Store {
      */
     getVersion() {
         return this.data.version;
-    }
-
-    setGame(game) {
-        this.data.game = game;
-        this.write();
-    }
-
-    unsetGame() {
-        this.setGame(null);
-    }
-
-    hasGame() {
-        return Boolean(this.data.game);
     }
 
 }

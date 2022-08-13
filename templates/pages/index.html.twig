@@ -11,7 +11,6 @@
 
 <h1 class="title">{{ 'title'|trans }}</h1>
 
-{% include 'partials/messages.html.twig' %}
 {% include 'partials/setup.html.twig' %}
 {% include 'partials/grimoire.html.twig' %}
 {% include 'partials/jinxes.html.twig' %}
@@ -29,6 +28,15 @@ var URLS = {
     jinxes: "{{ path('data_jinx', { version: version })|e('js') }}",
     game: "{{ path('data_game')|e('js') }}",
     homebrew: "{{ path('homebrew')|e('js') }}"
+};
+
+var I18N = {
+    goodTeam: "{{ 'messages.good_team'|trans|e('js') }}",
+    evilTeam: "{{ 'messages.evil_team'|trans|e('js') }}",
+    emptyCharacterAbility: "{{ 'messages.empty_character_ability'|trans|e('js') }}",
+    versionChange: "{{ 'messages.version_change_message'|trans|e('js') }}",
+    invalidScript: "{{ 'messages.invalid_script'|trans|e('js') }}",
+    noCharacters: "{{ 'messages.no_characters'|trans|e('js') }}"
 };
 </script>
 {{ encore_entry_script_tags('js/main') }}

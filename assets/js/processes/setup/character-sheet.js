@@ -8,40 +8,62 @@ import {
 const gameObserver = Observer.create("game");
 const characterStore = Object.create(null);
 
+/**
+ * Draws the QR code based on information on the QR code element.
+ */
 function drawQRCode() {
 
-    const teams = [
-        "townsfolk",
-        "outsider",
-        "minion",
-        "demon"
-    ];
-
-    if (lookupOneCached("#include-travellers").checked) {
-        teams.push("traveller");
-    }
-
-    if (lookupOneCached("#include-fabled").checked) {
-        teams.push("fabled");
-    }
-
+    const includeTravellers = lookupOneCached("#include-travellers").checked;
+    const includeFabled = lookupOneCached("#include-fabled").checked;
     const qrCode = lookupOneCached("#qr-code");
-
-    const ids = characterStore[qrCode.dataset.characters]
-        .filter((character) => teams.includes(character.getTeam()))
-        .map((character) => character.getId());
-
     const anchor = lookupOneCached("#qr-code-link");
     const url = new URL(anchor.href);
 
-    const name = qrCode.dataset.name;
+    const {
+        name,
+        characters,
+        game
+    } = qrCode.dataset;
+
     if (name) {
         url.searchParams.set("name", name);
     } else {
         url.searchParams.delete("name");
     }
 
-    url.searchParams.set("characters", ids);
+    if (game) {
+
+        url.searchParams.set("game", game);
+        url.searchParams.set("traveller", Number(includeTravellers));
+        url.searchParams.set("fabled", Number(includeFabled));
+        url.searchParams.delete("characters");
+
+    } else {
+
+        const teams = [
+            "townsfolk",
+            "outsider",
+            "minion",
+            "demon"
+        ];
+
+        if (includeTravellers) {
+            teams.push("traveller");
+        }
+
+        if (includeFabled) {
+            teams.push("fabled");
+        }
+
+        const ids = characterStore[qrCode.dataset.characters]
+            .filter((character) => teams.includes(character.getTeam()))
+            .map((character) => character.getId());
+        url.searchParams.set("characters", ids);
+        url.searchParams.delete("game");
+        url.searchParams.delete("traveller");
+        url.searchParams.delete("fabled");
+
+    }
 
     empty(qrCode).append(QRCode({
         msg: url.toString(),
@@ -57,15 +79,28 @@ gameObserver.on("characters-selected", ({ detail }) => {
 
     const {
         name,
-        characters
+        characters,
+        game
     } = detail;
-    const ids = JSON.stringify(
-        characters.map((character) => character.getId())
-    );
-
-    characterStore[ids] = characters;
 
     const qrCode = lookupOneCached("#qr-code");
+
+    if (game) {
+
+        qrCode.dataset.game = game;
+        delete qrCode.dataset.characters;
+
+    } else {
+
+        const ids = JSON.stringify(
+            characters.map((character) => character.getId())
+        );
+
+        characterStore[ids] = characters;
+        qrCode.dataset.characters = ids;
+        delete qrCode.dataset.game;
+
+    }
 
     if (name) {
         qrCode.dataset.name = name;
@@ -73,7 +108,6 @@ gameObserver.on("characters-selected", ({ detail }) => {
         delete qrCode.dataset.name;
     }
 
-    qrCode.dataset.characters = ids;
     drawQRCode();
 
 });

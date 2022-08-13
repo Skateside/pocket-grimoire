@@ -36,6 +36,8 @@ messages:
     version_change_message: This app has updated its version. Because your data may not be correct, we recommend that you clear everything in the "Clear Cache" dialog. Press "OK" to open the dialog or "Cancel" to close this message.
     invalid_script: The script format has not been recognised.
     no_characters: The script doesn't contain any recognised characters.
+    invalid_data: Invalid data.
+    no_data: No data sent.
 
 setup:
 
@@ -59,7 +61,6 @@ setup:
         custom_warning: Only load custom JSON files from sources that you trust!
         upload: Upload a custom script
         url: Enter a URL
-        unsupported: Please note that the Pocket Grimoire currently doesn't support homebrew or localised scripts.
         select: Select
 
     character_select:

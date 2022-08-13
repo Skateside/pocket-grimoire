@@ -36,6 +36,8 @@ messages:
     version_change_message: Cette application a été mise à jour. Étant donné que vos données peuvent ne pas être correctes, nous recommandons de tout effacer dans la boîte de dialogue "Effacer le cache". Appuyes sur "OK" pour ouvrir la boîte de dialogue ou sur "Annuler" pour fermer ce message.
     invalid_script: Le format de ce script n'a pas été reconnu
     no_characters: Ce script ne contient pas de personnages connus
+    invalid_data: Données invalides.
+    no_data: Aucune donnée envoyée.
 
 setup:
 
@@ -59,7 +61,6 @@ setup:
         custom_warning: Faire attention à utiliser des fichiers JSON provenant d'une source de confiance !
         upload: Télécharger un script personnalisé
         url: Entrer une URL
-        unsupported: 'Note : Le Grimoire de Poche ne gère pas encore les scripts faits maison ou traduits'
         select: Choisir
 
     character_select:

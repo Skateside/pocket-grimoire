@@ -47,7 +47,7 @@ function isScriptJson(json) {
  */
 function isHomebrewJson(json) {
 
-    return json.every(({ id, ability }) => (
+    return json.some(({ id, ability }) => (
         typeof ability === "string" || id === "_meta"
     ));
 
@@ -60,12 +60,16 @@ function isHomebrewJson(json) {
  *        Name of the script. This may be an empty string.
  * @param {Array.<Object>} characters
  *        Characters in the script.
+ * @param {String|null} [game=null]
+ *        The ID of the homebrew script that was uploaded. This will be null for
+ *        a game that only consists of recognised characters.
  */
-function announceScript(name, characters) {
+function announceScript(name, characters, game = null) {
 
     Observer.create("game").trigger("characters-selected", {
         name,
-        characters
+        characters,
+        game
     });
     Dialog.create(lookupOneCached("#edition-list")).hide();
 
@@ -195,7 +199,7 @@ function processJSON({
 
     if (!isScriptJson(json)) {
 
-        showInputError(input, lookupOneCached("#invalid-script").textContent);
+        showInputError(input, I18N.invalidScript);
         return;
 
     }
@@ -206,25 +210,25 @@ function processJSON({
 
         setFormLoadingState(form, true);
 
-        return post(URLS.homebrew, normalised).then((response) => {
-console.log(response);
+        return post(URLS.homebrew, normalised)
+            .then(({ success, game, message }) => {
 
-            setFormLoadingState(form, false);
+                setFormLoadingState(form, false);
 
-            if (response.success) {
+                if (success) {
 
-                // const name = extractMetaEntry(normalised);
-                // store.setGame(response.game);
-                // announceScript(name, normalised);
+                    announceScript(
+                        extractMetaEntry(normalised),
+                        normalised.map((item) => (
+                            store.createCustomCharacter(item)
+                        )),
+                        game
+                    );
+                    Dialog.create(lookupOneCached("#edition-list")).hide();
 
-                Observer.create("game").trigger("game-selected", {
-                    game: response.game
-                });
-                Dialog.create(lookupOneCached("#edition-list")).hide();
-
-            } else {
-                showInputError(input, response.message);
-            }
+                } else {
+                    showInputError(input, message);
+                }
 
         });
 
@@ -238,12 +242,11 @@ console.log(response);
     // The .replace() here is designed to convert their IDs to ours.
     const characters = json.map((item) => (
         store.getCharacter(item.id.replace(/[-_]/g, ""))
-        || store.createCustomCharacter(item)
     ));
 
     if (!characters.length) {
 
-        showInputError(input, lookupOneCached("#no-characters").textContent);
+        showInputError(input, I18N.noCharacters);
         return;
 
     }

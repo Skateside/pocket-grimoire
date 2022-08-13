@@ -36,6 +36,8 @@ messages:
     version_change_message: 這個應用程式的版本已經更新，由於您的資料可能不正確，我們建議您在「清除快取」對話窗中清除所有資料。點擊「OK」來開啟對話窗或點擊「Cancel」來關閉這則訊息。
     invalid_script: 無法辨認此劇本格式。
     no_characters: 無法從這個劇本辨認出任何角色。
+    invalid_data: 無效數據。
+    no_data: 沒有發送數據。
 
 setup:
 
@@ -59,7 +61,6 @@ setup:
         custom_warning: 只從您信任的來源載入自訂.json檔案!
         upload: 上傳自訂劇本
         url: 輸入網址
-        unsupported: 請注意口袋魔典目前不支援自製或本地化劇本。
         select: 選擇
 
     character_select:

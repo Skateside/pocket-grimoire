@@ -95,6 +95,13 @@ class HomebrewModel
 
         foreach ($entries as $entry) {
 
+            if (!is_array($entry)) {
+
+                $isValid = false;
+                break;
+
+            }
+
             if ($this->isMetaEntry($entry)) {
                 continue;
             }

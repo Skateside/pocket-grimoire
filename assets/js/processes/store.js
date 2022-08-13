@@ -31,7 +31,8 @@ gameObserver.on("characters-selected", ({ detail }) => {
             character.isCustom()
             ? character.getAllData()
             : character.getId()
-        ))
+        )),
+        detail.game
     );
     store.removeStaleInputs();
 
@@ -107,7 +108,7 @@ if (!savedVersion || compareVersions(savedVersion, VERSION) === -1) {
 
     if (
         savedVersion
-        && window.confirm(lookupOne("#version-change-message").textContent)
+        && window.confirm(I18N.versionChangeMessage)
     ) {
         Dialog.create(lookupOneCached("#clear-cache")).show();
     }
@@ -154,7 +155,8 @@ TokenStore.ready((tokenStore) => {
                     ? tokenStore.getCharacter(id)
                     : tokenStore.createCustomCharacter(item)
                 ))
-                .filter(Boolean)
+                .filter(Boolean),
+            game: info.game
         });
 
     }
@@ -277,5 +279,3 @@ TokenStore.ready((tokenStore) => {
     }
 
 });
-
-// TODO: Scroll amount?
