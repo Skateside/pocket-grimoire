@@ -39,5 +39,9 @@ var I18N = {
     noCharacters: "{{ 'messages.no_characters'|trans|e('js') }}"
 };
 </script>
+{# Keep this element for legacy reasons - delete it soon #}
+<div hidden>
+    <div id="version-change-message">{{ 'messages.version_change_message'|trans }}</div>
+</div>
 {{ encore_entry_script_tags('js/main') }}
 {% endblock %}
