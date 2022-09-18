@@ -20,19 +20,9 @@
         markup: 'info_tokens.info_tokens.notinplay'|trans
     },
     {
-        id: 'nominatetoday',
-        colour: 'dark-orange',
-        markup: 'info_tokens.info_tokens.nominatetoday'|trans
-    },
-    {
         id: 'abilitytargetted',
         colour: 'green',
         markup: 'info_tokens.info_tokens.abilitytargetted'|trans
-    },
-    {
-        id: 'playeris',
-        colour: 'dark-purple',
-        markup: 'info_tokens.info_tokens.playeris'|trans
     },
     {
         id: 'haveability',
@@ -40,9 +30,14 @@
         markup: 'info_tokens.info_tokens.haveability'|trans
     },
     {
-        id: 'votetoday',
-        colour: 'orange',
-        markup: 'info_tokens.info_tokens.votetoday'|trans
+        id: 'playeris',
+        colour: 'dark-purple',
+        markup: 'info_tokens.info_tokens.playeris'|trans
+    },
+    {
+        id: 'youare',
+        colour: 'purple',
+        markup: 'info_tokens.info_tokens.youare'|trans
     },
     {
         id: 'choice',
@@ -55,10 +50,15 @@
         markup: 'info_tokens.info_tokens.abilitynow'|trans
     },
     {
-        id: 'youare',
-        colour: 'purple',
-        markup: 'info_tokens.info_tokens.youare'|trans
-     }
+        id: 'nominatetoday',
+        colour: 'dark-orange',
+        markup: 'info_tokens.info_tokens.nominatetoday'|trans
+    },
+    {
+        id: 'votetoday',
+        colour: 'orange',
+        markup: 'info_tokens.info_tokens.votetoday'|trans
+    },
 ] %}
 
 {% embed 'includes/details.html.twig' with {
@@ -67,6 +67,12 @@
 } %}
     {% block body %}
     <ul class="button-list">
+        <li>
+            <button type="button" class="button button--full-height" id="show-tokens-info" data-dialog="#token-list" disabled>({{ 'grimoire.grimoire.show_tokens'|trans }})</button>
+        </li>
+        <li>
+            <button type="button" class="button button--full-height" id="add-info-token">(Add info token)</button>
+        </li>
         {% for info in infoTokens %}
         <li>
             <button type="button" class="button button--full-height" data-dialog="#info-token-{{ info.id }}" style="--bg-colour: var(--{{ info.colour }});">{{ info.markup|striptags }}</button>
@@ -93,3 +99,20 @@
         {% endblock %}
     {% endembed %}
 {% endfor %}
+
+<template id="info-token-button-template">
+    <li>
+        <button type="button" class="button button--full-height js--info-token--button"></button>
+    </li>
+</template>
+
+<template id="info-token-dialog-template">
+    <dialog class="dialog info-token dialog--hide-background js--info-token--dialog" data-dialog-hide-on="" tabindex="-1">
+        <div class="dialog__content">
+            <div class="dialog__body">
+                <button class="info-token__hide" type="button" aria-label="{{ 'dialog.close'|trans }}" data-dialog-hide>&times;</button>
+                <p class="info-token__text js--info-token--dialog-text"></p>
+            </div>
+        </div>
+    </dialog>
+</template>

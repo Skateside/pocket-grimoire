@@ -4,6 +4,9 @@ import TokenStore from "../classes/TokenStore.js";
 import Bluffs from "../classes/Bluffs.js";
 import Dialog from "../classes/Dialog.js";
 import {
+    addCustomInfoToken
+} from "../classes/InfoTokens.js";
+import {
     lookup,
     lookupOne,
     lookupOneCached,
@@ -19,6 +22,7 @@ import {
 const store = Store.create("pocket-grimoire");
 const gameObserver = Observer.create("game");
 const tokenObserver = Observer.create("token");
+const infoTokenObserver = Observer.create("info-token");
 
 const padElement = lookupOneCached(".js--pad");
 const pad = padElement.pad;
@@ -104,6 +108,10 @@ tokenObserver.on("set-player-name", ({ detail }) => {
 
 tokenObserver.on("bluff", ({ detail }) => {
     store.setBluff(detail.button, detail.character);
+});
+
+infoTokenObserver.on("add-info-token", ({ detail }) => {
+    store.addInfoToken(detail.text);
 });
 
 const savedVersion = store.getVersion();
@@ -251,6 +259,14 @@ TokenStore.ready((tokenStore) => {
     });
 
     gameObserver.trigger("inputs-repopulated");
+
+    // Re-add the custom info tokens.
+
+    storeData.infoTokens.forEach((text) => {
+
+        addCustomInfoToken(text);
+
+    });
 
     // Re-open or re-close the details.
 

@@ -20,6 +20,7 @@ export default class Store {
         characters: {},
         bluffs: {},
         tokens: [],
+        infoTokens: [],
         inputs: {},
         details: {},
         height: "",
@@ -392,6 +393,19 @@ export default class Store {
         }
 
         data.tokens[index].playerName = name;
+        this.write();
+
+    }
+
+    /**
+     * Adds a custom info token to the store so its existence can be remembered.
+     *
+     * @param {String} text
+     *        Text of the custom info token to add.
+     */
+    addInfoToken(text) {
+
+        this.data.infoTokens.push(text);
         this.write();
 
     }
