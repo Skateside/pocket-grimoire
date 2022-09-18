@@ -1,0 +1,9 @@
+{% embed 'includes/details.html.twig' with {
+    summary: 'Player Messages',
+    id: 'player-msgs'
+} %}
+    {% block body %}
+    <textarea rows="10" style="width: 100%;" placeholder="Storyteller and players can type messages to each other as needed here."></textarea><br>
+    <button type="button" class="button button--full-height" id="clear-player-msgs">Clear</button>
+    {% endblock %}
+{% endembed %}

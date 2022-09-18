@@ -137,7 +137,7 @@ body.addEventListener("input", ({ target }) => {
 
     const input = target.closest("input,select");
 
-    if (!input.hasAttribute("data-no-store")) {
+    if (input !== null && !input.hasAttribute("data-no-store")) {
         store.saveInput(input);
     }
 
@@ -147,6 +147,20 @@ body.addEventListener("toggle", ({ target }) => {
     store.saveDetails(target.closest("details"));
 }, {
     capture: true
+});
+
+lookupOne("details#player-msgs textarea").addEventListener("change", ( e ) => {
+
+    var text = e.target.value;
+    store.saveTextBox("player-msgs", text);
+
+});
+
+lookupOne("details#game-log textarea").addEventListener("change", ( e ) => {
+
+    var text = e.target.value;
+    store.saveTextBox("game-log", text);
+
 });
 
 const storeData = store.read();
@@ -259,6 +273,14 @@ TokenStore.ready((tokenStore) => {
     });
 
     gameObserver.trigger("inputs-repopulated");
+
+    // Re-populate the text boxes.
+
+    Object.entries(storeData.textBoxes).forEach(([selector, value]) => {
+
+        lookupOne("details#"+selector+" textarea").value = value;
+
+    });
 
     // Re-add the custom info tokens.
 

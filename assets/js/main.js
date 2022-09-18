@@ -18,6 +18,8 @@ import "./processes/night-order.js";
 
 import "./processes/info-tokens.js";
 
+import "./processes/text-boxes.js";
+
 import "./processes/acknowledgements.js";
 
 import "./processes/store.js";

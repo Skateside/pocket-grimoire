@@ -1,0 +1,8 @@
+{% embed 'includes/details.html.twig' with {
+    summary: 'Game Log',
+    id: 'game-log'
+} %}
+    {% block body %}
+    <textarea rows="10" style="width: 100%;" placeholder="Record game events for later reference. Keep this hidden from players until after the game."></textarea>
+    {% endblock %}
+{% endembed %}
