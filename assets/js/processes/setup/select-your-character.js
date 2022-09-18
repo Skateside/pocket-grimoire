@@ -4,6 +4,8 @@ import TokenStore from "../../classes/TokenStore.js";
 import Template from "../../classes/Template.js";
 import {
     empty,
+    lookup,
+    lookupOne,
     lookupOneCached,
     replaceContentsMany
 } from "../../utils/elements.js";
@@ -39,9 +41,7 @@ gameObserver.on("character-draw", ({ detail }) => {
 
 });
 
-lookupOneCached("#character-choice").addEventListener("click", ({ target }) => {
-
-    const element = target.closest("[data-id]");
+function chooseCharacter(element, showDialog) {
 
     if (!element || element.disabled) {
         return;
@@ -54,10 +54,18 @@ lookupOneCached("#character-choice").addEventListener("click", ({ target }) => {
 
         gameObserver.trigger("character-drawn", {
             element,
-            character: tokenStore.getCharacter(element.dataset.id).clone()
+            character: tokenStore.getCharacter(element.dataset.id).clone(),
+            showDialog
         });
 
     });
+
+}
+
+lookupOneCached("#character-choice").addEventListener("click", ({ target }) => {
+
+    const element = target.closest("[data-id]");
+    chooseCharacter(element, true);
 
 });
 
@@ -68,8 +76,12 @@ gameObserver.on("character-drawn", ({ detail }) => {
 gameObserver.on("character-drawn", ({ detail }) => {
 
     const {
-        character
+        character,
+        showDialog
     } = detail;
+
+    if (!showDialog)
+        return;
 
     empty(lookupOneCached("#character-decision-wrapper")).append(
         character.drawToken()
@@ -78,5 +90,13 @@ gameObserver.on("character-drawn", ({ detail }) => {
         character.getAbility()
     );
     Dialog.create(lookupOneCached("#character-decision")).show();
+
+});
+
+lookupOne("#open-all-character-choices").addEventListener("click", ({ target }) => {
+    
+    lookup("button.character-choice", lookupOneCached("#character-choice")).forEach((element) => {
+        chooseCharacter(element, false);
+    });
 
 });
