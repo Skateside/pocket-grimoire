@@ -40,10 +40,12 @@
         "id": "amnesiac",
         "name": "Minnesförlorare",
         "ability": "Du vet inte vad din förmåga är. Varje dag, gissa privat vad din förmåga är: du får reda på hur nära du är.",
-        "firstNightReminder": "Bestäm Minnesförlorarens hela förmåga. Om Minnesförlorarens förmåga gör så de vaknar under natten: väck Minnesförloraren och utför deras förmåga. ",
-        "otherNightReminder": "Om Minnesförlorarens förmåga gör så de vaknar under natten: väck Minnesförloraren och utför deras förmåga. ",
+        "firstNightReminder": "Bestäm Minnesförlorarens hela förmåga. Om Minnesförlorarens förmåga gör så de vaknar under natten: väck Minnesförloraren och utför deras förmåga.",
+        "otherNightReminder": "Om Minnesförlorarens förmåga gör så de vaknar under natten: väck Minnesförloraren och utför deras förmåga.",
         "remindersGlobal": [],
-        "reminders": []
+        "reminders": [
+            "?"
+        ]
     },
     {
         "id": "angel",
@@ -52,7 +54,10 @@
         "firstNightReminder": "",
         "otherNightReminder": "",
         "remindersGlobal": [],
-        "reminders": []
+        "reminders": [
+            "Protect",
+            "Something Bad"
+        ]
     },
     {
         "id": "apprentice",
@@ -106,9 +111,9 @@
         "remindersGlobal": [],
         "reminders": [
             "Sett Bybo",
-            "Sett Outsider",
-            "Sett Minion",
             "Sett Demon",
+            "Sett Minion",
+            "Sett Outsider",
             "Sett Resande"
         ]
     },
@@ -131,8 +136,8 @@
         "otherNightReminder": "Välj en spelare, väck dem och berätta för dem vilken av Baristans förmågor påverkar dem. Behandla dem sedan enligt förmågan (nykter/frisk/sann information eller aktivera deras förmåga två gånger)",
         "remindersGlobal": [],
         "reminders": [
-            "Nykter & Frisk",
-            "Förmåga två gånger"
+            "Förmåga två gånger",
+            "Nykter & Frisk"
         ]
     },
     {
@@ -173,8 +178,8 @@
         "otherNightReminder": "Bensamlaren skakar antingen på huvudet eller pekar på en död spelare. Om de pekar på en död spelare, sätt Bensamlarens \"Har förmåga\" markör bredvid den valda spelarens karaktär. (De kan behöva väckas inatt för att använda sin förmåga)",
         "remindersGlobal": [],
         "reminders": [
-            "Ingen förmåga",
-            "Har förmåga"
+            "Har förmåga",
+            "Ingen förmåga"
         ]
     },
     {
@@ -245,8 +250,8 @@
         "otherNightReminder": "",
         "remindersGlobal": [],
         "reminders": [
-            "Förgiftad",
-            "Dog idag"
+            "Dog idag",
+            "Förgiftad"
         ]
     },
     {
@@ -256,7 +261,9 @@
         "firstNightReminder": "Cerenouvus pekar på en spelare, sen på en karaktär på deras karaktärslista. Väck den spelaren, visa dem \"Den här karaktären valde dig\"-kortet och sedan Cerenouvus. Visa den valda karaktären. Om spelaren inte är \"galen\" att de är den karaktären imorgon, så kan du avrätta dem.",
         "otherNightReminder": "Cerenouvus pekar på en spelare, sen på en karaktär på sin karaktärslista. Väck den spelaren, visa dem \"Den här karaktären valde dig\" kortet och sedan Cerenouvus. Visa den valda karaktäen. Om spelaren inte är \"galen\" att de är den karaktären imorgon, så kan du avrätta dem.",
         "remindersGlobal": [],
-        "reminders": []
+        "reminders": [
+            "Mad"
+        ]
     },
     {
         "id": "chambermaid",
@@ -302,9 +309,9 @@
         "otherNightReminder": "Räkna ner de kvarstående dagarna för den fulla karaktären. Om Hovmannen inte har använt sin förmåga: Hovmannen skakar antingen på huvudet för nej, eller pekar på en karaktär på karaktärslistan. Om Hovmannen använder sin förmåga: Om den valda karaktären är med i spelet, blir den karaktären full.",
         "remindersGlobal": [],
         "reminders": [
-            "Full 3",
-            "Full 2",
             "Full 1",
+            "Full 2",
+            "Full 3",
             "Ingen förmåga"
         ]
     },
@@ -326,6 +333,17 @@
         "remindersGlobal": [],
         "reminders": [
             "Har gissat"
+        ]
+    },
+    {
+        "id": "deusexfiasco",
+        "name": "Deus ex Fiasco",
+        "ability": "Once per game, the Storyteller will make a \"mistake\", correct it and publicly admit to it.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": [
+            "Whoops"
         ]
     },
     {
@@ -393,7 +411,10 @@
         "firstNightReminder": "",
         "otherNightReminder": "",
         "remindersGlobal": [],
-        "reminders": []
+        "reminders": [
+            "False Info",
+            "Visitor"
+        ]
     },
     {
         "id": "empath",
@@ -471,12 +492,14 @@
     },
     {
         "id": "fibbin",
-        "name": "",
+        "name": "Fibbin",
         "ability": "En gång per spel, 1 god spelare kan få falsk information.",
         "firstNightReminder": "",
         "otherNightReminder": "",
         "remindersGlobal": [],
-        "reminders": []
+        "reminders": [
+            "Used"
+        ]
     },
     {
         "id": "fiddler",
@@ -597,7 +620,7 @@
     },
     {
         "id": "goon",
-        "name": "",
+        "name": "Goon",
         "ability": "Varje natt, den 1a spelaren som väljer dig med deras förmåga är full tills skymmning. Du blir på deras lag.",
         "firstNightReminder": "",
         "otherNightReminder": "",
@@ -655,7 +678,9 @@
         "firstNightReminder": "",
         "otherNightReminder": "",
         "remindersGlobal": [],
-        "reminders": []
+        "reminders": [
+            "Something Bad"
+        ]
     },
     {
         "id": "heretic",
@@ -696,8 +721,8 @@
         "otherNightReminder": "Den förra skyddade och fulla spelare blir av med de markörerna. Värdshusvärden pekar på 2 spelare. De spelarna är skyddade. En är full.",
         "remindersGlobal": [],
         "reminders": [
-            "Skyddad",
-            "Full"
+            "Full",
+            "Skyddad"
         ]
     },
     {
@@ -708,8 +733,8 @@
         "otherNightReminder": "",
         "remindersGlobal": [],
         "reminders": [
-            "Minion",
-            "Fel"
+            "Fel",
+            "Minion"
         ]
     },
     {
@@ -768,7 +793,7 @@
         "id": "leviathan",
         "name": "Leviathan",
         "ability": "Om mer än 1 god spelare är avrättad, vinner du. Alla spelare vet att du är i spel. Efter dag 5, vinner onda.",
-        "firstNightReminder": "Placera Leviathans \"Dag 1\" markör. Utropa \"Leviathan är i spel; det här är dag 1\". ",
+        "firstNightReminder": "Placera Leviathans \"Dag 1\" markör. Utropa \"Leviathan är i spel; det här är dag 1\".",
         "otherNightReminder": "Byt ut Leviathans Dagpåminnelse till nästa dagen.",
         "remindersGlobal": [],
         "reminders": [
@@ -788,8 +813,8 @@
         "otherNightReminder": "",
         "remindersGlobal": [],
         "reminders": [
-            "Outsider",
-            "Fel"
+            "Fel",
+            "Outsider"
         ]
     },
     {
@@ -799,8 +824,8 @@
         "firstNightReminder": "Väck alla Minions tillsammans, låt dem rösta genom att peka på den de vill ska vara barnvakt åt Lil'Monsta.",
         "otherNightReminder": "Väck alla Minions tillsammans, låt dem rösta genom att peka på den de vill ska vara barnvakt åt Lil'Monsta. Välj en spelare, den spelaren dör.",
         "remindersGlobal": [
-            "Är Demonen",
-            "Död"
+            "Död",
+            "Är Demonen"
         ],
         "reminders": []
     },
@@ -1010,11 +1035,11 @@
         "ability": "En gång per spel, under natten, välj en god karaktär: få deras förmåga. Om karaktären redan är i spel, blir de full.",
         "firstNightReminder": "Filosofen antingen skakar på huvudet för nej, eller pekar på en god karaktär på deras lista. Om de väljer en karaktär: Byt karaktärs-polletten med Filosofens pollett. Om karaktären är i spel, placera \"Full\" markören vid den spelaren och \"Inte Filosof\" markören bredvid Filosofen.",
         "otherNightReminder": "Om Filosofen inte har använt deras förmåga: Filosofen antingen skakar på huvudet för nej, eller pekar på en god karaktär på deras lista. Om de väljer en karaktär: Byt karaktärs-polletten med Filosofens pollett. Om karaktären är i spel, placera \"Full\" markören vid den spelaren och \"Inte Filosof\" markören bredvid Filosofen.",
-        "remindersGlobal": [],
-        "reminders": [
+        "remindersGlobal": [
             "Full",
             "Är Filosofen"
-        ]
+        ],
+        "reminders": []
     },
     {
         "id": "pithag",
@@ -1045,8 +1070,8 @@
         "otherNightReminder": "Om Po valde ingen förra natten: Po pekar på 3 spelare. Annars: Po skakar antingen på huvudet för nej,  eller pekar på en spelare. Den valda spelaren dör.",
         "remindersGlobal": [],
         "reminders": [
-            "Död",
-            "3 attacker"
+            "3 attacker",
+            "Död"
         ]
     },
     {
@@ -1099,8 +1124,8 @@
         "otherNightReminder": "Om Professorn inte har använt sin förmåga: Professorn skakar antingen på huvudet för nej, eller pekar på en spelare. Om den spelaren är en Bybo, lever de.",
         "remindersGlobal": [],
         "reminders": [
-            "Lever",
-            "Ingen förmåga"
+            "Ingen förmåga",
+            "Lever"
         ]
     },
     {
@@ -1120,8 +1145,8 @@
         "otherNightReminder": "Pukka pekar på en spelare. Den spelaren är förgiftad. Den tidigare förgiftade spelaren dör.",
         "remindersGlobal": [],
         "reminders": [
-            "Förgiftad",
-            "Död"
+            "Död",
+            "Förgiftad"
         ]
     },
     {
@@ -1161,7 +1186,9 @@
         "firstNightReminder": "",
         "otherNightReminder": "",
         "remindersGlobal": [],
-        "reminders": []
+        "reminders": [
+            "Register Falsely?"
+        ]
     },
     {
         "id": "riot",
@@ -1304,12 +1331,14 @@
     },
     {
         "id": "spiritofivory",
-        "name": "",
+        "name": "Spirit Of Ivory",
         "ability": "Det kan inte finnas mer än 1 extra ond spelare.",
         "firstNightReminder": "",
         "otherNightReminder": "",
         "remindersGlobal": [],
-        "reminders": []
+        "reminders": [
+            "No extra evil"
+        ]
     },
     {
         "id": "spy",
@@ -1327,7 +1356,9 @@
         "firstNightReminder": "",
         "otherNightReminder": "",
         "remindersGlobal": [],
-        "reminders": []
+        "reminders": [
+            "Safe"
+        ]
     },
     {
         "id": "sweetheart",
@@ -1392,7 +1423,9 @@
         "firstNightReminder": "",
         "otherNightReminder": "",
         "remindersGlobal": [],
-        "reminders": []
+        "reminders": [
+            "No Attack"
+        ]
     },
     {
         "id": "undertaker",
@@ -1414,8 +1447,8 @@
         "remindersGlobal": [],
         "reminders": [
             "Död",
-            "Har förmåga",
-            "Förgiftad"
+            "Förgiftad",
+            "Har förmåga"
         ]
     },
     {

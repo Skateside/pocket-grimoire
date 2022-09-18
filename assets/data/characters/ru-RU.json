@@ -54,7 +54,10 @@
         "firstNightReminder": "",
         "otherNightReminder": "",
         "remindersGlobal": [],
-        "reminders": []
+        "reminders": [
+            "Protect",
+            "Something Bad"
+        ]
     },
     {
         "id": "apprentice",
@@ -148,7 +151,7 @@
     },
     {
         "id": "beggar",
-        "name": "Попрошайка",
+        "name": "Нищий",
         "ability": "Вы должны потратить жетон голоса, чтобы голосовать. Мертвые игроки могут отдать вам свои жетоны голоса. Вы узнаете сторону того, кто это сделает.",
         "firstNightReminder": "",
         "otherNightReminder": "",
@@ -333,6 +336,17 @@
         ]
     },
     {
+        "id": "deusexfiasco",
+        "name": "Deus ex Fiasco",
+        "ability": "Once per game, the Storyteller will make a \"mistake\", correct it and publicly admit to it.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": [
+            "Whoops"
+        ]
+    },
+    {
         "id": "deviant",
         "name": "Юродивый",
         "ability": "Если вы сегодня вели себя забавно, вас нельзя изгнать.",
@@ -397,7 +411,10 @@
         "firstNightReminder": "",
         "otherNightReminder": "",
         "remindersGlobal": [],
-        "reminders": []
+        "reminders": [
+            "False Info",
+            "Visitor"
+        ]
     },
     {
         "id": "empath",
@@ -480,7 +497,9 @@
         "firstNightReminder": "",
         "otherNightReminder": "",
         "remindersGlobal": [],
-        "reminders": []
+        "reminders": [
+            "Used"
+        ]
     },
     {
         "id": "fiddler",
@@ -643,7 +662,7 @@
     },
     {
         "id": "harlot",
-        "name": "Наперсница ",
+        "name": "Наперсница",
         "ability": "Каждой ночью* выберите живого игрока: если он согласится, вы узнаете его роль, но иногда вы оба можете умереть.",
         "firstNightReminder": "",
         "otherNightReminder": "Наперсница указывает на любого игрока. Усыпите ее. Разбудите выбранного игрока, покажите ему карточку \"Этот персонаж выбрал вас\", затем жетон Наперсницы. Этот игрок жестом обозначает согласие (кивок) либо отказ (качание головой). Если он кивнул, разбудите Наперсницу и покажите ей жетон роли выбранного игрока. После этого вы можете решить, что они оба умирают.",
@@ -659,7 +678,9 @@
         "firstNightReminder": "",
         "otherNightReminder": "",
         "remindersGlobal": [],
-        "reminders": []
+        "reminders": [
+            "Something Bad"
+        ]
     },
     {
         "id": "heretic",
@@ -1012,13 +1033,13 @@
         "id": "philosopher",
         "name": "Философ",
         "ability": "Один раз за игру, ночью, выберите добрую роль: вы получите способность этой роли. Если она присутствует в игре, ее владелец становится пьян.",
-        "firstNightReminder": "Философ либо качанием головы отказывается действовать, либо указывает на добрую роль в списке. Если он выбрал роль: замените жетон Философа жетоном этой роли. Или же, если эта роль есть в игре, отметьте ее владельца жетоном \"Пьян\", а Философа - жетоном \"Не Философ\".",
-        "otherNightReminder": "Если Философ еще не применял свою способность: Философ либо качанием головы отказывается действовать, либо указывает на добрую роль в списке. Если он выбрал роль: замените жетон Философа жетоном этой роли. Или же, если эта роль есть в игре, отметьте ее владельца жетоном \"Пьян\", а Философа - жетоном \"Не Философ\".",
-        "remindersGlobal": [],
-        "reminders": [
-            "Не Философ",
+        "firstNightReminder": "Философ либо качанием головы отказывается действовать, либо указывает на добрую роль в списке. Если он выбрал роль: замените жетон Философа жетоном этой роли. Или же, если эта роль есть в игре, отметьте ее владельца жетоном \"Пьян\", а Философа - жетоном \"Философ\".",
+        "otherNightReminder": "Если Философ еще не применял свою способность: Философ либо качанием головы отказывается действовать, либо указывает на добрую роль в списке. Если он выбрал роль: замените жетон Философа жетоном этой роли. Или же, если эта роль есть в игре, отметьте ее владельца жетоном \"Пьян\", а Философа - жетоном \"Философ\".",
+        "remindersGlobal": [
+            "Философ",
             "Пьян"
-        ]
+        ],
+        "reminders": []
     },
     {
         "id": "pithag",
@@ -1165,7 +1186,9 @@
         "firstNightReminder": "",
         "otherNightReminder": "",
         "remindersGlobal": [],
-        "reminders": []
+        "reminders": [
+            "Register Falsely?"
+        ]
     },
     {
         "id": "riot",
@@ -1313,7 +1336,9 @@
         "firstNightReminder": "",
         "otherNightReminder": "",
         "remindersGlobal": [],
-        "reminders": []
+        "reminders": [
+            "No extra evil"
+        ]
     },
     {
         "id": "spy",
@@ -1331,7 +1356,9 @@
         "firstNightReminder": "",
         "otherNightReminder": "",
         "remindersGlobal": [],
-        "reminders": []
+        "reminders": [
+            "Safe"
+        ]
     },
     {
         "id": "sweetheart",
@@ -1396,7 +1423,9 @@
         "firstNightReminder": "",
         "otherNightReminder": "",
         "remindersGlobal": [],
-        "reminders": []
+        "reminders": [
+            "No Attack"
+        ]
     },
     {
         "id": "undertaker",
