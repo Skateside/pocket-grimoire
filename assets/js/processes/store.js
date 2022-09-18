@@ -152,7 +152,7 @@ TokenStore.ready((tokenStore) => {
             characters: info.characters
                 .map((item) => (
                     typeof item === "string"
-                    ? tokenStore.getCharacter(id)
+                    ? tokenStore.getCharacter(item)
                     : tokenStore.createCustomCharacter(item)
                 ))
                 .filter(Boolean),
