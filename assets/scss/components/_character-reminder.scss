@@ -165,7 +165,7 @@
     width: 90%;
 }
 
-.character__name {
+.character__name, .character__player_name {
     font-family: var(--serif-font);
     font-weight: bold;
     letter-spacing: 0.1em;
