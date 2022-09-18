@@ -108,7 +108,7 @@ if (!savedVersion || compareVersions(savedVersion, VERSION) === -1) {
 
     if (
         savedVersion
-        && window.confirm(I18N.versionChangeMessage)
+        && window.confirm(I18N.versionChange)
     ) {
         Dialog.create(lookupOneCached("#clear-cache")).show();
     }
