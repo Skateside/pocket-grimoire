@@ -103,6 +103,14 @@ lookupOne("#character-reminder").addEventListener("click", ({ target }) => {
 
 });
 
+lookupOne("#character-name").addEventListener("click", ({ target }) => {
+
+    var name = prompt("What is the name of this player?");
+    pad.setPlayerNameForToken(getToken(target), name);
+    hideDialog(target);
+
+});
+
 lookupOne("#character-remove").addEventListener("click", ({ target }) => {
 
     pad.removeCharacterByToken(getToken(target));

@@ -372,6 +372,31 @@ export default class Store {
     }
 
     /**
+     * Sets the player name for the given character.
+     *
+     * @param {CharacterToken} token
+     *        Character whose player name should be updated in the store.
+     * @param {String} name
+     *        The player name of this character.
+     */
+    setPlayerName(token, name) {
+
+        const {
+            data,
+            tokens
+        } = this;
+        let index = tokens.indexOf(token);
+
+        if (index < 0) {
+            return;
+        }
+
+        data.tokens[index].playerName = name;
+        this.write();
+
+    }
+
+    /**
      * Saves the state of the given input.
      *
      * @param {Element} input

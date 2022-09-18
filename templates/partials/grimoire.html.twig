@@ -112,9 +112,15 @@
             <img src="" alt="" class="character__icon js--character--image" width="177" height="124" loading="lazy">
         </span>
         <svg viewBox="0 0 150 150" class="character__text">
-            <path d="M 13 75 C 13 160, 138 160, 138 75" id="curve" fill="transparent"></path>
+            <path d="M 13 75 C 13 -10, 138 -10, 138 75" id="curve-upper" fill="transparent"></path>
+            <text width="150" x="66.6%" text-anchor="middle" class="character__player_name" dominant-baseline="hanging">
+                <textPath xlink:href="#curve-upper" style="fill: currentColor;" class="js--character--player-name"></textPath>
+            </text>
+        </svg>
+        <svg viewBox="0 0 150 150" class="character__text">
+            <path d="M 13 75 C 13 160, 138 160, 138 75" id="curve-lower" fill="transparent"></path>
             <text width="150" x="66.6%" text-anchor="middle" class="character__name">
-                <textPath xlink:href="#curve" style="fill: currentColor;" class="js--character--name"></textPath>
+                <textPath xlink:href="#curve-lower" style="fill: currentColor;" class="js--character--name"></textPath>
             </text>
         </svg>
         <span class="character__shroud"></span>
@@ -159,6 +165,7 @@
         <li><button type="button" class="button" id="character-shroud-toggle">{{ 'grimoire.character_show.shroud'|trans }}</button></li>
         <li><button type="button" class="button" id="character-rotate">{{ 'grimoire.character_show.rotate'|trans }}</button></li>
         <li><button type="button" class="button" id="character-reminder">{{ 'grimoire.character_show.reminder'|trans }}</button></li>
+        <li><button type="button" class="button" id="character-name">Set Player Name</button></li>
     </ul>
     <p class="mt-4"><small>{{ 'grimoire.character_show.recent_reminders'|trans }}</small></p>
     <ul id="character-show-reminders" class="button-list button-list--reminder is-show-all"></ul>
