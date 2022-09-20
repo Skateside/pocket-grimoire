@@ -4,6 +4,13 @@
 
 A digital version of the [Blood on the Clocktower](https://bloodontheclocktower.com) grimoire, allowing in-person games.
 
+## Table of Contents
+
+- [Getting Started](#getting-started)
+- [Custom Scripts](#custom-scripts)
+- [Custom Character Support](#custom-character-support)
+- [Contributing](CONTRIBUTING.md)
+
 ## Getting Started
 
 When you first load the Pocket Grimoire, you'll be presented with a simple screen with the Setup section open and two of the buttons will be disabled.
@@ -80,8 +87,6 @@ As well as the three official scripts, the Pocket Grimoire can allow you to work
 
 The JSON file created on the [official script tool](https://script.bloodontheclocktower.com/) will be understood.
 
-> :warning: There is currently no support for homebrew characters or localised characters. Only official (and unreleased but announced) IDs will be recognised.
-
 Optionally, you can include a name for the script. To do this, include an entry in the JSON with the ID `_meta`:
 
 ```js
@@ -90,3 +95,44 @@ Optionally, you can include a name for the script. To do this, include an entry 
     // ...
 ]
 ```
+
+## Custom Character Support
+
+The Pocket Grimoire understands custom characters. In order to use them, you'll need to create a JSON definition. The JSON definition uses the same format that [clocktower.online](https://clocktower.online/) does.
+
+> :warning: The Pocket Grimoire can only understand custom characters if all characters in the script are fully defined.
+
+```json
+[
+    {
+        "id": "acrobat",
+        "image": "https://github.com/bra1n/townsquare/blob/main/src/assets/icons/acrobat.png?raw=true",
+        "firstNight": 0,
+        "firstNightReminder": "",
+        "otherNight": 49,
+        "otherNightReminder": "If either good living neighbour is drunk or poisoned, the Acrobat dies.",
+        "reminders": ["Die"],
+        "remindersGlobal": [],
+        "setup": false,
+        "name": "Acrobat",
+        "team": "outsider",
+        "ability": "Each night*, if either good living neighbour is drunk or poisoned, you die."
+    }
+]
+```
+
+**Required properties**: `name`, `ability`, `image`, `team`, `reminders`, `remindersGlobal`
+
+-   `id`: A unique ID for the character. It shouldn't have any spaces or special characters.
+-   `image`: A URL to a PNG of the character token icon. It should have a transparent background.
+-   `firstNight` / `otherNight`: The position that this character acts on the first / other nights, compared to other characters.
+    <br>_Note:_ this must be a positive whole number or zero, with zero being treated as "does not act during the night".
+-   `firstNightReminder` / `otherNightReminder`: reminder text for the first / other nights.
+-   `reminders`: reminder tokens. It should be an empty array (`[]`) if there are none.
+-   `remindersGlobal`: global reminder tokens that will always be available, no matter if the character is assigned to a player or not. It should be an empty array (`[]`) if there are none.
+-   `setup`: whether this token affects the setup.
+-   `name`: name of the character.
+-   `team`: the team of the character. It has to be one of `townsfolk`, `outsider`, `minion`, `demon`, `traveler` (`traveller` is understood as an alternative spelling), or `fabled`.
+-   `ability`: the displayed ability of the character.
+
+> :warning: The text for custom characters is not translated if the language is changed.
