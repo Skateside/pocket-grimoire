@@ -105,8 +105,17 @@ lookupOne("#character-reminder").addEventListener("click", ({ target }) => {
 
 lookupOne("#character-name").addEventListener("click", ({ target }) => {
 
-    var name = prompt("What is the name of this player?");
-    pad.setPlayerNameForToken(getToken(target), name);
+    const token = getToken(target);
+    const name = window.prompt(
+        window.I18N.playerName,
+        lookupOneCached(".js--character--player-name", token)?.textContent || ""
+    );
+
+    if (name === null) {
+        return;
+    }
+
+    pad.setPlayerNameForToken(token, name);
     hideDialog(target);
 
 });

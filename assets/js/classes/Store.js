@@ -385,7 +385,7 @@ export default class Store {
             data,
             tokens
         } = this;
-        let index = tokens.indexOf(token);
+        const index = tokens.indexOf(token);
 
         if (index < 0) {
             return;
