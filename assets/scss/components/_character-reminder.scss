@@ -171,6 +171,24 @@
     letter-spacing: 0.1em;
 }
 
+.character__player-name {
+    display: block;
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    background-color: #fffef0;
+    background-image: url("../../img/token/character-token-noise.png");
+    box-shadow:
+        inset 0.1em 0.1em 0.2em rgb(255 255 255 / 0.2),
+        inset 0 0 0.7em #8a4d0f,
+        var(--shadow-amount) var(--shadow-amount) 0.2em rgb(0 0 0 / 0.8);
+    font-size: 0.8em;
+
+    &:empty {
+        display: none;
+    }
+}
+
 .character__unknown {
     display: flex;
     align-items: center;

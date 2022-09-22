@@ -38,6 +38,7 @@ messages:
     no_characters: The script doesn't contain any recognised characters.
     invalid_data: Invalid data.
     no_data: No data sent.
+    player_name: What is the name of this player?
 
 setup:
 
@@ -139,6 +140,7 @@ grimoire:
         reminder: Reminder
         remove: Remove token
         recent_reminders: 'Most recently added reminders:'
+        player_name: Set player name
 
     reminder_show:
         title: Reminder

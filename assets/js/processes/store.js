@@ -98,6 +98,10 @@ tokenObserver.on("rotate-toggle", ({ detail }) => {
     store.rotate(pad.getCharacterByToken(detail.token), detail.isUpsideDown);
 });
 
+tokenObserver.on("set-player-name", ({ detail }) => {
+    store.setPlayerName(pad.getCharacterByToken(detail.token), detail.name);
+});
+
 tokenObserver.on("bluff", ({ detail }) => {
     store.setBluff(detail.button, detail.character);
 });
@@ -171,7 +175,8 @@ TokenStore.ready((tokenStore) => {
         top,
         zIndex,
         isDead,
-        isUpsideDown
+        isUpsideDown,
+        playerName
     }) => {
 
         const isCharacter = TokenStore.isCharacterId(id);
@@ -187,6 +192,7 @@ TokenStore.ready((tokenStore) => {
 
             pad.toggleDead(info.character, Boolean(isDead));
             pad.rotate(info.character, Boolean(isUpsideDown));
+            pad.setPlayerName(info.character, playerName);
 
         }
 

@@ -38,6 +38,7 @@ messages:
     no_characters: Este script não contém nenhum personagem reconhecível.
     invalid_data: Dados inválidos.
     no_data: Nenhum dado enviado.
+    player_name: Qual é o nome desse jogador?
 
 setup:
 
@@ -139,6 +140,7 @@ grimoire:
         reminder: Lembrete
         remove: Remover token
         recent_reminders: 'Lembretes adicionados recentemente:'
+        player_name: Definir nome do jogador
 
     reminder_show:
         title: Lembrete

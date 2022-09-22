@@ -118,6 +118,7 @@
             </text>
         </svg>
         <span class="character__shroud"></span>
+        <span class="character__player-name js--character--player-name"></span>
     </span>
 </template>
 
@@ -159,6 +160,7 @@
         <li><button type="button" class="button" id="character-shroud-toggle">{{ 'grimoire.character_show.shroud'|trans }}</button></li>
         <li><button type="button" class="button" id="character-rotate">{{ 'grimoire.character_show.rotate'|trans }}</button></li>
         <li><button type="button" class="button" id="character-reminder">{{ 'grimoire.character_show.reminder'|trans }}</button></li>
+        <li><button type="button" class="button" id="character-name">{{ 'grimoire.character_show.player_name'|trans }}</button></li>
     </ul>
     <p class="mt-4"><small>{{ 'grimoire.character_show.recent_reminders'|trans }}</small></p>
     <ul id="character-show-reminders" class="button-list button-list--reminder is-show-all"></ul>

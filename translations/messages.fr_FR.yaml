@@ -38,6 +38,7 @@ messages:
     no_characters: Ce script ne contient pas de personnages connus
     invalid_data: Données invalides.
     no_data: Aucune donnée envoyée.
+    player_name: Comment s'appelle ce joueur ?
 
 setup:
 
@@ -139,6 +140,7 @@ grimoire:
         reminder: Rappel
         remove: Enlever jeton
         recent_reminders: 'Jetons rappel les plus récent :'
+        player_name: Définir le nom du joueur
 
     reminder_show:
         title: Rappel

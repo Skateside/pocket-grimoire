@@ -103,6 +103,23 @@ lookupOne("#character-reminder").addEventListener("click", ({ target }) => {
 
 });
 
+lookupOne("#character-name").addEventListener("click", ({ target }) => {
+
+    const token = getToken(target);
+    const name = window.prompt(
+        window.I18N.playerName,
+        lookupOneCached(".js--character--player-name", token)?.textContent || ""
+    );
+
+    if (name === null) {
+        return;
+    }
+
+    pad.setPlayerNameForToken(token, name);
+    hideDialog(target);
+
+});
+
 lookupOne("#character-remove").addEventListener("click", ({ target }) => {
 
     pad.removeCharacterByToken(getToken(target));

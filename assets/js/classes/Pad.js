@@ -357,6 +357,62 @@ export default class Pad {
     }
 
     /**
+     * Sets the player name for the character that's been given.
+     *
+     * @param {CharacterToken} character
+     *        The character to set the player name for.
+     * @param {String} name
+     *        The player name to display with the character token.
+     */
+    setPlayerName(character, name) {
+
+        const {
+            characters,
+            observer
+        } = this;
+        const info = characters.find((info) => info.character === character);
+
+        if (!info) {
+            return;
+        }
+
+        const {
+            token
+        } = info;
+
+        const nameTag = lookupOneCached(
+            ".js--character--player-name",
+            this.constructor.getToken(token)
+        );
+
+        if (!nameTag) {
+            return;
+        }
+
+        name = (name || "").trim();
+        nameTag.textContent = name;
+        observer.trigger("set-player-name", {
+            name,
+            token,
+            character
+        });
+
+    }
+
+    /**
+     * A helper function for setting the player name of a character by their
+     * element rather than the {@link CharacterToken} instance.
+     *
+     * @param {Element} token
+     *        The token element.
+     * @param {String} name
+     *        The player name to display with the character token.
+     */
+    setPlayerNameForToken(token, name) {
+        this.setPlayerName(this.getCharacterByToken(token), name);
+    }
+
+    /**
      * Adds a reminder to {@link Pad#element}.
      *
      * @param  {ReminderToken} reminder

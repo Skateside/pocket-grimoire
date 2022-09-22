@@ -9,6 +9,7 @@ A digital version of the [Blood on the Clocktower](https://bloodontheclocktower.
 - [Getting Started](#getting-started)
 - [Custom Scripts](#custom-scripts)
 - [Custom Character Support](#custom-character-support)
+- [Translations and Typos](#translations-and-typos)
 - [Contributing](CONTRIBUTING.md)
 
 ## Getting Started
@@ -136,3 +137,21 @@ The Pocket Grimoire understands custom characters. In order to use them, you'll 
 -   `ability`: the displayed ability of the character.
 
 > :warning: The text for custom characters is not translated if the language is changed.
+
+## Translations and Typos
+
+If you've noticed a typo, or you have a better translation or would like to add a new language, there are 3 files that will need to be updated:
+
+1.  [RealVidy's BotC Translations](https://docs.google.com/spreadsheets/d/183HMp4ZgslxA4NtFVTXhY3xAbg7FIXZdmVnh9-4A_14/edit#gid=923580658)
+    <br>This file contains translations for the tokens, reminders, and abilities.
+    <br>Since this file wasn't created by me, you'll need to let me know of any updates.
+    <br>This file has many more translations than the Pocket Grimoire has.
+
+2.  [The Jinxes](https://docs.google.com/spreadsheets/d/1EJQzuQNlzTvNzAOJEIldu0ILKNU3UhsgFr-TZnhxpVM/edit#gid=1649450121)
+    <br>This file contains translations for the jinxes.
+    <br>It was created as a separate file so that it could be easily used in other projects.
+
+3.  [The Pocket Grimoire](https://docs.google.com/spreadsheets/d/1YjI3LcLnLbuONbjbniZTZa1BIT8MKBb8TuIprtmkjAw/edit#gid=19211044)
+    <br>This file contains translations for anything that's specific for the Pocket Grimoire.
+
+As soon as a translation exists in all 3 documents, I can add it to the Pocket Grimoire 🙂
