@@ -38,6 +38,7 @@ messages:
     no_characters: 無法從這個劇本辨認出任何角色。
     invalid_data: 無效數據。
     no_data: 沒有發送數據。
+    player_name: 這個玩家叫什麼名字？
 
 setup:
 
@@ -139,6 +140,7 @@ grimoire:
         reminder: 標記
         remove: 移除角色代幣
         recent_reminders: '最近新增的標記：'
+        player_name: 設置玩家姓名
 
     reminder_show:
         title: 標記

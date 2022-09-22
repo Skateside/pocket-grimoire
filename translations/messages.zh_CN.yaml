@@ -38,6 +38,7 @@ messages:
     no_characters: 该脚本不包含任何可识别的字符。
     invalid_data: 无效数据。
     no_data: 没有发送数据。
+    player_name: 这个玩家叫什么名字？
 
 setup:
 
@@ -139,6 +140,7 @@ grimoire:
         reminder: 提醒
         remove: 删除令牌
         recent_reminders: '最近添加的提醒：'
+        player_name: 设置玩家姓名
 
     reminder_show:
         title: 提醒

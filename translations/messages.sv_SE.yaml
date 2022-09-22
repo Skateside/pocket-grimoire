@@ -38,6 +38,7 @@ messages:
     no_characters: Scriptet innehåller inte några igenkända karaktärer.
     invalid_data: Ogiltiga data.
     no_data: Ingen data skickad.
+    player_name: Vad heter den här spelaren?
 
 setup:
 
@@ -139,6 +140,7 @@ grimoire:
         reminder: Påminnelse
         remove: Ta bort markör
         recent_reminders: 'Senast tillagda påminnelser:'
+        player_name: Ställ in spelarens namn
 
     reminder_show:
         title: Påminnelse
