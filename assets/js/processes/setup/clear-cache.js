@@ -31,6 +31,10 @@ lookupOne("#clear-tokens").addEventListener("change", ({ target }) => {
     lookupOneCached("#token-warning").hidden = !target.checked;
 });
 
+lookupOne("#clear-infoTokens").addEventListener("change", ({ target }) => {
+    lookupOneCached("#info-token-warning").hidden = !target.checked;
+});
+
 lookupOne("#cache-form").addEventListener("submit", (e) => {
 
     e.preventDefault();
