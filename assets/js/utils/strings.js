@@ -66,3 +66,16 @@ export function readUTF8(bytes) {
     return string;
 
 }
+
+/**
+ * Removes any HTML markup from the given string.
+ *
+ * @param  {String} string
+ *         String from which HTML markup should be removed.
+ * @return {String}
+ *         String without any HTML markup.
+ * @see    https://css-tricks.com/snippets/javascript/strip-html-tags-in-javascript/
+ */
+export function striptags(string) {
+    return String(string).replace(/(<([^>]+)>)/gi, "");
+}

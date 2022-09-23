@@ -31,8 +31,10 @@
 {% endif %}
 {% set attributes = attributes|merge(['data-dialog-hide-on="' ~ hide|join(' ') ~ '"']) %}
 
-{% set headerId = 'header-' ~ random() %}
-{% set attributes = attributes|merge(['aria-described-by="' ~ headerId ~ '"', 'tabindex="-1"']) %}
+{% if includeHeader is not defined or includeHeader != false %}
+    {% set headerId = 'header-' ~ random() %}
+    {% set attributes = attributes|merge(['aria-described-by="' ~ headerId ~ '"', 'tabindex="-1"']) %}
+{% endif %}
 
 <dialog {{ attributes|join(' ')|raw }}>
     <div class="dialog__content">

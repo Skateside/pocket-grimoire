@@ -87,8 +87,18 @@ Promise.all([
 
 });
 
-lookupCached("[data-dialog]").forEach((trigger) => {
-    trigger.dialog = Dialog.createFromTrigger(trigger);
+// Delegate this event for two reasons:
+// 1. We can add dialogs dynamically and they'll still work.
+// 2. It's more efficient to only create the instance when it's needed.
+document.body.addEventListener("click", ({ target }) => {
+
+    if (target.hasAttribute("data-dialog") && !target.dialog) {
+
+        target.dialog = Dialog.createFromTrigger(target);
+        target.dialog.show();
+
+    }
+
 });
 
 lookup("input[data-filter-list]").forEach((input) => {

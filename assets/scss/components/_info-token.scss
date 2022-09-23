@@ -58,3 +58,11 @@
         display: inline-block;
     }
 }
+
+.info-token-heading {
+    font-family: var(--serif-font);
+    font-weight: normal;
+    font-size: 1em;
+    text-shadow: 0.1em 0.1em 0.1em rgb(0 0 0 / 80%);
+    margin: 1em 0;
+}

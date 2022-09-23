@@ -66,30 +66,35 @@
     id: 'info-tokens'
 } %}
     {% block body %}
-    <ul class="button-list">
-        {% for info in infoTokens %}
+    <ul class="button-list" id="info-token-button-holder" data-info-tokens='{{ infoTokens|json_encode() }}'></ul>
+    <h3 class="info-token-heading">Custom tokens</h3>
+    <ul class="button-list" id="info-token-custom-holder">
         <li>
-            <button type="button" class="button button--full-height" data-dialog="#info-token-{{ info.id }}" style="--bg-colour: var(--{{ info.colour }});">{{ info.markup|striptags }}</button>
+            <button type="button" class="button button--full-height" id="add-info-token">Add info token</button>
         </li>
-        {% endfor %}
     </ul>
     {% endblock %}
 {% endembed %}
 
-{% for info in infoTokens %}
+<div id="info-token-dialog-holder"></div>
+
+<template id="info-token-button-template">
+    <li>
+        <button type="button" class="button button--full-height js--info-token--button"></button>
+    </li>
+</template>
+
+<template id="info-token-dialog-template">
     {% embed 'includes/dialog.html.twig' with {
-        id: 'info-token-' ~ info.id,
-        class: 'info-token info-token--' ~ info.colour,
+        id: 'info-token-',
+        class: 'info-token js--info-token--dialog',
         background: 'hide',
         hideClickBackground: false,
-        includeHeader: false,
-        style: {
-            '--colour': 'var(--' ~ info.colour ~ ')'
-        }
+        includeHeader: false
     } %}
         {% block body %}
         <button class="info-token__hide" type="button" aria-label="{{ 'dialog.close'|trans }}" data-dialog-hide>&times;</button>
-        <p class="info-token__text">{{ info.markup|raw }}</p>
+        <p class="info-token__text js--info-token--dialog-text"></p>
         {% endblock %}
     {% endembed %}
-{% endfor %}
+</template>

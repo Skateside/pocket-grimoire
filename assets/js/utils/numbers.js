@@ -100,3 +100,31 @@ export function times(number, handler, context) {
     return max;
 
 }
+
+/**
+ * Returns a number between 0 and 1 that is cryptographically random. The
+ * precision of the random number can be adjusted by defining the number of bits
+ * of the random number: 8, 16, or 32. A larger number will be more precise but
+ * may take longer to compute.
+ *
+ * @param  {Number} [bits=8]
+ *         Optional number of bits for the random number. If the number is not
+ *         one of 8, 16, or 32, then 8 is assumed.
+ * @return {Number}
+ *         Random number between 0 and 1.
+ */
+export function random(bits = 8) {
+
+    const arrays = {
+        8: Uint8Array,
+        16: Uint16Array,
+        32: Uint32Array
+    };
+
+    if (!arrays[bits]) {
+        bits = 8;
+    }
+
+    return window.crypto.getRandomValues(new arrays[bits](1))[0] / 2**bits;
+
+}

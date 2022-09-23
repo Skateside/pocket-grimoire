@@ -16,6 +16,8 @@ import "./processes/jinxes.js";
 
 import "./processes/night-order.js";
 
+import "./processes/info-tokens.js";
+
 import "./processes/acknowledgements.js";
 
 import "./processes/store.js";
