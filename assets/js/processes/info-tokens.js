@@ -62,7 +62,7 @@ observer.on("info-token-added", ({ detail }) => {
 
 function editToken(token, raw) {
 
-    token.updateRaw(text);
+    token.updateRaw(raw);
     observer.trigger("info-token-updated", {
         token
     });

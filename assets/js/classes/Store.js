@@ -22,6 +22,7 @@ export default class Store {
         tokens: [],
         inputs: {},
         details: {},
+        infoTokens: [],
         height: "",
         version: ""
     };
@@ -83,6 +84,8 @@ export default class Store {
          */
         this.tokens = [];
 
+        this.infoTokens = [];
+
     }
 
     /**
@@ -131,6 +134,10 @@ export default class Store {
             this.tokens.length = 0;
             this.data.bluffs = deepClone(defaults.bluffs);
 
+        }
+
+        if (key === "info_tokens") {
+            this.infoTokens.length = 0;
         }
 
         this.write();
@@ -477,6 +484,79 @@ export default class Store {
 
         this.data.details[`#${id}`] = open;
         this.write();
+
+    }
+
+    /**
+     * Adds a custom info token to the data.
+     *
+     * @param {InfoToken} infoToken
+     *        The custom info token to save.
+     */
+    saveInfoToken(infoToken, index) {
+
+        const {
+            infoTokens,
+            data
+        } = this;
+
+        if (infoTokens.includes(infoToken)) {
+            return;
+        }
+
+        if (typeof index === "number") {
+            infoTokens[index] = infoToken;
+        } else {
+            infoTokens.push(infoToken);
+            data.infoTokens.push(infoToken.getRaw());
+        }
+
+        this.write();
+
+    }
+
+    /**
+     * Updates the stored data for the given info token. If the info token is
+     * not recognised, no action is taken.
+     *
+     * @param {InfoToken} infoToken
+     *        Info token whose data should be updated.
+     */
+    updateInfoToken(infoToken) {
+
+        const index = this.infoTokens.indexOf(infoToken);
+
+        if (index > -1) {
+
+            this.data.infoTokens[index] = infoToken.getRaw();
+            this.write();
+
+        }
+
+    }
+
+    /**
+     * Removes the given info token from the stored data. If the info token is
+     * not recognised then no action is taken.
+     *
+     * @param {InfoToken} infoToken
+     *        Info token to be removed.
+     */
+    removeInfoToken(infoToken) {
+
+        const {
+            infoTokens,
+            data
+        } = this;
+        const index = infoTokens.indexOf(infoToken);
+
+        if (index > -1) {
+
+            infoTokens.splice(index, 1);
+            data.infoTokens.splice(index, 1);
+            this.write();
+
+        }
 
     }
 

@@ -3,6 +3,7 @@ import Observer from "../classes/Observer.js";
 import TokenStore from "../classes/TokenStore.js";
 import Bluffs from "../classes/Bluffs.js";
 import Dialog from "../classes/Dialog.js";
+import InfoToken from "../classes/InfoToken.js";
 import {
     lookup,
     lookupOne,
@@ -19,6 +20,7 @@ import {
 const store = Store.create("pocket-grimoire");
 const gameObserver = Observer.create("game");
 const tokenObserver = Observer.create("token");
+const infoTokenObserver = Observer.create("info-token");
 
 const padElement = lookupOneCached(".js--pad");
 const pad = padElement.pad;
@@ -104,6 +106,18 @@ tokenObserver.on("set-player-name", ({ detail }) => {
 
 tokenObserver.on("bluff", ({ detail }) => {
     store.setBluff(detail.button, detail.character);
+});
+
+infoTokenObserver.on("info-token-added", ({ detail }) => {
+    store.saveInfoToken(detail.token, detail.index);
+});
+
+infoTokenObserver.on("info-token-updated", ({ detail }) => {
+    store.updateInfoToken(detail.token);
+});
+
+infoTokenObserver.on("info-token-deleted", ({ detail }) => {
+    store.removeInfoToken(detail.token);
 });
 
 const savedVersion = store.getVersion();
@@ -283,5 +297,22 @@ TokenStore.ready((tokenStore) => {
     if (storeData.height) {
         padElement.style.height = storeData.height;
     }
+
+    // Re-add any custom info tokens.
+
+    storeData.infoTokens.forEach((raw, i) => {
+
+        const token = new InfoToken({
+            raw,
+            custom: true
+        });
+        token.draw();
+
+        infoTokenObserver.trigger("info-token-added", {
+            token,
+            index: i
+        });
+
+    });
 
 });

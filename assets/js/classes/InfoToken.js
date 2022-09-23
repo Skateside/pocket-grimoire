@@ -252,6 +252,16 @@ export default class InfoToken {
     }
 
     /**
+     * Exposes the "raw" key from {@link InfoToken#data}.
+     *
+     * @return {String}
+     *         The raw markdown.
+     */
+    getRaw() {
+        return this.data.raw;
+    }
+
+    /**
      * Exposes {@link InfoToken#trigger}
      *
      * @return {Element}
@@ -288,6 +298,7 @@ export default class InfoToken {
         const markup = markdown2html(raw);
         const text = striptags(markup);
 
+        data.raw = raw;
         data.text = text;
         lookupOne(".js--info-token--button", trigger).textContent = text;
         data.markup = markup;
