@@ -39,6 +39,7 @@ messages:
     invalid_data: Dados inválidos.
     no_data: Nenhum dado enviado.
     player_name: Qual é o nome desse jogador?
+    custom_info_token: "O que você quer que seu novo token de informações diga? Use **asteriscos duplos** para enfatizar o texto."
 
 setup:
 
@@ -187,16 +188,16 @@ info_tokens:
     info_tokens:
         isdemon: Este é o <strong>Demônio</strong>
         isminion: Estes são seus <strong>Lacaios</strong>
-        inplay: Estes personagens estão <strong>em jogo</strong>
         notinplay: Estes personagens <strong>não estão em jogo</strong>
         nominatetoday: Você <strong>nomeou</strong> hoje?
-        abilitytargetted: Você foi alvo desta <strong>habilidade</strong>
         playeris: Este <strong>jogador</strong> é
-        haveability: Você tem esta <strong>habilidade</strong>
         votetoday: Você <strong>votou</strong> hoje?
-        choice: Sua <strong>escolha</strong>?
-        abilitynow: Você usará sua <strong>habilidade</strong> agora?
-        youare: <strong>Você</strong> é
+        youare: "<strong>Você</strong> é"
+        selectedyou: Este personagem <strong>selecionou</strong> você
+    custom: Fichas de informações personalizadas
+    add_custom: Adicionar token de informações
+    edit_custom: Editar token de informações
+    delete_custom: Excluir token de informações
 
 acknowledgements:
     title: Reconhecimentos

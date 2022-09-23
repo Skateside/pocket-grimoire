@@ -39,6 +39,7 @@ messages:
     invalid_data: Неверные данные.
     no_data: Данные не отправлены.
     player_name: Как зовут этого игрока?
+    custom_info_token: "Что вы хотите, чтобы ваш новый информационный токен говорил? Используйте **двойные звездочки**, чтобы выделить текст."
 
 setup:
 
@@ -187,16 +188,16 @@ info_tokens:
     info_tokens:
         isdemon: Этот игрок - <strong>Демон</strong>
         isminion: Это - ваши <strong>Приспешники</strong>
-        inplay: Эти роли находятся <strong>в игре</strong>
         notinplay: Эти роли находятся <strong>вне игры</strong>
         nominatetoday: Вы сегодня <strong>выдвигали?</strong>
-        abilitytargetted: Вы - цель данной <strong>способности</strong>
         playeris: Роль этого <strong>игрока</strong>
-        haveability: Вы владеете этой <strong>способностью</strong>
         votetoday: Вы сегодня <strong>голосовали?</strong>
-        choice: Ваш <strong>выбор?</strong>
-        abilitynow: Применить <strong>способность</strong> сейчас?
         youare: <strong>Ваша</strong> роль
+        selectedyou: Этот персонаж <strong>выбрал</strong> вас
+    custom: Пользовательские информационные таблички
+    add_custom: Добавить информационные таблички
+    edit_custom: Изменить информационные таблички
+    delete_custom: Удалить информационные таблички
 
 acknowledgements:
     title: Права

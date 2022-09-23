@@ -79,3 +79,15 @@ export function readUTF8(bytes) {
 export function striptags(string) {
     return String(string).replace(/(<([^>]+)>)/gi, "");
 }
+
+/**
+ * A simple funciton that converts the double asterists into strong tags.
+ *
+ * @param  {String} string
+ *         Text to convert.
+ * @return {String}
+ *         Converted text.
+ */
+export function markdown2html(string) {
+    return string.replace(/\*\*([^*]*)\*\*/g, "<strong>$1</strong>");
+}

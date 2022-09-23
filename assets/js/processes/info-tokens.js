@@ -1,136 +1,118 @@
 import Template from "../classes/Template.js";
+import InfoToken from "../classes/InfoToken.js";
+import Observer from "../classes/Observer.js";
+import Dialog from "../classes/Dialog.js";
 import {
-    lookupOne,
-    lookupOneCached
+    lookupOne
 } from "../utils/elements.js";
-import {
-    random
-} from "../utils/numbers.js";
-import {
-    striptags
-} from "../utils/strings.js";
 
-const buttonTemplate = Template.create(lookupOne("#info-token-button-template"));
-const dialogTemplate = Template.create(lookupOne("#info-token-dialog-template"));
 const buttonHolder = lookupOne("#info-token-button-holder");
-const customHolder = lookupOne("#info-token-custom-holder");
 const dialogHolder = lookupOne("#info-token-dialog-holder");
 
-JSON.parse(buttonHolder.dataset.infoTokens).forEach((data) => drawToken(data));
+InfoToken.setTemplates({
+    button: Template.create(lookupOne("#info-token-button-template")),
+    dialog: Template.create(lookupOne("#info-token-dialog-template"))
+});
+InfoToken.setHolders({
+    button: buttonHolder,
+    custom: lookupOne("#info-token-custom-holder"),
+    dialog: dialogHolder
+});
 
-const idCache = Object.create(null);
+JSON.parse(buttonHolder.dataset.infoTokens).forEach((data) => {
 
-function makeId(text) {
+    const token = new InfoToken(data);
+    token.draw();
 
-    if (!idCache[text]) {
+});
 
-        idCache[text] = (
-            text.replace(/\W/g, "").toLowerCase()
-            + "-"
-            + String(random()).replace(/\D/g, "")
-        );
-
-    }
-
-    return idCache[text];
-
-}
-
-function interpret({ markup, id, colour, custom }) {
-
-    const text = striptags(markup);
-
-    if (!id) {
-        id = makeId(text);
-    }
-
-    return {
-        text,
-        markup,
-        id: `info-token-${id}`,
-        colour: `var(--${colour || "grey"})`,
-        custom: Boolean(custom)
-    };
-
-}
-
-function drawToken(data) {
-
-    drawButton(data);
-    drawDialog(data);
-
-}
-
-function drawButton(data) {
-
-    const {
-        text,
-        id,
-        colour,
-        custom
-    } = interpret(data);
-
-    const holder = (
-        custom
-        ? customHolder
-        : buttonHolder
-    );
-
-    holder.append(buttonTemplate.draw([
-        [
-            ".js--info-token--button",
-            null,
-            (element) => {
-
-                element.textContent = text;
-                element.style.setProperty("--bg-colour", colour);
-                element.dataset.dialog = `#${id}`;
-
-            }
-        ]
-    ]));
-
-}
-
-function drawDialog(data) {
-
-    const {
-        markup,
-        id,
-        colour
-    } = interpret(data);
-
-    dialogHolder.append(dialogTemplate.draw([
-        [
-            ".js--info-token--dialog",
-            null,
-            (element) => {
-
-                element.id = id;
-                element.style.setProperty("--colour", colour);
-
-            }
-        ],
-        [
-            ".js--info-token--dialog-text",
-            markup,
-            (element) => element.innerHTML = markup
-        ]
-    ]));
-
-}
-
-function addMarkup(text) {
-    return text.replace(/\*\*([^*]*)\*\*/g, "<strong>$1</strong>");
-}
+const observer = Observer.create("info-token");
 
 lookupOne("#add-info-token").addEventListener("click", () => {
 
-    const text = window.prompt("What do you want your new info token to say? Use **double asterisks** to emphasise text.");
+    const text = window.prompt(window.I18N.customInfoToken);
 
-    drawToken({
-        markup: addMarkup(text),
+    if (!text) {
+        return;
+    }
+
+    const token = new InfoToken({
+        raw: text,
         custom: true
     });
+    token.draw();
+
+    observer.trigger("info-token-added", {
+        token
+    });
+
+});
+
+const dialog2token = new WeakMap();
+
+observer.on("info-token-added", ({ detail }) => {
+
+    const {
+        token
+    } = detail;
+
+    dialog2token.set(token.getDialog(), token);
+
+});
+
+function editToken(token, raw) {
+
+    token.updateRaw(text);
+    observer.trigger("info-token-updated", {
+        token
+    });
+
+}
+
+function deleteToken(token) {
+
+    Dialog.create(token.getDialog()).hide();
+    token.remove();
+    observer.trigger("info-token-deleted", {
+        token
+    });
+
+}
+
+dialogHolder.addEventListener("click", ({ target }) => {
+
+    const button = target.closest("button[data-action]");
+
+    if (!button) {
+        return;
+    }
+
+    const token = dialog2token.get(button.closest(".js--info-token--dialog"));
+
+    if (!token) {
+        return;
+    }
+
+    switch (button.dataset.action) {
+
+    case "edit":
+
+        const data = token.getData();
+        const text = window.prompt(window.I18N.customInfoToken, data.raw);
+
+        if (text) {
+            editToken(token, text);
+        } else {
+            deleteToken(token);
+        }
+
+        break;
+
+    case "delete":
+
+        deleteToken(token);
+        break;
+
+    }
 
 });

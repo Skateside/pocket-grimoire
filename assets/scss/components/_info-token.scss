@@ -59,6 +59,21 @@
     }
 }
 
+.info-token__actions {
+    position: absolute;
+    left: 1.2em;
+    top: 1.2em;
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+}
+
+.info-token__button {
+    @extend %no-btn;
+    color: #fff;
+    width: 1em;
+}
+
 .info-token-heading {
     font-family: var(--serif-font);
     font-weight: normal;

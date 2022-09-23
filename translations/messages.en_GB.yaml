@@ -39,6 +39,7 @@ messages:
     invalid_data: Invalid data.
     no_data: No data sent.
     player_name: What is the name of this player?
+    custom_info_token: "What do you want your new info token to say? Use **double asterisks** to emphasise text."
 
 setup:
 
@@ -187,16 +188,16 @@ info_tokens:
     info_tokens:
         isdemon: This is the <strong>Demon</strong>
         isminion: These are your <strong>Minions</strong>
-        inplay: These characters are <strong>in play</strong>
         notinplay: These characters are <strong>not in play</strong>
         nominatetoday: Did you <strong>nominate</strong> today?
-        abilitytargetted: This <strong>ability</strong> targeted you
-        playeris: This <strong>player</strong> is
-        haveability: You have this <strong>ability</strong>
+        playeris: <strong>This player</strong> is
         votetoday: Did you <strong>vote</strong> today?
-        choice: Your <strong>choice</strong>?
-        abilitynow: Use your <strong>ability</strong> now?
         youare: "<strong>You</strong> are"
+        selectedyou: This character <strong>selected</strong> you
+    custom: Custom info tokens
+    add_custom: Add info token
+    edit_custom: Edit info token
+    delete_custom: Delete info token
 
 acknowledgements:
     title: Acknowledgements

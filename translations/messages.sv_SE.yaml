@@ -39,6 +39,7 @@ messages:
     invalid_data: Ogiltiga data.
     no_data: Ingen data skickad.
     player_name: Vad heter den här spelaren?
+    custom_info_token: "Vad vill du att din nya informationstoken ska säga? Använd **dubbla asterisker** för att framhäva text."
 
 setup:
 
@@ -187,16 +188,16 @@ info_tokens:
     info_tokens:
         isdemon: Det här är <strong>Demonen</strong>
         isminion: De här är dina <strong>Minions</strong>
-        inplay: De här karaktärerna är <strong>i spel</strong>
         notinplay: De här karaktärerna är inte <strong>I spel</strong>
         nominatetoday: <strong>Nominerade</strong> du idag?
-        abilitytargetted: Den här <strong>förmågan</strong> användes på dig
         playeris: Den här <strong>spelaren</strong> är
-        haveability: Du har den här <strong>förmågan</strong>
         votetoday: <strong>Röstade</strong> du idag?
-        choice: Ditt <strong>val</strong>?
-        abilitynow: Använd din <strong>förmåga</strong> nu?
         youare: <strong>Du</strong> är
+        selectedyou: Denna karaktär <strong>valde</strong> dig
+    custom: Anpassade informationstoken
+    add_custom: Lägg till informationstoken
+    edit_custom: Redigera informationstoken
+    delete_custom: Ta bort informationstoken
 
 acknowledgements:
     title: Erkännanden

@@ -39,6 +39,7 @@ messages:
     invalid_data: 無效數據。
     no_data: 沒有發送數據。
     player_name: 這個玩家叫什麼名字？
+    custom_info_token: "你想讓你的新信息令牌說什麼？ 使用**雙星號**強調文本。"
 
 setup:
 
@@ -187,16 +188,16 @@ info_tokens:
     info_tokens:
         isdemon: 這是<strong>惡魔</strong>
         isminion: 這些是你的<strong>僕從</strong>
-        inplay: 這些角色<strong>在遊戲中</strong>
         notinplay: 這些角色<strong>不在遊戲中</strong>
         nominatetoday: 你今天<strong>提名</strong>了嗎?
-        abilitytargetted: 這個<strong>能力</strong>指定你
         playeris: <strong>這位玩家</strong>是
-        haveability: 你擁有這個<strong>能力</strong>
         votetoday: 你今天<strong>投票</strong>了嗎?
-        choice: 你的<strong>選擇</strong>是?
-        abilitynow: 要使用你的<strong>能力</strong>嗎?
         youare: <strong>你</strong>是
+        selectedyou: 這個角色<strong>選擇</strong>了你
+    custom: 自定義信息令牌
+    add_custom: 添加信息令牌
+    edit_custom: 編輯信息令牌
+    delete_custom: 刪除信息令牌
 
 acknowledgements:
     title: 致謝

@@ -39,6 +39,7 @@ messages:
     invalid_data: Données invalides.
     no_data: Aucune donnée envoyée.
     player_name: Comment s'appelle ce joueur ?
+    custom_info_token: "Que voulez-vous que votre nouveau jeton d'information dise ? Utilisez des **doubles astérisques** pour souligner le texte."
 
 setup:
 
@@ -187,16 +188,16 @@ info_tokens:
     info_tokens:
         isdemon: Voici le <strong>Démon</strong>
         isminion: Voici tes <strong>Sbires</strong>
-        inplay: Ces personnages sont <strong>en jeu</strong>
         notinplay: Ces personnages ne sont <strong>pas en jeu</strong>
         nominatetoday: As-tu <strong>nommé</strong> aujourd'hui ?
-        abilitytargetted: Cette <strong>compétence</strong> t'a ciblé
-        playeris: Ce <strong>joueur</strong> est
-        haveability: Tu as cette <strong>compétence</strong>
+        playeris: <strong>Ce joueur</strong> est
         votetoday: As-tu <strong>voté</strong> aujourd'hui ?
-        choice: Ton <strong>choix</strong> ?
-        abilitynow: Tu utilise ta <strong>compétence</strong> maintenant ?
         youare: <strong>Tu</strong> es
+        selectedyou: Ce personnage vous a <strong>sélectionné</strong>
+    custom: Jetons d'infos personnalisés
+    add_custom: Ajouter un jeton info
+    edit_custom: Modifier le jeton info
+    delete_custom: Supprimer le jeton info
 
 acknowledgements:
     title: Remerciements
