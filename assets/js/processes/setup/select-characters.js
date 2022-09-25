@@ -360,7 +360,8 @@ lookupOne("#player-select").addEventListener("submit", (e) => {
             .flat();
 
         gameObserver.trigger("character-draw", {
-            characters: filtered
+            characters: filtered,
+            isShowAll: e.submitter.id === "player-select-all"
         });
 
         Dialog.create(lookupOneCached("#character-select")).hide();
@@ -368,6 +369,12 @@ lookupOne("#player-select").addEventListener("submit", (e) => {
     });
 
 });
+
+// lookupOne("#player-select-all").addEventListener("click", () => {
+//
+//
+//
+// });
 
 tokenObserver.on("toggle-jinx-active", ({ detail }) => {
 

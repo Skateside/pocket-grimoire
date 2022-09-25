@@ -162,7 +162,10 @@
         </fieldset>
         {% endfor %}
 
-        <button type="submit" class="button">{{ 'setup.character_select.draw_characters'|trans }}</button>
+        <ul class="button-list">
+            <li><button type="submit" class="button button--full-height">{{ 'setup.character_select.draw_characters'|trans }}</button></li>
+            <li><button type="submit" class="button button--full-height" id="player-select-all">{{ 'setup.character_select.add_all'|trans }}</button></li>
+        </ul>
 
     </form>
     {% endblock %}
@@ -346,7 +349,6 @@
 
             <p id="token-warning"><small>{{ 'setup.clear_cache.warning'|trans|raw }}</small></p>
             <p id="info-token-warning"><small>{{ 'setup.clear_cache.info_token_warning'|trans|raw }}</small></p>
-            {# NOTE: add a warning for info tokens #}
             <p><button type="submit" class="button">{{ 'setup.clear_cache.clear_cache'|trans }}</button></p>
 
         </form>

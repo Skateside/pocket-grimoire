@@ -15,6 +15,10 @@ const gameObserver = Observer.create("game");
 
 gameObserver.on("character-draw", ({ detail }) => {
 
+    if (detail.isShowAll) {
+        return;
+    }
+
     const template = Template.create(
         lookupOneCached("#character-choice-template")
     );
@@ -36,6 +40,29 @@ gameObserver.on("character-draw", ({ detail }) => {
     );
 
     Dialog.create(lookupOneCached("#character-choice")).show();
+
+});
+
+gameObserver.on("character-draw", ({ detail }) => {
+
+    if (!detail.isShowAll) {
+        return;
+    }
+
+    TokenStore.ready((tokenStore) => {
+
+        detail.characters.forEach((character) => {
+
+            gameObserver.trigger("character-drawn", {
+                character: character.clone(),
+                isAutoAdd: true
+            });
+
+        });
+
+        lookupOneCached("#grimoire").open = true;
+
+    });
 
 });
 
@@ -62,14 +89,28 @@ lookupOneCached("#character-choice").addEventListener("click", ({ target }) => {
 });
 
 gameObserver.on("character-drawn", ({ detail }) => {
-    detail.element.disabled = true;
+    // detail.element.disabled = true;
+
+    const {
+        element
+    } = detail;
+
+    if (element) {
+        element.disabled = true;
+    }
+
 });
 
 gameObserver.on("character-drawn", ({ detail }) => {
 
     const {
+        isAutoAdd,
         character
     } = detail;
+
+    if (isAutoAdd) {
+        return;
+    }
 
     empty(lookupOneCached("#character-decision-wrapper")).append(
         character.drawToken()
