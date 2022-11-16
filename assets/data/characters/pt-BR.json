@@ -288,14 +288,14 @@
         "name": "Coroinha",
         "ability": "Se o Demônio matar o Rei, você vê qual jogador é o Demônio. [+Rei]",
         "firstNightReminder": "",
-        "otherNightReminder": "Se o Rei foi morto pelo Demônio, acorde o Garoto do Coral e aponte para o jogador que é o Demônio.",
+        "otherNightReminder": "Se o Rei foi morto pelo Demônio, acorde o Coroinha e aponte para o jogador que é o Demônio.",
         "remindersGlobal": [],
         "reminders": []
     },
     {
         "id": "clockmaker",
         "name": "Relojoeiro",
-        "ability": "Mostre o número com os dedos.",
+        "ability": "Você começa sabendo a quantos passos o Demônio está do seu Lacaios mais próximo.",
         "firstNightReminder": "Mostre o número com os dedos.",
         "otherNightReminder": "",
         "remindersGlobal": [],
@@ -428,7 +428,7 @@
     {
         "id": "engineer",
         "name": "Engenheiro",
-        "ability": "Uma vez po jogo, à noite, você pode decidir quais Lacaios ou qual Demônio está em jogo.",
+        "ability": "Uma vez por jogo, à noite, você pode decidir quais Lacaios ou qual Demônio está em jogo.",
         "firstNightReminder": "O Engenheiro sinaliza 'não' com a cabeça, ou aponta na ficha de personagens para um Demônio ou para uma quantidade de Lacaios (conforme o número de jogadores). Se o Engenheiro fizer isso, troque os personagens, conforme escolhido, e acorde os jogadores correspondentes para informá-los sobre a mudança.",
         "otherNightReminder": "Se o Engenheiro ainda não usou a habilidade, o Engenheiro sinaliza 'não' com a cabeça, ou aponta na ficha de personagens para um Demônio ou para uma quantidade de Lacaios (conforme o número de jogadores). Se o Engenheiro fizer isso, troque os personagens, conforme escolhido, e acorde os jogadores correspondentes para informá-los sobre a mudança.",
         "remindersGlobal": [],
@@ -546,7 +546,7 @@
     {
         "id": "fortuneteller",
         "name": "Vidente",
-        "ability": "A cada noite, escolha 2 jogadores: você vê se algum dos alvos é um Demônio. Há um jogador bom que sempre registrado como Demônio para você.",
+        "ability": "A cada noite, escolha 2 jogadores: você vê se algum dos alvos é um Demônio. Há um jogador bom que é sempre registrado como Demônio para você.",
         "firstNightReminder": "A Vidente, aponta para dois jogadores. Com a cabeça, sinalize 'sim' ou 'não' para responder se algum dos alvos é um Demônio (ou o jogador marcado como 'Alarme Falso').",
         "otherNightReminder": "A Vidente, aponta para dois jogadores. Com a cabeça, sinalize 'sim' ou 'não' para responder se algum dos alvos é um Demônio (ou o jogador marcado como 'Alarme Falso').",
         "remindersGlobal": [],
@@ -887,7 +887,7 @@
     {
         "id": "mastermind",
         "name": "Mentor",
-        "ability": "Se o jogo terminaria com por causa da execução do Demônio, o jogo dura mais 1 dia em vez disso. Se então um jogador for executado, o time dele perde.",
+        "ability": "Se o jogo terminaria por causa da execução do Demônio, o jogo dura mais 1 dia em vez disso. Se, então, um jogador for executado, o time dele perde.",
         "firstNightReminder": "",
         "otherNightReminder": "",
         "remindersGlobal": [],
@@ -916,7 +916,7 @@
     {
         "id": "mayor",
         "name": "Prefeito",
-        "ability": "Se apenas 3 jogadores estão vivos e não houver execução, seu time vence. Se você morreria à noite, outro jogador pode morrer em vez disso.",
+        "ability": "Se apenas 3 jogadores estão vivos e não houver execução, seu time vence. Se você for morrer à noite, outro jogador pode morrer em vez disso.",
         "firstNightReminder": "",
         "otherNightReminder": "",
         "remindersGlobal": [],
@@ -990,7 +990,7 @@
     {
         "id": "noble",
         "name": "Nobre",
-        "ability": "Você vê 3 jogadores. Apenas 1 deles é mau.",
+        "ability": "Você começa vendo 3 jogadores. Apenas 1 deles é mau.",
         "firstNightReminder": "Aponte para 3 jogadores incluindo exatamente 1 mau em qualquer ordem.",
         "otherNightReminder": "",
         "remindersGlobal": [],

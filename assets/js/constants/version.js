@@ -3,4 +3,4 @@
  * This comes from the package.json file.
  * @type {String}
  */
-export const VERSION = "0.6.1";
+export const VERSION = "0.6.2";
