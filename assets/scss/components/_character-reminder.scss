@@ -142,11 +142,16 @@
 }
 
 .character__shroud {
+    --background-width: calc(75% * (233 / 419));
     z-index: 2;
-    background-image: url("../../img/token/shroud.png");
+    background-image:
+        url("../../img/token/shroud.png"),
+        linear-gradient(to bottom, #808080 57%, transparent 57%);
+    background-size:
+        auto 75%,
+        var(--background-width) auto;
     background-repeat: no-repeat;
     background-position: 50% 0;
-    background-size: auto 75%;
     filter: drop-shadow(0.1em 0.1em 0.2em rgba(0 0 0 / 0.8));
     display: none;
 
