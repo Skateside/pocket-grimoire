@@ -120,6 +120,38 @@ lookupOne("#character-name").addEventListener("click", ({ target }) => {
 
 });
 
+const ghostVoteButton = lookupOneCached("#character-ghost-vote");
+
+function setGhostButtonState(character) {
+
+    ghostVoteButton.disabled = (
+        ghostVoteButton,
+        !character.getIsDead() || !character.getHasGhostVote()
+    );
+
+}
+
+lookupOneCached("#character-show").addEventListener(Dialog.SHOW, ({ target }) => {
+
+    const token = lookupOne(target.dataset.token);
+    const character = pad.getCharacterByToken(token);
+
+    setGhostButtonState(character);
+
+});
+
+ghostVoteButton.addEventListener("click", ({ target }) => {
+
+    const token = getToken(target);
+    pad.setGhostVoteForToken(token, false);
+
+    const character = pad.getCharacterByToken(token);
+    setGhostButtonState(character);
+
+    hideDialog(target);
+
+});
+
 lookupOne("#character-remove").addEventListener("click", ({ target }) => {
 
     pad.removeCharacterByToken(getToken(target));

@@ -254,6 +254,10 @@ export default class Pad {
         this.removeCharacter(this.getCharacterByToken(token));
     }
 
+    getInfoByCharacter(character) {
+        return this.characters.find((info) => info.character === character);
+    }
+
     /**
      * Toggles the dead state for the character that's been given.
      *
@@ -265,29 +269,29 @@ export default class Pad {
     toggleDead(character, deadState) {
 
         const {
-            characters,
-            observer
-        } = this;
-        const info = characters.find((info) => info.character === character);
+            token
+        } = this.getInfoByCharacter(character) || {};
 
-        if (!info) {
+        if (!token) {
             return;
         }
-
-        const {
-            token
-        } = info;
 
         const isDead = character.toggleDead(deadState);
         this.constructor
             .getToken(token)
             .classList
             .toggle("is-dead", isDead);
-        observer.trigger("shroud-toggle", {
+        this.observer.trigger("shroud-toggle", {
             isDead,
             token,
             character
         });
+
+        // Revived players get their ghost vote back.
+        // https://discord.com/channels/569683781800296501/719898820942626817/1056935809263079535
+        if (!isDead && !character.getHasGhostVote()) {
+            this.setGhostVote(character, true);
+        }
 
     }
 
@@ -316,25 +320,19 @@ export default class Pad {
     rotate(character, rotateState) {
 
         const {
-            characters,
-            observer
-        } = this;
-        const info = characters.find((info) => info.character === character);
+            token
+        } = this.getInfoByCharacter(character) || {};
 
-        if (!info) {
+        if (!token) {
             return;
         }
-
-        const {
-            token
-        } = info;
 
         const isUpsideDown = character.rotate(rotateState);
         this.constructor
             .getToken(token)
             .classList
             .toggle("is-upside-down", isUpsideDown);
-        observer.trigger("rotate-toggle", {
+        this.observer.trigger("rotate-toggle", {
             isUpsideDown,
             token,
             character
@@ -349,7 +347,7 @@ export default class Pad {
      * @param {Element} token
      *        Element whose associated character should have their rotated state
      *        toggled.
-     * @param {Boolean} [deadState]
+     * @param {Boolean} [rotateState]
      *        Optional rotated state to set.
      */
     rotateByToken(token, rotateState) {
@@ -367,18 +365,12 @@ export default class Pad {
     setPlayerName(character, name) {
 
         const {
-            characters,
-            observer
-        } = this;
-        const info = characters.find((info) => info.character === character);
+            token
+        } = this.getInfoByCharacter(character) || {};
 
-        if (!info) {
+        if (!token) {
             return;
         }
-
-        const {
-            token
-        } = info;
 
         const nameTag = lookupOneCached(
             ".js--character--player-name",
@@ -391,7 +383,7 @@ export default class Pad {
 
         name = (name || "").trim();
         nameTag.textContent = name;
-        observer.trigger("set-player-name", {
+        this.observer.trigger("set-player-name", {
             name,
             token,
             character
@@ -410,6 +402,51 @@ export default class Pad {
      */
     setPlayerNameForToken(token, name) {
         this.setPlayerName(this.getCharacterByToken(token), name);
+    }
+
+    /**
+     * Toggles the ghost vote state for the character that's been given.
+     *
+     * @param {CharacterToken} character
+     *        The character whose ghost vote state should be toggled.
+     * @param {Boolean} [ghostVoteState]
+     *        Optional ghost vote state to set.
+     */
+    setGhostVote(character, ghostVoteState) {
+
+        const {
+            token
+        } = this.getInfoByCharacter(character) || {};
+
+        if (!token) {
+            return;
+        }
+
+        const hasGhostVote = character.toggleGhostVote(ghostVoteState);
+        this.constructor
+            .getToken(token)
+            .classList
+            .toggle("is-voteless", !hasGhostVote);
+        this.observer.trigger("ghost-vote-toggle", {
+            hasGhostVote,
+            token,
+            character
+        });
+
+    }
+
+    /**
+     * A helper function for toggling the ghost vote state of a character by
+     * their element rather than the {@link CharacterToken} instance.
+     *
+     * @param {Element} token
+     *        Element whose associated character should have their ghost vote
+     *        state toggled.
+     * @param {Boolean} [ghostVoteState]
+     *        Optional ghost vote state to set.
+     */
+    setGhostVoteForToken(token, ghostVoteState) {
+        this.setGhostVote(this.getCharacterByToken(token), ghostVoteState);
     }
 
     /**

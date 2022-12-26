@@ -104,6 +104,15 @@ tokenObserver.on("set-player-name", ({ detail }) => {
     store.setPlayerName(pad.getCharacterByToken(detail.token), detail.name);
 });
 
+tokenObserver.on("ghost-vote-toggle", ({ detail }) => {
+
+    store.setGhostVote(
+        pad.getCharacterByToken(detail.token),
+        detail.hasGhostVote
+    );
+
+});
+
 tokenObserver.on("bluff", ({ detail }) => {
     store.setBluff(detail.button, detail.character);
 });
@@ -190,7 +199,8 @@ TokenStore.ready((tokenStore) => {
         zIndex,
         isDead,
         isUpsideDown,
-        playerName
+        playerName,
+        ghostVote
     }) => {
 
         const isCharacter = TokenStore.isCharacterId(id);
@@ -199,14 +209,19 @@ TokenStore.ready((tokenStore) => {
             ? pad.addCharacter(tokenStore.getCharacterClone(id))
             : pad.addReminder(tokenStore.getReminderClone(id))
         );
+        const {
+            token,
+            character
+        } = info;
 
-        pad.moveToken(info.token, left, top, zIndex);
+        pad.moveToken(token, left, top, zIndex);
 
         if (isCharacter) {
 
-            pad.toggleDead(info.character, Boolean(isDead));
-            pad.rotate(info.character, Boolean(isUpsideDown));
-            pad.setPlayerName(info.character, playerName);
+            pad.toggleDead(character, Boolean(isDead));
+            pad.rotate(character, Boolean(isUpsideDown));
+            pad.setPlayerName(character, playerName);
+            pad.setGhostVote(character, Boolean(ghostVote));
 
         }
 

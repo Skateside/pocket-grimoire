@@ -404,6 +404,31 @@ export default class Store {
     }
 
     /**
+     * Sets whether or not the given character has a ghost vote.
+     *
+     * @param {CharacterToken} token
+     *        Character whose ghost vote should be updated in the store.
+     * @param {Boolean} hasGhostVote
+     *        The ghost vote state to store.
+     */
+    setGhostVote(token, hasGhostVote) {
+
+        const {
+            data,
+            tokens
+        } = this;
+        const index = tokens.indexOf(token);
+
+        if (index < 0) {
+            return;
+        }
+
+        data.tokens[index].ghostVote = hasGhostVote;
+        this.write();
+
+    }
+
+    /**
      * Saves the state of the given input.
      *
      * @param {Element} input

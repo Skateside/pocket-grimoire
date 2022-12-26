@@ -118,6 +118,12 @@ export default class CharacterToken extends Token {
         this.isUpsideDown = false;
 
         /**
+         * A flag showing whether or not the character has a ghost vote.
+         * @type {Boolean}
+         */
+        this.hasGhostVote = false;
+
+        /**
          * A collection of all jinxes that may affect this character.
          * @type {Array.<Jinx>}
          */
@@ -231,6 +237,37 @@ export default class CharacterToken extends Token {
      */
     getIsUpsideDown() {
         return Boolean(this.isUpsideDown);
+    }
+
+    /**
+     * Toggles whether or not the player has a ghost vote. The state can be
+     * forced by passing a boolean to this method.
+     *
+     * @param  {Boolean} [state]
+     *         Optional state to set. If ommitted, the state is toggled.
+     * @return {Boolean}
+     *         The new state.
+     */
+    toggleGhostVote(state) {
+
+        if (state === undefined) {
+            state = !this.hasGhostVote;
+        }
+
+        this.hasGhostVote = state;
+
+        return this.getHasGhostVote();
+
+    }
+
+    /**
+     * Exposes {@link CharacterToken#hasGhostVote}.
+     *
+     * @return {Boolean}
+     *         true if the character has a ghost vote, false otherwise.
+     */
+    getHasGhostVote() {
+        return Boolean(this.hasGhostVote);
     }
 
     /**

@@ -170,6 +170,12 @@
     color: #fff;
     width: 30%;
     transform: translateY(100%);
+
+    @at-root {
+        .is-voteless & {
+            display: none;
+        }
+    }
 }
 
 .character__icon {
