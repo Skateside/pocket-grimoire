@@ -19,48 +19,55 @@
     </div>
 
     <ul class="button-list mt-4">
-        <li><button type="button" class="button" id="add-token" data-dialog="#character-list" disabled>{{ 'grimoire.grimoire.add_token'|trans }}</button></li>
-        <li><button type="button" class="button" id="add-reminder" data-dialog="#reminder-list" disabled>{{ 'grimoire.grimoire.add_reminder'|trans }}</button></li>
-        <li><button type="button" class="button" id="add-traveller" data-dialog="#traveller-list" disabled>{{ 'grimoire.grimoire.add_traveller'|trans }}</button></li>
-        <li><button type="button" class="button" id="show-tokens" data-dialog="#token-list" disabled>{{ 'grimoire.grimoire.show_tokens'|trans }}</button></li>
-        <li><button type="button" class="button" id="reset-height">{{ 'grimoire.grimoire.reset_height'|trans }}</button></li>
-        <li><button type="button" class="button button--warning" id="clear-grimoire" data-confirm="{{ 'grimoire.grimoire.clear_grimoire_warning'|trans }}">{{ 'grimoire.grimoire.clear_grimoire'|trans }}</button></li>
+        <li><button type="button" class="button button--full-height" id="add-token" data-dialog="#character-list" disabled>{{ 'grimoire.grimoire.add_token'|trans }}</button></li>
+        <li><button type="button" class="button button--full-height" id="add-reminder" data-dialog="#reminder-list" disabled>{{ 'grimoire.grimoire.add_reminder'|trans }}</button></li>
+        <li><button type="button" class="button button--full-height" id="add-traveller" data-dialog="#traveller-list" disabled>{{ 'grimoire.grimoire.add_traveller'|trans }}</button></li>
+        <li><button type="button" class="button button--full-height" id="show-tokens" data-dialog="#token-list" disabled>{{ 'grimoire.grimoire.show_tokens'|trans }}</button></li>
+        <li><button type="button" class="button button--full-height" id="reset-height">{{ 'grimoire.grimoire.reset_height'|trans }}</button></li>
+        <li><button type="button" class="button button--full-height button--warning" id="clear-grimoire" data-confirm="{{ 'grimoire.grimoire.clear_grimoire_warning'|trans }}">{{ 'grimoire.grimoire.clear_grimoire'|trans }}</button></li>
     </ul>
 
-    <div class="mt-4">
-        {{ forms.switch({
-            node: 'div',
-            label: 'grimoire.grimoire.show_night_order'|trans,
-            name: 'show-night-order',
-            id: 'show-night-order',
-            checked: true
-        }) }}
-    </div>
+    <details id="grimoire-settings" class="pad pad--bluffs mt-4">
+        <summary class="pad__title">{{ 'grimoire.grimoire.token_settings'|trans }}</summary>
+        <div>
 
-    <div class="mt-4">
-        {{ forms.range({
-            label: 'grimoire.grimoire.character_size'|trans,
-            name: 'token-size',
-            id: 'token-size',
-            output: 'token-size-output',
-            min: 0.5,
-            max: 2,
-            step: 0.1,
-            value: 1
-        }) }}
-    </div>
-    <div class="mt-4">
-        {{ forms.range({
-            label: 'grimoire.grimoire.reminder_size'|trans,
-            name: 'reminder-size',
-            id: 'reminder-size',
-            output: 'reminder-size-output',
-            min: 0.5,
-            max: 2,
-            step: 0.1,
-            value: 1
-        }) }}
-    </div>
+            <div class="mt-4">
+                {{ forms.switch({
+                    node: 'div',
+                    label: 'grimoire.grimoire.show_night_order'|trans,
+                    name: 'show-night-order',
+                    id: 'show-night-order',
+                    checked: true
+                }) }}
+            </div>
+
+            <div class="mt-4">
+                {{ forms.range({
+                    label: 'grimoire.grimoire.character_size'|trans,
+                    name: 'token-size',
+                    id: 'token-size',
+                    output: 'token-size-output',
+                    min: 0.5,
+                    max: 2,
+                    step: 0.1,
+                    value: 1
+                }) }}
+            </div>
+            <div class="mt-4">
+                {{ forms.range({
+                    label: 'grimoire.grimoire.reminder_size'|trans,
+                    name: 'reminder-size',
+                    id: 'reminder-size',
+                    output: 'reminder-size-output',
+                    min: 0.5,
+                    max: 2,
+                    step: 0.1,
+                    value: 1
+                }) }}
+            </div>
+
+        </div>
+    </details>
 
     {% endblock %}
 {% endembed %}
