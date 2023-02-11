@@ -203,6 +203,8 @@
     {% block body %}
     <div id="character-decision-wrapper" class="mb-4"></div>
     <p id="character-decision-ability"></p>
+    <p><input type="text" name="player-name" id="player-name" aria-label="Name yourself (optional)" placeholder="Name yourself (optional)" class="input"></p>
+<!-- TODO: <datalist> -->
     <p><button type="button" class="button" data-dialog-hide>{{ 'setup.character_decision.return'|trans }}</button></p>
     {% endblock %}
 {% endembed %}

@@ -4,6 +4,7 @@ import TokenStore from "../../classes/TokenStore.js";
 import Template from "../../classes/Template.js";
 import {
     empty,
+    lookupOne,
     lookupOneCached,
     replaceContentsMany
 } from "../../utils/elements.js";
@@ -12,6 +13,8 @@ import {
 } from "../../utils/arrays.js";
 
 const gameObserver = Observer.create("game");
+const characterDecisionDialog = Dialog.create(lookupOne("#character-decision"));
+const playerName = lookupOne("#player-name");
 
 gameObserver.on("character-draw", ({ detail }) => {
 
@@ -89,7 +92,6 @@ lookupOneCached("#character-choice").addEventListener("click", ({ target }) => {
 });
 
 gameObserver.on("character-drawn", ({ detail }) => {
-    // detail.element.disabled = true;
 
     const {
         element
@@ -118,6 +120,34 @@ gameObserver.on("character-drawn", ({ detail }) => {
     lookupOneCached("#character-decision-ability").textContent = (
         character.getAbility()
     );
-    Dialog.create(lookupOneCached("#character-decision")).show();
+    characterDecisionDialog.show();
+
+});
+
+let character = null;
+
+gameObserver.on("character-drawn", ({ detail }) => {
+    character = detail.character;
+});
+
+characterDecisionDialog.on(Dialog.SHOW, () => {
+    playerName.value = playerName.defaultValue;
+});
+
+characterDecisionDialog.on(Dialog.HIDE, () => {
+
+    const {
+        pad
+    } = lookupOneCached(".js--pad");
+    const {
+        value
+    } = playerName;
+    const trimmed = (value || "").trim();
+
+    if (pad && trimmed && character) {
+        pad.setPlayerName(character, trimmed);
+    }
+
+    character = null;
 
 });

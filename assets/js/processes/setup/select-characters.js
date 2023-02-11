@@ -22,7 +22,7 @@ const gameObserver = Observer.create("game");
 const tokenObserver = Observer.create("token");
 
 /**
- * Sets the totals for each team based on the breakdown that#s given.
+ * Sets the totals for each team based on the breakdown that's given.
  *
  * @param {Object} breakdown
  *        Breakdown of the numbers for the teams.
