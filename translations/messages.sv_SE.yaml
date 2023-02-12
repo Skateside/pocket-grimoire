@@ -80,6 +80,7 @@ setup:
 
     character_decision:
         title: Kom ihåg din karaktär
+        name: Namnge dig själv (valfritt)
         return: Gå tillbaka till karaktärsval
 
     qr_code:
@@ -105,6 +106,8 @@ setup:
         details_note: Vilka sektioner är öppna och stängda.
         info_tokens_label: Rensa anpassade informationstoken
         info_tokens_note: De anpassade informationstoken som har lagts till.
+        names_label: Rensa namn
+        names_note: Spelarens namnförslag.
         height_label: Rensa pad-höjd
         height_note: Höjden av paddan i grimoaren.
         clear_refresh_label: Uppdatera efteråt

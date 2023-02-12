@@ -80,6 +80,7 @@ setup:
 
     character_decision:
         title: Remember Your Character
+        name: Name yourself (optional)
         return: Return to Character Select
 
     qr_code:
@@ -105,6 +106,8 @@ setup:
         details_note: Which sections are open or closed.
         info_tokens_label: Clear custom info tokens
         info_tokens_note: The custom info tokens that have been added.
+        names_label: Clear names
+        names_note: The player names suggestions.
         height_label: Clear pad height
         height_note: The height of the pad in the grimoire.
         clear_refresh_label: Refresh afterwards

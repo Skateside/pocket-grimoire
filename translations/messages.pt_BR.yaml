@@ -80,6 +80,7 @@ setup:
 
     character_decision:
         title: Lembre seu Personagem
+        name: Nomeie-se (opcional)
         return: Retornar à Seleção de Personagem
 
     qr_code:
@@ -105,6 +106,8 @@ setup:
         details_note: Quais seções estão abertas/fechadas.
         info_tokens_label: Limpar tokens de informações personalizados
         info_tokens_note: Os tokens de informações personalizados que foram adicionados.
+        names_label: Limpar nomes
+        names_note: O jogador nomeia sugestões.
         height_label: Limpar altura do quadro
         height_note: A altura do quadro que representa o interior do Grimório.
         clear_refresh_label: Atualizar após concluído

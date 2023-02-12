@@ -80,6 +80,7 @@ setup:
 
     character_decision:
         title: 記住你的角色
+        name: 給自己起個名字（可選）
         return: 回到角色選擇
 
     qr_code:
@@ -105,6 +106,8 @@ setup:
         details_note: 展開或收合的區塊。
         info_tokens_label: 清除自定義信息令牌
         info_tokens_note: 已添加的自定義信息標記。
+        names_label: 清楚的名字
+        names_note: 玩家命名建議。
         height_label: 清除寬度
         height_note: 魔典的寬度
         clear_refresh_label: 清除後刷新

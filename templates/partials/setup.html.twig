@@ -203,8 +203,11 @@
     {% block body %}
     <div id="character-decision-wrapper" class="mb-4"></div>
     <p id="character-decision-ability"></p>
-    <p><input type="text" name="player-name" id="player-name" aria-label="Name yourself (optional)" placeholder="Name yourself (optional)" class="input"></p>
-<!-- TODO: <datalist> -->
+    <p>
+        <label for="player-name" class="d-block text-small">{{ 'setup.character_decision.name'|trans }}</label>
+        <input type="text" class="input" name="player-name" id="player-name" list="player-name-options">
+    </p>
+    <datalist id="player-name-options"></datalist>
     <p><button type="button" class="button" data-dialog-hide>{{ 'setup.character_decision.return'|trans }}</button></p>
     {% endblock %}
 {% endembed %}
@@ -227,6 +230,10 @@
             <span class="character-select__part character-select__part--ability js--character-select--ability"></span>
         </label>
     </div>
+</template>
+
+<template id="player-name-template">
+    <option class="js--player-name--option">
 </template>
 
 {% embed 'includes/dialog.html.twig' with {
@@ -317,6 +324,11 @@
                         value: 'infoTokens',
                         label: 'setup.clear_cache.info_tokens_label'|trans,
                         note: 'setup.clear_cache.info_tokens_note'|trans
+                    },
+                    {
+                        value: 'names',
+                        label: 'setup.clear_cache.names_label'|trans,
+                        note: 'setup.clear_cache.names_note'|trans
                     },
                     {
                         value: 'height',

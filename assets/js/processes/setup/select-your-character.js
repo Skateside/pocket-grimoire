@@ -124,6 +124,10 @@ gameObserver.on("character-drawn", ({ detail }) => {
 
 });
 
+// Allow a name to be set when the character is revealed.
+// We do this by checking to see if a name was entered when the "remember your
+// character" dialog is closed, using it if it was.
+
 let character = null;
 
 gameObserver.on("character-drawn", ({ detail }) => {

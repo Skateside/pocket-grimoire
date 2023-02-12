@@ -4,6 +4,7 @@ import TokenStore from "../classes/TokenStore.js";
 import Bluffs from "../classes/Bluffs.js";
 import Dialog from "../classes/Dialog.js";
 import InfoToken from "../classes/InfoToken.js";
+import Names from "../classes/Names.js";
 import {
     lookup,
     lookupOne,
@@ -24,6 +25,7 @@ const infoTokenObserver = Observer.create("info-token");
 
 const padElement = lookupOneCached(".js--pad");
 const pad = padElement.pad;
+const names = Names.create();
 
 gameObserver.on("characters-selected", ({ detail }) => {
 
@@ -101,7 +103,10 @@ tokenObserver.on("rotate-toggle", ({ detail }) => {
 });
 
 tokenObserver.on("set-player-name", ({ detail }) => {
+
     store.setPlayerName(pad.getCharacterByToken(detail.token), detail.name);
+    names.add(detail.name);
+
 });
 
 tokenObserver.on("bluff", ({ detail }) => {

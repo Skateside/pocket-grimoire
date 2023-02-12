@@ -4,6 +4,7 @@ import Pad from "../../classes/Pad.js";
 import Template from "../../classes/Template.js";
 import TokenStore from "../../classes/TokenStore.js";
 import CharacterToken from "../../classes/CharacterToken.js";
+import Names from "../../classes/Names.js";
 import {
     identify,
     lookup,
@@ -16,6 +17,7 @@ const gameObserver = Observer.create("game");
 const tokenObserver = Observer.create("token");
 const pad = lookupOneCached(".js--pad").pad;
 const recentReminders = lookupOneCached("#character-show-reminders");
+const characterShowDialog = Dialog.create(lookupOneCached("#character-show"));
 
 // Set up the token dialog when a character token is clicked.
 tokenObserver.on("character-click", ({ detail }) => {
@@ -24,14 +26,16 @@ tokenObserver.on("character-click", ({ detail }) => {
         element
     } = detail;
     const character = pad.getCharacterByToken(element);
-    const dialog = lookupOneCached("#character-show");
-    dialog.dataset.token = `#${identify(element)}`;
+    // const dialog = lookupOneCached("#character-show");
+    // dialog.dataset.token = `#${identify(element)}`;
+    characterShowDialog.getElement().dataset.token = `#${identify(element)}`;
 
     lookupOneCached("#character-show-name").textContent = character.getName();
     lookupOneCached("#character-show-ability").textContent = character.getAbility();
     recentReminders.dataset.coords = JSON.stringify(pad.getTokenPosition(element));
 
-    Dialog.create(dialog).show();
+    // Dialog.create(dialog).show();
+    characterShowDialog.show();
 
 });
 
@@ -103,21 +107,30 @@ lookupOne("#character-reminder").addEventListener("click", ({ target }) => {
 
 });
 
+const characterNameInput = lookupOne("#character-name-input");
 lookupOne("#character-name").addEventListener("click", ({ target }) => {
 
-    const token = getToken(target);
-    const name = window.prompt(
-        window.I18N.playerName,
-        lookupOneCached(".js--character--player-name", token)?.textContent || ""
-    );
+    const {
+        value
+    } = characterNameInput;
+    const name = (value || "").trim();
 
-    if (name === null) {
-        return;
-    }
-
-    pad.setPlayerNameForToken(token, name);
+    pad.setPlayerNameForToken(getToken(target), name);
     hideDialog(target);
 
+});
+
+characterShowDialog.on(Dialog.SHOW, () => {
+
+    const token = getToken(characterShowDialog.getElement());
+    const nameElement = lookupOneCached(".js--character--player-name", token);
+
+    characterNameInput.value = nameElement?.textContent || "";
+
+});
+
+characterShowDialog.on(Dialog.HIDE, () => {
+    characterNameInput.value = characterNameInput.defaultValue;
 });
 
 lookupOne("#character-remove").addEventListener("click", ({ target }) => {
@@ -302,5 +315,29 @@ TokenStore.ready((tokenStore) => {
         tokenListDialog.hide();
 
     });
+
+});
+
+// Update the list of suggested names that can be set when a token is drawn.
+
+const names = Names.create();
+
+names.on("names-added", () => {
+
+    replaceContentsMany(
+        lookupOneCached("#player-name-options"),
+        names.drawList()
+    );
+    replaceContentsMany(
+        lookupOneCached("#character-name-input-options"),
+        names.drawList()
+    );
+
+});
+
+names.on("names-cleared", () => {
+
+    empty(lookupOneCached("#player-name-options"));
+    empty(lookupOneCached("#character-name-input-options"));
 
 });

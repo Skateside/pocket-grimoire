@@ -5,6 +5,7 @@ import CharacterToken from "../../classes/CharacterToken.js";
 import ReminderToken from "../../classes/ReminderToken.js";
 import TokenStore from "../../classes/TokenStore.js";
 import Dialog from "../../classes/Dialog.js";
+import Names from "../../classes/Names.js";
 import {
     fetchFromStore
 } from "../../utils/fetch.js";
@@ -14,16 +15,18 @@ import {
     lookupCached,
     lookupOneCached
 } from "../../utils/elements.js";
+import {
+    LANGUAGE
+} from "../../constants/language.js";
 
 const store = Store.create("pocket-grimoire");
 const gameObserver = Observer.create("game");
-const lang = document.documentElement.lang || "en-GB";
 
-fetchFromStore(`characters_${lang}`, URLS.characters, store).then((characters) => {
+fetchFromStore(`characters_${LANGUAGE}`, URLS.characters, store).then((characters) => {
     gameObserver.trigger("characters-loaded", { characters });
 });
 
-fetchFromStore(`jinxes_${lang}`, URLS.jinxes, store).then((jinxes) => {
+fetchFromStore(`jinxes_${LANGUAGE}`, URLS.jinxes, store).then((jinxes) => {
     gameObserver.trigger("jinxes-loaded", { jinxes });
 });
 
@@ -41,6 +44,9 @@ ReminderToken.setTemplates({
     token: Template.create(lookupOne("#reminder-template")),
     list: Template.create(lookupOne("#reminder-list-template"))
 });
+Names.create()
+    .setTemplate(Template.create(lookupOne("#player-name-template")))
+    .setObserver(new Observer());
 
 Promise.all([
     new Promise((resolve) => {

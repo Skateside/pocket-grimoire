@@ -23,6 +23,7 @@ export default class Store {
         inputs: {},
         details: {},
         infoTokens: [],
+        names: [],
         height: "",
         version: ""
     };
@@ -399,6 +400,11 @@ export default class Store {
         }
 
         data.tokens[index].playerName = name;
+
+        if (!data.names.includes(name)) {
+            data.names.push(name);
+        }
+
         this.write();
 
     }
