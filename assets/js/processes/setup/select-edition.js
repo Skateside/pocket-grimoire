@@ -37,19 +37,19 @@ function isScriptJson(json) {
 }
 
 /**
- * Checks to see if the data given looks like a homebrew script. This function
- * assumes that the same data has already been checked by {@link isScriptJson}.
+ * Checks to see if the given json looks like it contains any homebrew content.
  *
  * @param  {Array.<Object>} json
  *         Data to check.
  * @return {Boolean}
- *         true if the data looks like a homebrew script, false if it doesn't.
+ *         true if the data seems to contain any homebrew, false if it doesn't
+ *         seem to contain any homebrew.
  */
-function isHomebrewJson(json) {
+function containsHomebrew(json) {
 
-    return json.some(({ id, ability }) => (
-        typeof ability === "string" || id === "_meta"
-    ));
+    return json
+        .filter(({ id }) => id !== "_meta")
+        .some(({ ability }) => typeof ability === "string");
 
 }
 
@@ -204,7 +204,7 @@ function processJSON({
 
     }
 
-    if (isHomebrewJson(json)) {
+    if (containsHomebrew(json)) {
 
         const normalised = normaliseHomebrew(json);
 

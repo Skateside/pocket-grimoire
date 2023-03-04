@@ -189,12 +189,23 @@ class MainController extends AbstractController
 
             if (
                 !is_array($data)
-                || !$this->homebrewModel->validateAllEntries($data)
+                || (
+                    ($isHomebrew = $this->homebrewModel->isHomebrew($data))
+                    && !$this->homebrewModel->validateAllEntries($data)
+                )
             ) {
 
                 return new JsonResponse([
                     'success' => false,
                     'message' => $translator->trans('messages.invalid_data')
+                ]);
+
+            }
+
+            if (!$isHomebrew) {
+
+                return new JsonResponse([
+                    'success' => true
                 ]);
 
             }

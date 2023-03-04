@@ -22,6 +22,57 @@ class HomebrewModel
     }
 
     /**
+     * Checks to see if the given entry has the required keys.
+     *
+     * @param  array $entry
+     * @param  array $keys
+     * @return bool
+     */
+    protected function hasKeys(array $entry, array $keys): bool
+    {
+
+        foreach ($keys as $key) {
+            if (!array_key_exists($key, $entry)) {
+                return false;
+            }
+        }
+
+        return true;
+
+    }
+
+    /**
+     * Checks to see if the given entry is a homebrew entry.
+     *
+     * @param  array
+     * @return bool
+     */
+    public function isHomebrewEntry(array $entry): bool
+    {
+        return $this->hasKeys($entry, $this->requiredKeys);
+    }
+
+    /**
+     * Checks to see if all the entries given are homebrew entries. This will
+     * return true if there are no entries.
+     *
+     * @param  array $entries
+     * @return bool
+     */
+    public function isHomebrew(array $entries): bool
+    {
+
+        foreach ($entries as $entry) {
+            if (!$this->isHomebrewEntry($entry)) {
+                return false;
+            }
+        }
+
+        return true;
+
+    }
+
+    /**
      * Checks to see if the entry contains the meta information about the
      * script.
      *
@@ -34,7 +85,7 @@ class HomebrewModel
         return (
             array_key_exists('id', $entry)
             && $entry['id'] === '_meta'
-             && array_key_exists('name', $entry)
+            && array_key_exists('name', $entry)
         );
 
     }
@@ -56,15 +107,8 @@ class HomebrewModel
             return $isValid;
         }
 
-        foreach ($this->requiredKeys as $key) {
-
-            if (!array_key_exists($key, $entry)) {
-
-                $isValid = false;
-                break;
-
-            }
-
+        if (!$this->isHomebrewEntry($entry)) {
+            $isValid = false;
         }
 
         if (
