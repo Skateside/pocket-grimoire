@@ -283,18 +283,14 @@ gameObserver.on("characters-selected", ({ detail }) => {
 
     replaceContentsMany(
         tokenList,
-        characters.map((character) => tokenListTemplate.draw([
-            [
-                ".js--token-list--button",
-                character.getId(),
-                (element, content) => element.dataset.tokenId = content
-            ],
-            [
-                ".js--token-list--token",
-                character.drawToken(),
-                Template.append
-            ]
-        ]))
+        characters.map((character) => tokenListTemplate.draw({
+            ".js--token-list--button"(element) {
+                element.dataset.tokenId = character.getId();
+            },
+            ".js--token-list--token"(element) {
+                element.append(character.drawToken());
+            }
+        }))
     );
 
 });

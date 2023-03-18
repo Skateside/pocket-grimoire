@@ -139,9 +139,9 @@ export default class Names {
      * @param {String} content
      *        Content of the value to set.
      */
-    static setValue(element, content) {
-        element.value = content;
-    }
+    // static setValue(element, content) {
+    //     element.value = content;
+    // }
 
     /**
      * Draws a list of elements for each entry in {@link Names#names}.
@@ -163,13 +163,11 @@ export default class Names {
             throw new Error("Cannot draw a list because the template is not set");
         }
 
-        return names.map((name) => template.draw([
-            [
-                ".js--player-name--option",
-                name,
-                this.constructor.setValue
-            ]
-        ]));
+        return names.map((name) => template.draw({
+            ".js--player-name--option"(element) {
+                element.value = name;
+            }
+        }));
 
     }
 

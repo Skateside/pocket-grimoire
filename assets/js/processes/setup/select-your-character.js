@@ -29,17 +29,14 @@ gameObserver.on("character-draw", ({ detail }) => {
     replaceContentsMany(
         lookupOneCached("#character-choice-wrapper"),
         shuffle(detail.characters)
-            .map((character, i) => template.draw([
-                [
-                    "[data-id]",
-                    character.getId(),
-                    (element, content) => element.dataset.id = content
-                ],
-                [
-                    ".js--character-choice--number",
-                    i + 1
-                ]
-            ]))
+            .map((character, i) => template.draw({
+                "[data-id]"(element) {
+                    element.dataset.id = character.getId();
+                },
+                ".js--character-choice--number"(element) {
+                    element.textContent = i + 1;
+                }
+            }))
     );
 
     Dialog.create(lookupOneCached("#character-choice")).show();

@@ -106,18 +106,14 @@ export default class Pad {
         } = this;
 
         element.append(
-            template.draw([
-                [
-                    ".js--token--wrapper",
-                    character.drawToken(),
-                    (element, content) => {
+            template.draw({
+                ".js--token--wrapper"(element) {
 
-                        Template.append(element, content);
-                        element.dataset.token = "character";
+                    element.append(character.drawToken());
+                    element.dataset.token = "character";
 
-                    }
-                ]
-            ])
+                }
+            })
         );
 
         const token = element.lastElementChild;
@@ -430,19 +426,15 @@ export default class Pad {
         } = this;
 
         element.append(
-            template.draw([
-                [
-                    ".js--token--wrapper",
-                    reminder.drawToken(),
-                    (element, content) => {
+            template.draw({
+                ".js--token--wrapper"(element) {
 
-                        Template.append(element, content);
-                        element.dataset.token = "reminder";
-                        element.dataset.reminder = reminder.getId();
+                    element.append(reminder.drawToken());
+                    element.dataset.token = "reminder";
+                    element.dataset.reminder = reminder.getId();
 
-                    }
-                ]
-            ])
+                }
+            })
         );
 
         const token = element.lastElementChild;

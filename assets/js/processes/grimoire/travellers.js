@@ -26,18 +26,14 @@ TokenStore.ready((tokenStore) => {
 
     replaceContentsMany(
         lookupOneCached("#traveller-list__list"),
-        travellers.map((traveller) => characterTemplate.draw([
-            [
-                ".js--character-list--item,.js--character-list--button",
-                traveller.getId(),
-                (element, content) => element.dataset.tokenId = content
-            ],
-            [
-                ".js--character-list--token",
-                traveller.drawToken(),
-                Template.append
-            ]
-        ]))
+        travellers.map((traveller) => characterTemplate.draw({
+            ".js--character-list--item,.js--character-list--button"(element) {
+                element.dataset.tokenId = traveller.getId();
+            },
+            ".js--character-list--token"(element) {
+                element.append(traveller.drawToken());
+            }
+        }))
     );
 
 });

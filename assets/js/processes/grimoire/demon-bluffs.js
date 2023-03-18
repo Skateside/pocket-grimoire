@@ -52,31 +52,20 @@ TokenStore.ready((tokenStore) => {
 
         replaceContentsMany(
             lookupOneCached("#character-list__bluffs"),
-            characters.map((character) => characterTemplate.draw([
-                [
-                    ".js--character-list--item",
-                    {
-                        id: character.getId(),
-                        team: character.getTeam()
-                    },
-                    (element, { id, team }) => {
+            characters.map((character) => characterTemplate.draw({
+                ".js--character-list--item"(element) {
 
-                        element.dataset.characterId = id;
-                        element.dataset.team = team;
+                    element.dataset.characterId = character.getId();
+                    element.dataset.team = character.getTeam();
 
-                    }
-                ],
-                [
-                    ".js--character-list--button",
-                    character.getId(),
-                    (element, content) => element.dataset.tokenId = content
-                ],
-                [
-                    ".js--character-list--token",
-                    character.drawToken(),
-                    Template.append
-                ]
-            ]))
+                },
+                ".js--character-list--button"(element) {
+                    element.dataset.tokenId = character.getId();
+                },
+                ".js--character-list--token"(element) {
+                    element.append(character.drawToken());
+                }
+            }))
         );
 
         lookupCached(".js--character-list--bluff").forEach((button) => {

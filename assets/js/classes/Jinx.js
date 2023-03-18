@@ -325,42 +325,36 @@ export default class Jinx {
             target,
             trick,
             reason,
-            template
+            template,
+            constructor: {
+                drawImg
+            }
         } = this;
 
         // if (!template) {
         //     throw new Error("Jinx template has not been set.");
         // }
 
-        return template.draw([
-            [
-                ".js--jinx-table--jinx",
-                this.getId(),
-                (element, content) => element.id = content
-            ],
-            [
-                ".js--jinx-table--target",
-                target,
-                this.constructor.drawImg
-            ],
-            [
-                ".js--jinx-table--target-name",
-                target.getName()
-            ],
-            [
-                ".js--jinx-table--trick",
-                trick,
-                this.constructor.drawImg
-            ],
-            [
-                ".js--jinx-table--trick-name",
-                trick.getName()
-            ],
-            [
-                ".js--jinx-table--reason",
-                reason
-            ]
-        ]);
+        return template.draw({
+            ".js--jinx-table--jinx": (element) => {
+                element.id = this.getId();
+            },
+            ".js--jinx-table--target"(element) {
+                drawImg(element, target);
+            },
+            ".js--jinx-table--target-name"(element) {
+                element.textContent = target.getName();
+            },
+            ".js--jinx-table--trick"(element) {
+                drawImg(element, trick);
+            },
+            ".js--jinx-table--trick-name"(element) {
+                element.textContent = trick.getName();
+            },
+            ".js--jinx-table--reason"(element) {
+                element.textContent = reason;
+            }
+        });
 
     }
 
