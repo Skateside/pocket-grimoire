@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="{{ app.request.locale|replace({ '_': '-' }) }}">
+<html lang="{{ app.request.locale|replace({ '_': '-' }) }}" dir="{{ app.request.locale in ['he_IL'] ? 'rtl' : 'ltr' }}">
 <head>
 
 {% block dns_prefetch %}{% endblock %}

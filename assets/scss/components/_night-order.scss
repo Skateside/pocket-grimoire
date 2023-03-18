@@ -15,18 +15,18 @@
         display: block;
 
         @at-root {
-            #{&} ~ #{&} {
+            & ~ & {
                 border-top: 1px solid rgb(255 255 255 / 60%);
             }
         }
     }
 
     @at-root {
-        .is-show-all > #{&} {
+        .is-show-all > & {
             display: block;
 
         }
-        .is-show-all > #{&} + #{&} {
+        .is-show-all > & + & {
             border-top: 1px solid rgb(255 255 255 / 60%);
         }
     }

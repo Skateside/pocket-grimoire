@@ -54,5 +54,17 @@
             outline: -webkit-focus-ring-color auto 1px;
             outline-offset: 2px;
         }
+
+        [dir="rtl"] & {
+
+            &::before {
+                border-radius: 0 var(--border-radius) var(--border-radius) 0;
+            }
+
+            &::after {
+                border-radius: var(--border-radius) 0 0 var(--border-radius);
+            }
+
+        }
     }
 }

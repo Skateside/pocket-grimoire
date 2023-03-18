@@ -16,7 +16,7 @@
         </label>
         <select name="select-locale" id="select-locale" class="input locale-form__dropdown" data-no-store>
             {% for locale in locales() %}
-                <option value="{{ path('index', { '_locale': locale[0] }) }}" lang="{{ locale[0]|replace({ '_': '-' }) }}" {{ app.request.locale == locale[0] ? 'selected' }}>{{ locale[1] }}</option>
+                <option value="{{ path('index', { '_locale': locale[0] }) }}" lang="{{ locale[0]|replace({ '_': '-' }) }}" dir="{{ locale[0] in ['he_IL'] ? 'rtl' : 'ltr' }}" {{ app.request.locale == locale[0] ? 'selected' }}>{{ locale[1] }}</option>
             {% endfor %}
         </select>
         <button type="submit" class="button locale-form__action">
@@ -152,7 +152,9 @@
                 <div class="sidebar__side-content character-select__heading">
                     <div class="character-select__title" aria-hidden="true">{{ name }}</div>
                     <div class="character-select__score-box">
-                        <span class="js--character-select--count">0</span>-<span class="js--character-select--total">X</span>
+                        <span class="js--character-select--count">0</span>
+                        <span class="character-select__score-seperator" data-vertical="-" data-horizontal="|"></span>
+                        <span class="js--character-select--total">X</span>
                     </div>
                 </div>
             </div>

@@ -5,11 +5,29 @@
 
 .character-select__title,
 .character-select__score-box {
-    display: inline-block;
+    display: inline-flex;
 }
 
 .character-select__score-box {
     margin-top: 1em;
+
+    @at-root {
+        [dir="rtl"] & {
+            margin-bottom: 1em;
+            margin-top: 0;
+            display: inline-flex; // reverse the order of the content.
+        }
+    }
+}
+
+.character-select__score-seperator::after {
+    content: attr(data-vertical);
+
+    @at-root {
+        [dir="rtl"] & {
+            content: attr(data-horizontal);
+        }
+    }
 }
 
 .character-select__characters {
