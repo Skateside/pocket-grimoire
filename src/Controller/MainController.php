@@ -145,7 +145,7 @@ class MainController extends AbstractController
     
                     $team = $teamMap[$teamId];
                 } else {
-                    $characterId = $character['id'];
+                    $characterId = $this->homebrewModel->convertCharacterId($character['id']);
                     $character = $this->roleRepo->findOneBy(['identifier' => $characterId]);
                     $team = $character->getTeam();
                     $teamId = $team->getIdentifier();
