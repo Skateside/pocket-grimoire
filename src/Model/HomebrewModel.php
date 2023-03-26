@@ -14,6 +14,14 @@ class HomebrewModel
         'ability',
         'team'
     ];
+    protected $filteredKeys = [
+        'name',
+        'ability',
+        'image',
+        'team',
+        'firstNight',
+        'otherNight'
+    ];
 
     public function __construct(
         TeamRepository $teamRepo
@@ -203,7 +211,7 @@ class HomebrewModel
         // }
 
         return array_filter($entry, function ($key) {
-            return in_array($key, $this->requiredKeys);
+            return in_array($key, $this->filteredKeys);
         }, ARRAY_FILTER_USE_KEY);
 
     }

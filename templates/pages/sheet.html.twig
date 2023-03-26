@@ -78,6 +78,44 @@
     {% endembed %}
 {% endif %}
 
+{% if nights is defined %}
+    {% embed 'includes/details.html.twig' with {
+        open: false,
+        id: 'wrapper-nights',
+        class: 'edition edition--nights'
+    } %}
+        {% block summary %}
+        <span class="edition__heading-text">{{ 'night_order.title'|trans }}</span>
+        {% endblock %}
+        {% block body %}
+            <div id="team-nights" class="edition__team">
+                <div class="edition__row--nights">
+                    <h4>First Night:</h4>
+                    <div>
+                        {% for character in nights['first'] %}
+                            <div class="edition__role--nights">
+                                <img src="{{ character.image }}" alt="{{ character.name }}" width="177" height="124" aria-hidden="true" loading="lazy">
+                                <p>{{ character.name }}</p>
+                            </div>
+                        {% endfor %}
+                    </div>
+                </div>
+                <div class="edition__row--nights">
+                    <h4>Other Nights:</h4>
+                    <div>
+                        {% for character in nights['other'] %}
+                            <div class="edition__role--nights">
+                                <img src="{{ character.image }}" alt="{{ character.name }}" width="177" height="124" aria-hidden="true" loading="lazy">
+                                <p>{{ character.name }}</p>
+                            </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        {% endblock %}
+    {% endembed %}
+{% endif %}
+
 <footer>
     <p><small>{{ 'sheet.each_night'|trans }}</small></p>
     <p><button type="button" class="button" data-dialog="#qr-code-dialog">{{ 'sheet.get_qr_code'|trans }}</button></p>
