@@ -114,6 +114,10 @@ function normaliseHomebrew(json) {
             entry[key] = map[entry[key]] || entry[key];
         });
 
+        if (typeof entry['team'] !== "undefined" && (!entry.hasOwnProperty('image') || entry['image'] === '')) {
+            entry['image'] = "../build/img/icon/generic/" + entry['team'] + ".png";
+        }
+
         return entry;
 
     });
