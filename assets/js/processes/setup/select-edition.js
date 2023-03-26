@@ -176,6 +176,14 @@ function setFormLoadingState(form, state) {
 
 }
 
+function convertCharacterId(item) {
+    // The script tool creates IDs differently from our data.
+    // Examples: script = lil_monsta, data = lilmonsta
+    // Examples: script = al-hadikhia, data = alhadikhia
+    // The .replace() here is designed to convert their IDs to ours.
+    return item.id.replace(/[-_]/g, "")
+}
+
 /**
  * Processes the JSON to set up the game.
  *
@@ -220,7 +228,7 @@ function processJSON({
                     announceScript(
                         extractMetaEntry(normalised),
                         normalised.map((item) => (
-                            store.createCustomCharacter(item)
+                            Object.keys(item).length > 2 ? store.createCustomCharacter(item) : store.getCharacter(convertCharacterId(item))
                         )),
                         game
                     );
@@ -236,12 +244,8 @@ function processJSON({
 
     const name = extractMetaEntry(json);
 
-    // The script tool creates IDs differently from our data.
-    // Examples: script = lil_monsta, data = lilmonsta
-    // Examples: script = al-hadikhia, data = alhadikhia
-    // The .replace() here is designed to convert their IDs to ours.
     const characters = json.map((item) => (
-        store.getCharacter(item.id.replace(/[-_]/g, ""))
+        store.getCharacter(convertCharacterId(item))
     ));
 
     if (!characters.length) {

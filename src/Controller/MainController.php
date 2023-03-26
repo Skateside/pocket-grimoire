@@ -124,6 +124,9 @@ class MainController extends AbstractController
             // Might save a little processing power.
             $teamMap = [];
 
+            $ids = [];
+            $tempJinxes = [];
+
             foreach ($homebrew->getJson() as $character) {
 
                 if ($this->homebrewModel->isMetaEntry($character)) {
@@ -132,14 +135,26 @@ class MainController extends AbstractController
                     continue;
 
                 }
+                
+                if (array_key_exists('team', $character)) {
+                    $teamId = $character['team'];
 
-                $teamId = $character['team'];
-
-                if (!array_key_exists($teamId, $teamMap)) {
-                    $teamMap[$teamId] = $this->teamRepo->findOneBy(['identifier' => $teamId]);
+                    if (!array_key_exists($teamId, $teamMap)) {
+                        $teamMap[$teamId] = $this->teamRepo->findOneBy(['identifier' => $teamId]);
+                    }
+    
+                    $team = $teamMap[$teamId];
+                } else {
+                    $characterId = $character['id'];
+                    $character = $this->roleRepo->findOneBy(['identifier' => $characterId]);
+                    $team = $character->getTeam();
+                    $teamId = $team->getIdentifier();
+                    
+                    $ids[] = $characterId;
+                    foreach ($character->getJinxes() as $jinx) {
+                        $tempJinxes[] = $jinx;
+                    }
                 }
-
-                $team = $teamMap[$teamId];
 
                 if (!array_key_exists($teamId, $groups)) {
 
@@ -151,6 +166,19 @@ class MainController extends AbstractController
                 }
 
                 $groups[$teamId]['characters'][] = $character;
+
+            }
+
+            foreach ($tempJinxes as $jinx) {
+                if (
+                    in_array($jinx->getTarget()->getIdentifier(), $ids)
+                    && in_array($jinx->getTrick()->getIdentifier(), $ids)
+                ) {
+
+                    $jinx->setActive(true);
+                    $jinxes[] = $jinx;
+
+                }
 
             }
 
@@ -189,23 +217,12 @@ class MainController extends AbstractController
 
             if (
                 !is_array($data)
-                || (
-                    ($isHomebrew = $this->homebrewModel->isHomebrew($data))
-                    && !$this->homebrewModel->validateAllEntries($data)
-                )
+                || !$this->homebrewModel->validateAllEntries($data, $this->roleRepo)
             ) {
 
                 return new JsonResponse([
                     'success' => false,
                     'message' => $translator->trans('messages.invalid_data')
-                ]);
-
-            }
-
-            if (!$isHomebrew) {
-
-                return new JsonResponse([
-                    'success' => true
                 ]);
 
             }

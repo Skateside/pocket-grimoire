@@ -2,6 +2,7 @@
 
 namespace App\Model;
 
+use App\Repository\RoleRepository;
 use App\Repository\TeamRepository;
 
 class HomebrewModel
@@ -53,26 +54,6 @@ class HomebrewModel
     }
 
     /**
-     * Checks to see if all the entries given are homebrew entries. This will
-     * return true if there are no entries.
-     *
-     * @param  array $entries
-     * @return bool
-     */
-    public function isHomebrew(array $entries): bool
-    {
-
-        foreach ($entries as $entry) {
-            if (!$this->isHomebrewEntry($entry)) {
-                return false;
-            }
-        }
-
-        return true;
-
-    }
-
-    /**
      * Checks to see if the entry contains the meta information about the
      * script.
      *
@@ -88,6 +69,17 @@ class HomebrewModel
             && array_key_exists('name', $entry)
         );
 
+    }
+
+    /**
+     * Checks to see if the entry just contains an 'id' key like an official character.
+     *
+     * @param  array $entry
+     * @return bool
+     */
+    public function isOfficialCharacter(array $entry): bool
+    {
+        return count($entry) == 1 && array_key_exists('id', $entry);
     }
 
     /**
@@ -129,7 +121,7 @@ class HomebrewModel
      * @param  array $entries
      * @return bool
      */
-    public function validateAllEntries(array $entries): bool
+    public function validateAllEntries(array $entries, RoleRepository $roleRepo): bool
     {
 
         $isValid = true;
@@ -147,6 +139,16 @@ class HomebrewModel
             }
 
             if ($this->isMetaEntry($entry)) {
+                continue;
+            }
+
+            if ($this->isOfficialCharacter($entry)) {
+                $character = $roleRepo->findOneBy(['identifier' => $entry['id']]);
+                if (is_null($character)) {
+                    $isValid = false;
+                    break;
+                }
+                $teams[$character->getTeam()->getIdentifier()] += 1;
                 continue;
             }
 
@@ -186,6 +188,10 @@ class HomebrewModel
                 return in_array($key, ['id', 'name']);
             }, ARRAY_FILTER_USE_KEY);
 
+        }
+
+        if ($this->isOfficialCharacter($entry)) {
+            return $entry;
         }
 
         return array_filter($entry, function ($key) {
