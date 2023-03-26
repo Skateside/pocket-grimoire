@@ -56,6 +56,11 @@
     text-align: center;
 }
 
+.character-select__part--image {
+    aspect-ratio: 1/1;
+    object-fit: contain;
+}
+
 .character-select__part--ability {
     display: block;
     font-size: 0.75em;

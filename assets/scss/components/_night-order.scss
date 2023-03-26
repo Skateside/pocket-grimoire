@@ -42,6 +42,8 @@
 
 .night-order__icon {
     width: 2em;
+    aspect-ratio: auto 177 / 124;
+    object-fit: contain;
 }
 
 .night-order__role {
