@@ -50,10 +50,6 @@ function setTotals(breakdown) {
  */
 function highlightRandomInTeam(team, count) {
 
-    if (!count) {
-        return;
-    }
-
     // Don't cache this since they will change if a different edition is chosen.
     const inputs = lookup(`[data-team="${team}"] [name="character"]`);
 
