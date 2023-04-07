@@ -90,6 +90,15 @@
             {% if app.request.get('name') is not empty %}
                 {% set params = params|merge({ name: app.request.get('name') }) %}
             {% endif %}
+            {% if app.request.get('game') is not empty %}
+                {% set params = params|merge({ game: app.request.get('game') }) %}
+            {% endif %}
+            {% if app.request.get('traveller') is not empty %}
+                {% set params = params|merge({ traveller: app.request.get('traveller') }) %}
+            {% endif %}
+            {% if app.request.get('fabled') is not empty %}
+                {% set params = params|merge({ fabled: app.request.get('fabled') }) %}
+            {% endif %}
             {% for locale in locales() %}
                 <option value="{{ path('sheet', params|merge({ '_locale': locale[0] })) }}" lang="{{ locale[0]|replace({ '_': '-' }) }}" {{ app.request.locale == locale[0] ? 'selected' }}>{{ locale[1] }}</option>
             {% endfor %}
