@@ -145,24 +145,24 @@ class MainController extends AbstractController
                     continue;
 
                 }
-                
+
                 if (array_key_exists('team', $character)) {
                     $teamId = $character['team'];
 
                     if (!array_key_exists($teamId, $teamMap)) {
                         $teamMap[$teamId] = $this->teamRepo->findOneBy(['identifier' => $teamId]);
                     }
-    
+
                     $team = $teamMap[$teamId];
-                    
+
                     $characterFirstNight = array_key_exists('firstNight', $character) ? $character['firstNight'] : 0;
                     $characterOtherNight = array_key_exists('otherNight', $character) ? $character['otherNight'] : 0;
                 } else {
-                    $characterId = $this->homebrewModel->convertCharacterId($character['id']);
+                    $characterId = $this->homebrewModel->normaliseId($character['id']);
                     $character = $this->roleRepo->findOneBy(['identifier' => $characterId]);
                     $team = $character->getTeam();
                     $teamId = $team->getIdentifier();
-                    
+
                     $ids[] = $characterId;
                     foreach ($character->getJinxes() as $jinx) {
                         $tempJinxes[] = $jinx;

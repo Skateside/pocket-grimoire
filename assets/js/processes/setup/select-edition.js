@@ -114,8 +114,8 @@ function normaliseHomebrew(json) {
             entry[key] = map[entry[key]] || entry[key];
         });
 
-        if (typeof entry['team'] !== "undefined" && (!entry.hasOwnProperty('image') || entry['image'] === '')) {
-            entry['image'] = "../build/img/icon/generic/" + entry['team'] + ".png";
+        if (entry.team && !entry.image) {
+            entry.image = `/build/img/icon/${entry.team}.png`;
         }
 
         return entry;
@@ -232,7 +232,8 @@ function processJSON({
                     announceScript(
                         extractMetaEntry(normalised),
                         normalised.map((item) => (
-                            Object.keys(item).length > 2 ? store.createCustomCharacter(item) : store.getCharacter(convertCharacterId(item))
+                            store.getOfficialCharacter(convertCharacterId(item))
+                            || store.createCustomCharacter(item)
                         )),
                         game
                     );
@@ -389,5 +390,14 @@ urlInput.addEventListener("input", () => {
         announceInput(fileInput);
 
     }
+
+});
+
+Dialog.create(lookupOne("#edition-list")).on(Dialog.HIDE, () => {
+
+    fileInput.value = "";
+    announceInput(fileInput);
+    urlInput.value = "";
+    announceInput(urlInput);
 
 });

@@ -9,6 +9,7 @@ class HomebrewModel
 {
 
     protected $teamRepo;
+    protected $roleRepo;
     protected $requiredKeys = [
         'name',
         'ability',
@@ -20,13 +21,21 @@ class HomebrewModel
         'image',
         'team',
         'firstNight',
-        'otherNight'
+        'firstNightReminder',
+        'otherNight',
+        'otherNightReminder',
+        'reminders',
+        'setup'
     ];
 
     public function __construct(
-        TeamRepository $teamRepo
+        TeamRepository $teamRepo,
+        RoleRepository $roleRepo
     ) {
+
         $this->teamRepo = $teamRepo;
+        $this->roleRepo = $roleRepo;
+
     }
 
     /**
@@ -79,14 +88,25 @@ class HomebrewModel
     }
 
     /**
-     * Checks to see if the entry just contains an 'id' key like an official character.
+     * Checks to see if the entry just contains an 'id' key like an official
+     * character.
      *
      * @param  array $entry
      * @return bool
      */
     public function isOfficialCharacter(array $entry): bool
     {
-        return count($entry) == 1 && array_key_exists('id', $entry);
+
+        if (!array_key_exists('id', $entry)) {
+            return false;
+        }
+
+        $character = $this->roleRepo->findOneBy([
+            'identifier' => $this->normaliseId($entry['id'])
+        ]);
+
+        return !is_null($character);
+
     }
 
     /**
@@ -117,12 +137,17 @@ class HomebrewModel
 
     }
 
-    public function convertCharacterId(string $id): string
+    /**
+     * The official script tool creates IDs differently from our data. For
+     * example: they have "lil_monsta" when we have "lilmonsta", they have
+     * "al-hadikhia" when we have "alhadikhia" etc. This adjusts the given ID so
+     * it will match our data.
+     *
+     * @param  string $id
+     * @return string
+     */
+    public function normaliseId(string $id): string
     {
-        // The script tool creates IDs differently from our data.
-        // Examples: script = lil_monsta, data = lilmonsta
-        // Examples: script = al-hadikhia, data = alhadikhia
-        // The .replace() here is designed to convert their IDs to ours.
         return preg_replace('/[-_]/', '', $id);
     }
 
@@ -133,7 +158,7 @@ class HomebrewModel
      * @param  array $entries
      * @return bool
      */
-    public function validateAllEntries(array $entries, RoleRepository $roleRepo): bool
+    public function validateAllEntries(array $entries): bool
     {
 
         $isValid = true;
@@ -155,13 +180,28 @@ class HomebrewModel
             }
 
             if ($this->isOfficialCharacter($entry)) {
-                $character = $roleRepo->findOneBy(['identifier' => $this->convertCharacterId($entry['id'])]);
+
+                $character = $this->roleRepo->findOneBy([
+                    'identifier' => $this->normaliseId($entry['id'])
+                ]);
+
                 if (is_null($character)) {
                     $isValid = false;
                     break;
                 }
-                $teams[$character->getTeam()->getIdentifier()] += 1;
+
+                // The user may have uploaded a script that includes travellers
+                // or fabled. This allows that team to be added optionally.
+                $teamID = $character->getTeam()->getIdentifier();
+
+                if (!array_key_exists($teamID, $teams)) {
+                    $teams[$teamID] = 0;
+                }
+
+                $teams[$teamID] += 1;
+
                 continue;
+
             }
 
             if (!$this->validateEntry($entry)) {
@@ -205,10 +245,6 @@ class HomebrewModel
         if ($this->isOfficialCharacter($entry)) {
             return $entry;
         }
-
-        // if (!array_key_exists('image', $entry) || $entry['image'] === '') {
-        //     $entry['image'] = "../build/img/icon/generic/" . $entry['team'] . ".png";
-        // }
 
         return array_filter($entry, function ($key) {
             return in_array($key, $this->filteredKeys);
