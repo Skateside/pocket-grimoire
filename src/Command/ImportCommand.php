@@ -22,6 +22,7 @@ class ImportCommand extends Command
     protected static $defaultName = 'pocket-grimoire:import';
 
     protected static $locales = [
+        'de_DE',
         'fr_FR',
         'he_IL',
         'pt_BR',

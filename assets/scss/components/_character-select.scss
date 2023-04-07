@@ -43,7 +43,7 @@
     opacity: 0.6;
 
     @at-root {
-        :checked ~ #{&} {
+        :checked ~ & {
             opacity: 1;
         }
     }
@@ -54,6 +54,10 @@
     font-size: 0.9em;
     font-weight: bold;
     text-align: center;
+
+    &:lang(de) {
+        font-size: 0.7em;
+    }
 }
 
 .character-select__part--ability {
@@ -61,7 +65,7 @@
     font-size: 0.75em;
 
     @at-root {
-        .is-hide-abilities #{&} {
+        .is-hide-abilities & {
             display: none;
         }
     }
@@ -121,7 +125,7 @@
     z-index: 1;
 
     @at-root {
-        .is-show-duplicates .is-selected > #{&} {
+        .is-show-duplicates .is-selected > & {
             display: block;
         }
     }

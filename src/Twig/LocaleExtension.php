@@ -18,6 +18,7 @@ class LocaleExtension extends AbstractExtension
     public function getLocales(): array
     {
         return [
+            ['de_DE', 'Deutsch'],
             ['en_GB', 'English'],
             ['fr_FR', 'Français'],
             ['pt_BR', 'Português brasileiro'],
