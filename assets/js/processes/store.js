@@ -174,9 +174,12 @@ TokenStore.ready((tokenStore) => {
             name: info.name,
             characters: info.characters
                 .map((item) => (
-                    typeof item === "string"
-                    ? tokenStore.getCharacter(item)
-                    : tokenStore.createCustomCharacter(item)
+                    tokenStore.getCharacter(
+                        typeof item === "string"
+                        ? item
+                        : item.id
+                    )
+                    || tokenStore.createCustomCharacter(item)
                 ))
                 .filter(Boolean),
             game: info.game

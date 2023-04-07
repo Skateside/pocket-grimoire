@@ -49,7 +49,7 @@ function closeDetails() {
 }
 
 const printQuery = window.matchMedia("print");
-printQuery.addListener(({ matches }) => {
+printQuery.addEventListener("change", ({ matches }) => {
 
     if (matches) {
         openAllDetails();

@@ -101,7 +101,7 @@ Optionally, you can include a name for the script. To do this, include an entry 
 
 The Pocket Grimoire understands custom characters. In order to use them, you'll need to create a JSON definition. The JSON definition uses the same format that [clocktower.online](https://clocktower.online/) does.
 
-> :warning: The Pocket Grimoire can only understand custom characters if all characters in the script are fully defined.
+> :information_source: You can combine official and homebrew character by simply adding your homebrew character to a list of recognised IDs, such as the Trouble Brewing example in the [Custom Scripts](#custom-scripts) section.
 
 ```json
 [

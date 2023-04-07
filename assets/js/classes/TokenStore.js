@@ -266,6 +266,28 @@ export default class TokenStore {
     }
 
     /**
+     * Gets the character for the given ID, the same as
+     * {@link TokenStore#getCharacter}, but if the character is custom then
+     * undefined is returned.
+     *
+     * @param  {String} id
+     *         ID of the character to get.
+     * @return {CharacterToken|undefined}
+     *         The matching instance or undefined if the character isn't found.
+     */
+    getOfficialCharacter(id) {
+
+        const character = this.getCharacter(id);
+
+        if (character?.isCustom()) {
+            return undefined;
+        }
+
+        return character;
+
+    }
+
+    /**
      * Gets a clone of the character for the given ID.
      *
      * @param  {String} id

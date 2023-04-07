@@ -2,23 +2,40 @@
 
 namespace App\Model;
 
+use App\Repository\RoleRepository;
 use App\Repository\TeamRepository;
 
 class HomebrewModel
 {
 
     protected $teamRepo;
+    protected $roleRepo;
     protected $requiredKeys = [
         'name',
         'ability',
-        'image',
         'team'
+    ];
+    protected $filteredKeys = [
+        'name',
+        'ability',
+        'image',
+        'team',
+        'firstNight',
+        'firstNightReminder',
+        'otherNight',
+        'otherNightReminder',
+        'reminders',
+        'setup'
     ];
 
     public function __construct(
-        TeamRepository $teamRepo
+        TeamRepository $teamRepo,
+        RoleRepository $roleRepo
     ) {
+
         $this->teamRepo = $teamRepo;
+        $this->roleRepo = $roleRepo;
+
     }
 
     /**
@@ -53,26 +70,6 @@ class HomebrewModel
     }
 
     /**
-     * Checks to see if all the entries given are homebrew entries. This will
-     * return true if there are no entries.
-     *
-     * @param  array $entries
-     * @return bool
-     */
-    public function isHomebrew(array $entries): bool
-    {
-
-        foreach ($entries as $entry) {
-            if (!$this->isHomebrewEntry($entry)) {
-                return false;
-            }
-        }
-
-        return true;
-
-    }
-
-    /**
      * Checks to see if the entry contains the meta information about the
      * script.
      *
@@ -91,6 +88,28 @@ class HomebrewModel
     }
 
     /**
+     * Checks to see if the entry just contains an 'id' key like an official
+     * character.
+     *
+     * @param  array $entry
+     * @return bool
+     */
+    public function isOfficialCharacter(array $entry): bool
+    {
+
+        if (!array_key_exists('id', $entry)) {
+            return false;
+        }
+
+        $character = $this->roleRepo->findOneBy([
+            'identifier' => $this->normaliseId($entry['id'])
+        ]);
+
+        return !is_null($character);
+
+    }
+
+    /**
      * Validates a single entry to make sure that it has all the required keys
      * and that it's part of a recognised team.
      *
@@ -102,10 +121,6 @@ class HomebrewModel
 
         $isValid = true;
         $teams = [];
-
-        if ($this->isMetaEntry($entry)) {
-            return $isValid;
-        }
 
         if (!$this->isHomebrewEntry($entry)) {
             $isValid = false;
@@ -120,6 +135,20 @@ class HomebrewModel
 
         return $isValid;
 
+    }
+
+    /**
+     * The official script tool creates IDs differently from our data. For
+     * example: they have "lil_monsta" when we have "lilmonsta", they have
+     * "al-hadikhia" when we have "alhadikhia" etc. This adjusts the given ID so
+     * it will match our data.
+     *
+     * @param  string $id
+     * @return string
+     */
+    public function normaliseId(string $id): string
+    {
+        return preg_replace('/[-_]/', '', $id);
     }
 
     /**
@@ -148,6 +177,31 @@ class HomebrewModel
 
             if ($this->isMetaEntry($entry)) {
                 continue;
+            }
+
+            if ($this->isOfficialCharacter($entry)) {
+
+                $character = $this->roleRepo->findOneBy([
+                    'identifier' => $this->normaliseId($entry['id'])
+                ]);
+
+                if (is_null($character)) {
+                    $isValid = false;
+                    break;
+                }
+
+                // The user may have uploaded a script that includes travellers
+                // or fabled. This allows that team to be added optionally.
+                $teamID = $character->getTeam()->getIdentifier();
+
+                if (!array_key_exists($teamID, $teams)) {
+                    $teams[$teamID] = 0;
+                }
+
+                $teams[$teamID] += 1;
+
+                continue;
+
             }
 
             if (!$this->validateEntry($entry)) {
@@ -188,8 +242,12 @@ class HomebrewModel
 
         }
 
+        if ($this->isOfficialCharacter($entry)) {
+            return $entry;
+        }
+
         return array_filter($entry, function ($key) {
-            return in_array($key, $this->requiredKeys);
+            return in_array($key, $this->filteredKeys);
         }, ARRAY_FILTER_USE_KEY);
 
     }
