@@ -23,6 +23,7 @@ class ImportCommand extends Command
 
     protected static $locales = [
         'de_DE',
+        'es_AR',
         'fr_FR',
         'he_IL',
         'pt_BR',

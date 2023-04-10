@@ -1,0 +1,218 @@
+title: Grimorio de Bolsillo
+
+forms:
+    file:
+        placeholder: Elegir archivo
+        button: Buscar
+
+dialog:
+    close: Cerrar
+
+index:
+    title: Juego
+    description: Un grimorio virtual para Blood on the Clocktower
+
+sheet:
+    title: Hoja de Personajes
+    description: La hoja de personajes para esta edición de Blood on the Clocktower
+    jinx: Hechizo
+    each_night: '* Cada noche, excepto la primera.'
+    get_qr_code: Ver código QR para esta hoja
+    get_sheet: Ver esta hoja
+    credit: <a href="https://bloodontheclocktower.com/" target="_blank" rel="noopener noreferrer">Blood on the Clocktower</a> es una marca registrada de Steven Medway y <a href="https://www.thepandemoniuminstitute.com/" target="_blank" rel="noopener noreferrer">The Pandemonium Institute</a>
+
+groups:
+    townsfolk: Ciudadanos
+    outsider: Forasteros
+    minion: Secuaces
+    demon: Demonios
+    traveller: Viajeros
+    fabled: Leyendas
+
+messages:
+    good_team: Equipo bueno
+    evil_team: Equipo malo
+    empty_character_ability: Este es un personaje vacío.
+    version_change_message: Esta app ha sido actualizada. Como puede que tus datos sean incorrectos, recomendamos que limpies todo en la opción "Limpiar Cache". Presiona "OK" para abrir el diálogo o "Cancelar" para cerrar este mensaje.
+    invalid_script: No se reconoce el formato de guión.
+    no_characters: El guión no contiene ningún personaje reconocido.
+    player_name: ¿Cual es el nombre de este jugador?
+    custom_info_token: ¿Que queres que diga esta nueva ficha de información? Usa **asteriscos dobles** para enfatizar el texto.
+
+setup:
+
+    title: Preparacion
+
+    buttons:
+        select_edition: Elegir Edicion
+        select_characters: Elegir Personajes
+        qr_code_button: Hoja de Personajes
+        clear_cache_button: Limpiar Cache
+        language: Idioma
+        set_language: Elegir Idioma
+
+    editions:
+        title: Elegir Edicion
+        trouble_brewing: Trouble Brewing
+        bad_moon_rising: Bad Moon Rising
+        sects_and_violets: Sects and Violets
+        custom_script: Guión Personalizado
+        custom_note: Subi un guión personalizado o ingresa la URL del guión personalizado.
+        custom_warning: Solo subi archivos JSON personalizados de fuentes confiables!
+        upload: Subir un guión personalizado
+        url: Ingresar URL
+        unsupported: Por favor tener en cuenta que actualmente el Grimorio de Bolsillo es incompatible con guiones homebrew o localizados.
+        select: Seleccionar
+
+    character_select:
+        title: Elegir Personajes
+        number_players: Número de jugadores
+        toggle_abilities: Mostrar habilidades de personajes
+        toggle_duplicates: Permitir personajes duplicados
+        highlight_random: Elegir aleatorios
+        draw_characters: Sortear Personajes
+        add_all: Agregar Todos
+
+    character_choice:
+        title: Elegi tu Personaje
+        description: Presiona cualquiera de las fichas numeradas para elegir tu personaje. Las oscurecidas ya han sido elegidas.
+
+    character_decision:
+        title: Recorda Tu Personaje
+        name: Ingresa tu nombre (opcional)
+        return: Volver a Selección de Personajes
+
+    qr_code:
+        title: Hoja de personajes
+        intro: Escanea este código QR para ver la hoja de personajes
+        include: 'Incluir:'
+        travellers: Viajeros
+        fabled: Leyendas
+
+    clear_cache:
+        title: Limpiar Cache
+        clear_all: Limpiar todo
+        clear_description: Desactivar esto permitirá limpiar partes individuales del chache.
+        lookup_label: Limpiar datos
+        lookup_note: Los datos para hechizos, la configuración de equipos, y la información de personajes.
+        characters_label: Limpiar edicion
+        characters_note: La edicion, o guion, que ha sido elegida y cargada.
+        tokens_label: Limpiar fichas
+        tokens_note: La posición de las fichas en el grimorio.
+        inputs_label: Limpiar inputs
+        inputs_note: Configuración de usuario para esta página.
+        details_label: Limpiar abierto/cerrado
+        details_note: Qué secciones están abiertas o cerradas.
+        info_tokens_label: Limpiar fichas de información personalizadas
+        info_tokens_note: Las fichas de información personalizadas que han sido agregadas.
+        names_label: Limpiar nombres
+        names_note: Las sugerencias de nombre de jugadores.
+        height_label: Limpiar altura del pad
+        height_note: La altura del pad en el Grimorio
+        clear_refresh_label: Refrescar después de limpiar
+        clear_refresh_note: Refrescar cargará información nueva para todo lo que haya sido limpiado.
+        warning: '<strong>Advertencia:</strong> cualquier ficha que se haya puesto en el grimorio será olvidada.'
+        info_token_warning: '<strong>Advertencia:</strong> cualquier ficha ficha de información personalizada será olvidada.'
+        clear_cache: Limpiar Cache
+
+grimoire:
+
+    title: Grimorio
+
+    grimoire:
+        bluffs: Mentiras para el Demonio
+        add_token: Agregar ficha
+        add_reminder: Agregar recordatorio
+        add_traveller: Agregar viajero
+        show_tokens: Mostrar fichas
+        reset_height: Restablecer altura del pad
+        clear_grimoire: Limpiar Grimorio
+        clear_grimoire_warning: ¿Estás seguro que queres quitar todas las fichas?
+        show_night_order: Mostar orden nocturno
+        character_size: Tamaño de ficha de personaje
+        reminder_size: Tamaño de ficha de recordatorio
+        token_settings: Configuración de Ficha
+
+    character_list:
+        title: Elegir Personaje
+
+    reminder_list:
+        title: Elegir Recordatorio
+        show: Mostrar todos los recordatorios
+
+    character_show:
+        title: Ficha
+        show: Mostrar
+        shroud: Velo
+        rotate: Rotar
+        reminder: Recordatorio
+        remove: Quitar ficha
+        recent_reminders: 'Recordatorios agregados recientemente:'
+        player_name: Establecer nombre de jugador
+
+    reminder_show:
+        title: Recordatorio
+        remove: Quitar
+
+    bluff_show:
+        title: Ficha
+        empty: Vacio
+        show: Mostrar
+        change: Cambiar
+
+    bluff_list:
+        title: Elegir Mentira
+        show_existing: Mostrar personajes existentes
+        show_travellers: Mostar viajeros
+        show_evil: Mostrar personajes malvados
+
+    token_list:
+        title: Personajes
+
+    traveller_list:
+        title: Viajeros
+        show_all: Mostrar todos los viajeros
+
+    token:
+        title: Ficha
+
+jinxes:
+    title: Hechizos
+    target: Objetivo
+    trick: Hechizado
+    reason: Motivo
+    show: Mostrar hechizos fuera de juego
+
+night_order:
+    title: Orden Nocturno
+    first_night: Primera noche
+    other_night: Otras noches
+    swipe_change: Desliza para cambiar de noche.
+    show: Mostrar personajes que no estén en juego.
+
+info_tokens:
+    title: Fichas de Información
+    info_tokens:
+        isdemon: Este es el <strong>Demonio</strong>
+        isminion: Estos son tus <strong>Secuaces</strong>
+        notinplay: Estos personajes <strong>no están en juego</strong>
+        nominatetoday: <strong>¿Nominaste</strong> hoy?
+        playeris: <strong>Este jugador</strong> es
+        votetoday: <strong>¿Votaste</strong> hoy?
+        youare: <strong>Vos sos</strong>
+        selectedyou: Este personaje <strong>te eligió</strong>
+    custom: Fichas de información personalizadas
+    add_custom: Agregar ficha de informacion
+    edit_custom: Editar ficha de informacion
+    delete_custom: Borrar ficha de información
+
+acknowledgements:
+    title: Reconocimientos
+    acknowledgements:
+        - <a href="https://bloodontheclocktower.com/" target="_blank" rel="noopener noreferrer">Blood on the Clocktower</a> es una marca registrada de Steven Medway y <a href="https://www.thepandemoniuminstitute.com/" target="_blank" rel="noopener noreferrer">The Pandemonium Institute</a>
+        - Recordatorio nocturnos y otros textos auxiliares escritos por <a href="http://bignose.whitetree.org/projects/botc/diy/" target="_blank" rel="noopener noreferrer">Ben Finney</a>.
+        - Iconos fueron tomados de <a href="https://fontawesome.com/v5.15/icons" target="_blank" rel="noopener noreferrer">Font Awesome</a>.
+        - Varias imágenes y datos fueron tomados de <a href="https://www.clocktower.online" target="_blank" rel="noopener noreferrer">Clocktower online</a> y el <a href="https://bloodontheclocktower.com/" target="_blank" rel="noopener noreferrer">sitio de Blood on the Clocktower</a>
+        - Este es un grimorio virtual no oficial para Blood on the Clocktower. Este proyecto es gratuito y el código fuente se puede encontrar en <a href="https://github.com/Skateside/pocket-grimoire" target="_blank" rel="noopener noreferrer">GitHub</a>. Este producto no está afiliado con Pandemonium Institute. Si disfrutas jugar Blood on the Clocktower, <a href="https://bloodontheclocktower.com/pages/where-to-buy" target="_blank" rel="noopener noreferrer">por favor considera comprar tu propio grimorio</a> - además de ser más flexible que esta versión digital, también apoya a los creadores.
+        - ¿Encontraste algún bug o tenes una sugerencia? Contanos en <a href="https://discord.com/channels/569683781800296501/708509594758152203" target="_blank" rel="noopener noreferrer">el canal de toolmakers en el discord no oficial</a> (mi nombre ahí es "Skateside") o <a href="https://github.com/Skateside/pocket-grimoire/issues" target="_blank" rel="noopener noreferrer">levanta un problema en GitHub</a>
+        - <small>Version <span id="version"></span></small>
