@@ -1,4 +1,5 @@
 import Pad from "../../classes/Pad.js";
+import Positioner from "../../classes/Positioner.js";
 import Observer from "../../classes/Observer.js";
 import TokenStore from "../../classes/TokenStore.js";
 import ReminderToken from "../../classes/ReminderToken.js";
@@ -16,6 +17,23 @@ const tokenObserver = Observer.create("token");
 const padElement = lookupOneCached(".js--pad");
 const pad = new Pad(padElement, tokenObserver);
 padElement.pad = pad;
+
+
+/* TEMP - put these somewhere better */
+    const positioner = new Positioner();
+    pad.setPositioner(positioner);
+    positioner.setLayout(Object.keys(Positioner.layout)[0]);
+    const {
+        width: padElementWidth,
+        height: padElementHeight
+    } = padElement.getBoundingClientRect();
+    positioner.setContainerSize(padElementWidth, padElementHeight);
+    gameObserver.on("player-count", ({ detail }) => {
+        positioner.setTotal(detail.count);
+        pad.generateCoords();
+    });
+    pad.generateCoords();
+/* END TEMP */
 
 const styleObserver = new MutationObserver((mutations) => {
 

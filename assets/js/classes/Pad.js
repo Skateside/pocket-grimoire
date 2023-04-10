@@ -1,5 +1,9 @@
 import Tokens from "./Tokens.js";
 import Template from "./Template.js";
+import Observer from "./Observer.js";
+import CharacterToken from "./CharacterToken.js";
+import ReminderToken from "./ReminderToken.js";
+import Positioner from "./Positioner.js";
 import {
     lookupOne,
     lookupOneCached
@@ -86,6 +90,12 @@ export default class Pad {
          */
         this.reminders = [];
 
+        /**
+         * The positioner that will lay out the tokens automatically.
+         * @type {Positioner}
+         */
+        this.positioner = null;
+
     }
 
     /**
@@ -141,22 +151,45 @@ export default class Pad {
     addNewCharacter(character) {
 
         const {
-            element,
+            // element,
             tokens,
-            characters
+            characters,
+            coords,
+            constructor: {
+                OFFSET
+            }
         } = this;
+
+        if (!coords) {
+            throw new Error("Co-ordinates have not been generated");
+        }
+
         const info = this.addCharacter(character);
-        const offset = Math.max(
-            this.constructor.OFFSET,
-            element.offsetWidth / 25
-        );
+
+        const index = characters.length - 1;
+        const [
+            left,
+            top
+        ] = (coords?.[index] || [OFFSET * index, OFFSET, index]);
 
         tokens.moveTo(
             info.token,
-            characters.length * offset,
-            offset,
+            left,
+            top,
             tokens.advanceZIndex()
         );
+
+        // const offset = Math.max(
+        //     this.constructor.OFFSET,
+        //     element.offsetWidth / 25
+        // );
+
+        // tokens.moveTo(
+        //     info.token,
+        //     characters.length * offset,
+        //     offset,
+        //     tokens.advanceZIndex()
+        // );
 
         return info;
 
@@ -564,6 +597,14 @@ export default class Pad {
      */
     setZIndex(zIndex) {
         this.tokens.setZIndex(zIndex);
+    }
+
+    setPositioner(positioner) {
+        this.positioner = positioner;
+    }
+
+    generateCoords() {
+        this.coords = this.positioner.generateCoords();
     }
 
 }

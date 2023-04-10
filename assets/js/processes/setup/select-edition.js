@@ -180,11 +180,18 @@ function setFormLoadingState(form, state) {
 
 }
 
-function convertCharacterId(item) {
-    // The script tool creates IDs differently from our data.
-    // Examples: script = lil_monsta, data = lilmonsta
-    // Examples: script = al-hadikhia, data = alhadikhia
-    // The .replace() here is designed to convert their IDs to ours.
+/**
+ * The script tool uses a slightly different ID format from the one we use. For
+ * example, script uses "lil_monsta" where we use "lilmonsta", script uses
+ * "al-hadikhia" where we use "alhadikhia" etc. This function just normalises
+ * the IDs so they always match our data.
+ *
+ * @param  {Object} item
+ *         Item whose ID should be normalised.
+ * @return {String}
+ *         The normalised ID.
+ */
+function normaliseId(item) {
     return item.id.replace(/[-_]/g, "")
 }
 
@@ -232,7 +239,7 @@ function processJSON({
                     announceScript(
                         extractMetaEntry(normalised),
                         normalised.map((item) => (
-                            store.getOfficialCharacter(convertCharacterId(item))
+                            store.getOfficialCharacter(normaliseId(item))
                             || store.createCustomCharacter(item)
                         )),
                         game
@@ -250,7 +257,7 @@ function processJSON({
     const name = extractMetaEntry(json);
 
     const characters = json.map((item) => (
-        store.getCharacter(convertCharacterId(item))
+        store.getCharacter(normaliseId(item))
     ));
 
     if (!characters.length) {
