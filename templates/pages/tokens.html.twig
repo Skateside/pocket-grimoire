@@ -45,7 +45,12 @@
     <ul class="no-list slot">
         {% for token in group.tokens %}
             <li>
-                <span class="character js--character js--character--leaves">
+                {% set leaves = '' %}
+                {% if token.setup %}{% set leaves = leaves ~ ' character--setup' %}{% endif %}
+                {% if token.firstNight > 0 %}{% set leaves = leaves ~ ' character--left-1' %}{% endif %}
+                {% if token.otherNight > 0 %}{% set leaves = leaves ~ ' character--right-1' %}{% endif %}
+                {% if token.reminders|length > 0 %}{% set leaves = leaves ~ ' character--top-' ~ token.reminders|length %}{% endif %}
+                <span class="character {{ leaves }}">
                     <span class="character__image">
                         <img src="{{ token.image }}" alt="" class="character__icon" width="177" height="124" loading="lazy">
                     </span>
