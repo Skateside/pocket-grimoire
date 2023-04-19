@@ -256,4 +256,66 @@ class MainController extends AbstractController
 
     }
 
+    /**
+     * @Route("/", name="tokens_stub")
+     */
+    public function tokensStubAction(Request $request): Response
+    {
+        return $this->redirectToRoute('tokens', $request->query->all(), 301);
+    }
+
+    /**
+     * @Route("/{_locale}/tokens", name="tokens")
+     */
+    public function tokensAction(
+        Request $request,
+        RoleRepository $roleRepo,
+        TeamRepository $teamRepo,
+        TranslatorInterface $translator
+    ) {
+
+        $feed = $roleRepo->getFeed();
+        $roles = [];
+
+        foreach ($teamRepo->getTeamIds(true) as $id) {
+
+            $roles[$id] = [
+                'name' => $translator->trans('groups.' . $id),
+                'tokens' => []
+            ];
+
+        }
+
+        foreach ($roleRepo->getFeed() as $token) {
+
+            $team = $token['team'];
+
+            if (!array_key_exists($team, $roles)) {
+                continue;
+            }
+
+            $roles[$team]['tokens'][] = $token;
+
+        }
+
+        foreach ($roles as $team => $data) {
+            usort($data['tokens'], function ($a, $b) {
+                return $a['name'] <=> $b['name'];
+            });
+        }
+
+        // $roles = [
+        //     'townsfolk' => [
+        //         'name' => $translator->trans('groups.townsfolk'),
+        //         'tokens' => []
+        //     ],
+        // ];
+
+
+        return $this->render('pages/tokens.html.twig', [
+            'roles' => $roles
+        ]);
+
+    }
+
 }
