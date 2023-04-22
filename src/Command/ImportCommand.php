@@ -172,12 +172,6 @@ class ImportCommand extends Command
 
         if ($countMissingCharacters > 0) {
 
-            // $this->io->writeln('Adding missing characters:');
-            // $this->io->listing(
-            //     array_map(function ($data) {
-            //         return $data['name'];
-            //     }, $missingCharacters)
-            // );
             $listing = [];
 
             foreach ($missingCharacters as $missingCharacter) {
@@ -272,6 +266,7 @@ class ImportCommand extends Command
         }
 
         // Check the night order and update if necessary.
+        // TODO: is this worth doing?
 
     }
 
