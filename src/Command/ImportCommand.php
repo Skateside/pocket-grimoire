@@ -14,12 +14,15 @@ use App\Entity\Role;
 use App\Repository\RoleRepository;
 use App\Entity\Edition;
 use App\Repository\EditionRepository;
+use App\Entity\Jinx;
 use App\Repository\JinxRepository;
 
 class ImportCommand extends Command
 {
 
     protected static $defaultName = 'pocket-grimoire:import';
+
+    private const DEFAULT_LOCALE = 'en_GB';
 
     protected static $locales = [
         'de_DE',
@@ -75,6 +78,13 @@ class ImportCommand extends Command
 
         $this
             ->addOption(
+                'new',
+                null,
+                InputOption::VALUE_OPTIONAL,
+                'Add any new characters/jinxes?',
+                'yes'
+            )
+            ->addOption(
                 'type',
                 't',
                 InputOption::VALUE_OPTIONAL,
@@ -96,6 +106,7 @@ class ImportCommand extends Command
     {
 
         $this->io = new SymfonyStyle($input, $output);
+        $addNew = in_array(strtolower($input->getOption('new')), ['yes', 'y', '1']);
         $types = $this->interpretOption($input->getOption('type'), self::$types);
         $locales = $this->interpretOption($input->getOption('locale'), self::$locales);
         $table = [];
@@ -103,6 +114,12 @@ class ImportCommand extends Command
         $labelSize = array_reduce($types, function ($carry, $type) {
             return max($carry, strlen($type) + 1);
         }, 0);
+
+        if ($addNew) {
+            $this->addNew($output->isVerbose());
+        }
+
+        // TODO: update all en_GB based on characters.json and jinx.json
 
         foreach ($types as $type) {
 
@@ -133,6 +150,128 @@ class ImportCommand extends Command
         $this->io->success("Files for type '{$input->getOption('type')}' and locale '{$input->getOption('locale')}' has/have been imported");
 
         return Command::SUCCESS;
+
+    }
+
+    protected function addNew(bool $output = false)
+    {
+
+        // Check all characters in `assets/data/characters.json` - add any missing ones.
+
+        $characters = $this->read('.', 'characters');
+        $missingCharacters = array_filter($characters, function ($data) {
+
+            return is_null(
+                $this->roleRepo->findOneBy(['identifier' => $data['id']])
+            );
+
+        });
+
+        $this->io->writeln('Checking for missing characters.');
+        $countMissingCharacters = count($missingCharacters);
+
+        if ($countMissingCharacters > 0) {
+
+            // $this->io->writeln('Adding missing characters:');
+            // $this->io->listing(
+            //     array_map(function ($data) {
+            //         return $data['name'];
+            //     }, $missingCharacters)
+            // );
+            $listing = [];
+
+            foreach ($missingCharacters as $missingCharacter) {
+
+                $role = $this->getRole($missingCharacter, self::DEFAULT_LOCALE);
+                $listing[] = "Added role '{$role->getName()}'";
+
+            }
+
+            $this->em->flush();
+
+            if ($output) {
+                $this->io->listing($listing);
+            }
+
+            $this->io->writeln("Added {$countMissingCharacters} missing character(s)");
+
+        }
+
+        // Check all jinxes in `assets/data/jinx.json` - add any missing ones.
+
+        $jinxes = $this->read('.', 'jinx');
+        $missingJinxes = [];
+
+        foreach ($jinxes as $target) {
+
+            $targetRole = $this->roleRepo->findOneBy(['name' => $target['id']]);
+
+            if (is_null($targetRole)) {
+                $this->io->writeln("Unable to find role '{$target['id']}'");
+                continue;
+            }
+
+            foreach ($target['jinx'] as $trick) {
+
+                $trickRole = $this->roleRepo->findOneBy(['name' => $trick['id']]);
+
+                if (is_null($trickRole)) {
+                    $this->io->writeln("Unable to find role '{$trick['id']}'");
+                    continue;
+                }
+
+                $jinx = $this->jinxRepo->findOneBy([
+                    'target' => $targetRole,
+                    'trick' => $trickRole
+                ]);
+
+                if (is_null($jinx)) {
+
+                    $missingJinxes[] = [
+                        'target' => $targetRole,
+                        'trick' => $trickRole,
+                        'reason' => $trick['reason']
+                    ];
+
+                }
+
+            }
+
+        }
+
+        $countMissingJinxes = count($missingJinxes);
+
+        if ($countMissingJinxes > 0) {
+
+            $listing = [];
+
+            foreach ($missingJinxes as $missingJinx) {
+
+                $jinx = new Jinx();
+                $jinx
+                    ->setTranslatableLocale(self::DEFAULT_LOCALE)
+                    ->setTarget($missingJinx['target'])
+                    ->setTrick($missingJinx['trick'])
+                    ->setReason($missingJinx['reason']);
+                $this->em->persist($jinx);
+
+                $targetName = $missingJinx['target']->getName();
+                $trickName = $missingJinx['trick']->getName();
+                $listing[] = "Added jinx for '{$targetName}' and '{$trickName}'";
+
+            }
+
+            $this->em->flush();
+
+            if ($output) {
+                $this->io->listing($listing);
+            }
+
+            $this->io->writeln("Added {$countMissingJinxes} missing jinx(es)");
+
+        }
+
+        // Check the night order and update if necessary.
 
     }
 
@@ -447,7 +586,7 @@ class ImportCommand extends Command
         }
 
         if (!empty($data['team'])) {
-            $role->setTeam($this->getTeam($data['team']));
+            $role->setTeam($this->getTeam(['id' => $data['team']], $locale));
         }
 
         if (
