@@ -2227,5 +2227,19 @@
         "setup": false,
         "ability": "All players keep their eyes closed when voting & the vote tally is secret. Votes for you only count if you vote.",
         "image": "/build/img/icon/minion/organgrinder.png"
+    },
+    {
+        "id": "vizier",
+        "name": "Vizier",
+        "edition": "",
+        "team": "minion",
+        "firstNight": 54,
+        "firstNightReminder": "Announce 'The Vizier is in play' and state which player they are.",
+        "otherNight": 0,
+        "otherNightReminder": "",
+        "reminders": [],
+        "setup": false,
+        "ability": "All players know who you are. You can not die during the day. If good voted, you may choose to execute immediately.",
+        "image": "/build/img/icon/minion/vizier.png"
     }
 ]

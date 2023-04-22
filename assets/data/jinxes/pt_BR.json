@@ -378,5 +378,40 @@
         "target": "organgrinder",
         "trick": "preacher",
         "reason": "Apenas um destes personagens pode estar em jogo."
+    },
+    {
+        "target": "vizier",
+        "trick": "alchemist",
+        "reason": "Se o Alquimista tiver a habilidade Vizir, ele só pode optar por executar imediatamente se três ou mais jogadores votarem."
+    },
+    {
+        "target": "vizier",
+        "trick": "courtier",
+        "reason": "Se o Vizir perder sua habilidade, eles aprendem isso e se o Vizir for executado enquanto eles tiverem sua habilidade, seu time vence."
+    },
+    {
+        "target": "vizier",
+        "trick": "fearmonger",
+        "reason": "O Vizir acorda com o Intimidador, aprende quem ele escolhe e não pode escolher executar aquele jogador."
+    },
+    {
+        "target": "vizier",
+        "trick": "investigator",
+        "reason": "Se o Investigador descobre que o Vizir está em jogo, a existência do Vizir não é anunciada pelo Narrador."
+    },
+    {
+        "target": "vizier",
+        "trick": "lilmonsta",
+        "reason": "O Vizir pode morrer por execução se for babá Bebê Monstro."
+    },
+    {
+        "target": "vizier",
+        "trick": "magician",
+        "reason": "Apenas um destes personagens pode estar em jogo."
+    },
+    {
+        "target": "vizier",
+        "trick": "preacher",
+        "reason": "Se o Vizir perder sua habilidade, eles aprendem isso e se o Vizir for executado enquanto eles tiverem sua habilidade, seu time vence."
     }
 ]

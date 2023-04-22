@@ -378,5 +378,40 @@
         "target": "organgrinder",
         "trick": "preacher",
         "reason": "Il ne peut y avoir qu'un personnage jinxé en jeu."
+    },
+    {
+        "target": "vizier",
+        "trick": "alchemist",
+        "reason": "Si l'Alchimiste a la capacité Vizir, il ne peut choisir d'exécuter immédiatement que si trois joueurs ou plus ont voté."
+    },
+    {
+        "target": "vizier",
+        "trick": "courtier",
+        "reason": "Si le Vizir perd sa capacité, il l'apprend et si le Vizir est exécuté alors qu'il a sa capacité, son équipe gagne."
+    },
+    {
+        "target": "vizier",
+        "trick": "fearmonger",
+        "reason": "Le Vizir se réveille avec le Prophète de l'Effroi, apprend qui il choisit et ne peut pas choisir d'exécuter ce joueur."
+    },
+    {
+        "target": "vizier",
+        "trick": "investigator",
+        "reason": "Si l'Enquêteur apprend que le Vizir est en jeu, l'existence du Vizir n'est pas annoncée par le Conteur."
+    },
+    {
+        "target": "vizier",
+        "trick": "lilmonsta",
+        "reason": "Le Vizir peuvent mourir par exécution s'ils font du baby-sitting P'tit monstre."
+    },
+    {
+        "target": "vizier",
+        "trick": "magician",
+        "reason": "Il ne peut y avoir qu'un personnage jinxé en jeu."
+    },
+    {
+        "target": "vizier",
+        "trick": "preacher",
+        "reason": "Si le Vizir perd sa capacité, il l'apprend et si le Vizir est exécuté alors qu'il a sa capacité, son équipe gagne."
     }
 ]

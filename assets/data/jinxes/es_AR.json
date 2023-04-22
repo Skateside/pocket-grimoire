@@ -378,5 +378,40 @@
         "target": "organgrinder",
         "trick": "preacher",
         "reason": "Solo 1 personaje hechizado puede estar en juego."
+    },
+    {
+        "target": "vizier",
+        "trick": "alchemist",
+        "reason": "Si el Alquimista tiene la habilidad Visir, solo puede optar por ejecutar inmediatamente si tres o más jugadores votaron."
+    },
+    {
+        "target": "vizier",
+        "trick": "courtier",
+        "reason": "Si el Visir pierde su habilidad, aprende esto y si el Visir se ejecuta mientras tiene su habilidad, su equipo gana."
+    },
+    {
+        "target": "vizier",
+        "trick": "fearmonger",
+        "reason": "El Visir se despierta con el Alarmista, aprende a quién elige y no puede elegir ejecutar a ese jugador."
+    },
+    {
+        "target": "vizier",
+        "trick": "investigator",
+        "reason": "Si el Investigador se entera de que el Visir está en juego, el Narrador no anuncia la existencia del Visir."
+    },
+    {
+        "target": "vizier",
+        "trick": "lilmonsta",
+        "reason": "El Visir puede morir por ejecución si está cuidando niños Pequeño Monstruo."
+    },
+    {
+        "target": "vizier",
+        "trick": "magician",
+        "reason": "Solo 1 personaje hechizado puede estar en juego."
+    },
+    {
+        "target": "vizier",
+        "trick": "preacher",
+        "reason": "Si el Visir pierde su habilidad, aprende esto y si el Visir se ejecuta mientras tiene su habilidad, su equipo gana."
     }
 ]
