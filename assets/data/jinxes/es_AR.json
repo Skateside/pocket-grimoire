@@ -90,6 +90,11 @@
         "reason": "Votos para el Moledor de Órganos cuentan si el Moledor de órganos está cuidando al Pequeño Monstruo."
     },
     {
+        "target": "lilmonsta",
+        "trick": "vizier",
+        "reason": "El Visir puede morir por ejecución si está cuidando niños Pequeño Monstruo."
+    },
+    {
         "target": "lycanthrope",
         "trick": "gambler",
         "reason": "Si el Licántropo está vivo y el Apostador se mata a sí mismo de noche, nadie más puede morir esa noche."
@@ -398,11 +403,6 @@
         "target": "vizier",
         "trick": "investigator",
         "reason": "Si el Investigador se entera de que el Visir está en juego, el Narrador no anuncia la existencia del Visir."
-    },
-    {
-        "target": "vizier",
-        "trick": "lilmonsta",
-        "reason": "El Visir puede morir por ejecución si está cuidando niños Pequeño Monstruo."
     },
     {
         "target": "vizier",

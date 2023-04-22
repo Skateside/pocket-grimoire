@@ -90,6 +90,11 @@
         "reason": "Röster för Orgelkvarn räknas om Orgelkvarn är barnvakt Lil' Monsta."
     },
     {
+        "target": "lilmonsta",
+        "trick": "vizier",
+        "reason": "Visir kan dö genom avrättning om de är barnvakt Lil' Monsta."
+    },
+    {
         "target": "lycanthrope",
         "trick": "gambler",
         "reason": "Om Varuvlen lever och Hasardspelaren dödar sig själv under natten, kan ingen annan spelare dö inatt."
@@ -398,11 +403,6 @@
         "target": "vizier",
         "trick": "investigator",
         "reason": "Om Utredare får reda på att Visir är i spel, meddelas inte existensen av Visir av berättaren."
-    },
-    {
-        "target": "vizier",
-        "trick": "lilmonsta",
-        "reason": "Visir kan dö genom avrättning om de är barnvakt Lil' Monsta."
     },
     {
         "target": "vizier",

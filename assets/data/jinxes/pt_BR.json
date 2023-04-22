@@ -90,6 +90,11 @@
         "reason": "Os votos para o Tocador de Órgão contam se o Tocador de Órgão for babá Bebê Monstro."
     },
     {
+        "target": "lilmonsta",
+        "trick": "vizier",
+        "reason": "O Vizir pode morrer por execução se for babá Bebê Monstro."
+    },
+    {
         "target": "lycanthrope",
         "trick": "gambler",
         "reason": "Se o Licantropo estiver vivo e o Apostador se matar à noite, nenhum outro jogador poderá morrer naquela noite."
@@ -398,11 +403,6 @@
         "target": "vizier",
         "trick": "investigator",
         "reason": "Se o Investigador descobre que o Vizir está em jogo, a existência do Vizir não é anunciada pelo Narrador."
-    },
-    {
-        "target": "vizier",
-        "trick": "lilmonsta",
-        "reason": "O Vizir pode morrer por execução se for babá Bebê Monstro."
     },
     {
         "target": "vizier",

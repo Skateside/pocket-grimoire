@@ -90,6 +90,11 @@
         "reason": "如果器官研磨机正在照看怪兽宝宝，则对器官研磨机的投票有效。"
     },
     {
+        "target": "lilmonsta",
+        "trick": "vizier",
+        "reason": "如果宰相正在照顾怪兽宝宝，他们可能会死于死刑。"
+    },
+    {
         "target": "lycanthrope",
         "trick": "gambler",
         "reason": "如果狼人还活着，而赌徒在晚上自杀，那么今晚没有其他玩家会死。"
@@ -398,11 +403,6 @@
         "target": "vizier",
         "trick": "investigator",
         "reason": "如果调查员得知宰相在场，则 Storyteller 不会宣布宰相的存在。"
-    },
-    {
-        "target": "vizier",
-        "trick": "lilmonsta",
-        "reason": "如果宰相正在照顾怪兽宝宝，他们可能会死于死刑。"
     },
     {
         "target": "vizier",
