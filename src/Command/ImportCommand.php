@@ -29,6 +29,7 @@ class ImportCommand extends Command
         'es_AR',
         'fr_FR',
         'he_IL',
+        'nb_NO',
         'pt_BR',
         'ru_RU',
         'sv_SE',

@@ -1,0 +1,218 @@
+title: Vesle-Boka
+
+forms:
+    file:
+        placeholder: Velg fil
+        button: Søk
+
+dialog:
+    close: Lukk
+
+index:
+    title: Spill
+    description: En virtuell grimoire for Blodet på Klokketårnet
+
+sheet:
+    title: Rolleark
+    description: Rollearket for denne utgaven av Blodet på Klokketårnet
+    jinx: Gand
+    each_night: '* Hver natt utenom første natt'
+    get_qr_code: Få QR-koden for arket
+    get_sheet: Få arket
+    credit: <a href="https://bloodontheclocktower.com/" target="_blank" rel="noopener noreferrer">Blood on the Clocktower</a> er et varemerke tilhørende Steven Medway og <a href="https://www.thepandemoniuminstitute.com/" target="_blank" rel="noopener noreferrer">The Pandemonium Institute</a>
+
+groups:
+    townsfolk: Borgere
+    outsider: Einstøinger
+    minion: Lakeier
+    demon: Demoner
+    traveller: Omreisende
+    fabled: Sagnomsuste
+
+messages:
+    good_team: Godt lag
+    evil_team: Ondt lag
+    empty_character_ability: Dette er en hul rolle.
+    version_change_message: Appen har oppdatert versjonen sin. Ettersom dataen din kan være feil, anbefaler vi at du rydder vekk alt i "Rydd cache"-ruta. Trykk "OK" for å åpne ruta eller "Avbryt" får å lukke denne meldingen.
+    invalid_script: Scenarioformatet gjenkjennes ikke.
+    no_characters: Scenarioet inneholder ingen gjenkjennelige roller.
+    player_name: Hva heter denne spilleren?
+    custom_info_token: 'Hva ønsker du at din nye kunnskapsbrikke skal si? Bruk **dobbel stjerne** for å vektlegge tekst.'
+
+setup:
+
+    title: Oppsett
+
+    buttons:
+        select_edition: Velg utgave
+        select_characters: Velg roller
+        qr_code_button: Rolleark
+        clear_cache_button: Rydd cache
+        language: Språk
+        set_language: Velg språk
+
+    editions:
+        title: Velg utgave
+        trouble_brewing: Trøbbel i Gjære
+        bad_moon_rising: Fullmånenatt
+        sects_and_violets: Okkulte affærer
+        custom_script: Annet scenario
+        custom_note: Enten last opp et annet scenario eller skriv inn nettadressen til et annet scenario.
+        custom_warning: Bare last opp JSON-filer fra pålitelige kilder!
+        upload: Last opp annet scenario
+        url: Skriv inn nettadresse
+        unsupported: Vennligst bemerk at Vesle-Boka for øyeblikket ikke støtter heimebrygg eller lokaliserte scenario.
+        select: Velg
+
+    character_select:
+        title: Velg roller
+        number_players: Antall spillere
+        toggle_abilities: Vis rolleevner
+        toggle_duplicates: Tillat kopier av roller
+        highlight_random: Fremhev tilfeldige
+        draw_characters: Trekk roller
+        add_all: Legg til alle
+
+    character_choice:
+        title: Velg rollen din
+        description: Trykk på en av de nummererte brikkene for å velge rollen din. Mørkere brikker har allerede blitt valgt.
+
+    character_decision:
+        title: Husk rollen din
+        name: Gi deg selv et navn (valgfritt)
+        return: Returner til rollearket
+
+    qr_code:
+        title: Rolleark
+        intro: Scan QR-koden for å se rollearket
+        include: Ta med
+        travellers: Omreisende
+        fabled: Sagnomsuste
+
+    clear_cache:
+        title: Rydd cache
+        clear_all: Rydd alt
+        clear_description: Å skru denne av gjør det mulig å rydde vekk enkeltstående deler av cachen.
+        lookup_label: Rydd data
+        lookup_note: Dataen til gandene, lagoppbyggingen, og rolleinformasjonen.
+        characters_label: Rydd utgave
+        characters_note: Utgaven, eller scenarioet, som er valgt og lastet inn.
+        tokens_label: Rydd brikker
+        tokens_note: Stillingen til brikkene i Boka.
+        inputs_label: Rydd inndata
+        inputs_note: Brukerinnstillinger for nettsiden.
+        details_label: Rydd åpen/lukket
+        details_note: Hvilke deler er åpne eller lukkede.
+        info_tokens_label: Rydd egne kunnskapsbrikker
+        info_tokens_note: De egne kunnskapsbrikkene som er lagt til.
+        names_label: Rydd navn
+        names_note: Forslagene til spillernavn.
+        height_label: Rydd underlagshøyde
+        height_note: Høyden på underlaget i Boka.
+        clear_refresh_label: Oppdater etterpå
+        clear_refresh_note: Å oppdatere vil laste inn ny data for alt som er ryddet vekk.
+        warning: '<strong>OBS!</strong> Alle brikker plassert i Boka vil bli glemt.'
+        info_token_warning: '<strong>OBS!</strong> Alle egne kunnskapsbrikker vil bli glemt.'
+        clear_cache: Rydd cache
+
+grimoire:
+
+    title: Boka
+
+    grimoire:
+        bluffs: Demonbløffer
+        add_token: Legg til brikke
+        add_reminder: Legg til påminnelse
+        add_traveller: Legg til Omreisende
+        show_tokens: Vis brikker
+        reset_height: Tilbakestill underlagshøyde
+        clear_grimoire: Rydd Boka
+        clear_grimoire_warning: Er du sikker på at du ønsker å rydde vekk alle brikkene?
+        show_night_order: Vis nattens gang
+        character_size: Størrelse på rollebrikkene
+        reminder_size: Størrelse på påminnelsesbrikkene
+        token_settings: Brikkeinnstillinger
+
+    character_list:
+        title: Velg rolle
+
+    reminder_list:
+        title: Velg påminnelse
+        show: Vis alle påminnelser
+
+    character_show:
+        title: Brikke
+        show: Vis
+        shroud: Slør
+        rotate: Drei
+        reminder: Påminnelse
+        remove: Fjern brikke
+        recent_reminders: 'Påminnelser nyligst lagt til:'
+        player_name: Navngi spiller
+
+    reminder_show:
+        title: Påminnelse
+        remove: Fjern
+
+    bluff_show:
+        title: Brikke
+        empty: Hul
+        show: Vis
+        change: Endre
+
+    bluff_list:
+        title: Velg bløff
+        show_existing: Vis eksisterende roller
+        show_travellers: Vis Omreisende
+        show_evil: Vis onde roller
+
+    token_list:
+        title: Roller
+
+    traveller_list:
+        title: Omreisende
+        show_all: Vis alle Omreisende
+
+    token:
+        title: Brikke
+
+jinxes:
+    title: Gander
+    target: Mål
+    trick: Triks
+    reason: Regel
+    show: Vis gander ikke i spill
+
+night_order:
+    title: Nattens gang
+    first_night: Første natt
+    other_night: Andre netter
+    swipe_change: Sveip for å endre netter.
+    show: Vis roller ikke i spill
+
+info_tokens:
+    title: Kunnskapsbrikker
+    info_tokens:
+        isdemon: Dette er <strong>Demonen</strong>
+        isminion: Dette er dine <strong>Lakeier</strong>
+        notinplay: Disse rollene er <strong>ikke i spill</strong>
+        nominatetoday: <strong>Nominerte</strong> du i dag?
+        playeris: <strong>Denne spilleren</strong> er
+        votetoday: <strong>Stemte</strong> du i dag?
+        youare: <strong>Du</strong> er
+        selectedyou: Denne rollen <strong>valgte</strong> deg
+    custom: Egne kunnskapsbrikker
+    add_custom: Legg til kunnskapsbrikke
+    edit_custom: Rediger kunnskapsbrikke
+    delete_custom: Slett kunnskapsbrikke
+
+acknowledgements:
+    title: Erkjennelser
+    acknowledgements:
+        - <a href="https://bloodontheclocktower.com/" target="_blank" rel="noopener noreferrer">Blood on the Clocktower</a> er et varemerke tilhørende Steven Medway og <a href="https://www.thepandemoniuminstitute.com/" target="_blank" rel="noopener noreferrer">The Pandemonium Institute</a>.
+        - Nattepåminnelser og annen tilleggstekst er skrevet av <a href="http://bignose.whitetree.org/projects/botc/diy/" target="_blank" rel="noopener noreferrer">Ben Finney</a>.
+        - Ikoner er hentet fra <a href="https://fontawesome.com/v5.15/icons" target="_blank" rel="noopener noreferrer">Font Awesome</a>.
+        - Mange bilder og data er hentet fra <a href="https://www.clocktower.online" target="_blank" rel="noopener noreferrer">Clocktower.online</a> og <a href="https://bloodontheclocktower.com/" target="_blank" rel="noopener noreferrer">Blood on the Clocktower-nettsiden</a>.
+        - Dette er en uoffisiell virtuell grimoire for Blodet på Klokketårnet. Prosjektet er gratis og kildekoden kan finnes på <a href="https://github.com/Skateside/pocket-grimoire" target="_blank" rel="noopener noreferrer">GitHub</a>. Prosjektet er ikke tilknyttet the Pandemonium Institute. Om du har glede av å spille Blodet på Klokketårnet, <a href="https://bloodontheclocktower.com/pages/where-to-buy" target="_blank" rel="noopener noreferrer">vurder gjerne å kjøpe din egen grimoire</a> - i tillegg til å være mer fleksibel enn denne digitale utgaven, støtter det også utviklerne.
+        - Lagt merke til en teknisk feil eller har du et forslag til forbedring? La meg få vite det i <a href="https://discord.com/channels/569683781800296501/708509594758152203" target="_blank" rel="noopener noreferrer">toolmakers-kanalen på den uoffisielle discord-serveren</a> (navnet mitt der er "Skateside") eller <a href="https://github.com/Skateside/pocket-grimoire/issues" target="_blank" rel="noopener noreferrer">ta eventuelle problemer opp på GitHub</a>.
+        - <small>Versjon <span id="version"></span></small>
