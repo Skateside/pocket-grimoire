@@ -1,0 +1,417 @@
+[
+    {
+        "target": "chambermaid",
+        "trick": "mathematician",
+        "reason": "Nữ phục vụ biết Nhà toán học dậy tối nay hay không, ngay cả khi Nữ phục vụ dậy trước."
+    },
+    {
+        "target": "butler",
+        "trick": "cannibal",
+        "reason": "Nếu Ăn thịt người có chức năng của Quản gia, Ăn thịt người biết điều này."
+    },
+    {
+        "target": "lunatic",
+        "trick": "mathematician",
+        "reason": "Nhà toán học biết khi Người điên tấn công (những) người khác với người Quỷ thật tấn công."
+    },
+    {
+        "target": "pithag",
+        "trick": "heretic",
+        "reason": "Pit-hag không tạo ra Dị giáo."
+    },
+    {
+        "target": "pithag",
+        "trick": "damsel",
+        "reason": "Nếu Pit-hag tạo ra Thiếu nữ, Người kể chuyện quyết định người đó là ai."
+    },
+    {
+        "target": "pithag",
+        "trick": "politician",
+        "reason": "Pit-hag không thể tạo ra Chính trị gia ác."
+    },
+    {
+        "target": "cerenovus",
+        "trick": "goblin",
+        "reason": "Cerenovus có thể khiến 1 người chơi điên rằng họ là Yêu tinh."
+    },
+    {
+        "target": "leviathan",
+        "trick": "soldier",
+        "reason": "Nếu Leviathan biểu quyết và hành quyết Chiến sĩ, Chiến sĩ không chết."
+    },
+    {
+        "target": "leviathan",
+        "trick": "monk",
+        "reason": "Nếu Leviathan biểu quyết và hành quyết người mà Nhà sư chọn, người đó không chết."
+    },
+    {
+        "target": "leviathan",
+        "trick": "innkeeper",
+        "reason": "Nếu Leviathan biểu quyết và hành quyết người mà Chủ quán trọ chọn, người đó không chết."
+    },
+    {
+        "target": "leviathan",
+        "trick": "ravenkeeper",
+        "reason": "Nếu có Leviathan trong cuộc & Người nuôi quạ chết vì hành quyết, họ dậy trong đêm đó để sử dụng chức năng."
+    },
+    {
+        "target": "leviathan",
+        "trick": "sage",
+        "reason": "Nếu có Leviathan trong cuộc & Hiền nhân chết vì hành quyết, họ dậy trong đêm đó để sử dụng chức năng."
+    },
+    {
+        "target": "leviathan",
+        "trick": "farmer",
+        "reason": "Nếu có Leviathan trong cuộc & Nông dân chết vì hành quyết, 1 người thiện sẽ trở thành Nông dân đêm đó."
+    },
+    {
+        "target": "leviathan",
+        "trick": "mayor",
+        "reason": "Nếu có Leviathan trong cuộc & không có hành quyết trong ngày 5, phe thiện thắng."
+    },
+    {
+        "target": "lilmonsta",
+        "trick": "poppygrower",
+        "reason": "Nếu có Người trồng hoa trong cuộc, Tay sai không dậy cùng nhau. Họ được gọi dậy lần lượt, cho đến khi một người chấp nhận trông non Lil' Monsta."
+    },
+    {
+        "target": "lilmonsta",
+        "trick": "magician",
+        "reason": "Chỉ có 1 nhân vật trùng trong cuộc."
+    },
+    {
+        "target": "lilmonsta",
+        "trick": "scarletwoman",
+        "reason": "Nếu còn 5 người sống trở lên và người giữ Lil' Monsta chết, Phụ nữ đỏ được giữ Lil' Monsta tối nay."
+    },
+    {
+        "target": "lilmonsta",
+        "trick": "organgrinder",
+        "reason": "Phiếu dành cho Kẻ bán nội tạng tính khi họ đang trông non Lil' Monsta."
+    },
+    {
+        "target": "lilmonsta",
+        "trick": "vizier",
+        "reason": "tể tướng có thể chết bằng cách hành quyết nếu họ đang trông trẻ Lil' Monsta."
+    },
+    {
+        "target": "lycanthrope",
+        "trick": "gambler",
+        "reason": "Nếu Người sói còn sống và Con bạc tự giết mình trong đêm, những người khác không chết tối nay."
+    },
+    {
+        "target": "legion",
+        "trick": "engineer",
+        "reason": "Legion và Kĩ sư không thể tồn tại cùng nhau khi bắt đầu game. Nếu Kĩ sư tạo ra Legion, đa số người chơi (tính cả người chơi ác) trở thành Legion ác."
+    },
+    {
+        "target": "legion",
+        "trick": "preacher",
+        "reason": "Chỉ có 1 nhân vật trùng trong cuộc."
+    },
+    {
+        "target": "fanggu",
+        "trick": "scarletwoman",
+        "reason": "Nếu Fang Gu chọn Lữ khách và chết, Phụ nữ đỏ chưa được trở thành Fang Gu."
+    },
+    {
+        "target": "spy",
+        "trick": "alchemist",
+        "reason": "Nhà giả kim không thể có chức năng của Gián điệp."
+    },
+    {
+        "target": "spy",
+        "trick": "magician",
+        "reason": "Khi Gián điệp nhìn Sách ma thuật, token nhân vật của Quỷ và Ảo thuật gia được lấy ra."
+    },
+    {
+        "target": "spy",
+        "trick": "poppygrower",
+        "reason": "Nếu có Người trồng hoa trong cuộc, Gián điệp không được nhìn Sách ma thuật cho tới khi Người trồng hoa chết."
+    },
+    {
+        "target": "spy",
+        "trick": "damsel",
+        "reason": "Chỉ có 1 nhân vật trùng trong cuộc."
+    },
+    {
+        "target": "spy",
+        "trick": "heretic",
+        "reason": "Chỉ có 1 nhân vật trùng trong cuộc."
+    },
+    {
+        "target": "widow",
+        "trick": "alchemist",
+        "reason": "Nhà giả kim không thể có chức năng của Góa phụ."
+    },
+    {
+        "target": "widow",
+        "trick": "magician",
+        "reason": "Khi Góa phụ nhìn Sách ma thuật, token nhân vật của Quỷ và Ảo thuật gia được lấy ra."
+    },
+    {
+        "target": "widow",
+        "trick": "poppygrower",
+        "reason": "Nếu có Người trồng hoa trong cuộc, Góa phụ không được nhìn Sách ma thuật cho tới khi Người trồng hoa chết."
+    },
+    {
+        "target": "widow",
+        "trick": "damsel",
+        "reason": "Chỉ có 1 nhân vật trùng trong cuộc."
+    },
+    {
+        "target": "widow",
+        "trick": "heretic",
+        "reason": "Chỉ có 1 nhân vật trùng trong cuộc."
+    },
+    {
+        "target": "godfather",
+        "trick": "heretic",
+        "reason": "Chỉ có 1 nhân vật trùng trong cuộc."
+    },
+    {
+        "target": "baron",
+        "trick": "heretic",
+        "reason": "Có thể Nam tước chỉ thêm 1 Lữ khách, không phải 2."
+    },
+    {
+        "target": "marionette",
+        "trick": "lilmonsta",
+        "reason": "Con rối ngồi cạnh Tay sai, không phải Quỷ. Con rối không được gọi dậy để chọn người trông non Lil' Monsta, và không biết họ là Con rối khi họ nhân token Lil' Monsta."
+    },
+    {
+        "target": "marionette",
+        "trick": "poppygrower",
+        "reason": "Khi Người trồng hoa chết, Quỷ biết Con rối nhưng Con rối không biết gì."
+    },
+    {
+        "target": "marionette",
+        "trick": "snitch",
+        "reason": "Con rối không biết 3 nhân vật ngoài cuộc. Thay vào đó, Quỷ biết thêm 3."
+    },
+    {
+        "target": "marionette",
+        "trick": "balloonist",
+        "reason": "Nếu Con rối nghĩ mình là Khinh khí cầu, vẫn thêm +1 Lữ khách."
+    },
+    {
+        "target": "marionette",
+        "trick": "damsel",
+        "reason": "Con rối không biết có Thiếu nữ trong cuộc."
+    },
+    {
+        "target": "marionette",
+        "trick": "huntsman",
+        "reason": "Nếu Con rối nghĩ mình là Thợ săn, vẫn thêm Thiếu nữ."
+    },
+    {
+        "target": "lleech",
+        "trick": "mastermind",
+        "reason": "Nếu Chủ mưu còn sông và vật chủ của Lleech chết vì hành quyết, Lleech sống nhưng mất chức năng."
+    },
+    {
+        "target": "lleech",
+        "trick": "slayer",
+        "reason": "Nếu Người diệt quỷ giết vật chủ của Lleech, vật chủ chết."
+    },
+    {
+        "target": "lleech",
+        "trick": "heretic",
+        "reason": "Nếu Lleech đầu độc Dị giáo và Lleech chết, Dị giáo vẫn bị trúng độc."
+    },
+    {
+        "target": "riot",
+        "trick": "engineer",
+        "reason": "Riot và Kĩ sư không thể tồn tại cùng nhau khi bắt đầu game. Nếu Kĩ sư tạo ra Riot, người ác trở thành Riot."
+    },
+    {
+        "target": "riot",
+        "trick": "golem",
+        "reason": "Nếu Golem biểu quyết Riot, người chơi Riot không chết."
+    },
+    {
+        "target": "riot",
+        "trick": "snitch",
+        "reason": "Nếu có Mách lẻo trong cuộc, mỗi người chơi Riot nhận thêm 3 nhân vật giả."
+    },
+    {
+        "target": "riot",
+        "trick": "saint",
+        "reason": "Nếu người thiện biểu quyết là giết Thành, phe của Thành thua."
+    },
+    {
+        "target": "riot",
+        "trick": "butler",
+        "reason": "Quản gia không thể biểu quyết chủ nhân của họ."
+    },
+    {
+        "target": "riot",
+        "trick": "pithag",
+        "reason": "Nếu Pit-hag tạo ra Riot, tất cả người ác trở thành Riot. Nếu Pit-hag tạo ra Riot sau ngày 3, trò chơi tiếp tục thêm 1 ngày nữa."
+    },
+    {
+        "target": "riot",
+        "trick": "mayor",
+        "reason": "Nếu ngày 3 bắt đầu với chỉ 3 người sống, người chơi có thể đồng ý (theo nhóm) là không biểu quyết ai cả. Nếu vậy (và Thị trưởng còn sống) đội của Thị trưởng thắng."
+    },
+    {
+        "target": "riot",
+        "trick": "monk",
+        "reason": "Nếu người chơi Riot biểu quyết và giết người được bảo vệ bởi Nhà sư, người được bảo vệ không chết."
+    },
+    {
+        "target": "riot",
+        "trick": "farmer",
+        "reason": "Nếu người chơi Riot biểu quyết và giết Nông dân, Nông dân được dùng chức năng đêm nay."
+    },
+    {
+        "target": "riot",
+        "trick": "innkeeper",
+        "reason": "Nếu người chơi Riot biểu quyết và giết người được bảo vệ bởi Chủ quán trọ, người được bảo vệ không chết."
+    },
+    {
+        "target": "riot",
+        "trick": "sage",
+        "reason": "Nếu người chơi Riot biểu quyết và giết Hiền nhân, Hiền nhân được dùng chức năng tối nay."
+    },
+    {
+        "target": "riot",
+        "trick": "ravenkeeper",
+        "reason": "Nếu người chơi Riot biểu quyết và giết Người nuô quạ, Người nuôi quạ được dùng chức năng tối nay."
+    },
+    {
+        "target": "riot",
+        "trick": "soldier",
+        "reason": "Nếu người chơi Riot biểu quyết Chiến sĩ, Chiến sĩ không chết."
+    },
+    {
+        "target": "riot",
+        "trick": "grandmother",
+        "reason": "Nếu Riot biểu quyết và giết Người cháu, Bà ngoại chết cùng."
+    },
+    {
+        "target": "riot",
+        "trick": "king",
+        "reason": "Nếu người chơi Riot giết vua và Ca đoàn còn sống, Ca đoàn dùng chức năng tối nay"
+    },
+    {
+        "target": "riot",
+        "trick": "exorcist",
+        "reason": "Chỉ có 1 nhân vật trùng trong cuộc."
+    },
+    {
+        "target": "riot",
+        "trick": "minstrel",
+        "reason": "Chỉ có 1 nhân vật trùng trong cuộc."
+    },
+    {
+        "target": "riot",
+        "trick": "flowergirl",
+        "reason": "Chỉ có 1 nhân vật trùng trong cuộc."
+    },
+    {
+        "target": "riot",
+        "trick": "undertaker",
+        "reason": "Người chết vì biểu quyết đước tính là bị hành quyết với Chôn cất."
+    },
+    {
+        "target": "riot",
+        "trick": "cannibal",
+        "reason": "Người chết vì biểu quyết đước tính là bị hành quyết với Ăn thịt người."
+    },
+    {
+        "target": "riot",
+        "trick": "pacifist",
+        "reason": "Người chết vì biểu quyết đước tính là bị hành quyết với Hòa bình."
+    },
+    {
+        "target": "riot",
+        "trick": "devilsadvocate",
+        "reason": "Người chết vì biểu quyết đước tính là bị hành quyết với Luật sư của Quỷ."
+    },
+    {
+        "target": "riot",
+        "trick": "investigator",
+        "reason": "Riot được tính và Tay sai với Điều tra viên."
+    },
+    {
+        "target": "riot",
+        "trick": "clockmaker",
+        "reason": "Riot được tính và Tay sai với Thợ đồng hồ."
+    },
+    {
+        "target": "riot",
+        "trick": "towncrier",
+        "reason": "Riot được tính và Tay sai với Mõ làng."
+    },
+    {
+        "target": "riot",
+        "trick": "damsel",
+        "reason": "Riot được tính và Tay sai với Thiếu nữ."
+    },
+    {
+        "target": "riot",
+        "trick": "preacher",
+        "reason": "Riot được tính và Tay sai với Mục sư."
+    },
+    {
+        "target": "alhadikhia",
+        "trick": "scarletwoman",
+        "reason": "Nếu có 2 Al-Hadikhia còn sống, Phụ nữ đỏ là Al-Hadikhia trở về thành Phụ nữ đỏ bình thường."
+    },
+    {
+        "target": "alhadikhia",
+        "trick": "mastermind",
+        "reason": "Chỉ có 1 nhân vật trùng trong cuộc. Người ác biết đó là nhân vật nào và là người nào."
+    },
+    {
+        "target": "organgrinder",
+        "trick": "butler",
+        "reason": "Nếu Kẻ bán nội tạng tạo ra bỏ phiếu ẩn, Quản gia có thể bỏ phiếu nhưng phiếu của họ được đếm khi chủ nhân của họ bỏ phiếu."
+    },
+    {
+        "target": "organgrinder",
+        "trick": "flowergirl",
+        "reason": "Nếu người chơi nhắm mắt khi biểu quyết, Bán hoa biết số lần Quỷ bỏ phiếu."
+    },
+    {
+        "target": "organgrinder",
+        "trick": "minstrel",
+        "reason": "Chỉ có 1 nhân vật trùng trong cuộc."
+    },
+    {
+        "target": "organgrinder",
+        "trick": "preacher",
+        "reason": "Chỉ có 1 nhân vật trùng trong cuộc."
+    },
+    {
+        "target": "vizier",
+        "trick": "alchemist",
+        "reason": "Nếu Nhà giả kim có chức năng Tể tướng, họ chỉ có thể chọn hành quyết ngay lập tức nếu có ba người bỏ phiếu trở lên."
+    },
+    {
+        "target": "vizier",
+        "trick": "courtier",
+        "reason": "Nếu Tể tướng mất khả năng của mình, họ sẽ biết được điều này và nếu Tể tướng bị hành quyết khi họ còn chức năng, phe của họ thắng."
+    },
+    {
+        "target": "vizier",
+        "trick": "fearmonger",
+        "reason": "Tể tướng thức dậy cùng với Kẻ gây hãi, biết được họ chọn ai và không được hành quyết người chơi đó."
+    },
+    {
+        "target": "vizier",
+        "trick": "investigator",
+        "reason": "Nếu Điều tra viên biết có Tể tướng trong cuộc, sự tồn tại của Tể tướng sẽ không được Người kể chuyện thông báo."
+    },
+    {
+        "target": "vizier",
+        "trick": "magician",
+        "reason": "Chỉ có 1 nhân vật trùng trong cuộc."
+    },
+    {
+        "target": "vizier",
+        "trick": "preacher",
+        "reason": "Nếu Tể tướng mất khả năng của mình, họ sẽ biết được điều này và nếu Tể tướng bị hành quyết khi họ còn chức năng, phe của họ thắng."
+    }
+]

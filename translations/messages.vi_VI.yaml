@@ -1,0 +1,218 @@
+title: Sách ma thuật bỏ túi
+
+forms:
+    file:
+        placeholder: Chọn tệp
+        button: Duyệt
+
+dialog:
+    close: Đóng
+
+index:
+    title: Game
+    description: Sách ma thuật ảo để chơi Tháp đồng hồ nhuốm máu (Blood on the Clocktower)
+
+sheet:
+    title: Tờ nhân vật
+    description: Tờ nhân vật dành cho phiên bản này của Tháp đồng hồ nhuốm máu
+    jinx: Trùng
+    each_night: '* Mỗi đêm trừ đêm đầu.'
+    get_qr_code: Nhận mã QR cho tờ nhân vật này
+    get_sheet: Nhận tờ nhân vật này
+    credit: <a href="https://bloodontheclocktower.com/" target="_blank" rel="noopener noreferrer">Tháp đồng hồ nhuốm máu (Blood on the Clocktower)</a> là thương hiệu của Steven Medway và <a href="https://www.thepandemoniuminstitute.com/" target="_blank" rel="noopener noreferrer">The Pandemonium Institute</a>
+
+groups:
+    townsfolk: Dân làng
+    outsider: Lữ khách
+    minion: Tay sai
+    demon: Quỷ
+    traveller: Du khách
+    fabled: Ngụ ngôn
+
+messages:
+    good_team: Phe thiện
+    evil_team: Phe ác
+    empty_character_ability: Đây là nhân vật trống.
+    version_change_message: Phần mềm này đã nâng cấp phiên bản mới. Vì dữ liệu của bạn có thể bị lỗi, mình gợi ý là xóa tất cả bằng hộp thoại "Xóa tất cả" . Bấm "OK" để mở hộp thoại hoặc "Cancel" để đóng tin nhắn này.
+    invalid_script: Không thể xác định định dạng của kịch bản này.
+    no_characters: Không thể xác định nhân vật nào trong kịch bản này.
+    player_name: Tên của nhân vật này là gì?
+    custom_info_token: Bạn muốn token thông tin ghi những gì? Dùng **Hoa thị kép** để nhấn mạnh văn bản.
+
+setup:
+
+    title: Cài đặt
+
+    buttons:
+        select_edition: Chọn thể loại
+        select_characters: Chọn nhân vật
+        qr_code_button: Tờ nhân vật
+        clear_cache_button: Xóa bộ nhớ
+        language: Ngôn ngữ
+        set_language: Đặt ngôn ngữ
+
+    editions:
+        title: Chọn thể loại
+        trouble_brewing: Trouble Brewing
+        bad_moon_rising: Bad Moon Rising
+        sects_and_violets: Sects and Violets
+        custom_script: Kịch bản tự chế
+        custom_note: Tải kịch bản tự chế hoặc nhập URL của kịch bản đó.
+        custom_warning: Chỉ tải tệp JSON của kịch bản từ nguồn tin cậy!
+        upload: Tải kịch bản tự chế
+        url: Nhập URL
+        unsupported: Lưu ý là Sách ma thuật bỏ túi hiện tại chưa hỗ trợ kịch bản thủ công.
+        select: Chọn
+
+    character_select:
+        title: Chọn nhân vật
+        number_players: Số người chơi
+        toggle_abilities: Cho xem chức năng
+        toggle_duplicates: Cho phép trùng lặp nhân vật
+        highlight_random: Đánh dấu ngẫu nhiên
+        draw_characters: Bốc nhân vật
+        add_all: Thêm tất cả
+
+    character_choice:
+        title: Chọn nhân vật của bạn
+        description: Nhấn vào token đánh số để chọn nhân vật của bạn. Token xẫm màu là nhân vật đã được chọn.
+
+    character_decision:
+        title: Ghi nhớ nhân vật của bạn
+        name: Tên của bạn (không bắt buộc)
+        return: Quay về chọn nhân vật
+
+    qr_code:
+        title: Tờ nhân vật
+        intro: Quét mà QR này để xem tờ nhân vật
+        include: Gồm:
+        travellers: Du khách
+        fabled: Ngụ ngôn
+
+    clear_cache:
+        title: Xóa bộ nhớ
+        clear_all: Xóa tất cả
+        clear_description: Tắt lựa chọn này sẽ cho phép xóa những phần riêng lẻ của bộ nhớ.
+        lookup_label: Xóa dữ liệu
+        lookup_note: Dữ liệu của trùng lặp, chia phe, và thông tin nhân vật.
+        characters_label: Xóa thể loại
+        characters_note: Thể loại, hoặc kịch bản, được chọn và hiện.
+        tokens_label: Xóa token
+        tokens_note: Vị trí của token trên sách thần.
+        inputs_label: Xóa dữ liệu nhập
+        inputs_note: Cài đặt người dùng trên trang.
+        details_label: Xóa đóng/mở
+        details_note: Phần nào được mở hoặc đóng.
+        info_tokens_label: Xóa token thông tin tự chế
+        info_tokens_note: Token tự chế được thêm.
+        names_label: Xóa tên
+        names_note: Gợi ý tên người chơi.
+        height_label: Xóa chiều dài
+        height_note: Chiều dài mặt trước của sách ma thuật.
+        clear_refresh_label: Tải lại ngay sau đó
+        clear_refresh_note: Tải lại sẽ hiện lên dữ liệu mới cho những cái đã xóa.
+        warning: '<strong>Cánh báo:</strong> tất cả những token đước đặt trên sách ma thuật sẽ bị mất.'
+        info_token_warning: '<strong>Cảnh báo:</strong> tất cả token thông tin tự chế sẽ bị mất.'
+        clear_cache: Xóa dữ liệu
+
+grimoire:
+
+    title: Sách ma thuật
+
+    grimoire:
+        bluffs: Bịp của Quỷ
+        add_token: Thêm token
+        add_reminder: Thêm đánh dấu
+        add_traveller: Thêm du khách
+        show_tokens: Xem token
+        reset_height: Cài lại chiều cao
+        clear_grimoire: Xóa sách ma thuật
+        clear_grimoire_warning: Bạn có muốn xóa tất cả token không?
+        show_night_order: Xem thứ tự đêm
+        character_size: Độ lớn token nhân vật
+        reminder_size: Độ lớn token đánh dấu
+        token_settings: Cài đắt token
+
+    character_list:
+        title: Chọn nhân vật
+
+    reminder_list:
+        title: Chọn đánh dấu
+        show: Xem tất cả đánh dấu
+
+    character_show:
+        title: Token
+        show: Xem
+        shroud: Vải liệm
+        rotate: Quay
+        reminder: Đánh dấu
+        remove: Xóa token
+        recent_reminders: 'Đánh dấu được thêm gần nhất:'
+        player_name: Đặt tên người chơi
+
+    reminder_show:
+        title: Đánh dấu
+        remove: Xóa
+
+    bluff_show:
+        title: Token
+        empty: Trống
+        show: Xem
+        change: Đổi
+
+    bluff_list:
+        title: Chọn Bịp
+        show_existing: Xem nhân vật đang có
+        show_travellers: Xem du khách
+        show_evil: Xem nhân vật ác
+
+    token_list:
+        title: Nhân vật
+
+    traveller_list:
+        title: Du khách
+        show_all: Xem tất cả du khách
+
+    token:
+        title: Token
+
+jinxes:
+    title: Trùng
+    target: Mục tiên
+    trick: Chiêu thức
+    reason: Nguyên nhân
+    show: Xem Trùng ngoài cuộc
+
+night_order:
+    title: Thứ tự đêm
+    first_night: Đêm đầu
+    other_night: Đêm khác
+    swipe_change: Trượt để đổi đêm
+    show: Xem nhân vật ngoài cuộc
+
+info_tokens:
+    title: Token thông tin
+    info_tokens:
+        isdemon: Đây là <strong>Quỷ</strong>
+        isminion: Đây là <strong>Tay sai</strong> của bạn
+        notinplay: Những nhân vật sau <strong>nằm ngoài cuộc</strong>
+        nominatetoday: Bạn có <strong>biểu quyết</strong> hôm nay không?
+        playeris: <strong>Người này</strong> là
+        votetoday: Bạn có <strong>bỏ phiếu</strong> hôm nay không?
+        youare: <strong>Bạn</strong> là
+        selectedyou: Nhân vật này <strong>chọn</strong> bạn
+    custom: Token thông tin tự chế
+    add_custom: Thêm token thông tin
+    edit_custom: Sửa token thông tin
+    delete_custom: Xóa token thông tin
+
+acknowledgements:
+    title: Acknowledgements
+    acknowledgements:
+        - <a href="https://bloodontheclocktower.com/" target="_blank" rel="noopener noreferrer">Tháp đồng hồ nhuốm máu (Blood on the Clocktower)</a> là thương hiệu của Steven Medway và <a href="https://www.thepandemoniuminstitute.com/" target="_blank" rel="noopener noreferrer">The Pandemonium Institute</a>
+        - Đánh dấu đêm và câu phụ trợ được viết với <a href="http://bignose.whitetree.org/projects/botc/diy/" target="_blank" rel="noopener noreferrer">Ben Finney</a>.
+        - Biểu tượng lấy từ <a href="https://fontawesome.com/v5.15/icons" target="_blank" rel="noopener noreferrer">Font Awesome</a>.
+        - Ảnh và dữ liệu lấy từ <a href="https://www.clocktower.online" target="_blank" rel="noopener noreferrer">Clocktower.online</a> và trang web <a href="https://bloodontheclocktower.com/" target="_blank" rel="noopener noreferrer">Blood on the Clocktower</a>.
+        - Đây là sách ma thuật ảo không chính thức của Tháp đồng hồ nhuốm máu. Dự án này miễn phí và là nguồn mở có thể tìm thấy trên <a href="https://github.com/Skateside/pocket-grimoire" target="_blank" rel="noopener noreferrer">GitHub</a>. Dự án này không liên kết với The Pandemonium Institute. Nếu bạn thích chơi Tháp đồng hồ nhốm máu, <a href="https://bloodontheclocktower.com/pages/where-to-buy" target="_blank" rel="noopener noreferrer">vui lòng tính đến mua bản thật của game</a> - ngoài việc nó linh hoạt hơn bản này, nó có thể hỗ trợ nhà phát triển.
+        - Gặp trục trặc hoặc có ý kiến để cải tiến? Cho mình biết tại <a href="https://discord.com/channels/569683781800296501/708509594758152203" target="_blank" rel="noopener noreferrer">kênh toolmaker trong server không chính thức trên discord</a> (tên mình là "Skateside") hoặc <a href="https://github.com/Skateside/pocket-grimoire/issues" target="_blank" rel="noopener noreferrer">báo lỗi trên Github</a>.
+        - <small>Phiên bản <span id="version"></span></small>

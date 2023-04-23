@@ -33,6 +33,7 @@ class ImportCommand extends Command
         'pt_BR',
         'ru_RU',
         'sv_SE',
+        'vi_VI',
         'zh_CN',
         'zh_TW'
     ];

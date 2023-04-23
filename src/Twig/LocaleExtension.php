@@ -26,6 +26,7 @@ class LocaleExtension extends AbstractExtension
             ['pt_BR', 'Português brasileiro'],
             ['ru_RU', 'Русский'],
             ['sv_SE', 'Svenska'],
+            ['vi_VI', 'Tiếng việt'],
             ['zh_CN', '简体中文'],
             ['zh_TW', '繁體中文'],
             ['he_IL', 'עִברִית']
