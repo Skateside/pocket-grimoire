@@ -1021,6 +1021,17 @@
         "reminders": []
     },
     {
+        "id": "organgrinder",
+        "name": "Máy mài nội tạng",
+        "ability": "Tất cả người chơi nhắm mắt khi bỏ phiếu và việc kiểm phiếu là bí mật. Phiếu bầu cho bạn chỉ được tính nếu bạn bỏ phiếu.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": [
+            "Sắp chết"
+        ]
+    },
+    {
         "id": "pacifist",
         "name": "Hòa bình",
         "ability": "Người tốt bị hành quyết có thể không chết.",
@@ -1461,6 +1472,15 @@
         "reminders": [
             "Hết chức năng"
         ]
+    },
+    {
+        "id": "vizier",
+        "name": "Tể tướng",
+        "ability": "Tất cả người chơi đều biết bạn là ai. Bạn không thể chết trong ngày. Nếu bình chọn tốt, bạn có thể chọn thực hiện ngay.",
+        "firstNightReminder": "Thông báo 'Tể tướng đang chơi' và cho biết họ là người chơi nào.",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": []
     },
     {
         "id": "vortox",

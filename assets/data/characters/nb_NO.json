@@ -1021,6 +1021,17 @@
         "reminders": []
     },
     {
+        "id": "organgrinder",
+        "name": "Veivspiller",
+        "ability": "Alle spillere lukker øynene under avstemminger & antall stemmer holdes hemmelig. Stemmer for deg teller bare om du også stemmer for.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": [
+            "I ferd med å dø"
+        ]
+    },
+    {
         "id": "pacifist",
         "name": "Pasifist",
         "ability": "Det kan hende at gode spillere som henrettes ikke dør.",
@@ -1461,6 +1472,15 @@
         "reminders": [
             "Evneløs"
         ]
+    },
+    {
+        "id": "vizier",
+        "name": "Vesir",
+        "ability": "Alle spillere vet hvem du er. Du kan ikke dø om dagen. Om godt stemte for, kan du velge å henrette umiddelbart.",
+        "firstNightReminder": "Kunngjør \"Vesiren er i spill\" og erklær hvem den er.",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": []
     },
     {
         "id": "vortox",
