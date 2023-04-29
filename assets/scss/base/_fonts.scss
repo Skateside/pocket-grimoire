@@ -7,3 +7,21 @@
     font-style: normal;
     font-display: swap;
 }
+
+@font-face {
+    font-family: "Noto Serif Simplified Chinese";
+    src:
+        url("../../fonts/NotoSerifSC-Regular.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Noto Serif Traditional Chinese";
+    src:
+        url("../../fonts/NotoSerifTC-Regular.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}

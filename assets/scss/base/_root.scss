@@ -1,7 +1,15 @@
 :root {
     // Fonts
-    --serif-font: Vinque, "Times New Roman", Times, serif;
-    --sans-font: Helvetica, Arial, sans-serif;
+    --serif-font:
+        Vinque,
+        Georgia,
+        "Times New Roman",
+        Times,
+        serif;
+    --sans-font:
+        Helvetica,
+        Arial,
+        sans-serif;
     // Colours
     --blue: #679fd0;
     --orange: #d09f67;
@@ -11,4 +19,72 @@
     --dark-purple: #9f679f;
     --purple: #d067d0;
     --grey: #999;
+}
+
+// Hebrew serif font stack is the same as the default one, except that Vinque is
+// not included. This is because Vinque does not include Hebrew characters so
+// the user would have to download 43 kB unnecessarily.
+
+:lang(he) {
+    --serif-font:
+        Georgia,
+        "Times New Roman",
+        Times,
+        serif;
+}
+
+// Chinese font stacks found here:
+// https://tech.busuu.com/handling-css-font-stacks-for-multi-language-websites-cf852e321f06
+// We have to split up the languages into Simplified and Traditional because
+// otherwise someone might have to download both fonts (15MB+) to render a
+// single character.
+
+:lang(zh-CN) {
+    --serif-font:
+        Georgia,
+        "Times New Roman",
+        "Noto Serif Simplified Chinese",
+        "FangSong",
+        "仿宋",
+        STFangSong,
+        "华文仿宋",
+        serif;
+    --sans-font:
+        Helvetica,
+        Arial,
+        "华文细黑",
+        "STXihei",
+        "PingFang TC",
+        "微软雅黑体",
+        "Microsoft YaHei New",
+        "微软雅黑",
+        "Microsoft Yahei",
+        "宋体",
+        "SimSun",
+        sans-serif;
+}
+
+:lang(zh-TW) {
+    --serif-font:
+        Georgia,
+        "Times New Roman",
+        "Noto Serif Traditional Chinese",
+        "FangSong",
+        "仿宋",
+        STFangSong,
+        "华文仿宋",
+        serif;
+    --sans-font:
+        Helvetica,
+        Arial,
+        "华文细黑",
+        "STXihei",
+        "PingFang TC",
+        "微软雅黑体",
+        "Microsoft YaHei New",
+        "微软雅黑",
+        "Microsoft Yahei",
+        "宋体",
+        "SimSun",
+        sans-serif;
 }
