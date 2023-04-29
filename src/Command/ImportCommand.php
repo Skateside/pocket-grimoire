@@ -30,6 +30,7 @@ class ImportCommand extends Command
         'fr_FR',
         'he_IL',
         'nb_NO',
+        'nn_NO',
         'pt_BR',
         'ru_RU',
         'sv_SE',
@@ -97,7 +98,7 @@ class ImportCommand extends Command
                 'locale',
                 'l',
                 InputOption::VALUE_OPTIONAL,
-                'Which locale to import?',
+                'Which locales to import? (comma-separated)',
                 'all'
             )
             ;
@@ -443,7 +444,7 @@ class ImportCommand extends Command
 
     private function interpretOption(string $option, array $all): array
     {
-        return $option === 'all' ? $all : [$option];
+        return $option === 'all' ? $all : array_map('trim', explode(',', $option));
     }
 
     private function getFileName(string $type, string $locale): string

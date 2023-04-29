@@ -23,6 +23,7 @@ class LocaleExtension extends AbstractExtension
             ['es_AR', 'Español argentino'],
             ['fr_FR', 'Français'],
             ['nb_NO', 'Norsk Bokmål'],
+            ['nn_NO', 'Nynorsk'],
             ['pt_BR', 'Português brasileiro'],
             ['ru_RU', 'Русский'],
             ['sv_SE', 'Svenska'],
