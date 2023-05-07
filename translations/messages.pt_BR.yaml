@@ -30,16 +30,14 @@ groups:
     fabled: Lendas
 
 messages:
-    good_team: time Bom
-    evil_team: time Mau
+    good_team: Time Bom
+    evil_team: Time Mau
     empty_character_ability: Este é um personagem vazio.
     version_change_message: Uma nova versão do aplicativo está disponível. Como seus dados podem estar incorretos, sugerimos que você apague tudo usando a opção "Limpar Cache". Pressione "OK" para fazer isso agora ou "Cancelar" para fechar esta mensagem.
     invalid_script: O formato do script não foi reconhecido.
     no_characters: Este script não contém nenhum personagem reconhecível.
-    invalid_data: Dados inválidos.
-    no_data: Nenhum dado enviado.
     player_name: Qual é o nome desse jogador?
-    custom_info_token: "O que você quer que seu novo token de informações diga? Use **asteriscos duplos** para enfatizar o texto."
+    custom_info_token: O que você quer que seu novo token de informações diga? Use **asteriscos duplos** para enfatizar o texto.
 
 setup:
 
@@ -63,6 +61,7 @@ setup:
         custom_warning: Apenas carregue arquivos JSON de fontes que você confia!
         upload: Carregue um script personalizado
         url: Insira uma URL
+        unsupported: 'Importante: o Grimório de Bolso ainda não oferece suporte para scripts homebrew ou localizados.'
         select: Selecionar
 
     character_select:
@@ -200,12 +199,12 @@ info_tokens:
         nominatetoday: Você <strong>nomeou</strong> hoje?
         playeris: Este <strong>jogador</strong> é
         votetoday: Você <strong>votou</strong> hoje?
-        youare: "<strong>Você</strong> é"
+        youare: <strong>Você</strong> é
         selectedyou: Este personagem <strong>selecionou</strong> você
     custom: Fichas de informações personalizadas
-    add_custom: Adicionar token de informações
-    edit_custom: Editar token de informações
-    delete_custom: Excluir token de informações
+    add_custom: Adicionar token de informação
+    edit_custom: Editar token de informação
+    delete_custom: Excluir token de informação
 
 acknowledgements:
     title: Reconhecimentos
@@ -215,5 +214,5 @@ acknowledgements:
         - Ícones retirados de <a href="https://fontawesome.com/v5.15/icons" target="_blank" rel="noopener noreferrer">Font Awesome</a>.
         - Várias imagens e dados foram retirados de <a href="https://www.clocktower.online" target="_blank" rel="noopener noreferrer">Clocktower.online</a> e do <a href="https://bloodontheclocktower.com/" target="_blank" rel="noopener noreferrer">website Blood on the Clocktower</a>.
         - Este é um Grimório virtual não oficial para o jogo Blood on the Clocktower. Este projeto é livre e o código fonte pode ser ser encontrado no <a href="https://github.com/Skateside/pocket-grimoire" target="_blank" rel="noopener noreferrer">GitHub</a>. Este projeto não é afiliado ao The Pandemonium Institute. Se você gosta de Blood on the Clocktower, <a href="https://bloodontheclocktower.com/buy" target="_blank" rel="noopener noreferrer">por favor considere comprar seu próprio Grimório</a> - além de ser mais versátil do que esta versão digital, você estará apoiando os criadores.
-        - Notou um bug ou tem alguma sugestão de melhoria? Me avise no <a href="https://discord.com/channels/569683781800296501/708509594758152203" target="_blank" rel="noopener noreferrer">canal toolmakers no servidor não oficial do discord</a> (meu nome lá é "Skateside") ou <a href="https://github.com/Skateside/pocket-grimoire/issues" target="_blank" rel="noopener noreferrer">crie um issue no Github</a>.
+        - Notou um bug ou tem alguma sugestão de melhoria? Me avise no <a href="https://discord.com/channels/569683781800296501/708509594758152203" target="_blank" rel="noopener noreferrer">canal toolmakers no servidor não oficial do discord</a>. (meu nome lá é "Skateside") ou <a href="https://github.com/Skateside/pocket-grimoire/issues" target="_blank" rel="noopener noreferrer">crie um issue no Github</a>.
         - <small>Versão <span id="version"></span></small>
