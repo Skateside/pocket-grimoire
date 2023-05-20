@@ -778,6 +778,18 @@
         "reminders": []
     },
     {
+        "id": "knight",
+        "name": "騎士",
+        "ability": "你開始認識 2 個不是惡魔的玩家。",
+        "firstNightReminder": "指向 2 名非惡魔玩家。",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": [
+            "知道",
+            "知道"
+        ]
+    },
+    {
         "id": "legion",
         "name": "軍團",
         "ability": "每天晚上*，可能會有一位玩家死亡。處刑時如果只有邪惡玩家投票則投票失敗。你也被視為僕從。[大多數玩家都是軍團]",
@@ -1359,6 +1371,17 @@
         "otherNightReminder": "將魔典展示給間諜。",
         "remindersGlobal": [],
         "reminders": []
+    },
+    {
+        "id": "steward",
+        "name": "管家",
+        "ability": "你開始認識一位優秀的球員。",
+        "firstNightReminder": "指向 1 個優秀的玩家。",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": [
+            "知道"
+        ]
     },
     {
         "id": "stormcatcher",

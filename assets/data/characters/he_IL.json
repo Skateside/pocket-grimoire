@@ -778,6 +778,18 @@
         "reminders": []
     },
     {
+        "id": "knight",
+        "name": "אַבִּיר",
+        "ability": "אתה מתחיל להכיר 2 שחקנים שהם לא השד.",
+        "firstNightReminder": "הצבע על 2 שחקנים שאינם שדים.",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": [
+            "לָדַעַת",
+            "לָדַעַת"
+        ]
+    },
+    {
         "id": "legion",
         "name": "לגיון",
         "ability": "בכל לילה*, שחקן עלול למות. הוצאות להורג נכשלות אם רק רעים הצביעו. אתה נרשם גם כמשרת. [רוב השחקנים הם הלגיון]",
@@ -1360,6 +1372,17 @@
         "otherNightReminder": "תראה את הגרימואר למרגל לכמה זמן שהוא צריך.",
         "remindersGlobal": [],
         "reminders": []
+    },
+    {
+        "id": "steward",
+        "name": "מֶלְצַר",
+        "ability": "אתה מתחיל להכיר שחקן אחד טוב.",
+        "firstNightReminder": "הצבע על שחקן אחד טוב.",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": [
+            "לָדַעַת"
+        ]
     },
     {
         "id": "stormcatcher",

@@ -777,6 +777,18 @@
         "reminders": []
     },
     {
+        "id": "knight",
+        "name": "Ritter",
+        "ability": "Du kennst 2 Spieler, die nicht der Dämon sind.",
+        "firstNightReminder": "Zeigen Sie auf 2 Nicht-Dämonen-Spieler.",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": [
+            "Wissen",
+            "Wissen"
+        ]
+    },
+    {
         "id": "legion",
         "name": "Legion",
         "ability": "Jede Nacht* könnte ein Spieler sterben. Hinrichtungen schlagen fehl, wenn nur böse Spieler abgestimmt haben. Du registrierst auch als Untergebener. [Eine Mehrzahl von Spielern sind Legion]",
@@ -1358,6 +1370,17 @@
         "otherNightReminder": "Zeige dem Spion das Grimoire so lange er es braucht.",
         "remindersGlobal": [],
         "reminders": []
+    },
+    {
+        "id": "steward",
+        "name": "Steward",
+        "ability": "Sie beginnen, einen guten Spieler zu kennen.",
+        "firstNightReminder": "Zeigen Sie auf 1 guten Spieler.",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": [
+            "Wissen"
+        ]
     },
     {
         "id": "stormcatcher",

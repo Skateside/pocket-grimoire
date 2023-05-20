@@ -778,6 +778,18 @@
         "reminders": []
     },
     {
+        "id": "knight",
+        "name": "Hiệp sỹ",
+        "ability": "Bạn bắt đầu biết 2 người chơi không phải là Quỷ.",
+        "firstNightReminder": "Chỉ vào 2 người chơi không phải Quỷ.",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": [
+            "Biết",
+            "Biết"
+        ]
+    },
+    {
         "id": "legion",
         "name": "Legion",
         "ability": "Mỗi đêm*, một người có thể chết. Hành quyết thất bại nếu chỉ có ác bỏ phiếu. Bạn cũng được thấy là Tay sai. [Đa số người là Legion]",
@@ -1359,6 +1371,17 @@
         "otherNightReminder": "Cho Gián điệp xem Sách ma thuật đến khi họ không cần nữa.",
         "remindersGlobal": [],
         "reminders": []
+    },
+    {
+        "id": "steward",
+        "name": "Tiếp viên",
+        "ability": "Bạn bắt đầu biết 1 người chơi giỏi.",
+        "firstNightReminder": "Chỉ vào 1 người chơi tốt.",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": [
+            "Biết"
+        ]
     },
     {
         "id": "stormcatcher",

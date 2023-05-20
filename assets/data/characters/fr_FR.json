@@ -778,6 +778,18 @@
         "reminders": []
     },
     {
+        "id": "knight",
+        "name": "Chevalier",
+        "ability": "Vous commencez à connaître 2 joueurs qui ne sont pas le Démon.",
+        "firstNightReminder": "Pointez vers 2 joueurs non démons.",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": [
+            "Connaître",
+            "Connaître"
+        ]
+    },
+    {
         "id": "legion",
         "name": "Légion",
         "ability": "Chaque nuit*, un joueur peut mourir. Les exécutions échouent si seulement les maléfiques ont votés. Vous êtes reconnu comme étant un Sbire. [La majorité des joueurs sont des Légions].",
@@ -1364,6 +1376,17 @@
         "otherNightReminder": "Se réveille et peut regarder le grimoire.",
         "remindersGlobal": [],
         "reminders": []
+    },
+    {
+        "id": "steward",
+        "name": "Intendant",
+        "ability": "Vous commencez à connaître 1 bon joueur.",
+        "firstNightReminder": "Pointez sur 1 bon joueur.",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": [
+            "Connaître"
+        ]
     },
     {
         "id": "stormcatcher",

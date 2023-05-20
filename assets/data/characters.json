@@ -2241,5 +2241,38 @@
         "setup": false,
         "ability": "All players know who you are. You can not die during the day. If good voted, you may choose to execute immediately.",
         "image": "/build/img/icon/minion/vizier.png"
+    },
+    {
+        "id": "knight",
+        "name": "Knight",
+        "edition": "",
+        "team": "townsfolk",
+        "firstNight": 42,
+        "firstNightReminder": "Point to 2 non-Demon players.",
+        "otherNight": 0,
+        "otherNightReminder": "",
+        "reminders": [
+            "Know",
+            "Know"
+        ],
+        "setup": false,
+        "ability": "You start knowing 2 players that are not the Demon.",
+        "image": "/build/img/icon/townsfolk/knight.png"
+    },
+    {
+        "id": "steward",
+        "name": "Steward",
+        "edition": "",
+        "team": "townsfolk",
+        "firstNight": 41,
+        "firstNightReminder": "Point to 1 good player.",
+        "otherNight": 0,
+        "otherNightReminder": "",
+        "reminders": [
+            "Know"
+        ],
+        "setup": false,
+        "ability": "You start knowing 1 good player.",
+        "image": "/build/img/icon/townsfolk/steward.png"
     }
 ]

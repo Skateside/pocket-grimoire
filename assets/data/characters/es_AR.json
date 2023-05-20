@@ -778,6 +778,18 @@
         "reminders": []
     },
     {
+        "id": "knight",
+        "name": "Caballero",
+        "ability": "Empiezas a conocer a 2 jugadores que no son el Demonio.",
+        "firstNightReminder": "Señala a 2 jugadores que no sean demonios.",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": [
+            "Saber",
+            "Saber"
+        ]
+    },
+    {
         "id": "legion",
         "name": "Legion",
         "ability": "Cada noche*, un jugador puede morir. Las ejecuciones fallan si solo vota el mal. También registras como Secuaz. [La mayoría de jugadores son Legión]",
@@ -1359,6 +1371,17 @@
         "otherNightReminder": "Mostrale el Grimorio al Espía por el tiempo que necesite. ",
         "remindersGlobal": [],
         "reminders": []
+    },
+    {
+        "id": "steward",
+        "name": "Mayordomo",
+        "ability": "Empiezas a conocer a 1 buen jugador.",
+        "firstNightReminder": "Señale a 1 buen jugador.",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": [
+            "Saber"
+        ]
     },
     {
         "id": "stormcatcher",

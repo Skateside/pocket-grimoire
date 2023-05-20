@@ -268,8 +268,63 @@ class ImportCommand extends Command
 
         }
 
-        // Check the night order and update if necessary.
-        // TODO: is this worth doing?
+        // Update the night order based on `assets/data/night-order.json`.
+
+        $this->io->writeln('Updating the night order.');
+        $nightOrder = $this->read('.', 'night-order');
+
+        $firstNight = [];
+
+        foreach ($nightOrder['firstNight'] as $firstNightName) {
+
+            $character = $this->roleRepo->findOneBy(['name' => $firstNightName]);
+
+            if (!is_null($character)) {
+
+                $character->setFirstNight(
+                    array_push($firstNight, $character->getName())
+                );
+                $this->em->persist($character);
+
+            }
+
+        }
+
+        $otherNight = [];
+
+        foreach ($nightOrder['otherNight'] as $otherNightName) {
+
+            $character = $this->roleRepo->findOneBy(['name' => $otherNightName]);
+
+            if (!is_null($character)) {
+
+                $character->setOtherNight(
+                    array_push($otherNight, $character->getName())
+                );
+                $this->em->persist($character);
+
+            }
+
+        }
+
+        if (count($firstNight) && count($otherNight)) {
+
+            if ($output) {
+
+                $getIndex = function (string $name, int $index): string {
+                    return "{$index}. {$name}";
+                };
+
+                $this->io->writeln('First night:');
+                $this->io->listing(array_map($getIndex, $firstNight, array_keys($firstNight)));
+                $this->io->writeln('Other nights:');
+                $this->io->listing(array_map($getIndex, $otherNight, array_keys($otherNight)));
+
+            }
+
+            $this->io->writeln('Updated night order');
+
+        }
 
     }
 

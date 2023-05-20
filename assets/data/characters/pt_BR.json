@@ -777,6 +777,18 @@
         "reminders": []
     },
     {
+        "id": "knight",
+        "name": "Cavaleiro",
+        "ability": "Você começa conhecendo 2 jogadores que não são o Demônio.",
+        "firstNightReminder": "Aponte para 2 jogadores que não sejam Demônios.",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": [
+            "Saber",
+            "Saber"
+        ]
+    },
+    {
         "id": "legion",
         "name": "Legião",
         "ability": "A cada noite*, um jogador pode morrer. Execuções irão falhar se apenas jogadores maus votarem. Você também é registrado como Lacaio. [Maioria dos jogadores é Legião]",
@@ -1360,6 +1372,17 @@
         "otherNightReminder": "Mostre o Grimório para o Espião pelo tempo que ele precisar.",
         "remindersGlobal": [],
         "reminders": []
+    },
+    {
+        "id": "steward",
+        "name": "Comissário de bordo",
+        "ability": "Você começa conhecendo 1 bom jogador.",
+        "firstNightReminder": "Aponte para 1 bom jogador.",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": [
+            "Saber"
+        ]
     },
     {
         "id": "stormcatcher",

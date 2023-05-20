@@ -778,6 +778,18 @@
         "reminders": []
     },
     {
+        "id": "knight",
+        "name": "Ridder",
+        "ability": "Du begynner å kjenne 2 spillere som ikke er demonen.",
+        "firstNightReminder": "Pek på 2 ikke-demonspillere.",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": [
+            "Vet",
+            "Vet"
+        ]
+    },
+    {
         "id": "legion",
         "name": "Ordenen",
         "ability": "Hver natt* kan det hende at en spiller dør. Henrettelser mislykkes om kun ondt stemte for. Du oppfattes også som Lakei. [De fleste spillerne er del av Ordenen]",
@@ -1359,6 +1371,17 @@
         "otherNightReminder": "La Spionen se inn i Boka for så lenge de trenger.",
         "remindersGlobal": [],
         "reminders": []
+    },
+    {
+        "id": "steward",
+        "name": "Steward",
+        "ability": "Du begynner å kjenne 1 god spiller.",
+        "firstNightReminder": "Pek på 1 god spiller.",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": [
+            "Vet"
+        ]
     },
     {
         "id": "stormcatcher",

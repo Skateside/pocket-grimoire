@@ -774,6 +774,18 @@
         "reminders": []
     },
     {
+        "id": "knight",
+        "name": "骑士",
+        "ability": "你开始认识 2 个不是恶魔的玩家。",
+        "firstNightReminder": "指向 2 名非恶魔玩家。",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": [
+            "知道",
+            "知道"
+        ]
+    },
+    {
         "id": "legion",
         "name": "犯罪团伙",
         "ability": "每个夜晚*，一位玩家可能会死去。如果一项处决投票只有邪恶玩家参与，那么本次处决将会失败。你同时还会被视为爪牙。（场上大多数玩家都会成为犯罪团伙的一员）",
@@ -1354,6 +1366,17 @@
         "otherNightReminder": "将魔法书展示给间谍，他想看多久就看多久。",
         "remindersGlobal": [],
         "reminders": []
+    },
+    {
+        "id": "steward",
+        "name": "管家",
+        "ability": "你开始认识一位优秀的球员。",
+        "firstNightReminder": "指向 1 个优秀的玩家。",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": [
+            "知道"
+        ]
     },
     {
         "id": "stormcatcher",

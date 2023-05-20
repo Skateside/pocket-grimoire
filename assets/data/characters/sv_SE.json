@@ -778,6 +778,18 @@
         "reminders": []
     },
     {
+        "id": "knight",
+        "name": "Riddare",
+        "ability": "Du börjar känna 2 spelare som inte är demonen.",
+        "firstNightReminder": "Peka på 2 icke-demonspelare.",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": [
+            "Känna till",
+            "Känna till"
+        ]
+    },
+    {
         "id": "legion",
         "name": "Legion",
         "ability": "Varje natt*, en spelare kan dö. Avrättningar misslyckas om bara onda spelare röstade. Du registrerar som en Minion också. [De flesta spelarna är Legion]",
@@ -1359,6 +1371,17 @@
         "otherNightReminder": "Visa Spionen Grimoaren så länge de behöver.",
         "remindersGlobal": [],
         "reminders": []
+    },
+    {
+        "id": "steward",
+        "name": "Steward",
+        "ability": "Du börjar känna 1 bra spelare.",
+        "firstNightReminder": "Peka på 1 bra spelare.",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": [
+            "Känna till"
+        ]
     },
     {
         "id": "stormcatcher",
