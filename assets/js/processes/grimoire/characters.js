@@ -3,7 +3,8 @@ import Observer from "../../classes/Observer.js";
 import Pad from "../../classes/Pad.js";
 import Template from "../../classes/Template.js";
 import TokenStore from "../../classes/TokenStore.js";
-import CharacterToken from "../../classes/CharacterToken.js";
+// import CharacterToken from "../../classes/CharacterToken.js";
+import TokenDialog from "../../classes/TokenDialog.js";
 import Names from "../../classes/Names.js";
 import {
     identify,
@@ -18,6 +19,7 @@ const tokenObserver = Observer.create("token");
 const pad = lookupOneCached(".js--pad").pad;
 const recentReminders = lookupOneCached("#character-show-reminders");
 const characterShowDialog = Dialog.create(lookupOneCached("#character-show"));
+const tokenDialog = TokenDialog.get();
 
 // Set up the token dialog when a character token is clicked.
 tokenObserver.on("character-click", ({ detail }) => {
@@ -75,7 +77,20 @@ TokenStore.ready(() => {
     // Show a token as it's clicked from the "show tokens" dialog.
     lookupOne("#character-show-token").addEventListener("click", ({ target }) => {
 
-        CharacterToken.show(pad.getCharacterByToken(getToken(target)));
+        // CharacterToken.show(pad.getCharacterByToken(getToken(target)));
+        // const token = lookupOneCached("#token");
+        // const tokenDialog = Dialog.create(token);
+        // token.dataset.display = JSON.stringify([
+        //     // button.dataset.tokenId
+        //     pad.getCharacterByToken(getToken(target)).getId()
+        // ]);
+        // tokenDialog.show();
+        // const tokenDialog = TokenDialog.get();
+        tokenDialog.setIds([
+            pad.getCharacterByToken(getToken(target)).getId()
+        ]);
+        tokenDialog.show();
+
         hideDialog(target);
 
     });
@@ -309,6 +324,8 @@ gameObserver.on("characters-selected", ({ detail }) => {
 
 TokenStore.ready((tokenStore) => {
 
+    // const token = lookupOneCached("#token");
+    // const tokenDialog = Dialog.create(token);
     const tokenListDialog = Dialog.create(lookupOne("#token-list"));
 
     tokenList.addEventListener("click", ({ target }) => {
@@ -319,8 +336,57 @@ TokenStore.ready((tokenStore) => {
             return;
         }
 
-        CharacterToken.show(tokenStore.getCharacter(button.dataset.tokenId));
+        // CharacterToken.show(tokenStore.getCharacter(button.dataset.tokenId));
+        // token.dataset.display = JSON.stringify([button.dataset.tokenId]);
+        tokenDialog.setIds([button.dataset.tokenId]);
+        tokenDialog.show();
         tokenListDialog.hide();
+
+    });
+
+    // Display character token.
+    const tokenEntryTemplate = new Template(lookupOne("#token-entry-template"));
+    const tokenHolder = lookupOne(".js--token--holder");
+    // const tokenHeader = lookupOne("#token-name");
+
+    tokenDialog.on(Dialog.SHOW, ({ target }) => {
+
+        const characters = tokenDialog
+            .getIds()
+            .map((id) => tokenStore.getCharacter(id));
+        const isMultiple = characters.length > 1;
+
+        replaceContentsMany(
+            tokenHolder,
+            characters.map((character) => tokenEntryTemplate.draw({
+                ".js--token--show"(element) {
+                    element.append(character.drawToken());
+                },
+                ".js--token--ability"(element) {
+                    element.textContent = character.getAbility();
+                    element.hidden = isMultiple;
+                }
+            }))
+        );
+
+        tokenDialog.setTitle(
+            isMultiple
+            ? token.dataset.multiple
+            : characters[0].getName()
+        );
+        tokenHolder.classList.toggle("slot--2", isMultiple);
+
+        // if (isMultiple) {
+
+        //     tokenHeader.textContent = tokenHeader.dataset.multiple;
+        //     tokenHolder.classList.add("slot--2");
+
+        // } else {
+
+        //     tokenHeader.textContent = characters[0].getName();
+        //     tokenHolder.classList.remove("slot--2");
+
+        // }
 
     });
 

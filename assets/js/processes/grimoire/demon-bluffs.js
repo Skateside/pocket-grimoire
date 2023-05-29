@@ -6,7 +6,8 @@ import Dialog from "../../classes/Dialog.js";
 import TokenStore from "../../classes/TokenStore.js";
 import Template from "../../classes/Template.js";
 import Observer from "../../classes/Observer.js";
-import CharacterToken from "../../classes/CharacterToken.js";
+// import CharacterToken from "../../classes/CharacterToken.js";
+import TokenDialog from "../../classes/TokenDialog.js";
 import {
     lookup,
     lookupCached,
@@ -17,6 +18,7 @@ import {
 
 const gameObserver = Observer.create("game");
 const tokenObserver = Observer.create("token");
+const tokenDialog = TokenDialog.get();
 
 const bluffs = Bluffs.create(
     lookupCached(".js--character-list--bluff").map((button) => new Bluff(button)),
@@ -135,9 +137,17 @@ TokenStore.ready((tokenStore) => {
             return;
         }
 
-        CharacterToken.show(tokenStore.getCharacter(id));
+        // CharacterToken.show(tokenStore.getCharacter(id));
+        tokenDialog.setIds([id]);
+        tokenDialog.show();
         bluffDialog.hide();
 
+    });
+
+    lookupOneCached("#show-all-bluffs").addEventListener("click", ({ target }) => {
+        tokenDialog.setIds(bluffs.getIds());
+        tokenDialog.setTitle(target.dataset.title, 10);
+        tokenDialog.show();
     });
 
 });

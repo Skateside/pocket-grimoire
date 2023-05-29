@@ -1,11 +1,10 @@
 import Token from "./Token.js";
 import Template from "./Template.js";
-import Dialog from "./Dialog.js";
+// import Dialog from "./Dialog.js";
 import {
-    empty,
+    // empty,
     identify,
-    appendMany,
-    lookupOneCached
+    // lookupOneCached
 } from "../utils/elements.js";
 
 const emptyProperty = Symbol("empty");
@@ -59,18 +58,18 @@ export default class CharacterToken extends Token {
      * @throws {Error}
      *         The character has to exist.
      */
-    static show(character) {
+    // static show(character) {
 
-        if (!character) {
-            throw new Error("No character given, cannot show");
-        }
+    //     if (!character) {
+    //         throw new Error("No character given, cannot show");
+    //     }
 
-        lookupOneCached("#token-name").textContent = character.getName();
-        empty(lookupOneCached("#token-show")).append(character.drawToken());
-        lookupOneCached("#token-ability").textContent = character.getAbility();
-        Dialog.create(lookupOneCached("#token")).show();
+    //     lookupOneCached("#token-name").textContent = character.getName();
+    //     empty(lookupOneCached("#token-show")).append(character.drawToken());
+    //     lookupOneCached("#token-ability").textContent = character.getAbility();
+    //     Dialog.create(lookupOneCached("#token")).show();
 
-    }
+    // }
 
     /**
      * @inheritDoc

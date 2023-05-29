@@ -16,6 +16,7 @@
                 <button type="button" id="bluff-{{ i }}" class="token token--bluff js--character-list--bluff" data-token="character" data-bluff-dialog="#bluff-show" disabled></button>
             {% endfor %}
         </div>
+        <p class="mt-4"><button type="button" class="button" id="show-all-bluffs" data-title="{{ 'grimoire.grimoire.bluffs'|trans|e('html_attr') }}">{{ 'grimoire.grimoire.show_bluffs'|trans }}</button></p>
     </div>
 
     <ul class="button-list mt-4">
@@ -289,9 +290,22 @@
     background: 'hide',
     hideClickBackground: false
 } %}
-    {% block title %}<span id="token-name">{{ 'grimoire.token.title'|trans }}</span>{% endblock %}
+    {% block title %}<span id="token-name" data-multiple="{{ 'grimoire.token_list.title'|trans|e('html_attr') }}">{{ 'grimoire.token.title'|trans }}</span>{% endblock %}
     {% block body %}
-        <div id="token-show"></div>
-        <p id="token-ability" class="character-show__ability mt-4"></p>
+        <ul class="no-list slot js--token--holder">
+            {# <li>
+                <div id="token-show"></div>
+                <p id="token-ability" class="character-show__ability mt-4"></p>
+            </li> #}
+        </ul>
     {% endblock %}
 {% endembed %}
+
+<template id="token-entry-template">
+    <li>
+        <div class="js--token--show"></div>
+        <p class="character-show__ability mt-4 js--token--ability"></p>
+    </li>
+    {# TODO: add buttons so a ttoken can be added or removed #}
+</template>
+

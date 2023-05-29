@@ -1,6 +1,6 @@
-import {
-    groupBy
-} from "../utils/arrays.js";
+// import {
+//     groupBy
+// } from "../utils/arrays.js";
 import {
     identify
 } from "../utils/elements.js";
@@ -178,6 +178,14 @@ export default class Bluffs {
      */
     getCharacterByButton(button) {
         return this.getCharacter(`#${identify(button)}`);
+    }
+
+    getIds() {
+
+        return this.bluffs
+            .map((bluff) => bluff.getCharacter()?.getId())
+            .filter(Boolean);;
+
     }
 
 }
