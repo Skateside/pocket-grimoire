@@ -193,6 +193,16 @@
     &:empty {
         display: none;
     }
+
+    @at-root {
+        .is-upside-down > & {
+            // Just setting --shadow-rotation doesn't work.
+            --shadow-amount: var(--shadow-offset);
+            top: auto;
+            bottom: 100%;
+            transform: rotate(180deg);
+        }
+    }
 }
 
 .character__unknown {

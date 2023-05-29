@@ -4,6 +4,7 @@ import {
     lookupOne,
     lookupOneCached
 } from "../utils/elements.js";
+import CharacterToken from "./CharacterToken.js";
 
 /**
  * Handles tokens being added to the main pad section.
@@ -350,6 +351,45 @@ export default class Pad {
      */
     rotateByToken(token, rotateState) {
         this.rotate(this.getCharacterByToken(token), rotateState);
+    }
+
+    /**
+     * Gets the player name for the character that's been given.
+     *
+     * @param  {CharacterToken} character
+     *         The character whose name should be returned.
+     * @return {String}
+     *         The name of the player, or an empty string if there is no name or
+     *         the character token can't be found.
+     */
+    getPlayerName(character) {
+
+        const info = this.characters.find((info) => info.character === character);
+
+        if (!info) {
+            return "";
+        }
+
+        const nameTag = lookupOneCached(
+            ".js--character--player-name",
+            this.constructor.getToken(info.token)
+        );
+
+        return nameTag?.textContent || "";
+
+    }
+
+    /**
+     * A helper function for getting the name of the player by the element
+     * rather than the {@link CharacterToken} instance.
+     *
+     * @param  {Element} token
+     *         The token element.
+     * @return {String}
+     *         The player name or an empty string.
+     */
+    getPlayerNameForToken(token) {
+        return this.getPlayerName(this.getCharacterByToken(token));
     }
 
     /**

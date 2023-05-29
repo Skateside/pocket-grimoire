@@ -70,7 +70,7 @@ function hideDialog(target) {
     Dialog.create(target.closest(".dialog")).hide();
 }
 
-TokenStore.ready((tokenStore) => {
+TokenStore.ready(() => {
 
     // Show a token as it's clicked from the "show tokens" dialog.
     lookupOne("#character-show-token").addEventListener("click", ({ target }) => {
@@ -107,6 +107,20 @@ lookupOne("#character-reminder").addEventListener("click", ({ target }) => {
 
 });
 
+lookupOne("#character-replace").addEventListener("click", ({ target }) => {
+
+    const character = lookupOneCached("#character-list");
+    const token = getToken(target);
+
+    character.dataset.replace = JSON.stringify({
+        coords: pad.getTokenPosition(token),
+        token: `#${identify(token)}`
+    });
+    Dialog.create(character).show();
+    hideDialog(target);
+
+});
+
 const characterNameInput = lookupOne("#character-name-input");
 lookupOne("#character-name").addEventListener("click", ({ target }) => {
 
@@ -123,9 +137,7 @@ lookupOne("#character-name").addEventListener("click", ({ target }) => {
 characterShowDialog.on(Dialog.SHOW, () => {
 
     const token = getToken(characterShowDialog.getElement());
-    const nameElement = lookupOneCached(".js--character--player-name", token);
-
-    characterNameInput.value = nameElement?.textContent || "";
+    characterNameInput.value = pad.getPlayerNameForToken(token);
 
 });
 
@@ -154,7 +166,7 @@ function updateTokens() {
 
         firstCount += 1;
 
-        tokens.forEach(({ character, token }) => {
+        tokens.forEach(({ token }) => {
             Pad.getToken(token).dataset.firstNight = firstCount;
         });
 
@@ -166,7 +178,7 @@ function updateTokens() {
 
         otherCount += 1;
 
-        tokens.forEach(({ character, token }) => {
+        tokens.forEach(({ token }) => {
             Pad.getToken(token).dataset.otherNight = otherCount;
         });
 

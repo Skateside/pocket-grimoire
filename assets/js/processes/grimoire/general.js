@@ -67,6 +67,9 @@ gameObserver.on("characters-selected", ({ detail }) => {
 
 });
 
+const characterList = lookupOneCached("#character-list");
+const characterListDialog = Dialog.create(characterList);
+
 lookupOneCached("#character-list__list").addEventListener("click", ({ target }) => {
 
     const button = target.closest("[data-token-id]");
@@ -77,11 +80,40 @@ lookupOneCached("#character-list__list").addEventListener("click", ({ target }) 
 
     TokenStore.ready((tokenStore) => {
 
-        pad.addCharacter(tokenStore.getCharacterClone(button.dataset.tokenId));
-        Dialog.create(lookupOneCached("#character-list")).hide();
+        const {
+            character,
+            token: newToken
+        } = pad.addCharacter(tokenStore.getCharacterClone(button.dataset.tokenId));
+        const replace = JSON.parse(characterList.dataset.replace || "null");
+
+        if (replace) {
+
+            const {
+                token,
+                coords: {
+                    x,
+                    y,
+                    z
+                }
+            } = replace;
+
+            const oldCharacter = pad.getCharacterByToken(lookupOne(token));
+            pad.toggleDead(character, oldCharacter.getIsDead());
+            pad.rotate(character, oldCharacter.getIsUpsideDown());
+            pad.setPlayerName(character, pad.getPlayerName(oldCharacter));
+            pad.removeCharacter(oldCharacter);
+            pad.moveToken(newToken, x, y, z);
+
+        }
+
+        characterListDialog.hide();
 
     });
 
+});
+
+characterListDialog.on(Dialog.HIDE, ({ target }) => {
+    target.removeAttribute("data-replace");
 });
 
 gameObserver.on("character-drawn", ({ detail }) => {
