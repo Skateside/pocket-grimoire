@@ -150,7 +150,7 @@ class ImportCommand extends Command
         }
 
         $this->io->table(['Type', 'Locale', 'Status'], $table);
-        $this->io->success("Files for type '{$input->getOption('type')}' and locale '{$input->getOption('locale')}' has/have been imported");
+        $this->io->success("Import successful for type '{$input->getOption('type')}' and locale(s) '{$input->getOption('locale')}'");
 
         return Command::SUCCESS;
 
