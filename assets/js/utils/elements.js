@@ -251,3 +251,20 @@ export function announceInput(input) {
     }));
 
 }
+
+/**
+ * Gets the element's index.
+ *
+ * @param  {Element} element
+ *         The element whose index should be returned.
+ * @return {Number}
+ *         The element's index, or -1 if it can't be worked out.
+ */
+export function getIndex(element) {
+
+    return Array.prototype.findIndex.call(
+        element.parentNode.children,
+        (item) => item === element
+    );
+
+}

@@ -50,28 +50,6 @@ export default class CharacterToken extends Token {
     }
 
     /**
-     * Shows a dialog that displays the character token and their ability, so
-     * that it can be shown to a player.
-     *
-     * @param  {CharacterToken} character
-     *         The character to show.
-     * @throws {Error}
-     *         The character has to exist.
-     */
-    // static show(character) {
-
-    //     if (!character) {
-    //         throw new Error("No character given, cannot show");
-    //     }
-
-    //     lookupOneCached("#token-name").textContent = character.getName();
-    //     empty(lookupOneCached("#token-show")).append(character.drawToken());
-    //     lookupOneCached("#token-ability").textContent = character.getAbility();
-    //     Dialog.create(lookupOneCached("#token")).show();
-
-    // }
-
-    /**
      * @inheritDoc
      */
     processData(data) {

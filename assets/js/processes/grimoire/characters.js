@@ -20,6 +20,7 @@ const pad = lookupOneCached(".js--pad").pad;
 const recentReminders = lookupOneCached("#character-show-reminders");
 const characterShowDialog = Dialog.create(lookupOneCached("#character-show"));
 const tokenDialog = TokenDialog.get();
+tokenDialog.setEntryTemplate(new Template(lookupOne("#token-entry-template")));
 
 // Set up the token dialog when a character token is clicked.
 tokenObserver.on("character-click", ({ detail }) => {
@@ -324,6 +325,7 @@ gameObserver.on("characters-selected", ({ detail }) => {
 
 TokenStore.ready((tokenStore) => {
 
+    tokenDialog.setTokenStore(tokenStore);
     // const token = lookupOneCached("#token");
     // const tokenDialog = Dialog.create(token);
     const tokenListDialog = Dialog.create(lookupOne("#token-list"));
@@ -345,50 +347,38 @@ TokenStore.ready((tokenStore) => {
     });
 
     // Display character token.
-    const tokenEntryTemplate = new Template(lookupOne("#token-entry-template"));
-    const tokenHolder = lookupOne(".js--token--holder");
+    // const tokenEntryTemplate = new Template(lookupOne("#token-entry-template"));
+    // const tokenHolder = lookupOne(".js--token--holder");
     // const tokenHeader = lookupOne("#token-name");
 
-    tokenDialog.on(Dialog.SHOW, ({ target }) => {
+    // tokenDialog.on(Dialog.SHOW, () => {
 
-        const characters = tokenDialog
-            .getIds()
-            .map((id) => tokenStore.getCharacter(id));
-        const isMultiple = characters.length > 1;
+    //     const characters = tokenDialog
+    //         .getIds()
+    //         .map((id) => tokenStore.getCharacter(id));
+    //     const isMultiple = characters.length > 1;
 
-        replaceContentsMany(
-            tokenHolder,
-            characters.map((character) => tokenEntryTemplate.draw({
-                ".js--token--show"(element) {
-                    element.append(character.drawToken());
-                },
-                ".js--token--ability"(element) {
-                    element.textContent = character.getAbility();
-                    element.hidden = isMultiple;
-                }
-            }))
-        );
+    //     replaceContentsMany(
+    //         tokenHolder,
+    //         characters.map((character) => tokenEntryTemplate.draw({
+    //             ".js--token--show"(element) {
+    //                 element.append(character.drawToken());
+    //             },
+    //             ".js--token--ability"(element) {
+    //                 element.textContent = character.getAbility();
+    //                 element.hidden = isMultiple;
+    //             }
+    //         }))
+    //     );
 
-        tokenDialog.setTitle(
-            isMultiple
-            ? token.dataset.multiple
-            : characters[0].getName()
-        );
-        tokenHolder.classList.toggle("slot--2", isMultiple);
+    //     tokenDialog.setTitle(
+    //         isMultiple
+    //         ? token.dataset.multiple
+    //         : characters[0].getName()
+    //     );
+    //     tokenHolder.classList.toggle("slot--2", isMultiple);
 
-        // if (isMultiple) {
-
-        //     tokenHeader.textContent = tokenHeader.dataset.multiple;
-        //     tokenHolder.classList.add("slot--2");
-
-        // } else {
-
-        //     tokenHeader.textContent = characters[0].getName();
-        //     tokenHolder.classList.remove("slot--2");
-
-        // }
-
-    });
+    // });
 
 });
 
