@@ -137,7 +137,6 @@ TokenStore.ready((tokenStore) => {
             return;
         }
 
-        // CharacterToken.show(tokenStore.getCharacter(id));
         tokenDialog.setIds([id]);
         tokenDialog.show();
         bluffDialog.hide();

@@ -3,7 +3,6 @@ import Observer from "../../classes/Observer.js";
 import Pad from "../../classes/Pad.js";
 import Template from "../../classes/Template.js";
 import TokenStore from "../../classes/TokenStore.js";
-// import CharacterToken from "../../classes/CharacterToken.js";
 import TokenDialog from "../../classes/TokenDialog.js";
 import Names from "../../classes/Names.js";
 import {
@@ -29,15 +28,12 @@ tokenObserver.on("character-click", ({ detail }) => {
         element
     } = detail;
     const character = pad.getCharacterByToken(element);
-    // const dialog = lookupOneCached("#character-show");
-    // dialog.dataset.token = `#${identify(element)}`;
-    characterShowDialog.getElement().dataset.token = `#${identify(element)}`;
 
+    characterShowDialog.getElement().dataset.token = `#${identify(element)}`;
     lookupOneCached("#character-show-name").textContent = character.getName();
     lookupOneCached("#character-show-ability").textContent = character.getAbility();
     recentReminders.dataset.coords = JSON.stringify(pad.getTokenPosition(element));
 
-    // Dialog.create(dialog).show();
     characterShowDialog.show();
 
 });
@@ -78,15 +74,6 @@ TokenStore.ready(() => {
     // Show a token as it's clicked from the "show tokens" dialog.
     lookupOne("#character-show-token").addEventListener("click", ({ target }) => {
 
-        // CharacterToken.show(pad.getCharacterByToken(getToken(target)));
-        // const token = lookupOneCached("#token");
-        // const tokenDialog = Dialog.create(token);
-        // token.dataset.display = JSON.stringify([
-        //     // button.dataset.tokenId
-        //     pad.getCharacterByToken(getToken(target)).getId()
-        // ]);
-        // tokenDialog.show();
-        // const tokenDialog = TokenDialog.get();
         tokenDialog.setIds([
             pad.getCharacterByToken(getToken(target)).getId()
         ]);
@@ -326,8 +313,6 @@ gameObserver.on("characters-selected", ({ detail }) => {
 TokenStore.ready((tokenStore) => {
 
     tokenDialog.setTokenStore(tokenStore);
-    // const token = lookupOneCached("#token");
-    // const tokenDialog = Dialog.create(token);
     const tokenListDialog = Dialog.create(lookupOne("#token-list"));
 
     tokenList.addEventListener("click", ({ target }) => {
@@ -338,47 +323,11 @@ TokenStore.ready((tokenStore) => {
             return;
         }
 
-        // CharacterToken.show(tokenStore.getCharacter(button.dataset.tokenId));
-        // token.dataset.display = JSON.stringify([button.dataset.tokenId]);
         tokenDialog.setIds([button.dataset.tokenId]);
         tokenDialog.show();
         tokenListDialog.hide();
 
     });
-
-    // Display character token.
-    // const tokenEntryTemplate = new Template(lookupOne("#token-entry-template"));
-    // const tokenHolder = lookupOne(".js--token--holder");
-    // const tokenHeader = lookupOne("#token-name");
-
-    // tokenDialog.on(Dialog.SHOW, () => {
-
-    //     const characters = tokenDialog
-    //         .getIds()
-    //         .map((id) => tokenStore.getCharacter(id));
-    //     const isMultiple = characters.length > 1;
-
-    //     replaceContentsMany(
-    //         tokenHolder,
-    //         characters.map((character) => tokenEntryTemplate.draw({
-    //             ".js--token--show"(element) {
-    //                 element.append(character.drawToken());
-    //             },
-    //             ".js--token--ability"(element) {
-    //                 element.textContent = character.getAbility();
-    //                 element.hidden = isMultiple;
-    //             }
-    //         }))
-    //     );
-
-    //     tokenDialog.setTitle(
-    //         isMultiple
-    //         ? token.dataset.multiple
-    //         : characters[0].getName()
-    //     );
-    //     tokenHolder.classList.toggle("slot--2", isMultiple);
-
-    // });
 
 });
 

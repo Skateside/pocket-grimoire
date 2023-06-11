@@ -40,15 +40,13 @@ export default class TokenDialog extends Dialog {
 
         dialog.addEventListener("click", ({ target }) => {
 
-            const button = target.closest(".js--token--remove");
-            const item = button?.closest(".js--token--item");
+            const removeButton = target.closest(".js--token--remove");
+            const removeItem = removeButton?.closest(".js--token--item");
 
-            if (!button || !item) {
-                return;
+            if (removeItem) {
+                this.removeIdByIndex(getIndex(removeItem));
+                this.drawCharacters();
             }
-
-            this.removeIdByIndex(getIndex(item));
-            this.drawCharacters();
 
         });
 
