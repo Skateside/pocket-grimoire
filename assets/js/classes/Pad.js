@@ -1,10 +1,12 @@
 import Tokens from "./Tokens.js";
 import Template from "./Template.js";
+import Observer from "./Observer.js";
+import CharacterToken from "./CharacterToken.js";
+import ReminderToken from "./ReminderToken.js";
 import {
     lookupOne,
     lookupOneCached
 } from "../utils/elements.js";
-import CharacterToken from "./CharacterToken.js";
 
 /**
  * Handles tokens being added to the main pad section.

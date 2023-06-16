@@ -81,7 +81,7 @@ export function striptags(string) {
 }
 
 /**
- * A simple funciton that converts the double asterists into strong tags.
+ * A simple function that converts the double asterists into strong tags.
  *
  * @param  {String} string
  *         Text to convert.

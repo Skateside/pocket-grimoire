@@ -1,3 +1,4 @@
+import Template from "./Template.js";
 import {
     LANGUAGE
 } from "../constants/language.js";

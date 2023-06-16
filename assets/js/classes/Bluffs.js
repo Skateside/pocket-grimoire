@@ -1,6 +1,6 @@
-// import {
-//     groupBy
-// } from "../utils/arrays.js";
+import Bluff from "./Bluff.js";
+import Observer from "./Observer.js";
+import CharacterToken from "./CharacterToken.js";
 import {
     identify
 } from "../utils/elements.js";
@@ -180,11 +180,17 @@ export default class Bluffs {
         return this.getCharacter(`#${identify(button)}`);
     }
 
+    /**
+     * Gets all the character IDs from {@link Bluffs#bluffs}.
+     *
+     * @return {Array.<String>}
+     *         List of all IDs for the characters in the bluffs list.
+     */
     getIds() {
 
         return this.bluffs
             .map((bluff) => bluff.getCharacter()?.getId())
-            .filter(Boolean);;
+            .filter(Boolean);
 
     }
 

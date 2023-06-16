@@ -1,3 +1,5 @@
+import Observer from "./Observer.js";
+import CharacterToken from "./CharacterToken.js";
 import {
     empty,
     identify
@@ -99,18 +101,6 @@ export default class Bluff {
     getSelector() {
         return `#${identify(this.button)}`;
     }
-
-    /**
-     * Checks to see if the given button matches {@link Bluff#button}.
-     *
-     * @param  {Element} button
-     *         Element to check.
-     * @return {Boolean}
-     *         true if the given button is a match, false otherwise.
-     */
-    // isTrigger(button) {
-    //     return this.button === button;
-    // }
 
     /**
      * Displays the character's token and saves a reference to it.

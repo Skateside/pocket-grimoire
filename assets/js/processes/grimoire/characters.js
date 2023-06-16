@@ -1,4 +1,5 @@
 import Dialog from "../../classes/Dialog.js";
+import SelectDialog from "../../classes/SelectDialog.js";
 import Observer from "../../classes/Observer.js";
 import Pad from "../../classes/Pad.js";
 import Template from "../../classes/Template.js";
@@ -110,18 +111,104 @@ lookupOne("#character-reminder").addEventListener("click", ({ target }) => {
 
 });
 
+const characterListDialog = SelectDialog.get();
+characterListDialog.addProcess({
+
+    // The generic process: add a token to the pad when the icon is clicked.
+
+    click(tokenId) {
+
+        TokenStore.ready((tokenStore) => {
+            pad.addCharacter(tokenStore.getCharacterClone(tokenId));
+        });
+        characterListDialog.hide();
+
+    }
+
+});
+
+// The process that will replace one token in the grimoire with another one.
+const replaceOnPadProcess = {
+
+    data: null,
+
+    click(tokenId) {
+
+        TokenStore.ready((tokenStore) => {
+
+            const {
+                character,
+                token: newToken
+            } = pad.addCharacter(tokenStore.getCharacterClone(tokenId));
+            const {
+                data
+            } = this;
+
+            if (data) {
+
+                const {
+                    token,
+                    coords: {
+                        x,
+                        y,
+                        z
+                    }
+                } = data;
+
+                const oldCharacter = pad.getCharacterByToken(lookupOne(token));
+                pad.toggleDead(character, oldCharacter.getIsDead());
+                pad.rotate(character, oldCharacter.getIsUpsideDown());
+                pad.setPlayerName(character, pad.getPlayerName(oldCharacter));
+                pad.removeCharacter(oldCharacter);
+                pad.moveToken(newToken, x, y, z);
+
+            }
+
+        });
+
+        characterListDialog.hide();
+
+    },
+
+    hide() {
+        this.data = null;
+        characterListDialog.removeProcess(replaceOnPadProcess);
+    }
+
+};
+
 lookupOne("#character-replace").addEventListener("click", ({ target }) => {
 
-    const character = lookupOneCached("#character-list");
     const token = getToken(target);
-
-    character.dataset.replace = JSON.stringify({
+    replaceOnPadProcess.data = {
         coords: pad.getTokenPosition(token),
         token: `#${identify(token)}`
-    });
-    Dialog.create(character).show();
+    };
+    characterListDialog.addProcess(replaceOnPadProcess);
+    characterListDialog.show();
     hideDialog(target);
 
+});
+
+// The process that will add another token to the token dialog.
+const addToDialogProcess = {
+
+    click(tokenId) {
+        tokenDialog.addId(tokenId);
+        tokenDialog.show();
+        characterListDialog.hide();
+    },
+
+    hide() {
+        characterListDialog.removeProcess(addToDialogProcess);
+    }
+
+};
+
+lookupOne(".js--token--add").addEventListener("click", () => {
+    characterListDialog.addProcess(addToDialogProcess);
+    characterListDialog.show();
+    tokenDialog.hide();
 });
 
 const characterNameInput = lookupOne("#character-name-input");

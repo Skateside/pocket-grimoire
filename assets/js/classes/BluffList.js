@@ -1,3 +1,7 @@
+import Bluff from "./Bluff.js";
+import BluffDialog from "./BluffDialog.js";
+import CharacterToken from "./CharacterToken.js";
+
 /**
  * Manages the list of bluffs, keeping a record of which bluff was selected.
  */
@@ -34,7 +38,6 @@ export default class BluffList {
         this.bluff = bluff;
 
         this.dialog.display(bluff.getCharacter());
-        // this.dialog.show();
 
     }
 

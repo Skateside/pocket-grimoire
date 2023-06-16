@@ -1,3 +1,6 @@
+import Token from "./Token.js";
+import CharacterToken from "./CharacterToken.js";
+import InfoToken from "./InfoToken.js";
 import {
     deepClone,
     deepFreeze

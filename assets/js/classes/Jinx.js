@@ -1,3 +1,6 @@
+import CharacterToken from "./CharacterToken";
+import Observer from "./Observer";
+
 /**
  * Manages a Jinx.
  *
@@ -17,7 +20,7 @@
  *
  * Active.
  * Both characters that form this jinx have been selected.
- * For eaxmple, the Butler is jinxed with the Cannibal. If both tokens are in
+ * For example, the Butler is jinxed with the Cannibal. If both tokens are in
  * the grimoire then the jinx is active.
  *
  * Target.

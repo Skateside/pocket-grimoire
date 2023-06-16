@@ -1,10 +1,9 @@
 import Token from "./Token.js";
 import Template from "./Template.js";
-// import Dialog from "./Dialog.js";
+import Jinx from "./Jinx.js";
+import ReminderToken from "./ReminderToken.js";
 import {
-    // empty,
     identify,
-    // lookupOneCached
 } from "../utils/elements.js";
 
 const emptyProperty = Symbol("empty");
@@ -261,7 +260,7 @@ export default class CharacterToken extends Token {
     /**
      * Toggles the ready state of a jinx. Optionally the state can be defined.
      *
-     * @param {Character} character
+     * @param {CharacterToken} character
      *        Character that has a jinx with this character.
      * @param {Boolean} [state]
      *        Optional state to force. If ommitted, the state is toggled.

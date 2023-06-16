@@ -1,8 +1,6 @@
 import Pad from "../../classes/Pad.js";
 import Observer from "../../classes/Observer.js";
-import TokenStore from "../../classes/TokenStore.js";
 import ReminderToken from "../../classes/ReminderToken.js";
-import Dialog from "../../classes/Dialog.js";
 import {
     lookup,
     lookupOne,
@@ -65,55 +63,6 @@ gameObserver.on("characters-selected", ({ detail }) => {
     lookupOneCached("#add-reminder").disabled = false;
     lookupOneCached("#show-tokens").disabled = false;
 
-});
-
-const characterList = lookupOneCached("#character-list");
-const characterListDialog = Dialog.create(characterList);
-
-lookupOneCached("#character-list__list").addEventListener("click", ({ target }) => {
-
-    const button = target.closest("[data-token-id]");
-
-    if (!button) {
-        return;
-    }
-
-    TokenStore.ready((tokenStore) => {
-
-        const {
-            character,
-            token: newToken
-        } = pad.addCharacter(tokenStore.getCharacterClone(button.dataset.tokenId));
-        const replace = JSON.parse(characterList.dataset.replace || "null");
-
-        if (replace) {
-
-            const {
-                token,
-                coords: {
-                    x,
-                    y,
-                    z
-                }
-            } = replace;
-
-            const oldCharacter = pad.getCharacterByToken(lookupOne(token));
-            pad.toggleDead(character, oldCharacter.getIsDead());
-            pad.rotate(character, oldCharacter.getIsUpsideDown());
-            pad.setPlayerName(character, pad.getPlayerName(oldCharacter));
-            pad.removeCharacter(oldCharacter);
-            pad.moveToken(newToken, x, y, z);
-
-        }
-
-        characterListDialog.hide();
-
-    });
-
-});
-
-characterListDialog.on(Dialog.HIDE, ({ target }) => {
-    target.removeAttribute("data-replace");
 });
 
 gameObserver.on("character-drawn", ({ detail }) => {

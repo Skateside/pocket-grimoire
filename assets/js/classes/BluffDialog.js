@@ -1,4 +1,5 @@
 import Dialog from "./Dialog.js";
+import CharacterToken from "./CharacterToken.js";
 import {
     lookupOneCached
 } from "../utils/elements.js";
