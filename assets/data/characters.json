@@ -2274,5 +2274,19 @@
         "setup": false,
         "ability": "You start knowing 1 good player.",
         "image": "/build/img/icon/townsfolk/steward.png"
+    },
+    {
+        "id": "highpriestess",
+        "name": "High Priestess",
+        "edition": "",
+        "team": "townsfolk",
+        "firstNight": 50,
+        "firstNightReminder": "Point to a player.",
+        "otherNight": 69,
+        "otherNightReminder": "Point to a player.",
+        "reminders": [],
+        "setup": false,
+        "ability": "Each night, learn which player the Storyteller believes you should talk to most.",
+        "image": "/build/img/icon/townsfolk/highpriestess.png"
     }
 ]
