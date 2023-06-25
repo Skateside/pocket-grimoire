@@ -125,7 +125,11 @@ lookup("input[data-filter-list]").forEach((input) => {
 
 lookupOne("#locale-form").addEventListener("submit", (e) => {
     e.preventDefault();
-    window.location.href = lookupOne("#select-locale").value;
+    window.location.href = lookupOneCached("#select-locale").value;
+});
+
+lookupOneCached("#select-locale").addEventListener("change", ({ target }) => {
+    target.form.requestSubmit();
 });
 
 function setTrackWidth(input) {
