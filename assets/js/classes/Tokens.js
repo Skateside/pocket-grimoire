@@ -316,6 +316,7 @@ export default class Tokens {
             top
         } = element.getBoundingClientRect();
 
+        this.endDragging();
         this.dragHandler = (event) => this.dragObject(element, event);
 
         if (type === "mousedown") {
