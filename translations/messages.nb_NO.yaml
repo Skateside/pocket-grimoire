@@ -37,7 +37,7 @@ messages:
     invalid_script: Scenarioformatet gjenkjennes ikke.
     no_characters: Scenarioet inneholder ingen gjenkjennelige roller.
     player_name: Hva heter denne spilleren?
-    custom_info_token: 'Hva ønsker du at din nye kunnskapsbrikke skal si? Bruk **dobbel stjerne** for å vektlegge tekst.'
+    custom_info_token: 'Alle spillere lukker øynene under avstemninger & antall stemmer holdes hemmelig. Stemmer for deg teller bare om du også stemmer for.'
 
 setup:
 
@@ -145,7 +145,7 @@ grimoire:
         title: Brikke
         show: Vis
         shroud: Slør
-        rotate: Drei
+        rotate: Vri
         reminder: Påminnelse
         replace: Erstatt
         remove: Fjern brikke
