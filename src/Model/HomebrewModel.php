@@ -168,6 +168,12 @@ class HomebrewModel
 
         foreach ($entries as $entry) {
 
+            // The entry might just be a string of the character's ID if it's a
+            // reference to an official character.
+            if (is_string($entry)) {
+                $entry = ['id' => $entry];
+            }
+
             if (!is_array($entry)) {
 
                 $isValid = false;
@@ -228,11 +234,23 @@ class HomebrewModel
     /**
      * Filters an entry so it only includes the required keys.
      *
-     * @param  array $entry
+     * NOTE: `mixed` type was added in PHP 8.0 and unions were added in PHP 8.2.
+     *
+     * @param  array|string $entry
      * @return array
      */
-    public function filterEntry(array $entry): array
+    public function filterEntry($entry): array
     {
+
+        // The entry might just be a string of the character's ID if it's a
+        // reference to an official character.
+        if (is_string($entry)) {
+            $entry = ['id' => $entry];
+        }
+
+        if (!is_array($entry)) {
+            return false;
+        }
 
         if ($this->isMetaEntry($entry)) {
 

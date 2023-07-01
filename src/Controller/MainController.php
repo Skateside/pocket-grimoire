@@ -304,14 +304,6 @@ class MainController extends AbstractController
             });
         }
 
-        // $roles = [
-        //     'townsfolk' => [
-        //         'name' => $translator->trans('groups.townsfolk'),
-        //         'tokens' => []
-        //     ],
-        // ];
-
-
         return $this->render('pages/tokens.html.twig', [
             'roles' => $roles
         ]);

@@ -18,7 +18,7 @@ import {
 /**
  * Checks to see if the given data looks like a script.
  *
- * @param  {Array.<Object>} json
+ * @param  {Array.<Object|String>} json
  *         Data to check.
  * @return {Boolean}
  *         true if the data looks like a script, false if it doesn't.
@@ -29,8 +29,11 @@ function isScriptJson(json) {
         Array.isArray(json)
         && json.length
         && json.every((item) => (
-            typeof item === "object"
-            && typeof item?.id === "string"
+            (
+                typeof item === "object"
+                && typeof item?.id === "string"
+            )
+            || typeof item === "string"
         ))
     );
 
@@ -110,9 +113,19 @@ function normaliseHomebrew(json) {
 
     return json.map((entry) => {
 
+        // An official character may be a simple string rather than the
+        // old-school approach of an object with an "id" key.
+        if (typeof entry === "string") {
+            entry = { id: entry };
+        }
+
         Object.entries(normalMap).forEach(([key, map]) => {
             entry[key] = map[entry[key]] || entry[key];
         });
+
+        if (Array.isArray(entry.image)) {
+            entry.image = entry.image[0];
+        }
 
         if (entry.team && !entry.image) {
             entry.image = `/build/img/icon/${entry.team}.png`;
@@ -180,12 +193,30 @@ function setFormLoadingState(form, state) {
 
 }
 
+/**
+ * Converts a character entry into a normalised ID.
+ *
+ * @param  {Object|String} item
+ *         Item whose normalised ID should be returned.
+ * @return {String}
+ *         Normalised character ID.
+ */
 function convertCharacterId(item) {
+
+    let id = "";
+
+    if (typeof item === "string") {
+        id = item;
+    } else if (item && typeof item === "object") {
+        id = item.id || "";
+    }
+
     // The script tool creates IDs differently from our data.
     // Examples: script = lil_monsta, data = lilmonsta
     // Examples: script = al-hadikhia, data = alhadikhia
     // The .replace() here is designed to convert their IDs to ours.
-    return item.id.replace(/[-_]/g, "")
+    return id.replace(/[-_]/g, "")
+
 }
 
 /**
