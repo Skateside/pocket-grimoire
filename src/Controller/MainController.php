@@ -16,6 +16,7 @@ use App\Repository\TeamRepository;
 use App\Repository\HomebrewRepository;
 use App\Entity\Homebrew;
 use App\Model\HomebrewModel;
+use App\Model\GameModel;
 
 class MainController extends AbstractController
 {
@@ -69,6 +70,7 @@ class MainController extends AbstractController
      */
     public function sheetAction(
         Request $request,
+        GameModel $gameModel,
         EntityManagerInterface $em
     ): Response {
 
@@ -204,7 +206,8 @@ class MainController extends AbstractController
         return $this->render('pages/sheet.html.twig', [
             'name' => $name,
             'groups' => $groups,
-            'jinxes' => $jinxes
+            'jinxes' => $jinxes,
+            'breakdown' => $gameModel->getTransposedFeed(),
         ]);
 
     }

@@ -78,8 +78,30 @@
     {% endembed %}
 {% endif %}
 
+<p><small>{{ 'sheet.each_night'|trans }}</small></p>
+
+<div class="breakdown no-print">
+    <table class="breakdown__table">
+        <caption class="sr-only">{{ 'sheet.breakdown'|trans }}</caption>
+        <tbody>
+            {% for group, count in breakdown %}
+                {% set isPlayers = loop.first %}
+                <tr class="breakdown__row breakdown__row--{{ group }}">
+                    <th scope="row" class="breakdown__heading">{{ ('groups.' ~ group)|trans }}</th>
+                    {% for count in count %}
+                        {% if isPlayers %}
+                            <th scope="col" class="breakdown__cell">{{ loop.last ? 'sheet.count_plus'|trans({ '%count%': count }) : count }}</th>
+                        {% else %}
+                            <td class="breakdown__cell">{{ count }}</td>
+                        {% endif %}
+                    {% endfor %}
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+
 <footer>
-    <p><small>{{ 'sheet.each_night'|trans }}</small></p>
     <p><button type="button" class="button" data-dialog="#qr-code-dialog">{{ 'sheet.get_qr_code'|trans }}</button></p>
     <form id="locale-form" class="locale-form locale-form--sheet">
         <label for="select-locale" class="locale-form__label">
