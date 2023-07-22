@@ -45,9 +45,12 @@ export default class TokenDialog extends Dialog {
          */
         this.entryTemplate = null;
 
+    }
+
+    run() {
         this.setIds([]);
         this.discoverElements();
-
+        super.run();
     }
 
     /**
@@ -62,6 +65,9 @@ export default class TokenDialog extends Dialog {
                 SHOW,
                 HIDE
             },
+            input,
+            title,
+            previous,
             dialog
         } = this;
 
@@ -79,6 +85,38 @@ export default class TokenDialog extends Dialog {
                 this.drawCharacters();
 
             }
+
+        });
+
+        title.addEventListener("click", () => {
+
+            title.setAttribute("aria-hidden", true);
+            input.hidden = false;
+            input.style.setProperty(
+                "--width",
+                title.getBoundingClientRect().width
+            );
+            input.focus();
+
+        });
+
+        input.addEventListener("focus", () => {
+            input.value ="";
+        });
+
+        input.addEventListener("blur", () => {
+            title.setAttribute("aria-hidden", false);
+            input.hidden = true;
+            previous.value = input.value;
+        });
+
+        input.addEventListener("input", () => {
+
+            this.setTitle(input.value);
+            input.style.setProperty(
+                "--width",
+                title.getBoundingClientRect().width
+            );
 
         });
 
@@ -105,6 +143,26 @@ export default class TokenDialog extends Dialog {
          * @type {Element}
          */
         this.holder = lookupOne(".js--token--holder", dialog);
+
+        /**
+         * The input that allows the user to change the value of the title.
+         * @type {Element}
+         */
+        this.input = lookupOne(".js--token--input", dialog);
+
+        /**
+         * The option within the datalist that holds the starting value,
+         * allowing the user to easily get it back if necessary.
+         * @type {Element}
+         */
+        this.start = lookupOne(".js--token--start", dialog);
+
+        /**
+         * The option within the datalist that holds the previous value,
+         * allowing the user to easily get it back if necessary.
+         * @type {Element}
+         */
+        this.previous = lookupOne(".js--token--previous", dialog);
 
     }
 
@@ -260,6 +318,7 @@ export default class TokenDialog extends Dialog {
     drawCharacters() {
 
         const {
+            start,
             holder,
             entryTemplate
         } = this;
@@ -284,11 +343,13 @@ export default class TokenDialog extends Dialog {
             }))
         );
 
-        this.setTitle(
+        const titleText = (
             isMultiple
             ? this.getMultipleTitle()
             : characters[0].getName()
         );
+        this.setTitle(titleText);
+        start.value = titleText;
         holder.classList.toggle("is-multiple", isMultiple);
 
     }
