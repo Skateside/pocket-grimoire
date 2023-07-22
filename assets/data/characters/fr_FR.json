@@ -672,6 +672,17 @@
         ]
     },
     {
+        "id": "harpy",
+        "name": "Harpie",
+        "ability": "Chaque nuit, choisissez 2 joueurs : demain, le 1er joueur est fou que le 2ème soit mauvais, ou les deux pourraient mourir.",
+        "firstNightReminder": "Réveillez la harpie ; ils pointent vers un joueur, puis un autre. Réveillez le 1er joueur pointé par la Harpie, montrez-lui la carte \"Ce personnage vous a sélectionné\", montrez-lui le jeton Harpie, puis pointez le 2ème joueur pointé par la Harpie.",
+        "otherNightReminder": "Réveillez la harpie ; ils pointent vers un joueur, puis un autre. Réveillez le 1er joueur pointé par la Harpie, montrez-lui la carte \"Ce personnage vous a sélectionné\", montrez-lui le jeton Harpie, puis pointez le 2ème joueur pointé par la Harpie.",
+        "reminders": [
+            "Fou",
+            "2e"
+        ]
+    },
+    {
         "id": "hellslibrarian",
         "name": "Bibliothécaire de l'enfer",
         "ability": "Quelque chose de grave peut arriver au joueur qui parle lorsque le conteur a demandé le silence.",

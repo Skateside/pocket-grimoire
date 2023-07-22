@@ -671,6 +671,17 @@
         ]
     },
     {
+        "id": "harpy",
+        "name": "Harpia",
+        "ability": "A cada noite, escolha 2 jogadores: amanhã, o 1º jogador fica bravo porque o 2º é mau, ou ambos podem morrer.",
+        "firstNightReminder": "Acorde a Harpia; eles apontam para um jogador, depois para outro. Acorde o 1º jogador para o qual a Harpia apontou, mostre a ele a carta \"Este personagem selecionou você\", mostre a ficha da Harpia e aponte para o 2º jogador para o qual a Harpia apontou.",
+        "otherNightReminder": "Acorde a Harpia; eles apontam para um jogador, depois para outro. Acorde o 1º jogador para o qual a Harpia apontou, mostre a ele a carta \"Este personagem selecionou você\", mostre a ficha da Harpia e aponte para o 2º jogador para o qual a Harpia apontou.",
+        "reminders": [
+            "Louco",
+            "2º"
+        ]
+    },
+    {
         "id": "hellslibrarian",
         "name": "Bibliotecário do Inferno",
         "ability": "Algo ruim pode acontecer com quem falar quando o Narrador pedir silêncio.",

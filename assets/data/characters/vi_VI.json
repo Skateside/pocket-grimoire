@@ -672,6 +672,17 @@
         ]
     },
     {
+        "id": "harpy",
+        "name": "Harpy",
+        "ability": "Mỗi đêm, chọn 2 người chơi: ngày mai, người chơi thứ nhất tức giận vì người thứ hai là ác quỷ, hoặc cả hai có thể chết.",
+        "firstNightReminder": "Đánh thức Harpy; họ chỉ vào một người chơi, rồi người khác. Đánh thức người chơi đầu tiên mà Harpy chỉ vào, cho họ xem thẻ \"Nhân vật này đã chọn bạn\", cho họ xem mã thông báo Harpy, sau đó chỉ vào người chơi thứ 2 mà Harpy chỉ vào.",
+        "otherNightReminder": "Đánh thức Harpy; họ chỉ vào một người chơi, rồi người khác. Đánh thức người chơi đầu tiên mà Harpy chỉ vào, cho họ xem thẻ \"Nhân vật này đã chọn bạn\", cho họ xem mã thông báo Harpy, sau đó chỉ vào người chơi thứ 2 mà Harpy chỉ vào.",
+        "reminders": [
+            "Điên rồ",
+            "lần 2"
+        ]
+    },
+    {
         "id": "hellslibrarian",
         "name": "Thư viện Địa ngục",
         "ability": "Điều xấu có thể xảy ra với người nói khi Người kể chuyện cần im lặng.",

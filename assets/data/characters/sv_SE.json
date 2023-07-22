@@ -672,6 +672,17 @@
         ]
     },
     {
+        "id": "harpy",
+        "name": "Harpya",
+        "ability": "Välj 2 spelare varje kväll: imorgon är den första spelaren arg på att den andra är ond, annars kan båda dö.",
+        "firstNightReminder": "Väck Harpy; de pekar på en spelare, sedan en annan. Väck den första spelaren som Harpy pekade på, visa dem kortet \"Den här karaktären har valt dig\", visa dem Harpy-tokenet och peka sedan på den andra spelaren som Harpy pekade på.",
+        "otherNightReminder": "Väck Harpy; de pekar på en spelare, sedan en annan. Väck den första spelaren som Harpy pekade på, visa dem kortet \"Den här karaktären har valt dig\", visa dem Harpy-tokenet och peka sedan på den andra spelaren som Harpy pekade på.",
+        "reminders": [
+            "Galen",
+            "2:a"
+        ]
+    },
+    {
         "id": "hellslibrarian",
         "name": "Helvetets Biblotikarie",
         "ability": "Något dåligt kan hända till den spelaren som pratar över Sagoberättaren om du har bett om tystnad.",

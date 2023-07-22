@@ -672,6 +672,17 @@
         ]
     },
     {
+        "id": "harpy",
+        "name": "Arpía",
+        "ability": "Cada noche, elige 2 jugadores: mañana, el primer jugador está enojado porque el segundo es malvado, o ambos podrían morir.",
+        "firstNightReminder": "Despierta a la Arpía; señalan a un jugador, luego a otro. Despierta al primer jugador al que señaló la Arpía, muéstrale la carta \"Este personaje te ha seleccionado a ti\", muéstrale la ficha de Arpía y luego señala al segundo jugador al que señaló la Arpía.",
+        "otherNightReminder": "Despierta a la Arpía; señalan a un jugador, luego a otro. Despierta al primer jugador al que señaló la Arpía, muéstrale la carta \"Este personaje te ha seleccionado a ti\", muéstrale la ficha de Arpía y luego señala al segundo jugador al que señaló la Arpía.",
+        "reminders": [
+            "Enojado",
+            "2do"
+        ]
+    },
+    {
         "id": "hellslibrarian",
         "name": "Bibliotecario del Infierno",
         "ability": "Algo malo puede pasar a quien se que hable cuando el Narrador haya pedido silencio.",

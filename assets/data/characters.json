@@ -2288,5 +2288,22 @@
         "setup": false,
         "ability": "Each night, learn which player the Storyteller believes you should talk to most.",
         "image": "/build/img/icon/townsfolk/highpriestess.png"
+    },
+    {
+        "id": "harpy",
+        "name": "Harpy",
+        "edition": "",
+        "team": "minion",
+        "firstNight": 24,
+        "firstNightReminder": "Wake the Harpy; they point at one player, then another. Wake the 1st player the Harpy pointed to, show them the 'This character has selected you' card, show them the Harpy token, then point at the 2nd player the Harpy pointed to.",
+        "otherNight": 14,
+        "otherNightReminder": "Wake the Harpy; they point at one player, then another. Wake the 1st player the Harpy pointed to, show them the 'This character has selected you' card, show them the Harpy token, then point at the 2nd player the Harpy pointed to.",
+        "reminders": [
+            "Mad",
+            "2nd"
+        ],
+        "setup": false,
+        "ability": "Each night, choose 2 players: tomorrow, the 1st player is mad that the 2nd is evil, or both might die.",
+        "image": "/build/img/icon/minion/harpy.png"
     }
 ]
