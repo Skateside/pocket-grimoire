@@ -105,9 +105,14 @@ export default class TokenDialog extends Dialog {
         });
 
         input.addEventListener("blur", () => {
+
             title.setAttribute("aria-hidden", false);
             input.hidden = true;
-            previous.value = input.value;
+
+            if (input.value) {
+                previous.value = input.value;
+            }
+
         });
 
         input.addEventListener("input", () => {
