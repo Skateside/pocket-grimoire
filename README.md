@@ -142,7 +142,7 @@ The Pocket Grimoire understands custom characters. In order to use them, you'll 
 
 If you've noticed a typo, or you have a better translation or would like to add a new language, there are 3 files that will need to be updated:
 
-1.  [RealVidy's BotC Translations](https://docs.google.com/spreadsheets/d/183HMp4ZgslxA4NtFVTXhY3xAbg7FIXZdmVnh9-4A_14/edit#gid=923580658)
+1.  [The Community BotC Translations](https://docs.google.com/spreadsheets/d/1aAJdqSTafHnw01w-WZ94UPx1Me70Kz-EG1NFfBht2tA/edit#gid=923580658)
     <br>This file contains translations for the tokens, reminders, and abilities.
     <br>Since this file wasn't created by me, you'll need to let me know of any updates.
     <br>This file has many more translations than the Pocket Grimoire has.
