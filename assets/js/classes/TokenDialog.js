@@ -101,7 +101,7 @@ export default class TokenDialog extends Dialog {
         });
 
         input.addEventListener("focus", () => {
-            input.value ="";
+            input.value = "";
         });
 
         input.addEventListener("blur", () => {
