@@ -10,18 +10,18 @@ dialog:
 
 index:
     title: Spill
-    description: En virtuell grimoire for Blodet på Klokketårnet
+    description: En virtuell grimoire for Blodet på klokketårnet
 
 sheet:
     title: Rolleark
-    description: Rollearket for denne utgaven av Blodet på Klokketårnet
+    description: Rollearket for denne utgaven av Blodet på klokketårnet
     jinx: Gand
     each_night: '* Hver natt utenom første natt'
     get_qr_code: Få QR-koden for arket
     get_sheet: Få arket
     credit: <a href="https://bloodontheclocktower.com/" target="_blank" rel="noopener noreferrer">Blood on the Clocktower</a> er et varemerke tilhørende Steven Medway og <a href="https://www.thepandemoniuminstitute.com/" target="_blank" rel="noopener noreferrer">The Pandemonium Institute</a>
     breakdown: Tallene til hvert lag for antall spillere.
-    count_plus: "%count%+"
+    count_plus: '%count%+'
 
 groups:
     players: Spillere
@@ -36,11 +36,11 @@ messages:
     good_team: Godt lag
     evil_team: Ondt lag
     empty_character_ability: Dette er en hul rolle.
-    version_change_message: Appen har oppdatert versjonen sin. Ettersom dataen din kan være feil, anbefaler vi at du rydder vekk alt i "Rydd cache"-ruta. Trykk "OK" for å åpne ruta eller "Avbryt" får å lukke denne meldingen.
+    version_change_message: Appen har oppdatert versjonen sin. Ettersom dataet ditt kan være feil, anbefaler vi at du rydder vekk alt i "Rydd cache"-ruta. Trykk "OK" for å åpne ruta eller "Avbryt" for å lukke denne meldingen.
     invalid_script: Scenarioformatet gjenkjennes ikke.
     no_characters: Scenarioet inneholder ingen gjenkjennelige roller.
     player_name: Hva heter denne spilleren?
-    custom_info_token: 'Alle spillere lukker øynene under avstemninger & antall stemmer holdes hemmelig. Stemmer for deg teller bare om du også stemmer for.'
+    custom_info_token: Hva ønsker du at din nye kunnskapsbrikke skal si? Bruk **dobbel stjerne** for å fremheve tekst.
 
 setup:
 
@@ -56,7 +56,7 @@ setup:
 
     editions:
         title: Velg utgave
-        trouble_brewing: Trøbbel i Gjære
+        trouble_brewing: Trøbbel i gjære
         bad_moon_rising: Fullmånenatt
         sects_and_violets: Okkulte affærer
         custom_script: Annet scenario
@@ -78,7 +78,7 @@ setup:
 
     character_choice:
         title: Velg rollen din
-        description: Trykk på en av de nummererte brikkene for å velge rollen din. Mørkere brikker er allerede valgt.
+        description: Trykk på en av de nummererte brikkene for å velge rollen din. Mørklagte brikker er allerede valgt.
 
     character_decision:
         title: Husk rollen din
@@ -97,7 +97,7 @@ setup:
         clear_all: Rydd alt
         clear_description: Å skru denne av gjør det mulig å rydde vekk enkeltstående deler av cachen.
         lookup_label: Rydd data
-        lookup_note: Dataen til gandene, lagoppbyggingen, og rolleinformasjonen.
+        lookup_note: Dataet til gandene, lagoppbyggingen, og rolleinformasjonen.
         characters_label: Rydd utgave
         characters_note: Utgaven, eller scenarioet, som er valgt og lastet inn.
         tokens_label: Rydd brikker
@@ -218,7 +218,7 @@ acknowledgements:
         - <a href="https://bloodontheclocktower.com/" target="_blank" rel="noopener noreferrer">Blood on the Clocktower</a> er et varemerke tilhørende Steven Medway og <a href="https://www.thepandemoniuminstitute.com/" target="_blank" rel="noopener noreferrer">The Pandemonium Institute</a>.
         - Nattepåminnelser og annen tilleggstekst er skrevet av <a href="http://bignose.whitetree.org/projects/botc/diy/" target="_blank" rel="noopener noreferrer">Ben Finney</a>.
         - Ikoner er hentet fra <a href="https://fontawesome.com/v5.15/icons" target="_blank" rel="noopener noreferrer">Font Awesome</a>.
-        - Mange bilder og data er hentet fra <a href="https://www.clocktower.online" target="_blank" rel="noopener noreferrer">Clocktower.online</a> og <a href="https://bloodontheclocktower.com/" target="_blank" rel="noopener noreferrer">Blood on the Clocktower-nettsiden</a>.
-        - Dette er en uoffisiell virtuell grimoire for Blodet på Klokketårnet. Prosjektet er gratis og kildekoden kan finnes på <a href="https://github.com/Skateside/pocket-grimoire" target="_blank" rel="noopener noreferrer">GitHub</a>. Prosjektet er ikke tilknyttet the Pandemonium Institute. Om du har glede av å spille Blodet på Klokketårnet, <a href="https://bloodontheclocktower.com/buy" target="_blank" rel="noopener noreferrer">vurder gjerne å kjøpe din egen grimoire</a> - i tillegg til å være mer fleksibel enn denne digitale utgaven, støtter det også utviklerne.
+        - Mange bilder og mye data er hentet fra <a href="https://www.clocktower.online" target="_blank" rel="noopener noreferrer">Clocktower.online</a> og <a href="https://bloodontheclocktower.com/" target="_blank" rel="noopener noreferrer">Blood on the Clocktower-nettsiden</a>.
+        - Dette er en uoffisiell virtuell grimoire for Blodet på klokketårnet. Prosjektet er gratis og kildekoden finnes på <a href="https://github.com/Skateside/pocket-grimoire" target="_blank" rel="noopener noreferrer">GitHub</a>. Prosjektet er ikke tilknyttet the Pandemonium Institute. Om du har glede av å spille Blodet på klokketårnet, <a href="https://bloodontheclocktower.com/buy" target="_blank" rel="noopener noreferrer">vurder gjerne å kjøpe din egen grimoire</a> - i tillegg til å være mer fleksibel enn denne digitale utgaven, støtter det også utviklerne.
         - Lagt merke til en teknisk feil eller har du et forslag til forbedring? La meg få vite det i <a href="https://discord.com/channels/569683781800296501/708509594758152203" target="_blank" rel="noopener noreferrer">toolmakers-kanalen på den uoffisielle discord-serveren</a> (navnet mitt der er "Skateside") eller <a href="https://github.com/Skateside/pocket-grimoire/issues" target="_blank" rel="noopener noreferrer">ta eventuelle problemer opp på GitHub</a>.
         - <small>Versjon <span id="version"></span></small>

@@ -5,6 +5,11 @@
         "reason": "侍女は、たとえ侍女が先に目覚めたとしても、数学者が今夜目覚めるかどうかを知ります。"
     },
     {
+        "target": "eviltwin",
+        "trick": "plaguedoctor",
+        "reason": "ペストドクターが死亡した場合、ストーリーテラーは邪悪な双子の能力を得ることができません。"
+    },
+    {
         "target": "butler",
         "trick": "cannibal",
         "reason": "人食い人種が執事の能力を獲得すると、人食い人種はこれを学びます。"
@@ -33,6 +38,11 @@
         "target": "cerenovus",
         "trick": "goblin",
         "reason": "セレノバスは、自分たちがゴブリンであるということでプレイヤーを怒らせることを選択するかもしれません。"
+    },
+    {
+        "target": "goblin",
+        "trick": "plaguedoctor",
+        "reason": "ペストドクターが死亡すると、生きているミニオンは自分の能力に加えてゴブリンの能力を獲得し、これを学習します。"
     },
     {
         "target": "leviathan",
@@ -131,6 +141,11 @@
     },
     {
         "target": "spy",
+        "trick": "plaguedoctor",
+        "reason": "ペストドクターが死亡すると、生きているミニオンは自分の能力に加えてスパイ能力を獲得し、これを学習します。"
+    },
+    {
+        "target": "spy",
         "trick": "damsel",
         "reason": "ジンクスされたキャラクターは1人だけ場に出すことができます。"
     },
@@ -170,9 +185,29 @@
         "reason": "ジンクスされたキャラクターは1人だけ場に出すことができます。"
     },
     {
+        "target": "scarletwoman",
+        "trick": "plaguedoctor",
+        "reason": "ペストドクターが死亡すると、生きているミニオンは自分の能力に加えてスカーレットウーマンの能力を獲得し、これを学びます。"
+    },
+    {
+        "target": "boomdandy",
+        "trick": "plaguedoctor",
+        "reason": "ペストドクターが処刑され、ストーリーテラーがブームダンディ能力を獲得した場合、ブームダンディ能力は直ちに発動します。"
+    },
+    {
+        "target": "fearmonger",
+        "trick": "plaguedoctor",
+        "reason": "ペストドクターが死亡すると、生きているミニオンは自分の能力に加えてフィアーモンガーの能力を獲得し、これを学習します。"
+    },
+    {
         "target": "baron",
         "trick": "heretic",
         "reason": "男爵はアウトサイダーを 2 人ではなく 1 人だけ追加する可能性があります。"
+    },
+    {
+        "target": "baron",
+        "trick": "plaguedoctor",
+        "reason": "ストーリーテラーが男爵能力を獲得すると、最大 2 人のプレイヤーがアウトオブプレイのアウトサイダーになります。"
     },
     {
         "target": "marionette",
@@ -198,6 +233,11 @@
         "target": "marionette",
         "trick": "damsel",
         "reason": "マリオネットはダムゼルがプレイ中であることを知りません。"
+    },
+    {
+        "target": "marionette",
+        "trick": "plaguedoctor",
+        "reason": "ペストドクターが死亡したときにデーモンに生きている隣人と町民または部外者がいた場合、そのプレイヤーは邪悪なマリオネットになります。 すでに追加の邪悪なプレイヤーがいる場合、これは起こりません。"
     },
     {
         "target": "marionette",

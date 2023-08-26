@@ -9,6 +9,15 @@
         ]
     },
     {
+        "id": "Evil Twin",
+        "jinx": [
+            {
+                "id": "Plague Doctor",
+                "reason": "The Storyteller cannot gain the Evil Twin ability if the Plague Doctor dies."
+            }
+        ]
+    },
+    {
         "id": "Butler",
         "jinx": [
             {
@@ -49,6 +58,15 @@
             {
                 "id": "Goblin",
                 "reason": "The Cerenovus may choose to make a player mad that they are the Goblin."
+            }
+        ]
+    },
+    {
+        "id": "Goblin",
+        "jinx": [
+            {
+                "id": "Plague Doctor",
+                "reason": "If the Plague Doctor dies, a living Minion gains the Goblin ability in addition to their own ability, and learns this."
             }
         ]
     },
@@ -157,6 +175,10 @@
                 "reason": "If the Poppy Grower is in play, the Spy does not see the Grimoire until the Poppy Grower dies."
             },
             {
+                "id": "Plague Doctor",
+                "reason": "If the Plague Doctor dies, a living Minion gains the Spy ability in addition to their own ability, and learns this."
+            },
+            {
                 "id": "Damsel",
                 "reason": "Only 1 jinxed character can be in play. "
             },
@@ -201,11 +223,42 @@
         ]
     },
     {
+        "id": "Scarlet Woman",
+        "jinx": [
+            {
+                "id": "Plague Doctor",
+                "reason": "If the Plague Doctor dies, a living Minion gains the Scarlet Woman ability in addition to their own ability, and learns this."
+            }
+        ]
+    },
+    {
+        "id": "Boomdandy",
+        "jinx": [
+            {
+                "id": "Plague Doctor",
+                "reason": "If the Plague Doctor is executed and the Storyteller would gain the Boomdandy ability, the Boomdandy ability triggers immediately."
+            }
+        ]
+    },
+    {
+        "id": "Fearmonger",
+        "jinx": [
+            {
+                "id": "Plague Doctor",
+                "reason": "If the Plague Doctor dies, a living Minion gains the Fearmonger ability in addition to their own ability, and learns this."
+            }
+        ]
+    },
+    {
         "id": "Baron",
         "jinx": [
             {
                 "id": "Heretic",
                 "reason": "The Baron might only add 1 Outsider, not 2."
+            },
+            {
+                "id": "Plague Doctor",
+                "reason": "If the Storyteller gains the Baron ability, up to two players become out-of-play Outsiders."
             }
         ]
     },
@@ -231,6 +284,10 @@
             {
                 "id": "Damsel",
                 "reason": "The Marionette does not learn that a Damsel is in play."
+            },
+            {
+                "id": "Plague Doctor",
+                "reason": "If the Demon has a neighbour who is alive and a Townsfolk or Outsider when the Plague Doctor dies, that player becomes an evil Marionette. If there is already an extra evil player, this does not happen."
             },
             {
                 "id": "Huntsman",

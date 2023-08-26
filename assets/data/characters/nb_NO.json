@@ -194,7 +194,7 @@
     {
         "id": "bountyhunter",
         "name": "Dusørjeger",
-        "ability": "Du vet fra spillets begynnelse 1 ond spiller. Om spilleren du vet dør, lær en ny ond spiller i natt. [1 Borger er ond]",
+        "ability": "Du lærer innledningsvis 1 ond spiller. Om spilleren du vet dør, lær en ny ond spiller i natt. [1 Borger er ond]",
         "firstNightReminder": "Pek mot en ond spiller. Vekk Borgeren som er ond og vis dem \"Du er\"-kortet og tommel ned, håndtegnet for \"ond\".",
         "otherNightReminder": "Om spilleren markert med \"Vet\" dør, pek mot en annen ond spiller.",
         "remindersGlobal": [],
@@ -277,7 +277,7 @@
     {
         "id": "chef",
         "name": "Kokk",
-        "ability": "Du vet fra spillets begynnelse hvor mange par med onde spillere som finnes.",
+        "ability": "Du lærer innledningsvis hvor mange par med onde spillere som finnes.",
         "firstNightReminder": "Hold frem antall fingre (0, 1, 2, …) tilsvarende par med onde spillere.",
         "otherNightReminder": "",
         "remindersGlobal": [],
@@ -295,7 +295,7 @@
     {
         "id": "clockmaker",
         "name": "Urmaker",
-        "ability": "Du vet fra spillets begynnelse hvor mange steg fra Demonen til nærmeste Lakei.",
+        "ability": "Du lærer innledningsvis hvor mange steg fra Demonen til nærmeste Lakei.",
         "firstNightReminder": "Hold frem antall fingre (0, 1, 2, …) tilsvarende steg fra Demon til nærmeste Lakei.",
         "otherNightReminder": "",
         "remindersGlobal": [],
@@ -598,7 +598,7 @@
     {
         "id": "godfather",
         "name": "Gudfar",
-        "ability": "Du vet fra spillets begynnelse hvilke Einstøinger er i spill. Om 1 døde i dag, velg en spiller i natt: de dør. [-1 eller +1 Einstøing]",
+        "ability": "Du lærer innledningsvis hvilke Einstøinger er i spill. Om 1 døde i dag, velg en spiller i natt: de dør. [-1 eller +1 Einstøing]",
         "firstNightReminder": "Vis hver Einstøing-brikke i spill.",
         "otherNightReminder": "Om en Einstøing døde i natt: Gudfaren peker mot en spiller. Spilleren dør.",
         "remindersGlobal": [],
@@ -643,7 +643,7 @@
     {
         "id": "grandmother",
         "name": "Farmor",
-        "ability": "Du vet fra spillets begynnelse en god spiller & rollen deres. Om Demonen dreper dem, dør du også.",
+        "ability": "Du lærer innledningsvis en god spiller & rollen deres. Om Demonen dreper dem, dør du også.",
         "firstNightReminder": "Vis rollebrikken til barnebarnet. Pek mot spilleren som er barnebarnet.",
         "otherNightReminder": "Om Demonen drepte Farmoras barnebarn i natt: Farmora dør.",
         "remindersGlobal": [],
@@ -674,12 +674,13 @@
     {
         "id": "harpy",
         "name": "Harpy",
-        "ability": "Velg 2 spillere hver kveld: i morgen er den første spilleren sint over at den andre er ond, eller begge kan dø.",
-        "firstNightReminder": "Vekk harpyen; de peker på en spiller, så en annen. Vekk den første spilleren Harpyen pekte på, vis dem kortet \"Denne karakteren har valgt deg\", vis dem Harpy-tokenet, og pek deretter på den andre spilleren Harpyen pekte på.",
-        "otherNightReminder": "Vekk harpyen; de peker på en spiller, så en annen. Vekk den første spilleren Harpyen pekte på, vis dem kortet \"Denne karakteren har valgt deg\", vis dem Harpy-tokenet, og pek deretter på den andre spilleren Harpyen pekte på.",
+        "ability": "Hver natt, velg 2 spillere: i morgen er den første spilleren manisk den andre er ond, ellers kan det hende begge dør.",
+        "firstNightReminder": "Vekk Harpyen; de peker mot en spiller, og så mot en annen. Vekk den første spilleren Harpyen pekte mot, vis dem \"Denne rollen valgte deg\"-kortet, vis dem Harpy-brikken, og pek så mot den andre spilleren Harpyen pekte mot.",
+        "otherNightReminder": "Vekk Harpyen; de peker mot en spiller, og så mot en annen. Vekk den første spilleren Harpyen pekte mot, vis dem \"Denne rollen valgte deg\"-kortet, vis dem Harpy-brikken, og pek så mot den andre spilleren Harpyen pekte mot.",
+        "remindersGlobal": [],
         "reminders": [
-            "Gal",
-            "2"
+            "Manisk",
+            "Andre"
         ]
     },
     {
@@ -748,7 +749,7 @@
     {
         "id": "investigator",
         "name": "Etterforsker",
-        "ability": "Du vet fra spillets begynnelse at 1 av 2 gitte spillere er en bestemt Lakei.",
+        "ability": "Du lærer innledningsvis at 1 av 2 gitte spillere er en bestemt Lakei.",
         "firstNightReminder": "Vis rollebrikken til en Lakei som er i spill. Pek mot to spillere, hvor en av dem har den rollen.",
         "otherNightReminder": "",
         "remindersGlobal": [],
@@ -800,7 +801,7 @@
     {
         "id": "knight",
         "name": "Ridder",
-        "ability": "Du vet fra spillets begynnelse 2 spiller som ikke er Demonen.",
+        "ability": "Du lærer innledningsvis 2 spiller som ikke er Demonen.",
         "firstNightReminder": "Pek mot to spillere som ikke er Demoner.",
         "otherNightReminder": "",
         "remindersGlobal": [],
@@ -840,7 +841,7 @@
     {
         "id": "librarian",
         "name": "Bibliotekar",
-        "ability": "Du vet fra spillets begynnelse at 1 av 2 gitte spillere er en bestemt Einstøing, eller at ingen Einstøinger er i spill.",
+        "ability": "Du lærer innledningsvis at 1 av 2 gitte spillere er en bestemt Einstøing, eller at ingen Einstøinger er i spill.",
         "firstNightReminder": "Vis rollebrikken til en Einstøing som er i spill. Pek mot to spillere, hvor en av dem har den rollen. Om ingen Einstøinger er i spill, rist på hodet for \"nei\".",
         "otherNightReminder": "",
         "remindersGlobal": [],
@@ -864,7 +865,7 @@
     {
         "id": "lleech",
         "name": "Igla",
-        "ability": "Hver natt*, velg en spiller: de dør. Ved spillets begynnelse, velg en levende spiller: de forgiftes - du dør når de dør. Dette er den eneste måten du kan dø på.",
+        "ability": "Hver natt*, velg en spiller: de dør. Innledningsvis, velg en levende spiller: de forgiftes - du dør når de dør. Dette er den eneste måten du kan dø på.",
         "firstNightReminder": "Igla peker mot en spiller. Marker spilleren som \"Forgiftet\".",
         "otherNightReminder": "Igla peker mot en spiller. Spilleren dør.",
         "remindersGlobal": [],
@@ -958,7 +959,7 @@
     {
         "id": "mezepheles",
         "name": "Dervettel",
-        "ability": "Du vet fra spillets begynnelse et hemmelig ord. Den første gode spilleren som sier ordet blir ond den natten.",
+        "ability": "Du lærer innledningsvis et hemmelig ord. Den første gode spilleren som sier ordet blir ond den natten.",
         "firstNightReminder": "Vis Dervettelen det hemmelige ordet.",
         "otherNightReminder": "Vekk den første gode spilleren som sa Dervettelens hemmelige ord. Vis dem \"Du er\"-kortet og tommel ned, håndtegnet for \"ond\".",
         "remindersGlobal": [],
@@ -1023,7 +1024,7 @@
     {
         "id": "noble",
         "name": "Adelsmann",
-        "ability": "Du vet fra spillets begynnelse 3 spillere, nøyaktig 1 av dem er ond.",
+        "ability": "Du lærer innledningsvis 3 spillere, nøyaktig 1 av dem er ond.",
         "firstNightReminder": "Pek mot tre spillere, inkludert nøyaktig én ond spiller, i en vilkårlig rekkefølge.",
         "otherNightReminder": "",
         "remindersGlobal": [],
@@ -1055,7 +1056,7 @@
     {
         "id": "organgrinder",
         "name": "Veivspiller",
-        "ability": "Alle spillere lukker øynene under avstemninger & antall stemmer holdes hemmelig. Stemmer for deg teller bare om du også stemmer for.",
+        "ability": "Alle spillere lukker øynene under avstemminger & antall stemmer holdes hemmelig. Stemmer for deg teller bare om du også stemmer for.",
         "firstNightReminder": "",
         "otherNightReminder": "",
         "remindersGlobal": [],
@@ -1096,13 +1097,24 @@
     {
         "id": "pixie",
         "name": "Nisse",
-        "ability": "Du vet fra spillets begynnelse 1 Borger i spill. Om du var manisk du var denne rollen, tilegn deg evnen deres når de dør.",
+        "ability": "Du lærer innledningsvis 1 Borger i spill. Om du var manisk du var denne rollen, tilegn deg evnen deres når de dør.",
         "firstNightReminder": "Vis Nissen rollebrikken til en Borger i spill.",
         "otherNightReminder": "",
         "remindersGlobal": [],
         "reminders": [
             "Manisk",
             "Har evne"
+        ]
+    },
+    {
+        "id": "plaguedoctor",
+        "name": "Pestdoktor",
+        "ability": "Hvis du dør, får historiefortelleren en Minion-evne som ikke er i spill.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": [
+            "Fortellerevne"
         ]
     },
     {
@@ -1357,7 +1369,7 @@
     {
         "id": "snitch",
         "name": "Tyster",
-        "ability": "Lakeier vet fra spillets begynnelse 3 roller ikke i spill.",
+        "ability": "Lakeier lærer innledningsvis 3 roller ikke i spill.",
         "firstNightReminder": "Etter lakeiopplysningene, vekk hver Lakei og vis dem tre roller ikke i spill. Rollene kan være de samme eller forskjellige fra rollene vist til Demonen.",
         "otherNightReminder": "",
         "remindersGlobal": [],
@@ -1395,7 +1407,7 @@
     {
         "id": "steward",
         "name": "Vasall",
-        "ability": "Du vet fra spillets begynnelse 1 god spiller.",
+        "ability": "Du lærer innledningsvis 1 god spiller.",
         "firstNightReminder": "Pek mot en god spiller.",
         "otherNightReminder": "",
         "remindersGlobal": [],
@@ -1548,7 +1560,7 @@
     {
         "id": "washerwoman",
         "name": "Vaskekone",
-        "ability": "Du vet fra spillets begynnelse at 1 av 2 gitte spillere er en bestemt Borger.",
+        "ability": "Du lærer innledningsvis at 1 av 2 gitte spillere er en bestemt Borger.",
         "firstNightReminder": "Vis rollebrikken til en Borger som er i spill. Pek mot to spillere, hvor en av dem har den rollen.",
         "otherNightReminder": "",
         "remindersGlobal": [],

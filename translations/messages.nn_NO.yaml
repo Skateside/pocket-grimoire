@@ -10,21 +10,21 @@ dialog:
 
 index:
     title: Spel
-    description: Ein virtuell grimoire for Blodet på Klokketårnet
+    description: Ein virtuell grimoire for Blodet på klokketårnet
 
 sheet:
     title: Rolleark
-    description: Rollearket for denne utgåva av Blodet på Klokketårnet
+    description: Rollearket for denne utgåva av Blodet på klokketårnet
     jinx: Gand
     each_night: '* Kvar natt utanom den fyrste natta'
     get_qr_code: Få QR-koden for arket
     get_sheet: Få arket
-    credit: <a href="https://bloodontheclocktower.com/" target="_blank" rel="noopener noreferrer">Blood on the Clocktower</a> er eit varemerke som høyrer til Steven Medway og <a href="https://www.thepandemoniuminstitute.com/" target="_blank" rel="noopener noreferrer">The Pandemonium Institute</a>
+    credit: Blood on the Clocktower er eit varemerke som høyrer til Steven Medway og The Pandemonium Institute
     breakdown: Tallene til hvert lag for antall spillere.
-    count_plus: "%count%+"
+    count_plus: '%count%+'
 
 groups:
-    players: Spillere
+    players: Spelarar
     townsfolk: Borgarar
     outsider: Einstøingar
     minion: Lakeiar
@@ -56,7 +56,7 @@ setup:
 
     editions:
         title: Vel utgåve
-        trouble_brewing: Trøbbel i Gjære
+        trouble_brewing: Trøbbel i gjære
         bad_moon_rising: Fullmånenatt
         sects_and_violets: Okkulte affærar
         custom_script: Anna scenario
@@ -219,6 +219,6 @@ acknowledgements:
         - Nattepåminningar og anna tilleggstekst er skrive av <a href="http://bignose.whitetree.org/projects/botc/diy/" target="_blank" rel="noopener noreferrer">Ben Finney</a>.
         - Ikon er henta frå <a href="https://fontawesome.com/v5.15/icons" target="_blank" rel="noopener noreferrer">Font Awesome</a>.
         - Mange bilete og mykje data er henta frå <a href="https://www.clocktower.online" target="_blank" rel="noopener noreferrer">Clocktower.online</a> og <a href="https://bloodontheclocktower.com/" target="_blank" rel="noopener noreferrer">Blood on the Clocktower-nettsida</a>.
-        - Dette er ein uoffisiell virtuell grimoire for Blodet på Klokketårnet. Prosjektet er gratis og kjeldekoden finst på <a href="https://github.com/Skateside/pocket-grimoire" target="_blank" rel="noopener noreferrer">GitHub</a>. Prosjektet er ikkje knytt til the Pandemonium Institute. Om du har glede av å spele Blodet på Klokketårnet, <a href="https://bloodontheclocktower.com/buy" target="_blank" rel="noopener noreferrer">vurder gjerne å kjøpe din eigen grimoire</a> - i tillegg til å vere meir fleksibel enn denne digitale utgåva, stør det også utviklarane.
+        - Dette er ein uoffisiell virtuell grimoire for Blodet på klokketårnet. Prosjektet er gratis og kjeldekoden finst på <a href="https://github.com/Skateside/pocket-grimoire" target="_blank" rel="noopener noreferrer">GitHub</a>. Prosjektet er ikkje knytt til the Pandemonium Institute. Om du har glede av å spele Blodet på klokketårnet, <a href="https://bloodontheclocktower.com/buy" target="_blank" rel="noopener noreferrer">vurder gjerne å kjøpe din eigen grimoire</a> - i tillegg til å vere meir fleksibel enn denne digitale utgåva, stør det også utviklarane.
         - Lagt merke til ein teknisk feil eller har du eit framlegg til forbetring? Lat meg få vite det i <a href="https://discord.com/channels/569683781800296501/708509594758152203" target="_blank" rel="noopener noreferrer">toolmakers-kanalen på den uoffisielle discord-serveren</a> (namnet mitt der er "Skateside") eller <a href="https://github.com/Skateside/pocket-grimoire/issues" target="_blank" rel="noopener noreferrer">tak eventuelle problem opp på GitHub</a>.
         - <small>Versjon <span id="version"></span></small>

@@ -5,6 +5,11 @@
         "reason": "Kammerjenta lærer om Matematikaren vaknar i natt eller ei, sjølv om Kammerjenta vaknar fyrst."
     },
     {
+        "target": "eviltwin",
+        "trick": "plaguedoctor",
+        "reason": "Historiefortelleren kan ikke få evnen til den onde tvillingen hvis pestdoktoren dør."
+    },
+    {
         "target": "butler",
         "trick": "cannibal",
         "reason": "Om Menneskeetaren tileignar seg evna til Hovmeisteren, lærer dei det."
@@ -33,6 +38,11 @@
         "target": "cerenovus",
         "trick": "goblin",
         "reason": "Cerenoven kan velje å gjere ein spelar manisk dei er Småtrollet."
+    },
+    {
+        "target": "goblin",
+        "trick": "plaguedoctor",
+        "reason": "Hvis pestdoktoren dør, får en levende Minion Goblin-evnen i tillegg til sin egen evne, og lærer dette."
     },
     {
         "target": "leviathan",
@@ -131,6 +141,11 @@
     },
     {
         "target": "spy",
+        "trick": "plaguedoctor",
+        "reason": "Hvis pestdoktoren dør, får en levende Minion spionevnen i tillegg til sin egen evne, og lærer dette."
+    },
+    {
+        "target": "spy",
         "trick": "damsel",
         "reason": "Berre 1 ganda rolle kan vere i spel."
     },
@@ -170,9 +185,29 @@
         "reason": "Berre 1 ganda rolle kan vere i spel."
     },
     {
+        "target": "scarletwoman",
+        "trick": "plaguedoctor",
+        "reason": "Hvis pestdoktoren dør, får en levende Minion Scarlet Woman-evnen i tillegg til sin egen evne, og lærer dette."
+    },
+    {
+        "target": "boomdandy",
+        "trick": "plaguedoctor",
+        "reason": "Hvis pestdoktoren blir henrettet og historiefortelleren vil få Boomdandy-evnen, utløses Boomdandy-evnen umiddelbart."
+    },
+    {
+        "target": "fearmonger",
+        "trick": "plaguedoctor",
+        "reason": "Hvis pestdoktoren dør, får en levende Minion Frykthandler-evnen i tillegg til sin egen evne, og lærer dette."
+    },
+    {
         "target": "baron",
         "trick": "heretic",
         "reason": "Det kan hende Greven berre legg til 1 Einstøing, ikkje 2."
+    },
+    {
+        "target": "baron",
+        "trick": "plaguedoctor",
+        "reason": "Hvis historiefortelleren får Baron-evnen, blir opptil to spillere utenfor spillet utenfor spillet."
     },
     {
         "target": "marionette",
@@ -198,6 +233,11 @@
         "target": "marionette",
         "trick": "damsel",
         "reason": "Tråddokka lærer ikkje at ei Prinsesse er i spel."
+    },
+    {
+        "target": "marionette",
+        "trick": "plaguedoctor",
+        "reason": "Hvis demonen har en nabo som er i live og en byfolk eller utenforstående når pestdoktoren dør, blir den spilleren en ond marionette. Hvis det allerede er en ekstra ond spiller, skjer ikke dette."
     },
     {
         "target": "marionette",
@@ -362,7 +402,7 @@
     {
         "target": "alhadikhia",
         "trick": "mastermind",
-        "reason": "Berre 1 ganda rolle kan vere i spel. Vonde spelarar veit frå byrjinga av spelet kva spelar og rolle det er."
+        "reason": "Berre 1 ganda rolle kan vere i spel. Vonde spelarar lærer innleiingsvis kva spelar og rolle det er."
     },
     {
         "target": "organgrinder",

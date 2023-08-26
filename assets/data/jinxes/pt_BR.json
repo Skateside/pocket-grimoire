@@ -5,6 +5,11 @@
         "reason": "A Camareira também vê o Matemático se ele for acordar naquela noite."
     },
     {
+        "target": "eviltwin",
+        "trick": "plaguedoctor",
+        "reason": "O Narrador não pode ganhar a habilidade Evil Twin se o Plague Doctor morrer."
+    },
+    {
         "target": "butler",
         "trick": "cannibal",
         "reason": "Se o Canibal ganhar a habilidade do Mordomo, o Canibal é avisado disso."
@@ -33,6 +38,11 @@
         "target": "cerenovus",
         "trick": "goblin",
         "reason": "O Cerenovus pode escolher fazer um jogador alucinar que é o Goblin."
+    },
+    {
+        "target": "goblin",
+        "trick": "plaguedoctor",
+        "reason": "Se o Plague Doctor morrer, um Minion vivo ganha a habilidade Goblin além de sua própria habilidade, e aprende isso."
     },
     {
         "target": "leviathan",
@@ -131,6 +141,11 @@
     },
     {
         "target": "spy",
+        "trick": "plaguedoctor",
+        "reason": "Se o Plague Doctor morrer, um Minion vivo ganha a habilidade Spy além de sua própria habilidade, e aprende isso."
+    },
+    {
+        "target": "spy",
         "trick": "damsel",
         "reason": "Apenas um destes personagens pode estar em jogo."
     },
@@ -170,9 +185,29 @@
         "reason": "Apenas um destes personagens pode estar em jogo."
     },
     {
+        "target": "scarletwoman",
+        "trick": "plaguedoctor",
+        "reason": "Se o Plague Doctor morrer, um Minion vivo ganha a habilidade Scarlet Woman além de sua própria habilidade, e aprende isso."
+    },
+    {
+        "target": "boomdandy",
+        "trick": "plaguedoctor",
+        "reason": "Se o Plague Doctor for executado e o Narrador ganhar a habilidade Boomdandy, a habilidade Boomdandy será desencadeada imediatamente."
+    },
+    {
+        "target": "fearmonger",
+        "trick": "plaguedoctor",
+        "reason": "Se o Plague Doctor morrer, um Minion vivo ganha a habilidade Fearmonger além de sua própria habilidade, e aprende isso."
+    },
+    {
         "target": "baron",
         "trick": "heretic",
         "reason": "O Barão adiciona apenas 1 Forasteiro em vez de 2."
+    },
+    {
+        "target": "baron",
+        "trick": "plaguedoctor",
+        "reason": "Se o Narrador ganhar a habilidade Barão, até dois jogadores se tornarão Forasteiros fora do jogo."
     },
     {
         "target": "marionette",
@@ -198,6 +233,11 @@
         "target": "marionette",
         "trick": "damsel",
         "reason": "A Marionete não sabe que há uma Donzela em jogo."
+    },
+    {
+        "target": "marionette",
+        "trick": "plaguedoctor",
+        "reason": "Se o Demônio tiver um vizinho que esteja vivo e um cidadão ou forasteiro quando o Doutor da Peste morrer, esse jogador se tornará uma marionete maligna. Se já existir um jogador maligno extra, isso não acontece."
     },
     {
         "target": "marionette",

@@ -5,6 +5,11 @@
         "reason": "Das Kammermädchen erfährt, ob der Mathematiker heute Nacht aufwacht oder nicht, obwohl das Zimmermädchen zuerst aufwacht."
     },
     {
+        "target": "eviltwin",
+        "trick": "plaguedoctor",
+        "reason": "Der Geschichtenerzähler kann die Fähigkeit „Böser Zwilling“ nicht erlangen, wenn der Seuchendoktor stirbt."
+    },
+    {
         "target": "butler",
         "trick": "cannibal",
         "reason": "Wenn der Kannibale die Butler Fähigkeit erlangt, erfährt der Kannibale dies."
@@ -33,6 +38,11 @@
         "target": "cerenovus",
         "trick": "goblin",
         "reason": "Der Cerenovus kann sich entscheiden einen Spieler davon besessen zu machen der Goblin zu sein."
+    },
+    {
+        "target": "goblin",
+        "trick": "plaguedoctor",
+        "reason": "Wenn der Pestdoktor stirbt, erhält ein lebender Diener zusätzlich zu seiner eigenen Fähigkeit die Goblin-Fähigkeit und lernt diese."
     },
     {
         "target": "leviathan",
@@ -131,6 +141,11 @@
     },
     {
         "target": "spy",
+        "trick": "plaguedoctor",
+        "reason": "Wenn der Pestdoktor stirbt, erhält ein lebender Diener zusätzlich zu seiner eigenen Fähigkeit die Spionagefähigkeit und lernt diese."
+    },
+    {
+        "target": "spy",
         "trick": "damsel",
         "reason": "Nur 1 verhexter Character kann gleichzeitig im Spiel sein"
     },
@@ -170,9 +185,29 @@
         "reason": "Nur 1 verhexter Character kann gleichzeitig im Spiel sein"
     },
     {
+        "target": "scarletwoman",
+        "trick": "plaguedoctor",
+        "reason": "Wenn der Pestdoktor stirbt, erhält ein lebender Diener zusätzlich zu seiner eigenen Fähigkeit die Fähigkeit „Scharlachrote Frau“ und lernt diese."
+    },
+    {
+        "target": "boomdandy",
+        "trick": "plaguedoctor",
+        "reason": "Wenn der Pestdoktor hingerichtet wird und der Geschichtenerzähler die Boomdandy-Fähigkeit erhalten würde, wird die Boomdandy-Fähigkeit sofort ausgelöst."
+    },
+    {
+        "target": "fearmonger",
+        "trick": "plaguedoctor",
+        "reason": "Wenn der Pestdoktor stirbt, erhält ein lebender Diener zusätzlich zu seiner eigenen Fähigkeit die Fähigkeit „Furchtmacher“ und lernt diese."
+    },
+    {
         "target": "baron",
         "trick": "heretic",
         "reason": "Der Baron fügt unter umständen nur einen anstatt 2 Außenseiter zum Spiel hinzu."
+    },
+    {
+        "target": "baron",
+        "trick": "plaguedoctor",
+        "reason": "Wenn der Geschichtenerzähler die Baron-Fähigkeit erlangt, werden bis zu zwei Spieler zu Außenseitern, die nicht im Spiel sind."
     },
     {
         "target": "marionette",
@@ -198,6 +233,11 @@
         "target": "marionette",
         "trick": "damsel",
         "reason": "Die Marionette lernt nicht, dass sich eine Maid im Spiel befindet."
+    },
+    {
+        "target": "marionette",
+        "trick": "plaguedoctor",
+        "reason": "Wenn der Dämon beim Tod des Seuchendoktors einen lebenden Nachbarn und einen Stadtbewohner oder Außenseiter hat, wird dieser Spieler zu einer bösen Marionette. Wenn es bereits einen zusätzlichen bösen Spieler gibt, passiert dies nicht."
     },
     {
         "target": "marionette",

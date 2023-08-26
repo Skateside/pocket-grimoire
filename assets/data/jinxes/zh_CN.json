@@ -5,6 +5,11 @@
         "reason": "女佣知道数学家今晚是否醒来，即使女佣先醒来。"
     },
     {
+        "target": "eviltwin",
+        "trick": "plaguedoctor",
+        "reason": "如果瘟疫医生死亡，讲故事的人将无法获得邪恶双生的能力。"
+    },
+    {
         "target": "butler",
         "trick": "cannibal",
         "reason": "如果食人族获得管家能力，食人族就会学会这一点。"
@@ -33,6 +38,11 @@
         "target": "cerenovus",
         "trick": "goblin",
         "reason": "洗脑师可能会选择让玩家生气，因为他们是地精。"
+    },
+    {
+        "target": "goblin",
+        "trick": "plaguedoctor",
+        "reason": "如果瘟疫医生死亡，活着的小兵除了拥有自己的能力外，还会获得哥布林能力，并学习这一点。"
     },
     {
         "target": "leviathan",
@@ -131,6 +141,11 @@
     },
     {
         "target": "spy",
+        "trick": "plaguedoctor",
+        "reason": "如果瘟疫医生死亡，活着的小兵除了获得自己的能力外，还将获得间谍能力，并学会这一点。"
+    },
+    {
+        "target": "spy",
         "trick": "damsel",
         "reason": "只有 1 个被诅咒的角色可以在场。"
     },
@@ -170,9 +185,29 @@
         "reason": "只有 1 个被诅咒的角色可以在场。"
     },
     {
+        "target": "scarletwoman",
+        "trick": "plaguedoctor",
+        "reason": "如果瘟疫医生死亡，活着的小兵除了获得自己的能力外，还会获得猩红女人的能力，并学习这一点。"
+    },
+    {
+        "target": "boomdandy",
+        "trick": "plaguedoctor",
+        "reason": "如果瘟疫医生被处决并且说书人将获得 Boomdandy 能力，Boomdandy 能力会立即触发。"
+    },
+    {
+        "target": "fearmonger",
+        "trick": "plaguedoctor",
+        "reason": "如果瘟疫医生死亡，活着的小兵除了拥有自己的能力外，还会获得恐吓者能力，并学会这一点。"
+    },
+    {
         "target": "baron",
         "trick": "heretic",
         "reason": "男爵可能只会添加 1 个局外人，而不是 2 个。"
+    },
+    {
+        "target": "baron",
+        "trick": "plaguedoctor",
+        "reason": "如果讲故事的人获得男爵能力，最多两名玩家将成为局外人。"
     },
     {
         "target": "marionette",
@@ -198,6 +233,11 @@
         "target": "marionette",
         "trick": "damsel",
         "reason": "傀儡不知道有一个少女在玩。"
+    },
+    {
+        "target": "marionette",
+        "trick": "plaguedoctor",
+        "reason": "如果瘟疫医生死后，恶魔的邻居还活着并且是城镇居民或局外人，那么该玩家就会变成邪恶的木偶。 如果已经有额外的邪恶玩家，则不会发生这种情况。"
     },
     {
         "target": "marionette",

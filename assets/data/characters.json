@@ -2305,5 +2305,21 @@
         "setup": false,
         "ability": "Each night, choose 2 players: tomorrow, the 1st player is mad that the 2nd is evil, or both might die.",
         "image": "/build/img/icon/minion/harpy.png"
+    },
+    {
+        "id": "plaguedoctor",
+        "name": "Plague Doctor",
+        "edition": "",
+        "team": "outsider",
+        "firstNight": 0,
+        "firstNightReminder": "",
+        "otherNight": 0,
+        "otherNightReminder": "",
+        "reminders": [
+            "Storyteller Ability"
+        ],
+        "setup": false,
+        "ability": "If you die, the Storyteller gains a not-in-play Minion ability.",
+        "image": "/build/img/icon/outsider/plaguedoctor.png"
     }
 ]

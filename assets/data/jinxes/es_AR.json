@@ -5,6 +5,11 @@
         "reason": "La Sirvienta se entera si el Matemático se despierta esta noche o no, a pesar de que la Sirvienta se despierta primero."
     },
     {
+        "target": "eviltwin",
+        "trick": "plaguedoctor",
+        "reason": "El Narrador no puede obtener la habilidad Evil Twin si el Plague Doctor muere."
+    },
+    {
         "target": "butler",
         "trick": "cannibal",
         "reason": "Si el Caníbal gana la habilidad del Mayordomo, el Caníbal lo sabe."
@@ -33,6 +38,11 @@
         "target": "cerenovus",
         "trick": "goblin",
         "reason": "El Ceronovus puede hacer que un jugador esté enojado de ser el Duende."
+    },
+    {
+        "target": "goblin",
+        "trick": "plaguedoctor",
+        "reason": "Si el Doctor de la Plaga muere, un Minion vivo obtiene la habilidad Duende además de su propia habilidad y aprende esto."
     },
     {
         "target": "leviathan",
@@ -131,6 +141,11 @@
     },
     {
         "target": "spy",
+        "trick": "plaguedoctor",
+        "reason": "Si el Doctor de la Plaga muere, un Minion vivo obtiene la habilidad de Espía además de su propia habilidad y aprende esto."
+    },
+    {
+        "target": "spy",
         "trick": "damsel",
         "reason": "Solo 1 personaje hechizado puede estar en juego."
     },
@@ -170,9 +185,29 @@
         "reason": "Solo 1 personaje hechizado puede estar en juego."
     },
     {
+        "target": "scarletwoman",
+        "trick": "plaguedoctor",
+        "reason": "Si el Doctor de la Plaga muere, un Minion vivo obtiene la habilidad Mujer Escarlata además de su propia habilidad, y aprende esto."
+    },
+    {
+        "target": "boomdandy",
+        "trick": "plaguedoctor",
+        "reason": "Si se ejecuta el Doctor de la Plaga y el Narrador obtiene la habilidad Boomdandy, la habilidad Boomdandy se activa inmediatamente."
+    },
+    {
+        "target": "fearmonger",
+        "trick": "plaguedoctor",
+        "reason": "Si el Doctor de la Plaga muere, un Minion vivo obtiene la habilidad Fearmonger además de su propia habilidad, y aprende esto."
+    },
+    {
         "target": "baron",
         "trick": "heretic",
         "reason": "El Barón puede agregar solo 1 Forastero, no 2."
+    },
+    {
+        "target": "baron",
+        "trick": "plaguedoctor",
+        "reason": "Si el Narrador obtiene la habilidad Barón, hasta dos jugadores quedan fuera de juego."
     },
     {
         "target": "marionette",
@@ -198,6 +233,11 @@
         "target": "marionette",
         "trick": "damsel",
         "reason": "La Marioneta no se entera que la Damisela está en juego."
+    },
+    {
+        "target": "marionette",
+        "trick": "plaguedoctor",
+        "reason": "Si el Demonio tiene un vecino que está vivo y un ciudadano o un forastero cuando el Doctor de la Plaga muere, ese jugador se convierte en una marioneta malvada. Si ya hay un jugador extra malvado, esto no sucede."
     },
     {
         "target": "marionette",

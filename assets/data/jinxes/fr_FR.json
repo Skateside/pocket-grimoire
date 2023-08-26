@@ -5,6 +5,11 @@
         "reason": "La femme de chambre apprend si le mathématicien se réveille ce soir ou non, même si la femme de chambre se réveille en premier."
     },
     {
+        "target": "eviltwin",
+        "trick": "plaguedoctor",
+        "reason": "Le conteur ne peut pas acquérir la capacité Evil Twin si le Plague Doctor meurt."
+    },
+    {
         "target": "butler",
         "trick": "cannibal",
         "reason": "Si le Cannibale obtiens la capacité du Majordome, le Cannibale l'apprend."
@@ -33,6 +38,11 @@
         "target": "cerenovus",
         "trick": "goblin",
         "reason": "Le Manipulateur peut choisir de faire qu'un joueur délire d'être le Gobelin"
+    },
+    {
+        "target": "goblin",
+        "trick": "plaguedoctor",
+        "reason": "Si le Docteur de la Peste meurt, un serviteur vivant acquiert la capacité Gobelin en plus de sa propre capacité et l'apprend."
     },
     {
         "target": "leviathan",
@@ -131,6 +141,11 @@
     },
     {
         "target": "spy",
+        "trick": "plaguedoctor",
+        "reason": "Si le Docteur de la Peste meurt, un serviteur vivant acquiert la capacité Espion en plus de sa propre capacité et l'apprend."
+    },
+    {
+        "target": "spy",
         "trick": "damsel",
         "reason": "Il ne peut y avoir qu'un personnage jinxé en jeu."
     },
@@ -170,9 +185,29 @@
         "reason": "Il ne peut y avoir qu'un personnage jinxé en jeu."
     },
     {
+        "target": "scarletwoman",
+        "trick": "plaguedoctor",
+        "reason": "Si le Docteur de la Peste meurt, un serviteur vivant acquiert la capacité Femme écarlate en plus de sa propre capacité et l'apprend."
+    },
+    {
+        "target": "boomdandy",
+        "trick": "plaguedoctor",
+        "reason": "Si le Docteur de la Peste est exécuté et que le Conteur obtient la capacité Boomdandy, la capacité Boomdandy se déclenche immédiatement."
+    },
+    {
+        "target": "fearmonger",
+        "trick": "plaguedoctor",
+        "reason": "Si le Docteur de la Peste meurt, un serviteur vivant acquiert la capacité Peur en plus de sa propre capacité et l'apprend."
+    },
+    {
         "target": "baron",
         "trick": "heretic",
         "reason": "Le Baron ne peut ajouter qu'un Étranger, pas deux."
+    },
+    {
+        "target": "baron",
+        "trick": "plaguedoctor",
+        "reason": "Si le Conteur acquiert la capacité Baron, jusqu'à deux joueurs deviennent des Outsiders hors jeu."
     },
     {
         "target": "marionette",
@@ -198,6 +233,11 @@
         "target": "marionette",
         "trick": "damsel",
         "reason": "La Marionnette n'apprend pas qu'une Demoiselle est en jeu."
+    },
+    {
+        "target": "marionette",
+        "trick": "plaguedoctor",
+        "reason": "Si le démon a un voisin vivant et un citadin ou un étranger lorsque le docteur de la peste meurt, ce joueur devient une marionnette maléfique. S'il y a déjà un joueur maléfique supplémentaire, cela n'arrive pas."
     },
     {
         "target": "marionette",

@@ -5,6 +5,11 @@
         "reason": "Kammarjungfrun får reda på om Matematikern vaknar inatt eller inte, trots att Chambermaid vaknar först."
     },
     {
+        "target": "eviltwin",
+        "trick": "plaguedoctor",
+        "reason": "Berättaren kan inte få förmågan Evil Twin om pestdoktorn dör."
+    },
+    {
         "target": "butler",
         "trick": "cannibal",
         "reason": "Om Kanibalen får Butlerns förmåga, får Kanibalen reda på det."
@@ -33,6 +38,11 @@
         "target": "cerenovus",
         "trick": "goblin",
         "reason": "Cerenovus kan välja en spelare som ska vara \"galen\" att de är Goblin."
+    },
+    {
+        "target": "goblin",
+        "trick": "plaguedoctor",
+        "reason": "Om pestdoktorn dör, får en levande Minion Goblin-förmågan utöver sin egen förmåga, och lär sig detta."
     },
     {
         "target": "leviathan",
@@ -131,6 +141,11 @@
     },
     {
         "target": "spy",
+        "trick": "plaguedoctor",
+        "reason": "Om pestdoktorn dör, får en levande Minion spionförmågan utöver sin egen förmåga, och lär sig detta."
+    },
+    {
+        "target": "spy",
         "trick": "damsel",
         "reason": "Endast 1 jinxed karaktär kan vara i spel."
     },
@@ -170,9 +185,29 @@
         "reason": "Endast 1 jinxed karaktär kan vara i spel."
     },
     {
+        "target": "scarletwoman",
+        "trick": "plaguedoctor",
+        "reason": "Om pestdoktorn dör, får en levande Minion förmågan Scarlet Woman utöver sin egen förmåga, och lär sig detta."
+    },
+    {
+        "target": "boomdandy",
+        "trick": "plaguedoctor",
+        "reason": "Om pestdoktorn avrättas och berättaren skulle få Boomdandy-förmågan, utlöses Boomdandy-förmågan omedelbart."
+    },
+    {
+        "target": "fearmonger",
+        "trick": "plaguedoctor",
+        "reason": "Om pestdoktorn dör, får en levande Minion förmågan att rädsla utöver sin egen förmåga, och lär sig detta."
+    },
+    {
         "target": "baron",
         "trick": "heretic",
         "reason": "Baronen kan lägga till antingen 1 eller 2 Outsiders."
+    },
+    {
+        "target": "baron",
+        "trick": "plaguedoctor",
+        "reason": "Om sagoberättaren får Baron-förmågan blir upp till två spelare out-of-play Outsiders."
     },
     {
         "target": "marionette",
@@ -198,6 +233,11 @@
         "target": "marionette",
         "trick": "damsel",
         "reason": "Marionetten får inte reda på att en Mö är i spel."
+    },
+    {
+        "target": "marionette",
+        "trick": "plaguedoctor",
+        "reason": "Om demonen har en granne som är vid liv och en stadsbefolkning eller utomstående när pestdoktorn dör, blir den spelaren en ond marionett. Om det redan finns en extra ond spelare så händer inte detta."
     },
     {
         "target": "marionette",

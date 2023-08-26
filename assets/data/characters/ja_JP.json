@@ -1106,6 +1106,17 @@
         ]
     },
     {
+        "id": "plaguedoctor",
+        "name": "ペスト医師",
+        "ability": "あなたが死亡した場合、ストーリーテラーはプレイ外のミニオン能力を獲得します。",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": [
+            "ストーリーテラーの能力"
+        ]
+    },
+    {
         "id": "po",
         "name": "ポー",
         "ability": "毎夜(*)、プレイヤーを1人選んでよい。そのプレイヤーは死亡する。昨夜に誰も選ばなかった場合、今夜はプレイヤーを3人選ぶ。",

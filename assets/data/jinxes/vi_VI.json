@@ -5,6 +5,11 @@
         "reason": "Nữ phục vụ biết Nhà toán học dậy tối nay hay không, ngay cả khi Nữ phục vụ dậy trước."
     },
     {
+        "target": "eviltwin",
+        "trick": "plaguedoctor",
+        "reason": "Người kể chuyện không thể có được khả năng Evil Twin nếu Bác sĩ bệnh dịch hạch chết."
+    },
+    {
         "target": "butler",
         "trick": "cannibal",
         "reason": "Nếu Ăn thịt người có chức năng của Quản gia, Ăn thịt người biết điều này."
@@ -33,6 +38,11 @@
         "target": "cerenovus",
         "trick": "goblin",
         "reason": "Cerenovus có thể khiến 1 người chơi điên rằng họ là Yêu tinh."
+    },
+    {
+        "target": "goblin",
+        "trick": "plaguedoctor",
+        "reason": "Nếu Bác sĩ bệnh dịch hạch chết, một Minion còn sống sẽ nhận được khả năng Goblin ngoài khả năng của chính chúng và học được điều này."
     },
     {
         "target": "leviathan",
@@ -77,7 +87,7 @@
     {
         "target": "lilmonsta",
         "trick": "magician",
-        "reason": "Chỉ có 1 nhân vật trùng trong cuộc."
+        "reason": "Chỉ có 1 nhân vật jinx trong cuộc."
     },
     {
         "target": "lilmonsta",
@@ -107,7 +117,7 @@
     {
         "target": "legion",
         "trick": "preacher",
-        "reason": "Chỉ có 1 nhân vật trùng trong cuộc."
+        "reason": "Chỉ có 1 nhân vật jinx trong cuộc."
     },
     {
         "target": "fanggu",
@@ -131,13 +141,18 @@
     },
     {
         "target": "spy",
+        "trick": "plaguedoctor",
+        "reason": "Nếu Bác sĩ bệnh dịch hạch chết, một Minion còn sống sẽ có được khả năng Gián điệp bên cạnh khả năng của chính chúng và học được điều này."
+    },
+    {
+        "target": "spy",
         "trick": "damsel",
-        "reason": "Chỉ có 1 nhân vật trùng trong cuộc."
+        "reason": "Chỉ có 1 nhân vật jinx trong cuộc."
     },
     {
         "target": "spy",
         "trick": "heretic",
-        "reason": "Chỉ có 1 nhân vật trùng trong cuộc."
+        "reason": "Chỉ có 1 nhân vật jinx trong cuộc."
     },
     {
         "target": "widow",
@@ -157,22 +172,42 @@
     {
         "target": "widow",
         "trick": "damsel",
-        "reason": "Chỉ có 1 nhân vật trùng trong cuộc."
+        "reason": "Chỉ có 1 nhân vật jinx trong cuộc."
     },
     {
         "target": "widow",
         "trick": "heretic",
-        "reason": "Chỉ có 1 nhân vật trùng trong cuộc."
+        "reason": "Chỉ có 1 nhân vật jinx trong cuộc."
     },
     {
         "target": "godfather",
         "trick": "heretic",
-        "reason": "Chỉ có 1 nhân vật trùng trong cuộc."
+        "reason": "Chỉ có 1 nhân vật jinx trong cuộc."
+    },
+    {
+        "target": "scarletwoman",
+        "trick": "plaguedoctor",
+        "reason": "Nếu Bác sĩ bệnh dịch hạch chết, một Minion còn sống sẽ nhận được khả năng Scarlet Woman bên cạnh khả năng của chính họ và học được điều này."
+    },
+    {
+        "target": "boomdandy",
+        "trick": "plaguedoctor",
+        "reason": "Nếu Bác sĩ bệnh dịch hạch bị hành quyết và Người kể chuyện sẽ có được khả năng Boomdandy, khả năng Boomdandy sẽ kích hoạt ngay lập tức."
+    },
+    {
+        "target": "fearmonger",
+        "trick": "plaguedoctor",
+        "reason": "Nếu Bác sĩ bệnh dịch hạch chết, một Minion còn sống sẽ nhận được khả năng Fearmonger ngoài khả năng của chính chúng và học được điều này."
     },
     {
         "target": "baron",
         "trick": "heretic",
         "reason": "Có thể Nam tước chỉ thêm 1 Lữ khách, không phải 2."
+    },
+    {
+        "target": "baron",
+        "trick": "plaguedoctor",
+        "reason": "Nếu Người kể chuyện có được khả năng Baron, tối đa hai người chơi sẽ trở thành Người ngoài cuộc."
     },
     {
         "target": "marionette",
@@ -201,6 +236,11 @@
     },
     {
         "target": "marionette",
+        "trick": "plaguedoctor",
+        "reason": "Nếu Ác ma có một người hàng xóm còn sống và Người dân thị trấn hoặc Người ngoài cuộc khi Bác sĩ bệnh dịch chết, người chơi đó sẽ trở thành một Marionette độc ác. Nếu đã có thêm một người chơi ác thì điều này sẽ không xảy ra."
+    },
+    {
+        "target": "marionette",
         "trick": "huntsman",
         "reason": "Nếu Con rối nghĩ mình là Thợ săn, vẫn thêm Thiếu nữ."
     },
@@ -222,7 +262,7 @@
     {
         "target": "riot",
         "trick": "engineer",
-        "reason": "Nổi loạn và Kĩ sư không thể tồn tại cùng nhau khi bắt đầu game. Nếu Kĩ sư tạo ra Nổi loạn, người ác trở thành Nổi loạn."
+        "reason": "Nổi loạn và Kĩ sư không thể tồn tại cùng nhau khi bắt đầu game. Nếu Kĩ sư tạo ra Nổi loạn, phe ác trở thành Nổi loạn."
     },
     {
         "target": "riot",
@@ -247,7 +287,7 @@
     {
         "target": "riot",
         "trick": "pithag",
-        "reason": "Nếu Pit-hag tạo ra Nổi loạn, tất cả người ác trở thành Nổi loạn. Nếu Pit-hag tạo ra Nổi loạn sau ngày 3, trò chơi tiếp tục thêm 1 ngày nữa."
+        "reason": "Nếu Pit-hag tạo ra Nổi loạn, tất cả phe ác trở thành Nổi loạn. Nếu Pit-hag tạo ra Nổi loạn sau ngày 3, trò chơi tiếp tục thêm 1 ngày nữa."
     },
     {
         "target": "riot",
@@ -297,17 +337,17 @@
     {
         "target": "riot",
         "trick": "exorcist",
-        "reason": "Chỉ có 1 nhân vật trùng trong cuộc."
+        "reason": "Chỉ có 1 nhân vật jinx trong cuộc."
     },
     {
         "target": "riot",
         "trick": "minstrel",
-        "reason": "Chỉ có 1 nhân vật trùng trong cuộc."
+        "reason": "Chỉ có 1 nhân vật jinx trong cuộc."
     },
     {
         "target": "riot",
         "trick": "flowergirl",
-        "reason": "Chỉ có 1 nhân vật trùng trong cuộc."
+        "reason": "Chỉ có 1 nhân vật jinx trong cuộc."
     },
     {
         "target": "riot",
@@ -362,7 +402,7 @@
     {
         "target": "alhadikhia",
         "trick": "mastermind",
-        "reason": "Chỉ có 1 nhân vật trùng trong cuộc. Người ác biết đó là nhân vật nào và là người nào."
+        "reason": "Chỉ có 1 nhân vật jinx trong cuộc. Phe ác biết đó là nhân vật nào và là người nào."
     },
     {
         "target": "organgrinder",
@@ -377,12 +417,12 @@
     {
         "target": "organgrinder",
         "trick": "minstrel",
-        "reason": "Chỉ có 1 nhân vật trùng trong cuộc."
+        "reason": "Chỉ có 1 nhân vật jinx trong cuộc."
     },
     {
         "target": "organgrinder",
         "trick": "preacher",
-        "reason": "Chỉ có 1 nhân vật trùng trong cuộc."
+        "reason": "Chỉ có 1 nhân vật jinx trong cuộc."
     },
     {
         "target": "vizier",
@@ -407,7 +447,7 @@
     {
         "target": "vizier",
         "trick": "magician",
-        "reason": "Chỉ có 1 nhân vật trùng trong cuộc."
+        "reason": "Chỉ có 1 nhân vật jinx trong cuộc."
     },
     {
         "target": "vizier",
