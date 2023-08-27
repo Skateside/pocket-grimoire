@@ -1,3 +1,5 @@
+import "./processes/errors.js";
+
 import "./processes/setup/general.js";
 import "./processes/setup/select-edition.js";
 import "./processes/setup/select-characters.js";

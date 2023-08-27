@@ -28,7 +28,8 @@ export default class Store {
         infoTokens: [],
         names: [],
         height: "",
-        version: ""
+        version: "",
+        user: ""
     };
 
     /**
@@ -618,6 +619,28 @@ export default class Store {
      */
     getVersion() {
         return this.data.version;
+    }
+
+    /**
+     * Sets the user ID. I use this to watch sessions and debug any errors. It
+     * should be unique and contain no identifiable information.
+     *
+     * @param {String} user
+     *        A string identifying the user.
+     */
+    setUser(user) {
+        this.data.user = user;
+        this.write();
+    }
+
+    /**
+     * Gets the user ID.
+     *
+     * @return {String}
+     *         A string identifying the user.
+     */
+    getUser() {
+        return this.data.user;
     }
 
 }
