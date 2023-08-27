@@ -629,8 +629,10 @@ export default class Store {
      *        A string identifying the user.
      */
     setUser(user) {
+
         this.data.user = user;
         this.write();
+
     }
 
     /**
