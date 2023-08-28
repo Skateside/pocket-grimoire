@@ -2,6 +2,7 @@ import Dialog from "./Dialog.js";
 import TokenStore from "./TokenStore.js";
 import Template from "./Template.js";
 import CharacterToken from "./CharacterToken.js";
+import Draggable from "./Draggable.js";
 import {
     getIndex,
     lookupOne,
@@ -47,10 +48,16 @@ export default class TokenDialog extends Dialog {
 
     }
 
+    /**
+     * @inheritdoc
+     */
     run() {
+
         this.setIds([]);
         this.discoverElements();
+        this.activateDraggable();
         super.run();
+
     }
 
     /**
@@ -168,6 +175,12 @@ export default class TokenDialog extends Dialog {
          * @type {Element}
          */
         this.previous = lookupOne(".js--token--previous", dialog);
+
+    }
+
+    activateDraggable() {
+
+        this.draggable = new Draggable(this.holder);
 
     }
 
@@ -325,6 +338,7 @@ export default class TokenDialog extends Dialog {
         const {
             start,
             holder,
+            draggable,
             entryTemplate
         } = this;
 
@@ -334,6 +348,8 @@ export default class TokenDialog extends Dialog {
 
         const characters = this.getCharacters();
         const isMultiple = characters.length > 1;
+
+        draggable.removeAllChildren();
 
         replaceContentsMany(
             holder,
@@ -356,6 +372,15 @@ export default class TokenDialog extends Dialog {
         this.setTitle(titleText);
         start.value = titleText;
         holder.classList.toggle("is-multiple", isMultiple);
+
+        if (isMultiple) {
+
+            holder.querySelectorAll(".js--token--item").forEach((child) => {
+                draggable.addChild(child);
+console.log("added %o; draggable = %o", child, draggable);
+            });
+
+        }
 
     }
 

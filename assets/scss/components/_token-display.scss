@@ -10,6 +10,14 @@
 
 .token-display__item {
     position: relative;
+
+    &.is-draggable {
+        cursor: move;
+    }
+
+    &.is-dragging {
+        opacity: 0.5;
+    }
 }
 
 .token-display__remove {

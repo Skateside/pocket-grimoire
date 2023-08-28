@@ -1,6 +1,7 @@
 export default class Draggable {
 
     static defaults = {
+        childClass: "is-draggable",
         dragClass: "is-dragging"
     };
 
@@ -66,6 +67,10 @@ export default class Draggable {
     // https://stackoverflow.com/a/28962290/557019
     isBefore(target, source) {
 
+        // if (!target || !source) {
+        //     return true;
+        // }
+
         if (target.parentNode === source.parentNode) {
 
             for (
@@ -123,6 +128,8 @@ export default class Draggable {
 
     addChild(child) {
 
+        child.classList.add(this.settings.childClass);
+        child.setAttribute("draggable", true);
         child.addEventListener("dragstart", this.onChildDragStart);
         child.addEventListener("dragend", this.onChildDragEnd);
         this.children.add(child);
@@ -139,10 +146,16 @@ export default class Draggable {
             return;
         }
 
+        child.classList.remove(this.settings.childClass);
+        child.removeAttribute("draggable");
         child.removeEventListener("dragstart", this.onChildDragStart);
         child.removeEventListener("dragend", this.onChildDragEnd);
         children.delete(child);
 
+    }
+
+    removeAllChildren() {
+        [...this.children].forEach((child) => this.removeChild(child));
     }
 
 }
