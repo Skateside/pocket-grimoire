@@ -114,3 +114,21 @@ export function times(number, handler, context) {
 export function toRadians(degrees) {
     return (Math.PI / 180) * degrees;
 }
+
+/**
+ * Checks to see if the given value is numeric. This is not necessarily the same
+ * as being a number because a numeric string would return true.
+ *
+ * @param  {?} value
+ *         Value to check.
+ * @return {Boolean}
+ *         true if the given value is a number or numeric string, false
+ *         otherwise.
+ */
+export function isNumeric(value) {
+
+    const parsed = window.parseFloat(value);
+
+    return !Number.isNaN(parsed) && Number.isFinite(parsed);
+
+}

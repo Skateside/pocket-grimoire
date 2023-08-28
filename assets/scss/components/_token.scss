@@ -10,6 +10,7 @@
     font-family: inherit;
     font-size: inherit;
     line-height: inherit;
+    transform-origin: 0 0;
 
     &[data-token="character"] {
         width: clamp(70px, 100vw / 6, 150px);

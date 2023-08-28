@@ -164,6 +164,16 @@
         </fieldset>
         {% endfor %}
 
+        <p>
+            <label for="token-layout">Layout</label>
+            <select name="token-layout" id="token-layout" class="input">
+                <option value="ellipse">Ellipse</option>
+                <option value="diagonal">Diagonal</option>
+                <option value="horizontal">Horizontal</option>
+                <option value="vertical">Vertical</option>
+            </select>
+        </p>
+
         <ul class="button-list">
             <li><button type="submit" class="button button--full-height">{{ 'setup.character_select.draw_characters'|trans }}</button></li>
             <li><button type="submit" class="button button--full-height" id="player-select-all">{{ 'setup.character_select.add_all'|trans }}</button></li>
