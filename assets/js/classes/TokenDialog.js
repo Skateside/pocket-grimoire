@@ -287,7 +287,7 @@ export default class TokenDialog extends Dialog {
         this.setTitle(
             isMultiple
             ? this.getMultipleTitle()
-            : characters[0].getName()
+            : (characters[0]?.getName() || "")
         );
         holder.classList.toggle("is-multiple", isMultiple);
 
