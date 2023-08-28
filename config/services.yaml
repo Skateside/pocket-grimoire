@@ -29,3 +29,8 @@ services:
     App\Model\GameModel:
         bind:
             string $configDir: '%kernel.project_dir%/config'
+            string $fileName: 'game.yaml'
+    App\Model\LocaleModel:
+        bind:
+            string $configDir: '%kernel.project_dir%/config'
+            string $fileName: 'locales.yaml'

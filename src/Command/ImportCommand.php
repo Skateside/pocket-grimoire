@@ -16,6 +16,7 @@ use App\Entity\Edition;
 use App\Repository\EditionRepository;
 use App\Entity\Jinx;
 use App\Repository\JinxRepository;
+use App\Model\LocaleModel;
 
 class ImportCommand extends Command
 {
@@ -23,22 +24,6 @@ class ImportCommand extends Command
     protected static $defaultName = 'pocket-grimoire:import';
 
     private const DEFAULT_LOCALE = 'en_GB';
-
-    protected static $locales = [
-        'de_DE',
-        'es_AR',
-        'fr_FR',
-        'he_IL',
-        'ja_JP',
-        'nb_NO',
-        'nn_NO',
-        'pt_BR',
-        'ru_RU',
-        'sv_SE',
-        'vi_VI',
-        'zh_CN',
-        'zh_TW'
-    ];
 
     // The order matters. Teams must be imported first, then characters, then jinxes.
     protected static $types = [
@@ -53,13 +38,15 @@ class ImportCommand extends Command
     private $roleRepo;
     private $editionRepo;
     private $cache = [];
+    private $localeModel;
 
     public function __construct(
         EntityManagerInterface $em,
         TeamRepository $teamRepo,
         RoleRepository $roleRepo,
         EditionRepository $editionRepo,
-        JinxRepository $jinxRepo
+        JinxRepository $jinxRepo,
+        LocaleModel $localeModel
     ) {
 
         $this->em = $em;
@@ -72,6 +59,7 @@ class ImportCommand extends Command
             'roles' => [],
             'editions' => []
         ];
+        $this->localeModel = $localeModel;
 
         parent::__construct();
 
@@ -112,7 +100,10 @@ class ImportCommand extends Command
         $this->io = new SymfonyStyle($input, $output);
         $addNew = in_array(strtolower($input->getOption('new')), ['yes', 'y', '1']);
         $types = $this->interpretOption($input->getOption('type'), self::$types);
-        $locales = $this->interpretOption($input->getOption('locale'), self::$locales);
+        $locales = $this->interpretOption(
+            $input->getOption('locale'),
+            $this->localeModel->getLocaleCodes([self::DEFAULT_LOCALE])
+        );
         $table = [];
 
         $labelSize = array_reduce($types, function ($carry, $type) {

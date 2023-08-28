@@ -5,21 +5,8 @@ namespace App\Model;
 use Symfony\Component\Config\FileLocator;
 use Symfony\Component\Yaml\Yaml;
 
-class GameModel
+class GameModel extends YamlModel
 {
-
-    private $fileLocator;
-
-    public function __construct(string $configDir)
-    {
-        $this->fileLocator = new FileLocator($configDir);
-    }
-
-    public function getData(): array
-    {
-        $file = $this->fileLocator->locate('game.yaml');
-        return Yaml::parse(file_get_contents($file));
-    }
 
     public function getFeed(): array
     {
