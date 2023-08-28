@@ -2,6 +2,8 @@ import Pad from "../../classes/Pad.js";
 import Positioner from "../../classes/Positioner.js";
 import Observer from "../../classes/Observer.js";
 import ReminderToken from "../../classes/ReminderToken.js";
+import Dialog from "../../classes/Dialog.js";
+import TokenStore from "../../classes/TokenStore.js";
 import {
     lookup,
     lookupOne,
