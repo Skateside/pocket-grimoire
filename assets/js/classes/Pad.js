@@ -3,10 +3,15 @@ import Template from "./Template.js";
 import Observer from "./Observer.js";
 import CharacterToken from "./CharacterToken.js";
 import ReminderToken from "./ReminderToken.js";
+import Positioner from "./Positioner.js";
+import TokenStore from "./TokenStore.js";
 import {
     lookupOne,
     lookupOneCached
 } from "../utils/elements.js";
+import {
+    isNumeric
+} from "../utils/numbers.js";
 
 /**
  * Handles tokens being added to the main pad section.
@@ -89,22 +94,42 @@ export default class Pad {
          */
         this.reminders = [];
 
+        /**
+         * The positioner that will lay out the tokens automatically.
+         * @type {Positioner}
+         */
+        this.positioner = null;
+
+        /**
+         * The co-ordinates for each of the tokens.
+         * @type {Array.<Array>}
+         */
+        this.coords = [];
+
+        /**
+         * The TokenStore that wil be used for working out the dimensions of the
+         * tokens, so that co-ordinates can be correctly calculated.
+         * @type {TokenStore}
+         */
+        this.tokenStore = null;
+
     }
 
     /**
-     * Adds a character to the {@link Pad#element}.
+     * Adds a character to the {@link Pad#element}. This method is for internal
+     * use only because it doesn't trigger any events - use
+     * {@link Pad#addCharacter} instead.
      *
      * @param  {CharacterToken} character
      *         The character to add.
      * @return {Object}
      *         An object with the token and the character that was added.
      */
-    addCharacter(character) {
+    drawCharacter(character) {
 
         const {
             element,
             characters,
-            observer,
             template
         } = this;
 
@@ -126,7 +151,23 @@ export default class Pad {
         });
 
         characters.push(info);
-        observer.trigger("character-add", info);
+
+        return info;
+
+    }
+
+    /**
+     * Adds a character to the {@link Pad#element}.
+     *
+     * @param  {CharacterToken} character
+     *         The character to add.
+     * @return {Object}
+     *         An object with the token and the character that was added.
+     */
+    addCharacter(character) {
+
+        const info = this.drawCharacter(character);
+        this.observer.trigger("character-add", info);
 
         return info;
 
@@ -144,20 +185,30 @@ export default class Pad {
     addNewCharacter(character) {
 
         const {
-            element,
             tokens,
-            characters
+            characters,
+            coords,
+            constructor: {
+                OFFSET
+            }
         } = this;
+
+        if (!coords) {
+            throw new Error("Co-ordinates have not been generated");
+        }
+
         const info = this.addCharacter(character);
-        const offset = Math.max(
-            this.constructor.OFFSET,
-            element.offsetWidth / 25
-        );
+
+        const index = characters.length - 1;
+        const [
+            left,
+            top
+        ] = (coords?.[index] || [OFFSET * index, OFFSET, index]);
 
         tokens.moveTo(
             info.token,
-            characters.length * offset,
-            offset,
+            left,
+            top,
             tokens.advanceZIndex()
         );
 
@@ -194,16 +245,18 @@ export default class Pad {
     }
 
     /**
-     * Removes a character from {@link Pad#element}
+     * Removes a character from {@link Pad#element}. This method is for internal
+     * use only because it doesn't trigger the events - use
+     * {@link Pad#removeCharacter} instead.
      *
      * @param {CharacterToken} character
      *        The character to remove.
      */
-    removeCharacter(character) {
+    undrawCharacter(character) {
 
         const {
             characters,
-            observer
+            preserveReference
         } = this;
         const index = characters
             .findIndex((info) => info.character === character);
@@ -218,14 +271,32 @@ export default class Pad {
 
         token.remove();
 
-        if (!this.preserveReference) {
+        if (!preserveReference) {
             characters.splice(index, 1);
         }
 
-        observer.trigger("character-remove", {
-            character,
-            token
-        });
+        return token;
+
+    }
+
+    /**
+     * Removes a character from {@link Pad#element}.
+     *
+     * @param {CharacterToken} character
+     *        The character to remove.
+     */
+    removeCharacter(character) {
+
+        const token = this.undrawCharacter(character);
+
+        if (token) {
+
+            this.observer.trigger("character-remove", {
+                character,
+                token
+            });
+
+        }
 
     }
 
@@ -606,6 +677,159 @@ export default class Pad {
      */
     setZIndex(zIndex) {
         this.tokens.setZIndex(zIndex);
+    }
+
+    /**
+     * Sets the positioner that will place the tokens correctly.
+     *
+     * @param {Positioner} positioner
+     *        Positioner that will correctly place the tokens.
+     */
+    setPositioner(positioner) {
+        this.positioner = positioner;
+    }
+
+    /**
+     * Generates the co-ordinates for each of the tokens and stores them in
+     * {@link Pad#coords}
+     */
+    generateCoords() {
+        this.coords = this.positioner.generateCoords();
+    }
+
+    /**
+     * Works out the dimensions of {@link Par#element} in pixels.
+     *
+     * @return {Object}
+     *         An object with width and height properties.
+     */
+    getPadDimensions() {
+
+        const {
+            width,
+            height
+        } = this.element.getBoundingClientRect();
+
+        return {
+            width,
+            height
+        };
+
+    }
+
+    /**
+     * Sets {@link Pad#tokenStore}.
+     *
+     * @param {TokenStore}
+     *        The token store.
+     */
+    setTokenStore(tokenStore) {
+        this.tokenStore = tokenStore;
+    }
+
+    /**
+     * Gets the dimensions of a token, including its drop shadow.
+     *
+     * @return {Object}
+     *         An object with width and height properties.
+     */
+    getTokenDimensions() {
+
+        const dimensions = {
+            width: 0,
+            height: 0
+        };
+
+        if (!this.tokenStore) {
+
+            console.warn("Cannot test dimensions because tokenStore is not set");
+            return dimensions;
+
+        }
+
+        const noCharacter = this.tokenStore.getEmptyCharacter();
+        const {
+            token
+        } = this.drawCharacter(noCharacter);
+        const {
+            width: tokenWidth,
+            height: tokenHeight
+        } = token.getBoundingClientRect();
+
+        // Add the shadow.
+
+        const scale = Number(
+            window.getComputedStyle(token, null).getPropertyValue("--token-size")
+            || 1
+        );
+        const tokenCharacter = token.querySelector(".js--character");
+        const styles = window.getComputedStyle(tokenCharacter, null);
+
+        const shadowOffset = styles.getPropertyValue("--shadow-offset");
+        let shadowAmount = parseFloat(shadowOffset) * scale;
+
+        if (shadowOffset.trim().replace(/[\d\.]/g, "") === "em") {
+            shadowAmount *= parseFloat(styles.getPropertyValue("font-size"));
+        }
+
+        dimensions.width = tokenWidth + shadowAmount;
+        dimensions.height = tokenHeight + shadowAmount;
+
+        this.undrawCharacter(noCharacter);
+
+        return dimensions;
+
+    }
+
+    /**
+     * Updates {@link Pad#positioner} with the details that have been passed in
+     * before re-generating the co-ordinates.
+     *
+     * @param  {Object} settings
+     *         Settings to use to update the positioner.
+     * @param  {Boolean} [settings.container]
+     *         true if the container size should be sent to the positioner.
+     * @param  {Boolean} [settings.tokens]
+     *         true if the token size should be sent to the positioner.
+     * @param  {Number|String} [settings.total]
+     *         The total number of tokens expected.
+     * @param  {String} [settings.layout]
+     *         The layout that should be used to position the tokens.
+     * @param  {Boolean} [settings.generate = true]
+     *         Whether or not to re-generate the co-ordinates.
+     * @throws {ReferenceError}
+     *         {@link Pad#positioner} must be set before this function is used.
+     */
+    updatePositioner({ container, tokens, total, layout, generate = true }) {
+
+        const {
+            positioner
+        } = this;
+
+        if (!positioner) {
+            throw new ReferenceError("The positioner has not been set");
+        }
+
+        if (container) {
+            positioner.setContainerSize(this.getPadDimensions());
+        }
+
+        if (tokens) {
+            positioner.setTokenSize(this.getTokenDimensions());
+        }
+
+        if (layout) {
+            positioner.setLayout(layout);
+        }
+
+        if (total && isNumeric(total)) {
+            positioner.setTotal(total);
+        }
+
+        if (generate) {
+            this.generateCoords();
+        }
+
     }
 
 }

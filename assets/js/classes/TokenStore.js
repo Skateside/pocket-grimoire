@@ -320,6 +320,16 @@ export default class TokenStore {
     }
 
     /**
+     * Returns an empty character.
+     *
+     * @return {CharacterToken}
+     *         A clone of an empty character.
+     */
+    getEmptyCharacter() {
+        return this.getCharacterClone(this.constructor.EMPTY);
+    }
+
+    /**
      * Gets the reminder for the given ID.
      *
      * @param  {String} id

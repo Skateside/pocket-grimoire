@@ -27,7 +27,7 @@ const bluffs = Bluffs.create(
 
 TokenStore.ready((tokenStore) => {
 
-    const noCharacter = tokenStore.getCharacterClone(TokenStore.EMPTY);
+    const noCharacter = tokenStore.getEmptyCharacter();
 
     bluffs.setNoCharacter(noCharacter);
     bluffs.reset(false);

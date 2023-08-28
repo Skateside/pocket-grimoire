@@ -426,14 +426,15 @@ export default class Store {
             form,
             type,
             value,
-            checked
+            checked,
+            nodeName
         } = (input || {});
 
         if (!name || type === "file") {
             return;
         }
 
-        let selector = `input[name="${name}"]`;
+        let selector = `${nodeName.toLowerCase()}[name="${name}"]`;
         const isCheckbox = type === "checkbox";
 
         if (isCheckbox && input.hasAttribute("value")) {

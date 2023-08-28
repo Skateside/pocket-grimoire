@@ -366,12 +366,6 @@ lookupOne("#player-select").addEventListener("submit", (e) => {
 
 });
 
-// lookupOne("#player-select-all").addEventListener("click", () => {
-//
-//
-//
-// });
-
 tokenObserver.on("toggle-jinx-active", ({ detail }) => {
 
     const {

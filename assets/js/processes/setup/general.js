@@ -12,7 +12,6 @@ import {
 import {
     lookup,
     lookupOne,
-    lookupCached,
     lookupOneCached
 } from "../../utils/elements.js";
 import {
