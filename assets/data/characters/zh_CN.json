@@ -669,13 +669,13 @@
     },
     {
         "id": "harpy",
-        "name": "鹰身女妖",
-        "ability": "每天晚上，选择两名玩家：明天，第一名玩家因为第二名是邪恶的而生气，否则两人都可能会死。",
-        "firstNightReminder": "唤醒鹰身女妖； 他们指着一名球员，然后指着另一名球员。 唤醒鹰身女妖指向的第一个玩家，向他们展示“此角色选择了你”卡，向他们展示鹰身女妖令牌，然后指向鹰身女妖指向的第二个玩家。",
-        "otherNightReminder": "唤醒鹰身女妖； 他们指着一名球员，然后指着另一名球员。 唤醒鹰身女妖指向的第一个玩家，向他们展示“此角色选择了你”卡，向他们展示鹰身女妖令牌，然后指向鹰身女妖指向的第二个玩家。",
+        "name": "哈耳庇厄",
+        "ability": "个夜晚, 选择两名玩家: 明天, 第一位玩家必须表现得像他认为第二个玩家是邪恶玩家，否则他们都可能会死亡。",
+        "firstNightReminder": "唤醒哈耳庇俄; 他指向一位玩家, 然后指向另一位玩家。 唤醒哈耳庇俄指向的第一位玩家, 告知他被哈耳庇俄选中, 然后指向第二位玩家。",
+        "otherNightReminder": "唤醒哈耳庇俄; 他指向一位玩家, 然后指向另一位玩家。 唤醒哈耳庇俄指向的第一位玩家, 告知他被哈耳庇俄选中, 然后指向第二位玩家。",
         "reminders": [
-            "疯狂的",
-            "第二名"
+            "被洗脑",
+            "第二位"
         ]
     },
     {
@@ -701,9 +701,9 @@
     {
         "id": "highpriestess",
         "name": "大祭司",
-        "ability": "每天晚上，了解讲故事者认为您最应该与哪位玩家交谈。",
-        "firstNightReminder": "指向一名玩家。",
-        "otherNightReminder": "指向一名玩家。",
+        "ability": "夜晚，你会得知说书人认为你最应该去交流的玩家。",
+        "firstNightReminder": "指向一名玩家",
+        "otherNightReminder": "指向一名玩家",
         "remindersGlobal": [],
         "reminders": []
     },
@@ -796,8 +796,8 @@
     {
         "id": "knight",
         "name": "骑士",
-        "ability": "你开始认识 2 个不是恶魔的玩家。",
-        "firstNightReminder": "指向 2 名非恶魔玩家。",
+        "ability": "在你的首个夜晚，你会得知两名不是恶魔的玩家。",
+        "firstNightReminder": "指向两名玩家",
         "otherNightReminder": "",
         "remindersGlobal": [],
         "reminders": [
@@ -1049,13 +1049,13 @@
     },
     {
         "id": "organgrinder",
-        "name": "器官研磨机",
-        "ability": "所有玩家在投票时都闭上眼睛，投票结果是保密的。 只有在您投票时，您的选票才算数。",
+        "name": "器官研磨者",
+        "ability": "所有玩家在投票时闭眼，且总投票数不公开。针对你的投票只有在你投票时才计数。",
         "firstNightReminder": "",
         "otherNightReminder": "",
         "remindersGlobal": [],
         "reminders": [
-            "快死了"
+            "即将死亡"
         ]
     },
     {
@@ -1103,12 +1103,12 @@
     {
         "id": "plaguedoctor",
         "name": "瘟疫医生",
-        "ability": "如果你死了，故事讲述者将获得非游戏中的小兵能力。",
+        "ability": "如果你死亡，那么说书人将会获得一个不在场的爪牙的能力。",
         "firstNightReminder": "",
         "otherNightReminder": "",
         "remindersGlobal": [],
         "reminders": [
-            "讲故事的能力"
+            "说书人能力"
         ]
     },
     {
@@ -1400,9 +1400,9 @@
     },
     {
         "id": "steward",
-        "name": "管家",
-        "ability": "你开始认识一位优秀的球员。",
-        "firstNightReminder": "指向 1 个优秀的玩家。",
+        "name": "主管",
+        "ability": "在你的首个夜晚，你会得知一位善良阵营的玩家。",
+        "firstNightReminder": "指向一位善良阵营的玩家。",
         "otherNightReminder": "",
         "remindersGlobal": [],
         "reminders": [
@@ -1523,9 +1523,9 @@
     },
     {
         "id": "vizier",
-        "name": "宰相",
-        "ability": "所有玩家都知道你是谁。 你不能在白天死去。 如果投了好票，您可以选择立即执行。",
-        "firstNightReminder": "宣布“大臣在玩”并说明他们是哪位玩家。",
+        "name": "维齐尔",
+        "ability": "所有玩家知道你是维齐尔。你在白天无法死亡。如果任意一位善良阵营的玩家参与投票，你可以选择是否立即进行处决。",
+        "firstNightReminder": "宣布本次游戏有维齐尔在场，然后指向是维齐尔的玩家。",
         "otherNightReminder": "",
         "remindersGlobal": [],
         "reminders": []
