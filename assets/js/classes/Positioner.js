@@ -1,6 +1,5 @@
 import {
-    times,
-    toRadians
+    times
 } from "../utils/numbers.js";
 
 export default class Positioner {
@@ -11,7 +10,7 @@ export default class Positioner {
      */
     static layouts = {
 
-        // https://stackoverflow.com/a/26601039/557019
+        // https://stackoverflow.com/a/6972434
         ellipse(data) {
 
             const {
@@ -24,16 +23,27 @@ export default class Positioner {
             const coordinates = [];
             const radiusX = (width - tokenWidth) / 2;
             const radiusY = (height - tokenHeight) / 2;
-
-            times(total, (index) => {
-
-                const theta = toRadians((360 / total) * index);
-                coordinates[index] = [
-                    radiusX + radiusX * Math.sin(theta),
-                    radiusY - radiusY * Math.cos(theta)
-                ];
-
-            });
+            
+            function dp(radians) {
+                return Math.sqrt( (radiusX * Math.sin(radians)) ** 2 + (radiusY * Math.cos(radians)) ** 2 );
+            }
+            var precision = 0.001;
+            var offset = Math.PI * -0.5;
+            var circ = 0;
+            for (var radians = 0 + offset; radians < (Math.PI * 2 + offset); radians += precision) {
+                circ += dp(radians);
+            }
+            var nextPoint = 0;
+            var run = 0;
+            for (var radians = 0 + offset; radians < (Math.PI * 2 + offset); radians += precision) {
+                if ((total * run / circ) >= nextPoint) {
+                    nextPoint++;
+                    var pointX = radiusX + (Math.cos(radians) * radiusX);
+                    var pointY = radiusY + (Math.sin(radians) * radiusY);
+                    coordinates.push([pointX, pointY]);
+                }
+                run += dp(radians);
+            }
 
             return coordinates;
 
