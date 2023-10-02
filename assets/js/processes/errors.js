@@ -43,7 +43,11 @@ createScript("https://unpkg.com/highlight.run").then(() => {
 
     if (!user) {
 
-        user = window.crypto.randomUUID();
+        user = (
+            typeof window.crypto?.randomUUID === "function"
+            ? window.crypto.randomUUID()
+            : `user-${Date.now().toString(16)}-${Math.random().toString(16).slice(2)}`
+        );
         store.setUser(user);
 
     }

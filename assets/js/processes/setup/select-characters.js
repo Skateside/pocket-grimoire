@@ -357,7 +357,7 @@ lookupOne("#player-select").addEventListener("submit", (e) => {
 
         gameObserver.trigger("character-draw", {
             characters: filtered,
-            isShowAll: e.submitter.id === "player-select-all"
+            isShowAll: e.submitter?.id === "player-select-all"
         });
 
         Dialog.create(lookupOneCached("#character-select")).hide();
