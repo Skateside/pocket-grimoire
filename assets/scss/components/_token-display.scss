@@ -13,6 +13,7 @@
 
     &.is-draggable {
         cursor: move;
+        touch-action: none;
     }
 
     &.is-dragging {

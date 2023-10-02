@@ -377,7 +377,6 @@ export default class TokenDialog extends Dialog {
 
             holder.querySelectorAll(".js--token--item").forEach((child) => {
                 draggable.addChild(child);
-console.log("added %o; draggable = %o", child, draggable);
             });
 
         }
