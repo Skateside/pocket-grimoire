@@ -1339,6 +1339,15 @@
         ]
     },
     {
+        "id": "shugenja",
+        "name": "修验者",
+        "ability": "你开始知道你最近的邪恶玩家是顺时针还是逆时针。 如果等距，则该信息是任意的。",
+        "firstNightReminder": "唤醒修验者； 水平指向最近的邪恶玩家的方向。 如果两个最近的邪恶玩家等距，请将手指水平指向任一方向。",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
         "id": "slayer",
         "name": "杀手",
         "ability": "每局游戏限一次，在白天时，你可以公开选择一名玩家：如果那名玩家是恶魔，那么该玩家会死去。",

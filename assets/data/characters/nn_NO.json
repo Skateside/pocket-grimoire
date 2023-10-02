@@ -675,8 +675,8 @@
         "id": "harpy",
         "name": "Harpy",
         "ability": "Kvar natt, vel 2 spelarar: i morgon er den fyrste spelaren manisk den andre er vond, elles kan det hende båe døyr.",
-        "firstNightReminder": "Vekk Harpyen; dei peikar mot ein spelar, og så mot ein annan. Vekk den fyrste spelaren Harpyen peika mot, vis dei \"Denne rolla valde deg\"-kortet, vis dei Harpy-brikka, og peik så mot den andre spelaren Harpyen peika mot.",
-        "otherNightReminder": "Vekk Harpyen; dei peikar mot ein spelar, og så mot ein annan. Vekk den fyrste spelaren Harpyen peika mot, vis dei \"Denne rolla valde deg\"-kortet, vis dei Harpy-brikka, og peik så mot den andre spelaren Harpyen peika mot.",
+        "firstNightReminder": "Vekk Harpyen. Dei peikar mot ein spelar, og så mot ein annan. Vekk den fyrste spelaren Harpyen peika mot, vis dei \"Denne rolla valde deg\"-kortet, vis dei Harpy-brikka, og peik så mot den andre spelaren Harpyen peika mot.",
+        "otherNightReminder": "Vekk Harpyen. Dei peikar mot ein spelar, og så mot ein annan. Vekk den fyrste spelaren Harpyen peika mot, vis dei \"Denne rolla valde deg\"-kortet, vis dei Harpy-brikka, og peik så mot den andre spelaren Harpyen peika mot.",
         "remindersGlobal": [],
         "reminders": [
             "Manisk",
@@ -1108,13 +1108,13 @@
     },
     {
         "id": "plaguedoctor",
-        "name": "Pestdoktor",
-        "ability": "Hvis du dør, får historiefortelleren en Minion-evne som ikke er i spill.",
+        "name": "Pestlækjar",
+        "ability": "Om du døyr, tileignar Forteljaren seg evna til ein Lakei ikkje i spel.",
         "firstNightReminder": "",
         "otherNightReminder": "",
         "remindersGlobal": [],
         "reminders": [
-            "Fortellerevne"
+            "Forteljar har evne"
         ]
     },
     {
@@ -1326,7 +1326,7 @@
     {
         "id": "sentinel",
         "name": "Grensevakt",
-        "ability": "Det kan hende 1 flere eller 1 færre Einstøing er i spel.",
+        "ability": "Det kan hende 1 fleire eller 1 færre Einstøing er i spel.",
         "firstNightReminder": "",
         "otherNightReminder": "",
         "remindersGlobal": [],
@@ -1343,6 +1343,15 @@
             "Daud",
             "I live"
         ]
+    },
+    {
+        "id": "shugenja",
+        "name": "Shugenja",
+        "ability": "Du lærer innleiingsvis om den vonde spelaren nærast deg sit med eller mot klokka frå deg. Om to vonde spelarar båe er nærast, tek du imot vilkårleg kunnskap.",
+        "firstNightReminder": "Vekk Shugenjaen og peik vassrett i retning av den næraste vonde spelaren. Om dei to næraste vonde spelarane er like langt unna, vel du sjølv kva retning du peikar i.",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": []
     },
     {
         "id": "slayer",

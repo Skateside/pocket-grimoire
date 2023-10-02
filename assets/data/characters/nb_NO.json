@@ -675,8 +675,8 @@
         "id": "harpy",
         "name": "Harpy",
         "ability": "Hver natt, velg 2 spillere: i morgen er den første spilleren manisk den andre er ond, ellers kan det hende begge dør.",
-        "firstNightReminder": "Vekk Harpyen; de peker mot en spiller, og så mot en annen. Vekk den første spilleren Harpyen pekte mot, vis dem \"Denne rollen valgte deg\"-kortet, vis dem Harpy-brikken, og pek så mot den andre spilleren Harpyen pekte mot.",
-        "otherNightReminder": "Vekk Harpyen; de peker mot en spiller, og så mot en annen. Vekk den første spilleren Harpyen pekte mot, vis dem \"Denne rollen valgte deg\"-kortet, vis dem Harpy-brikken, og pek så mot den andre spilleren Harpyen pekte mot.",
+        "firstNightReminder": "Vekk Harpyen. De peker mot en spiller, og så mot en annen. Vekk den første spilleren Harpyen pekte mot, vis dem \"Denne rollen valgte deg\"-kortet, vis dem Harpy-brikken, og pek så mot den andre spilleren Harpyen pekte mot.",
+        "otherNightReminder": "Vekk Harpyen. De peker mot en spiller, og så mot en annen. Vekk den første spilleren Harpyen pekte mot, vis dem \"Denne rollen valgte deg\"-kortet, vis dem Harpy-brikken, og pek så mot den andre spilleren Harpyen pekte mot.",
         "remindersGlobal": [],
         "reminders": [
             "Manisk",
@@ -1108,13 +1108,13 @@
     },
     {
         "id": "plaguedoctor",
-        "name": "Pestdoktor",
-        "ability": "Hvis du dør, får historiefortelleren en Minion-evne som ikke er i spill.",
+        "name": "Pestlege",
+        "ability": "Om du dør, tilegner Fortelleren seg evnen til en Lakei ikke i spill.",
         "firstNightReminder": "",
         "otherNightReminder": "",
         "remindersGlobal": [],
         "reminders": [
-            "Fortellerevne"
+            "Forteller har evne"
         ]
     },
     {
@@ -1343,6 +1343,15 @@
             "Død",
             "I live"
         ]
+    },
+    {
+        "id": "shugenja",
+        "name": "Shugenja",
+        "ability": "Du lærer innledningsvis om din nærmeste onde spiller sitter med eller mot klokka fra deg. Om to onde spillere begge er nærmest, mottar du vilkårlig kunnskap.",
+        "firstNightReminder": "Vekk Shugenjaen og pek vannrett i retning av den nærmeste onde spilleren. Om de to nærmeste onde spillerne er like langt unna, velger du selv hvilken retning du peker i.",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": []
     },
     {
         "id": "slayer",

@@ -7,7 +7,7 @@
     {
         "target": "eviltwin",
         "trick": "plaguedoctor",
-        "reason": "Người kể chuyện không thể có được khả năng Evil Twin nếu Bác sĩ bệnh dịch hạch chết."
+        "reason": "Người kể chuyện không thể có chức năng của Sinh đôi xấu nếu Bác sĩ dịch hạch chết."
     },
     {
         "target": "butler",
@@ -42,7 +42,7 @@
     {
         "target": "goblin",
         "trick": "plaguedoctor",
-        "reason": "Nếu Bác sĩ bệnh dịch hạch chết, một Minion còn sống sẽ nhận được khả năng Goblin ngoài khả năng của chính chúng và học được điều này."
+        "reason": "Nếu Bác sĩ dịch hạch chết, một Tay sai còn sống sẽ nhận được chức năng của Goblin ngoài chức năng của họ và biết được điều này."
     },
     {
         "target": "leviathan",
@@ -142,7 +142,7 @@
     {
         "target": "spy",
         "trick": "plaguedoctor",
-        "reason": "Nếu Bác sĩ bệnh dịch hạch chết, một Minion còn sống sẽ có được khả năng Gián điệp bên cạnh khả năng của chính chúng và học được điều này."
+        "reason": "Nếu Bác sĩ dịch hạch chết, một Minion còn sống sẽ có chức năng của Gián điệp ngoài chức năng của họ và biết được điều này."
     },
     {
         "target": "spy",
@@ -187,17 +187,17 @@
     {
         "target": "scarletwoman",
         "trick": "plaguedoctor",
-        "reason": "Nếu Bác sĩ bệnh dịch hạch chết, một Minion còn sống sẽ nhận được khả năng Scarlet Woman bên cạnh khả năng của chính họ và học được điều này."
+        "reason": "Nếu Bác sĩ dịch hạch chết, một Minion còn sống sẽ có chức năng của Phụ nữ đỏ ngoài chức năng của họ và biết được điều này."
     },
     {
         "target": "boomdandy",
         "trick": "plaguedoctor",
-        "reason": "Nếu Bác sĩ bệnh dịch hạch bị hành quyết và Người kể chuyện sẽ có được khả năng Boomdandy, khả năng Boomdandy sẽ kích hoạt ngay lập tức."
+        "reason": "Nếu Bác sĩ dịch hạch bị hành quyết và Người kể chuyện sẽ có chức năng của Kẻ giữ bom, chức năng của Kẻ giữ bom sẽ được kích hoạt ngay lập tức."
     },
     {
         "target": "fearmonger",
         "trick": "plaguedoctor",
-        "reason": "Nếu Bác sĩ bệnh dịch hạch chết, một Minion còn sống sẽ nhận được khả năng Fearmonger ngoài khả năng của chính chúng và học được điều này."
+        "reason": "Nếu Bác sĩ dịch hạch chết, một Minion còn sống sẽ có chức năng của Kẻ gây hãi ngoài chức năng của họ và biết được điều này."
     },
     {
         "target": "baron",
@@ -207,7 +207,7 @@
     {
         "target": "baron",
         "trick": "plaguedoctor",
-        "reason": "Nếu Người kể chuyện có được khả năng Baron, tối đa hai người chơi sẽ trở thành Người ngoài cuộc."
+        "reason": "Nếu Người kể chuyện có được khả năng của Nam tước, tối đa hai người sẽ trở thành Lữ khách."
     },
     {
         "target": "marionette",
@@ -237,7 +237,7 @@
     {
         "target": "marionette",
         "trick": "plaguedoctor",
-        "reason": "Nếu Ác ma có một người hàng xóm còn sống và Người dân thị trấn hoặc Người ngoài cuộc khi Bác sĩ bệnh dịch chết, người chơi đó sẽ trở thành một Marionette độc ác. Nếu đã có thêm một người chơi ác thì điều này sẽ không xảy ra."
+        "reason": "Nếu Quỷ có hàng xóm còn sống và là Dân làng hoặc là Lữ khách, người đó trở thành con rỗi xấu. Trường hợp đã có thêm 1 người xấu thì điều đó không bao giờ xảy ra."
     },
     {
         "target": "marionette",
@@ -432,7 +432,7 @@
     {
         "target": "vizier",
         "trick": "courtier",
-        "reason": "Nếu Tể tướng mất khả năng của mình, họ sẽ biết được điều này và nếu Tể tướng bị hành quyết khi họ còn chức năng, phe của họ thắng."
+        "reason": "Nếu Tể tướng mất chức năng của mình, họ sẽ biết được điều này và nếu Tể tướng bị hành quyết khi họ còn chức năng, phe của họ thắng."
     },
     {
         "target": "vizier",
@@ -452,6 +452,6 @@
     {
         "target": "vizier",
         "trick": "preacher",
-        "reason": "Nếu Tể tướng mất khả năng của mình, họ sẽ biết được điều này và nếu Tể tướng bị hành quyết khi họ còn chức năng, phe của họ thắng."
+        "reason": "Nếu Tể tướng mắt chức năng của mình, họ sẽ biết được điều này và nếu Tể tướng bị hành quyết khi họ còn chức năng, phe của họ thắng."
     }
 ]

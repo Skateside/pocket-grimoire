@@ -2321,5 +2321,19 @@
         "setup": false,
         "ability": "If you die, the Storyteller gains a not-in-play Minion ability.",
         "image": "/build/img/icon/outsider/plaguedoctor.png"
+    },
+    {
+        "id": "shugenja",
+        "name": "Shugenja",
+        "edition": "",
+        "team": "townsfolk",
+        "firstNight": 33,
+        "firstNightReminder": "Wake the Shugenja; point horizontally in the direction of the closest evil player. If the two closest evil players are equidistant, point your finger horizontally in either direction.",
+        "otherNight": 0,
+        "otherNightReminder": "",
+        "reminders": [],
+        "setup": false,
+        "ability": "You start knowing if your closest evil player is clockwise or anti-clockwise. If equidistant, this info is arbitrary.",
+        "image": "/build/img/icon/townsfolk/shugenja.png"
     }
 ]
