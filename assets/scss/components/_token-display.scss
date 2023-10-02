@@ -10,6 +10,15 @@
 
 .token-display__item {
     position: relative;
+
+    &.is-draggable {
+        cursor: move;
+        touch-action: none;
+    }
+
+    &.is-dragging {
+        opacity: 0.5;
+    }
 }
 
 .token-display__remove {
@@ -30,4 +39,24 @@
             right: auto;
         }
     }
+}
+
+.token-display__title[aria-hidden="true"] {
+    opacity: 0;
+    position: absolute;
+    z-index: -1;
+}
+
+.token-display__input {
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    display: inline;
+    font-family: inherit;
+    color: inherit;
+    line-height: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    text-shadow: inherit;
+    width: calc((var(--width, 100) * 1px) + 1.34em);
 }

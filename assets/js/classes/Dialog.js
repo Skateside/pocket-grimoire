@@ -119,8 +119,16 @@ export default class Dialog {
             attributeFilter: ["open"]
         });
 
-        this.addListeners();
+        this.run();
 
+    }
+
+    /**
+     * Processes everything that would need to happen when the dialog instance
+     * is created. This allows us to subclass {@link Dialog} more easily.
+     */
+    run() {
+        this.addListeners();
     }
 
     /**
