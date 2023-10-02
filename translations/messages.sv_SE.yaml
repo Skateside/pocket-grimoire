@@ -76,7 +76,7 @@ setup:
         draw_characters: Dra roller
         add_all: Lägg till alla
         layout: Layout
-        ellipse: Ellips
+        ellipse: Elliptisk
         diagonal: Diagonal
         horizontal: Horisontell
         vertical: Vertikal
@@ -197,7 +197,7 @@ jinxes:
 night_order:
     title: Nattordning
     first_night: Första natten
-    other_night: Andra nätter
+    other_night: Övriga nätter
     swipe_change: Svep för att ändra natt
     show: Visa roller som inte är i spel
 
@@ -205,7 +205,7 @@ info_tokens:
     title: Infobrickor
     info_tokens:
         isdemon: Det här är <strong>Demonen</strong>
-        isminion: De här är dina <strong>Hantlangare</strong>
+        isminion: Det här är dina <strong>Hantlangare</strong>
         notinplay: De här rollerna är <strong>inte i spel</strong>
         nominatetoday: <strong>Nominerade</strong> du idag?
         playeris: <strong>Den här spelaren</strong> är
