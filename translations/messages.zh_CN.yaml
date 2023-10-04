@@ -1,4 +1,4 @@
-title: 袖珍魔典
+title: 口袋魔典
 
 forms:
     file:
@@ -10,18 +10,18 @@ dialog:
 
 index:
     title: 游戏
-    description: 钟楼上的鲜血的虚拟魔典
+    description: 《染·钟楼谜团》虚拟魔典
 
 sheet:
-    title: 字符表
-    description: 本期《血染钟楼》人物卡
-    jinx: 金克斯
-    each_night: '* 除第一个夜晚阶段之外的每个夜晚阶段。'
-    get_qr_code: 获取此工作表的二维码
-    get_sheet: 获取此表
-    credit:  <a href="https://bloodontheclocktower.com/" target="_blank" rel="noopener noreferrer">《血染钟楼》</a> 是 Steven Medway 的商标，<a href="https:// www.thepandemoniuminstitute.com/" target="_blank" rel="noopener noreferrer">Pandemonium Institute</a>
-    breakdown: 每队的人数为球员人数。
-    count_plus: "%count%+"
+    title: 角色列表
+    description: 此《染·钟楼谜团》剧本的角色列表
+    jinx: 相克规则
+    each_night: '*不包括首个夜晚'
+    get_qr_code: 获取此角色列表的二维码
+    get_sheet: 获取此角色列表
+    credit: <a href="https://bloodontheclocktower.com/" target="_blank" rel="noopener noreferrer">Blood on the Clocktower</a>是Steven Medway和<a href="https://www.thepandemoniuminstitute.com/" target="_blank" rel="noopener noreferrer">The Pandemonium Institute</a>的商标。
+    breakdown: 玩家人数对应的各角色类型的角色数量。
+    count_plus: '%count%+'
 
 groups:
     players: 玩家
@@ -33,95 +33,94 @@ groups:
     fabled: 传奇角色
 
 messages:
-    good_team: 善良
-    evil_team: 邪恶
-    empty_character_ability: 这是一个空字符。
-    version_change_message: 此应用程序已更新其版本。由于您的数据可能不正确，我们建议您清除《清除缓存》对话框中的所有内容。按《确定》打开对话框或按《取消》关闭此消息。
-    invalid_script: 脚本格式未被识别。
-    no_characters: 该脚本不包含任何可识别的字符。
-    invalid_data: 无效数据。
-    no_data: 没有发送数据。
-    player_name: 这个玩家叫什么名字？
-    custom_info_token: "你想让你的新信息令牌说什么？ 使用**双星号**强调文本。"
+    good_team: 善良阵营
+    evil_team: 邪恶阵营
+    empty_character_ability: 这是一个空角色。
+    version_change_message: 此应用程序已更新版本。由于您的数据可能出错，建议您在“清除缓存”对话框中选择清除所有缓存。按“确定”键打开对话框，或按“取消”键关闭此消息。
+    invalid_script: 无法识别这个剧本的格式。
+    no_characters: 这个剧本中没有可识别的角色。
+    player_name: 这名玩家的名称是？
+    custom_info_token: 新的信息标记的内容是？使用**两个星号**加粗文本。
 
 setup:
 
     title: 设置
 
     buttons:
-        select_edition: 选择版本
-        select_characters: 选择字符
-        qr_code_button: 字符表
+        select_edition: 选择剧本
+        select_characters: 选择角色
+        qr_code_button: 角色列表
         clear_cache_button: 清除缓存
         language: 语言
-        set_language: 设置语言
+        set_language: 语言设置
 
     editions:
-        title: 选择版本
+        title: 选择剧本
         trouble_brewing: 暗流涌动
         bad_moon_rising: 黯月初升
-        sects_and_violets: 梦殒春宵
-        custom_script: 自定义脚本
-        custom_note: 上传自定义脚本或输入自定义脚本的 URL。
-        custom_warning: 仅从您信任的来源加载自定义 JSON 文件！
-        upload: 上传自定义脚本
+        sects_and_violets: 梦陨春宵
+        custom_script: 自定义剧本
+        custom_note: 请上传自定义剧本或输入自定义剧本的网址。
+        custom_warning: 请只从您信任的来源加载自定义JSON文件！
+        upload: 上传自定义剧本
         url: 输入网址
+        unsupported: 请注意：口袋魔典目前不支持自制剧本和本地化剧本。
         select: 选择
 
     character_select:
-        title: 选择字符
+        title: 选择角色
         number_players: 玩家人数
         toggle_abilities: 显示角色能力
-        toggle_duplicates: 允许重复字符
-        highlight_random: 随机突出显示
-        draw_characters: 绘制字符
+        toggle_duplicates: 允许重复角色
+        highlight_random: 随机角色
+        draw_characters: 抽取角色
         add_all: 全部添加
         layout: 布局
         ellipse: 椭圆
         diagonal: 对角线
-        horizontal: 水平的
-        vertical: 垂直的
+        horizontal: 水平
+        vertical: 垂直
 
     character_choice:
-        title: 选择你的角色
-        description: 点击任何编号的标记来选择你的角色。已经选择了较暗的。
+        title: 抽取你的角色
+        description: 点击任意标有数字的标记以抽取角色。变暗的标记代表已被抽取。
 
     character_decision:
-        title: 记住你的性格
-        name: 给自己起个名字（可选）
-        return: 返回字符选择
+        title: 记住你的角色
+        name: 你的名称（可选）
+        return: 返回抽取角色
 
     qr_code:
-        title: 字符表
-        intro: 扫描此二维码查看字符表
-        include: '包括：'
+        title: 角色列表
+        intro: 扫描此二维码以查看角色列表
+        include: 包含：
         travellers: 旅行者
         fabled: 传奇角色
 
     clear_cache:
         title: 清除缓存
-        clear_all: 清除一切
-        clear_description: 关闭此功能将允许清除缓存的个别部分。
+        clear_all: 清除所有缓存
+        clear_description: 如果关闭此项，可以选择清除特定的缓存项目。
         lookup_label: 清除数据
-        lookup_note: 恶作剧、团队分解和角色信息的数据。
-        characters_label: 清除版
-        characters_note: 已选择并加载的版本或脚本。
-        tokens_label: 清除令牌
-        tokens_note: 标记在魔典中的位置。
-        inputs_label: 清除输入
+        lookup_note: 角色信息和相克规则的数据。
+        characters_label: 清除剧本
+        characters_note: 已选择并加载的剧本。
+        tokens_label: 清除角色标记
+        tokens_note: 角色标记在魔典中的位置。
+        inputs_label: 清除用户设置
         inputs_note: 本网站的用户设置。
-        details_label: 清除打开/关闭
-        details_note: 哪些部分是打开或关闭的。
+        details_label: 重置展开/收起
+        details_note: 哪些部分是展开或收起的。
         info_tokens_label: 清除自定义信息标记
         info_tokens_note: 已添加的自定义信息标记。
-        names_label: 清楚的名字
-        names_note: 玩家命名建议。
-        height_label: 净焊盘高度
-        height_note: 魔法书中垫子的高度。
-        clear_refresh_label: 之后刷新
-        clear_refresh_note: 刷新将为已清除的任何内容加载新数据。
-        warning: "<strong>警告：</strong>任何放置在魔典上的标记都将被遗忘。"
-        info_token_warning: "<strong>警告：</strong>任何自定义信息标记都将被遗忘。"
+        names_label: 清除玩家名称
+        names_note: 玩家名称输入建议。
+        height_label: 重置魔典高度
+        height_note: 魔典的高度。
+        clear_refresh_label: 完成后刷新
+        clear_refresh_note: 刷新将为所有被清除或重置的内容加载新数据。
+        warning: <strong>警告：</strong>魔典中的所有标记都会移除。
+        info_token_warning: <strong>警告：</strong>所有自定义信息标记都会被移除。
         clear_cache: 清除缓存
 
 grimoire:
@@ -129,102 +128,102 @@ grimoire:
     title: 魔典
 
     grimoire:
-        bluffs: 恶魔虚张声势
-        show_bluffs: 显示所有诈唬
-        add_token: 添加令牌
-        add_reminder: 添加提醒
-        add_traveller: 添加旅客
-        show_tokens: 显示令牌
-        reset_height: 重置焊盘高度
-        clear_grimoire: 清除魔典
-        clear_grimoire_warning: 您确定要清除所有令牌吗？
-        show_night_order: 显示夜间订单
-        character_size: 字符标记大小
-        reminder_size: 提醒令牌大小
-        token_settings: 令牌设置
+        bluffs: 恶魔的伪装角色
+        show_bluffs: 显示所有伪装角色
+        add_token: 添加角色标记
+        add_reminder: 添加提示标记
+        add_traveller: 加入旅行者
+        show_tokens: 展示角色标记
+        reset_height: 重置魔典高度
+        clear_grimoire: 清空魔典
+        clear_grimoire_warning: 你确定要清除所有标记吗？
+        show_night_order: 显示夜晚顺序表
+        character_size: 角色标记大小
+        reminder_size: 提示标记大小
+        token_settings: 标记设置
 
     character_list:
-        title: 选择字符
+        title: 选择角色
 
     reminder_list:
-        title: 选择提醒
-        show: 显示所有提醒
+        title: 选择提示标记
+        show: 显示所有提示标记
 
     character_show:
         title: 角色标记
-        show: 显示
-        shroud: 裹尸布
-        rotate: 旋转
-        reminder: 提醒
-        replace: 代替
-        remove: 删除令牌
-        recent_reminders: '最近添加的提醒：'
-        player_name: 设置玩家姓名
+        show: 展示
+        shroud: 死亡标记
+        rotate: 倒置
+        reminder: 提示标记
+        replace: 替换
+        remove: 移除该角色标记
+        recent_reminders: 最近添加过的提示标记：
+        player_name: 设置玩家名称
 
     reminder_show:
-        title: 提醒
-        remove: 消除
+        title: 提示标记
+        remove: 移除
 
     bluff_show:
         title: 角色标记
-        empty: 空的
+        empty: 空
         show: 显示
-        change: 改变
+        change: 替换
 
     bluff_list:
-        title: 选择虚张声势
-        show_existing: 显示现有字符
-        show_travellers: 显示旅行者
-        show_evil: 显示邪恶的字符
+        title: 选择伪装角色
+        show_existing: 显示在场的角色
+        show_travellers: 显示旅行者角色
+        show_evil: 显示邪恶角色
 
     token_list:
-        title: 人物
-        add: 添加令牌
+        title: 角色
+        add: 添加角色标记
 
     traveller_list:
         title: 旅行者
-        show_all: 显示所有旅客
+        show_all: 显示全部旅行者角色
 
     token:
         title: 角色标记
 
 jinxes:
-    title: 厄运
-    target: 目标
-    trick: 诡计
-    reason: 原因
-    show: 显示恶作剧不在游戏中
+    title: 相克规则
+    target: 角色1
+    trick: 角色2
+    reason: 内容
+    show: 显示不在场的角色之间的相克规则
 
 night_order:
-    title: 夜间顺序表
+    title: 夜晚顺序表
     first_night: 首个夜晚
     other_night: 其他夜晚
-    swipe_change: 滑动以更改夜晚。
-    show: 显示不在游戏中的角色
+    swipe_change: 滑动以切换夜晚顺序表
+    show: 显示不在场的角色
 
 info_tokens:
-    title: 信息令牌
+    title: 信息标记
     info_tokens:
-        isdemon: 这是<strong>恶魔</strong>
-        isminion: 这些是你的<strong>爪牙</strong>
-        notinplay: 这些角色<strong>不在游戏中</strong>
+        isdemon: 他是<strong>恶魔</strong>
+        isminion: 他们是你的<strong>爪牙</strong>
+        notinplay: 这些角色<strong>不在场</strong>
         nominatetoday: 你今天<strong>提名</strong>了吗？
-        playeris: 这个<strong>播放器</strong>是
-        votetoday: 你今天<strong>投票</strong>了吗
-        youare: "<strong>你</strong>是"
+        playeris: <strong>他的角色</strong>是
+        votetoday: 你今天<strong>投票</strong>了吗？
+        youare: <strong>你</strong>是
         selectedyou: 这个角色<strong>选择</strong>了你
-    custom: 自定义信息令牌
-    add_custom: 添加信息令牌
-    edit_custom: 编辑信息令牌
-    delete_custom: 删除信息令牌
+    custom: 自定义信息标记
+    add_custom: 添加信息标记
+    edit_custom: 编辑信息标记
+    delete_custom: 删除信息标记
 
 acknowledgements:
     title: 致谢
     acknowledgements:
-        - <a href="https://bloodontheclocktower.com/" target="_blank" rel="noopener noreferrer">《血染钟楼》</a> 是 Steven Medway 的商标，<a href="https:// www.thepandemoniuminstitute.com/" target="_blank" rel="noopener noreferrer">Pandemonium Institute</a>。
-        - <a href="http://bignose.whitetree.org/projects/botc/diy/" target="_blank" rel="noopener noreferrer">Ben Finney</a> 撰写的夜间提醒和其他辅助文本。
-        - 图标取自 <a href="https://fontawesome.com/v5.15/icons" target="_blank" rel="noopener noreferrer">Font Awesome</a>。
-        - '许多图像和数据取自 <a href="https://www.clocktower.online" target="_blank" rel="noopener noreferrer">Clocktower.online</a> 和 <a href="https: //bloodontheclocktower.com/" target="_blank" rel="noopener noreferrer">《血染钟楼》 网站</a>。'
-        - 这是钟楼上的鲜血的非官方虚拟魔典。这个项目是免费的，源代码可以在 <a href="https://github.com/Skateside/pocket-grimoire" target="_blank" rel="noopener noreferrer">GitHub</a> 上找到。该项目不隶属于 Pandemonium Institute。如果您喜欢在钟塔上玩血，<a href="https://bloodontheclocktower.com/buy" target="_blank" rel="noopener noreferrer">请考虑购买自己的魔典</ a> - 除了比这个数字版本更灵活之外，它还支持创作者。
-        - 注意到错误或有改进建议？在非官方 Discord 服务器上的 <a href="https://discord.com/channels/569683781800296501/708509594758152203" target="_blank" rel="noopener noreferrer">toolmakers 频道</a>中告诉我（我的名字在《Skateside》上）或 <a href="https://github.com/Skateside/pocket-grimoire/issues" target="_blank" rel="noopener noreferrer">在 GitHub 中提出问题</a>.
+        - <a href="https://bloodontheclocktower.com/" target="_blank" rel="noopener noreferrer">Blood on the Clocktower</a>是Steven Medway和<a href="https://www.thepandemoniuminstitute.com/" target="_blank" rel="noopener noreferrer">The Pandemonium Institute</a>的商标。
+        - <a href="http://bignose.whitetree.org/projects/botc/diy/" target="_blank" rel="noopener noreferrer">Ben Finney</a>撰写了夜晚行动和其他辅助文本。
+        - 图标来自<a href="https://fontawesome.com/v5.15/icons" target="_blank" rel="noopener noreferrer">Font Awesome</a>。
+        - 许多图片和数据来自<a href="https://www.clocktower.online" target="_blank" rel="noopener noreferrer">Clocktower.online</a>和<a href="https://bloodontheclocktower.com/" target="_blank" rel="noopener noreferrer">Blood on the Clocktower website</a>官网。
+        - 这是一个《Blood on the Clocktower》的非官方虚拟魔典。此项目是免费项目，其源代码可以在<a href="https://github.com/Skateside/pocket-grimoire" target="_blank" rel="noopener noreferrer">GitHub</a>上获取。此项目与The Pandemonium Institute无关。如果您喜欢《Blood on the Clocktower》，<a href="https://www.gstonegames.com/game/info-13275.html" target="_blank" rel="noopener noreferrer">请考虑购买一个你自己的魔典</a>——它不仅比这个电子魔典更灵活，更能支持游戏创作者。
+        - 发现错误或是有改进建议？请在<a href="https://discord.com/channels/569683781800296501/708509594758152203" target="_blank" rel="noopener noreferrer">非官方Discord服务器的“toolmakers”频道</a>上告诉我（我的用户名是Skateside）或是<a href="https://github.com/Skateside/pocket-grimoire/issues" target="_blank" rel="noopener noreferrer">在GitHub上提出问题</a>。
         - <small>版本 <span id="version"></span></small>
