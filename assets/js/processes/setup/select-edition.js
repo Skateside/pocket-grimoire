@@ -279,10 +279,9 @@ function processJSON({
     }
 
     const name = extractMetaEntry(json);
-
-    const characters = json.map((item) => (
-        store.getCharacter(convertCharacterId(item))
-    ));
+    const characters = json
+        .map((item) => store.getCharacter(convertCharacterId(item)))
+        .filter(Boolean);
 
     if (!characters.length) {
 
