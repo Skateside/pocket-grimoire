@@ -24,34 +24,38 @@ function createScript(url) {
 
 const store = Store.create("pocket-grimoire");
 
-createScript("https://unpkg.com/highlight.run").then(() => {
+if (window.location.hostname !== "127.0.0.1") {
 
-    H.init("qe9xppe1", {
-        environment: window.ENVIRONMENT || "dev",
-        version: VERSION,
-        networkRecording: {
-            enabled: true,
-            recordHeadersAndBody: true,
-            urlBlocklist: [
-                "https://www.googleapis.com/identitytoolkit",
-                "https://securetoken.googleapis.com",
-            ],
-        },
+    createScript("https://unpkg.com/highlight.run").then(() => {
+
+        H.init("qe9xppe1", {
+            environment: window.ENVIRONMENT || "dev",
+            version: VERSION,
+            networkRecording: {
+                enabled: true,
+                recordHeadersAndBody: true,
+                urlBlocklist: [
+                    "https://www.googleapis.com/identitytoolkit",
+                    "https://securetoken.googleapis.com",
+                ],
+            },
+        });
+
+        let user = store.getUser();
+
+        if (!user) {
+
+            user = (
+                typeof window.crypto?.randomUUID === "function"
+                ? window.crypto.randomUUID()
+                : `user-${Date.now().toString(16)}-${Math.random().toString(16).slice(2)}`
+            );
+            store.setUser(user);
+
+        }
+
+        H.identify(user);
+
     });
 
-    let user = store.getUser();
-
-    if (!user) {
-
-        user = (
-            typeof window.crypto?.randomUUID === "function"
-            ? window.crypto.randomUUID()
-            : `user-${Date.now().toString(16)}-${Math.random().toString(16).slice(2)}`
-        );
-        store.setUser(user);
-
-    }
-
-    H.identify(user);
-
-});
+}
