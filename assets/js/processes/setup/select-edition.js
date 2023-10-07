@@ -347,6 +347,10 @@ form.addEventListener("submit", (e) => {
                 fetch(urlInput.value)
                     .catch((error) => showInputError(urlInput, error.message))
                     .then((response) => response.json())
+                    .catch(() => {
+                        showInputError(urlInput, I18N.invalidScript)
+                        return [];
+                    })
                     .then((json) => processJSON({
                         form,
                         json,
@@ -362,12 +366,24 @@ form.addEventListener("submit", (e) => {
                 //    them to be included. Noticed when trying to upload a
                 //    homebrew Spanish script.
 
-                reader.addEventListener("load", ({ target }) => processJSON({
-                    form,
-                    json: JSON.parse(readUTF8(target.result)), // [1]
-                    input: fileInput,
-                    store: tokenStore
-                }));
+                reader.addEventListener("load", ({ target }) => {
+
+                    let json = [];
+
+                    try {
+                        json = JSON.parse(readUTF8(target.result)); // [1]
+                    } catch (error) {
+                        return showInputError(fileInput, I18N.invalidScript);
+                    }
+
+                    processJSON({
+                        form,
+                        json,
+                        input: fileInput,
+                        store: tokenStore
+                    })
+
+                });
 
                 reader.readAsBinaryString(fileInput.files[0]);
 
