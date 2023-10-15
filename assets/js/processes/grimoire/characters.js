@@ -243,36 +243,38 @@ lookupOne("#character-remove").addEventListener("click", ({ target }) => {
 });
 
 // Update the night order on the tokens.
+// #72: Use objects rather than arrays to allow for decimals in night orders.
 const nightOrder = {
-    first: [],
-    other: []
+    first: Object.create(null),
+    other: Object.create(null)
 };
+
+function getSortedKeys(object) {
+    return Object.keys(object).sort((a, b) => Number(a) - Number(b));
+}
+
+function assignCounts(object, dataKey) {
+
+    let count = 0;
+
+    getSortedKeys(object).forEach((key) => {
+
+        const tokens = object[key];
+
+        count += 1;
+
+        tokens.forEach(({ token }) => {
+            Pad.getToken(token).dataset[dataKey] = count;
+        });
+
+    });
+
+}
 
 function updateTokens() {
 
-    let firstCount = 0;
-
-    nightOrder.first.forEach((tokens) => {
-
-        firstCount += 1;
-
-        tokens.forEach(({ token }) => {
-            Pad.getToken(token).dataset.firstNight = firstCount;
-        });
-
-    });
-
-    let otherCount = 0;
-
-    nightOrder.other.forEach((tokens) => {
-
-        otherCount += 1;
-
-        tokens.forEach(({ token }) => {
-            Pad.getToken(token).dataset.otherNight = otherCount;
-        });
-
-    });
+    assignCounts(nightOrder.first, "firstNight");
+    assignCounts(nightOrder.other, "otherNight");
 
 }
 
