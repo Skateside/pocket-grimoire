@@ -1045,6 +1045,17 @@
         ]
     },
     {
+        "id": "ojo",
+        "name": "Ojo",
+        "ability": "Chaque nuit*, choisissez un personnage : il meurt. S'ils ne sont pas en jeu, le conteur choisit qui meurt.",
+        "firstNightReminder": "",
+        "otherNightReminder": "L'Ojo désigne un personnage sur la feuille ; s'il est en jeu, ce joueur meurt. S'il n'est pas en jeu, le conteur choisit qui meurt à la place.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Assassiné"
+        ]
+    },
+    {
         "id": "oracle",
         "name": "Oracle",
         "ability": "Chaque nuit*, vous apprenez combien de joueurs morts sont maléfiques.",

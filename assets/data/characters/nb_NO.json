@@ -1045,6 +1045,17 @@
         ]
     },
     {
+        "id": "ojo",
+        "name": "Ojo",
+        "ability": "Hver natt*, velg en karakter: de dør. Hvis de ikke er i spill, velger historiefortelleren hvem som dør.",
+        "firstNightReminder": "",
+        "otherNightReminder": "Ojo-en peker på en karakter på arket; hvis i spill, dør den spilleren. Hvis det ikke er i spill, velger historiefortelleren hvem som dør i stedet.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Død"
+        ]
+    },
+    {
         "id": "oracle",
         "name": "Orakel",
         "ability": "Hver natt*, lær hvor mange døde spillere er onde.",

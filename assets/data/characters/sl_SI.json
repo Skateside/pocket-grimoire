@@ -1045,6 +1045,17 @@
         ]
     },
     {
+        "id": "ojo",
+        "name": "Ojo",
+        "ability": "Vsako noč* izberite lik: umrejo. Če niso v igri, Pripovedovalec izbere, kdo umre.",
+        "firstNightReminder": "",
+        "otherNightReminder": "Ojo kaže na lik na listu; če je v igri, ta igralec umre. Če ni v igri, Pripovedovalec izbere, kdo namesto njega umre.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Mrtev"
+        ]
+    },
+    {
         "id": "oracle",
         "name": "Videc",
         "ability": "Vsako noč* izveš, koliko mrtvih igralcev je zlobnih.",

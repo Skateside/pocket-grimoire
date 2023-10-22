@@ -1044,6 +1044,17 @@
         ]
     },
     {
+        "id": "ojo",
+        "name": "大條",
+        "ability": "每天晚上*，選擇一位玩家，該玩家死亡。 如果他們不在場，則由說故事的人選擇死亡。",
+        "firstNightReminder": "",
+        "otherNightReminder": "大條指向紙張上的一個字元； 如果在比賽中，該玩家死亡。 如果沒有進行，則故事講述者會選擇死亡的人。",
+        "remindersGlobal": [],
+        "reminders": [
+            "死亡"
+        ]
+    },
+    {
         "id": "oracle",
         "name": "預言家",
         "ability": "每天晚上*，你得知有多少死去的玩家是邪惡的。",

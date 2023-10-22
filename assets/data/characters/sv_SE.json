@@ -1045,6 +1045,17 @@
         ]
     },
     {
+        "id": "ojo",
+        "name": "Ojo",
+        "ability": "Välj en roll varje natt*; hen dör. Om rollen inte är i spel väljer berättaren vem som dör.",
+        "firstNightReminder": "",
+        "otherNightReminder": "Ojo pekar på en roll på sitt rollark; om rollen är i spel så dör den spelaren. Om rollen inte är i spel så väljer berättaren vem som dör istället.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Död"
+        ]
+    },
+    {
         "id": "oracle",
         "name": "Oraklet",
         "ability": "Varje natt* får du veta hur många döda spelare som är onda.",

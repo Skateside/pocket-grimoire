@@ -1043,6 +1043,17 @@
         ]
     },
     {
+        "id": "ojo",
+        "name": "Ojo",
+        "ability": "A cada noite*, escolha um personagem: ele morre. Se ele não estiver em jogo, o Narrador escolhe quem morre.",
+        "firstNightReminder": "",
+        "otherNightReminder": "O Ojo aponta para um personagem na lista; se estiver em jogo, aquele jogador morre. Se não estiver em jogo, o Narrador escolhe quem morre.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Morto"
+        ]
+    },
+    {
         "id": "oracle",
         "name": "Oráculo",
         "ability": "A cada noite*, você vê quantos jogadores mortos são maus.",
