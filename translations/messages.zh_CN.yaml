@@ -133,6 +133,7 @@ grimoire:
         add_token: 添加角色标记
         add_reminder: 添加提示标记
         add_traveller: 添加旅行者
+        add_fabled: 添加传奇角色
         show_tokens: 展示角色标记
         reset_height: 重置魔典高度
         clear_grimoire: 清空魔典
@@ -183,6 +184,9 @@ grimoire:
     traveller_list:
         title: 旅行者
         show_all: 显示全部旅行者角色
+
+    fabled_list:
+        title: 传奇角色
 
     token:
         title: 角色标记

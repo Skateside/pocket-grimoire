@@ -106,9 +106,9 @@ TokenStore.ready((tokenStore) => {
         }
 
         counts[characterId] += 1;
-
+console.log({ characterId, reminders: character.getReminders() })
         character.getReminders().forEach((reminder) => {
-
+console.log("lookupOne('[data-reminder-id=%o]', %o) = %o", reminder.getId(), list, lookupOne(`[data-reminder-id="${reminder.getId()}"]`, list));
             lookupOne(
                 `[data-reminder-id="${reminder.getId()}"]`,
                 list

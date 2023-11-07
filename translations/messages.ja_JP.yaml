@@ -20,7 +20,7 @@ sheet:
     get_qr_code: シートのQRコードを取得
     get_sheet: シートを取得
     credit: <a href="https://bloodontheclocktower.com/" target="_blank" rel="noopener noreferrer">Blood on the Clocktower</a> は Steven Medway および <a href="https://www.thepandemoniuminstitute.com/" target="_blank" rel="noopener noreferrer">The Pandemonium Institute</a> の登録商標です
-    breakdown:
+    breakdown: プレイヤー数に対する各チームの数字。
     count_plus: '%count%+'
 
 groups:
@@ -134,6 +134,7 @@ grimoire:
         add_token: トークンを追加
         add_reminder: リマインダーを追加
         add_traveller: 旅人を追加
+        add_fabled: 伝説を追加
         show_tokens: トークンを表示
         reset_height: パッドの高さをリセット
         clear_grimoire: グリモアをクリア
@@ -156,7 +157,7 @@ grimoire:
         shroud: 包む
         rotate: 回転
         reminder: リマインダー
-        replace:
+        replace: 交換する
         remove: トークンを取り除く
         recent_reminders: '直近に追加されたリマインダー:'
         player_name: プレイヤー名を設定
@@ -184,6 +185,9 @@ grimoire:
     traveller_list:
         title: 旅人
         show_all: 全ての旅人を表示
+
+    fabled_list:
+        title: 伝説
 
     token:
         title: トークン

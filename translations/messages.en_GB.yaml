@@ -135,6 +135,7 @@ grimoire:
         add_token: Add token
         add_reminder: Add reminder
         add_traveller: Add traveller
+        add_fabled: Add fabled
         show_tokens: Show tokens
         reset_height: Reset pad height
         clear_grimoire: Clear Grimoire
@@ -185,6 +186,9 @@ grimoire:
     traveller_list:
         title: Travellers
         show_all: Show all travellers
+
+    fabled_list:
+        title: Fabled
 
     token:
         title: Token
