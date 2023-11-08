@@ -9,19 +9,27 @@ import {
     replaceContentsMany
 } from "../../utils/elements.js";
 
+const gameObserver = Observer.create("game");
 const tokenObserver = Observer.create("token");
+
 
 // Include all the Fabled in the traveller list.
 
-TokenStore.ready((tokenStore) => {
+const homebrewFabled = [];
+const officialFabled = [];
+let characterTemplate = null;
 
-    const fabled = tokenStore
-        .getAllCharacters()
-        .filter((character) => character.getTeam() === "fabled");
+function populateFabled() {
 
-    const characterTemplate = Template.create(
-        lookupOneCached("#character-list-template")
-    );
+    const fabled = officialFabled.concat(homebrewFabled);
+
+    if (!characterTemplate) {
+
+        characterTemplate = Template.create(
+            lookupOneCached("#character-list-template")
+        );
+
+    }
 
     replaceContentsMany(
         lookupOneCached("#fabled-list__list"),
@@ -36,6 +44,31 @@ TokenStore.ready((tokenStore) => {
     );
 
     lookupOneCached("#add-fabled").disabled = false;
+
+}
+
+gameObserver.on("characters-selected", ({ detail }) => {
+
+    homebrewFabled.length = 0;
+
+    detail.characters
+        .filter((character) => character.getTeam() === "fabled")
+        .forEach((character) => homebrewFabled.push(character));
+
+    populateFabled();
+
+});
+
+TokenStore.ready((tokenStore) => {
+
+    officialFabled.length = 0;
+
+    tokenStore
+        .getAllCharacters()
+        .filter((character) => character.getTeam() === "fabled")
+        .forEach((character) => officialFabled.push(character));
+
+    populateFabled();
 
 });
 
