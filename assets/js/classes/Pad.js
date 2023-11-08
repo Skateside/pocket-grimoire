@@ -19,14 +19,6 @@ import {
 export default class Pad {
 
     /**
-     * The minimum offset for the tokens that are automatically added.
-     * @type {Number}
-     */
-    static get OFFSET() {
-        return 15;
-    }
-
-    /**
      * Returns the actual character token from the given token button.
      *
      * @param  {Element} button

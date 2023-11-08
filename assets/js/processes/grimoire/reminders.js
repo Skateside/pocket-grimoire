@@ -4,6 +4,7 @@ import TokenStore from "../../classes/TokenStore.js";
 import {
     empty,
     identify,
+    lookup,
     lookupOne,
     lookupOneCached
 } from "../../utils/elements.js";
@@ -19,7 +20,7 @@ function getCoords(element) {
 
 function addReminderQuick(target, tokenStore, coords) {
 
-    const button = target.closest("[data-reminder-id]");
+    const button = target?.closest("[data-reminder-id]");
 
     if (!button) {
         return;
@@ -38,12 +39,77 @@ function addReminderQuick(target, tokenStore, coords) {
 
 }
 
+function toggleReminder(target) {
+
+    const button = target.closest("[data-reminder-id]");
+    const checkbox = lookupOne(
+        `.js--reminder-list--checkbox[value="${button?.dataset.reminderId}"]`
+    );
+
+    if (!button || !checkbox) {
+        return;
+    }
+
+    checkbox.checked = !checkbox.checked;
+
+}
+
 TokenStore.ready((tokenStore) => {
+
+    let isAddMultiple = false;
 
     // Add a reminder to the page if it's clicked from the list.
     lookupOneCached("#reminder-list__list").addEventListener("click", ({ target }) => {
 
-        addReminderQuick(target, tokenStore, getCoords(reminderList));
+        if (isAddMultiple) {
+            toggleReminder(target);
+        } else {
+
+            addReminderQuick(target, tokenStore, getCoords(reminderList));
+            reminderListDialog.hide();
+
+        }
+
+    });
+
+    const multipleReminders = lookupOne("#multiple-reminders");
+    const addAllReminders = lookupOne(".js--reminder-list--multiple");
+
+    multipleReminders.addEventListener("change", () => {
+
+        const isNowAddMultiple = multipleReminders.checked;
+
+        isAddMultiple = isNowAddMultiple;
+        addAllReminders.hidden = !isNowAddMultiple;
+
+        if (!isNowAddMultiple) {
+
+            lookup(".js--reminder-list--checkbox").forEach((checkbox) => {
+                checkbox.checked = false;
+            });
+
+        }
+
+    });
+
+    addAllReminders.addEventListener("click", () => {
+
+        const coords = getCoords(reminderList) || { x: 0, y: 0 };
+
+        lookup(".js--reminder-list--checkbox:checked").forEach((checkbox) => {
+
+            // TODO: replace this with a Positioner?
+            coords.x += 15;
+            coords.y += 15;
+            addReminderQuick(
+                lookupOne(`.js--reminder-list--button[data-reminder-id="${checkbox.value}"]`),
+                tokenStore,
+                coords
+            );
+            checkbox.checked = false;
+
+        });
+
         reminderListDialog.hide();
 
     });

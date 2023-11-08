@@ -120,6 +120,9 @@ export default class ReminderToken extends Token {
             },
             ".js--reminder-list--button": (element) => {
                 element.append(this.drawToken());
+            },
+            ".js--reminder-list--checkbox"(element) {
+                element.value = id;
             }
         });
 

@@ -108,6 +108,15 @@
         id: 'show-all-reminders',
         value: 'all-reminders'
     }) }}
+    {{ forms.switch({
+        node: 'p',
+        classes: 'mt-4 mb-0',
+        label: 'grimoire.reminder_list.multiple'|trans,
+        name: 'multiple',
+        id: 'multiple-reminders',
+        value: 'multiple-reminders'
+    }) }}
+    <button type="button" class="button w-full mt-4 js--reminder-list--multiple" hidden>{{ 'grimoire.reminder_list.add_all'|trans }}</button>
     {% endblock %}
 {% endembed %}
 
@@ -133,7 +142,8 @@
 
 <template id="reminder-list-template">
     <li class="reminder-list__item js--reminder-list--item">
-        <button type="button" class="no-btn js--reminder-list--button"></button>
+        <input type="checkbox" class="reminder-list__checkbox sr-only js--reminder-list--checkbox">
+        <button type="button" class="reminder-list__button no-btn js--reminder-list--button"></button>
     </li>
 </template>
 
