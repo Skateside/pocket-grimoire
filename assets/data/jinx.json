@@ -48,7 +48,7 @@
             },
             {
                 "id": "Politician",
-                "reason": "A Pit-hag can not create an evil Politician."
+                "reason": "A Pit-Hag can not create an evil Politician."
             }
         ]
     },
@@ -100,6 +100,14 @@
             {
                 "id": "Mayor",
                 "reason": "If Leviathan is in play & no execution occurs on day 5, good wins."
+            },
+            {
+                "id": "Hatter",
+                "reason": "If the Hatter dies on or after day 5, the Demon cannot choose Leviathan."
+            },
+            {
+                "id": "Pit-Hag",
+                "reason": "After day 5, the Pit-Hag cannot choose Leviathan."
             }
         ]
     },
@@ -125,6 +133,10 @@
             {
                 "id": "Vizier",
                 "reason": "The Vizier can die by execution if they are babysitting Lil' Monsta."
+            },
+            {
+                "id": "Hatter",
+                "reason": "If a Demon chooses Lil' Monsta, they also choose a Minion to become and babysit Lil' Monsta tonight."
             }
         ]
     },
@@ -147,6 +159,10 @@
             {
                 "id": "Preacher",
                 "reason": "Only 1 jinxed character can be in play."
+            },
+            {
+                "id": "Hatter",
+                "reason": "If the Hatter dies and Legion is in play, nothing happens. If the Hatter dies and an evil player chooses Legion, all current evil players become Legion."
             }
         ]
     },
@@ -258,7 +274,7 @@
             },
             {
                 "id": "Plague Doctor",
-                "reason": "If the Storyteller gains the Baron ability, up to two players become out-of-play Outsiders."
+                "reason": "If the Storyteller gains the Baron ability, up to two players become not-in-play Outsiders."
             }
         ]
     },
@@ -422,6 +438,10 @@
             {
                 "id": "Preacher",
                 "reason": "Riot registers as a Minion to the Preacher."
+            },
+            {
+                "id": "Hatter",
+                "reason": "If the Hatter dies, Riot is in play and a Riot chooses a different Demon, a normal evil team is created from the Riot players. If the Hatter dies and the Demon chooses Riot, Minions become Riot too."
             }
         ]
     },

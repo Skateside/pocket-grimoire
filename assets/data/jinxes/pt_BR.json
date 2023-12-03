@@ -80,6 +80,16 @@
         "reason": "Se o Leviatã estiver em jogo e não houver execução no dia 5, o Bem vence."
     },
     {
+        "target": "leviathan",
+        "trick": "hatter",
+        "reason": "Se o Chapeleiro morrer no dia 5 ou após, o Demônio não poderá escolher o Leviatã."
+    },
+    {
+        "target": "leviathan",
+        "trick": "pithag",
+        "reason": "Após o dia 5, a Pit-Hag não pode escolher o Leviatã."
+    },
+    {
         "target": "lilmonsta",
         "trick": "poppygrower",
         "reason": "Se a Cultivadora está em jogo, os Lacaios não acordam juntos. Eles acordam um por um, até que um deles escolha ficar com o token do Bebê Monstro."
@@ -105,6 +115,11 @@
         "reason": "O Vizir pode morrer por execução se for babá do Bebê Monstro."
     },
     {
+        "target": "lilmonsta",
+        "trick": "hatter",
+        "reason": "Se um Demônio escolher Lil' Monsta, eles também escolherão um Minion para se tornar babá de Lil' Monsta esta noite."
+    },
+    {
         "target": "lycanthrope",
         "trick": "gambler",
         "reason": "Se o Licantropo estiver vivo e o Apostador se matar à noite, nenhum outro jogador poderá morrer naquela noite."
@@ -118,6 +133,11 @@
         "target": "legion",
         "trick": "preacher",
         "reason": "Apenas um destes personagens pode estar em jogo."
+    },
+    {
+        "target": "legion",
+        "trick": "hatter",
+        "reason": "Se o Chapeleiro morrer e a Legião estiver em jogo, nada acontece. Se o Chapeleiro morrer e um jogador maligno escolher Legião, todos os jogadores malignos atuais se tornarão Legião."
     },
     {
         "target": "fanggu",
@@ -393,6 +413,11 @@
         "target": "riot",
         "trick": "preacher",
         "reason": "Pandemônio é registrado como Lacaio para o Pregador."
+    },
+    {
+        "target": "riot",
+        "trick": "hatter",
+        "reason": "Se o Chapeleiro morrer, a Riot estará em jogo e uma Riot escolherá um Demônio diferente, um time normal do mal será criado a partir dos jogadores da Riot. Se o Chapeleiro morrer e o Demônio escolher Riot, os Minions também se tornarão Riot."
     },
     {
         "target": "alhadikhia",

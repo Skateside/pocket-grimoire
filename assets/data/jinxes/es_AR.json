@@ -80,6 +80,16 @@
         "reason": "Si el Leviatan esta en juego y nadie es ejecutado el 5to dia, el bien gana."
     },
     {
+        "target": "leviathan",
+        "trick": "hatter",
+        "reason": "Si el Sombrerero muere el día 5 o después, el Demonio no puede elegir Leviatán."
+    },
+    {
+        "target": "leviathan",
+        "trick": "pithag",
+        "reason": "Después del día 5, Pit-Hag no puede elegir Leviatán."
+    },
+    {
         "target": "lilmonsta",
         "trick": "poppygrower",
         "reason": "Si el Cultivador de Amapolas está en juego, los Secuazes no despiertan juntos. Son despertados uno por uno, hasta que uno elija tomar la ficha del Pequeño Monstruo."
@@ -105,6 +115,11 @@
         "reason": "El Visir puede morir por ejecución si está cuidando niños Pequeño Monstruo."
     },
     {
+        "target": "lilmonsta",
+        "trick": "hatter",
+        "reason": "Si un demonio elige a Lil' Monsta, también elige un Minion para convertirse en Lil' Monsta y cuidarlo esta noche."
+    },
+    {
         "target": "lycanthrope",
         "trick": "gambler",
         "reason": "Si el Licántropo está vivo y el Apostador se mata a sí mismo de noche, nadie más puede morir esa noche."
@@ -118,6 +133,11 @@
         "target": "legion",
         "trick": "preacher",
         "reason": "Solo 1 personaje hechizado puede estar en juego."
+    },
+    {
+        "target": "legion",
+        "trick": "hatter",
+        "reason": "Si el Sombrerero muere y la Legión está en juego, no pasa nada. Si el Sombrerero muere y un jugador malvado elige Legión, todos los jugadores malvados actuales se convierten en Legión."
     },
     {
         "target": "fanggu",
@@ -393,6 +413,11 @@
         "target": "riot",
         "trick": "preacher",
         "reason": "Disturbio registra como Secuaz para el Pastor."
+    },
+    {
+        "target": "riot",
+        "trick": "hatter",
+        "reason": "Si el Sombrerero muere, Riot está en juego y Riot elige un Demonio diferente, se crea un equipo malvado normal a partir de los jugadores de Riot. Si el Sombrerero muere y el Demonio elige a Riot, los Minions también se convierten en Riot."
     },
     {
         "target": "alhadikhia",

@@ -80,6 +80,16 @@
         "reason": "如果利维坦在场，镇长存活且第五天没有处决发生，则善良阵营获胜。"
     },
     {
+        "target": "leviathan",
+        "trick": "hatter",
+        "reason": "如果帽匠在第五天或之后死亡，恶魔就不能选择利维坦。"
+    },
+    {
+        "target": "leviathan",
+        "trick": "pithag",
+        "reason": "第五天之后，坑婆婆就不能选择利维坦了。"
+    },
+    {
         "target": "lilmonsta",
         "trick": "poppygrower",
         "reason": "如果罂粟种植者在场，爪牙们不会同时醒来选择照看小怪宝。 他们会依次单独被唤醒，直到其中一人选择照看小怪宝。"
@@ -105,6 +115,11 @@
         "reason": "照看小怪宝的维齐尔能够死于处决。"
     },
     {
+        "target": "lilmonsta",
+        "trick": "hatter",
+        "reason": "如果恶魔选择了小蒙斯塔，他们也会选择一个小黄人来成为今晚照顾小蒙斯塔的人。"
+    },
+    {
         "target": "lycanthrope",
         "trick": "gambler",
         "reason": "赌徒会先于半兽人行动。 如果赌徒赌博失败且半兽人在场，那么无论半兽人选择了哪个玩家，当晚只会有赌徒死亡。"
@@ -118,6 +133,11 @@
         "target": "legion",
         "trick": "preacher",
         "reason": "互为克星的角色在同一时间里只能有其中一个角色在场。"
+    },
+    {
+        "target": "legion",
+        "trick": "hatter",
+        "reason": "如果帽子匠死了而军团还在玩，则什么也不会发生。 如果帽匠死亡并且邪恶玩家选择军团，则所有当前邪恶玩家都会成为军团。"
     },
     {
         "target": "fanggu",
@@ -393,6 +413,11 @@
         "target": "riot",
         "trick": "preacher",
         "reason": "暴乱被传教士当作爪牙。"
+    },
+    {
+        "target": "riot",
+        "trick": "hatter",
+        "reason": "如果帽匠死了，暴乱就会开始比赛，并且暴乱会选择不同的恶魔，一个正常的邪恶队伍就会由暴乱玩家创建。 如果帽匠死了并且恶魔选择了暴乱，那么小兵也会变成暴乱。"
     },
     {
         "target": "alhadikhia",

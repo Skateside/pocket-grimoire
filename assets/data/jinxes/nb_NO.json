@@ -80,6 +80,16 @@
         "reason": "Om Leviatan er i spill & ingen henrettes dag 5, vinner godt."
     },
     {
+        "target": "leviathan",
+        "trick": "hatter",
+        "reason": "Hvis hattemakeren dør på eller etter dag 5, kan ikke demonen velge Leviathan."
+    },
+    {
+        "target": "leviathan",
+        "trick": "pithag",
+        "reason": "Etter dag 5 kan ikke Pit-Hag velge Leviathan."
+    },
+    {
         "target": "lilmonsta",
         "trick": "poppygrower",
         "reason": "Om Valmuedyrkeren er i spill, våkner ikke Lakeier samtidig. De vekkes én om gangen, inntil én av dem velger å ta Ungmonster-brikken."
@@ -105,6 +115,11 @@
         "reason": "Vesiren kan dø ved henrettelse om de passer på Ungmonsteret."
     },
     {
+        "target": "lilmonsta",
+        "trick": "hatter",
+        "reason": "Hvis en demon velger Lil' Monsta, velger de også en Minion å bli og er barnevakt for Lil' Monsta i kveld."
+    },
+    {
         "target": "lycanthrope",
         "trick": "gambler",
         "reason": "Om Lykantropen lever og Hasardspilleren dreper seg selv om natten, kan ingen andre spillere dø i natt."
@@ -118,6 +133,11 @@
         "target": "legion",
         "trick": "preacher",
         "reason": "Bare 1 gandet rolle kan være i spill."
+    },
+    {
+        "target": "legion",
+        "trick": "hatter",
+        "reason": "Hvis Hattemakeren dør og Legion er i spill, skjer ingenting. Hvis hattemakeren dør og en ond spiller velger Legion, blir alle nåværende onde spillere Legion."
     },
     {
         "target": "fanggu",
@@ -393,6 +413,11 @@
         "target": "riot",
         "trick": "preacher",
         "reason": "Opprør oppfattes som en Lakei av Predikanten."
+    },
+    {
+        "target": "riot",
+        "trick": "hatter",
+        "reason": "Hvis hattemakeren dør, er Riot i spill og en Riot velger en annen demon, et normalt ondt lag blir skapt fra Riot-spillerne. Hvis hattemakeren dør og demonen velger Riot, blir Minions også Riot."
     },
     {
         "target": "alhadikhia",

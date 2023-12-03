@@ -191,6 +191,15 @@
         "reminders": []
     },
     {
+        "id": "bootlegger",
+        "name": "Bootlegger",
+        "ability": "Dieses Skript enthält Homebrew-Zeichen oder -Regeln.",
+        "firstNightReminder": "Kündigen Sie an, dass der Bootlegger im Spiel ist, und informieren Sie die Gruppe über alle Homebrew-Charaktere und/oder Regeln, die Sie in diesem Spiel verwenden.",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
         "id": "bountyhunter",
         "name": "Kopfgeldjäger",
         "ability": "Du beginnst das Spiel mit dem Wissen, dass 1 Spieler böse ist. Wenn dieser Spieler stirbt, lernst du in der Nacht einen anderen bösen Spieler kennen. [1 Dorfbewohner ist böse]",
@@ -502,7 +511,7 @@
     },
     {
         "id": "fiddler",
-        "name": "Geigenspieler",
+        "name": "Fiedler",
         "ability": "Einmal im Spiel kann der Dämon geheim einen Spieler der anderen Seite wählen. Alle Spieler entscheiden, wer dieser zwei Spieler gewinnt.",
         "firstNightReminder": "",
         "otherNightReminder": "",
@@ -673,12 +682,24 @@
     {
         "id": "harpy",
         "name": "Harpyie",
-        "ability": "Wählen Sie jeden Abend 2 Spieler aus: Morgen ist der erste Spieler wütend, weil der zweite böse ist, sonst könnten beide sterben.",
-        "firstNightReminder": "Wecke die Harpyie; Sie zeigen auf einen Spieler, dann auf einen anderen. Wecken Sie den ersten Spieler, auf den die Harpyie gezeigt hat, zeigen Sie ihm die Karte „Dieser Charakter hat Sie ausgewählt“, zeigen Sie ihm den Harpyienmarker und zeigen Sie dann auf den zweiten Spieler, auf den die Harpyie gezeigt hat.",
-        "otherNightReminder": "Wecke die Harpyie; Sie zeigen auf einen Spieler, dann auf einen anderen. Wecken Sie den ersten Spieler, auf den die Harpyie gezeigt hat, zeigen Sie ihm die Karte „Dieser Charakter hat Sie ausgewählt“, zeigen Sie ihm den Harpyienmarker und zeigen Sie dann auf den zweiten Spieler, auf den die Harpyie gezeigt hat.",
+        "ability": "Jede Nacht, wähle 2 Spieler: am kommenden Tag ist der erste Spieler besessen davon, dass der zweite Spieler böse ist, ansonsten könnten beide sterben.",
+        "firstNightReminder": "Wake the Harpy; they point at one player, then another. Wake the 1st player the Harpy pointed to, show them the 'This character has selected you' card, show them the Harpy token, then point at the 2nd player the Harpy pointed to.",
+        "otherNightReminder": "Wake the Harpy; they point at one player, then another. Wake the 1st player the Harpy pointed to, show them the 'This character has selected you' card, show them the Harpy token, then point at the 2nd player the Harpy pointed to.",
+        "remindersGlobal": [],
         "reminders": [
-            "Verrückt",
-            "2"
+            "Mad",
+            "2nd"
+        ]
+    },
+    {
+        "id": "hatter",
+        "name": "Hutmacher",
+        "ability": "Wenn Sie heute oder heute Nacht gestorben sind, können die Minion & Demon-Spieler neue Minion & Demon-Charaktere auswählen.",
+        "firstNightReminder": "",
+        "otherNightReminder": "Wenn der Hutmacher heute gestorben ist: Wecken Sie die Schergen und den Dämon auf. Zeigen Sie ihnen den Informationsmarker „Dieser Charakter hat Sie ausgewählt“ und dann den Hutmacher-Token. Jeder Spieler schüttelt entweder den Kopf oder zeigt auf einen anderen Charakter desselben Typs wie sein aktueller Charakter. Wenn ein zweiter Spieler am Ende denselben Charakter wie ein anderer Spieler hätte, schütteln Sie den Kopf und gestikulieren Sie ihm, sich noch einmal zu entscheiden. Lass sie schlafen. Verwandeln Sie jeden Spieler in den von ihm gewählten Charakter.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Heute Abend Teeparty"
         ]
     },
     {
@@ -704,9 +725,9 @@
     {
         "id": "highpriestess",
         "name": "Hohepriesterin",
-        "ability": "Erfahren Sie jeden Abend, mit welchem Spieler Sie nach Meinung des Geschichtenerzählers am meisten sprechen sollten.",
-        "firstNightReminder": "Zeigen Sie auf einen Spieler.",
-        "otherNightReminder": "Zeigen Sie auf einen Spieler.",
+        "ability": "Jede Nacht, erfahre, mit welchem Spieler der Erzähler denkt solltest du am ehesten reden.",
+        "firstNightReminder": "Point to a player.",
+        "otherNightReminder": "Point to a player.",
         "remindersGlobal": [],
         "reminders": []
     },
@@ -799,13 +820,13 @@
     {
         "id": "knight",
         "name": "Ritter",
-        "ability": "Du kennst 2 Spieler, die nicht der Dämon sind.",
-        "firstNightReminder": "Zeigen Sie auf 2 Nicht-Dämonen-Spieler.",
+        "ability": "Du beginnst das Spiel mit dem Wissen, dass 2 Spieler nicht der Dämon sind.",
+        "firstNightReminder": "Point to 2 non-Demon players.",
         "otherNightReminder": "",
         "remindersGlobal": [],
         "reminders": [
-            "Wissen",
-            "Wissen"
+            "Know",
+            "Know"
         ]
     },
     {
@@ -852,7 +873,7 @@
         "id": "lilmonsta",
         "name": "Kleines Monsta",
         "ability": "Jede Nacht entscheiden die Untergebenen, wer das Kleine Monsta Charakterplättchen babysittet & der Dämon \"ist\". Ein Spieler stirbt jede Nacht*. [+1 Untergebener]",
-        "firstNightReminder": "Wecke alle Untergebenen gemeinsam. Sie müssen sich einigen, wer von Ihnen das Kleine Monsta babysittet.",
+        "firstNightReminder": "Wecke alle Untergebenen gemeinsam. Sie müssen sich einigen, wer von ihnen das Kleine Monsta babysittet.",
         "otherNightReminder": "Wecke alle Untergebenen gemeinsam. Sie müssen sich einigen, wer von Ihnen das Kleine Monsta babysittet. Wähle einen Spieler, dieser Spieler stirbt.",
         "remindersGlobal": [
             "Tot",
@@ -958,8 +979,8 @@
         "id": "mezepheles",
         "name": "Mezepheles",
         "ability": "Du beginnst das Spiel mit dem Wissen über ein geheimes Wort. Der erste gute Spieler, der dieses Wort ausspricht, wird in der Nacht böse.",
-        "firstNightReminder": "Zeige Mezepheles das geheime Wort",
-        "otherNightReminder": "Wecken den ersten guten Spieler, der das geheime Wort von Mezepheles ausspricht und zeige ihm die 'Du bist' Karte und danach das Daumen runter Signal um zu zeigen, dass er ab jetzt böse ist.",
+        "firstNightReminder": "Zeige dem Mezepheles das geheime Wort",
+        "otherNightReminder": "Wecke den ersten guten Spieler, der das geheime Wort des Mezepheles ausgesprochen hat und zeige ihm die 'Du bist' Karte und danach das Daumen runter Signal, um zu zeigen, dass er ab jetzt böse ist",
         "remindersGlobal": [],
         "reminders": [
             "Keine Fähigkeit",
@@ -1012,8 +1033,8 @@
         "id": "nightwatchman",
         "name": "Nachtwächter",
         "ability": "Einmal im Spiel, in der Nacht, wähle einen Spieler. Dieser Spieler erfährt, wer du bist.",
-        "firstNightReminder": "Der Nachtwächter kann auf einen Spieler zeigen. Wecke den Spieler und zeige ihm die 'Dieser Charakter hat Dich ausgewählt' Karte und den Token des Nachtwächters. Dann zeige auf den Spieler des Nachtwächters.",
-        "otherNightReminder": "Der Nachtwächter kann auf einen Spieler zeigen. Wecke den Spieler und zeige ihm die 'Dieser Charakter hat Dich ausgewählt' Karte und den Token des Nachtwächters. Dann zeige auf den Spieler des Nachtwächters.",
+        "firstNightReminder": "Der Nachtwächter kann auf einen Spieler zeigen. Wecke den Spieler und zeige ihm die 'Dieser Charakter hat Dich ausgewählt' Karte und das Charakterplättchen des Nachtwächters. Dann zeige auf den Nachtwächter.",
+        "otherNightReminder": "Der Nachtwächter kann auf einen Spieler zeigen. Wecke den Spieler und zeige ihm die 'Dieser Charakter hat Dich ausgewählt' Karte und das Charakterplättchen des Nachtwächters. Dann zeige auf den Nachtwächter.",
         "remindersGlobal": [],
         "reminders": [
             "Keine Fähigkeit"
@@ -1045,12 +1066,12 @@
     {
         "id": "ojo",
         "name": "Ojo",
-        "ability": "Wähle jede Nacht* einen Charakter: Er stirbt. Wenn sie nicht im Spiel sind, bestimmt der Geschichtenerzähler, wer stirbt.",
+        "ability": "Jede Nacht*, wähle 1 Charakter: er stirbt. Ist er nicht im Spiel, wählt der Erzähler, wer stirbt.",
         "firstNightReminder": "",
-        "otherNightReminder": "Der Ojo zeigt auf ein Zeichen auf dem Blatt; Wenn er im Spiel ist, stirbt dieser Spieler. Wenn es nicht im Spiel ist, entscheidet der Geschichtenerzähler, wer stattdessen stirbt.",
+        "otherNightReminder": "The Ojo points to a character on the sheet; if in play, that player dies. If it is not in play, the Storyteller chooses who dies instead.",
         "remindersGlobal": [],
         "reminders": [
-            "Tot"
+            "Dead"
         ]
     },
     {
@@ -1065,12 +1086,12 @@
     {
         "id": "organgrinder",
         "name": "Leiermann",
-        "ability": "Alle Spieler halten beim Abstimmen die Augen geschlossen und die Stimmenauswertung ist geheim. Stimmen für dich zählen nur, wenn du abstimmst.",
+        "ability": "Alle Spieler schliessen während Abstimmungen die Augen & das Abstimmungsergebnis ist geheim. Stimmen für dich zählen nur wenn du abstimmst.",
         "firstNightReminder": "",
         "otherNightReminder": "",
         "remindersGlobal": [],
         "reminders": [
-            "Dabei zu sterben"
+            "About to die"
         ]
     },
     {
@@ -1107,7 +1128,7 @@
         "id": "pixie",
         "name": "Elfe",
         "ability": "Du beginnst das Spiel mit dem Wissen, dass 1 Dorfbewohner im Spiel ist. Wenn du \"besessen\" davon bist, dass du dieser Charakter bist, erhätlst du seine Fähigkeit, wenn er stirbt.",
-        "firstNightReminder": "Zeige der Elfe eine Token eines Dorfbewohners, der sich im Spiel befindet.",
+        "firstNightReminder": "Zeige der Elfe das Charakterplättchen eines Dorfbewohners, der sich im Spiel befindet.",
         "otherNightReminder": "",
         "remindersGlobal": [],
         "reminders": [
@@ -1117,13 +1138,13 @@
     },
     {
         "id": "plaguedoctor",
-        "name": "Pest Arzt",
-        "ability": "Wenn du stirbst, erhält der Geschichtenerzähler eine Schergenfähigkeit, die nicht im Spiel ist.",
+        "name": "Pestdoktor",
+        "ability": "Wenn du stirbst, dann erhält der Erzähler die Fähigkeit eines Untergebenen der nicht im Spiel ist.",
         "firstNightReminder": "",
         "otherNightReminder": "",
         "remindersGlobal": [],
         "reminders": [
-            "Fähigkeit zum Geschichtenerzähler"
+            "Storyteller Ability"
         ]
     },
     {
@@ -1356,8 +1377,8 @@
     {
         "id": "shugenja",
         "name": "Shugenja",
-        "ability": "Sie beginnen zu wissen, ob Ihr nächster böser Spieler im oder gegen den Uhrzeigersinn ist. Bei gleichem Abstand sind diese Informationen willkürlich.",
-        "firstNightReminder": "Wecke den Shugenja; Zeigen Sie horizontal in die Richtung des nächsten bösen Spielers. Wenn die beiden nächsten bösen Spieler den gleichen Abstand haben, zeigen Sie mit dem Finger horizontal in eine der beiden Richtungen.",
+        "ability": "Du beginnst das Spiel mit dem Wissen, in welcher Richtung der näheste böse Spieler zu dir sitzt. Sind zwei gleich weit von dir entfernt, ist diese Info willkürlich.",
+        "firstNightReminder": "Wake the Shugenja; point horizontally in the direction of the closest evil player. If the two closest evil players are equidistant, point your finger horizontally in either direction.",
         "otherNightReminder": "",
         "remindersGlobal": [],
         "reminders": []
@@ -1424,13 +1445,13 @@
     },
     {
         "id": "steward",
-        "name": "Steward",
-        "ability": "Sie beginnen, einen guten Spieler zu kennen.",
-        "firstNightReminder": "Zeigen Sie auf 1 guten Spieler.",
+        "name": "Hofmeister",
+        "ability": "Du beginnst das Spiel mit dem Wissen, dass 1 Spieler gut ist.",
+        "firstNightReminder": "Point to 1 good player.",
         "otherNightReminder": "",
         "remindersGlobal": [],
         "reminders": [
-            "Wissen"
+            "Know"
         ]
     },
     {
@@ -1549,8 +1570,8 @@
     {
         "id": "vizier",
         "name": "Wesir",
-        "ability": "Alle Spieler wissen, wer Sie sind. Sie können nicht tagsüber sterben. Wenn Sie für gut gestimmt haben, können Sie sich für eine sofortige Ausführung entscheiden.",
-        "firstNightReminder": "Sagen Sie „Der Wesir ist im Spiel“ und geben Sie an, um welchen Spieler es sich handelt.",
+        "ability": "Alle Spieler wissen, wer du bist. Du kannst am Tag nicht sterben. Wenn mindestens 1 guter Spieler abgestimmt hat, darfst du sofort hinrichten.",
+        "firstNightReminder": "Announce 'The Vizier is in play' and state which player they are.",
         "otherNightReminder": "",
         "remindersGlobal": [],
         "reminders": []

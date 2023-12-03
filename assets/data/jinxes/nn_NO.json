@@ -80,6 +80,16 @@
         "reason": "Om Leviatan er i spel & ingen vert avretta dag 5, vinn godt."
     },
     {
+        "target": "leviathan",
+        "trick": "hatter",
+        "reason": "Hvis hattemakeren dør på eller etter dag 5, kan ikke demonen velge Leviathan."
+    },
+    {
+        "target": "leviathan",
+        "trick": "pithag",
+        "reason": "Etter dag 5 kan ikke Pit-Hag velge Leviathan."
+    },
+    {
         "target": "lilmonsta",
         "trick": "poppygrower",
         "reason": "Om Valmuedyrkaren er i spel, vaknar ikkje Lakeiar samstundes. Dei vert vekt éin om gongen, inntil éin av dei vel å take Ungmonster-brikka."
@@ -105,6 +115,11 @@
         "reason": "Vesiren kan døy ved avretting om dei passar på Ungmonsteret."
     },
     {
+        "target": "lilmonsta",
+        "trick": "hatter",
+        "reason": "Hvis en demon velger Lil' Monsta, velger de også en Minion å bli og er barnevakt for Lil' Monsta i kveld."
+    },
+    {
         "target": "lycanthrope",
         "trick": "gambler",
         "reason": "Om Lykantropen lever og Hasardspelaren drep seg sjølv om natta, kan ingen andre spelarar døy i natt."
@@ -118,6 +133,11 @@
         "target": "legion",
         "trick": "preacher",
         "reason": "Berre 1 ganda rolle kan vere i spel."
+    },
+    {
+        "target": "legion",
+        "trick": "hatter",
+        "reason": "Hvis Hattemakeren dør og Legion er i spill, skjer ingenting. Hvis hattemakeren dør og en ond spiller velger Legion, blir alle nåværende onde spillere Legion."
     },
     {
         "target": "fanggu",
@@ -393,6 +413,11 @@
         "target": "riot",
         "trick": "preacher",
         "reason": "Opprør vert tydd som ein Lakei av Predikanten."
+    },
+    {
+        "target": "riot",
+        "trick": "hatter",
+        "reason": "Hvis hattemakeren dør, er Riot i spill og en Riot velger en annen demon, et normalt ondt lag blir skapt fra Riot-spillerne. Hvis hattemakeren dør og demonen velger Riot, blir Minions også Riot."
     },
     {
         "target": "alhadikhia",

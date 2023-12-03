@@ -80,6 +80,16 @@
         "reason": "If Leviathan is in play & no execution occurs on day 5, good wins. Wenn der Leviathan im Spiel ist & es findet keine Hinrichtung and Tag 5 statt, gewinnt Gut."
     },
     {
+        "target": "leviathan",
+        "trick": "hatter",
+        "reason": "Wenn der Hutmacher am oder nach Tag 5 stirbt, kann der Dämon keinen Leviathan wählen."
+    },
+    {
+        "target": "leviathan",
+        "trick": "pithag",
+        "reason": "Nach Tag 5 kann sich die Pit-Hag nicht mehr für Leviathan entscheiden."
+    },
+    {
         "target": "lilmonsta",
         "trick": "poppygrower",
         "reason": "If the Poppy Grower is in play, Minions don't wake together. They are woken one by one, until one of them chooses to take the Lil' Monsta token."
@@ -105,6 +115,11 @@
         "reason": "Die Wesir können durch Hinrichtung sterben, wenn sie babysitten Kleines Monsta."
     },
     {
+        "target": "lilmonsta",
+        "trick": "hatter",
+        "reason": "Wenn sich ein Dämon für Lil' Monsta entscheidet, wählt er auch einen Diener aus, der heute Abend Lil' Monsta werden und auf ihn aufpassen soll."
+    },
+    {
         "target": "lycanthrope",
         "trick": "gambler",
         "reason": "Wenn der Lykanthrop am Leben ist und der Glücksspieler tötet sich in der Nacht kann kein weiterer Spieler in dieser nacht sterben."
@@ -118,6 +133,11 @@
         "target": "legion",
         "trick": "preacher",
         "reason": "Nur 1 verfluchter Charakter kann gleichzeitig im Spiel sein"
+    },
+    {
+        "target": "legion",
+        "trick": "hatter",
+        "reason": "Wenn der Hutmacher stirbt und Legion im Spiel ist, passiert nichts. Wenn der Hutmacher stirbt und ein böser Spieler Legion wählt, werden alle aktuellen bösen Spieler zu Legion."
     },
     {
         "target": "fanggu",
@@ -393,6 +413,11 @@
         "target": "riot",
         "trick": "preacher",
         "reason": "Krawall registriert als Untergebener für den Priester"
+    },
+    {
+        "target": "riot",
+        "trick": "hatter",
+        "reason": "Wenn der Hutmacher stirbt, Riot im Spiel ist und ein Riot einen anderen Dämon wählt, wird aus den Riot-Spielern ein normales böses Team erstellt. Wenn der Hutmacher stirbt und der Dämon sich für Riot entscheidet, werden auch Minions zu Riot."
     },
     {
         "target": "alhadikhia",

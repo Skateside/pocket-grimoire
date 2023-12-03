@@ -2,9 +2,9 @@
     {
         "id": "acrobat",
         "name": "Nghệ sĩ xiếc",
-        "ability": "Mỗi đêm*, nếu bất kì hàng xóm thiện của bạn bị trúng độc hoặc bị say, bạn chết",
+        "ability": "Mỗi đêm*, nếu bất kì hàng xóm tốt của bạn bị trúng độc hoặc bị say, bạn chết",
         "firstNightReminder": "",
-        "otherNightReminder": "Nếu bất kì hàng xóm thiện của họ trúng độc hoặc bị say, Nghệ sĩ xiếc chết",
+        "otherNightReminder": "Nếu bất kì hàng xóm tốt của họ trúng độc hoặc bị say, Nghệ sĩ xiếc chết",
         "remindersGlobal": [],
         "reminders": [
             "Chết"
@@ -14,7 +14,7 @@
         "id": "alchemist",
         "name": "Nhà giả kim",
         "ability": "Bạn có chức năng của Tay sai ngoài cuộc.",
-        "firstNightReminder": "Cho Nhà giả kim thấy token của tay sai ngoài cuộc",
+        "firstNightReminder": "Cho Nhà giả kim thấy thẻ của tay sai ngoài cuộc",
         "otherNightReminder": "",
         "remindersGlobal": [
             "là Nhà giả kim"
@@ -50,7 +50,7 @@
     {
         "id": "angel",
         "name": "Thiên thần",
-        "ability": "Điều xấu có thể sẽ xảy ra đến người có trách nhiệm lớn nhất đến cái chết của người mới",
+        "ability": "Nếu người chơi mới bị chết, ai có trách nhiệm nhiều nhất có thể sẽ bị gặp điều xấu.  ",
         "firstNightReminder": "",
         "otherNightReminder": "",
         "remindersGlobal": [],
@@ -62,8 +62,8 @@
     {
         "id": "apprentice",
         "name": "Tập sự",
-        "ability": "Vào đêm đâu tiên của bạn, bạn có chức năng của Dân làng (nếu là thiện), hoặc của Tay sai (nếu là ác).",
-        "firstNightReminder": "Cho tập sự thấy lá 'Bạn là', và token Dân làng hoặc Tay sai. Trong Grimoire, thay token Tập sự với token nhân vật đó, và đặt đánh dấu \"là Tập sụ\" của Tập sự bên cạnh token đó",
+        "ability": "Vào đêm đâu tiên của bạn, bạn có chức năng của Dân làng (nếu là tốt), hoặc của Tay sai (nếu là xấu).",
+        "firstNightReminder": "Cho tập sự thấy lá 'Bạn là', và thẻ Dân làng hoặc Tay sai. Trong Grimoire, thay thẻ Tập sự với thẻ nhân vật đó, và đặt đánh dấu \"là Tập sụ\" của Tập sự bên cạnh thẻ đó",
         "otherNightReminder": "",
         "remindersGlobal": [],
         "reminders": [
@@ -96,7 +96,7 @@
     {
         "id": "atheist",
         "name": "Vô thần",
-        "ability": "Người kể chuyện có thể phá luật & nếu bị hành quyết, phe thiện thắng, ngay cả khi bạn chết [Không có nhân vạt ác]",
+        "ability": "Người kể chuyện có thể phá luật & nếu bị hành quyết, phe tốt thắng, ngay cả khi bạn chết [Không có nhân vật xấu]",
         "firstNightReminder": "",
         "otherNightReminder": "",
         "remindersGlobal": [],
@@ -104,10 +104,10 @@
     },
     {
         "id": "balloonist",
-        "name": "Khinh khí cầu",
+        "name": "Khinh khí cầu gia",
         "ability": "Mỗi đêm, bạn biết 1 người thuộc về mỗi loại nhân vật cho đến khi hết loại nhân vật. [+1 Lữ khách]",
-        "firstNightReminder": "Chọn 1 loại nhân vật. Chỉ người thuộc về loại nhân vật đó. Đặt đánh dấu Đã biết của Khinh khí cầu cạnh nhân vật đó.",
-        "otherNightReminder": "Chọn 1 loại nhân vật chưa có token đánh dấu Đã biết cạnh nhân vật. Chỉ 1 người có nhân vật thuộc loại đó, nếu còn. Đặt đánh dấu Đã biết của Khinh khí cầu cạnh nhân vật đó.",
+        "firstNightReminder": "Chọn 1 loại nhân vật. Chỉ người thuộc về loại nhân vật đó. Đặt đánh dấu Đã biết của Khinh khí cầu gia cạnh nhân vật đó.",
+        "otherNightReminder": "Chọn 1 loại nhân vật chưa có thẻ đánh dấu Đã biết cạnh nhân vật. Chỉ 1 người có nhân vật thuộc loại đó, nếu còn. Đặt đánh dấu Đã biết của Khinh khí cầu gia cạnh nhân vật đó.",
         "remindersGlobal": [],
         "reminders": [
             "Dân làng đã biết",
@@ -119,10 +119,10 @@
     },
     {
         "id": "barber",
-        "name": "Thợ tóc",
-        "ability": "Nếu bạn chết đêm nay hoặc sáng nay, Quỷ có thể chọn 2 người (không phải Quỷ khác) để tráo nhân vật.",
+        "name": "Thợ cắt tóc",
+        "ability": "Nếu bạn chết hôm nay, trong đêm Quỷ có thể chọn 2 người (không phải Quỷ khác) để tráo nhân vật.",
         "firstNightReminder": "",
-        "otherNightReminder": "Nếu Thợ tóc chết hôm nay: Gọi Quỷ dậy. Cho xem là 'Nhân vật này chọn bạn' ,và token Thợ tóc. Quỷ có thể lắc đầu, hoặc chỉ 2 người. Nếu họ chọn người: Tráo token nhân vật. Gọi mỗi người. Cho xem 'Bạn là', và token nhân vật mới.",
+        "otherNightReminder": "Nếu Thợ cắt tóc chết hôm nay: Gọi Quỷ dậy. Cho xem là 'Nhân vật này chọn bạn' và thẻ Thợ cắt tóc. Quỷ có thể lắc đầu, hoặc chỉ 2 người. Nếu họ chọn người: Tráo thẻ nhân vật. Gọi mỗi người. Cho xem 'Bạn là', và thẻ nhân vật mới.",
         "remindersGlobal": [],
         "reminders": [
             "Cắt tóc đêm nay"
@@ -152,7 +152,7 @@
     {
         "id": "beggar",
         "name": "Ăn xin",
-        "ability": "Bạn phải có token phiểu để bỏ phiếu. Người chết có thể đưa token của họ. Nếu vậy, bạn biết phe của họ. Bạn tỉnh & khỏe mạnh.",
+        "ability": "Bạn phải có thẻ phiểu để bỏ phiếu. Người chết có thể đưa thẻ của họ. Nếu vậy, bạn biết phe của họ. Bạn tỉnh & khỏe mạnh.",
         "firstNightReminder": "",
         "otherNightReminder": "",
         "remindersGlobal": [],
@@ -166,8 +166,8 @@
         "otherNightReminder": "",
         "remindersGlobal": [],
         "reminders": [
-            "Biểu quyết thiện",
-            "Biểu quyết ác"
+            "Biểu quyết tốt",
+            "Biểu quyết xấu"
         ]
     },
     {
@@ -175,7 +175,7 @@
         "name": "Nhà sưu tầm xương",
         "ability": "Một lần trong game, vào buổi đêm, chọn người chết: họ lấy lại chức năng đến hoàng hôn.",
         "firstNightReminder": "",
-        "otherNightReminder": "Nhà sưu tầm xương có thể lắc đầu hoặc chọn 1 người. Nếu họ chỉ người chết, đặt đánh dấu 'Có chức năng' của Nhà sưu tầm xương cạnh token nhân vật được chọn. (Họ có thể phải thức dậy trong đêm để dùng nó.)",
+        "otherNightReminder": "Nhà sưu tầm xương có thể lắc đầu hoặc chọn 1 người. Nếu họ chỉ người chết, đặt đánh dấu 'Có chức năng' của Nhà sưu tầm xương cạnh thẻ nhân vật được chọn. (Họ có thể phải thức dậy trong đêm để dùng nó.)",
         "remindersGlobal": [],
         "reminders": [
             "Hết chức năng",
@@ -192,11 +192,20 @@
         "reminders": []
     },
     {
+        "id": "bootlegger",
+        "name": "Bootlegger",
+        "ability": "This script has homebrew characters or rules.",
+        "firstNightReminder": "Announce the Bootlegger is in play and inform the group of all homebrew characters and/or rules you are using in this game.",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
         "id": "bountyhunter",
         "name": "Thợ săn tiền thưởng",
-        "ability": "Bạn biết 1 người ác đầu game. Nếu người bạn biết chết, bạn biết 1 người ác khác tối nay. [1 Dân làng là ác]",
-        "firstNightReminder": "Chỉ 1 người ác. Gọi dân làng ác dậy và cho họ thấy lá 'Bạn là' và giơ ngón cái xuống thể hiện ác.",
-        "otherNightReminder": "Nếu người ác đã biết chết, chỉ người ác khác. ",
+        "ability": "Bạn biết 1 người xấu đầu game. Nếu người bạn biết chết, bạn biết 1 người xấu khác tối nay. [1 Dân làng là xấu]",
+        "firstNightReminder": "Chỉ 1 người xấu. Gọi dân làng xấu dậy và cho họ thấy lá 'Bạn là' và giơ ngón cái xuống thể hiện xấu.",
+        "otherNightReminder": "Nếu người xấu đã biết chết, chỉ người xấu khác. ",
         "remindersGlobal": [],
         "reminders": [
             "Được biết"
@@ -215,8 +224,8 @@
         "id": "bureaucrat",
         "name": "Công chức",
         "ability": "Mỗi đêm, chọn 1 người (không phải bạn): phiếu của họ được tính là 3 phiếu vào ngày mai.",
-        "firstNightReminder": "Công chức chỉ 1 người. Đặt đánh dấu '3 phiếu' của Công chức cạnh token nhân vật của người được chọn.",
-        "otherNightReminder": "Công chức chỉ 1 người. Đặt đánh dấu '3 phiếu' của Công chức cạnh token nhân vật của người được chọn.",
+        "firstNightReminder": "Công chức chỉ 1 người. Đặt đánh dấu '3 phiếu' của Công chức cạnh thẻ nhân vật của người được chọn.",
+        "otherNightReminder": "Công chức chỉ 1 người. Đặt đánh dấu '3 phiếu' của Công chức cạnh thẻ nhân vật của người được chọn.",
         "remindersGlobal": [],
         "reminders": [
             "3 phiếu"
@@ -234,7 +243,7 @@
     {
         "id": "butler",
         "name": "Quản gia",
-        "ability": "Mỗi đêm, chọn 1 người (không phải bạn): ngày mai, bạn chỉ có thể vote khi họ vote.",
+        "ability": "Mỗi đêm, chọn 1 người (không phải bạn). Ngày hôm sau, chỉ đc bỏ phiếu Hành Quyết nếu người đó bỏ phiếu.",
         "firstNightReminder": "Quản gia chỉ 1 người. Đánh dấu người đó là 'Chủ nhân'.",
         "otherNightReminder": "Quản gia chỉ 1 người. Đánh dấu người đó là 'Chủ nhân'.",
         "remindersGlobal": [],
@@ -245,7 +254,7 @@
     {
         "id": "cannibal",
         "name": "Ăn thịt người",
-        "ability": "Bạn có chức năng của người chết vì hành quyết gần nhất. Nếu họ là ác, bạn trúng độc cho đến khi người tốt chết vì hành quyết.",
+        "ability": "Bạn có chức năng của người chết vì hành quyết gần nhất. Nếu họ là xấu, bạn trúng độc cho đến khi người tốt chết vì hành quyết.",
         "firstNightReminder": "",
         "otherNightReminder": "",
         "remindersGlobal": [],
@@ -256,10 +265,10 @@
     },
     {
         "id": "cerenovus",
-        "name": "Cerenovus",
-        "ability": "Mỗi đêm, chọn 1 người & nhân vật tốt: họ 'điên' rằng họ là nhân vật đó, hoặc có thể bị hành quyết ngày mai.",
-        "firstNightReminder": "Cerenovus chỉ một người, và một nhân vật trong tờ của họ. Wake that player. Cho xem lá 'Nhân vật này chọn bạn', và token Cerenovus. Cho xem token nhân vật được chọn. Nếu họ không điên rằng mình là nhân vật đó vào ngày mai, họ có thể bị hành quyết.",
-        "otherNightReminder": "Cerenovus chỉ một người, và một nhân vật trong tờ của họ. Wake that player. Cho xem lá 'Nhân vật này chọn bạn', và token Cerenovus. Cho xem token nhân vật được chọn. Nếu họ không điên rằng mình là nhân vật đó vào ngày mai, họ có thể bị hành quyết.",
+        "name": "Tẩy não",
+        "ability": "Mỗi đêm, chọn 1 người & nhân vật tốt: họ phải 'điên' rằng họ là nhân vật đó, hoặc có thể bị hành quyết ngày mai.",
+        "firstNightReminder": "Tẩy não chỉ một người, và một nhân vật trong tờ của họ. Gọi người đó dậy, cho xem lá 'Nhân vật này chọn bạn', và thẻ Tẩy não. Cho xem thẻ nhân vật được chọn. Nếu họ không điên rằng mình là nhân vật đó vào ngày mai, họ có thể bị hành quyết.",
+        "otherNightReminder": "Tẩy não chỉ một người, và một nhân vật trong tờ của họ. Gọi người đó dậy, cho xem lá 'Nhân vật này chọn bạn', và thẻ Tẩy não. Cho xem thẻ nhân vật được chọn. Nếu họ không điên rằng mình là nhân vật đó vào ngày mai, họ có thể bị hành quyết.",
         "remindersGlobal": [],
         "reminders": [
             "Điên"
@@ -277,8 +286,8 @@
     {
         "id": "chef",
         "name": "Đầu bếp",
-        "ability": "Bạn bắt đầu biết có bao nhiêu cặp người ác.",
-        "firstNightReminder": "Cho xem dấu hiệu số (0, 1, 2, …) bằng số cặp người ác ngồi cạnh nhau.",
+        "ability": "Đêm đầu tiên, bạn biết có bao nhiêu cặp Phe Xấu ngồi cạnh nhau (hoặc là không có).",
+        "firstNightReminder": "Cho xem dấu hiệu số (1, 2,…) bằng số cặp người Xấu ngồi cạnh nhau, hoặc 0 nếu không có cặp nào.",
         "otherNightReminder": "",
         "remindersGlobal": [],
         "reminders": []
@@ -295,8 +304,8 @@
     {
         "id": "clockmaker",
         "name": "Thợ đồng hồ",
-        "ability": "Bạn bắt đầu biết số bước từ Quỷ đến Tay sai gần nhất",
-        "firstNightReminder": "Cho xem dấu hiệu số (1, 2, 3, v.v.) bằng khoảng cách từ Quy đến Tay sai gần nhất.",
+        "ability": "Đêm đầu tiên bạn biết khoảng cách từ Quỷ cho đến Tay Sai gần nhất.",
+        "firstNightReminder": "Cho xem dấu hiệu số (1, 2, 3, v.v.) bằng khoảng cách từ Quỷ đến Tay Sai gần nhất.",
         "otherNightReminder": "",
         "remindersGlobal": [],
         "reminders": []
@@ -319,8 +328,8 @@
         "id": "cultleader",
         "name": "Trưởng giáo phái",
         "ability": "Mỗi đêm, bạn có phe của 1 người hàng xóm còn sống. Nếu tất cả những người tốt tham gia giáo phái của bạn, phe bạn thắng.",
-        "firstNightReminder": "Nếu trưởng giáo phái đổi phe, cho họ thấy ngón cái lên thể hiện thiện hoặc ngón cái xuống thể hiện ác.",
-        "otherNightReminder": "Nếu trưởng giáo phái đổi phe, cho họ thấy ngón cái lên thể hiện thiện hoặc ngón cái xuống thể hiện ác.",
+        "firstNightReminder": "Nếu trưởng giáo phái đổi phe, cho họ thấy ngón cái lên thể hiện tốt hoặc ngón cái xuống thể hiện xấu.",
+        "otherNightReminder": "Nếu trưởng giáo phái đổi phe, cho họ thấy ngón cái lên thể hiện tốt hoặc ngón cái xuống thể hiện xấu.",
         "remindersGlobal": [],
         "reminders": []
     },
@@ -328,8 +337,8 @@
         "id": "damsel",
         "name": "Thiếu nữ",
         "ability": "Tất cả tay sai biết bạn trong game. Nếu Tay sai công khai đoán bạn (lần duy nhất), phe bạn thua.",
-        "firstNightReminder": "Gọi tất cả tay sai dậy, cho họ xem lá 'Nhân vật này chọn bạn' và token Thiếu nữ.",
-        "otherNightReminder": "Nếu được chọn bởi Thợ săn, gọi Thiếu nữ dậy, cho xem lá 'Bạn là' và token Dân làng ngoài game.",
+        "firstNightReminder": "Gọi tất cả tay sai dậy, cho họ xem lá 'Nhân vật này chọn bạn' và thẻ Thiếu nữ.",
+        "otherNightReminder": "Nếu được chọn bởi Thợ săn, gọi Thiếu nữ dậy, cho xem lá 'Bạn là' và thẻ Dân làng ngoài game.",
         "remindersGlobal": [],
         "reminders": [
             "Đã đoán"
@@ -338,7 +347,7 @@
     {
         "id": "deusexfiasco",
         "name": "Deus ex Fiasco",
-        "ability": "Một lần trong game, Người kể chuyện sẽ \"gây lỗi\", sửa nó và thừa nhận lỗi của mình.",
+        "ability": "Một lần trong game, Người kể chuyện sẽ \"mắc lỗi\", sửa nó và thừa nhận lỗi của mình.",
         "firstNightReminder": "",
         "otherNightReminder": "",
         "remindersGlobal": [],
@@ -368,8 +377,8 @@
     },
     {
         "id": "djinn",
-        "name": "Djinn",
-        "ability": "Sử dụng luật đặc biết của Djinn. Tất cả mọi người biết nó là gì.",
+        "name": "Thần đèn",
+        "ability": "Sử dụng luật đặc biệt của Thần đèn. Tất cả mọi người biết nó là gì.",
         "firstNightReminder": "",
         "otherNightReminder": "",
         "remindersGlobal": [],
@@ -377,8 +386,8 @@
     },
     {
         "id": "doomsayer",
-        "name": "Người nói vận đen",
-        "ability": "Nếu còn 4 người sống trở lên, mỗi người sống có thể công khai chọn (một lần trong game) rằng một người cùng phe họ chết.",
+        "name": "Khẩu nghiệp",
+        "ability": "Nếu có ít nhất 4 người còn sống, mỗi người sống có thể công khai chọn (một lần duy nhất) một người cùng phe họ để chết.",
         "firstNightReminder": "",
         "otherNightReminder": "",
         "remindersGlobal": [],
@@ -387,9 +396,9 @@
     {
         "id": "dreamer",
         "name": "Mơ mộng",
-        "ability": "Mỗi đêm, chọn 1 người (khộng phải bạn hoặc Du khách): bạn biết 1 nhân vật thiện và 1 nhân vật ác, 1 trong số đó là đúng.",
-        "firstNightReminder": "Mơ mộng chỉ 1 người. Cho xem 1 token nhân vật thiện và 1 token nhân vật ác; một trong số đó là đúng.",
-        "otherNightReminder": "Mơ mộng chỉ 1 người. Cho xem 1 token nhân vật thiện và 1 token nhân vật ác; một trong số đó là đúng.",
+        "ability": "Mỗi đêm, chọn 1 người (không phải mình hay Lữ Khách): được biết 1 chức năng tốt và 1 chức năng xấu, 1 trong số đó là đúng.",
+        "firstNightReminder": "Mơ mộng chỉ 1 người. Cho xem 1 thẻ nhân vật tốt và 1 thẻ nhân vật xấu; 1 trong số đó là đúng.",
+        "otherNightReminder": "Mơ mộng chỉ 1 người. Cho xem 1 thẻ nhân vật tốt và 1 thẻ nhân vật xấu; 1 trong số đó là đúng.",
         "remindersGlobal": [],
         "reminders": []
     },
@@ -407,7 +416,7 @@
     {
         "id": "duchess",
         "name": "Phu nhân",
-        "ability": "Mỗi ngày, 3 người có thể thăm bạn. Trong đêm*, mỗi người thăm sẽ biết được có bao nhiêu người thăm ác, nhưng 1 người nhận sai thông tin.",
+        "ability": "Mỗi ngày, 3 người có thể thăm bạn. Trong đêm*, mỗi người thăm sẽ biết được có bao nhiêu người thăm xấu, nhưng 1 người nhận sai thông tin.",
         "firstNightReminder": "",
         "otherNightReminder": "",
         "remindersGlobal": [],
@@ -419,9 +428,9 @@
     {
         "id": "empath",
         "name": "Đồng cảm",
-        "ability": "Mỗi đêm, bạn biết số người ác trong số 2 hàng xóm sống của bạn.",
-        "firstNightReminder": "Cho xem dấu hiệu số (0, 1, 2) bằng số hàng xóm ác sống bên cạnh Đồng cảm.",
-        "otherNightReminder": "Cho xem dấu hiệu số (0, 1, 2) bằng số hàng xóm ác sống bên cạnh Đồng cảm.",
+        "ability": "Mỗi đêm, bạn biết số người xấu trong 2 hàng xóm sống của bạn.",
+        "firstNightReminder": "Cho xem dấu hiệu số (0, 1, 2) bằng số hàng xóm là người xấu sống bên cạnh Đồng cảm.",
+        "otherNightReminder": "Cho xem dấu hiệu số (0, 1, 2) bằng số hàng xóm là người Xấu sống bên cạnh Đồng cảm.",
         "remindersGlobal": [],
         "reminders": []
     },
@@ -429,8 +438,8 @@
         "id": "engineer",
         "name": "Kĩ sư",
         "ability": "Một lần trong game, trong đêm, chọn Quỷ nào hoặc những Tay sai nào trong game.",
-        "firstNightReminder": "Kĩ sư có thể lắc đầu, hoặc chỉ 1 Quỷ hoặc chỉ số lượng Tay sai thích hợp. Nếu Kĩ sư chọn nhân vật, thay thế Quỷ hoặc Tay sai với lựa chọn đó, rối gọi người liên quan dậy và cho xem lá 'Bạn là' và những token thích hợp.",
-        "otherNightReminder": "Kĩ sư có thể lắc đầu, hoặc chỉ 1 Quỷ hoặc chỉ số lượng Tay sai thích hợp. Nếu Kĩ sư chọn nhân vật, thay thế Quỷ hoặc Tay sai với lựa chọn đó, rối gọi người liên quan dậy và cho xem lá 'Bạn là' và những token thích hợp.",
+        "firstNightReminder": "Kĩ sư có thể lắc đầu, hoặc chỉ 1 Quỷ hoặc chỉ số lượng Tay sai thích hợp. Nếu Kĩ sư chọn nhân vật, thay thế Quỷ hoặc Tay sai với lựa chọn đó, rối gọi người liên quan dậy và cho xem lá 'Bạn là' và những thẻ thích hợp.",
+        "otherNightReminder": "Kĩ sư có thể lắc đầu, hoặc chỉ 1 Quỷ hoặc chỉ số lượng Tay sai thích hợp. Nếu Kĩ sư chọn nhân vật, thay thế Quỷ hoặc Tay sai với lựa chọn đó, rối gọi người liên quan dậy và cho xem lá 'Bạn là' và những thẻ thích hợp.",
         "remindersGlobal": [],
         "reminders": [
             "Hết chức năng"
@@ -438,9 +447,9 @@
     },
     {
         "id": "eviltwin",
-        "name": "Sinh đôi ác",
-        "ability": "Bạn & người khác phe biết nhau. Nếu người tốt bị hành quyết, phe ác thắng. Phe thiện không thể thắng nếu 2 người cùng sống.",
-        "firstNightReminder": "Gọi Sinh đôi ác và sinh đôi của họ. Chắc chắn rằng cả 2 biết nhau. Chỉ Sinh đôi ác. Cho xem token Sinh đôi ác cho sinh đôi thiện. Chi sinh đôi thiện. Cho xem token nhân vật của họ cho Sinh đôi ác.",
+        "name": "Sinh đôi xấu",
+        "ability": "Bạn & 1 người khác phe biết nhau. Nếu người đó bị hành quyết, phe xấu thắng. Phe Tốt không thể thắng nếu 2 người cùng sống.",
+        "firstNightReminder": "Gọi Sinh đôi xấu và sinh đôi của họ, chắc chắn rằng cả 2 biết nhau. Chỉ Sinh đôi xấu, cho xem thẻ \"Sinh đôi xấu\" cho Sinh đôi tốt. Chỉ Sinh đôi tốt, cho xem thẻ nhân vật của họ cho Sinh đôi xấu.",
         "otherNightReminder": "",
         "remindersGlobal": [],
         "reminders": [
@@ -452,18 +461,18 @@
         "name": "Thầy trừ tà",
         "ability": "Mỗi đêm*, chọn 1 người (khác đêm qua): Quỷ, nếu được chọn, biết bạn là ai và không thức dậy nữa.",
         "firstNightReminder": "",
-        "otherNightReminder": "Thầy trừ tà chỉ 1 người, khác đêm trước. Nếu ngườ đó là Quỷ: Gọi Quỷ dậy. Cho xem token Thầy trừ tà. Chỉ Thầy trừ tà. Quỷ không hành động đêm nay.",
+        "otherNightReminder": "Thầy trừ tà chỉ 1 người, khác đêm trước. Nếu ngườ đó là Quỷ: Gọi Quỷ dậy. Cho xem thẻ Thầy trừ tà. Chỉ Thầy trừ tà. Quỷ không hành động đêm nay.",
         "remindersGlobal": [],
         "reminders": [
-            "Chosen"
+            "Được chọn"
         ]
     },
     {
         "id": "fanggu",
         "name": "Fang Gu",
-        "ability": "Mỗi đêm*, chọn 1 người: họ chết. Lữ khách đầu tiên nhân vật này chọn sẽ trở thành Fang Gu ác & bạn chết thay. [+1 Lữ khách]",
+        "ability": "Mỗi đêm*, chọn 1 người: họ chết. Lữ khách  đầu tiên bị nhân vật này chọn sẽ biến thành Fang Gu mới, theo Phe Xấu & bạn chết. [+1 Lữ khách]",
         "firstNightReminder": "",
-        "otherNightReminder": "Fang Gu chỉ 1 người. người đó chết. Hoặc, nếu người đó là Lữ khách và không có Fang Gu khác trong game: Fang Gu chết thay cho người được chọn. Người được chọn sẽ trở thành Fang Gu ác. Gọi Fang Gu mới dậy. Cho xem lá 'Bạn là, token Fang Gu. Cho xem lá 'Bạn là', và giơ ngón cái xuống thể hiện ác.",
+        "otherNightReminder": "Fang Gu chỉ 1 người. người đó chết. Hoặc, nếu người đó là Lữ khách và không có Fang Gu khác: Fang Gu chết thay cho người được chọn. Người được chọn sẽ trở thành Fang Gu xấu. Gọi Fang Gu mới dậy. Cho xem lá 'Bạn là, thẻ Fang Gu. Cho xem lá 'Bạn là', và giơ ngón cái xuống thể hiện theo Phe Xấu.",
         "remindersGlobal": [],
         "reminders": [
             "Chết",
@@ -475,7 +484,7 @@
         "name": "Nông dân",
         "ability": "Nếu bạn chết trong đêm, 1 người tốt trở thành Nông dân.",
         "firstNightReminder": "",
-        "otherNightReminder": "Nếu 1 Nông dân chết trong đêm, chọn người tốt khác và biến họ thành Nông dân. Gọi người tốt đó dậy, cho họ xem lá 'Bạn là' và token nhân vật Nông dân.",
+        "otherNightReminder": "Nếu 1 Nông dân chết trong đêm, chọn người tốt khác và biến họ thành Nông dân. Gọi người tốt đó dậy, cho họ xem lá 'Bạn là' và thẻ nhân vật Nông dân.",
         "remindersGlobal": [],
         "reminders": []
     },
@@ -483,8 +492,8 @@
         "id": "fearmonger",
         "name": "Kẻ gây hãi",
         "ability": "Mỗi đêm, chọn 1 người. nếu bạn biểu quyết & hành quyết họ, phe họ thua. Tất cả mọi người biết bạn chọn 1 người mới.",
-        "firstNightReminder": "Kẻ gây hãi chỉ 1 người. Đặt token Sợ hãi bên cạnh người đó và thông báo rằng 1 người mới đã được chọn bởi chức năng của Kẻ gây hãi.",
-        "otherNightReminder": "Kẻ gây hãi chỉ 1 người. Nếu khac đêm trước, đặt token Sợ hãi bên cạnh người đó và thông báo rằng 1 người mới đã được chọn bởi chức năng của Kẻ gây hãi.",
+        "firstNightReminder": "Kẻ gây hãi chỉ 1 người. Đặt thẻ Sợ hãi bên cạnh người đó và thông báo rằng 1 người mới đã được chọn bởi chức năng của Kẻ gây hãi.",
+        "otherNightReminder": "Kẻ gây hãi chỉ 1 người. Nếu khac đêm trước, đặt thẻ Sợ hãi bên cạnh người đó và thông báo rằng 1 người mới đã được chọn bởi chức năng của Kẻ gây hãi.",
         "remindersGlobal": [],
         "reminders": [
             "Sợ hãi"
@@ -503,7 +512,7 @@
     },
     {
         "id": "fiddler",
-        "name": "người vĩ cầm",
+        "name": "Người vĩ cầm",
         "ability": "Một lần trong game, Quỷ chọn người khác phe: tất cả mọi người quyết định người thắng trong số 2 người.",
         "firstNightReminder": "",
         "otherNightReminder": "",
@@ -524,9 +533,9 @@
     {
         "id": "flowergirl",
         "name": "Bán hoa",
-        "ability": "Mỗi đêm*, bạn biết Quỷ có bỏ phiếu hôm nay.",
+        "ability": "Mỗi đêm*, bạn biết Quỷ có bỏ phiếu hôm nay hay không.",
         "firstNightReminder": "",
-        "otherNightReminder": "Gật đầu 'có' hoặc lắc đầu 'không' tùy theo Quỷ có bỏ phiếu hôm nay không. Đặt token đánh dấu 'Quỷ không bỏ phiếu' (bỏ 'Quỷ bỏ phiếu', nếu có).",
+        "otherNightReminder": "Gật đầu 'có' hoặc lắc đầu 'không' tùy theo Quỷ có bỏ phiếu hôm nay không. Đặt thẻ đánh dấu 'Quỷ không bỏ phiếu' (bỏ 'Quỷ bỏ phiếu', nếu có).",
         "remindersGlobal": [],
         "reminders": [
             "Quỷ bỏ phiếu",
@@ -547,12 +556,12 @@
     {
         "id": "fortuneteller",
         "name": "Thầy bói",
-        "ability": "Mỗi đêm, chọn 2 người: bạn biết trong đó có Quỷ không. Có 1 người thiện được thấy là Quỷ đối với bạn.",
-        "firstNightReminder": "Tiên tri chỉ 2 người. Đưa dấu hiệu đầu (gật đầu đúng, lắc đầu sai) tùy theo trong số đó có Quỷ không. ",
-        "otherNightReminder": "Tiên tri chỉ 2 người. Đưa dấu hiệu đầu (gật đầu đúng, lắc đầu sai) tùy theo trong số đó có Quỷ không. ",
+        "ability": "Mỗi đêm, chọn 2 người: bạn biết trong đó có Quỷ hay không. Có 1 người tốt bị tính là Quỷ với bạn.",
+        "firstNightReminder": "Thầy bói chỉ 2 người. Đưa dấu hiệu đầu (gật đầu đúng, lắc đầu sai) tùy theo trong số đó có Quỷ không. ",
+        "otherNightReminder": "Thầy bói chỉ 2 người. Đưa dấu hiệu đầu (gật đầu đúng, lắc đầu sai) tùy theo trong số đó có Quỷ không. ",
         "remindersGlobal": [],
         "reminders": [
-            "Đánh lạc hướng"
+            "Điểm mù"
         ]
     },
     {
@@ -578,9 +587,9 @@
     {
         "id": "general",
         "name": "Đại tướng",
-        "ability": "Mỗi đêm, bạn biết phe mà Người kể chuyện nghĩ là đang thắng: thiện, ác, hoặc ngang bằng.",
-        "firstNightReminder": "Cho Đại tướng thấy ngón cái lên nếu thiện đang thắng, ngón cái xuống nếu ác đang thắng hoặc ngón cái ngang nếu đang cân bằng.",
-        "otherNightReminder": "Cho Đại tướng thấy ngón cái lên nếu thiện đang thắng, ngón cái xuống nếu ác đang thắng hoặc ngón cái ngang nếu đang cân bằng.",
+        "ability": "Mỗi đêm, bạn biết phe mà Người kể chuyện nghĩ là đang thắng: tốt, xấu, hoặc ngang bằng.",
+        "firstNightReminder": "Cho Đại tướng thấy ngón cái lên nếu tốt đang thắng, ngón cái xuống nếu xấu đang thắng hoặc ngón cái ngang nếu đang cân bằng.",
+        "otherNightReminder": "Cho Đại tướng thấy ngón cái lên nếu tốt đang thắng, ngón cái xuống nếu xấu đang thắng hoặc ngón cái ngang nếu đang cân bằng.",
         "remindersGlobal": [],
         "reminders": []
     },
@@ -599,7 +608,7 @@
         "id": "godfather",
         "name": "Bố già",
         "ability": "Bạn bắt đầu biết những Lữ khách trong game. Nếu 1 trong số đó chết hôm nay, chọn 1 người đêm nay: họ chết. [−1 or +1 Lữ khách]",
-        "firstNightReminder": "Cho xem tất cả token Lữ khách trong game.",
+        "firstNightReminder": "Cho xem tất cả thẻ Lữ khách trong game.",
         "otherNightReminder": "Nếu Lữ khách chết hôm nay: Bố già chỉ 1 người. người đó chết.",
         "remindersGlobal": [],
         "reminders": [
@@ -634,7 +643,7 @@
         "name": "Bà tám",
         "ability": "Mỗi ngày, bạn có thể đưa ra 1 mệnh đề công khai. Đêm nay, nếu nó đúng, 1 người chết.",
         "firstNightReminder": "",
-        "otherNightReminder": "Nếu mệnh đề công khai của Mách lèo là đúng: Chọn 1 người không được bảo vệ khỏi cái chết tối nay. người đó chết.",
+        "otherNightReminder": "Nếu mệnh đề công khai của Bà tám là đúng: Chọn 1 người không được bảo vệ khỏi cái chết tối nay. người đó chết.",
         "remindersGlobal": [],
         "reminders": [
             "Chết"
@@ -643,8 +652,8 @@
     {
         "id": "grandmother",
         "name": "Bà ngoại",
-        "ability": "Bạn bắt đầu biết 1 người thiện & nhân vật của họ. Nếu Quỷ giết họ, bạn chết theo.",
-        "firstNightReminder": "Cho xem token nhân vật được đánh dấu. Chỉ người được đánh dấu.",
+        "ability": "Bạn bắt đầu biết 1 người tốt & nhân vật của họ. Nếu Quỷ giết họ, bạn chết theo.",
+        "firstNightReminder": "Cho xem thẻ nhân vật được đánh dấu. Chỉ người được đánh dấu.",
         "otherNightReminder": "Nếu cháu của Bà ngoại bị giết bởi Quỷ tối nay: Bà ngoại chết.",
         "remindersGlobal": [],
         "reminders": [
@@ -665,7 +674,7 @@
         "name": "Gái điếm",
         "ability": "Mỗi đêm*, chọn 1 người sống: nếu họ đồng ý, bạn biết nhân vật của họ, nhưng cả hai có thể chết.",
         "firstNightReminder": "",
-        "otherNightReminder": "Gái điếm chỉ bất kì người nào. Rồi cho Gái điếm đi ngủ. Gọi người được chọn, Cho họ xem lá 'Nhân vật này chọn bạn', và token Gái điếm. người đó có thể gật đầu có hoặc lắc đầu không. Nếu họ gật đầu có, gọi Gái điếm và cho xem token nhân vật của người được chọn. Rồi bạn có thể cho cả hai cùng chết.",
+        "otherNightReminder": "Gái điếm chỉ bất kì người nào. Rồi cho Gái điếm đi ngủ. Gọi người được chọn, Cho họ xem lá 'Nhân vật này chọn bạn', và thẻ Gái điếm. người đó có thể gật đầu có hoặc lắc đầu không. Nếu họ gật đầu có, gọi Gái điếm và cho xem thẻ nhân vật của người được chọn. Rồi bạn có thể cho cả hai cùng chết.",
         "remindersGlobal": [],
         "reminders": [
             "Chết"
@@ -673,13 +682,25 @@
     },
     {
         "id": "harpy",
-        "name": "Harpy",
-        "ability": "Mỗi đêm, chọn 2 người chơi: ngày mai, người chơi thứ nhất tức giận vì người thứ hai là ác quỷ, hoặc cả hai có thể chết.",
-        "firstNightReminder": "Đánh thức Harpy; họ chỉ vào một người chơi, rồi người khác. Đánh thức người chơi đầu tiên mà Harpy chỉ vào, cho họ xem thẻ \"Nhân vật này đã chọn bạn\", cho họ xem mã thông báo Harpy, sau đó chỉ vào người chơi thứ 2 mà Harpy chỉ vào.",
-        "otherNightReminder": "Đánh thức Harpy; họ chỉ vào một người chơi, rồi người khác. Đánh thức người chơi đầu tiên mà Harpy chỉ vào, cho họ xem thẻ \"Nhân vật này đã chọn bạn\", cho họ xem mã thông báo Harpy, sau đó chỉ vào người chơi thứ 2 mà Harpy chỉ vào.",
+        "name": "Người chim",
+        "ability": "Mỗi đêm, chọn 2 người: ngày mai, người thứ nhất điên rằng người thứ hai là xấu, hoặc cả hai có thể chết.",
+        "firstNightReminder": "Gọi Người chim dậy; họ chỉ 1 người và 1 người khác. Gọi người đầu tiên được Người chim chỉ, cho họ xem lá 'Nhân vật này chọn bạn', và token Người chim, rồi chỉ người thứ hai được Người chim chỉ.",
+        "otherNightReminder": "Gọi Người chim dậy; họ chỉ 1 người và 1 người khác. Gọi người đầu tiên được Người chim chỉ, cho họ xem lá 'Nhân vật này chọn bạn', và token Người chim, rồi chỉ người thứ hai được Người chim chỉ.",
+        "remindersGlobal": [],
         "reminders": [
-            "Điên rồ",
-            "lần 2"
+            "Điên",
+            "2nd"
+        ]
+    },
+    {
+        "id": "hatter",
+        "name": "Hatter",
+        "ability": "Nếu bạn chết trong hôm nay hoặc đêm nay, Quỷ và Tay sai có thể chọn để trở thành nhân vật Quỷ và Tay sai mới.",
+        "firstNightReminder": "",
+        "otherNightReminder": "If the Hatter died today: Wake the Minions and Demon. Show them the 'This Character Selected You' info token, then the Hatter token. Each player either shakes their head no or points to another character of the same type as their current character.  If a second player would end up with the same character as another player, shake your head no and gesture for them to choose again. Put them to sleep. Change each player to the character they chose.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Tea Party Tonight"
         ]
     },
     {
@@ -696,7 +717,7 @@
     {
         "id": "heretic",
         "name": "Dị giáo",
-        "ability": "Ai thắng, thua & ai thua, thắng, ngay cả khi bạn đã chết",
+        "ability": "Ai thắng, thua & ai thua, thắng, ngay cả khi bạn đã chết.",
         "firstNightReminder": "",
         "otherNightReminder": "",
         "remindersGlobal": [],
@@ -704,10 +725,10 @@
     },
     {
         "id": "highpriestess",
-        "name": "Nữ tu",
-        "ability": "Mỗi đêm, biết người chơi mà Người kể chuyện thấy bạn nên bắt chuyện nhất.",
-        "firstNightReminder": "Chỉ 1 người chơi.",
-        "otherNightReminder": "Chỉ 1 người chơi.",
+        "name": "Nữ thượng tế",
+        "ability": "Mỗi đêm, bạn biết Người kể chuyện nghĩ bạn nên nói chuyện với người nào nhất",
+        "firstNightReminder": "Chỉ 1 người.",
+        "otherNightReminder": "Chỉ 1 người.",
         "remindersGlobal": [],
         "reminders": []
     },
@@ -715,8 +736,8 @@
         "id": "huntsman",
         "name": "Thợ săn",
         "ability": "Một lần trong game, trong đêm, chọn người sống: Thiếu nữ, nếu được chọn, trở thành Dân làng ngoài game. [+Thiếu nữ]",
-        "firstNightReminder": "Thợ săn lắc đầu hoặc chỉ 1 người. Nếu họ chỉ Thiếu nữ: gọi người đó dậy, cho xem lá 'Bạn là' và token nhân vật ngoài game.",
-        "otherNightReminder": "Thợ săn lắc đầu hoặc chỉ 1 người. Nếu họ chỉ Thiếu nữ: gọi người đó dậy, cho xem lá 'Bạn là' và token nhân vật ngoài game.",
+        "firstNightReminder": "Thợ săn lắc đầu hoặc chỉ 1 người. Nếu họ chỉ Thiếu nữ: gọi người đó dậy, cho xem lá 'Bạn là' và thẻ nhân vật ngoài game.",
+        "otherNightReminder": "Thợ săn lắc đầu hoặc chỉ 1 người. Nếu họ chỉ Thiếu nữ: gọi người đó dậy, cho xem lá 'Bạn là' và thẻ nhân vật ngoài game.",
         "remindersGlobal": [],
         "reminders": [
             "Hết chức năng"
@@ -727,7 +748,7 @@
         "name": "Imp",
         "ability": "Mỗi đêm*, chọn 1 người: họ chết. Nếu bạn giết chính mình bằng cách này, 1 Tay sai trở thành Imp.",
         "firstNightReminder": "",
-        "otherNightReminder": "Imp chỉ 1 người. Người đó chết. Nếu Imp chỉ chính mình: Thay thế token nhân vật của 1 tay sai còn sống bằng token Imp thừa . Cho xem lá 'Bạn là', và token Imp.",
+        "otherNightReminder": "Imp chỉ 1 người. Người đó chết. Nếu Imp chỉ chính mình: Thay thế thẻ nhân vật của 1 tay sai còn sống bằng thẻ Imp thừa . Cho xem lá 'Bạn là', và thẻ Imp.",
         "remindersGlobal": [],
         "reminders": [
             "Chết"
@@ -748,12 +769,12 @@
     {
         "id": "investigator",
         "name": "Điều tra viên",
-        "ability": "Bạn biết nhân vật Tay sai thuộc về 1 trong 2 người.",
-        "firstNightReminder": "Cho xem token nhân vật của Tay sai trong cuộc. Chỉ 2 người, một trong số họ là nhân vật đó.",
+        "ability": "Đêm đầu tiên, bạn biết chức năng của Tay Sai thuộc về 1 trong 2 người.",
+        "firstNightReminder": "Cho xem thẻ nhân vật của Tay Sai trong cuộc. Chỉ 2 người, 1 trong số họ là nhân vật đó.",
         "otherNightReminder": "",
         "remindersGlobal": [],
         "reminders": [
-            "Tay sai",
+            "Tay Sai",
             "Sai"
         ]
     },
@@ -773,7 +794,7 @@
         "name": "Tung hứng",
         "ability": "Vào ngày đầu tiên của bạn, đoán công khai nhân vật của 5 người. Đêm đó, bạn biết bạn có bao nhiêu người đúng.",
         "firstNightReminder": "",
-        "otherNightReminder": "Nếu hôm nay là ngày đầu tiên của Tung hứng: Cho xem dấu hiệu số (0, 1, 2, v.v) bằng số token 'Đúng'. Bỏ đánh dấu.",
+        "otherNightReminder": "Nếu hôm nay là ngày đầu tiên của Tung hứng: Cho xem dấu hiệu số (0, 1, 2, v.v) bằng số thẻ 'Đúng'. Bỏ đánh dấu.",
         "remindersGlobal": [],
         "reminders": [
             "Đúng"
@@ -783,15 +804,15 @@
         "id": "king",
         "name": "Ông vua",
         "ability": "Mỗi đêm, nếu người chết nhiều hơn người sống, bạn biết nhân vật của người sống. Quỷ biết bạn là ai.",
-        "firstNightReminder": "Gọi Quỷ dậy, cho xem lá 'Nhân vật này chọn bạn', cho xem token Ông vua và chỉ vào Ông vua.",
-        "otherNightReminder": "Nếu người chết nhiều hơn người sống, cho Ông vua xem token nhân vật của người sống.",
+        "firstNightReminder": "Gọi Quỷ dậy, cho xem lá 'Nhân vật này chọn bạn', cho xem thẻ Ông vua và chỉ vào Ông vua.",
+        "otherNightReminder": "Nếu người chết nhiều hơn người sống, cho Ông vua xem thẻ nhân vật của người sống.",
         "remindersGlobal": [],
         "reminders": []
     },
     {
         "id": "klutz",
         "name": "Hậu đậu",
-        "ability": "Khi bạn biết bạn chết, công khai chọn 1 người sống: nếu họ là ác, phe bạn thua.",
+        "ability": "Khi bạn biết bạn chết, công khai chọn 1 người sống: nếu họ là người Xấu, phe bạn thua.",
         "firstNightReminder": "",
         "otherNightReminder": "",
         "remindersGlobal": [],
@@ -799,9 +820,9 @@
     },
     {
         "id": "knight",
-        "name": "Hiệp sĩ",
-        "ability": "Bạn bắt đầu biết 2 người không phải Quỷ.",
-        "firstNightReminder": "Chỉ tới 2 người không phải Quỷ.",
+        "name": "Hiệp sỹ",
+        "ability": "Bạn bắt đầu biết 2 người chơi không phải là Quỷ",
+        "firstNightReminder": "Chỉ 2 người không phải Quỷ ",
         "otherNightReminder": "",
         "remindersGlobal": [],
         "reminders": [
@@ -812,7 +833,7 @@
     {
         "id": "legion",
         "name": "Legion",
-        "ability": "Mỗi đêm*, một người có thể chết. Hành quyết thất bại nếu chỉ có ác bỏ phiếu. Bạn cũng được thấy là Tay sai. [Đa số người là Legion]",
+        "ability": "Mỗi đêm*, một người có thể chết. Hành quyết thất bại nếu chỉ có người xấu bỏ phiếu. Bạn cũng được thấy là Tay sai. [Đa số người là Legion]",
         "firstNightReminder": "",
         "otherNightReminder": "Chọn 1 người, người đó chết.",
         "remindersGlobal": [],
@@ -824,7 +845,7 @@
     {
         "id": "leviathan",
         "name": "Leviathan",
-        "ability": "Nếu nhiều hơn 1 người thiện bị hành quyết, bạn thắng. Tất cả người biết bạn trong cuộc. Sau ngày 5, ác thắng.",
+        "ability": "Nếu nhiều hơn 1 người tốt bị hành quyết, bạn thắng. Tất cả người biết bạn trong cuộc. Sau ngày 5, xấu thắng.",
         "firstNightReminder": "Đặt đánh dấu 'Ngày 1' của Leviathan. Thông báo rằng 'Có Leviathan trong cuộc: Hôm nay là ngày 1.'",
         "otherNightReminder": "Đổi đánh dấu ngày của Leviathan sang ngày hôm sau.",
         "remindersGlobal": [],
@@ -834,14 +855,14 @@
             "Ngày 3",
             "Ngày 4",
             "Ngày 5",
-            "Thiện đã bị hành quyết"
+            "tốt đã bị hành quyết"
         ]
     },
     {
         "id": "librarian",
         "name": "Thủ thư",
-        "ability": "Bạn biết nhân vật Lữ khách thuộc về 1 trong 2 người. (Hoặc không có Lữ khách.)",
-        "firstNightReminder": "Cho xem token nhân vật Lữ khách trong cuộc. Chỉ 2 người, một trong số họ là nhân vật đó.",
+        "ability": "Đêm đầu tiên, bạn biết chức năng của Lữ khách thuộc về 1 trong 2 người (hoặc là không có Lữ khách).",
+        "firstNightReminder": "Cho xem thẻ nhân vật Lữ khách trong cuộc. Chỉ vào 2 người, 1 trong số họ là nhân vật đó.",
         "otherNightReminder": "",
         "remindersGlobal": [],
         "reminders": [
@@ -852,7 +873,7 @@
     {
         "id": "lilmonsta",
         "name": "Lil' Monsta",
-        "ability": "Mỗi đêm, Tay sai quyết định ai trông nom token Lil' Monsta & \"là Quỷ\"..Một người chết mỗi đêm*. [+1 Tay sai]",
+        "ability": "Mỗi đêm, Tay sai quyết định ai trông nom thẻ Lil' Monsta & \"là Quỷ\"..Một người chết mỗi đêm*. [+1 Tay sai]",
         "firstNightReminder": "Gọi tất cả Tay sai dậy, cho họ chỉ phiếu cho người họ muốn trông coi Lil' Monsta.",
         "otherNightReminder": "Gọi tất cả Tay sai dậy, cho họ chỉ phiếu cho người họ muốn trông coi Lil' Monsta.. Chọn 1 người, người đó chết.",
         "remindersGlobal": [
@@ -865,7 +886,7 @@
         "id": "lleech",
         "name": "Lleech",
         "ability": "Mỗi đêm*, chọn 1 người: họ chết. Bạn chọn 1 người lúc bắt đầu: họ trúng độc - bạn chết khi & chỉ khi họ chết.",
-        "firstNightReminder": "Lleech chọn 1 người. Đặt token nhớ 'Trúng độc'.",
+        "firstNightReminder": "Lleech chọn 1 người. Đặt thẻ nhớ 'Trúng độc'.",
         "otherNightReminder": "Lleech chỉ 1 người. Người đó chết.",
         "remindersGlobal": [],
         "reminders": [
@@ -877,7 +898,7 @@
         "id": "lunatic",
         "name": "Người điên",
         "ability": "Bạn nghĩ bạn là Quỷ, nhưng bạn không phải. Quỷ biết bạn là ai & người bạn chọn trong đêm.",
-        "firstNightReminder": "Nếu có 7 người trở lên: Cho Người điên thấy 'Tay sai' ngẫu nhiên, bằng số Tay sai trong game. Cho xem 3 nhân vật thiện ngẫu nhiên. Nếu Người điên nhận được token Quỷ thức dậy đêm nay: Cho Người điên sử dụng chức năng Quỷ đó. Đặt đánh dấu 'tấn công' của họ. Gọi Quỷ dậy. Cho Quỷ xem token nhân vật thật sự của họ. Cho họ thấy Người điên. Nếu Người điên tấn công người: Cho Quỷ thật sự biết những người đó. Bỏ tất cả đánh dấu 'tấn công'.",
+        "firstNightReminder": "Nếu có 7 người trở lên: Cho Người điên thấy 'Tay sai' ngẫu nhiên, bằng số Tay sai trong game. Cho xem 3 nhân vật tốt ngẫu nhiên. Nếu Người điên nhận được thẻ Quỷ thức dậy đêm nay: Cho Người điên sử dụng chức năng Quỷ đó. Đặt đánh dấu 'tấn công' của họ. Gọi Quỷ dậy. Cho Quỷ xem thẻ nhân vật thật sự của họ. Cho họ thấy Người điên. Nếu Người điên tấn công người: Cho Quỷ thật sự biết những người đó. Bỏ tất cả đánh dấu 'tấn công'.",
         "otherNightReminder": "Cho Người điên sử dụng chức năng Quỷ. Đặt đánh dấu 'tấn công'. Nếu Người điên chọn người: Wake the Demon. Cho xem đánh dấu 'tấn công', và chỉ tất cả người được đánh dấu. Bỏ tất cả đánh dấu 'tấn công'.",
         "remindersGlobal": [],
         "reminders": [
@@ -889,9 +910,9 @@
     {
         "id": "lycanthrope",
         "name": "Người sói",
-        "ability": "Mỗi đêm*, chọn 1 người sống: nếu là thiện, họ chết, nhưng họ là người duy nhất có thể chết đêm nay.",
+        "ability": "Mỗi đêm*, chọn 1 người sống: nếu là tốt, họ chết, nhưng họ là người duy nhất có thể chết đêm nay.",
         "firstNightReminder": "",
-        "otherNightReminder": "Người sói chỉ người sống: nếu là thiện, họ chết và những người khác không thế chết đêm nay.",
+        "otherNightReminder": "Người sói chỉ người sống: nếu là tốt, họ chết và những người khác không thế chết đêm nay.",
         "remindersGlobal": [],
         "reminders": [
             "Chết"
@@ -910,7 +931,7 @@
         "id": "marionette",
         "name": "Con rối",
         "ability": "Bạn nghĩ bạn là nhân vật tốt nhưng không phải. Quỷ biết bạn là ai. [Bạn ngồi cạnh Quỷ]",
-        "firstNightReminder": "Chọn một người tốt ngồi kế Quỷ và đặt token đánh dấu 'là Con rối'. Gọi Quỷ dậy và cho họ biết Con rối.",
+        "firstNightReminder": "Chọn một người tốt ngồi kế Quỷ và đặt thẻ đánh dấu 'là Con rối'. Gọi Quỷ dậy và cho họ biết Con rối.",
         "otherNightReminder": "",
         "remindersGlobal": [
             "là Con rối"
@@ -919,7 +940,7 @@
     },
     {
         "id": "mastermind",
-        "name": "Chủ mưu",
+        "name": "Quân sư",
         "ability": "Nếu Quỷ chết vì hành quyết (kết thúc game), chơi thêm 1 ngày nữa. Nếu 1 người bị hành quyết sau đó, phe họ thua.",
         "firstNightReminder": "",
         "otherNightReminder": "",
@@ -929,7 +950,7 @@
     {
         "id": "mathematician",
         "name": "Nhà toán học",
-        "ability": "Mỗi đêm, bạn biết bao nhiêu chức năng của người hoạt động bất thường (từ lúc bình minh) vì chức năng của người khác.",
+        "ability": "Mỗi đêm, bạn biết có bao nhiêu tính năng hoạt động bất thường (từ sáng) do chức năng của nhân vật khác.",
         "firstNightReminder": "Cho xem dấu hiệu số (0, 1, 2, v.v.) bằng số người có chức năng hoạt động bất thường vì chức năng khác.",
         "otherNightReminder": "Cho xem dấu hiệu số (0, 1, 2, v.v.) bằng số người có chức năng hoạt động bất thường vì chức năng khác.",
         "remindersGlobal": [],
@@ -949,7 +970,7 @@
     {
         "id": "mayor",
         "name": "Thị trưởng",
-        "ability": "Nếu còn 3 người sống & không có hành quyết, phe bạn thắng. Nếu bạn chết trong đêm, có thể người khác chết thay bạn.",
+        "ability": "Nếu còn 3 người sống mà ko ai bị Hành Quyết, phe bạn thắng. Nếu bạn sẽ chết trong đêm, có thể người khác sẽ chết thay.",
         "firstNightReminder": "",
         "otherNightReminder": "",
         "remindersGlobal": [],
@@ -957,13 +978,13 @@
     },
     {
         "id": "mezepheles",
-        "name": "Mezepheles",
-        "ability": "Bạn bắt đầu biết 1 từ bí mật. Người thiện đầu tiên nói từ này trở thành ác đêm đó.",
-        "firstNightReminder": "Cho Mezepheles biết từ bí mật.",
-        "otherNightReminder": "Gọi người thiện đầu tiên nói từ bí mật của Mezepheles dậy và cho xem lá 'Bạn là' và ngón tay cái xuống thể hiện ác.",
+        "name": "Kẻ chiêu mộ",
+        "ability": "Bạn bắt đầu biết 1 từ bí mật. Người tốt đầu tiên nói từ này trở thành người xấu đêm đó.",
+        "firstNightReminder": "Cho Kẻ chiêu mộ biết từ bí mật.",
+        "otherNightReminder": "Gọi người tốt đầu tiên nói từ bí mật của Kẻ chiêu mộ dậy và cho xem lá 'Bạn là' và ngón tay cái xuống thể hiện xấu.",
         "remindersGlobal": [],
         "reminders": [
-            "Biến thành ác",
+            "Biến thành xấu",
             "Hết chức năng"
         ]
     },
@@ -983,7 +1004,7 @@
         "name": "Nhà sư",
         "ability": "Mỗi đêm*, chọn 1 người (không phải bạn): họ an toàn khỏi Quỷ đêm nay.",
         "firstNightReminder": "",
-        "otherNightReminder": "Người được bảo vệ trước đó sẽ không được bảo vệ nữa. Nhà sư chỉ 1 người không phải chính họ. Đánh dấu người đó 'Được bảo vệ'.",
+        "otherNightReminder": "Người được bảo vệ trước đó sẽ không được bảo vệ nữa. Nhà sư chỉ 1 người không phải chính họ. Đánh dấu người đó 'Bảo vệ'.",
         "remindersGlobal": [],
         "reminders": [
             "Bảo vệ"
@@ -992,9 +1013,9 @@
     {
         "id": "moonchild",
         "name": "Con trăng",
-        "ability": "Khi bạn biết bạn chết, công khai chọn 1 người sống. Tối nay, nếu họ là người thiện, họ chết.",
+        "ability": "Khi bạn biết bạn chết, công khai chọn 1 người sống. Tối nay, nếu họ là người tốt, họ chết.",
         "firstNightReminder": "",
-        "otherNightReminder": "Nếu Con trăng sử dụng chức năng lên 1 người hôm nay: Nếu người đó là thiện, họ chết.",
+        "otherNightReminder": "Nếu Con trăng sử dụng chức năng lên 1 người hôm nay: Nếu người đó là tốt, họ chết.",
         "remindersGlobal": [],
         "reminders": [
             "Chết"
@@ -1003,7 +1024,7 @@
     {
         "id": "mutant",
         "name": "Đột biến",
-        "ability": "Nếu bạn \"điên' rằng mình là Lữ khách, có thể bạn bị hành quyết.",
+        "ability": "Nếu bạn \"điên' rằng mình là Lữ khách, có thể bạn bị Hành Quyết.",
         "firstNightReminder": "",
         "otherNightReminder": "",
         "remindersGlobal": [],
@@ -1013,8 +1034,8 @@
         "id": "nightwatchman",
         "name": "Người gác đêm",
         "ability": "Một lần trong game, trong đêm, chọn 1 người: họ biết bạn là ai.",
-        "firstNightReminder": "Người gác đêm có thể chỉ 1 người. Gọi người đó dậy, cho xem lá 'Nhân vật này chọn bạn' và token Người gác đêm, và chỉ Người gác đêm.",
-        "otherNightReminder": "Người gác đêm có thể chỉ 1 người. Gọi người đó dậy, cho xem lá 'Nhân vật này chọn bạn' và token Người gác đêm, và chỉ Người gác đêm.",
+        "firstNightReminder": "Người gác đêm có thể chỉ 1 người. Gọi người đó dậy, cho xem lá 'Nhân vật này chọn bạn' và thẻ Người gác đêm, và chỉ Người gác đêm.",
+        "otherNightReminder": "Người gác đêm có thể chỉ 1 người. Gọi người đó dậy, cho xem lá 'Nhân vật này chọn bạn' và thẻ Người gác đêm, và chỉ Người gác đêm.",
         "remindersGlobal": [],
         "reminders": [
             "Hết chức năng"
@@ -1023,8 +1044,8 @@
     {
         "id": "noble",
         "name": "Quý tộc",
-        "ability": "Bạn bắt đầu biết 3 người, 1 và chỉ 1 người là ác.",
-        "firstNightReminder": "Chỉ 3 người trong đó có người ác, không theo thứ tự.",
+        "ability": "Bạn bắt đầu biết 3 người, 1 và chỉ 1 người là xấu.",
+        "firstNightReminder": "Chỉ 3 người trong đó có người xấu, không theo thứ tự.",
         "otherNightReminder": "",
         "remindersGlobal": [],
         "reminders": [
@@ -1045,10 +1066,10 @@
     },
     {
         "id": "ojo",
-        "name": "ôi",
-        "ability": "Mỗi đêm*, chọn 1 người: họ chết. Nếu họ không chơi, Người kể chuyện sẽ chọn ai chết.",
+        "name": "Ojo",
+        "ability": "Mỗi đêm*, chọn 1 nhân vật: họ chết. Nếu nó ko có trong game, Người kể chuyện chọn người chết.",
         "firstNightReminder": "",
-        "otherNightReminder": "ôi chỉ vào một ký tự trên tờ giấy; nếu đang chơi, người chơi đó sẽ chết. Nếu nó không diễn ra, Người kể chuyện sẽ chọn người chết thay thế.",
+        "otherNightReminder": "Ojo chỉ 1 nhân vật trong tờ kịch bản; nếu có trong game, người đó chết. Nếu nó không có trong game, quản trò chọn người chết thay.",
         "remindersGlobal": [],
         "reminders": [
             "Chết"
@@ -1057,16 +1078,16 @@
     {
         "id": "oracle",
         "name": "Tiên tri",
-        "ability": "Mỗi đêm*, bạn biết có bao nhiêu người chết là ác.",
+        "ability": "Mỗi đêm*, bạn biết có bao nhiêu người chết là Phe Xấu.",
         "firstNightReminder": "",
-        "otherNightReminder": "Cho xem dấu hiệu số (0, 1, 2, v.v.) bằng số người chết ác.",
+        "otherNightReminder": "Cho xem dấu hiệu số (0, 1, 2, v.v.) bằng số Phe Xấu đã chết.",
         "remindersGlobal": [],
         "reminders": []
     },
     {
         "id": "organgrinder",
         "name": "Nhạc công đường phố",
-        "ability": "Tất cả mọi người phải nhắm mắt khi bỏ phiếu & số phiếu được giữ bí mật. Phiếu dành cho bạn chỉ tính khi bạn bỏ phiếu.",
+        "ability": "Tất cả người chơi nhắm mắt khi bỏ phiếu & số phiếu được giữ bí mất. Phiếu lên bạn chỉ được tính khi bạn bỏ phiếu.",
         "firstNightReminder": "",
         "otherNightReminder": "",
         "remindersGlobal": [],
@@ -1086,9 +1107,9 @@
     {
         "id": "philosopher",
         "name": "Triết gia",
-        "ability": "Một lần trong game, trong đêm, chọn nhân vật thiện: nhận chức năng đó. Nếu nhân vật này trong cuộc, họ bị say.",
-        "firstNightReminder": "Triết gia có thể lắc đầu, hoặc chỉ 1 nhân vật trong tờ của họ. Nếu họ chọn nhân vật: Tráo token nhân vật của Triết gia với nhân vật ngoài cuộc. Hoặc, nếu nhân vật này trong cuộc, đánh dấu say đặt nhân vật đó và token Không phải Triết gia bằng Triết gia.",
-        "otherNightReminder": "Triết gia có thể lắc đầu, hoặc chỉ 1 nhân vật trong tờ của họ. Nếu họ chọn nhân vật: Tráo token nhân vật của Triết gia với nhân vật ngoài cuộc. Hoặc, nếu nhân vật này trong cuộc, đánh dấu say đặt nhân vật đó và token Không phải Triết gia bằng Triết gia.",
+        "ability": "Chỉ 1 lần duy nhất, trong đêm, chọn 1 nhân vật Phe Tốt: nhận chức năng đó. Nếu nhân vật này đã có trong làng, họ sẽ bị say.",
+        "firstNightReminder": "Nếu Triết gia không dùng chức năng, họ có thể lắc đầu. Nếu Triết gia muốn chọn nhân vật, họ chỉ vào tờ của họ. Tráo thẻ nhân vật của Triết gia với nhân vật ngoài cuộc. Hoặc, nếu nhân vật này trong cuộc, đánh dấu \"Say\" cạnh nhân vật đó và thẻ \"là Triết gia\" cạnh Triết gia.",
+        "otherNightReminder": "Nếu Triết gia không dùng chức năng, họ có thể lắc đầu. Nếu Triết gia muốn chọn nhân vật, họ chỉ vào tờ của họ. Tráo thẻ nhân vật của Triết gia với nhân vật ngoài cuộc. Hoặc, nếu nhân vật này trong cuộc, đánh dấu \"Say\" cạnh nhân vật đó và thẻ \"là Triết gia\" cạnh Triết gia.",
         "remindersGlobal": [
             "Say",
             "là Triết gia"
@@ -1100,7 +1121,7 @@
         "name": "Pit-Hag",
         "ability": "Mỗi đêm*, chọn 1 người & 1 nhân vật mà họ biến thành (nếu ngoài cuộc). Nếu Quỷ được sinh ra, cái chết xảy ra ngẫu nhiên.",
         "firstNightReminder": "",
-        "otherNightReminder": "Pit-hag chỉ 1 người và nhân vật trong tờ của họ. Nếu nhân vật này ở ngoài cuộc, gọi người đó dậy và cho họ xem lá 'Bạn là' và token nhân vật liên quan. Nếu nhân vật này ở trong cuộc, không có gì xảy ra.",
+        "otherNightReminder": "Pit-hag chỉ 1 người và nhân vật trong tờ của họ. Nếu nhân vật này ở ngoài cuộc, gọi người đó dậy và cho họ xem lá 'Bạn là' và thẻ nhân vật liên quan. Nếu nhân vật này ở trong cuộc, không có gì xảy ra.",
         "remindersGlobal": [],
         "reminders": []
     },
@@ -1108,7 +1129,7 @@
         "id": "pixie",
         "name": "Tiểu tiên",
         "ability": "Bạn biết 1 Dân làng trong cuộc. Nếu bạn điên rằng bạn là nhân vật này, bạn nhân chức năng của họ khi họ chết.",
-        "firstNightReminder": "Cho Tiểu tiên xem 1 token nhân vật của Dân làng trong cuộc.",
+        "firstNightReminder": "Cho Tiểu tiên xem 1 thẻ nhân vật của Dân làng trong cuộc.",
         "otherNightReminder": "",
         "remindersGlobal": [],
         "reminders": [
@@ -1136,15 +1157,15 @@
         "remindersGlobal": [],
         "reminders": [
             "Chết",
-            "3 tấn công"
+            "Giết 3 người"
         ]
     },
     {
         "id": "poisoner",
-        "name": "Kẻ đầu độc",
-        "ability": "Mỗi đêm, chọn 1 người: họ trúng độc đêm nay và sáng mai.",
-        "firstNightReminder": "Kẻ đầu độc chỉ 1 người. Người đó bị trúng độc.",
-        "otherNightReminder": "Người bị trúng độc trước đó không còn bị trúng độc. Kẻ đầu độc chỉ 1 người. Người đó bị trúng độc.",
+        "name": "Độc thủ",
+        "ability": "Mỗi đêm, chọn 1 người, họ sẽ bị đầu độc cho đến hết ngày hôm sau.",
+        "firstNightReminder": "Độc thủ chỉ 1 người. Đánh dấu là \"Trúng độc\"",
+        "otherNightReminder": "Người bị trúng độc trước đó không còn bị trúng độc. Kẻ đầu độc chỉ 1 người. Chuyển \"Trúng độc\" sang người mới.",
         "remindersGlobal": [],
         "reminders": [
             "Trúng độc"
@@ -1174,8 +1195,8 @@
         "id": "preacher",
         "name": "Mục sư",
         "ability": "Mỗi đêm, chọn 1 người: Tay sai, nếu được chọn, biết điều đó. Tất cả Tay sai được chọn không có chức năng.",
-        "firstNightReminder": "Mục sư chọn 1 người. Nếu Tay sai được chọn, gọi Tay sai dậy và cho xem lá \"Nhân vật này chọn bạn\" và token Mục sư.",
-        "otherNightReminder": "Mục sư chọn 1 người. Nếu Tay sai được chọn, gọi Tay sai dậy và cho xem lá \"Nhân vật này chọn bạn\" và token Mục sư.",
+        "firstNightReminder": "Mục sư chọn 1 người. Nếu Tay sai được chọn, gọi Tay sai dậy và cho xem lá \"Nhân vật này chọn bạn\" và thẻ Mục sư.",
+        "otherNightReminder": "Mục sư chọn 1 người. Nếu Tay sai được chọn, gọi Tay sai dậy và cho xem lá \"Nhân vật này chọn bạn\" và thẻ Mục sư.",
         "remindersGlobal": [],
         "reminders": [
             "Đang nghe đạo"
@@ -1217,7 +1238,7 @@
     {
         "id": "puzzlemaster",
         "name": "Bậc thầy câu đố",
-        "ability": "1 người bị say rượu, ngay cả khi bạn chết. Nếu bạn đoán (1 lần) người đó là ai, biết Quỷ là ai, nhưng đoán sai & nhận thông tin sai.",
+        "ability": "1 người bị say rượu, ngay cả khi bạn chết. Nếu bạn đoán (1 lần) người đó là ai, biết Quỷ là ai, nhưng nếu đoán sai sẽ nhận thông tin sai.",
         "firstNightReminder": "",
         "otherNightReminder": "",
         "remindersGlobal": [],
@@ -1228,17 +1249,17 @@
     },
     {
         "id": "ravenkeeper",
-        "name": "Người nuôi quạ",
+        "name": "Nuôi quạ",
         "ability": "Nếu bạn chết trong đêm, bạn được gọi dậy để chọn 1 người: bạn biết nhân vật của họ.",
         "firstNightReminder": "",
-        "otherNightReminder": "Nếu Người nuôi quạ chết trong đêm: Người nuôi quạ chỉ 1 người. Cho xem token nhân vật của người đó.",
+        "otherNightReminder": "Nếu Nuôi quạ chết trong đêm: Nuôi quạ chỉ 1 người. Cho xem thẻ nhân vật của người đó.",
         "remindersGlobal": [],
         "reminders": []
     },
     {
         "id": "recluse",
         "name": "Người ẩn dật",
-        "ability": "Bạn cỏ thể thấy là ác & là Tay sai hoặc là Quỷ, ngay cả khi chết.",
+        "ability": "Bạn bị tính là Tay Sai hoặc Quỷ cho các chức năng khác, kể cả khi chết.",
         "firstNightReminder": "",
         "otherNightReminder": "",
         "remindersGlobal": [],
@@ -1267,7 +1288,7 @@
     {
         "id": "sage",
         "name": "Hiền nhân",
-        "ability": "Nếu Quỷ giết bạn, bạn biết họ là 1 trong 2 người.",
+        "ability": "Nếu bạn bị Quỷ giết, bạn sẽ biết nó là 1 trong 2 người.",
         "firstNightReminder": "",
         "otherNightReminder": "Nếu Hiền nhân bị giết bởi Quỷ: Chỉ 2 người, một trong số họ là Quỷ.",
         "remindersGlobal": [],
@@ -1287,7 +1308,7 @@
     {
         "id": "saint",
         "name": "Thánh",
-        "ability": "Nếu bạn chết vì hành quyết, phe bạn thua.",
+        "ability": "Nếu bạn bị Hành Quyết, phe bạn thua.",
         "firstNightReminder": "",
         "otherNightReminder": "",
         "remindersGlobal": [],
@@ -1296,7 +1317,7 @@
     {
         "id": "savant",
         "name": "Nhà bác học",
-        "ability": "Mỗi ngày, bạn có thể thăm Người kể chuyện để nhận 2 mệnh đề: 1 đúng & 1 sai.",
+        "ability": "Mỗi ngày, bạn có thể gặp Quản trò để học 2 điều: 1 đúng và 1 sai.",
         "firstNightReminder": "",
         "otherNightReminder": "",
         "remindersGlobal": [],
@@ -1316,7 +1337,7 @@
         "name": "Phụ nữ đỏ",
         "ability": "Nếu còn 5 người trở lên còn sống & Quỷ chết, bạn trở thành Quỷ. (Không tính Du khách)",
         "firstNightReminder": "",
-        "otherNightReminder": "Nếu Phụ nữ đỏ trở thành Quỷ: Cho xem lá \"Bạn là\", và token quỷ.",
+        "otherNightReminder": "Nếu Phụ nữ đỏ trở thành Quỷ: Cho xem lá \"Bạn là\", và thẻ quỷ.",
         "remindersGlobal": [],
         "reminders": [
             "Quỷ"
@@ -1325,9 +1346,9 @@
     {
         "id": "seamstress",
         "name": "Thợ may",
-        "ability": "Một lần trong game, trong đêm, chọn 2 người (không phải bạn): bạn biết họ có cùng phe không.",
-        "firstNightReminder": "Thợ may có thể lắc đầu không, hoặc chỉ 2 người. Nếu Thợ may chọn người, lắc đầu hoặc gật đầu tùy theo 2 người đó có cùng phe không.",
-        "otherNightReminder": "Nếu Thợ may không dùng chức năng của họ: Thợ may có thể lắc đầu không, hoặc chỉ 2 người. Nếu Thợ may chọn người, lắc đầu hoặc gật đầu tùy theo 2 người đó có cùng phe không.",
+        "ability": "Chỉ 1 lần duy nhất, trong đêm, chọn 2 người (không phải mình): bạn biết họ có cùng phe hay không.",
+        "firstNightReminder": "Nếu Thợ may không dùng chức năng của họ: Thợ may có thể lắc đầu không. Nếu Thợ may chọn 2 người, lắc đầu hoặc gật đầu tùy theo 2 người đó có cùng phe không.",
+        "otherNightReminder": "Nếu Thợ may không dùng chức năng của họ: Thợ may có thể lắc đầu không. Nếu Thợ may chọn 2 người, lắc đầu hoặc gật đầu tùy theo 2 người đó có cùng phe không.",
         "remindersGlobal": [],
         "reminders": [
             "Hết chức năng"
@@ -1357,16 +1378,16 @@
     {
         "id": "shugenja",
         "name": "Shugenja",
-        "ability": "Bạn bắt đầu biết người chơi ác gần nhất của bạn theo chiều kim đồng hồ hay ngược chiều kim đồng hồ. Nếu cách đều nhau thì thông tin này là tùy ý.",
-        "firstNightReminder": "Đánh thức Shugenja; chỉ theo chiều ngang về phía người chơi ác gần nhất. Nếu hai người chơi ác gần nhất cách đều nhau, hãy chỉ ngón tay của bạn theo chiều ngang về một trong hai hướng.",
+        "ability": "Bạn bắt đầu biết người xấu gần nhất với bạn ngồi theo chiều hay ngược chiều kim đồng hồ. Nếu như nhau, thông tin này sẽ mang tính ngẫu nhiên.",
+        "firstNightReminder": "Gọi Shugenja dậy; chỉ ngang về hướng có người xấu gần nhất. Nếu cả 2 người xấu gần nhất có khoảng cách như nhau, chỉ tay về 1 trong 2 hướng.",
         "otherNightReminder": "",
         "remindersGlobal": [],
         "reminders": []
     },
     {
         "id": "slayer",
-        "name": "Người diệt quỷ",
-        "ability": "Một lần trong game, trong ngày, công khai chọn 1 người: Nếu họ là Quỷ, họ chết.",
+        "name": "Diệt quỷ",
+        "ability": "Chỉ 1 lần duy nhất, ban ngày, chọn 1 người công khai: Quỷ mà bị chọn thì sẽ chết.",
         "firstNightReminder": "",
         "otherNightReminder": "",
         "remindersGlobal": [],
@@ -1376,10 +1397,10 @@
     },
     {
         "id": "snakecharmer",
-        "name": "Người điều khiển rắn",
+        "name": "Nuôi rắn",
         "ability": "Mỗi đêm, chọn người sống: Quỷ được chọn sẽ hoán đổi nhân vật & phe với bạn & sau đó bị trúng độc.",
-        "firstNightReminder": "Người điều khiển rắn chỉ 1 người. Nếu người đó là Quỷ: hoán đổi nhân vật và phe của Quỷ và Người điều khiển rắn. Gọi mỗi người dậy để thông báo phe và nhân vật của họ. Người điều khiển rắn mới bị trúng độc.",
-        "otherNightReminder": "Người điều khiển rắn chỉ 1 người. Nếu người đó là Quỷ: hoán đổi nhân vật và phe của Quỷ và Người điều khiển rắn. Gọi mỗi người dậy để thông báo phe và nhân vật của họ. Người điều khiển rắn mới bị trúng độc.",
+        "firstNightReminder": "Nuôi rắn chỉ 1 người. Nếu người đó là Quỷ: hoán đổi nhân vật và phe của Quỷ và Nuôi rắn. Gọi mỗi người dậy để thông báo phe và nhân vật của họ. Nuôi rắn hoá thành Quỷ và đổi sang Phe Xấu. Quỷ cũ hoá thành Nuôi rắn, và đổi sang Phe Tốt và bị trúng độc (không còn chức năng).",
+        "otherNightReminder": "Nuôi rắn chỉ 1 người. Nếu người đó là Quỷ: hoán đổi nhân vật và phe của Quỷ và Nuôi rắn. Gọi mỗi người dậy để thông báo phe và nhân vật của họ. Nuôi rắn mới bị trúng độc (không còn chức năng).",
         "remindersGlobal": [],
         "reminders": [
             "Trúng độc"
@@ -1389,7 +1410,7 @@
         "id": "snitch",
         "name": "Mách lẻo",
         "ability": "Tay sai bắt đầu biết 3 nhân vật ngoài cuộc.",
-        "firstNightReminder": "Sau thông tin của Tay sai, gọi mỗi Tay sai dậy và cho họ xem token 3 nhân vật ngoài cuộc. Chúng có thể giống hoặc khác nhau với mỗi người và với Quỷ.",
+        "firstNightReminder": "Nếu Phụ nữ đỏ trở thành Quỷ: Cho xem lá \"Bạn là\", và thẻ quỷ.",
         "otherNightReminder": "",
         "remindersGlobal": [],
         "reminders": []
@@ -1397,7 +1418,7 @@
     {
         "id": "soldier",
         "name": "Chiến sĩ",
-        "ability": "Bạn an toàn khỏi Quỷ.",
+        "ability": "Không bị ảnh hưởng bởi Quỷ.",
         "firstNightReminder": "",
         "otherNightReminder": "",
         "remindersGlobal": [],
@@ -1406,28 +1427,28 @@
     {
         "id": "spiritofivory",
         "name": "Thần ngà",
-        "ability": "Không thể có thêm quá 1 người ác.",
+        "ability": "Không thể có thêm quá 1 người xấu.",
         "firstNightReminder": "",
         "otherNightReminder": "",
         "remindersGlobal": [],
         "reminders": [
-            "Không thêm ác"
+            "Không thêm xấu"
         ]
     },
     {
         "id": "spy",
         "name": "Gián điệp",
-        "ability": "Mỗi đêm, bạn nhìn thấy Sách ma thuật. Bạn có thể thấy là thiện, là Dân làng & là Lữ khách, ngay cả khi chết.",
-        "firstNightReminder": "Cho Gián điệp xem Sách ma thuật đến khi họ không cần nữa.",
-        "otherNightReminder": "Cho Gián điệp xem Sách ma thuật đến khi họ không cần nữa.",
+        "ability": "Mỗi đêm, được xem Grimore. Có thể được tính là Dân làng hoặc Lữ khách cho các chức năng khác, kể cả khi chết.",
+        "firstNightReminder": "Cho Gián điệp xem Grimore đến khi họ không cần nữa.",
+        "otherNightReminder": "Cho Gián điệp xem Grimore đến khi họ không cần nữa.",
         "remindersGlobal": [],
         "reminders": []
     },
     {
         "id": "steward",
         "name": "Quản lý",
-        "ability": "Bạn bắt đầu biết 1 người thiện.",
-        "firstNightReminder": "Chỉ tới 1 người thiện.",
+        "ability": "Bạn biết 1 người tốt đầu game.",
+        "firstNightReminder": "Chỉ 1 người tốt.",
         "otherNightReminder": "",
         "remindersGlobal": [],
         "reminders": [
@@ -1437,7 +1458,7 @@
     {
         "id": "stormcatcher",
         "name": "Người bắt bão",
-        "ability": "Đọc tên nhân vật thiện. Nếu trong cuộc, họ chỉ có thể bị chết vì hành quyết, nhưng phe ác biết họ là ai.",
+        "ability": "Đọc tên nhân vật tốt. Nếu trong cuộc, họ chỉ có thể bị chết vì hành quyết, nhưng phe xấu biết họ là ai.",
         "firstNightReminder": "",
         "otherNightReminder": "",
         "remindersGlobal": [],
@@ -1447,8 +1468,8 @@
     },
     {
         "id": "sweetheart",
-        "name": "Tình nhân",
-        "ability": "Khi ban chết, 1 người bị say từ lúc đó.",
+        "name": "Con cưng",
+        "ability": "Khi bạn chết, 1 người sẽ bắt đầu bị say.",
         "firstNightReminder": "",
         "otherNightReminder": "Chọn 1 người để bị say.",
         "remindersGlobal": [],
@@ -1459,7 +1480,7 @@
     {
         "id": "tealady",
         "name": "Cô hầu trà",
-        "ability": "Nếu cả 2 hàng xóm sống của bạn đều là thiện, họ không thể chết.",
+        "ability": "Nếu cả 2 hàng xóm sống của bạn đều là tốt, họ không thể chết.",
         "firstNightReminder": "",
         "otherNightReminder": "",
         "remindersGlobal": [],
@@ -1471,8 +1492,8 @@
         "id": "thief",
         "name": "Trộm",
         "ability": "Mỗi đêm, chọn 1 người (không phải bạn): phiếu của họ tính là âm ngày mai.",
-        "firstNightReminder": "Trộm chỉ 1 người. Đắt đánh dấu \"Âm phiếu\" của trộm cạnh token nhân vật của người được chọn.",
-        "otherNightReminder": "Trộm chỉ 1 người. Đắt đánh dấu \"Âm phiếu\" của trộm cạnh token nhân vật của người được chọn.",
+        "firstNightReminder": "Trộm chỉ 1 người. Đắt đánh dấu \"Âm phiếu\" của trộm cạnh thẻ nhân vật của người được chọn.",
+        "otherNightReminder": "Trộm chỉ 1 người. Đắt đánh dấu \"Âm phiếu\" của trộm cạnh thẻ nhân vật của người được chọn.",
         "remindersGlobal": [],
         "reminders": [
             "Âm phiếu"
@@ -1492,9 +1513,9 @@
     {
         "id": "towncrier",
         "name": "Mõ làng",
-        "ability": "Mỗi đêm*, bạn biết Tay sai có biểu quyết không.",
+        "ability": "Mỗi đêm*, bạn biết Tay Sai có chọn người để Biểu Quyết hôm nay hay không.",
         "firstNightReminder": "",
-        "otherNightReminder": "Gật đầu hoặc lắc đầu tùy theo việc Tay sai có biểu quyết không. Đặt đánh dấu 'Tay sai chưa biểu quyết' (Bỏ 'Tay sai biểu quyết, nếu có).",
+        "otherNightReminder": "Gật đầu hoặc lắc đầu tùy theo việc Tay Sai có chọn người hay không. Đặt đánh dấu 'Tay sai chưa biểu quyết' (Bỏ 'Tay sai biểu quyết, nếu có).",
         "remindersGlobal": [],
         "reminders": [
             "Tay sai chưa biểu quyết",
@@ -1504,7 +1525,7 @@
     {
         "id": "toymaker",
         "name": "Người làm đồ chơi",
-        "ability": "Quỷ có thể chọn không tấn công & phải làm việc này 1 lần trong game. Người ác nhận thông tin bắt đầu như thường.",
+        "ability": "Quỷ có thể chọn không tấn công & phải làm việc này 1 lần trong game. Người xấu nhận thông tin bắt đầu như thường.",
         "firstNightReminder": "",
         "otherNightReminder": "",
         "remindersGlobal": [],
@@ -1515,9 +1536,9 @@
     {
         "id": "undertaker",
         "name": "Chôn cất",
-        "ability": "Mỗi đêm*, bạn biết nhân vật nào chết bởi hành quyết hôm nay.",
+        "ability": "Mỗi đêm*, bạn biết nhân vật nào chết bởi Hành Quyết hôm nay.",
         "firstNightReminder": "",
-        "otherNightReminder": "Nếu có người bị hành quyết: Cho xem token nhân vật của người đó.",
+        "otherNightReminder": "Nếu có người bị Hành Quyết  Cho xem thẻ nhân vật của người đó.",
         "remindersGlobal": [],
         "reminders": [
             "Hành quyết"
@@ -1526,7 +1547,7 @@
     {
         "id": "vigormortis",
         "name": "Vigormortis",
-        "ability": "Mỗi đêm*, chọn 1 người: họ chết. Tay sai bạn giết được giữ chức năng & đầu độc 1 hàng xóm Dân làng. [−1 Lữ khách]",
+        "ability": "Mỗi đêm*, chọn 1 người: họ chết. Tay sai bạn giết được giữ chức năng & đầu độc 1 hàng xóm là Dân làng. [−1 Lữ khách]",
         "firstNightReminder": "",
         "otherNightReminder": "Vigormortis chỉ 1 người. Người đó chết. Nếu họ là Tay sai, họ giữ chức năng và 1 trong những hàng xóm Dân làng của họ bị trúng độc.",
         "remindersGlobal": [],
@@ -1539,7 +1560,7 @@
     {
         "id": "virgin",
         "name": "Trinh nữ",
-        "ability": "Lần đầu bạn bị biểu quyết, nếu người biểu quyết là Dân làng, họ bị hành quyết ngay lập tức.",
+        "ability": "Lần đầu bạn bị Biểu Quyết, nếu người chọn bạn là Dân Làng, họ bị Hành Quyết ngay lập tức.",
         "firstNightReminder": "",
         "otherNightReminder": "",
         "remindersGlobal": [],
@@ -1550,8 +1571,8 @@
     {
         "id": "vizier",
         "name": "Tể tướng",
-        "ability": "Mọi người biết bạn là ai. Bạn không thể chết trong ngày. Nếu người thiện bỏ phiếu, bạn có quyền được hành quyết họ ngay lập tức.",
-        "firstNightReminder": "Thông báo 'Có Tể tướng trong cuộc' và nói họ là ai.",
+        "ability": "Tất cả người chơi biết bạn là ai. Bạn không thể chết trong ngày. Nếu tốt bỏ phiếu, bạn có thể cho hành quyết ngay lập tức.",
+        "firstNightReminder": "Thông báo \"Có Tề tướng trong cuộc\" và họ là ai.",
         "otherNightReminder": "",
         "remindersGlobal": [],
         "reminders": []
@@ -1559,7 +1580,7 @@
     {
         "id": "vortox",
         "name": "Vortox",
-        "ability": "Mỗi đêm*, chọn 1 người: họ chết. Chức năng của Dân làng cho sai thông tin. Mỗi ngày, nếu không ai bị hành quyết, phe ác thắng.",
+        "ability": "Mỗi đêm*, chọn 1 người: họ chết. Chức năng của Dân làng luôn cho thông tin sai. Mỗi ngày, nếu không ai bị Hành Quyết, Phe Xấu thắng.",
         "firstNightReminder": "",
         "otherNightReminder": "Vortox chỉ 1 người. Người đó chết.",
         "remindersGlobal": [],
@@ -1570,7 +1591,7 @@
     {
         "id": "voudon",
         "name": "Voudon",
-        "ability": "Chỉ có bạn và người chết được bỏ phiếu. Họ không cần token vote để làm vậy. Hơn 50% số phiếu là không cần thiết.",
+        "ability": "Chỉ có bạn và người chết được bỏ phiếu. Họ không cần thẻ vote để làm vậy. Hơn 50% số phiếu là không cần thiết.",
         "firstNightReminder": "",
         "otherNightReminder": "",
         "remindersGlobal": [],
@@ -1579,20 +1600,20 @@
     {
         "id": "washerwoman",
         "name": "Thợ giặt",
-        "ability": "Bạn biết nhân vật Dân làng thuộc về 1 trong 2 người.",
-        "firstNightReminder": "Cho xem token nhân vật Dân làng. Chỉ 2 người, 1 trong số họ là nhân vật đó.",
+        "ability": "Đêm đầu tiên, bạn biết chức năng của Dân Làng thuộc về 1 trong 2 người.",
+        "firstNightReminder": "Cho xem thẻ nhân vật Dân Làng trong cuộc. Chỉ 2 người, 1 trong số họ là nhân vật đó.",
         "otherNightReminder": "",
         "remindersGlobal": [],
         "reminders": [
-            "Dân làng",
+            "Dân Làng",
             "Sai"
         ]
     },
     {
         "id": "widow",
         "name": "Góa phụ",
-        "ability": "Trong đêm đầu của bạn, nhìn Sách ma thuật & chọn 1 người: họ bị trúng độc. 1 người thiện biết có Góa phụ trong cuộc.",
-        "firstNightReminder": "Cho Góa phụ xem Sách ma thuật đến khi họ không cần nữa. Góa phụ chỉ 1 người. Người đó bị trúng độc. Gọi 1 người tốt dậy. Cho xem lá 'Những nhân vật này trong cuộc', và token nhân vật Góa phụ.",
+        "ability": "Trong đêm đầu của bạn, nhìn Grimore & chọn 1 người: họ bị trúng độc. 1 người tốt biết có Góa phụ trong cuộc.",
+        "firstNightReminder": "Cho Góa phụ xem Grimore đến khi họ không cần nữa. Góa phụ chỉ 1 người. Người đó bị trúng độc. Gọi 1 người tốt dậy. Cho xem lá 'Những nhân vật này trong cuộc', và thẻ nhân vật Góa phụ.",
         "otherNightReminder": "",
         "remindersGlobal": [
             "Biết"
@@ -1604,7 +1625,7 @@
     {
         "id": "witch",
         "name": "Phù thủy",
-        "ability": "Mỗi đêm, chọn 1 người: nếu họ biểu quyết ngày mai, họ chết. Nếu còn 3 người sống, bạn mất chức năng này.",
+        "ability": "Mỗi đêm, chọn 1 người: nếu họ chọn người biểu quyết ngày mai, họ chết. Nếu còn 3 người sống, bạn mất chức năng này.",
         "firstNightReminder": "Phù thủy chỉ 1 người. Nếu người đó biểu quyết ngày mai, họ chết ngay lập tức.",
         "otherNightReminder": "Nếu còn 4 người sống trở lên: Phù thủy chỉ 1 người. Nếu người đó biểu quyết ngày mai, họ chết ngay lập tức.",
         "remindersGlobal": [],

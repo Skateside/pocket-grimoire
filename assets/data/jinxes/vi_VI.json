@@ -80,6 +80,16 @@
         "reason": "Nếu có Leviathan trong cuộc & không có hành quyết trong ngày 5, phe thiện thắng."
     },
     {
+        "target": "leviathan",
+        "trick": "hatter",
+        "reason": "Nếu Người làm mũ chết vào hoặc sau ngày thứ 5, Ác ma không thể chọn Leviathan."
+    },
+    {
+        "target": "leviathan",
+        "trick": "pithag",
+        "reason": "Sau ngày thứ 5, Pit-Hag không thể chọn Leviathan."
+    },
+    {
         "target": "lilmonsta",
         "trick": "poppygrower",
         "reason": "Nếu có Người trồng hoa trong cuộc, Tay sai không dậy cùng nhau. Họ được gọi dậy lần lượt, cho đến khi một người chấp nhận trông non Lil' Monsta."
@@ -105,6 +115,11 @@
         "reason": "Tể tướng có thể chết vì hành quyết nếu họ đang trông non Lil' Monsta."
     },
     {
+        "target": "lilmonsta",
+        "trick": "hatter",
+        "reason": "Nếu một Ác ma chọn Lil' Monsta, chúng cũng chọn một Minion để trở thành và trông trẻ cho Lil' Monsta tối nay."
+    },
+    {
         "target": "lycanthrope",
         "trick": "gambler",
         "reason": "Nếu Người sói còn sống và Con bạc tự giết mình trong đêm, những người khác không chết tối nay."
@@ -118,6 +133,11 @@
         "target": "legion",
         "trick": "preacher",
         "reason": "Chỉ có 1 nhân vật jinx trong cuộc."
+    },
+    {
+        "target": "legion",
+        "trick": "hatter",
+        "reason": "Nếu Hatter chết và Legion đang chơi thì sẽ không có gì xảy ra. Nếu Người làm mũ chết và một người chơi độc ác chọn Quân đoàn, tất cả những người chơi độc ác hiện tại sẽ trở thành Quân đoàn."
     },
     {
         "target": "fanggu",
@@ -393,6 +413,11 @@
         "target": "riot",
         "trick": "preacher",
         "reason": "Nổi loạn được tính là Tay sai với Mục sư."
+    },
+    {
+        "target": "riot",
+        "trick": "hatter",
+        "reason": "Nếu Người làm mũ chết, Riot sẽ tham gia và Riot chọn một Ác quỷ khác, một đội ác bình thường được tạo ra từ những người chơi Riot. Nếu Người làm mũ chết và Ác quỷ chọn Riot, Minions cũng trở thành Riot."
     },
     {
         "target": "alhadikhia",

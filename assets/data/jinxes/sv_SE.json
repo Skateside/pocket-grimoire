@@ -2,456 +2,481 @@
     {
         "target": "chambermaid",
         "trick": "mathematician",
-        "reason": "Perica izve, ali bo Matematik nocoj vstal, čeprav vstane pred njim."
+        "reason": "Husan får veta om Matematikern vaknar inatt eller inte, trots att Husan vaknar först."
     },
     {
         "target": "eviltwin",
         "trick": "plaguedoctor",
-        "reason": "Če Kužnik umre, Pripovedovalec ne more dobiti moči Dvojčka."
+        "reason": "Berättaren kan inte få Dubbelgångarens förmåga om Pestläkaren dör."
     },
     {
         "target": "butler",
         "trick": "cannibal",
-        "reason": "Če Ljudožerec dobi moč Služabnika, to izve."
+        "reason": "Kannibalen får veta om hen får Betjäntens förmåga."
     },
     {
         "target": "lunatic",
         "trick": "mathematician",
-        "reason": "Matematik izve, če Blaznež izbere drugega igralca, kot ga Demon napade."
+        "reason": "Matematikern får veta om Galningen attackerar någon annan än den riktiga Demonen."
     },
     {
         "target": "pithag",
         "trick": "heretic",
-        "reason": "Vragulja ne more narediti Heretika."
+        "reason": "Trollpackan kan inte skapa en Kättare."
     },
     {
         "target": "pithag",
         "trick": "damsel",
-        "reason": "Če Vragulja naredi Gospodično, se pripovedovalec odloči, kdo postane Gospodična."
+        "reason": "Om Trollpackan skapar en Ungmö bestämmer Berättaren vilken spelare det blir."
     },
     {
         "target": "pithag",
         "trick": "politician",
-        "reason": "Vragulja ne more narediti zlobnega Politika."
+        "reason": "Trollpackan kan inte skapa en ond Politiker."
     },
     {
         "target": "cerenovus",
         "trick": "goblin",
-        "reason": "Cerenovus lahko izbere Goblina, ko izbere vlogo, o kateri nori njegova tarča."
+        "reason": "Cerenovus får välja att en spelare ska låtsas vara Vätten."
     },
     {
         "target": "goblin",
         "trick": "plaguedoctor",
-        "reason": "Če Kužnik umre, eden od živih Sledilcev dobi še moč Goblina in to izve."
+        "reason": "Om Pestläkaren dör så får en levande Hantlangare Vättens förmåga utöver sin egen, och får veta om det."
     },
     {
         "target": "leviathan",
         "trick": "soldier",
-        "reason": "Če Leviatan nominira in usmrti Soldata, ta ne umre."
+        "reason": "Om Leviatan nominerar och avrättar Soldaten så dör Soldaten inte."
     },
     {
         "target": "leviathan",
         "trick": "monk",
-        "reason": "Če Leviatan nominira in usmrti igralca, ki ga je izbral Menih, ta ne umre."
+        "reason": "Om Leviatan nominerar och avrättar spelaren som Munken valde så dör inte den spelaren."
     },
     {
         "target": "leviathan",
         "trick": "innkeeper",
-        "reason": "Če Leviatan nominira in usmrti igralca, ki ga je izbrala Krčmarica, ta ne umre."
+        "reason": "Om Leviatan nominerar och avrättar en spelare som Gästgivaren valt så dör inte den spelaren."
     },
     {
         "target": "leviathan",
         "trick": "ravenkeeper",
-        "reason": "Če je Leviatan v igri in je Krokar usmrčen, lahko ponoči uporabi svojo moč."
+        "reason": "Om Leviatan är i spel och Korpskötaren avrättas och dör så vaknar Korpskötaren samma natt och använder sin förmåga."
     },
     {
         "target": "leviathan",
         "trick": "sage",
-        "reason": "Če je Leviatan v igri in je Pismouk usmrčen, lahko ponoči uporabi svojo moč."
+        "reason": "Om Leviatan är i spel och Gurun avrättas och dör så vaknar Gurun samma natt och använder sin förmåga."
     },
     {
         "target": "leviathan",
         "trick": "farmer",
-        "reason": "Če je Leviatan v igri in je Kmet usmrčen, ponoči uporabi svojo moč."
+        "reason": "Om Leviatan är i spel och en Bonde avrättas och dör så blir en god spelare Bonde samma natt."
     },
     {
         "target": "leviathan",
         "trick": "mayor",
-        "reason": "Če je Leviatan v igri in se peti dan nikogar ne usmrti, dobro zmaga."
+        "reason": "Om Leviatan är i spel och ingen avrättas dag 5 så vinner de goda."
+    },
+    {
+        "target": "leviathan",
+        "trick": "hatter",
+        "reason": "Om Hattmakaren dör dag 5 eller senare kan Demonen inte välja Leviatan."
+    },
+    {
+        "target": "leviathan",
+        "trick": "pithag",
+        "reason": "Efter dag 5 kan Trollpackan inte välja Leviatan."
     },
     {
         "target": "lilmonsta",
         "trick": "poppygrower",
-        "reason": "Če je Sejalka v igri, se Sledilci ne zbudijo skupaj, ampak vsak posebej, dokler še eden od njih ne odloči, da bo varuška Pošastku."
+        "reason": "Om Vallmoodlaren är i spel så vaknar Hantlangarna inte tillsammans; de vaknar en och en tills en väljer att ta hand om Lillmonstret."
     },
     {
         "target": "lilmonsta",
         "trick": "magician",
-        "reason": "Samo ena od uročenih vlog je lahko v igri."
+        "reason": "Endast 1 roll med förbannelse får vara i spel."
     },
     {
         "target": "lilmonsta",
         "trick": "scarletwoman",
-        "reason": "Če je živih 5 ali več igralcev in Pošastkova varuška umre, Pošastek preživi in Škrlatna dama ponoči postane varuška."
+        "reason": "Om 5 eller fler spelare lever och spelaren som tar hand om Lillmonstret dör så får Röda damen Lillmonstret inatt."
     },
     {
         "target": "lilmonsta",
         "trick": "organgrinder",
-        "reason": "Glasovi za Lajnarja štejejo, če je varuška Pošastku."
+        "reason": "Röster på Positivhalaren räknas om Positivhalaren tar hand om Lillmonstret."
     },
     {
         "target": "lilmonsta",
         "trick": "vizier",
-        "reason": "Vizir je lahko usmrčen in umre, če je varuška Pošastku."
+        "reason": "Vesiren kan avrättas och dö om hen har hand om Lillmonstret samtidigt."
+    },
+    {
+        "target": "lilmonsta",
+        "trick": "hatter",
+        "reason": "Om Demonen väljer Lillmonstret väljer hen också en Hantlangare. Hen blir till Hantlangaren och tar hand om Lillmonstret inatt."
     },
     {
         "target": "lycanthrope",
         "trick": "gambler",
-        "reason": "Če je Volkodlak živ in se Kockar ubije ponoči, nihče drug ne more umreti to noč."
+        "reason": "Om Lykantropen lever och Hasardspelaren dödar sig själv på natten kan ingen annan spelare dö inatt."
     },
     {
         "target": "legion",
         "trick": "engineer",
-        "reason": "Inžinir in Legijon ne moreta biti oba v igri, ko se ta začne. Če inžinir naredi Legijon, večina igralcev postane Legijon."
+        "reason": "Legionen och Ingenjören kan inte vara i spel samtidigt när spelet börjar. Om Ingenjören skapar Legionen blir de flesta spelare, inklusive alla spelare, den onda Legionen."
     },
     {
         "target": "legion",
         "trick": "preacher",
-        "reason": "Samo ena od uročenih vlog je lahko v igri."
+        "reason": "Endast 1 roll med en förbannelse får vara i spel."
+    },
+    {
+        "target": "legion",
+        "trick": "hatter",
+        "reason": "Om Hattmakaren dör och Legionen är i spel händer ingenting. Om Hattmakaren dör och en ond spelare väljer Legionen blir alla onda spelare till Legionen."
     },
     {
         "target": "fanggu",
         "trick": "scarletwoman",
-        "reason": "Če Fang Gu izbere Izobčenca in umre, Škrlatna dama ne postane Fang Gu."
+        "reason": "Om Fang Gu väljer en Utböling och dör så blir Röda damen inte till Fang Gu."
     },
     {
         "target": "spy",
         "trick": "alchemist",
-        "reason": "Alkimist ne more imeti moči Vohuna."
+        "reason": "Alkemisten kan inte få Spionens förmåga."
     },
     {
         "target": "spy",
         "trick": "magician",
-        "reason": "Ko Vohun pogleda v Buklo, odstrani žetona Demona in Čarovnika."
+        "reason": "När Spionen ser Spelboken tas Demonens och Magikerns rollbrickor bort."
     },
     {
         "target": "spy",
         "trick": "poppygrower",
-        "reason": "Če je Sejalka v igri, Vohun ne vidi Bukle, dokler Sejalka ne umre."
+        "reason": "Om Vallmoodlaren är i spel får Spionen inte se spelboken förrän Vallmoodlaren dör."
     },
     {
         "target": "spy",
         "trick": "plaguedoctor",
-        "reason": "If the Plague Doctor dies, a living Minion gains the Spy ability in addition to their own ability, and learns this."
+        "reason": "Om Pestläkaren dör får en levande Undersåte Spionens förmåga utöver sin egen förmåga, och får veta detta."
     },
     {
         "target": "spy",
         "trick": "damsel",
-        "reason": "Samo ena od uročenih vlog je lahko v igri."
+        "reason": "Endast 1 roll med förbannelse får vara i spel."
     },
     {
         "target": "spy",
         "trick": "heretic",
-        "reason": "Samo ena od uročenih vlog je lahko v igri."
+        "reason": "Endast 1 roll med förbannelse får vara i spel."
     },
     {
         "target": "widow",
         "trick": "alchemist",
-        "reason": "Alkimist ne more imeti moči Vdove."
+        "reason": "Alkemisten kan inte få Änkans förmåga."
     },
     {
         "target": "widow",
         "trick": "magician",
-        "reason": "Ko Vdova pogleda v Buklo, odstrani žetona Demona in Čarovnika."
+        "reason": "När Änkan ser Spelboken tas Demonens och Magikerns rollbrickor bort."
     },
     {
         "target": "widow",
         "trick": "poppygrower",
-        "reason": "Če je Sejalka v igri, Vdova ne vidi Bukle, dokler Sejalka ne umre."
+        "reason": "Om Vallmoodlaren är i spel får Änkan inte se spelboken förrän Vallmoodlaren dör."
     },
     {
         "target": "widow",
         "trick": "damsel",
-        "reason": "Samo ena od uročenih vlog je lahko v igri."
+        "reason": "Endast 1 roll med förbannelse får vara i spel."
     },
     {
         "target": "widow",
         "trick": "heretic",
-        "reason": "Samo ena od uročenih vlog je lahko v igri."
+        "reason": "Endast 1 roll med förbannelse får vara i spel."
     },
     {
         "target": "godfather",
         "trick": "heretic",
-        "reason": "Samo ena od uročenih vlog je lahko v igri."
+        "reason": "Endast 1 roll med förbannelse får vara i spel."
     },
     {
         "target": "scarletwoman",
         "trick": "plaguedoctor",
-        "reason": "Če Kužnik umre, eden od živih Sledilcev dobi še moč Škrlatne dame in to izve."
+        "reason": "Om Pestläkaren dör får en levande Hantlangare Röda damens förmåga utöver sin egen, och får veta detta."
     },
     {
         "target": "boomdandy",
         "trick": "plaguedoctor",
-        "reason": "Če Kužnik umre in bi Pripovedovalec dobil moč Požigalca, se ta takoj sproži."
+        "reason": "Om Pestläkaren avrättas och Berättaren skulle få Sprängarens förmåga så aktiveras Sprängarens förmåga direkt."
     },
     {
         "target": "fearmonger",
         "trick": "plaguedoctor",
-        "reason": "Če Kužnik umre, eden od živih Sledilcev dobi še moč Vohuna in to izve."
+        "reason": "Om Pestläkaren dör får en levande Hantlangare Skräckspridarens förmåga utöver sin egen, och får veta detta."
     },
     {
         "target": "baron",
         "trick": "heretic",
-        "reason": "Baron morda doda le enega Izobčenca in ne dveh."
+        "reason": "Baronen lägger bara till 1 Utböling, inte 2."
     },
     {
         "target": "baron",
         "trick": "plaguedoctor",
-        "reason": "Če Pripovedovlec dobi moč Barona, do dva igralca postaneta Izobčenca, ki nista v igri."
+        "reason": "Om Berättaren får Baronens förmåga så blir upp till två spelare till Utbölingar som inte är i spel."
     },
     {
         "target": "marionette",
         "trick": "lilmonsta",
-        "reason": "Marioneta je sosednja enemu od sledilcev, ne Demonu. Marioneta se ne zbudi, da bi se odločila, kdo bo varoval Pošastka, in ne izve, da je Marioneta, če ga dobi."
+        "reason": "Marionetten sitter bredvid en Hantlangare, inte Demonen. Marionetten vaknar inte för att välja vem som tar Lillmonstrets bricka, och får inte veta att hen är Marionetten om hen har Lillmonstrets bricka."
     },
     {
         "target": "marionette",
         "trick": "poppygrower",
-        "reason": "Ko Sejalka umre, Demon izve, kdo je Marioneta, a Merioneta ne izve ničesar."
+        "reason": "När Vallmoodlaren dör får Demonen veta vem Marionetten är, men Marionetten får inte veta något."
     },
     {
         "target": "marionette",
         "trick": "snitch",
-        "reason": "Marioneta ne izve treh vlog, ki niso v igri - namesto tega Demon izve dodatne 3."
+        "reason": "Marionetten får inte veta 3 roller som inte är spel; istället får Demonen veta ytterligare 3."
     },
     {
         "target": "marionette",
         "trick": "balloonist",
-        "reason": "Če Marioneta misli, da je Balonar, ima igra +1 Izobčenca."
+        "reason": "Om Marionetten tror sig vara Ballongfararen så läggs 1 extra Utböling till."
     },
     {
         "target": "marionette",
         "trick": "damsel",
-        "reason": "Marioneta ne izve, da je v igri Gospodična."
+        "reason": "Marionetten får inte veta att Ungmön är i spel."
     },
     {
         "target": "marionette",
         "trick": "plaguedoctor",
-        "reason": "Če ima Demon soseda, ki je Meščan ali Izobčenec ko Kužnik umre, ta igralec postane zlobna Marioneta, razen če je v igri že dodaen zlobnež."
+        "reason": "Om Demonen har en granne som lever och är Bybo eller Utböling när Pestläkaren dör så blir den spelaren en ond Marionett. Om det redan finns en extra ond spelare händer detta inte."
     },
     {
         "target": "marionette",
         "trick": "huntsman",
-        "reason": "Če Marioneta misli, da je Lovec, je v igri Gospodična."
+        "reason": "Om Marionetten tror sig vara Jägaren så läggs Ungmön till."
     },
     {
         "target": "lleech",
         "trick": "mastermind",
-        "reason": "Če je Veleum živ, ko Grabežev gostitelj umre, Grabež preživi, a izgubi svojo moč."
+        "reason": "Om Mästaren lever och Igelns värd avrättas och dör så överlever Igeln men förlorar sin förmåga."
     },
     {
         "target": "lleech",
         "trick": "slayer",
-        "reason": "Če ubijalec ustreli Grabeževega gostitelja, ta umre."
+        "reason": "Om Banemannen dräper Igelns värd så dör värden."
     },
     {
         "target": "lleech",
         "trick": "heretic",
-        "reason": "Če Grabež zastrupi Heretika in Grabež kasneje umre, Heretik ostane zastrupljen."
+        "reason": "Om Igeln har förgiftat Kättaren så dör Igeln, och Kättaren förblir förgiftad."
     },
     {
         "target": "riot",
         "trick": "engineer",
-        "reason": "Inžinir in Rogovil ne moreta biti oba v igri, ko se ta začne. Če inžinir naredi Rogovila, vsi zlobni igralci postanejo Rogovili."
+        "reason": "Både Upproret och Ingenjören kan inte vara i spel i början av spelet. Om Ingenjören skapar Upproret så blir de onda spelarna till Upproret."
     },
     {
         "target": "riot",
         "trick": "golem",
-        "reason": "Če golem nominira Rogovila, ta ne umre."
+        "reason": "Om Golem nominerar Upproret så dör inte den nominerade spelaren."
     },
     {
         "target": "riot",
         "trick": "snitch",
-        "reason": "Če je Tožibaba v ugri, vsak Rogovil dobi še tri blefe."
+        "reason": "Om Tjallaren är i spel får varje spelare som är Upproret 3 extra bluffar."
     },
     {
         "target": "riot",
         "trick": "saint",
-        "reason": "Če dober igralec nominira Svetnika in ta umre, njegova ekipa izgubi."
+        "reason": "Om en god spelare nominerar och dödar Helgonet så förlorar Helgonets lag."
     },
     {
         "target": "riot",
         "trick": "butler",
-        "reason": "Služabnik ne more nominirani svojega Gospodarja."
+        "reason": "Betjänten kan inte nominera sin husbonde."
     },
     {
         "target": "riot",
         "trick": "pithag",
-        "reason": "Če Vragulja naredi Rogovila, vsi zlobni igralci postanejo Rogovili. Če ga naredi po 3. dnevu, se igra nadaljuje še en dan. "
+        "reason": "Om Trollpackan skapar Upproret så blir alla onda spelare till Upproret. Om Trollpackan skapar Upproret efter dag 3 så pågår spelet i en dag till."
     },
     {
         "target": "riot",
         "trick": "mayor",
-        "reason": "Če so na 3. dan živi samo trije igralci, se lahko kot skupina odločijo, da ne nominirajo. Če to storijo in Župan živi, njegova ekipa zmaga."
+        "reason": "Om det bara är 3 levande spelare kvar när dag 3 börjar så får spelarna gemensamt välja att inte nominera någon. Om de gör det och Borgmästaren lever så vinner Borgmästarens lag."
     },
     {
         "target": "riot",
         "trick": "monk",
-        "reason": "Če Rogovil nominira in ubije igralca, ki ga je varoval Menih, ta ne umre."
+        "reason": "Om någon som är Upproret nominerar och dödar spelaren som är skyddad av Munken så dör inte den skyddade spelaren."
     },
     {
         "target": "riot",
         "trick": "farmer",
-        "reason": "Če Rogovil nominira in ubije Kmeta, ta nocoj uporabi svojo moč."
+        "reason": "Om någon som är Upproret nominerar och dödar en Bonde så använder Bonden sin förmåga samma natt."
     },
     {
         "target": "riot",
         "trick": "innkeeper",
-        "reason": "Če Rogovil nominira in ubije igralca, ki ga je varovala Krčmarica, ta ne umre."
+        "reason": "Om någon som är Upproret nominerar en spelare som är skyddad av Gästgivaren så dör inte den skyddade spelaren."
     },
     {
         "target": "riot",
         "trick": "sage",
-        "reason": "Če Rogovil nominira in ubije Pismouka, ta nocoj uporabi svojo moč."
+        "reason": "Om någon som är Upproret nominerar och dödar en Guru så använder Gurun sin förmåga samma natt."
     },
     {
         "target": "riot",
         "trick": "ravenkeeper",
-        "reason": "Če Rogovil nominira in ubije Krokarja, ta nocoj uporabi svojo moč."
+        "reason": "Om någon som är Upproret nominerar och dödar Korpskötaren så använder Korpskötaren sin förmåga samma natt."
     },
     {
         "target": "riot",
         "trick": "soldier",
-        "reason": "Če Rogovil nominira Soldata, ta ne umre."
+        "reason": "Om någon som är Upproret nominerar Soldaten så dör inte Soldaten."
     },
     {
         "target": "riot",
         "trick": "grandmother",
-        "reason": "Če Rogovil nominira in ubije Babičinega vnuka, Babica umre."
+        "reason": "Om någon som är Upproret nominerar och dödar barnbarnet så dör Farmorn också."
     },
     {
         "target": "riot",
         "trick": "king",
-        "reason": "Če Rogovil nominira in ubije Kralja in je Pevec živ, nocoj uporabi svojo moč. "
+        "reason": "Om någon som är Upproret nominerar och dödar Kungen och Korgossen fortfarande lever så använder Korgossen sin förmåga samma natt."
     },
     {
         "target": "riot",
         "trick": "exorcist",
-        "reason": "Samo ena od uročenih vlog je lahko v igri."
+        "reason": "Endast 1 roll med förbannelse får vara i spel."
     },
     {
         "target": "riot",
         "trick": "minstrel",
-        "reason": "Samo ena od uročenih vlog je lahko v igri."
+        "reason": "Endast 1 roll med förbannelse får vara i spel."
     },
     {
         "target": "riot",
         "trick": "flowergirl",
-        "reason": "Samo ena od uročenih vlog je lahko v igri."
+        "reason": "Endast 1 roll med förbannelse får vara i spel."
     },
     {
         "target": "riot",
         "trick": "undertaker",
-        "reason": "Igralci, ki umrejo, ker so nominirani, izpadejo kot usmrčeni za potrebe Grobarja."
+        "reason": "Spelare som dör av nominering visas som avrättade för Dödgrävaren."
     },
     {
         "target": "riot",
         "trick": "cannibal",
-        "reason": "Igralci, ki umrejo, ker so nominirani, izpadejo kot usmrčeni za potrebe Ljudožerca."
+        "reason": "Spelare som dör av nominering visas som avrättade för Kannibalen."
     },
     {
         "target": "riot",
         "trick": "pacifist",
-        "reason": "Igralci, ki bi umrli, ker so nominirani, izpadejo kot usmrčeni za potrebe Mirovnika."
+        "reason": "Spelare som dör av nominering visas som avrättade för Pacifisten."
     },
     {
         "target": "riot",
         "trick": "devilsadvocate",
-        "reason": "Igralci, ki bi umrli, ker so nominirani, izpadejo kot usmrčeni za potrebe Hudičevega odvetnika."
+        "reason": "Spelare som dör av nominering visas som avrättade för Djävulens advokat."
     },
     {
         "target": "riot",
         "trick": "investigator",
-        "reason": "Rogovil izpade kot Sledilec za potrebe Raziskovalca."
+        "reason": "Upproret visas som Hantlangare för Detektiven."
     },
     {
         "target": "riot",
         "trick": "clockmaker",
-        "reason": "Rogovil izpade kot Sledilec za potrebe Urarja."
+        "reason": "Upproret visas som Hantlangare för Urmakaren."
     },
     {
         "target": "riot",
         "trick": "towncrier",
-        "reason": "Rogovil izpade kot Sledilec za potrebe Mestnega Glasnika."
+        "reason": "Upproret visas som Hantlangare för Härolden."
     },
     {
         "target": "riot",
         "trick": "damsel",
-        "reason": "Rogovil izpade kot Sledilec za potrebe Gospodične."
+        "reason": "Upproret visas som Hantlangare för Ungmön."
     },
     {
         "target": "riot",
         "trick": "preacher",
-        "reason": "Rogovil izpade kot Sledilec za potrebe Pridigarja."
+        "reason": "Upproret visas som Hantlangare för Predikanten."
+    },
+    {
+        "target": "riot",
+        "trick": "hatter",
+        "reason": "Om Hattmakaren dör, Upproret är i spel och någon i Upprorett väljer en annan Demon så blir alla i Upproret till ett vanligt ont lag. Om Hattmakaren dör och Demonen väljer Upproret så blir alla Hantlangare också till Upproret."
     },
     {
         "target": "alhadikhia",
         "trick": "scarletwoman",
-        "reason": "Če kadarkoli živita 2 Al-Hadikhia, Škrlatna dama znova postane Škrlatna dama."
+        "reason": "Om det finns två levande Al-Hadikhia så slutar Röda damen att vara Al-Hadikhia och blir Röda damen igen."
     },
     {
         "target": "alhadikhia",
         "trick": "mastermind",
-        "reason": "Samo ena od uročenih vlog je lahko v igri. Zlobni igralci ponoči izvedo, katera vloga je v igri in kdo jo ima."
+        "reason": "Endast 1 roll med en förbannelse får vara i spel. Onda spelare vet från början vilken spelare och roll det är."
     },
     {
         "target": "organgrinder",
         "trick": "butler",
-        "reason": "Če morajo igralci mižati, lahko Služabnik vedno glasuje, a njegov glas šteje, samo če je glasoval tudi Gospodar."
+        "reason": "Om Positivhalaren tvingar fram en röstning där alla blundar så får Betjänten rösta, men hens röst räknas bara om husbonden också röstade."
     },
     {
         "target": "organgrinder",
         "trick": "flowergirl",
-        "reason": "Če so igralci mižali med nominacijami, Cvetličarka izve, kolikokrat je Demon glasoval."
+        "reason": "Om spelarna blundade under nomineringen så får Floristen veta hur många gånger Demonen röstade."
     },
     {
         "target": "organgrinder",
         "trick": "minstrel",
-        "reason": "Samo ena od uročenih vlog je lahko v igri."
+        "reason": "Endast 1 roll med förbannelse får vara i spel."
     },
     {
         "target": "organgrinder",
         "trick": "preacher",
-        "reason": "Samo ena od uročenih vlog je lahko v igri."
+        "reason": "Endast 1 roll med förbannelse får vara i spel."
     },
     {
         "target": "vizier",
         "trick": "alchemist",
-        "reason": "Če ima Alkimist Vizirjevo moč, lahko izsili usmrtitev, samo če so glasovali 3 igralci ali več."
+        "reason": "Om Alkemisten har Vesirens förmåga får hen bara avrätta direkt om minst tre spelare röstade."
     },
     {
         "target": "vizier",
         "trick": "courtier",
-        "reason": "Če Vizir izgubi moč, to izve. Če je usmrčen, ko še kam moč, zlo zmaga."
+        "reason": "Om Vesiren förlorar sin förmåga så får hen veta det, och om Vesiren avrättas medan hen har sin förmåga så vinner hens lag."
     },
     {
         "target": "vizier",
         "trick": "fearmonger",
-        "reason": "Vizir se zbudi skupaj z Grozljivcem, izve, koga izbere, in ne more usmrtiti te osebe naslednji dan."
+        "reason": "Vesiren vaknar med Skräckspridaren, får veta vem Skräckspridaren väljer och får inte välja att avrätta den spelaren."
     },
     {
         "target": "vizier",
         "trick": "investigator",
-        "reason": "Če Raziskovalec izve, da je Vizir v igri, ga Pripovedovalec ne najavi javno."
+        "reason": "Om Detektiven får veta att Vesiren är i spel så tillkännager Berättaren inte att Vesiren är i spel för övriga spelare."
     },
     {
         "target": "vizier",
         "trick": "magician",
-        "reason": "Samo ena od uročenih vlog je lahko v igri."
+        "reason": "Endast 1 roll med förbannelse får vara i spel."
     },
     {
         "target": "vizier",
         "trick": "preacher",
-        "reason": "Če Vizir izgubi moč, to izve. Če je usmrčen, ko še kam moč, zlo zmaga."
+        "reason": "Om Vesiren förlorar sin förmåga så får hen veta det, och om Vesiren avrättas medan hen har sin förmåga så vinner hens lag."
     }
 ]

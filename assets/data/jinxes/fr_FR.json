@@ -2,12 +2,12 @@
     {
         "target": "chambermaid",
         "trick": "mathematician",
-        "reason": "La femme de chambre apprend si le mathématicien se réveille ce soir ou non, même si la femme de chambre se réveille en premier."
+        "reason": "La Femme de chambre apprend si le Mathématicien se réveille ce soir ou non, même si la Femme de chambre se réveille en premier."
     },
     {
         "target": "eviltwin",
         "trick": "plaguedoctor",
-        "reason": "Le conteur ne peut pas acquérir la capacité Evil Twin si le Plague Doctor meurt."
+        "reason": "Le Conteur ne peut pas acquérir la capacité de Jumeau Maléfique si le Plague Doctor meurt."
     },
     {
         "target": "butler",
@@ -42,7 +42,7 @@
     {
         "target": "goblin",
         "trick": "plaguedoctor",
-        "reason": "Si le Docteur de la Peste meurt, un serviteur vivant acquiert la capacité Gobelin en plus de sa propre capacité et l'apprend."
+        "reason": "Si le Docteur de la Peste meurt, un Sbire vivant acquiert la capacité du Gobelin en plus de sa propre capacité et l'apprend."
     },
     {
         "target": "leviathan",
@@ -80,6 +80,16 @@
         "reason": "S'il n'y a pas d'exécution au 5ème jour, le bien l'emporte"
     },
     {
+        "target": "leviathan",
+        "trick": "hatter",
+        "reason": "Si le Chapelier meurt le cinquième jour ou après, le Démon ne peut pas choisir Léviathan."
+    },
+    {
+        "target": "leviathan",
+        "trick": "pithag",
+        "reason": "Après le cinquième jour, la Vieille-Chouette ne peut pas créer de Léviathan."
+    },
+    {
         "target": "lilmonsta",
         "trick": "poppygrower",
         "reason": "Les sbires ne se réveillent pas au même moment. Ils sont réveillés un par un jusqu'à ce que l'un d'eux décide de prendre le jeton P'tit Monstre."
@@ -105,6 +115,11 @@
         "reason": "Le Vizir peuvent mourir par exécution s'ils font du baby-sitting P'tit monstre."
     },
     {
+        "target": "lilmonsta",
+        "trick": "hatter",
+        "reason": "Si un Démon choisit P'tit monstre, il choisit également un Sbire, le devient, et garde P'tit monstre ce soir."
+    },
+    {
         "target": "lycanthrope",
         "trick": "gambler",
         "reason": "Si le Lycanthrope est en vie et le Parieur se tue cette nuit, aucun autre joueur ne peut mourir cette nuit."
@@ -112,12 +127,17 @@
     {
         "target": "legion",
         "trick": "engineer",
-        "reason": "La Légion et l'Ingénieur ne peuvent pas etre tous deux en jeu en début de partie. Si l'ingénieur crée une Légion, la plupart des joueurs (dont tous les joueurs maléfiques) deviennent Légion maléfique."
+        "reason": "La Légion et l'Ingénieur ne peuvent pas être tous deux en jeu en début de partie. Si l'Ingénieur crée une Légion, la plupart des joueurs (dont tous les joueurs maléfiques) deviennent Légion maléfique."
     },
     {
         "target": "legion",
         "trick": "preacher",
         "reason": "Il ne peut y avoir qu'un personnage jinxé en jeu."
+    },
+    {
+        "target": "legion",
+        "trick": "hatter",
+        "reason": "Si le Chapelier meurt et que la Légion est en jeu, rien ne se passe. Si le Chapelier meurt et qu'un joueur maléfique choisit Légion, tous les joueurs maléfiques actuels deviennent Légion."
     },
     {
         "target": "fanggu",
@@ -262,7 +282,7 @@
     {
         "target": "riot",
         "trick": "engineer",
-        "reason": "Riot and the Engineer can not both be in play at the start of the game. If the Engineer creates Riot, the evil players become Riot."
+        "reason": "Les Emeutiers et l'Ingénieur ne peuvent pas être tous les deux en jeu en début de partie. Si l'Ingénieur crée un Emeutier, tous les joueurs maléfiques deviennent des Emeutiers."
     },
     {
         "target": "riot",
@@ -272,7 +292,7 @@
     {
         "target": "riot",
         "trick": "snitch",
-        "reason": "Chaque Émeutier obtient 3 bluffs de plus"
+        "reason": "Chaque Émeutier obtient 3 bluffs de plus."
     },
     {
         "target": "riot",
@@ -367,7 +387,7 @@
     {
         "target": "riot",
         "trick": "devilsadvocate",
-        "reason": "Les joueurs qui meurent par nomination sont considérés comme ayant été éxécuté pour l'Avocat du Diable"
+        "reason": "Les joueurs qui meurent par nomination sont considérés comme ayant été éxécuté pour l'Avocat du Diable."
     },
     {
         "target": "riot",
@@ -393,6 +413,11 @@
         "target": "riot",
         "trick": "preacher",
         "reason": "Les Émeutiers sont considérés comme Sbires pour le Prédicateur."
+    },
+    {
+        "target": "riot",
+        "trick": "hatter",
+        "reason": "Si le Chapelier meurt, que les Emeutiers sont en jeu et que l'un d'entre eux choisit un Démon différent, une équipe maléfique normale est créée à partir des Emeutiers. Si le Chapelier meurt et que le Démon choisit Emeutier, les Sbires deviennent également des Emeutiers."
     },
     {
         "target": "alhadikhia",

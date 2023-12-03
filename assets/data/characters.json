@@ -3082,5 +3082,52 @@
         "setup": false,
         "ability": "Each night*, choose a character: they die. If they are not in play, the Storyteller chooses who dies.",
         "image": "/build/img/icon/demon/ojo.png"
+    },
+    {
+        "id": "hatter",
+        "name": "Hatter",
+        "edition": "",
+        "team": "outsider",
+        "firstNight": 0,
+        "firstNightReminder": "",
+        "otherNight": 40,
+        "otherNightReminder": "If the Hatter died today: Wake the Minions and Demon. Show them the 'This Character Selected You' info token, then the Hatter token. Each player either shakes their head no or points to another character of the same type as their current character.  If a second player would end up with the same character as another player, shake your head no and gesture for them to choose again. Put them to sleep. Change each player to the character they chose.",
+        "reminders": ["Tea Party Tonight"],
+        "setup": false,
+        "ability": "If you died today or tonight, the Minion & Demon players may choose new Minion & Demon characters to be.",
+        "image": "/build/img/icon/outsider/hatter.png"
+    },
+    {
+        "id": "bootlegger",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "reminders": [],
+        "setup": false,
+        "name": "Bootlegger",
+        "team": "fabled",
+        "ability": "This script has homebrew characters or rules.",
+        "image": "/build/img/icon/fabled/bootlegger.png"
+    },
+    {
+        "id": "ferryman",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "reminders": [],
+        "setup": false,
+        "name": "Ferryman",
+        "team": "fabled",
+        "ability": "On the final day, all dead players regain their vote token.",
+        "image": "/build/img/icon/fabled/ferryman.png"
+    },
+    {
+        "id": "gardener",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "reminders": [],
+        "setup": false,
+        "name": "Gardener",
+        "team": "fabled",
+        "ability": "The Storyteller assigns 1 or more players' characters.",
+        "image": "/build/img/icon/fabled/gardener.png"
     }
 ]

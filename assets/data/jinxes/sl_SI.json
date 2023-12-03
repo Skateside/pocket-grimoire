@@ -80,6 +80,16 @@
         "reason": "Če je Leviatan v igri in se peti dan nikogar ne usmrti, dobro zmaga."
     },
     {
+        "target": "leviathan",
+        "trick": "hatter",
+        "reason": "Če Klobučar umre 5. dan ali pozneje, Demon ne more izbrati Levijatana."
+    },
+    {
+        "target": "leviathan",
+        "trick": "pithag",
+        "reason": "Po 5. dnevu Pit-Hag ne more izbrati Levijatana."
+    },
+    {
         "target": "lilmonsta",
         "trick": "poppygrower",
         "reason": "Če je Sejalka v igri, se Sledilci ne zbudijo skupaj, ampak vsak posebej, dokler še eden od njih ne odloči, da bo varuška Pošastku."
@@ -105,6 +115,11 @@
         "reason": "Vizir je lahko usmrčen in umre, če je varuška Pošastku."
     },
     {
+        "target": "lilmonsta",
+        "trick": "hatter",
+        "reason": "Če demon izbere Lil' Monsta, izbere tudi Miniona, ki bo nocoj postal varuška Lil' Monsta."
+    },
+    {
         "target": "lycanthrope",
         "trick": "gambler",
         "reason": "Če je Volkodlak živ in se Kockar ubije ponoči, nihče drug ne more umreti to noč."
@@ -118,6 +133,11 @@
         "target": "legion",
         "trick": "preacher",
         "reason": "Samo ena od uročenih vlog je lahko v igri."
+    },
+    {
+        "target": "legion",
+        "trick": "hatter",
+        "reason": "Če Klobučar umre in je Legion v igri, se ne zgodi nič. Če Klobučar umre in zlobni igralec izbere Legion, vsi trenutni zlobni igralci postanejo Legion."
     },
     {
         "target": "fanggu",
@@ -393,6 +413,11 @@
         "target": "riot",
         "trick": "preacher",
         "reason": "Rogovil izpade kot Sledilec za potrebe Pridigarja."
+    },
+    {
+        "target": "riot",
+        "trick": "hatter",
+        "reason": "Če Klobučar umre, je v igri Riot in Riot izbere drugega demona, se iz igralcev Riot ustvari običajna zlobna ekipa. Če Klobučar umre in Demon izbere Riot, postanejo tudi Minioni Riot."
     },
     {
         "target": "alhadikhia",
