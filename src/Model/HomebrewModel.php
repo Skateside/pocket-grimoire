@@ -25,7 +25,8 @@ class HomebrewModel
         'otherNight',
         'otherNightReminder',
         'reminders',
-        'setup'
+        'setup',
+        'jinxes'
     ];
 
     public function __construct(

@@ -275,6 +275,32 @@ export default class Jinx {
     }
 
     /**
+     * Exposes {@link Jinx#isHomebrew}
+     *
+     * @returns {Boolean}
+     *          true if the Jinx is homebrew, false if it's not.
+     */
+    getIsHomebrew() {
+        return Boolean(this.isHomebrew);
+    }
+
+    /**
+     * Sets whether or not this Jinx is from a homebrew role.
+     *
+     * @param {Boolean} isHomebrew
+     *        true if the Jinx comes from a homebrew source, false otherwise.
+     */
+    setIsHomebrew(isHomebrew) {
+
+        /**
+         * Whether or not this Jinx has ceom from a homebrew role or not.
+         * @type {Boolean}
+         */
+        this.isHomebrew = isHomebrew;
+
+    }
+
+    /**
      * Sets the template that can be used to draw the jinx.
      *
      * @param {Template} template

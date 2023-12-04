@@ -383,4 +383,31 @@ export default class TokenStore {
         return this.jinxes;
     }
 
+    /**
+     * Adds a jinx to {@link TokenStore#jinxes}.
+     *
+     * @param {Jinx} jinx
+     *        Jinx to add.
+     */
+    addJinx(jinx) {
+        this.jinxes.push(jinx);
+    }
+
+    /**
+     * Gets all the homebrew jinxes that have been registered.
+     *
+     * @return {Array.<Jinx>}
+     *         Collection of all homebrew jinxes.
+     */
+    getAllHomebrewJinxes() {
+        return this.jinxes.filter((jinx) => jinx.getIsHomebrew());
+    }
+
+    /**
+     * Removes all the homebrew jinxes from {@link TokenStore#jinxes}.
+     */
+    removeAllHomebrewJinxes() {
+        this.jinxes = this.jinxes.filter((jinx) => !jinx.getIsHomebrew());
+    }
+
 }
