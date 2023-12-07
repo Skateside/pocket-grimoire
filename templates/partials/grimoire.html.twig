@@ -9,22 +9,14 @@
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512" class="pad-wrapper__icon"><!--! Font Awesome Pro 6.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path fill="currentColor" d="M246.6 361.4C252.9 367.6 256 375.8 256 384s-3.125 16.38-9.375 22.62l-96 96c-12.5 12.5-32.75 12.5-45.25 0l-96-96c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L96 402.8v-293.5L54.63 150.6c-12.5 12.5-32.75 12.5-45.25 0s-12.5-32.75 0-45.25l96-96c12.5-12.5 32.75-12.5 45.25 0l96 96C252.9 111.6 256 119.8 256 128s-3.125 16.38-9.375 22.62c-12.5 12.5-32.75 12.5-45.25 0L160 109.3v293.5l41.38-41.38C213.9 348.9 234.1 348.9 246.6 361.4z"/></svg>
     </div>
 
-    <div class="pad pad--bluffs">
-        <h3 class="pad__title">{{ 'grimoire.grimoire.bluffs'|trans }}</h3>
-        <div class="bluffs">
-            {% for i in 1..3 %}
-                <button type="button" id="bluff-{{ i }}" class="token token--bluff js--character-list--bluff" data-token="character" data-bluff-dialog="#bluff-show" disabled></button>
-            {% endfor %}
-        </div>
-        <p class="mt-4"><button type="button" class="button" id="show-all-bluffs" data-title="{{ 'grimoire.grimoire.bluffs'|trans|e('html_attr') }}">{{ 'grimoire.grimoire.show_bluffs'|trans }}</button></p>
-    </div>
+    {% include 'partials/grimoire/demon-bluffs.html.twig' %}
 
     <ul class="button-list mt-4">
-        <li><button type="button" class="button button--full-height" id="add-token" data-dialog="#character-list" disabled>{{ 'grimoire.grimoire.add_token'|trans }}</button></li>
-        <li><button type="button" class="button button--full-height" id="add-reminder" data-dialog="#reminder-list" disabled>{{ 'grimoire.grimoire.add_reminder'|trans }}</button></li>
-        <li><button type="button" class="button button--full-height" id="add-traveller" data-dialog="#traveller-list" disabled>{{ 'grimoire.grimoire.add_traveller'|trans }}</button></li>
-        <li><button type="button" class="button button--full-height" id="add-fabled" data-dialog="#fabled-list" disabled>{{ 'grimoire.grimoire.add_fabled'|trans }}</button></li>
-        <li><button type="button" class="button button--full-height" id="show-tokens" data-dialog="#token-list" disabled>{{ 'grimoire.grimoire.show_tokens'|trans }}</button></li>
+        <li>{% include 'partials/grimoire/add-token.html.twig' %}</li>
+        <li>{% include 'partials/grimoire/add-reminder.html.twig' %}</li>
+        <li>{% include 'partials/grimoire/add-traveller.html.twig' %}</li>
+        <li>{% include 'partials/grimoire/add-fabled.html.twig' %}</li>
+        <li>{% include 'partials/grimoire/show-tokens.html.twig' %}</li>
         <li><button type="button" class="button button--full-height" id="reset-height">{{ 'grimoire.grimoire.reset_height'|trans }}</button></li>
         <li><button type="button" class="button button--full-height button--warning" id="clear-grimoire" data-confirm="{{ 'grimoire.grimoire.clear_grimoire_warning'|trans }}">{{ 'grimoire.grimoire.clear_grimoire'|trans }}</button></li>
     </ul>
@@ -71,52 +63,6 @@
         </div>
     </details>
 
-    {% endblock %}
-{% endembed %}
-
-{% embed 'includes/dialog.html.twig' with {
-    id: 'character-list',
-    background: 'blur',
-    title: 'grimoire.character_list.title'|trans
-} %}
-    {% block body %}
-    <ul id="character-list__list" class="button-list button-list--reminder character-list"></ul>
-    {% endblock %}
-{% endembed %}
-
-<template id="character-list-template">
-    <li class="js--character-list--item">
-        <button type="button" class="no-btn w-full js--character-list--button">
-            <span class="character-list__token js--character-list--token"></span>
-        </button>
-    </li>
-</template>
-
-{% embed 'includes/dialog.html.twig' with {
-    id: 'reminder-list',
-    background: 'blur',
-    title: 'grimoire.reminder_list.title'|trans
-} %}
-    {% import 'macros/forms.html.twig' as forms %}
-    {% block body %}
-    <ul id="reminder-list__list" class="button-list button-list--reminder"></ul>
-    {{ forms.switch({
-        node: 'p',
-        classes: 'mt-4',
-        label: 'grimoire.reminder_list.show'|trans,
-        name: 'show',
-        id: 'show-all-reminders',
-        value: 'all-reminders'
-    }) }}
-    {{ forms.switch({
-        node: 'p',
-        classes: 'mt-4 mb-0',
-        label: 'grimoire.reminder_list.multiple'|trans,
-        name: 'multiple',
-        id: 'multiple-reminders',
-        value: 'multiple-reminders'
-    }) }}
-    <button type="button" class="button w-full mt-4 js--reminder-list--multiple" hidden>{{ 'grimoire.reminder_list.add_all'|trans }}</button>
     {% endblock %}
 {% endembed %}
 
@@ -203,129 +149,6 @@
     {% block body %}
     <div id="reminder-show-token" class="character-show__token"></div>
     <p class="mt-4"><button type="button" class="button button--warning" id="reminder-remove">{{ 'grimoire.reminder_show.remove'|trans }}</button></p>
-    {% endblock %}
-{% endembed %}
-
-{% embed 'includes/dialog.html.twig' with {
-    id: 'bluff-show',
-    background: 'blur'
-} %}
-    {% block title %}<span id="bluff-show-name" data-no-character="{{ 'grimoire.bluff_show.empty'|trans }}">{{ 'grimoire.bluff_show.title'|trans }}</span>{% endblock %}
-    {% block body %}
-    <p id="bluff-show-ability" class="character-show__ability"></p>
-    <ul class="button-list">
-        <li><button type="button" class="button" id="bluff-show-token">{{ 'grimoire.bluff_show.show'|trans }}</button></li>
-        <li><button type="button" class="button" data-dialog="#bluff-list">{{ 'grimoire.bluff_show.change'|trans }}</button></li>
-    </ul>
-    {% endblock %}
-{% endembed %}
-
-{% embed 'includes/dialog.html.twig' with {
-    id: 'bluff-list',
-    background: 'blur',
-    title: 'grimoire.bluff_list.title'|trans
-} %}
-    {% import 'macros/forms.html.twig' as forms %}
-    {% block body %}
-    <ul id="character-list__bluffs" class="button-list button-list--reminder character-list mb-4"></ul>
-
-    <ul class="no-list">
-        {{ forms.switch({
-            node: 'li',
-            label: 'grimoire.bluff_list.show_existing'|trans,
-            name: 'show',
-            id: 'show-existing',
-            value: 'existing'
-        }) }}
-        {{ forms.switch({
-            node: 'li',
-            label: 'grimoire.bluff_list.show_travellers'|trans,
-            name: 'show',
-            id: 'show-travellers',
-            value: 'traveller'
-        }) }}
-        {{ forms.switch({
-            node: 'li',
-            label: 'grimoire.bluff_list.show_evil'|trans,
-            name: 'show',
-            id: 'show-evil',
-            value: 'evil'
-        }) }}
-    </ul>
-
-    {% endblock %}
-{% endembed %}
-
-{% embed 'includes/dialog.html.twig' with {
-    id: 'token-list',
-    background: 'blur',
-    title: 'grimoire.token_list.title'|trans
-} %}
-    {% block body %}
-        <ul id="token-list__list" class="button-list button-list--reminder"></ul>
-    {% endblock %}
-{% endembed %}
-
-<template id="token-list-template">
-    <li class="js--token-list--item">
-        <button type="button" class="no-btn w-full js--token-list--button">
-            <span class="character-list__token js--token-list--token"></span>
-        </button>
-    </li>
-</template>
-
-{% embed 'includes/dialog.html.twig' with {
-    id: 'traveller-list',
-    background: 'blur',
-    title: 'grimoire.traveller_list.title'|trans
-} %}
-    {% import 'macros/forms.html.twig' as forms %}
-    {% block body %}
-        <ul id="traveller-list__list" class="filter-list button-list button-list--reminder"></ul>
-        {{ forms.switch({
-            node: 'p',
-            classes: 'mt-4',
-            label: 'grimoire.traveller_list.show_all'|trans,
-            name: 'show',
-            id: 'show-all-travellers',
-            attributes: {
-                'data-filter-list': '#traveller-list__list'
-            }
-        }) }}
-    {% endblock %}
-{% endembed %}
-
-{% embed 'includes/dialog.html.twig' with {
-    id: 'fabled-list',
-    background: 'blur',
-    title: 'grimoire.fabled_list.title'|trans
-} %}
-    {% import 'macros/forms.html.twig' as forms %}
-    {% block body %}
-        <ul id="fabled-list__list" class="button-list button-list--reminder"></ul>
-    {% endblock %}
-{% endembed %}
-
-{% embed 'includes/dialog.html.twig' with {
-    id: 'token',
-    background: 'hide',
-    hideClickBackground: false
-} %}
-    {% block title %}
-        <span class="token-display__title js--token--title" data-multiple="{{ 'grimoire.token_list.title'|trans|e('html_attr') }}">{{ 'grimoire.token.title'|trans }}</span>
-        <input type="text" class="token-display__input js--token--input" list="token-title-list" hidden>
-        <datalist id="token-title-list">
-            <option value="{{ 'grimoire.token.title'|trans|e('html_attr') }}" class="js--token--start">
-            <option value="{{ 'grimoire.token.title'|trans|e('html_attr') }}" class="js--token--previous">
-            <option value="{{ 'grimoire.token_list.title'|trans|e('html_attr') }}">
-            <option value="{{ 'grimoire.grimoire.bluffs'|trans|e('html_attr') }}">
-        </datalist>
-    {% endblock %}
-    {% block body %}
-        <ul class="token-display js--token--holder"></ul>
-        <p class="token-display__additional mt-4">
-            <button type="button" class="button js--token--add">{{ 'grimoire.token_list.add'|trans }}</button>
-        </p>
     {% endblock %}
 {% endembed %}
 

@@ -1,0 +1,39 @@
+<button type="button" class="button button--full-height" id="qr-code-button" data-dialog="#qr-code-dialog" disabled>{{ 'setup.buttons.qr_code_button'|trans }}</button>
+
+{% embed 'includes/dialog.html.twig' with {
+    id: 'qr-code-dialog',
+    background: 'hide',
+    title: 'setup.qr_code.title'|trans
+} %}
+    {% import 'macros/forms.html.twig' as forms %}
+    {% block body %}
+        <p>{{ 'setup.qr_code.intro'|trans }}</p>
+        <a href="{{ path('sheet') }}" target="_blank" rel="noopener noreferrer" id="qr-code-link" disabled>
+            <span id="qr-code" class="qr"></span>
+        </a>
+
+        <p class="mt-4" id="include-groups">{{ 'setup.qr_code.include'|trans }}</p>
+        <div class="slot slot--2">
+            {{ forms.switch({
+                node: 'div',
+                label: 'setup.qr_code.travellers'|trans,
+                name: 'include-travellers',
+                id: 'include-travellers',
+                checked: true,
+                attributes: {
+                    'aria-describedby': 'include-groups'
+                }
+            }) }}
+            {{ forms.switch({
+                node: 'div',
+                label: 'setup.qr_code.fabled'|trans,
+                name: 'include-fabled',
+                id: 'include-fabled',
+                checked: true,
+                attributes: {
+                    'aria-describedby': 'include-groups'
+                }
+            }) }}
+        </div>
+    {% endblock %}
+{% endembed %}

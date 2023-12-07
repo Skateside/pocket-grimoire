@@ -1,0 +1,19 @@
+<button type="button" class="button button--full-height" id="add-token" data-dialog="#character-list" disabled>{{ 'grimoire.grimoire.add_token'|trans }}</button>
+
+{% embed 'includes/dialog.html.twig' with {
+    id: 'character-list',
+    background: 'blur',
+    title: 'grimoire.character_list.title'|trans
+} %}
+    {% block body %}
+    <ul id="character-list__list" class="button-list button-list--reminder character-list"></ul>
+    {% endblock %}
+{% endembed %}
+
+<template id="character-list-template">
+    <li class="js--character-list--item">
+        <button type="button" class="no-btn w-full js--character-list--button">
+            <span class="character-list__token js--character-list--token"></span>
+        </button>
+    </li>
+</template>

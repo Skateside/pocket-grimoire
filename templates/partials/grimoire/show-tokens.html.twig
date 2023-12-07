@@ -1,0 +1,19 @@
+<button type="button" class="button button--full-height" id="show-tokens" data-dialog="#token-list" disabled>{{ 'grimoire.grimoire.show_tokens'|trans }}</button>
+
+{% embed 'includes/dialog.html.twig' with {
+    id: 'token-list',
+    background: 'blur',
+    title: 'grimoire.token_list.title'|trans
+} %}
+    {% block body %}
+        <ul id="token-list__list" class="button-list button-list--reminder"></ul>
+    {% endblock %}
+{% endembed %}
+
+<template id="token-list-template">
+    <li class="js--token-list--item">
+        <button type="button" class="no-btn w-full js--token-list--button">
+            <span class="character-list__token js--token-list--token"></span>
+        </button>
+    </li>
+</template>

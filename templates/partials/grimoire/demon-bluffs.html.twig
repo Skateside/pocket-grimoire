@@ -1,0 +1,59 @@
+<div class="pad pad--bluffs">
+    <h3 class="pad__title">{{ 'grimoire.grimoire.bluffs'|trans }}</h3>
+    <div class="bluffs">
+        {% for i in 1..3 %}
+            <button type="button" id="bluff-{{ i }}" class="token token--bluff js--character-list--bluff" data-token="character" data-bluff-dialog="#bluff-show" disabled></button>
+        {% endfor %}
+    </div>
+    <p class="mt-4"><button type="button" class="button" id="show-all-bluffs" data-title="{{ 'grimoire.grimoire.bluffs'|trans|e('html_attr') }}">{{ 'grimoire.grimoire.show_bluffs'|trans }}</button></p>
+</div>
+
+{% embed 'includes/dialog.html.twig' with {
+    id: 'bluff-show',
+    background: 'blur'
+} %}
+    {% block title %}<span id="bluff-show-name" data-no-character="{{ 'grimoire.bluff_show.empty'|trans }}">{{ 'grimoire.bluff_show.title'|trans }}</span>{% endblock %}
+    {% block body %}
+    <p id="bluff-show-ability" class="character-show__ability"></p>
+    <ul class="button-list">
+        <li><button type="button" class="button" id="bluff-show-token">{{ 'grimoire.bluff_show.show'|trans }}</button></li>
+        <li><button type="button" class="button" data-dialog="#bluff-list">{{ 'grimoire.bluff_show.change'|trans }}</button></li>
+    </ul>
+    {% endblock %}
+{% endembed %}
+
+{% embed 'includes/dialog.html.twig' with {
+    id: 'bluff-list',
+    background: 'blur',
+    title: 'grimoire.bluff_list.title'|trans
+} %}
+    {% import 'macros/forms.html.twig' as forms %}
+    {% block body %}
+    <ul id="character-list__bluffs" class="button-list button-list--reminder character-list mb-4"></ul>
+
+    <ul class="no-list">
+        {{ forms.switch({
+            node: 'li',
+            label: 'grimoire.bluff_list.show_existing'|trans,
+            name: 'show',
+            id: 'show-existing',
+            value: 'existing'
+        }) }}
+        {{ forms.switch({
+            node: 'li',
+            label: 'grimoire.bluff_list.show_travellers'|trans,
+            name: 'show',
+            id: 'show-travellers',
+            value: 'traveller'
+        }) }}
+        {{ forms.switch({
+            node: 'li',
+            label: 'grimoire.bluff_list.show_evil'|trans,
+            name: 'show',
+            id: 'show-evil',
+            value: 'evil'
+        }) }}
+    </ul>
+
+    {% endblock %}
+{% endembed %}
