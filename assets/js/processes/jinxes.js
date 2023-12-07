@@ -23,7 +23,11 @@ TokenStore.ready((tokenStore) => {
      */
     function registerJinx(jinx) {
 
-        const trickId = jinx.getTrick().getId();
+        const trickId = jinx.getTrick()?.getId();
+
+        if (!trickId) {
+            return;
+        }
 
         if (!trickToTarget[trickId]) {
             trickToTarget[trickId] = [];

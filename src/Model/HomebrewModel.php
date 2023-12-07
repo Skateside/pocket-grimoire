@@ -117,21 +117,27 @@ class HomebrewModel
      * @param  array $entry
      * @return bool
      */
-    public function validateEntry(array $entry): bool
+    public function validateEntry(array $entry, array &$reason = []): bool
     {
 
         $isValid = true;
         $teams = [];
 
         if (!$this->isHomebrewEntry($entry)) {
+
+            $reason[] = 'Not homebrew entry "' . $entry['id'] . '"';
             $isValid = false;
+
         }
 
         if (
             $isValid
             && !$this->teamRepo->findOneBy(['identifier' => $entry['team']])
         ) {
+
+            $reason[] = 'Unrecognised team "' . $entry['team'] . '"';
             $isValid = false;
+
         }
 
         return $isValid;
@@ -157,9 +163,10 @@ class HomebrewModel
      * least 1 entry.
      *
      * @param  array $entries
+     * @param  array $reasons
      * @return bool
      */
-    public function validateAllEntries(array $entries): bool
+    public function validateAllEntries(array $entries, array &$reasons = []): bool
     {
 
         $isValid = true;
@@ -177,6 +184,7 @@ class HomebrewModel
 
             if (!is_array($entry)) {
 
+                $reasons[] = 'Could not find ID: ' . var_export($entry, 1);
                 $isValid = false;
                 break;
 
@@ -193,8 +201,11 @@ class HomebrewModel
                 ]);
 
                 if (is_null($character)) {
+
+                    $reasons[] = 'Could not recognise character "' . $entry['id'] . '"';
                     $isValid = false;
                     break;
+
                 }
 
                 // The user may have uploaded a script that includes travellers
@@ -211,8 +222,10 @@ class HomebrewModel
 
             }
 
-            if (!$this->validateEntry($entry)) {
+            $invalidReasons = [];
+            if (!$this->validateEntry($entry, $invalidReasons)) {
 
+                $reasons[] = 'Invalid entry for  "' . $entry['id'] . '": ' . implode(', ', $invalidReasons);
                 $isValid = false;
                 break;
 
@@ -225,7 +238,13 @@ class HomebrewModel
         }
 
         if ($isValid && in_array(0, array_values($teams))) {
+
+            $missingTeams = array_keys(array_filter($teams, function ($count) {
+                return $count < 1;
+            }));
+            $reasons[] = 'Empty teams: ' . implode(', ', $missingTeams);
             $isValid = false;
+
         }
 
         return $isValid;

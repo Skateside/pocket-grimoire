@@ -223,14 +223,17 @@ class MainController extends AbstractController
 
         if ($data = json_decode($request->getContent(), true)) {
 
+            $invalidReasons = [];
+
             if (
                 !is_array($data)
-                || !$this->homebrewModel->validateAllEntries($data, $this->roleRepo)
+                || !$this->homebrewModel->validateAllEntries($data, $invalidReasons)
             ) {
 
                 return new JsonResponse([
                     'success' => false,
-                    'message' => $translator->trans('messages.invalid_data')
+                    'message' => $translator->trans('messages.invalid_data'),
+                    'reasons' => $invalidReasons
                 ]);
 
             }

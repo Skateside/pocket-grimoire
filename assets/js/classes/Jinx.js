@@ -38,8 +38,10 @@ import Observer from "./Observer";
 export default class Jinx {
 
     /**
-     * @param {CharacterToken} trick
-     *        The character that the source character will be jinxed with.
+     * @param {CharacterToken|undefined} trick
+     *        The character that the source character will be jinxed with. If
+     *        the jinx is between 2 homebrew characters and only one is defined
+     *        in the data, `trick` may be undefined.
      * @param {String} reason
      *        The reason for the jinx.
      */
@@ -47,7 +49,7 @@ export default class Jinx {
 
         /**
          * The character that the source character is jinxed with.
-         * @type {CharacterToken}
+         * @type {CharacterToken|undefined}
          */
         this.trick = trick;
 
@@ -228,7 +230,7 @@ export default class Jinx {
      *         true if the jinx is active, false otherwise.
      */
     isActive() {
-        return this.state.ready && this.state.active;
+        return Boolean(this.trick) && this.state.ready && this.state.active;
         // return this.isReady() && this.state.trick && this.state.target;
     }
 
@@ -241,7 +243,7 @@ export default class Jinx {
      *         true if the character matches, false if it doesn't.
      */
     matches(character) {
-        return this.trick.matches(character);
+        return Boolean(this.trick) && this.trick.matches(character);
     }
 
     /**
@@ -257,8 +259,9 @@ export default class Jinx {
     /**
      * Exposes {@link Jinx#trick}.
      *
-     * @return {CharacterToken}
-     *         The character that the source character is jinxed with.
+     * @return {CharacterToken|undefined}
+     *         The character that the source character is jinxed with, if we
+     *         know it.
      */
     getTrick() {
         return this.trick;
@@ -326,6 +329,10 @@ export default class Jinx {
      */
     static drawImg(element, character) {
 
+        if (!character) {
+            return;
+        }
+
         element.src = character.getImage();
         element.alt = character.getName();
         element.title = character.getName();
@@ -339,7 +346,7 @@ export default class Jinx {
      *         An ID for the jinx.
      */
     getId() {
-        return `jinx--${this.target.getId()}-${this.trick.getId()}`;
+        return `jinx--${this.target.getId()}-${this.trick?.getId() || '_unknown_'}`;
     }
 
     /**
@@ -378,7 +385,7 @@ export default class Jinx {
                 drawImg(element, trick);
             },
             ".js--jinx-table--trick-name"(element) {
-                element.textContent = trick.getName();
+                element.textContent = trick?.getName() || '';
             },
             ".js--jinx-table--reason"(element) {
                 element.textContent = reason;
