@@ -27,3 +27,13 @@ export function deepFreeze(object) {
     return Object.freeze(object);
 
 }
+
+/**
+ * Removes all the properties from an object.
+ *
+ * @param {Object} object
+ *        Object to empty.
+ */
+export function empty(object) {
+    Object.keys(object).forEach((key) => delete object[key]);
+}

@@ -8,20 +8,23 @@ import {
     lookupOneCached,
     replaceContentsMany
 } from "../../utils/elements.js";
+import {
+    empty
+} from "../../utils/objects.js";
 
 const gameObserver = Observer.create("game");
 const tokenObserver = Observer.create("token");
 
 
-// Include all the Fabled in the traveller list.
+// Include all the Fabled in the fabled list.
 
-const homebrewFabled = [];
-const officialFabled = [];
+const homebrewFabled = Object.create(null);
+const officialFabled = Object.create(null);
 let characterTemplate = null;
 
 function populateFabled() {
 
-    const fabled = officialFabled.concat(homebrewFabled);
+    const fabled = Object.values({...officialFabled, ...homebrewFabled});
 
     if (!characterTemplate) {
 
@@ -49,11 +52,11 @@ function populateFabled() {
 
 gameObserver.on("characters-selected", ({ detail }) => {
 
-    homebrewFabled.length = 0;
+    empty(homebrewFabled);
 
     detail.characters
         .filter((character) => character.getTeam() === "fabled")
-        .forEach((character) => homebrewFabled.push(character));
+        .forEach((character) => homebrewFabled[character.getId()] = character);
 
     populateFabled();
 
@@ -61,12 +64,12 @@ gameObserver.on("characters-selected", ({ detail }) => {
 
 TokenStore.ready((tokenStore) => {
 
-    officialFabled.length = 0;
+    empty(officialFabled);
 
     tokenStore
         .getAllCharacters()
         .filter((character) => character.getTeam() === "fabled")
-        .forEach((character) => officialFabled.push(character));
+        .forEach((character) => officialFabled[character.getId()] = character);
 
     populateFabled();
 
