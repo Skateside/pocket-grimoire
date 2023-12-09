@@ -1,8 +1,12 @@
 import Template from "../../classes/Template.js";
 import TokenStore from "../../classes/TokenStore.js";
+import Observer from "../../classes/Observer.js";
+import BluffDialog from "../../classes/BluffDialog.js";
 import {
-    // lookup,
+    lookup,
     lookupOne,
+    lookupOneCached,
+    replaceContentsMany,
     empty
 } from "../../utils/elements.js";
 
@@ -109,6 +113,34 @@ class BluffsGroups {
 
     }
 
+    getVisibleGroup() {
+
+        const group = this.groups[this.visibleGroupIndex];
+
+        if (!group) {
+            throw new Error(`Cannot find group at index ${this.visibleGroupIndex}`);
+        }
+
+        return group;
+
+    }
+
+    setInnerIndex(index) {
+        this.getVisibleGroup().setSetIndex(index);
+    }
+
+    getInnerIndex() {
+        return this.getVisibleGroup().getSetIndex();
+    }
+
+    setCharacter(character) {
+        return this.getVisibleGroup().setCharacter(character);
+    }
+
+    redraw() {
+        this.getVisibleGroup().redrawButton();
+    }
+
     serialise() {
         return this.groups.map((group) => group.serialise());
     }
@@ -116,6 +148,10 @@ class BluffsGroups {
 }
 
 class BluffsGroup {
+
+    static get READY() {
+        return "bluff-group-ready";
+    }
 
     static setTemplate(template) {
         this.template = template;
@@ -166,11 +202,26 @@ class BluffsGroup {
         return `.js--demon-bluffs--group[data-group-id="${this.index}"]`;
     }
 
+    getSetIndex() {
+        return this.bluffSet.getIndex();
+    }
+
+    setSetIndex(index) {
+        return this.bluffSet.setIndex(index);
+    }
+
+    setCharacter(character) {
+        this.bluffSet.setCharacter(character);
+    }
+
     ready() {
 
         const {
             element,
-            bluffSet
+            bluffSet,
+            constructor: {
+                READY
+            }
         } = this;
 
         if (!element) {
@@ -192,10 +243,35 @@ class BluffsGroup {
 
         });
 
+        element.dispatchEvent(new CustomEvent(READY, {
+            bubbles: true,
+            cancelable: false,
+            detail: {
+                bluffGroup: this
+            }
+        }));
+
     }
 
     remove() {
         this.element?.remove();
+    }
+
+    redrawButton() {
+
+        const {
+            element,
+            bluffSet
+        } = this;
+
+        const setIndex = bluffSet.getIndex();
+        const character = bluffSet.getCharacters()[setIndex];
+
+        empty(lookupOne(
+            `.js--demon-bluffs--bluff[data-index="${setIndex}"]`,
+            element
+        )).append(character.drawToken());
+
     }
 
 }
@@ -222,14 +298,34 @@ class BluffSet {
             emptyCharacter.clone()
         ];
 
+        this.index = 0;
+
     }
 
     getCharacters() {
         return [...this.characters];
     }
 
-    setCharacter(character, index) {
-        this.characters[index] = character;
+    validateIndex(index) {
+
+        index = Number(index);
+
+        if (index < 0 || index >= this.characters.length) {
+
+            if (showThrow) {
+                throw new RangeError(`Invalid index ${index}`)
+            }
+
+            return -1;
+
+        }
+
+        return index;
+
+    }
+
+    setCharacter(character, index = this.index) {
+        this.characters[this.validateIndex(index)] = character;
     }
 
     unsetCharacter(character) {
@@ -238,14 +334,18 @@ class BluffSet {
 
     unsetCharacterByIndex(index) {
 
-        index = Number(index);
+        this.characters[this.validateIndex(index)] = (
+            this.constructor.emptyCharacter.clone()
+        );
 
-        if (index < 0 || index >= this.characters.length) {
-            return;
-        }
+    }
 
-        this.characters[index] = this.constructor.emptyCharacter.clone();
+    setIndex(index) {
+        this.index = this.validateIndex(index);
+    }
 
+    getIndex() {
+        return this.index;
     }
 
     serialise() {
@@ -259,6 +359,9 @@ BluffsGroup.setTemplate(
 );
 
 TokenStore.ready((tokenStore) => {
+
+    const gameObserver = Observer.create("game");
+    const tokenObserver = Observer.create("token");
 
     BluffSet.setEmptyCharacter(tokenStore.getEmptyCharacter());
 
@@ -278,14 +381,132 @@ TokenStore.ready((tokenStore) => {
 
     });
 
-    bluffGroupsContainer.addEventListener("bluff-group-visible", ({ target }) => {
+    bluffGroupsContainer.addEventListener("click", ({ target }) => {
+
+        const button = target.closest(".js--demon-bluffs--bluff[data-index]");
+
+        if (!button) {
+            return;
+        }
+
+        bluffGroups.setInnerIndex(button.dataset.index);
+
+    });
+
+    bluffGroupsContainer.addEventListener(BluffsGroups.VISIBLE, ({ target }) => {
         bluffGroups.setVisibleGroupIndex(target.dataset.groupId);
+    });
+
+    bluffGroupsContainer.addEventListener(BluffsGroup.READY, ({ target }) => {
+
+        lookup("[data-bluff-dialog]", target).forEach((trigger) => {
+            trigger.dialog = BluffDialog.createFromTrigger(trigger);
+        });
+
     });
 
     bluffGroups.add(new BluffsGroup(new BluffSet()));
 
     lookupOne("#add-bluffs").addEventListener("click", () => {
         bluffGroups.add(new BluffsGroup(new BluffSet()));
+    });
+
+    gameObserver.on("characters-selected", ({ detail }) => {
+
+        const characterTemplate = Template.create(
+            lookupOneCached("#character-list-template")
+        );
+        const characters = [
+            tokenStore.characters[TokenStore.EMPTY],
+            ...detail.characters
+        ];
+
+        replaceContentsMany(
+            lookupOneCached("#character-list__bluffs"),
+            characters.map((character) => characterTemplate.draw({
+                ".js--character-list--item"(element) {
+
+                    element.dataset.characterId = character.getId();
+                    element.dataset.team = character.getTeam();
+
+                },
+                ".js--character-list--button"(element) {
+                    element.dataset.tokenId = character.getId();
+                },
+                ".js--character-list--token"(element) {
+                    element.append(character.drawToken());
+                }
+            }))
+        );
+
+    });
+
+    // const bluffDialog = BluffDialog.create(lookupOne("#bluff-show"));
+
+    // bluffDialog.on(BluffDialog.SHOW, (e) => {
+    //     // TODO: How do I know which token is being shown right now?
+    //     lookupOneCached("#bluff-show-token").disabled = true;
+    //     console.log({ e });
+    // });
+
+    function markInPlay(character, shouldAdd = true) {
+
+        const inPlay = lookupOne(
+            `#character-list__bluffs [data-character-id="${character.getId()}"]`
+        );
+
+        if (inPlay) {
+            inPlay.classList.toggle("is-in-play", shouldAdd);
+        }
+
+    }
+
+    gameObserver.on("character-drawn", ({ detail }) => {
+        markInPlay(detail.character);
+    });
+
+    tokenObserver.on("character-add", ({ detail }) => {
+        markInPlay(detail.character);
+    });
+
+    tokenObserver.on("character-remove", ({ detail }) => {
+        markInPlay(detail.character, false);
+    });
+
+    function toggleBluffListClass(className, state) {
+
+        lookupOneCached("#character-list__bluffs")
+            .classList
+            .toggle(className, state);
+
+    }
+
+    lookupOne("#show-existing").addEventListener("change", ({ target }) => {
+        toggleBluffListClass("is-show-existing", target.checked);
+    });
+
+    lookupOne("#show-travellers").addEventListener("change", ({ target }) => {
+        toggleBluffListClass("is-show-travellers", target.checked);
+    });
+
+    lookupOne("#show-evil").addEventListener("change", ({ target }) => {
+        toggleBluffListClass("is-show-evil", target.checked);
+    });
+
+    lookupOne("#character-list__bluffs").addEventListener("click", ({ target }) => {
+
+        const button = target.closest("[data-token-id]")
+
+        if (!button) {
+            return;
+        }
+
+        // assign the chosen character to the correct set
+        const character = tokenStore.getCharacter(button.dataset.tokenId);
+        bluffGroups.setCharacter(character);
+        bluffGroups.redraw();
+        // close the dialog
+
     });
 
     /* TEMP */console.log("window.bluffGroups = %o", bluffGroups);window.bluffGroups = bluffGroups;/* TEMP */
@@ -295,8 +516,10 @@ TokenStore.ready((tokenStore) => {
 // NEXT STEPS
 //
 // The bluffs can't be assigned yet.
+//      -> choosing a bluff doesn't update the popup yet.
 // The "Show all bluffs" button doesn't work.
 // The store can't re-load the bluffs yet.
+// Clearing the grimoire won't clear the bluffs.
 
 
 /*

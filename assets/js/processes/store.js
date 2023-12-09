@@ -108,11 +108,11 @@ tokenObserver.on("set-player-name", ({ detail }) => {
     names.add(detail.name);
 
 });
-
+/*
 tokenObserver.on("bluff", ({ detail }) => {
     store.setBluff(detail.button, detail.character);
 });
-
+*/
 infoTokenObserver.on("info-token-added", ({ detail }) => {
     store.saveInfoToken(detail.token, detail.index);
 });
