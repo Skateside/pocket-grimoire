@@ -8,21 +8,33 @@ import {
     lookupOneCached,
     replaceContentsMany
 } from "../../utils/elements.js";
+import {
+    empty
+} from "../../utils/objects.js";
 
 const gameObserver = Observer.create("game");
 const tokenObserver = Observer.create("token");
 
 // Include all the Travellers in the traveller list.
 
-TokenStore.ready((tokenStore) => {
+const officialTravellers = Object.create(null);
+const homebrewTravellers = Object.create(null);
+let characterTemplate = null;
 
-    const travellers = tokenStore
-        .getAllCharacters()
-        .filter((character) => character.getTeam() === "traveller");
+function populateTravellers() {
 
-    const characterTemplate = Template.create(
-        lookupOneCached("#character-list-template")
-    );
+    const travellers = Object.values({
+        ...officialTravellers,
+        ...homebrewTravellers
+    });
+
+    if (!characterTemplate) {
+
+        characterTemplate = Template.create(
+            lookupOneCached("#character-list-template")
+        );
+
+    }
 
     replaceContentsMany(
         lookupOneCached("#traveller-list__list"),
@@ -36,12 +48,38 @@ TokenStore.ready((tokenStore) => {
         }))
     );
 
+    lookupOneCached("#add-traveller").disabled = false;
+
+}
+
+TokenStore.ready((tokenStore) => {
+
+    empty(officialTravellers);
+
+    tokenStore
+        .getAllCharacters()
+        .filter((character) => character.getTeam() === "traveller")
+        .forEach((traveller) => officialTravellers[traveller.getId()] = traveller);
+
+    populateTravellers();
+
 });
 
-// Flag Travellers in the script as being included.
-// For example, the main 3 editions have Travellers that complement the script.
-
 gameObserver.on("characters-selected", ({ detail }) => {
+
+    // Add any homebrew characters to the list.
+
+    empty(homebrewTravellers);
+
+    detail.characters
+        .filter((character) => character.getTeam() === "traveller")
+        .forEach((traveller) => homebrewTravellers[traveller.getId()] = traveller);
+
+    populateTravellers();
+
+    // Flag Travellers in the script as being included. For example, the main 3
+    // editions have Travellers that complement the script. Homebrew scripts
+    // maight have their own Travellers as well.
 
     const travellerIDs = detail.characters
         .filter((character) => character.getTeam() === "traveller")
@@ -54,8 +92,6 @@ gameObserver.on("characters-selected", ({ detail }) => {
         "is-included",
         travellerIDs.includes(item.dataset.tokenId)
     ));
-
-    lookupOneCached("#add-traveller").disabled = false;
 
 });
 
