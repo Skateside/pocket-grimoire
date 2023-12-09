@@ -1,5 +1,22 @@
-.bluffs {
+.bluffs__heading {
+    display: flex;
+    flex-flow: row nowrap;
+    margin-bottom: 1rem;
+}
+
+.bluffs__title {
+    flex-grow: 1;
+    margin-bottom: 0;
+}
+
+[data-group-id="0"] .bluffs__remove {
+    display: none;
+}
+
+.bluffs__list {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    padding-left: 1rem;
+    padding-right: 1rem;
 }

@@ -1,3 +1,305 @@
+import Template from "../../classes/Template.js";
+import TokenStore from "../../classes/TokenStore.js";
+import {
+    // lookup,
+    lookupOne,
+    empty
+} from "../../utils/elements.js";
+
+class BluffsGroups {
+
+    static get VISIBLE() {
+        return "bluff-group-visible";
+    }
+
+    constructor(container) {
+
+        this.groups = [];
+        this.container = container;
+        this.visibleGroupIndex = -1;
+
+        this.observer = new IntersectionObserver((entries) => {
+
+            entries.forEach(({ target, intersectionRatio }) => {
+
+                if (intersectionRatio === 1) {
+
+                    target.dispatchEvent(
+                        new CustomEvent(this.constructor.VISIBLE, {
+                            bubbles: true,
+                            cancelable: false
+                        })
+                    );
+
+                }
+
+            });
+
+        }, {
+            root: container,
+            threshold: 1
+        });
+
+    }
+
+    add(group) {
+
+        if (this.has(group)) {
+            return;
+        }
+
+        group.setIndex(this.groups.push(group) - 1);
+        this.container.append(group.draw());
+        group.setElement(this.container.querySelector(group.getSelector()));
+        this.observer.observe(group.getElement());
+        group.ready();
+
+    }
+
+    has(group) {
+        return this.groups.includes(group);
+    }
+
+    getIndex(group) {
+        return this.groups.indexOf(group);
+    }
+
+    remove(group) {
+        this.removeByIndex(this.getIndex(group));
+    }
+
+    removeByIndex(index) {
+
+        const {
+            groups
+        } = this;
+
+        index = Number(index);
+
+        if (index < 0 || index >= groups.length) {
+            return;
+        }
+
+        const group = groups[index];
+
+        this.observer.unobserve(group.getElement());
+        group.remove();
+        groups.splice(index, 1);
+        this.updateIndicies();
+
+    }
+
+    updateIndicies() {
+        this.groups.forEach((group, index) => group.setIndex(index));
+    }
+
+    getVisibleGroupIndex() {
+        return this.visibleGroupIndex;
+    }
+
+    setVisibleGroupIndex(index) {
+
+        index = Number(index);
+
+        if (index < 0 || index > this.groups.length) {
+            throw new RangeError(`Visible index ${index} is out of range`);
+        }
+
+        this.visibleGroupIndex = index;
+
+    }
+
+    serialise() {
+        return this.groups.map((group) => group.serialise());
+    }
+
+}
+
+class BluffsGroup {
+
+    static setTemplate(template) {
+        this.template = template;
+    }
+
+    constructor(bluffSet) {
+
+        this.index = 0;
+        this.bluffSet = bluffSet;
+
+    }
+
+    setElement(element) {
+        this.element = element;
+    }
+
+    getElement() {
+        return this.element;
+    }
+
+    setIndex(index) {
+
+        this.index = index;
+
+        if (this.element) {
+            this.element.dataset.groupId = this.index;
+        }
+
+    }
+
+    serialise() {
+        // TODO: give this bluff group a name and return that as well
+        // { name: "lorem ipsum", set: this.bluffSet.serialise() }
+        return this.bluffSet.serialise();
+    }
+
+    draw() {
+
+        return this.constructor.template.draw({
+            ".js--demon-bluffs--group": (element) => {
+                element.dataset.groupId = this.index;
+            }
+        })
+
+    }
+
+    getSelector() {
+        return `.js--demon-bluffs--group[data-group-id="${this.index}"]`;
+    }
+
+    ready() {
+
+        const {
+            element,
+            bluffSet
+        } = this;
+
+        if (!element) {
+            return;
+        }
+
+        element.scrollIntoView({
+            block: "nearest"
+        });
+
+        bluffSet.getCharacters().forEach((character, index) => {
+
+            const button = lookupOne(
+                `.js--demon-bluffs--bluff[data-index="${index}"]`,
+                element
+            );
+
+            empty(button).append(character.drawToken());
+
+        });
+
+    }
+
+    remove() {
+        this.element?.remove();
+    }
+
+}
+
+class BluffSet {
+
+    static setEmptyCharacter(emptyCharacter) {
+        this.emptyCharacter = emptyCharacter;
+    }
+
+    constructor() {
+
+        const {
+            emptyCharacter
+        } = this.constructor;
+
+        if (!emptyCharacter) {
+            throw new Error("The \"No character\" character needs to be set.");
+        }
+
+        this.characters = [
+            emptyCharacter.clone(),
+            emptyCharacter.clone(),
+            emptyCharacter.clone()
+        ];
+
+    }
+
+    getCharacters() {
+        return [...this.characters];
+    }
+
+    setCharacter(character, index) {
+        this.characters[index] = character;
+    }
+
+    unsetCharacter(character) {
+        this.unsetCharacterByIndex(this.characters.indexOf(character));
+    }
+
+    unsetCharacterByIndex(index) {
+
+        index = Number(index);
+
+        if (index < 0 || index >= this.characters.length) {
+            return;
+        }
+
+        this.characters[index] = this.constructor.emptyCharacter.clone();
+
+    }
+
+    serialise() {
+        return this.characters.map((character) => character.getId());
+    }
+
+}
+
+BluffsGroup.setTemplate(
+    Template.create(lookupOne("#demon-bluffs-template"))
+);
+
+TokenStore.ready((tokenStore) => {
+
+    BluffSet.setEmptyCharacter(tokenStore.getEmptyCharacter());
+
+    const bluffGroupsContainer = lookupOne("#demon-bluffs-group");
+    const bluffGroups = new BluffsGroups(bluffGroupsContainer);
+
+    bluffGroupsContainer.addEventListener("click", ({ target }) => {
+
+        const button = target.closest(".js--demon-bluffs--remove");
+        const group = button?.closest(".js--demon-bluffs--group");
+
+        if (!button || !group) {
+            return;
+        }
+
+        bluffGroups.removeByIndex(group.dataset.groupId);
+
+    });
+
+    bluffGroupsContainer.addEventListener("bluff-group-visible", ({ target }) => {
+        bluffGroups.setVisibleGroupIndex(target.dataset.groupId);
+    });
+
+    bluffGroups.add(new BluffsGroup(new BluffSet()));
+
+    lookupOne("#add-bluffs").addEventListener("click", () => {
+        bluffGroups.add(new BluffsGroup(new BluffSet()));
+    });
+
+    /* TEMP */console.log("window.bluffGroups = %o", bluffGroups);window.bluffGroups = bluffGroups;/* TEMP */
+
+});
+
+// NEXT STEPS
+//
+// The bluffs can't be assigned yet.
+// The "Show all bluffs" button doesn't work.
+// The store can't re-load the bluffs yet.
+
+
+/*
 import Bluff from "../../classes/Bluff.js";
 import Bluffs from "../../classes/Bluffs.js";
 import BluffDialog from "../../classes/BluffDialog.js";
@@ -213,3 +515,4 @@ lookupOneCached("#character-list__bluffs").addEventListener("click", ({ target }
     });
 
 });
+*/

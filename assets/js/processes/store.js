@@ -1,7 +1,7 @@
 import Store from "../classes/Store.js";
 import Observer from "../classes/Observer.js";
 import TokenStore from "../classes/TokenStore.js";
-import Bluffs from "../classes/Bluffs.js";
+// import Bluffs from "../classes/Bluffs.js";
 import Dialog from "../classes/Dialog.js";
 import InfoToken from "../classes/InfoToken.js";
 import Names from "../classes/Names.js";
@@ -227,7 +227,7 @@ TokenStore.ready((tokenStore) => {
     pad.setZIndex(finalZIndex);
 
     // Re-set the bluffs.
-
+    /*
     const bluffs = Bluffs.get();
 
     Object.entries(storeData.bluffs).forEach(([selector, characterId]) => {
@@ -241,7 +241,7 @@ TokenStore.ready((tokenStore) => {
         bluffs.display(selector, character);
 
     });
-
+    */
     // Re-populate the inputs.
 
     Object.entries(storeData.inputs).forEach(([selector, value]) => {

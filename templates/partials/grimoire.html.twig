@@ -114,6 +114,29 @@
 </template>
 
 {% embed 'includes/dialog.html.twig' with {
+    id: 'token',
+    background: 'hide',
+    hideClickBackground: false
+} %}
+    {% block title %}
+        <span class="token-display__title js--token--title" data-multiple="{{ 'grimoire.token_list.title'|trans|e('html_attr') }}">{{ 'grimoire.token.title'|trans }}</span>
+        <input type="text" class="token-display__input js--token--input" list="token-title-list" hidden>
+        <datalist id="token-title-list">
+            <option value="{{ 'grimoire.token.title'|trans|e('html_attr') }}" class="js--token--start">
+            <option value="{{ 'grimoire.token.title'|trans|e('html_attr') }}" class="js--token--previous">
+            <option value="{{ 'grimoire.token_list.title'|trans|e('html_attr') }}">
+            <option value="{{ 'grimoire.grimoire.bluffs'|trans|e('html_attr') }}">
+        </datalist>
+    {% endblock %}
+    {% block body %}
+        <ul class="token-display js--token--holder"></ul>
+        <p class="token-display__additional mt-4">
+            <button type="button" class="button js--token--add">{{ 'grimoire.token_list.add'|trans }}</button>
+        </p>
+    {% endblock %}
+{% endembed %}
+
+{% embed 'includes/dialog.html.twig' with {
     id: 'character-show',
     background: 'blur'
 } %}
