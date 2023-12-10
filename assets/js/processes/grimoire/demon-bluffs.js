@@ -1,7 +1,9 @@
 import Template from "../../classes/Template.js";
 import TokenStore from "../../classes/TokenStore.js";
 import Observer from "../../classes/Observer.js";
+import Dialog from "../../classes/Dialog.js";
 import BluffDialog from "../../classes/BluffDialog.js";
+import TokenDialog from "../../classes/TokenDialog.js";
 import {
     lookup,
     lookupOne,
@@ -10,10 +12,15 @@ import {
     empty
 } from "../../utils/elements.js";
 
+// The top-down controller for all groups of demon bluffs.
 class BluffsGroups {
 
     static get VISIBLE() {
         return "bluff-group-visible";
+    }
+
+    static setDialog(dialog) {
+        this.dialog = dialog;
     }
 
     constructor(container) {
@@ -126,7 +133,12 @@ class BluffsGroups {
     }
 
     setInnerIndex(index) {
-        this.getVisibleGroup().setSetIndex(index);
+
+        const group = this.getVisibleGroup();
+
+        group.setSetIndex(index);
+        this.constructor.dialog?.display(group.getCharacter());
+
     }
 
     getInnerIndex() {
@@ -134,7 +146,10 @@ class BluffsGroups {
     }
 
     setCharacter(character) {
-        return this.getVisibleGroup().setCharacter(character);
+
+        this.getVisibleGroup().setCharacter(character);
+        this.constructor.dialog?.display(character);
+
     }
 
     redraw() {
@@ -147,6 +162,7 @@ class BluffsGroups {
 
 }
 
+// Manages the DOM elements that manage the group of 3 demon bluffs.
 class BluffsGroup {
 
     static get READY() {
@@ -214,6 +230,10 @@ class BluffsGroup {
         this.bluffSet.setCharacter(character);
     }
 
+    getCharacter(index) {
+        return this.bluffSet.getCharacter(index);
+    }
+
     ready() {
 
         const {
@@ -265,7 +285,7 @@ class BluffsGroup {
         } = this;
 
         const setIndex = bluffSet.getIndex();
-        const character = bluffSet.getCharacters()[setIndex];
+        const character = bluffSet.getCharacter(setIndex);
 
         empty(lookupOne(
             `.js--demon-bluffs--bluff[data-index="${setIndex}"]`,
@@ -276,6 +296,7 @@ class BluffsGroup {
 
 }
 
+// Manages the set of 3 demon bluffs, handling the tokens.
 class BluffSet {
 
     static setEmptyCharacter(emptyCharacter) {
@@ -302,10 +323,6 @@ class BluffSet {
 
     }
 
-    getCharacters() {
-        return [...this.characters];
-    }
-
     validateIndex(index) {
 
         index = Number(index);
@@ -313,7 +330,7 @@ class BluffSet {
         if (index < 0 || index >= this.characters.length) {
 
             if (showThrow) {
-                throw new RangeError(`Invalid index ${index}`)
+                throw new RangeError(`BluffSet invalid index ${index}`)
             }
 
             return -1;
@@ -322,6 +339,14 @@ class BluffSet {
 
         return index;
 
+    }
+
+    getCharacters() {
+        return [...this.characters];
+    }
+
+    getCharacter(index = this.index) {
+        return this.characters[this.validateIndex(index)];
     }
 
     setCharacter(character, index = this.index) {
@@ -354,15 +379,17 @@ class BluffSet {
 
 }
 
-BluffsGroup.setTemplate(
-    Template.create(lookupOne("#demon-bluffs-template"))
-);
-
 TokenStore.ready((tokenStore) => {
 
     const gameObserver = Observer.create("game");
     const tokenObserver = Observer.create("token");
+    const tokenDialog = TokenDialog.get();
+    const bluffDialog = BluffDialog.create(lookupOne("#bluff-show"));
 
+    BluffsGroups.setDialog(bluffDialog);
+    BluffsGroup.setTemplate(
+        Template.create(lookupOne("#demon-bluffs-template"))
+    );
     BluffSet.setEmptyCharacter(tokenStore.getEmptyCharacter());
 
     const bluffGroupsContainer = lookupOne("#demon-bluffs-group");
@@ -441,13 +468,7 @@ TokenStore.ready((tokenStore) => {
 
     });
 
-    // const bluffDialog = BluffDialog.create(lookupOne("#bluff-show"));
-
-    // bluffDialog.on(BluffDialog.SHOW, (e) => {
-    //     // TODO: How do I know which token is being shown right now?
-    //     lookupOneCached("#bluff-show-token").disabled = true;
-    //     console.log({ e });
-    // });
+    // Show all possible bluffs dialog.
 
     function markInPlay(character, shouldAdd = true) {
 
@@ -493,6 +514,8 @@ TokenStore.ready((tokenStore) => {
         toggleBluffListClass("is-show-evil", target.checked);
     });
 
+    const bluffListDialog = Dialog.create(lookupOne("#bluff-list"));
+
     lookupOne("#character-list__bluffs").addEventListener("click", ({ target }) => {
 
         const button = target.closest("[data-token-id]")
@@ -506,6 +529,37 @@ TokenStore.ready((tokenStore) => {
         bluffGroups.setCharacter(character);
         bluffGroups.redraw();
         // close the dialog
+        bluffListDialog.hide();
+        bluffDialog.hide();
+
+    });
+
+    // Bluff token dialog.
+
+    lookupOneCached(
+        "#bluff-show-token",
+        bluffDialog.getElement()
+    ).addEventListener("click", ({ target }) => {
+
+        const id = target.closest("[data-character-id]")?.dataset.characterId;
+
+        if (!id) {
+            return;
+        }
+
+        tokenDialog.setIds([id]);
+        tokenDialog.show();
+        bluffDialog.hide();
+
+    });
+
+    lookupOneCached("#show-all-bluffs").addEventListener("click", ({ target }) => {
+
+        // TODO: if the group gets a name, this will need to be
+        // `bluffGroups.getVisibleGroup().serialise().set`
+        tokenDialog.setIds(bluffGroups.getVisibleGroup().serialise());
+        tokenDialog.setMultipleTitle(target.dataset.title);
+        tokenDialog.show();
 
     });
 
@@ -515,11 +569,9 @@ TokenStore.ready((tokenStore) => {
 
 // NEXT STEPS
 //
-// The bluffs can't be assigned yet.
-//      -> choosing a bluff doesn't update the popup yet.
-// The "Show all bluffs" button doesn't work.
 // The store can't re-load the bluffs yet.
 // Clearing the grimoire won't clear the bluffs.
+// The bluff groups want different names, to make it easier for the ST to remember which is which.
 
 
 /*
