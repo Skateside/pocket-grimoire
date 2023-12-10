@@ -173,6 +173,10 @@ class BluffsGroup {
         this.template = template;
     }
 
+    // static setSettableTitle(TitleClass) {
+    //     this.SettableTitle = TitleClass;
+    // }
+
     constructor(bluffSet) {
 
         this.index = 0;
@@ -379,17 +383,80 @@ class BluffSet {
 
 }
 
+class SettableTitle {
+
+    constructor(title, input) {
+
+        this.title = title;
+        this.input = input;
+        this.list = input.list;
+
+        if (!this.title || !this.input || !this.list) {
+            throw new Error("Settable title not properly configured");
+        }
+
+        this.addListeners();
+
+    }
+
+    addListeners() {
+
+        const {
+            title,
+            input
+        } = this;
+
+        title.addEventListener("click", () => {
+
+            this.showInput();
+            input.focus();
+
+        });
+        input.addEventListener("blur", () => this.hideInput());
+
+        // TODO: update list etc.
+
+    }
+
+    isShowingInput() {
+        return !this.input.hidden;
+    }
+
+    toggleInput(forceState) {
+
+        if (forceState === undefined) {
+            forceState = !this.isShowingInput();
+        }
+
+        if (forceState === this.isShowingInput()) {
+            return;
+        }
+
+        this.title.hidden = forceState;
+        this.input.hidden = !forceState;
+
+    }
+
+    showInput() {
+        this.toggleInput(true);
+    }
+
+    hideInput() {
+        this.toggleInput(false);
+    }
+
+}
+
+const gameObserver = Observer.create("game");
+const tokenObserver = Observer.create("token");
+const tokenDialog = TokenDialog.get();
+const bluffDialog = BluffDialog.create(lookupOne("#bluff-show"));
+
+BluffsGroups.setDialog(bluffDialog);
+BluffsGroup.setTemplate(Template.create(lookupOne("#demon-bluffs-template")));
+
 TokenStore.ready((tokenStore) => {
 
-    const gameObserver = Observer.create("game");
-    const tokenObserver = Observer.create("token");
-    const tokenDialog = TokenDialog.get();
-    const bluffDialog = BluffDialog.create(lookupOne("#bluff-show"));
-
-    BluffsGroups.setDialog(bluffDialog);
-    BluffsGroup.setTemplate(
-        Template.create(lookupOne("#demon-bluffs-template"))
-    );
     BluffSet.setEmptyCharacter(tokenStore.getEmptyCharacter());
 
     const bluffGroupsContainer = lookupOne("#demon-bluffs-group");
