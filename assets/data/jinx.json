@@ -49,6 +49,14 @@
             {
                 "id": "Politician",
                 "reason": "A Pit-Hag can not create an evil Politician."
+            },
+            {
+                "id": "戏子",
+                "reason": "麻脸巫婆无法创造戏子。"
+            },
+            {
+                "id": "梼杌",
+                "reason": "如果梼杌变成了其他恶魔，因为梼杌而失去能力的爪牙会立即死亡。"
             }
         ]
     },
@@ -108,6 +116,14 @@
             {
                 "id": "Pit-Hag",
                 "reason": "After day 5, the Pit-Hag cannot choose Leviathan."
+            },
+            {
+                "id": "和尚",
+                "reason": "如果利维坦发起的提名中被处决的玩家是与和尚邻近的存活玩家，\n那么那名玩家不会死亡，并且当晚和尚得知\n他的能力被触发。（如常在和尚旁放置“已生效”提示标记，\n因为黎明时才会移除此标记，因此当晚和尚无法再触发他的能力。）"
+            },
+            {
+                "id": "戏子",
+                "reason": "在戏子存在于剧本中时，利维坦可以在游戏中\n任意时候向说书人示意自己“想要死亡”， 说书人会在当晚杀死这名玩家。"
             }
         ]
     },
@@ -137,6 +153,10 @@
             {
                 "id": "Hatter",
                 "reason": "If a Demon chooses Lil' Monsta, they also choose a Minion to become and babysit Lil' Monsta tonight."
+            },
+            {
+                "id": "戏子",
+                "reason": "在戏子存在于剧本中时，照顾小怪宝的玩家可以在游戏中\n任意时候向说书人示意自己“想要死亡”， 说书人会在当晚杀死这名玩家。"
             }
         ]
     },
@@ -146,6 +166,14 @@
             {
                 "id": "Gambler",
                 "reason": "If the Lycanthrope is alive and the Gambler kills themself at night, no other players can die tonight."
+            },
+            {
+                "id": "打更人",
+                "reason": "如果打更人猜测正确的玩家是半兽人攻击的玩家，\n那么当晚只会有打更人死亡。"
+            },
+            {
+                "id": "锦衣卫",
+                "reason": "如果半兽人选择了锦衣卫保护的善良玩家，\n那么当晚只会有锦衣卫死亡。"
             }
         ]
     },
@@ -163,6 +191,10 @@
             {
                 "id": "Hatter",
                 "reason": "If the Hatter dies and Legion is in play, nothing happens. If the Hatter dies and an evil player chooses Legion, all current evil players become Legion."
+            },
+            {
+                "id": "戏子",
+                "reason": "在戏子存在于剧本中时，军团可以在游戏中任意时候\n向说书人示意自己“想要死亡”，说书人会在其中一名玩家示意后\n在夜晚一同唤醒所有军团，并询问这些玩家是否要一同死亡。"
             }
         ]
     },
@@ -201,6 +233,10 @@
             {
                 "id": "Heretic",
                 "reason": "Only 1 jinxed character can be in play."
+            },
+            {
+                "id": "戏子",
+                "reason": "互为克星的角色在同一时间里只能有其中一个角色在场。"
             }
         ]
     },
@@ -226,6 +262,10 @@
             {
                 "id": "Heretic",
                 "reason": "Only 1 jinxed character can be in play."
+            },
+            {
+                "id": "戏子",
+                "reason": "互为克星的角色在同一时间里只能有其中一个角色在场。"
             }
         ]
     },
@@ -235,6 +275,10 @@
             {
                 "id": "Heretic",
                 "reason": "Only 1 jinxed character can be in play."
+            },
+            {
+                "id": "戏子",
+                "reason": "互为克星的角色在同一时间里只能有其中一个角色在场。"
             }
         ]
     },
@@ -308,6 +352,10 @@
             {
                 "id": "Huntsman",
                 "reason": "If the Marionette thinks that they are the Huntsman, the Damsel was added."
+            },
+            {
+                "id": "梼杌",
+                "reason": "梼杌不会得知谁是提线木偶。在梼杌使得提线木偶\n失去能力后，梼杌会得知对应的那一名提线木偶是谁，\n但提线木偶会仍然以为自己是一个善良角色。"
             }
         ]
     },
@@ -442,6 +490,30 @@
             {
                 "id": "Hatter",
                 "reason": "If the Hatter dies, Riot is in play and a Riot chooses a different Demon, a normal evil team is created from the Riot players. If the Hatter dies and the Demon chooses Riot, Minions become Riot too."
+            },
+            {
+                "id": "半仙",
+                "reason": "当且仅当暴乱提名了半仙时，半仙不会死亡，而是让另一名\n存活的邪恶玩家死亡。（随后那名死亡的邪恶玩家可以立即\n发起新的提名。如果场上已经没有其他存活的邪恶玩家，那么\n半仙在被唯一存活的暴乱提名时会正常死亡。）"
+            },
+            {
+                "id": "打更人",
+                "reason": "如果在夜晚无人死亡，打更人的能力能保护下一个白天\n首次死亡的玩家（如果打更人的猜测正确）。然而集体免死的效果\n不会在白天触发，打更人也不会因此在\n白天死亡。"
+            },
+            {
+                "id": "和尚",
+                "reason": "如果暴乱提名了与和尚邻近的存活玩家，那么那名玩家不会死亡，\n并且当晚和尚得知他的能力被触发。（如常在和尚旁\n放置“已生效”提示标记，因为黎明时才会移除此标记，\n因此当晚和尚无法再触发他的能力。）"
+            },
+            {
+                "id": "戏子",
+                "reason": "在戏子存在于剧本中时，暴乱可以在游戏中任意时候\n向说书人示意自己“想要死亡”，说书人会在其中一名玩家示意\n后在夜晚一同唤醒所有暴乱，并询问这些\n玩家是否要一同死亡。"
+            },
+            {
+                "id": "逆臣",
+                "reason": "被提名且死亡的玩家算作被处决。"
+            },
+            {
+                "id": "狐媚娘",
+                "reason": "被提名且死亡的玩家算作被处决。"
             }
         ]
     },
@@ -476,6 +548,10 @@
             {
                 "id": "Preacher",
                 "reason": "Only 1 jinxed character can be in play. Evil players start knowing which player and character it is."
+            },
+            {
+                "id": "梼杌",
+                "reason": "当梼杌被处决时，如果街头风琴手具有能力，\n说书人会宣布“无人被处决”。"
             }
         ]
     },
@@ -505,6 +581,66 @@
             {
                 "id": "Fearmonger",
                 "reason": "The Vizier wakes with the Fearmonger, learns who they choose and cannot choose to immediately execute that player."
+            }
+        ]
+    },
+    {
+        "id": "Plague Doctor",
+        "jinx": [
+            {
+                "id": "养蛊人",
+                "reason": "如果瘟疫医生死亡且说书人会因此获得养蛊人的能力，\n改为一名存活的爪牙玩家获得此能力，且他会得知此事。"
+            },
+            {
+                "id": "赶尸人",
+                "reason": "如果瘟疫医生死亡且说书人会因此获得赶尸人的能力，改为一名存活的爪牙玩家获得此能力，且他会得知此事。"
+            }
+        ]
+    },
+    {
+        "id": "戏子",
+        "jinx": [
+            {
+                "id": "Evil Twin",
+                "reason": "互为克星的角色在同一时间里只能有其中一个角色在场。"
+            }
+        ]
+    },
+    {
+        "id": "狐媚娘",
+        "jinx": [
+            {
+                "id": "Heretic",
+                "reason": "互为克星的角色在同一时间里只能有其中一个角色在场。"
+            }
+        ]
+    },
+    {
+        "id": "梼杌",
+        "jinx": [
+            {
+                "id": "Scarlet Woman",
+                "reason": "红唇女郎在梼杌的能力判断中被当作“不具有能力”。"
+            },
+            {
+                "id": "Mastermind",
+                "reason": "主谋在梼杌的能力判断中被当作“不具有能力”。"
+            },
+            {
+                "id": "Hatter",
+                "reason": "如果梼杌变成了其他恶魔，因为梼杌而失去能力的爪牙会立即死亡。"
+            },
+            {
+                "id": "Engineer",
+                "reason": "如果梼杌变成了其他恶魔，因为梼杌而失去能力的爪牙会立即死亡。"
+            },
+            {
+                "id": "Snake Charmer",
+                "reason": "如果梼杌的角色发生了交换，不会因此移除原本梼杌的“失去能力”提示标记。"
+            },
+            {
+                "id": "Barber",
+                "reason": "如果梼杌的角色发生了交换，不会因此移除原本梼杌的“失去能力”提示标记。"
             }
         ]
     }
