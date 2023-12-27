@@ -15,6 +15,7 @@ use App\Repository\JinxRepository;
 use App\Repository\TeamRepository;
 use App\Repository\HomebrewRepository;
 use App\Entity\Homebrew;
+use App\Entity\Jinx;
 use App\Model\HomebrewModel;
 use App\Model\GameModel;
 
@@ -126,7 +127,21 @@ class MainController extends AbstractController
             // Might save a little processing power.
             $teamMap = [];
 
-            $ids = [];
+            // Work out the IDs that we're using.
+            $ids = array_reduce($homebrew->getJson(), function (array $carry, array $character): array {
+
+                if (
+                    array_key_exists('id', $character)
+                    && !in_array($character['id'], $carry)
+                    && !$this->homebrewModel->isMetaEntry($character)
+                ) {
+                    $carry[] = $character['id'];
+                }
+
+                return $carry;
+
+            }, []);
+
             $tempJinxes = [];
 
             foreach ($homebrew->getJson() as $character) {
@@ -155,10 +170,48 @@ class MainController extends AbstractController
                     $team = $character->getTeam();
                     $teamId = $team->getIdentifier();
 
-                    $ids[] = $characterId;
+                    if (!in_array($characterId, $ids)) {
+                        $ids[] = $characterId;
+                    }
+
                     foreach ($character->getJinxes() as $jinx) {
                         $tempJinxes[] = $jinx;
                     }
+
+                }
+
+                // Convert any homebrew jinxes into Jinx entities.
+                if (array_key_exists('jinxes', $character)) {
+
+                    $characterJinxes = [];
+
+                    foreach ($character['jinxes'] as $maybeJinx) {
+
+                        if (is_array($maybeJinx)) {
+
+                            $target = (
+                                $this->roleRepo->findOneBy(['identifier' => $character['id']])
+                                ?? $this->roleRepo->createTemp($character)
+                            );
+                            $trick = (
+                                $this->roleRepo->findOneBy(['identifier' => $maybeJinx['id']])
+                                ?? $this->roleRepo->createTemp($maybeJinx)
+                            );
+
+                            $jinx = (new Jinx())
+                                ->setTarget($target)
+                                ->setTrick($trick)
+                                ->setReason($maybeJinx['reason']);
+                            $tempJinxes[] = $jinx;
+                            $characterJinxes[] = $jinx;
+
+                        } else {
+                            $characterJinxes[] = $maybeJinx;
+                        }
+
+                    }
+
+                    $character['jinxes'] = $characterJinxes;
 
                 }
 

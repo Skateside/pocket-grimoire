@@ -11,11 +11,13 @@ class HomebrewModel
     protected $teamRepo;
     protected $roleRepo;
     protected $requiredKeys = [
+        'id',
         'name',
         'ability',
         'team'
     ];
     protected $filteredKeys = [
+        'id',
         'name',
         'ability',
         'image',
