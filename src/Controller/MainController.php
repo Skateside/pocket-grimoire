@@ -180,8 +180,10 @@ class MainController extends AbstractController
 
                 }
 
-                // Convert any homebrew jinxes into Jinx entities.
-                if (array_key_exists('jinxes', $character)) {
+                // Convert any homebrew jinxes into Jinx entities. We need to
+                // ensure that the character data has an ID to prevent an error
+                // appearing if an older upload URL is checked.
+                if (array_key_exists('jinxes', $character) && array_key_exists('id', $character)) {
 
                     $characterJinxes = [];
 

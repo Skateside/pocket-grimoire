@@ -37,7 +37,7 @@
                     <div class="edition__ability">{{ character.ability }}</div>
                     <div class="edition__jinxes">
                         {% for jinx in character.jinxes|default([]) %}
-                            {% if jinx.active %}
+                            {% if jinx.active|default(false) %}
                                 <div class="edition__jinx">
                                     <img src="{{ jinx.trick.image }}" alt="{{ 'sheet.jinx'|trans }}: {{ jinx.trick.name }}" title="{{ jinx.reason }}" width="177" height="124" loading="lazy">
                                 </div>
