@@ -203,9 +203,17 @@ class BluffsGroup {
     }
 
     serialise() {
-        // TODO: give this bluff group a name and return that as well
-        // { name: "lorem ipsum", set: this.bluffSet.serialise() }
-        return this.bluffSet.serialise();
+
+        const {
+            bluffSet,
+            settableTitle
+        } = this;
+
+        return {
+            name: settableTitle?.getTitle() || "",
+            set: bluffSet.serialise()
+        };
+
     }
 
     draw() {
@@ -296,6 +304,10 @@ class BluffsGroup {
             element
         )).append(character.drawToken());
 
+    }
+
+    setSettableTitle(settableTitle) {
+        this.settableTitle = settableTitle;
     }
 
 }
@@ -395,6 +407,11 @@ class SettableTitle {
             throw new Error("Settable title not properly configured");
         }
 
+        this.start = this.list.querySelector(".js--demon-bluffs--start");
+        this.previous = this.list.querySelector(".js--demon-bluffs--previous");
+
+        this.start.value = title.textContent;
+
         this.addListeners();
 
     }
@@ -412,7 +429,24 @@ class SettableTitle {
             input.focus();
 
         });
-        input.addEventListener("blur", () => this.hideInput());
+
+        input.addEventListener("focus", () => {
+            input.value = "";
+        });
+
+        input.addEventListener("blur", () => {
+
+            this.hideInput();
+            this.updatePrevious();
+
+        });
+
+        input.addEventListener("input", () => {
+
+            this.setTitle(input.value);
+            this.updateInputWidth();
+
+        });
 
         // TODO: update list etc.
 
@@ -432,8 +466,15 @@ class SettableTitle {
             return;
         }
 
-        this.title.hidden = forceState;
-        this.input.hidden = !forceState;
+        const {
+            title,
+            input
+        } = this;
+
+        // title.hidden = forceState;
+        title.setAttribute("aria-hidden", forceState);
+        input.hidden = !forceState;
+        this.updateInputWidth();
 
     }
 
@@ -443,6 +484,40 @@ class SettableTitle {
 
     hideInput() {
         this.toggleInput(false);
+    }
+
+    updateInputWidth() {
+
+        this.input.style.setProperty(
+            "--width",
+            this.title.getBoundingClientRect().width
+        );
+
+    }
+
+    updatePrevious() {
+
+        const {
+            input,
+            previous
+        } = this;
+
+        if (input.value) {
+            previous.value = input.value;
+        }
+
+    }
+
+    setTitle(title) {
+        this.title.textContent = title;
+    }
+
+    getTitle() {
+        return this.title.textContent;
+    }
+
+    getStartText() {
+        return this.start.value;
     }
 
 }
@@ -491,11 +566,21 @@ TokenStore.ready((tokenStore) => {
         bluffGroups.setVisibleGroupIndex(target.dataset.groupId);
     });
 
-    bluffGroupsContainer.addEventListener(BluffsGroup.READY, ({ target }) => {
+    bluffGroupsContainer.addEventListener(BluffsGroup.READY, ({ detail }) => {
 
-        lookup("[data-bluff-dialog]", target).forEach((trigger) => {
+        const {
+            bluffGroup
+        } = detail;
+        const element = bluffGroup.getElement();
+
+        lookup("[data-bluff-dialog]", element).forEach((trigger) => {
             trigger.dialog = BluffDialog.createFromTrigger(trigger);
         });
+
+        bluffGroup.setSettableTitle(new SettableTitle(
+            element.querySelector(".js--demon-bluffs--title"),
+            element.querySelector(".js--demon-bluffs--input")
+        ));
 
     });
 
@@ -537,30 +622,6 @@ TokenStore.ready((tokenStore) => {
 
     // Show all possible bluffs dialog.
 
-    function markInPlay(character, shouldAdd = true) {
-
-        const inPlay = lookupOne(
-            `#character-list__bluffs [data-character-id="${character.getId()}"]`
-        );
-
-        if (inPlay) {
-            inPlay.classList.toggle("is-in-play", shouldAdd);
-        }
-
-    }
-
-    gameObserver.on("character-drawn", ({ detail }) => {
-        markInPlay(detail.character);
-    });
-
-    tokenObserver.on("character-add", ({ detail }) => {
-        markInPlay(detail.character);
-    });
-
-    tokenObserver.on("character-remove", ({ detail }) => {
-        markInPlay(detail.character, false);
-    });
-
     function toggleBluffListClass(className, state) {
 
         lookupOneCached("#character-list__bluffs")
@@ -581,7 +642,60 @@ TokenStore.ready((tokenStore) => {
         toggleBluffListClass("is-show-evil", target.checked);
     });
 
+    const rolesInPlay = Object.create(null);
+
+    tokenObserver.on("character-add", ({ detail }) => {
+
+        const id = detail.character.getId();
+
+        if (!rolesInPlay[id]) {
+            rolesInPlay[id] = 0;
+        }
+
+        rolesInPlay[id] += 1;
+
+    });
+
+    tokenObserver.on("character-remove", ({ detail }) => {
+
+        const id = detail.character.getId();
+
+        if (rolesInPlay[id]) {
+            rolesInPlay[id] -= 1;
+        }
+
+        if (!rolesInPlay[id] || rolesInPlay[id] < 0) {
+            delete rolesInPlay[id];
+        }
+
+    });
+
     const bluffListDialog = Dialog.create(lookupOne("#bluff-list"));
+
+    bluffListDialog.on(Dialog.SHOW, () => {
+
+        Object
+            .keys(rolesInPlay)
+            .concat(bluffGroups.getVisibleGroup().serialise().set)
+            .filter(Boolean) // remove any empty IDs
+            .forEach((id) => {
+
+                const token = lookupOne(
+                    `#character-list__bluffs [data-character-id="${id}"]`
+                );
+                token?.classList.add("is-in-play");
+
+            });
+
+    });
+
+    bluffListDialog.on(Dialog.HIDE, () => {
+
+        lookup("#character-list__bluffs .is-in-play").forEach((token) => {
+            token.classList.remove("is-in-play");
+        });
+
+    });
 
     lookupOne("#character-list__bluffs").addEventListener("click", ({ target }) => {
 
@@ -622,9 +736,7 @@ TokenStore.ready((tokenStore) => {
 
     lookupOneCached("#show-all-bluffs").addEventListener("click", ({ target }) => {
 
-        // TODO: if the group gets a name, this will need to be
-        // `bluffGroups.getVisibleGroup().serialise().set`
-        tokenDialog.setIds(bluffGroups.getVisibleGroup().serialise());
+        tokenDialog.setIds(bluffGroups.getVisibleGroup().serialise().set);
         tokenDialog.setMultipleTitle(target.dataset.title);
         tokenDialog.show();
 
@@ -638,7 +750,10 @@ TokenStore.ready((tokenStore) => {
 //
 // The store can't re-load the bluffs yet.
 // Clearing the grimoire won't clear the bluffs.
-// The bluff groups want different names, to make it easier for the ST to remember which is which.
+// The Demon Bluff titles aren't properly styled.
+// There's no event triggering when a demon bluff is selected. (update events.md)
+// The TokenDialog class isn't using the SettableTitle class.
+// The old Bluff* classes haven't been deleted.
 
 
 /*

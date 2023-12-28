@@ -180,6 +180,7 @@ Specifically related to the role and reminder tokens.
 const tokenObserver = Observer.create("token");
 ```
 
+<!--
 #### `bluff`
 
 - `detail.button` -> `String`
@@ -187,6 +188,7 @@ const tokenObserver = Observer.create("token");
 - `detail.previous` -> `String`
 
 Fired when a demon bluff is selected. The CSS selector for the button with the bluff, the ID of the character chosen (which will be an empty string if "no character" is chosen), and the ID of the previous character (again, may be an empty string, or may be undefined if there was no previous character) are passed to the event.
+-->
 
 #### `character-add`
 

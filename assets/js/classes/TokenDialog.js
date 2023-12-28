@@ -10,6 +10,8 @@ import {
     replaceContentsMany
 } from "../utils/elements.js";
 
+// TODO: Integrate SettableTitle class.
+
 /**
  * A version of {@link Dialog} that shows one or more tokens, probably to the
  * player.
