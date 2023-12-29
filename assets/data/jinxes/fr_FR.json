@@ -432,12 +432,12 @@
     {
         "target": "organgrinder",
         "trick": "butler",
-        "reason": "Si l'Organe Meuleuse provoque un vote les yeux fermés, le majordome peut lever la main pour voter mais son vote n'est compté que si son maître a également voté."
+        "reason": "Si le Joueur d'Orgue provoque un vote les yeux fermés, le Majordome peut lever la main pour voter mais son vote n'est compté que si son maître a également voté."
     },
     {
         "target": "organgrinder",
         "trick": "flowergirl",
-        "reason": "Si les yeux des joueurs étaient fermés lors des nominations, la Flowergirl apprend combien de fois le Démon a voté."
+        "reason": "Si les yeux des joueurs étaient fermés lors des nominations, la Fleuriste apprend combien de fois le Démon a voté."
     },
     {
         "target": "organgrinder",
@@ -452,7 +452,7 @@
     {
         "target": "vizier",
         "trick": "alchemist",
-        "reason": "Si l'Alchimiste a la capacité Vizir, il ne peut choisir d'exécuter immédiatement que si trois joueurs ou plus ont voté."
+        "reason": "Si l'Alchimiste a la capacité du Vizir, il ne peut choisir d'exécuter immédiatement que si trois joueurs ou plus ont voté."
     },
     {
         "target": "vizier",
@@ -478,5 +478,30 @@
         "target": "vizier",
         "trick": "preacher",
         "reason": "Si le Vizir perd sa capacité, il l'apprend et si le Vizir est exécuté alors qu'il a sa capacité, son équipe gagne."
+    },
+    {
+        "target": "kazali",
+        "trick": "bountyhunter",
+        "reason": "Un Villageois malféique n'est créé que si le Chasseur de Primes reste le Chasseur de Primes."
+    },
+    {
+        "target": "kazali",
+        "trick": "goon",
+        "reason": "Si le Kazali choisit la Brute comme Sbire, les choix de Sbires restants sont réalisés par le Conteur."
+    },
+    {
+        "target": "kazali",
+        "trick": "marionette",
+        "reason": "Si le Kazali choisit de créer une Marionette, il doit obligatoirement choisir un de ses voisins."
+    },
+    {
+        "target": "kazali",
+        "trick": "huntsman",
+        "reason": "Si le Kazali choisit la Demoiselle comme Sbire, et que le Chasseur est en jeu, un joueur bon devient la Demoiselle."
+    },
+    {
+        "target": "kazali",
+        "trick": "choirboy",
+        "reason": "Le Kazali ne peut pas choisir le Roi comme Sbire si l'Enfant de Chœur est en jeu."
     }
 ]

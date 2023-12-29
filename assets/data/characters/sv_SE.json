@@ -801,6 +801,17 @@
         ]
     },
     {
+        "id": "kazali",
+        "name": "Kazali",
+        "ability": "Välj en spelare varje natt*: de dör. [Du väljer vilka spelare som är Hantlangare. -? till +? Utomstående]",
+        "firstNightReminder": "Kazali pekar på en spelare och en Hantlangare på karaktärsbladet. Byt ut deras gamla karaktärstoken med Hantlangare-token, visa dem informationstoken \"Du är\" och sedan Hantlangare-karaktärstoken och ge en tumme ner. Upprepa tills det normala antalet Minions finns. Låt kazalien somna in.",
+        "otherNightReminder": "Kazali pekar på en spelare. Den spelaren dör.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Död"
+        ]
+    },
+    {
         "id": "king",
         "name": "Kungen",
         "ability": "Varje natt som det är fler döda än levande spelare får du veta 1 levande roll. Demonen vet vem du är.",

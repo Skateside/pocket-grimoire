@@ -3129,5 +3129,18 @@
         "team": "fabled",
         "ability": "The Storyteller assigns 1 or more players' characters.",
         "image": "/build/img/icon/fabled/gardener.png"
+    },
+    {
+        "id": "kazali",
+        "name": "Kazali",
+        "team": "demon",
+        "image": "/build/img/icon/demon/kazali.png",
+        "ability": "Each night*, choose a player: they die. [You choose which players are Minions. -? to +? Outsiders]",
+        "setup": true,
+        "firstNight": 2,
+        "firstNightReminder": "The Kazali points at a player and a Minion on the character sheet. Replace their old character token with the Minion token, show them the “You Are” info token then the Minion character token, and give a thumbs down. Repeat until the normal number of Minions exist. Put the Kazali to sleep.",
+        "otherNight": 35,
+        "otherNightReminder": "The Kazali points to a player. That player dies.",
+        "reminders": ["Dead"]
     }
 ]

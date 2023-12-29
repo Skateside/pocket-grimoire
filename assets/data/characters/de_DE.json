@@ -800,6 +800,17 @@
         ]
     },
     {
+        "id": "kazali",
+        "name": "Kazali",
+        "ability": "Wähle jede Nacht* einen Spieler: Er stirbt. [Sie wählen, welche Spieler Minions sind. -? zu +? Außenseiter]",
+        "firstNightReminder": "Der Kazali zeigt auf einen Spieler und einen Diener auf dem Charakterbogen. Ersetzen Sie ihren alten Charakter-Token durch den Minion-Token, zeigen Sie ihnen den „Du bist“-Infotoken und dann den Minion-Charakter-Token und geben Sie einen Daumen nach unten. Wiederholen, bis die normale Anzahl an Minions vorhanden ist. Lass den Kazali schlafen.",
+        "otherNightReminder": "Der Kazali zeigt auf einen Spieler. Dieser Spieler stirbt.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Tot"
+        ]
+    },
+    {
         "id": "king",
         "name": "König",
         "ability": "Jede Nacht*, wenn es mehr tote Spieler gibt als lebende, erfährst du 1 lebenden Charakter. Der Dämon weiss, wer du bist.",

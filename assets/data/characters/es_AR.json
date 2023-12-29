@@ -791,6 +791,17 @@
         ]
     },
     {
+        "id": "kazali",
+        "name": "Kazali",
+        "ability": "Cada noche*, elige un jugador: muere. [Tú eliges qué jugadores son Secuaces. -? a +? Forasteros]",
+        "firstNightReminder": "El Kazali señala a un jugador y a un Secuaces en la hoja de personaje. Reemplace su antigua ficha de personaje con la ficha de Secuaces, muéstreles la ficha de información \"Vos sos\", luego la ficha de personaje Secuaces y dale el visto bueno. Repita hasta que exista la cantidad normal de Minions. Pon a dormir al Kazali.",
+        "otherNightReminder": "El Kazali señala a un jugador. Ese jugador muere.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Muerto"
+        ]
+    },
+    {
         "id": "king",
         "name": "Rey",
         "ability": "Cada noche, si el número de muertos es mayor que los vivos, aprendes 1 personaje vivo. El Demonio sabe quien sos.",

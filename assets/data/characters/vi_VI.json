@@ -801,6 +801,17 @@
         ]
     },
     {
+        "id": "kazali",
+        "name": "Kazali",
+        "ability": "Mỗi đêm*, chọn một người chơi: họ chết. [Bạn chọn người chơi nào là Tay sai. -? đến +? Người ngoài]",
+        "firstNightReminder": "Kazali chỉ vào một người chơi và một Tay sai trên bảng ký tự. Thay thế mã thông báo nhân vật cũ của họ bằng mã thông báo Tay sai, cho họ xem mã thông báo “Bạn là”, sau đó là mã thông báo nhân vật Tay sai và không thích. Lặp lại cho đến khi tồn tại số lượng Minions bình thường. Đưa Kazali đi ngủ.",
+        "otherNightReminder": "Kazali chỉ vào một người chơi. Người chơi đó chết.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Chết"
+        ]
+    },
+    {
         "id": "king",
         "name": "Ông vua",
         "ability": "Mỗi đêm, nếu người chết nhiều hơn người sống, bạn biết nhân vật của người sống. Quỷ biết bạn là ai.",

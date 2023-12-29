@@ -792,6 +792,17 @@
         ]
     },
     {
+        "id": "kazali",
+        "name": "Kazali",
+        "ability": "Velg en spiller hver natt*: de dør. [Du velger hvilke spillere som er Lakeiar. -? til +? Utenforstående]",
+        "firstNightReminder": "Kazalien peker på en spiller og en Lakeiar på karakterarket. Bytt ut deres gamle karakter-token med Lakeiar-token, vis dem «Du er»-infotokenet og deretter Lakeiar-karaktertoken, og gi en tommel ned. Gjenta til det normale antallet Minions eksisterer. La kazalien sove.",
+        "otherNightReminder": "Kazalien peker på en spiller. Den spilleren dør.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Daud"
+        ]
+    },
+    {
         "id": "king",
         "name": "Konge",
         "ability": "Kvar natt, om det er fleire daude enn levande spelarar, lær 1 levande rolle. Demonen veit kven du er.",

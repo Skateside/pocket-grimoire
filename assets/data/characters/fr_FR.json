@@ -801,6 +801,17 @@
         ]
     },
     {
+        "id": "kazali",
+        "name": "Kazali",
+        "ability": "Chaque nuit*, choisissez un joueur: il meurt. [Vous choisissez quels joueurs sont quels Sbires. -?/+? Etrangers]",
+        "firstNightReminder": "Le Kazali pointe un joueur du doigt et montre un rôle de Sbire sur la fiche de personnages. Remplacez le jeton de personnage de ce joueur avec celui du Sbire choisi, réveillez le joueur, puis montrez le jeton d'information \"Tu es\" suivi du jeton de Sbire et d'un pouce vers le bas. Répétez cette opération jusqu'à ce que le nombre normal de Sbires existent. Endormez le Kazali.",
+        "otherNightReminder": "Le Kazali pointe un joueur du doigt. Ce joueur meurt.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Mort"
+        ]
+    },
+    {
         "id": "king",
         "name": "Roi",
         "ability": "Chaque nuit, si les morts sont plus nombreux que les vivants, le Conteur vous désigne un rôle d’un joueur vivant. Le Démon sait qui vous êtes.",

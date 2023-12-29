@@ -790,6 +790,17 @@
         ]
     },
     {
+        "id": "kazali",
+        "name": "Kazali",
+        "ability": "Cada noite*, escolha um jogador: ele morre. [Você escolhe quais jogadores são Lacaios. -? para +? Estranhos]",
+        "firstNightReminder": "O Kazali aponta para um jogador e um Lacaios na ficha de personagem. Substitua o token de personagem antigo pelo token de Lacaios, mostre a eles o token de informação “Você é”, depois o token de personagem Lacaios e dê um sinal de positivo. Repita até que o número normal de Minions exista. Coloque o Kazali para dormir.",
+        "otherNightReminder": "O Kazali aponta para um jogador. Esse jogador morre.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Morto"
+        ]
+    },
+    {
         "id": "king",
         "name": "Rei",
         "ability": "A cada noite, se os mortos são maioria, você vê um personagem vivo. O Demôno sabe quem você é.",
@@ -879,8 +890,8 @@
         "otherNightReminder": "O Parasita aponta para um jogador: o alvo morre.",
         "remindersGlobal": [],
         "reminders": [
-            "Dead",
-            "Poisoned"
+            "Morto",
+            "Envenenado"
         ]
     },
     {
