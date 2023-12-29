@@ -407,8 +407,8 @@ class SettableTitle {
             throw new Error("Settable title not properly configured");
         }
 
-        this.start = this.list.querySelector(".js--demon-bluffs--start");
-        this.previous = this.list.querySelector(".js--demon-bluffs--previous");
+        this.start = this.list.querySelector(".js--settable-title--start");
+        this.previous = this.list.querySelector(".js--settable-title--previous");
 
         this.start.value = title.textContent;
 
@@ -448,6 +448,14 @@ class SettableTitle {
 
         });
 
+        input.form?.addEventListener("submit", (e) => {
+
+            e.preventDefault();
+            e.stopPropagation();
+            input.blur();
+
+        });
+
         // TODO: update list etc.
 
     }
@@ -472,9 +480,9 @@ class SettableTitle {
         } = this;
 
         // title.hidden = forceState;
+        this.updateInputWidth();
         title.setAttribute("aria-hidden", forceState);
         input.hidden = !forceState;
-        this.updateInputWidth();
 
     }
 
@@ -502,7 +510,7 @@ class SettableTitle {
             previous
         } = this;
 
-        if (input.value) {
+        if (previous && input.value) {
             previous.value = input.value;
         }
 
@@ -517,7 +525,7 @@ class SettableTitle {
     }
 
     getStartText() {
-        return this.start.value;
+        return this.start?.value || "";
     }
 
 }
@@ -578,8 +586,8 @@ TokenStore.ready((tokenStore) => {
         });
 
         bluffGroup.setSettableTitle(new SettableTitle(
-            element.querySelector(".js--demon-bluffs--title"),
-            element.querySelector(".js--demon-bluffs--input")
+            element.querySelector(".js--settable-title--title"),
+            element.querySelector(".js--settable-title--input")
         ));
 
     });
@@ -748,11 +756,11 @@ TokenStore.ready((tokenStore) => {
 
 // NEXT STEPS
 //
-// The store can't re-load the bluffs yet.
 // Clearing the grimoire won't clear the bluffs.
-// The Demon Bluff titles aren't properly styled.
-// There's no event triggering when a demon bluff is selected. (update events.md)
+// The store can't re-load the bluffs yet.
 // The TokenDialog class isn't using the SettableTitle class.
+// There's no event triggering when a demon bluff is selected. (update events.md)
+// There's no communal list of demon bluff names (needed?)
 // The old Bluff* classes haven't been deleted.
 
 

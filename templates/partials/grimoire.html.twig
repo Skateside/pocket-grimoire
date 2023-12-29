@@ -119,6 +119,7 @@
     hideClickBackground: false
 } %}
     {% block title %}
+        {# TODO: use the settable-title class #}
         <span class="token-display__title js--token--title" data-multiple="{{ 'grimoire.token_list.title'|trans|e('html_attr') }}">{{ 'grimoire.token.title'|trans }}</span>
         <input type="text" class="token-display__input js--token--input" list="token-title-list" hidden>
         <datalist id="token-title-list">
