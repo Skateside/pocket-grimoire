@@ -910,6 +910,7 @@ TokenStore.ready((tokenStore) => {
 // NEXT STEPS
 //
 // The store can't re-load the bluffs yet.
+//  ^-- This also needs to be able to understand the old stored data to prevent errors.
 // The TokenDialog class isn't using the SettableTitle class.
 // There's no communal list of demon bluff names (needed?)
 // The old Bluff* classes haven't been deleted.
