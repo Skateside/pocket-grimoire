@@ -792,9 +792,9 @@
     {
         "id": "kazali",
         "name": "Kazali",
-        "ability": "Cada noite*, escolha um jogador: ele morre. [Você escolhe quais jogadores são Lacaios. -? para +? Estranhos]",
-        "firstNightReminder": "O Kazali aponta para um jogador e um Lacaios na ficha de personagem. Substitua o token de personagem antigo pelo token de Lacaios, mostre a eles o token de informação “Você é”, depois o token de personagem Lacaios e dê um sinal de positivo. Repita até que o número normal de Minions exista. Coloque o Kazali para dormir.",
-        "otherNightReminder": "O Kazali aponta para um jogador. Esse jogador morre.",
+        "ability": "A cada noite*, escolha um jogador: ele morre. [Você escolhe quais jogadores são Lacaios. -? a +? Forasteiros]",
+        "firstNightReminder": "O Kazali aponta para um jogador e um Lacaio na lista. Acorde o alvo. Mostre o token: 'Você é', o token de Lacaio e sinalize 'mau' (polegar para baixo). Repita até que o número normal de Lacaios exista. Ponha o Kazali para dormir.",
+        "otherNightReminder": "O Kazali aponta para um jogador: O alvo morre.",
         "remindersGlobal": [],
         "reminders": [
             "Morto"

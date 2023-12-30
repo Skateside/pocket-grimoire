@@ -803,9 +803,9 @@
     {
         "id": "kazali",
         "name": "Kazali",
-        "ability": "Mỗi đêm*, chọn một người chơi: họ chết. [Bạn chọn người chơi nào là Tay sai. -? đến +? Người ngoài]",
-        "firstNightReminder": "Kazali chỉ vào một người chơi và một Tay sai trên bảng ký tự. Thay thế mã thông báo nhân vật cũ của họ bằng mã thông báo Tay sai, cho họ xem mã thông báo “Bạn là”, sau đó là mã thông báo nhân vật Tay sai và không thích. Lặp lại cho đến khi tồn tại số lượng Minions bình thường. Đưa Kazali đi ngủ.",
-        "otherNightReminder": "Kazali chỉ vào một người chơi. Người chơi đó chết.",
+        "ability": "Mỗi đêm* chọn 1 người: họ chết. [Bạn chọn những ai là Tay sai. -? đến +? Lữ khách]",
+        "firstNightReminder": "Kazali chỉ 1 người và nhân vật trong tờ nhân vật. Đổi nhân vật cũ của họ với nhân vật Tay sai mới, cho họ thấy token \"Bạn là\" và nhân vật Tay sai đó, và giơ ngón cái xuống. Lặp đi lặp lại cho đến khi đủ số Tay sai. Cho Kazali đi ngủ.",
+        "otherNightReminder": "Kazali chỉ 1 người. Người đó chết.",
         "remindersGlobal": [],
         "reminders": [
             "Chết"
