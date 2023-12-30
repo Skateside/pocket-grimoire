@@ -1,3 +1,4 @@
+// DEPRECATED
 import Observer from "./Observer.js";
 import CharacterToken from "./CharacterToken.js";
 import {

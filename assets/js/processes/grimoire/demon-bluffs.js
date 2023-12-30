@@ -19,9 +19,7 @@ class BluffsGroups {
         return "bluff-group-visible";
     }
 
-    static setDialog(dialog) {
-        this.dialog = dialog;
-    }
+    static readyData = [{}];
 
     constructor(container) {
 
@@ -53,7 +51,23 @@ class BluffsGroups {
 
     }
 
+    createEmptyGroup() {
+        return;
+    }
+
+    setCreateEmptyGroup(createEmptyGroup) {
+        this.createEmptyGroup = createEmptyGroup;
+    }
+
+    addEmpty() {
+        this.add(this.createEmptyGroup());
+    }
+
     add(group) {
+
+        if (!group) {
+            throw new Error("Empty group given to BluffGroups#add()");
+        }
 
         if (this.has(group)) {
             return;
@@ -64,6 +78,7 @@ class BluffsGroups {
         group.setElement(this.container.querySelector(group.getSelector()));
         this.observer.observe(group.getElement());
         group.ready();
+        this.announceUpdate();
 
     }
 
@@ -97,6 +112,25 @@ class BluffsGroups {
         group.remove();
         groups.splice(index, 1);
         this.updateIndicies();
+        this.announceUpdate();
+
+    }
+
+    removeAll() {
+
+        const {
+            groups
+        } = this;
+        let {
+            length
+        } = groups;
+
+        while (length) {
+
+            length -= 1;
+            this.removeByIndex(length);
+
+        }
 
     }
 
@@ -133,12 +167,7 @@ class BluffsGroups {
     }
 
     setInnerIndex(index) {
-
-        const group = this.getVisibleGroup();
-
-        group.setSetIndex(index);
-        this.constructor.dialog?.display(group.getCharacter());
-
+        this.getVisibleGroup().setSetIndex(index);
     }
 
     getInnerIndex() {
@@ -148,7 +177,7 @@ class BluffsGroups {
     setCharacter(character) {
 
         this.getVisibleGroup().setCharacter(character);
-        this.constructor.dialog?.display(character);
+        this.announceUpdate();
 
     }
 
@@ -158,6 +187,47 @@ class BluffsGroups {
 
     serialise() {
         return this.groups.map((group) => group.serialise());
+    }
+
+    announceUpdate() {
+        return;
+    }
+
+    setAnnounceUpdate(announceUpdate) {
+        this.announceUpdate = announceUpdate;
+    }
+
+    convertId(id) {
+        return;
+    }
+
+    setConvertId(convertId) {
+        this.convertId = convertId;
+    }
+
+    ready() {
+
+        const {
+            readyData
+        } = this.constructor;
+
+        readyData.forEach(({ name, set = [] }) => {
+
+            const group = this.createEmptyGroup();
+
+            if (!group) {
+                throw new Error("Cannot create an empty group");
+            }
+
+            group.setTitle(name);
+            set.forEach((id, index) => {
+                group.setCharacter(this.convertId(id), index);
+            });
+
+            this.add(group);
+
+        });
+
     }
 
 }
@@ -172,10 +242,6 @@ class BluffsGroup {
     static setTemplate(template) {
         this.template = template;
     }
-
-    // static setSettableTitle(TitleClass) {
-    //     this.SettableTitle = TitleClass;
-    // }
 
     constructor(bluffSet) {
 
@@ -238,8 +304,8 @@ class BluffsGroup {
         return this.bluffSet.setIndex(index);
     }
 
-    setCharacter(character) {
-        this.bluffSet.setCharacter(character);
+    setCharacter(character, index) {
+        this.bluffSet.setCharacter(character, index);
     }
 
     getCharacter(index) {
@@ -310,6 +376,10 @@ class BluffsGroup {
         this.settableTitle = settableTitle;
     }
 
+    setTitle(title) {
+        this.settableTitle?.setTitle(title);
+    }
+
 }
 
 // Manages the set of 3 demon bluffs, handling the tokens.
@@ -321,6 +391,18 @@ class BluffSet {
 
     constructor() {
 
+        this.characters = [
+            this.getEmptyCharacter(),
+            this.getEmptyCharacter(),
+            this.getEmptyCharacter()
+        ];
+
+        this.index = 0;
+
+    }
+
+    getEmptyCharacter() {
+
         const {
             emptyCharacter
         } = this.constructor;
@@ -329,14 +411,7 @@ class BluffSet {
             throw new Error("The \"No character\" character needs to be set.");
         }
 
-        this.characters = [
-            emptyCharacter.clone(),
-            emptyCharacter.clone(),
-            emptyCharacter.clone()
-        ];
-
-        this.index = 0;
-
+        return emptyCharacter.clone();
     }
 
     validateIndex(index) {
@@ -366,7 +441,13 @@ class BluffSet {
     }
 
     setCharacter(character, index = this.index) {
+
+        if (!character) {
+            character = this.getEmptyCharacter();
+        }
+
         this.characters[this.validateIndex(index)] = character;
+
     }
 
     unsetCharacter(character) {
@@ -445,6 +526,7 @@ class SettableTitle {
 
             this.setTitle(input.value);
             this.updateInputWidth();
+            this.announceUpdate();
 
         });
 
@@ -479,6 +561,7 @@ class SettableTitle {
             input
         } = this;
 
+        // TODO: Do we need to set the width? Can CSS just handle it?
         // title.hidden = forceState;
         this.updateInputWidth();
         title.setAttribute("aria-hidden", forceState);
@@ -517,7 +600,7 @@ class SettableTitle {
     }
 
     setTitle(title) {
-        this.title.textContent = title;
+        this.title.textContent = title || this.getStartText();
     }
 
     getTitle() {
@@ -528,6 +611,14 @@ class SettableTitle {
         return this.start?.value || "";
     }
 
+    announceUpdate() {
+        return;
+    }
+
+    setAnnounceUpdate(announceUpdate) {
+        this.announceUpdate = announceUpdate;
+    }
+
 }
 
 const gameObserver = Observer.create("game");
@@ -535,7 +626,6 @@ const tokenObserver = Observer.create("token");
 const tokenDialog = TokenDialog.get();
 const bluffDialog = BluffDialog.create(lookupOne("#bluff-show"));
 
-BluffsGroups.setDialog(bluffDialog);
 BluffsGroup.setTemplate(Template.create(lookupOne("#demon-bluffs-template")));
 
 TokenStore.ready((tokenStore) => {
@@ -544,6 +634,17 @@ TokenStore.ready((tokenStore) => {
 
     const bluffGroupsContainer = lookupOne("#demon-bluffs-group");
     const bluffGroups = new BluffsGroups(bluffGroupsContainer);
+    bluffGroups.setCreateEmptyGroup(() => new BluffsGroup(new BluffSet()));
+
+    function announceUpdate() {
+
+        tokenObserver.trigger("bluff", {
+            data: bluffGroups.serialise()
+        });
+
+    }
+
+    bluffGroups.setAnnounceUpdate(announceUpdate);
 
     bluffGroupsContainer.addEventListener("click", ({ target }) => {
 
@@ -567,6 +668,7 @@ TokenStore.ready((tokenStore) => {
         }
 
         bluffGroups.setInnerIndex(button.dataset.index);
+        bluffDialog.display(bluffGroups.getVisibleGroup().getCharacter());
 
     });
 
@@ -585,17 +687,22 @@ TokenStore.ready((tokenStore) => {
             trigger.dialog = BluffDialog.createFromTrigger(trigger);
         });
 
-        bluffGroup.setSettableTitle(new SettableTitle(
+        const settableTitle = new SettableTitle(
             element.querySelector(".js--settable-title--title"),
             element.querySelector(".js--settable-title--input")
-        ));
+        );
+        settableTitle.setAnnounceUpdate(announceUpdate);
+        bluffGroup.setSettableTitle(settableTitle);
 
     });
 
-    bluffGroups.add(new BluffsGroup(new BluffSet()));
+    // TODO: change this so that the BluffGroups instance creates data based on
+    // the serialised information it's given, defaulting to one empty group.
+    // bluffGroups.addEmpty();
+    bluffGroups.ready();
 
     lookupOne("#add-bluffs").addEventListener("click", () => {
-        bluffGroups.add(new BluffsGroup(new BluffSet()));
+        bluffGroups.addEmpty();
     });
 
     gameObserver.on("characters-selected", ({ detail }) => {
@@ -750,16 +857,21 @@ TokenStore.ready((tokenStore) => {
 
     });
 
-    /* TEMP */console.log("window.bluffGroups = %o", bluffGroups);window.bluffGroups = bluffGroups;/* TEMP */
+    gameObserver.on("clear", () => {
+
+        bluffGroups.removeAll();
+        bluffGroups.addEmpty();
+
+    });
+
+    /* TEMP */console.log("window.bluffGroups = %o\nwindow.tokenObserver = %o", bluffGroups, tokenObserver);window.bluffGroups = bluffGroups;window.tokenObserver = tokenObserver;/* TEMP */
 
 });
 
 // NEXT STEPS
 //
-// Clearing the grimoire won't clear the bluffs.
 // The store can't re-load the bluffs yet.
 // The TokenDialog class isn't using the SettableTitle class.
-// There's no event triggering when a demon bluff is selected. (update events.md)
 // There's no communal list of demon bluff names (needed?)
 // The old Bluff* classes haven't been deleted.
 

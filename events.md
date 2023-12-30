@@ -180,15 +180,11 @@ Specifically related to the role and reminder tokens.
 const tokenObserver = Observer.create("token");
 ```
 
-<!--
 #### `bluff`
 
-- `detail.button` -> `String`
-- `detail.character` -> `String`
-- `detail.previous` -> `String`
+- `detail.data` -> `Array.<Object>`
 
-Fired when a demon bluff is selected. The CSS selector for the button with the bluff, the ID of the character chosen (which will be an empty string if "no character" is chosen), and the ID of the previous character (again, may be an empty string, or may be undefined if there was no previous character) are passed to the event.
--->
+Fired when a demon bluff is selected. The serialised data for the bluff groups is passed to the event. Each item in the array has a `name` property (the current text for bluff group) and a `set` property (an array of character IDs for each of the selected bluffs).
 
 #### `character-add`
 

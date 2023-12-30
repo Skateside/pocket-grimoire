@@ -1,3 +1,4 @@
+// DEPRECATED
 import Bluff from "./Bluff.js";
 import Observer from "./Observer.js";
 import CharacterToken from "./CharacterToken.js";
