@@ -19,7 +19,7 @@ class BluffsGroups {
         return "bluff-group-visible";
     }
 
-    static readyData = [{}];
+    static readyData = { index: 0, groups: [{ set: [] }] };
 
     constructor(container) {
 
@@ -66,7 +66,7 @@ class BluffsGroups {
     add(group) {
 
         if (!group) {
-            throw new Error("Empty group given to BluffGroups#add()");
+            throw new Error("Cannot add a non-existent group");
         }
 
         if (this.has(group)) {
@@ -186,7 +186,12 @@ class BluffsGroups {
     }
 
     serialise() {
-        return this.groups.map((group) => group.serialise());
+
+        return {
+            index: this.visibleGroupIndex,
+            groups: this.groups.map((group) => group.serialise())
+        };
+
     }
 
     announceUpdate() {
@@ -211,7 +216,7 @@ class BluffsGroups {
             readyData
         } = this.constructor;
 
-        readyData.forEach(({ name, set = [] }) => {
+        readyData.groups.forEach(({ name, set }) => {
 
             const group = this.createEmptyGroup();
 
@@ -227,6 +232,9 @@ class BluffsGroups {
             this.add(group);
 
         });
+
+        this.setVisibleGroupIndex(readyData.index);
+        this.getVisibleGroup().display();
 
     }
 
@@ -312,6 +320,22 @@ class BluffsGroup {
         return this.bluffSet.getCharacter(index);
     }
 
+    display() {
+
+        const {
+            element
+        } = this;
+
+        if (!element) {
+            throw new Error("Cannot display group because there is no element");
+        }
+
+        element.scrollIntoView({
+            block: "nearest"
+        });
+
+    }
+
     ready() {
 
         const {
@@ -326,9 +350,7 @@ class BluffsGroup {
             return;
         }
 
-        element.scrollIntoView({
-            block: "nearest"
-        });
+        this.display();
 
         bluffSet.getCharacters().forEach((character, index) => {
 
@@ -373,11 +395,30 @@ class BluffsGroup {
     }
 
     setSettableTitle(settableTitle) {
+
         this.settableTitle = settableTitle;
+
+        if (this.settableTitleTitle) {
+
+            settableTitle.setTitle(this.settableTitleTitle);
+            delete this.settableTitleTitle;
+
+        }
+
     }
 
     setTitle(title) {
-        this.settableTitle?.setTitle(title);
+
+        const {
+            settableTitle
+        } = this;
+
+        if (settableTitle) {
+            settableTitle.setTitle(title);
+        } else {
+            this.settableTitleTitle = title;
+        }
+
     }
 
 }
@@ -489,9 +530,9 @@ class SettableTitle {
         }
 
         this.start = this.list.querySelector(".js--settable-title--start");
-        this.previous = this.list.querySelector(".js--settable-title--previous");
-
         this.start.value = title.textContent;
+
+        this.previous = this.list.querySelector(".js--settable-title--previous");
 
         this.addListeners();
 
@@ -635,16 +676,14 @@ TokenStore.ready((tokenStore) => {
     const bluffGroupsContainer = lookupOne("#demon-bluffs-group");
     const bluffGroups = new BluffsGroups(bluffGroupsContainer);
     bluffGroups.setCreateEmptyGroup(() => new BluffsGroup(new BluffSet()));
-
-    function announceUpdate() {
+    bluffGroups.setConvertId((id) => tokenStore.getCharacter(id));
+    bluffGroups.setAnnounceUpdate(() => {
 
         tokenObserver.trigger("bluff", {
             data: bluffGroups.serialise()
         });
 
-    }
-
-    bluffGroups.setAnnounceUpdate(announceUpdate);
+    });
 
     bluffGroupsContainer.addEventListener("click", ({ target }) => {
 
@@ -691,7 +730,7 @@ TokenStore.ready((tokenStore) => {
             element.querySelector(".js--settable-title--title"),
             element.querySelector(".js--settable-title--input")
         );
-        settableTitle.setAnnounceUpdate(announceUpdate);
+        settableTitle.setAnnounceUpdate(() => bluffGroups.announceUpdate());
         bluffGroup.setSettableTitle(settableTitle);
 
     });
@@ -864,7 +903,7 @@ TokenStore.ready((tokenStore) => {
 
     });
 
-    /* TEMP */console.log("window.bluffGroups = %o\nwindow.tokenObserver = %o", bluffGroups, tokenObserver);window.bluffGroups = bluffGroups;window.tokenObserver = tokenObserver;/* TEMP */
+    /* TEMP */console.log("window.bluffGroups = %o\nwindow.tokenObserver = %o\nwindow.bluffDialog = %o", bluffGroups, tokenObserver, bluffDialog);window.bluffGroups = bluffGroups;window.tokenObserver = tokenObserver;window.bluffDialog = bluffDialog;/* TEMP */
 
 });
 

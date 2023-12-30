@@ -182,9 +182,9 @@ const tokenObserver = Observer.create("token");
 
 #### `bluff`
 
-- `detail.data` -> `Array.<Object>`
+- `detail.data` -> `Object`
 
-Fired when a demon bluff is selected. The serialised data for the bluff groups is passed to the event. Each item in the array has a `name` property (the current text for bluff group) and a `set` property (an array of character IDs for each of the selected bluffs).
+Fired when a demon bluff is selected. The serialised data for the bluff groups is passed to the event. The data has an `index` property which is the index of the currently visible group, and a `groups` property which contains an array of each of the groups. Each item in the array has a `name` property (the current text for bluff group) and a `set` property (an array of character IDs for each of the selected bluffs).
 
 #### `character-add`
 
