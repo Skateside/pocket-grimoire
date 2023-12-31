@@ -1,6 +1,7 @@
 import Token from "./Token.js";
 import CharacterToken from "./CharacterToken.js";
 import InfoToken from "./InfoToken.js";
+import BluffsGroups from "./BluffsGroups.js";
 import {
     deepClone,
     deepFreeze
@@ -89,6 +90,10 @@ export default class Store {
          */
         this.tokens = [];
 
+        /**
+         * The info tokens that have been added.
+         * @type {Array.<String>}
+         */
         this.infoTokens = [];
 
     }
@@ -585,16 +590,15 @@ export default class Store {
     }
 
     /**
-     * Saves a bluff.
+     * Saves information about the bluffs
      *
-     * @param {String} buttonSelector
-     *        A CSS selector that identifies the bluff button.
-     * @param {String} characterId
-     *        The ID of the character serving as the demon bluff.
+     * @param {Object} bluffs
+     *        The serialised data about the bluffs. See
+     *        {@link BluffsGroup#serialise}.
      */
-    setBluff(buttonSelector, characterId) {
+    setBluffs(bluffs) {
 
-        this.data.bluffs[buttonSelector] = characterId;
+        this.data.bluffs = bluffs;
         this.write();
 
     }

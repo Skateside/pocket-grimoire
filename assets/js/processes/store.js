@@ -1,7 +1,8 @@
 import Store from "../classes/Store.js";
 import Observer from "../classes/Observer.js";
 import TokenStore from "../classes/TokenStore.js";
-import Bluffs from "../classes/Bluffs.js";
+// import Bluffs from "../classes/Bluffs.js";
+import BluffsGroups from "../classes/BluffsGroups.js";
 import Dialog from "../classes/Dialog.js";
 import InfoToken from "../classes/InfoToken.js";
 import Names from "../classes/Names.js";
@@ -110,7 +111,7 @@ tokenObserver.on("set-player-name", ({ detail }) => {
 });
 
 tokenObserver.on("bluff", ({ detail }) => {
-    store.setBluff(detail.button, detail.character);
+    store.setBluffs(detail.data);
 });
 
 infoTokenObserver.on("info-token-added", ({ detail }) => {
@@ -227,20 +228,25 @@ TokenStore.ready((tokenStore) => {
     pad.setZIndex(finalZIndex);
 
     // Re-set the bluffs.
+    // Convert the previous bluffs format into the new one.
 
-    const bluffs = Bluffs.get();
+    let {
+        bluffs
+    } = storeData;
 
-    Object.entries(storeData.bluffs).forEach(([selector, characterId]) => {
+    if (!Object.keys(bluffs).length) {
+        bluffs = BluffsGroups.getEmptyData();
+    }
 
-        const character = tokenStore.getCharacter(characterId);
+    if (typeof bluffs["#bluff-1"] === "string") {
 
-        if (!character || !bluffs) {
-            return;
-        }
+        const empty = BluffsGroups.getEmptyData();
+        empty.groups[0].set = Object.values(bluffs);
+        bluffs = empty;
 
-        bluffs.display(selector, character);
+    }
 
-    });
+    BluffsGroups.get().ready(bluffs);
 
     // Re-populate the inputs.
 

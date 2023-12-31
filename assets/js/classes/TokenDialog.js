@@ -2,6 +2,7 @@ import Dialog from "./Dialog.js";
 import TokenStore from "./TokenStore.js";
 import Template from "./Template.js";
 import CharacterToken from "./CharacterToken.js";
+import SettableTitle from "./SettableTitle.js";
 import Draggable from "./Draggable.js";
 import {
     getIndex,
@@ -55,6 +56,7 @@ export default class TokenDialog extends Dialog {
 
         this.setIds([]);
         this.discoverElements();
+        this.activateSettableTitle();
         this.activateDraggable();
         super.run();
 
@@ -72,9 +74,6 @@ export default class TokenDialog extends Dialog {
                 SHOW,
                 HIDE
             },
-            input,
-            title,
-            previous,
             dialog
         } = this;
 
@@ -95,43 +94,6 @@ export default class TokenDialog extends Dialog {
 
         });
 
-        title.addEventListener("click", () => {
-
-            title.setAttribute("aria-hidden", true);
-            input.hidden = false;
-            input.style.setProperty(
-                "--width",
-                title.getBoundingClientRect().width
-            );
-            input.focus();
-
-        });
-
-        input.addEventListener("focus", () => {
-            input.value = "";
-        });
-
-        input.addEventListener("blur", () => {
-
-            title.setAttribute("aria-hidden", false);
-            input.hidden = true;
-
-            if (input.value) {
-                previous.value = input.value;
-            }
-
-        });
-
-        input.addEventListener("input", () => {
-
-            this.setTitle(input.value);
-            input.style.setProperty(
-                "--width",
-                title.getBoundingClientRect().width
-            );
-
-        });
-
     }
 
     /**
@@ -145,41 +107,43 @@ export default class TokenDialog extends Dialog {
         } = this;
 
         /**
-         * The element that contains the title text.
-         * @type {Element}
-         */
-        this.title = lookupOne(".js--token--title", dialog);
-
-        /**
          * The element that contains all the token renderings.
          * @type {Element}
          */
         this.holder = lookupOne(".js--token--holder", dialog);
 
-        /**
-         * The input that allows the user to change the value of the title.
-         * @type {Element}
-         */
-        this.input = lookupOne(".js--token--input", dialog);
+    }
+
+    /**
+     * Activates the {@link SettableTitle} class so that the title of the dialog
+     * can be changed.
+     */
+    activateSettableTitle() {
+
+        const {
+            dialog
+        } = this;
 
         /**
-         * The option within the datalist that holds the starting value,
-         * allowing the user to easily get it back if necessary.
-         * @type {Element}
+         * A class that allows the title of the dialog to be set.
          */
-        this.start = lookupOne(".js--token--start", dialog);
-
-        /**
-         * The option within the datalist that holds the previous value,
-         * allowing the user to easily get it back if necessary.
-         * @type {Element}
-         */
-        this.previous = lookupOne(".js--token--previous", dialog);
+        this.settableTitle = new SettableTitle(
+            dialog.querySelector(".js--settable-title--title"),
+            dialog.querySelector(".js--settable-title--input")
+        );
 
     }
 
+    /**
+     * Activates the {@link Draggable} class so tokens within this dialog can be
+     * dragged and re-ordered.
+     */
     activateDraggable() {
 
+        /**
+         * A class that enables the dragging and re-ordering of tokens.
+         * @type {Draggable}
+         */
         this.draggable = new Draggable(this.holder);
 
     }
@@ -251,16 +215,6 @@ export default class TokenDialog extends Dialog {
     }
 
     /**
-     * Sets the text displayed in {@link TokenDialog#title}.
-     *
-     * @param {String} title
-     *        Text to display.
-     */
-    setTitle(title) {
-        this.title.textContent = title;
-    }
-
-    /**
      * Sets {@link TokenDialog#tokenStore}.
      *
      * @param {TokenStore} tokenStore
@@ -308,7 +262,13 @@ export default class TokenDialog extends Dialog {
      *         The title for multiple characters.
      */
     getMultipleTitle() {
-        return this.multipleTitle || this.title.dataset.multiple;
+
+        return (
+            this.multipleTitle
+            || this.settableTitle.getForm()?.dataset.multiple
+            || ""
+        );
+
     }
 
     /**
@@ -336,8 +296,8 @@ export default class TokenDialog extends Dialog {
     drawCharacters() {
 
         const {
-            start,
             holder,
+            settableTitle,
             draggable,
             entryTemplate
         } = this;
@@ -369,8 +329,8 @@ export default class TokenDialog extends Dialog {
             ? this.getMultipleTitle()
             : (characters[0]?.getName() || "")
         );
-        this.setTitle(titleText);
-        start.value = titleText;
+        settableTitle.setStartText(titleText);
+        settableTitle.setTitle(titleText);
         holder.classList.toggle("is-multiple", isMultiple);
 
         if (isMultiple) {

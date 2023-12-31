@@ -1,5 +1,25 @@
-.bluffs {
+.bluffs__heading {
+    display: flex;
+    flex-flow: row nowrap;
+    margin-bottom: 1rem;
+}
+
+.bluffs__title {
+    flex-grow: 1;
+    margin-bottom: 0;
+}
+
+[data-group-id="0"] .bluffs__remove {
+    display: none;
+}
+
+.bluffs__list {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
+}
+
+.bluffs__input {
+    flex-grow: 1;
+    width: auto;
 }
