@@ -1,5 +1,8 @@
 import BluffsGroup from "./BluffsGroup";
 import CharacterToken from "./CharacterToken";
+import {
+    deepClone
+} from "../utils/objects";
 
 /**
  * The top-down controller for all groups of demon bluffs.
@@ -16,11 +19,54 @@ export default class BluffsGroups {
     }
 
     /**
-     * Data that will be read in {@link BluffsGroups#ready} to build the Demon
-     * Bluffs groups. This can be set by the store.
-     * @type {Object}
+     * Returns a copy of the empty data.
+     *
+     * @return {Object}
+     *         A copy of the empty data.
      */
-    static readyData = { index: 0, groups: [{ set: [] }] };
+    static getEmptyData() {
+        return deepClone({ index: 0, groups: [{ set: [] }] });
+    }
+
+    /**
+     * Exposes {@link BluffsGroups.instance}.
+     *
+     * @return {BluffsGroups}
+     *         The singleton instance.
+     */
+    static get() {
+        return this.instance;
+    }
+
+    /**
+     * Helper function for creating a new instance and storing it in
+     * {@link BluffsGroups.instance}.
+     *
+     * @param  {HTMLElement} container
+     *         The element that contains all Demon Bluffs groups.
+     * @return {BluffsGroups}
+     *         Instance.
+     */
+    static create(...args) {
+
+        let bluffs = this.instance;
+
+        if (!bluffs) {
+
+            bluffs = new this(...args);
+
+            /**
+             * An instance that was created using {@link BluffsGroups.create}
+             * and can be accessed using {@link BluffsGroups.get}.
+             * @type {BluffsGroups}
+             */
+            this.instance = bluffs;
+
+        }
+
+        return bluffs;
+
+    }
 
     /**
      * Sets up the class.
@@ -44,11 +90,17 @@ export default class BluffsGroups {
 
         /**
          * The index of the group within {@link BluffsGroups#groups} of the
-         * currently visible group. If it's less than 0, there is no visible
-         * group.
+         * currently visible group.
          * @type {Number}
          */
-        this.visibleGroupIndex = -1;
+        this.visibleGroupIndex = 0;
+
+        /**
+         * A flag that allows updates to be announced - if this setting is
+         * `true` then updates are announced, if `false` then they're not.
+         * @type {Boolean}
+         */
+        this.announceUpdates = true;
 
         /**
          * An observer that checks to see when a group of Demon Bluffs becomes
@@ -98,7 +150,8 @@ export default class BluffsGroups {
     /**
      * Adds a group to {@link BluffsGroups#groups} and sets it up correctly. If
      * the group already exists, no action is taken. Since a change has taken
-     * place, the update is announced using {@link BluffsGroups#announceUpdate}.
+     * place, the update is announced using
+     * {@link BluffsGroups#maybeAnnounceUpdate}.
      *
      * @param  {BluffsGroup} group
      *         The group to add.
@@ -121,7 +174,7 @@ export default class BluffsGroups {
         group.setElement(this.container.querySelector(group.getSelector()));
         this.observer.observe(group.getElement());
         group.ready();
-        this.announceUpdate();
+        this.maybeAnnounceUpdate();
 
     }
 
@@ -189,7 +242,7 @@ export default class BluffsGroups {
         group.remove();
         groups.splice(index, 1);
         this.updateIndicies();
-        this.announceUpdate();
+        this.maybeAnnounceUpdate();
 
     }
 
@@ -236,7 +289,9 @@ export default class BluffsGroups {
     /**
      * Sets {@link BluffsGroups#visibleGroupIndex}. Some validation is done to
      * make sure that the given index is a number between 0 and the number of
-     * groups - an error is thrown if this isn't the case.
+     * groups - an error is thrown if this isn't the case. Because this has
+     * updated the data, the update is announced using
+     * {@link BluffsGroups#maybeAnnounceUpdate}.
      *
      * @param  {Number} index
      *         Index of the visible group.
@@ -252,6 +307,7 @@ export default class BluffsGroups {
         }
 
         this.visibleGroupIndex = index;
+        this.maybeAnnounceUpdate();
 
     }
 
@@ -302,7 +358,7 @@ export default class BluffsGroups {
     /**
      * Sets the character for the Demon Bluff of the currently visible group of
      * bluffs. Because a change will have happened, the update is announced
-     * using {@link BluffsGroups#announceUpdate}.
+     * using {@link BluffsGroups#maybeAnnounceUpdate}.
      *
      * @param {CharacterToken} character
      *        The character to set.
@@ -310,7 +366,7 @@ export default class BluffsGroups {
     setCharacter(character) {
 
         this.getVisibleGroup().setCharacter(character);
-        this.announceUpdate();
+        this.maybeAnnounceUpdate();
 
     }
 
@@ -340,6 +396,34 @@ export default class BluffsGroups {
     }
 
     /**
+     * Disables the update announcements.
+     */
+    disableAnnouncements() {
+        this.announceUpdates = false;
+    }
+
+    /**
+     * Enables the update announcements.
+     */
+    enableAnnouncements() {
+        this.announceUpdates = true;
+    }
+
+    /**
+     * Checks {@link BluffsGroups.announceUpdates} to see if updates should be
+     * announced, doing nothing if they shouldn't.
+     */
+    maybeAnnounceUpdate() {
+
+        if (!this.announceUpdates) {
+            return;
+        }
+
+        this.announceUpdate();
+
+    }
+
+    /**
      * A function that executes when an update should be announced. This is done
      * to keep the classes loosely coupled.
      */
@@ -352,8 +436,10 @@ export default class BluffsGroups {
      * This function starts as an empty function so that it can be replaced and
      * still keep the classes loosely coupled.
      *
-     * @param {String} id
-     * @returns {CharacterToken}
+     * @param  {String} id
+     *         The ID of the character whose token should be returned.
+     * @return {CharacterToken}
+     *         The character token instance for the given ID.
      */
     convertId(id) {
         return;
@@ -363,13 +449,11 @@ export default class BluffsGroups {
      * A function that executes when the class is ready, creating the groups
      * defined in {@link BluffsGroups.readyData}.
      */
-    ready() {
+    ready({ index, groups }) {
 
-        const {
-            readyData
-        } = this.constructor;
+        this.removeAll();
 
-        readyData.groups.forEach(({ name, set }) => {
+        groups.forEach(({ name, set }) => {
 
             const group = this.createEmptyGroup();
 
@@ -386,7 +470,7 @@ export default class BluffsGroups {
 
         });
 
-        this.setVisibleGroupIndex(readyData.index);
+        this.setVisibleGroupIndex(index);
         this.getVisibleGroup().display();
 
     }

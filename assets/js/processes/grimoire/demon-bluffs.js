@@ -27,7 +27,8 @@ TokenStore.ready((tokenStore) => {
     BluffSet.setEmptyCharacter(tokenStore.getEmptyCharacter());
 
     const bluffGroupsContainer = lookupOne("#demon-bluffs-group");
-    const bluffGroups = new BluffsGroups(bluffGroupsContainer);
+    // const bluffGroups = new BluffsGroups(bluffGroupsContainer);
+    const bluffGroups = BluffsGroups.create(bluffGroupsContainer);
     bluffGroups.createEmptyGroup = () => new BluffsGroup(new BluffSet());
     bluffGroups.convertId = (id) => tokenStore.getCharacter(id);
     bluffGroups.announceUpdate = () => {
@@ -88,7 +89,9 @@ TokenStore.ready((tokenStore) => {
 
     });
 
-    bluffGroups.ready();
+    bluffGroups.disableAnnouncements();
+    bluffGroups.ready(BluffsGroups.getEmptyData());
+    bluffGroups.enableAnnouncements();
 
     lookupOne("#add-bluffs").addEventListener("click", () => {
         bluffGroups.addEmpty();
@@ -259,9 +262,6 @@ TokenStore.ready((tokenStore) => {
 
 // NEXT STEPS
 //
-// The store can't re-load the bluffs yet.
-//  ^-- Do this by setting `BluffsGroups.readyData`.
-//  ^-- This also needs to be able to understand the old stored data to prevent errors.
 // The TokenDialog class isn't using the SettableTitle class.
 // There's no communal list of demon bluff names (needed?)
 // The old Bluff* classes haven't been deleted.
