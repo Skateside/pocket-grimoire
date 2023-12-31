@@ -36,6 +36,13 @@ export default class SettableTitle {
         }
 
         /**
+         * The form that enwraps {@link SettableTitle#input}. This element might
+         * not exist.
+         * @type {HTMLElement|null}
+         */
+        this.form = input.form;
+
+        /**
          * The option within {@link SettableTitle#list} that displays the
          * original, starting value of the title.
          * @type {HTMLElement}
@@ -61,7 +68,8 @@ export default class SettableTitle {
 
         const {
             title,
-            input
+            input,
+            form
         } = this;
 
         title.addEventListener("click", () => {
@@ -85,20 +93,17 @@ export default class SettableTitle {
         input.addEventListener("input", () => {
 
             this.setTitle(input.value);
-            this.updateInputWidth();
             this.announceUpdate();
 
         });
 
-        input.form?.addEventListener("submit", (e) => {
+        form?.addEventListener("submit", (e) => {
 
             e.preventDefault();
             e.stopPropagation();
             input.blur();
 
         });
-
-        // TODO: update list etc.
 
     }
 
@@ -139,10 +144,7 @@ export default class SettableTitle {
             input
         } = this;
 
-        // TODO: Do we need to set the width? Can CSS just handle it?
-        // title.hidden = forceState;
-        this.updateInputWidth();
-        title.setAttribute("aria-hidden", forceState);
+        title.hidden = forceState;
         input.hidden = !forceState;
 
     }
@@ -161,19 +163,6 @@ export default class SettableTitle {
      */
     hideInput() {
         this.toggleInput(false);
-    }
-
-    /**
-     * Updates a property on {@link SettableTitle#input} that matches the width
-     * of {@link SettableTitle#title}.
-     */
-    updateInputWidth() {
-
-        this.input.style.setProperty(
-            "--width",
-            this.title.getBoundingClientRect().width
-        );
-
     }
 
     /**
@@ -213,6 +202,35 @@ export default class SettableTitle {
      */
     getTitle() {
         return this.title.textContent;
+    }
+
+    /**
+     * Exposes {@link SettableTitle#form}.
+     *
+     * @return {HTMLElement|null}
+     *         Form element.
+     */
+    getForm() {
+        return this.form;
+    }
+
+    /**
+     * Sets the text of {@link SettableTitle#start}. If that element doesn't
+     * exist then no action is taken.
+     *
+     * @param {String} text
+     *        Starting text.
+     */
+    setStartText(text) {
+
+        const {
+            start
+        } = this;
+
+        if (start) {
+            start.value = text;
+        }
+
     }
 
     /**

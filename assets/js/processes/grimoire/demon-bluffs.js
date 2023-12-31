@@ -262,7 +262,6 @@ TokenStore.ready((tokenStore) => {
 
 // NEXT STEPS
 //
-// The TokenDialog class isn't using the SettableTitle class.
 // There's no communal list of demon bluff names (needed?)
 // The old Bluff* classes haven't been deleted.
 

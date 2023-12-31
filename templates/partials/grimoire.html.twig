@@ -119,15 +119,16 @@
     hideClickBackground: false
 } %}
     {% block title %}
-        {# TODO: use the settable-title class #}
-        <span class="token-display__title js--token--title" data-multiple="{{ 'grimoire.token_list.title'|trans|e('html_attr') }}">{{ 'grimoire.token.title'|trans }}</span>
-        <input type="text" class="token-display__input js--token--input" list="token-title-list" hidden>
-        <datalist id="token-title-list">
-            <option value="{{ 'grimoire.token.title'|trans|e('html_attr') }}" class="js--token--start">
-            <option value="{{ 'grimoire.token.title'|trans|e('html_attr') }}" class="js--token--previous">
-            <option value="{{ 'grimoire.token_list.title'|trans|e('html_attr') }}">
-            <option value="{{ 'grimoire.grimoire.bluffs'|trans|e('html_attr') }}">
-        </datalist>
+        <form class="settable-title" data-multiple="{{ 'grimoire.token_list.title'|trans|e('html_attr') }}">
+            <span class="settable-title__title js--settable-title--title">{{ 'grimoire.token.title'|trans }}</span>
+            <input type="text" class="settable-title__input settable-title__input--full js--settable-title--input" list="token-title-list" hidden>
+            <datalist id="token-title-list">
+                <option value="{{ 'grimoire.token.title'|trans|e('html_attr') }}" class="js--settable-title--start">
+                <option value="{{ 'grimoire.token.title'|trans|e('html_attr') }}" class="js--settable-title--previous">
+                <option value="{{ 'grimoire.token_list.title'|trans|e('html_attr') }}">
+                <option value="{{ 'grimoire.grimoire.bluffs'|trans|e('html_attr') }}">
+            </datalist>
+        </form>
     {% endblock %}
     {% block body %}
         <ul class="token-display js--token--holder"></ul>
