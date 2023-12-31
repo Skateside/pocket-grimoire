@@ -2,14 +2,13 @@
     <div class="carousel" id="demon-bluffs-group"></div>
     <ul class="button-list mt-4">
         <li><button type="button" class="button" id="show-all-bluffs" data-title="{{ 'grimoire.grimoire.bluffs'|trans|e('html_attr') }}">{{ 'grimoire.grimoire.show_bluffs'|trans }}</button></li>
-        <li><button type="button" class="button" id="add-bluffs">Add bluffs</button></li>
+        <li><button type="button" class="button" id="add-bluffs">{{ 'grimoire.grimoire.add_bluffs'|trans }}</button></li>
     </ul>
 </div>
 
 <template id="demon-bluffs-template">
     <div class="carousel__item js--demon-bluffs--group">
         <form class="settable-title bluffs__heading pad__title">
-            {#<h3 class="pad__title bluffs__title">{{ 'grimoire.grimoire.bluffs'|trans }}</h3>#}
             <h3 class="settable-title__title bluffs__title js--settable-title--title">{{ 'grimoire.grimoire.bluffs'|trans }}</h3>
             <input type="text" class="settable-title__input bluffs__input js--settable-title--input" list="bluffs-title-list" hidden>
             <datalist id="bluffs-title-list">
