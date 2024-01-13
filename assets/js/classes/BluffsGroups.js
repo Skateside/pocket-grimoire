@@ -112,7 +112,7 @@ export default class BluffsGroups {
 
             entries.forEach(({ target, intersectionRatio }) => {
 
-                if (intersectionRatio === 1) {
+                if (intersectionRatio >= 0.9) {
 
                     target.dispatchEvent(
                         new CustomEvent(this.constructor.VISIBLE, {
@@ -127,7 +127,7 @@ export default class BluffsGroups {
 
         }, {
             root: container,
-            threshold: 1
+            threshold: [0.9, 0.95, 1]
         });
 
     }
