@@ -1574,6 +1574,17 @@
         ]
     },
     {
+        "id": "villageidiot",
+        "name": "Idiot du village",
+        "ability": "Chaque soir, choisissez un joueur : vous apprenez son alignement. [+0 à +2 Idiots du village. 1 des figurants est ivre]",
+        "firstNightReminder": "Le Village Idiot montre un joueur ; donnez un coup de pouce si ce joueur est bon ou un pouce vers le bas si ce joueur est mauvais.",
+        "otherNightReminder": "Le Village Idiot montre un joueur ; donnez un coup de pouce si ce joueur est bon ou un pouce vers le bas si ce joueur est mauvais.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Assassiné"
+        ]
+    },
+    {
         "id": "virgin",
         "name": "Vierge",
         "ability": "La première fois que vous êtes mise en nomination, si le proposant est un Villageois, il est exécuté immédiatement.",

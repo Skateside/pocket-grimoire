@@ -128,7 +128,7 @@ function normaliseHomebrew(json) {
         }
 
         if (entry.team && !entry.image) {
-            entry.image = `/build/img/icon/${entry.team}.png`;
+            entry.image = `/build/img/icons/${entry.team}.png`;
         }
 
         return entry;

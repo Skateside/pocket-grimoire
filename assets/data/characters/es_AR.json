@@ -1559,6 +1559,17 @@
         ]
     },
     {
+        "id": "villageidiot",
+        "name": "Tonto del pueblo",
+        "ability": "Cada noche, elige un jugador: aprendes su alineación. [+0 a +2 idiotas del pueblo. 1 de los extras está borracho]",
+        "firstNightReminder": "Tonto del pueblo señala a un jugador; dale el visto bueno hacia arriba si ese jugador es bueno o hacia abajo si ese jugador es malo.",
+        "otherNightReminder": "Tonto del pueblo señala a un jugador; dale el visto bueno hacia arriba si ese jugador es bueno o hacia abajo si ese jugador es malo.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Muerto"
+        ]
+    },
+    {
         "id": "virgin",
         "name": "Virgen",
         "ability": "La 1era vez que sos nominado, si el nominador es un Ciudadano, es ejecutado inmediatamente.",

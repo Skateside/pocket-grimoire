@@ -1564,9 +1564,20 @@
         "otherNightReminder": "O Vigormortis escolhe um jogador. O jogador morre. Se o alvo for Lacaio, mantêm sua habilidade e um de seus vizinhos Cidadãos é envenenado.",
         "remindersGlobal": [],
         "reminders": [
-            "Envenenado",
             "Morto",
-            "Tem Habilidade"
+            "Tem Habilidade",
+            "Envenenado"
+        ]
+    },
+    {
+        "id": "villageidiot",
+        "name": "Idiota da vila",
+        "ability": "Cada noite, escolha um jogador: você aprende seu alinhamento. [+0 a +2 Idiotas da Aldeia. 1 dos figurantes está bêbado]",
+        "firstNightReminder": "O Village Idiot aponta para um jogador; dê um sinal de positivo se esse jogador for bom ou um polegar para baixo se esse jogador for mau.",
+        "otherNightReminder": "O Village Idiot aponta para um jogador; dê um sinal de positivo se esse jogador for bom ou um polegar para baixo se esse jogador for mau.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Morto"
         ]
     },
     {
