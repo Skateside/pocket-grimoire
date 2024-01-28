@@ -298,6 +298,7 @@ const form = lookupOne("#select-edition-form");
 const fileInput = lookupOne("#custom-script-upload");
 const fileInputRender = fileInput.nextElementSibling;
 const urlInput = lookupOne("#custom-script-url");
+const pasteInput = lookupOne("#custom-script-paste");
 const uploader = lookupOne("#custom-script");
 const radios = lookup("[name=\"edition\"]", form);
 
@@ -310,15 +311,29 @@ radios.forEach((radio) => {
         uploader.hidden = !isCustom;
         fileInput.required = isCustom;
         urlInput.required = isCustom;
+        pasteInput.required = isCustom;
 
     });
 
     fileInput.addEventListener("input", () => {
+
         urlInput.required = !fileInput.value;
+        pasteInput.required = false;
+
     });
 
     urlInput.addEventListener("input", () => {
+
         fileInput.required = !urlInput.value;
+        pasteInput.required = false;
+
+    });
+
+    pasteInput.addEventListener("input", () => {
+
+        fileInput.required = !pasteInput.value;
+        urlInput.required = false;
+
     });
 
 });
@@ -386,6 +401,23 @@ form.addEventListener("submit", (e) => {
                 });
 
                 reader.readAsBinaryString(fileInput.files[0]);
+
+            } else if (pasteInput.value) {
+
+                let json = [];
+
+                try {
+                    json = JSON.parse(readUTF8(pasteInput.value)); // [1]
+                } catch (error) {
+                    return showInputError(pasteInput, I18N.invalidScript);
+                }
+
+                processJSON({
+                    form,
+                    json,
+                    input: pasteInput,
+                    store: tokenStore
+                })
 
             }
 

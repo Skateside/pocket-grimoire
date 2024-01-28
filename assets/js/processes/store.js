@@ -147,7 +147,7 @@ const {
 
 body.addEventListener("input", ({ target }) => {
 
-    const input = target.closest("input,select");
+    const input = target.closest("input,select,textarea");
 
     if (!input.hasAttribute("data-no-store")) {
         store.saveInput(input);
