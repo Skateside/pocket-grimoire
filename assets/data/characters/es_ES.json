@@ -1,0 +1,1670 @@
+[
+    {
+        "id": "acrobat",
+        "name": "Acróbata",
+        "ability": "Cada noche*, si alguno de tus vecinos vivos buenos está borracho o envenenado, mueres.",
+        "firstNightReminder": "",
+        "otherNightReminder": "Si un vecino bueno está borracho o intoxicado, el jugador Acróbata muere.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Muerto"
+        ]
+    },
+    {
+        "id": "alchemist",
+        "name": "Alquimista",
+        "ability": "Tienes la habilidad de un Esbirro que no está en juego.",
+        "firstNightReminder": "Muestra al Alquimista la ficha de un esbirro no presente en la partida.",
+        "otherNightReminder": "",
+        "remindersGlobal": [
+            "Es el Alquimista"
+        ],
+        "reminders": []
+    },
+    {
+        "id": "alhadikhia",
+        "name": "Al-Hadikhia",
+        "ability": "Cada noche* elige 3 jugadores (todos descubren quiénes son): cada uno elige en silencio si vive o muere, pero si todos viven, todos mueren.",
+        "firstNightReminder": "",
+        "otherNightReminder": "El al-Hadikhia elige a 3 jugadores. Anuncia al primer jugador, despiértalo para que asienta si quiere vivir o niegue si quiere morir. Mata o resucita según lo elegido y vuelve a hacerlo dormir. Anuncia al siguiente jugador. Si al acabar los 3 jugadores están vivos, los 3 mueren.",
+        "remindersGlobal": [],
+        "reminders": [
+            "1",
+            "2",
+            "3",
+            "Elige muerte",
+            "Elige vida"
+        ]
+    },
+    {
+        "id": "amnesiac",
+        "name": "Amnésico",
+        "ability": "No sabes cuál es tu habilidad. Cada día intenta adivinarla en privado y sabes lo cerca que estás.",
+        "firstNightReminder": "Decide la habilidad del Amnésico. Si la habilidad requiere que se despierte esta noche: despiértalo para usarla.",
+        "otherNightReminder": "Si la habilidad del Amnésico requiere que se despierte esta noche: despiértalo para usarla.",
+        "remindersGlobal": [],
+        "reminders": [
+            "?"
+        ]
+    },
+    {
+        "id": "angel",
+        "name": "Ángel",
+        "ability": "Algo malo puede pasarle a quien sea más responsable de matar a un nuevo jugador.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": [
+            "Protegido",
+            "Algo malo"
+        ]
+    },
+    {
+        "id": "apprentice",
+        "name": "Aprendiz",
+        "ability": "En tu primera noche ganas la habilidad de un Aldeano (si eres bueno) o un Esbirro (si eres malo).",
+        "firstNightReminder": "Muestra al Aprendiz la tarjeta \"Eres\" y una ficha de Aldeano o de esbirro. En el Grimorio, sustituye la ficha de Aprendiz por la de ese personaje y pon el recordatorio \"Es el Aprendiz\" al lado de la ficha de ese personaje.",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": [
+            "Es el aprendiz"
+        ]
+    },
+    {
+        "id": "artist",
+        "name": "Artista",
+        "ability": "Una vez por partida, durante el día, hazle en privado al Narrador una pregunta de sí­ o no.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": [
+            "Sin habilidad"
+        ]
+    },
+    {
+        "id": "assassin",
+        "name": "Asesina",
+        "ability": "Una vez por partida, por la noche*, elige 1 jugador: muere, incluso si por otro motivo no pudiera.",
+        "firstNightReminder": "",
+        "otherNightReminder": "Si la Asesina no ha utilizado su habilidad aún: la Asesina niega con la cabeza o señala a un jugador. Ese jugador muere.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Muerto",
+            "Sin habilidad"
+        ]
+    },
+    {
+        "id": "atheist",
+        "name": "Ateo",
+        "ability": "Cada noche* elige 3 jugadores (todos descubren quiánes son): cada uno elige en silencio si vive o muere, pero si todos viven, todos mueren.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "balloonist",
+        "name": "Aeronauta",
+        "ability": "Cada noche descubres 1 jugador de cada tipo de personaje hasta que no queden más tipos. [+1 Forastero]",
+        "firstNightReminder": "Elige un tipo de personaje. Señala a un jugador que tenga un personaje de ese tipo. Pon el recordatorio \"Divisado\" del Aeronauta junto a ese personaje.",
+        "otherNightReminder": "Elige un tipo de personaje que aún no tenga el recordatorio \"Divisado\" junto a un personaje de ese tipo. Señala a un jugador cuyo personaje sea de ese tipo, si los hay. Pon el recordatorio \"Divisado\" del Aeronauta junto a ese personaje.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Aldeano Divisado",
+            "Demonio Divisado",
+            "Forastero Divisado",
+            "esbirro Divisado",
+            "Viajero Divisado"
+        ]
+    },
+    {
+        "id": "barber",
+        "name": "Barbero",
+        "ability": "Si mueres hoy o esta noche, el Demonio puede elegir 2 jugadores (no otro Demonio) para que intercambien personajes.",
+        "firstNightReminder": "",
+        "otherNightReminder": "Si el Barbero murió hoy: despierta al Demonio. Muestra la tarjeta \"Este personaje te ha elegido\" y la ficha del Barbero. El Demonio puede negar con la cabeza o señalar a 2 jugadores. Si elige jugadores: intercambia sus fichas de personaje. Despierta a cada jugador. Muéstrale \"Eres\" y su nueva ficha de personaje.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Cortes de pelo esta noche"
+        ]
+    },
+    {
+        "id": "barista",
+        "name": "Barista",
+        "ability": "Cada noche, hasta el crepúsculo, 1) un jugador está sobrio, sano y recibe información verdadera, o 2) su habilidad funciona 2 veces. El jugador sabe cuál de las dos.",
+        "firstNightReminder": "Elige a un jugador, despiértalo y dile qué poder del Barista le está afectando. Trátalo según el poder (sobrio/sano/información correcta o activa su habilidad dos veces).",
+        "otherNightReminder": "Elige a un jugador, despiértalo y dile qué poder del Barista le está afectando. Trátalo según el poder (sobrio/sano/información correcta o activa su habilidad dos veces).",
+        "remindersGlobal": [],
+        "reminders": [
+            "Habilidad doble",
+            "Sobrio y Sano"
+        ]
+    },
+    {
+        "id": "baron",
+        "name": "Barón",
+        "ability": "Hay Forasteros extra en la partida. [+2 Forasteros]",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "beggar",
+        "name": "Mendigo",
+        "ability": "Debes usar una ficha de votación para votar. Si un jugador muerto te da la suya, descubres su alineamiento. Estás sobrio y sano.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "bishop",
+        "name": "Obispo",
+        "ability": "Solo puede nominar el Narrador y debe nominar al menos a 1 bueno y 1 malo cada día.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": [
+            "Nominar bueno",
+            "Nominar malo"
+        ]
+    },
+    {
+        "id": "bonecollector",
+        "name": "Coleccionista de huesos",
+        "ability": "Una vez por partida, por la noche, elige 1 jugador muerto: vuelve a ganar su habilidad hasta el crepúsculo.",
+        "firstNightReminder": "",
+        "otherNightReminder": "El Profanador puede negar con la cabeza o señalar a cualquier jugador muerto. Si señalan a un jugador muerto, pon el recordatorio \"Con Habilidad\" del Profanador junto a la ficha de personaje del jugador elegido. (Pueden despertarse esta noche para usarla si es necesario.)",
+        "remindersGlobal": [],
+        "reminders": [
+            "Con habilidad",
+            "Sin habilidad"
+        ]
+    },
+    {
+        "id": "boomdandy",
+        "name": "Boomdandy",
+        "ability": "Si eres ejecutado, todos los jugadores menos 3 mueren. 1 minuto despuás, el jugador con más jugadores apuntándole muere.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "bootlegger",
+        "name": "Contrabandista",
+        "ability": "Este guión tiene caracteres o reglas caseras.",
+        "firstNightReminder": "Anuncia que el contrabandista está en juego e informe al grupo sobre todos los personajes y/o reglas caseras que estas utilizando en esta partida.",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "bountyhunter",
+        "name": "Cazarrecompensas",
+        "ability": "Empiezas conociendo 1 jugador malo. Si ese jugador muere, descubres otro 1 jugador malo esta noche. [1 Aldeano es malo]",
+        "firstNightReminder": "Despierta al Aldeano malo y muéstrale la tarjeta \"Eres\" y el signo de malo con el pulgar hacia abajo.",
+        "otherNightReminder": "Si el jugador malo conocido está muerto, señala a otro jugador malo.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Conocido"
+        ]
+    },
+    {
+        "id": "buddhist ",
+        "name": "Budista",
+        "ability": "En los primeros 2 minutos del día, los jugadores veteranos no pueden hablar.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "bureaucrat",
+        "name": "Burócrata",
+        "ability": "Cada noche elige 1 jugador (no a ti): su voto cuenta como 3 votos mañana.",
+        "firstNightReminder": "El Burócrata señala a un jugador. Pon el recordatorio \"3 votos\" junto a la ficha de personaje del jugador.",
+        "otherNightReminder": "El Burócrata señala a un jugador. Pon el recordatorio \"3 votos\" del Burócrata junto a la ficha de personaje del jugador.",
+        "remindersGlobal": [],
+        "reminders": [
+            "3 votos"
+        ]
+    },
+    {
+        "id": "butcher",
+        "name": "Carnicero",
+        "ability": "Cada día, despuás de la primera ejecución, puedes nominar otra vez.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "butler",
+        "name": "Mayordomo",
+        "ability": "Cada noche elige 1 jugador (no a ti): mañana solo puedes votar si ese jugador está votando.",
+        "firstNightReminder": "El Mayordomo señala a un jugador. Marca a dicho jugador como \"Señor\".",
+        "otherNightReminder": "El Mayordomo señala a un jugador. Marca a dicho jugador como \"Señor\".",
+        "remindersGlobal": [],
+        "reminders": [
+            "Señor"
+        ]
+    },
+    {
+        "id": "cannibal",
+        "name": "Caníbal",
+        "ability": "Tienes la habilidad del último jugador ejecutado. Si es malo, estás envenenado hasta que uno bueno muera ejecutado.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": [
+            "Intoxicado",
+            "Muerto hoy"
+        ]
+    },
+    {
+        "id": "cerenovus",
+        "name": "Cerenovus",
+        "ability": "Cada noche, elige 1 jugador y 1 personaje bueno: mañana el jugador está loco sobre que es ese personaje o puede ser ejecutado.",
+        "firstNightReminder": "El Cerenovus señala a un jugador, y elige un personaje de su hoja. Despierta a ese jugador. Muéstrale la tarjeta \"Este personaje te ha elegido\" y la ficha del Cerenovus. Muéstrale la ficha del personaje elegido. Si el jugador no intenta hacer creer que este personaje mañana, puede ser ejecutado.",
+        "otherNightReminder": "El Cerenovus señala a un jugador, y elige un personaje de su hoja. Despierta a ese jugador. Muéstrale la tarjeta \"Este personaje te ha elegido\" y la ficha del Cerenovus. Muéstrale la ficha del personaje elegido. Si el jugador no intenta hacer creer que este personaje mañana, puede ser ejecutado.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Loco"
+        ]
+    },
+    {
+        "id": "chambermaid",
+        "name": "Sirvienta",
+        "ability": "Cada noche elige 2 jugadores vivos (no a ti). Descubres cuántos han despertado esta noche por su habilidad.",
+        "firstNightReminder": "La Sirvientaseñala a dos jugadores. Muéstrale la señal numérica (0, 1, 2, ...) indicando cuántos de esos jugadores se han despertado esta noche por su habilidad.",
+        "otherNightReminder": "La Sirvienta señala a dos jugadores. Muéstrale la señal numérica (0, 1, 2, ...) indicando cuántos de esos jugadores se han despertado esta noche por su habilidad.",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "chef",
+        "name": "Chef",
+        "ability": "Comienzas sabiendo cuántas parejas de jugadores malos hay sentados juntos.",
+        "firstNightReminder": "Muestra con los dedos (0, 1, 2, ...) cuántos pares de jugadores malos hay sentados juntos.",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "choirboy",
+        "name": "Chico del coro",
+        "ability": "Si el Demonio mata al rey (King), descubres quá jugador es el Demonio [+ King]",
+        "firstNightReminder": "",
+        "otherNightReminder": "Si el Demonio mata al Rey, despierta al Corista y señálale al Demonio.",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "clockmaker",
+        "name": "Relojero",
+        "ability": "Empiezas sabiendo a cuántos pasos está el Demonio de su Esbirro más cercano.",
+        "firstNightReminder": "Muestra la señal numérica (1, 2, 3, etc.) de los pasos entre el Demonio y su esbirro más cercano.",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "courtier",
+        "name": "Cortesana",
+        "ability": "Una vez por partida, por la noche, elige 1 personaje: está borracho durante 3 días y 3 noches.",
+        "firstNightReminder": "La Cortesana puede negar con la cabeza o señalar a un personaje de la hoja. Si la Cortesana utiliza su habilidad: si ese personaje está presente en la partida, ese jugador estará borracho.",
+        "otherNightReminder": "Reduce el número de días restantes que el jugador estará borracho. Si la Cortesana no ha usado aún su habilidad: la Cortesana puede negar con la cabeza o señalar un personaje de la hoja. Si la Cortesana ha usado su habilidad: si ese personaje está presente en la partida, ese jugador estará borracho.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Borracho 1",
+            "Borracho 2",
+            "Borracho 3",
+            "Sin habilidad"
+        ]
+    },
+    {
+        "id": "cultleader",
+        "name": "Lider de culto",
+        "ability": "Cada noche te conviertes al alineamiento de un vecino vivo. Si todos los jugadores buenos eligen unirse a tu culto, tu bando gana.",
+        "firstNightReminder": "Si el Lider de culto cambia de bando, muéstrale la señal de bueno con el pulgar hacia arriba o de malo con el pulgar hacia abajo según corresponda.",
+        "otherNightReminder": "Si el Lider de cultocambia de bando, muéstrale la señal de bueno con el pulgar hacia arriba o de malo con el pulgar hacia abajo según corresponda.",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "damsel",
+        "name": "Damisela",
+        "ability": "Los Esbirros saben que estás en juego. Si un Esbirro adivina quián eres (una vez por partida) tu equipo pierde.",
+        "firstNightReminder": "Despierta a todos los esbirros, muéstrales la tarjeta \"Este personaje te ha elegido\" y la ficha de la Damisela.",
+        "otherNightReminder": "Si el Cazador la selecciona, despierta a la Damisela, muéstrale la tarjeta \"Eres\" y la ficha de un Aldeano que no esté presente en la partida.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Intento agotado"
+        ]
+    },
+    {
+        "id": "deusexfiasco",
+        "name": "Deus ex Fiasco",
+        "ability": "Una vez por partida, el Narrador cometerá un error, lo arreglará y lo admitirá públicamente.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": [
+            "Ups!"
+        ]
+    },
+    {
+        "id": "deviant",
+        "name": "Pervertido",
+        "ability": "Si has sido gracioso hoy no puedes ser exiliado.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "devilsadvocate",
+        "name": "Abogado del diablo",
+        "ability": "Cada noche elige 1 jugador (diferente al de la noche anterior): si es ejecutado mañana, no muere.",
+        "firstNightReminder": "El Abogado del diablo señala a un jugador vivo. Este jugador sobrevive a la ejecución mañana.",
+        "otherNightReminder": "El Abogado del diablo señala a un jugador vivo, diferente al de la noche anterior. Este jugador sobrevive a la ejecución mañana.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Sobrevive a la ejecución"
+        ]
+    },
+    {
+        "id": "djinn",
+        "name": "Djinn",
+        "ability": "Usa la regla especial. Todos los jugadores la conocen.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "doomsayer",
+        "name": "Doomsayer",
+        "ability": "Si quedan 4 o más jugadores vivos, cada jugador vivo puede (una vez por partida) declarar públicamente que un jugador de su alineamiento muera.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "dreamer",
+        "name": "Soñador",
+        "ability": "Cada noche, elige a un jugador (no a ti mismo ni a Viajeros): sabrás 1 personaje bueno y 1 personaje malo, 1 de ellos es correcto.",
+        "firstNightReminder": "El Soñador señala a un jugador. Muestra 1 ficha de personaje bueno y 1 de personaje malo, una de ella es correcta.",
+        "otherNightReminder": "El Soñador señala a un jugador. Muestra 1 ficha de personaje bueno y 1 de personaje malo, una de ella es correcta.",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "drunk",
+        "name": "Borracho",
+        "ability": "No sabes que eres el Borracho. Crees que eres un Aldeano, pero no lo eres.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [
+            "Borracho"
+        ],
+        "reminders": []
+    },
+    {
+        "id": "duchess",
+        "name": "Duquesa",
+        "ability": "Cada día, 3 jugadores pueden visitar al Narrador. Por la noche* cada visitante sabe cuántos son malos, pero 1 recibe información falsa.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": [
+            "Información falsa",
+            "visitante"
+        ]
+    },
+    {
+        "id": "empath",
+        "name": "Empática",
+        "ability": "Cada noche sabes cuántos de tus vecinos vivos son malos.",
+        "firstNightReminder": "Muestra la seña numérica con los dedos (0, 1, 2) indicando el número de vecinos malos vivos de la Empática.",
+        "otherNightReminder": "Muestra la seña numérica con los dedos (0, 1, 2) indicando el número de vecinos malos vivos de la Empática.",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "engineer",
+        "name": "Ingeniero",
+        "ability": "Una vez por partida, por la noche, elige quá Esbirros o qué Demonio está en juego.",
+        "firstNightReminder": "El Ingeniero niega con la cabeza o señala un Demonio o a los esbirros necesarios. Si el ingeniero decide elegir personajes, sustituye al Demonio o a los esbirros por sus elecciones, después despierta a los jugadores implicados y muéstrales la tarjeta \"Eres\" y la ficha de personaje pertinente.",
+        "otherNightReminder": "El Ingeniero niega con la cabeza o señala un Demonio o a los esbirros necesarios. Si el ingeniero decide elegir personajes, sustituye al Demonio o a los esbirros por sus elecciones, después despierta a los jugadores implicados y muéstrales la tarjeta \"Eres\" y la ficha de personaje pertinente.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Sin habilidad"
+        ]
+    },
+    {
+        "id": "eviltwin",
+        "name": "Gemelo malvado",
+        "ability": "Tú y un jugador del equipo contrario os conocáis. Si el jugador bueno es ejecutado, los malos ganan. Los buenos no pueden ganar si ambos vivís.",
+        "firstNightReminder": "Despierta al Gemelo Malvado y a su gemelo. Confirma que ambos se reconocen. Señala al Gemelo corrupto. Muéstrale la ficha de Gemelo corrupto al gemelo bueno. Señala al gemelo bueno. Muéstrale la ficha de su personaje al Gemelo corrupto.",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": [
+            "Gemelo Bueno"
+        ]
+    },
+    {
+        "id": "exorcist",
+        "name": "Exorcista",
+        "ability": "Cada noche* elige 1 jugador (diferente al de la noche anterior): si es el Demonio, áste sabe quián eres y no se despierta esta noche.",
+        "firstNightReminder": "",
+        "otherNightReminder": "El Exorcista señala a un jugador, diferente del de la noche anterior. Si ese jugador es el Demonio: despierta al demonio. Muéstrale la ficha del Exorcista. Señala al Exorcista. El Demonio no actúa esta noche.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Elegido"
+        ]
+    },
+    {
+        "id": "fanggu",
+        "name": "Fang Gu",
+        "ability": "Cada noche*, elige a un jugador: morirá. El 1º Forastero que mates se convertirá en un Fang Gu malo y tú morirás en su lugar. [+1 Forastero]",
+        "firstNightReminder": "",
+        "otherNightReminder": "El Fang Gu señala a un jugador. Ese jugador muere. O, si ese jugador era un Forastero y no hay otros Fang Gu presentes en la partida: el Fang Gu muere en lugar del jugador elegido. El jugador elegido es ahora un Fang Gu malo. Despierta al nuevo Fang Gu. Muéstrale la tarjeta \"Eres\" y la ficha de Fang Gu. Muéstrale la tarjeta \"Eres\" y el signo de malo con el pulgar hacia abajo.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Muerto",
+            "Una vez"
+        ]
+    },
+    {
+        "id": "farmer",
+        "name": "Granjero",
+        "ability": "Si mueres por la noche, 1 jugador vivo bueno se convierte en granjero (Farmer).",
+        "firstNightReminder": "",
+        "otherNightReminder": "Si un Granjero muere esta noche, elige a otro jugador bueno y conviértelo en el Granjero. Despiértalo y muéstrale la tarjeta \"Eres\" y la ficha de personaje del Granjero.",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "fearmonger",
+        "name": "Fearmonger",
+        "ability": "Cada noche elige 1 jugador: si nominas y le ejecutas, su equipo pierde. Todos los jugadores saben si has elegido a un nuevo jugador.",
+        "firstNightReminder": "El fearmonger señala a un jugador. Pon el recordatorio de \"Agitado\" junto a ese jugador y anuncia que un nuevo jugador ha sido seleccionado con la habilidad del fearmonger.",
+        "otherNightReminder": "El fearmonger señala a un jugador. Si es diferente al de la noche anterior, por el recordatorio de \"Agitado\" junto a ese jugador y anuncia que un nuevo jugador ha sido elegido con la habilidad del fearmonger.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Aterrorizado"
+        ]
+    },
+    {
+        "id": "fibbin",
+        "name": "Mentirosillo",
+        "ability": "Una vez por partida, 1 jugador bueno puede recibir información incorrecta.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": [
+            "Usado"
+        ]
+    },
+    {
+        "id": "fiddler",
+        "name": "Violinista",
+        "ability": "Una vez por partida, el Demonio elige en secreto 1 jugador del equipo contrario. Todos los jugadores deciden quián de los 2 gana.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "fisherman",
+        "name": "Pescador",
+        "ability": "Una vez por partida, durante el día, visita al Narrador para que te aconseje sobre cómo debe ganar tu bando.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": [
+            "Sin habilidad"
+        ]
+    },
+    {
+        "id": "flowergirl",
+        "name": "Florista",
+        "ability": "Cada noche* descubres si el Demonio ha votado hoy.",
+        "firstNightReminder": "",
+        "otherNightReminder": "Indica que sí o que no con la cabeza para confirmar si el Demonio votó hoy. Pon el recordatorio \"El Demonio no votó (o quita el recordatorio \"El Demonio votó\", si lo hay).",
+        "remindersGlobal": [],
+        "reminders": [
+            "El Demonio no votó",
+            "El Demonio votó"
+        ]
+    },
+    {
+        "id": "fool",
+        "name": "Bufón",
+        "ability": "La primera vez que mueras, no mueres.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": [
+            "Sin habilidad"
+        ]
+    },
+    {
+        "id": "fortuneteller",
+        "name": "Vidente",
+        "ability": "Cada noche elige 2 jugadores: sabes si alguno es el Demonio. Hay un jugador bueno que aparece como malo para ti.",
+        "firstNightReminder": "La Vidente señala a dos jugadores. Afirma o niega con la cabeza para decirle si uno de ellos es el Demonio.",
+        "otherNightReminder": "La Vidente señala a dos jugadores. Afirma o niega con la cabeza para decirle si uno de ellos es el Demonio.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Señuelo"
+        ]
+    },
+    {
+        "id": "gambler",
+        "name": "Tahúr",
+        "ability": "Cada noche* elige 1 jugador e intenta adivinar su personaje: si fallas, mueres.",
+        "firstNightReminder": "",
+        "otherNightReminder": "El Tahúr señala a un jugador y un personaje de la hoja. Si no es correcto, el Tahúr muere.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Muerto"
+        ]
+    },
+    {
+        "id": "gangster",
+        "name": "Mafioso",
+        "ability": "Una vez por día puedes matar a uno de tus vecinos vivos si el otro vecino vivo lo acepta.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "general",
+        "name": "General",
+        "ability": "Cada noche sabes quá alineamiento cree el Narrador que está ganando: bueno, malo o ninguno.",
+        "firstNightReminder": "Muestra al General el pulgar hacia arriba para señalar que el Bien está ganando, el pulgar hacia abajo para el Mal ganando o el pulgar hacia un lado para ninguno.",
+        "otherNightReminder": "Muestra al General el pulgar hacia arriba para señalar que el Bien está ganando, el pulgar hacia abajo para el Mal ganando o el pulgar hacia un lado para ninguno.",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "goblin",
+        "name": "Goblin",
+        "ability": "Si públicamente declaras ser el goblin (Goblin) cuando te nominen y eres ejecutado ese día, tu equipo gana.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": [
+            "Declarado"
+        ]
+    },
+    {
+        "id": "godfather",
+        "name": "Padrino",
+        "ability": "Empiezas conociendo quá Forasteros están en juego. Si 1 muere por el día, elige 1 jugador esta noche: muere. [-1 o +1 Forastero]",
+        "firstNightReminder": "Muestra todas las fichas de Forasteros presentes en la partida.",
+        "otherNightReminder": "Si un Forastero muere hoy: el Padrino señala a un jugador. Ese jugador muere.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Muerto",
+            "Muerto hoy"
+        ]
+    },
+    {
+        "id": "golem",
+        "name": "Gólem",
+        "ability": "Solo puedes nominar 1 vez. Cuando lo hagas, si el nominado no es el Demonio, muere.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": [
+            "No puede nominar"
+        ]
+    },
+    {
+        "id": "goon",
+        "name": "Matón",
+        "ability": "Cada noche, el primer jugador que te elija por su habilidad está borracho hasta el crepúsculo. Te conviertes a su alineamiento.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": [
+            "Borracho"
+        ]
+    },
+    {
+        "id": "gossip",
+        "name": "Chismoso",
+        "ability": "Cada día puedes hacer una declaración pública. Esta noche, si fue cierta, un jugador muere.",
+        "firstNightReminder": "",
+        "otherNightReminder": "Si la declaración pública del Chismoso era cierta: elige a un jugador que no esté protegido de morir esta noche. Ese jugador muere.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Muerto"
+        ]
+    },
+    {
+        "id": "grandmother",
+        "name": "Abuelita",
+        "ability": "Empiezas conociendo 1 jugador bueno y su personaje. Si el Demonio le mata, tú tambián mueres.",
+        "firstNightReminder": "Muestra la ficha del personaje marcado. Señala al jugador marcado.",
+        "otherNightReminder": "Si el Demonio mata al nieto de la Abuela: la Abuela muere.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Nieto"
+        ]
+    },
+    {
+        "id": "gunslinger",
+        "name": "Pistolero",
+        "ability": "Cada día, despuás de que se haya contado la primera votación, puedes elegir 1 jugador que haya votado: muere.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "harlot",
+        "name": "Prostituto",
+        "ability": "Cada noche*, elige a un jugador con vida: si lo consiente, sabrás cuál es su personaje, pero ambos jugadores podrían morir.",
+        "firstNightReminder": "",
+        "otherNightReminder": "El prostituto señala a un jugador. El prostituto vuelve a dormir. Despierta al jugador elegido, muéstrale la tarjeta \"Este personaje te ha seleccionado\" y la ficha de el prostituto. Ese jugador puede afirmar o negar con la cabeza. Si afirma, despierta a el prostituo y muéstrale la ficha de personaje del jugador elegido. Después, decide si ambos jugadores mueren.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Muerto"
+        ]
+    },
+    {
+        "id": "harpy",
+        "name": "Arpía",
+        "ability": "Cada noche elige 2 jugadores: mañana, el primer jugador está loco sobre que el segundo es malo o ambos pueden morir.",
+        "firstNightReminder": "Despierta a la Arpía; esta señala a un jugador, luego a otro. Despierta al primer jugador al que señaló la Arpía, muéstrale la tarjeta \"Este personaje te ha seleccionado\", muéstrale la ficha de Arpía y luego señala al segundo jugador al que señaló la Arpía.",
+        "otherNightReminder": "Despierta a la Arpía; esta señala a un jugador, luego a otro. Despierta al primer jugador al que señaló la Arpía, muéstrale la tarjeta \"Este personaje te ha seleccionado\", muéstrale la ficha de Arpía y luego señala al segundo jugador al que señaló la Arpía.",
+        "remindersGlobal": [],
+        "reminders": [
+            "loco",
+            "2nd"
+        ]
+    },
+    {
+        "id": "hatter",
+        "name": "Hatter",
+        "ability": "Si mueres hoy o esta noche, los Esbirros y el Demonio pueden elegir nuevos Esbirros y Demonios que ser.",
+        "firstNightReminder": "",
+        "otherNightReminder": "Si el Sombrerero murió hoy: Despierta a los Esbirros y al Demonio. Muéstrales la ficha de información \"Este personaje te seleccionó\" y luego la ficha del Sombrerero. Cada jugador niega con la cabeza o señala a otro personaje del mismo tipo que su personaje actual. Si un segundo jugador termina con el mismo personaje que otro jugador, niega con la cabeza y hazle un gesto para que elija nuevamente. Ponlos a dormir. Cambia a cada jugador por el personaje que eligió.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Fiesta del té esta noche"
+        ]
+    },
+    {
+        "id": "hellslibrarian",
+        "name": "Bibliotecario infernal",
+        "ability": "Algo malo puede pasar a quien hable cuando el Narrador pida silencio.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": [
+            "Algo Malo."
+        ]
+    },
+    {
+        "id": "heretic",
+        "name": "Hereje",
+        "ability": "Quien gane, pierde y quien pierda gana, aunque estés muerto.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "highpriestess",
+        "name": "Suma sacerdotisa",
+        "ability": "Cada noche sabes con quá jugador cree el Narrador que deberías hablar más.",
+        "firstNightReminder": "Señala a un jugador.",
+        "otherNightReminder": "Señala a un jugador.",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "huntsman",
+        "name": "Cazador",
+        "ability": "Una vez por partida, por la noche, elige 1 jugador vivo: si es la damisela (Damsel) se convierte en un Aldeano que no está en juego. [+ Damsel]",
+        "firstNightReminder": "El Cazador puede negar con la cabeza o señalar a un jugador. Si señalan a la Doncella, despierta a ese jugador, muéstrale la tarjeta \"Eres\" y la ficha de un personaje Aldeano no presente en la partida.",
+        "otherNightReminder": "El Cazador puede negar con la cabeza o señalar a un jugador. Si señalan a la Doncella, despierta a ese jugador, muéstrale la tarjeta \"Eres\" y la ficha de un personaje Aldeano no presente en la partida.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Sin habilidad"
+        ]
+    },
+    {
+        "id": "imp",
+        "name": "Diablillo",
+        "ability": "Cada noche* elige 1 jugador: muere. Si te matas de esta forma, un Esbirro se convierte en el diablillo (Imp).",
+        "firstNightReminder": "",
+        "otherNightReminder": "El Diablillo señala a un jugador. Ese jugador muere. Si el Diablillo se elige a sí mismo: sustituye el personaje de 1 esbirro con vida con una ficha extra de Diablillo. Muéstrale la tarjeta \"Eres\" y la ficha del Diablillo.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Muerto"
+        ]
+    },
+    {
+        "id": "innkeeper",
+        "name": "Posadero",
+        "ability": "Cada noche* elige 2 jugadores: no pueden morir esta noche, pero 1 está borracho hasta el crepúsculo.",
+        "firstNightReminder": "",
+        "otherNightReminder": "Los jugadores de la noche anterior pierden sus marcadores (protegido, borracho). El Posadero señala a dos jugadores. Esos jugadores están protegidos. Uno está borracho.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Borracho",
+            "Protegido"
+        ]
+    },
+    {
+        "id": "investigator",
+        "name": "Investigador",
+        "ability": "Empiezas conociendo que 1 de 2 jugadores es un Esbirro particular.",
+        "firstNightReminder": "Muestra la ficha de personaje de un esbirro presente en la partida. Señala a dos jugadores, uno de los cuales es ese personaje.",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": [
+            "Incorrecto",
+            "esbirro"
+        ]
+    },
+    {
+        "id": "judge",
+        "name": "Juez",
+        "ability": "Una vez por partida, si otro jugador ha nominado, puedes forzar la ejecución o impedirla.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": [
+            "Sin habilidad"
+        ]
+    },
+    {
+        "id": "juggler",
+        "name": "Malabarista",
+        "ability": "En tu primer día declara públicamente el personaje de hasta 5 jugadores. Esta noche sabes cuántos has acertado.",
+        "firstNightReminder": "",
+        "otherNightReminder": "Si hoy fue el primer día del Malabarista: muéstrale con los dedos el número (0, 1, 2, etc.) de aciertos. Quita los marcadores.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Correcto"
+        ]
+    },
+    {
+        "id": "kazali",
+        "name": "Kazali",
+        "ability": "Cada noche* elige 1 jugador: muere. [Eliges los Esbirros en juego y quá jugadores son. -? a +? Forasteros]",
+        "firstNightReminder": "El Kazali señala a un jugador y a un Esbirro en el guión. Reemplace su antigua ficha de personaje con la ficha de Esbirro, muéstreles la ficha de información \"Tú eres\", luego la ficha de personaje Esbirro y ponlo a dormir. Repite hasta que exista la cantidad normal de Esbirros. Pon a dormir al Kazali.",
+        "otherNightReminder": "El Kazali señala a un jugador. Ese jugador muere.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Muerto"
+        ]
+    },
+    {
+        "id": "king",
+        "name": "Rey",
+        "ability": "Cada noche, si hay más muertos que vivos, descubres 1 personaje vivo. El Demonio sabe quián eres.",
+        "firstNightReminder": "Despierta al Demonio, muéstrale la tarjeta \"Este personaje te ha seleccionado\", muéstrale la ficha del Rey y señala al jugador que es el Rey.",
+        "otherNightReminder": "Si hay más jugadores muertos que vivos, muéstra al Rey la ficha de personaje de un jugador vivo.",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "klutz",
+        "name": "Cafre",
+        "ability": "Cuando descubras que has muerto, elige públicamente 1 jugador vivo: si es malo, tu equipo pierde.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "knight",
+        "name": "Knight",
+        "ability": "Empiezas conociendo 2 jugadores que no son el Demonio.",
+        "firstNightReminder": "Señala a 2 jugadores que no sean el demonio",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": [
+            "Conocido",
+            "conocido"
+        ]
+    },
+    {
+        "id": "legion",
+        "name": "Legión",
+        "ability": "Cada noche* 1 jugador puede morir. Las ejecuciones fallan si solo votan los malos. Apareces tambián como Esbirro. [La mayoría de jugadores son Legion]",
+        "firstNightReminder": "",
+        "otherNightReminder": "Elige a un jugador, ese jugador muere.",
+        "remindersGlobal": [],
+        "reminders": [
+            "A punto de morir",
+            "Muerto"
+        ]
+    },
+    {
+        "id": "leviathan",
+        "name": "Leviatán",
+        "ability": "Si más de 1 jugador bueno es ejecutado, los malos ganan. Todos los jugadores saben que estás en juego. Despuás del día 5, los malos ganan.",
+        "firstNightReminder": "Pon el marcador \"Día 1\" del Leviatán. Anuncia 'El Leviatán está entre nosotros, este es el Día 1'.",
+        "otherNightReminder": "Cambia el recordatorio de Día del Leviatán para el día siguiente.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Día 1",
+            "Día 2",
+            "Día 3",
+            "Día 4",
+            "Día 5",
+            "Jugador bueno ejecutado"
+        ]
+    },
+    {
+        "id": "librarian",
+        "name": "Bibliotecario",
+        "ability": "Empiezas conociendo que 1 de 2 jugadores es un Forastero particular (o que hay 0 en juego).",
+        "firstNightReminder": "Muestra la ficha de personaje de un Forastero presente en la partida. Señala a dos jugadores, uno de los cuales es ese personaje.",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": [
+            "Forastero",
+            "Incorrecto"
+        ]
+    },
+    {
+        "id": "lilmonsta",
+        "name": "Lil’ Monsta",
+        "ability": "Cada noche, los esbirros eligen quién cuida de la ficha del Lil’ Monsta y \"es el Demonio\". Un jugador muere cada noche*. [+1 esbirro]",
+        "firstNightReminder": "Despierta a todos los esbirros juntos, permíteles voten señalando a quién quieran que cuide al Lil’ Monsta.",
+        "otherNightReminder": "Despierta a todos los esbirros juntos, permíteles voten señalando a quién quieran que cuide al Lil’ Monsta. Elige a un jugador, ese jugador muere.",
+        "remindersGlobal": [
+            "Es el Demonio",
+            "Muerto"
+        ],
+        "reminders": []
+    },
+    {
+        "id": "lleech",
+        "name": "Lleech",
+        "ability": "Cada noche* elige 1 jugador: muere. Empiezas eligiendo un jugador vivo: está envenenado. Mueres solo si ese jugador muere.",
+        "firstNightReminder": "La Sanguijuela señala a un jugador. Pon el recordatorio de \"Envenenado\".",
+        "otherNightReminder": "La Sanguijuela señala a un jugador. Ese jugador muere.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Envenenado",
+            "Muerto"
+        ]
+    },
+    {
+        "id": "lunatic",
+        "name": "Lunático",
+        "ability": "Crees que eres el Demonio, pero no lo eres. El Demonio sabe quián eres y a quián eliges por la noche.",
+        "firstNightReminder": "Si hay 7 o más jugadores: muestra al Lunático un número arbitrario de 'esbirros' igual al número de esbirros presentes en la partida. Muéstrale 3 fichas de personajes buenos aleatorias. si la ficha recibida por el Lunático es un Demonio que debe despertarse esta noche: permítele que realice las acciones del Demonio. Pon sus marcadores de 'ataque'. Despierta al Demonio. Muéstrale la ficha de personaje demoníaco real. Muéstrale al jugador Lunático. Si el Lunático ha atacado a jugadores: muéstrale al demonio real los jugadores marcados. Elimina todos los marcadores de 'ataque' del Lunático.",
+        "otherNightReminder": "Permite al Lunático que realice las acciones del Demonio. Pon sus marcadores de 'ataque'. Si el Lunático ha atacado a jugadores: despierta al Demonio. Muéstrale el marcador de 'ataque' y señala a cada jugador marcado. Elimina todos los marcadores de 'ataque' del Lunático.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Ataque 1",
+            "Ataque 2",
+            "Ataque 3"
+        ]
+    },
+    {
+        "id": "lycanthrope",
+        "name": "Licántropo",
+        "ability": "Cada noche* elige 1 jugador vivo. Si es bueno, muere, pero no puede haber más muertes esta noche.",
+        "firstNightReminder": "",
+        "otherNightReminder": "El Licántropo señala a un jugador vivo: si es bueno, muere y nadie más puede morir esta noche.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Muerto"
+        ]
+    },
+    {
+        "id": "magician",
+        "name": "Mago",
+        "ability": "El Demonio piensa que eres un Esbirro. Los Esbirros piensan que eres un Demonio.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "marionette",
+        "name": "Marioneta",
+        "ability": "Piensas que eres un personaje bueno, pero no lo eres. El Demonio sabe quián eres. [Estás adyacente al Demonio]",
+        "firstNightReminder": "Selecciona a uno de los jugadores buenos sentados junto al Demonio y ponle el recordatorio \"Es la Marioneta\". Despierta al Demonio e indícale quién es la Marioneta.",
+        "otherNightReminder": "",
+        "remindersGlobal": [
+            "Es la Marioneta"
+        ],
+        "reminders": []
+    },
+    {
+        "id": "mastermind",
+        "name": "Mente maestra",
+        "ability": "Si el Demonio muere por ejecución (terminando la partida), juega 1 día más. Si un jugador es ejecutado ese día, su equipo pierde.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "mathematician",
+        "name": "Matemático",
+        "ability": "Cada noche sabes cuántas habilidades de personajes han funcionado anormalmente (desde el amanecer) por las habilidades de otros personajes.",
+        "firstNightReminder": "Muestra con la mano el número (0, 1, 2, etc.) de jugadores cuya habilidad ha funcionado de forma anormal debido a otras habilidades.",
+        "otherNightReminder": "Muestra con la mano el número (0, 1, 2, etc.) de jugadores cuya habilidad ha funcionado de forma anormal debido a otras habilidades.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Anormal"
+        ]
+    },
+    {
+        "id": "matron",
+        "name": "Matrona",
+        "ability": "Cada día puedes elegir hasta 3 parejas de jugadores para que cambien sus asientos. Los jugadores no pueden levantarse para hablar en privado.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "mayor",
+        "name": "Alcalde",
+        "ability": "Si solo quedan 3 jugadores vivos y no hay ejecución, tu bando gana. Si mueres por la noche, en vez de eso puede morir otro jugador.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "mezepheles",
+        "name": "Mezepheles",
+        "ability": "Empiezas conociendo 1 palabra secreta. El primer jugador bueno en decirla se convierte en malo esta noche.",
+        "firstNightReminder": "Muestra al Mezepheles su palabra secreta.",
+        "otherNightReminder": "Despierta al 1º jugador bueno que haya dicho la palabra secreta del Mezepheles y muéstrale la tarjeta \"Eres\" y el signo de malo con el pulgar hacia abajo.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Se vuelve malo",
+            "Sin habilidad"
+        ]
+    },
+    {
+        "id": "minstrel",
+        "name": "Trovador",
+        "ability": "Cuando un Esbirro muera por ejecución, todos los jugadores (salvo viajeros) están borrachos hasta el crepúsculo de mañana.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": [
+            "Todos borrachos"
+        ]
+    },
+    {
+        "id": "monk",
+        "name": "Monje",
+        "ability": "Cada noche* elige 1 jugador (no a ti): está a salvo del Demonio esta noche.",
+        "firstNightReminder": "",
+        "otherNightReminder": "El jugador protegido previamente ya no está protegido. El Monje señala a un jugador (no a sí mismo). Marca a ese jugador como \"Protegido\".",
+        "remindersGlobal": [],
+        "reminders": [
+            "Protegido"
+        ]
+    },
+    {
+        "id": "moonchild",
+        "name": "Hija de la Luna",
+        "ability": "Cuando descubras que has muerto, elige públicamente 1 jugador vivo. Esta noche, si era un jugador bueno, muere.",
+        "firstNightReminder": "",
+        "otherNightReminder": "Si la Cíngara usó su habilidad para elegir a un jugador: si el jugador es bueno, muere",
+        "remindersGlobal": [],
+        "reminders": [
+            "Muerto"
+        ]
+    },
+    {
+        "id": "mutant",
+        "name": "Mutante",
+        "ability": "Si estás loco sobre que eres un Forastero, puedes ser ejecutado.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "nightwatchman",
+        "name": "Vigilante nocturno",
+        "ability": "Una vez por partida, por la noche, elige 1 jugador: descubre quián eres.",
+        "firstNightReminder": "El Vigilante nocturno puede señalar a un jugador. Despierta a ese jugador, muéstrale la tarjeta \"Este personaje te ha seleccionado\" y la ficha del Vigilante nocturno. Después, señala al jugador Vigilante nocturno.",
+        "otherNightReminder": "El Vigilante nocturno puede señalar a un jugador. Despierta a ese jugador, muéstrale la tarjeta \"Este personaje te ha seleccionado\" y la ficha del Vigilante nocturno. Después, señala al jugador Vigilante nocturno.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Sin habilidad"
+        ]
+    },
+    {
+        "id": "noble",
+        "name": "Noble",
+        "ability": "Empiezas conociendo 3 jugadores, 1 y solo 1 de ellos es malo.",
+        "firstNightReminder": "Señala a 3 jugadores incluyendo a uno malo, sin un orden específico.",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": [
+            "Visto"
+        ]
+    },
+    {
+        "id": "nodashii",
+        "name": "No Dashii",
+        "ability": "Cada noche* elige 1 jugador: muere. Tus 2 vecinos Aldeanos están envenenados.",
+        "firstNightReminder": "",
+        "otherNightReminder": "El No Dashii señala a un jugador. Ese jugador muere.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Envenenado",
+            "Muerto"
+        ]
+    },
+    {
+        "id": "ojo",
+        "name": "Ojo",
+        "ability": "Cada noche* elige 1 personaje: muere. Si no está en juego, el Narrador decide quián muere.",
+        "firstNightReminder": "",
+        "otherNightReminder": "El Ojo señala un personaje del guión; si está en juego, ese jugador muere. Si no está en juego, el Narrador elige quién muere en su lugar.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Dead"
+        ]
+    },
+    {
+        "id": "oracle",
+        "name": "Oráculo",
+        "ability": "Cada noche* sabes cuántos jugadores muertos son malos.",
+        "firstNightReminder": "",
+        "otherNightReminder": "Muestra con los dedos el número (0, 1, 2, etc.) de jugadores malos muertos.",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "organgrinder",
+        "name": "Organ Grinder",
+        "ability": "Todos los jugadores cierran los ojos al votar y su voto se cuenta en secreto. Los votos contra ti solo cuentan si tú votas.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": [
+            "Debe morir."
+        ]
+    },
+    {
+        "id": "pacifist",
+        "name": "Pacifista",
+        "ability": "Los jugadores buenos ejecutados pueden no morir.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "philosopher",
+        "name": "Filósofo",
+        "ability": "Una vez por partida, por la noche, elige 1 personaje bueno: ganas su habilidad. Si el personaje está en juego, está borracho.",
+        "firstNightReminder": "El Filósofo puede negar con la cabeza o señalar a un personaje bueno en la hoja. Si elige a un personaje: sustituye la ficha de personaje del Filósofo por la del personaje no presente en la partida. O, si el personaje está presente en la partida, pon el recordatorio de \"Borracho\" junto a ese jugador y el de \"Es el Filósofo\" junto al del Filósofo.",
+        "otherNightReminder": "Si el Filósofo no ha usado su habilidad: el Filósofo puede negar con la cabeza o señalar a un personaje bueno en la hoja. Si elige a un personaje: sustituye la ficha de personaje del Filósofo por la del personaje no presente en la partida. O, si el personaje está presente en la partida, pon el recordatorio de \"Borracho\" junto a ese jugador y el de \"Es el Filósofo\" junto al del Filósofo.",
+        "remindersGlobal": [
+            "Borracho",
+            "Es el Filósofo"
+        ],
+        "reminders": []
+    },
+    {
+        "id": "pithag",
+        "name": "Pit-Hag",
+        "ability": "Cada noche*, elige a un jugador y el personaje en el que se convierte (si no está ya presente en la partida). Si creas un Demonio, esta noche las muertes serán aleatorias.",
+        "firstNightReminder": "",
+        "otherNightReminder": "Pit-Hag señala a un jugador y un personaje de la hoja. Si el personaje no está presente en la partida, despierta a ese jugador y muéstrale la tarjeta \"Eres\" y la ficha de personaje pertinente. Si el personaje ya está en la partida, no ocurre nada.",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "pixie",
+        "name": "Pixie",
+        "ability": "Empiezas conociendo 1 Aldeano en juego. Si estás loco sobre que eres ese personaje, ganas su habilidad cuando muera.",
+        "firstNightReminder": "Muestra al Pixie la ficha de personaje de un Aldeano presente en la partida.",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": [
+            "Con habilidad",
+            "Loco"
+        ]
+    },
+    {
+        "id": "plaguedoctor",
+        "name": "Plague Doctor",
+        "ability": "Si mueres, el Narrador gana la habilidad de un Esbirro que no está en juego.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": [
+            "Habilidad del Storyteller"
+        ]
+    },
+    {
+        "id": "po",
+        "name": "Po",
+        "ability": "Cada noche* puedes elegir 1 jugador: muere. Si tu última elección fue no elegir a nadie, elige a 3 jugadores esta noche.",
+        "firstNightReminder": "",
+        "otherNightReminder": "Si el Po no eligió a nadie la noche anterior: el Po señala a 3 jugadores. De lo contrario: el Po niega con la cabeza o señala a un jugador. Los jugadores señalados mueren.",
+        "remindersGlobal": [],
+        "reminders": [
+            "3 ataques",
+            "Muerto"
+        ]
+    },
+    {
+        "id": "poisoner",
+        "name": "Envenedador",
+        "ability": "Cada noche, elige a un jugador: estará envenenado esta noche y el día de mañana.",
+        "firstNightReminder": "El envenedador señala a un jugador. Ese jugador estará envenenado.",
+        "otherNightReminder": "El jugador envenenado previamente ya no está envenenado. El envenedador señala a un jugador. Ese jugador estará envenenado.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Envenenado"
+        ]
+    },
+    {
+        "id": "politician",
+        "name": "Político",
+        "ability": "Si fuiste el jugador con mayor responsabilidad en la derrota de tu equipo, cambias de bando y ganas, incluso si estás muerto.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "poppygrower",
+        "name": "Cultivadora de amapólas",
+        "ability": "Los esbirros y Demonios no se conocen entre ellos. Si mueres, sabrás quién es cada uno de ellos esa noche.",
+        "firstNightReminder": "No informes al Demonio/esbirros de quiénes son cada uno.",
+        "otherNightReminder": "Si el Cultivadora de amapólas murió, muestra a los esbirros/Demonio quién es cada uno de ellos.",
+        "remindersGlobal": [],
+        "reminders": [
+            "El Mal se despierta"
+        ]
+    },
+    {
+        "id": "preacher",
+        "name": "Predicador",
+        "ability": "Cada noche elige 1 jugador: si es Esbirro lo sabe. Los Esbirros elegidos no tienen habilidad.",
+        "firstNightReminder": "El Predicador elige a un jugador. Si elige a un esbirro, despiértalo y muéstrale la tarjeta \"Este personaje te ha seleccionado\" y la ficha del Predicador.",
+        "otherNightReminder": "El Predicador elige a un jugador. Si elige a un esbirro, despiértalo y muéstrale la tarjeta \"Este personaje te ha seleccionado\" y la ficha del Predicador.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Escuchando el sermón"
+        ]
+    },
+    {
+        "id": "professor",
+        "name": "Profesor",
+        "ability": "Una vez por partida, por la noche*, elige 1 jugador muerto. Si es Aldeano, resucita.",
+        "firstNightReminder": "",
+        "otherNightReminder": "Si el Catedrático no ha usado su habilidad: el Catedrático puede negar con la cabeza o señalar a un jugador. Si ese jugador es un Aldeano, vuelve a estar vivo.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Sin habilidad",
+            "Vivo"
+        ]
+    },
+    {
+        "id": "psychopath",
+        "name": "Psicópata",
+        "ability": "Cada día, antes de las nominaciones, puedes elegir públicamente 1 jugador: muere. Si eres ejecutado, solo mueres si pierdes a piedra-papel-tijera.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "pukka",
+        "name": "Pukka",
+        "ability": "Cada noche elige 1 jugador: está envenenado. El anterior jugador envenenado muere y despuás está sano.",
+        "firstNightReminder": "El Pukka señala a un jugador. Ese jugador es envenenado.",
+        "otherNightReminder": "El Pukka señala a un jugador. Ese jugador es envenenado. El jugador envenenado previamente muere.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Envenenado",
+            "Muerto"
+        ]
+    },
+    {
+        "id": "puzzlemaster",
+        "name": "Rompecabezas",
+        "ability": "Un jugador está borracho, aunque estás muerto. Si adivinas quián es (una vez por partida), descubres quián es el Demonio, pero si fallas recibes información falsa.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": [
+            "Borracho",
+            "Intento agotado"
+        ]
+    },
+    {
+        "id": "ravenkeeper",
+        "name": "Criacuervos",
+        "ability": "Si mueres por la noche te despiertan para que elijas 1 jugador: descubres su personaje.",
+        "firstNightReminder": "",
+        "otherNightReminder": "Si el Criacuervos murió esta noche: el Criacuervos señala a un jugador. Muéstrale la ficha de personaje de ese jugador.",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "recluse",
+        "name": "Recluso",
+        "ability": "Puedes aparecer como malo y como Esbirro o Demonio, aunque estás muerto.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "revolutionary",
+        "name": "Revolucionario",
+        "ability": "2 jugadores vecinos son del mismo alineamiento. Una vez por partida, uno de ellos aparecerá del alineamiento opuesto.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": [
+            "Register Falsely?"
+        ]
+    },
+    {
+        "id": "riot",
+        "name": "Riot",
+        "ability": "Los nominados mueren, pero puedes nominar de nuevo inmediatamente (el 3º día, están obligados a nominar). Después del día 3, Ganan los Malos. [Todos los esbirros son Riot]",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "sage",
+        "name": "Sabio",
+        "ability": "Si el Demonio te mata descubres que es 1 de 2 jugadores.",
+        "firstNightReminder": "",
+        "otherNightReminder": "Si el Demonio mata al Sabio: señala a dos jugadores, uno de los cuales es el Demonio.",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "sailor",
+        "name": "Marinero",
+        "ability": "No puedes morir. Cada noche elige 1 jugador vivo: tú o ese jugador estáis borrachos hasta el crepúsculo.",
+        "firstNightReminder": "El Marinero señala a un jugador vivo. El Marinero o el jugador elegido estará borracho.",
+        "otherNightReminder": "El jugador que estaba borracho previamente ya no lo está. El Marinero señala a un jugador vivo. El Marinero o el jugador elegido estará borracho.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Borracho"
+        ]
+    },
+    {
+        "id": "saint",
+        "name": "Santa",
+        "ability": "Si mueres por ejecución, tu equipo pierde.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "savant",
+        "name": "Erudito",
+        "ability": "Cada día, puedes visitar al Narrador que te dirá 2 cosas: 1 verdadera y 1 falsa.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "scapegoat",
+        "name": "Chivo expiatorio",
+        "ability": "Si un jugador de tu alineamiento es ejecutado, en vez de eso puedes ser ejecutado tú.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "scarletwoman",
+        "name": "Mujer escarlata",
+        "ability": "Si hay 5 o más jugadores vivos y el Demonio muere, te conviertes en el Demonio. (No cuentan los viajeros)",
+        "firstNightReminder": "",
+        "otherNightReminder": "Si la Mujer escarlata se convirtió en el Demonio hoy: muéstrale la tarjeta \"Eres\" y la ficha del demonio.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Demonio"
+        ]
+    },
+    {
+        "id": "seamstress",
+        "name": "Costurera",
+        "ability": "Una vez por partida, por la noche, elige 2 jugadores (no a ti): descubres si son del mismo alineamiento.",
+        "firstNightReminder": "La Costurera puede indicar que no con la cabeza, o señalar a dos jugadores. Si la Costurera señala a jugadores, indica sí o no con la cabeza para confirmar si son del mismo bando.",
+        "otherNightReminder": "Si la Costurera no ha usado aún su habilidad: la Costurera puede indicar que no con la cabeza o señalar a dos jugadores. Si señala a jugadores, indica sí o no con la cabeza para confirmar si son del mismo bando.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Sin habilidad"
+        ]
+    },
+    {
+        "id": "sentinel",
+        "name": "Centinela",
+        "ability": "Puede haber 1 Forastero más o menos.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "shabaloth",
+        "name": "Shabaloth",
+        "ability": "Cada noche* elige 2 jugadores: mueren. Un jugador muerto elegido la noche anterior puede ser regurgitado.",
+        "firstNightReminder": "",
+        "otherNightReminder": "Uno de los jugadores elegidos la noche anterior por el Shabaloth puede resucitar. El Shabaloth señala a dos jugadores. Esos jugadores mueren.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Muerto",
+            "Vivo"
+        ]
+    },
+    {
+        "id": "shugenja",
+        "name": "Shugenja",
+        "ability": "Empiezas sabiendo si el jugador malo más cercano está a tu izquierda o tu derecha. Si es equidistante, la información es arbitraria.",
+        "firstNightReminder": "Despierta al Shugenja; Apunta en dirección al jugador malvado más cercano. Si los dos jugadores malvados más cercanos están equidistantes, apunta con el dedo en cualquier dirección.",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "slayer",
+        "name": "Cazador",
+        "ability": "Una vez por partida, durante el día, elige públicamente 1 jugador: si es el Demonio, muere.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": [
+            "Sin habilidad"
+        ]
+    },
+    {
+        "id": "snakecharmer",
+        "name": "Encantador de serpientes",
+        "ability": "Cada noche elige 1 jugador vivo: si es el Demonio intercambiáis personajes y alineamiento y despuás está envenenado.",
+        "firstNightReminder": "El Encantador de serpientes señala a un jugador. Si ese jugador es el Demonio: intercambia los personajes y bandos del Demonio y el Encantador de serpientes. Despierta a cada jugador para informarles de su nuevo personaje y bando. El nuevo Encantador de serpientes estará envenenado.",
+        "otherNightReminder": "El Encantador de serpientes señala a un jugador. Si ese jugador es el Demonio: intercambia los personajes y bandos del Demonio y el Encantador de serpientes. Despierta a cada jugador para informarles de su nuevo personaje y bando. El nuevo Encantador de serpientes estará envenenado.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Envenenado"
+        ]
+    },
+    {
+        "id": "snitch",
+        "name": "Chivato",
+        "ability": "Los Esbirros empiezan conociendo 3 personajes que no están en juego.",
+        "firstNightReminder": "Después de la información de los Esbirro, despierta a cada Esbirro y muéstrales tres fichas de personajes que no están en juego. Estos pueden ser iguales o diferentes entre sí e iguales o diferentes de los que les muestras al Demonio.",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "soldier",
+        "name": "Soldado",
+        "ability": "Estás a salvo del Demonio.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "spiritofivory",
+        "name": "Espíritu de marfil",
+        "ability": "No puede haber más de 1 jugador malo extra.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": [
+            "No extra evil"
+        ]
+    },
+    {
+        "id": "spy",
+        "name": "Espía",
+        "ability": "Cada noche ves el Grimorio. Puedes aparecer como bueno y como Aldeano o Forastero, aunque estás muerto.",
+        "firstNightReminder": "Muestra el Grimorio al Espía todo el tiempo que le sea necesario.",
+        "otherNightReminder": "Muestra el Grimorio al Espía todo el tiempo que le sea necesario.",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "steward",
+        "name": "Administrador",
+        "ability": "Empiezas conociendo 1 jugador bueno.",
+        "firstNightReminder": "Marca a un juegador bueno.",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": [
+            "Know"
+        ]
+    },
+    {
+        "id": "stormcatcher",
+        "name": "Cazatormentas",
+        "ability": "Nombra un personaje bueno. Si está en juego solo puede morir por ejecución, pero los malos saben quián es.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": [
+            "Safe"
+        ]
+    },
+    {
+        "id": "sweetheart",
+        "name": "Querida",
+        "ability": "Cuando mueres, 1 jugador pasará a estar borracho.",
+        "firstNightReminder": "",
+        "otherNightReminder": "Elige al jugador que estará borracho.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Borracho"
+        ]
+    },
+    {
+        "id": "tealady",
+        "name": "Dama del té",
+        "ability": "Si tus dos vecinos vivos son buenos, no pueden morir.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": [
+            "No puede morir"
+        ]
+    },
+    {
+        "id": "thief",
+        "name": "Ladrón",
+        "ability": "Cada noche elige 1 jugador (no a ti): su voto cuenta negativo mañana.",
+        "firstNightReminder": "El Ladrón señala a un jugador. Pon el recordatorio \"Voto negativo\" del Ladrón junto a la ficha de personaje del jugador elegido.",
+        "otherNightReminder": "El Ladrón señala a un jugador. Pon el recordatorio \"Voto negativo\" del Ladrón junto a la ficha de personaje del jugador elegido.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Voto negativo"
+        ]
+    },
+    {
+        "id": "tinker",
+        "name": "Chapucero",
+        "ability": "Puedes morir en cualquier momento.",
+        "firstNightReminder": "",
+        "otherNightReminder": "El Quincallero podría morir.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Muerto"
+        ]
+    },
+    {
+        "id": "towncrier",
+        "name": "Pregonero",
+        "ability": "Cada noche* descubres si un Esbirro ha nominado hoy.",
+        "firstNightReminder": "",
+        "otherNightReminder": "Indica sí o no con la cabeza para indicar si un esbirro nominó hoy. Pon el recordatorio \"esbirro no nominó\" (quita \"esbirro nominó\", si lo hay).",
+        "remindersGlobal": [],
+        "reminders": [
+            "esbirro no nominó",
+            "esbirro nominó"
+        ]
+    },
+    {
+        "id": "toymaker",
+        "name": "Juguetero",
+        "ability": "El Demonio puede decidir no atacar una noche y debe hacerlo al menos 1 vez por partida. Los malos reciben información inicial normal.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": [
+            "No Attack"
+        ]
+    },
+    {
+        "id": "undertaker",
+        "name": "Enterrador",
+        "ability": "Cada noche* descubres quá personaje ha muerto por ejecución hoy.",
+        "firstNightReminder": "",
+        "otherNightReminder": "Si hoy se ejecutó a algún jugador: muéstrale la ficha de personaje de ese jugador.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Ejecutado"
+        ]
+    },
+    {
+        "id": "vigormortis",
+        "name": "Vigormortis",
+        "ability": "Cada noche* elige 1 jugador: muere. Los Esbirros que mates mantienen su habilidad y 1 Aldeano vecino suyo está envenenado. [-1 Forastero]",
+        "firstNightReminder": "",
+        "otherNightReminder": "El Vigormortis señala a un jugador. Ese jugador muere. Si se trata de un esbirro, mantiene su habilidad y uno de sus vecinos Aldeanos será envenenado.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Con habilidad",
+            "Envenenado",
+            "Muerto"
+        ]
+    },
+    {
+        "id": "villageidiot",
+        "name": "Tonto del pueblo",
+        "ability": "Cada noche, elige un jugador: aprendes su alineación. [+0 a +2 idiotas del pueblo. 1 de los extras está borracho]",
+        "firstNightReminder": "Tonto del pueblo señala a un jugador; dale el visto bueno hacia arriba si ese jugador es bueno o hacia abajo si ese jugador es malo.",
+        "otherNightReminder": "Tonto del pueblo señala a un jugador; dale el visto bueno hacia arriba si ese jugador es bueno o hacia abajo si ese jugador es malo.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Muerto"
+        ]
+    },
+    {
+        "id": "virgin",
+        "name": "Virgen",
+        "ability": "La primera vez que te nominen, si quien nomina es Aldeano, es ejecutado inmediatamente.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": [
+            "Sin habilidad"
+        ]
+    },
+    {
+        "id": "vizier",
+        "name": "Vizier",
+        "ability": "Todos los jugadores saben quián eres. No puedes morir durante el día. Si algún bueno vota, puedes elegir ejecutar inmediatamente.",
+        "firstNightReminder": "Anuncia \"El Visir está en juego\" e indica qué jugador es.",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "vortox",
+        "name": "Vortox",
+        "ability": "Cada noche* elige 1 jugador: muere. Las habilidades de los Aldeanos dan información falsa. Cada día, si nadie es ejecutado, ganan los malos.",
+        "firstNightReminder": "",
+        "otherNightReminder": "El Vortox señala a un jugador. Ese jugador muere.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Muerto"
+        ]
+    },
+    {
+        "id": "voudon",
+        "name": "Necromante",
+        "ability": "Solo tú y los muertos podáis votar. No necesitan ficha de votación para hacerlo. No es necesaria una mayoría para ejecutar.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "washerwoman",
+        "name": "Lavandera",
+        "ability": "Empiezas conociendo que 1 de 2 jugadores es un Aldeano particular.",
+        "firstNightReminder": "Muestra la ficha de personaje de un Aldeano presente en la partida. Señala a dos jugadores, uno de los cuales es ese personaje.",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": [
+            "Aldeano",
+            "Incorrecto"
+        ]
+    },
+    {
+        "id": "widow",
+        "name": "Viuda",
+        "ability": "En tu primera noche ves el Grimorio y eliges 1 jugador: está envenenado. 1 jugador bueno sabe que la viuda (Widow) está en juego.",
+        "firstNightReminder": "Muestra el Grimorio a la viuda el tiempo que lo necesite. La Viuda señala a un jugador. Ese jugador es envenenado. Despierta a un jugador bueno. Muestra la tarjeta \"Estos personajes están en la partida\" y la ficha de personaje de la Viuda.",
+        "otherNightReminder": "",
+        "remindersGlobal": [
+            "Lo sabe"
+        ],
+        "reminders": [
+            "Envenenado"
+        ]
+    },
+    {
+        "id": "witch",
+        "name": "Bruja",
+        "ability": "Cada noche elige 1 jugador: si mañana nomina, muere. Si solo hay 3 jugadores vivos pierdes esta habilidad.",
+        "firstNightReminder": "La Bruja señala a un jugador. Si ese jugador nomina mañana, morirá inmediatamente.",
+        "otherNightReminder": "Si hay 4 o más jugadores con vida: la Bruja señala a un jugador. Si ese jugador nomina mañana, morirá inmediatamente.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Maldito"
+        ]
+    },
+    {
+        "id": "zombuul",
+        "name": "Zombuul",
+        "ability": "Cada noche*, si nadie ha muerto durante el día, elige 1 jugador: muere. La primera vez que mueras, vives pero apareces como malo.",
+        "firstNightReminder": "",
+        "otherNightReminder": "Si nadie murió durante el día: el Zombuul señala a un jugador. Ese jugador muere.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Muerto",
+            "Muerto hoy"
+        ]
+    }
+]
