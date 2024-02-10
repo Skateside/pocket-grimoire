@@ -294,6 +294,28 @@ function processJSON({
 
 }
 
+function setFieldsValidity(fields, isVisible) {
+
+    if (isVisible) {
+
+        const inputted = fields.find((field) => field.value);
+        fields.forEach((field) => {
+            field.required = !inputted || field === inputted;
+        });
+
+    } else {
+
+        fields.forEach((field) => {
+
+            field.setCustomValidity("");
+            field.required = false;
+
+        });
+
+    }
+
+}
+
 const form = lookupOne("#select-edition-form");
 const fileInput = lookupOne("#custom-script-upload");
 const fileInputRender = fileInput.nextElementSibling;
@@ -301,6 +323,7 @@ const urlInput = lookupOne("#custom-script-url");
 const pasteInput = lookupOne("#custom-script-paste");
 const uploader = lookupOne("#custom-script");
 const radios = lookup("[name=\"edition\"]", form);
+const customInputs = [fileInput, urlInput, pasteInput];
 
 radios.forEach((radio) => {
 
@@ -309,30 +332,18 @@ radios.forEach((radio) => {
         const isCustom = target.value === "custom";
 
         uploader.hidden = !isCustom;
-        fileInput.required = isCustom;
-        urlInput.required = isCustom;
-        pasteInput.required = isCustom;
+        setFieldsValidity(customInputs, isCustom);
 
     });
 
-    fileInput.addEventListener("input", () => {
+});
 
-        urlInput.required = !fileInput.value;
-        pasteInput.required = false;
+customInputs.forEach((input) => {
 
-    });
+    input.addEventListener("input", () => {
 
-    urlInput.addEventListener("input", () => {
-
-        fileInput.required = !urlInput.value;
-        pasteInput.required = false;
-
-    });
-
-    pasteInput.addEventListener("input", () => {
-
-        fileInput.required = !pasteInput.value;
-        urlInput.required = false;
+        input.setCustomValidity("");
+        setFieldsValidity(customInputs, true);
 
     });
 
