@@ -294,6 +294,15 @@ function processJSON({
 
 }
 
+/**
+ * Sets the validation on the given fields.
+ *
+ * @param {Array.<Element>} fields
+ *        Input fields that should have their validity set.
+ * @param {Boolean} isVisible
+ *        true if the fields are visible and their validity should be set, false
+ *        if they're not visible and their validity should be removed.
+ */
 function setFieldsValidity(fields, isVisible) {
 
     if (isVisible) {
