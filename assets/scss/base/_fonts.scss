@@ -1,4 +1,14 @@
 @font-face {
+    font-family: "Goudy Mediaeval";
+    src:
+        url("../../fonts/Goudy-Mediaeval-Regular.woff2") format("woff2"),
+        url("../../fonts/Goudy-Mediaeval-Regular.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
     font-family: "Vinque";
     src:
         url("../../fonts/Vinque.woff2") format("woff2"),
