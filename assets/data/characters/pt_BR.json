@@ -1411,8 +1411,8 @@
         "id": "snakecharmer",
         "name": "Encantador",
         "ability": "A cada noite, escolha um jogador vivo: se o ele for um Demônio, troca de personagem e alinhamento com você, e então fica envenenado.",
-        "firstNightReminder": "O Encantador de Serpentes escolhe um jogador vivo. Se escolheu o Demônio: Mostre o token 'Você é' e o torn de personagem do Demônio. Mostre o polegar para biaxo. Troque os tokens de personagem do Encantador de Serpentes com o do Demônio. Coloque o antigo Encantador de Serpentes para dormir. Acorde o Demônio antigo. Mostre o token 'Você é' e o token do Encantador de Serpentes e mostre o polegar para cima. (lembrete)",
-        "otherNightReminder": "O Encantador de Serpentes escolhe um jogador vivo. Se escolheu o Demônio: Mostre o token 'Você é' e o torn de personagem do Demônio. Mostre o polegar para biaxo. Troque os tokens de personagem do Encantador de Serpentes com o do Demônio. Coloque o antigo Encantador de Serpentes para dormir. Acorde o Demônio antigo. Mostre o token 'Você é' e o token do Encantador de Serpentes e mostre o polegar para cima. (lembrete)",
+        "firstNightReminder": "O Encantador de Serpentes escolhe um jogador vivo. Se escolheu o Demônio: Mostre o token 'Você é' e o torn de personagem do Demônio. Mostre o polegar para baixo. Troque os tokens de personagem do Encantador de Serpentes com o do Demônio. Coloque o antigo Encantador de Serpentes para dormir. Acorde o Demônio antigo. Mostre o token 'Você é' e o token do Encantador de Serpentes e mostre o polegar para cima. (lembrete)",
+        "otherNightReminder": "O Encantador de Serpentes escolhe um jogador vivo. Se escolheu o Demônio: Mostre o token 'Você é' e o torn de personagem do Demônio. Mostre o polegar para baixo. Troque os tokens de personagem do Encantador de Serpentes com o do Demônio. Coloque o antigo Encantador de Serpentes para dormir. Acorde o Demônio antigo. Mostre o token 'Você é' e o token do Encantador de Serpentes e mostre o polegar para cima. (lembrete)",
         "remindersGlobal": [],
         "reminders": [
             "Envenenado"
@@ -1564,20 +1564,20 @@
         "otherNightReminder": "O Vigormortis escolhe um jogador. O jogador morre. Se o alvo for Lacaio, mantêm sua habilidade e um de seus vizinhos Cidadãos é envenenado.",
         "remindersGlobal": [],
         "reminders": [
+            "Envenenado",
             "Morto",
-            "Tem Habilidade",
-            "Envenenado"
+            "Tem Habilidade"
         ]
     },
     {
         "id": "villageidiot",
-        "name": "Idiota da vila",
-        "ability": "Cada noite, escolha um jogador: você aprende seu alinhamento. [+0 a +2 Idiotas da Aldeia. 1 dos figurantes está bêbado]",
-        "firstNightReminder": "O Village Idiot aponta para um jogador; dê um sinal de positivo se esse jogador for bom ou um polegar para baixo se esse jogador for mau.",
-        "otherNightReminder": "O Village Idiot aponta para um jogador; dê um sinal de positivo se esse jogador for bom ou um polegar para baixo se esse jogador for mau.",
+        "name": "Idiota da Aldeia",
+        "ability": "A cada noite, escolha um jogador: saiba seu alinhamento. [+0 a +2 Idiotas da Aldeia. 1 dos extras está bêbado]",
+        "firstNightReminder": "O Idiota da Aldeia aponta para um jogador; mostre o polegar para cima se o jogador for do bem, ou para baixo se for do mal.",
+        "otherNightReminder": "O Idiota da Aldeia aponta para um jogador; mostre o polegar para cima se o jogador for do bem, ou para baixo se for do mal.",
         "remindersGlobal": [],
         "reminders": [
-            "Morto"
+            "Bêbado"
         ]
     },
     {
