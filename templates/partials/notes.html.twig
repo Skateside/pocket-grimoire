@@ -1,0 +1,10 @@
+{% embed 'includes/details.html.twig' with {
+    summary: 'notes.title'|trans,
+    id: 'storyteller-notes'
+} %}
+    {% block body %}
+    <label for="st-notes">{{ 'notes.label'|trans }}</label>
+    <textarea name="st-notes" id="st-notes" class="input input--tall"></textarea>
+    <p><button type="button" id="clear-st-notes" class="button button--warning" data-warning="{{ 'notes.clear_warning'|trans|e('html') }}">{{ 'notes.clear'|trans }}</button></p>
+    {% endblock %}
+{% endembed %}

@@ -83,7 +83,6 @@ setup:
         horizontal: Horizontal
         vertical: Vertical
 
-
     character_choice:
         title: Select Your Character
         description: Tap any of the numbered tokens to choose your character. Darker ones have already been chosen.
@@ -226,6 +225,12 @@ info_tokens:
     add_custom: Add info token
     edit_custom: Edit info token
     delete_custom: Delete info token
+
+notes:
+    title: Storyteller Notes
+    label: Notes
+    clear: Clear notes
+    clear_warning: Are you sure you want to clear the notes?
 
 acknowledgements:
     title: Acknowledgements
