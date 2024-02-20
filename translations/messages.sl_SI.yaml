@@ -241,3 +241,12 @@ acknowledgements:
         - To je neuradna virtualna bukla za igro Blood on the Clocktower. Ta projekt je brezplačen, njegovo izvorno kodo lahko najdeš na <a href="https://github.com/Skateside/pocket-grimoire" target="_blank" rel="noopener noreferrer">GitHub-u</a>. Žepna bukla ni povezana z Pandemonium Institute. Če uživaš v igri Blood on the Clocktower, <a href="https://bloodontheclocktower.com/buy" target="_blank" rel="noopener noreferrer">prosim premisli o tem, da si kupiš svojo buklo</a>- poleg tega da je bolj priročna kot ta digitalna izdaja, tudi podpira ustvarjalce igre.
         - Si opazil hrošča ali bi predlagal izboljšave? Poišči me v kanalu <a href="https://discord.com/channels/569683781800296501/708509594758152203" target="_blank" rel="noopener noreferrer">"toolmakers" na neuradnem Discord strežniku</a> (moje ime tam je "Scaterside") ali <a href="https://github.com/Skateside/pocket-grimoire/issues" target="_blank" rel="noopener noreferrer">opomni na težavo na Github-u</a>.
         - <small>Verzija <span id="version"></span></small>
+
+errors:
+    homebrew_json:
+        not_homebrew: Ni domači vnos "%id%"
+        unrecognised_team: Neprepoznana ekipa "%team%"
+        not_find_id: Ni bilo mogoče najti ID-ja "%id%"
+        not_recognise_character: Ni bilo mogoče prepoznati znaka "%id%"
+        invalid_entry: 'Neveljaven vnos za "%id%": %reasons%'
+        empty_teams: 'Prazne ekipe: %teams%'

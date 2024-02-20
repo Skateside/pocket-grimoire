@@ -241,3 +241,12 @@ acknowledgements:
         - Det här är en inofficiell virtuell spelbok för Blood on the Clocktower. Koden är öppen och finns på <a href="https://github.com/Skateside/pocket-grimoire" target="_blank" rel="noopener noreferrer">GitHub</a>. Projektet är inte knutet till The Pandemonium Institute. Om du gillar Blood on the Clocktower kan du <a href="https://bloodontheclocktower.com/buy" target="_blank" rel="noopener noreferrer">köpa din egen spelbok</a> för att stödja spelets skapare och få en mer flexibel spelbok än denna virtuella.
         - 'Är det något som inte funkar som det ska? Tagga mig (på engelska) i <a href="https://discord.com/channels/569683781800296501/708509594758152203" target="_blank" rel="noopener noreferrer">kanalen #toolmakers på den inofficiella Discordservern</a> (där heter jag Skateside) eller anmäl problemet i <a href="https://github.com/Skateside/pocket-grimoire/issues" target="_blank" rel="noopener noreferrer">GitHub</a>.'
         - <small>Version <span id="version"></span></small>
+
+errors:
+    homebrew_json:
+        not_homebrew: Inte homebrew-posten "%id%"
+        unrecognised_team: Okänt team "%team%"
+        not_find_id: Kunde inte hitta ID "%id%"
+        not_recognise_character: Kunde inte känna igen tecknet "%id%"
+        invalid_entry: 'Ogiltig post för "%id%": %reasons%'
+        empty_teams: 'Tomma lag: %teams%'

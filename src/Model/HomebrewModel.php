@@ -2,6 +2,7 @@
 
 namespace App\Model;
 
+use Symfony\Contracts\Translation\TranslatorInterface;
 use App\Repository\RoleRepository;
 use App\Repository\TeamRepository;
 
@@ -33,11 +34,13 @@ class HomebrewModel
 
     public function __construct(
         TeamRepository $teamRepo,
-        RoleRepository $roleRepo
+        RoleRepository $roleRepo,
+        TranslatorInterface $translator
     ) {
 
         $this->teamRepo = $teamRepo;
         $this->roleRepo = $roleRepo;
+        $this->translator = $translator;
 
     }
 
@@ -127,7 +130,10 @@ class HomebrewModel
 
         if (!$this->isHomebrewEntry($entry)) {
 
-            $reason[] = 'Not homebrew entry "' . $entry['id'] . '"';
+            $reason[] = $this->translator->trans(
+                'errors.homebrew_json.not_homebrew',
+                ['%id%' => $entry['id']]
+            );
             $isValid = false;
 
         }
@@ -137,7 +143,10 @@ class HomebrewModel
             && !$this->teamRepo->findOneBy(['identifier' => $entry['team']])
         ) {
 
-            $reason[] = 'Unrecognised team "' . $entry['team'] . '"';
+            $reason[] = $this->translator->trans(
+                'errors.homebrew_json.unrecognised_team',
+                ['%team%' => $entry['team']]
+            );
             $isValid = false;
 
         }
@@ -186,7 +195,10 @@ class HomebrewModel
 
             if (!is_array($entry)) {
 
-                $reasons[] = 'Could not find ID: ' . var_export($entry, 1);
+                $reasons[] = $this->translator->trans(
+                    'errors.homebrew_json.not_find_id',
+                    ['%id%' => var_export($entry, 1)]
+                );
                 $isValid = false;
                 break;
 
@@ -204,7 +216,10 @@ class HomebrewModel
 
                 if (is_null($character)) {
 
-                    $reasons[] = 'Could not recognise character "' . $entry['id'] . '"';
+                    $reasons[] = $this->translator->trans(
+                        'errors.homebrew_json.not_recognise_character',
+                        ['%id%' => $entry['id']]
+                    );
                     $isValid = false;
                     break;
 
@@ -227,7 +242,13 @@ class HomebrewModel
             $invalidReasons = [];
             if (!$this->validateEntry($entry, $invalidReasons)) {
 
-                $reasons[] = 'Invalid entry for  "' . $entry['id'] . '": ' . implode(', ', $invalidReasons);
+                $reasons[] = $this->translator->trans(
+                    'errors.homebrew_json.invalid_entry',
+                    [
+                        '%id%' => $entry['id'],
+                        '%reasons%' => implode(', ', $invalidReasons)
+                    ]
+                );
                 $isValid = false;
                 break;
 
@@ -244,7 +265,10 @@ class HomebrewModel
             $missingTeams = array_keys(array_filter($teams, function ($count) {
                 return $count < 1;
             }));
-            $reasons[] = 'Empty teams: ' . implode(', ', $missingTeams);
+            $reasons[] = $this->translator->trans(
+                'errors.homebrew_json.empty_teams',
+                ['%teams%' => implode(', ', $missingTeams)]
+            );
             $isValid = false;
 
         }

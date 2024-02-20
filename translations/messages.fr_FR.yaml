@@ -242,3 +242,12 @@ acknowledgements:
         - Il s'agit d'un grimoire virtuel non officiel pour Blood on the Clocktower. Ce projet est gratuit et le code source peut être trouvé sur <a href="https://github.com/Skateside/pocket-grimoire" target="_blank" rel="noopener noreferrer">GitHub</a>. Ce projet n'est pas affilié à The Pandemonium Institute. Si tu aimes jouer à Blood on the Clocktower, <a href="https://bloodontheclocktower.com/buy" target="_blank" rel="noopener noreferrer">considères l'achat ton propre grimoire</a> - en plus d'être plus flexible que cette version numérique, il soutient également les créateurs.
         - Tu as remarqué un bug ou as une suggestion d'amélioration ? Fais-le moi savoir sur le salon <a href="https://discord.com/channels/569683781800296501/708509594758152203" target="_blank" rel="noopener noreferrer">"toolmakers" sur le serveur discord non officiel</a> (mon nom y est "Skateside") ou <a href="https://github.com/Skateside/pocket-grimoire/issues" target="_blank" rel="noopener noreferrer">ouvre un ticket sur GitHub</a>.
         - <small>Version <span id="version"></span></small>
+
+errors:
+    homebrew_json:
+        not_homebrew: Pas d'entrée homebrew "%id%"
+        unrecognised_team: Équipe non reconnue "%team%"
+        not_find_id: Impossible de trouver l'ID "%id%"
+        not_recognise_character: Impossible de reconnaître le caractère "%id%"
+        invalid_entry: 'Entrée invalide pour "%id%" : %reasons%'
+        empty_teams: 'Équipes vides : %teams%'

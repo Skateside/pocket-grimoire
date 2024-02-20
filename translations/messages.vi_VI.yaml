@@ -241,3 +241,12 @@ acknowledgements:
         - Đây là sách ma thuật ảo không chính thức của Tháp đồng hồ nhuốm máu. Dự án này miễn phí và là nguồn mở có thể tìm thấy trên <a href="https://github.com/Skateside/pocket-grimoire" target="_blank" rel="noopener noreferrer">GitHub</a>. Dự án này không liên kết với The Pandemonium Institute. Nếu bạn thích chơi Tháp đồng hồ nhốm máu, <a href="https://bloodontheclocktower.com/buy" target="_blank" rel="noopener noreferrer">vui lòng tính đến mua bản thật của game</a> - ngoài việc nó linh hoạt hơn bản này, nó có thể hỗ trợ nhà phát triển.
         - Gặp trục trặc hoặc có ý kiến để cải tiến? Cho mình biết tại <a href="https://discord.com/channels/569683781800296501/708509594758152203" target="_blank" rel="noopener noreferrer">kênh toolmaker trong server không chính thức trên discord</a> (tên mình là "Skateside") hoặc <a href="https://github.com/Skateside/pocket-grimoire/issues" target="_blank" rel="noopener noreferrer">báo lỗi trên Github</a>.
         - <small>Phiên bản <span id="version"></span></small>
+
+errors:
+    homebrew_json:
+        not_homebrew: Không phải mục nhập homebrew "%id%"
+        unrecognised_team: Đội không được công nhận "%team%"
+        not_find_id: Không thể tìm thấy ID "%id%"
+        not_recognise_character: Không thể nhận dạng ký tự "%id%"
+        invalid_entry: 'Mục nhập không hợp lệ cho "%id%": %reasons%'
+        empty_teams: 'Các đội trống: %teams%'

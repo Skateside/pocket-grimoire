@@ -241,3 +241,12 @@ acknowledgements:
         - זהו גרימואר וירטואלי לא רשמי עבור דם על מגדל השעון. פרויקט זה הוא בחינם וניתן למצוא את קוד המקור ב-<a href="https://github.com/Skateside/pocket-grimoire" target="_blank" rel="noopener noreferrer">GitHub</a>. פרויקט זה אינו מזוהה עם מכון הפנדמוניום. אם אתה נהנה לשחק דם על מגדל השעון, <a href="https://bloodontheclocktower.com/buy" target="_blank" rel="noopener noreferrer">אנא שקול לקנות גרימואר משלך </a>- בנוסף להיותו גמיש יותר מהגרסה הדיגיטלית הזו, הוא גם תומך ביוצרים.
         - שמת לב לבאג או יש לך הצעת שיפור? הודע לי <a href="https://discord.com/channels/569683781800296501/708509594758152203" target="_blank" rel="noopener noreferrer">בערוץ הכלים בשרת הדיסקורד הלא רשמי (</a>השם שלי שם הוא "Skateside") או <a href="https://github.com/Skateside/pocket-grimoire/issues" target="_blank" rel="noopener noreferrer">העלה בעיה ב-GitHub</a>.
         - <small>גרסא <span id="version"></span></small>
+
+errors:
+    homebrew_json:
+        not_homebrew: לא ערך ביתי "%id%"
+        unrecognised_team: צוות לא מזוהה "%team%"
+        not_find_id: לא ניתן למצוא את המזהה "%id%"
+        not_recognise_character: לא ניתן לזהות את התו "%id%"
+        invalid_entry: 'ערך לא חוקי עבור "%id%": %reasons%'
+        empty_teams: 'צוותים ריקים: %teams%'

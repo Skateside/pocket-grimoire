@@ -241,3 +241,12 @@ acknowledgements:
         - Dette er en uoffisiell virtuell grimoire for Blodet på klokketårnet. Prosjektet er gratis og kildekoden finnes på <a href="https://github.com/Skateside/pocket-grimoire" target="_blank" rel="noopener noreferrer">GitHub</a>. Prosjektet er ikke tilknyttet the Pandemonium Institute. Om du har glede av å spille Blodet på klokketårnet, <a href="https://bloodontheclocktower.com/buy" target="_blank" rel="noopener noreferrer">vurder gjerne å kjøpe din egen grimoire</a> - i tillegg til å være mer fleksibel enn denne digitale utgaven, støtter det også utviklerne.
         - Lagt merke til en teknisk feil eller har du et forslag til forbedring? La meg få vite det i <a href="https://discord.com/channels/569683781800296501/708509594758152203" target="_blank" rel="noopener noreferrer">toolmakers-kanalen på den uoffisielle discord-serveren</a> (navnet mitt der er "Skateside") eller <a href="https://github.com/Skateside/pocket-grimoire/issues" target="_blank" rel="noopener noreferrer">ta eventuelle problemer opp på GitHub</a>.
         - <small>Versjon <span id="version"></span></small>
+
+errors:
+    homebrew_json:
+        not_homebrew: Ikke hjemmebrygget oppføring "%id%"
+        unrecognised_team: Ukjent team "%team%"
+        not_find_id: Fant ikke ID "%id%"
+        not_recognise_character: Kunne ikke gjenkjenne tegnet "%id%"
+        invalid_entry: 'Ugyldig oppføring for "%id%": %reasons%'
+        empty_teams: 'Tomme lag: %teams%'

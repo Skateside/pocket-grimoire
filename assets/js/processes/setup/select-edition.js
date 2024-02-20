@@ -254,7 +254,7 @@ function processJSON({
         setFormLoadingState(form, true);
 
         return post(URLS.homebrew, normalised)
-            .then(({ success, game, message }) => {
+            .then(({ success, game, message, reasons }) => {
 
                 setFormLoadingState(form, false);
 
@@ -271,7 +271,13 @@ function processJSON({
                     Dialog.create(lookupOneCached("#edition-list")).hide();
 
                 } else {
+
+                    if (reasons && reasons.length) {
+                        message += "\n\n" + reasons.join("\n");
+                    }
+
                     showInputError(input, message);
+
                 }
 
         });

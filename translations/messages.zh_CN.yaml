@@ -241,3 +241,12 @@ acknowledgements:
         - 这是一个染·钟楼谜团（Blood on the Clocktower）的非官方虚拟魔典。此项目是免费项目，其源代码可以在<a href="https://github.com/Skateside/pocket-grimoire" target="_blank" rel="noopener noreferrer">GitHub</a>上获取。此项目与The Pandemonium Institute无关。如果您喜欢Blood on the Clocktower，<a href="https://www.gstonegames.com/game/info-13275.html" target="_blank" rel="noopener noreferrer">请考虑购买一部您自己的魔典</a>——它不仅比这个数字魔典更灵活，更能支持这个游戏的创作者。
         - 发现错误或是有改进建议？请在<a href="https://discord.com/channels/569683781800296501/708509594758152203" target="_blank" rel="noopener noreferrer">非官方Discord服务器的“toolmakers”频道</a>上告诉我（我的用户名是Skateside）或是<a href="https://github.com/Skateside/pocket-grimoire/issues" target="_blank" rel="noopener noreferrer">在GitHub上提出问题</a>。
         - <small>版本 <span id="version"></span></small>
+
+errors:
+    homebrew_json:
+        not_homebrew: 不是自制条目“%id%”
+        unrecognised_team: 无法识别的团队“%team%”
+        not_find_id: 找不到 ID“%id%”
+        not_recognise_character: 无法识别字符“%id%”
+        invalid_entry: “%id%”输入无效：%reasons%
+        empty_teams: 空队：%teams%
