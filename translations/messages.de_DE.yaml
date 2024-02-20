@@ -1,0 +1,252 @@
+title: Pocket Grimoire
+
+forms:
+    file:
+        placeholder: Wähle eine Datei
+        button: Browse
+
+dialog:
+    close: Schließen
+
+index:
+    title: Spiel
+    description: Ein virtuelles Grimoire für Blood on the Clocktower
+
+sheet:
+    title: Charakterbogen
+    description: Der Charakterbogen für diese Edition von Blood on the Clocktower
+    jinx: Fluch
+    each_night: '* Jede Nacht außer der ersten Nacht.'
+    get_qr_code: Erhalte den QR code für diesen Charakterbogen
+    get_sheet: Erhalte diesen Charakterbogen
+    credit: <a href="https://bloodontheclocktower.com/" target="_blank" rel="noopener noreferrer">Blood on the Clocktower</a> ist eine Marke von Steven Medway und <a href="https://www.thepandemoniuminstitute.com/" target="_blank" rel="noopener noreferrer">The Pandemonium Institute</a>
+    breakdown: Die Nummern jeder Mannschaft für die Anzahl der Spieler.
+    count_plus: "%count%+"
+
+groups:
+    players: Spieler
+    townsfolk: Dorfbewohner
+    outsider: Außenseiter
+    minion: Untergebene
+    demon: Dämonen
+    traveller: Reisende
+    fabled: Sagenhaften
+
+messages:
+    good_team: Gutes Team
+    evil_team: Böses Team
+    empty_character_ability: Dies ist ein leerer Charakter
+    version_change_message: Diese App hat ihre Version aktualisiert. Weil deine Daten vielleicht nicht korrekt sind, empfehlen wir alles zu löschen im "Cache leeren" Fenster. Drücke "OK" um das Fenster zu öffner oder "Abbrechen" um diese Nachricht zu schließen.
+    invalid_script: Das Skripformat wurde nicht erkannt.
+    no_characters: Das Skript enthält keine erkannten Charaktere.
+    player_name: Was ist der Name dieses Spielers?
+    custom_info_token: 'Was möchtest du das dein neues Infoplättchen sagt? Benutze **doppel Sternchen** um Text zu betonen.'
+
+setup:
+
+    title: Aufbau
+
+    buttons:
+        select_edition: Wähle eine Edition
+        select_characters: Wähle Charaktere
+        qr_code_button: Charakterbogen
+        clear_cache_button: Cache leeren
+        language: Sprache
+        set_language: Sprache einstellen
+
+    editions:
+        title: Wähle eine Edition
+        trouble_brewing: Trouble Brewing
+        bad_moon_rising: Bad Moon Rising
+        sects_and_violets: Sects and Violets
+        custom_script: Selbsterstelltes Skript
+        custom_note: Lade entweder ein selbsterstelltes Skript hoch oder die URL eines selbsterstellten Skriptes.
+        custom_warning: Lade nur selbserstellte JSON dateien von Quellen denen du vertraust.
+        upload: Lade ein selbsterstelltes Skript hoch.
+        url: Gebe eine URL ein.
+        paste: Aus der Zwischenablage einfügen
+        unsupported: Bitte beachte das Pocket Grimoire momentan weder eigene Charaktere noch lokalisierte Skripte unterstützt.
+        select: Auswählen
+
+    character_select:
+        title: Wähle Charaktere
+        number_players: Anzahl der Spieler
+        toggle_abilities: Zeige die Fähigkeiten der Charaktere
+        toggle_duplicates: Erlaube Charakter Duplikate
+        highlight_random: Zufällige markieren
+        draw_characters: Ziehe Charaktere
+        add_all: Alle hinzufügen
+        layout: Layout
+        ellipse: Ellipse
+        diagonal: Diagonale
+        horizontal: Horizontal
+        vertical: Vertikal
+
+    character_choice:
+        title: Wähle deinen Charakter
+        description: Drücke irgendeins der nummerierten Plättchen um deinen Charakter zu wählen. Dunklere wurden schon gewählt.
+
+    character_decision:
+        title: Merke dir deinen Charakter
+        name: Gib dir einen Namen(optional)
+        return: Kehre zur Charakterauswahl zurück
+
+    qr_code:
+        title: Charakterbogen
+        intro: Scannen Sie diesen QR-Code, um den Charakterbogen anzuzeigen
+        include: Beinhalte:
+        travellers: Reisende
+        fabled: Sagenhaften
+
+    clear_cache:
+        title: Cache leeren
+        clear_all: Alles löschen
+        clear_description: Turning this off will allow individual parts of the cache to be cleared.
+        lookup_label: Daten löschen
+        lookup_note: Die Angaben für die Flüche, Teamzusammenstellung und Charakterinformationen.
+        characters_label: Edition vergessen
+        characters_note: Diese Edition oder dieses Skript wurde ausgewählt und geladen.
+        tokens_label: Plättchen zurücksetzen
+        tokens_note: The position of the tokens in the grimoire.
+        inputs_label: Eingaben zurücksetzen
+        inputs_note: Benutzereinstellungen auf dieser Webseite
+        details_label: Offen/Geschlossen zurücksetzen
+        details_note: Welche Bereiche sind offen oder geschlossen
+        info_tokens_label: Lösche Selbsterstellte Infoplättchen.
+        info_tokens_note: Selbsterstellte Infoplättchen die hinzugefügt wurden.
+        names_label: Namen löschen
+        names_note: Vorschläge für Spielernamen
+        height_label: Zurücksetzten der höhe der Unterlage.
+        height_note: Die Höhe der Unterlage im Grimoire.
+        clear_refresh_label: Danach Neu laden
+        clear_refresh_note: Das Neuladen sorgt für das Laden von neuen Daten für alles das gelöscht wurde.
+        warning: '<strong>Warnung:</strong> jegliche Plättchen die im Grimoire platziert wurden werden vergessen.'
+        info_token_warning: '<strong>Warnung:</strong> jegliche selbsterstellte Infoplättchen werden vergessen werden.'
+        clear_cache: Cache leeren
+
+grimoire:
+
+    title: Grimoire
+
+    grimoire:
+        bluffs: Bluffs des Dämonen
+        show_bluffs: Alle Bluffs anzeigen
+        add_bluffs: Bluffs hinzufügen
+        add_token: Plättchen hinzufügen
+        add_reminder: Erinnerung hinzufügen
+        add_traveller: Reisenden hinzufügen
+        add_fabled: Sagenhaften hinzufügen
+        show_tokens: Zeige Plättchen
+        reset_height: Höhe der Unterlage zurücksetzen
+        clear_grimoire: Grimoire leeren
+        clear_grimoire_warning: Bist du dir sicher das du alle Plättchen entfernen möchtest?
+        show_night_order: Zeige die nächtliche Reihenfolge
+        character_size: Charakterplättchengröße
+        reminder_size: Erinnerungsplättchengröße
+        token_settings: Plättcheneinstellungen
+
+    character_list:
+        title: Wähle Charaktere
+
+    reminder_list:
+        title: Wähle Erinnerung
+        show: Zeige alle Erinnerugen
+        multiple: Mehrere hinzufügen
+        add_all: Alle hinzufügen
+
+    character_show:
+        title: Plättchen
+        show: Zeige
+        shroud: Leichentuch
+        rotate: Rotiere
+        replace: Ersetzen
+        reminder: Erinnerung
+        remove: Plättchen entfernen
+        recent_reminders: Zuletzte hinzugefügte Erinnerungen
+        player_name: Spielernamen festlegen
+
+    reminder_show:
+        title: Erinnerugen
+        remove: Entferne
+
+    bluff_show:
+        title: Plättchen
+        empty: Leer
+        show: Zeige
+        change: Ändern
+
+    bluff_list:
+        title: Wähl einen Bluff
+        show_existing: Zeige existierende Charaktere
+        show_travellers: Zeige Reisende
+        show_evil: Zeige böse Charaktere
+
+    token_list:
+        title: Charaktere
+        add: Plättchen hinzufügen
+
+    traveller_list:
+        title: Reisende
+        show_all: Zeige alle Reisenden
+
+    fabled_list:
+        title: Sagenhaften
+
+    token:
+        title: Plättchen
+
+jinxes:
+    title: Flüche
+    target: Ziel
+    trick: Trick
+    reason: Grund
+    show: Zeige Flüche die sich nicht im Spiel befinden
+
+night_order:
+    title: Nächtliche Reihenfolge
+    first_night: Erste Nacht
+    other_night: Andere Nächte
+    swipe_change: Wische seitlich um Nächte zu wechseln
+    show: Zeige Charaktere die nicht im Spiel sind
+
+info_tokens:
+    title: Info Plättchen
+    info_tokens:
+        isdemon: Dies ist der <strong>Dämon</strong>
+        isminion: Diese sind deine <strong>Untergebenen</strong>
+        notinplay: Diese Charaktere sind <strong>nicht im Spiel</strong>
+        nominatetoday: Hast du heute <strong>nominiert</strong>?
+        playeris: <strong>Dieser Spieler</strong> ist
+        votetoday: Hast du heute <strong>abgestimmt</strong>?
+        youare: <strong>Du</strong> bist
+        selectedyou: Dieser Charakter hat dich <strong>ausgewählt</strong>
+    custom: Benutzerdefiniertes Info Plättchen
+    add_custom: Füge Info Plättchen hinzu
+    edit_custom: Bearbeite Info Plättchen
+    delete_custom: Lösche Info Plättchen
+
+notes:
+    title: Notizen des Geschichtenerzählers
+    label: Anmerkungen
+    clear: Klare Notizen
+    clear_warning: Möchten Sie die Notizen wirklich löschen?
+
+acknowledgements:
+    title: Anerkennungen
+    acknowledgements:
+        - <a href="https://bloodontheclocktower.com/" target="_blank" rel="noopener noreferrer">Blood on the Clocktower</a> ist eine Marke von Steven Medway und <a href="https://www.thepandemoniuminstitute.com/" target="_blank" rel="noopener noreferrer">The Pandemonium Institute</a>.
+        - Nächtliche Erinnerungen und anderer Hilfstext geschriben von <a href="http://bignose.whitetree.org/projects/botc/diy/" target="_blank" rel="noopener noreferrer">Ben Finney</a>.
+        - Symbole stammen von <a href="https://fontawesome.com/v5.15/icons" target="_blank" rel="noopener noreferrer">Font Awesome</a>.
+        - Viele Bilder und Angabens stammen von <a href="https://www.clocktower.online" target="_blank" rel="noopener noreferrer">Clocktower.online</a> und der <a href="https://bloodontheclocktower.com/" target="_blank" rel="noopener noreferrer">Blood on the Clocktower website</a>.
+        - Dies ist ein inoffizielles virtuelles Grimoire für Blood on the Clocktower. Dieses Projekt ist kostenlos und der Quellcode kann auf <a href="https://github.com/Skateside/pocket-grimoire" target="_blank" rel="noopener noreferrer">GitHub</a> gefunden werden. Dieses Projekt ist nicht mit dem Pandemonium Institute verbunden. Wenn du gerne Blood on the Clocktower spielst, <a href="https://bloodontheclocktower.com/buy" target="_blank" rel="noopener noreferrer">erwäge bitte den Kauf deines eigenen Grimmoire</a> – es ist nicht nur flexibler als diese digitale Version, sondern unterstützt auch die Entwickler.
+        - Hast due eine Fehler bemerkt oder Verbesserungsvorschläge? Lass es mich im <a href="https://discord.com/channels/569683781800296501/708509594758152203" target="_blank" rel="noopener noreferrer">Toolmakers-Kanal auf dem inoffiziellen Discord Server wissen</a> (mein Name ist "Skateside") oder <a href="https://github.com/Skateside/pocket-grimoire/issues" target="_blank" rel="noopener noreferrer">melde ein Problem auf GitHub</a>.
+        - <small>Version <span id="version"></span></small>
+
+errors:
+    homebrew_json:
+        not_homebrew: Kein Homebrew-Eintrag „%id%“
+        unrecognised_team: Unbekanntes Team „%team%“
+        not_find_id: ID „%id%“ konnte nicht gefunden werden
+        not_recognise_character: Das Zeichen „%id%“ konnte nicht erkannt werden.
+        invalid_entry: 'Ungültiger Eintrag für „%id%“: %reasons%'
+        empty_teams: 'Leere Teams: %teams%'

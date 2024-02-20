@@ -2,7 +2,8 @@ import Dialog from "./classes/Dialog.js";
 import {
     lookup,
     lookupOne,
-    lookupCached
+    lookupCached,
+    lookupOneCached
 } from "./utils/elements.js";
 import QRCode from "./lib/qrcode-svg.js";
 
@@ -49,7 +50,7 @@ function closeDetails() {
 }
 
 const printQuery = window.matchMedia("print");
-printQuery.addListener(({ matches }) => {
+printQuery.addEventListener("change", ({ matches }) => {
 
     if (matches) {
         openAllDetails();
@@ -69,5 +70,8 @@ window.addEventListener("afterprint", closeDetails);
 // Change Language.
 lookupOne("#locale-form").addEventListener("submit", (e) => {
     e.preventDefault();
-    window.location.href = lookupOne("#select-locale").value;
+    window.location.href = lookupOneCached("#select-locale").value;
+});
+lookupOneCached("#select-locale").addEventListener("change", ({ target }) => {
+    target.form.requestSubmit();
 });

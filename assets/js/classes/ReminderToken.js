@@ -84,21 +84,17 @@ export default class ReminderToken extends Token {
             characterName
         } = this.data;
 
-        return this.constructor.templates.token.draw([
-            [
-                ".js--reminder--name",
-                characterName
-            ],
-            [
-                ".js--reminder--text",
-                text
-            ],
-            [
-                ".js--reminder--image",
-                image,
-                Template.setSrc
-            ]
-        ]);
+        return this.constructor.templates.token.draw({
+            ".js--reminder--name"(element) {
+                element.textContent = characterName;
+            },
+            ".js--reminder--text"(element) {
+                element.textContent = text;
+            },
+            ".js--reminder--image"(element) {
+                element.src = image;
+            }
+        });
 
     }
 
@@ -115,25 +111,20 @@ export default class ReminderToken extends Token {
             isGlobal
         } = this.data;
 
-        return this.constructor.templates.list.draw([
-            [
-                ".js--reminder-list--item,.js--reminder-list--button",
-                id,
-                (element, content) => element.dataset.reminderId = content
-            ],
-            [
-                ".js--reminder-list--item",
-                isGlobal,
-                (element, content) => {
-                    element.classList.toggle("is-global", content);
-                }
-            ],
-            [
-                ".js--reminder-list--button",
-                this.drawToken(),
-                Template.append
-            ]
-        ]);
+        return this.constructor.templates.list.draw({
+            ".js--reminder-list--item,.js--reminder-list--button"(element) {
+                element.dataset.reminderId = id;
+            },
+            ".js--reminder-list--item"(element) {
+                element.classList.toggle("is-global", isGlobal);
+            },
+            ".js--reminder-list--button": (element) => {
+                element.append(this.drawToken());
+            },
+            ".js--reminder-list--checkbox"(element) {
+                element.value = id;
+            }
+        });
 
     }
 

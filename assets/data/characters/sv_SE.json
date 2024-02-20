@@ -1,0 +1,1670 @@
+[
+    {
+        "id": "acrobat",
+        "name": "Akrobaten",
+        "ability": "Om någon av dina goda levande grannar är full eller förgiftad dör du på natten*.",
+        "firstNightReminder": "",
+        "otherNightReminder": "Om en god levande granne är full eller förgiftad dör Akrobaten.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Död"
+        ]
+    },
+    {
+        "id": "alchemist",
+        "name": "Alkemisten",
+        "ability": "Du har samma förmåga som en Hantlangare som inte är i spel.",
+        "firstNightReminder": "Visa Alkemisten en Hantlangare som inte är i spel.",
+        "otherNightReminder": "",
+        "remindersGlobal": [
+            "Är Alkemisten"
+        ],
+        "reminders": []
+    },
+    {
+        "id": "alhadikhia",
+        "name": "al-Hadikhia",
+        "ability": "Välj 3 spelare varje natt* (alla spelare vet vilka du valt); de väljer tyst att leva eller dö. Om alla lever dör alla tre.",
+        "firstNightReminder": "",
+        "otherNightReminder": "al-Hadikhia väljer 3 spelare. Tillkännage och väck den första spelaren; hen nickar för att leva eller skakar på huvudet för att dö; markera hen som död eller återupplivad; spelaren somnar. Upprepa för de två andra spelarna. Om alla 3 lever efter detta dör alla 3.",
+        "remindersGlobal": [],
+        "reminders": [
+            "1",
+            "2",
+            "3",
+            "Valt att dö",
+            "Valt att leva"
+        ]
+    },
+    {
+        "id": "amnesiac",
+        "name": "Virrpannan",
+        "ability": "Du vet inte vad din förmåga är. Varje dag kan du gissa privat för Berättaren; du får veta hur nära du är.",
+        "firstNightReminder": "Bestäm Virrpannans förmåga. Om förmågan får Virrpannan att vakna inatt så väck hen och använd förmågan.",
+        "otherNightReminder": "Om Virrpannans förmåga får hen att vakna inatt så väck hen och använd förmågan.",
+        "remindersGlobal": [],
+        "reminders": [
+            "?"
+        ]
+    },
+    {
+        "id": "angel",
+        "name": "Ängeln",
+        "ability": "Något dåligt kanske händer den som är främsta skälet till att en ny spelare dör.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": [
+            "Skydda",
+            "Något dåligt"
+        ]
+    },
+    {
+        "id": "apprentice",
+        "name": "Lärlingen",
+        "ability": "Din första natt får du en Bybos förmåga (om du är god) eller en Hantlangares (om du är ond).",
+        "firstNightReminder": "Visa Lärlingen kortet ”Du är” och en Bybos eller Hantlangares rollbricka. Byt ut Lärlingsbrickan mot den nya rollbrickan i Spelboken och sätt påminnelsen ”Är Lärlingen” bredvid.",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": [
+            "Är Lärlingen"
+        ]
+    },
+    {
+        "id": "artist",
+        "name": "Konstnären",
+        "ability": "En gång per spel, på dagen, kan du privat ställa en ja/nej-fråga till Berättaren.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": [
+            "Ingen förmåga"
+        ]
+    },
+    {
+        "id": "assassin",
+        "name": "Lönnmördaren",
+        "ability": "En gång per spel, på natten*, kan du välja en spelare; hen dör, även om hen av någon anledning skulle överleva.",
+        "firstNightReminder": "",
+        "otherNightReminder": "Om Lönnmördaren inte har använt sin förmåga skakar hen på huvudet eller pekar på en spelare. Den utpekade spelaren dör.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Död",
+            "Ingen förmåga"
+        ]
+    },
+    {
+        "id": "atheist",
+        "name": "Ateisten",
+        "ability": "Berättaren kan bryta mot spelets regler och måste avrättas för att de goda ska vinna, även om du är död. [Inga onda roller]",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "balloonist",
+        "name": "Ballongfararen",
+        "ability": "Varje natt får du veta 1 spelare per rolltyp tills du gått igenom alla typer. [+1 Utböling]",
+        "firstNightReminder": "Välj en rolltyp. Peka på en spelare vars roll är den typen. Sätt motsvarande ”Visad”-påminnelse bredvid den rollens bricka.",
+        "otherNightReminder": "Välj en rolltyp som Ballongfararen inte sett än. Peka på en spelare vars roll är den typen. Sätt motsvarande ”Visad”-påminnelse bredvid den rollens bricka.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Visad Bybo",
+            "Visad Utböling",
+            "Visad Hantlangare",
+            "Visad Demon",
+            "Visad Resenär"
+        ]
+    },
+    {
+        "id": "barber",
+        "name": "Barberaren",
+        "ability": "Om du dör kan Demonen samma natt välja 2 spelare (inte en annan Demon) som byter roll.",
+        "firstNightReminder": "",
+        "otherNightReminder": "Om Barberaren dog idag: Väck Demonen. Visa kortet ”Den här rollen valde dig” och sedan Barberarens bricka. Demonen skakar på huvudet för nej eller pekar på 2 spelare. Om Demonen väljer två spelare så byt plats på deras rollbrickor. Väck varje spelare och visa ”Du är” följt av den nya rollbrickan.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Klipper inatt"
+        ]
+    },
+    {
+        "id": "barista",
+        "name": "Baristan",
+        "ability": "Varje natt och nästa dag blir en spelare kry och får sann info, eller kan använda sin förmåga två gånger. Hen får veta vilket.",
+        "firstNightReminder": "Välj en spelare, väck hen och ange vilken Baristakraft hen fått. Agera därefter (kry och sann info eller aktivera förmågan två gånger).",
+        "otherNightReminder": "Välj en spelare, väck hen och ange vilken Baristakraft hen fått. Agera därefter (kry och sann info eller aktivera förmågan två gånger).",
+        "remindersGlobal": [],
+        "reminders": [
+            "Kry",
+            "Dubbel förmåga"
+        ]
+    },
+    {
+        "id": "baron",
+        "name": "Baronen",
+        "ability": "Det är extra Utbölingar i spel. [+2 Utbölingar]",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "beggar",
+        "name": "Tiggaren",
+        "ability": "Du kan bara rösta med en röstbricka. Om en död spelare ger dig sin bricka får du veta hens lag. Du är frisk och nykter.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "bishop",
+        "name": "Biskopen",
+        "ability": "Bara Berättaren kan nominera. Minst 1 spelare som inte är på Biskopens lag måste nomineras varje dag.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": [
+            "Nominera god",
+            "Nominera ond"
+        ]
+    },
+    {
+        "id": "bonecollector",
+        "name": "Bensamlaren",
+        "ability": "En gång per spel, på natten, kan du välja en död spelare; hen återfår sin förmåga fram till skymningen.",
+        "firstNightReminder": "",
+        "otherNightReminder": "Bensamlaren skakar på huvudet för nej eller pekar på en död spelare. Om hen pekar på en död spelare, sätt Bensamlarens påminnelse ”Har förmåga” vid den valda spelarens rollbricka. (Spelaren ska eventuellt väckas inatt för att kunna använda den.)",
+        "remindersGlobal": [],
+        "reminders": [
+            "Ingen förmåga",
+            "Har förmåga"
+        ]
+    },
+    {
+        "id": "boomdandy",
+        "name": "Sprängaren",
+        "ability": "Om du avrättas dör alla utom 3 spelare; 1 minut senare dör den spelare som flest pekar på.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "bootlegger",
+        "name": "Hembrännaren",
+        "ability": "Det här skriptet har hemgjorda roller eller regler.",
+        "firstNightReminder": "Berätta att Hembrännaren är i spel och tala om vilka hemgjorda roller och regler du använder.",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "bountyhunter",
+        "name": "Prisjägaren",
+        "ability": "Du vet om 1 ond spelare från början. Om den spelaren dör får du veta en annan ond spelare samma natt. [1 Bybo är ond]",
+        "firstNightReminder": "Peka på 1 ond spelare. Väck den onda Bybon och visa kortet ”Du är” följt av tummen ner för ond.",
+        "otherNightReminder": "Om den avslöjade onda spelaren har dött, peka på en annan ond spelare.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Avslöjad"
+        ]
+    },
+    {
+        "id": "buddhist",
+        "name": "Buddisten",
+        "ability": "De 2 första minuterna varje dag får veteranspelare inte prata.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "bureaucrat",
+        "name": "Byråkraten",
+        "ability": "De 2 första minuterna varje dag får veteranspelare inte prata.",
+        "firstNightReminder": "Byråkraten pekar på en spelare. Sätt Byråkratens påminnelse ”3 röster” vid den valda spelarens rollbricka.",
+        "otherNightReminder": "Byråkraten pekar på en spelare. Sätt Byråkratens påminnelse ”3 röster” vid den valda spelarens rollbricka.",
+        "remindersGlobal": [],
+        "reminders": [
+            "3 röster"
+        ]
+    },
+    {
+        "id": "butcher",
+        "name": "Slaktaren",
+        "ability": "Efter den första avrättningen varje dag kan du nominera igen.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "butler",
+        "name": "Butlern",
+        "ability": "Välj en spelare varje natt (inte dig själv); nästa dag får du bara rösta om hen också röstar.",
+        "firstNightReminder": "Butlern pekar på en spelare. Markera den spelaren som ”Husbonde”.",
+        "otherNightReminder": "Butlern pekar på en spelare. Markera den spelaren som ”Husbonde”.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Husbonde"
+        ]
+    },
+    {
+        "id": "cannibal",
+        "name": "Kannibalen",
+        "ability": "Du tar över förmågan från den som sist avrättades och dog. Om hen är ond blir du förgiftad tills en god spelare avrättas och dör.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": [
+            "Förgiftad",
+            "Dog idag"
+        ]
+    },
+    {
+        "id": "cerenovus",
+        "name": "Cerenovus",
+        "ability": "Välj en spelare och en god roll varje natt; hen låtsas att hen är den rollen nästa dag, annars kanske hen avrättas.",
+        "firstNightReminder": "Cerenovus pekar på en spelare och sedan på en roll på sitt ark. Väck den spelaren. Visa kortet ”Den här rollen valde dig” följt av Cerenovus bricka. Visa den valda rollens bricka. Om spelaren inte försöker övertyga de andra om att hen är den rollen imorgon kan hen avrättas.",
+        "otherNightReminder": "Cerenovus pekar på en spelare och sedan på en roll på sitt ark. Väck den spelaren. Visa kortet ”Den här rollen valde dig” följt av Cerenovus bricka. Visa den valda rollens bricka. Om spelaren inte försöker övertyga de andra om att hen är den rollen imorgon kan hen avrättas.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Låtsas"
+        ]
+    },
+    {
+        "id": "chambermaid",
+        "name": "Husan",
+        "ability": "Välj 2 levande spelare varje natt (inte dig själv); du får veta hur många som vaknade den natten p.g.a. sin förmåga.",
+        "firstNightReminder": "Husan pekar på två spelare. Signalera hur många av dem som vaknade inatt för sin förmåga (0, 1 eller 2).",
+        "otherNightReminder": "Husan pekar på två spelare. Signalera hur många av dem som vaknade inatt för sin förmåga (0, 1 eller 2).",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "chef",
+        "name": "Kocken",
+        "ability": "Du vet från början hur många par onda spelare som sitter bredvid varandra.",
+        "firstNightReminder": "Signalera hur många par onda spelare som sitter bredvid varandra (0, 1, 2 eller 3).",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "choirboy",
+        "name": "Korgossen",
+        "ability": "Om Demonen dödar Kungen får du veta vem som är Demonen. [+Kungen]",
+        "firstNightReminder": "",
+        "otherNightReminder": "Om Kungen dödades av Demonen, väck Korgossen och peka på den spelare som är Demonen.",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "clockmaker",
+        "name": "Urmakaren",
+        "ability": "Du vet från början hur många steg det är från Demonen till hens närmsta Hantlangare.",
+        "firstNightReminder": "Signalera med handen (1, 2, 3 osv.) hur många platser det är från Demonen till närmsta Hantlangare.",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "courtier",
+        "name": "Hovmästaren",
+        "ability": "En gång per spel, på natten, kan du välja en roll; den spelaren är full i 3 dygn.",
+        "firstNightReminder": "Hovmästaren skakar på huvudet för nej, eller pekar på en roll på sitt ark. Om Hovmästaren använder sin förmåga och den utpekade rollen är i spel blir den spelaren full.",
+        "otherNightReminder": "Minska antalet dagar som den markerade spelaren är förgiftad. Om Hovmästaren inte har använt sin förmåga: Hovmästaren skakar på huvudet för nej, eller pekar på en roll på sitt ark. Om Hovmästaren använder sin förmåga och den utpekade rollen är i spel blir den spelaren full.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Full 3",
+            "Full 2",
+            "Full 1",
+            "Ingen förmåga"
+        ]
+    },
+    {
+        "id": "cultleader",
+        "name": "Kultledaren",
+        "ability": "Varje natt hamnar du på en levande grannes lag. Om alla goda spelare går med i din kult vinner ditt lag.",
+        "firstNightReminder": "Om Kultledaren bytt lag, visa hen tummen upp för goda laget eller tummen ner för onda laget.",
+        "otherNightReminder": "Om Kultledaren bytt lag, visa hen tummen upp för goda laget eller tummen ner för onda laget.",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "damsel",
+        "name": "Ungmön",
+        "ability": "Alla Hantlangare vet att du är i spel. Om en Hantlangare öppet gissar dig (en chans) förlorar ditt lag.",
+        "firstNightReminder": "Väck alla Hantlangare; visa dem kortet ”Den här rollen valde dig” och Ungmöns rollbricka.",
+        "otherNightReminder": "Om Jägaren valde Ungmön så väck Ungmön, visa kortet ”Du är” och rollbrickan för en Bybo som inte är i spel.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Har gissat"
+        ]
+    },
+    {
+        "id": "deusexfiasco",
+        "name": "Deus ex fiasco",
+        "ability": "En gång per spel begår Berättaren ett ”misstag”, rättar till det och erkänner.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": [
+            "Hoppsan!"
+        ]
+    },
+    {
+        "id": "deviant",
+        "name": "Avvikaren",
+        "ability": "Om du var rolig på dagen kan du inte bli utstött samma dag.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "devilsadvocate",
+        "name": "Djävulens advokat",
+        "ability": "Välj en levande spelare varje natt (inte samma som sist); om hen avrättas nästa dag dör hen inte.",
+        "firstNightReminder": "Djävulens advokat pekar på en levande spelare. Den spelaren överlever avrättning imorgon.",
+        "otherNightReminder": "Djävulens advokat pekar på en levande spelare, men inte samma som igår natt. Den spelaren överlever avrättning imorgon.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Överlever avrättning"
+        ]
+    },
+    {
+        "id": "djinn",
+        "name": "Anden",
+        "ability": "Använd Andens specialregel. Alla spelare vet vilken det är.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "doomsayer",
+        "name": "Domedagsprofeten",
+        "ability": "Varje levande spelare kan en gång per spel öppet välja att en spelare på hens lag dör, så länge minst 4 spelare lever.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "dreamer",
+        "name": "Drömmaren",
+        "ability": "Välj en spelare varje natt (inte dig själv eller Resenärer); du får veta 1 god och 1 ond roll som hen kan vara.",
+        "firstNightReminder": "Drömmaren pekar på en spelare. Visa 1 god och 1 ond rollbricka; en av dem stämmer.",
+        "otherNightReminder": "Drömmaren pekar på en spelare. Visa 1 god och 1 ond rollbricka; en av dem stämmer.",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "drunk",
+        "name": "Fyllot",
+        "ability": "Du vet inte att du är Fyllot. Du tror att du är en Bybo, men det är du inte.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [
+            "Full"
+        ],
+        "reminders": []
+    },
+    {
+        "id": "duchess",
+        "name": "Hertiginnan",
+        "ability": "Varje dag kan 3 spelare besöka dig. På natten* får besökarna veta hur många besökare som var onda, men 1 får falsk info.",
+        "firstNightReminder": "",
+        "otherNightReminder": "Väck varje spelare märkt ”Besökare” eller ”Falsk info” en i taget. Visa dem Hertiginnans rollbricka. Visa spelarna märkta ”Besökare” och sedan lika många fingrar som antalet onda spelare märkta ”Besökare” (1, 2 eller 3). Visa spelaren märkt ”Falsk info” ett annat antal fingrar.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Besökare",
+            "Falsk info"
+        ]
+    },
+    {
+        "id": "empath",
+        "name": "Empaten",
+        "ability": "Varje natt får du veta hur många av dina 2 levande grannar som är onda.",
+        "firstNightReminder": "Signalera med fingrarna hur många av Empatens levande grannar som är onda (0, 1 eller 2).",
+        "otherNightReminder": "Signalera med fingrarna hur många av Empatens levande grannar som är onda (0, 1 eller 2).",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "engineer",
+        "name": "Ingenjören",
+        "ability": "En gång per spel, på natten, kan du välja vilka Hantlangare eller vilken Demon som är i spel.",
+        "firstNightReminder": "Ingenjören skakar på huvudet för nej, eller pekar på en Demon eller rätt antal Hantlangare på sitt rollark. Om Ingenjören väljer roller, ersätt Demonen eller Hantlangarna med de valda. Väck sedan de berörda spelarna och visa dem kortet ”Du är” följt av de valda rollernas brickor.",
+        "otherNightReminder": "Ingenjören skakar på huvudet för nej, eller pekar på en Demon eller rätt antal Hantlangare på sitt rollark. Om Ingenjören väljer roller, ersätt Demonen eller Hantlangarna med de valda. Väck sedan de berörda spelarna och visa dem kortet ”Du är” följt av de valda rollernas brickor.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Ingen förmåga"
+        ]
+    },
+    {
+        "id": "eviltwin",
+        "name": "Dubbelgångaren",
+        "ability": "Du och en motspelare känner till varandra. Om den goda spelaren avrättas vinner de onda. De goda kan inte vinna om båda lever.",
+        "firstNightReminder": "Väck Dubbelgångaren och den andra spelaren. Bekräfta att de har sett varandra. Peka på Dubbelgångaren och visa hens rollbricka för den andra spelaren. Peka på den andra spelaren och visa hens roll för Dubbelgångaren.",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": [
+            "Dubbelgångare"
+        ]
+    },
+    {
+        "id": "exorcist",
+        "name": "Exorcisten",
+        "ability": "Välj en spelare varje natt (inte samma som sist); om du väljer Demonen kan hen inte agera den natten, men får veta vem du är.",
+        "firstNightReminder": "",
+        "otherNightReminder": "Exorcisten pekar på en spelare, men inte samma som igår natt. Om den spelaren är Demonen så väck Demonen, visa Exorcistens rollbricka och peka på Exorcistens spelare. Demonen får inte agera inatt.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Vald"
+        ]
+    },
+    {
+        "id": "fanggu",
+        "name": "Fang Gu",
+        "ability": "Välj en spelare varje natt*; hen dör. Den första Utbölingen som dör så blir en ond Fang Gu och du dör istället. [+1 Utböling]",
+        "firstNightReminder": "",
+        "otherNightReminder": "Fang Gu pekar på en spelare, och den spelaren dör. Men om spelaren var Utböling och ingen annan spelare är Fang Gu så dör Fang Gu istället för den valda spelaren. Den valda spelaren blir ond och blir Fang Gu. Väck den nya Fang Gu och visa kortet ”Du är” följt av Fang Gus rollbricka. Visa igen kortet ”Du är” följt av tummen ner för ond.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Död",
+            "Förbrukad"
+        ]
+    },
+    {
+        "id": "farmer",
+        "name": "Bonden",
+        "ability": "Om du dör på natten blir en levande god spelare till Bonde.",
+        "firstNightReminder": "",
+        "otherNightReminder": "Om en Bonde dog inatt, välj en annan spelare och gör hen till Bonden. Väck den valda spelaren och visa kortet ”Du är” följt av Bondens rollbricka.",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "fearmonger",
+        "name": "Skräckspridaren",
+        "ability": "Välj en spelare varje natt; om du nominerar och avrättar hen förlorar hens lag. Alla får veta när du väljer en ny spelare.",
+        "firstNightReminder": "Skräckspridaren pekar på en spelare. Sätt ”Rädd”-brickan bredvid den spelaren och tillkännage att Skräckspridaren har valt en ny spelare.",
+        "otherNightReminder": "Skräckspridaren pekar på en spelare, men inte samma som igår. Sätt ”Rädd”-brickan bredvid den spelaren och tillkännage att Skräckspridaren har valt en ny spelare.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Rädd"
+        ]
+    },
+    {
+        "id": "fibbin",
+        "name": "Hittepåaren",
+        "ability": "En gång per spel kanske 1 god spelare får falsk info.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": [
+            "Förbrukad"
+        ]
+    },
+    {
+        "id": "fiddler",
+        "name": "Violinisten",
+        "ability": "En gång per spel väljer Demonen privat en motspelare; alla spelare väljer vem av de 2 spelarna som vinner.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "fisherman",
+        "name": "Fiskaren",
+        "ability": "En gång per spel, på dagen, kan du be Berättaren om tips för att vinna.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": [
+            "Ingen förmåga"
+        ]
+    },
+    {
+        "id": "flowergirl",
+        "name": "Floristen",
+        "ability": "Varje natt* får du veta om en Demon röstade den dagen.",
+        "firstNightReminder": "",
+        "otherNightReminder": "Sätt brickan ”Röstade” vid Floristens bricka om Demonen röstar på dagen, och annars ”Röstade inte” (ta bort motsatt bricka vid behov). Väck Floristen och nicka för ja om Demonen röstade, och skaka annars på huvudet.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Röstade",
+            "Röstade inte"
+        ]
+    },
+    {
+        "id": "fool",
+        "name": "Narren",
+        "ability": "Första gången du dör överlever du.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": [
+            "Ingen förmåga"
+        ]
+    },
+    {
+        "id": "fortuneteller",
+        "name": "Sierskan",
+        "ability": "Välj två spelare varje natt; du får veta om någon av dem är Demon. 1 god spelare registreras som Demon för dig.",
+        "firstNightReminder": "Sierskan pekar på två spelare. Nicka om någon av dem är Demonen, och skaka annars på huvudet.",
+        "otherNightReminder": "Sierskan pekar på två spelare. Nicka om någon av dem är Demonen, och skaka annars på huvudet.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Falsklarm"
+        ]
+    },
+    {
+        "id": "gambler",
+        "name": "Hasardspelaren",
+        "ability": "Välj en spelare varje natt* och gissa hens roll; om du gissar fel dör du.",
+        "firstNightReminder": "",
+        "otherNightReminder": "Hasardspelaren pekar på en spelare och en roll på sitt ark. Om den utpekade spelaren inte har den rollen så dör Hasardspelaren.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Död"
+        ]
+    },
+    {
+        "id": "gangster",
+        "name": "Gangstern",
+        "ability": "En gång per dag kan du döda en levande granne, om din andra levande granne går med på det.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "general",
+        "name": "Generalen",
+        "ability": "Varje natt får du veta vilket lag som Berättaren tror har övertaget: de goda, de onda eller varken eller.",
+        "firstNightReminder": "Visa Generalen tummen upp om de goda har övertaget, tummen ner om de onda har övertaget eller tummen sidan om lagen ligger lika.",
+        "otherNightReminder": "Visa Generalen tummen upp om de goda har övertaget, tummen ner om de onda har övertaget eller tummen sidan om lagen ligger lika.",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "goblin",
+        "name": "Vätten",
+        "ability": "Ditt lag vinner om du öppet säger att du är Vätten när du nomineras, och därefter avrättas.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": [
+            "Avslöjad"
+        ]
+    },
+    {
+        "id": "godfather",
+        "name": "Gudfadern",
+        "ability": "Du vet från början vilka Utbölingar som är i spel. Om en Utböling dör på dagen väljer du en spelare på natten; hen dör. [±1 Utböling]",
+        "firstNightReminder": "Visa alla rollbrickor för Utbölingar i spel.",
+        "otherNightReminder": "Om en Utböling dog idag pekar Gudfadern på en spelare; den spelaren dör.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Dog idag",
+            "Död"
+        ]
+    },
+    {
+        "id": "golem",
+        "name": "Golem",
+        "ability": "Du kan bara nominera en gång per spel. Den du nominerat dör om hen inte är Demonen.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": [
+            "Kan inte nominera"
+        ]
+    },
+    {
+        "id": "goon",
+        "name": "Hejduken",
+        "ability": "Varje natt blir den första spelaren som väljer dig med sin förmåga full fram till skymningen. Du går över till hens lag.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": [
+            "Full"
+        ]
+    },
+    {
+        "id": "gossip",
+        "name": "Skvallerbyttan",
+        "ability": "Varje dag kan du öppet påstå något. Om påståendet stämmer dör en spelare samma natt.",
+        "firstNightReminder": "",
+        "otherNightReminder": "Om Skvallerbyttans offentliga påstående stämde så välj en spelare som inte är skyddad från att dö. Den spelaren dör på natten.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Död"
+        ]
+    },
+    {
+        "id": "grandmother",
+        "name": "Farmorn",
+        "ability": "Du vet från början en god spelare och hens roll. Om hen dödas av Demonen dör du också.",
+        "firstNightReminder": "Visa den markerade rollens bricka och peka på den markerade spelaren.",
+        "otherNightReminder": "Om Farmorns barnbarn dödades av Demonen inatt så dör Farmorn också.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Barnbarn"
+        ]
+    },
+    {
+        "id": "gunslinger",
+        "name": "Revolvermannen",
+        "ability": "Varje dag, efter att dagens första omröstning är avslutad, kan du välja en spelare som röstade; hen dör.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "harlot",
+        "name": "Kurtisanen",
+        "ability": "Välj en levande spelare varje natt*; om hen går med på det får du veta hens roll, men ni båda kanske dör.",
+        "firstNightReminder": "",
+        "otherNightReminder": "Kurtisanen pekar på en spelare och somnar. Väck den valda spelaren, visa kortet ”Den här rollen valde dig” och sedan Kurtisanens bricka. Den valda spelaren kan nicka för ja eller skaka på huvudet för nej. Om hen nickar så väck Kurtisanen igen och visa den valda spelarens bricka. Bestäm sedan om båda ska dö eller inte.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Död"
+        ]
+    },
+    {
+        "id": "harpy",
+        "name": "Harpyan",
+        "ability": "Välj 2 spelare varje natt; nästa dag låtsas den första att den andra är ond, annars kanske båda dör.",
+        "firstNightReminder": "Väck Harpyan; hen pekar på två spelare, en i taget. Väck den första spelaren som Harpyan pekade på, visa kortet ”Den här rollen valde dig”, visa Harpyans rollbricka och peka på den andra spelaren som Harpyan pekade på.",
+        "otherNightReminder": "Väck Harpyan; hen pekar på två spelare, en i taget. Väck den första spelaren som Harpyan pekade på, visa kortet ”Den här rollen valde dig”, visa Harpyans rollbricka och peka på den andra spelaren som Harpyan pekade på.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Låtsas",
+            "Utpekad"
+        ]
+    },
+    {
+        "id": "hatter",
+        "name": "Hattmakaren",
+        "ability": "Om du dör får Hantlangarna och Demonen välja nya Hantlangar- och Demonroller att vara.",
+        "firstNightReminder": "",
+        "otherNightReminder": "Väck Hantlangarna och Demonen om Hattmakaren dog idag. Visa dem infobrickan ”Den här rollen valde dig” och Hattmakarens bricka. Varje spelare antingen skakar på huvudet för nej, eller pekar på en annan roll av samma typ som sin nuvarande roll. Om en andra spelare väljer samma roll som en annan spelare, skaka på huvudet och få hen att välja om. Låt alla somna. Ändra varje spelare till sin valda roll.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Tebjudning ikväll"
+        ]
+    },
+    {
+        "id": "hellslibrarian",
+        "name": "Hyssjaren",
+        "ability": "Något dåligt kanske händer den som pratar när Berättaren har bett om tystnad.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": [
+            "Något dåligt"
+        ]
+    },
+    {
+        "id": "heretic",
+        "name": "Kättaren",
+        "ability": "Vinnarlaget förlorar och förlorarlaget vinner, även om du är död.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "highpriestess",
+        "name": "Prästinnan",
+        "ability": "Varje natt får du veta vilken spelare Berättaren tycker att du främst borde prata med.",
+        "firstNightReminder": "Peka på en spelare.",
+        "otherNightReminder": "Peka på en spelare.",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "huntsman",
+        "name": "Jägaren",
+        "ability": "En gång per spel, på natten, kan du välja en levande spelare; om du väljer Ungmön blir hen en Bybo som inte är i spel. [+Ungmön]",
+        "firstNightReminder": "Jägaren skakar på huvudet för nej eller pekar på en spelare. Om Jägaren pekar på Ungmön så väck den spelaren, visa kortet ”Du är” och en rollbricka för en Bybo som inte är i spel.",
+        "otherNightReminder": "Jägaren skakar på huvudet för nej eller pekar på en spelare. Om Jägaren pekar på Ungmön så väck den spelaren, visa kortet ”Du är” och en rollbricka för en Bybo som inte är i spel.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Ingen förmåga"
+        ]
+    },
+    {
+        "id": "imp",
+        "name": "Djävulen",
+        "ability": "Välj en spelare varje natt*; hen dör. Om du dödar dig själv på det sättet blir en Hantlangare till Djävulen.",
+        "firstNightReminder": "",
+        "otherNightReminder": "Djävulen pekar på en spelare. Den spelaren dör. Om Djävulen väljer sig själv så ersätt en levande Hantlangares roll med en andra Djävulsbricka. Visa ”Du är”-kortet för Hantlangaren, följt av Djävulens rollbricka.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Död"
+        ]
+    },
+    {
+        "id": "innkeeper",
+        "name": "Gästgivaren",
+        "ability": "Välj 2 spelare varje natt*; de kan inte dö den natten, men 1 blir full till skymningen.",
+        "firstNightReminder": "",
+        "otherNightReminder": "De tidigare skyddade och fulla spelarna förlorar sina markörer. Gästgivaren pekar på två spelare; båda är skyddade och en är full.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Skyddad",
+            "Full"
+        ]
+    },
+    {
+        "id": "investigator",
+        "name": "Detektiven",
+        "ability": "Du vet från början att 1 av 2 spelare är en viss Hantlangare.",
+        "firstNightReminder": "Välj en Hantlangare som är i spel och visa dess rollbricka. Peka på två spelare varav en är den rollen.",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": [
+            "Hantlangare",
+            "Fel"
+        ]
+    },
+    {
+        "id": "judge",
+        "name": "Domaren",
+        "ability": "En gång per spel, när någon annan nominerat, kan du tvinga omröstningen att gå igenom eller inte.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": [
+            "Ingen förmåga"
+        ]
+    },
+    {
+        "id": "juggler",
+        "name": "Jonglören",
+        "ability": "Gissa öppet upp till 5 spelares roller på din första dag. Samma natt får du veta hur många rätt du hade.",
+        "firstNightReminder": "",
+        "otherNightReminder": "Om idag var Jonglörens första dag: Visa med fingrarna (0, 1, 2 osv.) hur många rätt Jonglören hade. Ta sedan bort markörerna.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Rätt"
+        ]
+    },
+    {
+        "id": "kazali",
+        "name": "Kazali",
+        "ability": "Välj en spelare varje natt*; hen dör. [Du väljer vilka spelare som är Hantlangare. ±? Utbölingar]",
+        "firstNightReminder": "Kazali pekar på en spelare och en Hantlangare på rollarket. Byt ut den spelarens rollbricka mot den valda Hantlangarbrickan, visa hen infobrickan ”Du är” följt av Hantlangarbrickan, och visa tummen ner för ond. Upprepa detta tills rätt antal spelare är Hantlangare. Låt Kazali somna.",
+        "otherNightReminder": "Kazali pekar på en spelare. Den spelaren dör.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Död"
+        ]
+    },
+    {
+        "id": "king",
+        "name": "Kungen",
+        "ability": "Varje natt som det är fler döda än levande spelare får du veta 1 levande roll. Demonen vet vem du är.",
+        "firstNightReminder": "Väck Demonen. Visa kortet ”Den här rollen valde dig”, visa Kungens rollbricka och peka på Kungens spelare.",
+        "otherNightReminder": "Om det finns fler döda än levande spelare så visa Kungen en levande spelares rollbricka.",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "klutz",
+        "name": "Klanten",
+        "ability": "När du får veta att du dött väljer du öppet 1 levande spelare; om hen är ond förlorar ditt lag.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "knight",
+        "name": "Riddaren",
+        "ability": "Du vet från början 2 spelare som inte är Demonen.",
+        "firstNightReminder": "Peka på 2 spelare som inte är Demon.",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": [
+            "Avslöjad",
+            "Avslöjad"
+        ]
+    },
+    {
+        "id": "legion",
+        "name": "Legionen",
+        "ability": "Varje natt* kan en spelare dö. Röstar bara onda avrättas ingen. Du registreras också som Hantlangare. [De flesta är Legionen]",
+        "firstNightReminder": "",
+        "otherNightReminder": "Välj en spelare; den spelaren dör.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Död",
+            "Nära döden"
+        ]
+    },
+    {
+        "id": "leviathan",
+        "name": "Leviatan",
+        "ability": "Om mer än 1 god spelare avrättas vinner de onda. Alla spelare vet att du är i spel. Efter dag 5 vinner de onda.",
+        "firstNightReminder": "Sätt Leviatans markör ”Dag 1” i Spelboken. Tillkännage ”Leviatan är i spel; det här är dag 1”.",
+        "otherNightReminder": "Ändra Leviatans dagmarkör till nästa dag.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Dag 1",
+            "Dag 2",
+            "Dag 3",
+            "Dag 4",
+            "Dag 5",
+            "God spelare avrättad"
+        ]
+    },
+    {
+        "id": "librarian",
+        "name": "Bibliotekarien",
+        "ability": "Du vet från början att 1 av 2 spelare är en viss Utböling (eller att inga är med).",
+        "firstNightReminder": "Visa rollbrickan för en Utböling som är i spel. Peka på två spelare varav en är den rollen.",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": [
+            "Utböling",
+            "Fel"
+        ]
+    },
+    {
+        "id": "lilmonsta",
+        "name": "Lillmonstret",
+        "ability": "Varje natt väljer Hantlangarna vem som vaktar Lillmonstret och räknas som Demon. En spelare dör varje natt*. [+1 Hantlangare]",
+        "firstNightReminder": "Väck alla Hantlangare tillsammans. De röstar om vem som ska vakta Lillmonstret genom att peka.",
+        "otherNightReminder": "Väck alla Hantlangare tillsammans. De röstar om vem som ska vakta Lillmonstret genom att peka. Välj en spelare; den spelaren dör.",
+        "remindersGlobal": [
+            "Är Demonen",
+            "Död"
+        ],
+        "reminders": []
+    },
+    {
+        "id": "lleech",
+        "name": "Igeln",
+        "ability": "Välj en spelare varje natt*; hen dör. I början väljer du en levnade spelare; hen förgiftas, och du dör endast om hen dör.",
+        "firstNightReminder": "Igeln pekar på en spelare. Sätt brickan ”Förgiftad” vid den valda spelarens rollbricka.",
+        "otherNightReminder": "Igeln pekar på en spelare. Den spelaren dör.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Död",
+            "Förgiftad"
+        ]
+    },
+    {
+        "id": "lunatic",
+        "name": "Galningen",
+        "ability": "Du tror att du är en Demon, men det är du inte. Demonen vet vem du är och vem du väljer på natten.",
+        "firstNightReminder": "Om det är 7 eller fler spelare: Visa Galningen godtyckliga spelare som ”Hantlangare”, lika många som antalet faktiska Hantlangare i spel. Visa 3 godtyckliga goda rollers brickor. Om Galningens bricka är en Demon som skulle vakna inatt, låt Galningen utföra Demonhandlingen. Sätt ut Galningens ”Attack”-markörer. Väck Demonen. Visa Demonens riktiga roll. Visa Demonen vilken spelare som är Galningen. Om Galningen valde spelare, visa den riktiga Demonen varje vald spelare. Ta bort Galningens ”Attack”-markörer.",
+        "otherNightReminder": "Låt Galningen utföra Demonens handling och sätt ut Galningens ”Attack”-markörer. Om Galningen valde spelare så väck Demonen, visa ”Attack”-markören och peka på varje markerad spelare. Ta bort Galningens ”Attack”-markörer.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Attack 1",
+            "Attack 2",
+            "Attack 3"
+        ]
+    },
+    {
+        "id": "lycanthrope",
+        "name": "Lykantropen",
+        "ability": "Välj en levande spelare varje natt*; om hen är god dör hen, och är den enda som kan dö den natten.",
+        "firstNightReminder": "",
+        "otherNightReminder": "Lykantropen pekar på en levande spelare. Om hen är god dör hen, och ingen annan kan dö inatt.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Död"
+        ]
+    },
+    {
+        "id": "magician",
+        "name": "Magikern",
+        "ability": "Demonen tror att du är en Hantlangare. Hantlangarna tror att du är en Demon.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "marionette",
+        "name": "Marionetten",
+        "ability": "Du tror att du är en god roll, men det är du inte. Demonen vet vem du är. [Granne med Demonen]",
+        "firstNightReminder": "Välj en av de goda spelarna bredvid Demonen och sätt påminnelsen ”Är Marionetten” bredvid. Väck Demonen och visa Marionetten.",
+        "otherNightReminder": "",
+        "remindersGlobal": [
+            "Är Marionetten"
+        ],
+        "reminders": []
+    },
+    {
+        "id": "mastermind",
+        "name": "Mästaren",
+        "ability": "Om Demonen avrättas och dör (så spelet skulle ta slut) pågår spelet 1 dag till. Om en spelare avrättas då förlorar hens lag.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "mathematician",
+        "name": "Matematikern",
+        "ability": "Varje natt får du veta hur många spelares förmågor som fungerat onormalt sedan gryningen p.g.a. andras förmågor.",
+        "firstNightReminder": "Signalera med fingrarna (0, 1, 2 osv.) hur många spelare vars förmåga inte fungerade normalt på grund av andras förmågor.",
+        "otherNightReminder": "Signalera med fingrarna (0, 1, 2 osv.) hur många spelare vars förmåga inte fungerade normalt på grund av andras förmågor.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Onormalt"
+        ]
+    },
+    {
+        "id": "matron",
+        "name": "Föreståndarinnan",
+        "ability": "Varje dag kan du välja upp till 3 par spelare som byter plats. Spelarna får inte lämna sina platser för privata samtal.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "mayor",
+        "name": "Borgmästaren",
+        "ability": "Om bara 3 spelare lever och ingen avrättas vinner ditt lag. Om du dör på natten kanske en annan spelare dör istället.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "mezepheles",
+        "name": "Mezefeles",
+        "ability": "Du vet ett hemligt ord från början. Den första goda spelaren som säger ordet blir ond samma natt.",
+        "firstNightReminder": "Visa Mezefeles det hemliga ordet.",
+        "otherNightReminder": "Väck den första goda spelaren som yttrade Mezefeles hemliga ord. Visa kortet ”Du är” följt av tummen ner för ond.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Blir ond",
+            "Ingen förmåga"
+        ]
+    },
+    {
+        "id": "minstrel",
+        "name": "Trubaduren",
+        "ability": "Om en Hantlangare avrättas och dör blir alla andra spelare (utom Resenärer) fulla fram till skymningen nästa dag.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": [
+            "Alla är fulla"
+        ]
+    },
+    {
+        "id": "monk",
+        "name": "Munken",
+        "ability": "Välj en spelare varje natt* (inte dig själv); hen är skyddad från Demonen den natten.",
+        "firstNightReminder": "",
+        "otherNightReminder": "Den spelare som skyddades sist är inte skyddad längre. Munken pekar på en annan spelare än sig själv. Markera den spelaren som skyddad.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Skyddad"
+        ]
+    },
+    {
+        "id": "moonchild",
+        "name": "Månflickan",
+        "ability": "Välj öppet 1 levande spelare när du får veta att du dött. Om du väljer en god spelare dör hen samma natt.",
+        "firstNightReminder": "",
+        "otherNightReminder": "Om Månflickan använde sin förmåga för att peka ut en god spelare idag så dör den utpekade.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Död"
+        ]
+    },
+    {
+        "id": "mutant",
+        "name": "Mutanten",
+        "ability": "Om du försöker avslöja att du är Utböling kanske du blir avrättad.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "nightwatchman",
+        "name": "Nattvakten",
+        "ability": "En gång per spel, på natten, kan du välja en spelare; hen får veta vem du är.",
+        "firstNightReminder": "Nattvakten får peka på en spelare. Väck den utpekade, visa kortet ”Den här rollen valde dig” och Nattvaktens rollbricka, och peka sedan på Nattvaktens spelare.",
+        "otherNightReminder": "Nattvakten får peka på en spelare. Väck den utpekade, visa kortet ”Den här rollen valde dig” och Nattvaktens rollbricka, och peka sedan på Nattvaktens spelare.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Ingen förmåga"
+        ]
+    },
+    {
+        "id": "noble",
+        "name": "Adelsmannen",
+        "ability": "Du vet 3 spelare från början, varav endast 1 är ond.",
+        "firstNightReminder": "Peka på 3 spelare varav 1 ond, utan inbördes ordning.",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": [
+            "Visad"
+        ]
+    },
+    {
+        "id": "nodashii",
+        "name": "No Dashii",
+        "ability": "Välj en spelare varje natt*; hen dör. De 2 Bybor som sitter närmast dig på var sida är förgiftade.",
+        "firstNightReminder": "",
+        "otherNightReminder": "No Dashii pekar på en spelare. Den spelaren dör.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Död",
+            "Förgiftad"
+        ]
+    },
+    {
+        "id": "ojo",
+        "name": "Ojo",
+        "ability": "Välj en roll varje natt*; hen dör. Om rollen inte är i spel väljer berättaren vem som dör.",
+        "firstNightReminder": "",
+        "otherNightReminder": "Ojo pekar på en roll på sitt rollark; om rollen är i spel så dör den spelaren. Om rollen inte är i spel så väljer berättaren vem som dör istället.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Död"
+        ]
+    },
+    {
+        "id": "oracle",
+        "name": "Oraklet",
+        "ability": "Varje natt* får du veta hur många döda spelare som är onda.",
+        "firstNightReminder": "",
+        "otherNightReminder": "Signalera med fingrarna (0, 1, 2 osv.) hur många döda spelare som är onda.",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "organgrinder",
+        "name": "Positivhalaren",
+        "ability": "Alla spelare blundar när de röstar, och resultatet är hemligt. Röster på dig räknas bara om du själv röstar.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": [
+            "Nära döden"
+        ]
+    },
+    {
+        "id": "pacifist",
+        "name": "Pacifisten",
+        "ability": "Avrättade goda spelare kanske inte dör.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "philosopher",
+        "name": "Filosofen",
+        "ability": "En gång per spel, på natten, kan du välja en god roll; du får dess förmåga. Om rollen redan är i spel blir den spelaren full.",
+        "firstNightReminder": "Filosofen skakar på huvudet för ”nej”, eller pekar på en god roll på sitt ark. Om Filosofen valde en roll så byt ut den valda rollbrickan mot Filosofens bricka. Om den valda rollen redan är i spel så sätt markören ”Full” vid den valda spelaren. Sätt markören ”Är Filosofen” vid den spelare som var Filosofen.",
+        "otherNightReminder": "Filosofen skakar på huvudet för ”nej”, eller pekar på en god roll på sitt ark. Om Filosofen valde en roll så byt ut den valda rollbrickan mot Filosofens bricka. Om den valda rollen redan är i spel så sätt markören ”Full” vid den valda spelaren. Sätt markören ”Är Filosofen” vid den spelare som var Filosofen.",
+        "remindersGlobal": [
+            "Full",
+            "Är Filosofen"
+        ],
+        "reminders": []
+    },
+    {
+        "id": "pithag",
+        "name": "Trollpackan",
+        "ability": "Välj varje natt* en spelare och en roll; om rollen inte är i spel blir spelaren den. Om en Demon skapas dör spelare godtyckligt.",
+        "firstNightReminder": "",
+        "otherNightReminder": "Trollpackan pekar på en spelare och en roll på arket. Om rollen inte är i spel, väck spelaren och visa kortet ”Du är” följt av den valda rollens bricka. Om den valda rollen är i spel händer ingenting.",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "pixie",
+        "name": "Älvan",
+        "ability": "Du vet från början 1 Bybo som är i spel. Om du låtsas att du är den rollen får du dess förmåga när den dör.",
+        "firstNightReminder": "Visa Älvan rollbrickan för en Bybo som är i spel.",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": [
+            "Låtsas",
+            "Har förmåga"
+        ]
+    },
+    {
+        "id": "plaguedoctor",
+        "name": "Pestläkaren",
+        "ability": "Om du dör får Berättaren samma förmåga som en Hantlangare som inte är i spel.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": [
+            "Berättarförmåga"
+        ]
+    },
+    {
+        "id": "po",
+        "name": "Po",
+        "ability": "Varje natt* kan du välja en spelare; hen dör. Om du inte valde någon sist väljer du 3 nästa natt.",
+        "firstNightReminder": "",
+        "otherNightReminder": "Om Po inte valde någon igår natt pekar Po på tre spelare. Annars skaka Po på huvudet för nej eller pekar på en spelare. Alla valda spelare dör.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Död",
+            "3 attacker"
+        ]
+    },
+    {
+        "id": "poisoner",
+        "name": "Giftblandaren",
+        "ability": "Välj en spelare varje natt; hen är förgiftad den natten och nästa dag.",
+        "firstNightReminder": "Giftblandaren pekar på en spelare. Den spelaren är förgiftad.",
+        "otherNightReminder": "Den spelare som förgiftades igår blir frisk. Giftblandaren pekar på en spelare. Den spelaren är förgiftad.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Förgiftad"
+        ]
+    },
+    {
+        "id": "politician",
+        "name": "Politikern",
+        "ability": "Om du är främsta skälet till att ditt lag förlorade byter du lag och vinner, även om du är död.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "poppygrower",
+        "name": "Vallmoodlaren",
+        "ability": "Hantlangare och Demonen känner inte till varandra. Om du dör får de veta om varandra samma natt.",
+        "firstNightReminder": "Demonen och Hantlangarna får inte veta om varandra.",
+        "otherNightReminder": "Om Vallmoodlaren dog, visa Hantlangarna och Demonen för varandra.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Onda vaknar"
+        ]
+    },
+    {
+        "id": "preacher",
+        "name": "Predikanten",
+        "ability": "Välj en spelare varje natt; om du väljer en Hantlangare får hen veta det. Valda Hantlangare har ingen förmåga.",
+        "firstNightReminder": "Predikanten väljer en spelare. Om Predikanten väljer en Hantlangare så väck Hantlangaren och visa kortet ”Den här rollen valde dig” följt av Predikantens rollbricka.",
+        "otherNightReminder": "Predikanten väljer en spelare. Om Predikanten väljer en Hantlangare, väck Hantlangaren och visa kortet ”Den här rollen valde dig” följt av Predikantens rollbricka.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Ingen förmåga"
+        ]
+    },
+    {
+        "id": "professor",
+        "name": "Professorn",
+        "ability": "En gång per spel, på natten, kan du välja en död spelare; om du väljer en Bybo börjar hen leva igen.",
+        "firstNightReminder": "",
+        "otherNightReminder": "Om Professorn inte har använt sin förmåga kan hen skaka på huvudet för nej eller peka på en spelare. Om den valda spelaren är Bybo så lever hen nu.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Lever",
+            "Ingen förmåga"
+        ]
+    },
+    {
+        "id": "psychopath",
+        "name": "Psykopaten",
+        "ability": "Varje dag innan någon nominerats kan du öppet välja en spelare; hen dör. Om du avrättas dör du bara om du förlorar sten-sax-påse.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "pukka",
+        "name": "Pukka",
+        "ability": "Välj en spelare varje natt; hen blir förgiftad. Förra förgiftade spelaren dör och blir frisk.",
+        "firstNightReminder": "Pukka pekar på en spelare. Den spelaren är förgiftad.",
+        "otherNightReminder": "Pukka pekar på en spelare. Den spelaren är förgiftad. Den tidigare förgiftade spelaren dör.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Förgiftad",
+            "Död"
+        ]
+    },
+    {
+        "id": "puzzlemaster",
+        "name": "Pusselläggaren",
+        "ability": "1 spelare är full, även om du dör. Om du gissar vem (en chans) får du veta vem Demonen är, annars får du falsk info.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": [
+            "Full",
+            "Förbrukad"
+        ]
+    },
+    {
+        "id": "ravenkeeper",
+        "name": "Korpskötaren",
+        "ability": "Om du dör på natten väcks du och väljer en spelare; du får veta hens roll.",
+        "firstNightReminder": "",
+        "otherNightReminder": "Om Korpskötaren dog inatt pekar hen på en spelare. Visa den spelarens rollbricka.",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "recluse",
+        "name": "Enslingen",
+        "ability": "Du kan registreras som ond och som Hantlangare eller Demon, även om du är död.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "revolutionary",
+        "name": "Revolutionären",
+        "ability": "Alla vet att 2 spelare som sitter bredvid varandra är i samma lag. En gång per spel registreras en av dem fel.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": [
+            "Registreras fel?"
+        ]
+    },
+    {
+        "id": "riot",
+        "name": "Upproret",
+        "ability": "Nominerade dör, men kan nominera direkt (och måste på dag 3). Efter dag 3 vinner de onda. [Alla Hantlangare är Upproret]",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "sage",
+        "name": "Gurun",
+        "ability": "Om Demonen dödar dig får du veta att hen är 1 av 2 spelare.",
+        "firstNightReminder": "",
+        "otherNightReminder": "Om Gurun dödades av en Demon så peka på två spelare, varav en är den Demonen.",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "sailor",
+        "name": "Matrosen",
+        "ability": "Välj en levande spelare varje natt; hen eller du blir full fram till skymningen. Du kan inte dö.",
+        "firstNightReminder": "Matrosen pekar på en levande spelare. Antingen Matrosen eller den valda spelaren är full.",
+        "otherNightReminder": "Den spelare som var full igår blir nykter. Matrosen pekar på en levande spelare. Antingen Matrosen eller den valda spelaren är full.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Full"
+        ]
+    },
+    {
+        "id": "saint",
+        "name": "Helgonet",
+        "ability": "Om du avrättas och dör förlorar ditt lag.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "savant",
+        "name": "Studenten",
+        "ability": "Varje dag kan du prata med Berättaren privat och få 2 påståenden: 1 sant och 1 falskt.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "scapegoat",
+        "name": "Syndabocken",
+        "ability": "Om en spelare på ditt lag avrättas kanske du avrättas istället.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "scarletwoman",
+        "name": "Röda damen",
+        "ability": "Om 5 eller fler spelare lever och Demonen dör blir du Demonen. (Resenärer räknas inte.)",
+        "firstNightReminder": "",
+        "otherNightReminder": "Om Demonen har dött så visa kortet ”Du är” följt av Demonens rollbricka.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Demon"
+        ]
+    },
+    {
+        "id": "seamstress",
+        "name": "Sömmerskan",
+        "ability": "En gång per spel, på natten, kan du välja 2 spelare (inte dig själv); du får veta om de är i samma lag.",
+        "firstNightReminder": "Sömmerskan skakar på huvudet för nej eller pekar på två andra spelare. Om Sömmerskan väljer två spelare på samma lag så nicka för ja; skaka annars på huvudet för nej.",
+        "otherNightReminder": "Om Sömmerskan inte har använt sin förmåga får hen skaka på huvudet för nej eller peka på två andra spelare. Om Sömmerskan väljer två spelare på samma lag så nicka för ja; skaka annars på huvudet för nej.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Ingen förmåga"
+        ]
+    },
+    {
+        "id": "sentinel",
+        "name": "Väktaren",
+        "ability": "Det kan vara 1 Utböling mer eller mindre i spel.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "shabaloth",
+        "name": "Shabaloth",
+        "ability": "Välj 2 spelare varje natt*; de dör. En död spelare du valde igår natt kan börja leva igen.",
+        "firstNightReminder": "",
+        "otherNightReminder": "En spelare som Shabaloth valde igår natt kan återupplivas. Shabaloth pekar på två spelare. De dör.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Död",
+            "Lever"
+        ]
+    },
+    {
+        "id": "shugenja",
+        "name": "Shugenja",
+        "ability": "Du vet från början om den närmsta onda spelaren är medurs eller moturs från dig. Om det är lika blir svaret godtyckligt.",
+        "firstNightReminder": "Väck Shugenja och peka horisontellt åt det håll där den närmaste onda spelaren sitter. Om de två närmaste onda spelarna är lika långt borta så peka åt valfritt av de två hållen.",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "slayer",
+        "name": "Banemannen",
+        "ability": "En gång per spel, på dagen, kan du öppet välja en spelare; om du väljer Demonen dör hen.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": [
+            "Ingen förmåga"
+        ]
+    },
+    {
+        "id": "snakecharmer",
+        "name": "Ormtjusaren",
+        "ability": "Välj en levande spelare varje natt; om du väljer Demonen byter ni roll och lag, och spelaren du valde blir förgiftad.",
+        "firstNightReminder": "Ormtjusaren pekar på en spelare. Om den spelaren är Demonen byter Ormtjusaren och Demonen roller och lag med varandra. Väck varje spelare för att meddela den nya rollen och lagtillhörigheten. Den nya Ormtjusaren är förgiftad.",
+        "otherNightReminder": "Ormtjusaren pekar på en spelare. Om den spelaren är Demonen byter Ormtjusaren och Demonen roller och lag med varandra. Väck varje spelare för att meddela den nya rollen och lagtillhörigheten. Den nya Ormtjusaren är förgiftad.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Förgiftad"
+        ]
+    },
+    {
+        "id": "snitch",
+        "name": "Tjallaren",
+        "ability": "Hantlangare vet från början 3 roller som inte är i spel.",
+        "firstNightReminder": "Efter att Hantlangarna fått sin första information, väck varje Hantlangare för sig och visa tre rollbrickor för roller som inte är i spel. Hantlangarna kan se samma brickor som varandra eller Demonen, eller olika.",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "soldier",
+        "name": "Soldaten",
+        "ability": "Du är skyddad från Demonen.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "spiritofivory",
+        "name": "Amulettbäraren",
+        "ability": "Det kan inte finnas mer än 1 extra ond spelare.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": [
+            "Inga extra onda"
+        ]
+    },
+    {
+        "id": "spy",
+        "name": "Spionen",
+        "ability": "Varje natt ser du Spelbokens innehåll. Du kan registreras som god och Bybo eller Utböling, även om du är död.",
+        "firstNightReminder": "Visa Spelboken för Spionen så länge hen behöver.",
+        "otherNightReminder": "Visa Spelboken för Spionen så länge hen behöver.",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "steward",
+        "name": "Uppassaren",
+        "ability": "Du vet från början 1 god spelare.",
+        "firstNightReminder": "Peka på 1 god spelare.",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": [
+            "Avslöjad"
+        ]
+    },
+    {
+        "id": "stormcatcher",
+        "name": "Stormjägaren",
+        "ability": "Säg en god roll. Om den är i spel kan den spelaren bara dö genom avrättning, men alla onda får veta vem spelaren är.",
+        "firstNightReminder": "Märk en god spelare som ”Skyddad”. Väck alla onda spelare och visa dem den märkta spelaren.",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": [
+            "Skyddad"
+        ]
+    },
+    {
+        "id": "sweetheart",
+        "name": "Kärestan",
+        "ability": "Om du dör blir 1 spelare full.",
+        "firstNightReminder": "",
+        "otherNightReminder": "Välj en spelare som är full.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Full"
+        ]
+    },
+    {
+        "id": "tealady",
+        "name": "Tekokerskan",
+        "ability": "Om båda dina levande grannar är goda kan de inte dö.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": [
+            "Kan inte dö"
+        ]
+    },
+    {
+        "id": "thief",
+        "name": "Tjuven",
+        "ability": "Välj en spelare varje natt (inte dig själv); hens röst räknas negativt nästa dag.",
+        "firstNightReminder": "Tjuven pekar på en spelare. Sätt Tjuvens påminnelse ”Negativ röst” vid den valda spelarens rollbricka.",
+        "otherNightReminder": "Tjuven pekar på en spelare. Sätt Tjuvens påminnelse ”Negativ röst” vid den valda spelarens rollbricka.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Negativ röst"
+        ]
+    },
+    {
+        "id": "tinker",
+        "name": "Mekaren",
+        "ability": "Du kan dö när som helst.",
+        "firstNightReminder": "",
+        "otherNightReminder": "Mekaren kan dö.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Död"
+        ]
+    },
+    {
+        "id": "towncrier",
+        "name": "Härolden",
+        "ability": "Varje natt* får du veta om en Hantlangare nominerade den dagen.",
+        "firstNightReminder": "",
+        "otherNightReminder": "Nicka om en Hantlangare nominerade idag; skaka annars på huvudet. Sätt in markören ”Har inte nominerat” och ta bort ”Nominerat” vid behov.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Har inte nominerat",
+            "Nominerat"
+        ]
+    },
+    {
+        "id": "toymaker",
+        "name": "Leksaksmakaren",
+        "ability": "Demonen kan välja att inte attackera, och måste välja detta minst en gång per spel. Onda spelare får vanlig startinfo.",
+        "firstNightReminder": "",
+        "otherNightReminder": "Om Demonens attack skulle avsluta spelet inatt och Demonen inte är märkt med brickan ”Ingen attack” så får Demonen inte vakna och agera inatt.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Ingen attack"
+        ]
+    },
+    {
+        "id": "undertaker",
+        "name": "Dödgrävaren",
+        "ability": "Varje natt* får du veta vilken roll som avrättades och dog på dagen.",
+        "firstNightReminder": "",
+        "otherNightReminder": "Om en spelare avrättades idag, visa den spelarens rollbricka.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Avrättad"
+        ]
+    },
+    {
+        "id": "vigormortis",
+        "name": "Vigormortis",
+        "ability": "Välj en spelare varje natt*; hen dör. Hantlangare du dödar behåller sin förmåga och förgiftar 1 angränsande Bybo. [−1 Utböling]",
+        "firstNightReminder": "",
+        "otherNightReminder": "Vigormortis pekar på en spelare. Den spelaren dör. Om spelaren är Hantlangare behåller hen sin förmåga, och en av hens grannar blir förgiftad om den grannen är Bybo.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Död",
+            "Har förmåga",
+            "Förgiftad"
+        ]
+    },
+    {
+        "id": "villageidiot",
+        "name": "Byfånen",
+        "ability": "Välj en spelare varje natt; du får veta hens lag. [+0 till +2 extra Byfånar. En av de extra är full.]",
+        "firstNightReminder": "Byfånen pekar på en spelare; ge tummen upp om den spelaren är god, och tummen ner om den spelaren är ond.",
+        "otherNightReminder": "Byfånen pekar på en spelare; ge tummen upp om den spelaren är god, och tummen ner om den spelaren är ond.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Full"
+        ]
+    },
+    {
+        "id": "virgin",
+        "name": "Jungfrun",
+        "ability": "Om den första som nominerar dig är Bybo avrättas hen omedelbart.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": [
+            "Ingen förmåga"
+        ]
+    },
+    {
+        "id": "vizier",
+        "name": "Vesiren",
+        "ability": "Alla spelare vet vem du är. Du kan inte dö på dagen. Om någon god röstat kan du välja att avrätta direkt.",
+        "firstNightReminder": "Tillkännage ”Vesiren är i spel” och säg vilken spelare som är Vesiren.",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "vortox",
+        "name": "Vortox",
+        "ability": "Välj en spelare varje natt*; hen dör. Bybors förmågor ger falsk info. Om ingen avrättas en dag vinner de onda.",
+        "firstNightReminder": "",
+        "otherNightReminder": "Vortox pekar på en spelare. Den spelaren dör.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Död"
+        ]
+    },
+    {
+        "id": "voudon",
+        "name": "Voudon",
+        "ability": "Bara du och de döda kan rösta. De behöver ingen röstbricka för att rösta. 50% majoritet behövs inte.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "washerwoman",
+        "name": "Tvätterskan",
+        "ability": "Du vet från början att 1 av 2 spelare är en viss Bybo.",
+        "firstNightReminder": "Visa rollbrickan för en Bybo som är i spel. Peka på två spelare varav en är den rollen.",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": [
+            "Bybo",
+            "Fel"
+        ]
+    },
+    {
+        "id": "widow",
+        "name": "Änkan",
+        "ability": "Din första natt ser du Spelboken och väljer en spelare; hen blir förgiftad. 1 god spelare vet att Änkan är i spel.",
+        "firstNightReminder": "Visa Spelboken för Änkan så länge hen behöver. Änkan pekar på en spelare; den spelaren är förgiftad. Väck en god spelare. Visa kortet ”De här rollerna är i spel” och visa Änkans rollbricka.",
+        "otherNightReminder": "",
+        "remindersGlobal": [
+            "Vet"
+        ],
+        "reminders": [
+            "Förgiftad"
+        ]
+    },
+    {
+        "id": "witch",
+        "name": "Häxan",
+        "ability": "Välj en spelare varje natt; om hen nominerar nästa dag dör hen. Om bara 3 spelare lever förlorar du denna förmåga.",
+        "firstNightReminder": "Häxan pekar på en spelare. Om den spelaren nominerar imorgon så dör hen direkt.",
+        "otherNightReminder": "Om 4 eller fler spelare lever så pekar Häxan på en spelare. Om den spelaren nominerar imorgon så dör hen direkt.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Förhäxad"
+        ]
+    },
+    {
+        "id": "zombuul",
+        "name": "Zombuul",
+        "ability": "Varje natt* efter en dag när ingen dog väljer du en spelare; hen dör. Första gången du dör blir du skendöd men lever fortfarande.",
+        "firstNightReminder": "",
+        "otherNightReminder": "Om ingen dog på dagen så pekar Zombuul på en spelare. Den spelaren dör.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Dog idag",
+            "Död"
+        ]
+    }
+]

@@ -1,0 +1,22 @@
+<button type="button" class="button button--full-height" id="add-traveller" data-dialog="#traveller-list" disabled>{{ 'grimoire.grimoire.add_traveller'|trans }}</button>
+
+{% embed 'includes/dialog.html.twig' with {
+    id: 'traveller-list',
+    background: 'blur',
+    title: 'grimoire.traveller_list.title'|trans
+} %}
+    {% import 'macros/forms.html.twig' as forms %}
+    {% block body %}
+        <ul id="traveller-list__list" class="filter-list button-list button-list--reminder"></ul>
+        {{ forms.switch({
+            node: 'p',
+            classes: 'mt-4',
+            label: 'grimoire.traveller_list.show_all'|trans,
+            name: 'show',
+            id: 'show-all-travellers',
+            attributes: {
+                'data-filter-list': '#traveller-list__list'
+            }
+        }) }}
+    {% endblock %}
+{% endembed %}

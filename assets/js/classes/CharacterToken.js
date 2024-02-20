@@ -1,11 +1,9 @@
 import Token from "./Token.js";
 import Template from "./Template.js";
-import Dialog from "./Dialog.js";
+import Jinx from "./Jinx.js";
+import ReminderToken from "./ReminderToken.js";
 import {
-    empty,
     identify,
-    appendMany,
-    lookupOneCached
 } from "../utils/elements.js";
 
 const emptyProperty = Symbol("empty");
@@ -47,28 +45,6 @@ export default class CharacterToken extends Token {
          * @type {Object}
          */
         this.templates = templates;
-
-    }
-
-    /**
-     * Shows a dialog that displays the character token and their ability, so
-     * that it can be shown to a player.
-     *
-     * @param  {CharacterToken} character
-     *         The character to show.
-     * @throws {Error}
-     *         The character has to exist.
-     */
-    static show(character) {
-
-        if (!character) {
-            throw new Error("No character given, cannot show");
-        }
-
-        lookupOneCached("#token-name").textContent = character.getName();
-        empty(lookupOneCached("#token-show")).append(character.drawToken());
-        lookupOneCached("#token-ability").textContent = character.getAbility();
-        Dialog.create(lookupOneCached("#token")).show();
 
     }
 
@@ -321,7 +297,7 @@ export default class CharacterToken extends Token {
     /**
      * Toggles the ready state of a jinx. Optionally the state can be defined.
      *
-     * @param {Character} character
+     * @param {CharacterToken} character
      *        Character that has a jinx with this character.
      * @param {Boolean} [state]
      *        Optional state to force. If ommitted, the state is toggled.
@@ -438,30 +414,23 @@ export default class CharacterToken extends Token {
             setup
         } = this.data;
 
-        return this.constructor.templates.token.draw([
-            [
-                ".js--character--leaves",
-                "",
-                (element) => {
+        return this.constructor.templates.token.draw({
+            ".js--character--leaves"(element) {
 
-                    element.classList.toggle("character--setup", setup);
-                    element.classList.toggle("character--left-1", firstNight);
-                    element.classList.toggle("character--right-1", otherNight);
-                    const top = reminders.length + remindersGlobal.length;
-                    element.classList.toggle(`character--top-${top}`, top);
+                element.classList.toggle("character--setup", setup);
+                element.classList.toggle("character--left-1", firstNight);
+                element.classList.toggle("character--right-1", otherNight);
+                const top = reminders.length + remindersGlobal.length;
+                element.classList.toggle(`character--top-${top}`, top);
 
-                }
-            ],
-            [
-                ".js--character--image",
-                image,
-                Template.setSrc
-            ],
-            [
-                ".js--character--name",
-                name
-            ]
-        ]);
+            },
+            ".js--character--image"(element) {
+                element.src = image;
+            },
+            ".js--character--name"(element) {
+                element.textContent = name;
+            }
+        });
 
     }
 
@@ -477,18 +446,14 @@ export default class CharacterToken extends Token {
             id
         } = this.data;
 
-        return this.constructor.templates.list.draw([
-            [
-                ".js--character-list--button",
-                id,
-                (element, content) => element.dataset.tokenId = content
-            ],
-            [
-                ".js--character-list--token",
-                this.drawToken(),
-                Template.append
-            ]
-        ]);
+        return this.constructor.templates.list.draw({
+            ".js--character-list--button"(element) {
+                element.dataset.tokenId = id;
+            },
+            ".js--character-list--token": (element) => {
+                element.append(this.drawToken());
+            }
+        });
 
     }
 
@@ -509,45 +474,32 @@ export default class CharacterToken extends Token {
             setup
         } = this.data;
 
-        return this.constructor.templates.select.draw([
-            [
-                ".js--character-select--image",
-                image,
-                Template.setSrc
-            ],
-            [
-                ".js--character-select--name",
-                name,
-                (element, content) => {
+        return this.constructor.templates.select.draw({
+            ".js--character-select--image"(element) {
+                element.src = image;
+            },
+            ".js--character-select--name"(element) {
 
-                    Template.setText(element, content);
-                    element.classList.toggle("is-setup", setup);
+                element.textContent = name;
+                element.classList.toggle("is-setup", setup);
 
-                }
-            ],
-            [
-                ".js--character-select--ability",
-                ability
-            ],
-            [
-                ".js--character-select--input",
-                id,
-                (element, content) => {
+            },
+            ".js--character-select--ability"(element) {
+                element.textContent = ability;
+            },
+            ".js--character-select--input"(element) {
 
-                    element.value = content;
-                    element.closest("label").htmlFor = identify(element);
+                element.value = id;
+                element.closest("label").htmlFor = identify(element);
 
-                }
-            ],
-            [
-                ".js--character-select--count",
-                id,
-                (element, content) => {
-                    element.name += content;
-                    element.dataset.for = content;
-                }
-            ]
-        ]);
+            },
+            ".js--character-select--count"(element) {
+
+                element.name += id;
+                element.dataset.for = id;
+
+            }
+        });
 
     }
 
@@ -572,42 +524,33 @@ export default class CharacterToken extends Token {
             otherNightReminder
         } = this.data;
 
-        return this.constructor.templates.nightOrder.draw([
-            [
-                ".js--night-info--wrapper",
-                [
-                    id,
-                    (
-                        isFirst
-                        ? firstNight
-                        : otherNight
-                    )
-                ],
-                (element, [id, order]) => {
+        return this.constructor.templates.nightOrder.draw({
+            ".js--night-info--wrapper"(element) {
 
-                    element.dataset.id = id;
-                    element.dataset.order = order;
+                element.dataset.id = id;
+                element.dataset.order = (
+                    isFirst
+                    ? firstNight
+                    : otherNight
+                );
 
-                }
-            ],
-            [
-                ".js--night-info--icon",
-                image,
-                Template.setSrc
-            ],
-            [
-                ".js--night-info--role",
-                name
-            ],
-            [
-                ".js--night-info--ability",
-                (
+            },
+            ".js--night-info--icon"(element) {
+                element.src = image;
+            },
+            ".js--night-info--role"(element) {
+                element.textContent = name;
+            },
+            ".js--night-info--ability"(element) {
+
+                element.textContent = (
                     isFirst
                     ? firstNightReminder
                     : otherNightReminder
-                )
-            ]
-        ]);
+                );
+
+            }
+        });
 
     }
 

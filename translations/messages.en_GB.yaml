@@ -20,8 +20,11 @@ sheet:
     get_qr_code: Get the QR code for this sheet
     get_sheet: Get this sheet
     credit: <a href="https://bloodontheclocktower.com/" target="_blank" rel="noopener noreferrer">Blood on the Clocktower</a> is a trademark of Steven Medway and <a href="https://www.thepandemoniuminstitute.com/" target="_blank" rel="noopener noreferrer">The Pandemonium Institute</a>
+    breakdown: The numbers of each team for the number of players.
+    count_plus: "%count%+"
 
 groups:
+    players: Players
     townsfolk: Townsfolk
     outsider: Outsiders
     minion: Minions
@@ -59,10 +62,11 @@ setup:
         bad_moon_rising: Bad Moon Rising
         sects_and_violets: Sects and Violets
         custom_script: Custom Script
-        custom_note: Either upload a custom script or enter the URL of a custom script.
+        custom_note: Upload a custom script, enter the URL of a custom script, or paste the JSON directly.
         custom_warning: Only load custom JSON files from sources that you trust!
         upload: Upload a custom script
         url: Enter a URL
+        paste: Paste from clipboard
         select: Select
 
     character_select:
@@ -73,6 +77,11 @@ setup:
         highlight_random: Highlight random
         draw_characters: Draw Characters
         add_all: Add All
+        layout: Layout
+        ellipse: Ellipse
+        diagonal: Diagonal
+        horizontal: Horizontal
+        vertical: Vertical
 
     character_choice:
         title: Select Your Character
@@ -80,6 +89,7 @@ setup:
 
     character_decision:
         title: Remember Your Character
+        name: Name yourself (optional)
         return: Return to Character Select
 
     qr_code:
@@ -105,6 +115,8 @@ setup:
         details_note: Which sections are open or closed.
         info_tokens_label: Clear custom info tokens
         info_tokens_note: The custom info tokens that have been added.
+        names_label: Clear names
+        names_note: The player names suggestions.
         height_label: Clear pad height
         height_note: The height of the pad in the grimoire.
         clear_refresh_label: Refresh afterwards
@@ -119,9 +131,12 @@ grimoire:
 
     grimoire:
         bluffs: Demon Bluffs
+        show_bluffs: Show all bluffs
+        add_bluffs: Add bluffs
         add_token: Add token
         add_reminder: Add reminder
         add_traveller: Add traveller
+        add_fabled: Add fabled
         show_tokens: Show tokens
         reset_height: Reset pad height
         clear_grimoire: Clear Grimoire
@@ -129,6 +144,7 @@ grimoire:
         show_night_order: Show night order
         character_size: Character token size
         reminder_size: Reminder token size
+        token_settings: Token Settings
 
     character_list:
         title: Select Character
@@ -136,12 +152,15 @@ grimoire:
     reminder_list:
         title: Select Reminder
         show: Show all reminders
+        multiple: Add multiple
+        add_all: Add all
 
     character_show:
         title: Token
         show: Show
         shroud: Shroud
         rotate: Rotate
+        replace: Replace
         reminder: Reminder
         remove: Remove token
         recent_reminders: 'Most recently added reminders:'
@@ -166,10 +185,14 @@ grimoire:
 
     token_list:
         title: Characters
+        add: Add token
 
     traveller_list:
         title: Travellers
         show_all: Show all travellers
+
+    fabled_list:
+        title: Fabled
 
     token:
         title: Token
@@ -204,6 +227,12 @@ info_tokens:
     edit_custom: Edit info token
     delete_custom: Delete info token
 
+notes:
+    title: Storyteller Notes
+    label: Notes
+    clear: Clear notes
+    clear_warning: Are you sure you want to clear the notes?
+
 acknowledgements:
     title: Acknowledgements
     acknowledgements:
@@ -211,6 +240,15 @@ acknowledgements:
         - Night reminders and other auxiliary text written by <a href="http://bignose.whitetree.org/projects/botc/diy/" target="_blank" rel="noopener noreferrer">Ben Finney</a>.
         - Icons are taken from <a href="https://fontawesome.com/v5.15/icons" target="_blank" rel="noopener noreferrer">Font Awesome</a>.
         - Many images and data are taken from <a href="https://www.clocktower.online" target="_blank" rel="noopener noreferrer">Clocktower.online</a> and the <a href="https://bloodontheclocktower.com/" target="_blank" rel="noopener noreferrer">Blood on the Clocktower website</a>.
-        - This is an unofficial virtual grimoire for Blood on the Clocktower. This project is free and the source code can be found on <a href="https://github.com/Skateside/pocket-grimoire" target="_blank" rel="noopener noreferrer">GitHub</a>. This project is not affiliated with the Pandemonium Institute. If you enjoy playing Blood on the Clocktower, <a href="https://bloodontheclocktower.com/pages/where-to-buy" target="_blank" rel="noopener noreferrer">please consider buying your own grimoire</a> - as well as being more flexible than this digital version, it also supports the creators.
+        - This is an unofficial virtual grimoire for Blood on the Clocktower. This project is free and the source code can be found on <a href="https://github.com/Skateside/pocket-grimoire" target="_blank" rel="noopener noreferrer">GitHub</a>. This project is not affiliated with the Pandemonium Institute. If you enjoy playing Blood on the Clocktower, <a href="https://bloodontheclocktower.com/buy" target="_blank" rel="noopener noreferrer">please consider buying your own grimoire</a> - as well as being more flexible than this digital version, it also supports the creators.
         - Noticed a bug or have an improvement suggestion? Let me know in the <a href="https://discord.com/channels/569683781800296501/708509594758152203" target="_blank" rel="noopener noreferrer">toolmakers channel on the unofficial discord server</a> (my name on there is "Skateside") or <a href="https://github.com/Skateside/pocket-grimoire/issues" target="_blank" rel="noopener noreferrer">raise an issue in GitHub</a>.
         - <small>Version <span id="version"></span></small>
+
+errors:
+    homebrew_json:
+        not_homebrew: Not homebrew entry "%id%"
+        unrecognised_team: Unrecognised team "%team%"
+        not_find_id: Could not find ID "%id%"
+        not_recognise_character: Could not recognise character "%id%"
+        invalid_entry: 'Invalid entry for "%id%": %reasons%'
+        empty_teams: 'Empty teams: %teams%'

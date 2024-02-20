@@ -1,0 +1,512 @@
+[
+    {
+        "target": "chambermaid",
+        "trick": "mathematician",
+        "reason": "Das Kammermädchen erfährt, ob der Mathematiker heute Nacht aufwacht oder nicht, obwohl das Zimmermädchen zuerst aufwacht."
+    },
+    {
+        "target": "eviltwin",
+        "trick": "plaguedoctor",
+        "reason": "Der Geschichtenerzähler kann die Fähigkeit „Böser Zwilling“ nicht erlangen, wenn der Seuchendoktor stirbt."
+    },
+    {
+        "target": "butler",
+        "trick": "cannibal",
+        "reason": "Wenn der Kannibale die Butler Fähigkeit erlangt, erfährt der Kannibale dies."
+    },
+    {
+        "target": "lunatic",
+        "trick": "mathematician",
+        "reason": "Der Mathematiker erfährt, wenn der Wahnsinnige einen anderen Spieler angreift als der echte Dämon angegriffen hat."
+    },
+    {
+        "target": "pithag",
+        "trick": "heretic",
+        "reason": "Eine Trankbrauerin kann keinen Ketzer erschaffen."
+    },
+    {
+        "target": "pithag",
+        "trick": "damsel",
+        "reason": "Wenn eine Trankbrauerin eine Maid erschafft wählt der Erzähler welcher Spieler es ist."
+    },
+    {
+        "target": "pithag",
+        "trick": "politician",
+        "reason": "Eine Trankbrauering kann keinen bösen Politiker erschaffen."
+    },
+    {
+        "target": "pithag",
+        "trick": "villageidiot",
+        "reason": "Wenn ein Ersatzmarker vorhanden ist, kann die Grubenhexe einen zusätzlichen Dorfidioten erschaffen. Wenn ja, könnte sich der betrunkene Dorftrottel ändern."
+    },
+    {
+        "target": "cerenovus",
+        "trick": "goblin",
+        "reason": "Der Cerenovus kann sich entscheiden einen Spieler davon besessen zu machen der Goblin zu sein."
+    },
+    {
+        "target": "goblin",
+        "trick": "plaguedoctor",
+        "reason": "Wenn der Pestdoktor stirbt, erhält ein lebender Diener zusätzlich zu seiner eigenen Fähigkeit die Goblin-Fähigkeit und lernt diese."
+    },
+    {
+        "target": "leviathan",
+        "trick": "soldier",
+        "reason": "Wenn der Leviathan den Soldaten nominiert und er hingerichtet wird, stirbt der Soldat nicht."
+    },
+    {
+        "target": "leviathan",
+        "trick": "monk",
+        "reason": "Wenn der Leviathan den Spieler nominiert der vom Mönch ausgesucht wurde und dieser hingerichtet wird, stirbt der Spieler nicht. "
+    },
+    {
+        "target": "leviathan",
+        "trick": "innkeeper",
+        "reason": "Wenn der Leviathan den Spieler nominiert der vom Gastwirt ausgesucht wurde und dieser hingerichtet wurde, stirbt der Spieler nicht."
+    },
+    {
+        "target": "leviathan",
+        "trick": "ravenkeeper",
+        "reason": "Wenn der Leviathan im Spiel ist & der Rabenwärter stirbt durch Hinrichtug, wacht er in dieser Nacht auf um seine Fähigkeit zu nutzen"
+    },
+    {
+        "target": "leviathan",
+        "trick": "sage",
+        "reason": "Wenn der Leviathan im Spiel ist & der Weise durch Hinrichtung stirbt, wacht er in dieser Nacht auf um seine Fähigkeit zu nutzen."
+    },
+    {
+        "target": "leviathan",
+        "trick": "farmer",
+        "reason": "Wenn der Leviathan im Spiel ist & ein Bauer stirbt durch Hinrichtung, wird ein guter Spieler diese Nacht zum Bauern."
+    },
+    {
+        "target": "leviathan",
+        "trick": "mayor",
+        "reason": "If Leviathan is in play & no execution occurs on day 5, good wins. Wenn der Leviathan im Spiel ist & es findet keine Hinrichtung and Tag 5 statt, gewinnt Gut."
+    },
+    {
+        "target": "leviathan",
+        "trick": "hatter",
+        "reason": "Wenn der Hutmacher am oder nach Tag 5 stirbt, kann der Dämon keinen Leviathan wählen."
+    },
+    {
+        "target": "leviathan",
+        "trick": "pithag",
+        "reason": "Nach Tag 5 kann sich die Pit-Hag nicht mehr für Leviathan entscheiden."
+    },
+    {
+        "target": "lilmonsta",
+        "trick": "poppygrower",
+        "reason": "If the Poppy Grower is in play, Minions don't wake together. They are woken one by one, until one of them chooses to take the Lil' Monsta token."
+    },
+    {
+        "target": "lilmonsta",
+        "trick": "magician",
+        "reason": "Nur 1 verhexter Character kann gleichzeitig im Spiel sein"
+    },
+    {
+        "target": "lilmonsta",
+        "trick": "scarletwoman",
+        "reason": "Wenn 5 oder mehr Spieler am Leben sind und der Spieler mit dem Kleinen Monsta Charakterplättchen stirbt, bekommt die Frau in Rot es in der Nacht."
+    },
+    {
+        "target": "lilmonsta",
+        "trick": "organgrinder",
+        "reason": "Stimmen für die Leiermann zählen, wenn die Leiermann babysittet Kleines Monsta."
+    },
+    {
+        "target": "lilmonsta",
+        "trick": "vizier",
+        "reason": "Die Wesir können durch Hinrichtung sterben, wenn sie babysitten Kleines Monsta."
+    },
+    {
+        "target": "lilmonsta",
+        "trick": "hatter",
+        "reason": "Wenn sich ein Dämon für Lil' Monsta entscheidet, wählt er auch einen Diener aus, der heute Abend Lil' Monsta werden und auf ihn aufpassen soll."
+    },
+    {
+        "target": "lycanthrope",
+        "trick": "gambler",
+        "reason": "Wenn der Lykanthrop am Leben ist und der Glücksspieler tötet sich in der Nacht kann kein weiterer Spieler in dieser nacht sterben."
+    },
+    {
+        "target": "legion",
+        "trick": "engineer",
+        "reason": "Legion und Ingeniuer können nicht beide zu Spielstart im Spiel sein. Wenn der Ingeniuer Legion erschaftt werden die meisten Spieler (inklusiv aller bösen Spieler) zur bösen Legion."
+    },
+    {
+        "target": "legion",
+        "trick": "preacher",
+        "reason": "Nur 1 verfluchter Charakter kann gleichzeitig im Spiel sein"
+    },
+    {
+        "target": "legion",
+        "trick": "hatter",
+        "reason": "Wenn der Hutmacher stirbt und Legion im Spiel ist, passiert nichts. Wenn der Hutmacher stirbt und ein böser Spieler Legion wählt, werden alle aktuellen bösen Spieler zu Legion."
+    },
+    {
+        "target": "fanggu",
+        "trick": "scarletwoman",
+        "reason": "Wenn der Fang Gu einen Außenseiter wählt und stirbt wird die Frau in Rot nicht zum Fang Gu."
+    },
+    {
+        "target": "spy",
+        "trick": "alchemist",
+        "reason": "Der Alchemist kann nicht die Fähigkeit des Spions haben."
+    },
+    {
+        "target": "spy",
+        "trick": "magician",
+        "reason": "Wenn der Spion das Grimoire sieht, werden das Dämon und das Magier Charakterplättchen entfernt."
+    },
+    {
+        "target": "spy",
+        "trick": "poppygrower",
+        "reason": "If the Poppy Grower is in play, the Spy does not see the Grimoire until the Poppy Grower dies."
+    },
+    {
+        "target": "spy",
+        "trick": "plaguedoctor",
+        "reason": "Wenn der Pestdoktor stirbt, erhält ein lebender Diener zusätzlich zu seiner eigenen Fähigkeit die Spionagefähigkeit und lernt diese."
+    },
+    {
+        "target": "spy",
+        "trick": "damsel",
+        "reason": "Nur 1 verhexter Character kann gleichzeitig im Spiel sein"
+    },
+    {
+        "target": "spy",
+        "trick": "heretic",
+        "reason": "Nur 1 verhexter Character kann gleichzeitig im Spiel sein"
+    },
+    {
+        "target": "widow",
+        "trick": "alchemist",
+        "reason": "Der Alchemist kann nicht die Fähigkeit de Witwe haben."
+    },
+    {
+        "target": "widow",
+        "trick": "magician",
+        "reason": "Wenn die Witwe das Grimoire sieht, werden das Dämon und das Magier Charakterplättchen entfernt."
+    },
+    {
+        "target": "widow",
+        "trick": "poppygrower",
+        "reason": "Wenn der Mohnzüchter im Spiel ist sieht die Witwe das Grimoire erst wenn der Mohnzüchter stirbt."
+    },
+    {
+        "target": "widow",
+        "trick": "damsel",
+        "reason": "Nur 1 verhexter Character kann gleichzeitig im Spiel sein"
+    },
+    {
+        "target": "widow",
+        "trick": "heretic",
+        "reason": "Nur 1 verhexter Character kann gleichzeitig im Spiel sein"
+    },
+    {
+        "target": "godfather",
+        "trick": "heretic",
+        "reason": "Nur 1 verhexter Character kann gleichzeitig im Spiel sein"
+    },
+    {
+        "target": "scarletwoman",
+        "trick": "plaguedoctor",
+        "reason": "Wenn der Pestdoktor stirbt, erhält ein lebender Diener zusätzlich zu seiner eigenen Fähigkeit die Fähigkeit „Scharlachrote Frau“ und lernt diese."
+    },
+    {
+        "target": "boomdandy",
+        "trick": "plaguedoctor",
+        "reason": "Wenn der Pestdoktor hingerichtet wird und der Geschichtenerzähler die Boomdandy-Fähigkeit erhalten würde, wird die Boomdandy-Fähigkeit sofort ausgelöst."
+    },
+    {
+        "target": "fearmonger",
+        "trick": "plaguedoctor",
+        "reason": "Wenn der Pestdoktor stirbt, erhält ein lebender Diener zusätzlich zu seiner eigenen Fähigkeit die Fähigkeit „Furchtmacher“ und lernt diese."
+    },
+    {
+        "target": "baron",
+        "trick": "heretic",
+        "reason": "Der Baron fügt unter umständen nur einen anstatt 2 Außenseiter zum Spiel hinzu."
+    },
+    {
+        "target": "baron",
+        "trick": "plaguedoctor",
+        "reason": "Wenn der Geschichtenerzähler die Baron-Fähigkeit erlangt, werden bis zu zwei Spieler zu Außenseitern, die nicht im Spiel sind."
+    },
+    {
+        "target": "marionette",
+        "trick": "lilmonsta",
+        "reason": "Die Marionette ist benachbart zu einem Untergebenen und nicht dem Dämon. Die Marionette wird nicht geweckt um zu bestimmen wer das Kleine Monsta Charakterplättchen nimmt und lernt nicht das sie die Marionette ist wenn sie das Kleine Monsta Charakterplättchen hat."
+    },
+    {
+        "target": "marionette",
+        "trick": "poppygrower",
+        "reason": "When der Mohnzüchter stirbt erfährt der Dämon wer die Marionette ist, aber die Marionette lernt nichts."
+    },
+    {
+        "target": "marionette",
+        "trick": "snitch",
+        "reason": "Der Marionette werden keine 3 Charakter die sich nicht im Spiel befinden gezeigt. Stattdessen zeige dem Dämon 3 zusätzliche."
+    },
+    {
+        "target": "marionette",
+        "trick": "balloonist",
+        "reason": "Wenn die Marionette denkt das sie der Ballonfahrer ist, wurde +1 Außenseiter hinzugefügt."
+    },
+    {
+        "target": "marionette",
+        "trick": "damsel",
+        "reason": "Die Marionette lernt nicht, dass sich eine Maid im Spiel befindet."
+    },
+    {
+        "target": "marionette",
+        "trick": "plaguedoctor",
+        "reason": "Wenn der Dämon beim Tod des Seuchendoktors einen lebenden Nachbarn und einen Stadtbewohner oder Außenseiter hat, wird dieser Spieler zu einer bösen Marionette. Wenn es bereits einen zusätzlichen bösen Spieler gibt, passiert dies nicht."
+    },
+    {
+        "target": "marionette",
+        "trick": "huntsman",
+        "reason": "Wenn die Marionette denkt dass sie der Jäger ist wurde die Maid hinzugefügt. "
+    },
+    {
+        "target": "lleech",
+        "trick": "mastermind",
+        "reason": "Wenn das Genie am Leben ist under der Wirt des Eegel am Leben ist, lebt der Eegel aber verliert seine Fähigkeit."
+    },
+    {
+        "target": "lleech",
+        "trick": "slayer",
+        "reason": "Wenn der Schütze den Wirt des Eegel wählt stirbt der Wirt."
+    },
+    {
+        "target": "lleech",
+        "trick": "heretic",
+        "reason": "Wenn der Eegel den Ketzer vergiftet hat und der Eegel stirbt, bleibt der Ketzer vergiftet."
+    },
+    {
+        "target": "riot",
+        "trick": "engineer",
+        "reason": "Krawall und der Ingeniuer können nicht beide zu Spielanfang im Spiel sein. Wenn der Ingeniuer Krawall ins Spiel bringt werden alle bösen Spieler Krawall."
+    },
+    {
+        "target": "riot",
+        "trick": "golem",
+        "reason": "Wenn der Golem Krawall nominiert stirbt der Krawall Spieler nicht."
+    },
+    {
+        "target": "riot",
+        "trick": "snitch",
+        "reason": "Wenn die Petze im Spiel ist zeige jedem Krawall Spieler 3 zusätliche bluffs."
+    },
+    {
+        "target": "riot",
+        "trick": "saint",
+        "reason": "Wenn ein guter Spieler den Heiligen nominiert und tötet, verliert das Team des Heiligen."
+    },
+    {
+        "target": "riot",
+        "trick": "butler",
+        "reason": "Der Butler kann nicht seinen Dienstherren nominieren."
+    },
+    {
+        "target": "riot",
+        "trick": "pithag",
+        "reason": "Wenn die Trankbrauerin Krawall erschafft, alle Bösen Spieler werden zu Krawall. Wenn die Trankbrauerin Krawall nach Tag 3 erschaft, dauert das Spiel noch einen weiteren Tag."
+    },
+    {
+        "target": "riot",
+        "trick": "mayor",
+        "reason": "Wenn der 3te Tag anbricht und es sind drei Spieler am Leben, die Spieler können sich entscheiden(als Gruppe) überhaupt nicht zu nominieren. Wenn das passiert(und der Bürgermeister ist am Leben) gewinnt das Team des Bürgermeisters."
+    },
+    {
+        "target": "riot",
+        "trick": "monk",
+        "reason": "Wenn der Krawall Spieler den vom Mönch beschützten Spieler nominiert und tötet, stirbt der vom Mönch beschützte Spieler nicht."
+    },
+    {
+        "target": "riot",
+        "trick": "farmer",
+        "reason": "Wenn ein Krawall Spieler den Bauern nominiert und tötet, nutz der Bauer sein Fähigkeit in der Nacht."
+    },
+    {
+        "target": "riot",
+        "trick": "innkeeper",
+        "reason": "Wenn ein Krawall Spieler den vom Gastwirt beschützten Spieler nominiert, stirbt der vom Gastwirt beschützte Spieler nicht."
+    },
+    {
+        "target": "riot",
+        "trick": "sage",
+        "reason": "Wenn ein Krawall Spieler den Weisen nominiert und tötet, nutzder Weise seine Fähigkeit in der Nacht."
+    },
+    {
+        "target": "riot",
+        "trick": "ravenkeeper",
+        "reason": "Wenn ein Krawall Spieler den Rabenwärter nominiert und tötet, nutz der Rabenwärter seine Fähigkeit in der Nacht."
+    },
+    {
+        "target": "riot",
+        "trick": "soldier",
+        "reason": "Wenn ein Krawall Spieler den Soldaten nominiert, stirbt der Soldat nicht."
+    },
+    {
+        "target": "riot",
+        "trick": "grandmother",
+        "reason": "Wenn eine Krawall Spieler das Enkelkind nominiert und tötet, stirbt die Großmutter auch."
+    },
+    {
+        "target": "riot",
+        "trick": "king",
+        "reason": "Wenn ein Krawall Spieler den König nominiert und tötet und der Chorknabe ist am leben, nutzt der Chorknabe seine Fähigkeit in der Nacht."
+    },
+    {
+        "target": "riot",
+        "trick": "exorcist",
+        "reason": "Nur 1 verhexter Character kann gleichzeitig im Spiel sein"
+    },
+    {
+        "target": "riot",
+        "trick": "minstrel",
+        "reason": "Nur 1 verhexter Character kann gleichzeitig im Spiel sein"
+    },
+    {
+        "target": "riot",
+        "trick": "flowergirl",
+        "reason": "Nur 1 verhexter Character kann gleichzeitig im Spiel sein"
+    },
+    {
+        "target": "riot",
+        "trick": "undertaker",
+        "reason": "Players that die by nomination register as being executed to the Undertaker."
+    },
+    {
+        "target": "riot",
+        "trick": "cannibal",
+        "reason": "Players that die by nomination register as being executed to the Cannibal."
+    },
+    {
+        "target": "riot",
+        "trick": "pacifist",
+        "reason": "Players that die by nomination register as being executed to the Pacifist."
+    },
+    {
+        "target": "riot",
+        "trick": "devilsadvocate",
+        "reason": "Players that die by nomination register as being executed to the Devil's Advocate."
+    },
+    {
+        "target": "riot",
+        "trick": "investigator",
+        "reason": "Krawall registriert als Untergebener für den Ermittler."
+    },
+    {
+        "target": "riot",
+        "trick": "clockmaker",
+        "reason": "Krawall registriert als Untergebener für den Uhrmacher."
+    },
+    {
+        "target": "riot",
+        "trick": "towncrier",
+        "reason": "Krawall registriert als Untergebener für den Stadschreier."
+    },
+    {
+        "target": "riot",
+        "trick": "damsel",
+        "reason": "Krawall registriert als Untergebener für die Maid."
+    },
+    {
+        "target": "riot",
+        "trick": "preacher",
+        "reason": "Krawall registriert als Untergebener für den Priester"
+    },
+    {
+        "target": "riot",
+        "trick": "hatter",
+        "reason": "Wenn der Hutmacher stirbt, Riot im Spiel ist und ein Riot einen anderen Dämon wählt, wird aus den Riot-Spielern ein normales böses Team erstellt. Wenn der Hutmacher stirbt und der Dämon sich für Riot entscheidet, werden auch Minions zu Riot."
+    },
+    {
+        "target": "alhadikhia",
+        "trick": "scarletwoman",
+        "reason": "Wenn es zwei lebende Al-Hadikhias gibt, wird der \"Frau in Rot\" Al-Hadikhia wieder zu \"Frau in Rot\"."
+    },
+    {
+        "target": "alhadikhia",
+        "trick": "mastermind",
+        "reason": "Nur 1 verhexter Character kann gleichzeitig im Spiel sein. Böse Spieler wissen von Spielbeginn an welcher und Spieler und Character es ist."
+    },
+    {
+        "target": "organgrinder",
+        "trick": "butler",
+        "reason": "Wenn wegen dem Leiermann mit geschlossenen Augen abgestimmt wird, darf der Butler seine Hand heben um abzustimmen  aber die Stimme wird nur gezählt wenn sein Dienstherr auch abgestimmt hat."
+    },
+    {
+        "target": "organgrinder",
+        "trick": "flowergirl",
+        "reason": "Wenn die Augen der Spieler während der nominierung geschlossen waren, erfährt das Blumenmädchen wie oft der Dämon abgestimmt hat."
+    },
+    {
+        "target": "organgrinder",
+        "trick": "minstrel",
+        "reason": "Nur 1 verhexter Character kann gleichzeitig im Spiel sein"
+    },
+    {
+        "target": "organgrinder",
+        "trick": "preacher",
+        "reason": "Nur 1 verhexter Character kann gleichzeitig im Spiel sein"
+    },
+    {
+        "target": "vizier",
+        "trick": "alchemist",
+        "reason": "Wenn der Alchemist die Fähigkeit des Wesir hat, kann er sich nur dann für eine sofortige Hinrichtung entscheiden, wenn drei oder mehr Spieler abgestimmt haben."
+    },
+    {
+        "target": "vizier",
+        "trick": "courtier",
+        "reason": "Wenn der Wesir seine Fähigkeit verliert, lernen er dies und wenn der Wesir hingerichtet wird, während er seine Fähigkeit hat, gewinnt sein Team."
+    },
+    {
+        "target": "vizier",
+        "trick": "fearmonger",
+        "reason": "Der Wesir wacht mit dem Panikmacher auf, lernt wen er wählt und kann sich nicht entscheiden diesen Spieler hinzurichten."
+    },
+    {
+        "target": "vizier",
+        "trick": "investigator",
+        "reason": "Wenn der Ermittler erfährt, dass der Wesir im Spiel ist, wird die Existenz des Wesir nicht vom Geschichtenerzähler angekündigt."
+    },
+    {
+        "target": "vizier",
+        "trick": "magician",
+        "reason": "Nur 1 verhexter Character kann gleichzeitig im Spiel sein"
+    },
+    {
+        "target": "vizier",
+        "trick": "preacher",
+        "reason": "Wenn der Wesir seine Fähigkeit verliert, lernen er dies und wenn der Wesir hingerichtet wird, während er seine Fähigkeit hat, gewinnt sein Team."
+    },
+    {
+        "target": "kazali",
+        "trick": "bountyhunter",
+        "reason": "Ein böser Städter entsteht nur, wenn der Kopfgeldjäger nach der Tat von Kazali noch im Spiel ist."
+    },
+    {
+        "target": "kazali",
+        "trick": "goon",
+        "reason": "Wenn der Kazali den Idioten als Diener auswählt, entscheidet der Geschichtenerzähler über die verbleibenden Diener."
+    },
+    {
+        "target": "kazali",
+        "trick": "marionette",
+        "reason": "Wenn die Kazali eine Marionette erschaffen möchten, müssen sie einen ihrer Nachbarn auswählen."
+    },
+    {
+        "target": "kazali",
+        "trick": "huntsman",
+        "reason": "Wenn der Kazali die Jungfrau als Dienerin auswählt und ein Jäger im Spiel ist, wird ein guter Spieler zur Jungfrau."
+    },
+    {
+        "target": "kazali",
+        "trick": "choirboy",
+        "reason": "Der Kazali kann den König nicht als Diener wählen, wenn ein Chorknabe im Spiel ist."
+    }
+]

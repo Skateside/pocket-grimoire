@@ -1,8 +1,9 @@
 import Pad from "../../classes/Pad.js";
+import Positioner from "../../classes/Positioner.js";
 import Observer from "../../classes/Observer.js";
-import TokenStore from "../../classes/TokenStore.js";
 import ReminderToken from "../../classes/ReminderToken.js";
 import Dialog from "../../classes/Dialog.js";
+import TokenStore from "../../classes/TokenStore.js";
 import {
     lookup,
     lookupOne,
@@ -67,23 +68,6 @@ gameObserver.on("characters-selected", ({ detail }) => {
 
 });
 
-lookupOneCached("#character-list__list").addEventListener("click", ({ target }) => {
-
-    const button = target.closest("[data-token-id]");
-
-    if (!button) {
-        return;
-    }
-
-    TokenStore.ready((tokenStore) => {
-
-        pad.addCharacter(tokenStore.getCharacterClone(button.dataset.tokenId));
-        Dialog.create(lookupOneCached("#character-list")).hide();
-
-    });
-
-});
-
 gameObserver.on("character-drawn", ({ detail }) => {
     pad.addNewCharacter(detail.character);
 });
@@ -110,4 +94,44 @@ lookupOne("#token-size").addEventListener("input", ({ target }) => {
 
 lookupOne("#reminder-size").addEventListener("input", ({ target }) => {
     html.style.setProperty("--reminder-size", target.value);
+});
+
+// Token auto-placements.
+
+pad.setPositioner(new Positioner());
+
+const tokenLayout = lookupOne("#token-layout");
+
+pad.updatePositioner({
+    layout: tokenLayout.value,
+    // At this stage, most of the positioner probably hasn't been set up so we'd
+    // get a few issues if we try to generate the co-ordinates. Better to just
+    // give the positioner some data and generate the co-ordinates later.
+    generate: false
+});
+
+tokenLayout.addEventListener("change", () => {
+    pad.updatePositioner({ layout: tokenLayout.value });
+});
+
+gameObserver.on("player-count", ({ detail }) => {
+    pad.updatePositioner({ total: detail.count });
+});
+
+gameObserver.on("pad-height-change", () => {
+    pad.updatePositioner({ container: true });
+});
+
+Dialog.create(lookupOneCached("#character-select")).on(Dialog.SHOW, () => {
+
+    pad.updatePositioner({
+        container: true,
+        tokens: true,
+        total: lookupOneCached("#player-count").value
+    });
+
+});
+
+TokenStore.ready((tokenStore) => {
+    pad.setTokenStore(tokenStore);
 });

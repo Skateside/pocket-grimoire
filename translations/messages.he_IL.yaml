@@ -1,0 +1,252 @@
+title: גרימואר כיס
+
+forms:
+    file:
+        placeholder: בחר קובץ
+        button: דפדף
+
+dialog:
+    close: סגור
+
+index:
+    title: משחק
+    description: גרימואר וירטואלי עבור דם על מגדל השעון
+
+sheet:
+    title: דף דמות
+    description: דף הדמות עבור הגרסא הזו של דם על מגדל השעון
+    jinx: נאחס
+    each_night: "* כל לילה פרט ללילה הראשון"
+    get_qr_code: קבל קוד QR עבור דף הדמות הזה
+    get_sheet: קבל את דף הדמות הזה
+    credit: <a href="https://bloodontheclocktower.com/" target="_blank" rel="noopener noreferrer">דם על מגדל השעון</a> זה סימן מסחרי של סטיבן מדווי ושל <a href="https://www.thepandemoniuminstitute.com/" target="_blank" rel="noopener noreferrer">מכון פנדמוניום</a>
+    breakdown: המספרים של כל קבוצה למספר השחקנים.
+    count_plus: "%count%+"
+
+groups:
+    players: שחקנים
+    townsfolk: תושבי-עיירה
+    outsider: זרים
+    minion: משרתים
+    demon: שדים
+    traveller: מטיילים
+    fabled: אגדות
+
+messages:
+    good_team: הקבוצה הטובה
+    evil_team: הקבוצה הרעה
+    empty_character_ability: זו דמות ריקה
+    version_change_message: יש ליישומון הזה גרסא עדכנית. בגלל שהמידע שלך יכול להיות שגוי, אנחנו ממליצים שתנקה הכל בדיאלוג "נקה מטמון". לחץ "אישור" כדי לפתוח את הדיאלוג או "ביטול" כדי לסגור את ההודעה הזו
+    invalid_script: פורמט התסריט לא זוהה
+    no_characters: התסריט לא מכיל אף דמות מזוהה
+    player_name: מה שם השחקן או השחקנית?
+    custom_info_token: "מה אתה רוצה שיהיה כתוב על אסימון המידע החדש? השתמש **בכוכביות כפולות** כדי להדגיש טקסט."
+
+setup:
+
+    title: הכנה
+
+    buttons:
+        select_edition: בחר גרסא
+        select_characters: בחר דמויות
+        qr_code_button: דף דמויות
+        clear_cache_button: נקה מטמון
+        language: שפה
+        set_language: בחר שפה
+
+    editions:
+        title: בחר גרסא
+        trouble_brewing: צרות מתבשלות
+        bad_moon_rising: עליית הירח הנורא
+        sects_and_violets: כתות וסיגליות
+        custom_script: תסריט מותאם אישית
+        custom_note: העלה תסריט מותאם אישית או שתכניס קישור לתסריט מותאם אישית
+        custom_warning: תטען רק קבצי JSON ממקורות שאתה סומך עליהם!
+        upload: העלה תסריט מותאם אישית
+        url: הכנס קישור
+        paste: הדבק מהלוח
+        unsupported: בבקשה שים לב שכרגע גרימואר כיס לא תומך בתסריטים מקומיים או עם חוקי בית
+        select: בחר
+
+    character_select:
+        title: בחר דמויות
+        number_players: מספר שחקנים
+        toggle_abilities: הראה יכולות של דמויות
+        toggle_duplicates: תאפשר דמויות כפולות
+        highlight_random: הדגש באופן אקראי
+        draw_characters: שלוף דמויות
+        add_all: הוסף הכל
+        layout: מַעֲרָך
+        ellipse: אֶלִיפְּסָה
+        diagonal: אֲלַכסוֹנִי
+        horizontal: אופקי
+        vertical: אֲנָכִי
+
+    character_choice:
+        title: בחר את הדמות שלך
+        description: תלחץ על כל אחד מהאסימונים הממוספרים כדי לבחור את הדמות שלך. כהים יותר כבר נבחרו.
+
+    character_decision:
+        title: זכור את הדמות שלך
+        name: תן לעצמך שם (אופציונלי)
+        return: חזור לבחירת הדמויות
+
+    qr_code:
+        title: דף דמויות
+        intro: סרוק את קוד הQR הזה כדי לראות את דף הדמויות
+        include: 'כלול:'
+        travellers: מטיילים
+        fabled: אגדה
+
+    clear_cache:
+        title: נקה מטמון
+        clear_all: נקה הכל
+        clear_description: כיבוי של האפשרות הזו תאפשר לחלקים פרטיים של המטמון להתנקות
+        lookup_label: נקה מידע
+        lookup_note: המידע על הנאחסים, פירוק הקבוצות, ומידע הדמויות
+        characters_label: נקה גרסא
+        characters_note: הגרסא, או התסריט, שנבחר ונטען
+        tokens_label: נקה אסימונים
+        tokens_note: המיקום של האסימונים בגרימואר
+        inputs_label: נקה קלטים
+        inputs_note: הגדרות משתמש עבור האתר הזה
+        details_label: נקה פתוח/סגור
+        details_note: איזה חלקים פתוחים או סגורים
+        info_tokens_label: נקה אסימוני מידע מותאמים אישית
+        info_tokens_note: אסימוני המידע המותאמים אישית שהתווספו
+        names_label: נקה שמות
+        names_note: הצעות של שמות השחקנים
+        height_label: נקה גובה ריפוד
+        height_note: הגובה של הריפוד בגרימואר
+        clear_refresh_label: רענן לאחר מכן
+        clear_refresh_note: רענון יטען מידע חדש עבור כל מה שנוקה
+        warning: '<strong>אזהרה:</strong> כל אסימון שהונח בגרימואר ישכח'
+        info_token_warning: '<strong>אזהרה:</strong> כל אסימון מידע מותאם אישית ישכח'
+        clear_cache: נקה מטמון
+
+grimoire:
+
+    title: גרימואר
+
+    grimoire:
+        bluffs: הבלופים של השד
+        show_bluffs: הצג את כל הבלופים
+        add_bluffs: הוסף בלופים
+        add_token: הוסף אסימון
+        add_reminder: הוסף תזכורת
+        add_traveller: הוסף מטייל
+        add_fabled: הוסף אגדות
+        show_tokens: הראה אסימונים
+        reset_height: אפס גובה ריפוד
+        clear_grimoire: נקה את הגרימואר
+        clear_grimoire_warning: אתה בטוח שאתה רוצה למחוק את כל האסימונים?
+        show_night_order: הראה את סדר הלילה
+        character_size: גודל אסימוני דמויות
+        reminder_size: גודל אסימוני תזכורת
+        token_settings: הגדרות אסימונים
+
+    character_list:
+        title: בחר דמות
+
+    reminder_list:
+        title: בחר תזכורת
+        show: הראה את כל התזכורות
+        multiple: הוסף מרובים
+        add_all: הוסף הכל
+
+    character_show:
+        title: אסימון
+        show: הראה
+        shroud: תכרוך
+        rotate: תסובב
+        reminder: תזכורת
+        replace: החלף
+        remove: הסר אסימון
+        recent_reminders: 'התזכורות האחרונות שהתווספו:'
+        player_name: קבע שם שחקן
+
+    reminder_show:
+        title: תזכורת
+        remove: הסר
+
+    bluff_show:
+        title: אסימון
+        empty: ריק
+        show: תראה
+        change: תשנה
+
+    bluff_list:
+        title: בחר בלוף
+        show_existing: הראה דמויות קיימות
+        show_travellers: הראה מטיילים
+        show_evil: הראה דמויות רעות
+
+    token_list:
+        title: דמויות
+        add: הוסף אסימון
+
+    traveller_list:
+        title: מטיילים
+        show_all: הראה את כל המטיילים
+
+    fabled_list:
+        title: אגדות
+
+    token:
+        title: אסימון
+
+jinxes:
+    title: נאחסים
+    target: מטרה
+    trick: טריק
+    reason: סיבה
+    show: הראה נאחסים שלא במשחק
+
+night_order:
+    title: סדר הלילה
+    first_night: לילה ראשון
+    other_night: שאר הלילות
+    swipe_change: החלק כדי לשנות לילות
+    show: הראה דמויות שלא במשחק
+
+info_tokens:
+    title: אסימוני מידע
+    info_tokens:
+        isdemon: זה <strong>השד</strong>
+        isminion: אלה <strong>המשרתים</strong> שלך
+        notinplay: הדמויות האלה <strong>לא במשחק</strong>
+        nominatetoday: האם <strong>הצבעת</strong> היום?
+        playeris: <strong>השחקן הזה</strong> הוא
+        votetoday: האם <strong>הצבעת</strong> היום?
+        youare: <strong>אתה</strong>
+        selectedyou: הדמות הזו <strong>בחרה</strong> בך
+    custom: אסימון מידע מותאם אישית
+    add_custom: הוסף אסימון מידע
+    edit_custom: עדכן אסימון מידע
+    delete_custom: מחק אסימון מידע
+
+notes:
+    title: הערות מספר סיפורים
+    label: הערות
+    clear: הערות ברורות
+    clear_warning: האם אתה בטוח שברצונך לנקות את ההערות?
+
+acknowledgements:
+    title: הודאות
+    acknowledgements:
+        - <a href="https://bloodontheclocktower.com/" target="_blank" rel="noopener noreferrer">דם על מגדל השעון</a> זה סימן מסחרי של סטיבן מדווי ושל <a href="https://www.thepandemoniuminstitute.com/" target="_blank" rel="noopener noreferrer">מכון פנדמוניום</a>
+        - תזכורות לילה וטקטס עזר אחר נכתב על ידי <a href="http://bignose.whitetree.org/projects/botc/diy/" target="_blank" rel="noopener noreferrer">בן פיני</a>
+        - אייקונים נלקחו <a href="https://fontawesome.com/v5.15/icons" target="_blank" rel="noopener noreferrer">מפונט אדיר</a>
+        - תמונות רבות והמידע נלקח מ<a href="https://www.clocktower.online" target="_blank" rel="noopener noreferrer">clocktower.online</a> <a href="https://bloodontheclocktower.com/" target="_blank" rel="noopener noreferrer">ומהאתר של דם על מגדל השעון</a>
+        - זהו גרימואר וירטואלי לא רשמי עבור דם על מגדל השעון. פרויקט זה הוא בחינם וניתן למצוא את קוד המקור ב-<a href="https://github.com/Skateside/pocket-grimoire" target="_blank" rel="noopener noreferrer">GitHub</a>. פרויקט זה אינו מזוהה עם מכון הפנדמוניום. אם אתה נהנה לשחק דם על מגדל השעון, <a href="https://bloodontheclocktower.com/buy" target="_blank" rel="noopener noreferrer">אנא שקול לקנות גרימואר משלך </a>- בנוסף להיותו גמיש יותר מהגרסה הדיגיטלית הזו, הוא גם תומך ביוצרים.
+        - שמת לב לבאג או יש לך הצעת שיפור? הודע לי <a href="https://discord.com/channels/569683781800296501/708509594758152203" target="_blank" rel="noopener noreferrer">בערוץ הכלים בשרת הדיסקורד הלא רשמי (</a>השם שלי שם הוא "Skateside") או <a href="https://github.com/Skateside/pocket-grimoire/issues" target="_blank" rel="noopener noreferrer">העלה בעיה ב-GitHub</a>.
+        - <small>גרסא <span id="version"></span></small>
+
+errors:
+    homebrew_json:
+        not_homebrew: לא ערך ביתי "%id%"
+        unrecognised_team: צוות לא מזוהה "%team%"
+        not_find_id: לא ניתן למצוא את המזהה "%id%"
+        not_recognise_character: לא ניתן לזהות את התו "%id%"
+        invalid_entry: 'ערך לא חוקי עבור "%id%": %reasons%'
+        empty_teams: 'צוותים ריקים: %teams%'

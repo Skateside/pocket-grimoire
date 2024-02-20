@@ -266,6 +266,28 @@ export default class TokenStore {
     }
 
     /**
+     * Gets the character for the given ID, the same as
+     * {@link TokenStore#getCharacter}, but if the character is custom then
+     * undefined is returned.
+     *
+     * @param  {String} id
+     *         ID of the character to get.
+     * @return {CharacterToken|undefined}
+     *         The matching instance or undefined if the character isn't found.
+     */
+    getOfficialCharacter(id) {
+
+        const character = this.getCharacter(id);
+
+        if (character?.isCustom()) {
+            return undefined;
+        }
+
+        return character;
+
+    }
+
+    /**
      * Gets a clone of the character for the given ID.
      *
      * @param  {String} id
@@ -295,6 +317,16 @@ export default class TokenStore {
      */
     getAllCharacters() {
         return Object.values(this.characters);
+    }
+
+    /**
+     * Returns an empty character.
+     *
+     * @return {CharacterToken}
+     *         A clone of an empty character.
+     */
+    getEmptyCharacter() {
+        return this.getCharacterClone(this.constructor.EMPTY);
     }
 
     /**
@@ -349,6 +381,33 @@ export default class TokenStore {
      */
     getAllJinxes() {
         return this.jinxes;
+    }
+
+    /**
+     * Adds a jinx to {@link TokenStore#jinxes}.
+     *
+     * @param {Jinx} jinx
+     *        Jinx to add.
+     */
+    addJinx(jinx) {
+        this.jinxes.push(jinx);
+    }
+
+    /**
+     * Gets all the homebrew jinxes that have been registered.
+     *
+     * @return {Array.<Jinx>}
+     *         Collection of all homebrew jinxes.
+     */
+    getAllHomebrewJinxes() {
+        return this.jinxes.filter((jinx) => jinx.getIsHomebrew());
+    }
+
+    /**
+     * Removes all the homebrew jinxes from {@link TokenStore#jinxes}.
+     */
+    removeAllHomebrewJinxes() {
+        this.jinxes = this.jinxes.filter((jinx) => !jinx.getIsHomebrew());
     }
 
 }

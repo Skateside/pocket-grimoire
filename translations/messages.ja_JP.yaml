@@ -1,0 +1,253 @@
+title: ポケットグリモア
+
+forms:
+    file:
+        placeholder: ファイルを選ぶ
+        button: データを見る
+
+dialog:
+    close: 閉じる
+
+index:
+    title: ゲーム
+    description: Blood on the Clocktower のための仮想グリモア
+
+sheet:
+    title: キャラクターシート
+    description: 本エディションの Blood on the Clocktower 用キャラクターシート
+    jinx: ジンクス
+    each_night: '* 初夜を除く毎晩'
+    get_qr_code: シートのQRコードを取得
+    get_sheet: シートを取得
+    credit: <a href="https://bloodontheclocktower.com/" target="_blank" rel="noopener noreferrer">Blood on the Clocktower</a> は Steven Medway および <a href="https://www.thepandemoniuminstitute.com/" target="_blank" rel="noopener noreferrer">The Pandemonium Institute</a> の登録商標です
+    breakdown: プレイヤー数に対する各チームの数字。
+    count_plus: '%count%+'
+
+groups:
+    players: プレイヤー
+    townsfolk: 市民
+    outsider: よそ者
+    minion: ミニオン
+    demon: 悪魔
+    traveller: 旅人
+    fabled: 伝説
+
+messages:
+    good_team: 善人チーム
+    evil_team: 悪魔チーム
+    empty_character_ability: 空のキャラクターです
+    version_change_message: アプリがアップデートされました。データが正しくない可能性があるため、「キャッシュのクリア」ダイアログから全てのクリアすることをお勧めします。「OK」を押してダイアログを開くか、「キャンセル」を押してこのメッセージを閉じます
+    invalid_script: スクリプトのフォーマットが認識されていません
+    no_characters: スクリプトに認識可能なキャラクターが含まれていません
+    invalid_data: 無効なデータ。
+    no_data: データは送信されませんでした。
+    player_name: プレイヤーの名前はなんですか？
+    custom_info_token: 情報トークンに何を表示したいですか？二重アスタリスクで強調
+
+setup:
+
+    title: セットアップ
+
+    buttons:
+        select_edition: エディションを選択
+        select_characters: キャラクターを選択
+        qr_code_button: キャラクターシート
+        clear_cache_button: キャッシュのクリア
+        language: 言語
+        set_language: 言語を設定
+
+    editions:
+        title: エディションを選択
+        trouble_brewing: Trouble Brewing
+        bad_moon_rising: Bad Moon Rising
+        sects_and_violets: Sects and Violets
+        custom_script: カスタムスクリプト
+        custom_note: カスタムスクリプトをアップロード、またはスクリプトのURLを入力
+        custom_warning: 信頼できるソースからのJSONのみをロードしてください！
+        upload: カスタムスクリプトをアップロード
+        url: URLを入力
+        paste: クリップボードから貼り付け
+        select: 選択
+
+    character_select:
+        title: キャラクターをを選択
+        number_players: プレイヤーの人数
+        toggle_abilities: キャラクターの能力を表示
+        toggle_duplicates: キャラクターの重複を許す
+        highlight_random: ランダムなハイライト
+        draw_characters: キャラクターを描く
+        add_all: 全て追加
+        layout: レイアウト
+        ellipse: 楕円
+        diagonal: 対角線
+        horizontal: 水平
+        vertical: 垂直
+
+    character_choice:
+        title: キャラクターを選択する
+        description: 番号付きのトークンをタップしてキャラクターを選択します。色の濃いものは既に選択されています。
+
+    character_decision:
+        title: キャラクターを記憶する
+        name: 自身に名前をつける（任意）
+        return: キャラクターの選択に戻る
+
+    qr_code:
+        title: キャラクターシート
+        intro: QRコードをスキャンしてキャラクターシートを確認
+        include: 'を含む:'
+        travellers: 旅人
+        fabled: 幻
+
+    clear_cache:
+        title: キャッシュのクリア
+        clear_all: 全てをクリア
+        clear_description: オフにすることで個別にキャッシュをクリア
+        lookup_label: データをクリア
+        lookup_note: ジンクス、チーム分けおよびキャラクターの情報
+        characters_label: エディションをクリア
+        characters_note: 選択およびロードされたエディションとスクリプト
+        tokens_label: トークンをクリア
+        tokens_note: グリモア内のトークンの位置
+        inputs_label: 入力をクリア
+        inputs_note: ウェブサイト内の設定
+        details_label: オープン/クローズのクリア
+        details_note: オープンまたはクローズされているセクション
+        info_tokens_label: カスタム情報トークンをクリア
+        info_tokens_note: 追加されたカスタム情報トークン
+        names_label: 名前をクリア
+        names_note: プレイヤー名のサジェスト
+        height_label: パディングの高さをクリア
+        height_note: グリモア内のパディングの高さ
+        clear_refresh_label: あとでリフレッシュ
+        clear_refresh_note: リフレッシュにより、新しいデータがロードされます
+        warning: '<strong>警告:</strong> グリモア内に配置された全てのカスタム情報トークンは忘れられます'
+        info_token_warning: '<strong>警告:</strong> 全てのカスタム情報トークンは忘れられます'
+        clear_cache: キャッシュのクリア
+
+grimoire:
+
+    title: グリモア
+
+    grimoire:
+        bluffs: 悪魔のブラフ
+        show_bluffs: 全てのブラフを表示
+        add_bluffs: ブラフを追加する
+        add_token: トークンを追加
+        add_reminder: リマインダーを追加
+        add_traveller: 旅人を追加
+        add_fabled: 伝説を追加
+        show_tokens: トークンを表示
+        reset_height: パッドの高さをリセット
+        clear_grimoire: グリモアをクリア
+        clear_grimoire_warning: 本当に全てのトークンをクリアしますか？
+        show_night_order: 夜の順番を表示
+        character_size: キャラクタートークンのサイズ
+        reminder_size: リマインダートークンのサイズ
+        token_settings: トークンの設定
+
+    character_list:
+        title: キャラクターを選択
+
+    reminder_list:
+        title: リマインダーを選択
+        show: 全てのリマインダーを表示
+        multiple: 複数追加
+        add_all: 全て追加
+
+    character_show:
+        title: トークン
+        show: 表示
+        shroud: 包む
+        rotate: 回転
+        reminder: リマインダー
+        replace: 交換する
+        remove: トークンを取り除く
+        recent_reminders: '直近に追加されたリマインダー:'
+        player_name: プレイヤー名を設定
+
+    reminder_show:
+        title: リマインダー
+        remove: 取り除く
+
+    bluff_show:
+        title: トークン
+        empty: 空
+        show: 表示
+        change: 変更
+
+    bluff_list:
+        title: ブラフを選択
+        show_existing: 既存のキャラクターを表示
+        show_travellers: 旅人を表示
+        show_evil: 悪魔キャラクターを表示
+
+    token_list:
+        title: キャラクター
+        add: トークンを追加
+
+    traveller_list:
+        title: 旅人
+        show_all: 全ての旅人を表示
+
+    fabled_list:
+        title: 伝説
+
+    token:
+        title: トークン
+
+jinxes:
+    title: ジンクス
+    target: ターゲット
+    trick: トリック
+    reason: 理由
+    show: プレーされていないジンクスを表示
+
+night_order:
+    title: 夜の順番
+    first_night: 初夜
+    other_night: 昨晩
+    swipe_change: スワイプして夜を変更
+    show: プレーされていないキャラクターを表示
+
+info_tokens:
+    title: 情報トークン
+    info_tokens:
+        isdemon: これが<strong>悪魔</strong>です
+        isminion: これが<strong>ミニオン</strong>です
+        notinplay: これらのキャラクターは<strong>プレーされていません</strong>
+        nominatetoday: 本日<strong>推薦</strong>を行いましたか？
+        playeris: <strong>このプレイヤー</strong>は
+        votetoday: 本日<strong>投票</strong>をしましたか？
+        youare: <strong>あなた</strong>は
+        selectedyou: このキャラクターはあなたを<strong>選択</strong>しました
+    custom: カスタム情報トークン
+    add_custom: 情報トークンを追加
+    edit_custom: 情報トークンを編集
+    delete_custom: 情報トークンを削除
+
+notes:
+    title: ストーリーテラーノート
+    label: ノート
+    clear: クリアノート
+    clear_warning: メモを消去してもよろしいですか?
+
+acknowledgements:
+    title: 謝辞
+    acknowledgements:
+        - <a href="https://bloodontheclocktower.com/" target="_blank" rel="noopener noreferrer">Blood on the Clocktower</a> は Steven Medway および <a href="https://www.thepandemoniuminstitute.com/" target="_blank" rel="noopener noreferrer">The Pandemonium Institute</a> の登録商標です
+        - 夜のリマインダーおよび補助テキストは <a href="http://bignose.whitetree.org/projects/botc/diy/" target="_blank" rel="noopener noreferrer">Ben Finney</a> により作成されました
+        - アイコンは <a href="https://fontawesome.com/v5.15/icons" target="_blank" rel="noopener noreferrer">Font Awesome</a> より取得・使用しています
+        - 画像およびデータの多くは <a href="https://www.clocktower.online" target="_blank" rel="noopener noreferrer">Clocktower.online</a> と <a href="https://bloodontheclocktower.com/" target="_blank" rel="noopener noreferrer">Blood on the Clocktower</a> ウェブサイト提供のものを使用しています
+        - これは非公式の Blood on the Clocktower のための仮想グリモアです。このプロジェクトは無料であり、ソースコードは <a href="https://github.com/Skateside/pocket-grimoire" target="_blank" rel="noopener noreferrer">GitHub</a> 上に公開されています。本プロジェクトは  The Pandemonium Institute とは関連がありません。Blood on the Clocktower をお楽しみいただけた場合、<a href="https://bloodontheclocktower.com/buy" target="_blank" rel="noopener noreferrer">ご自分のグリモアの購入をご検討ください</a> - デジタル版より柔軟性が高く、さらに作成者を支援することができます。
+        - バグを発見した場合や改善についてのご意見がある場合、非公式の<a href="https://discord.com/channels/569683781800296501/708509594758152203" target="_blank" rel="noopener noreferrer">Discord</a>サーバ内開発者チャンネル（ユーザ名 "Skateslide"）または <a href="https://github.com/Skateside/pocket-grimoire/issues" target="_blank" rel="noopener noreferrer">GitHub の issue</a> にてお知らせください
+        - <small>バージョン <span id="version"></span></small>
+
+errors:
+    homebrew_json:
+        not_homebrew: 自作エントリ "%id%" ではありません
+        unrecognised_team: 認識されないチーム「%team%」
+        not_find_id: ID「%id%」が見つかりませんでした
+        not_recognise_character: 文字「%id%」を認識できませんでした
+        invalid_entry: '「%id%」のエントリが無効です: %reasons%'
+        empty_teams: '空のチーム: %teams%'

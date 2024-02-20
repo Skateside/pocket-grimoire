@@ -100,6 +100,11 @@
     grid-area: trick;
 }
 
+.edition__image {
+    aspect-ratio: auto 177 / 124;
+    object-fit: contain;
+}
+
 .edition__ability {
     grid-area: ability;
 }

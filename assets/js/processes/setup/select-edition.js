@@ -18,7 +18,7 @@ import {
 /**
  * Checks to see if the given data looks like a script.
  *
- * @param  {Array.<Object>} json
+ * @param  {Array.<Object|String>} json
  *         Data to check.
  * @return {Boolean}
  *         true if the data looks like a script, false if it doesn't.
@@ -29,27 +29,30 @@ function isScriptJson(json) {
         Array.isArray(json)
         && json.length
         && json.every((item) => (
-            typeof item === "object"
-            && typeof item?.id === "string"
+            (
+                typeof item === "object"
+                && typeof item?.id === "string"
+            )
+            || typeof item === "string"
         ))
     );
 
 }
 
 /**
- * Checks to see if the data given looks like a homebrew script. This function
- * assumes that the same data has already been checked by {@link isScriptJson}.
+ * Checks to see if the given json looks like it contains any homebrew content.
  *
  * @param  {Array.<Object>} json
  *         Data to check.
  * @return {Boolean}
- *         true if the data looks like a homebrew script, false if it doesn't.
+ *         true if the data seems to contain any homebrew, false if it doesn't
+ *         seem to contain any homebrew.
  */
-function isHomebrewJson(json) {
+function containsHomebrew(json) {
 
-    return json.some(({ id, ability }) => (
-        typeof ability === "string" || id === "_meta"
-    ));
+    return json
+        .filter(({ id }) => id !== "_meta")
+        .some(({ ability }) => typeof ability === "string");
 
 }
 
@@ -110,9 +113,23 @@ function normaliseHomebrew(json) {
 
     return json.map((entry) => {
 
+        // An official character may be a simple string rather than the
+        // old-school approach of an object with an "id" key.
+        if (typeof entry === "string") {
+            entry = { id: entry };
+        }
+
         Object.entries(normalMap).forEach(([key, map]) => {
             entry[key] = map[entry[key]] || entry[key];
         });
+
+        if (Array.isArray(entry.image)) {
+            entry.image = entry.image[0];
+        }
+
+        if (entry.team && !entry.image) {
+            entry.image = `/build/img/icons/${entry.team}.png`;
+        }
 
         return entry;
 
@@ -177,6 +194,32 @@ function setFormLoadingState(form, state) {
 }
 
 /**
+ * Converts a character entry into a normalised ID.
+ *
+ * @param  {Object|String} item
+ *         Item whose normalised ID should be returned.
+ * @return {String}
+ *         Normalised character ID.
+ */
+function convertCharacterId(item) {
+
+    let id = "";
+
+    if (typeof item === "string") {
+        id = item;
+    } else if (item && typeof item === "object") {
+        id = item.id || "";
+    }
+
+    // The script tool creates IDs differently from our data.
+    // Examples: script = lil_monsta, data = lilmonsta
+    // Examples: script = al-hadikhia, data = alhadikhia
+    // The .replace() here is designed to convert their IDs to ours.
+    return id.replace(/[-_]/g, "")
+
+}
+
+/**
  * Processes the JSON to set up the game.
  *
  * @param {Object} json
@@ -204,14 +247,14 @@ function processJSON({
 
     }
 
-    if (isHomebrewJson(json)) {
+    if (containsHomebrew(json)) {
 
         const normalised = normaliseHomebrew(json);
 
         setFormLoadingState(form, true);
 
         return post(URLS.homebrew, normalised)
-            .then(({ success, game, message }) => {
+            .then(({ success, game, message, reasons }) => {
 
                 setFormLoadingState(form, false);
 
@@ -220,14 +263,21 @@ function processJSON({
                     announceScript(
                         extractMetaEntry(normalised),
                         normalised.map((item) => (
-                            store.createCustomCharacter(item)
+                            store.getOfficialCharacter(convertCharacterId(item))
+                            || store.createCustomCharacter(item)
                         )),
                         game
                     );
                     Dialog.create(lookupOneCached("#edition-list")).hide();
 
                 } else {
+
+                    if (reasons && reasons.length) {
+                        message += "\n\n" + reasons.join("\n");
+                    }
+
                     showInputError(input, message);
+
                 }
 
         });
@@ -235,14 +285,9 @@ function processJSON({
     }
 
     const name = extractMetaEntry(json);
-
-    // The script tool creates IDs differently from our data.
-    // Examples: script = lil_monsta, data = lilmonsta
-    // Examples: script = al-hadikhia, data = alhadikhia
-    // The .replace() here is designed to convert their IDs to ours.
-    const characters = json.map((item) => (
-        store.getCharacter(item.id.replace(/[-_]/g, ""))
-    ));
+    const characters = json
+        .map((item) => store.getCharacter(convertCharacterId(item)))
+        .filter(Boolean);
 
     if (!characters.length) {
 
@@ -255,12 +300,45 @@ function processJSON({
 
 }
 
+/**
+ * Sets the validation on the given fields.
+ *
+ * @param {Array.<Element>} fields
+ *        Input fields that should have their validity set.
+ * @param {Boolean} isVisible
+ *        true if the fields are visible and their validity should be set, false
+ *        if they're not visible and their validity should be removed.
+ */
+function setFieldsValidity(fields, isVisible) {
+
+    if (isVisible) {
+
+        const inputted = fields.find((field) => field.value);
+        fields.forEach((field) => {
+            field.required = !inputted || field === inputted;
+        });
+
+    } else {
+
+        fields.forEach((field) => {
+
+            field.setCustomValidity("");
+            field.required = false;
+
+        });
+
+    }
+
+}
+
 const form = lookupOne("#select-edition-form");
 const fileInput = lookupOne("#custom-script-upload");
 const fileInputRender = fileInput.nextElementSibling;
 const urlInput = lookupOne("#custom-script-url");
+const pasteInput = lookupOne("#custom-script-paste");
 const uploader = lookupOne("#custom-script");
 const radios = lookup("[name=\"edition\"]", form);
+const customInputs = [fileInput, urlInput, pasteInput];
 
 radios.forEach((radio) => {
 
@@ -269,17 +347,19 @@ radios.forEach((radio) => {
         const isCustom = target.value === "custom";
 
         uploader.hidden = !isCustom;
-        fileInput.required = isCustom;
-        urlInput.required = isCustom;
+        setFieldsValidity(customInputs, isCustom);
 
     });
 
-    fileInput.addEventListener("input", () => {
-        urlInput.required = !fileInput.value;
-    });
+});
 
-    urlInput.addEventListener("input", () => {
-        fileInput.required = !urlInput.value;
+customInputs.forEach((input) => {
+
+    input.addEventListener("input", () => {
+
+        input.setCustomValidity("");
+        setFieldsValidity(customInputs, true);
+
     });
 
 });
@@ -308,6 +388,10 @@ form.addEventListener("submit", (e) => {
                 fetch(urlInput.value)
                     .catch((error) => showInputError(urlInput, error.message))
                     .then((response) => response.json())
+                    .catch(() => {
+                        showInputError(urlInput, I18N.invalidScript)
+                        return [];
+                    })
                     .then((json) => processJSON({
                         form,
                         json,
@@ -323,14 +407,43 @@ form.addEventListener("submit", (e) => {
                 //    them to be included. Noticed when trying to upload a
                 //    homebrew Spanish script.
 
-                reader.addEventListener("load", ({ target }) => processJSON({
-                    form,
-                    json: JSON.parse(readUTF8(target.result)), // [1]
-                    input: fileInput,
-                    store: tokenStore
-                }));
+                reader.addEventListener("load", ({ target }) => {
+
+                    let json = [];
+
+                    try {
+                        json = JSON.parse(readUTF8(target.result)); // [1]
+                    } catch (error) {
+                        return showInputError(fileInput, I18N.invalidScript);
+                    }
+
+                    processJSON({
+                        form,
+                        json,
+                        input: fileInput,
+                        store: tokenStore
+                    })
+
+                });
 
                 reader.readAsBinaryString(fileInput.files[0]);
+
+            } else if (pasteInput.value) {
+
+                let json = [];
+
+                try {
+                    json = JSON.parse(readUTF8(pasteInput.value)); // [1]
+                } catch (error) {
+                    return showInputError(pasteInput, I18N.invalidScript);
+                }
+
+                processJSON({
+                    form,
+                    json,
+                    input: pasteInput,
+                    store: tokenStore
+                })
 
             }
 
@@ -381,5 +494,14 @@ urlInput.addEventListener("input", () => {
         announceInput(fileInput);
 
     }
+
+});
+
+Dialog.create(lookupOne("#edition-list")).on(Dialog.HIDE, () => {
+
+    fileInput.value = "";
+    announceInput(fileInput);
+    urlInput.value = "";
+    announceInput(urlInput);
 
 });

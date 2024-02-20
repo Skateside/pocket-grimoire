@@ -1,0 +1,252 @@
+title: Žepna Bukla
+
+forms:
+    file:
+        placeholder: Izberi datoteko
+        button: Brskaj
+
+dialog:
+    close: Zapri
+
+index:
+    title: Igra
+    description: Virtualna Bukla za igro Blood on the Clocktower
+
+sheet:
+    title: Seznam vlog
+    description: Seznam vlog te izdaje igre Blood on the Clocktower
+    jinx: Urok
+    each_night: '* Vsako noč razen prvo noč.'
+    get_qr_code: Pridobi QR kodo za ta seznam vlog
+    get_sheet: Get this sheet
+    credit: <a href="https://bloodontheclocktower.com/" target="_blank" rel="noopener noreferrer">Blood on the Clocktower</a> je blagovna znamka Stevena Medwaya in <a href="https://www.thepandemoniuminstitute.com/" target="_blank" rel="noopener noreferrer">The Pandemonium Institute</a>
+    breakdown: Številke vsake ekipe za število igralcev.
+    count_plus: '%count%+'
+
+groups:
+    players: Igralci
+    townsfolk: Meščani
+    outsider: Izobčenci
+    minion: Sledilci
+    demon: Demoni
+    traveller: Popotniki
+    fabled: Pravljičarji
+
+messages:
+    good_team: Dobra ekipa
+    evil_team: Zlobna ekipa
+    empty_character_ability: To je prazna vloga.
+    version_change_message: Aplikacija se je posodobila. Ker je možno, da so tvoji podatki napačni, predlagamo, da počistiš svojo Buklo prek pojavnega okna "Počisti predpomnilnik". Pritisni "OK", da odpreš pojavno okno ali "Prekliči", da zapreš to okno.
+    invalid_script: Ne prepoznamo formata tega scenarija.
+    no_characters: Ne prepoznamo nobene vloge na tem scenariju.
+    player_name: Kako je ime temu igralcu?
+    custom_info_token: Kaj želiš, da tvoj novi info žeton pravi? Uporabi **dvojne zvezdice**, da poudariš besedilo.
+
+setup:
+
+    title: Priprava
+
+    buttons:
+        select_edition: Izberi izdajo
+        select_characters: Izberi vloge
+        qr_code_button: Seznam vlog
+        clear_cache_button: Počisti Predpomnilnik
+        language: Jezik
+        set_language: Določi jezik
+
+    editions:
+        title: Izberi izdajo
+        trouble_brewing: Trouble Brewing
+        bad_moon_rising: Bad Moon Rising
+        sects_and_violets: Sects and Violets
+        custom_script: Lasten scenarij
+        custom_note: Naloži svoj scenarij ali vnesi URL scenarija.
+        custom_warning: JSON datoteko odpri samo, če zaupaš njenemu viru!
+        upload: Naloži lasten scenarij.
+        url: Vnesi URL.
+        paste: Prilepi iz odložišča
+        unsupported: Žepna Bukla trenutno ne podpira "homebrew-a" ali lokaliziranih urokov.
+        select: Izberi
+
+    character_select:
+        title: Izberi vloge
+        number_players: Število igralcev
+        toggle_abilities: Pokaži moči vlog
+        toggle_duplicates: Dovoli podvojene vloge
+        highlight_random: Označi naključno
+        draw_characters: Vleči karakterje
+        add_all: Dodaj vse
+        layout: Oblika
+        ellipse: Elipsa
+        diagonal: Diagonala
+        horizontal: Navpičnica
+        vertical: Vodoravnica
+
+    character_choice:
+        title: Izberi svojo vlogo
+        description: Izberi na enega od žetonov s številko, da izbereš svojega lika. Zatemnjen žeton je že izbral nekdo drug.
+
+    character_decision:
+        title: Zapomni si svojo vlogo
+        name: Poimenuj se (po želji)
+        return: Vrni se na izbor vlog
+
+    qr_code:
+        title: Seznam vlog
+        intro: Skeniraj to QR kodo, da vidiš seznam vlog
+        include: 'Vsebuje:'
+        travellers: Popotniki
+        fabled: Pravljičarji
+
+    clear_cache:
+        title: Počisti predpomnilnik
+        clear_all: Počisti vse
+        clear_description: Če izključiš to možnost, boš lahko počistil posamezne dele predpomnilnika.
+        lookup_label: Počisti podatke
+        lookup_note: Podatki o urokih, sestavah ekip in opisih vlog.
+        characters_label: Počisti izdajo
+        characters_note: Izdaja ali scenarij, ki je bil izbran in naložen.
+        tokens_label: Počisti žetone
+        tokens_note: Položaj žetonov v bukli.
+        inputs_label: Počisti vnose
+        inputs_note: Uporabniške nastavitve za to stran
+        details_label: Počisti odprto/zaprto
+        details_note: Kateri razdelki so odprti ali zaprti
+        info_tokens_label: Počisti lastne info žetone
+        info_tokens_note: Lastni info žetoni so bili dodani.
+        names_label: Počisti imena
+        names_note: Predlogi za imena igralcev.
+        height_label: Ponastavi velikost razdelka
+        height_note: Velikost razdelka v bukli
+        clear_refresh_label: Osveži počiščene podatke
+        clear_refresh_note: Če osvežiš podatke, se bo za vse, kar si počistil_a, naložili novi podatki.
+        warning: '<strong>Pozor:</strong> Vsi žetoni v Bukli bodo pozabljeni.'
+        info_token_warning: '<strong>Pozor:</strong> Vsi lastni info žetoni bodo pozabljeni.'
+        clear_cache: Počisti predpomnilnik
+
+grimoire:
+
+    title: Bukla
+
+    grimoire:
+        bluffs: Demonovi blefi
+        show_bluffs: Pokaži vse blefe
+        add_bluffs: Dodajte blefe
+        add_token: Dodaj žeton
+        add_reminder: Dodaj opomnik
+        add_traveller: Dodaj Popotnika
+        add_fabled: Dodaj Pravljičarji
+        show_tokens: Pokaži žetone
+        reset_height: Ponastavi velikost razdelka
+        clear_grimoire: Počisti Buklo
+        clear_grimoire_warning: Si prepričan_a, da želiš počistiti vse info žetone?
+        show_night_order: Pokaži nočni red
+        character_size: Velikost žetonov z vlogo
+        reminder_size: Velikost opomnikov
+        token_settings: Nastavitve žetonov
+
+    character_list:
+        title: Izberi vlogo
+
+    reminder_list:
+        title: Izberi opomnik
+        show: Pokaži vse opomnike
+        multiple: Dodajte več
+        add_all: Dodaj vse
+
+    character_show:
+        title: Žeton
+        show: Pokaži
+        shroud: Zakrij
+        rotate: Obrni
+        reminder: Opomnik
+        replace: Zamenjati
+        remove: Odstrani žeton
+        recent_reminders: 'Nedavno dodani opomniki:'
+        player_name: Določi ime igralca
+
+    reminder_show:
+        title: Opomnik
+        remove: Odstrani žeton
+
+    bluff_show:
+        title: Žeton
+        empty: Prazno
+        show: Pokaži
+        change: Spremeni
+
+    bluff_list:
+        title: Izberi Blef
+        show_existing: Pokaži vloge v igri
+        show_travellers: Pokaži popotnike
+        show_evil: Pokaži zlobne vloge
+
+    token_list:
+        title: Vloge
+        add: Dodaj žeton
+
+    traveller_list:
+        title: Popotniki
+        show_all: Pokaži vse Popotnike
+
+    fabled_list:
+        title: Pravljičarji
+
+    token:
+        title: Žetoni
+
+jinxes:
+    title: Uroki
+    target: Tarča
+    trick: Trik
+    reason: Razlog
+    show: Pokaži uroke, ki niso v igri
+
+night_order:
+    title: Nočni red
+    first_night: Prva noč
+    other_night: Ostale noči
+    swipe_change: Podrsaj, da zamenjaš noči.
+    show: Pokaži vloge, ki niso v igri
+
+info_tokens:
+    title: Info žetoni
+    info_tokens:
+        isdemon: To je <strong>Demon</strong>.
+        isminion: To so tvoji <strong>Sledilci</strong>.
+        notinplay: To so vloge, ki <strong>niso v igri</strong>.
+        nominatetoday: Si <strong>danes nominiral-a</strong>?
+        playeris: <strong>Ta igralec</strong> je
+        votetoday: Si danes <strong>glasoval-a</strong>?
+        youare: <strong>Ti</strong> si
+        selectedyou: Ta vloga te je <strong>izbrala</strong>
+    custom: Lastni info žetoni
+    add_custom: Dodaj info žeton
+    edit_custom: Uredi info žeton
+    delete_custom: Izbriši info žeton
+
+notes:
+    title: Zapiski pripovedovalca
+    label: Opombe
+    clear: Jasne opombe
+    clear_warning: Ali ste prepričani, da želite počistiti zapiske?
+
+acknowledgements:
+    title: Priznanja
+    acknowledgements:
+        - <a href="https://bloodontheclocktower.com/" target="_blank" rel="noopener noreferrer">Blood on the Clocktower</a> je blagovna znamka Stevena Medwaya in <a href="https://www.thepandemoniuminstitute.com/" target="_blank" rel="noopener noreferrer">The Pandemonium Institute</a>.
+        - Nočne opomnike in druga pomožna besedila je napisal <a href="http://bignose.whitetree.org/projects/botc/diy/" target="_blank" rel="noopener noreferrer">Ben Finney</a>.
+        - Ikone so pobrane iz <a href="https://fontawesome.com/v5.15/icons" target="_blank" rel="noopener noreferrer">Font Awesome</a>.
+        - Mnogo slik in podatkov smo vzeli iz <a href="https://www.clocktower.online" target="_blank" rel="noopener noreferrer">Clocktower.online</a> in <a href="https://bloodontheclocktower.com/" target="_blank" rel="noopener noreferrer">Spletne strani igre Blood on the Clocktower</a>.
+        - To je neuradna virtualna bukla za igro Blood on the Clocktower. Ta projekt je brezplačen, njegovo izvorno kodo lahko najdeš na <a href="https://github.com/Skateside/pocket-grimoire" target="_blank" rel="noopener noreferrer">GitHub-u</a>. Žepna bukla ni povezana z Pandemonium Institute. Če uživaš v igri Blood on the Clocktower, <a href="https://bloodontheclocktower.com/buy" target="_blank" rel="noopener noreferrer">prosim premisli o tem, da si kupiš svojo buklo</a>- poleg tega da je bolj priročna kot ta digitalna izdaja, tudi podpira ustvarjalce igre.
+        - Si opazil hrošča ali bi predlagal izboljšave? Poišči me v kanalu <a href="https://discord.com/channels/569683781800296501/708509594758152203" target="_blank" rel="noopener noreferrer">"toolmakers" na neuradnem Discord strežniku</a> (moje ime tam je "Scaterside") ali <a href="https://github.com/Skateside/pocket-grimoire/issues" target="_blank" rel="noopener noreferrer">opomni na težavo na Github-u</a>.
+        - <small>Verzija <span id="version"></span></small>
+
+errors:
+    homebrew_json:
+        not_homebrew: Ni domači vnos "%id%"
+        unrecognised_team: Neprepoznana ekipa "%team%"
+        not_find_id: Ni bilo mogoče najti ID-ja "%id%"
+        not_recognise_character: Ni bilo mogoče prepoznati znaka "%id%"
+        invalid_entry: 'Neveljaven vnos za "%id%": %reasons%'
+        empty_teams: 'Prazne ekipe: %teams%'

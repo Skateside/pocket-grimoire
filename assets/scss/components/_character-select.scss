@@ -5,11 +5,29 @@
 
 .character-select__title,
 .character-select__score-box {
-    display: inline-block;
+    display: inline-flex;
 }
 
 .character-select__score-box {
     margin-top: 1em;
+
+    @at-root {
+        [dir="rtl"] & {
+            margin-bottom: 1em;
+            margin-top: 0;
+            display: inline-flex; // reverse the order of the content.
+        }
+    }
+}
+
+.character-select__score-seperator::after {
+    content: attr(data-vertical);
+
+    @at-root {
+        [dir="rtl"] & {
+            content: attr(data-horizontal);
+        }
+    }
 }
 
 .character-select__characters {
@@ -25,7 +43,7 @@
     opacity: 0.6;
 
     @at-root {
-        :checked ~ #{&} {
+        :checked ~ & {
             opacity: 1;
         }
     }
@@ -36,6 +54,15 @@
     font-size: 0.9em;
     font-weight: bold;
     text-align: center;
+
+    &:lang(de) {
+        font-size: 0.7em;
+    }
+}
+
+.character-select__part--image {
+    aspect-ratio: 1/1;
+    object-fit: contain;
 }
 
 .character-select__part--ability {
@@ -43,7 +70,7 @@
     font-size: 0.75em;
 
     @at-root {
-        .is-hide-abilities #{&} {
+        .is-hide-abilities & {
             display: none;
         }
     }
@@ -103,7 +130,7 @@
     z-index: 1;
 
     @at-root {
-        .is-show-duplicates .is-selected > #{&} {
+        .is-show-duplicates .is-selected > & {
             display: block;
         }
     }

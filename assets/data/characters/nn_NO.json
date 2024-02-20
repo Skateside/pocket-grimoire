@@ -1,0 +1,1661 @@
+[
+    {
+        "id": "acrobat",
+        "name": "Akrobat",
+        "ability": "Kvar natt*, om ein av dine gode, levande naboar er full eller forgifta, døyr du.",
+        "firstNightReminder": "",
+        "otherNightReminder": "Om ein god levande nabo er full eller forgifta, døyr Akrobaten.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Daud"
+        ]
+    },
+    {
+        "id": "alchemist",
+        "name": "Alkymist",
+        "ability": "Du har evna til ein Lakei ikkje i spel.",
+        "firstNightReminder": "Vis Alkymisten ei Lakei-brikke ikkje i spel.",
+        "otherNightReminder": "",
+        "remindersGlobal": [
+            "Er Alkymisten"
+        ],
+        "reminders": []
+    },
+    {
+        "id": "alhadikhia",
+        "name": "Al-Hadikhia",
+        "ability": "Kvar natt*, vel 3 spelarar (alle spelarane lærer kven): kvar av dei vel i løyndom å leve eller å døy, men om alle lever, døyr alle.",
+        "firstNightReminder": "",
+        "otherNightReminder": "Al-Hadikhia vel tre spelarar. Kunngjer den fyrste spelaren, vekk dei for anten å nikke for \"ja\" eller riste på hovudet for \"nei\", drep eller gjenoppliv dei ut ifrå dette. Få spelaren til å sove att, og kunngjer neste spelar. Om alle spelarane er i live etter dette, døyr alle.",
+        "remindersGlobal": [],
+        "reminders": [
+            "1",
+            "2",
+            "3",
+            "Valde dauden",
+            "Valde livet"
+        ]
+    },
+    {
+        "id": "amnesiac",
+        "name": "Forgløymd",
+        "ability": "Du veit ikkje kva evna di er. Kvar dag, giss i fortrulegheit kva ho er: lær kor presis du er.",
+        "firstNightReminder": "Avgjer kva evna til den Forgløymde er. Om evna til den Forgløymde gjer at dei vaknar i natt: Vekk den Forgløymde og legg til rette for at dei kan nytte evna si.",
+        "otherNightReminder": "Om evna til den Forgløymde gjer at dei vaknar i natt: Vekk den Forgløymde og legg til rette for at dei kan nytte evna si.",
+        "remindersGlobal": [],
+        "reminders": [
+            "?"
+        ]
+    },
+    {
+        "id": "angel",
+        "name": "Verjeengel",
+        "ability": "Noko ugreitt kan hende spelaren som er mest ansvarleg for at ein ny spelar døydde.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": [
+            "Verj",
+            "Noko ugreitt"
+        ]
+    },
+    {
+        "id": "apprentice",
+        "name": "Lærling",
+        "ability": "I den fyrste natta di, få evna til ein Borgar om du er god, eller evna til ein Lakei om du er vond.",
+        "firstNightReminder": "Vis Lærlingen \"Du er\"-kortet, så ei Borgar- eller Lakei-brikke. I Boka, byt ut Lærling-brikka med den viste rollebrikka, og marker rollebrikka med \"Er Lærlingen\"-påminninga.",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": [
+            "Er Lærlingen"
+        ]
+    },
+    {
+        "id": "artist",
+        "name": "Kunstnar",
+        "ability": "Éin gong i løpet av spelet, om dagen, spør i fortrulegheit Forteljaren eit ja/nei-spørsmål.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": [
+            "Evnelaus"
+        ]
+    },
+    {
+        "id": "assassin",
+        "name": "Snikmordar",
+        "ability": "Éin gong i løpet av spelet, om natta*, vel ein spelar: dei døyr, sjølv om dei av andre grunnar skulle vere immun.",
+        "firstNightReminder": "",
+        "otherNightReminder": "Om Snikmordaren enno ikkje har nytta evna si: Snikmordaren anten ristar på hovudet for \"nei\", eller peikar mot en spelar. Spelaren døyr.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Daud",
+            "Evnelaus"
+        ]
+    },
+    {
+        "id": "atheist",
+        "name": "Ateist",
+        "ability": "Forteljaren kan bryte reglane til spelet. Godt lag vinn om dei avrettar Forteljaren, sjølv om du er daud. [Ingen vonde roller]",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "balloonist",
+        "name": "Ballongfarar",
+        "ability": "Kvar natt, lær 1 spelar av kvar rolletype, til det ikkje er fleire typar å lære att. [+1 Einstøing]",
+        "firstNightReminder": "Vel ein rolletype. Peik mot ein spelar som har ei rolle av den typen. Marker spelaren med \"Sett\"-påminninga.",
+        "otherNightReminder": "Vel ein rolletype som ikkje allereie har ei \"Sett\"-påminning attmed ei rolle av denne typen. Peik mot ein spelar som har ei rolle av den typen. Marker spelaren med \"Sett\"-påminninga.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Sett Borgar",
+            "Sett Einstøing",
+            "Sett Lakei",
+            "Sett Demon",
+            "Sett Omreisande"
+        ]
+    },
+    {
+        "id": "barber",
+        "name": "Frisør",
+        "ability": "Om du døydde i dag eller i natt, kan Demonen velje 2 spelarar utanom ein annan Demon: dei byter rolle.",
+        "firstNightReminder": "",
+        "otherNightReminder": "Om Frisøren døydde i dag: Vekk Demonen. Vis dei \"Denne rolla valde deg\"-kortet, så Frisør-brikka. Demonen anten ristar på hovudet for \"nei\", eller peikar mot to spelarar. Om dei vel spelarar, byt om på rollebrikkene deira. Vekk båe spelarane, ein om gongen, og vis dei \"Du er\"-kortet fyrst, så den nye rollebrikka deira.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Hårklipp i natt"
+        ]
+    },
+    {
+        "id": "barista",
+        "name": "Barista",
+        "ability": "Kvar natt, til skyming, 1) ein spelar vert frisk, edru & vert gjeve sann kunnskap, eller 2) evna deira verkar 2 gonger. Spelaren lærer kva.",
+        "firstNightReminder": "Vel ein spelar, vekk dei og fortel dei kva av Baristaen sine krefter påverkar dei. Handsam dei såleis (frisk/edru/sann kunnskap eller la dei nytte evna si to gonger).",
+        "otherNightReminder": "Vel ein spelar, vekk dei og fortel dei kva av Baristaen sine krefter påverkar dei. Handsam dei såleis (frisk/edru/sann kunnskap eller la dei nytte evna si to gonger).",
+        "remindersGlobal": [],
+        "reminders": [
+            "Edru & Frisk",
+            "Evne 2 gonger"
+        ]
+    },
+    {
+        "id": "baron",
+        "name": "Greve",
+        "ability": "Fleire Einstøingar er i spel. [+2 Einstøingar]",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "beggar",
+        "name": "Tiggar",
+        "ability": "Du må nytte ei røystbrikke for å røyste. Daude spelarar kan velje å gjeve deg deira. I så fall lærer du lojaliteten deira. Du er frisk & edru.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "bishop",
+        "name": "Biskop",
+        "ability": "Berre Forteljaren kan nominere. Minst 1 spelar av motsett lojalitet må verte nominert kvar dag.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": [
+            "Nominer godt",
+            "Nominer vondt"
+        ]
+    },
+    {
+        "id": "bonecollector",
+        "name": "Beinsamlar",
+        "ability": "Éin gong i løpet av spelet, om natta, vel ein daud spelar: evna deira verkar på ny til daggry.",
+        "firstNightReminder": "",
+        "otherNightReminder": "Beinsamlaren anten ristar på hovudet for \"nei\", eller peikar mot ein daud spelar. Om dei peika mot ein daud spelar, marker rollebrikka til den valde spelaren med \"Har evne\"-påminninga. (Det kan hende spelaren må verte vekt slik at dei skal kunne nytte evna si.)",
+        "remindersGlobal": [],
+        "reminders": [
+            "Evnelaus",
+            "Har evne"
+        ]
+    },
+    {
+        "id": "boomdandy",
+        "name": "Knallkar",
+        "ability": "Om du vert avretta, døyr alle spelarane utanom 3. 1 minutt seinare vil spelaren flest peikar på også døy.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "bountyhunter",
+        "name": "Dusørjeger",
+        "ability": "Du lærer innleiingsvis 1 vond spelar. Om spelaren du veit døyr, lær ein ny vond spelar i natt. [1 Borgar er vond]",
+        "firstNightReminder": "Peik mot ein vond spelar. Vekk Borgaren som er vond og vis dei \"Du er\"-kortet og tommel ned, handteiknet for \"vond\".",
+        "otherNightReminder": "Om spelaren markert med \"Veit\" døyr, peik mot ein annan vond spelar.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Veit"
+        ]
+    },
+    {
+        "id": "buddhist",
+        "name": "Buddhist",
+        "ability": "Røynde spelarar får ikkje lov å snakke dei 2 fyrste minutta kvar dag.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "bureaucrat",
+        "name": "Byråkrat",
+        "ability": "Kvar natt, vel ein spelar utanom deg sjølv: røysta deira tel som 3 i morgon.",
+        "firstNightReminder": "Byråkraten peikar mot ein spelar. Marker spelaren med \"3 røyster\".",
+        "otherNightReminder": "Byråkraten peikar mot ein spelar. Marker spelaren med \"3 røyster\".",
+        "remindersGlobal": [],
+        "reminders": [
+            "3 røyster"
+        ]
+    },
+    {
+        "id": "butcher",
+        "name": "Slaktar",
+        "ability": "Kvar dag, etter den fyrste avrettinga, nominer att om du vil.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "butler",
+        "name": "Hovmeister",
+        "ability": "Kvar natt, vel ein spelar utanom deg sjølv: i morgon kan du berre røyste om dei også røystar.",
+        "firstNightReminder": "Hovmeisteren peikar mot ein spelar annleis seg sjølv. Marker spelaren som \"Herre\".",
+        "otherNightReminder": "Hovmeisteren peikar mot ein spelar annleis seg sjølv. Marker spelaren som \"Herre\".",
+        "remindersGlobal": [],
+        "reminders": [
+            "Herre"
+        ]
+    },
+    {
+        "id": "cannibal",
+        "name": "Menneskeetar",
+        "ability": "Du har evna til spelaren nylegast drepen ved avretting. Om dei er vond, vert du forgifta til ein god spelar døyr ved avretting.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": [
+            "Forgifta",
+            "Døydde i dag"
+        ]
+    },
+    {
+        "id": "cerenovus",
+        "name": "Cerenov",
+        "ability": "Kvar natt, vel ein spelar & ei god rolle: dei er \"manisk\" dei er den rolla, om ikkje kan det hende dei vert avretta.",
+        "firstNightReminder": "Cerenoven peikar mot ein spelar, så på ei rolle på rollearket. Vekk spelaren, vis dei \"Denne rolla valde deg\"-kortet, så Cerenov-brikka. Vis dei den valde rollebrikka. Om spelaren ikkje er manisk dei er den rolla i morgon, kan dei verte avretta.",
+        "otherNightReminder": "Cerenoven peikar mot ein spelar, så på ei rolle på rollearket. Vekk spelaren, vis dei \"Denne rolla valde deg\"-kortet, så Cerenov-brikka. Vis dei den valde rollebrikka. Om spelaren ikkje er manisk dei er den rolla i morgon, kan dei verte avretta.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Manisk"
+        ]
+    },
+    {
+        "id": "chambermaid",
+        "name": "Kammerjente",
+        "ability": "Kvar natt, vel 2 levande spelarar utanom deg sjølv: lær kor mange av dei vakna i natt på grunn av evna si.",
+        "firstNightReminder": "Kammerjenta peikar mot to spelarar. Hald fram eit tal fingrar (0, 1, 2) tilsvarande kor mange av dei valde spelarane vakna i natt på grunn av evna si.",
+        "otherNightReminder": "Kammerjenta peikar mot to spelarar. Hald fram eit tal fingrar (0, 1, 2) tilsvarande kor mange av dei valde spelarane vakna i natt på grunn av evna si.",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "chef",
+        "name": "Kokk",
+        "ability": "Du lærer innleiingsvis kor mange par med vonde spelarar som finst.",
+        "firstNightReminder": "Hald fram eit tal fingrar (0, 1, 2, …) tilsvarande par med vonde spelarar.",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "choirboy",
+        "name": "Korgut",
+        "ability": "Om Demonen drep Kongen, lær kven Demonen er. [+ Kongen]",
+        "firstNightReminder": "",
+        "otherNightReminder": "Om Kongen var drepe av Demonen, vekk Korguten og peik mot spelaren som er Demonen.",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "clockmaker",
+        "name": "Urmakar",
+        "ability": "Du lærer innleiingsvis kor mange steg frå Demonen til næraste Lakei.",
+        "firstNightReminder": "Hald fram eit tal fingrar (0, 1, 2, …) tilsvarande steg frå Demon til næraste Lakei.",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "courtier",
+        "name": "Kavaler",
+        "ability": "Éin gong i løpet av spelet, om natta, vel ei rolle: dei er full for 3 netter & 3 dagar.",
+        "firstNightReminder": "Kavaleren anten ristar på hovudet for \"nei\", eller peikar på ei rolle på rollearket. Om kavaleren nytta evna si: Om rolla er i spel, er den spelaren full.",
+        "otherNightReminder": "Kort ned på talet dagar den markerte spelaren er forgifta. Om Kavaleren enno ikkje har nytta evna si: Kavaleren anten ristar på hovudet for \"nei\", eller peikar på ei rolle på rollearket. Om kavaleren nytta evna si: Om rolla er i spel, er den spelaren full.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Full 3",
+            "Full 2",
+            "Full 1",
+            "Evnelaus"
+        ]
+    },
+    {
+        "id": "cultleader",
+        "name": "Sektleiar",
+        "ability": "Kvar natt, få lojaliteten til ein levande nabo. Om alle gode spelarar vel å verte med i sekta di, vinn laget ditt.",
+        "firstNightReminder": "Om Sektleiaren bytte lojalitet, vekk dei og vis dei det relevante handteiknet, anten tommel opp, handteiknet for \"god\", eller tommel ned, handteiknet for \"vond\".",
+        "otherNightReminder": "Om Sektleiaren bytte lojalitet, vekk dei og vis dei det relevante handteiknet, anten tommel opp, handteiknet for \"god\", eller tommel ned, handteiknet for \"vond\".",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "damsel",
+        "name": "Prinsesse",
+        "ability": "Alle lakeiar veit du er i spel. Om ein Lakei gissar kven du er offentleg, tapar laget ditt. Lakeiane kan seg imellom berre gisse éin gong.",
+        "firstNightReminder": "Vekk alle Lakeiar, vis dei \"Denne rolla valde deg\"-kortet, og så Prinsesse-brikka. Om Ferdamannen valde Prinsessa, vekk Prinsessa og vis dei \"Du er\"-kortet, og så ei Borgar-brikke ikkje i spel.",
+        "otherNightReminder": "Om Ferdamannen valde Prinsessa, vekk Prinsessa og vis dei \"Du er\"-kortet, og så ei Borgar-brikke ikkje i spel.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Gissing nytta"
+        ]
+    },
+    {
+        "id": "deusexfiasco",
+        "name": "Deus ex Fiasco",
+        "ability": "Forteljaren har éin gong i løpet av spelet gjort ein \"tabbe\", har så retta han opp og vedgått det for alle.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": [
+            "Oisann"
+        ]
+    },
+    {
+        "id": "deviant",
+        "name": "Skøyar",
+        "ability": "Du kan ikkje døy ved forvising i dag om du var morosam.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "devilsadvocate",
+        "name": "Djevelens Adv.",
+        "ability": "Kvar natt, vel ein levande spelar annleis enn førre natt: vert dei avretta i morgon, døyr dei ikkje.",
+        "firstNightReminder": "Djevelens Advokat peikar mot ein levande spelar. Spelaren overlever avretting i morgon.",
+        "otherNightReminder": "Djevelens Advokat peikar mot ein levande spelar annleis enn førre natt. Spelaren overlever avretting i morgen.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Overlever avretting"
+        ]
+    },
+    {
+        "id": "djinn",
+        "name": "Djinn",
+        "ability": "Fylg Djinnen sin særregel. Alle spelarane kjenner til regelen.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "doomsayer",
+        "name": "Domedagsprofet",
+        "ability": "Om 4 eller fleire spelarar lever, kvar levande spelar kan, éin gong i løpet av spelet, offentleg velje at ein spelar av same lojalitet som dei døyr.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "dreamer",
+        "name": "Drøymar",
+        "ability": "Kvar natt, vel ein spelar utanom deg sjølv eller Omreisande: lær 1 god & 1 vond rolle, der 1 av dei er sann.",
+        "firstNightReminder": "Drøymaren peikar mot ein spelar. Vis ei god og ei vond rollebrikke, der ei av dei er sann.",
+        "otherNightReminder": "Drøymaren peikar mot ein spelar. Vis ei god og ei vond rollebrikke, der ei av dei er sann.",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "drunk",
+        "name": "Fyllik",
+        "ability": "Du veit ikkje at du er Fylliken. Du trur du er ein Borgar, men er ikkje det.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [
+            "Full"
+        ],
+        "reminders": []
+    },
+    {
+        "id": "duchess",
+        "name": "Hertuginne",
+        "ability": "Kvar dag kan 3 spelarar velje å vitje deg. Om natta* lærer kvar vitjande kor mange vitjande er vonde, men 1 tek imot galen kunnskap.",
+        "firstNightReminder": "",
+        "otherNightReminder": "Vekk kvar spelar markert \"Vitjande\" eller \"Galen kunnskap\", éin om gongen. Vis dei Hertuginne-brikka, hald så fram eit tal fingrar (0, 1, 2, …) tilsvarande vonde spelarar markert \"Vitjande\" eller, om du vekker spelaren markert \"Galen kunnskap\", hald fram eit tal fingrar (0, 1, 2, …) som ikkje tilsvarar onde spelarar markert \"Vitjande\".",
+        "remindersGlobal": [],
+        "reminders": [
+            "Vitjande",
+            "Galen kunnskap"
+        ]
+    },
+    {
+        "id": "empath",
+        "name": "Empat",
+        "ability": "Kvar natt, lær kor mange av dei 2 levande naboane dine er vonde.",
+        "firstNightReminder": "Hald fram eit tal fingrar (0, 1, 2) tilsvarande levande naboar til Empaten som er vonde.",
+        "otherNightReminder": "Hald fram eit tal fingrar (0, 1, 2) tilsvarande levande naboar som er vonde.",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "engineer",
+        "name": "Ingeniør",
+        "ability": "Éin gong i løpet av spelet, om natta, vel kva Lakeiar eller kva Demon er i spel.",
+        "firstNightReminder": "Ingeniøren anten ristar på hovudet for \"nei\", eller peikar på ein Demon eller på eit relevant tal Lakeiar. Om Ingeniøren vel roller, byt ut Demonen eller Lakeiane med dei relevante rollene, og vekk dei relevante spelarane og vis dei \"Du er\"-kortet, og så dei relevante rollebrikkene.",
+        "otherNightReminder": "Ingeniøren anten ristar på hovudet for \"nei\", eller peikar på ein Demon eller på eit relevant tal Lakeiar. Om Ingeniøren vel roller, byt ut Demonen eller Lakeiane med dei relevante rollene, og vekk dei relevante spelarane og vis dei \"Du er\"-kortet, og så dei relevante rollebrikkene.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Evnelaus"
+        ]
+    },
+    {
+        "id": "eviltwin",
+        "name": "Vond Tvilling",
+        "ability": "Du & ein spelar av motsett lojalitet veit kven kvarandre er. Vondt vinn om den gode spelaren vert avretta. Godt kan ikkje vinne medan de båe lever.",
+        "firstNightReminder": "Vekk den Vonde Tvillingen og tvillingen deira. Fastset at dei kjenner til kvarandre. Peik mot den Vonde Tvillingen og vis Vond Tvilling-brikka til tvillingen deira. Peik mot tvillingen og vis rollebrikka deira til den Vonde Tvillingen.",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": [
+            "Tvilling"
+        ]
+    },
+    {
+        "id": "exorcist",
+        "name": "Djevleutdrivar",
+        "ability": "Kvar natt*, vel ein spelar annleis enn førre natt: Demonen, om han vert vald, lærer kven du er og vaknar ikkje i natt.",
+        "firstNightReminder": "",
+        "otherNightReminder": "Djevleutdrivaren peikar mot ein spelar, annleis enn førre natt. Om spelaren er Demonen, vekk dei. Vis dei Djevleutdrivar-brikka og peik mot Djevleutdrivaren. Demonen handlar ikkje i natt.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Vald"
+        ]
+    },
+    {
+        "id": "fanggu",
+        "name": "Fægist",
+        "ability": "Kvar natt*, vel ein spelar: dei døyr. Den fyrste Einstøingen dette drep vert til ein vond Fægist & du døyr i staden. [+1 Einstøing]",
+        "firstNightReminder": "",
+        "otherNightReminder": "Fægisten peikar mot ein spelar. Spelaren døyr, med mindre spelaren er ein Einstøing og det ikkje finst andre Fægistar i spel. I så fall døyr Fægisten i staden for spelaren, og spelaren vert til ein vond Fægist. Vekk den nye Fægisten opp. Vis dei \"Du er\"-kortet, så Fægist-brikka. Vis dei \"Du er\"-kortet, så tommel ned, handteiknet for \"vond\".",
+        "remindersGlobal": [],
+        "reminders": [
+            "Daud",
+            "Éin gong"
+        ]
+    },
+    {
+        "id": "farmer",
+        "name": "Bonde",
+        "ability": "Om du døyr om natta, vert ein levande god spelar til ein Bonde.",
+        "firstNightReminder": "",
+        "otherNightReminder": "Om ein Bonde døydde i natt, vel ein annan god spelar og gjer dei om til Bonden. Vekk spelaren, vis dei \"Du er\"-kortet og så Bonde-brikka.",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "fearmonger",
+        "name": "Fryktspreiar",
+        "ability": "Kvar natt, vel ein spelar. Om du nominerer & avrettar dei, tapar laget deira. Alle spelarane får vite det om du vel ein ny spelar.",
+        "firstNightReminder": "Fryktspreiaren peikar mot ein spelar. Marker spelaren med \"Frykt\" og kunngjer at Fryktspreiaren har valt ein ny spelar.",
+        "otherNightReminder": "Fryktspreiaren peikar mot ein spelar. Marker spelaren med \"Frykt\" og, om spelaren er annleis den førre valde spelaren, kunngjer at Fryktspreiaren har valt ein ny spelar.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Frykt"
+        ]
+    },
+    {
+        "id": "fibbin",
+        "name": "Skrønemakar",
+        "ability": "Éin gong i løpet av spelet, ein god spelar kan take imot galen kunnskap.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": [
+            "Nytta"
+        ]
+    },
+    {
+        "id": "fiddler",
+        "name": "Spelemann",
+        "ability": "Éin gong i løpet av spelet, ei avrøysting mellom 2 spelarar vert halden kor alle røystar over kven av dei som vinn (med laget sitt). Den eine spelaren er Demonen, den andre ein spelar av motsett lojalitet valt av Demonen i løyndom.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "fisherman",
+        "name": "Fiskar",
+        "ability": "Éin gong i løpet av spelet, om dagen, vitj Forteljaren og tak imot eit godt råd som skal hjelpe deg vinne.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": [
+            "Evnelaus"
+        ]
+    },
+    {
+        "id": "flowergirl",
+        "name": "Blomsterjente",
+        "ability": "Kvar natt*, lær om ein Demon røysta i dag.",
+        "firstNightReminder": "",
+        "otherNightReminder": "Vis med hovudet (nikk for \"ja\" eller rist for \"nei\") om Demonen røysta i dag. Fjern \"Demon røysta\"-markøren om han fanst, og plasser \"Demon røysta ikkje\".",
+        "remindersGlobal": [],
+        "reminders": [
+            "Demon røysta",
+            "Demon røysta ikkje"
+        ]
+    },
+    {
+        "id": "fool",
+        "name": "Narr",
+        "ability": "Fyrste gongen du døyr, gjer du ikkje det.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": [
+            "Evnelaus"
+        ]
+    },
+    {
+        "id": "fortuneteller",
+        "name": "Spåkjerring",
+        "ability": "Kvar natt, vel 2 spelarar: lær om du har valt ein Demon. Éin god spelar vert tydd som Demon av deg.",
+        "firstNightReminder": "Spåkjerringa peikar mot to spelarar. Vis med hovudet (nikk for \"ja\" eller rist for \"nei\") om dei peikar mot ein Demon.",
+        "otherNightReminder": "Spåkjerringa peikar mot to spelarar. Vis med hovudet (nikk for \"ja\" eller rist for \"nei\") om dei peikar mot ein Demon.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Villspor"
+        ]
+    },
+    {
+        "id": "gambler",
+        "name": "Hasardspelar",
+        "ability": "Kvar natt*, vel ein spelar & giss rolla deira: gissar du feil, døyr du.",
+        "firstNightReminder": "",
+        "otherNightReminder": "Hasardspelaren peikar mot ein spelar, og på ei rolle på rollearket. Om Hasardspelaren tek feil, døyr dei.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Daud"
+        ]
+    },
+    {
+        "id": "gangster",
+        "name": "Lovbrytar",
+        "ability": "Éin gong om dagen, om du vil, drep ein levande nabo med løyve frå din andre levande nabo.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "general",
+        "name": "General",
+        "ability": "Kvar natt, lær kva lag Forteljaren trur har overtaket: godt, vondt, eller ingen.",
+        "firstNightReminder": "Vis Generalen tommel opp om godt har overtaket, tommel ned om vondt har overtaket, eller tommel til sida om ingen har eit klårt overtak.",
+        "otherNightReminder": "Vis Generalen tommel opp om godt har overtaket, tommel ned om vondt har overtaket, eller tommel til sida om ingen har eit klårt overtak.",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "goblin",
+        "name": "Småtroll",
+        "ability": "Om du offentleg kunngjer at du er Småtrollet når du vert nominert & vert avretta same dagen, vinn laget ditt.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": [
+            "Kunngjort"
+        ]
+    },
+    {
+        "id": "godfather",
+        "name": "Gudfar",
+        "ability": "Du lærer innleiingsvis kva Einstøingar er i spel. Om 1 døydde i dag, vel ein spelar i natt: dei døyr. [-1 eller +1 Einstøing]",
+        "firstNightReminder": "Vis kvar Einstøing-brikke i spel.",
+        "otherNightReminder": "Om ein Einstøing døydde i natt: Gudfaren peikar mot ein spelar. Spelaren døyr.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Døydde i dag",
+            "Daud"
+        ]
+    },
+    {
+        "id": "golem",
+        "name": "Golem",
+        "ability": "Du kan berre nominere éin gong i løpet av spelet. Når det hender, om den nominerte ikkje er Demonen, døyr dei.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": [
+            "Kan ikkje nominere"
+        ]
+    },
+    {
+        "id": "goon",
+        "name": "Bajas",
+        "ability": "Kvar natt, den fyrste spelaren som vel deg med evna si er full til skyming. Du får lojaliteten deira.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": [
+            "Full"
+        ]
+    },
+    {
+        "id": "gossip",
+        "name": "Sladrehank",
+        "ability": "Kvar dag kan du kome med ei offentleg utsegn. I natt, om utsegna var sann, døyr ein spelar.",
+        "firstNightReminder": "",
+        "otherNightReminder": "Om Sladrehanken si offentlege utsegn var sann: Vel ein spelar ikkje verja mot å døy i natt. Spelaren døyr.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Daud"
+        ]
+    },
+    {
+        "id": "grandmother",
+        "name": "Farmor",
+        "ability": "Du lærer innleiingsvis ein god spelar & rolla deira. Om Demonen drep dei, døyr du også.",
+        "firstNightReminder": "Vis rollebrikka til barnebarnet. Peik mot spelaren som er barnebarnet.",
+        "otherNightReminder": "Om Demonen drepte Farmora sitt barnebarn i natt: Farmora døyr.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Barnebarn"
+        ]
+    },
+    {
+        "id": "gunslinger",
+        "name": "Skyttar",
+        "ability": "Kvar dag, etter fyrste avrøysting er gjort unna med, kan du velje ein spelar som røysta: dei døyr.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "harlot",
+        "name": "Tøyte",
+        "ability": "Kvar natt*, vel ein levande spelar: om dei seier seg einig, lær rolla deira, med de kan båe døy.",
+        "firstNightReminder": "",
+        "otherNightReminder": "Tøyta peikar mot ein spelar, og fell så attende i svevn. Vekk den valde spelaren, vis dei \"Denne rolla valde deg\"-kortet, så Tøyte-brikka. Spelaren anten nikkar for \"ja\" eller ristar på hovudet for \"nei\". Om dei nikka, vekk Tøyta og vis dei rollebrikka til den valde spelaren. Etterpå kan du velje at båe spelarane døyr.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Daud"
+        ]
+    },
+    {
+        "id": "harpy",
+        "name": "Harpy",
+        "ability": "Kvar natt, vel 2 spelarar: i morgon er den fyrste spelaren manisk den andre er vond, elles kan det hende båe døyr.",
+        "firstNightReminder": "Vekk Harpyen. Dei peikar mot ein spelar, og så mot ein annan. Vekk den fyrste spelaren Harpyen peika mot, vis dei \"Denne rolla valde deg\"-kortet, vis dei Harpy-brikka, og peik så mot den andre spelaren Harpyen peika mot.",
+        "otherNightReminder": "Vekk Harpyen. Dei peikar mot ein spelar, og så mot ein annan. Vekk den fyrste spelaren Harpyen peika mot, vis dei \"Denne rolla valde deg\"-kortet, vis dei Harpy-brikka, og peik så mot den andre spelaren Harpyen peika mot.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Manisk",
+            "Andre"
+        ]
+    },
+    {
+        "id": "hatter",
+        "name": "Hattemaker",
+        "ability": "Hvis du døde i dag eller i kveld, kan Minion & Demon-spillerne velge nye Minion & Demon-karakterer.",
+        "firstNightReminder": "",
+        "otherNightReminder": "Hvis hattemakeren døde i dag: Vekk undersåttene og demonen. Vis dem informasjonstokenet \"Denne karakteren valgte deg\", og deretter Hattemaker-tokenet. Hver spiller enten rister nei på hodet eller peker på en annen karakter av samme type som deres nåværende karakter. Hvis en annen spiller ville ende opp med samme karakter som en annen spiller, rister du på hodet og gjør en gest for at de skal velge på nytt. Legg dem til å sove. Endre hver spiller til karakteren de valgte.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Tea Party i kveld"
+        ]
+    },
+    {
+        "id": "hellslibrarian",
+        "name": "Hysj!",
+        "ability": "Noko ugreitt kan hende spelarar som snakkar når Forteljaren har bedd om ro.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": [
+            "Noko ugreitt"
+        ]
+    },
+    {
+        "id": "heretic",
+        "name": "Kjettar",
+        "ability": "Kven enn som vinn, tapar & kven enn som tapar, vinn, sjølv om du er daud.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "highpriestess",
+        "name": "Øvsteprestinne",
+        "ability": "Kvar natt, lær kva spelar Forteljaren tykkjer du bør snakke med mest.",
+        "firstNightReminder": "Peik mot ein spelar.",
+        "otherNightReminder": "Peik mot ein spelar.",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "huntsman",
+        "name": "Ferdamann",
+        "ability": "Éin gong i løpet av spelet, om natta, vel ein levande spelar: Prinsessa, om vald, vert til ein Borgar ikkje i spel. [+ Prinsessa]",
+        "firstNightReminder": "Ferdamannen anten ristar på hovudet for \"nei\", eller peikar mot ein spelar. Om dei peikar mot Prinsessa, vekk spelaren, vis dei \"Du er\"-kortet og rollebrikka til ei rolle ikkje i spel.",
+        "otherNightReminder": "Ferdamannen anten ristar på hovudet for \"nei\", eller peikar mot ein spelar. Om dei peikar mot Prinsessa, vekk spelaren, vis dei \"Du er\"-kortet og rollebrikka til ei rolle ikkje i spel.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Evnelaus"
+        ]
+    },
+    {
+        "id": "imp",
+        "name": "Imp",
+        "ability": "Kvar natt*, vel ein spelar: dei døyr. Om du drep deg sjølv slik, vert ein Lakei til Impen.",
+        "firstNightReminder": "",
+        "otherNightReminder": "Impen peikar mot ein spelar. Spelaren døyr. Om Impen vel seg sjølv, byt ut rollebrikka til ein levande Lakei med ei ekstra Imp-brikke.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Daud"
+        ]
+    },
+    {
+        "id": "innkeeper",
+        "name": "Krovert",
+        "ability": "Kvar natt*, vel 2 spelarar: dei kan ikkje døy i natt, men 1 er full til daggry.",
+        "firstNightReminder": "",
+        "otherNightReminder": "Spelarane som før var full og/eller verja misser markørane sine. Korverten peikar mot to spelarar. Båe spelarane er verja, éin av dei er full.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Verja",
+            "Full"
+        ]
+    },
+    {
+        "id": "investigator",
+        "name": "Etterforskar",
+        "ability": "Du lærer innleiingsvis at 1 av 2 gjevne spelarar er ein bestemd Lakei.",
+        "firstNightReminder": "Vis rollebrikka til ein Lakei som er i spel. Peik mot to spelarar, kor ein av dei har den rolla.",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": [
+            "Lakei",
+            "Feil"
+        ]
+    },
+    {
+        "id": "judge",
+        "name": "Domar",
+        "ability": "Éin gong i løpet av spelet, om ein annan spelar nominerte, kan du tvinge avrettinga til anten å lykkast eller mislykkast.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": [
+            "Evnelaus"
+        ]
+    },
+    {
+        "id": "juggler",
+        "name": "Sjonglør",
+        "ability": "På den fyrste dagen din, giss offentleg rolla til opp mot 5 spelarar. Om natta, lær kor mange du fekk rett i.",
+        "firstNightReminder": "",
+        "otherNightReminder": "Om i dag var den fyrste dagen til Sjongløren: Hald fram eit tal fingrar (0, 1, 2, …) tilsvarande \"Rett\"-markørar. Fjern markørane.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Rett"
+        ]
+    },
+    {
+        "id": "kazali",
+        "name": "Kazali",
+        "ability": "Velg en spiller hver natt*: de dør. [Du velger hvilke spillere som er Lakeiar. -? til +? Utenforstående]",
+        "firstNightReminder": "Kazalien peker på en spiller og en Lakeiar på karakterarket. Bytt ut deres gamle karakter-token med Lakeiar-token, vis dem «Du er»-infotokenet og deretter Lakeiar-karaktertoken, og gi en tommel ned. Gjenta til det normale antallet Minions eksisterer. La kazalien sove.",
+        "otherNightReminder": "Kazalien peker på en spiller. Den spilleren dør.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Daud"
+        ]
+    },
+    {
+        "id": "king",
+        "name": "Konge",
+        "ability": "Kvar natt, om det er fleire daude enn levande spelarar, lær 1 levande rolle. Demonen veit kven du er.",
+        "firstNightReminder": "Vekk Demonen, vis dei \"Denne rolla valde deg\"-kortet, vis Konge-brikka og peik mot spelaren som er Kongen.",
+        "otherNightReminder": "Om det er fleire daude spelarar enn levande, vis Kongen rollebrikka til ein levande spelar.",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "klutz",
+        "name": "Kløne",
+        "ability": "Når du får vite du har døydd, vel offentleg 1 levande spelar: om dei er vond, tapar laget ditt.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "knight",
+        "name": "Riddar",
+        "ability": "Du lærer innleiingsvis 2 spelarar som ikkje er Demonen.",
+        "firstNightReminder": "Peik mot to spelarar som ikkje er Demonar.",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": [
+            "Veit",
+            "Veit"
+        ]
+    },
+    {
+        "id": "legion",
+        "name": "Ordenen",
+        "ability": "Kvar natt* kan det hende at ein spelar døyr. Avrettingar mislykkast om berre vondt røysta for. Du vert også tydd som Lakei. [Dei fleste spelarane er del av Ordenen]",
+        "firstNightReminder": "",
+        "otherNightReminder": "Vel ein spelar. Spelaren døyr.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Daud",
+            "I ferd med å døy"
+        ]
+    },
+    {
+        "id": "leviathan",
+        "name": "Leviatan",
+        "ability": "Om fleire enn 1 god spelar vert avretta, vinn vondt. Alle spelarane veit du er i spel. Vondt vinn etter 5 dagar.",
+        "firstNightReminder": "Plasser Leviatan sin \"Dag 1\"-markør. Kunngjer \"Leviatan er i spel; dette er dag 1\".",
+        "otherNightReminder": "Byt ut \"Dag\"-påminninga for neste dag.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Dag 1",
+            "Dag 2",
+            "Dag 3",
+            "Dag 4",
+            "Dag 5",
+            "God spelar avretta"
+        ]
+    },
+    {
+        "id": "librarian",
+        "name": "Bibliotekar",
+        "ability": "Du lærer innleiingsvis at 1 av 2 gjevne spelarar er ein bestemd Einstøing, eller at ingen Einstøingar er i spel.",
+        "firstNightReminder": "Vis rollebrikka til ein Einstøing som er i spel. Peik mot to spelarar, kor ein av dei har den rolla. Om ingen Einstøingar er i spel, rist på hovudet for \"nei\".",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": [
+            "Einstøing",
+            "Feil"
+        ]
+    },
+    {
+        "id": "lilmonsta",
+        "name": "Ungmonster",
+        "ability": "Kvar natt vel Lakeiane kven som passar på Ungmonsteret & \"er Demonen\". Ein spelar døyr kvar natt*. [+1 Lakei]",
+        "firstNightReminder": "Vekk alle Lakeiane samstundes. Kvar Lakei peikar mot spelaren dei ynskjer skal passe på Ungmonsteret.",
+        "otherNightReminder": "Vekk alle Lakeiane samstundes. Kvar Lakei peikar mot spelaren dei ynskjer skal passe på Ungmonsteret. Vel ein spelar. Spelaren døyr.",
+        "remindersGlobal": [
+            "Er Demonen",
+            "Daud"
+        ],
+        "reminders": []
+    },
+    {
+        "id": "lleech",
+        "name": "Igla",
+        "ability": "Kvar natt*, vel ein spelar: dei døyr. Innleiingsvis, vel ein levande spelar: dei vert forgifta - du døyr når dei døyr. Dette er den einaste måten du kan døy på.",
+        "firstNightReminder": "Igla peikar mot ein spelar. Marker spelaren som \"Forgifta\".",
+        "otherNightReminder": "Igla peikar mot ein spelar. Spelaren døyr.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Daud",
+            "Forgifta"
+        ]
+    },
+    {
+        "id": "lunatic",
+        "name": "Sinnssjuk",
+        "ability": "Du trur du er Demonen, men er ikkje det. Demonen veit kven du er & kven du vel om natta.",
+        "firstNightReminder": "Om det er sju eller fleire spelarar: Vis den Sinnssjuke vilkårlege \"Lakeiar\", spelarar tilsvarande Lakeiar i spel. Vis dei tre rollebrikker av vilkårlege gode roller. Om rollebrikka teke imot av den Sinnssjuke er ein Demon som ville vakna i natt: Legg til rette for at den Sinnssjuke kan gjere Demon-handlingane. Plasser \"Åtak\"-markørane. Vekk Demonen. Vis dei Demonen si ekte rollebrikke. Vis dei den Sinnssjuke. Om den Sinnssjuke åtok ein spelar: Vis den ekte Demonen kvar markerte spelar. Fjern alle \"Åtak\"-markørar til den Sinnssjuke.",
+        "otherNightReminder": "Tillat den Sinnssjuke å gjere handlingane til Demonen. Plasser \"Åtak\"-markørar. Om den Sinnssjuke valde spelarar: Vekk Demonen. Vis dei \"Åtak\"-markøren, peik så mot kvar markerte spelar. Fjern alle \"Åtak\"-markørar til den Sinnssjuke.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Åtak 1",
+            "Åtak 2",
+            "Åtak 3"
+        ]
+    },
+    {
+        "id": "lycanthrope",
+        "name": "Lykantrop",
+        "ability": "Kvar natt*, vel ein levande spelar: Om dei er god, døyr dei, men dei er den einaste spelaren som kan døy i natt.",
+        "firstNightReminder": "",
+        "otherNightReminder": "Lykantropen peikar mot ein levande spelar: om dei er god, døyr dei. I så fall kan ingen andre døy i natt.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Daud"
+        ]
+    },
+    {
+        "id": "magician",
+        "name": "Tryllekunstnar",
+        "ability": "Demonen trur du er ein Lakei. Lakeiar trur du er ein Demon.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "marionette",
+        "name": "Tråddokke",
+        "ability": "Du trur du har ei god rolle men har ikkje det. Demonen veit kven du er. [Du er nabo til Demonen]",
+        "firstNightReminder": "Vel ein god spelar attmed Demonen og marker dei med \"Er Tråddokka\". Vekk Demonen og vis dei Tråddokka.",
+        "otherNightReminder": "",
+        "remindersGlobal": [
+            "Er Tråddokka"
+        ],
+        "reminders": []
+    },
+    {
+        "id": "mastermind",
+        "name": "Geni",
+        "ability": "Om Demonen døyr ved avretting (med enden av spelet som fylgje), spel for 1 dag til. Om ein spelar vert så avretta, tapar laget deira.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "mathematician",
+        "name": "Matematikar",
+        "ability": "Kvar natt, lær kor mange spelarar som, sidan daggry, hadde evner som ikkje verka som dei skulle på grunn av evna til ei anna rolle.",
+        "firstNightReminder": "Hald fram eit tal fingrar (0, 1, 2, …) tilsvarande spelarar med evner som ikkje verka som dei skulle takka vere andre evner.",
+        "otherNightReminder": "Hald fram eit tal fingrar (0, 1, 2, …) tilsvarande spelarar med evner som ikkje verka som dei skulle takka vere andre evner.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Defekt"
+        ]
+    },
+    {
+        "id": "matron",
+        "name": "Matrone",
+        "ability": "Kvar dag, vel om du vil opp til 3 sett av 2 spelarar som byter sete. Spelarar kan ikkje lenger forlate seta sine for å snakke i fortrulegheit.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "mayor",
+        "name": "Borgarmeister",
+        "ability": "Om berre 3 spelarar lever & ingen vert avretta, vinn laget ditt. Om du døyr om natta, kan det hende ein annan spelar døyr i staden for deg.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "mezepheles",
+        "name": "Dervettel",
+        "ability": "Du lærer innleiingsvis eit løynleg ord. Den fyrste gode spelaren som seier ordet vert vond den natta.",
+        "firstNightReminder": "Vis Dervettelen det løynlege ordet.",
+        "otherNightReminder": "Vekk den fyrste gode spelaren som sa Dervettelen sitt løynlege ord. Vis dei \"Du er\"-kortet og tommel ned, handteiknet for \"vond\".",
+        "remindersGlobal": [],
+        "reminders": [
+            "Vert vond",
+            "Evnelaus"
+        ]
+    },
+    {
+        "id": "minstrel",
+        "name": "Trubadur",
+        "ability": "Når ein Lakei døyr ved avretting, er alle andre spelarar utanom Omreisande full til daggry i morgon.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": [
+            "Alle full"
+        ]
+    },
+    {
+        "id": "monk",
+        "name": "Munk",
+        "ability": "Kvar natt*, vel ein spelar utanom deg sjølv: dei er trygg frå Demonen i natt.",
+        "firstNightReminder": "",
+        "otherNightReminder": "Førre verja spelar er ikkje lenger verja. Munken peikar mot ein spelar annleis seg sjølv. Marker spelaren som \"Verja\".",
+        "remindersGlobal": [],
+        "reminders": [
+            "Verja"
+        ]
+    },
+    {
+        "id": "moonchild",
+        "name": "Stjernebarn",
+        "ability": "Når du får vite at du har døydd, vel 1 levande spelar offentleg. I natt døyr dei, om dei er god.",
+        "firstNightReminder": "",
+        "otherNightReminder": "Om Stjernebarnet nytta evna si på ein spelar i dag: Om spelaren er god, døyr dei.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Daud"
+        ]
+    },
+    {
+        "id": "mutant",
+        "name": "Misfoster",
+        "ability": "Er du \"manisk\" du er ein Einstøing, kan det hende du vert avretta.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "nightwatchman",
+        "name": "Nattevaktar",
+        "ability": "Éin gong i løpet av spelet, om natta, vel ein spelar: dei lærer kven du er.",
+        "firstNightReminder": "Nattevaktaren anten ristar på hovudet for \"nei\", eller peikar mot ein spelar. Om dei peikar mot ein spelar: Vekk spelaren, vis dei \"Denne rolla valde deg\"-kortet, så Nattevaktar-brikka, og så peik mot spelaren som er Nattevaktaren.",
+        "otherNightReminder": "Nattevaktaren anten ristar på hovudet for \"nei\", eller peikar mot ein spelar. Om dei peikar mot ein spelar: Vekk spelaren, vis dei \"Denne rolla valde deg\"-kortet, så Nattevaktar-brikka, og så peik mot spelaren som er Nattevaktaren.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Evnelaus"
+        ]
+    },
+    {
+        "id": "noble",
+        "name": "Adelsmann",
+        "ability": "Du lærer innleiingsvis 3 spelarar, nøyaktig 1 av dei er vond.",
+        "firstNightReminder": "Peik mot tre spelarar, inkludert nøyaktig éin vond spelar, i ei vilkårleg rekkjefylgd.",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": [
+            "Sett"
+        ]
+    },
+    {
+        "id": "nodashii",
+        "name": "Kraka Ski",
+        "ability": "Kvar natt* vel ein spelar: dei døyr. Dei 2 Borgar-naboane dine er forgifta.",
+        "firstNightReminder": "",
+        "otherNightReminder": "Kraka Ski peikar mot ein spelar. Spelaren døyr.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Daud",
+            "Forgifta"
+        ]
+    },
+    {
+        "id": "ojo",
+        "name": "Ojo",
+        "ability": "Hver natt*, velg en karakter: de dør. Hvis de ikke er i spill, velger historiefortelleren hvem som dør.",
+        "firstNightReminder": "",
+        "otherNightReminder": "Ojo-en peker på en karakter på arket; hvis i spill, dør den spilleren. Hvis det ikke er i spill, velger historiefortelleren hvem som dør i stedet.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Daud"
+        ]
+    },
+    {
+        "id": "oracle",
+        "name": "Orakel",
+        "ability": "Kvar natt*, lær kor mange daude spelarar er vonde.",
+        "firstNightReminder": "",
+        "otherNightReminder": "Hald fram eit tal fingrar (0, 1, 2, …) tilsvarande daude vonde spelarar.",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "organgrinder",
+        "name": "Veivspelar",
+        "ability": "Alle spelarar lukkar augo under avrøystingar & talet røyster vert halde løynleg. Røyster for deg tel berre om du også røystar for.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": [
+            "I ferd med å døy"
+        ]
+    },
+    {
+        "id": "pacifist",
+        "name": "Pasifist",
+        "ability": "Det kan hende at gode spelarar som vert avretta ikkje døyr.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "philosopher",
+        "name": "Filosof",
+        "ability": "Éin gong i løpet av spelet, om natta, vel ei god rolle: tileign deg den evna. Om rolla allereie er i spel, er dei no full.",
+        "firstNightReminder": "Filosofen anten ristar på hovudet for \"nei\", eller peikar på ei god rolle på rollearket. Om dei vel rolle: Byt ut Filosof-brikka med den valde rolla, og marker rolla med \"Er Filosofen\". Om rolla allereie er i spel, marker spelaren som har rolla med \"Full\".",
+        "otherNightReminder": "Om Filosofen enno ikkje har nytta evna si: Filosofen anten ristar på hovudet for \"nei\", eller peikar på ei god rolle på rollearket. Om dei vel rolle: Byt ut Filosof-brikka med den valde rolla, og marker rolla med \"Er Filosofen\". Om rolla allereie er i spel, marker spelaren som har rolla med \"Full\".",
+        "remindersGlobal": [
+            "Full",
+            "Er Filosofen"
+        ],
+        "reminders": []
+    },
+    {
+        "id": "pithag",
+        "name": "Markkjerring",
+        "ability": "Kvar natt*, vel ein spelar & ei rolle dei vert til (om ikkje i spel). Om ein Demon vert til, er dødsfall i natt vilkårlege.",
+        "firstNightReminder": "",
+        "otherNightReminder": "Markkjerringa peikar mot ein spelar og på ei rolle på rollearket. Om rolla ikkje er i spel, vekk spelaren og vis dei \"Du er\"-kortet, og så den relevante rollebrikka. Om rolla allereie er i spel, hender ingenting.",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "pixie",
+        "name": "Nisse",
+        "ability": "Du lærer innleiingsvis 1 Borgar i spel. Om du var manisk du var denne rolla, tileign deg evna deira når dei døyr.",
+        "firstNightReminder": "Vis Nissen rollebrikka til ein Borgar i spel.",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": [
+            "Manisk",
+            "Har evne"
+        ]
+    },
+    {
+        "id": "plaguedoctor",
+        "name": "Pestlækjar",
+        "ability": "Om du døyr, tileignar Forteljaren seg evna til ein Lakei ikkje i spel.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": [
+            "Forteljar har evne"
+        ]
+    },
+    {
+        "id": "po",
+        "name": "Py",
+        "ability": "Kvar natt*, vel ein spelar som døyr, eller vel ingen. Om du førre natt valde ingen, vel 3 spelarar i natt.",
+        "firstNightReminder": "",
+        "otherNightReminder": "Om Pyen valde ingen førre natt: Pyen peikar mot tre spelarar. Elles: Pyen anten ristar på hovudet for \"nei\", eller peikar mot ein spelar. Valde spelarar døyr.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Daud",
+            "3 åtak"
+        ]
+    },
+    {
+        "id": "poisoner",
+        "name": "Forgiftar",
+        "ability": "Kvar natt, vel ein spelar: dei er forgifta i natt og morgondagen.",
+        "firstNightReminder": "Forgiftaren peikar mot ein spelar. Spelaren vert forgifta.",
+        "otherNightReminder": "Den førre forgifta spelaren er ikkje lenger forgifta. Forgiftaren peikar mot ein spelar. Spelaren vert forgifta.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Forgifta"
+        ]
+    },
+    {
+        "id": "politician",
+        "name": "Politikar",
+        "ability": "Om du er spelaren mest ansvarleg for at ditt lag tapa, byt lojalitet og vinn, sjølv om du er daud.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "poppygrower",
+        "name": "Valmuedyrkar",
+        "ability": "Lakeiar & Demonar kjenner ikkje til kvarandre. Om du døyr, lærer dei kven kvarandre er om natta.",
+        "firstNightReminder": "Ikkje opplys Demonen eller Lakeiane kven kvarandre er.",
+        "otherNightReminder": "Om Valmuedyrkaren har døydd, vis Demonen og Lakeiane kven kvarandre er.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Vondt vaknar"
+        ]
+    },
+    {
+        "id": "preacher",
+        "name": "Predikant",
+        "ability": "Kvar natt, vel ein spelar: Lakeiar, om dei vert valde, lærer dette. Valde lakeiar er evnelause.",
+        "firstNightReminder": "Predikanten vel ein spelar. Om Predikanten vel ein Lakei, vekk Lakeien og vis dei \"Denne rolla valde deg\"-kortet, og så Predikant-brikka.",
+        "otherNightReminder": "Predikanten vel ein spelar. Om Predikanten vel ein Lakei, vekk Lakeien og vis dei \"Denne rolla valde deg\"-kortet, og så Predikant-brikka.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Ved ei preike"
+        ]
+    },
+    {
+        "id": "professor",
+        "name": "Professor",
+        "ability": "Éin gong i løpet av spelet, om natta*, vel ein daud spelar: om dei er ein Borgar, vert dei gjenoppliva.",
+        "firstNightReminder": "",
+        "otherNightReminder": "Om Professoren enno ikkje har nytta evna si: Professoren anten ristar på hovudet for \"nei\", eller peikar mot ein spelar. Om spelaren er ein Borgar, er dei no i live.",
+        "remindersGlobal": [],
+        "reminders": [
+            "I live",
+            "Evnelaus"
+        ]
+    },
+    {
+        "id": "psychopath",
+        "name": "Galning",
+        "ability": "Kvar dag, før det vert opna opp for nominasjonar, kan du offentleg velje ein spelar: dei døyr. Om du vert avretta, døyr du berre om du tapar stein, saks, papir.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "pukka",
+        "name": "Pukka",
+        "ability": "Kvar natt, vel ein spelar: dei vert forgifta. Den førre forgifta spelaren døyr, og vert så frisk att.",
+        "firstNightReminder": "Pukkaen peikar mot ein spelar. Spelaren vert forgifta.",
+        "otherNightReminder": "Pukkaen peikar mot ein spelar. Spelaren vert forgifta. Førre forgifta spelar døyr.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Forgifta",
+            "Daud"
+        ]
+    },
+    {
+        "id": "puzzlemaster",
+        "name": "Puslar",
+        "ability": "1 spelar er full, sjølv etter at du er daud. Du har éin freistnad på å gisse kven. Giss rett & lær kven Demonen er, men giss feil & tak imot galen kunnskap.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": [
+            "Full",
+            "Gissing nytta"
+        ]
+    },
+    {
+        "id": "ravenkeeper",
+        "name": "Ramnherre",
+        "ability": "Om du døyr om natta, vert du vekt for å velje ein spelar: lær rolla deira.",
+        "firstNightReminder": "",
+        "otherNightReminder": "Om Ramnherren døydde i natt, vekk dei. Ramnherren peikar mot ein spelar, vis dei rollebrikka til spelaren dei valde.",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "recluse",
+        "name": "Eremitt",
+        "ability": "Du kan verte tydd som vond & som ein Lakei eller Demon, sjølv i dauden.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "revolutionary",
+        "name": "Revolusjonær",
+        "ability": "Det er kjent at 2 nabospelarar har same lojalitet. Éin gong i løpet av spelet, 1 av dei vil verte tydd gale.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": [
+            "Tyde gale?"
+        ]
+    },
+    {
+        "id": "riot",
+        "name": "Opprør",
+        "ability": "Nominerte spelarar døyr, men kan rett etter nominere ein annan (den tredje dagen må dei). Vondt vinn etter den tredje dagen er gått. [Alle Lakeiar er Opprør]",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "sage",
+        "name": "Vismann",
+        "ability": "Om Demonen drep deg, lær at Demonen er 1 av 2 spelarar.",
+        "firstNightReminder": "",
+        "otherNightReminder": "Om Vismannen vart drepe av ein Demon: Peik mot to spelarar, der ein av dei er Demonen.",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "sailor",
+        "name": "Sjømann",
+        "ability": "Kvar natt, vel ein levande spelar: anten du eller dei er full til skyming. Du kan ikkje døy.",
+        "firstNightReminder": "Sjømannen peikar mot ein levande spelar: Anten sjømannen eller den valde spelaren er full.",
+        "otherNightReminder": "Den førre fulle spelaren er ikkje lenger full. Sjømannen peikar mot ein levande spelar: Anten sjømannen eller den valde spelaren er full.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Full"
+        ]
+    },
+    {
+        "id": "saint",
+        "name": "Helgen",
+        "ability": "Om du døyr ved avretting, tapar laget ditt.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "savant",
+        "name": "Gåverik",
+        "ability": "Kvar dag kan du vitje Forteljaren for å lære 2 ting i fortrulegheit: 1 er sann & 1 er galen.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "scapegoat",
+        "name": "Syndebukk",
+        "ability": "Om ein lagfelle vert avretta, kan det hende du døyr i staden for dei.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "scarletwoman",
+        "name": "Babylon",
+        "ability": "Om 5 eller fleire spelarar enno lever & Demonen døyr, vert til Demonen. (Omreisande tel ikkje med)",
+        "firstNightReminder": "",
+        "otherNightReminder": "Om Babylon vart til Demonen i dag, vis dei \"Du er\"-kortet og så Demon-brikka.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Demon"
+        ]
+    },
+    {
+        "id": "seamstress",
+        "name": "Syerske",
+        "ability": "Éin gong i løper av spelet, om natta, vel 2 spelarar utanom deg sjølv: lær om dei har same lojalitet.",
+        "firstNightReminder": "Syerska anten ristar på hovudet for \"nei\", eller peikar mot to andre spelarar. Om Syerska vel spelarar, vis med hovudet (nikk for \"ja\" eller rist for \"nei\") om spelarane har same lojalitet.",
+        "otherNightReminder": "Om Syerska enno ikkje har nytta evna si: Syerska anten ristar på hovudet for \"nei\", eller peikar mot to andre spelarar. Om Syerska vel spelarar, vis med hovudet (nikk for \"ja\" eller rist for \"nei\") om spelarane har same lojalitet.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Evnelaus"
+        ]
+    },
+    {
+        "id": "sentinel",
+        "name": "Grensevakt",
+        "ability": "Det kan hende 1 fleire eller 1 færre Einstøing er i spel.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "shabaloth",
+        "name": "Sjabalata",
+        "ability": "Kvar natt*, vel 2 spelarar: dei døyr. Det kan hende ein daud spelar du valde førre natt vert kasta opp att.",
+        "firstNightReminder": "",
+        "otherNightReminder": "Éin spelar Sjabalataen valde førre natt kan verte kasta opp att. Sjabalataen peikar mot to spelarar. Spelarane døyr.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Daud",
+            "I live"
+        ]
+    },
+    {
+        "id": "shugenja",
+        "name": "Shugenja",
+        "ability": "Du lærer innleiingsvis om den vonde spelaren nærast deg sit med eller mot klokka frå deg. Om to vonde spelarar båe er nærast, tek du imot vilkårleg kunnskap.",
+        "firstNightReminder": "Vekk Shugenjaen og peik vassrett i retning av den næraste vonde spelaren. Om dei to næraste vonde spelarane er like langt unna, vel du sjølv kva retning du peikar i.",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "slayer",
+        "name": "Monsterjeger",
+        "ability": "Éin gong i løpet av spelet, om dagen, offentleg vel ein spelar: om dei er Demonen, døyr dei.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": [
+            "Evnelaus"
+        ]
+    },
+    {
+        "id": "snakecharmer",
+        "name": "Slangetemjar",
+        "ability": "Kvar natt, vel ein levande spelar: ein vald Demon byter rolle & lojalitet med deg & vert så forgifta.",
+        "firstNightReminder": "Slangetemjaren peikar mot ein spelar. Om spelaren er Demonen, byt rolla og lojaliteten til Slangetemjaren og Demonen. Vekk kvar av dei opp for å fortelje dei om den nye rolla og lojaliteten deira. Marker den nye Slangetemjaren med \"Forgifta\".",
+        "otherNightReminder": "Slangetemjaren peikar mot ein spelar. Om spelaren er Demonen, byt rolla og lojaliteten til Slangetemjaren og Demonen. Vekk kvar av dei opp for å fortelje dei om den nye rolla og lojaliteten deira. Marker den nye Slangetemjaren med \"Forgifta\".",
+        "remindersGlobal": [],
+        "reminders": [
+            "Forgifta"
+        ]
+    },
+    {
+        "id": "snitch",
+        "name": "Tystar",
+        "ability": "Lakeiar lærer innleiingsvis 3 roller ikkje i spel.",
+        "firstNightReminder": "Etter lakeiopplysingane, vekk kvar Lakei og vis dei tre roller ikkje i spel. Rollene kan vere dei same eller ulike frå rollene vist til Demonen.",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "soldier",
+        "name": "Soldat",
+        "ability": "Du er trygg frå Demonen.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "spiritofivory",
+        "name": "Kvite Elefanten",
+        "ability": "Det kan ikkje vere meir enn 1 ekstra vond spelar.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": [
+            "Ingen ekstra vond"
+        ]
+    },
+    {
+        "id": "spy",
+        "name": "Spion",
+        "ability": "Kvar natt, sjå inn i Boka. Du kan verte tydd som god & som ein Borgar eller Einstøing, sjølv i dauden.",
+        "firstNightReminder": "La Spionen sjå inn i Boka for så lenge dei treng.",
+        "otherNightReminder": "La Spionen sjå inn i Boka for så lenge dei treng.",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "steward",
+        "name": "Vasall",
+        "ability": "Du lærer innleiingsvis 1 god spelar.",
+        "firstNightReminder": "Peik mot ein god spelar.",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": [
+            "Veit"
+        ]
+    },
+    {
+        "id": "stormcatcher",
+        "name": "Utpeika",
+        "ability": "Sei ei god rolle. Om ho er i spel, kan rolla berre døy ved avretting, men vonde spelarar lærer kven som har ho.",
+        "firstNightReminder": "Marker ein god spelar \"Trygg\". Vekk kvar av dei vonde spelarane og vis dei den markerte spelaren.",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": [
+            "Trygg"
+        ]
+    },
+    {
+        "id": "sweetheart",
+        "name": "Søtnos",
+        "ability": "Når du døyr vert 1 spelar full.",
+        "firstNightReminder": "",
+        "otherNightReminder": "Vel kven du gjer full.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Full"
+        ]
+    },
+    {
+        "id": "tealady",
+        "name": "Tedame",
+        "ability": "Dei 2 levande naboane dine kan ikkje døy, om dei båe er gode.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": [
+            "Kan ikkje døy"
+        ]
+    },
+    {
+        "id": "thief",
+        "name": "Tjuv",
+        "ability": "Kvar natt, vel ein spelar utanom deg sjølv: røysta deira tel negativt i morgon.",
+        "firstNightReminder": "Tjuven peikar mot ein spelar. Marker spelaren med \"Negativ røyst\".",
+        "otherNightReminder": "Tjuven peikar mot ein spelar. Marker spelaren med \"Negativ røyst\".",
+        "remindersGlobal": [],
+        "reminders": [
+            "Negativ røyst"
+        ]
+    },
+    {
+        "id": "tinker",
+        "name": "Oppfinnar",
+        "ability": "Du kan døy kva tid som helst.",
+        "firstNightReminder": "",
+        "otherNightReminder": "Oppfinnaren kan døy.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Daud"
+        ]
+    },
+    {
+        "id": "towncrier",
+        "name": "Utropar",
+        "ability": "Kvar natt*, lær om ein Lakei nominerte i dag.",
+        "firstNightReminder": "",
+        "otherNightReminder": "Vis med hovudet (nikk for \"ja\" eller rist for \"nei\") om ein Lakei nominerte i dag. Fjern \"Lakei nominerte\"-markøren om han fanst, og plasser \"Lakei nominerte ikkje\".",
+        "remindersGlobal": [],
+        "reminders": [
+            "Lakei nominerte",
+            "Lakei nominerte ikkje"
+        ]
+    },
+    {
+        "id": "toymaker",
+        "name": "Handverkar",
+        "ability": "Demonen kan velje å ikkje åtake & må gjere dette minst éin gong i løpet av spelet. Vonde spelarar får vanleg kunnskap i byrjinga av spelet.",
+        "firstNightReminder": "",
+        "otherNightReminder": "Om det er natt og eit åtak frå Demonen kan gjere slutt på spelet, og Demonen er markert \"Siste natta: Inkje åtak\": Demonen handlar ikkje i natt. Ikkje vekk dei.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Inkje åtak"
+        ]
+    },
+    {
+        "id": "undertaker",
+        "name": "Gravar",
+        "ability": "Kvar natt*, lær kva rolle døydde ved avretting i dag.",
+        "firstNightReminder": "",
+        "otherNightReminder": "Om ein spelar døydde ved avretting i dag, vis rollebrikka deira.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Avretta"
+        ]
+    },
+    {
+        "id": "vigormortis",
+        "name": "Vigmort",
+        "ability": "Kvar natt*, vel ein spelar: dei døyr. Lakeiar du drep beheld evna si & forgiftar 1 Borgar-nabo. [-1 Einstøing]",
+        "firstNightReminder": "",
+        "otherNightReminder": "Vigmorten peikar mot ein spelar. Spelaren døyr. Om spelaren er ein Lakei, beheld dei evna si og forgiftar ein av Borgar-naboane sine.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Daud",
+            "Har evne",
+            "Forgifta"
+        ]
+    },
+    {
+        "id": "villageidiot",
+        "name": "Landsbyidiot",
+        "ability": "Velg en spiller hver kveld: du lærer justeringen deres. [+0 til +2 landsbyidioter. 1 av statistene er full]",
+        "firstNightReminder": "Landsbyidioten peker på en spiller; gi en tommel opp hvis den spilleren er god eller en tommel ned hvis den spilleren er ond.",
+        "otherNightReminder": "Landsbyidioten peker på en spiller; gi en tommel opp hvis den spilleren er god eller en tommel ned hvis den spilleren er ond.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Daud"
+        ]
+    },
+    {
+        "id": "virgin",
+        "name": "Jomfru",
+        "ability": "Den fyrste som nominerer deg vert avretta med det same om dei er ein Borgar.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": [
+            "Evnelaus"
+        ]
+    },
+    {
+        "id": "vizier",
+        "name": "Vesir",
+        "ability": "Alle spelarar veit kven du er. Du kan ikkje døy om dagen. Om godt røysta for, kan du velje å avrette med det same.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "vortox",
+        "name": "Kvervelbeist",
+        "ability": "Kvar natt, vel ein spelar: dei døyr. Borgar-evner gjev galen kunnskap. Kvar dag, om ingen vert avretta, vinn vondt.",
+        "firstNightReminder": "",
+        "otherNightReminder": "Kvervelbeistet peikar mot ein spelar. Spelaren døyr.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Daud"
+        ]
+    },
+    {
+        "id": "voudon",
+        "name": "Åndemanar",
+        "ability": "Berre du og daude spelarar kan røyste. Dei treng ikkje ei dauderøyst for å gjere det. Eit fleirtal (50%) av røystene er ikkje lenger eit krav.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "washerwoman",
+        "name": "Vaskekone",
+        "ability": "Du lærer innleiingsvis at 1 av 2 gjevne spelarar er ein bestemd Borgar.",
+        "firstNightReminder": "Vis rollebrikka til ein Borgar som er i spel. Peik mot to spelarar, kor ein av dei har den rolla.",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": [
+            "Borgar",
+            "Feil"
+        ]
+    },
+    {
+        "id": "widow",
+        "name": "Enke",
+        "ability": "I den fyrste natta di, sjå inn i Boka & vel ein spelar: dei vert forgifta. 1 god spelar veit at ei Enke er i spel.",
+        "firstNightReminder": "La Enka sjå inn i Boka for så lenge dei treng. Enka peikar mot ein spelar. Spelaren vert forgifta. Vekk ein god spelar, vis dei \"Disse rollene er i spel\"-kortet og så Enke-brikka.",
+        "otherNightReminder": "",
+        "remindersGlobal": [
+            "Veit"
+        ],
+        "reminders": [
+            "Forgifta"
+        ]
+    },
+    {
+        "id": "witch",
+        "name": "Heks",
+        "ability": "Kvar natt, vel ein spelar: om dei nominerer i morgon, døyr dei. Om berre 3 spelarar lever, misser du evna di.",
+        "firstNightReminder": "Heksa peikar mot ein spelar. Om spelaren nominerer i morgon, døyr dei med det same.",
+        "otherNightReminder": "Om fire eller fleire spelarar enno lever: Heksa peikar mot ein spelar. Om spelaren nominerer i morgon, døyr dei med det same.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Forheksa"
+        ]
+    },
+    {
+        "id": "zombuul",
+        "name": "Dauguul",
+        "ability": "Kvar natt*, om ingen døydde i dag, vel ein spelar: dei døyr. Fyrste gongen du døyr, lever du i staden, men vert av alle andre tydd som daud.",
+        "firstNightReminder": "",
+        "otherNightReminder": "Om ingen døydde om dagen: Dauguulen peikar mot ein spelar. Spelaren døyr.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Døydde i dag",
+            "Daud"
+        ]
+    }
+]

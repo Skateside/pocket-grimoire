@@ -1,0 +1,152 @@
+<button type="button" class="button button--full-height" id="select-characters" data-dialog="#character-select" disabled>{{ 'setup.buttons.select_characters'|trans }}</button>
+
+{% embed 'includes/dialog.html.twig' with {
+    id: 'character-select',
+    background: 'blur',
+    title: 'setup.character_select.title'|trans
+} %}
+    {% import 'macros/forms.html.twig' as forms %}
+    {% block body %}
+    <form id="player-select">
+
+        {{ forms.range({
+            classes: 'mb-4',
+            label: 'setup.character_select.number_players'|trans,
+            name: 'player-count',
+            id: 'player-count',
+            output: 'player-count-output',
+            min: 5,
+            max: 15,
+            step: 1,
+            value: 7
+        }) }}
+
+        {{ forms.switch({
+            node: 'div',
+            classes: 'mb-4',
+            label: 'setup.character_select.toggle_abilities'|trans,
+            name: 'toggle-abilities',
+            id: 'toggle-abilities',
+            checked: true
+        }) }}
+
+        {{ forms.switch({
+            node: 'div',
+            classes: 'mb-4',
+            label: 'setup.character_select.toggle_duplicates'|trans,
+            name: 'toggle-duplicates',
+            id: 'toggle-duplicates',
+            checked: false
+        }) }}
+
+        <p><button type="button" class="button" id="player-select-random">{{ 'setup.character_select.highlight_random'|trans }}</button></p>
+
+        {% set teams = {
+            townsfolk: 'groups.townsfolk'|trans,
+            outsider: 'groups.outsider'|trans,
+            minion: 'groups.minion'|trans,
+            demon: 'groups.demon'|trans,
+            traveller: 'groups.traveller'|trans
+        } %}
+        {% for team, name in teams %}
+        <fieldset class="sidebar character-select__group is-hide-duplicates" data-team="{{ team }}">
+            <legend class="sr-only">{{ name }}</legend>
+            <div class="sidebar__side character-select__score">
+                <div class="sidebar__side-content character-select__heading">
+                    <div class="character-select__title" aria-hidden="true">{{ name }}</div>
+                    <div class="character-select__score-box">
+                        <span class="js--character-select--count">0</span>
+                        <span class="character-select__score-seperator" data-vertical="-" data-horizontal="|"></span>
+                        <span class="js--character-select--total">X</span>
+                    </div>
+                </div>
+            </div>
+            <div class="sidebar__body">
+                <div class="character-select__characters js--character-select--list"></div>
+            </div>
+        </fieldset>
+        {% endfor %}
+
+        <p>
+            <label for="token-layout">{{ 'setup.character_select.layout'|trans }}</label>
+            <select name="token-layout" id="token-layout" class="input">
+                <option value="ellipse">{{ 'setup.character_select.ellipse'|trans }}</option>
+                <option value="diagonal">{{ 'setup.character_select.diagonal'|trans }}</option>
+                <option value="horizontal">{{ 'setup.character_select.horizontal'|trans }}</option>
+                <option value="vertical">{{ 'setup.character_select.vertical'|trans }}</option>
+            </select>
+        </p>
+
+        <ul class="button-list">
+            <li><button type="submit" class="button button--full-height">{{ 'setup.character_select.draw_characters'|trans }}</button></li>
+            <li><button type="submit" class="button button--full-height" id="player-select-all">{{ 'setup.character_select.add_all'|trans }}</button></li>
+        </ul>
+
+    </form>
+    {% endblock %}
+{% endembed %}
+
+{% embed 'includes/dialog.html.twig' with {
+    id: 'character-choice',
+    background: 'hide',
+    title: 'setup.character_choice.title'|trans,
+    hideClickBackground: false
+} %}
+    {% block body %}
+    <p>{{ 'setup.character_choice.description'|trans }}</p>
+    <div id="character-choice-wrapper" class="slot slot--3">
+    </div>
+    {% endblock %}
+{% endembed %}
+
+<template id="character-choice-template">
+    <div>
+        <button type="button" data-id="" class="character-choice">
+            <span class="character">
+                <span class="character__unknown js--character-choice--number"></span>
+            </span>
+        </button>
+    </div>
+</template>
+
+{% embed 'includes/dialog.html.twig' with {
+    id: 'character-decision',
+    background: 'hide',
+    hideClickBackground: false,
+    title: 'setup.character_decision.title'|trans
+} %}
+    {% block body %}
+    <div id="character-decision-wrapper" class="mb-4"></div>
+    <p id="character-decision-ability"></p>
+    <p>
+        <label for="player-name" class="d-block text-small">{{ 'setup.character_decision.name'|trans }}</label>
+        <input type="text" class="input" name="player-name" id="player-name" list="player-name-options">
+    </p>
+    <datalist id="player-name-options"></datalist>
+    <p><button type="button" class="button" data-dialog-hide>{{ 'setup.character_decision.return'|trans }}</button></p>
+    {% endblock %}
+{% endembed %}
+
+<template id="character-select-template">
+    <div class="character-select__character js--character-select">
+        <div class="character-select__duplicate js--character-select--duplicate-wrapper">
+            <button type="button" class="character-select__button character-select__button--prev" data-quantity-amount="-1">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="character-select__icon"><!--! Font Awesome Pro 6.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path fill="currentColor" d="M0 256C0 114.6 114.6 0 256 0C397.4 0 512 114.6 512 256C512 397.4 397.4 512 256 512C114.6 512 0 397.4 0 256zM168 232C154.7 232 144 242.7 144 256C144 269.3 154.7 280 168 280H344C357.3 280 368 269.3 368 256C368 242.7 357.3 232 344 232H168z"/></svg>
+            </button>
+            <input type="number" step="1" min="0" value="0" name="count-" tabindex="-1" class="character-select__count js--character-select--count" readonly>
+            <button type="button" class="character-select__button character-select__button--next" data-quantity-amount="1">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="character-select__icon"><!--! Font Awesome Pro 6.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path fill="currentColor" d="M0 256C0 114.6 114.6 0 256 0C397.4 0 512 114.6 512 256C512 397.4 397.4 512 256 512C114.6 512 0 397.4 0 256zM256 368C269.3 368 280 357.3 280 344V280H344C357.3 280 368 269.3 368 256C368 242.7 357.3 232 344 232H280V168C280 154.7 269.3 144 256 144C242.7 144 232 154.7 232 168V232H168C154.7 232 144 242.7 144 256C144 269.3 154.7 280 168 280H232V344C232 357.3 242.7 368 256 368z"/></svg>
+            </button>
+        </div>
+        <label class="js--character-select--label" for="">
+            <input type="checkbox" name="character" value="" class="sr-only character-select__input js--character-select--input">
+            <img src="" alt="" width="177" height="124" aria-hidden="true" class="character-select__part character-select__part--image js--character-select--image" loading="lazy">
+            <span class="character-select__part character-select__part--name js--character-select--name"></span>
+            <span class="character-select__part character-select__part--ability js--character-select--ability"></span>
+        </label>
+    </div>
+</template>
+
+<template id="player-name-template">
+    <option class="js--player-name--option">
+</template>

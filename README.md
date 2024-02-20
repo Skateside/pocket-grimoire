@@ -101,7 +101,7 @@ Optionally, you can include a name for the script. To do this, include an entry 
 
 The Pocket Grimoire understands custom characters. In order to use them, you'll need to create a JSON definition. The JSON definition uses the same format that [clocktower.online](https://clocktower.online/) does.
 
-> :warning: The Pocket Grimoire can only understand custom characters if all characters in the script are fully defined.
+> :information_source: You can combine official and homebrew character by simply adding your homebrew character to a list of recognised IDs, such as the Trouble Brewing example in the [Custom Scripts](#custom-scripts) section.
 
 ```json
 [
@@ -142,7 +142,7 @@ The Pocket Grimoire understands custom characters. In order to use them, you'll 
 
 If you've noticed a typo, or you have a better translation or would like to add a new language, there are 3 files that will need to be updated:
 
-1.  [RealVidy's BotC Translations](https://docs.google.com/spreadsheets/d/183HMp4ZgslxA4NtFVTXhY3xAbg7FIXZdmVnh9-4A_14/edit#gid=923580658)
+1.  [The Community BotC Translations](https://docs.google.com/spreadsheets/d/1aAJdqSTafHnw01w-WZ94UPx1Me70Kz-EG1NFfBht2tA/edit#gid=923580658)
     <br>This file contains translations for the tokens, reminders, and abilities.
     <br>Since this file wasn't created by me, you'll need to let me know of any updates.
     <br>This file has many more translations than the Pocket Grimoire has.

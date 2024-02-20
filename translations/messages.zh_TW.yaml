@@ -14,14 +14,17 @@ index:
 
 sheet:
     title: 角色表
-    description: 血染鐘塔中用於這個版本的角色表
+    description: 用於這個版本中的血染鐘塔角色表
     jinx: Jinx
     each_night: '* 除了第一晚之外的所有晚上'
     get_qr_code: 取得這張表格的 QR code
     get_sheet: 獲取此表
-    credit: <a href="https://bloodontheclocktower.com/" target="_blank" rel="noopener noreferrer">Blood on the Clocktower</a> 是屬於 Steven Medway 和 <a href="https://www.thepandemoniuminstitute.com/" target="_blank" rel="noopener noreferrer">The Pandemonium Institute</a> 的商標。
+    credit: Blood on the Clocktower 是屬於 Steven Medway 和 The Pandemonium Institute 的商標。
+    breakdown: 每隊的人數為球員人數。
+    count_plus: "%count%+"
 
 groups:
+    players: 玩家
     townsfolk: 鎮民
     outsider: 城外人
     minion: 僕從
@@ -36,10 +39,8 @@ messages:
     version_change_message: 這個應用程式的版本已經更新，由於您的資料可能不正確，我們建議您在「清除快取」對話窗中清除所有資料。點擊「OK」來開啟對話窗或點擊「Cancel」來關閉這則訊息。
     invalid_script: 無法辨認此劇本格式。
     no_characters: 無法從這個劇本辨認出任何角色。
-    invalid_data: 無效數據。
-    no_data: 沒有發送數據。
-    player_name: 這個玩家叫什麼名字？
-    custom_info_token: "你想讓你的新信息令牌說什麼？ 使用**雙星號**強調文本。"
+    player_name: 這位玩家叫什麼名字?
+    custom_info_token: '你想在你的自定義提示卡上寫什麼? 使用**雙星號**以粗體標示。'
 
 setup:
 
@@ -63,6 +64,8 @@ setup:
         custom_warning: 只從您信任的來源載入自訂.json檔案!
         upload: 上傳自訂劇本
         url: 輸入網址
+        paste: 從剪貼簿貼上
+        unsupported: 請注意口袋魔典目前不支援自製或本地化劇本。
         select: 選擇
 
     character_select:
@@ -73,6 +76,11 @@ setup:
         highlight_random: 隨機選擇
         draw_characters: 抽取角色
         add_all: 全部添加
+        layout: 佈局
+        ellipse: 橢圓
+        diagonal: 對角線
+        horizontal: 水平的
+        vertical: 垂直的
 
     character_choice:
         title: 選擇你的角色
@@ -80,7 +88,8 @@ setup:
 
     character_decision:
         title: 記住你的角色
-        return: 回到角色選擇
+        name: 幫自己取個名字(可選)
+        return: 回到角色選擇頁面
 
     qr_code:
         title: 角色表
@@ -103,14 +112,16 @@ setup:
         inputs_note: 使用者對此網站的設定。
         details_label: 清除開閉
         details_note: 展開或收合的區塊。
-        info_tokens_label: 清除自定義信息令牌
-        info_tokens_note: 已添加的自定義信息標記。
+        info_tokens_label: 清除自定義提示卡
+        info_tokens_note: 已添加的自定義提示卡。
+        names_label: 清楚的名字
+        names_note: 玩家命名建議。
         height_label: 清除寬度
         height_note: 魔典的寬度
         clear_refresh_label: 清除後刷新
         clear_refresh_note: 刷新將為清除的內容載入新資料。
-        warning: <strong>警告：</strong>任何已放置在魔典內的代幣將會被移除。
-        info_token_warning: <strong>警告：</strong>任何自定義信息標記都將被遺忘。
+        warning: '<strong>警告：任何已放置在魔典內的代幣將會被移除。</strong>'
+        info_token_warning: <strong>警告：任何自定義提示卡都將會被移除。</strong>'
         clear_cache: 清除快取
 
 grimoire:
@@ -119,16 +130,20 @@ grimoire:
 
     grimoire:
         bluffs: 惡魔偽裝
+        show_bluffs: 顯示所有詐唬
+        add_bluffs: 添加虛張聲勢
         add_token: 添加角色代幣
         add_reminder: 添加標記
         add_traveller: 添加旅行者
+        add_fabled: 添加傳奇
         show_tokens: 展示角色代幣
         reset_height: 重置寬度
         clear_grimoire: 清除魔典
         clear_grimoire_warning: 確定要清除所有代幣及標記嗎?
         show_night_order: 顯示夜晚行動順序
         character_size: 字符標記大小
-        reminder_size: 提醒令牌大小
+        reminder_size: 提醒標記大小
+        token_settings: 標記設置
 
     character_list:
         title: 選擇角色
@@ -136,6 +151,8 @@ grimoire:
     reminder_list:
         title: 選擇標記
         show: 顯示所有標記
+        multiple: 多個添加
+        add_all: 全部添加
 
     character_show:
         title: 角色代幣
@@ -143,6 +160,7 @@ grimoire:
         shroud: 死亡標記
         rotate: 轉向
         reminder: 標記
+        replace: 代替
         remove: 移除角色代幣
         recent_reminders: '最近新增的標記：'
         player_name: 設置玩家姓名
@@ -166,10 +184,14 @@ grimoire:
 
     token_list:
         title: 角色
+        add: 添加角色代幣
 
     traveller_list:
         title: 旅行者
         show_all: 顯示所有旅行者
+
+    fabled_list:
+        title: 傳奇
 
     token:
         title: 角色代幣
@@ -195,22 +217,37 @@ info_tokens:
         isminion: 這些是你的<strong>僕從</strong>
         notinplay: 這些角色<strong>不在遊戲中</strong>
         nominatetoday: 你今天<strong>提名</strong>了嗎?
-        playeris: <strong>這位玩家</strong>是
+        playeris: <strong>這位玩家是</strong>
         votetoday: 你今天<strong>投票</strong>了嗎?
-        youare: <strong>你</strong>是
+        youare: <strong>你是</strong>
         selectedyou: 這個角色<strong>選擇</strong>了你
-    custom: 自定義信息令牌
-    add_custom: 添加信息令牌
-    edit_custom: 編輯信息令牌
-    delete_custom: 刪除信息令牌
+    custom: 自定義信息提示卡
+    add_custom: 添加信息提示卡
+    edit_custom: 編輯信息提示卡
+    delete_custom: 刪除信息提示卡
+
+notes:
+    title: 說書人筆記
+    label: 筆記
+    clear: 清晰的筆記
+    clear_warning: 您確定要清除筆記嗎？
 
 acknowledgements:
     title: 致謝
     acknowledgements:
         - <a href="https://bloodontheclocktower.com/" target="_blank" rel="noopener noreferrer">Blood on the Clocktower</a> 是屬於 Steven Medway 和 <a href="https://www.thepandemoniuminstitute.com/" target="_blank" rel="noopener noreferrer">The Pandemonium Institute</a> 的商標。
-        - <a href="http://bignose.whitetree.org/projects/botc/diy/" target="_blank" rel="noopener noreferrer">Ben Finney</a> 撰寫夜間標記和其他輔助文本。
+        - <a href="http://bignose.whitetree.org/projects/botc/diy/" target="_blank" rel="noopener noreferrer">Ben Finney</a> 撰寫夜間標記和其他輔助文檔。
         - 圖標取自 <a href="https://fontawesome.com/v5.15/icons" target="_blank" rel="noopener noreferrer">Font Awesome</a>。
         - 許多圖檔資料取自 <a href="https://www.clocktower.online" target="_blank" rel="noopener noreferrer">Clocktower.online</a> 以及 <a href="https://bloodontheclocktower.com/" target="_blank" rel="noopener noreferrer">Blood on the Clocktower website</a>。
-        - 這是一個非官方的虛擬魔典，用於 Blood on the Clocktower 血染鐘塔遊戲。這份專案為免費使用並且可在 <a href="https://github.com/Skateside/pocket-grimoire" target="_blank" rel="noopener noreferrer">GitHub</a> 上找到原始碼。這份專案不附屬於 Pandemonium Institute。如果你享受於遊玩 Blood on the Clocktower，請考慮<a href="https://bloodontheclocktower.com/pages/where-to-buy" target="_blank" rel="noopener noreferrer">購買你自己的魔典</a> - 除了比這個數位版本更靈活，還能支持遊戲創作者。
+        - 這是一個非官方的虛擬魔典，用於 Blood on the Clocktower 血染鐘塔遊戲。這份專案為免費使用並且可在 <a href="https://github.com/Skateside/pocket-grimoire" target="_blank" rel="noopener noreferrer">GitHub</a> 上找到原始碼。這份專案不附屬於 Pandemonium Institute。如果你享受於遊玩 Blood on the Clocktower，請考慮<a href="https://bloodontheclocktower.com/buy" target="_blank" rel="noopener noreferrer">購買你自己的魔典</a> - 除了比這份數位版本更靈活，還能支持遊戲創作者。
         - 發現漏洞或是有改善建議? 在<a href="https://discord.com/channels/569683781800296501/708509594758152203" target="_blank" rel="noopener noreferrer">非官方Discord伺服器上的 "toolmakers" 頻道</a>上讓我知道(我的使用者名稱是 "Skateside")，或是<a href="https://github.com/Skateside/pocket-grimoire/issues" target="_blank" rel="noopener noreferrer">在 GitHub 上提出 issue</a>。
         - <small>版本：<span id="version"></span></small>
+
+errors:
+    homebrew_json:
+        not_homebrew: 不是自製條目“%id%”
+        unrecognised_team: 無法辨識的團隊“%team%”
+        not_find_id: 找不到 ID“%id%”
+        not_recognise_character: 無法辨識字元“%id%”
+        invalid_entry: “%id%”輸入無效：%reasons%
+        empty_teams: 空隊：%teams%

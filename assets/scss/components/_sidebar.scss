@@ -14,8 +14,6 @@
 }
 
 .sidebar__side {
-    writing-mode: vertical-lr;
-    text-orientation: upright;
     background-image: url("../../img/background-img3.png");
     color: #fff;
     font-family: var(--serif-font);
@@ -24,9 +22,17 @@
 }
 
 .sidebar__side-content {
+    writing-mode: vertical-lr;
+    text-orientation: upright;
     display: inline-block;
     position: sticky;
     top: 1em;
+
+    @at-root {
+        [dir="rtl"] & {
+            text-orientation: mixed;
+        }
+    }
 }
 
 .sidebar__body {

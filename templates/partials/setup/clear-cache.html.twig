@@ -1,0 +1,96 @@
+<button type="button" class="button button--full-height" id="clear-cache-button" data-dialog="#clear-cache">{{ 'setup.buttons.clear_cache_button'|trans }}</button>
+
+{% embed 'includes/dialog.html.twig' with {
+    id: 'clear-cache',
+    background: 'blur',
+    title: 'setup.clear_cache.title'|trans
+} %}
+    {% import 'macros/forms.html.twig' as forms %}
+    {% block body %}
+        <form id="cache-form">
+
+            <p>
+                {{ forms.switch({
+                    label: 'setup.clear_cache.clear_all'|trans,
+                    name: 'clear-all',
+                    id: 'clear-all',
+                    checked: true
+                }) }}
+                <small class="d-block">{{ 'setup.clear_cache.clear_description'|trans }}</small>
+            </p>
+
+            <ul id="clear-individual" class="no-list mb-4 p-2 bd-dark" hidden>
+                {% set clears = [
+                    {
+                        value: 'lookup',
+                        label: 'setup.clear_cache.lookup_label'|trans,
+                        note: 'setup.clear_cache.lookup_note'|trans
+                    },
+                    {
+                        value: 'characters',
+                        label: 'setup.clear_cache.characters_label'|trans,
+                        note: 'setup.clear_cache.characters_note'|trans
+                    },
+                    {
+                        value: 'tokens',
+                        label: 'setup.clear_cache.tokens_label'|trans,
+                        note: 'setup.clear_cache.tokens_note'|trans
+                    },
+                    {
+                        value: 'inputs',
+                        label: 'setup.clear_cache.inputs_label'|trans,
+                        note: 'setup.clear_cache.inputs_note'|trans
+                    },
+                    {
+                        value: 'details',
+                        label: 'setup.clear_cache.details_label'|trans,
+                        note: 'setup.clear_cache.details_note'|trans
+                    },
+                    {
+                        value: 'infoTokens',
+                        label: 'setup.clear_cache.info_tokens_label'|trans,
+                        note: 'setup.clear_cache.info_tokens_note'|trans
+                    },
+                    {
+                        value: 'names',
+                        label: 'setup.clear_cache.names_label'|trans,
+                        note: 'setup.clear_cache.names_note'|trans
+                    },
+                    {
+                        value: 'height',
+                        label: 'setup.clear_cache.height_label'|trans,
+                        note: 'setup.clear_cache.height_note'|trans
+                    },
+                ] %}
+                {% for clear in clears %}
+                    <li>
+                        {{ forms.switch({
+                            node: 'div',
+                            label: clear.label,
+                            name: 'clear',
+                            id: 'clear-' ~ clear.value,
+                            value: clear.value,
+                            checked: true
+                        }) }}
+                        <small class="d-block">{{ clear.note }}</small>
+                    </li>
+                {% endfor %}
+            </ul>
+
+            <p>
+                {{ forms.switch({
+                    label: 'setup.clear_cache.clear_refresh_label'|trans,
+                    name: 'clear-refresh',
+                    id: 'clear-refresh',
+                    checked: true
+                }) }}
+                <small class="d-block">{{ 'setup.clear_cache.clear_refresh_note'|trans }}</small>
+            </p>
+
+            <p id="token-warning"><small>{{ 'setup.clear_cache.warning'|trans|raw }}</small></p>
+            <p id="info-token-warning"><small>{{ 'setup.clear_cache.info_token_warning'|trans|raw }}</small></p>
+            <p><button type="submit" class="button">{{ 'setup.clear_cache.clear_cache'|trans }}</button></p>
+
+        </form>
+    {% endblock %}
+{% endembed %}

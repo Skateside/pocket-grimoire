@@ -1,0 +1,26 @@
+.settable-title__title {
+    font-family: inherit;
+    color: inherit;
+    line-height: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    text-shadow: inherit;
+}
+
+.settable-title__input {
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    display: inline;
+    font-family: inherit;
+    color: inherit;
+    line-height: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    text-shadow: inherit;
+}
+
+.settable-title__input--full {
+    display: block;
+    width: 100%;
+}

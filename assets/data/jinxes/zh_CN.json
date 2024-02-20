@@ -1,0 +1,512 @@
+[
+    {
+        "target": "chambermaid",
+        "trick": "mathematician",
+        "reason": "侍女会得知数学家是否醒来，即使她是在数学家之前醒来。"
+    },
+    {
+        "target": "eviltwin",
+        "trick": "plaguedoctor",
+        "reason": "说书人无法在瘟疫医生死亡时获得镜像双子的能力。"
+    },
+    {
+        "target": "butler",
+        "trick": "cannibal",
+        "reason": "如果食人族获得了管家的能力，他会得知这一信息。"
+    },
+    {
+        "target": "lunatic",
+        "trick": "mathematician",
+        "reason": "数学家会得知疯子是否攻击了与真正的恶魔不同的目标。"
+    },
+    {
+        "target": "pithag",
+        "trick": "heretic",
+        "reason": "麻脸巫婆无法创造异端分子。"
+    },
+    {
+        "target": "pithag",
+        "trick": "damsel",
+        "reason": "如果麻脸巫婆创造了落难少女，改为由说书人来决定哪一名玩家变成落难少女。"
+    },
+    {
+        "target": "pithag",
+        "trick": "politician",
+        "reason": "麻脸巫婆无法将一名邪恶玩家变成政客。"
+    },
+    {
+        "target": "pithag",
+        "trick": "villageidiot",
+        "reason": "如果有多余的标记，坑女巫可以额外创造一个村白痴。 如果是这样的话，醉酒的乡村白痴可能会改变。"
+    },
+    {
+        "target": "cerenovus",
+        "trick": "goblin",
+        "reason": "洗脑师可以选择将玩家洗脑成哥布林。"
+    },
+    {
+        "target": "goblin",
+        "trick": "plaguedoctor",
+        "reason": "如果瘟疫医生死亡且说书人会因此获得哥布林的能力，改为一名存活的爪牙玩家获得此能力，且他会得知此事。"
+    },
+    {
+        "target": "leviathan",
+        "trick": "soldier",
+        "reason": "如果利维坦发起的提名中士兵被处决，士兵不会死亡。"
+    },
+    {
+        "target": "leviathan",
+        "trick": "monk",
+        "reason": "如果利维坦发起的提名中被处决的玩家在前一晚曾被僧侣成功保护，那么那名玩家不会死亡。"
+    },
+    {
+        "target": "leviathan",
+        "trick": "innkeeper",
+        "reason": "如果利维坦发起的提名中被处决的玩家在前一晚曾被旅店老板成功保护，那么那名玩家不会死亡。"
+    },
+    {
+        "target": "leviathan",
+        "trick": "ravenkeeper",
+        "reason": "如果利维坦在场且守鸦人被处决，那么他当晚会被唤醒并使用自己的能力。"
+    },
+    {
+        "target": "leviathan",
+        "trick": "sage",
+        "reason": "如果利维坦在场且贤者被处决，那么他当晚会被唤醒并使用自己的能力。"
+    },
+    {
+        "target": "leviathan",
+        "trick": "farmer",
+        "reason": "如果利维坦在场且农夫被处决，当晚会有一名存活的善良玩家变成农夫。"
+    },
+    {
+        "target": "leviathan",
+        "trick": "mayor",
+        "reason": "如果利维坦在场，镇长存活且第五天没有处决发生，则善良阵营获胜。"
+    },
+    {
+        "target": "leviathan",
+        "trick": "hatter",
+        "reason": "如果帽匠在第五天或之后死亡，恶魔就不能选择利维坦。"
+    },
+    {
+        "target": "leviathan",
+        "trick": "pithag",
+        "reason": "第五天之后，坑婆婆就不能选择利维坦了。"
+    },
+    {
+        "target": "lilmonsta",
+        "trick": "poppygrower",
+        "reason": "如果罂粟种植者在场，爪牙们不会同时醒来选择照看小怪宝。 他们会依次单独被唤醒，直到其中一人选择照看小怪宝。"
+    },
+    {
+        "target": "lilmonsta",
+        "trick": "magician",
+        "reason": "互为克星的角色在同一时间里只能有其中一个角色在场。"
+    },
+    {
+        "target": "lilmonsta",
+        "trick": "scarletwoman",
+        "reason": "如果在五名及以上的玩家存活时照看小怪宝的玩家死亡， 当晚红唇女郎必须要照看小怪宝。"
+    },
+    {
+        "target": "lilmonsta",
+        "trick": "organgrinder",
+        "reason": "如果街头风琴手在照看小怪宝，对街头风琴手的提名即使他自己没有投票，票数也会被统计。"
+    },
+    {
+        "target": "lilmonsta",
+        "trick": "vizier",
+        "reason": "照看小怪宝的维齐尔能够死于处决。"
+    },
+    {
+        "target": "lilmonsta",
+        "trick": "hatter",
+        "reason": "如果恶魔选择了小蒙斯塔，他们也会选择一个小黄人来成为今晚照顾小蒙斯塔的人。"
+    },
+    {
+        "target": "lycanthrope",
+        "trick": "gambler",
+        "reason": "赌徒会先于半兽人行动。 如果赌徒赌博失败且半兽人在场，那么无论半兽人选择了哪个玩家，当晚只会有赌徒死亡。"
+    },
+    {
+        "target": "legion",
+        "trick": "engineer",
+        "reason": "军团和工程师不能在初始时同时在场。 如果工程师创造了军团，那么包括所有邪恶玩家在内的绝大部分玩家都会变成邪恶的军团。"
+    },
+    {
+        "target": "legion",
+        "trick": "preacher",
+        "reason": "互为克星的角色在同一时间里只能有其中一个角色在场。"
+    },
+    {
+        "target": "legion",
+        "trick": "hatter",
+        "reason": "如果帽子匠死了而军团还在玩，则什么也不会发生。 如果帽匠死亡并且邪恶玩家选择军团，则所有当前邪恶玩家都会成为军团。"
+    },
+    {
+        "target": "fanggu",
+        "trick": "scarletwoman",
+        "reason": "如果方古成功转化了外来者并因此死去，红唇女郎不会变成方古。"
+    },
+    {
+        "target": "spy",
+        "trick": "alchemist",
+        "reason": "炼金术士无法获得间谍的能力。"
+    },
+    {
+        "target": "spy",
+        "trick": "magician",
+        "reason": "当间谍查看魔典时，魔术师和恶魔的角色标记会被说书人移除。"
+    },
+    {
+        "target": "spy",
+        "trick": "poppygrower",
+        "reason": "如果罂粟种植者在场，直到其死亡前间谍无法查看魔典。"
+    },
+    {
+        "target": "spy",
+        "trick": "plaguedoctor",
+        "reason": "如果瘟疫医生死亡且说书人会因此获得间谍的能力，改为一名存活的爪牙玩家获得此能力，且他会得知此事。"
+    },
+    {
+        "target": "spy",
+        "trick": "damsel",
+        "reason": "互为克星的角色在同一时间里只能有其中一个角色在场。"
+    },
+    {
+        "target": "spy",
+        "trick": "heretic",
+        "reason": "互为克星的角色在同一时间里只能有其中一个角色在场。"
+    },
+    {
+        "target": "widow",
+        "trick": "alchemist",
+        "reason": "炼金术士无法获得寡妇的能力。"
+    },
+    {
+        "target": "widow",
+        "trick": "magician",
+        "reason": "当寡妇查看魔典时，魔术师和恶魔的标记会被说书人移除。"
+    },
+    {
+        "target": "widow",
+        "trick": "poppygrower",
+        "reason": "如果罂粟种植者在场，直到其死亡前寡妇无法查看魔典。 寡妇会在罂粟种植者死后的首个夜晚触发自身的能力。"
+    },
+    {
+        "target": "widow",
+        "trick": "damsel",
+        "reason": "互为克星的角色在同一时间里只能有其中一个角色在场。"
+    },
+    {
+        "target": "widow",
+        "trick": "heretic",
+        "reason": "互为克星的角色在同一时间里只能有其中一个角色在场。"
+    },
+    {
+        "target": "godfather",
+        "trick": "heretic",
+        "reason": "互为克星的角色在同一时间里只能有其中一个角色在场。"
+    },
+    {
+        "target": "scarletwoman",
+        "trick": "plaguedoctor",
+        "reason": "如果瘟疫医生死亡且说书人会因此获得红唇女郎的能力，改为一名存活的爪牙玩家获得此能力，且他会得知此事。"
+    },
+    {
+        "target": "boomdandy",
+        "trick": "plaguedoctor",
+        "reason": "如果瘟疫医生死于处决且说书人会因此获得炸弹人的能力，那么炸弹人的能力会立即被触发。"
+    },
+    {
+        "target": "fearmonger",
+        "trick": "plaguedoctor",
+        "reason": "如果瘟疫医生死亡且说书人会因此获得恐惧之灵的能力，改为一名存活的爪牙玩家获得此能力，且他会得知此事。"
+    },
+    {
+        "target": "baron",
+        "trick": "heretic",
+        "reason": "如果异端分子在剧本中，男爵的效果可能会只增加一个而非两个外来者。"
+    },
+    {
+        "target": "baron",
+        "trick": "plaguedoctor",
+        "reason": "如果说书人获得了男爵的能力，至多两名玩家会变成不在场的外来者。"
+    },
+    {
+        "target": "marionette",
+        "trick": "lilmonsta",
+        "reason": "提线木偶会与一名爪牙玩家邻座，而不是恶魔。 提线木偶不会被唤醒来决定是否照看小怪宝。"
+    },
+    {
+        "target": "marionette",
+        "trick": "poppygrower",
+        "reason": "当罂粟种植者死亡后，恶魔会知道谁是提线木偶，但提线木偶什么都不会知道。"
+    },
+    {
+        "target": "marionette",
+        "trick": "snitch",
+        "reason": "提线木偶不会得知三个不在场的角色，改为由恶魔额外得知三个不在场角色。"
+    },
+    {
+        "target": "marionette",
+        "trick": "balloonist",
+        "reason": "如果提线木偶抽到了气球驾驶员，也会+1外来者。"
+    },
+    {
+        "target": "marionette",
+        "trick": "damsel",
+        "reason": "提线木偶不会得知落难少女在场。"
+    },
+    {
+        "target": "marionette",
+        "trick": "plaguedoctor",
+        "reason": "如果在瘟疫医生死亡时说书人获得了提线木偶的能力，且与恶魔邻座的存活玩家中有镇民或外来者，其中一名玩家会变成邪恶的提线木偶。如果此时场上的邪恶玩家数量比初始设置时的数量超出一名或更多，改为无事发生。"
+    },
+    {
+        "target": "marionette",
+        "trick": "huntsman",
+        "reason": "如果提线木偶抽到了巡山人，也会增加落难少女。"
+    },
+    {
+        "target": "lleech",
+        "trick": "mastermind",
+        "reason": "如果主谋存活且痢蛭的宿主被处决，痢蛭存活但失去能力，并会在下一天的黄昏时死亡。"
+    },
+    {
+        "target": "lleech",
+        "trick": "slayer",
+        "reason": "如果猎手选择了痢蛭的宿主，则宿主会死亡。"
+    },
+    {
+        "target": "lleech",
+        "trick": "heretic",
+        "reason": "如果痢蛭选择异端分子作为宿主，痢蛭死亡时异端分子仍会中毒。"
+    },
+    {
+        "target": "riot",
+        "trick": "engineer",
+        "reason": "暴乱和工程师不能在初始时同时在场。如果工程师创造了暴乱，所有邪恶玩家都会变成暴乱。"
+    },
+    {
+        "target": "riot",
+        "trick": "golem",
+        "reason": "如果魔像提名了暴乱，暴乱不会死亡。"
+    },
+    {
+        "target": "riot",
+        "trick": "snitch",
+        "reason": "如果告密者在场，所有暴乱玩家都会分别得知三个不在场角色。"
+    },
+    {
+        "target": "riot",
+        "trick": "saint",
+        "reason": "如果善良玩家提名并杀死了圣徒，圣徒的阵营落败。"
+    },
+    {
+        "target": "riot",
+        "trick": "butler",
+        "reason": "管家无法提名主人。"
+    },
+    {
+        "target": "riot",
+        "trick": "pithag",
+        "reason": "如果麻脸巫婆创造了暴乱，所有邪恶玩家都会变成暴乱。 如果麻脸巫婆在游戏的第三天之后创造了暴乱，则游戏还会再进行一天。"
+    },
+    {
+        "target": "riot",
+        "trick": "mayor",
+        "reason": "如果在第三天开始时只有三名玩家存活，所有玩家可以针对今天不发起提名进行表决。 如果表决通过且镇长存活，镇长的阵营获胜。"
+    },
+    {
+        "target": "riot",
+        "trick": "monk",
+        "reason": "如果暴乱提名了一名前一晚曾被僧侣成功保护的玩家，那名玩家不会死亡。"
+    },
+    {
+        "target": "riot",
+        "trick": "farmer",
+        "reason": "如果暴乱提名并杀死了农夫，当晚会有一名存活的善良玩家变成农夫。"
+    },
+    {
+        "target": "riot",
+        "trick": "innkeeper",
+        "reason": "如果暴乱提名了一名前一晚曾被旅店老板成功保护的玩家，那名玩家不会死亡。"
+    },
+    {
+        "target": "riot",
+        "trick": "sage",
+        "reason": "如果暴乱提名并杀死了贤者，当晚贤者会被唤醒并使用其能力。"
+    },
+    {
+        "target": "riot",
+        "trick": "ravenkeeper",
+        "reason": "如果暴乱提名并杀死了守鸦人，当晚守鸦人会被唤醒并使用其能力。"
+    },
+    {
+        "target": "riot",
+        "trick": "soldier",
+        "reason": "如果暴乱提名了士兵，士兵不会死亡。"
+    },
+    {
+        "target": "riot",
+        "trick": "grandmother",
+        "reason": "如果暴乱提名并杀死了孙子，祖母会一同死亡。"
+    },
+    {
+        "target": "riot",
+        "trick": "king",
+        "reason": "如果暴乱提名并杀死了国王且唱诗男孩存活，当晚唱诗男孩会被唤醒并使用其能力。"
+    },
+    {
+        "target": "riot",
+        "trick": "exorcist",
+        "reason": "互为克星的角色在同一时间里只能有其中一个角色在场。"
+    },
+    {
+        "target": "riot",
+        "trick": "minstrel",
+        "reason": "互为克星的角色在同一时间里只能有其中一个角色在场。"
+    },
+    {
+        "target": "riot",
+        "trick": "flowergirl",
+        "reason": "互为克星的角色在同一时间里只能有其中一个角色在场。"
+    },
+    {
+        "target": "riot",
+        "trick": "undertaker",
+        "reason": "被提名且死亡的玩家被送葬者当作被处决。"
+    },
+    {
+        "target": "riot",
+        "trick": "cannibal",
+        "reason": "被提名且死亡的玩家被食人族当作被处决。"
+    },
+    {
+        "target": "riot",
+        "trick": "pacifist",
+        "reason": "被提名且死亡的玩家被和平主义者当作被处决。"
+    },
+    {
+        "target": "riot",
+        "trick": "devilsadvocate",
+        "reason": "被提名且死亡的玩家被魔鬼代言人当作被处决。"
+    },
+    {
+        "target": "riot",
+        "trick": "investigator",
+        "reason": "暴乱被调查员当作爪牙。"
+    },
+    {
+        "target": "riot",
+        "trick": "clockmaker",
+        "reason": "暴乱被钟表匠当作爪牙。"
+    },
+    {
+        "target": "riot",
+        "trick": "towncrier",
+        "reason": "暴乱被城镇公告员当作爪牙。"
+    },
+    {
+        "target": "riot",
+        "trick": "damsel",
+        "reason": "暴乱被落难少女当作爪牙。"
+    },
+    {
+        "target": "riot",
+        "trick": "preacher",
+        "reason": "暴乱被传教士当作爪牙。"
+    },
+    {
+        "target": "riot",
+        "trick": "hatter",
+        "reason": "如果帽匠死了，暴乱就会开始比赛，并且暴乱会选择不同的恶魔，一个正常的邪恶队伍就会由暴乱玩家创建。 如果帽匠死了并且恶魔选择了暴乱，那么小兵也会变成暴乱。"
+    },
+    {
+        "target": "alhadikhia",
+        "trick": "scarletwoman",
+        "reason": "如果出现两名存活的哈迪寂亚，则红唇女郎变成的哈迪寂亚会变回红唇女郎。"
+    },
+    {
+        "target": "alhadikhia",
+        "trick": "mastermind",
+        "reason": "互为克星的角色在同一时间里只能有其中一个角色在场。邪恶阵营玩家在游戏开始时知道这两者中是什么角色在场，是哪一名玩家。"
+    },
+    {
+        "target": "organgrinder",
+        "trick": "butler",
+        "reason": "如果街头风琴手使得玩家需要闭眼投票，管家可以自由举手投票，但只在他的主人投票时他的票才会被统计。"
+    },
+    {
+        "target": "organgrinder",
+        "trick": "flowergirl",
+        "reason": "如果街头风琴手使得玩家需要闭眼投票，卖花女孩在夜晚会改为得知恶魔在白天投票的总次数。"
+    },
+    {
+        "target": "organgrinder",
+        "trick": "minstrel",
+        "reason": "互为克星的角色在同一时间里只能有其中一个角色在场。"
+    },
+    {
+        "target": "organgrinder",
+        "trick": "preacher",
+        "reason": "互为克星的角色在同一时间里只能有其中一个角色在场。"
+    },
+    {
+        "target": "vizier",
+        "trick": "alchemist",
+        "reason": "如果炼金术士拥有维齐尔的能力，他只能在三名或更多玩家投票时选择立即处决，不论这些玩家的阵营如何。"
+    },
+    {
+        "target": "vizier",
+        "trick": "courtier",
+        "reason": "如果维齐尔失去能力，他会得知这一信息。如果侍臣在剧本列表中，且维齐尔在具有能力时被处决，他的阵营获胜。"
+    },
+    {
+        "target": "vizier",
+        "trick": "fearmonger",
+        "reason": "在恐惧之灵因为自己的能力被唤醒时，维齐尔会一同被唤醒。他会得知恐惧之灵选择了哪名玩家，并且无法使用自己的能力让那名玩家立即被处决。"
+    },
+    {
+        "target": "vizier",
+        "trick": "investigator",
+        "reason": "如果调查员的能力使其得知了维齐尔，则说书人不会告知所有人维齐尔在场。"
+    },
+    {
+        "target": "vizier",
+        "trick": "magician",
+        "reason": "互为克星的角色在同一时间里只能有其中一个角色在场。"
+    },
+    {
+        "target": "vizier",
+        "trick": "preacher",
+        "reason": "如果维齐尔失去能力，他会得知这一信息。如果传教士在剧本列表中，且维齐尔在具有能力时被处决，他的阵营获胜。"
+    },
+    {
+        "target": "kazali",
+        "trick": "bountyhunter",
+        "reason": "只有在卡扎利行动后赏金猎人仍在发挥作用时，才会产生邪恶的城镇居民。"
+    },
+    {
+        "target": "kazali",
+        "trick": "goon",
+        "reason": "如果卡扎利选择莽夫成为爪牙，则剩余的爪牙选择将由讲故事的人决定。"
+    },
+    {
+        "target": "kazali",
+        "trick": "marionette",
+        "reason": "如果卡扎利人选择创造一个木偶，他们必须选择一个邻居。"
+    },
+    {
+        "target": "kazali",
+        "trick": "huntsman",
+        "reason": "如果卡扎利选择少女成为小兵，并且有猎人在场，那么优秀的玩家就会成为少女。"
+    },
+    {
+        "target": "kazali",
+        "trick": "choirboy",
+        "reason": "如果唱诗班男孩在场，卡扎利人不能选择国王成为随从。"
+    }
+]

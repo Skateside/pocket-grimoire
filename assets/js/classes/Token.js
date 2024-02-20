@@ -90,6 +90,18 @@ export default class Token {
     }
 
     /**
+     * Checks to see if the key exists within the data.
+     *
+     * @param  {String} key
+     *         Key for the data to check for.
+     * @return {Boolean}
+     *         true if the data has the given key, false if it doesn't.
+     */
+    hasData(key) {
+        return Object.prototype.hasOwnProperty.call(this.data, key);
+    }
+
+    /**
      * Gets the key from {@link Template#data} and returns the value.
      *
      * @param  {String} key
@@ -101,7 +113,7 @@ export default class Token {
      */
     getData(key) {
 
-        if (!Object.prototype.hasOwnProperty.call(this.data, key)) {
+        if (!this.hasData(key)) {
             throw new ReferenceError(`Unrecognised property "${key}"`);
         }
 

@@ -21,7 +21,6 @@ function drawQRCode() {
 
     const {
         name,
-        characters,
         game
     } = qrCode.dataset;
 

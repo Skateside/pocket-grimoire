@@ -1,0 +1,512 @@
+[
+    {
+        "target": "chambermaid",
+        "trick": "mathematician",
+        "reason": "Husan får veta om Matematikern vaknar inatt eller inte, trots att Husan vaknar först."
+    },
+    {
+        "target": "eviltwin",
+        "trick": "plaguedoctor",
+        "reason": "Berättaren kan inte få Dubbelgångarens förmåga om Pestläkaren dör."
+    },
+    {
+        "target": "butler",
+        "trick": "cannibal",
+        "reason": "Kannibalen får veta om hen får Butlerns förmåga."
+    },
+    {
+        "target": "lunatic",
+        "trick": "mathematician",
+        "reason": "Matematikern får veta om Galningen attackerar någon annan än den riktiga Demonen."
+    },
+    {
+        "target": "pithag",
+        "trick": "heretic",
+        "reason": "Trollpackan kan inte skapa en Kättare."
+    },
+    {
+        "target": "pithag",
+        "trick": "damsel",
+        "reason": "Om Trollpackan skapar en Ungmö bestämmer Berättaren vilken spelare det blir."
+    },
+    {
+        "target": "pithag",
+        "trick": "politician",
+        "reason": "Trollpackan kan inte skapa en ond Politiker."
+    },
+    {
+        "target": "pithag",
+        "trick": "villageidiot",
+        "reason": "Om det finns en ledig bricka kan Trollpackan skapa en extra Byfåne. Det kan ändra vilken av Byfånarna som är full."
+    },
+    {
+        "target": "cerenovus",
+        "trick": "goblin",
+        "reason": "Cerenovus får välja att en spelare ska låtsas vara Vätten."
+    },
+    {
+        "target": "goblin",
+        "trick": "plaguedoctor",
+        "reason": "Om Pestläkaren dör så får en levande Hantlangare Vättens förmåga utöver sin egen, och får veta om det."
+    },
+    {
+        "target": "leviathan",
+        "trick": "soldier",
+        "reason": "Om Leviatan nominerar och avrättar Soldaten så dör Soldaten inte."
+    },
+    {
+        "target": "leviathan",
+        "trick": "monk",
+        "reason": "Om Leviatan nominerar och avrättar spelaren som Munken valde så dör inte den spelaren."
+    },
+    {
+        "target": "leviathan",
+        "trick": "innkeeper",
+        "reason": "Om Leviatan nominerar och avrättar en spelare som Gästgivaren valt så dör inte den spelaren."
+    },
+    {
+        "target": "leviathan",
+        "trick": "ravenkeeper",
+        "reason": "Om Leviatan är i spel och Korpskötaren avrättas och dör så vaknar Korpskötaren samma natt och använder sin förmåga."
+    },
+    {
+        "target": "leviathan",
+        "trick": "sage",
+        "reason": "Om Leviatan är i spel och Gurun avrättas och dör så vaknar Gurun samma natt och använder sin förmåga."
+    },
+    {
+        "target": "leviathan",
+        "trick": "farmer",
+        "reason": "Om Leviatan är i spel och en Bonde avrättas och dör så blir en god spelare Bonde samma natt."
+    },
+    {
+        "target": "leviathan",
+        "trick": "mayor",
+        "reason": "Om Leviatan är i spel och ingen avrättas dag 5 så vinner de goda."
+    },
+    {
+        "target": "leviathan",
+        "trick": "hatter",
+        "reason": "Om Hattmakaren dör dag 5 eller senare kan Demonen inte välja Leviatan."
+    },
+    {
+        "target": "leviathan",
+        "trick": "pithag",
+        "reason": "Efter dag 5 kan Trollpackan inte välja Leviatan."
+    },
+    {
+        "target": "lilmonsta",
+        "trick": "poppygrower",
+        "reason": "Om Vallmoodlaren är i spel så vaknar Hantlangarna inte tillsammans; de vaknar en och en tills en väljer att ta hand om Lillmonstret."
+    },
+    {
+        "target": "lilmonsta",
+        "trick": "magician",
+        "reason": "Endast 1 roll med förbannelse får vara i spel."
+    },
+    {
+        "target": "lilmonsta",
+        "trick": "scarletwoman",
+        "reason": "Om 5 eller fler spelare lever och spelaren som tar hand om Lillmonstret dör så får Röda damen Lillmonstret inatt."
+    },
+    {
+        "target": "lilmonsta",
+        "trick": "organgrinder",
+        "reason": "Röster på Positivhalaren räknas om Positivhalaren tar hand om Lillmonstret."
+    },
+    {
+        "target": "lilmonsta",
+        "trick": "vizier",
+        "reason": "Vesiren kan avrättas och dö om hen har hand om Lillmonstret samtidigt."
+    },
+    {
+        "target": "lilmonsta",
+        "trick": "hatter",
+        "reason": "Om Demonen väljer Lillmonstret väljer hen också en Hantlangare. Hen blir till Hantlangaren och tar hand om Lillmonstret inatt."
+    },
+    {
+        "target": "lycanthrope",
+        "trick": "gambler",
+        "reason": "Om Lykantropen lever och Hasardspelaren dödar sig själv på natten kan ingen annan spelare dö inatt."
+    },
+    {
+        "target": "legion",
+        "trick": "engineer",
+        "reason": "Legionen och Ingenjören kan inte vara i spel samtidigt när spelet börjar. Om Ingenjören skapar Legionen blir de flesta spelare, inklusive alla spelare, den onda Legionen."
+    },
+    {
+        "target": "legion",
+        "trick": "preacher",
+        "reason": "Endast 1 roll med förbannelse får vara i spel."
+    },
+    {
+        "target": "legion",
+        "trick": "hatter",
+        "reason": "Om Hattmakaren dör och Legionen är i spel händer ingenting. Om Hattmakaren dör och en ond spelare väljer Legionen blir alla onda spelare till Legionen."
+    },
+    {
+        "target": "fanggu",
+        "trick": "scarletwoman",
+        "reason": "Om Fang Gu väljer en Utböling och dör så blir Röda damen inte till Fang Gu."
+    },
+    {
+        "target": "spy",
+        "trick": "alchemist",
+        "reason": "Alkemisten kan inte få Spionens förmåga."
+    },
+    {
+        "target": "spy",
+        "trick": "magician",
+        "reason": "När Spionen ser Spelboken tas Demonens och Magikerns rollbrickor bort."
+    },
+    {
+        "target": "spy",
+        "trick": "poppygrower",
+        "reason": "Om Vallmoodlaren är i spel får Spionen inte se spelboken förrän Vallmoodlaren dör."
+    },
+    {
+        "target": "spy",
+        "trick": "plaguedoctor",
+        "reason": "Om Pestläkaren dör får en levande Undersåte Spionens förmåga utöver sin egen förmåga, och får veta detta."
+    },
+    {
+        "target": "spy",
+        "trick": "damsel",
+        "reason": "Endast 1 roll med förbannelse får vara i spel."
+    },
+    {
+        "target": "spy",
+        "trick": "heretic",
+        "reason": "Endast 1 roll med förbannelse får vara i spel."
+    },
+    {
+        "target": "widow",
+        "trick": "alchemist",
+        "reason": "Alkemisten kan inte få Änkans förmåga."
+    },
+    {
+        "target": "widow",
+        "trick": "magician",
+        "reason": "När Änkan ser Spelboken tas Demonens och Magikerns rollbrickor bort."
+    },
+    {
+        "target": "widow",
+        "trick": "poppygrower",
+        "reason": "Om Vallmoodlaren är i spel får Änkan inte se spelboken förrän Vallmoodlaren dör."
+    },
+    {
+        "target": "widow",
+        "trick": "damsel",
+        "reason": "Endast 1 roll med förbannelse får vara i spel."
+    },
+    {
+        "target": "widow",
+        "trick": "heretic",
+        "reason": "Endast 1 roll med förbannelse får vara i spel."
+    },
+    {
+        "target": "godfather",
+        "trick": "heretic",
+        "reason": "Endast 1 roll med förbannelse får vara i spel."
+    },
+    {
+        "target": "scarletwoman",
+        "trick": "plaguedoctor",
+        "reason": "Om Pestläkaren dör får en levande Hantlangare Röda damens förmåga utöver sin egen, och får veta detta."
+    },
+    {
+        "target": "boomdandy",
+        "trick": "plaguedoctor",
+        "reason": "Om Pestläkaren avrättas och Berättaren skulle få Sprängarens förmåga så aktiveras Sprängarens förmåga direkt."
+    },
+    {
+        "target": "fearmonger",
+        "trick": "plaguedoctor",
+        "reason": "Om Pestläkaren dör får en levande Hantlangare Skräckspridarens förmåga utöver sin egen, och får veta detta."
+    },
+    {
+        "target": "baron",
+        "trick": "heretic",
+        "reason": "Baronen lägger bara till 1 Utböling, inte 2."
+    },
+    {
+        "target": "baron",
+        "trick": "plaguedoctor",
+        "reason": "Om Berättaren får Baronens förmåga så blir upp till två spelare till Utbölingar som inte är i spel."
+    },
+    {
+        "target": "marionette",
+        "trick": "lilmonsta",
+        "reason": "Marionetten sitter bredvid en Hantlangare, inte Demonen. Marionetten vaknar inte för att välja vem som tar Lillmonstrets bricka, och får inte veta att hen är Marionetten om hen har Lillmonstrets bricka."
+    },
+    {
+        "target": "marionette",
+        "trick": "poppygrower",
+        "reason": "När Vallmoodlaren dör får Demonen veta vem Marionetten är, men Marionetten får inte veta något."
+    },
+    {
+        "target": "marionette",
+        "trick": "snitch",
+        "reason": "Marionetten får inte veta 3 roller som inte är spel; istället får Demonen veta ytterligare 3."
+    },
+    {
+        "target": "marionette",
+        "trick": "balloonist",
+        "reason": "Om Marionetten tror sig vara Ballongfararen så läggs 1 extra Utböling till."
+    },
+    {
+        "target": "marionette",
+        "trick": "damsel",
+        "reason": "Marionetten får inte veta att Ungmön är i spel."
+    },
+    {
+        "target": "marionette",
+        "trick": "plaguedoctor",
+        "reason": "Om Demonen har en granne som lever och är Bybo eller Utböling när Pestläkaren dör så blir den spelaren en ond Marionett. Om det redan finns en extra ond spelare händer detta inte."
+    },
+    {
+        "target": "marionette",
+        "trick": "huntsman",
+        "reason": "Om Marionetten tror sig vara Jägaren så läggs Ungmön till."
+    },
+    {
+        "target": "lleech",
+        "trick": "mastermind",
+        "reason": "Om Mästaren lever och Igelns värd avrättas och dör så överlever Igeln men förlorar sin förmåga."
+    },
+    {
+        "target": "lleech",
+        "trick": "slayer",
+        "reason": "Om Banemannen dräper Igelns värd så dör värden."
+    },
+    {
+        "target": "lleech",
+        "trick": "heretic",
+        "reason": "Om Igeln har förgiftat Kättaren så dör Igeln, och Kättaren förblir förgiftad."
+    },
+    {
+        "target": "riot",
+        "trick": "engineer",
+        "reason": "Både Upproret och Ingenjören kan inte vara i spel i början av spelet. Om Ingenjören skapar Upproret så blir de onda spelarna till Upproret."
+    },
+    {
+        "target": "riot",
+        "trick": "golem",
+        "reason": "Om Golem nominerar Upproret så dör inte den nominerade spelaren."
+    },
+    {
+        "target": "riot",
+        "trick": "snitch",
+        "reason": "Om Tjallaren är i spel får varje spelare som är Upproret 3 extra bluffar."
+    },
+    {
+        "target": "riot",
+        "trick": "saint",
+        "reason": "Om en god spelare nominerar och dödar Helgonet så förlorar Helgonets lag."
+    },
+    {
+        "target": "riot",
+        "trick": "butler",
+        "reason": "Butlern kan inte nominera sin husbonde."
+    },
+    {
+        "target": "riot",
+        "trick": "pithag",
+        "reason": "Om Trollpackan skapar Upproret så blir alla onda spelare till Upproret. Om Trollpackan skapar Upproret efter dag 3 så pågår spelet i en dag till."
+    },
+    {
+        "target": "riot",
+        "trick": "mayor",
+        "reason": "Om det bara är 3 levande spelare kvar när dag 3 börjar så får spelarna gemensamt välja att inte nominera någon. Om de gör det och Borgmästaren lever så vinner Borgmästarens lag."
+    },
+    {
+        "target": "riot",
+        "trick": "monk",
+        "reason": "Om någon som är Upproret nominerar och dödar spelaren som är skyddad av Munken så dör inte den skyddade spelaren."
+    },
+    {
+        "target": "riot",
+        "trick": "farmer",
+        "reason": "Om någon som är Upproret nominerar och dödar en Bonde så använder Bonden sin förmåga samma natt."
+    },
+    {
+        "target": "riot",
+        "trick": "innkeeper",
+        "reason": "Om någon som är Upproret nominerar en spelare som är skyddad av Gästgivaren så dör inte den skyddade spelaren."
+    },
+    {
+        "target": "riot",
+        "trick": "sage",
+        "reason": "Om någon som är Upproret nominerar och dödar en Guru så använder Gurun sin förmåga samma natt."
+    },
+    {
+        "target": "riot",
+        "trick": "ravenkeeper",
+        "reason": "Om någon som är Upproret nominerar och dödar Korpskötaren så använder Korpskötaren sin förmåga samma natt."
+    },
+    {
+        "target": "riot",
+        "trick": "soldier",
+        "reason": "Om någon som är Upproret nominerar Soldaten så dör inte Soldaten."
+    },
+    {
+        "target": "riot",
+        "trick": "grandmother",
+        "reason": "Om någon som är Upproret nominerar och dödar barnbarnet så dör Farmorn också."
+    },
+    {
+        "target": "riot",
+        "trick": "king",
+        "reason": "Om någon som är Upproret nominerar och dödar Kungen och Korgossen fortfarande lever så använder Korgossen sin förmåga samma natt."
+    },
+    {
+        "target": "riot",
+        "trick": "exorcist",
+        "reason": "Endast 1 roll med förbannelse får vara i spel."
+    },
+    {
+        "target": "riot",
+        "trick": "minstrel",
+        "reason": "Endast 1 roll med förbannelse får vara i spel."
+    },
+    {
+        "target": "riot",
+        "trick": "flowergirl",
+        "reason": "Endast 1 roll med förbannelse får vara i spel."
+    },
+    {
+        "target": "riot",
+        "trick": "undertaker",
+        "reason": "Spelare som dör av nominering visas som avrättade för Dödgrävaren."
+    },
+    {
+        "target": "riot",
+        "trick": "cannibal",
+        "reason": "Spelare som dör av nominering visas som avrättade för Kannibalen."
+    },
+    {
+        "target": "riot",
+        "trick": "pacifist",
+        "reason": "Spelare som dör av nominering visas som avrättade för Pacifisten."
+    },
+    {
+        "target": "riot",
+        "trick": "devilsadvocate",
+        "reason": "Spelare som dör av nominering visas som avrättade för Djävulens advokat."
+    },
+    {
+        "target": "riot",
+        "trick": "investigator",
+        "reason": "Upproret visas som Hantlangare för Detektiven."
+    },
+    {
+        "target": "riot",
+        "trick": "clockmaker",
+        "reason": "Upproret visas som Hantlangare för Urmakaren."
+    },
+    {
+        "target": "riot",
+        "trick": "towncrier",
+        "reason": "Upproret visas som Hantlangare för Härolden."
+    },
+    {
+        "target": "riot",
+        "trick": "damsel",
+        "reason": "Upproret visas som Hantlangare för Ungmön."
+    },
+    {
+        "target": "riot",
+        "trick": "preacher",
+        "reason": "Upproret visas som Hantlangare för Predikanten."
+    },
+    {
+        "target": "riot",
+        "trick": "hatter",
+        "reason": "Om Hattmakaren dör, Upproret är i spel och någon i Upproret väljer en annan Demon så blir alla i Upproret till ett vanligt ont lag. Om Hattmakaren dör och Demonen väljer Upproret så blir alla Hantlangare också till Upproret."
+    },
+    {
+        "target": "alhadikhia",
+        "trick": "scarletwoman",
+        "reason": "Om det finns två levande Al-Hadikhia så slutar Röda damen att vara Al-Hadikhia och blir Röda damen igen."
+    },
+    {
+        "target": "alhadikhia",
+        "trick": "mastermind",
+        "reason": "Endast 1 roll med en förbannelse får vara i spel. Onda spelare vet från början vilken spelare och roll det är."
+    },
+    {
+        "target": "organgrinder",
+        "trick": "butler",
+        "reason": "Om Positivhalaren tvingar fram en röstning där alla blundar så får Butlern rösta, men hens röst räknas bara om husbonden också röstade."
+    },
+    {
+        "target": "organgrinder",
+        "trick": "flowergirl",
+        "reason": "Om spelarna blundade under nomineringen så får Floristen veta hur många gånger Demonen röstade."
+    },
+    {
+        "target": "organgrinder",
+        "trick": "minstrel",
+        "reason": "Endast 1 roll med förbannelse får vara i spel."
+    },
+    {
+        "target": "organgrinder",
+        "trick": "preacher",
+        "reason": "Endast 1 roll med förbannelse får vara i spel."
+    },
+    {
+        "target": "vizier",
+        "trick": "alchemist",
+        "reason": "Om Alkemisten har Vesirens förmåga får hen bara avrätta direkt om minst tre spelare röstade."
+    },
+    {
+        "target": "vizier",
+        "trick": "courtier",
+        "reason": "Om Vesiren förlorar sin förmåga så får hen veta det, och om Vesiren avrättas medan hen har sin förmåga så vinner hens lag."
+    },
+    {
+        "target": "vizier",
+        "trick": "fearmonger",
+        "reason": "Vesiren vaknar med Skräckspridaren, får veta vem Skräckspridaren väljer och får inte välja att avrätta den spelaren."
+    },
+    {
+        "target": "vizier",
+        "trick": "investigator",
+        "reason": "Om Detektiven får veta att Vesiren är i spel så tillkännager Berättaren inte att Vesiren är i spel för övriga spelare."
+    },
+    {
+        "target": "vizier",
+        "trick": "magician",
+        "reason": "Endast 1 roll med förbannelse får vara i spel."
+    },
+    {
+        "target": "vizier",
+        "trick": "preacher",
+        "reason": "Om Vesiren förlorar sin förmåga så får hen veta det, och om Vesiren avrättas medan hen har sin förmåga så vinner hens lag."
+    },
+    {
+        "target": "kazali",
+        "trick": "bountyhunter",
+        "reason": "En ond Bybo skapas bara om Prisjägaren fortfarande är i spel efter att Kazali har agerat."
+    },
+    {
+        "target": "kazali",
+        "trick": "goon",
+        "reason": "Om Kazali väljer att Hejduken ska bli en Hantlangare så väljer Berättaren återstående Hantlangare."
+    },
+    {
+        "target": "kazali",
+        "trick": "marionette",
+        "reason": "Om Kazali väljer att skapa en Marionett måste hen välja en av sina grannar."
+    },
+    {
+        "target": "kazali",
+        "trick": "huntsman",
+        "reason": "Om Kazali väljer att Ungmön ska bli Hantlangare och Jägaren är i spel så blir en god spelare till Ungmön."
+    },
+    {
+        "target": "kazali",
+        "trick": "choirboy",
+        "reason": "Kazali kan inte välja att Kungen ska bli Hantlangare om en Korgosse är i spel."
+    }
+]

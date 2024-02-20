@@ -1,6 +1,7 @@
 import Observer from "../classes/Observer.js";
 import TokenStore from "../classes/TokenStore.js";
 import Template from "../classes/Template.js";
+import Jinx from "../classes/Jinx.js";
 import {
     lookupOne,
     replaceContentsMany
@@ -11,19 +12,22 @@ const tokenObserver = Observer.create("token");
 
 TokenStore.ready((tokenStore) => {
 
-    const allCharacters = tokenStore.getAllCharacters();
-    const allJinxes = tokenStore.getAllJinxes();
     const trickToTarget = Object.create(null);
     const jinxTemplate = Template.create(lookupOne("#jinx-table-template"));
 
-    allJinxes.forEach((jinx) => {
+    /**
+     * Registers a jinx in the {@link trickToTarget} map.
+     *
+     * @param {Jinx} jinx
+     *        Jinx to register.
+     */
+    function registerJinx(jinx) {
 
-        // Set up all the jinxes.
-        jinx.setObserver(tokenObserver);
-        jinx.setTemplate(jinxTemplate);
+        const trickId = jinx.getTrick()?.getId();
 
-        // Create a map so we can easily find targets from the trick.
-        const trickId = jinx.getTrick().getId();
+        if (!trickId) {
+            return;
+        }
 
         if (!trickToTarget[trickId]) {
             trickToTarget[trickId] = [];
@@ -31,18 +35,91 @@ TokenStore.ready((tokenStore) => {
 
         trickToTarget[trickId].push(jinx.getTarget().getId());
 
-    });
+    }
+
+    /**
+     * Removes a jinx from the {@link trickToTarget} map, keeping it tidy and
+     * preventing old data from creating false positives.
+     *
+     * @param {Jinx} jinx
+     *        Jinx to unregister.
+     */
+    function unregisterJinx(jinx) {
+
+        const trickId = jinx.getTrick().getId();
+
+        if (!trickToTarget[trickId]) {
+            return;
+        }
+
+        const index = trickToTarget[trickId].indexOf(jinx.getTarget().getId());
+
+        if (index < 0) {
+            return;
+        }
+
+        trickToTarget[trickId].splice(index, 1);
+
+        if (!trickToTarget[trickId].length) {
+            delete trickToTarget[trickId];
+        }
+
+    }
+
+    /**
+     * Activates the given Jinx, setting the observer and template, and
+     * registering it.
+     *
+     * @param {Jinx} jinx
+     *        Jinx to activate.
+     */
+    function activateJinx(jinx) {
+
+        jinx.setObserver(tokenObserver);
+        jinx.setTemplate(jinxTemplate);
+        registerJinx(jinx);
+
+    }
+
+    tokenStore.getAllJinxes().forEach(activateJinx);
 
     // Unready any old jinxes and ready any jinxes on the current script.
     gameObserver.on("characters-selected", ({ detail }) => {
 
-        allJinxes.forEach((jinx) => jinx.toggleReady(false));
+        tokenStore.getAllJinxes().forEach((jinx) => jinx.toggleReady(false));
+        tokenStore.getAllHomebrewJinxes().forEach(unregisterJinx);
+        tokenStore.removeAllHomebrewJinxes();
 
         const {
             characters
         } = detail;
 
-        characters.forEach((character) => character.readyAllJinxes(characters));
+        characters.forEach((character) => {
+
+            // A character will only have "jinxes" data if it's a homebrew role
+            // that includes jinxes. When that happens - create Jinx instances
+            // for them, add them to the character, and register them in the
+            // store so that they can interact with the system.
+            if (character.hasData("jinxes")) {
+
+                character.getData("jinxes").forEach(({ id, reason }) => {
+
+                    const trick = tokenStore.getCharacter(id);
+                    const jinx = new Jinx(trick, reason);
+                    jinx.setIsHomebrew(true);
+                    character.addJinx(jinx);
+                    activateJinx(jinx);
+                    tokenStore.addJinx(jinx);
+
+                });
+
+            }
+
+            character.readyAllJinxes(characters);
+
+        });
+
+        const allJinxes = tokenStore.getAllJinxes();
 
         gameObserver.trigger("jinxes-ready", {
             jinxes: allJinxes.filter((jinx) => jinx.isReady())

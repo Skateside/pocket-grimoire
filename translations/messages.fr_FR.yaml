@@ -20,8 +20,11 @@ sheet:
     get_qr_code: Obtenir le QR code pour cette fiche
     get_sheet: Obtenir cette fiche
     credit: <a href="https://bloodontheclocktower.com/" target="_blank" rel="noopener noreferrer">Blood on the Clocktower</a> est une marque déposée de Steven Medway et <a href="https://www.thepandemoniuminstitute.com/" target="_blank" rel="noopener noreferrer">The Pandemonium Institute</a>
+    breakdown: Les numéros de chaque équipe pour le nombre de joueurs.
+    count_plus: "%count%+"
 
 groups:
+    players: Joueurs
     townsfolk: Villageois
     outsider: Étrangers
     minion: Sbires
@@ -63,6 +66,7 @@ setup:
         custom_warning: Faire attention à utiliser des fichiers JSON provenant d'une source de confiance !
         upload: Télécharger un script personnalisé
         url: Entrer une URL
+        paste: Coller depuis le presse-papiers
         select: Choisir
 
     character_select:
@@ -73,6 +77,11 @@ setup:
         highlight_random: Choisir aléatoirement
         draw_characters: Piocher Personnages
         add_all: Tout Ajouter
+        layout: Mise en page
+        ellipse: Ellipse
+        diagonal: Diagonale
+        horizontal: Horizontal
+        vertical: Verticale
 
     character_choice:
         title: Sélectionne ton Personnage
@@ -80,6 +89,7 @@ setup:
 
     character_decision:
         title: Souviens-toi de ton Personnage
+        name: Nommez-vous (facultatif)
         return: Retour à la Sélection de Personnage
 
     qr_code:
@@ -105,6 +115,8 @@ setup:
         details_note: Quelles sections sont ouvertes ou fermées.
         info_tokens_label: Effacer les jetons d'informations personnalisés
         info_tokens_note: Les jetons d'informations personnalisés qui ont été ajoutés.
+        names_label: Effacer les noms
+        names_note: Le joueur nomme des suggestions.
         height_label: Rénitialiser la hauteur du bloc
         height_note: La hauteur du bloc dans le grimoire.
         clear_refresh_label: Raffraîchir après.
@@ -119,9 +131,12 @@ grimoire:
 
     grimoire:
         bluffs: Bluffs Démon
+        show_bluffs: Afficher tous les bluffs
+        add_bluffs: Ajouter du bluff
         add_token: Ajouter jeton
         add_reminder: Ajouter rappel
         add_traveller: Ajouter voyageur
+        add_fabled: Ajouter mythiques
         show_tokens: Montrer jetons
         reset_height: Réinitialiser taille du bloc
         clear_grimoire: Effacer Grimoire
@@ -129,6 +144,7 @@ grimoire:
         show_night_order: Montrer ordre de nuit
         character_size: Taille des jetons
         reminder_size: Taille des rappels
+        token_settings: Paramètres des jetons
 
     character_list:
         title: Choisir Personnage
@@ -136,6 +152,8 @@ grimoire:
     reminder_list:
         title: Choisir Rappel
         show: Montrer tous les rappels
+        multiple: Plusieurs Ajouter
+        add_all: Tout Ajouter
 
     character_show:
         title: Jeton
@@ -143,6 +161,7 @@ grimoire:
         shroud: Linceul
         rotate: Tourner
         reminder: Rappel
+        replace: Remplacer
         remove: Enlever jeton
         recent_reminders: 'Jetons rappel les plus récent :'
         player_name: Définir le nom du joueur
@@ -166,10 +185,14 @@ grimoire:
 
     token_list:
         title: Personnages
+        add: Ajouter jeton
 
     traveller_list:
         title: Voyageurs
         show_all: Montrer tous voyageurs
+
+    fabled_list:
+        title: Mythiques
 
     token:
         title: Jetons
@@ -204,6 +227,12 @@ info_tokens:
     edit_custom: Modifier le jeton info
     delete_custom: Supprimer le jeton info
 
+notes:
+    title: Notes du conteur
+    label: Remarques
+    clear: Notes claires
+    clear_warning: Êtes-vous sûr de vouloir effacer les notes ?
+
 acknowledgements:
     title: Remerciements
     acknowledgements:
@@ -211,6 +240,15 @@ acknowledgements:
         - Rappels de nuit et textes auxiliaires anglais écrits par <a href="http://bignose.whitetree.org/projects/botc/diy/" target="_blank" rel="noopener noreferrer">Ben Finney</a>.
         - Les icônes viennent de <a href="https://fontawesome.com/v5.15/icons" target="_blank" rel="noopener noreferrer">Font Awesome</a>.
         - De nombreuses images et données sont récupérées de <a href="https://www.clocktower.online" target="_blank" rel="noopener noreferrer">Clocktower.online</a> et le <a href="https://bloodontheclocktower.com/" target="_blank" rel="noopener noreferrer">site de Blood on the Clocktower</a>.
-        - Il s'agit d'un grimoire virtuel non officiel pour Blood on the Clocktower. Ce projet est gratuit et le code source peut être trouvé sur <a href="https://github.com/Skateside/pocket-grimoire" target="_blank" rel="noopener noreferrer">GitHub</a>. Ce projet n'est pas affilié à The Pandemonium Institute. Si tu aimes jouer à Blood on the Clocktower, <a href="https://bloodontheclocktower.com/pages/where-to-buy" target="_blank" rel="noopener noreferrer">considères l'achat ton propre grimoire</a> - en plus d'être plus flexible que cette version numérique, il soutient également les créateurs.
+        - Il s'agit d'un grimoire virtuel non officiel pour Blood on the Clocktower. Ce projet est gratuit et le code source peut être trouvé sur <a href="https://github.com/Skateside/pocket-grimoire" target="_blank" rel="noopener noreferrer">GitHub</a>. Ce projet n'est pas affilié à The Pandemonium Institute. Si tu aimes jouer à Blood on the Clocktower, <a href="https://bloodontheclocktower.com/buy" target="_blank" rel="noopener noreferrer">considères l'achat ton propre grimoire</a> - en plus d'être plus flexible que cette version numérique, il soutient également les créateurs.
         - Tu as remarqué un bug ou as une suggestion d'amélioration ? Fais-le moi savoir sur le salon <a href="https://discord.com/channels/569683781800296501/708509594758152203" target="_blank" rel="noopener noreferrer">"toolmakers" sur le serveur discord non officiel</a> (mon nom y est "Skateside") ou <a href="https://github.com/Skateside/pocket-grimoire/issues" target="_blank" rel="noopener noreferrer">ouvre un ticket sur GitHub</a>.
         - <small>Version <span id="version"></span></small>
+
+errors:
+    homebrew_json:
+        not_homebrew: Pas d'entrée homebrew "%id%"
+        unrecognised_team: Équipe non reconnue "%team%"
+        not_find_id: Impossible de trouver l'ID "%id%"
+        not_recognise_character: Impossible de reconnaître le caractère "%id%"
+        invalid_entry: 'Entrée invalide pour "%id%" : %reasons%'
+        empty_teams: 'Équipes vides : %teams%'

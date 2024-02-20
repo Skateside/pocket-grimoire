@@ -74,7 +74,9 @@ export function toPosInt(number) {
 
 /**
  * Executes a handler a set number of times. The number of times is converted
- * into a positive integer (ses {@link toPosInt}) and returned.
+ * into a positive integer (ses {@link toPosInt}) and returned. The handler is
+ * passed the current index and the maximum number of times that the handler
+ * will be called.
  *
  * @param  {Number} number
  *         Number of times to execute the given handler.
@@ -92,11 +94,41 @@ export function times(number, handler, context) {
 
     while (index < max) {
 
-        handler.call(context, index);
+        handler.call(context, index, max);
         index += 1;
 
     }
 
     return max;
+
+}
+
+/**
+ * Converts the given degrees into radians
+ *
+ * @param  {Number} degrees
+ *         Degrees to convert.
+ * @return {Number}
+ *         Equivalent radians.
+ */
+export function toRadians(degrees) {
+    return (Math.PI / 180) * degrees;
+}
+
+/**
+ * Checks to see if the given value is numeric. This is not necessarily the same
+ * as being a number because a numeric string would return true.
+ *
+ * @param  {?} value
+ *         Value to check.
+ * @return {Boolean}
+ *         true if the given value is a number or numeric string, false
+ *         otherwise.
+ */
+export function isNumeric(value) {
+
+    const parsed = window.parseFloat(value);
+
+    return !Number.isNaN(parsed) && Number.isFinite(parsed);
 
 }

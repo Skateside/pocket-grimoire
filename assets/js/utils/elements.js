@@ -230,8 +230,8 @@ export function getLabelText(input) {
 }
 
 /**
- * Triggers the appropriate events for an input hacing changed, in the correct
- * (or, at least, a consisten) order. If the given input does not exist or is
+ * Triggers the appropriate events for an input having changed, in the correct
+ * (or, at least, a consistent) order. If the given input does not exist or is
  * not an input then nothing happens.
  *
  * @param {Element} input
@@ -239,7 +239,9 @@ export function getLabelText(input) {
  */
 export function announceInput(input) {
 
-    if (!input || input.nodeName?.toLowerCase() !== "input") {
+    const expectedNodeNames = ["input", "select", "textarea"];
+
+    if (!input || !expectedNodeNames.includes(input.nodeName?.toLowerCase())) {
         return;
     }
 
@@ -249,5 +251,22 @@ export function announceInput(input) {
     input.dispatchEvent(new Event("change", {
         bubbles: true
     }));
+
+}
+
+/**
+ * Gets the element's index.
+ *
+ * @param  {Element} element
+ *         The element whose index should be returned.
+ * @return {Number}
+ *         The element's index, or -1 if it can't be worked out.
+ */
+export function getIndex(element) {
+
+    return Array.prototype.findIndex.call(
+        element.parentNode.children,
+        (item) => item === element
+    );
 
 }

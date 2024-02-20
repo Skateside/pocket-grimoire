@@ -1,0 +1,44 @@
+.breakdown {
+    width: 100%;
+    overflow: auto;
+    margin-bottom: 1em;
+}
+
+.breakdown__table {
+    border: 0.05em solid #000;
+    border-collapse: collapse;
+    width: 100%;
+    text-align: center;
+}
+
+.breakdown__heading,
+.breakdown__cell {
+    padding: 0.1em 0.2em;
+}
+
+.breakdown__heading {
+    text-align: end;
+}
+
+.breakdown__cell {
+    border-color: #000;
+    border-width: 0.05em;
+    border-left-style: solid;
+
+    @at-root {
+        [dir="rtl"] & {
+            border-left-style: none;
+            border-right-style: solid;
+        }
+    }
+}
+
+.breakdown__row--townsfolk,
+.breakdown__row--outsider {
+    color: var(--good-team);
+}
+
+.breakdown__row--minion,
+.breakdown__row--demon {
+    color: var(--evil-team);
+}

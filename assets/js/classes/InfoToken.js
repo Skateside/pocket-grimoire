@@ -162,19 +162,15 @@ export default class InfoToken {
             : "button"
         ];
 
-        const trigger = templates.button.draw([
-            [
-                ".js--info-token--button",
-                null,
-                (element) => {
+        const trigger = templates.button.draw({
+            ".js--info-token--button"(element) {
 
-                    element.textContent = text;
-                    element.style.setProperty("--bg-colour", colour);
-                    element.dataset.dialog = `#${id}`;
+                element.textContent = text;
+                element.style.setProperty("--bg-colour", colour);
+                element.dataset.dialog = `#${id}`;
 
-                }
-            ]
-        ]);
+            }
+        });
 
         holder.append(trigger);
 
@@ -204,28 +200,20 @@ export default class InfoToken {
         } = this.constructor;
         const holder = holders.dialog;
 
-        const dialog = templates.dialog.draw([
-            [
-                ".js--info-token--dialog",
-                null,
-                (element) => {
+        const dialog = templates.dialog.draw({
+            ".js--info-token--dialog"(element) {
 
-                    element.id = id;
-                    element.style.setProperty("--colour", colour);
+                element.id = id;
+                element.style.setProperty("--colour", colour);
 
-                }
-            ],
-            [
-                ".js--info-token--dialog-text",
-                markup,
-                (element) => element.innerHTML = markup
-            ],
-            [
-                ".js--info-token--actions",
-                custom,
-                (element, content) => element.hidden = !content
-            ]
-        ]);
+            },
+            ".js--info-token--dialog-text"(element) {
+                element.innerHTML = markup;
+            },
+            ".js--info-token--actions"(element) {
+                element.hidden = !custom;
+            }
+        });
 
         holder.append(dialog);
 

@@ -10,36 +10,37 @@ dialog:
 
 index:
     title: Spel
-    description: En virituell grimoire för Blood on the Clocktower
+    description: En virtuell spelbok för Blood on the Clocktower
 
 sheet:
-    title: Karaktärslista
-    description: Karaktärslistan för den här upplagan av Blood on the Clocktower
-    jinx: Förhäxningar
-    each_night: '* Varje natt förutom den första natten.'
-    get_qr_code: Få QR-koden för den här karaktärslistan
-    get_sheet: Get this sheet
-    credit: <a href="https://bloodontheclocktower.com/" target="_blank" rel="noopener noreferrer">Blood on the Clocktower</a> är ett varumärke av Steven Medway och <a href="https://www.thepandemoniuminstitute.com/" target="_blank" rel="noopener noreferrer">The Pandemonium Institute</a>
+    title: Rollark
+    description: Rollarket för den här upplagan av Blood on the Clocktower
+    jinx: Förbannelser
+    each_night: '* Varje natt utom den första natten.'
+    get_qr_code: Få QR-koden för det här rollarket
+    get_sheet: Hämta det här arket
+    credit: <a href="https://bloodontheclocktower.com/" target="_blank" rel="noopener noreferrer">Blood on the Clocktower</a> är ett varumärke som tillhör Steven Medway och <a href="https://www.thepandemoniuminstitute.com/" target="_blank" rel="noopener noreferrer">The Pandemonium Institute</a>
+    breakdown: Antalet för varje lag för antalet spelare.
+    count_plus: '%count%+'
 
 groups:
-    townsfolk: Bybo
-    outsider: Outsiders
-    minion: Minions
+    players: Spelare
+    townsfolk: Bybor
+    outsider: Utbölingar
+    minion: Hantlangare
     demon: Demoner
-    traveller: Travellers
-    fabled: Fabel
+    traveller: Resenärer
+    fabled: Fabler
 
 messages:
     good_team: Goda laget
     evil_team: Onda laget
     empty_character_ability: Det här är en tom karaktär.
-    version_change_message: Den här appen har uppdaterat sin version. Eftersom din data inte behöver vara korrekt, rekommenderar vi att du rensar allt genom "Rensa cache" rutan. Klicka på "OK" för att öppna rutan eller "Avbryt" för att stänga ner det här meddelandet.
-    invalid_script: Scriptformatet kändes inte igen.
-    no_characters: Scriptet innehåller inte några igenkända karaktärer.
-    invalid_data: Ogiltiga data.
-    no_data: Ingen data skickad.
+    version_change_message: Den här appen har uppdaterats. Eftersom du kan ha fel data rekommenderar vi att du rensar allt i fönstret Rensa cache. Klicka på OK för att öppna fönstret eller Avbryt för att stänga det här meddelandet.
+    invalid_script: Skriptformatet kändes inte igen.
+    no_characters: Det gick inte att hitta några roller i skriptet.
     player_name: Vad heter den här spelaren?
-    custom_info_token: "Vad vill du att din nya informationstoken ska säga? Använd **dubbla asterisker** för att framhäva text."
+    custom_info_token: Vad vill du att det ska stå på infobrickan? Använd **dubbla asterisker** för att framhäva text.
 
 setup:
 
@@ -47,8 +48,8 @@ setup:
 
     buttons:
         select_edition: Välj upplaga
-        select_characters: Välj karaktärer
-        qr_code_button: Karaktärslista
+        select_characters: Välj roller
+        qr_code_button: Rollark
         clear_cache_button: Rensa cache
         language: Språk
         set_language: Välj språk
@@ -58,94 +59,111 @@ setup:
         trouble_brewing: Trouble Brewing
         bad_moon_rising: Bad Moon Rising
         sects_and_violets: Sects and Violets
-        custom_script: Custom Script
-        custom_note: Ladda antingen upp ett custom script eller skriv in en URL för ditt custom script.
-        custom_warning: Ladda bara custom JSON-filer från källor du litar på!
-        upload: Ladda upp ett custom script
+        custom_script: Eget skript
+        custom_note: Ladda upp ett eget skript eller skriv in en URL till skriptet.
+        custom_warning: Ladda bara JSON-filer från källor du litar på!
+        upload: Ladda upp ett eget skript
         url: Fyll i en URL
+        paste: Klistra in från urklipp
+        unsupported: Pocket Grimoire stödjer inte hemmagjorda roller eller egna översättningar.
         select: Välj
 
     character_select:
-        title: Välj karaktärer
+        title: Välj roller
         number_players: Antal spelare
-        toggle_abilities: Visa karaktärers förmågor
-        toggle_duplicates: Tillåt dubbla karaktärer
-        highlight_random: Markera slumpmässig
-        draw_characters: Dra karaktärer
+        toggle_abilities: Visa rollers förmågor
+        toggle_duplicates: Tillåt dubbletter
+        highlight_random: Slumpa
+        draw_characters: Dra roller
         add_all: Lägg till alla
+        layout: Layout
+        ellipse: Elliptisk
+        diagonal: Diagonal
+        horizontal: Horisontell
+        vertical: Vertikal
 
     character_choice:
-        title: Välj din karaktär
-        description: Tryck på valfri numrerad markör för att välja din karaktär. Mörkare markörer har redan blivit valda.
+        title: Välj roll
+        description: Tryck på en bricka för att välja roll. Mörkare brickor har redan blivit valda.
 
     character_decision:
-        title: Kom ihåg din karaktär
-        return: Gå tillbaka till karaktärsval
+        title: Kom ihåg din roll
+        name: Ange ditt namn (om du vill)
+        return: Gå tillbaka till rollval
 
     qr_code:
-        title: Karaktärlista
-        intro: Scanna QR-koden för att se karaktärslistanScan this QR code to see the character sheet
+        title: Rollark
+        intro: Scanna QR-koden för att se rollarket
         include: 'Inkludera:'
-        travellers: Travellers
-        fabled: Fabel
+        travellers: Resenärer
+        fabled: Fabler
 
     clear_cache:
-        title: Rensa Cache
+        title: Rensa cache
         clear_all: Rensa allt
-        clear_description: Stänga av detta kommer tillåta indivudella delar av cache att rensas.
+        clear_description: Stäng av detta för att rensa individuella delar av cachen.
         lookup_label: Rensa data
-        lookup_note: Datan för jinxes, laguppställning och karaktärsinformation.
+        lookup_note: Data för förbannelser, laguppställningar och rollinformation.
         characters_label: Rensa upplaga
-        characters_note: Upplagan eller scriptet som är valt och laddat.
+        characters_note: Upplagan (skriptet) som är valt och laddat.
         tokens_label: Rensa markörer
-        tokens_note: Positionerna av markörerna i grimoaren.
-        inputs_label: Rensa inputs
-        inputs_note: Användarinställningar för denna hemsida.
+        tokens_note: Markörernas positioner i spelboken.
+        inputs_label: Rensa inställningar
+        inputs_note: Användarinställningar för denna webbplats.
         details_label: Rensa öppen/stängd
-        details_note: Vilka sektioner är öppna och stängda.
-        info_tokens_label: Rensa anpassade informationstoken
-        info_tokens_note: De anpassade informationstoken som har lagts till.
-        height_label: Rensa pad-höjd
-        height_note: Höjden av paddan i grimoaren.
+        details_note: Vilka sektioner som är öppna och stängda.
+        info_tokens_label: Rensa egna infobrickor
+        info_tokens_note: De infobrickor som du själv gjort och lagt till.
+        names_label: Rensa namn
+        names_note: Spelarens namnförslag.
+        height_label: Rensa sidhöjd
+        height_note: Sidans höjd i spelboken
         clear_refresh_label: Uppdatera efteråt
-        clear_refresh_note: Uppdatera kommer ladda in ny data för allt som har blivit rensat.
-        warning: '<strong>Warning:</strong> markörer som har blivit placerade i grimoaren kommer bli glömda.'
-        info_token_warning: '<strong>Warning:</strong> alla anpassade informationstoken kommer att glömmas.'
-        clear_cache: Rensa Cache
+        clear_refresh_note: Uppdatera för att ladda in nya data för allt som rensats.
+        warning: '<strong>Varning:</strong> Alla markörer i spelboken kommer att försvinna.'
+        info_token_warning: '<strong>Varning:</strong> Alla egna infobrickor kommer att försvinna.'
+        clear_cache: Rensa cache
 
 grimoire:
 
-    title: Grimoire
+    title: Spelbok
 
     grimoire:
-        bluffs: Demon-bluffar
-        add_token: Lägg till markör
+        bluffs: Demonbluffar
+        show_bluffs: Visa alla bluffar
+        add_bluffs: Lägg till bluffar
+        add_token: Lägg till bricka
         add_reminder: Lägg till påminnelse
-        add_traveller: Lägg till Traveller
-        show_tokens: Visa markörer
-        reset_height: Återställ pad-höjd
-        clear_grimoire: Rensa grimoire
-        clear_grimoire_warning: Är du säker på att du vill rensa alla markörer?
-        show_night_order: Visa nattordning
-        character_size: Karaktärsmarkörstorlek
-        reminder_size: Påminnelsemarkörsstorlek
+        add_traveller: Lägg till Resenär
+        add_fabled: Lägg till Fabler
+        show_tokens: Visa brickor
+        reset_height: Återställ sidhöjd
+        clear_grimoire: Rensa spelboken
+        clear_grimoire_warning: Vill du verkligen ta bort alla brickor?
+        show_night_order: Visa nattordningen
+        character_size: Rollbrickors storlek
+        reminder_size: Påminnelsebrickors storlek
+        token_settings: Inställningar för brickor
 
     character_list:
-        title: Välj karaktär
+        title: Välj roll
 
     reminder_list:
         title: Välj påminnelse
         show: Visa alla påminnelser
+        multiple: Lägg till flera
+        add_all: Lägg till alla
 
     character_show:
-        title: Markör
+        title: Bricka
         show: Visa
-        shroud: Dödsmarkör
+        shroud: Död
         rotate: Rotera
         reminder: Påminnelse
-        remove: Ta bort markör
-        recent_reminders: 'Senast tillagda påminnelser:'
-        player_name: Ställ in spelarens namn
+        replace: Ersätt
+        remove: Ta bort brickan
+        recent_reminders: 'Senaste påminnelserna:'
+        player_name: Ange spelarnamn
         ghost_vote: Spökröstning
 
     reminder_show:
@@ -153,64 +171,83 @@ grimoire:
         remove: Ta bort
 
     bluff_show:
-        title: Markör
+        title: Bricka
         empty: Tom
         show: Visa
         change: Ändra
 
     bluff_list:
         title: Välj bluff
-        show_existing: Visa existerande karaktärer
-        show_travellers: Visa Travellers
-        show_evil: Visa onda karaktärer
+        show_existing: Visa befintliga roller
+        show_travellers: Visa Resenärer
+        show_evil: Visa onda roller
 
     token_list:
-        title: Karaktärer
+        title: Roller
+        add: Lägg till bricka
 
     traveller_list:
-        title: Travellers
-        show_all: Visa alla travellers
+        title: Resenärer
+        show_all: Visa alla Resenärer
+
+    fabled_list:
+        title: Fabler
 
     token:
-        title: Markör
+        title: Bricka
 
 jinxes:
-    title: Jinxes
+    title: Förbannelser
     target: Mål
     trick: Trick
     reason: Anledning
-    show: Visa Jinxes som inte är i spel
+    show: Visa förbannelser som inte är i spel
 
 night_order:
     title: Nattordning
     first_night: Första natten
-    other_night: Andra nätter
-    swipe_change: Swipea för att ändra natt.
-    show: Visa karaktärer som inte är i spel
+    other_night: Övriga nätter
+    swipe_change: Svep för att ändra natt
+    show: Visa roller som inte är i spel
 
 info_tokens:
-    title: Info Markörer
+    title: Infobrickor
     info_tokens:
         isdemon: Det här är <strong>Demonen</strong>
-        isminion: De här är dina <strong>Minions</strong>
-        notinplay: De här karaktärerna är inte <strong>I spel</strong>
+        isminion: Det här är dina <strong>Hantlangare</strong>
+        notinplay: De här rollerna är <strong>inte i spel</strong>
         nominatetoday: <strong>Nominerade</strong> du idag?
-        playeris: Den här <strong>spelaren</strong> är
+        playeris: <strong>Den här spelaren</strong> är
         votetoday: <strong>Röstade</strong> du idag?
         youare: <strong>Du</strong> är
-        selectedyou: Denna karaktär <strong>valde</strong> dig
-    custom: Anpassade informationstoken
-    add_custom: Lägg till informationstoken
-    edit_custom: Redigera informationstoken
-    delete_custom: Ta bort informationstoken
+        selectedyou: Denna roll <strong>valde</strong> dig
+    custom: Egna infobrickor
+    add_custom: Lägg till infobricka
+    edit_custom: Redigera infobricka
+    delete_custom: Ta bort infobricka
+
+notes:
+    title: Berättaranteckningar
+    label: Anteckningar
+    clear: Tydliga anteckningar
+    clear_warning: Är du säker på att du vill rensa anteckningarna?
 
 acknowledgements:
-    title: Erkännanden
+    title: Medverkande
     acknowledgements:
-        - <a href="https://bloodontheclocktower.com/" target="_blank" rel="noopener noreferrer">Blood on the Clocktower</a> är ett varumärke av Steven Medway och <a href="https://www.thepandemoniuminstitute.com/" target="_blank" rel="noopener noreferrer">The Pandemonium Institute</a>.
+        - <a href="https://bloodontheclocktower.com/" target="_blank" rel="noopener noreferrer">Blood on the Clocktower</a> är ett varumärke som tillhör Steven Medway och <a href="https://www.thepandemoniuminstitute.com/" target="_blank" rel="noopener noreferrer">The Pandemonium Institute</a>.
         - Nattpåminnelser och annan text är skriven av <a href="http://bignose.whitetree.org/projects/botc/diy/" target="_blank" rel="noopener noreferrer">Ben Finney</a>.
-        - Iconer är tagna från <a href="https://fontawesome.com/v5.15/icons" target="_blank" rel="noopener noreferrer">Font Awesome</a>.
-        - Många bilder och data är tagen från <a href="https://www.clocktower.online" target="_blank" rel="noopener noreferrer">Clocktower.online</a> och <a href="https://bloodontheclocktower.com/" target="_blank" rel="noopener noreferrer">Blood on the Clocktower website</a>.
-        - Det här är en inofficiel virituell grimoire för Blood on the Clocktower. Det här projektet är ratis och koden kan hittas på <a href="https://github.com/Skateside/pocket-grimoire" target="_blank" rel="noopener noreferrer">GitHub</a>. Det här projektet är inte i sammarbete med the Pandemonium Institute. Om du gillar att spela Blood on the Clocktower, <a href="https://bloodontheclocktower.com/pages/where-to-buy" target="_blank" rel="noopener noreferrer">vänligen överväg att köpa din egen grimoire</a> - utöver att vara mer flexibel än det här digitala verktyget, stödjer det även skaparna.
-        - Märkt ett bug eller har ett förbättringsförslag? Låt mig veta i <a href="https://discord.com/channels/569683781800296501/708509594758152203" target="_blank" rel="noopener noreferrer">toolmakers channel on the unofficial discord server</a> (mitt namn där är "Skateside") eller <a href="https://github.com/Skateside/pocket-grimoire/issues" target="_blank" rel="noopener noreferrer">lyft ett problem i GitHub</a>.
+        - Ikonerna kommer från <a href="https://fontawesome.com/v5.15/icons" target="_blank" rel="noopener noreferrer">Font Awesome</a>.
+        - Många bilder och data är hämtade från <a href="https://www.clocktower.online" target="_blank" rel="noopener noreferrer">Clocktower.online</a> och <a href="https://bloodontheclocktower.com/" target="_blank" rel="noopener noreferrer">Blood on the Clocktowers webbplats</a>.
+        - Det här är en inofficiell virtuell spelbok för Blood on the Clocktower. Koden är öppen och finns på <a href="https://github.com/Skateside/pocket-grimoire" target="_blank" rel="noopener noreferrer">GitHub</a>. Projektet är inte knutet till The Pandemonium Institute. Om du gillar Blood on the Clocktower kan du <a href="https://bloodontheclocktower.com/buy" target="_blank" rel="noopener noreferrer">köpa din egen spelbok</a> för att stödja spelets skapare och få en mer flexibel spelbok än denna virtuella.
+        - 'Är det något som inte funkar som det ska? Tagga mig (på engelska) i <a href="https://discord.com/channels/569683781800296501/708509594758152203" target="_blank" rel="noopener noreferrer">kanalen #toolmakers på den inofficiella Discordservern</a> (där heter jag Skateside) eller anmäl problemet i <a href="https://github.com/Skateside/pocket-grimoire/issues" target="_blank" rel="noopener noreferrer">GitHub</a>.'
         - <small>Version <span id="version"></span></small>
+
+errors:
+    homebrew_json:
+        not_homebrew: Inte homebrew-posten "%id%"
+        unrecognised_team: Okänt team "%team%"
+        not_find_id: Kunde inte hitta ID "%id%"
+        not_recognise_character: Kunde inte känna igen tecknet "%id%"
+        invalid_entry: 'Ogiltig post för "%id%": %reasons%'
+        empty_teams: 'Tomma lag: %teams%'

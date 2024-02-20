@@ -6,6 +6,7 @@ Hi! I'm really excited that you are interested in contributing to this project. 
 - [Pull Request Guidelines](#issue-reporting-guidelines)
 - [Commit Message Guidelines](#issue-reporting-guidelines)
 - [Development Setup](#development-setup)
+- [Events](#events)
 
 ## Issue Reporting Guidelines
 
@@ -58,3 +59,7 @@ This project is built using the [Symfony framework](https://symfony.com/doc/curr
 I use PHP 7.4 locally. My hosting currently doesn't support PHP 8 :pensive:
 
 When I get the time, I'll put together an install file that populates the database so you won't need to ask me for a mysqldump. I've created a [git issue](https://github.com/Skateside/pocket-grimoire/issues/36) to remind myself so feel free to nudge me on that - maybe it'll help me create it faster?
+
+## Events
+
+The JavaScript code of the Pocket Grimoire is heavily event-based. [The events are documented here](events.md).

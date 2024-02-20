@@ -1,0 +1,42 @@
+.token-display {
+    @extend %no-list;
+    @extend %slot;
+    justify-content: center;
+
+    &.is-multiple {
+        --columns: 2;
+    }
+}
+
+.token-display__item {
+    position: relative;
+
+    &.is-draggable {
+        cursor: move;
+        touch-action: none;
+    }
+
+    &.is-dragging {
+        opacity: 0.5;
+    }
+}
+
+.token-display__remove {
+    @extend %no-btn;
+    display: none;
+    position: absolute;
+    right: -0.5em;
+    top: -0.5em;
+    padding: 0.5em;
+    z-index: 1;
+
+    @at-root {
+        .is-multiple & {
+            display: block;
+        }
+        [dir="rtl"] & {
+            left: -0.5em;
+            right: auto;
+        }
+    }
+}

@@ -26,3 +26,11 @@ services:
     App\EventListener\LocaleSubscriber:
         tags:
             - { name: kernel.event_listener, event: kernel.request }
+    App\Model\GameModel:
+        bind:
+            string $configDir: '%kernel.project_dir%/config'
+            string $fileName: 'game.yaml'
+    App\Model\LocaleModel:
+        bind:
+            string $configDir: '%kernel.project_dir%/config'
+            string $fileName: 'locales.yaml'

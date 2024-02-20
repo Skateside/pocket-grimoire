@@ -57,4 +57,41 @@ class RoleRepository extends ServiceEntityRepository
 
     }
 
+    public function createTemp(array $data): Role
+    {
+
+        $role = new Role();
+        $keys = [
+            'id',
+            'name',
+            'edition',
+            // 'team',
+            'firstNight',
+            'firstNightReminder',
+            'otherNight',
+            'otherNightReminder',
+            'reminders',
+            'remindersGlobal',
+            'setup',
+            'ability',
+            'image'
+        ];
+        $map = ['id' => 'identifier'];
+
+        foreach ($keys as $key) {
+
+            if (!array_key_exists($key, $data)) {
+                continue;
+            }
+
+            $mapped = array_key_exists($key, $map) ? $map[$key] : $key;
+            $method = 'set' . ucfirst($mapped);
+            $role->$method($data[$key]);
+
+        }
+
+        return $role;
+
+    }
+
 }

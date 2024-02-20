@@ -1,4 +1,4 @@
-// import Observer from "./Observer.js";
+import Observer from "./Observer.js";
 import {
     clamp
 } from "../utils/numbers.js";
@@ -6,8 +6,6 @@ import {
     noop,
     rafThrottle
 } from "../utils/functions.js";
-
-// const tokenObserver = Observer.create("token");
 
 /**
  * Handles the tokens being draggable.
@@ -318,6 +316,7 @@ export default class Tokens {
             top
         } = element.getBoundingClientRect();
 
+        this.endDragging();
         this.dragHandler = (event) => this.dragObject(element, event);
 
         if (type === "mousedown") {

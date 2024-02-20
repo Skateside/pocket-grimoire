@@ -20,8 +20,11 @@ sheet:
     get_qr_code: Отобразить QR-код для данного списка
     get_sheet: Получить этот лист
     credit: Торговая марка <a href="https://bloodontheclocktower.com/" target="_blank" rel="noopener noreferrer">Blood on the Clocktower</a> принадлежит Стивену Медвею и компании <a href="https://www.thepandemoniuminstitute.com/" target="_blank" rel="noopener noreferrer">The Pandemonium Institute</a>
+    breakdown: Цифры каждой команды по количеству игроков.
+    count_plus: "%count%+"
 
 groups:
+    players: Игроки
     townsfolk: Горожане
     outsider: Изгои
     minion: Приспешники
@@ -63,6 +66,7 @@ setup:
         custom_warning: Загружайте JSON-файлы только из доверенных источников!
         upload: Загрузите свой сценарий
         url: Введите URL-адрес
+        paste: Вставить из буфера обмена
         select: Выбрать
 
     character_select:
@@ -73,6 +77,11 @@ setup:
         highlight_random: Выбрать случайные
         draw_characters: Начать раздачу ролей
         add_all: Добавить все
+        layout: Макет
+        ellipse: Эллипс
+        diagonal: Диагональ
+        horizontal: Горизонтальный
+        vertical: Вертикальный
 
     character_choice:
         title: Выберите свою роль
@@ -80,6 +89,7 @@ setup:
 
     character_decision:
         title: Запомните свою роль
+        name: Назовите себя (необязательно)
         return: Вернуться к выбору ролей
 
     qr_code:
@@ -105,6 +115,8 @@ setup:
         details_note: Секции, которые открыты/закрыты.
         info_tokens_label: Очистить пользовательские информационные токены
         info_tokens_note: Пользовательские информационные токены, которые были добавлены.
+        names_label: Очистить имена
+        names_note: Игрок называет предложения.
         height_label: Очистить высоту
         height_note: Высота рабочего пространства Гримуара.
         clear_refresh_label: Обновить после очищения
@@ -119,9 +131,12 @@ grimoire:
 
     grimoire:
         bluffs: Маски Демона
+        show_bluffs: Показать все блефы
+        add_bluffs: Добавить блеф
         add_token: Добавить жетон
         add_reminder: Добавить напоминание
         add_traveller: Добавить Странника
+        add_fabled: Добавить Мифы
         show_tokens: Показать жетоны
         reset_height: Сбросить высоту пространства
         clear_grimoire: Очистить Гримуар
@@ -129,6 +144,7 @@ grimoire:
         show_night_order: Показать порядок ночных действий
         character_size: Размер токена персонажа
         reminder_size: Размер токена напоминания
+        token_settings: Настройки токена
 
     character_list:
         title: Выберите роль
@@ -136,6 +152,8 @@ grimoire:
     reminder_list:
         title: Выберите напоминание
         show: Показать все напоминания
+        multiple: Добавить несколько
+        add_all: Добавить все
 
     character_show:
         title: Жетон
@@ -143,6 +161,7 @@ grimoire:
         shroud: Завеса смерти
         rotate: Повернуть
         reminder: Напоминание
+        replace: Заменять
         remove: Убрать жетон
         recent_reminders: Последние добавленные напоминания
         player_name: Установить имя игрока
@@ -166,10 +185,14 @@ grimoire:
 
     token_list:
         title: Роли
+        add: Добавить жетон
 
     traveller_list:
         title: Странники
         show_all: Показать всех Странников
+
+    fabled_list:
+        title: Мифы
 
     token:
         title: Жетон
@@ -204,6 +227,12 @@ info_tokens:
     edit_custom: Изменить информационные таблички
     delete_custom: Удалить информационные таблички
 
+notes:
+    title: Заметки рассказчика
+    label: Примечания
+    clear: Очистить заметки
+    clear_warning: Вы уверены, что хотите очистить заметки?
+
 acknowledgements:
     title: Права
     acknowledgements:
@@ -214,3 +243,12 @@ acknowledgements:
         - Это - неофициальный виртуальный гримуар для Blood on the Clocktower. Это некоммерческий проект, исходный код которого можно найти на <a href="https://github.com/Skateside/pocket-grimoire" target="_blank" rel="noopener noreferrer">GitHub</a>. Этот проект не имеет связи с компанией The Pandemonium Institute. Если вам нравится игра Blood on the Clocktower, настоятельно рекомендуем приобрести физическую версию, чтобы не только играть с большим удобством, но и поддержать создателей.
         - 'У вас есть информация об ошибках или предложения? Дайте мне знать <a href="https://discord.com/channels/569683781800296501/708509594758152203" target="_blank" rel="noopener noreferrer">в канале #toolmakers на неофициальном discord-сервере игры</a> (мой никнейм там - Skateside) или <a href="https://github.com/Skateside/pocket-grimoire/issues" target="_blank" rel="noopener noreferrer">подайте заявку на GitHub</a>.'
         - <small>Версия <span id="version"></span></small>
+
+errors:
+    homebrew_json:
+        not_homebrew: Не доморощенная запись "%id%"
+        unrecognised_team: Неизвестная команда "%team%"
+        not_find_id: Не удалось найти идентификатор «%id%»
+        not_recognise_character: Не удалось распознать символ "%id%"
+        invalid_entry: 'Неверная запись для «%id%»: %reasons%'
+        empty_teams: 'Пустые команды: %teams%'

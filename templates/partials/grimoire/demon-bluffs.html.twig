@@ -1,0 +1,79 @@
+<div class="pad pad--bluffs bluffs">
+    <div class="carousel" id="demon-bluffs-group"></div>
+    <ul class="button-list mt-4">
+        <li><button type="button" class="button button--full-height" id="show-all-bluffs" data-title="{{ 'grimoire.grimoire.bluffs'|trans|e('html_attr') }}">{{ 'grimoire.grimoire.show_bluffs'|trans }}</button></li>
+        <li><button type="button" class="button button--full-height" id="add-bluffs">{{ 'grimoire.grimoire.add_bluffs'|trans }}</button></li>
+    </ul>
+</div>
+
+<template id="demon-bluffs-template">
+    <div class="carousel__item js--demon-bluffs--group">
+        <form class="settable-title bluffs__heading pad__title">
+            <h3 class="settable-title__title bluffs__title js--settable-title--title">{{ 'grimoire.grimoire.bluffs'|trans }}</h3>
+            <input type="text" class="settable-title__input bluffs__input js--settable-title--input" list="bluffs-title-list" hidden>
+            <datalist id="bluffs-title-list">
+                <option value="{{ 'grimoire.grimoire.bluffs'|trans|e('html_attr') }}" class="js--settable-title--start">
+                <option value="{{ 'grimoire.grimoire.bluffs'|trans|e('html_attr') }}" class="js--settable-title--previous">
+            </datalist>
+
+            <button type="button" class="bluffs__remove no-btn js--demon-bluffs--remove" aria-label="{{ 'grimoire.reminder_show.remove'|trans }}">
+                <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512" aria-hidden="true"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path style="fill: currentColor;" d="M135.2 17.7C140.6 6.8 151.7 0 163.8 0H284.2c12.1 0 23.2 6.8 28.6 17.7L320 32h96c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 96 0 81.7 0 64S14.3 32 32 32h96l7.2-14.3zM32 128H416V448c0 35.3-28.7 64-64 64H96c-35.3 0-64-28.7-64-64V128zm96 64c-8.8 0-16 7.2-16 16V432c0 8.8 7.2 16 16 16s16-7.2 16-16V208c0-8.8-7.2-16-16-16zm96 0c-8.8 0-16 7.2-16 16V432c0 8.8 7.2 16 16 16s16-7.2 16-16V208c0-8.8-7.2-16-16-16zm96 0c-8.8 0-16 7.2-16 16V432c0 8.8 7.2 16 16 16s16-7.2 16-16V208c0-8.8-7.2-16-16-16z"/></svg>
+            </button>
+        </form>
+        <div class="bluffs__list">
+            {% for i in 0..2 %}
+                <button type="button" data-index="{{ i }}" class="token token--bluff js--demon-bluffs--bluff" data-token="character" data-bluff-dialog="#bluff-show"></button>
+            {% endfor %}
+        </div>
+    </div>
+</template>
+
+{% embed 'includes/dialog.html.twig' with {
+    id: 'bluff-show',
+    background: 'blur'
+} %}
+    {% block title %}<span id="bluff-show-name" data-no-character="{{ 'grimoire.bluff_show.empty'|trans }}">{{ 'grimoire.bluff_show.title'|trans }}</span>{% endblock %}
+    {% block body %}
+    <p id="bluff-show-ability" class="character-show__ability"></p>
+    <ul class="button-list">
+        <li><button type="button" class="button" id="bluff-show-token">{{ 'grimoire.bluff_show.show'|trans }}</button></li>
+        <li><button type="button" class="button" data-dialog="#bluff-list">{{ 'grimoire.bluff_show.change'|trans }}</button></li>
+    </ul>
+    {% endblock %}
+{% endembed %}
+
+{% embed 'includes/dialog.html.twig' with {
+    id: 'bluff-list',
+    background: 'blur',
+    title: 'grimoire.bluff_list.title'|trans
+} %}
+    {% import 'macros/forms.html.twig' as forms %}
+    {% block body %}
+    <ul id="character-list__bluffs" class="button-list button-list--reminder character-list mb-4"></ul>
+
+    <ul class="no-list">
+        {{ forms.switch({
+            node: 'li',
+            label: 'grimoire.bluff_list.show_existing'|trans,
+            name: 'show',
+            id: 'show-existing',
+            value: 'existing'
+        }) }}
+        {{ forms.switch({
+            node: 'li',
+            label: 'grimoire.bluff_list.show_travellers'|trans,
+            name: 'show',
+            id: 'show-travellers',
+            value: 'traveller'
+        }) }}
+        {{ forms.switch({
+            node: 'li',
+            label: 'grimoire.bluff_list.show_evil'|trans,
+            name: 'show',
+            id: 'show-evil',
+            value: 'evil'
+        }) }}
+    </ul>
+
+    {% endblock %}
+{% endembed %}

@@ -28,6 +28,13 @@
     pointer-events: none;
     width: 1em;
     aspect-ratio: 1 / 1;
+
+    @at-root {
+        [dir="rtl"] & {
+            right: auto;
+            left: 0;
+        }
+    }
 }
 
 .pad__title {
@@ -36,7 +43,3 @@
     font-size: 1rem;
     text-shadow: 0.1em 0.1em 0.1em rgb(0 0 0 / 80%);
 }
-
-// .pad__bluff {
-//
-// }

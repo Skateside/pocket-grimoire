@@ -39,6 +39,13 @@
     color: #fff;
     display: block;
     margin-left: auto;
+
+    @at-root {
+        [dir="rtl"] & {
+            margin-left: 0;
+            margin-right: auto;
+        }
+    }
 }
 
 .info-token__text {
@@ -46,14 +53,14 @@
     margin: 0;
     color: #fff;
 
+    &:lang(de),
     &:lang(ru) {
         font-size: clamp(1rem, 8vw, 3rem);
     }
 
     > strong {
         font-family: var(--serif-font);
-        font-size: 1.1em;
-        font-variant: small-caps;
+        font-size: 1.3em;
         letter-spacing: 0.1em;
         display: inline-block;
     }
@@ -66,6 +73,13 @@
     display: flex;
     flex-direction: row;
     gap: 1em;
+
+    @at-root {
+        [dir="rtl"] & {
+            left: auto;
+            right: 1.2em;
+        }
+    }
 }
 
 .info-token__button {

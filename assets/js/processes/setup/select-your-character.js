@@ -4,6 +4,7 @@ import TokenStore from "../../classes/TokenStore.js";
 import Template from "../../classes/Template.js";
 import {
     empty,
+    lookupOne,
     lookupOneCached,
     replaceContentsMany
 } from "../../utils/elements.js";
@@ -12,6 +13,8 @@ import {
 } from "../../utils/arrays.js";
 
 const gameObserver = Observer.create("game");
+const characterDecisionDialog = Dialog.create(lookupOne("#character-decision"));
+const playerName = lookupOne("#player-name");
 
 gameObserver.on("character-draw", ({ detail }) => {
 
@@ -26,17 +29,14 @@ gameObserver.on("character-draw", ({ detail }) => {
     replaceContentsMany(
         lookupOneCached("#character-choice-wrapper"),
         shuffle(detail.characters)
-            .map((character, i) => template.draw([
-                [
-                    "[data-id]",
-                    character.getId(),
-                    (element, content) => element.dataset.id = content
-                ],
-                [
-                    ".js--character-choice--number",
-                    i + 1
-                ]
-            ]))
+            .map((character, i) => template.draw({
+                "[data-id]"(element) {
+                    element.dataset.id = character.getId();
+                },
+                ".js--character-choice--number"(element) {
+                    element.textContent = i + 1;
+                }
+            }))
     );
 
     Dialog.create(lookupOneCached("#character-choice")).show();
@@ -89,7 +89,6 @@ lookupOneCached("#character-choice").addEventListener("click", ({ target }) => {
 });
 
 gameObserver.on("character-drawn", ({ detail }) => {
-    // detail.element.disabled = true;
 
     const {
         element
@@ -118,6 +117,38 @@ gameObserver.on("character-drawn", ({ detail }) => {
     lookupOneCached("#character-decision-ability").textContent = (
         character.getAbility()
     );
-    Dialog.create(lookupOneCached("#character-decision")).show();
+    characterDecisionDialog.show();
+
+});
+
+// Allow a name to be set when the character is revealed.
+// We do this by checking to see if a name was entered when the "remember your
+// character" dialog is closed, using it if it was.
+
+let character = null;
+
+gameObserver.on("character-drawn", ({ detail }) => {
+    character = detail.character;
+});
+
+characterDecisionDialog.on(Dialog.SHOW, () => {
+    playerName.value = playerName.defaultValue;
+});
+
+characterDecisionDialog.on(Dialog.HIDE, () => {
+
+    const {
+        pad
+    } = lookupOneCached(".js--pad");
+    const {
+        value
+    } = playerName;
+    const trimmed = (value || "").trim();
+
+    if (pad && trimmed && character) {
+        pad.setPlayerName(character, trimmed);
+    }
+
+    character = null;
 
 });

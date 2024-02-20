@@ -1,0 +1,76 @@
+<button type="button" class="button button--full-height" id="select-edition" data-dialog="#edition-list">{{ 'setup.buttons.select_edition'|trans }}</button>
+
+{% embed 'includes/dialog.html.twig' with {
+    id: 'edition-list',
+    background: 'blur',
+    title: 'setup.editions.title'|trans
+} %}
+    {% import 'macros/forms.html.twig' as forms %}
+    {% block body %}
+
+    <form id="select-edition-form" enctype="multipart/form-data">
+
+        <ul class="no-list mb-4">
+            <li>
+                {{ forms.radio({
+                    name: 'edition',
+                    value: 'tb',
+                    label: 'setup.editions.trouble_brewing'|trans,
+                    required: true
+                }) }}
+            </li>
+            <li>
+                {{ forms.radio({
+                    name: 'edition',
+                    value: 'bmr',
+                    label: 'setup.editions.bad_moon_rising'|trans
+                }) }}
+            </li>
+            <li>
+                {{ forms.radio({
+                    name: 'edition',
+                    value: 'snv',
+                    label: 'setup.editions.sects_and_violets'|trans
+                }) }}
+            </li>
+            <li>
+                {{ forms.radio({
+                    name: 'edition',
+                    value: 'custom',
+                    label: 'setup.editions.custom_script'|trans
+                }) }}
+            </li>
+        </ul>
+
+        <div id="custom-script" class="mb-4" hidden>
+            <p>{{ 'setup.editions.custom_note'|trans }} <strong>{{ 'setup.editions.custom_warning'|trans }}</strong></p>
+            <p>
+                <label for="custom-script-upload">{{ 'setup.editions.upload'|trans }}</label>
+                {{ forms.file({
+                    name: "custom-script-upload",
+                    id: "custom-script-upload",
+                    accept: "application/json"
+                }) }}
+            </p>
+            <p>
+                <label for="custom-script-url">{{ 'setup.editions.url'|trans }}</label>
+                <input type="url" name="custom-script-url" id="custom-script-url" class="input" placeholder="https://www.example.com/script.json" data-no-store>
+            </p>
+            <p>
+                <label for="custom-script-paste">{{ 'setup.editions.paste'|trans }}</label>
+                <textarea name="custom-script-paste" id="custom-script-paste" class="input" placeholder='["washerwoman","investigator","librarian","chef"]'></textarea>
+            </p>
+        </div>
+
+        <p>
+            <button type="submit" class="button">
+                <span class="button__text">{{ 'setup.editions.select'|trans }}</span>
+                <span class="button__loader" role="progressbar" aria-valuetext="Loading" aria-busy="false" aria-live="assertive" aria-valuemin="0" aria-valuemax="1">
+                    <span class="loader" aria-hidden="true"></span>
+                </span>
+            </button>
+        </p>
+
+    </form>
+    {% endblock %}
+{% endembed %}

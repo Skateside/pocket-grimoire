@@ -34,14 +34,17 @@
 @import "./components/radio";
 @import "./components/toggle-switch";
 @import "./components/file-upload";
+@import "./components/settable-title";
 @import "./components/bluffs";
 @import "./components/switch";
 @import "./components/jinxes";
 @import "./components/qr";
 @import "./components/locale-form";
+@import "./components/token-display";
 
 @import "./overrides/margin";
 @import "./overrides/padding";
 @import "./overrides/display";
 @import "./overrides/border";
 @import "./overrides/width";
+@import "./overrides/text-size";

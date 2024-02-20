@@ -1,10 +1,11 @@
 import Dialog from "./Dialog.js";
+import CharacterToken from "./CharacterToken.js";
 import {
     lookupOneCached
 } from "../utils/elements.js";
 
 /**
- * A version of {@link Dialog} with extea abilities for displaying a token.
+ * A version of {@link Dialog} with extra abilities for displaying a token.
  */
 export default class BluffDialog extends Dialog {
 

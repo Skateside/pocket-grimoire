@@ -1,3 +1,7 @@
+import Token from "./Token.js";
+import CharacterToken from "./CharacterToken.js";
+import InfoToken from "./InfoToken.js";
+import BluffsGroups from "./BluffsGroups.js";
 import {
     deepClone,
     deepFreeze
@@ -23,8 +27,10 @@ export default class Store {
         inputs: {},
         details: {},
         infoTokens: [],
+        names: [],
         height: "",
-        version: ""
+        version: "",
+        user: ""
     };
 
     /**
@@ -84,6 +90,10 @@ export default class Store {
          */
         this.tokens = [];
 
+        /**
+         * The info tokens that have been added.
+         * @type {Array.<String>}
+         */
         this.infoTokens = [];
 
     }
@@ -399,6 +409,11 @@ export default class Store {
         }
 
         data.tokens[index].playerName = name;
+
+        if (!data.names.includes(name)) {
+            data.names.push(name);
+        }
+
         this.write();
 
     }
@@ -441,14 +456,15 @@ export default class Store {
             form,
             type,
             value,
-            checked
+            checked,
+            nodeName
         } = (input || {});
 
         if (!name || type === "file") {
             return;
         }
 
-        let selector = `input[name="${name}"]`;
+        let selector = `${nodeName.toLowerCase()}[name="${name}"]`;
         const isCheckbox = type === "checkbox";
 
         if (isCheckbox && input.hasAttribute("value")) {
@@ -599,16 +615,15 @@ export default class Store {
     }
 
     /**
-     * Saves a bluff.
+     * Saves information about the bluffs
      *
-     * @param {String} buttonSelector
-     *        A CSS selector that identifies the bluff button.
-     * @param {String} characterId
-     *        The ID of the character serving as the demon bluff.
+     * @param {Object} bluffs
+     *        The serialised data about the bluffs. See
+     *        {@link BluffsGroup#serialise}.
      */
-    setBluff(buttonSelector, characterId) {
+    setBluffs(bluffs) {
 
-        this.data.bluffs[buttonSelector] = characterId;
+        this.data.bluffs = bluffs;
         this.write();
 
     }
@@ -634,6 +649,30 @@ export default class Store {
      */
     getVersion() {
         return this.data.version;
+    }
+
+    /**
+     * Sets the user ID. I use this to watch sessions and debug any errors. It
+     * should be unique and contain no identifiable information.
+     *
+     * @param {String} user
+     *        A string identifying the user.
+     */
+    setUser(user) {
+
+        this.data.user = user;
+        this.write();
+
+    }
+
+    /**
+     * Gets the user ID.
+     *
+     * @return {String}
+     *         A string identifying the user.
+     */
+    getUser() {
+        return this.data.user;
     }
 
 }

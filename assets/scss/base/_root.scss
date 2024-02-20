@@ -1,7 +1,15 @@
 :root {
     // Fonts
-    --serif-font: Metamorphous, "Times New Roman", Times, serif;
-    --sans-font: Helvetica, Arial, sans-serif;
+    --serif-font:
+        "Goudy Mediaeval",
+        Georgia,
+        "Times New Roman",
+        Times,
+        serif;
+    --sans-font:
+        Helvetica,
+        Arial,
+        sans-serif;
     // Colours
     --blue: #679fd0;
     --orange: #d09f67;
@@ -11,4 +19,129 @@
     --dark-purple: #9f679f;
     --purple: #d067d0;
     --grey: #999;
+    // Group Colours
+    --good-team: #1d82ff;
+    --evil-team: #ff1d1d;
+}
+
+// Goudy Mediaeval doesn't support cyrillic characters and Vietnamese
+// diacritics. Vinque is one of the few serif fonts that does, but I got
+// comments that it can be difficult to read. Use Vinque only when we need to.
+
+:lang(ru),
+:lang(uk),
+:lang(vi) {
+    --serif-font:
+        Vinque,
+        Georgia,
+        "Times New Roman",
+        Times,
+        serif;
+}
+
+// Hebrew serif font stack is the same as the default one, except that Vinque is
+// not included. This is because Vinque does not include Hebrew characters so
+// the user would have to download 17 - 43 kB unnecessarily.
+
+:lang(he) {
+    --serif-font:
+        Georgia,
+        "Times New Roman",
+        Times,
+        serif;
+}
+
+// Chinese font stacks found here:
+// https://tech.busuu.com/handling-css-font-stacks-for-multi-language-websites-cf852e321f06
+// We have to split up the languages into Simplified and Traditional because
+// otherwise someone might have to download both fonts (15MB+) to render a
+// single character.
+
+:lang(zh-CN) {
+    --serif-font:
+        Georgia,
+        "Times New Roman",
+        "Noto Serif Simplified Chinese",
+        "FangSong",
+        "仿宋",
+        STFangSong,
+        "华文仿宋",
+        serif;
+    --sans-font:
+        Helvetica,
+        Arial,
+        "华文细黑",
+        "STXihei",
+        "PingFang TC",
+        "微软雅黑体",
+        "Microsoft YaHei New",
+        "微软雅黑",
+        "Microsoft Yahei",
+        "宋体",
+        "SimSun",
+        sans-serif;
+}
+
+:lang(zh-TW) {
+    --serif-font:
+        Georgia,
+        "Times New Roman",
+        "Noto Serif Traditional Chinese",
+        "FangSong",
+        "仿宋",
+        STFangSong,
+        "华文仿宋",
+        serif;
+    --sans-font:
+        Helvetica,
+        Arial,
+        "华文细黑",
+        "STXihei",
+        "PingFang TC",
+        "微软雅黑体",
+        "Microsoft YaHei New",
+        "微软雅黑",
+        "Microsoft Yahei",
+        "宋体",
+        "SimSun",
+        sans-serif;
+}
+
+// Japanese font stack found here:
+// Serif:
+// https://readium.org/readium-css/docs/CSS08-defaults.html#default-font-stacks-for-japanese-publications
+// Sans-serif:
+// https://gist.github.com/prantlf/fbd12acc69a022edd589dea48dafe3f8
+
+:lang(ja-JP) {
+    --serif-font:
+        Georgia,
+        "Times New Roman",
+        "Noto Serif Japanese",
+        "ＭＳ Ｐ明朝",
+        "MS PMincho",
+        "Hiragino Mincho Pro",
+        "ヒラギノ明朝 Pro W3",
+        "游明朝",
+        "YuMincho",
+        "ＭＳ 明朝",
+        "MS Mincho",
+        "Hiragino Mincho ProN",
+        serif ;
+    --sans-font:
+        Helvetica,
+        Arial,
+        "ヒラギノ角ゴ Pro W3",
+        "Hiragino Kaku Gothic Pro",
+        Osaka,
+        メイリオ,
+        Meiryo,
+        "ＭＳ Ｐゴシック",
+        "MS PGothic",
+        "ＭＳ ゴシック",
+        "MS Gothic",
+        "Noto Sans CJK JP",
+        TakaoPGothic,
+        sans-serif;
+;
 }

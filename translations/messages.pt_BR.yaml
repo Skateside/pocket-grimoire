@@ -20,8 +20,11 @@ sheet:
     get_qr_code: Gerar QR Code desta ficha
     get_sheet: Baixar esta ficha
     credit: <a href="https://bloodontheclocktower.com/" target="_blank" rel="noopener noreferrer">Blood on the Clocktower</a> é uma marca registrada de Steven Medway e <a href="https://www.thepandemoniuminstitute.com/" target="_blank" rel="noopener noreferrer">The Pandemonium Institute</a>
+    breakdown: Os números de cada equipe para o número de jogadores.
+    count_plus: "%count%+"
 
 groups:
+    players: Jogadoras
     townsfolk: Cidadãos
     outsider: Forasteiros
     minion: Lacaios
@@ -30,20 +33,18 @@ groups:
     fabled: Lendas
 
 messages:
-    good_team: time Bom
-    evil_team: time Mau
+    good_team: Time Bom
+    evil_team: Time Mau
     empty_character_ability: Este é um personagem vazio.
     version_change_message: Uma nova versão do aplicativo está disponível. Como seus dados podem estar incorretos, sugerimos que você apague tudo usando a opção "Limpar Cache". Pressione "OK" para fazer isso agora ou "Cancelar" para fechar esta mensagem.
     invalid_script: O formato do script não foi reconhecido.
     no_characters: Este script não contém nenhum personagem reconhecível.
-    invalid_data: Dados inválidos.
-    no_data: Nenhum dado enviado.
     player_name: Qual é o nome desse jogador?
-    custom_info_token: "O que você quer que seu novo token de informações diga? Use **asteriscos duplos** para enfatizar o texto."
+    custom_info_token: O que você quer que seu novo token de informações diga? Use **asteriscos duplos** para enfatizar o texto.
 
 setup:
 
-    title: Setup
+    title: Preparação
 
     buttons:
         select_edition: Selecionar Edição
@@ -63,6 +64,8 @@ setup:
         custom_warning: Apenas carregue arquivos JSON de fontes que você confia!
         upload: Carregue um script personalizado
         url: Insira uma URL
+        paste: Colar da área de transferência
+        unsupported: 'Importante: o Grimório de Bolso ainda não oferece suporte para scripts homebrew ou localizados.'
         select: Selecionar
 
     character_select:
@@ -73,6 +76,11 @@ setup:
         highlight_random: Selecionar aleatoriamente
         draw_characters: Distribuir personagens
         add_all: Adicionar tudo
+        layout: Disposição
+        ellipse: Elipse
+        diagonal: Diagonal
+        horizontal: Horizontal
+        vertical: Vertical
 
     character_choice:
         title: Selecione seu Personagem
@@ -80,6 +88,7 @@ setup:
 
     character_decision:
         title: Lembre seu Personagem
+        name: Nomeie-se (opcional)
         return: Retornar à Seleção de Personagem
 
     qr_code:
@@ -105,6 +114,8 @@ setup:
         details_note: Quais seções estão abertas/fechadas.
         info_tokens_label: Limpar tokens de informações personalizados
         info_tokens_note: Os tokens de informações personalizados que foram adicionados.
+        names_label: Limpar nomes
+        names_note: O jogador nomeia sugestões.
         height_label: Limpar altura do quadro
         height_note: A altura do quadro que representa o interior do Grimório.
         clear_refresh_label: Atualizar após concluído
@@ -119,9 +130,12 @@ grimoire:
 
     grimoire:
         bluffs: Blefes do Demônio
+        show_bluffs: Mostrar todos os blefes
+        add_bluffs: Adicionar blefes
         add_token: Adicionar token
         add_reminder: Adicionar lembrete
         add_traveller: Adicionar Viajante
+        add_fabled: Adicionar Lendas
         show_tokens: Mostrar tokens
         reset_height: Resetar altura do quadro
         clear_grimoire: Limpar Grimório
@@ -129,6 +143,7 @@ grimoire:
         show_night_order: Mostrar ordem da noite
         character_size: Tamanho do token de personagem
         reminder_size: Tamanho do token de lembrete
+        token_settings: Configurações de token
 
     character_list:
         title: Selecionar Personagem
@@ -136,6 +151,8 @@ grimoire:
     reminder_list:
         title: Selecionar Lembrete
         show: Mostrar todos os lembretes
+        multiple: Adicionar vários
+        add_all: Adicionar tudo
 
     character_show:
         title: Token
@@ -143,6 +160,7 @@ grimoire:
         shroud: Mortalha
         rotate: Rotacionar
         reminder: Lembrete
+        replace: Substituir
         remove: Remover token
         recent_reminders: 'Lembretes adicionados recentemente:'
         player_name: Definir nome do jogador
@@ -166,10 +184,14 @@ grimoire:
 
     token_list:
         title: Personagens
+        add: Adicionar token
 
     traveller_list:
         title: Viajantes
         show_all: Mostrar todos os Viajantes
+
+    fabled_list:
+        title: Lendas
 
     token:
         title: Token
@@ -197,12 +219,18 @@ info_tokens:
         nominatetoday: Você <strong>nomeou</strong> hoje?
         playeris: Este <strong>jogador</strong> é
         votetoday: Você <strong>votou</strong> hoje?
-        youare: "<strong>Você</strong> é"
+        youare: <strong>Você</strong> é
         selectedyou: Este personagem <strong>selecionou</strong> você
     custom: Fichas de informações personalizadas
-    add_custom: Adicionar token de informações
-    edit_custom: Editar token de informações
-    delete_custom: Excluir token de informações
+    add_custom: Adicionar token de informação
+    edit_custom: Editar token de informação
+    delete_custom: Excluir token de informação
+
+notes:
+    title: Notas do contador de histórias
+    label: Notas
+    clear: Notas claras
+    clear_warning: Tem certeza de que deseja limpar as notas?
 
 acknowledgements:
     title: Reconhecimentos
@@ -211,6 +239,15 @@ acknowledgements:
         - Lembretes noturnos e outros textos auxiliares escritos por <a href="http://bignose.whitetree.org/projects/botc/diy/" target="_blank" rel="noopener noreferrer">Ben Finney</a>.
         - Ícones retirados de <a href="https://fontawesome.com/v5.15/icons" target="_blank" rel="noopener noreferrer">Font Awesome</a>.
         - Várias imagens e dados foram retirados de <a href="https://www.clocktower.online" target="_blank" rel="noopener noreferrer">Clocktower.online</a> e do <a href="https://bloodontheclocktower.com/" target="_blank" rel="noopener noreferrer">website Blood on the Clocktower</a>.
-        - Este é um Grimório virtual não oficial para o jogo Blood on the Clocktower. Este projeto é livre e o código fonte pode ser ser encontrado no <a href="https://github.com/Skateside/pocket-grimoire" target="_blank" rel="noopener noreferrer">GitHub</a>. Este projeto não é afiliado ao The Pandemonium Institute. Se você gosta de Blood on the Clocktower, <a href="https://bloodontheclocktower.com/pages/where-to-buy" target="_blank" rel="noopener noreferrer">por favor considere comprar seu próprio Grimório</a> - além de ser mais versátil do que esta versão digital, você estará apoiando os criadores.
-        - Notou um bug ou tem alguma sugestão de melhoria? Me avise no <a href="https://discord.com/channels/569683781800296501/708509594758152203" target="_blank" rel="noopener noreferrer">canal toolmakers no servidor não oficial do discord</a> (meu nome lá é "Skateside") ou <a href="https://github.com/Skateside/pocket-grimoire/issues" target="_blank" rel="noopener noreferrer">crie um issue no Github</a>.
+        - Este é um Grimório virtual não oficial para o jogo Blood on the Clocktower. Este projeto é livre e o código fonte pode ser ser encontrado no <a href="https://github.com/Skateside/pocket-grimoire" target="_blank" rel="noopener noreferrer">GitHub</a>. Este projeto não é afiliado ao The Pandemonium Institute. Se você gosta de Blood on the Clocktower, <a href="https://bloodontheclocktower.com/buy" target="_blank" rel="noopener noreferrer">por favor considere comprar seu próprio Grimório</a> - além de ser mais versátil do que esta versão digital, você estará apoiando os criadores.
+        - Notou um bug ou tem alguma sugestão de melhoria? Me avise no <a href="https://discord.com/channels/569683781800296501/708509594758152203" target="_blank" rel="noopener noreferrer">canal toolmakers no servidor não oficial do discord</a>. (meu nome lá é "Skateside") ou <a href="https://github.com/Skateside/pocket-grimoire/issues" target="_blank" rel="noopener noreferrer">crie um issue no Github</a>.
         - <small>Versão <span id="version"></span></small>
+
+errors:
+    homebrew_json:
+        not_homebrew: Não é a entrada homebrew "%id%"
+        unrecognised_team: Equipe não reconhecida "%team%"
+        not_find_id: Não foi possível encontrar o ID "%id%"
+        not_recognise_character: Não foi possível reconhecer o caractere "%id%"
+        invalid_entry: 'Entrada inválida para "%id%": %reasons%'
+        empty_teams: 'Equipes vazias: %teams%'

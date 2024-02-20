@@ -1,0 +1,29 @@
+<button type="button" class="button button--full-height" id="add-reminder" data-dialog="#reminder-list" disabled>{{ 'grimoire.grimoire.add_reminder'|trans }}</button>
+
+{% embed 'includes/dialog.html.twig' with {
+    id: 'reminder-list',
+    background: 'blur',
+    title: 'grimoire.reminder_list.title'|trans
+} %}
+    {% import 'macros/forms.html.twig' as forms %}
+    {% block body %}
+    <ul id="reminder-list__list" class="button-list button-list--reminder"></ul>
+    {{ forms.switch({
+        node: 'p',
+        classes: 'mt-4',
+        label: 'grimoire.reminder_list.show'|trans,
+        name: 'show',
+        id: 'show-all-reminders',
+        value: 'all-reminders'
+    }) }}
+    {{ forms.switch({
+        node: 'p',
+        classes: 'mt-4 mb-0',
+        label: 'grimoire.reminder_list.multiple'|trans,
+        name: 'multiple',
+        id: 'multiple-reminders',
+        value: 'multiple-reminders'
+    }) }}
+    <button type="button" class="button w-full mt-4 js--reminder-list--multiple" hidden>{{ 'grimoire.reminder_list.add_all'|trans }}</button>
+    {% endblock %}
+{% endembed %}

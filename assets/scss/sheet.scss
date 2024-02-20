@@ -9,6 +9,7 @@ a {
 }
 
 @import "./objects/no-btn";
+@import "./objects/sr-only";
 
 @import "./components/body";
 @import "./components/title";
@@ -17,6 +18,7 @@ a {
 @import "./components/dialog";
 @import "./components/qr";
 @import "./components/locale-form";
+@import "./components/breakdown";
 
 @media print {
 
@@ -136,6 +138,10 @@ a {
 
     .button {
         display: none;
+    }
+
+    .no-print {
+        display: none !important;
     }
 
 }

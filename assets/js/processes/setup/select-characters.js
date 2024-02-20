@@ -22,7 +22,7 @@ const gameObserver = Observer.create("game");
 const tokenObserver = Observer.create("token");
 
 /**
- * Sets the totals for each team based on the breakdown that#s given.
+ * Sets the totals for each team based on the breakdown that's given.
  *
  * @param {Object} breakdown
  *        Breakdown of the numbers for the teams.
@@ -49,10 +49,6 @@ function setTotals(breakdown) {
  *        The number of randomly selected items that should be highlighted.
  */
 function highlightRandomInTeam(team, count) {
-
-    if (!count) {
-        return;
-    }
 
     // Don't cache this since they will change if a different edition is chosen.
     const inputs = lookup(`[data-team="${team}"] [name="character"]`);
@@ -361,7 +357,7 @@ lookupOne("#player-select").addEventListener("submit", (e) => {
 
         gameObserver.trigger("character-draw", {
             characters: filtered,
-            isShowAll: e.submitter.id === "player-select-all"
+            isShowAll: e.submitter?.id === "player-select-all"
         });
 
         Dialog.create(lookupOneCached("#character-select")).hide();
@@ -369,12 +365,6 @@ lookupOne("#player-select").addEventListener("submit", (e) => {
     });
 
 });
-
-// lookupOne("#player-select-all").addEventListener("click", () => {
-//
-//
-//
-// });
 
 tokenObserver.on("toggle-jinx-active", ({ detail }) => {
 
