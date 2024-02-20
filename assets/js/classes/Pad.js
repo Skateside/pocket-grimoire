@@ -316,6 +316,14 @@ export default class Pad {
         this.removeCharacter(this.getCharacterByToken(token));
     }
 
+    /**
+     * Gets the information about the character from the character itself.
+     *
+     * @param  {CharacterToken} character
+     *         The character whose information should be returned.
+     * @return {Object}
+     *         Information about the character.
+     */
     getInfoByCharacter(character) {
         return this.characters.find((info) => info.character === character);
     }

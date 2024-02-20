@@ -97,7 +97,7 @@ export default class CharacterToken extends Token {
          * A flag showing whether or not the character has a ghost vote.
          * @type {Boolean}
          */
-        this.hasGhostVote = false;
+        this.hasGhostVote = true;
 
         /**
          * A collection of all jinxes that may affect this character.
