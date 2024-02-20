@@ -359,7 +359,12 @@ export default class Store {
         }
 
         data.tokens[index].isDead = isDead;
-        this.write();
+
+        if (isDead) {
+            this.setGhostVote(token, true);
+        } else {
+            this.write();
+        }
 
     }
 

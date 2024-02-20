@@ -359,7 +359,7 @@ export default class Pad {
 
         // Revived players get their ghost vote back.
         // https://discord.com/channels/569683781800296501/719898820942626817/1056935809263079535
-        if (!isDead && !character.getHasGhostVote()) {
+        if (!isDead) {
             this.setGhostVote(character, true);
         }
 
@@ -522,6 +522,12 @@ export default class Pad {
      *        Optional ghost vote state to set.
      */
     setGhostVote(character, ghostVoteState) {
+
+        // Prevent the value in the store breaking the ghost vote visibility if
+        // the character token is not dead.
+        if (!ghostVoteState && !character.getIsDead()) {
+            return;
+        }
 
         const {
             token

@@ -170,6 +170,10 @@ export default class CharacterToken extends Token {
 
         this.isDead = state;
 
+        if (state) {
+            this.toggleGhostVote(true);
+        }
+
         return this.getIsDead();
 
     }
