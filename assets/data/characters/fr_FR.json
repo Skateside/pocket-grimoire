@@ -1661,6 +1661,17 @@
         ]
     },
     {
+        "id": "yaggababble",
+        "name": "Yaggababble",
+        "ability": "Vous commencez à connaître une phrase secrète. À chaque fois que vous le dites publiquement aujourd’hui, un joueur risque de mourir.",
+        "firstNightReminder": "Montrez au Yaggababble leur phrase secrète.",
+        "otherNightReminder": "Choisissez un nombre de joueurs jusqu'au nombre total de fois où Yaggababble a prononcé publiquement sa phrase secrète, ces joueurs meurent.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Assassiné"
+        ]
+    },
+    {
         "id": "zombuul",
         "name": "Zombuul",
         "ability": "Chaque nuit*, si personne n’est mort aujourd'hui, choisissez un joueur: il meurt. La première fois que vous mourez, vous restez en vie mais êtes reconnu comme mort.",
@@ -1668,8 +1679,8 @@
         "otherNightReminder": "Si personne n’est mort aujourd'hui, choisit un joueur, il meurt.",
         "remindersGlobal": [],
         "reminders": [
-            "Assassiné",
-            "Aucun Mort"
+            "Aucun Mort",
+            "Assassiné"
         ]
     }
 ]

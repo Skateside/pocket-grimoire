@@ -1656,6 +1656,17 @@
         ]
     },
     {
+        "id": "yaggababble",
+        "name": "Yaggababble",
+        "ability": "Empiezas a conocer una frase secreta. Por cada vez que lo digas públicamente hoy, un jugador podría morir.",
+        "firstNightReminder": "Muéstrale a Yaggababble su frase secreta.",
+        "otherNightReminder": "Elige un número de jugadores hasta el número total de veces que Yaggababble dijo públicamente su frase secreta, esos jugadores mueren.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Muerto"
+        ]
+    },
+    {
         "id": "zombuul",
         "name": "Zombuul",
         "ability": "Cada noche*, si nadie ha muerto durante el día, elige 1 jugador: muere. La primera vez que mueras, vives pero apareces como malo.",
@@ -1663,8 +1674,8 @@
         "otherNightReminder": "Si nadie murió durante el día: el Zombuul señala a un jugador. Ese jugador muere.",
         "remindersGlobal": [],
         "reminders": [
-            "Muerto",
-            "Muerto hoy"
+            "Muerto hoy",
+            "Muerto"
         ]
     }
 ]

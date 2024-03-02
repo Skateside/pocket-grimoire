@@ -1655,6 +1655,17 @@
         ]
     },
     {
+        "id": "yaggababble",
+        "name": "Yaggababble",
+        "ability": "Sie beginnen, einen geheimen Satz zu kennen. Für jedes Mal, wenn Sie es heute öffentlich sagen, könnte ein Spieler sterben.",
+        "firstNightReminder": "Zeigen Sie dem Yaggababble seinen geheimen Satz.",
+        "otherNightReminder": "Wählen Sie eine Anzahl von Spielern aus, bis der Yaggababble seinen geheimen Satz insgesamt so oft öffentlich ausgesprochen hat, dass diese Spieler sterben.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Tot"
+        ]
+    },
+    {
         "id": "zombuul",
         "name": "Zombuul",
         "ability": "Jede Nacht*, wenn am Tag niemand gestorben ist, wähle 1 Spieler: er stirbt. Das erste Mal, dass du sterben solltest, stirbst du nicht, registrierst aber dennoch als tot.",
@@ -1662,8 +1673,8 @@
         "otherNightReminder": "Wenn niemand am Tag gestorben ist: Der Zombuul zeigt auf einen Spieler. Dieser Spieler stirbt.",
         "remindersGlobal": [],
         "reminders": [
-            "Tot",
-            "starb heute"
+            "starb heute",
+            "Tot"
         ]
     }
 ]

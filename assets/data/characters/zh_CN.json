@@ -2116,6 +2116,17 @@
         "reminders": []
     },
     {
+        "id": "yaggababble",
+        "name": "雅加巴布",
+        "ability": "你开始知道一个秘密短语。 今天你每次公开说出这句话，就有可能导致一名玩家死亡。",
+        "firstNightReminder": "向雅加巴布展示他们的秘密短语。",
+        "otherNightReminder": "选择一些玩家，最多达到雅加巴布公开说出秘密短语的总次数，这些玩家就会死亡。",
+        "remindersGlobal": [],
+        "reminders": [
+            "死亡"
+        ]
+    },
+    {
         "id": "yangguren",
         "name": "养蛊人",
         "ability": "在你存活时提名你的玩家会在当晚死亡，即使你已死亡。",

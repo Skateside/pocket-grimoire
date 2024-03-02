@@ -3104,6 +3104,22 @@
         "image": "/build/img/icons/townsfolk/xizi.png"
     },
     {
+        "id": "yaggababble",
+        "name": "Yaggababble",
+        "edition": "",
+        "team": "demon",
+        "firstNight": 2,
+        "firstNightReminder": "Show the Yaggababble their secret phrase.",
+        "otherNight": 35,
+        "otherNightReminder": "Choose a number of players up to the total number of times the Yaggababble said their secret phrase publicly, those players die.",
+        "reminders": [
+            "Dead"
+        ],
+        "setup": false,
+        "ability": "You start knowing a secret phrase. For each time you said it publicly today, a player might die.",
+        "image": "/build/img/icons/demon/yaggababble.png"
+    },
+    {
         "id": "yangguren",
         "name": "养蛊人",
         "edition": "hdcs",
