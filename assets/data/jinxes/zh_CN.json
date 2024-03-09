@@ -37,7 +37,7 @@
     {
         "target": "pithag",
         "trick": "villageidiot",
-        "reason": "如果有多余的标记，坑女巫可以额外创造一个村白痴。 如果是这样的话，醉酒的乡村白痴可能会改变。"
+        "reason": "如果村夫在场数量不足3人，麻脸巫婆可以创造新的村夫。如果她这么做，村夫的醉酒效果可能会更换目标。"
     },
     {
         "target": "cerenovus",
@@ -92,7 +92,7 @@
     {
         "target": "leviathan",
         "trick": "pithag",
-        "reason": "第五天之后，坑婆婆就不能选择利维坦了。"
+        "reason": "在第五个白天之后，麻脸巫婆无法创造利维坦。"
     },
     {
         "target": "lilmonsta",
@@ -487,31 +487,31 @@
     {
         "target": "kazali",
         "trick": "bountyhunter",
-        "reason": "只有在卡扎利行动后赏金猎人仍在发挥作用时，才会产生邪恶的城镇居民。"
+        "reason": "在卡扎力行动完毕后，如果赏金猎人仍然在场，才会创造邪恶镇民。"
     },
     {
         "target": "kazali",
         "trick": "goon",
-        "reason": "如果卡扎利选择莽夫成为爪牙，则剩余的爪牙选择将由讲故事的人决定。"
+        "reason": "如果卡扎力在选择爪牙时选择了莽夫，接下来的爪牙转变由说书人来做出决定。"
     },
     {
         "target": "kazali",
         "trick": "marionette",
-        "reason": "如果卡扎利人选择创造一个木偶，他们必须选择一个邻居。"
+        "reason": "如果卡扎力选择创造提线木偶，他只能选择将自己的邻座玩家变成提线木偶。"
     },
     {
         "target": "kazali",
         "trick": "huntsman",
-        "reason": "如果卡扎利选择少女成为小兵，并且有猎人在场，那么优秀的玩家就会成为少女。"
+        "reason": "如果卡扎力将落难少女变成了爪牙，并且巡山人在场，一名善良的玩家会变成落难少女。"
     },
     {
         "target": "kazali",
         "trick": "choirboy",
-        "reason": "如果唱诗班男孩在场，卡扎利人不能选择国王成为随从。"
+        "reason": "如果唱诗男孩在场，卡扎力在选择国王后无法将他变成爪牙。"
     },
     {
         "target": "yaggababble",
         "trick": "exorcist",
-        "reason": "如果驱魔师选择雅加巴布，那么雅加巴布能力今晚不会杀人。"
+        "reason": "如果驱魔人选中了牙噶巴卜，那么牙噶巴卜的能力在当晚无法造成死亡。"
     }
 ]

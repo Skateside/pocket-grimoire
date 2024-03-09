@@ -36,7 +36,7 @@ messages:
     good_team: 善良阵营
     evil_team: 邪恶阵营
     empty_character_ability: 这是一个空角色。
-    version_change_message: 本应用程序已更新。由于您的数据可能出错，建议您在“清除缓存”对话框中选择“清除所有缓存”。按“确定”键打开对话框，或按“取消”键关闭此消息。
+    version_change_message: 这个应用程序的版本已经更新。由于您的数据可能出现错误，我们建议您在“清除缓存”对话框中选择“清除所有缓存”。按“确定”键打开对话框，或按“取消”键关闭此消息。
     invalid_script: 无法识别此剧本的格式。
     no_characters: 此剧本不包含任何可识别的角色。
     player_name: 这名玩家的名字？
@@ -60,11 +60,11 @@ setup:
         bad_moon_rising: 黯月初升
         sects_and_violets: 梦殒春宵
         custom_script: 自定义剧本
-        custom_note: 请上传自定义剧本或输入自定义剧本的网址。
+        custom_note: 请上传剧本文件、输入剧本网址或粘贴JSON代码。
         custom_warning: 请只从您信任的来源加载JSON文件！
         upload: 上传自定义剧本
         url: 输入网址
-        paste: 从剪贴板粘贴
+        paste: 从剪贴板导入
         unsupported: 请注意：口袋魔典目前不支持自制剧本和本地化剧本。
         select: 选择
 
@@ -101,9 +101,9 @@ setup:
     clear_cache:
         title: 清除缓存
         clear_all: 清除所有缓存
-        clear_description: 关闭此项将允许您选择并清除特定的缓存项目。
+        clear_description: 关闭此项以清除特定的缓存。
         lookup_label: 清除数据
-        lookup_note: 角色信息和相克规则的数据。
+        lookup_note: 阵营划分、角色信息和相克规则的数据。
         characters_label: 清除剧本
         characters_note: 已选择并加载的剧本。
         tokens_label: 清除角色标记
@@ -129,9 +129,9 @@ grimoire:
     title: 魔典
 
     grimoire:
-        bluffs: 恶魔的伪装
-        show_bluffs: 显示所有伪装
-        add_bluffs: 添加虚张声势
+        bluffs: 恶魔的伪装角色
+        show_bluffs: 显示所有伪装角色
+        add_bluffs: 添加伪装角色
         add_token: 添加角色标记
         add_reminder: 添加提示标记
         add_traveller: 添加旅行者
@@ -164,7 +164,7 @@ grimoire:
         remove: 移除该角色标记
         recent_reminders: 最近添加过的提示标记：
         player_name: 设置玩家名称
-        ghost_vote: 幽灵投票
+        ghost_vote: 投票标记
 
     reminder_show:
         title: 提示标记
@@ -229,25 +229,25 @@ info_tokens:
 notes:
     title: 说书人笔记
     label: 笔记
-    clear: 清晰的笔记
-    clear_warning: 您确定要清除笔记吗？
+    clear: 清除笔记
+    clear_warning: 你确定要清除笔记吗？
 
 acknowledgements:
     title: 致谢
     acknowledgements:
         - <a href="https://bloodontheclocktower.com/" target="_blank" rel="noopener noreferrer">Blood on the Clocktower</a>是Steven Medway和<a href="https://www.thepandemoniuminstitute.com/" target="_blank" rel="noopener noreferrer">The Pandemonium Institute</a>的商标。
-        - <a href="http://bignose.whitetree.org/projects/botc/diy/" target="_blank" rel="noopener noreferrer">Ben Finney</a> 撰写了夜晚行动和其他辅助文本。
-        - 图标来自 <a href="https://fontawesome.com/v5.15/icons" target="_blank" rel="noopener noreferrer">Font Awesome</a>。
+        - <a href="http://bignose.whitetree.org/projects/botc/diy/" target="_blank" rel="noopener noreferrer">Ben Finney</a>撰写了夜晚行动和其他辅助文本。
+        - 图标来自<a href="https://fontawesome.com/v5.15/icons" target="_blank" rel="noopener noreferrer">Font Awesome</a>。
         - 许多图片和数据来自<a href="https://www.clocktower.online" target="_blank" rel="noopener noreferrer">Clocktower.online</a>和<a href="https://bloodontheclocktower.com/" target="_blank" rel="noopener noreferrer">Blood on the Clocktower官网</a>。
-        - 这是一个染·钟楼谜团（Blood on the Clocktower）的非官方虚拟魔典。此项目是免费项目，其源代码可以在<a href="https://github.com/Skateside/pocket-grimoire" target="_blank" rel="noopener noreferrer">GitHub</a>上获取。此项目与The Pandemonium Institute无关。如果您喜欢Blood on the Clocktower，<a href="https://www.gstonegames.com/game/info-13275.html" target="_blank" rel="noopener noreferrer">请考虑购买一部您自己的魔典</a>——它不仅比这个数字魔典更灵活，更能支持这个游戏的创作者。
-        - 发现错误或是有改进建议？请在<a href="https://discord.com/channels/569683781800296501/1161203348897288252" target="_blank" rel="noopener noreferrer">非官方Discord服务器的“pocket-grimoire”频道</a>上告诉我（我的用户名是Skateside）或是<a href="https://github.com/Skateside/pocket-grimoire/issues" target="_blank" rel="noopener noreferrer">在GitHub上提出问题</a>。
+        - 这是一部染·钟楼谜团（Blood on the Clocktower）的非官方虚拟魔典。此项目是免费项目，源代码可在<a href="https://github.com/Skateside/pocket-grimoire" target="_blank" rel="noopener noreferrer">GitHub</a>上获取。此项目与The Pandemonium Institute无关。如果您喜欢Blood on the Clocktower，<a href="https://www.gstonegames.com/game/info-13275.html" target="_blank" rel="noopener noreferrer">请考虑购买一部您自己的魔典</a>——它不仅比这个数字魔典更灵活，更能支持这个游戏的创作者。
+        - 发现错误或有改进建议？请在<a href="https://discord.com/channels/569683781800296501/1161203348897288252" target="_blank" rel="noopener noreferrer">非官方Discord服务器的“pocket-grimoire”频道</a>上告诉我（我的用户名是Skateside）或是<a href="https://github.com/Skateside/pocket-grimoire/issues" target="_blank" rel="noopener noreferrer">在GitHub上提出问题</a>。
         - <small>版本 <span id="version"></span></small>
 
 errors:
     homebrew_json:
-        not_homebrew: 不是自制条目“%id%”
-        unrecognised_team: 无法识别的团队“%team%”
-        not_find_id: 找不到 ID“%id%”
-        not_recognise_character: 无法识别字符“%id%”
-        invalid_entry: “%id%”输入无效：%reasons%
-        empty_teams: 空队：%teams%
+        not_homebrew: 不可输入自制剧本“%id%”
+        unrecognised_team: 无法识别阵营“%team%”
+        not_find_id: 找不到ID“%id%”
+        .not_recognise_character: 无法识别角色“%id%”
+        invalid_entry: 无效输入“%id%”：%reasons%
+        empty_teams: 空阵营：%teams%
