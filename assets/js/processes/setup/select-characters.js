@@ -17,6 +17,9 @@ import {
     clamp,
     times
 } from "../../utils/numbers.js";
+import {
+    supplant
+} from "../../utils/strings.js";
 
 const gameObserver = Observer.create("game");
 const tokenObserver = Observer.create("token");
@@ -326,12 +329,13 @@ gameObserver.on("character-count-change", ({ detail }) => {
     }, 0);
 
 });
-
+console.warn("Currently removing the Drunk won't allow the form to be submitted :-(");
 lookupOne("#player-select").addEventListener("submit", (e) => {
 
     e.preventDefault();
 
-    const ids = lookup(":checked", e.target).map(({ value }) => value);
+    const ids = lookup(".js--character-select--input:checked", e.target)
+        .map(({ value }) => value);
 
     TokenStore.ready((tokenStore) => {
 
@@ -355,12 +359,41 @@ lookupOne("#player-select").addEventListener("submit", (e) => {
             })
             .flat();
 
-        gameObserver.trigger("character-draw", {
-            characters: filtered,
-            isShowAll: e.submitter?.id === "player-select-all"
-        });
+        const validation = lookupOneCached("#player-select-validation");
+        const bagDisabled = filtered.filter((character) => {
 
-        Dialog.create(lookupOneCached("#character-select")).hide();
+            const special = character.getSpecial();
+
+            return (
+                special
+                && Array.isArray(special)
+                && special.find(({ name, type }) => {
+                    return name === "bag-disabled" && type === "selection";
+                })
+            );
+
+        });
+console.log({ ids, filtered, bagDisabled });
+        if (bagDisabled.length) {
+
+            validation.setCustomValidity(supplant(
+                window.I18N.bagDisabled,
+                [bagDisabled.map((character) => character.getName()).join(", ")]
+            ));
+            validation.form.reportValidity();
+
+        } else {
+
+            validation.setCustomValidity("");
+
+            gameObserver.trigger("character-draw", {
+                characters: filtered,
+                isShowAll: e.submitter?.id === "player-select-all"
+            });
+
+            Dialog.create(lookupOneCached("#character-select")).hide();
+
+        }
 
     });
 

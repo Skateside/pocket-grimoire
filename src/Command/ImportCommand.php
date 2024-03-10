@@ -114,8 +114,6 @@ class ImportCommand extends Command
             $this->addNew($output->isVerbose());
         }
 
-        // TODO: update all en_GB based on characters.json and jinx.json
-
         foreach ($types as $type) {
 
             $bar = $this->io->createProgressBar(count($locales));
@@ -151,40 +149,27 @@ class ImportCommand extends Command
     protected function addNew(bool $output = false)
     {
 
-        // Check all characters in `assets/data/characters.json` - add any missing ones.
+        // Check all characters in `assets/data/characters.json` - update all data.
 
         $characters = $this->read('.', 'characters');
-        $missingCharacters = array_filter($characters, function ($data) {
 
-            return is_null(
-                $this->roleRepo->findOneBy(['identifier' => $data['id']])
+        $bar = $this->io->createProgressBar(count($characters));
+        $bar->start();
+        $bar->setFormat("Updating character data:  %current%/%max% [%bar%] %percent:3s%% %elapsed:6s%");
+
+        foreach ($characters as $data) {
+
+            $this->updateRole(
+                $this->getRole($data, self::DEFAULT_LOCALE),
+                $data,
+                self::DEFAULT_LOCALE
             );
-
-        });
-
-        $this->io->writeln('Checking for missing characters.');
-        $countMissingCharacters = count($missingCharacters);
-
-        if ($countMissingCharacters > 0) {
-
-            $listing = [];
-
-            foreach ($missingCharacters as $missingCharacter) {
-
-                $role = $this->getRole($missingCharacter, self::DEFAULT_LOCALE);
-                $listing[] = "Added role '{$role->getName()}'";
-
-            }
-
-            $this->em->flush();
-
-            if ($output) {
-                $this->io->listing($listing);
-            }
-
-            $this->io->writeln("Added {$countMissingCharacters} missing character(s)");
+            $bar->advance();
 
         }
+
+        $bar->finish();
+        $this->io->writeln('');
 
         // Check all jinxes in `assets/data/jinx.json` - add any missing ones.
 
@@ -262,7 +247,7 @@ class ImportCommand extends Command
 
         // Update the night order based on `assets/data/night-order.json`.
 
-        $this->io->writeln('Updating the night order.');
+        $this->io->write('Updating the night order ... ');
         $nightOrder = $this->read('.', 'night-order');
 
         $firstNight = [];
@@ -314,7 +299,9 @@ class ImportCommand extends Command
 
             }
 
-            $this->io->writeln('Updated night order');
+            // $this->io->writeln('Updated night order');
+            $this->io->write('Done!');
+            $this->io->newLine();
 
         }
 
@@ -405,30 +392,8 @@ class ImportCommand extends Command
             $role = $this->getRole($data, $locale);
             $listing[] = "Role '{$role->getIdentifier()}' found/created for locale {$locale}";
 
-            $role
-                ->setTranslatableLocale($locale)
-                ->setName($data['name'])
-                ->setAbility($data['ability']);
-
-            if (!empty($data['firstNightReminder'])) {
-                $role->setFirstNightReminder($data['firstNightReminder']);
-            }
-
-            if (!empty($data['otherNightReminder'])) {
-                $role->setOtherNightReminder($data['otherNightReminder']);
-            }
-
-            if (count($data['reminders'])) {
-                $role->setReminders($data['reminders']);
-            }
-
-            if (
-                array_key_exists('remindersGlobal', $data)
-                && count($data['remindersGlobal'])
-            ) {
-                $role->setRemindersGlobal($data['remindersGlobal']);
-            }
-
+            $role->setTranslatableLocale($locale);
+            $this->updateRole($role, $data, $locale);
             $this->em->persist($role);
             $listing[] = "Role '{$role->getIdentifier()}' updated for locale {$locale}";
 
@@ -588,11 +553,26 @@ class ImportCommand extends Command
         $role = new Role();
         $role
             ->setTranslatableLocale($locale)
-            ->setIdentifier($data['id'])
+            ->setIdentifier($data['id']);
+
+        return $this->updateRole($role, $data, $locale);
+
+    }
+
+    private function updateRole(Role $role, array $data, string $locale): Role
+    {
+
+        $role
             ->setName($data['name'])
-            ->setSetup($data['setup'] ?? false)
-            ->setAbility($data['ability'])
-            ->setImage($data['image'] ?? '');
+            ->setAbility($data['ability']);
+
+        if (array_key_exists('setup', $data)) {
+            $role->setSetup($data['setup']);
+        }
+
+        if (array_key_exists('image', $data)) {
+            $role->setImage($data['image']);
+        }
 
         if (
             array_key_exists('firstNight', $data)
@@ -632,6 +612,10 @@ class ImportCommand extends Command
 
         if (!empty($data['team'])) {
             $role->setTeam($this->getTeam(['id' => $data['team']], $locale));
+        }
+
+        if (isset($data['special']) && !empty($data['special'])) {
+            $role->setSpecial($data['special']);
         }
 
         if (

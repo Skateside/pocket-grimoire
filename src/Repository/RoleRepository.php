@@ -37,7 +37,8 @@ class RoleRepository extends ServiceEntityRepository
                 'reminders' => $role->getReminders(),
                 'setup' => $role->getSetup(),
                 'ability' => $role->getAbility(),
-                'image' => $role->getImage()
+                'image' => $role->getImage(),
+                'special' => $role->getSpecial()
             ];
 
             if ($edition = $role->getEdition()) {

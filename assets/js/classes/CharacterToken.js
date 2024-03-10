@@ -69,6 +69,7 @@ export default class CharacterToken extends Token {
             setup: false,
             ability: "",
             image: "",
+            special: null,
             ...data
         };
 

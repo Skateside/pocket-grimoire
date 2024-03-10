@@ -110,6 +110,11 @@ class Role
      */
     private $tricks;
 
+    /**
+     * @ORM\Column(name="special", type="json")
+     */
+    private $special = [];
+
     public function __construct()
     {
         $this->jinxes = new ArrayCollection();
@@ -485,6 +490,28 @@ class Role
     public function getTrickes(): Collection
     {
         return $this->tricks;
+    }
+
+    /**
+     * Sets the special rules for this role.
+     *
+     * @param  array $special
+     * @return self
+     */
+    public function setSpecial(array $special): self
+    {
+        $this->special = $special;
+        return $this;
+    }
+
+    /**
+     * Exposes the special rules.
+     *
+     * @return array
+     */
+    public function getSpecial(): ?array
+    {
+        return $this->special;
     }
 
 }

@@ -719,6 +719,12 @@
         "remindersGlobal": [
             "Drunk"
         ],
+        "special": [
+            {
+                "type": "selection",
+                "name": "bag-disabled"
+            }
+        ],
         "setup": true,
         "ability": "You do not know you are the Drunk. You think you are a Townsfolk character, but you are not.",
         "image": "/build/img/icons/outsider/drunk.png"
@@ -1687,6 +1693,12 @@
             "Is the Demon",
             "Dead"
         ],
+        "special": [
+            {
+                "type": "selection",
+                "name": "bag-disabled"
+            }
+        ],
         "setup": true,
         "ability": "Each night, Minions choose who babysits Lil' Monsta's token & \"is the Demon\". A player dies each night*. [+1 Minion]",
         "image": "/build/img/icons/demon/lilmonsta.png"
@@ -1768,6 +1780,12 @@
         "reminders": [],
         "remindersGlobal": [
             "Is the Marionette"
+        ],
+        "special": [
+            {
+                "type": "selection",
+                "name": "bag-disabled"
+            }
         ],
         "setup": true,
         "ability": "You think you are a good character but you are not. The Demon knows who you are. [You neighbour the Demon]",

@@ -91,3 +91,23 @@ export function striptags(string) {
 export function markdown2html(string) {
     return string.replace(/\*\*([^*]*)\*\*/g, "<strong>$1</strong>");
 }
+
+/**
+ * Replaces placeholders in the given string with the replacements provided.
+ *
+ * @param  {String} template
+ *         String with placeholders to replace.
+ * @param  {Array|Object} replacements
+ *         Replacements to populate the string.
+ * @return {String}
+ *         String with replacements.
+ */
+export function supplant(template, replacements) {
+
+    return template.replace(/\{([^{}]*)\}/g, (whole, index) => (
+        Object.prototype.hasOwnProperty.call(replacements, index)
+        ? replacements[index]
+        : whole
+    ));
+
+}
