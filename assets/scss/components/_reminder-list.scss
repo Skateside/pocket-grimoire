@@ -12,25 +12,3 @@
         }
     }
 }
-
-.reminder-list__checkbox:checked + .reminder-list__button {
-    position: relative;
-
-    &::before {
-        content: "✓";
-        position: absolute;
-        left: 50%;
-        top: 50%;
-        z-index: 1;
-        transform: translate(-50%, -50%);
-        font-size: 4em;
-        color: #fff;
-        text-shadow: 0 0 0.25em #000;
-    }
-
-    > .reminder {
-        transform: scale(0.9);
-        transform-origin: center;
-    }
-
-}

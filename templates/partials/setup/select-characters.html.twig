@@ -141,12 +141,14 @@
             </button>
         </div>
         <label class="js--character-select--label" for="">
-            <input type="checkbox" name="character" value="" class="sr-only character-select__input js--character-select--input">
-            <span class="character-select__part character-select__part--icon">
-                <img src="" alt="" width="177" height="124" aria-hidden="true" class="character-select__part character-select__part--image js--character-select--image" loading="lazy">
+            <span class="tick-select">
+                <input type="checkbox" name="character" value="" class="sr-only tick-select__checkbox character-select__input js--character-select--input">
+                <span class="tick-select__highlight character-select__image-wrapper">
+                    <img src="" alt="" width="177" height="124" aria-hidden="true" class="tick-select__icon character-select__image js--character-select--image" loading="lazy">
+                </span>
             </span>
-            <span class="character-select__part character-select__part--name js--character-select--name"></span>
-            <span class="character-select__part character-select__part--ability js--character-select--ability"></span>
+            <span class="character-select__name js--character-select--name"></span>
+            <span class="character-select__ability js--character-select--ability"></span>
         </label>
     </div>
 </template>

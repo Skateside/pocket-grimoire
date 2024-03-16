@@ -39,7 +39,7 @@
     }
 }
 
-.character-select__part--name {
+.character-select__name {
     display: block;
     font-size: 0.9em;
     font-weight: bold;
@@ -50,30 +50,12 @@
     }
 }
 
-.character-select__part--icon {
-    position: relative;
-
-    @at-root {
-        :checked ~ &::before {
-            content: "✓";
-            position: absolute;
-            left: 50%;
-            top: 50%;
-            z-index: 1;
-            transform: translate(-50%, -50%);
-            font-size: 4em;
-            color: #fff;
-            text-shadow: 0 0 0.25em #000;
-        }
-    }
-}
-
-.character-select__part--image {
+.character-select__image {
     aspect-ratio: 1/1;
     object-fit: contain;
 }
 
-.character-select__part--ability {
+.character-select__ability {
     display: block;
     font-size: 0.75em;
 
@@ -84,7 +66,7 @@
     }
 }
 
-:checked ~ .character-select__part--name {
+:checked ~ .character-select__name {
 
     &.is-setup,
     &.is-jinx {
