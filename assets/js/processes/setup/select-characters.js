@@ -389,9 +389,15 @@ lookupOne("#player-select").addEventListener("submit", (e) => {
 
             validationInput.setCustomValidity("");
 
+            const isShowAll = Boolean(e.submitter?.id === "player-select-all");
+
             gameObserver.trigger("character-draw", {
-                characters: filtered,
-                isShowAll: e.submitter?.id === "player-select-all"
+                isShowAll,
+                characters: (
+                    isShowAll
+                    ? shuffle(filtered)
+                    : filtered
+                )
             });
 
             Dialog.create(lookupOneCached("#character-select")).hide();
