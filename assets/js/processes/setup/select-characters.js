@@ -313,6 +313,8 @@ gameObserver.on("character-toggle", ({ detail }) => {
 
 });
 
+const validationInput = lookupOne("#player-select-validation");
+
 gameObserver.on("character-count-change", ({ detail }) => {
 
     const {
@@ -328,8 +330,10 @@ gameObserver.on("character-count-change", ({ detail }) => {
         return total + Number(input.value);
     }, 0);
 
+    validationInput.setCustomValidity("");
+
 });
-console.warn("Currently removing the Drunk won't allow the form to be submitted :-(");
+
 lookupOne("#player-select").addEventListener("submit", (e) => {
 
     e.preventDefault();
@@ -359,7 +363,6 @@ lookupOne("#player-select").addEventListener("submit", (e) => {
             })
             .flat();
 
-        const validation = lookupOneCached("#player-select-validation");
         const bagDisabled = filtered.filter((character) => {
 
             const special = character.getSpecial();
@@ -373,18 +376,18 @@ lookupOne("#player-select").addEventListener("submit", (e) => {
             );
 
         });
-console.log({ ids, filtered, bagDisabled });
+
         if (bagDisabled.length) {
 
-            validation.setCustomValidity(supplant(
+            validationInput.setCustomValidity(supplant(
                 window.I18N.bagDisabled,
                 [bagDisabled.map((character) => character.getName()).join(", ")]
             ));
-            validation.form.reportValidity();
+            validationInput.form.reportValidity();
 
         } else {
 
-            validation.setCustomValidity("");
+            validationInput.setCustomValidity("");
 
             gameObserver.trigger("character-draw", {
                 characters: filtered,
