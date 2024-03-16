@@ -39,16 +39,6 @@
     }
 }
 
-.character-select__part {
-    opacity: 0.6;
-
-    @at-root {
-        :checked ~ & {
-            opacity: 1;
-        }
-    }
-}
-
 .character-select__part--name {
     display: block;
     font-size: 0.9em;
@@ -57,6 +47,24 @@
 
     &:lang(de) {
         font-size: 0.7em;
+    }
+}
+
+.character-select__part--icon {
+    position: relative;
+
+    @at-root {
+        :checked ~ &::before {
+            content: "✓";
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            z-index: 1;
+            transform: translate(-50%, -50%);
+            font-size: 4em;
+            color: #fff;
+            text-shadow: 0 0 0.25em #000;
+        }
     }
 }
 
@@ -112,11 +120,6 @@
         right: 0;
     }
 
-}
-
-:checked ~ .character-select__part--image {
-    background-image: radial-gradient(rgb(255 255 255 / 60%), transparent 50%);
-    filter: drop-shadow(0 0 0.1em white);
 }
 
 .character-select__character {
