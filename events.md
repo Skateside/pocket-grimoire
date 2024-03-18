@@ -206,7 +206,6 @@ Fired when a character token is clicked. The event is passed the token element a
 
 Fired when a character is removed from the Grimoire pad.
 
-<!--
 #### `ghost-vote-toggle`
 
 - `detail.hasGhostVote` -> `Boolean`
@@ -214,7 +213,6 @@ Fired when a character is removed from the Grimoire pad.
 - `detail.character` -> `CharacterToken`
 
 Fired when a character's ghost vote status is toggled. By default a character does not have a ghost vote (because the character is alive) but gains one whenever they die (ghost votes are reset when a player is revived). The `hasGhostVote` will be true if the player has a ghost vote and false if it doesn't.
--->
 
 #### `move`
 
