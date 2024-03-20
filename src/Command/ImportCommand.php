@@ -299,7 +299,6 @@ class ImportCommand extends Command
 
             }
 
-            // $this->io->writeln('Updated night order');
             $this->io->write('Done!');
             $this->io->newLine();
 
@@ -392,7 +391,6 @@ class ImportCommand extends Command
             $role = $this->getRole($data, $locale);
             $listing[] = "Role '{$role->getIdentifier()}' found/created for locale {$locale}";
 
-            $role->setTranslatableLocale($locale);
             $this->updateRole($role, $data, $locale);
             $this->em->persist($role);
             $listing[] = "Role '{$role->getIdentifier()}' updated for locale {$locale}";
@@ -551,9 +549,7 @@ class ImportCommand extends Command
     {
 
         $role = new Role();
-        $role
-            ->setTranslatableLocale($locale)
-            ->setIdentifier($data['id']);
+        $role->setIdentifier($data['id']);
 
         return $this->updateRole($role, $data, $locale);
 
@@ -563,6 +559,7 @@ class ImportCommand extends Command
     {
 
         $role
+            ->setTranslatableLocale($locale)
             ->setName($data['name'])
             ->setAbility($data['ability']);
 
@@ -578,22 +575,22 @@ class ImportCommand extends Command
             array_key_exists('firstNight', $data)
             && $data['firstNight'] > 0
         ) {
+            $role->setFirstNight($data['firstNight']);
+        }
 
-            $role
-                ->setFirstNight($data['firstNight'])
-                ->setFirstNightReminder($data['firstNightReminder']);
-
+        if (array_key_exists('firstNightReminder', $data)) {
+            $role->setFirstNightReminder($data['firstNightReminder']);
         }
 
         if (
             array_key_exists('otherNight', $data)
             && $data['otherNight'] > 0
         ) {
+            $role->setOtherNight($data['otherNight']);
+        }
 
-            $role
-                ->setOtherNight($data['otherNight'])
-                ->setOtherNightReminder($data['otherNightReminder']);
-
+        if (array_key_exists('otherNightReminder', $data)) {
+            $role->setOtherNightReminder($data['otherNightReminder']);
         }
 
         if (
