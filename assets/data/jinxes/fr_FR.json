@@ -532,21 +532,21 @@
     {
         "target": "summoner",
         "trick": "clockmaker",
-        "reason": "Si l'invocateur est en jeu, l'horloger ne reçoit pas ses informations tant qu'un démon n'est pas créé."
+        "reason": "Si l'Invocateur est en jeu, l'Horloger ne reçoit son information que lorsque le Démon est créé."
     },
     {
         "target": "summoner",
         "trick": "alchemist",
-        "reason": "S'il y a un Alchimiste-Invocateur en jeu, la partie commence avec un Démon en jeu, comme d'habitude. Si l'alchimiste-invocateur choisit un joueur, il fait de ce joueur un démon mais ne modifie pas son alignement."
+        "reason": "Si l'Alchimiste a le pouvoir de l'Invocateur, la partie commence avec un Démon en jeu, comme d'habitude. Si l'Alchimiste choisit alors un joueur, ce dernier devient le Démon choisit mais ne change pas d'alignement."
     },
     {
         "target": "summoner",
         "trick": "poppygrower",
-        "reason": "Si le producteur de pavot est vivant lorsque l'invocateur agit, l'invocateur choisit quel démon, mais le conteur choisit quel joueur."
+        "reason": "Si le Cultivateur de Pavot est vivant au moment où l'Invocateur agit, ce dernier choisit le personnage du Démon, mais le joueur est choisi par le Conteur."
     },
     {
         "target": "summoner",
         "trick": "marionette",
-        "reason": "La Marionnette est voisine de l'Invocateur. L'invocateur sait qui est la marionnette."
+        "reason": "La Marionettte est assise à côté de l'Invocateur. L'Invocateur sait qui est la Marionette."
     }
 ]
