@@ -860,12 +860,12 @@
         "otherNightReminder": "Coloque o lembrete com o número do dia que irá amanhecer. Se ainda não anunciou que o Leviatã está em jogo, faça isso ao amanhcer, anunciando também o número correspondente ao dia.",
         "remindersGlobal": [],
         "reminders": [
-            "Bom Executado",
             "Dia 1",
             "Dia 2",
             "Dia 3",
             "Dia 4",
-            "Dia 5"
+            "Dia 5",
+            "Bom Executado"
         ]
     },
     {
@@ -1476,6 +1476,19 @@
         "remindersGlobal": [],
         "reminders": [
             "Imune"
+        ]
+    },
+    {
+        "id": "summoner",
+        "name": "Invocador",
+        "ability": "Você ganha 3 blefes. Na 3ª noite, escolha um jogador: ele se tornará um Demônio maligno de sua escolha. [Sem Demônio]",
+        "firstNightReminder": "Mostre a carta 'Esses personagens não estão em jogo'. Mostre 3 fichas de personagens bons que não estão em jogo.",
+        "otherNightReminder": "Se for a 3ª noite, acorde o Invocador. Eles apontam para um jogador e um Demônio na ficha de personagem – esse jogador se torna esse Demônio.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Noite 1",
+            "Noite 2",
+            "Noite 3"
         ]
     },
     {

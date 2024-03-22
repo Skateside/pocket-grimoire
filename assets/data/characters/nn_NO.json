@@ -1469,6 +1469,19 @@
         ]
     },
     {
+        "id": "summoner",
+        "name": "Innkaller",
+        "ability": "Du får 3 bløffer. På den tredje natten, velg en spiller: de blir en ond demon etter eget valg. [Ingen demon]",
+        "firstNightReminder": "Vis kortet \"Disse karakterene er ikke i spill\". Vis 3 karaktertegn av gode karakterer som ikke er i spill.",
+        "otherNightReminder": "Hvis det er den tredje natten, vekk tilkalleren. De peker på en spiller og en demon på karakterarket - den spilleren blir den demonen.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Natt 1",
+            "Natt 2",
+            "Natt 3"
+        ]
+    },
+    {
         "id": "sweetheart",
         "name": "Søtnos",
         "ability": "Når du døyr vert 1 spelar full.",

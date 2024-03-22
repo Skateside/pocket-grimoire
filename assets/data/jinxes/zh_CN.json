@@ -145,6 +145,11 @@
         "reason": "如果帽子匠死了而军团还在玩，则什么也不会发生。 如果帽匠死亡并且邪恶玩家选择军团，则所有当前邪恶玩家都会成为军团。"
     },
     {
+        "target": "legion",
+        "trick": "summoner",
+        "reason": "如果召唤师创建军团，则大多数玩家（包括所有邪恶玩家）都会成为邪恶军团。"
+    },
+    {
         "target": "fanggu",
         "trick": "scarletwoman",
         "reason": "如果方古成功转化了外来者并因此死去，红唇女郎不会变成方古。"
@@ -425,6 +430,11 @@
         "reason": "如果帽匠死了，暴乱就会开始比赛，并且暴乱会选择不同的恶魔，一个正常的邪恶队伍就会由暴乱玩家创建。 如果帽匠死了并且恶魔选择了暴乱，那么小兵也会变成暴乱。"
     },
     {
+        "target": "riot",
+        "trick": "summoner",
+        "reason": "如果召唤者制造了暴乱，则所选玩家和所有邪恶玩家都会成为暴乱。 被选中的玩家必须是召唤师的好邻居之一。"
+    },
+    {
         "target": "alhadikhia",
         "trick": "scarletwoman",
         "reason": "如果出现两名存活的哈迪寂亚，则红唇女郎变成的哈迪寂亚会变回红唇女郎。"
@@ -510,8 +520,33 @@
         "reason": "如果唱诗男孩在场，卡扎力在选择国王后无法将他变成爪牙。"
     },
     {
+        "target": "kazali",
+        "trick": "summoner",
+        "reason": "卡扎利人无法选择创建召唤师。"
+    },
+    {
         "target": "yaggababble",
         "trick": "exorcist",
         "reason": "如果驱魔人选中了牙噶巴卜，那么牙噶巴卜的能力在当晚无法造成死亡。"
+    },
+    {
+        "target": "summoner",
+        "trick": "clockmaker",
+        "reason": "如果召唤师在场，钟表匠在创建恶魔之前不会收到他们的信息。"
+    },
+    {
+        "target": "summoner",
+        "trick": "alchemist",
+        "reason": "如果场上有炼金术士-召唤师，则游戏开始时会像平常一样以恶魔在场。 如果炼金术士-召唤师选择了一名玩家，他们会将该玩家变成恶魔，但不会改变其阵营。"
+    },
+    {
+        "target": "summoner",
+        "trick": "poppygrower",
+        "reason": "如果召唤者行动时罂粟种植者还活着，则召唤者选择哪个恶魔，但故事讲述者选择哪个玩家。"
+    },
+    {
+        "target": "summoner",
+        "trick": "marionette",
+        "reason": "木偶与召唤师相邻。 召唤师知道木偶是谁。"
     }
 ]

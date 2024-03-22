@@ -1478,6 +1478,19 @@
         ]
     },
     {
+        "id": "summoner",
+        "name": "Invocador",
+        "ability": "Obtienes 3 faroles. En la tercera noche, elige un jugador: se convertirá en un demonio malvado de tu elección. [Sin demonio]",
+        "firstNightReminder": "Muestra la tarjeta 'Estos personajes no están en juego'. Muestra 3 fichas de personajes buenos que no estén en juego.",
+        "otherNightReminder": "Si es la tercera noche, despierta al Invocador. Señalan a un jugador y a un Demonio en la hoja de personaje; ese jugador se convierte en ese Demonio.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Noche 1",
+            "Noche 2",
+            "Noche 3"
+        ]
+    },
+    {
         "id": "sweetheart",
         "name": "Querida",
         "ability": "Cuando mueres, 1 jugador pasará a estar borracho.",

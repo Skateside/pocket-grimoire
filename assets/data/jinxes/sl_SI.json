@@ -145,6 +145,11 @@
         "reason": "Če Klobučar umre in je Legion v igri, se ne zgodi nič. Če Klobučar umre in zlobni igralec izbere Legion, vsi trenutni zlobni igralci postanejo Legion."
     },
     {
+        "target": "legion",
+        "trick": "summoner",
+        "reason": "Če Summoner ustvari Legion, večina igralcev (vključno z vsemi zlobnimi igralci) postane zlobna Legija."
+    },
+    {
         "target": "fanggu",
         "trick": "scarletwoman",
         "reason": "Če Fang Gu izbere Izobčenca in umre, Škrlatna dama ne postane Fang Gu."
@@ -425,6 +430,11 @@
         "reason": "Če Klobučar umre, je v igri Riot in Riot izbere drugega demona, se iz igralcev Riot ustvari običajna zlobna ekipa. Če Klobučar umre in Demon izbere Riot, postanejo tudi Minioni Riot."
     },
     {
+        "target": "riot",
+        "trick": "summoner",
+        "reason": "Če Summoner ustvari Riot, izbrani igralec in vsi zlobni igralci postanejo Riot. Izbrani igralec mora biti eden od živih dobrih sosedov Summonerja."
+    },
+    {
         "target": "alhadikhia",
         "trick": "scarletwoman",
         "reason": "Če kadarkoli živita 2 Al-Hadikhia, Škrlatna dama znova postane Škrlatna dama."
@@ -510,8 +520,33 @@
         "reason": "Kazali ne more izbrati kralja, da postane Sledilci, če je v igri zborovski deček."
     },
     {
+        "target": "kazali",
+        "trick": "summoner",
+        "reason": "Kazali se ne more odločiti za ustvarjanje Summonerja."
+    },
+    {
         "target": "yaggababble",
         "trick": "exorcist",
         "reason": "Če Izganjalec izbere Yaggababble, sposobnost Yaggababble nocoj ne ubija."
+    },
+    {
+        "target": "summoner",
+        "trick": "clockmaker",
+        "reason": "Če je Summoner v igri, Clockmaker ne prejme njegovih informacij, dokler ni ustvarjen demon."
+    },
+    {
+        "target": "summoner",
+        "trick": "alchemist",
+        "reason": "Če je v igri Alchemist-Summoner, se igra začne z Demonom v igri, kot običajno. Če Alchemist-Summoner izbere igralca, tega igralca naredi za demona, vendar ne spremeni svoje poravnave."
+    },
+    {
+        "target": "summoner",
+        "trick": "poppygrower",
+        "reason": "Če je pridelovalec maka živ, ko klicalec deluje, klicalec izbere, katerega demona, pripovedovalec pa izbere, katerega igralca."
+    },
+    {
+        "target": "summoner",
+        "trick": "marionette",
+        "reason": "Marioneta je soseda Summonerja. Summoner ve, kdo je marioneta."
     }
 ]

@@ -2740,6 +2740,24 @@
         "image": "/build/img/icons/fabled/stormcatcher.png"
     },
     {
+        "id": "summoner",
+        "name": "Summoner",
+        "edition": "",
+        "team": "minion",
+        "firstNight": 8,
+        "firstNightReminder": "Show the 'These characters are not in play' card. Show 3 character tokens of good characters not in play.",
+        "otherNight": 19,
+        "otherNightReminder": "If it is the 3rd night, wake the Summoner. They point to a player and a Demon on the character sheet - that player becomes that Demon.",
+        "reminders": [
+            "Night 1",
+            "Night 2",
+            "Night 3"
+        ],
+        "setup": true,
+        "ability": "You get 3 bluffs. On the 3rd night, choose a player: they become an evil Demon of your choice. [No Demon]",
+        "image": "/build/img/icons/minion/summoner.png"
+    },
+    {
         "id": "sweetheart",
         "name": "Sweetheart",
         "edition": "snv",

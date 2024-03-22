@@ -145,6 +145,11 @@
         "reason": "Nếu Hatter chết và Legion đang chơi thì sẽ không có gì xảy ra. Nếu Người làm mũ chết và một người chơi độc ác chọn Quân đoàn, tất cả những người chơi độc ác hiện tại sẽ trở thành Quân đoàn."
     },
     {
+        "target": "legion",
+        "trick": "summoner",
+        "reason": "Nếu Người triệu hồi tạo ra Quân đoàn, hầu hết người chơi (bao gồm tất cả những người chơi ác) đều trở thành Quân đoàn ác."
+    },
+    {
         "target": "fanggu",
         "trick": "scarletwoman",
         "reason": "Nếu Fang Gu chọn Lữ khách và chết, Phụ nữ đỏ chưa được trở thành Fang Gu."
@@ -425,6 +430,11 @@
         "reason": "Nếu Người làm mũ chết, Riot sẽ tham gia và Riot chọn một Ác quỷ khác, một đội ác bình thường được tạo ra từ những người chơi Riot. Nếu Người làm mũ chết và Ác quỷ chọn Riot, Minions cũng trở thành Riot."
     },
     {
+        "target": "riot",
+        "trick": "summoner",
+        "reason": "Nếu Người triệu hồi tạo ra Riot, người chơi được chọn và tất cả những người chơi xấu sẽ trở thành Riot. Người chơi được chọn phải là một trong những hàng xóm tốt của Người triệu hồi."
+    },
+    {
         "target": "alhadikhia",
         "trick": "scarletwoman",
         "reason": "Nếu có 2 Al-Hadikhia còn sống, Phụ nữ đỏ là Al-Hadikhia trở về thành Phụ nữ đỏ bình thường."
@@ -510,8 +520,33 @@
         "reason": "Kazali không được chọn Ông vua trở thành Tay sai nếu có Ca đoàn trong game."
     },
     {
+        "target": "kazali",
+        "trick": "summoner",
+        "reason": "Người Kazali không thể chọn tạo Người triệu hồi."
+    },
+    {
         "target": "yaggababble",
         "trick": "exorcist",
         "reason": "Nếu Thầy trừ tà chọn Yaggababble thì khả năng Yaggababble không giết người tối nay."
+    },
+    {
+        "target": "summoner",
+        "trick": "clockmaker",
+        "reason": "Nếu Người triệu hồi đang chơi, Người thợ đồng hồ sẽ không nhận được thông tin của họ cho đến khi Ác ma được tạo ra."
+    },
+    {
+        "target": "summoner",
+        "trick": "alchemist",
+        "reason": "Nếu có Nhà triệu hồi giả kim đang chơi, trò chơi sẽ bắt đầu với một Ác ma đang chơi như bình thường. Nếu Nhà triệu hồi giả kim chọn một người chơi, họ sẽ biến người chơi đó thành Ác quỷ nhưng không thay đổi sự liên kết của họ."
+    },
+    {
+        "target": "summoner",
+        "trick": "poppygrower",
+        "reason": "Nếu Người trồng thuốc phiện còn sống khi Người triệu hồi hành động, Người triệu hồi sẽ chọn Ác quỷ nào, nhưng Người kể chuyện sẽ chọn người chơi nào."
+    },
+    {
+        "target": "summoner",
+        "trick": "marionette",
+        "reason": "Con rối hàng xóm với Người triệu hồi. Người triệu hồi biết Con rối là ai."
     }
 ]

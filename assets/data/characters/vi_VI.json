@@ -1478,6 +1478,19 @@
         ]
     },
     {
+        "id": "summoner",
+        "name": "Người triệu hồi",
+        "ability": "Bạn nhận được 3 lần bluff. Vào đêm thứ 3, hãy chọn một người chơi: họ trở thành Ác quỷ độc ác mà bạn lựa chọn. [Không có quỷ]",
+        "firstNightReminder": "Hiển thị thẻ 'Những nhân vật này không có trong trò chơi'. Hiển thị 3 token ký tự của nhân vật tốt chưa chơi.",
+        "otherNightReminder": "Nếu là đêm thứ 3, hãy đánh thức Người triệu hồi. Họ chỉ vào một người chơi và một Ác ma trên bảng ký tự - người chơi đó trở thành Ác ma đó.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Đêm 1",
+            "Đêm 2",
+            "Đêm 3"
+        ]
+    },
+    {
         "id": "sweetheart",
         "name": "Con cưng",
         "ability": "Khi bạn chết, 1 người sẽ bắt đầu bị say.",

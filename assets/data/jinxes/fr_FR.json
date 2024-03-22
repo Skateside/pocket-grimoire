@@ -145,6 +145,11 @@
         "reason": "Si le Chapelier meurt et que la Légion est en jeu, rien ne se passe. Si le Chapelier meurt et qu'un joueur maléfique choisit Légion, tous les joueurs maléfiques actuels deviennent Légion."
     },
     {
+        "target": "legion",
+        "trick": "summoner",
+        "reason": "Si l'invocateur crée une Légion, la plupart des joueurs (y compris tous les joueurs maléfiques) deviennent une Légion maléfique."
+    },
+    {
         "target": "fanggu",
         "trick": "scarletwoman",
         "reason": "Si le Fang Gu choisit un Étranger puis meurt la même nuit, la Croqueuse d'Homme ne devient pas Fang Gu."
@@ -425,6 +430,11 @@
         "reason": "Si le Chapelier meurt, que les Emeutiers sont en jeu et que l'un d'entre eux choisit un Démon différent, une équipe maléfique normale est créée à partir des Emeutiers. Si le Chapelier meurt et que le Démon choisit Emeutier, les Sbires deviennent également des Emeutiers."
     },
     {
+        "target": "riot",
+        "trick": "summoner",
+        "reason": "Si l'invocateur crée Riot, le joueur choisi et tous les joueurs maléfiques deviennent Riot. Le joueur choisi doit être l'un des bons voisins de l'invocateur."
+    },
+    {
         "target": "alhadikhia",
         "trick": "scarletwoman",
         "reason": "S'il y a deux Al-Hadikhias vivants, la Croqueuse d'Homme Al-Hadikhia redevient la Croqueuse d'Homme."
@@ -510,8 +520,33 @@
         "reason": "Le Kazali ne peut pas choisir le Roi comme Sbire si l'Enfant de Chœur est en jeu."
     },
     {
+        "target": "kazali",
+        "trick": "summoner",
+        "reason": "Le Kazali ne peut pas choisir de créer un Invocateur."
+    },
+    {
         "target": "yaggababble",
         "trick": "exorcist",
         "reason": "Si l'Exorciste choisit le Yaggababble, la capacité Yaggababble ne tue pas ce soir."
+    },
+    {
+        "target": "summoner",
+        "trick": "clockmaker",
+        "reason": "Si l'invocateur est en jeu, l'horloger ne reçoit pas ses informations tant qu'un démon n'est pas créé."
+    },
+    {
+        "target": "summoner",
+        "trick": "alchemist",
+        "reason": "S'il y a un Alchimiste-Invocateur en jeu, la partie commence avec un Démon en jeu, comme d'habitude. Si l'alchimiste-invocateur choisit un joueur, il fait de ce joueur un démon mais ne modifie pas son alignement."
+    },
+    {
+        "target": "summoner",
+        "trick": "poppygrower",
+        "reason": "Si le producteur de pavot est vivant lorsque l'invocateur agit, l'invocateur choisit quel démon, mais le conteur choisit quel joueur."
+    },
+    {
+        "target": "summoner",
+        "trick": "marionette",
+        "reason": "La Marionnette est voisine de l'Invocateur. L'invocateur sait qui est la marionnette."
     }
 ]

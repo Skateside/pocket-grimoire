@@ -860,12 +860,12 @@
         "otherNightReminder": "Wechsle den Leviathan Tag reminder für den nächsten Tag.",
         "remindersGlobal": [],
         "reminders": [
-            "Guter Spieler exekutiert",
             "Tag 1",
             "Tag 2",
             "Tag 3",
             "Tag 4",
-            "Tag 5"
+            "Tag 5",
+            "Guter Spieler exekutiert"
         ]
     },
     {
@@ -1474,6 +1474,19 @@
         "remindersGlobal": [],
         "reminders": [
             "Safe"
+        ]
+    },
+    {
+        "id": "summoner",
+        "name": "Beschwörer",
+        "ability": "Du erhältst 3 Bluffs. Wählen Sie in der dritten Nacht einen Spieler aus: Er wird zu einem bösen Dämon Ihrer Wahl. [Kein Dämon]",
+        "firstNightReminder": "Zeigen Sie die Karte „Diese Charaktere sind nicht im Spiel“ vor. Zeige 3 Charaktermarker von guten Charakteren, die nicht im Spiel sind.",
+        "otherNightReminder": "Wenn es die 3. Nacht ist, wecke den Beschwörer. Sie zeigen auf dem Charakterbogen auf einen Spieler und einen Dämon – dieser Spieler wird zu diesem Dämon.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Nacht 1",
+            "Nacht 2",
+            "Nacht 3"
         ]
     },
     {

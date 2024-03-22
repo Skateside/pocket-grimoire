@@ -145,6 +145,11 @@
         "reason": "Si el Sombrerero muere y Legión está en juego, no ocurre nada. Si el Sombrerero muere y un jugador malo elige a Legión, todos los jugadores malos actuales se convierten en Legión."
     },
     {
+        "target": "legion",
+        "trick": "summoner",
+        "reason": "Si el Invocador crea Legión, la mayoría de los jugadores (incluidos todos los jugadores malvados) se convierten en Legión malvada."
+    },
+    {
         "target": "fanggu",
         "trick": "scarletwoman",
         "reason": "Si Fang Gu elige a un Forastero y muere, la Dama escarlata no se convierte en Fang Gu."
@@ -425,6 +430,11 @@
         "reason": "Si el Sombrerero muere, Riot está en juego y un Riot elige a otro Demonio, se crea un equipo normal de malos entre los Riot. Si un Demonio elige Riot, todos los Esbirros se convierten en Riot."
     },
     {
+        "target": "riot",
+        "trick": "summoner",
+        "reason": "Si el invocador crea Riot, el jugador elegido y todos los jugadores malvados se convierten en Riot. El jugador elegido debe ser uno de los buenos vecinos vivos del Invocador."
+    },
+    {
         "target": "alhadikhia",
         "trick": "scarletwoman",
         "reason": "Si hay 2 Al-Hadikhia vivos, la Mujer escarlata Al-Hadikhia se convierte otra vez en Mujer escarlata."
@@ -510,8 +520,33 @@
         "reason": "Kazali no puede elegir al Rey para convertirse en Esbirro si el Chico del coro está en juego."
     },
     {
+        "target": "kazali",
+        "trick": "summoner",
+        "reason": "El Kazali no puede optar por crear un Invocador."
+    },
+    {
         "target": "yaggababble",
         "trick": "exorcist",
         "reason": "Si el Exorcista elige Yaggababble, la habilidad Yaggababble no mata esta noche."
+    },
+    {
+        "target": "summoner",
+        "trick": "clockmaker",
+        "reason": "Si el Invocador está en juego, el Relojero no recibe su información hasta que se crea un Demonio."
+    },
+    {
+        "target": "summoner",
+        "trick": "alchemist",
+        "reason": "Si hay un Alquimista-Invocador en juego, el juego comienza con un Demonio en juego, como es normal. Si el Alquimista-Invocador elige un jugador, lo convierte en Demonio, pero no cambia su alineación."
+    },
+    {
+        "target": "summoner",
+        "trick": "poppygrower",
+        "reason": "Si el cultivador de amapolas está vivo cuando actúa el invocador, el invocador elige qué demonio, pero el narrador elige qué jugador."
+    },
+    {
+        "target": "summoner",
+        "trick": "marionette",
+        "reason": "La Marioneta es vecina del Invocador. El Invocador sabe quién es la Marioneta."
     }
 ]

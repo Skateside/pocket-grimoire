@@ -145,6 +145,11 @@
         "reason": "Wenn der Hutmacher stirbt und Legion im Spiel ist, passiert nichts. Wenn der Hutmacher stirbt und ein böser Spieler Legion wählt, werden alle aktuellen bösen Spieler zu Legion."
     },
     {
+        "target": "legion",
+        "trick": "summoner",
+        "reason": "Wenn der Beschwörer eine Legion erschafft, werden die meisten Spieler (einschließlich aller bösen Spieler) zur bösen Legion."
+    },
+    {
         "target": "fanggu",
         "trick": "scarletwoman",
         "reason": "Wenn der Fang Gu einen Außenseiter wählt und stirbt wird die Frau in Rot nicht zum Fang Gu."
@@ -425,6 +430,11 @@
         "reason": "Wenn der Hutmacher stirbt, Riot im Spiel ist und ein Riot einen anderen Dämon wählt, wird aus den Riot-Spielern ein normales böses Team erstellt. Wenn der Hutmacher stirbt und der Dämon sich für Riot entscheidet, werden auch Minions zu Riot."
     },
     {
+        "target": "riot",
+        "trick": "summoner",
+        "reason": "Wenn der Beschwörer Riot erzeugt, werden der ausgewählte Spieler und alle bösen Spieler zu Riot. Der ausgewählte Spieler muss einer der lebenden guten Nachbarn des Beschwörers sein."
+    },
+    {
         "target": "alhadikhia",
         "trick": "scarletwoman",
         "reason": "Wenn es zwei lebende Al-Hadikhias gibt, wird der \"Frau in Rot\" Al-Hadikhia wieder zu \"Frau in Rot\"."
@@ -510,8 +520,33 @@
         "reason": "Der Kazali kann den König nicht als Diener wählen, wenn ein Chorknabe im Spiel ist."
     },
     {
+        "target": "kazali",
+        "trick": "summoner",
+        "reason": "Der Kazali kann sich nicht dafür entscheiden, einen Beschwörer zu erschaffen."
+    },
+    {
         "target": "yaggababble",
         "trick": "exorcist",
         "reason": "Wenn der Exorzist Yaggababble wählt, tötet die Yaggababble-Fähigkeit heute Nacht nicht."
+    },
+    {
+        "target": "summoner",
+        "trick": "clockmaker",
+        "reason": "Wenn der Beschwörer im Spiel ist, erhält der Uhrmacher seine Informationen erst, wenn ein Dämon erschaffen wurde."
+    },
+    {
+        "target": "summoner",
+        "trick": "alchemist",
+        "reason": "Wenn ein Alchemist-Beschwörer im Spiel ist, beginnt das Spiel wie gewohnt mit einem Dämon im Spiel. Wenn der Alchemist-Beschwörer einen Spieler auswählt, macht er diesen Spieler zu einem Dämon, ändert aber nicht seine Ausrichtung."
+    },
+    {
+        "target": "summoner",
+        "trick": "poppygrower",
+        "reason": "Wenn der Mohnzüchter am Leben ist, wenn der Beschwörer handelt, wählt der Beschwörer, welchen Dämon er hat, aber der Geschichtenerzähler wählt, welchen Spieler er spielt."
+    },
+    {
+        "target": "summoner",
+        "trick": "marionette",
+        "reason": "Die Marionette ist die Nachbarin des Beschwörers. Der Beschwörer weiß, wer die Marionette ist."
     }
 ]

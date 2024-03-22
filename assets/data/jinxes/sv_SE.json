@@ -145,6 +145,11 @@
         "reason": "Om Hattmakaren dör och Legionen är i spel händer ingenting. Om Hattmakaren dör och en ond spelare väljer Legionen blir alla onda spelare till Legionen."
     },
     {
+        "target": "legion",
+        "trick": "summoner",
+        "reason": "Om Summoner skapar Legion blir de flesta spelare (inklusive alla onda spelare) evil Legion."
+    },
+    {
         "target": "fanggu",
         "trick": "scarletwoman",
         "reason": "Om Fang Gu väljer en Utböling och dör så blir Röda damen inte till Fang Gu."
@@ -425,6 +430,11 @@
         "reason": "Om Hattmakaren dör, Upproret är i spel och någon i Upproret väljer en annan Demon så blir alla i Upproret till ett vanligt ont lag. Om Hattmakaren dör och Demonen väljer Upproret så blir alla Hantlangare också till Upproret."
     },
     {
+        "target": "riot",
+        "trick": "summoner",
+        "reason": "Om Summoner skapar Riot, blir den valda spelaren och alla onda spelare Riot. Den valda spelaren måste vara en av Summonerns levande goda grannar."
+    },
+    {
         "target": "alhadikhia",
         "trick": "scarletwoman",
         "reason": "Om det finns två levande Al-Hadikhia så slutar Röda damen att vara Al-Hadikhia och blir Röda damen igen."
@@ -510,8 +520,33 @@
         "reason": "Kazali kan inte välja att Kungen ska bli Hantlangare om en Korgosse är i spel."
     },
     {
+        "target": "kazali",
+        "trick": "summoner",
+        "reason": "Kazali kan inte välja att skapa en Summoner."
+    },
+    {
         "target": "yaggababble",
         "trick": "exorcist",
         "reason": "Om Exorcisten väljer Yaggababble kan Yaggababbles förmåga inte döda någon inatt."
+    },
+    {
+        "target": "summoner",
+        "trick": "clockmaker",
+        "reason": "Om summonern är i spel, får klockmakaren inte sin information förrän en demon har skapats."
+    },
+    {
+        "target": "summoner",
+        "trick": "alchemist",
+        "reason": "Om det finns en Alchemist-Summoner i spel, börjar spelet med en Demon i spel, som vanligt. Om Alchemist-Summoner väljer en spelare, gör de den spelaren till en Demon men ändrar inte sin inriktning."
+    },
+    {
+        "target": "summoner",
+        "trick": "poppygrower",
+        "reason": "Om vallmoodlaren är vid liv när Kallaren agerar, väljer Kallaren vilken demon, men berättaren väljer vilken spelare."
+    },
+    {
+        "target": "summoner",
+        "trick": "marionette",
+        "reason": "Marionetten grannar Summonern. Kallaren vet vem Marionetten är."
     }
 ]

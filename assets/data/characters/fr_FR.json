@@ -861,12 +861,12 @@
         "otherNightReminder": "Est-ce que deux joueurs « bon » sont morts ou est-ce que le jeton « Jour 5 » du Léviathan est en place, l'équipe maléfique gagne immédiatement. Placez le prochain jeton « Jour n » suivant et annoncer : Le Léviathan est toujours parmi vous, c'est le jour n.",
         "remindersGlobal": [],
         "reminders": [
-            "Bon Exécuté",
             "Jour 1",
             "Jour 2",
             "Jour 3",
             "Jour 4",
-            "Jour 5"
+            "Jour 5",
+            "Bon Exécuté"
         ]
     },
     {
@@ -1480,6 +1480,19 @@
         "remindersGlobal": [],
         "reminders": [
             "Protégé"
+        ]
+    },
+    {
+        "id": "summoner",
+        "name": "Invocateur",
+        "ability": "Vous obtenez 3 bluffs. La 3ème nuit, choisissez un joueur : il devient un démon maléfique de votre choix. [Pas de démon]",
+        "firstNightReminder": "Montrez la carte « Ces personnages ne sont pas en jeu ». Montrez 3 jetons de personnage de bons personnages non en jeu.",
+        "otherNightReminder": "Si c'est la 3ème nuit, réveillez l'Invocateur. Ils désignent un joueur et un Démon sur la feuille de personnage – ce joueur devient ce Démon.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Nuit 1",
+            "Nuit 2",
+            "Nuit 3"
         ]
     },
     {

@@ -1478,6 +1478,19 @@
         ]
     },
     {
+        "id": "summoner",
+        "name": "Kallare",
+        "ability": "Du får 3 bluffar. Den 3:e natten väljer du en spelare: de blir en ond demon som du väljer. [Ingen demon]",
+        "firstNightReminder": "Visa kortet 'Dessa karaktärer är inte i spel'. Visa 3 tecken på bra karaktärer som inte spelas.",
+        "otherNightReminder": "Om det är den 3:e natten, väck Summoner. De pekar på en spelare och en demon på karaktärsbladet - den spelaren blir den där demonen.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Natt 1",
+            "Natt 2",
+            "Natt 3"
+        ]
+    },
+    {
         "id": "sweetheart",
         "name": "Kärestan",
         "ability": "Om du dör blir 1 spelare full.",

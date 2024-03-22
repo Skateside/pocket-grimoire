@@ -145,6 +145,11 @@
         "reason": "Se o Chapeleiro morrer e Legião estiver em jogo, nada acontece. Se o Chapeleiro morrer e um jogador do mal escolher Legião, todos os jogadores do mal atuais se tornarão Legião."
     },
     {
+        "target": "legion",
+        "trick": "summoner",
+        "reason": "Se o Invocador criar Legião, a maioria dos jogadores (incluindo todos os jogadores malignos) se tornarão Legião maligna."
+    },
+    {
         "target": "fanggu",
         "trick": "scarletwoman",
         "reason": "Se o Fang Gu escolhe um Forasteiro e morre, a Mulher Escarlate não se torna um Fang Gu."
@@ -425,6 +430,11 @@
         "reason": "Se o Chapeleiro morrer, Pandemônio estiver em jogo e um Pandemônio escolhe um Demônio diferente, um time do mal normal é criado dos jogadores Pandemônio. Se o Chapeleiro morrer e o Demônio escolher Pandemônio, Lacaios também se tornam Pandemônio."
     },
     {
+        "target": "riot",
+        "trick": "summoner",
+        "reason": "Se o Invocador criar Riot, o jogador escolhido e todos os jogadores malignos se tornarão Riot. O jogador escolhido deve ser um dos bons vizinhos vivos do Invocador."
+    },
+    {
         "target": "alhadikhia",
         "trick": "scarletwoman",
         "reason": "Se há dois Al-Hadikhia vivos, o Al-Hadikhia que antes era Mulher Escarlate se torna Mulher Escarlate novamente."
@@ -510,8 +520,33 @@
         "reason": "O Kazali não pode escolher o Rei para virar Lacaio se um Coroinha estiver em jogo."
     },
     {
+        "target": "kazali",
+        "trick": "summoner",
+        "reason": "O Kazali não pode escolher criar um Invocador."
+    },
+    {
         "target": "yaggababble",
         "trick": "exorcist",
         "reason": "Se o Exorcista escolher a Yaggamatraca, a habilidade da Yaggamatraca não mata esta noite."
+    },
+    {
+        "target": "summoner",
+        "trick": "clockmaker",
+        "reason": "Se o Invocador estiver em jogo, o Relojoeiro não receberá suas informações até que um Demônio seja criado."
+    },
+    {
+        "target": "summoner",
+        "trick": "alchemist",
+        "reason": "Se houver um Alquimista-Invocador em jogo, o jogo começa com um Demônio em jogo, normalmente. Se o Alquimista-Invocador escolher um jogador, ele tornará esse jogador um Demônio, mas não mudará seu alinhamento."
+    },
+    {
+        "target": "summoner",
+        "trick": "poppygrower",
+        "reason": "Se o Poppy Grower estiver vivo quando o Invocador agir, o Invocador escolhe qual Demônio, mas o Narrador escolhe qual jogador."
+    },
+    {
+        "target": "summoner",
+        "trick": "marionette",
+        "reason": "A Marionete é vizinha do Invocador. O Invocador sabe quem é a Marionete."
     }
 ]

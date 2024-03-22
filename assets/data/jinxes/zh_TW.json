@@ -145,6 +145,11 @@
         "reason": "如果帽子匠死了而軍團還在玩，則什麼事也不會發生。 如果帽匠死亡並且邪惡玩家選擇軍團，則所有當前邪惡玩家都會成為軍團。"
     },
     {
+        "target": "legion",
+        "trick": "summoner",
+        "reason": "如果召喚師創建軍團，則大多數玩家（包括所有邪惡玩家）都會成為邪惡軍團。"
+    },
+    {
         "target": "fanggu",
         "trick": "scarletwoman",
         "reason": "如果惡鬼選擇了城外人而死亡，則淫魔不會成為惡鬼。"
@@ -425,6 +430,11 @@
         "reason": "如果帽匠死了，暴動就會開始比賽，並且暴亂會選擇不同的惡魔，一個正常的邪惡隊伍就會由暴動玩家創建。 如果帽匠死了並且惡魔選擇了暴亂，那麼小兵也會變成暴亂。"
     },
     {
+        "target": "riot",
+        "trick": "summoner",
+        "reason": "如果召喚者製造了暴亂，則所選玩家和所有邪惡玩家都會成為暴亂。 被選中的玩家必須是召喚師的好鄰居之一。"
+    },
+    {
         "target": "alhadikhia",
         "trick": "scarletwoman",
         "reason": "如果有兩個活著的哈迪基亞，則淫魔變成的哈迪基亞再次變回淫魔。"
@@ -510,8 +520,33 @@
         "reason": "如果唱詩班男孩在場，卡扎利人不能選擇國王成為隨從。"
     },
     {
+        "target": "kazali",
+        "trick": "summoner",
+        "reason": "卡扎利人不能選擇創建召喚師。"
+    },
+    {
         "target": "yaggababble",
         "trick": "exorcist",
         "reason": "如果驅魔師選擇雅加巴布，那麼雅加巴布能力今晚就不會殺人。"
+    },
+    {
+        "target": "summoner",
+        "trick": "clockmaker",
+        "reason": "如果召喚師在場，鐘錶匠在創建惡魔之前不會收到他們的訊息。"
+    },
+    {
+        "target": "summoner",
+        "trick": "alchemist",
+        "reason": "如果場上有煉金術士-召喚師，則遊戲開始時會像平常一樣以惡魔在場。 如果鍊金術士-召喚師選擇了一名玩家，他們會將該玩家變成惡魔，但不會改變其陣營。"
+    },
+    {
+        "target": "summoner",
+        "trick": "poppygrower",
+        "reason": "如果召喚者行動時罌粟種植者還活著，則召喚者選擇哪個惡魔，但故事講述者選擇哪個玩家。"
+    },
+    {
+        "target": "summoner",
+        "trick": "marionette",
+        "reason": "木偶與召喚師相鄰。 召喚師知道木偶是誰。"
     }
 ]
