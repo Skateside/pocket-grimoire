@@ -9,18 +9,6 @@
     {% block body %}
     <form id="player-select">
 
-        {{ forms.range({
-            classes: 'mb-4',
-            label: 'setup.character_select.number_players'|trans,
-            name: 'player-count',
-            id: 'player-count',
-            output: 'player-count-output',
-            min: 5,
-            max: 15,
-            step: 1,
-            value: 7
-        }) }}
-
         <div class="breakdown">
             <table class="breakdown__table breakdown__table--highlighted" id="breakdown-table">
                 <caption class="sr-only">{{ 'sheet.breakdown'|trans }}</caption>
@@ -41,6 +29,18 @@
                 </tbody>
             </table>
         </div>
+
+        {{ forms.range({
+            classes: 'mb-4',
+            label: 'setup.character_select.number_players'|trans,
+            name: 'player-count',
+            id: 'player-count',
+            output: 'player-count-output',
+            min: 5,
+            max: 15,
+            step: 1,
+            value: 7
+        }) }}
 
         {{ forms.switch({
             node: 'div',
