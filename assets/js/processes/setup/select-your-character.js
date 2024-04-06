@@ -132,7 +132,10 @@ gameObserver.on("character-drawn", ({ detail }) => {
 });
 
 characterDecisionDialog.on(Dialog.SHOW, () => {
+
     playerName.value = playerName.defaultValue;
+    playerName.focus();
+
 });
 
 characterDecisionDialog.on(Dialog.HIDE, () => {
@@ -151,4 +154,9 @@ characterDecisionDialog.on(Dialog.HIDE, () => {
 
     character = null;
 
+});
+
+lookupOne("#character-decision-form").addEventListener("submit", (e) => {
+    e.preventDefault();
+    characterDecisionDialog.hide();
 });
