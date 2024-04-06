@@ -21,6 +21,27 @@
             value: 7
         }) }}
 
+        <div class="breakdown">
+            <table class="breakdown__table breakdown__table--highlighted" id="breakdown-table">
+                <caption class="sr-only">{{ 'sheet.breakdown'|trans }}</caption>
+                <tbody>
+                    {% for group, count in breakdown %}
+                        {% set isPlayers = loop.first %}
+                        <tr class="breakdown__row breakdown__row--{{ group }}">
+                            <th scope="row" class="breakdown__heading">{{ ('groups.' ~ group)|trans }}</th>
+                            {% for count in count %}
+                                {% if isPlayers %}
+                                    <th scope="col" class="breakdown__cell js--breakdown--cell" data-count="{{ count }}">{{ loop.last ? 'sheet.count_plus'|trans({ '%count%': count }) : count }}</th>
+                                {% else %}
+                                    <td class="breakdown__cell js--breakdown--cell">{{ count }}</td>
+                                {% endif %}
+                            {% endfor %}
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+
         {{ forms.switch({
             node: 'div',
             classes: 'mb-4',

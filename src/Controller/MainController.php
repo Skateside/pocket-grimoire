@@ -61,9 +61,14 @@ class MainController extends AbstractController
     /**
      * @Route("/{_locale}/", name="index")
      */
-    public function indexAction(): Response
-    {
-        return $this->render('pages/index.html.twig');
+    public function indexAction(
+        GameModel $gameModel
+    ): Response {
+
+        return $this->render('pages/index.html.twig', [
+            'breakdown' => $gameModel->getTransposedFeed(),
+        ]);
+
     }
 
     /**

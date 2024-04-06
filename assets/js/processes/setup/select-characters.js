@@ -7,7 +7,8 @@ import {
     lookupCached,
     lookupOneCached,
     replaceContentsMany,
-    announceInput
+    announceInput,
+    getIndex,
 } from "../../utils/elements.js";
 import {
     shuffle,
@@ -428,3 +429,30 @@ tokenObserver.on("toggle-jinx-active", ({ detail }) => {
     }
 
 });
+
+const breakdownTable = lookupOne("#breakdown-table");
+
+function highlightBreakdown(number) {
+
+    if (number > 15) {
+        number = 15;
+    }
+
+    number = String(number);
+
+    const index = lookupCached("[data-count]", breakdownTable)
+        .findIndex((cell) => cell.dataset.count === number);
+
+    lookup(".is-count", breakdownTable)
+        .forEach((cell) => cell.classList.remove("is-count"));
+
+    lookupCached("tbody>tr", breakdownTable).forEach((row) => {
+        lookupCached(".js--breakdown--cell", row)[index]?.classList.add("is-count");
+    });
+
+}
+
+lookupOneCached("#player-count").addEventListener("input", ({ target }) => {
+    highlightBreakdown(target.value);
+});
+highlightBreakdown(lookupOneCached("#player-count").value);

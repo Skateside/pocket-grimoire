@@ -30,6 +30,15 @@
             border-left-style: none;
             border-right-style: solid;
         }
+
+        .breakdown__table--highlighted & {
+            opacity: 0.7;
+        }
+    }
+
+    &.is-count {
+        background-color: #fff6;
+        opacity: 1;
     }
 }
 
