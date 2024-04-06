@@ -132,10 +132,7 @@ gameObserver.on("character-drawn", ({ detail }) => {
 });
 
 characterDecisionDialog.on(Dialog.SHOW, () => {
-
     playerName.value = playerName.defaultValue;
-    playerName.focus();
-
 });
 
 characterDecisionDialog.on(Dialog.HIDE, () => {
