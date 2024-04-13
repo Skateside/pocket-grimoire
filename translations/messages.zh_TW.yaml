@@ -14,14 +14,14 @@ index:
 
 sheet:
     title: 角色表
-    description: 用於這個版本中的血染鐘塔角色表
-    jinx: Jinx
+    description: 用於這個劇本中的血染鐘塔角色表
+    jinx: 特殊互動規則
     each_night: '* 除了第一晚之外的所有晚上'
     get_qr_code: 取得這張表格的 QR code
     get_sheet: 獲取此表
     credit: <a href="https://bloodontheclocktower.com/" target="_blank" rel="noopener noreferrer">Blood on the Clocktower</a> 是屬於 Steven Medway 和 <a href="https://www.thepandemoniuminstitute.com/" target="_blank" rel="noopener noreferrer">The Pandemonium Institute</a> 的商標。
-    breakdown: 每隊的人數為球員人數。
-    count_plus: "%count%+"
+    breakdown: 各類別的角色數量
+    count_plus: '%count%+'
 
 groups:
     players: 玩家
@@ -30,25 +30,25 @@ groups:
     minion: 僕從
     demon: 惡魔
     traveller: 旅行者
-    fabled: 傳奇
+    fabled: 傳奇角色
 
 messages:
     good_team: 好人隊伍
     evil_team: 邪惡隊伍
-    empty_character_ability: 這是一個空的角色。
+    empty_character_ability: 這是一個空的角色代幣。
     version_change_message: 這個應用程式的版本已經更新，由於您的資料可能不正確，我們建議您在「清除快取」對話窗中清除所有資料。點擊「OK」來開啟對話窗或點擊「Cancel」來關閉這則訊息。
-    invalid_script: 無法辨認此劇本格式。
-    no_characters: 無法從這個劇本辨認出任何角色。
+    invalid_script: 無法辨識此劇本格式。
+    no_characters: 無法從這個劇本辨識出任何角色。
     player_name: 這位玩家叫什麼名字?
-    custom_info_token: '你想在你的自定義提示卡上寫什麼? 使用**雙星號**以粗體標示。'
-    bag_disabled: '無法將這些字元加入套件中：{0}'
+    custom_info_token: 你想在你的自定義提示卡上寫什麼? 使用**雙星號**以粗體標示。
+    bag_disabled: 無法加入這些角色至角色池：{0}
 
 setup:
 
     title: 設置
 
     buttons:
-        select_edition: 選擇遊戲版本
+        select_edition: 選擇遊戲劇本
         select_characters: 選擇角色
         qr_code_button: 角色表
         clear_cache_button: 清除快取
@@ -56,16 +56,16 @@ setup:
         set_language: 設定語言
 
     editions:
-        title: 選擇遊戲版本
-        trouble_brewing: 麻煩之釀
-        bad_moon_rising: 惡月升起
-        sects_and_violets: 教派與紫羅蘭
+        title: 選擇遊戲劇本
+        trouble_brewing: 麻煩之釀/暗流湧動/Trouble Brewing
+        bad_moon_rising: 惡月升起/黯月初升/Bad Moon Rising
+        sects_and_violets: 教派與紫羅蘭/夢殞春宵/Sects and Violets
         custom_script: 自訂劇本
-        custom_note: 上傳一個自訂劇本或是輸入一個自訂劇本的網址。
+        custom_note: 請上傳自訂劇本、輸入劇本網址或直接貼上JSON格式代碼。
         custom_warning: 只從您信任的來源載入自訂.json檔案!
         upload: 上傳自訂劇本
         url: 輸入網址
-        paste: 從剪貼簿貼上
+        paste: 從剪貼版貼上
         unsupported: 請注意口袋魔典目前不支援自製或本地化劇本。
         select: 選擇
 
@@ -77,11 +77,11 @@ setup:
         highlight_random: 隨機選擇
         draw_characters: 抽取角色
         add_all: 全部添加
-        layout: 佈局
+        layout: 角色代幣佈局
         ellipse: 橢圓
         diagonal: 對角線
-        horizontal: 水平的
-        vertical: 垂直的
+        horizontal: 水平
+        vertical: 垂直
 
     character_choice:
         title: 選擇你的角色
@@ -97,32 +97,32 @@ setup:
         intro: 掃描 QR code 來查看角色表
         include: '包含：'
         travellers: 旅行者
-        fabled: 傳奇
+        fabled: 傳奇角色
 
     clear_cache:
         title: 清除快取
         clear_all: 清除所有資料
         clear_description: 若關閉此項，則可以選擇要清除快取的細項。
         lookup_label: 清除資料
-        lookup_note: 關於 Jinxes 及角色資訊的資料。
-        characters_label: 清除版本
-        characters_note: 已選擇並載入的遊戲版本或劇本。
+        lookup_note: 關於特殊互動規則及角色資訊的資料。
+        characters_label: 清除遊戲劇本
+        characters_note: 已選擇並載入的遊戲劇本。
         tokens_label: 清除代幣
         tokens_note: 所有代幣在魔典內的位置。
         inputs_label: 清除使用者輸入
         inputs_note: 使用者對此網站的設定。
-        details_label: 清除開閉
+        details_label: 清除介面開閉
         details_note: 展開或收合的區塊。
         info_tokens_label: 清除自定義提示卡
         info_tokens_note: 已添加的自定義提示卡。
-        names_label: 清楚的名字
+        names_label: 清除玩家名稱
         names_note: 玩家命名建議。
-        height_label: 清除寬度
-        height_note: 魔典的寬度
+        height_label: 清除魔典高度
+        height_note: 魔典的高度。
         clear_refresh_label: 清除後刷新
         clear_refresh_note: 刷新將為清除的內容載入新資料。
-        warning: '<strong>警告：任何已放置在魔典內的代幣將會被移除。</strong>'
-        info_token_warning: <strong>警告：任何自定義提示卡都將會被移除。</strong>'
+        warning: '<strong>警告：任何已放置在魔典內的代幣都將會被移除。</strong>'
+        info_token_warning: '<strong>警告：任何自定義提示卡都將會被移除。</strong>'
         clear_cache: 清除快取
 
 grimoire:
@@ -131,18 +131,18 @@ grimoire:
 
     grimoire:
         bluffs: 惡魔偽裝
-        show_bluffs: 顯示所有詐唬
-        add_bluffs: 添加虛張聲勢
+        show_bluffs: 顯示所有偽裝給惡魔
+        add_bluffs: 添加另一組偽裝
         add_token: 添加角色代幣
         add_reminder: 添加標記
         add_traveller: 添加旅行者
-        add_fabled: 添加傳奇
+        add_fabled: 添加傳奇角色
         show_tokens: 展示角色代幣
-        reset_height: 重置寬度
+        reset_height: 重置高度
         clear_grimoire: 清除魔典
         clear_grimoire_warning: 確定要清除所有代幣及標記嗎?
         show_night_order: 顯示夜晚行動順序
-        character_size: 字符標記大小
+        character_size: 角色代幣大小
         reminder_size: 提醒標記大小
         token_settings: 標記設置
 
@@ -152,7 +152,7 @@ grimoire:
     reminder_list:
         title: 選擇標記
         show: 顯示所有標記
-        multiple: 多個添加
+        multiple: 添加多個標記
         add_all: 全部添加
 
     character_show:
@@ -160,12 +160,12 @@ grimoire:
         show: 展示
         shroud: 死亡標記
         rotate: 轉向
-        reminder: 標記
-        replace: 代替
+        reminder: 添加標記
+        replace: 更換角色代幣
         remove: 移除角色代幣
         recent_reminders: '最近新增的標記：'
         player_name: 設置玩家姓名
-        ghost_vote: 幽靈投票
+        ghost_vote: 移除投票標記
 
     reminder_show:
         title: 標記
@@ -175,12 +175,12 @@ grimoire:
         title: 角色代幣
         empty: 空
         show: 展示
-        change: 替換
+        change: 更換角色代幣
 
     bluff_list:
         title: 選擇偽裝
-        show_existing: 顯示存在的角色
-        show_travellers: 顯示旅行者
+        show_existing: 顯示在遊戲中的角色
+        show_travellers: 顯示旅行者角色
         show_evil: 顯示邪惡的角色
 
     token_list:
@@ -192,23 +192,23 @@ grimoire:
         show_all: 顯示所有旅行者
 
     fabled_list:
-        title: 傳奇
+        title: 傳奇角色
 
     token:
         title: 角色代幣
 
 jinxes:
-    title: Jinxes
+    title: 特殊互動規則
     target: 角色1
     trick: 角色2
-    reason: 內容
-    show: 顯示不在遊戲中的 Jinxes
+    reason: 規則
+    show: 顯示不在遊戲中角色的特殊互動規則
 
 night_order:
     title: 夜晚順序
     first_night: 第一晚
     other_night: 其他夜晚
-    swipe_change: 滑動來變換夜晚
+    swipe_change: 滑動來切換第一晚/其他夜晚
     show: 顯示不在遊戲中的角色
 
 info_tokens:
@@ -230,8 +230,8 @@ info_tokens:
 notes:
     title: 說書人筆記
     label: 筆記
-    clear: 清晰的筆記
-    clear_warning: 您確定要清除筆記嗎？
+    clear: 清除筆記
+    clear_warning: 確定要清除筆記嗎?
 
 acknowledgements:
     title: 致謝
@@ -246,9 +246,9 @@ acknowledgements:
 
 errors:
     homebrew_json:
-        not_homebrew: 不是自製條目“%id%”
-        unrecognised_team: 無法辨識的團隊“%team%”
-        not_find_id: 找不到 ID“%id%”
-        not_recognise_character: 無法辨識字元“%id%”
-        invalid_entry: “%id%”輸入無效：%reasons%
-        empty_teams: 空隊：%teams%
+        not_homebrew: 輸入非自訂劇本："%id%"
+        unrecognised_team: 無法辨識陣營："%team%"
+        not_find_id: 找不到ID："%id%"
+        not_recognise_character: 無法辨識角色："%id%"
+        invalid_entry: '無效輸入："%id%": %reasons%'
+        empty_teams: 隊伍為空：%teams%

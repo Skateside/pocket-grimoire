@@ -23,10 +23,10 @@
     },
     {
         "id": "alhadikhia",
-        "name": "al-Hadikhia",
+        "name": "al Hadikhia",
         "ability": "Välj 3 spelare varje natt* (alla spelare vet vilka du valt); de väljer tyst att leva eller dö. Om alla lever dör alla tre.",
         "firstNightReminder": "",
-        "otherNightReminder": "al-Hadikhia väljer 3 spelare. Tillkännage och väck den första spelaren; hen nickar för att leva eller skakar på huvudet för att dö; markera hen som död eller återupplivad; spelaren somnar. Upprepa för de två andra spelarna. Om alla 3 lever efter detta dör alla 3.",
+        "otherNightReminder": "al Hadikhia väljer 3 spelare. Tillkännage och väck den första spelaren; hen nickar för att leva eller skakar på huvudet för att dö; markera hen som död eller återupplivad; spelaren somnar. Upprepa för de två andra spelarna. Om alla 3 lever efter detta dör alla 3.",
         "remindersGlobal": [],
         "reminders": [
             "1",
@@ -203,7 +203,7 @@
     {
         "id": "bountyhunter",
         "name": "Prisjägaren",
-        "ability": "Du vet om 1 ond spelare från början. Om den spelaren dör får du veta en annan ond spelare samma natt. [1 Bybo är ond]",
+        "ability": "Du vet om 1 ond spelare från början. Om hen dör får du veta en annan ond spelare samma natt. [1 Bybo är ond]",
         "firstNightReminder": "Peka på 1 ond spelare. Väck den onda Bybon och visa kortet ”Du är” följt av tummen ner för ond.",
         "otherNightReminder": "Om den avslöjade onda spelaren har dött, peka på en annan ond spelare.",
         "remindersGlobal": [],
@@ -254,7 +254,7 @@
     {
         "id": "cannibal",
         "name": "Kannibalen",
-        "ability": "Du tar över förmågan från den som sist avrättades och dog. Om hen är ond blir du förgiftad tills en god spelare avrättas och dör.",
+        "ability": "Du har förmågan från den som sist dog av avrättning. Om hen är ond är du förgiftad tills en god spelare dör av avrättning.",
         "firstNightReminder": "",
         "otherNightReminder": "",
         "remindersGlobal": [],
@@ -447,13 +447,13 @@
     },
     {
         "id": "eviltwin",
-        "name": "Dubbelgångaren",
-        "ability": "Du och en motspelare känner till varandra. Om den goda spelaren avrättas vinner de onda. De goda kan inte vinna om båda lever.",
-        "firstNightReminder": "Väck Dubbelgångaren och den andra spelaren. Bekräfta att de har sett varandra. Peka på Dubbelgångaren och visa hens rollbricka för den andra spelaren. Peka på den andra spelaren och visa hens roll för Dubbelgångaren.",
+        "name": "Onda tvillingen",
+        "ability": "Du och en motspelare vet om varandra. Om den goda avrättas vinner de onda. De goda kan inte vinna om båda lever.",
+        "firstNightReminder": "Väck Onda tvillingen och den andra spelaren. Bekräfta att de har sett varandra. Peka på Onda tvillingen och visa hens rollbricka för den andra spelaren. Peka på den andra spelaren och visa hens roll för Onda tvillingen.",
         "otherNightReminder": "",
         "remindersGlobal": [],
         "reminders": [
-            "Dubbelgångare"
+            "Tvilling"
         ]
     },
     {
@@ -501,7 +501,7 @@
     },
     {
         "id": "fibbin",
-        "name": "Hittepåaren",
+        "name": "Lögnaren",
         "ability": "En gång per spel kanske 1 god spelare får falsk info.",
         "firstNightReminder": "",
         "otherNightReminder": "",
@@ -555,10 +555,10 @@
     },
     {
         "id": "fortuneteller",
-        "name": "Sierskan",
+        "name": "Spådamen",
         "ability": "Välj två spelare varje natt; du får veta om någon av dem är Demon. 1 god spelare registreras som Demon för dig.",
-        "firstNightReminder": "Sierskan pekar på två spelare. Nicka om någon av dem är Demonen, och skaka annars på huvudet.",
-        "otherNightReminder": "Sierskan pekar på två spelare. Nicka om någon av dem är Demonen, och skaka annars på huvudet.",
+        "firstNightReminder": "Spådamen pekar på två spelare. Nicka om någon av dem är Demonen, och skaka annars på huvudet.",
+        "otherNightReminder": "Spådamen pekar på två spelare. Nicka om någon av dem är Demonen, och skaka annars på huvudet.",
         "remindersGlobal": [],
         "reminders": [
             "Falsklarm"
@@ -1388,9 +1388,9 @@
     },
     {
         "id": "shugenja",
-        "name": "Shugenja",
+        "name": "Shugenjan",
         "ability": "Du vet från början om den närmsta onda spelaren är medurs eller moturs från dig. Om det är lika blir svaret godtyckligt.",
-        "firstNightReminder": "Väck Shugenja och peka horisontellt åt det håll där den närmaste onda spelaren sitter. Om de två närmaste onda spelarna är lika långt borta så peka åt valfritt av de två hållen.",
+        "firstNightReminder": "Väck Shugenjan och peka horisontellt åt det håll där den närmaste onda spelaren sitter. Om de två närmaste onda spelarna är lika långt borta så peka åt valfritt av de två hållen.",
         "otherNightReminder": "",
         "remindersGlobal": [],
         "reminders": []
@@ -1419,7 +1419,7 @@
     },
     {
         "id": "snitch",
-        "name": "Tjallaren",
+        "name": "Golaren",
         "ability": "Hantlangare vet från början 3 roller som inte är i spel.",
         "firstNightReminder": "Efter att Hantlangarna fått sin första information, väck varje Hantlangare för sig och visa tre rollbrickor för roller som inte är i spel. Hantlangarna kan se samma brickor som varandra eller Demonen, eller olika.",
         "otherNightReminder": "",
@@ -1457,7 +1457,7 @@
     },
     {
         "id": "steward",
-        "name": "Uppassaren",
+        "name": "Kammartjänaren",
         "ability": "Du vet från början 1 god spelare.",
         "firstNightReminder": "Peka på 1 god spelare.",
         "otherNightReminder": "",
@@ -1549,8 +1549,8 @@
     {
         "id": "toymaker",
         "name": "Leksaksmakaren",
-        "ability": "Demonen kan välja att inte attackera, och måste välja detta minst en gång per spel. Onda spelare får vanlig startinfo.",
-        "firstNightReminder": "",
+        "ability": "Demonen kan välja att inte attackera, och måste välja detta minst en gång per spel. De onda får vanlig startinfo.",
+        "firstNightReminder": "Väck Hantlangarna och visa Demonen, och väck Demonen och visa Hantlangarna samt tre roller som inte är i spel, även om det är färre än 7 spelare.",
         "otherNightReminder": "Om Demonens attack skulle avsluta spelet inatt och Demonen inte är märkt med brickan ”Ingen attack” så får Demonen inte vakna och agera inatt.",
         "remindersGlobal": [],
         "reminders": [
@@ -1670,10 +1670,10 @@
     },
     {
         "id": "yaggababble",
-        "name": "Yaggababble",
+        "name": "Yaggababbel",
         "ability": "Du vet en hemlig fras från början. För varje gång du sagt den öppet under dagen kan en spelare dö.",
-        "firstNightReminder": "Visa Yaggababble den hemliga frasen.",
-        "otherNightReminder": "Välj högst så många spelare som antalet gånger Yaggababble öppet sa sin fras. De valda spelarna dör.",
+        "firstNightReminder": "Visa Yaggababbel den hemliga frasen.",
+        "otherNightReminder": "Välj högst så många spelare som antalet gånger Yaggababbel öppet sa sin fras. De valda spelarna dör.",
         "remindersGlobal": [],
         "reminders": [
             "Död"
