@@ -7,29 +7,18 @@
 .night-order__item {
     padding: 0.5em 0;
     margin: 0;
-    opacity: 0.6;
-    display: none;
-
-    &.is-playing {
-        opacity: 1;
-        display: block;
-
-        @at-root {
-            & ~ & {
-                border-top: 1px solid rgb(255 255 255 / 60%);
-            }
-        }
-    }
 
     @at-root {
-        .is-show-all > & {
-            display: block;
-
-        }
-        .is-show-all > & + & {
+        & ~ & {
             border-top: 1px solid rgb(255 255 255 / 60%);
         }
     }
+
+    &:not(.is-in-play),
+    &.is-dead {
+        opacity: 0.6;
+    }
+
 }
 
 .night-order__heading {

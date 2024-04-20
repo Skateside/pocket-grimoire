@@ -23,6 +23,12 @@
     <p><small>{{ 'night_order.swipe_change'|trans }}</small></p>
     {{ forms.switch({
         node: 'p',
+        label: 'Show dead characters',
+        name: 'show-dead',
+        id: 'show-dead'
+    }) }}
+    {{ forms.switch({
+        node: 'p',
         label: 'night_order.show'|trans,
         name: 'show-all',
         id: 'show-all'

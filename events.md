@@ -152,7 +152,13 @@ Jinxes have been set. An array of all ready jinxes are passed to the event.
 
 - `detail.showAll` -> `Boolean`
 
-True if the user would prefer to see the whole night order, not just the characters in play, false otherwise.
+True if the user would prefer to see the night order including characters that are not in play, false otherwise.
+
+#### `night-order-show-dead`
+
+- `detail.showDead` -> `Boolean`
+
+True if the user would prefer to see the night order including characters that are dead, false otherwise.
 
 #### `pad-height-change`
 
