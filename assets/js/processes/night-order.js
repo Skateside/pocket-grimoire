@@ -10,12 +10,6 @@ import {
 const gameObserver = Observer.create("game");
 const tokenObserver = Observer.create("token");
 const nightOrder = new NightOrder();
-// nightOrder.redraw = () => {
-
-//     empty(lookupOneCached("#first-night")).append(nightOrder.drawNightOrder(true));
-//     empty(lookupOneCached("#other-nights")).append(nightOrder.drawNightOrder(false));
-
-// };
 
 gameObserver.on("characters-selected", ({ detail }) => {
 
