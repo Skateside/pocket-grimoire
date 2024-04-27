@@ -45,6 +45,22 @@ gameObserver.on("character-draw", ({ detail }) => {
 
 gameObserver.on("character-draw", ({ detail }) => {
 
+    const grimoireSection = lookupOneCached("#grimoire");
+
+    if (!grimoireSection.open) {
+
+        grimoireSection.open = true;
+        gameObserver.trigger("pad-height-change", {
+            height: window
+                .getComputedStyle(
+                    lookupOneCached(".js--pad", grimoireSection),
+                    null
+                )
+                .getPropertyValue("height")
+        });
+
+    }
+
     if (!detail.isShowAll) {
         return;
     }
@@ -59,8 +75,6 @@ gameObserver.on("character-draw", ({ detail }) => {
             });
 
         });
-
-        lookupOneCached("#grimoire").open = true;
 
     });
 
