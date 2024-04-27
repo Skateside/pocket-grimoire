@@ -95,6 +95,11 @@
         "reason": "Nach Tag 5 kann sich die Pit-Hag nicht mehr für Leviathan entscheiden."
     },
     {
+        "target": "leviathan",
+        "trick": "banshee",
+        "reason": "Wenn Leviathan im Spiel ist und die Banshee durch Hinrichtung stirbt, erfahren alle Spieler, dass die Banshee gestorben ist und die Banshee erhält ihre Fähigkeit."
+    },
+    {
         "target": "lilmonsta",
         "trick": "poppygrower",
         "reason": "If the Poppy Grower is in play, Minions don't wake together. They are woken one by one, until one of them chooses to take the Lil' Monsta token."
@@ -435,6 +440,11 @@
         "reason": "Wenn der Beschwörer Riot erzeugt, werden der ausgewählte Spieler und alle bösen Spieler zu Riot. Der ausgewählte Spieler muss einer der lebenden guten Nachbarn des Beschwörers sein."
     },
     {
+        "target": "riot",
+        "trick": "banshee",
+        "reason": "Wenn Riot die Banshee nominiert und tötet, erfahren alle Spieler, dass die Banshee gestorben ist, und die Banshee kann sofort zwei Spieler nominieren."
+    },
+    {
         "target": "alhadikhia",
         "trick": "scarletwoman",
         "reason": "Wenn es zwei lebende Al-Hadikhias gibt, wird der \"Frau in Rot\" Al-Hadikhia wieder zu \"Frau in Rot\"."
@@ -548,5 +558,10 @@
         "target": "summoner",
         "trick": "marionette",
         "reason": "Die Marionette ist die Nachbarin des Beschwörers. Der Beschwörer weiß, wer die Marionette ist."
+    },
+    {
+        "target": "vortox",
+        "trick": "banshee",
+        "reason": "Wenn der Vortox im Spiel ist und der Dämon die Banshee tötet, erfahren die Spieler trotzdem, dass die Banshee gestorben ist."
     }
 ]

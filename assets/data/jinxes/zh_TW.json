@@ -95,6 +95,11 @@
         "reason": "第五天之後，魔女不能選擇利維坦。"
     },
     {
+        "target": "leviathan",
+        "trick": "banshee",
+        "reason": "如果利維坦在場，而女妖被處決而死亡，所有玩家都會知道女妖已經死亡，而女妖獲得了他們的能力。"
+    },
+    {
         "target": "lilmonsta",
         "trick": "poppygrower",
         "reason": "如果罌粟農在遊戲中，則僕從們不會同時醒來，而是被依序喚醒，直到其中一位選擇拿取莉萌絲塔的角色代幣。"
@@ -435,6 +440,11 @@
         "reason": "如果召喚師產生了暴徒，被選擇的玩家及所有邪惡玩家變成暴徒。召喚師必須選擇自己的存活好人鄰居。"
     },
     {
+        "target": "riot",
+        "trick": "banshee",
+        "reason": "如果暴徒提名並殺死女妖，所有玩家都會得知女妖已死亡，而女妖可能會立即提名兩名玩家。"
+    },
+    {
         "target": "alhadikhia",
         "trick": "scarletwoman",
         "reason": "如果有兩個活著的哈迪基亞，則淫魔變成的哈迪基亞再次變回淫魔。"
@@ -548,5 +558,10 @@
         "target": "summoner",
         "trick": "marionette",
         "reason": "傀儡坐在召喚師旁邊。召喚師知道誰是傀儡。"
+    },
+    {
+        "target": "vortox",
+        "trick": "banshee",
+        "reason": "如果漩渦正在發揮作用並且惡魔殺死了女妖，玩家仍然會得知女妖已經死亡。"
     }
 ]

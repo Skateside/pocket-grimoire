@@ -95,6 +95,11 @@
         "reason": "Po 5. dnevu Pit-Hag ne more izbrati Levijatana."
     },
     {
+        "target": "leviathan",
+        "trick": "banshee",
+        "reason": "Če je Leviathan v igri in Banshee umre zaradi usmrtitve, vsi igralci izvedo, da je Banshee umrl, in Banshee pridobi svojo sposobnost."
+    },
+    {
         "target": "lilmonsta",
         "trick": "poppygrower",
         "reason": "Če je Sejalka v igri, se Sledilci ne zbudijo skupaj, ampak vsak posebej, dokler še eden od njih ne odloči, da bo varuška Pošastku."
@@ -435,6 +440,11 @@
         "reason": "Če Summoner ustvari Riot, izbrani igralec in vsi zlobni igralci postanejo Riot. Izbrani igralec mora biti eden od živih dobrih sosedov Summonerja."
     },
     {
+        "target": "riot",
+        "trick": "banshee",
+        "reason": "Če Riot nominira in ubije Bansheeja, vsi igralci izvedo, da je Banshee umrl, Banshee pa lahko takoj imenuje dva igralca."
+    },
+    {
         "target": "alhadikhia",
         "trick": "scarletwoman",
         "reason": "Če kadarkoli živita 2 Al-Hadikhia, Škrlatna dama znova postane Škrlatna dama."
@@ -548,5 +558,10 @@
         "target": "summoner",
         "trick": "marionette",
         "reason": "Marioneta je soseda Summonerja. Summoner ve, kdo je marioneta."
+    },
+    {
+        "target": "vortox",
+        "trick": "banshee",
+        "reason": "Če je Vortox v igri in Demon ubije Banshee, igralci še vedno izvedo, da je Banshee umrl."
     }
 ]

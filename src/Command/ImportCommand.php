@@ -181,7 +181,7 @@ class ImportCommand extends Command
             $targetRole = $this->roleRepo->findOneBy(['name' => $target['id']]);
 
             if (is_null($targetRole)) {
-                $this->io->writeln("Unable to find role '{$target['id']}'");
+                $this->io->writeln("Jinx: unable to find target role '{$target['id']}'");
                 continue;
             }
 
@@ -190,7 +190,7 @@ class ImportCommand extends Command
                 $trickRole = $this->roleRepo->findOneBy(['name' => $trick['id']]);
 
                 if (is_null($trickRole)) {
-                    $this->io->writeln("Unable to find role '{$trick['id']}'");
+                    $this->io->writeln("Jinx: unable to find trick role '{$trick['id']}'");
                     continue;
                 }
 

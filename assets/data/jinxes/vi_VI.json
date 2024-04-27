@@ -95,6 +95,11 @@
         "reason": "Sau ngày thứ 5, Pit-Hag không thể chọn Leviathan."
     },
     {
+        "target": "leviathan",
+        "trick": "banshee",
+        "reason": "Nếu có Leviathan trong game và báo tử chết vì hành quyết, tất cả người chơi được thông báo rằng Quỷ báo tử đã chết và Quỷ báo tử nhận chức năng."
+    },
+    {
         "target": "lilmonsta",
         "trick": "poppygrower",
         "reason": "Nếu có Người trồng hoa trong cuộc, Tay sai không dậy cùng nhau. Họ được gọi dậy lần lượt, cho đến khi một người chấp nhận trông non Lil' Monsta."
@@ -435,6 +440,11 @@
         "reason": "Nếu Người triệu hồi tạo ra Riot, người chơi được chọn và tất cả những người chơi xấu sẽ trở thành Riot. Người chơi được chọn phải là một trong những hàng xóm tốt của Người triệu hồi."
     },
     {
+        "target": "riot",
+        "trick": "banshee",
+        "reason": "Nếu Nổi loạn biểu quyết Quỷ báo tử, tất cả người chơi được biết Quỷ báo tử đã chết, và Quỷ báo tử được biểu quyết 2 lần ngay lập tức."
+    },
+    {
         "target": "alhadikhia",
         "trick": "scarletwoman",
         "reason": "Nếu có 2 Al-Hadikhia còn sống, Phụ nữ đỏ là Al-Hadikhia trở về thành Phụ nữ đỏ bình thường."
@@ -548,5 +558,10 @@
         "target": "summoner",
         "trick": "marionette",
         "reason": "Con rối hàng xóm với Người triệu hồi. Người triệu hồi biết Con rối là ai."
+    },
+    {
+        "target": "vortox",
+        "trick": "banshee",
+        "reason": "Nếu có Vortox trong game và Quỷ giết Quỷ báo tử, người chơi vẫn được thông báo là Quỷ báo tử đã chết."
     }
 ]

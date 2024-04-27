@@ -95,6 +95,11 @@
         "reason": "在第五个白天之后，麻脸巫婆无法创造利维坦。"
     },
     {
+        "target": "leviathan",
+        "trick": "banshee",
+        "reason": "如果利维坦在场，并且女妖被处决而死亡，所有玩家都会知道女妖已经死亡，并且女妖获得了他们的能力。"
+    },
+    {
         "target": "lilmonsta",
         "trick": "poppygrower",
         "reason": "如果罂粟种植者在场，爪牙们不会同时醒来选择照看小怪宝。 他们会依次单独被唤醒，直到其中一人选择照看小怪宝。"
@@ -435,6 +440,11 @@
         "reason": "如果召唤者制造了暴乱，则所选玩家和所有邪恶玩家都会成为暴乱。 被选中的玩家必须是召唤师的好邻居之一。"
     },
     {
+        "target": "riot",
+        "trick": "banshee",
+        "reason": "如果暴乱提名并杀死女妖，所有玩家都会得知女妖已死亡，并且女妖可能会立即提名两名玩家。"
+    },
+    {
         "target": "alhadikhia",
         "trick": "scarletwoman",
         "reason": "如果出现两名存活的哈迪寂亚，则红唇女郎变成的哈迪寂亚会变回红唇女郎。"
@@ -548,5 +558,10 @@
         "target": "summoner",
         "trick": "marionette",
         "reason": "木偶与召唤师相邻。 召唤师知道木偶是谁。"
+    },
+    {
+        "target": "vortox",
+        "trick": "banshee",
+        "reason": "如果漩涡正在发挥作用并且恶魔杀死了女妖，玩家仍然会得知女妖已经死亡。"
     }
 ]

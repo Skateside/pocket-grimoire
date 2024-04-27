@@ -95,6 +95,11 @@
         "reason": "Após o dia 5, a Bruxa do Fosso não pode escolher o Leviatã."
     },
     {
+        "target": "leviathan",
+        "trick": "banshee",
+        "reason": "Se o Leviatã estiver em jogo e o Banshee morrer por execução, todos os jogadores descobrem que o Banshee morreu e o Banshee ganha sua habilidade."
+    },
+    {
         "target": "lilmonsta",
         "trick": "poppygrower",
         "reason": "Se a Cultivadora está em jogo, os Lacaios não acordam juntos. Eles acordam um por um, até que um deles escolha ficar com o token do Monstrinho."
@@ -435,6 +440,11 @@
         "reason": "Se o Invocador criar um Pandemônio, o jogador escolhido e todos os jogadores maus se tornam Pandemônio. O jogador escolhido deve ser um dos vizinhos vivos do Invocador."
     },
     {
+        "target": "riot",
+        "trick": "banshee",
+        "reason": "Se a Riot nomear e matar o Banshee, todos os jogadores saberão que o Banshee morreu e o Banshee poderá nomear dois jogadores imediatamente."
+    },
+    {
         "target": "alhadikhia",
         "trick": "scarletwoman",
         "reason": "Se há dois Al-Hadikhia vivos, o Al-Hadikhia que antes era Mulher Escarlate se torna Mulher Escarlate novamente."
@@ -548,5 +558,10 @@
         "target": "summoner",
         "trick": "marionette",
         "reason": "A Marionete é vizinha do Invocador. O Invocador sabe quem é a Marionete."
+    },
+    {
+        "target": "vortox",
+        "trick": "banshee",
+        "reason": "Se o Vortox estiver em jogo e o Demônio matar o Banshee, os jogadores ainda descobrirão que o Banshee morreu."
     }
 ]

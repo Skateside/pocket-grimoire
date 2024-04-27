@@ -166,6 +166,22 @@
         "image": "/build/img/icons/townsfolk/balloonist.png"
     },
     {
+        "id": "banshee",
+        "name": "Banshee",
+        "edition": "",
+        "team": "townsfolk",
+        "firstNight": 0,
+        "firstNightReminder": "",
+        "otherNight": 42,
+        "otherNightReminder": "Announce that the Banshee has died.",
+        "reminders": [
+            "Has Ability"
+        ],
+        "setup": false,
+        "ability": "If the Demon kills you, all players learn this. From now on, you may nominate twice per day and vote twice per nomination.",
+        "image": "/build/img/icons/townsfolk/banshee.png"
+    },
+    {
         "id": "banxian",
         "name": "半仙",
         "edition": "hdcs",

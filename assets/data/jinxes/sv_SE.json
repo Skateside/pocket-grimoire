@@ -95,6 +95,11 @@
         "reason": "Efter dag 5 kan Trollpackan inte välja Leviatan."
     },
     {
+        "target": "leviathan",
+        "trick": "banshee",
+        "reason": "Om Leviatan är i spel och Bansheen dör av avrättning får alla spelare veta att Bansheen har dött, och Bansheen får sin förmåga."
+    },
+    {
         "target": "lilmonsta",
         "trick": "poppygrower",
         "reason": "Om Vallmoodlaren är i spel så vaknar Hantlangarna inte tillsammans; de vaknar en och en tills en väljer att ta hand om Lillmonstret."
@@ -435,6 +440,11 @@
         "reason": "Om Åkallaren skapar Upproret blir den valda spelaren och alla onda spelare till Upproret. Åkallaren måste välja en av sina levande goda grannar."
     },
     {
+        "target": "riot",
+        "trick": "banshee",
+        "reason": "Om Upproret nominerar och dödad Bansheen får alla spelare veta att Bansheen har dött, och Bansheen kan omedelbart nominera två spelare."
+    },
+    {
         "target": "alhadikhia",
         "trick": "scarletwoman",
         "reason": "Om det finns två levande al Hadikhia så slutar Röda damen att vara al Hadikhia och blir Röda damen igen."
@@ -548,5 +558,10 @@
         "target": "summoner",
         "trick": "marionette",
         "reason": "Marionetten sitter bredvid Åkallaren. Åkallaren vet vem Marionetten är."
+    },
+    {
+        "target": "vortox",
+        "trick": "banshee",
+        "reason": "Om Vortox är i spel och Demonen dödar Bansheen får spelarna fortfarande veta att Bansheen har dött."
     }
 ]

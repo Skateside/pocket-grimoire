@@ -95,6 +95,11 @@
         "reason": "Después del día 5, Pit-Hag no puede elegir Leviatán."
     },
     {
+        "target": "leviathan",
+        "trick": "banshee",
+        "reason": "Si Leviatán está en juego y Banshee muere mediante ejecución, todos los jugadores se enteran de que Banshee ha muerto y Banshee obtiene su habilidad."
+    },
+    {
         "target": "lilmonsta",
         "trick": "poppygrower",
         "reason": "Si el Cultivador de Amapolas está en juego, los Secuazes no despiertan juntos. Son despertados uno por uno, hasta que uno elija tomar la ficha del Pequeño Monstruo."
@@ -435,6 +440,11 @@
         "reason": "Si el invocador crea Riot, el jugador elegido y todos los jugadores malvados se convierten en Riot. El jugador elegido debe ser uno de los buenos vecinos vivos del Invocador."
     },
     {
+        "target": "riot",
+        "trick": "banshee",
+        "reason": "Si Riot nomina y mata a Banshee, todos los jugadores se enteran de que Banshee ha muerto y Banshee puede nominar a dos jugadores inmediatamente."
+    },
+    {
         "target": "alhadikhia",
         "trick": "scarletwoman",
         "reason": "Si hay dos Al-Hadikhias vivos, la Mujer Escarlata Al-Hadikhia vuelve a ser la Mujer Escarlata."
@@ -548,5 +558,10 @@
         "target": "summoner",
         "trick": "marionette",
         "reason": "La Marioneta es vecina del Invocador. El Invocador sabe quién es la Marioneta."
+    },
+    {
+        "target": "vortox",
+        "trick": "banshee",
+        "reason": "Si el Vortox está en juego y el Demonio mata a la Banshee, los jugadores aún se enteran de que la Banshee ha muerto."
     }
 ]

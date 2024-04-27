@@ -95,6 +95,11 @@
         "reason": "Etter dag 5 kan ikke Pit-Hag velge Leviathan."
     },
     {
+        "target": "leviathan",
+        "trick": "banshee",
+        "reason": "Hvis Leviathan er i spill, og Banshee dør ved henrettelse, får alle spillere vite at Banshee har dødd, og Banshee får sin evne."
+    },
+    {
         "target": "lilmonsta",
         "trick": "poppygrower",
         "reason": "Om Valmuedyrkeren er i spill, våkner ikke Lakeier samtidig. De vekkes én om gangen, inntil én av dem velger å ta Ungmonster-brikken."
@@ -435,6 +440,11 @@
         "reason": "Hvis Summoner oppretter Riot, blir den valgte spilleren og alle onde spillere Riot. Den valgte spilleren må være en av Summonerens levende gode naboer."
     },
     {
+        "target": "riot",
+        "trick": "banshee",
+        "reason": "Hvis Riot nominerer og dreper Banshee, får alle spillere vite at Banshee har dødd, og Banshee kan nominere to spillere umiddelbart."
+    },
+    {
         "target": "alhadikhia",
         "trick": "scarletwoman",
         "reason": "Om det er 2 levende Al-Hadikhiaer, blir Babylon-Al-Hadikhiaen til Babylon igjen."
@@ -548,5 +558,10 @@
         "target": "summoner",
         "trick": "marionette",
         "reason": "Marionetten er nabo til Summoner. The Summoner vet hvem Marionetten er."
+    },
+    {
+        "target": "vortox",
+        "trick": "banshee",
+        "reason": "Hvis Vortox er i spill og demonen dreper Banshee, lærer spillerne fortsatt at Banshee har dødd."
     }
 ]
