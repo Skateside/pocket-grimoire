@@ -124,11 +124,22 @@ gameObserver.on("pad-height-change", () => {
 
 Dialog.create(lookupOneCached("#character-select")).on(Dialog.SHOW, () => {
 
+    const grimoireSection = lookupOneCached("#grimoire");
+    const isOpen = grimoireSection.open;
+
+    if (!isOpen) {
+        grimoireSection.open = true;
+    }
+
     pad.updatePositioner({
         container: true,
         tokens: true,
         total: lookupOneCached("#player-count").value
     });
+
+    if (!isOpen) {
+        grimoireSection.open = false;
+    }
 
 });
 
