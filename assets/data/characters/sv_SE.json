@@ -673,7 +673,7 @@
     },
     {
         "id": "gunslinger",
-        "name": "Revolvermannen",
+        "name": "Skytten",
         "ability": "Varje dag, efter att dagens första omröstning är avslutad, kan du välja en spelare som röstade; hen dör.",
         "firstNightReminder": "",
         "otherNightReminder": "",
@@ -682,10 +682,10 @@
     },
     {
         "id": "harlot",
-        "name": "Kurtisanen",
+        "name": "Skökan",
         "ability": "Välj en levande spelare varje natt*; om hen går med på det får du veta hens roll, men ni båda kanske dör.",
         "firstNightReminder": "",
-        "otherNightReminder": "Kurtisanen pekar på en spelare och somnar. Väck den valda spelaren, visa kortet ”Den här rollen valde dig” och sedan Kurtisanens bricka. Den valda spelaren kan nicka för ja eller skaka på huvudet för nej. Om hen nickar så väck Kurtisanen igen och visa den valda spelarens bricka. Bestäm sedan om båda ska dö eller inte.",
+        "otherNightReminder": "Skökan pekar på en spelare och somnar. Väck den valda spelaren, visa kortet ”Den här rollen valde dig” och sedan Skökans bricka. Den valda spelaren kan nicka för ja eller skaka på huvudet för nej. Om hen nickar så väck Skökan igen och visa den valda spelarens bricka. Bestäm sedan om båda ska dö eller inte.",
         "remindersGlobal": [],
         "reminders": [
             "Död"
@@ -906,10 +906,10 @@
     },
     {
         "id": "lleech",
-        "name": "Igeln",
+        "name": "Lleech",
         "ability": "Välj en spelare varje natt*; hen dör. I början väljer du en levnade spelare; hen förgiftas, och du dör endast om hen dör.",
-        "firstNightReminder": "Igeln pekar på en spelare. Sätt brickan ”Förgiftad” vid den valda spelarens rollbricka.",
-        "otherNightReminder": "Igeln pekar på en spelare. Den spelaren dör.",
+        "firstNightReminder": "Lleech pekar på en spelare. Sätt brickan ”Förgiftad” vid den valda spelarens rollbricka.",
+        "otherNightReminder": "Lleech pekar på en spelare. Den spelaren dör.",
         "remindersGlobal": [],
         "reminders": [
             "Död",
@@ -963,7 +963,7 @@
     {
         "id": "mastermind",
         "name": "Mästaren",
-        "ability": "Om Demonen avrättas och dör (så spelet skulle ta slut) pågår spelet 1 dag till. Om en spelare avrättas då förlorar hens lag.",
+        "ability": "Om Demonen dör av avrättning (så spelet skulle ta slut) pågår spelet 1 dag till. Om en spelare avrättas då förlorar hens lag.",
         "firstNightReminder": "",
         "otherNightReminder": "",
         "remindersGlobal": [],
@@ -1013,7 +1013,7 @@
     {
         "id": "minstrel",
         "name": "Trubaduren",
-        "ability": "Om en Hantlangare avrättas och dör blir alla andra spelare (utom Resenärer) fulla fram till skymningen nästa dag.",
+        "ability": "Om en Hantlangare dör av avrättning blir alla andra spelare (utom Resenärer) fulla fram till skymningen nästa dag.",
         "firstNightReminder": "",
         "otherNightReminder": "",
         "remindersGlobal": [],
@@ -1330,7 +1330,7 @@
     {
         "id": "saint",
         "name": "Helgonet",
-        "ability": "Om du avrättas och dör förlorar ditt lag.",
+        "ability": "Om du dör av avrättning förlorar ditt lag.",
         "firstNightReminder": "",
         "otherNightReminder": "",
         "remindersGlobal": [],
@@ -1338,7 +1338,7 @@
     },
     {
         "id": "savant",
-        "name": "Studenten",
+        "name": "Savanten",
         "ability": "Varje dag kan du prata med Berättaren privat och få 2 påståenden: 1 sant och 1 falskt.",
         "firstNightReminder": "",
         "otherNightReminder": "",
@@ -1408,7 +1408,7 @@
     },
     {
         "id": "slayer",
-        "name": "Banemannen",
+        "name": "Dråparen",
         "ability": "En gång per spel, på dagen, kan du öppet välja en spelare; om du väljer Demonen dör hen.",
         "firstNightReminder": "",
         "otherNightReminder": "",
@@ -1571,7 +1571,7 @@
     {
         "id": "undertaker",
         "name": "Dödgrävaren",
-        "ability": "Varje natt* får du veta vilken roll som avrättades och dog på dagen.",
+        "ability": "Varje natt* får du veta vilken roll som dog av avrättning på dagen.",
         "firstNightReminder": "",
         "otherNightReminder": "Om en spelare avrättades idag, visa den spelarens rollbricka.",
         "remindersGlobal": [],

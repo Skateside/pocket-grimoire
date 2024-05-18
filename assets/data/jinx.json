@@ -40,7 +40,7 @@
         "jinx": [
             {
                 "id": "Heretic",
-                "reason": "A Pit-Hag can not create a Heretic. "
+                "reason": "A Pit-Hag can not create a Heretic."
             },
             {
                 "id": "Damsel",
@@ -48,7 +48,7 @@
             },
             {
                 "id": "Politician",
-                "reason": "A Pit-Hag can not create an evil Politician."
+                "reason": "If the Pit-Hag turns an evil player into the Politician, they can't turn good due to their own ability."
             },
             {
                 "id": "戏子",
@@ -61,6 +61,14 @@
             {
                 "id": "Village Idiot",
                 "reason": "If there is a spare token, the Pit-Hag can create an extra Village Idiot. If so, the drunk Village Idiot might change."
+            },
+            {
+                "id": "Cult Leader",
+                "reason": "If the Pit-Hag turns an evil player into the Cult Leader, they can't turn good due to their own ability."
+            },
+            {
+                "id": "Goon",
+                "reason": "If the Pit-Hag turns an evil player into the Goon, they can't turn good due to their own ability."
             }
         ]
     },
@@ -99,11 +107,11 @@
             },
             {
                 "id": "Ravenkeeper",
-                "reason": "If Leviathan is in play & the Ravenkeeper dies by execution, they wake that night to use their ability."
+                "reason": "If Leviathan is in play & the Ravenkeeper dies by execution, they wake that night to use their ability. They are drunk if their nominator was good."
             },
             {
                 "id": "Sage",
-                "reason": "If Leviathan is in play & the Sage dies by execution, they wake that night to use their ability."
+                "reason": "If Leviathan is in play & the Sage dies by execution, they wake that night to use their ability. They are drunk if their nominator was good."
             },
             {
                 "id": "Farmer",
@@ -144,7 +152,7 @@
             },
             {
                 "id": "Magician",
-                "reason": "Only 1 jinxed character can be in play. "
+                "reason": "Only 1 jinxed character can be in play."
             },
             {
                 "id": "Scarlet Woman",
@@ -190,7 +198,7 @@
         "jinx": [
             {
                 "id": "Engineer",
-                "reason": "Legion and the Engineer can not both be in play at the start of the game. If the Engineer creates Legion, most players (including all evil players) become evil Legion. "
+                "reason": "Legion and the Engineer can not both be in play at the start of the game.\nIf the Engineer creates Legion, most players (including all evil players) become evil Legion."
             },
             {
                 "id": "Preacher",
@@ -203,10 +211,6 @@
             {
                 "id": "戏子",
                 "reason": "在戏子存在于剧本中时，军团可以在游戏中任意时候\n向说书人示意自己“想要死亡”，说书人会在其中一名玩家示意后\n在夜晚一同唤醒所有军团，并询问这些玩家是否要一同死亡。"
-            },
-            {
-                "id": "Summoner",
-                "reason": "If the Summoner creates Legion, most players (including all evil players) become evil Legion."
             }
         ]
     },
@@ -240,7 +244,7 @@
             },
             {
                 "id": "Damsel",
-                "reason": "Only 1 jinxed character can be in play. "
+                "reason": "If the Spy is (or has been) in play, the Damsel is poisoned."
             },
             {
                 "id": "Heretic",
@@ -269,7 +273,7 @@
             },
             {
                 "id": "Damsel",
-                "reason": "Only 1 jinxed character can be in play."
+                "reason": "If the Widow is (or has been) in play, the Damsel is poisoned."
             },
             {
                 "id": "Heretic",
@@ -359,7 +363,7 @@
             },
             {
                 "id": "Plague Doctor",
-                "reason": "If the Demon has a neighbour who is alive and a Townsfolk or Outsider when the Plague Doctor dies, that player becomes an evil Marionette. If there is already an extra evil player, this does not happen."
+                "reason": "If the Demon has a neighbor who is alive and a Townsfolk or Outsider when the Plague Doctor dies, that player becomes an evil Marionette. If there is already an extra evil player, this does not happen."
             },
             {
                 "id": "Huntsman",
@@ -376,11 +380,11 @@
         "jinx": [
             {
                 "id": "Mastermind",
-                "reason": "If the Mastermind is alive and the Lleech's host dies by execution, the Lleech lives but loses their ability. "
+                "reason": "If the Mastermind is alive and the Lleech's host dies by execution, the Lleech lives but loses their ability."
             },
             {
                 "id": "Slayer",
-                "reason": "If the Slayer slays the Lleech's host, the host dies. "
+                "reason": "If the Slayer slays the Lleech's host, the host dies."
             },
             {
                 "id": "Heretic",
@@ -393,7 +397,7 @@
         "jinx": [
             {
                 "id": "Engineer",
-                "reason": "Riot and the Engineer can not both be in play at the start of the game. If the Engineer creates Riot, the evil players become Riot."
+                "reason": "Riot and the Engineer can not both be in play at the start of the game. \nIf the Engineer creates Riot, the evil players become Riot."
             },
             {
                 "id": "Golem",
@@ -401,11 +405,11 @@
             },
             {
                 "id": "Snitch",
-                "reason": "If the Snitch is in play, each Riot player gets an extra 3 bluffs. "
+                "reason": "If the Snitch is in play, each Riot player gets an extra 3 bluffs."
             },
             {
                 "id": "Saint",
-                "reason": "If a good player nominates and kills the Saint, the Saint's team loses. "
+                "reason": "If a good player nominates and kills the Saint, the Saint's team loses."
             },
             {
                 "id": "Butler",
@@ -413,7 +417,7 @@
             },
             {
                 "id": "Pit-Hag",
-                "reason": "If the Pit-Hag creates Riot, all evil players become Riot. If the Pit-Hag creates Riot after day 3, the game continues for one more day."
+                "reason": "If the Pit-Hag creates Riot, all evil players become Riot. \nIf the Pit-Hag creates Riot after day 3, the game continues for one more day."
             },
             {
                 "id": "Mayor",
@@ -436,6 +440,10 @@
                 "reason": "If a Riot player nominates and kills a Sage, the Sage uses their ability tonight."
             },
             {
+                "id": "Banshee",
+                "reason": "If Riot nominates and kills the Banshee, all players learn that the Banshee has died, and the Banshee may nominate two players immediately."
+            },
+            {
                 "id": "Ravenkeeper",
                 "reason": "If a Riot player nominates and kills the Ravenkeeper, the Ravenkeeper uses their ability tonight."
             },
@@ -453,15 +461,15 @@
             },
             {
                 "id": "Exorcist",
-                "reason": "Only 1 jinxed character can be in play. "
+                "reason": "Only 1 jinxed character can be in play."
             },
             {
                 "id": "Minstrel",
-                "reason": "Only 1 jinxed character can be in play. "
+                "reason": "Only 1 jinxed character can be in play."
             },
             {
                 "id": "Flowergirl",
-                "reason": "Only 1 jinxed character can be in play. "
+                "reason": "Only 1 jinxed character can be in play."
             },
             {
                 "id": "Undertaker",
@@ -473,7 +481,7 @@
             },
             {
                 "id": "Pacifist",
-                "reason": "Players that die by nomination register as being executed to the Pacifist. "
+                "reason": "Players that die by nomination register as being executed to the Pacifist."
             },
             {
                 "id": "Devil's Advocate",
@@ -481,7 +489,7 @@
             },
             {
                 "id": "Investigator",
-                "reason": "Riot registers as a Minion to the Investigator. "
+                "reason": "Riot registers as a Minion to the Investigator."
             },
             {
                 "id": "Clockmaker",
@@ -526,14 +534,6 @@
             {
                 "id": "狐媚娘",
                 "reason": "被提名且死亡的玩家算作被处决。"
-            },
-            {
-                "id": "Summoner",
-                "reason": "If the Summoner creates Riot, the chosen player and all evil players become Riot. The chosen player must be one of the Summoner's living good neighbours."
-            },
-            {
-                "id": "Banshee",
-                "reason": "If Riot nominates and kills the Banshee, all players learn that the Banshee has died, and the Banshee may nominate two players immediately."
             }
         ]
     },
@@ -601,6 +601,10 @@
             {
                 "id": "Fearmonger",
                 "reason": "The Vizier wakes with the Fearmonger, learns who they choose and cannot choose to immediately execute that player."
+            },
+            {
+                "id": "Politician",
+                "reason": "The Politician might register as evil to the Vizier."
             }
         ]
     },
@@ -677,7 +681,7 @@
             },
             {
                 "id": "Marionette",
-                "reason": "If the Kazali chooses to create a Marionette, they must choose one of their neighbours."
+                "reason": "If the Kazali chooses to create a Marionette, they must choose one of their neighbors."
             },
             {
                 "id": "Huntsman",
@@ -686,10 +690,6 @@
             {
                 "id": "Choirboy",
                 "reason": "The Kazali can not choose the King to become a Minion if a Choirboy is in play."
-            },
-            {
-                "id": "Summoner",
-                "reason": "The Kazali can not choose to create a Summoner."
             }
         ]
     },
@@ -719,7 +719,43 @@
             },
             {
                 "id": "Marionette",
-                "reason": "The Marionette neighbours the Summoner. The Summoner knows who the Marionette is."
+                "reason": "The Marionette neighbors the Summoner. The Summoner knows who the Marionette is."
+            },
+            {
+                "id": "Pit-Hag",
+                "reason": "The Summoner cannot create an in-play Demon. If the Summoner creates a not-in-play Demon, deaths tonight are arbitrary."
+            },
+            {
+                "id": "Hatter",
+                "reason": "The Summoner cannot create an in-play Demon. If the Summoner creates a not-in-play Demon, deaths tonight are arbitrary."
+            },
+            {
+                "id": "Courtier",
+                "reason": "If the Summoner is drunk on the 3rd night, the Summoner chooses which Demon, but the Storyteller chooses which player."
+            },
+            {
+                "id": "Engineer",
+                "reason": "If the Engineer removes a Summoner from play before that Summoner uses their ability, the Summoner uses their ability immediately."
+            },
+            {
+                "id": "Zombuul",
+                "reason": "If the Summoner turns a dead player into the Zombuul, the Storyteller treats that player as a Zombuul that has died once."
+            },
+            {
+                "id": "Pukka",
+                "reason": "The Summoner may choose a player to become the Pukka on the 2nd night."
+            },
+            {
+                "id": "Riot",
+                "reason": "If the Summoner creates Riot, all Minions also become Riot."
+            },
+            {
+                "id": "Legion",
+                "reason": "If the Summoner creates Legion, most players (including all evil players) become evil Legion."
+            },
+            {
+                "id": "Kazali",
+                "reason": "The Summoner cannot create an in-play Demon. If the Summoner creates a not-in-play Demon, deaths tonight are arbitrary."
             }
         ]
     },

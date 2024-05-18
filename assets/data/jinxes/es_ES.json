@@ -40,6 +40,16 @@
         "reason": "Si hay una ficha de repuesto, Pit-Hag puede crear un Village Idiot adicional. Si es así, el borracho Village Idiot podría cambiar."
     },
     {
+        "target": "pithag",
+        "trick": "cultleader",
+        "reason": "Si Pit-Hag convierte a un jugador malvado en el líder del culto, no puede volverse bueno debido a su propia habilidad."
+    },
+    {
+        "target": "pithag",
+        "trick": "goon",
+        "reason": "Si Pit-Hag convierte a un jugador malvado en Goon, no puede volverse bueno debido a su propia habilidad."
+    },
+    {
         "target": "cerenovus",
         "trick": "goblin",
         "reason": "Cerenovus puede hacer que un jugador se vuelva loco sobre que es el Goblin"
@@ -71,6 +81,11 @@
     },
     {
         "target": "leviathan",
+        "trick": "banshee",
+        "reason": "Si Leviatán está en juego y Banshee muere mediante ejecución, todos los jugadores se enteran de que Banshee ha muerto y Banshee obtiene su habilidad."
+    },
+    {
+        "target": "leviathan",
         "trick": "sage",
         "reason": "Si Leviathan está en juego y el Sabio muere por ejecución, se despierta esa noche para usar su habilidad."
     },
@@ -93,11 +108,6 @@
         "target": "leviathan",
         "trick": "pithag",
         "reason": "Después del día 5, Pit-Hag no puede elegir a Leviathan."
-    },
-    {
-        "target": "leviathan",
-        "trick": "banshee",
-        "reason": "Si Leviatán está en juego y Banshee muere mediante ejecución, todos los jugadores se enteran de que Banshee ha muerto y Banshee obtiene su habilidad."
     },
     {
         "target": "lilmonsta",
@@ -150,11 +160,6 @@
         "reason": "Si el Sombrerero muere y Legión está en juego, no ocurre nada. Si el Sombrerero muere y un jugador malo elige a Legión, todos los jugadores malos actuales se convierten en Legión."
     },
     {
-        "target": "legion",
-        "trick": "summoner",
-        "reason": "Si el Invocador crea Legión, la mayoría de los jugadores (incluidos todos los jugadores malvados) se convierten en Legión malvada."
-    },
-    {
         "target": "fanggu",
         "trick": "scarletwoman",
         "reason": "Si Fang Gu elige a un Forastero y muere, la Dama escarlata no se convierte en Fang Gu."
@@ -182,7 +187,7 @@
     {
         "target": "spy",
         "trick": "damsel",
-        "reason": "Solo puede haber 1 personaje maldito en juego."
+        "reason": "Si el Espía está (o ha estado) en juego, la Damisela está envenenada."
     },
     {
         "target": "spy",
@@ -207,7 +212,7 @@
     {
         "target": "widow",
         "trick": "damsel",
-        "reason": "Solo puede haber 1 personaje maldito en juego."
+        "reason": "Si la Viuda está (o ha estado) en juego, la Damisela está envenenada."
     },
     {
         "target": "widow",
@@ -233,6 +238,76 @@
         "target": "fearmonger",
         "trick": "plaguedoctor",
         "reason": "Si el Doctor de plaga muere, un Esbirro vivo gana la habilidad de Fearmonger además de la suya, y lo sabe."
+    },
+    {
+        "target": "yaggababble",
+        "trick": "exorcist",
+        "reason": "Si el Exorcista elige Yaggababble, la habilidad Yaggababble no mata esta noche."
+    },
+    {
+        "target": "summoner",
+        "trick": "clockmaker",
+        "reason": "Si el Invocador está en juego, el Relojero no recibe su información hasta que se crea un Demonio."
+    },
+    {
+        "target": "summoner",
+        "trick": "alchemist",
+        "reason": "Si hay un Alquimista-Invocador en juego, el juego comienza con un Demonio en juego, como es normal. Si el Alquimista-Invocador elige un jugador, lo convierte en Demonio, pero no cambia su alineación."
+    },
+    {
+        "target": "summoner",
+        "trick": "poppygrower",
+        "reason": "Si el cultivador de amapolas está vivo cuando actúa el invocador, el invocador elige qué demonio, pero el narrador elige qué jugador."
+    },
+    {
+        "target": "summoner",
+        "trick": "marionette",
+        "reason": "La Marioneta es vecina del Invocador. El Invocador sabe quién es la Marioneta."
+    },
+    {
+        "target": "summoner",
+        "trick": "pithag",
+        "reason": "El Invocador no puede crear un Demonio en juego. Si el Invocador crea un Demonio que no está en juego, las muertes de esta noche son arbitrarias."
+    },
+    {
+        "target": "summoner",
+        "trick": "hatter",
+        "reason": "El Invocador no puede crear un Demonio en juego. Si el Invocador crea un Demonio que no está en juego, las muertes de esta noche son arbitrarias."
+    },
+    {
+        "target": "summoner",
+        "trick": "courtier",
+        "reason": "Si el Invocador está borracho la tercera noche, el Invocador elige qué Demonio, pero el Narrador elige qué jugador."
+    },
+    {
+        "target": "summoner",
+        "trick": "engineer",
+        "reason": "Si el Ingeniero elimina a un Invocador del juego antes de que ese Invocador use su habilidad, el Invocador usa su habilidad inmediatamente."
+    },
+    {
+        "target": "summoner",
+        "trick": "zombuul",
+        "reason": "Si el Invocador convierte a un jugador muerto en Zombuul, el Narrador trata a ese jugador como un Zombuul que ha muerto una vez."
+    },
+    {
+        "target": "summoner",
+        "trick": "pukka",
+        "reason": "El Invocador puede elegir un jugador para que se convierta en Pukka la segunda noche."
+    },
+    {
+        "target": "summoner",
+        "trick": "riot",
+        "reason": "Si el Invocador crea Riot, todos los Minions se convierten en Riot."
+    },
+    {
+        "target": "summoner",
+        "trick": "legion",
+        "reason": "Si el Invocador crea Legión, la mayoría de los jugadores (incluidos todos los jugadores malvados) se convierten en Legión malvada."
+    },
+    {
+        "target": "summoner",
+        "trick": "kazali",
+        "reason": "El Invocador no puede crear un Demonio en juego. Si el Invocador crea un Demonio que no está en juego, las muertes de esta noche son arbitrarias."
     },
     {
         "target": "baron",
@@ -295,6 +370,31 @@
         "reason": "Si Lleech envenena al Hereje y después muere Lleech, el Hereje sigue envenenado."
     },
     {
+        "target": "kazali",
+        "trick": "bountyhunter",
+        "reason": "Solo se crea un Aldeaon malo si el Cazarrecompensas sigue en juego después de que actúe Kazali."
+    },
+    {
+        "target": "kazali",
+        "trick": "goon",
+        "reason": "Si Kazali elige al Matón para ser un Esbirro, el resto de elecciones de Esbirros las decide el Narrador."
+    },
+    {
+        "target": "kazali",
+        "trick": "marionette",
+        "reason": "Si Kazali elige crear a la Marioneta, debe elegir a uno de sus vecinos."
+    },
+    {
+        "target": "kazali",
+        "trick": "huntsman",
+        "reason": "Si Kazali elige convertir en Esbirro a la Damisela y el Cazador está en juego, un jugador bueno se convierte en la Damisela."
+    },
+    {
+        "target": "kazali",
+        "trick": "choirboy",
+        "reason": "Kazali no puede elegir al Rey para convertirse en Esbirro si el Chico del coro está en juego."
+    },
+    {
         "target": "riot",
         "trick": "engineer",
         "reason": "Riot y el Ingeniero no pueden estar en juego al principio de la partida. Si el Ingeniero crea a Riot, todos los jugadores malos se convierten en Riot."
@@ -348,6 +448,11 @@
         "target": "riot",
         "trick": "sage",
         "reason": "Si Riot nomina y mata al Sabio, el Sabio usa su habilidad esta noche."
+    },
+    {
+        "target": "riot",
+        "trick": "banshee",
+        "reason": "Si Riot nomina y mata a Banshee, todos los jugadores se enteran de que Banshee ha muerto y Banshee puede nominar a dos jugadores inmediatamente."
     },
     {
         "target": "riot",
@@ -435,16 +540,6 @@
         "reason": "Si el Sombrerero muere, Riot está en juego y un Riot elige a otro Demonio, se crea un equipo normal de malos entre los Riot. Si un Demonio elige Riot, todos los Esbirros se convierten en Riot."
     },
     {
-        "target": "riot",
-        "trick": "summoner",
-        "reason": "Si el invocador crea Riot, el jugador elegido y todos los jugadores malvados se convierten en Riot. El jugador elegido debe ser uno de los buenos vecinos vivos del Invocador."
-    },
-    {
-        "target": "riot",
-        "trick": "banshee",
-        "reason": "Si Riot nomina y mata a Banshee, todos los jugadores se enteran de que Banshee ha muerto y Banshee puede nominar a dos jugadores inmediatamente."
-    },
-    {
         "target": "alhadikhia",
         "trick": "scarletwoman",
         "reason": "Si hay 2 Al-Hadikhia vivos, la Mujer escarlata Al-Hadikhia se convierte otra vez en Mujer escarlata."
@@ -476,8 +571,13 @@
     },
     {
         "target": "vizier",
-        "trick": "alchemist",
-        "reason": "Si el Alquimista tiene la habilidad del Visir, solo puede elegir ejecutar inmediatamente si 3 o más jugadores han votado, independientemente de su alineamiento."
+        "trick": "investigator",
+        "reason": "Si el Investigador sabe que el Visir está en juego, la existencia del Visir no se anuncia."
+    },
+    {
+        "target": "vizier",
+        "trick": "preacher",
+        "reason": "Si el Visir pierde su habilidad, lo sabe. Si el Visir es ejecutado mientras tiene su habilidad, su equipo gana."
     },
     {
         "target": "vizier",
@@ -486,13 +586,8 @@
     },
     {
         "target": "vizier",
-        "trick": "fearmonger",
-        "reason": "El Visir se despierta junto a Fearmonger, sabe a quién elige y no puede ejecutarle inmediatamente."
-    },
-    {
-        "target": "vizier",
-        "trick": "investigator",
-        "reason": "Si el Investigador sabe que el Visir está en juego, la existencia del Visir no se anuncia."
+        "trick": "alchemist",
+        "reason": "Si el Alquimista tiene la habilidad del Visir, solo puede elegir ejecutar inmediatamente si 3 o más jugadores han votado, independientemente de su alineamiento."
     },
     {
         "target": "vizier",
@@ -501,63 +596,13 @@
     },
     {
         "target": "vizier",
-        "trick": "preacher",
-        "reason": "Si el Visir pierde su habilidad, lo sabe. Si el Visir es ejecutado mientras tiene su habilidad, su equipo gana."
+        "trick": "fearmonger",
+        "reason": "El Visir se despierta junto a Fearmonger, sabe a quién elige y no puede ejecutarle inmediatamente."
     },
     {
-        "target": "kazali",
-        "trick": "bountyhunter",
-        "reason": "Solo se crea un Aldeaon malo si el Cazarrecompensas sigue en juego después de que actúe Kazali."
-    },
-    {
-        "target": "kazali",
-        "trick": "goon",
-        "reason": "Si Kazali elige al Matón para ser un Esbirro, el resto de elecciones de Esbirros las decide el Narrador."
-    },
-    {
-        "target": "kazali",
-        "trick": "marionette",
-        "reason": "Si Kazali elige crear a la Marioneta, debe elegir a uno de sus vecinos."
-    },
-    {
-        "target": "kazali",
-        "trick": "huntsman",
-        "reason": "Si Kazali elige convertir en Esbirro a la Damisela y el Cazador está en juego, un jugador bueno se convierte en la Damisela."
-    },
-    {
-        "target": "kazali",
-        "trick": "choirboy",
-        "reason": "Kazali no puede elegir al Rey para convertirse en Esbirro si el Chico del coro está en juego."
-    },
-    {
-        "target": "kazali",
-        "trick": "summoner",
-        "reason": "El Kazali no puede optar por crear un Invocador."
-    },
-    {
-        "target": "yaggababble",
-        "trick": "exorcist",
-        "reason": "Si el Exorcista elige Yaggababble, la habilidad Yaggababble no mata esta noche."
-    },
-    {
-        "target": "summoner",
-        "trick": "clockmaker",
-        "reason": "Si el Invocador está en juego, el Relojero no recibe su información hasta que se crea un Demonio."
-    },
-    {
-        "target": "summoner",
-        "trick": "alchemist",
-        "reason": "Si hay un Alquimista-Invocador en juego, el juego comienza con un Demonio en juego, como es normal. Si el Alquimista-Invocador elige un jugador, lo convierte en Demonio, pero no cambia su alineación."
-    },
-    {
-        "target": "summoner",
-        "trick": "poppygrower",
-        "reason": "Si el cultivador de amapolas está vivo cuando actúa el invocador, el invocador elige qué demonio, pero el narrador elige qué jugador."
-    },
-    {
-        "target": "summoner",
-        "trick": "marionette",
-        "reason": "La Marioneta es vecina del Invocador. El Invocador sabe quién es la Marioneta."
+        "target": "vizier",
+        "trick": "politician",
+        "reason": "El político podría considerarse malvado ante el visir."
     },
     {
         "target": "vortox",

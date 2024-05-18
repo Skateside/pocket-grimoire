@@ -37,7 +37,17 @@
     {
         "target": "pithag",
         "trick": "villageidiot",
-        "reason": "Hvis det er en ekstra token, kan Pit-Hag lage en ekstra Village Idiot. I så fall kan den fulle landsbyidioten endre seg."
+        "reason": "Hvis det er en ekstra token, kan Markkjerring lage en ekstra Village Idiot. I så fall kan den fulle landsbyidioten endre seg."
+    },
+    {
+        "target": "pithag",
+        "trick": "cultleader",
+        "reason": "Hvis Markkjerring gjør en ond spiller til kultleder, kan de ikke bli gode på grunn av sin egen evne."
+    },
+    {
+        "target": "pithag",
+        "trick": "goon",
+        "reason": "Hvis Markkjerring gjør en ond spiller til Goon, kan de ikke bli gode på grunn av sin egen evne."
     },
     {
         "target": "cerenovus",
@@ -71,6 +81,11 @@
     },
     {
         "target": "leviathan",
+        "trick": "banshee",
+        "reason": "Hvis Leviathan er i spill, og Banshee dør ved henrettelse, får alle spillere vite at Banshee har dødd, og Banshee får sin evne."
+    },
+    {
+        "target": "leviathan",
         "trick": "sage",
         "reason": "Om Leviatan er i spill & Vismannen dør ved henrettelse, våkner de den natten for å bruke evnen sin."
     },
@@ -92,12 +107,7 @@
     {
         "target": "leviathan",
         "trick": "pithag",
-        "reason": "Etter dag 5 kan ikke Pit-Hag velge Leviathan."
-    },
-    {
-        "target": "leviathan",
-        "trick": "banshee",
-        "reason": "Hvis Leviathan er i spill, og Banshee dør ved henrettelse, får alle spillere vite at Banshee har dødd, og Banshee får sin evne."
+        "reason": "Etter dag 5 kan ikke Markkjerring velge Leviathan."
     },
     {
         "target": "lilmonsta",
@@ -150,11 +160,6 @@
         "reason": "Hvis Hattemakeren dør og Legion er i spill, skjer ingenting. Hvis hattemakeren dør og en ond spiller velger Legion, blir alle nåværende onde spillere Legion."
     },
     {
-        "target": "legion",
-        "trick": "summoner",
-        "reason": "Hvis Summoner lager Legion, blir de fleste spillere (inkludert alle onde spillere) onde Legion."
-    },
-    {
         "target": "fanggu",
         "trick": "scarletwoman",
         "reason": "Om Fægisten velger en Einstøing og dør, blir ikke Babylon til Fægisten."
@@ -182,7 +187,7 @@
     {
         "target": "spy",
         "trick": "damsel",
-        "reason": "Bare 1 gandet rolle kan være i spill."
+        "reason": "Hvis spionen er (eller har vært) i spill, er damselen forgiftet."
     },
     {
         "target": "spy",
@@ -207,7 +212,7 @@
     {
         "target": "widow",
         "trick": "damsel",
-        "reason": "Bare 1 gandet rolle kan være i spill."
+        "reason": "Hvis enken er (eller har vært) i spill, blir jenta forgiftet."
     },
     {
         "target": "widow",
@@ -233,6 +238,76 @@
         "target": "fearmonger",
         "trick": "plaguedoctor",
         "reason": "Om Pestlegen dør, tilegner en levende Lakei seg evnen til Fryktinngyteren, i tillegg til sin egen evne. Dette lærer de."
+    },
+    {
+        "target": "yaggababble",
+        "trick": "exorcist",
+        "reason": "Hvis eksorcisten velger Yaggababble, dreper ikke Yaggababble-evnen i kveld."
+    },
+    {
+        "target": "summoner",
+        "trick": "clockmaker",
+        "reason": "Hvis Summoner er i spill, mottar ikke Clockmaker informasjonen deres før en demon er opprettet."
+    },
+    {
+        "target": "summoner",
+        "trick": "alchemist",
+        "reason": "Hvis det er en Alchemist-Summoner i spill, starter spillet med en Demon i spill, som normalt. Hvis Alchemist-Summoner velger en spiller, gjør de spilleren til en Demon, men endrer ikke justeringen."
+    },
+    {
+        "target": "summoner",
+        "trick": "poppygrower",
+        "reason": "Hvis valmuedyrkeren er i live når summoneren handler, velger summoneren hvilken demon, men historiefortelleren velger hvilken spiller."
+    },
+    {
+        "target": "summoner",
+        "trick": "marionette",
+        "reason": "Marionetten er nabo til Summoner. The Summoner vet hvem Marionetten er."
+    },
+    {
+        "target": "summoner",
+        "trick": "pithag",
+        "reason": "Summoner kan ikke lage en demon i spillet. Hvis Summoner oppretter en demon som ikke er i spill, er dødsfallene i kveld vilkårlige."
+    },
+    {
+        "target": "summoner",
+        "trick": "hatter",
+        "reason": "Summoner kan ikke lage en demon i spillet. Hvis Summoner oppretter en demon som ikke er i spill, er dødsfallene i kveld vilkårlige."
+    },
+    {
+        "target": "summoner",
+        "trick": "courtier",
+        "reason": "Hvis innkalleren er full den tredje natten, velger innkalleren hvilken demon, men historiefortelleren velger hvilken spiller."
+    },
+    {
+        "target": "summoner",
+        "trick": "engineer",
+        "reason": "Hvis Ingeniøren fjerner en Summoner fra spill før denne Summoneren bruker evnen sin, bruker Summoneren sin evne umiddelbart."
+    },
+    {
+        "target": "summoner",
+        "trick": "zombuul",
+        "reason": "Hvis Summoner gjør en død spiller til Zombuul, behandler historiefortelleren spilleren som en Zombuul som har dødd én gang."
+    },
+    {
+        "target": "summoner",
+        "trick": "pukka",
+        "reason": "Innkalleren kan velge en spiller som skal bli Pukka den andre natten."
+    },
+    {
+        "target": "summoner",
+        "trick": "riot",
+        "reason": "Hvis Summoner oppretter Riot, blir alle Minions Riot."
+    },
+    {
+        "target": "summoner",
+        "trick": "legion",
+        "reason": "If the Summoner creates Legion, most players (including all evil players) become evil Legion."
+    },
+    {
+        "target": "summoner",
+        "trick": "kazali",
+        "reason": "Hvis Summoner lager Legion, blir de fleste spillere (inkludert alle onde spillere) onde Legion."
     },
     {
         "target": "baron",
@@ -282,7 +357,7 @@
     {
         "target": "lleech",
         "trick": "mastermind",
-        "reason": "Om Geniet lever og Iglas vert dør ved henrettelse, mister Igla evnen sin, men lever. "
+        "reason": "Om Geniet lever og Iglas vert dør ved henrettelse, mister Igla evnen sin, men lever."
     },
     {
         "target": "lleech",
@@ -293,6 +368,31 @@
         "target": "lleech",
         "trick": "heretic",
         "reason": "Om Igla har forgiftet Kjetteren og så dør, forblir Kjetteren forgiftet."
+    },
+    {
+        "target": "kazali",
+        "trick": "bountyhunter",
+        "reason": "En ond byfolk skapes bare hvis dusørjegeren fortsatt er i spill etter Kazali-handlingene."
+    },
+    {
+        "target": "kazali",
+        "trick": "goon",
+        "reason": "Hvis Kazali velger Goon for å bli en Minion, avgjøres gjenværende Minion-valg av historiefortelleren."
+    },
+    {
+        "target": "kazali",
+        "trick": "marionette",
+        "reason": "Hvis Kazali velger å lage en Marionette, må de velge en av naboene sine."
+    },
+    {
+        "target": "kazali",
+        "trick": "huntsman",
+        "reason": "Hvis Kazali velger Damsel å bli en Minion, og en Huntsman er i spill, blir en god spiller Damsel."
+    },
+    {
+        "target": "kazali",
+        "trick": "choirboy",
+        "reason": "Kazalien kan ikke velge kongen til å bli en Minion hvis en Choirboy er i spill."
     },
     {
         "target": "riot",
@@ -348,6 +448,11 @@
         "target": "riot",
         "trick": "sage",
         "reason": "Om en spiller som er Opprør nominerer og dreper Vismannen, bruker Vismannen evnen sin i natt."
+    },
+    {
+        "target": "riot",
+        "trick": "banshee",
+        "reason": "Hvis Riot nominerer og dreper Banshee, får alle spillere vite at Banshee har dødd, og Banshee kan nominere to spillere umiddelbart."
     },
     {
         "target": "riot",
@@ -435,16 +540,6 @@
         "reason": "Hvis hattemakeren dør, er Riot i spill og en Riot velger en annen demon, et normalt ondt lag blir skapt fra Riot-spillerne. Hvis hattemakeren dør og demonen velger Riot, blir Minions også Riot."
     },
     {
-        "target": "riot",
-        "trick": "summoner",
-        "reason": "Hvis Summoner oppretter Riot, blir den valgte spilleren og alle onde spillere Riot. Den valgte spilleren må være en av Summonerens levende gode naboer."
-    },
-    {
-        "target": "riot",
-        "trick": "banshee",
-        "reason": "Hvis Riot nominerer og dreper Banshee, får alle spillere vite at Banshee har dødd, og Banshee kan nominere to spillere umiddelbart."
-    },
-    {
         "target": "alhadikhia",
         "trick": "scarletwoman",
         "reason": "Om det er 2 levende Al-Hadikhiaer, blir Babylon-Al-Hadikhiaen til Babylon igjen."
@@ -476,8 +571,13 @@
     },
     {
         "target": "vizier",
-        "trick": "alchemist",
-        "reason": "Om Alkymisten har evnen til Vesiren, kan de kun henrette umiddelbart om 3 eller flere spillere stemte for."
+        "trick": "investigator",
+        "reason": "Om Etterforskeren lærer at Vesiren er i spill, kunngjør ikke Fortelleren det."
+    },
+    {
+        "target": "vizier",
+        "trick": "preacher",
+        "reason": "Om Vesiren blir evneløs, lærer de det. Om Vesiren henrettes mens de ennå har evnen sin, vinner laget deres."
     },
     {
         "target": "vizier",
@@ -486,13 +586,8 @@
     },
     {
         "target": "vizier",
-        "trick": "fearmonger",
-        "reason": "Vesiren våkner samtidig med Fryktinngyteren, lærer hvem de velger og kan ikke velge å henrette den spilleren."
-    },
-    {
-        "target": "vizier",
-        "trick": "investigator",
-        "reason": "Om Etterforskeren lærer at Vesiren er i spill, kunngjør ikke Fortelleren det."
+        "trick": "alchemist",
+        "reason": "Om Alkymisten har evnen til Vesiren, kan de kun henrette umiddelbart om 3 eller flere spillere stemte for."
     },
     {
         "target": "vizier",
@@ -501,63 +596,13 @@
     },
     {
         "target": "vizier",
-        "trick": "preacher",
-        "reason": "Om Vesiren blir evneløs, lærer de det. Om Vesiren henrettes mens de ennå har evnen sin, vinner laget deres."
+        "trick": "fearmonger",
+        "reason": "Vesiren våkner samtidig med Fryktinngyteren, lærer hvem de velger og kan ikke velge å henrette den spilleren."
     },
     {
-        "target": "kazali",
-        "trick": "bountyhunter",
-        "reason": "En ond byfolk skapes bare hvis dusørjegeren fortsatt er i spill etter Kazali-handlingene."
-    },
-    {
-        "target": "kazali",
-        "trick": "goon",
-        "reason": "Hvis Kazali velger Bajas å bli en Lakeier, avgjøres gjenværende Lakeier-valg av historiefortelleren."
-    },
-    {
-        "target": "kazali",
-        "trick": "marionette",
-        "reason": "Hvis Kazali velger å lage en Tråddukke, må de velge en av naboene sine."
-    },
-    {
-        "target": "kazali",
-        "trick": "huntsman",
-        "reason": "Hvis Kazali velger Prinsesse å bli en Lakeier, og en Ferdamann er i spill, blir en god spiller Prinsesse."
-    },
-    {
-        "target": "kazali",
-        "trick": "choirboy",
-        "reason": "Kazalien kan ikke velge kongen til å bli Lakeier hvis en korgutt er i spill."
-    },
-    {
-        "target": "kazali",
-        "trick": "summoner",
-        "reason": "Kazali kan ikke velge å opprette en Summoner."
-    },
-    {
-        "target": "yaggababble",
-        "trick": "exorcist",
-        "reason": "Hvis Djevleutdriver velger Yaggababble, dreper ikke Yaggababble-evnen i kveld."
-    },
-    {
-        "target": "summoner",
-        "trick": "clockmaker",
-        "reason": "Hvis Summoner er i spill, mottar ikke Clockmaker informasjonen deres før en demon er opprettet."
-    },
-    {
-        "target": "summoner",
-        "trick": "alchemist",
-        "reason": "Hvis det er en Alchemist-Summoner i spill, starter spillet med en Demon i spill, som normalt. Hvis Alchemist-Summoner velger en spiller, gjør de spilleren til en Demon, men endrer ikke justeringen."
-    },
-    {
-        "target": "summoner",
-        "trick": "poppygrower",
-        "reason": "Hvis valmuedyrkeren er i live når summoneren handler, velger summoneren hvilken demon, men historiefortelleren velger hvilken spiller."
-    },
-    {
-        "target": "summoner",
-        "trick": "marionette",
-        "reason": "Marionetten er nabo til Summoner. The Summoner vet hvem Marionetten er."
+        "target": "vizier",
+        "trick": "politician",
+        "reason": "Politikeren kan registrere seg som ond for vesiren."
     },
     {
         "target": "vortox",

@@ -40,6 +40,16 @@
         "reason": "如果村夫在场数量不足3人，麻脸巫婆可以创造新的村夫。如果她这么做，村夫的醉酒效果可能会更换目标。"
     },
     {
+        "target": "pithag",
+        "trick": "cultleader",
+        "reason": "如果 Pit-Hag 将邪恶玩家变成邪教领袖，由于他们自身的能力，他们无法变好。"
+    },
+    {
+        "target": "pithag",
+        "trick": "goon",
+        "reason": "如果 Pit-Hag 将邪恶玩家变成 Goon，由于他们自身的能力，他们无法变好。"
+    },
+    {
         "target": "cerenovus",
         "trick": "goblin",
         "reason": "洗脑师可以选择将玩家洗脑成哥布林。"
@@ -71,6 +81,11 @@
     },
     {
         "target": "leviathan",
+        "trick": "banshee",
+        "reason": "如果利维坦在场且报丧女妖死于处决，所有玩家都会得知报丧女妖死亡，随后报丧女妖获得她死亡后的能力。"
+    },
+    {
+        "target": "leviathan",
         "trick": "sage",
         "reason": "如果利维坦在场且贤者被处决，那么他当晚会被唤醒并使用自己的能力。"
     },
@@ -87,17 +102,12 @@
     {
         "target": "leviathan",
         "trick": "hatter",
-        "reason": "如果帽匠在第五天或之后死亡，恶魔就不能选择利维坦。"
+        "reason": "如果帽匠在第五个白天或之后死亡，恶魔不能选择变成利维坦。"
     },
     {
         "target": "leviathan",
         "trick": "pithag",
         "reason": "在第五个白天之后，麻脸巫婆无法创造利维坦。"
-    },
-    {
-        "target": "leviathan",
-        "trick": "banshee",
-        "reason": "如果利维坦在场，并且女妖被处决而死亡，所有玩家都会知道女妖已经死亡，并且女妖获得了他们的能力。"
     },
     {
         "target": "lilmonsta",
@@ -127,7 +137,7 @@
     {
         "target": "lilmonsta",
         "trick": "hatter",
-        "reason": "如果恶魔选择了小蒙斯塔，他们也会选择一个小黄人来成为今晚照顾小蒙斯塔的人。"
+        "reason": "如果恶魔选择了小怪宝，则还需要选择一个爪牙角色，他变成这个爪牙且当晚照看小怪宝。"
     },
     {
         "target": "lycanthrope",
@@ -147,12 +157,7 @@
     {
         "target": "legion",
         "trick": "hatter",
-        "reason": "如果帽子匠死了而军团还在玩，则什么也不会发生。 如果帽匠死亡并且邪恶玩家选择军团，则所有当前邪恶玩家都会成为军团。"
-    },
-    {
-        "target": "legion",
-        "trick": "summoner",
-        "reason": "如果召唤师创建军团，则大多数玩家（包括所有邪恶玩家）都会成为邪恶军团。"
+        "reason": "如果帽匠死亡时军团在场，则无事发生。如果帽匠死亡时一名邪恶玩家选择变成军团，当前所有邪恶玩家都会一同变成军团。"
     },
     {
         "target": "fanggu",
@@ -182,7 +187,7 @@
     {
         "target": "spy",
         "trick": "damsel",
-        "reason": "互为克星的角色在同一时间里只能有其中一个角色在场。"
+        "reason": "如果间谍正在（或已经）在场，少女就会中毒。"
     },
     {
         "target": "spy",
@@ -207,7 +212,7 @@
     {
         "target": "widow",
         "trick": "damsel",
-        "reason": "互为克星的角色在同一时间里只能有其中一个角色在场。"
+        "reason": "如果寡妇正在（或已经）在场，则少女会中毒。"
     },
     {
         "target": "widow",
@@ -233,6 +238,76 @@
         "target": "fearmonger",
         "trick": "plaguedoctor",
         "reason": "如果瘟疫医生死亡且说书人会因此获得恐惧之灵的能力，改为一名存活的爪牙玩家获得此能力，且他会得知此事。"
+    },
+    {
+        "target": "yaggababble",
+        "trick": "exorcist",
+        "reason": "如果驱魔人选中了牙噶巴卜，那么牙噶巴卜的能力在当晚无法造成死亡。"
+    },
+    {
+        "target": "summoner",
+        "trick": "clockmaker",
+        "reason": "如果召唤师在场，在创造恶魔之后钟表匠才会得知信息。"
+    },
+    {
+        "target": "summoner",
+        "trick": "alchemist",
+        "reason": "如果炼金术士获得了召唤师的能力，游戏会以初始有恶魔在场进行。炼金术士召唤师选择的玩家会变成恶魔但不会改变阵营。"
+    },
+    {
+        "target": "summoner",
+        "trick": "poppygrower",
+        "reason": "如果召唤师创造恶魔时罂粟种植者存活，由召唤师来选择创造哪种恶魔，由说书人来决定哪名玩家发生转变。"
+    },
+    {
+        "target": "summoner",
+        "trick": "marionette",
+        "reason": "在初始设置时，提线木偶会与召唤师邻座。召唤师会得知谁是提线木偶。"
+    },
+    {
+        "target": "summoner",
+        "trick": "pithag",
+        "reason": "召唤师无法创建游戏中的恶魔。如果召唤师创造了一个不在场的恶魔，今晚的死亡是任意的。"
+    },
+    {
+        "target": "summoner",
+        "trick": "hatter",
+        "reason": "召唤师无法创建游戏中的恶魔。如果召唤师创造了一个不在场的恶魔，今晚的死亡是任意的。"
+    },
+    {
+        "target": "summoner",
+        "trick": "courtier",
+        "reason": "如果召唤者在第三天晚上喝醉了，则召唤者选择哪个恶魔，但故事讲述者选择哪个玩家。"
+    },
+    {
+        "target": "summoner",
+        "trick": "engineer",
+        "reason": "如果工程师在召唤者使用其能力之前将其从游戏中移除，则该召唤者会立即使用其能力。"
+    },
+    {
+        "target": "summoner",
+        "trick": "zombuul",
+        "reason": "如果召唤师将死去的玩家变成了僵尸，故事讲述者会将该玩家视为死过一次的僵尸。"
+    },
+    {
+        "target": "summoner",
+        "trick": "pukka",
+        "reason": "召唤师可以在第二天晚上选择一名玩家成为普卡。"
+    },
+    {
+        "target": "summoner",
+        "trick": "riot",
+        "reason": "如果召唤者制造暴动，所有小兵都会变得暴动。"
+    },
+    {
+        "target": "summoner",
+        "trick": "legion",
+        "reason": "如果召唤师创造了军团，包括所有邪恶玩家在内的绝大多数玩家都会变成邪恶的军团。"
+    },
+    {
+        "target": "summoner",
+        "trick": "kazali",
+        "reason": "召唤师无法创建游戏中的恶魔。如果召唤师创造了一个不在场的恶魔，今晚的死亡是任意的。"
     },
     {
         "target": "baron",
@@ -295,6 +370,31 @@
         "reason": "如果痢蛭选择异端分子作为宿主，痢蛭死亡时异端分子仍会中毒。"
     },
     {
+        "target": "kazali",
+        "trick": "bountyhunter",
+        "reason": "在卡扎力行动完毕后，如果赏金猎人仍然在场，才会创造邪恶镇民。"
+    },
+    {
+        "target": "kazali",
+        "trick": "goon",
+        "reason": "如果卡扎力在选择爪牙时选择了莽夫，接下来的爪牙转变由说书人来做出决定。"
+    },
+    {
+        "target": "kazali",
+        "trick": "marionette",
+        "reason": "如果卡扎力选择创造提线木偶，他只能选择将自己的邻座玩家变成提线木偶。"
+    },
+    {
+        "target": "kazali",
+        "trick": "huntsman",
+        "reason": "如果卡扎力将落难少女变成了爪牙，并且巡山人在场，一名善良的玩家会变成落难少女。"
+    },
+    {
+        "target": "kazali",
+        "trick": "choirboy",
+        "reason": "如果唱诗男孩在场，卡扎力在选择国王后无法将他变成爪牙。"
+    },
+    {
         "target": "riot",
         "trick": "engineer",
         "reason": "暴乱和工程师不能在初始时同时在场。如果工程师创造了暴乱，所有邪恶玩家都会变成暴乱。"
@@ -348,6 +448,11 @@
         "target": "riot",
         "trick": "sage",
         "reason": "如果暴乱提名并杀死了贤者，当晚贤者会被唤醒并使用其能力。"
+    },
+    {
+        "target": "riot",
+        "trick": "banshee",
+        "reason": "如果暴乱提名并杀死了报丧女妖，所有玩家都会得知报丧女妖死亡，随后报丧女妖可以立即提名两名玩家。（同时或按顺序结算这两条提名链。）"
     },
     {
         "target": "riot",
@@ -432,17 +537,7 @@
     {
         "target": "riot",
         "trick": "hatter",
-        "reason": "如果帽匠死了，暴乱就会开始比赛，并且暴乱会选择不同的恶魔，一个正常的邪恶队伍就会由暴乱玩家创建。 如果帽匠死了并且恶魔选择了暴乱，那么小兵也会变成暴乱。"
-    },
-    {
-        "target": "riot",
-        "trick": "summoner",
-        "reason": "如果召唤者制造了暴乱，则所选玩家和所有邪恶玩家都会成为暴乱。 被选中的玩家必须是召唤师的好邻居之一。"
-    },
-    {
-        "target": "riot",
-        "trick": "banshee",
-        "reason": "如果暴乱提名并杀死女妖，所有玩家都会得知女妖已死亡，并且女妖可能会立即提名两名玩家。"
+        "reason": "如果帽匠死亡时暴乱在场，一名暴乱选择变成其他恶魔，则其他所有暴乱需要选择变成其他爪牙。如果帽匠死亡时恶魔选择变成暴乱，所有爪牙会一同变成暴乱（如果发生在第三天后，则游戏会多进行一天）。"
     },
     {
         "target": "alhadikhia",
@@ -476,8 +571,13 @@
     },
     {
         "target": "vizier",
-        "trick": "alchemist",
-        "reason": "如果炼金术士拥有维齐尔的能力，他只能在三名或更多玩家投票时选择立即处决，不论这些玩家的阵营如何。"
+        "trick": "investigator",
+        "reason": "如果调查员的能力使其得知了维齐尔，则说书人不会告知所有人维齐尔在场。"
+    },
+    {
+        "target": "vizier",
+        "trick": "preacher",
+        "reason": "如果维齐尔失去能力，他会得知这一信息。如果传教士在剧本列表中，且维齐尔在具有能力时被处决，他的阵营获胜。"
     },
     {
         "target": "vizier",
@@ -486,13 +586,8 @@
     },
     {
         "target": "vizier",
-        "trick": "fearmonger",
-        "reason": "在恐惧之灵因为自己的能力被唤醒时，维齐尔会一同被唤醒。他会得知恐惧之灵选择了哪名玩家，并且无法使用自己的能力让那名玩家立即被处决。"
-    },
-    {
-        "target": "vizier",
-        "trick": "investigator",
-        "reason": "如果调查员的能力使其得知了维齐尔，则说书人不会告知所有人维齐尔在场。"
+        "trick": "alchemist",
+        "reason": "如果炼金术士拥有维齐尔的能力，他只能在三名或更多玩家投票时选择立即处决，不论这些玩家的阵营如何。"
     },
     {
         "target": "vizier",
@@ -501,67 +596,17 @@
     },
     {
         "target": "vizier",
-        "trick": "preacher",
-        "reason": "如果维齐尔失去能力，他会得知这一信息。如果传教士在剧本列表中，且维齐尔在具有能力时被处决，他的阵营获胜。"
+        "trick": "fearmonger",
+        "reason": "在恐惧之灵因为自己的能力被唤醒时，维齐尔会一同被唤醒。他会得知恐惧之灵选择了哪名玩家，并且无法使用自己的能力让那名玩家立即被处决。"
     },
     {
-        "target": "kazali",
-        "trick": "bountyhunter",
-        "reason": "在卡扎力行动完毕后，如果赏金猎人仍然在场，才会创造邪恶镇民。"
-    },
-    {
-        "target": "kazali",
-        "trick": "goon",
-        "reason": "如果卡扎力在选择爪牙时选择了莽夫，接下来的爪牙转变由说书人来做出决定。"
-    },
-    {
-        "target": "kazali",
-        "trick": "marionette",
-        "reason": "如果卡扎力选择创造提线木偶，他只能选择将自己的邻座玩家变成提线木偶。"
-    },
-    {
-        "target": "kazali",
-        "trick": "huntsman",
-        "reason": "如果卡扎力将落难少女变成了爪牙，并且巡山人在场，一名善良的玩家会变成落难少女。"
-    },
-    {
-        "target": "kazali",
-        "trick": "choirboy",
-        "reason": "如果唱诗男孩在场，卡扎力在选择国王后无法将他变成爪牙。"
-    },
-    {
-        "target": "kazali",
-        "trick": "summoner",
-        "reason": "卡扎利人无法选择创建召唤师。"
-    },
-    {
-        "target": "yaggababble",
-        "trick": "exorcist",
-        "reason": "如果驱魔人选中了牙噶巴卜，那么牙噶巴卜的能力在当晚无法造成死亡。"
-    },
-    {
-        "target": "summoner",
-        "trick": "clockmaker",
-        "reason": "如果召唤师在场，钟表匠在创建恶魔之前不会收到他们的信息。"
-    },
-    {
-        "target": "summoner",
-        "trick": "alchemist",
-        "reason": "如果场上有炼金术士-召唤师，则游戏开始时会像平常一样以恶魔在场。 如果炼金术士-召唤师选择了一名玩家，他们会将该玩家变成恶魔，但不会改变其阵营。"
-    },
-    {
-        "target": "summoner",
-        "trick": "poppygrower",
-        "reason": "如果召唤者行动时罂粟种植者还活着，则召唤者选择哪个恶魔，但故事讲述者选择哪个玩家。"
-    },
-    {
-        "target": "summoner",
-        "trick": "marionette",
-        "reason": "木偶与召唤师相邻。 召唤师知道木偶是谁。"
+        "target": "vizier",
+        "trick": "politician",
+        "reason": "政客可能会被维齐尔认为是邪恶的。"
     },
     {
         "target": "vortox",
         "trick": "banshee",
-        "reason": "如果漩涡正在发挥作用并且恶魔杀死了女妖，玩家仍然会得知女妖已经死亡。"
+        "reason": "如果恶魔杀死报丧女妖时涡流在场，玩家仍然会得知正确信息。"
     }
 ]

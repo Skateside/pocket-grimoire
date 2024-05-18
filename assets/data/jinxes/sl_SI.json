@@ -40,6 +40,16 @@
         "reason": "Če obstaja rezervni žeton, lahko Pit-Hag ustvari dodatnega vaškega idiota. Če je tako, se lahko pijani vaški idiot spremeni."
     },
     {
+        "target": "pithag",
+        "trick": "cultleader",
+        "reason": "Če Pit-Hag zlobnega igralca spremeni v vodjo kulta, ta zaradi lastnih sposobnosti ne more postati dober."
+    },
+    {
+        "target": "pithag",
+        "trick": "goon",
+        "reason": "Če Pit-Hag zlobnega igralca spremeni v Goona, ta zaradi lastnih sposobnosti ne more postati dober."
+    },
+    {
         "target": "cerenovus",
         "trick": "goblin",
         "reason": "Cerenovus lahko izbere Goblina, ko izbere vlogo, o kateri nori njegova tarča."
@@ -71,6 +81,11 @@
     },
     {
         "target": "leviathan",
+        "trick": "banshee",
+        "reason": "Če je Leviathan v igri in Banshee umre zaradi usmrtitve, vsi igralci izvedo, da je Banshee umrl, in Banshee pridobi njihovo sposobnost."
+    },
+    {
+        "target": "leviathan",
         "trick": "sage",
         "reason": "Če je Leviatan v igri in je Pismouk usmrčen, lahko ponoči uporabi svojo moč."
     },
@@ -93,11 +108,6 @@
         "target": "leviathan",
         "trick": "pithag",
         "reason": "Po 5. dnevu Pit-Hag ne more izbrati Levijatana."
-    },
-    {
-        "target": "leviathan",
-        "trick": "banshee",
-        "reason": "Če je Leviathan v igri in Banshee umre zaradi usmrtitve, vsi igralci izvedo, da je Banshee umrl, in Banshee pridobi svojo sposobnost."
     },
     {
         "target": "lilmonsta",
@@ -150,11 +160,6 @@
         "reason": "Če Klobučar umre in je Legion v igri, se ne zgodi nič. Če Klobučar umre in zlobni igralec izbere Legion, vsi trenutni zlobni igralci postanejo Legion."
     },
     {
-        "target": "legion",
-        "trick": "summoner",
-        "reason": "Če Summoner ustvari Legion, večina igralcev (vključno z vsemi zlobnimi igralci) postane zlobna Legija."
-    },
-    {
         "target": "fanggu",
         "trick": "scarletwoman",
         "reason": "Če Fang Gu izbere Izobčenca in umre, Škrlatna dama ne postane Fang Gu."
@@ -177,12 +182,12 @@
     {
         "target": "spy",
         "trick": "plaguedoctor",
-        "reason": "If the Plague Doctor dies, a living Minion gains the Spy ability in addition to their own ability, and learns this."
+        "reason": "Če kužni zdravnik umre, živi Minion poleg lastne sposobnosti pridobi še sposobnost Vohuna in se tega nauči."
     },
     {
         "target": "spy",
         "trick": "damsel",
-        "reason": "Samo ena od uročenih vlog je lahko v igri."
+        "reason": "Če je vohun (ali je bil) v igri, je deklica zastrupljena."
     },
     {
         "target": "spy",
@@ -207,7 +212,7 @@
     {
         "target": "widow",
         "trick": "damsel",
-        "reason": "Samo ena od uročenih vlog je lahko v igri."
+        "reason": "Če je vdova (ali je bila) v igri, je deklica zastrupljena."
     },
     {
         "target": "widow",
@@ -233,6 +238,76 @@
         "target": "fearmonger",
         "trick": "plaguedoctor",
         "reason": "Če Kužnik umre, eden od živih Sledilcev dobi še moč Vohuna in to izve."
+    },
+    {
+        "target": "yaggababble",
+        "trick": "exorcist",
+        "reason": "Če Exorcist izbere Yaggababble, sposobnost Yaggababble nocoj ne ubija."
+    },
+    {
+        "target": "summoner",
+        "trick": "clockmaker",
+        "reason": "Če je Summoner v igri, Clockmaker ne prejme njegovih informacij, dokler ni ustvarjen demon."
+    },
+    {
+        "target": "summoner",
+        "trick": "alchemist",
+        "reason": "Če je v igri Alchemist-Summoner, se igra začne z Demonom v igri, kot običajno. Če Alchemist-Summoner izbere igralca, tega igralca naredi za demona, vendar ne spremeni svoje poravnave."
+    },
+    {
+        "target": "summoner",
+        "trick": "poppygrower",
+        "reason": "Če je pridelovalec maka živ, ko klicalec deluje, klicalec izbere, katerega demona, pripovedovalec pa izbere, katerega igralca."
+    },
+    {
+        "target": "summoner",
+        "trick": "marionette",
+        "reason": "Marioneta je soseda Summonerja. Summoner ve, kdo je marioneta."
+    },
+    {
+        "target": "summoner",
+        "trick": "pithag",
+        "reason": "Summoner ne more ustvariti demona v igri. Če Summoner ustvari demona, ki ni v igri, so nocojšnje smrti poljubne."
+    },
+    {
+        "target": "summoner",
+        "trick": "hatter",
+        "reason": "Summoner ne more ustvariti demona v igri. Če Summoner ustvari demona, ki ni v igri, so nocojšnje smrti poljubne."
+    },
+    {
+        "target": "summoner",
+        "trick": "courtier",
+        "reason": "Če je Summoner tretjo noč pijan, Summoner izbere, katerega demona, Storyteller pa izbere, katerega igralca."
+    },
+    {
+        "target": "summoner",
+        "trick": "engineer",
+        "reason": "Če Inženir odstrani Summonerja iz igre, preden ta Summoner uporabi svojo sposobnost, Summoner svojo sposobnost uporabi takoj."
+    },
+    {
+        "target": "summoner",
+        "trick": "zombuul",
+        "reason": "Če Summoner mrtvega igralca spremeni v Zombuula, Storyteller tega igralca obravnava kot Zombuula, ki je enkrat umrl."
+    },
+    {
+        "target": "summoner",
+        "trick": "pukka",
+        "reason": "Summoner lahko 2. noč izbere igralca, ki bo postal Pukka."
+    },
+    {
+        "target": "summoner",
+        "trick": "riot",
+        "reason": "Če Summoner ustvari Riot, vsi Minioni postanejo Riot."
+    },
+    {
+        "target": "summoner",
+        "trick": "legion",
+        "reason": "Če Summoner ustvari Legion, večina igralcev (vključno z vsemi zlobnimi igralci) postane zlobna Legija."
+    },
+    {
+        "target": "summoner",
+        "trick": "kazali",
+        "reason": "Summoner ne more ustvariti demona v igri. Če Summoner ustvari demona, ki ni v igri, so nocojšnje smrti poljubne."
     },
     {
         "target": "baron",
@@ -295,6 +370,31 @@
         "reason": "Če Grabež zastrupi Heretika in Grabež kasneje umre, Heretik ostane zastrupljen."
     },
     {
+        "target": "kazali",
+        "trick": "bountyhunter",
+        "reason": "Zlobni meščani nastanejo le, če je lovec na glave še vedno v igri po dejanjih Kazali."
+    },
+    {
+        "target": "kazali",
+        "trick": "goon",
+        "reason": "Če Kazali izbere Goona, da postane Minion, o preostalih Minionskih odločitvah odloča Pripovedovalec."
+    },
+    {
+        "target": "kazali",
+        "trick": "marionette",
+        "reason": "Če se Kazali odloči ustvariti marioneto, mora izbrati enega od svojih sosedov."
+    },
+    {
+        "target": "kazali",
+        "trick": "huntsman",
+        "reason": "Če Kazali izbere Deklico, da postane Minion, in je v igri Huntsman, dober igralec postane Deklica."
+    },
+    {
+        "target": "kazali",
+        "trick": "choirboy",
+        "reason": "Kazali ne more izbrati kralja, da postane Minion, če je v igri zborovski deček."
+    },
+    {
         "target": "riot",
         "trick": "engineer",
         "reason": "Inžinir in Rogovil ne moreta biti oba v igri, ko se ta začne. Če inžinir naredi Rogovila, vsi zlobni igralci postanejo Rogovili."
@@ -322,7 +422,7 @@
     {
         "target": "riot",
         "trick": "pithag",
-        "reason": "Če Vragulja naredi Rogovila, vsi zlobni igralci postanejo Rogovili. Če ga naredi po 3. dnevu, se igra nadaljuje še en dan. "
+        "reason": "Če Vragulja naredi Rogovila, vsi zlobni igralci postanejo Rogovili. Če ga naredi po 3. dnevu, se igra nadaljuje še en dan."
     },
     {
         "target": "riot",
@@ -351,6 +451,11 @@
     },
     {
         "target": "riot",
+        "trick": "banshee",
+        "reason": "Če Riot nominira in ubije Bansheeja, vsi igralci izvedo, da je Banshee umrl, Banshee pa lahko takoj imenuje dva igralca."
+    },
+    {
+        "target": "riot",
         "trick": "ravenkeeper",
         "reason": "Če Rogovil nominira in ubije Krokarja, ta nocoj uporabi svojo moč."
     },
@@ -367,7 +472,7 @@
     {
         "target": "riot",
         "trick": "king",
-        "reason": "Če Rogovil nominira in ubije Kralja in je Pevec živ, nocoj uporabi svojo moč. "
+        "reason": "Če Rogovil nominira in ubije Kralja in je Pevec živ, nocoj uporabi svojo moč."
     },
     {
         "target": "riot",
@@ -435,16 +540,6 @@
         "reason": "Če Klobučar umre, je v igri Riot in Riot izbere drugega demona, se iz igralcev Riot ustvari običajna zlobna ekipa. Če Klobučar umre in Demon izbere Riot, postanejo tudi Minioni Riot."
     },
     {
-        "target": "riot",
-        "trick": "summoner",
-        "reason": "Če Summoner ustvari Riot, izbrani igralec in vsi zlobni igralci postanejo Riot. Izbrani igralec mora biti eden od živih dobrih sosedov Summonerja."
-    },
-    {
-        "target": "riot",
-        "trick": "banshee",
-        "reason": "Če Riot nominira in ubije Bansheeja, vsi igralci izvedo, da je Banshee umrl, Banshee pa lahko takoj imenuje dva igralca."
-    },
-    {
         "target": "alhadikhia",
         "trick": "scarletwoman",
         "reason": "Če kadarkoli živita 2 Al-Hadikhia, Škrlatna dama znova postane Škrlatna dama."
@@ -476,8 +571,13 @@
     },
     {
         "target": "vizier",
-        "trick": "alchemist",
-        "reason": "Če ima Alkimist Vizirjevo moč, lahko izsili usmrtitev, samo če so glasovali 3 igralci ali več."
+        "trick": "investigator",
+        "reason": "Če Raziskovalec izve, da je Vizir v igri, ga Pripovedovalec ne najavi javno."
+    },
+    {
+        "target": "vizier",
+        "trick": "preacher",
+        "reason": "Če Vizir izgubi moč, to izve. Če je usmrčen, ko še kam moč, zlo zmaga."
     },
     {
         "target": "vizier",
@@ -486,13 +586,8 @@
     },
     {
         "target": "vizier",
-        "trick": "fearmonger",
-        "reason": "Vizir se zbudi skupaj z Grozljivcem, izve, koga izbere, in ne more usmrtiti te osebe naslednji dan."
-    },
-    {
-        "target": "vizier",
-        "trick": "investigator",
-        "reason": "Če Raziskovalec izve, da je Vizir v igri, ga Pripovedovalec ne najavi javno."
+        "trick": "alchemist",
+        "reason": "Če ima Alkimist Vizirjevo moč, lahko izsili usmrtitev, samo če so glasovali 3 igralci ali več."
     },
     {
         "target": "vizier",
@@ -501,63 +596,13 @@
     },
     {
         "target": "vizier",
-        "trick": "preacher",
-        "reason": "Če Vizir izgubi moč, to izve. Če je usmrčen, ko še kam moč, zlo zmaga."
+        "trick": "fearmonger",
+        "reason": "Vizir se zbudi skupaj z Grozljivcem, izve, koga izbere, in ne more usmrtiti te osebe naslednji dan."
     },
     {
-        "target": "kazali",
-        "trick": "bountyhunter",
-        "reason": "Zlobni meščani nastanejo samo, če je lovec na glave še vedno v igri po dejanjih Kazali."
-    },
-    {
-        "target": "kazali",
-        "trick": "goon",
-        "reason": "Če Kazali izbere Rokovnjač, da postane Sledilci, o preostalih Sledilci odloča Pripovedovalec."
-    },
-    {
-        "target": "kazali",
-        "trick": "marionette",
-        "reason": "Če se Kazali odloči ustvariti Marioneta, mora izbrati enega od svojih sosedov."
-    },
-    {
-        "target": "kazali",
-        "trick": "huntsman",
-        "reason": "Če Kazali izbere Gospodična, da postane Sledilci, in je v igri Lovec, dober igralec postane Gospodična."
-    },
-    {
-        "target": "kazali",
-        "trick": "choirboy",
-        "reason": "Kazali ne more izbrati kralja, da postane Sledilci, če je v igri zborovski deček."
-    },
-    {
-        "target": "kazali",
-        "trick": "summoner",
-        "reason": "Kazali se ne more odločiti za ustvarjanje Summonerja."
-    },
-    {
-        "target": "yaggababble",
-        "trick": "exorcist",
-        "reason": "Če Izganjalec izbere Yaggababble, sposobnost Yaggababble nocoj ne ubija."
-    },
-    {
-        "target": "summoner",
-        "trick": "clockmaker",
-        "reason": "Če je Summoner v igri, Clockmaker ne prejme njegovih informacij, dokler ni ustvarjen demon."
-    },
-    {
-        "target": "summoner",
-        "trick": "alchemist",
-        "reason": "Če je v igri Alchemist-Summoner, se igra začne z Demonom v igri, kot običajno. Če Alchemist-Summoner izbere igralca, tega igralca naredi za demona, vendar ne spremeni svoje poravnave."
-    },
-    {
-        "target": "summoner",
-        "trick": "poppygrower",
-        "reason": "Če je pridelovalec maka živ, ko klicalec deluje, klicalec izbere, katerega demona, pripovedovalec pa izbere, katerega igralca."
-    },
-    {
-        "target": "summoner",
-        "trick": "marionette",
-        "reason": "Marioneta je soseda Summonerja. Summoner ve, kdo je marioneta."
+        "target": "vizier",
+        "trick": "politician",
+        "reason": "Politik bi se lahko vezirju prijavil kot zloben."
     },
     {
         "target": "vortox",

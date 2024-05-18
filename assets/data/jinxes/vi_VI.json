@@ -37,7 +37,17 @@
     {
         "target": "pithag",
         "trick": "villageidiot",
-        "reason": "Nếu có mã thông báo dự phòng, Pit-Hag có thể tạo thêm Village Idiot. Nếu vậy, Village Idiot say xỉn có thể sẽ thay đổi."
+        "reason": "Nếu còn thừa token, Pit-hag có thể tạo ra Ngố làng. Nếu làm vậy, Ngố làng say có thể đổi."
+    },
+    {
+        "target": "pithag",
+        "trick": "cultleader",
+        "reason": "Nếu Pit-Hag biến một người chơi xấu xa thành Giáo chủ, họ không thể trở thành người tốt do khả năng của chính họ."
+    },
+    {
+        "target": "pithag",
+        "trick": "goon",
+        "reason": "Nếu Pit-Hag biến một người chơi ác thành Goon, họ không thể trở thành người tốt do khả năng của chính họ."
     },
     {
         "target": "cerenovus",
@@ -71,6 +81,11 @@
     },
     {
         "target": "leviathan",
+        "trick": "banshee",
+        "reason": "Nếu có Leviathan trong game và báo tử chết vì hành quyết, tất cả người chơi được thông báo rằng Quỷ báo tử đã chết và Quỷ báo tử nhận chức năng."
+    },
+    {
+        "target": "leviathan",
         "trick": "sage",
         "reason": "Nếu có Leviathan trong cuộc & Hiền nhân chết vì hành quyết, họ dậy trong đêm đó để sử dụng chức năng."
     },
@@ -87,17 +102,12 @@
     {
         "target": "leviathan",
         "trick": "hatter",
-        "reason": "Nếu Người làm mũ chết vào hoặc sau ngày thứ 5, Ác ma không thể chọn Leviathan."
+        "reason": "Nếu Thợ làm mũ chết trong hoặc sau ngày thứ 5, Quỷ không được chọn Leviathan."
     },
     {
         "target": "leviathan",
         "trick": "pithag",
-        "reason": "Sau ngày thứ 5, Pit-Hag không thể chọn Leviathan."
-    },
-    {
-        "target": "leviathan",
-        "trick": "banshee",
-        "reason": "Nếu có Leviathan trong game và báo tử chết vì hành quyết, tất cả người chơi được thông báo rằng Quỷ báo tử đã chết và Quỷ báo tử nhận chức năng."
+        "reason": "Sau ngày thứ 5, Pit-Hag không được chọn Leviathan."
     },
     {
         "target": "lilmonsta",
@@ -127,7 +137,7 @@
     {
         "target": "lilmonsta",
         "trick": "hatter",
-        "reason": "Nếu một Ác ma chọn Lil' Monsta, chúng cũng chọn một Minion để trở thành và trông trẻ cho Lil' Monsta tối nay."
+        "reason": "Nếu Quỷ chọn Lil' Monsta, họ cũng được chọn một Tay sai để trở thành và trông Lil' Monsta tối nay."
     },
     {
         "target": "lycanthrope",
@@ -147,12 +157,7 @@
     {
         "target": "legion",
         "trick": "hatter",
-        "reason": "Nếu Hatter chết và Legion đang chơi thì sẽ không có gì xảy ra. Nếu Người làm mũ chết và một người chơi độc ác chọn Quân đoàn, tất cả những người chơi độc ác hiện tại sẽ trở thành Quân đoàn."
-    },
-    {
-        "target": "legion",
-        "trick": "summoner",
-        "reason": "Nếu Người triệu hồi tạo ra Quân đoàn, hầu hết người chơi (bao gồm tất cả những người chơi ác) đều trở thành Quân đoàn ác."
+        "reason": "Nếu Thợ làm mũ chết mà có Legion trong game, không có gì xảy ra. Nếu Thợ làm mũ chết và người xấu chon Legion, tất cả người xấu hiện tại trở thành Legion."
     },
     {
         "target": "fanggu",
@@ -182,7 +187,7 @@
     {
         "target": "spy",
         "trick": "damsel",
-        "reason": "Chỉ có 1 nhân vật jinx trong cuộc."
+        "reason": "Nếu Điệp viên đang (hoặc đã) chơi đùa, Thiếu nữ sẽ bị đầu độc."
     },
     {
         "target": "spy",
@@ -207,7 +212,7 @@
     {
         "target": "widow",
         "trick": "damsel",
-        "reason": "Chỉ có 1 nhân vật jinx trong cuộc."
+        "reason": "Nếu Góa phụ đang (hoặc đã) chơi đùa, Thiếu nữ sẽ bị đầu độc."
     },
     {
         "target": "widow",
@@ -233,6 +238,76 @@
         "target": "fearmonger",
         "trick": "plaguedoctor",
         "reason": "Nếu Bác sĩ dịch hạch chết, một Minion còn sống sẽ có chức năng của Kẻ gây hãi ngoài chức năng của họ và biết được điều này."
+    },
+    {
+        "target": "yaggababble",
+        "trick": "exorcist",
+        "reason": "Nếu Thầy trừ tà chọn Yaggababble, chức năng của Yaggababble không thẻ giết người đêm nay."
+    },
+    {
+        "target": "summoner",
+        "trick": "clockmaker",
+        "reason": "Nếu có Kẻ triệu hồi trong game, Thợ đồng hồ sẽ không nhận thông tin cho đến khi Quỷ được tạo ra."
+    },
+    {
+        "target": "summoner",
+        "trick": "alchemist",
+        "reason": "Nếu có Nhà giả kim nhận Kẻ triệu hồi trong game, game bắt đầu với 1 Quỷ như bình thường. Nếu Nhà giả kim nhận Kẻ triệu hồi chọn 1 người, họ biến người đó thành Quỷ nhưng giữ nguyên phe."
+    },
+    {
+        "target": "summoner",
+        "trick": "poppygrower",
+        "reason": "Nếu Người trồng hoa còn sống khi Kẻ triệu hồi hoạt động, Kẻ triệu hồi chỉ được chọn nhân vật, Người kẻ chuyện sẽ chọn người."
+    },
+    {
+        "target": "summoner",
+        "trick": "marionette",
+        "reason": "Con rối ngồi cạnh Kẻ triệu hồi. Kẻ triệu hồi biết ai là Con rối."
+    },
+    {
+        "target": "summoner",
+        "trick": "pithag",
+        "reason": "Người triệu hồi không thể tạo Ác ma đang chơi. Nếu Người triệu hồi tạo ra một Ác ma không có mặt, cái chết đêm nay là tùy tiện."
+    },
+    {
+        "target": "summoner",
+        "trick": "hatter",
+        "reason": "Người triệu hồi không thể tạo Ác ma đang chơi. Nếu Người triệu hồi tạo ra một Ác ma không có mặt, cái chết đêm nay là tùy tiện."
+    },
+    {
+        "target": "summoner",
+        "trick": "courtier",
+        "reason": "Nếu Người triệu hồi say rượu vào đêm thứ 3, Người triệu hồi sẽ chọn Ác ma nào, nhưng Người kể chuyện sẽ chọn người chơi nào."
+    },
+    {
+        "target": "summoner",
+        "trick": "engineer",
+        "reason": "Nếu Kỹ sư loại Nhà triệu hồi khỏi cuộc chơi trước khi Nhà triệu hồi đó sử dụng khả năng của họ, thì Nhà triệu hồi đó sẽ sử dụng khả năng của họ ngay lập tức."
+    },
+    {
+        "target": "summoner",
+        "trick": "zombuul",
+        "reason": "Nếu Người triệu hồi biến một người chơi đã chết thành Zombuul, Người kể chuyện sẽ coi người chơi đó như một Zombuul đã chết một lần."
+    },
+    {
+        "target": "summoner",
+        "trick": "pukka",
+        "reason": "Người triệu hồi có thể chọn một người chơi trở thành Pukka vào đêm thứ 2."
+    },
+    {
+        "target": "summoner",
+        "trick": "riot",
+        "reason": "Nếu Người triệu hồi tạo ra Riot, tất cả Minion đều trở thành Riot."
+    },
+    {
+        "target": "summoner",
+        "trick": "legion",
+        "reason": "Nếu Kẻ triệu hồi chọn Legion, đa số người chơi (trong đó có tất cả người xấu) trở thành Legion xấu."
+    },
+    {
+        "target": "summoner",
+        "trick": "kazali",
+        "reason": "Người triệu hồi không thể tạo Ác ma đang chơi. Nếu Người triệu hồi tạo ra một Ác ma không có mặt, cái chết đêm nay là tùy tiện."
     },
     {
         "target": "baron",
@@ -295,6 +370,31 @@
         "reason": "Nếu Lleech đầu độc Dị giáo và Lleech chết, Dị giáo vẫn bị trúng độc."
     },
     {
+        "target": "kazali",
+        "trick": "bountyhunter",
+        "reason": "Dân làng ác chỉ được tạo ra khi Thợ săn tiền thưởng còn trong game sau lượt của Kazali"
+    },
+    {
+        "target": "kazali",
+        "trick": "goon",
+        "reason": "Nếu Kazali chọn Bất lương làm Tay sai, những Tay sai còn lại được quyết định bởi Người kể chuyện."
+    },
+    {
+        "target": "kazali",
+        "trick": "marionette",
+        "reason": "Nếu Kazali muốn tạo ra Con rối, họ phải chọn hàng xóm của họ."
+    },
+    {
+        "target": "kazali",
+        "trick": "huntsman",
+        "reason": "Nếu Kazali biến Thiếu nữ thành Tay sai, và có Thợ săn trong game, người tốt trở thành Thiếu nữ."
+    },
+    {
+        "target": "kazali",
+        "trick": "choirboy",
+        "reason": "Kazali không được chọn Ông vua trở thành Tay sai nếu có Ca đoàn trong game."
+    },
+    {
         "target": "riot",
         "trick": "engineer",
         "reason": "Nổi loạn và Kĩ sư không thể tồn tại cùng nhau khi bắt đầu game. Nếu Kĩ sư tạo ra Nổi loạn, phe ác trở thành Nổi loạn."
@@ -312,7 +412,7 @@
     {
         "target": "riot",
         "trick": "saint",
-        "reason": "Nếu người thiện biểu quyết là giết Thành, phe của Thành thua."
+        "reason": "Nếu người thiện biểu quyết là giết Thánh, phe của Thánh thua."
     },
     {
         "target": "riot",
@@ -348,6 +448,11 @@
         "target": "riot",
         "trick": "sage",
         "reason": "Nếu Nổi loạn biểu quyết và giết Hiền nhân, Hiền nhân được dùng chức năng tối nay."
+    },
+    {
+        "target": "riot",
+        "trick": "banshee",
+        "reason": "Nếu Nổi loạn biểu quyết Quỷ báo tử, tất cả người chơi được biết Quỷ báo tử đã chết, và Quỷ báo tử được biểu quyết 2 lần ngay lập tức."
     },
     {
         "target": "riot",
@@ -432,17 +537,7 @@
     {
         "target": "riot",
         "trick": "hatter",
-        "reason": "Nếu Người làm mũ chết, Riot sẽ tham gia và Riot chọn một Ác quỷ khác, một đội ác bình thường được tạo ra từ những người chơi Riot. Nếu Người làm mũ chết và Ác quỷ chọn Riot, Minions cũng trở thành Riot."
-    },
-    {
-        "target": "riot",
-        "trick": "summoner",
-        "reason": "Nếu Người triệu hồi tạo ra Riot, người chơi được chọn và tất cả những người chơi xấu sẽ trở thành Riot. Người chơi được chọn phải là một trong những hàng xóm tốt của Người triệu hồi."
-    },
-    {
-        "target": "riot",
-        "trick": "banshee",
-        "reason": "Nếu Nổi loạn biểu quyết Quỷ báo tử, tất cả người chơi được biết Quỷ báo tử đã chết, và Quỷ báo tử được biểu quyết 2 lần ngay lập tức."
+        "reason": "Nếu Thợ làm mũ chết, có Nổi loạn trong game và Nổi loạn chọn Quỷ khác, một phe xấu cơ bản được tạo ra từ những Nổi loạn. Nếu Thợ làm mũ chết và Quỷ chọn Nổi loạn, Tay sai sẽ cũng trở thành Riot."
     },
     {
         "target": "alhadikhia",
@@ -476,8 +571,13 @@
     },
     {
         "target": "vizier",
-        "trick": "alchemist",
-        "reason": "Nếu Nhà giả kim có chức năng Tể tướng, họ chỉ có thể chọn hành quyết ngay lập tức nếu có ba người bỏ phiếu trở lên."
+        "trick": "investigator",
+        "reason": "Nếu Điều tra viên biết có Tể tướng trong cuộc, sự tồn tại của Tể tướng sẽ không được Người kể chuyện thông báo."
+    },
+    {
+        "target": "vizier",
+        "trick": "preacher",
+        "reason": "Nếu Tể tướng mắt chức năng của mình, họ sẽ biết được điều này và nếu Tể tướng bị hành quyết khi họ còn chức năng, phe của họ thắng."
     },
     {
         "target": "vizier",
@@ -486,13 +586,8 @@
     },
     {
         "target": "vizier",
-        "trick": "fearmonger",
-        "reason": "Tể tướng thức dậy cùng với Kẻ gây hãi, biết được họ chọn ai và không được hành quyết người chơi đó."
-    },
-    {
-        "target": "vizier",
-        "trick": "investigator",
-        "reason": "Nếu Điều tra viên biết có Tể tướng trong cuộc, sự tồn tại của Tể tướng sẽ không được Người kể chuyện thông báo."
+        "trick": "alchemist",
+        "reason": "Nếu Nhà giả kim có chức năng Tể tướng, họ chỉ có thể chọn hành quyết ngay lập tức nếu có ba người bỏ phiếu trở lên."
     },
     {
         "target": "vizier",
@@ -501,63 +596,13 @@
     },
     {
         "target": "vizier",
-        "trick": "preacher",
-        "reason": "Nếu Tể tướng mắt chức năng của mình, họ sẽ biết được điều này và nếu Tể tướng bị hành quyết khi họ còn chức năng, phe của họ thắng."
+        "trick": "fearmonger",
+        "reason": "Tể tướng thức dậy cùng với Kẻ gây hãi, biết được họ chọn ai và không được hành quyết người chơi đó."
     },
     {
-        "target": "kazali",
-        "trick": "bountyhunter",
-        "reason": "Dân làng ác chỉ được tạo ra khi Thợ săn tiền thưởng còn trong game sau lượt của Kazali."
-    },
-    {
-        "target": "kazali",
-        "trick": "goon",
-        "reason": "Nếu Kazali chọn Bất lương làm Tay sai, những Tay sai còn lại được quyết định bởi Người kể chuyện."
-    },
-    {
-        "target": "kazali",
-        "trick": "marionette",
-        "reason": "Nếu Kazali muốn tạo ra Con rối, họ phải chọn hàng xóm của họ."
-    },
-    {
-        "target": "kazali",
-        "trick": "huntsman",
-        "reason": "Nếu Kazali biến Thiếu nữ thành Tay sai, và có Thợ săn trong game, người tốt trở thành Thiếu nữ."
-    },
-    {
-        "target": "kazali",
-        "trick": "choirboy",
-        "reason": "Kazali không được chọn Ông vua trở thành Tay sai nếu có Ca đoàn trong game."
-    },
-    {
-        "target": "kazali",
-        "trick": "summoner",
-        "reason": "Người Kazali không thể chọn tạo Người triệu hồi."
-    },
-    {
-        "target": "yaggababble",
-        "trick": "exorcist",
-        "reason": "Nếu Thầy trừ tà chọn Yaggababble thì khả năng Yaggababble không giết người tối nay."
-    },
-    {
-        "target": "summoner",
-        "trick": "clockmaker",
-        "reason": "Nếu Người triệu hồi đang chơi, Người thợ đồng hồ sẽ không nhận được thông tin của họ cho đến khi Ác ma được tạo ra."
-    },
-    {
-        "target": "summoner",
-        "trick": "alchemist",
-        "reason": "Nếu có Nhà triệu hồi giả kim đang chơi, trò chơi sẽ bắt đầu với một Ác ma đang chơi như bình thường. Nếu Nhà triệu hồi giả kim chọn một người chơi, họ sẽ biến người chơi đó thành Ác quỷ nhưng không thay đổi sự liên kết của họ."
-    },
-    {
-        "target": "summoner",
-        "trick": "poppygrower",
-        "reason": "Nếu Người trồng thuốc phiện còn sống khi Người triệu hồi hành động, Người triệu hồi sẽ chọn Ác quỷ nào, nhưng Người kể chuyện sẽ chọn người chơi nào."
-    },
-    {
-        "target": "summoner",
-        "trick": "marionette",
-        "reason": "Con rối hàng xóm với Người triệu hồi. Người triệu hồi biết Con rối là ai."
+        "target": "vizier",
+        "trick": "politician",
+        "reason": "Chính trị gia có thể bị coi là xấu xa đối với Vizier."
     },
     {
         "target": "vortox",

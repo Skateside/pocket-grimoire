@@ -40,6 +40,16 @@
         "reason": "如果有多餘的角色代幣，魔女可以產生新的愚民，若如此，醉酒的愚民可能會改變。"
     },
     {
+        "target": "pithag",
+        "trick": "cultleader",
+        "reason": "如果 Pit-Hag 將邪惡玩家變成邪教領袖，由於他們自身的能力，他們無法變好。"
+    },
+    {
+        "target": "pithag",
+        "trick": "goon",
+        "reason": "如果 Pit-Hag 將邪惡玩家變成 Goon，由於他們自身的能力，他們無法變好。"
+    },
+    {
         "target": "cerenovus",
         "trick": "goblin",
         "reason": "洗腦師可以選擇哥布林作為角色。"
@@ -71,6 +81,11 @@
     },
     {
         "target": "leviathan",
+        "trick": "banshee",
+        "reason": "如果利維坦在遊戲中時女妖被處決，則所有玩家得知女妖已死亡，且女妖得到能力。"
+    },
+    {
+        "target": "leviathan",
         "trick": "sage",
         "reason": "如果利維坦在遊戲中且賢者被處死，則賢者在當晚醒來並使用他的能力。"
     },
@@ -93,11 +108,6 @@
         "target": "leviathan",
         "trick": "pithag",
         "reason": "第五天之後，魔女不能選擇利維坦。"
-    },
-    {
-        "target": "leviathan",
-        "trick": "banshee",
-        "reason": "如果利維坦在場，而女妖被處決而死亡，所有玩家都會知道女妖已經死亡，而女妖獲得了他們的能力。"
     },
     {
         "target": "lilmonsta",
@@ -150,11 +160,6 @@
         "reason": "如果帽匠死亡時軍團在遊戲中則無事發生。如果帽匠死亡時有邪惡玩家選擇軍團，則所有邪惡玩家變成軍團。"
     },
     {
-        "target": "legion",
-        "trick": "summoner",
-        "reason": "如果召喚師產生了軍團，則大部分玩家(包含所有邪惡玩家)變成邪惡的軍團。"
-    },
-    {
         "target": "fanggu",
         "trick": "scarletwoman",
         "reason": "如果惡鬼選擇了城外人而死亡，則淫魔不會成為惡鬼。"
@@ -182,7 +187,7 @@
     {
         "target": "spy",
         "trick": "damsel",
-        "reason": "只有其中一個角色可以出現在遊戲中。"
+        "reason": "如果間諜正在（或已經）在場，少女就會中毒。"
     },
     {
         "target": "spy",
@@ -207,7 +212,7 @@
     {
         "target": "widow",
         "trick": "damsel",
-        "reason": "只有其中一個角色可以出現在遊戲中。"
+        "reason": "如果寡婦正在（或已經）在場，則少女會中毒。"
     },
     {
         "target": "widow",
@@ -233,6 +238,76 @@
         "target": "fearmonger",
         "trick": "plaguedoctor",
         "reason": "如果瘟疫醫生死亡，一個活著的僕從除了自己的能力之外，額外獲得恐懼販子的能力，並得知此事。"
+    },
+    {
+        "target": "yaggababble",
+        "trick": "exorcist",
+        "reason": "如果驅魔人選擇了牙加巴布，牙加巴布的能力今晚不會產生死亡。"
+    },
+    {
+        "target": "summoner",
+        "trick": "clockmaker",
+        "reason": "如果召喚師在遊戲中，鐘匠在惡魔產生時才會得知訊息。"
+    },
+    {
+        "target": "summoner",
+        "trick": "alchemist",
+        "reason": "如果煉金術士得到了召喚師的能力，遊戲照常有一個惡魔。如果煉金術士選擇了一位玩家，該玩家成為惡魔但不會改變隊伍。"
+    },
+    {
+        "target": "summoner",
+        "trick": "poppygrower",
+        "reason": "如果召喚師行動時罌粟農活著，則召喚師選擇惡魔種類，說書人決定是哪位玩家。"
+    },
+    {
+        "target": "summoner",
+        "trick": "marionette",
+        "reason": "傀儡坐在召喚師旁邊。召喚師知道誰是傀儡。"
+    },
+    {
+        "target": "summoner",
+        "trick": "pithag",
+        "reason": "召喚師無法創造遊戲中的惡魔。如果召喚師創造了一個不在場的惡魔，今晚的死亡是任意的。"
+    },
+    {
+        "target": "summoner",
+        "trick": "hatter",
+        "reason": "召喚師無法創造遊戲中的惡魔。如果召喚師創造了一個不在場的惡魔，今晚的死亡是任意的。"
+    },
+    {
+        "target": "summoner",
+        "trick": "courtier",
+        "reason": "如果召喚者在第三天晚上喝醉了，則召喚者選擇哪個惡魔，但故事講述者選擇哪個玩家。"
+    },
+    {
+        "target": "summoner",
+        "trick": "engineer",
+        "reason": "如果工程師在召喚者使用其能力之前將其從遊戲中移除，則該召喚者會立即使用其能力。"
+    },
+    {
+        "target": "summoner",
+        "trick": "zombuul",
+        "reason": "如果召喚師將死去的玩家變成了殭屍，故事講述者會將該玩家視為死過一次的殭屍。"
+    },
+    {
+        "target": "summoner",
+        "trick": "pukka",
+        "reason": "召喚師可以在第二天晚上選擇一名玩家成為普卡。"
+    },
+    {
+        "target": "summoner",
+        "trick": "riot",
+        "reason": "如果召喚者製造暴動，所有小兵都會變得暴動。"
+    },
+    {
+        "target": "summoner",
+        "trick": "legion",
+        "reason": "如果召喚師產生了軍團，則大部分玩家(包含所有邪惡玩家)變成邪惡的軍團。"
+    },
+    {
+        "target": "summoner",
+        "trick": "kazali",
+        "reason": "召喚師無法創造遊戲中的惡魔。如果召喚師創造了一個不在場的惡魔，今晚的死亡是任意的。"
     },
     {
         "target": "baron",
@@ -295,6 +370,31 @@
         "reason": "如果水蛭怪使異教徒中毒後自己死亡，則異教徒還是持續中毒。"
     },
     {
+        "target": "kazali",
+        "trick": "bountyhunter",
+        "reason": "寶藏獵人需要在卡札力行動完後還在遊戲中才會產生邪惡的鎮民。"
+    },
+    {
+        "target": "kazali",
+        "trick": "goon",
+        "reason": "如果卡札力選擇傻瓜成為僕從，則剩下的僕從及他們的角色由說書人決定。"
+    },
+    {
+        "target": "kazali",
+        "trick": "marionette",
+        "reason": "如果卡札力想要產生傀儡，他必須選擇他的鄰居。"
+    },
+    {
+        "target": "kazali",
+        "trick": "huntsman",
+        "reason": "如果獵人在遊戲中時卡札力使少女變成僕從，則一位好人玩家變成少女。"
+    },
+    {
+        "target": "kazali",
+        "trick": "choirboy",
+        "reason": "如果詩童在遊戲中，卡札力不能使國王變成僕從。"
+    },
+    {
         "target": "riot",
         "trick": "engineer",
         "reason": "暴徒和工程師不能於遊戲開始時同時存在。如果工程師產生了暴徒，則所有邪惡玩家變成暴徒。"
@@ -348,6 +448,11 @@
         "target": "riot",
         "trick": "sage",
         "reason": "如果暴徒提名並殺死了賢者，則賢者在當晚醒來並使用他的能力。"
+    },
+    {
+        "target": "riot",
+        "trick": "banshee",
+        "reason": "如果暴徒提名並殺死了女妖，則所有玩家得知女妖已死亡，且女妖可以立刻提名兩位玩家。"
     },
     {
         "target": "riot",
@@ -435,16 +540,6 @@
         "reason": "如果帽匠死亡時暴徒在遊戲中且有暴徒選擇另一個惡魔，則暴徒們變成正常遊戲時的邪惡隊伍組合。如果帽匠死亡時惡魔選擇暴徒，則所有邪惡玩家變成暴徒。"
     },
     {
-        "target": "riot",
-        "trick": "summoner",
-        "reason": "如果召喚師產生了暴徒，被選擇的玩家及所有邪惡玩家變成暴徒。召喚師必須選擇自己的存活好人鄰居。"
-    },
-    {
-        "target": "riot",
-        "trick": "banshee",
-        "reason": "如果暴徒提名並殺死女妖，所有玩家都會得知女妖已死亡，而女妖可能會立即提名兩名玩家。"
-    },
-    {
         "target": "alhadikhia",
         "trick": "scarletwoman",
         "reason": "如果有兩個活著的哈迪基亞，則淫魔變成的哈迪基亞再次變回淫魔。"
@@ -476,8 +571,13 @@
     },
     {
         "target": "vizier",
-        "trick": "alchemist",
-        "reason": "如果煉金術士擁有宰相的能力，他們只能在有三名或更多玩家投票時選擇立即處決。"
+        "trick": "investigator",
+        "reason": "如果調查員得知宰相在場，則說書人不會宣布宰相的存在。"
+    },
+    {
+        "target": "vizier",
+        "trick": "preacher",
+        "reason": "如果宰相失去了他的能力，則他得知此事，如果宰相在他有能力時被處決，則他的隊伍獲勝。"
     },
     {
         "target": "vizier",
@@ -486,13 +586,8 @@
     },
     {
         "target": "vizier",
-        "trick": "fearmonger",
-        "reason": "宰相與恐懼販子一起醒來，得知恐懼販子選擇了誰並且不能選擇處決該玩家。"
-    },
-    {
-        "target": "vizier",
-        "trick": "investigator",
-        "reason": "如果調查員得知宰相在場，則說書人不會宣布宰相的存在。"
+        "trick": "alchemist",
+        "reason": "如果煉金術士擁有宰相的能力，他們只能在有三名或更多玩家投票時選擇立即處決。"
     },
     {
         "target": "vizier",
@@ -501,67 +596,17 @@
     },
     {
         "target": "vizier",
-        "trick": "preacher",
-        "reason": "如果宰相失去了他的能力，則他得知此事，如果宰相在他有能力時被處決，則他的隊伍獲勝。"
+        "trick": "fearmonger",
+        "reason": "宰相與恐懼販子一起醒來，得知恐懼販子選擇了誰並且不能選擇處決該玩家。"
     },
     {
-        "target": "kazali",
-        "trick": "bountyhunter",
-        "reason": "寶藏獵人需要在卡札力行動完後還在遊戲中才會產生邪惡的鎮民。"
-    },
-    {
-        "target": "kazali",
-        "trick": "goon",
-        "reason": "如果卡札力選擇傻瓜成為僕從，則剩下的僕從及他們的角色由說書人決定。"
-    },
-    {
-        "target": "kazali",
-        "trick": "marionette",
-        "reason": "如果卡札力想要產生傀儡，他必須選擇他的鄰居。"
-    },
-    {
-        "target": "kazali",
-        "trick": "huntsman",
-        "reason": "如果獵人在遊戲中時卡札力使少女變成僕從，則一位好人玩家變成少女。"
-    },
-    {
-        "target": "kazali",
-        "trick": "choirboy",
-        "reason": "如果詩童在遊戲中，卡札力不能使國王變成僕從。"
-    },
-    {
-        "target": "kazali",
-        "trick": "summoner",
-        "reason": "卡札力不能產生召喚師。"
-    },
-    {
-        "target": "yaggababble",
-        "trick": "exorcist",
-        "reason": "如果驅魔人選擇了牙加巴布，牙加巴布的能力今晚不會產生死亡。"
-    },
-    {
-        "target": "summoner",
-        "trick": "clockmaker",
-        "reason": "如果召喚師在遊戲中，鐘匠在惡魔產生時才會得知訊息。"
-    },
-    {
-        "target": "summoner",
-        "trick": "alchemist",
-        "reason": "如果煉金術士得到了召喚師的能力，遊戲照常有一個惡魔。如果煉金術士選擇了一位玩家，該玩家成為惡魔但不會改變隊伍。"
-    },
-    {
-        "target": "summoner",
-        "trick": "poppygrower",
-        "reason": "如果召喚師行動時罌粟農活著，則召喚師選擇惡魔種類，說書人決定是哪位玩家。"
-    },
-    {
-        "target": "summoner",
-        "trick": "marionette",
-        "reason": "傀儡坐在召喚師旁邊。召喚師知道誰是傀儡。"
+        "target": "vizier",
+        "trick": "politician",
+        "reason": "政客可能會被維齊爾認為是邪惡的。"
     },
     {
         "target": "vortox",
         "trick": "banshee",
-        "reason": "如果漩渦正在發揮作用並且惡魔殺死了女妖，玩家仍然會得知女妖已經死亡。"
+        "reason": "如果迷魂在遊戲中時惡魔殺死了女妖，玩家們仍會得知女妖已死亡。"
     }
 ]
