@@ -10,9 +10,14 @@
         "reason": "如果瘟疫醫生死亡，說書人將無法獲得邪惡雙子的能力。"
     },
     {
-        "target": "butler",
-        "trick": "cannibal",
+        "target": "cannibal",
+        "trick": "butler",
         "reason": "如果食人族得到了管家的能力，則他得知這件事。"
+    },
+    {
+        "target": "cannibal",
+        "trick": "juggler",
+        "reason": "如果雜耍者在第一天就猜對了並被處決而死，今晚活著的食人者就會知道雜耍者有多少猜測是正確的。"
     },
     {
         "target": "lunatic",
@@ -42,12 +47,17 @@
     {
         "target": "pithag",
         "trick": "cultleader",
-        "reason": "如果 Pit-Hag 將邪惡玩家變成邪教領袖，由於他們自身的能力，他們無法變好。"
+        "reason": "如果魔女將邪惡玩家變成邪教領袖，由於他們自身的能力，他們無法變好。"
     },
     {
         "target": "pithag",
         "trick": "goon",
-        "reason": "如果 Pit-Hag 將邪惡玩家變成 Goon，由於他們自身的能力，他們無法變好。"
+        "reason": "如果魔女將邪惡玩家變成傻瓜，由於他們自身的能力，他們無法變好。"
+    },
+    {
+        "target": "pithag",
+        "trick": "ogre",
+        "reason": "如果魔女將邪惡玩家變成食人魔，由於他們自身的能力，他們無法變好。"
     },
     {
         "target": "cerenovus",
@@ -193,6 +203,11 @@
         "target": "spy",
         "trick": "heretic",
         "reason": "只有其中一個角色可以出現在遊戲中。"
+    },
+    {
+        "target": "spy",
+        "trick": "ogre",
+        "reason": "間諜對食人魔來說是邪惡的。"
     },
     {
         "target": "widow",
@@ -608,5 +623,10 @@
         "target": "vortox",
         "trick": "banshee",
         "reason": "如果迷魂在遊戲中時惡魔殺死了女妖，玩家們仍會得知女妖已死亡。"
+    },
+    {
+        "target": "ogre",
+        "trick": "recluse",
+        "reason": "如果隱士向食人魔表明自己是邪惡的，那麼食人魔就會知道他們是邪惡的。"
     }
 ]

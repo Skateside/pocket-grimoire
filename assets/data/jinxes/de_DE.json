@@ -10,9 +10,14 @@
         "reason": "Der Geschichtenerzähler kann die Fähigkeit „Böser Zwilling“ nicht erlangen, wenn der Seuchendoktor stirbt."
     },
     {
-        "target": "butler",
-        "trick": "cannibal",
+        "target": "cannibal",
+        "trick": "butler",
         "reason": "Wenn der Kannibale die Butler Fähigkeit erlangt, erfährt der Kannibale dies."
+    },
+    {
+        "target": "cannibal",
+        "trick": "juggler",
+        "reason": "Wenn der Jongleur am ersten Tag rät und durch Hinrichtung stirbt, erfährt der lebende Kannibale heute Abend, wie viele Schätzungen der Jongleur richtig gemacht hat."
     },
     {
         "target": "lunatic",
@@ -48,6 +53,11 @@
         "target": "pithag",
         "trick": "goon",
         "reason": "Wenn der Pit-Hag einen bösen Spieler in einen Goon verwandelt, kann er aufgrund seiner eigenen Fähigkeiten nicht zum Guten werden."
+    },
+    {
+        "target": "pithag",
+        "trick": "ogre",
+        "reason": "Wenn der Pit-Hag einen bösen Spieler in einen Oger verwandelt, kann er aufgrund seiner eigenen Fähigkeiten nicht zum Guten werden."
     },
     {
         "target": "cerenovus",
@@ -193,6 +203,11 @@
         "target": "spy",
         "trick": "heretic",
         "reason": "Nur 1 verhexter Character kann gleichzeitig im Spiel sein"
+    },
+    {
+        "target": "spy",
+        "trick": "ogre",
+        "reason": "Der Spion registriert sich gegenüber dem Oger als böse."
     },
     {
         "target": "widow",
@@ -608,5 +623,10 @@
         "target": "vortox",
         "trick": "banshee",
         "reason": "Wenn der Vortox im Spiel ist und der Dämon die Banshee tötet, erfahren die Spieler trotzdem, dass die Banshee gestorben ist."
+    },
+    {
+        "target": "ogre",
+        "trick": "recluse",
+        "reason": "Wenn sich der Einsiedler gegenüber dem Oger als böse registriert, erfährt der Oger, dass er böse ist."
     }
 ]

@@ -10,9 +10,14 @@
         "reason": "说书人无法在瘟疫医生死亡时获得镜像双子的能力。"
     },
     {
-        "target": "butler",
-        "trick": "cannibal",
+        "target": "cannibal",
+        "trick": "butler",
         "reason": "如果食人族获得了管家的能力，他会得知这一信息。"
+    },
+    {
+        "target": "cannibal",
+        "trick": "juggler",
+        "reason": "如果杂耍者在第一天就猜对了并被处决而死，今晚活着的食人者就会知道杂耍者有多少猜测是正确的。"
     },
     {
         "target": "lunatic",
@@ -42,12 +47,17 @@
     {
         "target": "pithag",
         "trick": "cultleader",
-        "reason": "如果 Pit-Hag 将邪恶玩家变成邪教领袖，由于他们自身的能力，他们无法变好。"
+        "reason": "如果麻脸巫婆将邪恶玩家变成邪教领袖，由于他们自身的能力，他们无法变好。"
     },
     {
         "target": "pithag",
         "trick": "goon",
-        "reason": "如果 Pit-Hag 将邪恶玩家变成 Goon，由于他们自身的能力，他们无法变好。"
+        "reason": "如果麻脸巫婆将邪恶玩家变成莽夫，由于他们自身的能力，他们无法变好。"
+    },
+    {
+        "target": "pithag",
+        "trick": "ogre",
+        "reason": "如果麻脸巫婆将邪恶玩家变成食人魔，由于他们自身的能力，他们无法变好。"
     },
     {
         "target": "cerenovus",
@@ -193,6 +203,11 @@
         "target": "spy",
         "trick": "heretic",
         "reason": "互为克星的角色在同一时间里只能有其中一个角色在场。"
+    },
+    {
+        "target": "spy",
+        "trick": "ogre",
+        "reason": "间谍对食人魔来说是邪恶的。"
     },
     {
         "target": "widow",
@@ -608,5 +623,10 @@
         "target": "vortox",
         "trick": "banshee",
         "reason": "如果恶魔杀死报丧女妖时涡流在场，玩家仍然会得知正确信息。"
+    },
+    {
+        "target": "ogre",
+        "trick": "recluse",
+        "reason": "如果隐士向食人魔表明自己是邪恶的，那么食人魔就会知道他们是邪恶的。"
     }
 ]

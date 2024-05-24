@@ -10,9 +10,14 @@
         "reason": "Berättaren kan inte få Onda tvillingens förmåga om Pestläkaren dör."
     },
     {
-        "target": "butler",
-        "trick": "cannibal",
+        "target": "cannibal",
+        "trick": "butler",
         "reason": "Kannibalen får veta om hen får Butlerns förmåga."
+    },
+    {
+        "target": "cannibal",
+        "trick": "juggler",
+        "reason": "Om Jonglören gissar på första dagen och dör av avrättning får den levande Kannibalen inatt veta hur många rätt Jonglören hade."
     },
     {
         "target": "lunatic",
@@ -48,6 +53,11 @@
         "target": "pithag",
         "trick": "goon",
         "reason": "Om Pit-Hag förvandlar en ond spelare till Goon, kan de inte bli bra på grund av sin egen förmåga."
+    },
+    {
+        "target": "pithag",
+        "trick": "ogre",
+        "reason": "Om Trollpackan gör en ond spelare till Trollet kan den spelaren inte bli god av sin egen förmåga."
     },
     {
         "target": "cerenovus",
@@ -193,6 +203,11 @@
         "target": "spy",
         "trick": "heretic",
         "reason": "Endast 1 av rollerna får vara i spel."
+    },
+    {
+        "target": "spy",
+        "trick": "ogre",
+        "reason": "Spionen registreras som ond för Troller."
     },
     {
         "target": "widow",
@@ -608,5 +623,10 @@
         "target": "vortox",
         "trick": "banshee",
         "reason": "Om Vortox är i spel och Demonen dödar Bansheen får spelarna fortfarande veta att Bansheen har dött."
+    },
+    {
+        "target": "ogre",
+        "trick": "recluse",
+        "reason": "Om Enslingen registreras som ond för Trollet får Troller veta att hen är ond."
     }
 ]

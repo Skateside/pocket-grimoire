@@ -10,9 +10,14 @@
         "reason": "Fortelleren kan ikke tilegne seg evnen til den Onde Tvillingen om Pestlegen dør."
     },
     {
-        "target": "butler",
-        "trick": "cannibal",
+        "target": "cannibal",
+        "trick": "butler",
         "reason": "Om Menneskeeteren tilegner seg evnen til Hovmesteren, lærer de det."
+    },
+    {
+        "target": "cannibal",
+        "trick": "juggler",
+        "reason": "Hvis gjøgleren gjetter på sin første dag og dør ved henrettelse, i kveld får den levende kannibalen vite hvor mange gjetninger gjøgleren fikk riktige."
     },
     {
         "target": "lunatic",
@@ -48,6 +53,11 @@
         "target": "pithag",
         "trick": "goon",
         "reason": "Hvis Markkjerring gjør en ond spiller til Goon, kan de ikke bli gode på grunn av sin egen evne."
+    },
+    {
+        "target": "pithag",
+        "trick": "ogre",
+        "reason": "Hvis Pit-Hag gjør en ond spiller til Ogre, kan de ikke bli gode på grunn av sin egen evne."
     },
     {
         "target": "cerenovus",
@@ -193,6 +203,11 @@
         "target": "spy",
         "trick": "heretic",
         "reason": "Bare 1 gandet rolle kan være i spill."
+    },
+    {
+        "target": "spy",
+        "trick": "ogre",
+        "reason": "Spionen registrerer seg som ond for Ogre."
     },
     {
         "target": "widow",
@@ -608,5 +623,10 @@
         "target": "vortox",
         "trick": "banshee",
         "reason": "Hvis Vortox er i spill og demonen dreper Banshee, lærer spillerne fortsatt at Banshee har dødd."
+    },
+    {
+        "target": "ogre",
+        "trick": "recluse",
+        "reason": "Hvis Recluse registrerer seg som ond for Ogre, lærer Ogre at de er onde."
     }
 ]

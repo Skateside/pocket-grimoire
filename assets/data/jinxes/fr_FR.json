@@ -10,9 +10,14 @@
         "reason": "Le Conteur ne peut pas acquérir la capacité de Jumeau Maléfique si le Médecin de la Peste meurt."
     },
     {
-        "target": "butler",
-        "trick": "cannibal",
+        "target": "cannibal",
+        "trick": "butler",
         "reason": "Si le Cannibale obtiens la capacité du Majordome, le Cannibale l'apprend."
+    },
+    {
+        "target": "cannibal",
+        "trick": "juggler",
+        "reason": "Si le Jongleur a tenté de deviner des rôles son premier jour et qu'il meurt éxécuté, cette nuit nuit le Cannibale apprend combien de combinaisons correctes le Jongleur a eu."
     },
     {
         "target": "lunatic",
@@ -48,6 +53,11 @@
         "target": "pithag",
         "trick": "goon",
         "reason": "Si la Vieille Chouette transforme un joueur maléfique en Brute, il ne peut pas devenir bon en raison de sa capacité."
+    },
+    {
+        "target": "pithag",
+        "trick": "ogre",
+        "reason": "Si la Vieille Chouette transforme un joueur maléfique en Ogre, il ne peut pas devenir bon en raison de sa capacité"
     },
     {
         "target": "cerenovus",
@@ -193,6 +203,11 @@
         "target": "spy",
         "trick": "heretic",
         "reason": "Il ne peut y avoir qu'un seul personnage jinxé en jeu."
+    },
+    {
+        "target": "spy",
+        "trick": "ogre",
+        "reason": "L'Espion est reconnu comme étant maléfique à l'Ogre"
     },
     {
         "target": "widow",
@@ -608,5 +623,10 @@
         "target": "vortox",
         "trick": "banshee",
         "reason": "Si le Vortox est en jeu et que le Démon tue la Banshee, les joueurs apprenent quand même que la Banshee est morte."
+    },
+    {
+        "target": "ogre",
+        "trick": "recluse",
+        "reason": "Si le Reclus est reconnu comme étant maléfique à l'Ogre, l'Ogre apprend qu'il est maléfique"
     }
 ]

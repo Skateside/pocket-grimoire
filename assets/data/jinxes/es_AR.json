@@ -10,9 +10,14 @@
         "reason": "El Narrador no puede obtener la habilidad Evil Twin si el Plague Doctor muere."
     },
     {
-        "target": "butler",
-        "trick": "cannibal",
+        "target": "cannibal",
+        "trick": "butler",
         "reason": "Si el Caníbal gana la habilidad del Mayordomo, el Caníbal lo sabe."
+    },
+    {
+        "target": "cannibal",
+        "trick": "juggler",
+        "reason": "Si el Malabarista adivina el primer día y muere en la ejecución, esta noche el Caníbal vivo aprende cuántas conjeturas acertó el Malabarista."
     },
     {
         "target": "lunatic",
@@ -48,6 +53,11 @@
         "target": "pithag",
         "trick": "goon",
         "reason": "Si Pit-Hag convierte a un jugador malvado en Goon, no puede volverse bueno debido a su propia habilidad."
+    },
+    {
+        "target": "pithag",
+        "trick": "ogre",
+        "reason": "Si Pit-Hag convierte a un jugador malvado en Ogro, no puede volverse bueno debido a su propia habilidad."
     },
     {
         "target": "cerenovus",
@@ -193,6 +203,11 @@
         "target": "spy",
         "trick": "heretic",
         "reason": "Solo 1 personaje hechizado puede estar en juego."
+    },
+    {
+        "target": "spy",
+        "trick": "ogre",
+        "reason": "El espía lo considera malvado ante el ogro."
     },
     {
         "target": "widow",
@@ -608,5 +623,10 @@
         "target": "vortox",
         "trick": "banshee",
         "reason": "Si el Vortox está en juego y el Demonio mata a la Banshee, los jugadores aún se enteran de que la Banshee ha muerto."
+    },
+    {
+        "target": "ogre",
+        "trick": "recluse",
+        "reason": "Si el Recluso lo registra como malvado ante el Ogro, el Ogro se entera de que es malvado."
     }
 ]

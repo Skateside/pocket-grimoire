@@ -10,9 +10,14 @@
         "reason": "Če Kužnik umre, Pripovedovalec ne more dobiti moči Dvojčka."
     },
     {
-        "target": "butler",
-        "trick": "cannibal",
+        "target": "cannibal",
+        "trick": "butler",
         "reason": "Če Ljudožerec dobi moč Služabnika, to izve."
+    },
+    {
+        "target": "cannibal",
+        "trick": "juggler",
+        "reason": "Če žongler prvi dan ugiba in zaradi usmrtitve umre, nocoj živi kanibal izve, koliko ugibanj je žongler pravilnih."
     },
     {
         "target": "lunatic",
@@ -48,6 +53,11 @@
         "target": "pithag",
         "trick": "goon",
         "reason": "Če Pit-Hag zlobnega igralca spremeni v Goona, ta zaradi lastnih sposobnosti ne more postati dober."
+    },
+    {
+        "target": "pithag",
+        "trick": "ogre",
+        "reason": "Če Pit-Hag zlobnega igralca spremeni v Ogra, ta zaradi lastnih sposobnosti ne more postati dober."
     },
     {
         "target": "cerenovus",
@@ -193,6 +203,11 @@
         "target": "spy",
         "trick": "heretic",
         "reason": "Samo ena od uročenih vlog je lahko v igri."
+    },
+    {
+        "target": "spy",
+        "trick": "ogre",
+        "reason": "Vohun se za Ogra označi kot zlo."
     },
     {
         "target": "widow",
@@ -608,5 +623,10 @@
         "target": "vortox",
         "trick": "banshee",
         "reason": "Če je Vortox v igri in Demon ubije Banshee, igralci še vedno izvedo, da je Banshee umrl."
+    },
+    {
+        "target": "ogre",
+        "trick": "recluse",
+        "reason": "Če se Samotar Ogru prijavi kot hudoben, se Ogre nauči, da so hudobni."
     }
 ]

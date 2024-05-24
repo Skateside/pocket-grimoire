@@ -1088,6 +1088,15 @@
         ]
     },
     {
+        "id": "ogre",
+        "name": "Ogre",
+        "ability": "Durant votre première nuit, choisissez un autre joueur: vous changez secrètement pour son alignement (sans apprendre lequel) même si vous êtes ivres ou empoisonnés",
+        "firstNightReminder": "L'Ogre choisit un joueur: il change d'alignement pour ce joueur. Ne lui annoncez pas son nouvel alignement.",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
         "id": "ojo",
         "name": "Ojo",
         "ability": "Chaque nuit*, choisissez un personnage: il meurt. S'il n'est pas en jeu, le Conteur choisit qui meurt.",

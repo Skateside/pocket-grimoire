@@ -234,7 +234,7 @@
     {
         "id": "bureaucrat",
         "name": "Byråkraten",
-        "ability": "De 2 första minuterna varje dag får veteranspelare inte prata.",
+        "ability": "Välj en spelare (inte dig själv) varje natt; nästa dag räknas hens röst som 3.",
         "firstNightReminder": "Byråkraten pekar på en spelare. Sätt Byråkratens påminnelse ”3 röster” vid den valda spelarens rollbricka.",
         "otherNightReminder": "Byråkraten pekar på en spelare. Sätt Byråkratens påminnelse ”3 röster” vid den valda spelarens rollbricka.",
         "remindersGlobal": [],
@@ -297,7 +297,7 @@
     {
         "id": "chef",
         "name": "Kocken",
-        "ability": "Du vet från början hur många par onda spelare som sitter bredvid varandra.",
+        "ability": "Du vet från början hur många par onda spelare det finns.",
         "firstNightReminder": "Signalera hur många par onda spelare som sitter bredvid varandra (0, 1, 2 eller 3).",
         "otherNightReminder": "",
         "remindersGlobal": [],
@@ -825,7 +825,7 @@
     {
         "id": "king",
         "name": "Kungen",
-        "ability": "Varje natt som det är fler döda än levande spelare får du veta 1 levande roll. Demonen vet vem du är.",
+        "ability": "Varje natt som det är minst lika många döda som levande spelare får du veta 1 levande roll. Demonen vet vem du är.",
         "firstNightReminder": "Väck Demonen. Visa kortet ”Den här rollen valde dig”, visa Kungens rollbricka och peka på Kungens spelare.",
         "otherNightReminder": "Om det finns fler döda än levande spelare så visa Kungen en levande spelares rollbricka.",
         "remindersGlobal": [],
@@ -1085,6 +1085,15 @@
             "Död",
             "Förgiftad"
         ]
+    },
+    {
+        "id": "ogre",
+        "name": "Trollet",
+        "ability": "Din första natt väljer du en spelare (inte dig själv); du går över till hens lag (men vet inte vilket) även om du är full eller förgiftad.",
+        "firstNightReminder": "Trollet pekar på en spelare (inte sig själv) och går över till hens lag.",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": []
     },
     {
         "id": "ojo",

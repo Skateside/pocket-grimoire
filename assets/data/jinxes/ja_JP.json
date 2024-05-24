@@ -10,9 +10,14 @@
         "reason": "ペストドクターが死亡した場合、ストーリーテラーは邪悪な双子の能力を得ることができません。"
     },
     {
-        "target": "butler",
-        "trick": "cannibal",
+        "target": "cannibal",
+        "trick": "butler",
         "reason": "人食い人種が執事の能力を獲得すると、人食い人種はこれを学びます。"
+    },
+    {
+        "target": "cannibal",
+        "trick": "juggler",
+        "reason": "ジャグラーが初日に予想を当てて処刑によって死亡した場合、今夜、生きているカニバルはジャグラーが何回正解したかを知ります。"
     },
     {
         "target": "lunatic",
@@ -48,6 +53,11 @@
         "target": "pithag",
         "trick": "goon",
         "reason": "痘痕の老婆が悪のプレイヤーをうすのろに変えても、彼ら自身の能力によって善に変えることはできません。"
+    },
+    {
+        "target": "pithag",
+        "trick": "ogre",
+        "reason": "ピットハグが悪のプレイヤーをオーガに変えても、彼ら自身の能力により善に変えることはできません。"
     },
     {
         "target": "cerenovus",
@@ -193,6 +203,11 @@
         "target": "spy",
         "trick": "heretic",
         "reason": "ジンクスされたキャラクターは1人だけ場に出すことができます。"
+    },
+    {
+        "target": "spy",
+        "trick": "ogre",
+        "reason": "スパイはオーガにとって悪として登録されます。"
     },
     {
         "target": "widow",
@@ -608,5 +623,10 @@
         "target": "vortox",
         "trick": "banshee",
         "reason": "ヴォルトックスがプレイ中にデーモンがバンシーを殺した場合でも、プレイヤーはバンシーが死んだことを知ります。"
+    },
+    {
+        "target": "ogre",
+        "trick": "recluse",
+        "reason": "世捨て人がオーガにとって悪であると登録すると、オーガは彼らが悪であることを学びます。"
     }
 ]

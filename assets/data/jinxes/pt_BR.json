@@ -10,9 +10,14 @@
         "reason": "O Narrador não pode ganhar a habilidade da Gêmea Má se o Médico da Peste morrer."
     },
     {
-        "target": "butler",
-        "trick": "cannibal",
+        "target": "cannibal",
+        "trick": "butler",
         "reason": "Se o Canibal ganhar a habilidade do Mordomo, o Canibal é avisado disso."
+    },
+    {
+        "target": "cannibal",
+        "trick": "juggler",
+        "reason": "Se o Malabarista adivinhar no primeiro dia e morrer na execução, esta noite o Canibal vivo saberá quantas suposições o Malabarista acertou."
     },
     {
         "target": "lunatic",
@@ -48,6 +53,11 @@
         "target": "pithag",
         "trick": "goon",
         "reason": "Se a Bruxa transformar um jogador malvado em um Goon, ele não poderá se tornar bom devido à sua própria habilidade."
+    },
+    {
+        "target": "pithag",
+        "trick": "ogre",
+        "reason": "Se a Pit-Hag transformar um jogador malvado em Ogro, ele não poderá se tornar bom devido à sua própria habilidade."
     },
     {
         "target": "cerenovus",
@@ -193,6 +203,11 @@
         "target": "spy",
         "trick": "heretic",
         "reason": "Apenas um destes personagens pode estar em jogo."
+    },
+    {
+        "target": "spy",
+        "trick": "ogre",
+        "reason": "O Spy é registrado como mau para o Ogro."
     },
     {
         "target": "widow",
@@ -608,5 +623,10 @@
         "target": "vortox",
         "trick": "banshee",
         "reason": "Se o Vortox estiver em jogo e o Demônio matar o Banshee, os jogadores ainda descobrirão que o Banshee morreu."
+    },
+    {
+        "target": "ogre",
+        "trick": "recluse",
+        "reason": "Se o Recluso for considerado mau para o Ogro, o Ogro descobre que eles são maus."
     }
 ]

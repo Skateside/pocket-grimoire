@@ -10,9 +10,14 @@
         "reason": "Người kể chuyện không thể có chức năng của Sinh đôi xấu nếu Bác sĩ dịch hạch chết."
     },
     {
-        "target": "butler",
-        "trick": "cannibal",
+        "target": "cannibal",
+        "trick": "butler",
         "reason": "Nếu Ăn thịt người có chức năng của Quản gia, Ăn thịt người biết điều này."
+    },
+    {
+        "target": "cannibal",
+        "trick": "juggler",
+        "reason": "Nếu Người tung hứng đoán vào ngày đầu tiên của họ và bị xử tử, tối nay Kẻ ăn thịt người còn sống sẽ biết được Người tung hứng đã đoán đúng bao nhiêu lần."
     },
     {
         "target": "lunatic",
@@ -48,6 +53,11 @@
         "target": "pithag",
         "trick": "goon",
         "reason": "Nếu Pit-Hag biến một người chơi ác thành Goon, họ không thể trở thành người tốt do khả năng của chính họ."
+    },
+    {
+        "target": "pithag",
+        "trick": "ogre",
+        "reason": "Nếu Pit-Hag biến một người chơi xấu thành Yêu tinh, họ không thể trở thành người tốt do khả năng của chính họ."
     },
     {
         "target": "cerenovus",
@@ -193,6 +203,11 @@
         "target": "spy",
         "trick": "heretic",
         "reason": "Chỉ có 1 nhân vật jinx trong cuộc."
+    },
+    {
+        "target": "spy",
+        "trick": "ogre",
+        "reason": "Điệp viên được coi là ác quỷ đối với Yêu tinh."
     },
     {
         "target": "widow",
@@ -608,5 +623,10 @@
         "target": "vortox",
         "trick": "banshee",
         "reason": "Nếu có Vortox trong game và Quỷ giết Quỷ báo tử, người chơi vẫn được thông báo là Quỷ báo tử đã chết."
+    },
+    {
+        "target": "ogre",
+        "trick": "recluse",
+        "reason": "Nếu Recluse cho rằng Ogre là ác quỷ, thì Ogre sẽ biết rằng chúng là ác quỷ."
     }
 ]
