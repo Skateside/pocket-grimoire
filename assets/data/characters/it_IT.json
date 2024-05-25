@@ -1,0 +1,1705 @@
+[
+    {
+        "id": "acrobat",
+        "name": "Acrobata",
+        "ability": "Ogni notte*, se uno dei tuoi vicini vivi buoni è ubriaco o avvelenato, muori.",
+        "firstNightReminder": "",
+        "otherNightReminder": "Se un suo vicino buono è ubriaco o avvelenato, l'Acrobata muore.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Morto"
+        ]
+    },
+    {
+        "id": "alchemist",
+        "name": "Alchimista",
+        "ability": "Hai l'abilità di un Seguace non in gioco.",
+        "firstNightReminder": "Mostra all'Alchimista il gettone di un Seguace non in gioco.",
+        "otherNightReminder": "",
+        "remindersGlobal": [
+            "È l'Alchimista"
+        ],
+        "reminders": []
+    },
+    {
+        "id": "alhadikhia",
+        "name": "Al-Hadikhia",
+        "ability": "Ogni notte*, scegli 3 giocatori (tutti scoprono chi): ognuno di loro sceglie silenziosamente se vivere o morire, ma se tutti vivono, tutti muoiono.",
+        "firstNightReminder": "",
+        "otherNightReminder": "Al-Hadikha sceglie 3 giocatori. Annuncia il primo e sveglialo. Al-Hadikha annuisce se vuole vivere oppure scuote la testa se vuole morire dopodiché uccidilo, tienilo in vita oppure resuscitalo (se era morto) a seconda della sua scelta, infine fallo addormentare e sveglia il giocatore successivo. Se tutti e 3 sono vivi alla fine, tutti e 3 muoiono.",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "amnesiac",
+        "name": "Smemorato",
+        "ability": "Non sai quale sia la tua abilità. Ogni giorno, prova a indovinare in privato quale sia: apprendi quanto ci sei andato vicino.",
+        "firstNightReminder": "Decidi l'abilità dello Smemorato. Se l'abilità dello Smemorato lo fa svegliare di notte: Sveglia lo Smemorato ed esegui la sua abilità.",
+        "otherNightReminder": "Decidi l'abilità dello Smemorato. Se l'abilità dello Smemorato lo fa svegliare di notte: Sveglia lo Smemorato ed esegui la sua abilità.",
+        "remindersGlobal": [],
+        "reminders": [
+            "?"
+        ]
+    },
+    {
+        "id": "angel",
+        "name": "Angelo",
+        "ability": "Qualcosa di brutto potrebbe accadere a chi è responsabile della morte di un nuovo giocatore.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "apprentice",
+        "name": "Apprendista",
+        "ability": "Durante la tua 1ᵃ notte, guadagni l'abilità di un Cittadino (se buono), o di un Seguace (se malvagio).",
+        "firstNightReminder": "Mostra all'Apprendista la carta \"Tu sei\" seguita dal gettone di un Cittadino o un Seguace. Nel Grimorio, rimpiazza il gettone dell'Apprendista con il gettone appena mostrato e affiancaci il promemoria \"È l'Apprendista\".",
+        "otherNightReminder": "Mostra all'Apprendista la carta \"Tu sei\" seguita dal gettone di un Cittadino o un Seguace. Nel Grimorio, rimpiazza il gettone dell'Apprendista con il gettone appena mostrato e affiancaci il promemoria \"È l'Apprendista\".",
+        "remindersGlobal": [],
+        "reminders": [
+            "È l'Apprendista"
+        ]
+    },
+    {
+        "id": "artist",
+        "name": "Artista",
+        "ability": "Una volta per partita, durante il giorno, puoi porgere privatamente al Narratore una qualsiasi domanda a cui è possibile rispondere con sì/no.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": [
+            "Nessuna Abilità"
+        ]
+    },
+    {
+        "id": "assassin",
+        "name": "Assassino",
+        "ability": "Una volta durante il gioco, di notte*, scegli un giocatore: muore, anche se per qualche motivo sopravvivrebbe.",
+        "firstNightReminder": "",
+        "otherNightReminder": "Se l'Assassino non ha ancora usato la sua abilità: l'Assassino fa segno di \"No\" con la testa o indica un giocatore. Quel giocatore muore.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Morto",
+            "Nessuna Abilità"
+        ]
+    },
+    {
+        "id": "atheist",
+        "name": "Ateo",
+        "ability": "Quando sei in gioco, non ci sono malvagi (nè Demoni nè Seguaci). Il bene vince se il Narratore viene giustiziato, anche se sei morto. Il Narratore può, tuttavia, violare le regole del gioco (es.Uccidere giocatori).",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "balloonist",
+        "name": "Aeronauta",
+        "ability": "Ogni notte, apprendi 1 giocatore per ogni tipo (es. Giocatore 1 / Cittadino, Giocatore 2 / Seguace, ...), finché non ci sono più tipi da apprendere. [+1 Forestiero]",
+        "firstNightReminder": "Scegli un tipo (es. Cittadino). Indica un giocatore che è di quel tipo. Affiancagli il promemoria \"Visto\" di quel tipo.",
+        "otherNightReminder": "Scegli un tipo non ancora visto (es. Seguace). Indica un giocatore che è di quel tipo. Affiancagli il promemoria \"Visto\" di quel tipo.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Visto Cittadino",
+            "Visto Demone",
+            "Visto Forestiero",
+            "Visto Seguace",
+            "Visto Viaggiatore"
+        ]
+    },
+    {
+        "id": "banshee",
+        "name": "Banshee",
+        "ability": "Se il Demone ti uccide, tutti lo vengono a sapere. D'ora in poi, puoi accusare due volte al giorno e votare 2 volte per votazione.",
+        "firstNightReminder": "",
+        "otherNightReminder": "Annuncia che la Banshee è morta.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Ha Abilità"
+        ]
+    },
+    {
+        "id": "barber",
+        "name": "Barbiere",
+        "ability": "Quando muori (sia durante la notte che per un'esecuzione), la notte successiva il Demone può scegliere 2 giocatori (che non siano Demoni) per scambiare i loro ruoli.",
+        "firstNightReminder": "",
+        "otherNightReminder": "Se il Barbiere è morto nell'ultimo ciclo notte/giorno: sveglia il Demone. Mostra la carta \"Questo personaggio ha scelto te\", seguita dal gettone del Barbiere. Il Demone fa segno di \"No\" con la testa se non vuole scambiare i personaggi di 2 giocatori, oppure indica 2 giocatori: se li ha indicati, scambia i loro gettoni personaggio; sveglia entrambi i giocatori singolarmente e comunicagli il loro nuovo personaggio.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Taglio Stanotte"
+        ]
+    },
+    {
+        "id": "barista",
+        "name": "Barista",
+        "ability": "Grazie alla tua presenza, ogni notte, fino al tramonto, un giocatore: 1) Diventa sobrio, salubre e ottiene informazioni corrette, oppure 2) La sua abilità funziona due volte. Egli apprende quale delle due cose, ma tu no. Sta al Narratore decidere quale dei tuoi due vantaggi viene attivato ogni notte.",
+        "firstNightReminder": "Scegli un giocatore, sveglialo e digli quale potere del Barista lo colpisce. Trattalo di conseguenza (Sobrio/Salubre/Informazione veritiera OPPURE Abilità doppia).",
+        "otherNightReminder": "Scegli un giocatore, sveglialo e digli quale potere del Barista lo colpisce. Trattalo di conseguenza (Sobrio/Salubre/Informazione veritiera OPPURE Abilità doppia).",
+        "remindersGlobal": [],
+        "reminders": [
+            "Abilità Doppia",
+            "Sobrio e Salubre"
+        ]
+    },
+    {
+        "id": "baron",
+        "name": "Barone",
+        "ability": "Ci sono Forestieri aggiuntivi in gioco. [+2 Forestieri]",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "beggar",
+        "name": "Mendicante",
+        "ability": "Devi usare un gettone di voto per votare. I morti possono scegliere di darti il loro gettone. Finché un morto non ti dà il suo gettone di voto, non puoi mai alzare la mano per votare. Se un morto ti dà il suo gettone di voto, apprendi il suo allineamento (buono o malvagio). Sei sobrio e salubre.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "bishop",
+        "name": "Vescovo",
+        "ability": "Quando sei in gioco e vivo, solo il Narratore può accusare (e di conseguenza i giocatori possono votare o meno solo il giocatore accusato dal Narratore). Il Narratore deve accusare almeno 1 giocatore di allineamento opposto al tuo ogni giorno.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": [
+            "Accusato Bene",
+            "Accusato Male"
+        ]
+    },
+    {
+        "id": "bonecollector",
+        "name": "Imbalsamatore",
+        "ability": "Una volta durante la partita, di notte, scegli un giocatore morto: egli riacquisisce la sua abilità fino al tramonto.",
+        "firstNightReminder": "",
+        "otherNightReminder": "L'Imbalsamatore fa segno di \"No\" con la testa oppure indica un giocatore morto: se ha indicato un giocatore, posiziona il gettone \"Ha abilità\" (potrebbe essere svegliato la stessa notte per usarla).",
+        "remindersGlobal": [],
+        "reminders": [
+            "Ha Abilità",
+            "Nessuna Abilità"
+        ]
+    },
+    {
+        "id": "boomdandy",
+        "name": "Dinamitardo",
+        "ability": "Se vieni giustiziato, tutti tranne 3 giocatori (uno dei quali è il Demone) muoiono. 1 minuto dopo, si vota: il giocatore con più dita puntate contro muore.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "bootlegger",
+        "name": "Contrabbandiere",
+        "ability": "Questo copione ha personaggi o regole stabilite dal Narratore.",
+        "firstNightReminder": "Annuncia che il Contrabbandiere è in gioco ed informa il gruppo di tutti i personaggi e/o regole che verranno usati in questa partita.",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "bountyhunter",
+        "name": "Mercenario",
+        "ability": "Inizi conoscendo un giocatore malvagio. Se quel giocatore muore (di notte o di giorno), la notte stessa o la notte successiva scopri un altro giocatore malvagio. [1 Cittadino è malvagio]",
+        "firstNightReminder": "Sveglia il Cittadino designato da te come malvagio e mostragli la carta \"Tu sei\" con il segno del pollice in giù \"malvagio\". Sveglia il Mercenario e indica 1 giocatore Malvagio (oppure il Cittadino malvagio). ",
+        "otherNightReminder": "Se il giocatore malvagio conosciuto è morto, indica un altro giocatore malvagio (o il Cittadino malvagio, o lo stesso giocatore malvagio già conosciuto).",
+        "remindersGlobal": [],
+        "reminders": [
+            "Conosce"
+        ]
+    },
+    {
+        "id": "buddhist",
+        "name": "Buddista",
+        "ability": "Per i primi 2 minuti di ogni giorno, i giocatori esperti non possono parlare.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "bureaucrat",
+        "name": "Burocrate",
+        "ability": "Ogni notte, scegli un giocatore (non te stesso): domani il suo voto durante uno o più accuse conta sempre come 3 voti.",
+        "firstNightReminder": "Il Burocrate indica un giocatore. Affiancagli il promemoria \"Voto Triplo\".",
+        "otherNightReminder": "Il Burocrate indica un giocatore. Affiancagli il promemoria \"Voto Triplo\".",
+        "remindersGlobal": [],
+        "reminders": [
+            "Voto Triplo"
+        ]
+    },
+    {
+        "id": "butcher",
+        "name": "Macellaio",
+        "ability": "Ogni giorno, se avviene un'esecuzione, puoi accusare ancora, per una possibile seconda esecuzione.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "butler",
+        "name": "Maggiordomo",
+        "ability": "Ogni notte, scegli un giocatore (non te stesso): domani, durante le accuse, puoi votare (alzando la mano) solo se anche quel giocatore sta votando (avendo la mano alzata).",
+        "firstNightReminder": "Il Maggiordomo indica un giocatore. Affiancagli il promemoria \"Padrone\".",
+        "otherNightReminder": "Il Maggiordomo indica un giocatore. Affiancagli il promemoria \"Padrone\".",
+        "remindersGlobal": [],
+        "reminders": [
+            "Padrone"
+        ]
+    },
+    {
+        "id": "cannibal",
+        "name": "Cannibale",
+        "ability": "Hai l'abilità dell'ultimo giustiziato. Se è malvagio, sei avvelenato finché un giocatore buono non viene giustiziato.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": [
+            "Avvelenato",
+            "Morto Oggi"
+        ]
+    },
+    {
+        "id": "cerenovus",
+        "name": "Strizzacervelli",
+        "ability": "Ogni notte, scegli un giocatore e un personaggio buono: è \"Folle\" di essere quel personaggio domani, o potrebbe essere giustiziato.",
+        "firstNightReminder": "Lo Strizzacervelli indica un giocatore e un personaggio nella scheda personaggi. Sveglia quel giocatore; mostragli la carta \"Questo personaggio ha scelto te\" con il gettone dello Strizzacervelli. Mostragli il gettone del personaggio scelto dallo Strizzacervelli: se il giocatore scelto non è \"Folle\" di essere quel personaggio domani, potrebbe essere giustiziato.",
+        "otherNightReminder": "Lo Strizzacervelli indica un giocatore e un personaggio nella scheda personaggi. Sveglia quel giocatore; mostragli la carta \"Questo personaggio ha scelto te\" con il gettone dello Strizzacervelli. Mostragli il gettone del personaggio scelto dallo Strizzacervelli: se il giocatore scelto non è \"Folle\" di essere quel personaggio domani, potrebbe essere giustiziato.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Folle"
+        ]
+    },
+    {
+        "id": "chambermaid",
+        "name": "Cameriera",
+        "ability": "Ogni notte, scegli 2 giocatori vivi (non te stesso): apprendi quanti si sono svegliati questa notte grazie alla loro abilità.",
+        "firstNightReminder": "La Cameriera indica due giocatori. Mostrale un segno numerico (0, 1, 2, ...) per ogni giocatore che si è svegliato per la sua abilità stanotte.",
+        "otherNightReminder": "La Cameriera indica due giocatori. Mostrale un segno numerico (0, 1, 2, ...) per ogni giocatore che si è svegliato per la sua abilità stanotte.",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "chef",
+        "name": "Cuoco",
+        "ability": "Inizi sapendo quante coppie di giocatori cattivi seduti vicini ci sono.",
+        "firstNightReminder": "Mostra un segno numerico (0, 1, 2, …) per ogni coppia di giocatori malvagi seduti vicini.",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "choirboy",
+        "name": "Corista",
+        "ability": "Se il Demone uccide il Re, apprendi quale giocatore è il Demone [+ il Re]",
+        "firstNightReminder": "",
+        "otherNightReminder": "Se il Re è stato ucciso dal Demone, sveglia il Corista e indicagli il giocatore che è il Demone.",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "clockmaker",
+        "name": "Orologiaio",
+        "ability": "Inizi sapendo quanti posti dista il Demone dal suo Seguace più vicino.",
+        "firstNightReminder": "Mostra un segno numerico (1, 2, 3, …) per ogni posizione tra il Demone e il Seguace più vicino.",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "courtier",
+        "name": "Cortigiana",
+        "ability": "Una volta per partita, di notte, scegli un personaggio: è ubriaco per 3 notti e 3 giorni.",
+        "firstNightReminder": "La Cortigiana può fare segno di \"No\" con la testa, oppure indicare un personaggio nella scheda personaggi. Se la Cortigiana ha usato la sua abilità: se quel personaggio è in gioco, quel giocatore è ubriaco.",
+        "otherNightReminder": "Riduci il numero rimanente di giorni di ebbrezza del giocatore scelto. Se la Cortigiana non ha ancora usato la sua abilità: La Cortigiana può fare segno di \"No\" con la testa, oppure indicare un personaggio nella scheda personaggi. Se la Cortigiana ha usato la sua abilità: se quel personaggio è in gioco, quel giocatore è ubriaco.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Nessuna abilità",
+            "Ubriaco 1",
+            "Ubriaco 2",
+            "Ubriaco 3"
+        ]
+    },
+    {
+        "id": "cultleader",
+        "name": "Cultista",
+        "ability": "Ogni notte, diventi della fazione di un vicino vivo. Se tutti i giocatori buoni si uniscono alla tua setta, la tua fazione (squadra) vince.",
+        "firstNightReminder": "Se il Cultista ha cambiato fazione, mostragli il segno del pollice in su, buono, o il segno del pollice in giù, malvagio, conformemente alla sua nuova fazione.",
+        "otherNightReminder": "Se il Cultista ha cambiato fazione, mostragli il segno del pollice in su, buono, o il segno del pollice in giù, malvagio, conformemente alla sua nuova fazione.",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "damsel",
+        "name": "Damigella",
+        "ability": "Tutti i Seguaci sanno che sei in gioco. Se un Seguace ti indovina pubblicamente (un tentativo), la tua squadra perde.",
+        "firstNightReminder": "Sveglia tutti i Seguaci, mostra loro la carta \"Questo personaggio ha scelto te\" e il gettone della Damigella.",
+        "otherNightReminder": "Se scelta dal Cacciatore, sveglia la Damigella, mostrale la carta \"Tu sei\" e il gettone di un personaggio non in gioco.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Tentativo usato"
+        ]
+    },
+    {
+        "id": "deusexfiasco",
+        "name": "Deus ex Fiasco",
+        "ability": "Una volta per partita, il Narratore farà un \"errore\", lo correggerà e lo ammetterà pubblicamente.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": [
+            "Ops"
+        ]
+    },
+    {
+        "id": "deviant",
+        "name": "Deviante",
+        "ability": "Se oggi sei stato simpatico, non puoi essere esiliato.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "devilsadvocate",
+        "name": "Avvocato",
+        "ability": "Ogni notte, scegli un giocatore vivo (diverso dalla scorsa notte): se domani viene giustiziato, non muore.",
+        "firstNightReminder": "L'Avvocato indica un giocatore in vita. Quel giocatore sopravvive all'esecuzione domani.",
+        "otherNightReminder": "L'Avvocato indica un giocatore in vita. Quel giocatore sopravvive all'esecuzione domani.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Sopravvive esecuzione"
+        ]
+    },
+    {
+        "id": "djinn",
+        "name": "Genio",
+        "ability": "Usa l'abilità speciale del Genio. Tutti i giocatori sanno qual è.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "doomsayer",
+        "name": "Iettatore",
+        "ability": "Se ci sono 4 o più giocatori vivi, ogni giocatore vivo può scegliere pubblicamente (una volta per partita ciascuno) che un giocatore del suo allineamento muoia.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "dreamer",
+        "name": "Sognatore",
+        "ability": "Ogni notte, scegli un giocatore (non te stesso o un viaggiatore): apprendi 1 personaggio buono e 1 malvagio, di cui 1 è corretto.",
+        "firstNightReminder": "Il Sognatore indica un giocatore. Mostragli 1 gettone personaggio buono e uno malvagio; uno tra questi è corretto",
+        "otherNightReminder": "Il Sognatore indica un giocatore. Mostragli 1 gettone personaggio buono e uno malvagio; uno tra questi è corretto",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "drunk",
+        "name": "Ubriaco",
+        "ability": "Non sai di essere l'Ubriaco. Pensi di essere un Cittadino, ma non lo sei.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [
+            "Ubriaco"
+        ],
+        "reminders": []
+    },
+    {
+        "id": "duchess",
+        "name": "Duchessa",
+        "ability": "Ogni giorno, 3 giocatori possono decidere di visitarti. Di notte*, ognuno di loro apprende quanti di quelli che ti hanno visitato sono cattivi, ma uno apprende informazioni sbagliate.",
+        "firstNightReminder": "",
+        "otherNightReminder": "Sceglia i gicatori segnati con il promemoria Visitatore o \"informazioni sbagliate\" uno alla volta. Mostra loro il token della Duchesa, poi un numero con le dita (0, 1, 2, ecc.) uguale al numero di giocatori Malvagi segnati con il promemoria indicati  come \"Visitatore\" o se stai svegliando il giovatore, ",
+        "remindersGlobal": [],
+        "reminders": [
+            "Informazioni sbagliate",
+            "Visitatore"
+        ]
+    },
+    {
+        "id": "empath",
+        "name": "Sensitivo",
+        "ability": "Ogni notte, apprendi quanti dei tuoi 2 vicini vivi sono cattivi.",
+        "firstNightReminder": "Mostragli un numero con le dita (0, 1, 2) corrispondente al numero di giocatori cattivi vicini al Sensitivo.",
+        "otherNightReminder": "Mostragli un numero con le dita (0, 1, 2) corrispondente al numero di giocatori cattivi vicini al Sensitivo.",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "engineer",
+        "name": "Ingegnere",
+        "ability": "Una volta per partita, di notte, scegli quali Seguaci o quale Demone sono in gioco.",
+        "firstNightReminder": "L'Ingeniere fa segno di \"No\" con la testa, o indica un Demone o dei Seguaci in quantità adeguata. Se l'Ingeniere ha scelto i personaggi, sostituisci il Demone o i Seguaci con quelli scelti, dopodiché sveglia i giocatori interessati e mostra loro la carta \"Tu sei\" e i personaggi a loro assegnati.",
+        "otherNightReminder": "L'Ingeniere fa segno di \"No\" con la testa, o indica un Demone o dei Seguaci in quantità adeguata. Se l'Ingeniere ha scelto i personaggi, sostituisci il Demone o i Seguaci con quelli scelti, dopodiché sveglia i giocatori interessati e mostra loro la carta \"Tu sei\" e i personaggi a loro assegnati.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Nessuna abilità"
+        ]
+    },
+    {
+        "id": "eviltwin",
+        "name": "Gemello Malvagio",
+        "ability": "Tu e un giocatore della fazione opposta vi conoscete. Se il giocatore buono viene giustiziato, i cattivi vincono. I buoni non possono vincere se siete vivi entrambi.",
+        "firstNightReminder": "Sveglia il gemello malvagio e il suo gemello buono. Conferma che entrambi si siano riconosciuti. Punta con il dito il Gemello Malvagio. Mostra il Gettone Gemello Malvagio al gemello buono. Punta con il dito il gemello buono. Mostra il gettone personaggio del gemello buono al Gemello malvagio.",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": [
+            "Gemello"
+        ]
+    },
+    {
+        "id": "exorcist",
+        "name": "Esorcista",
+        "ability": "Ogni notte*, scegli un giocatore (diverso dalla scorsa notte): il Demone, se scelto, apprende chi sei e non si sveglia stanotte.",
+        "firstNightReminder": "",
+        "otherNightReminder": "L'Esorcista indica un giocatore, diverso da quello della notte precedente. Se quel giocatore è il Demone: sveglia il Demone. Mostragli il gettone personaggio Esorcista, indica l'Esorcista. Il Demone non agisce questa notte.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Scelto"
+        ]
+    },
+    {
+        "id": "fanggu",
+        "name": "Fang Gu",
+        "ability": "Ogni notte*, scegli un giocatore: muore. Il 1° Forestiero che questa abilità uccide diventa un Fang Gu malvagio e tu muori al suo posto. [+1 Forestiero]",
+        "firstNightReminder": "",
+        "otherNightReminder": "Il Fang Gu indica un giocatore. Quel giocatore muore. Altrimenti, se quel giocatore era un Forestiero e non ci sono altri Fang Gu in gioco: il Fang Gu muore al posto del giocatore scelto. Il giocatore scelto è ora un Fang Gu malvagio. Sveglia il nuovo Fang Gu. Mostragli la carta \"Tu sei\", poi il gettone Fang Gu. Mostragli la carta \"Tu sei\" con il segno del pollice in giù \"malvagio\".",
+        "remindersGlobal": [],
+        "reminders": [
+            "Morto",
+            "Uno"
+        ]
+    },
+    {
+        "id": "farmer",
+        "name": "Contadino",
+        "ability": "Se muori di notte, un giocatore vivo buono diventa un Contadino.",
+        "firstNightReminder": "",
+        "otherNightReminder": "Se un Contadino è morto questa notte, scegli un altro giocatore buono, quel giocatore buono diventa un Contadino. Sveglia questo giocatore, mostragli la carta \"Tu sei\" e il gettone personaggio Contadino.",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "fearmonger",
+        "name": "Allarmista",
+        "ability": "Ogni notte, scegli un giocatore. Se lo nomini e giustizi, la sua squadra perde. Tutti i giocatori sanno se scegli un nuovo giocatore.",
+        "firstNightReminder": "L'Allarmista indica un giocatore. Colloca il gettone Terrore vicino al giocatore e annuncia che un nuovo giocatore è stato selezionato dall'abilità dell'Allarmista.",
+        "otherNightReminder": "L'Allarmista indica un giocatore. Colloca il gettone Terrore vicino al giocatore e annuncia che un nuovo giocatore è stato selezionato dall'abilità dell'Allarmista.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Terrore"
+        ]
+    },
+    {
+        "id": "fibbin",
+        "name": "Bugiardo",
+        "ability": "Una volta per partita, un giocatore buono potrebbe ottenere informazioni sbagliate.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": [
+            "Utilizzato"
+        ]
+    },
+    {
+        "id": "fiddler",
+        "name": "Violinista",
+        "ability": "Una volta per partita, il Demone sceglie segretamente un giocatore della fazione opposta: tutti i giocatori scelgono chi fra i 2 vince.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "fisherman",
+        "name": "Pescatore",
+        "ability": "Una volta per partita, durante il giorno, visita il Narratore per un aiuto su come vincere.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": [
+            "Nessuna abilità"
+        ]
+    },
+    {
+        "id": "flowergirl",
+        "name": "Fioraia",
+        "ability": "Ogni notte*, apprendi se un Demone ha votato oggi.",
+        "firstNightReminder": "",
+        "otherNightReminder": "Annuisci per \"Sì\" o scuoti la testa per \"No\" per comunicare se il Demone abbia votato oggi. Colloca il promemoria \"Demone non vota\" (rimuovi \"Demone vota\", se presente)",
+        "remindersGlobal": [],
+        "reminders": [
+            "Demone vota",
+            "Demone non vota"
+        ]
+    },
+    {
+        "id": "fool",
+        "name": "Giullare",
+        "ability": "La 1ᵃ volta che muori, non muori.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": [
+            "Nessuna abilità"
+        ]
+    },
+    {
+        "id": "fortuneteller",
+        "name": "Chiromante",
+        "ability": "Ogni notte, scegli 2 giocatori: apprendi se tra loro c'è un Demone. C'è un giocatore buono che ti appare come un Demone.",
+        "firstNightReminder": "Il Chiromante indica due giocatori. Mostragli il segnale: annuisci per \"Sì\" o scuoti la testa per \"No\" per comunicare se uno di quei due giocatori è il demone.",
+        "otherNightReminder": "Il Chiromante indica due giocatori. Mostragli il segnale: annuisci per \"Sì\" scuoti la testa per \"No\" per comunicare se uno di quei due giocatori è il demone.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Falsa pista"
+        ]
+    },
+    {
+        "id": "gambler",
+        "name": "Scommettitore",
+        "ability": "Ogni notte*, scegli un giocatore e prova a indovinare il suo personaggio: se sbagli, muori.",
+        "firstNightReminder": "",
+        "otherNightReminder": "Lo Scommettitore indica un giocatore e un personaggio sulla sua scheda personaggi. Se sbaglia, lo Scommettitore muore.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Morto"
+        ]
+    },
+    {
+        "id": "gangster",
+        "name": "Fuorilegge",
+        "ability": "Una volta al giorno, puoi decidere di uccidere un tuo vicino vivo, se il tuo altro vicino vivo è d'accordo.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "general",
+        "name": "Generale",
+        "ability": "Ogni notte, apprendi quale fazione sta vincendo secondo il Narratore: i buoni, i cattivi o nessuno dei due.",
+        "firstNightReminder": "Mostra al Generale il segno pollice in su per buoni vincenti, pollice in giù per cattivi vincenti. Punta il pollice lateralmente per indicare che nessuna squadra sta vincendo.",
+        "otherNightReminder": "Mostra al Generale il segno pollice in su per buoni vincenti, pollice in giù per cattivi vincenti. Punta il pollice lateralmente per indicare che nessuna squadra sta vincendo.",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "goblin",
+        "name": "Goblin",
+        "ability": "Se dici pubblicamente di essere il Goblin quando vieni accusato e muori quel giorno, la tua squadra vince.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": [
+            "Dichiarato"
+        ]
+    },
+    {
+        "id": "godfather",
+        "name": "Padrino",
+        "ability": "Inizi sapendo quali Forestieri sono in gioco. Se 1 è morto oggi, scegli un giocatore stanotte: muore. [-1 oppure +1 Forestieri]",
+        "firstNightReminder": "Mostra ogni gettone Forestiero in gioco",
+        "otherNightReminder": "Se un Forestiero è morto oggi: il Padrino indica un giocatore. Quel giocatore muore.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Morto oggi",
+            "Muore"
+        ]
+    },
+    {
+        "id": "golem",
+        "name": "Golem",
+        "ability": "Puoi accusare solo una volta per partita. Quando lo fai, se chi accusi non è il Demone, muore.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": [
+            "Non può accusare"
+        ]
+    },
+    {
+        "id": "goon",
+        "name": "Sgherro",
+        "ability": "Ogni notte, il 1° giocatore che ti sceglie con la sua abilità è ubriaco fino al tramonto. Diventi della sua fazione.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": [
+            "Ubriaco"
+        ]
+    },
+    {
+        "id": "gossip",
+        "name": "Pettegolo",
+        "ability": "Ogni giorno, puoi dire una frase pubblicamente. Stanotte, se era vera, un giocatore muore.",
+        "firstNightReminder": "",
+        "otherNightReminder": "Se la frase annunciata pubblicamente dal pettegolo è vera: scegli un giocatore non protetto dalla morte questa notte. Quel giocatore muore.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Muore"
+        ]
+    },
+    {
+        "id": "grandmother",
+        "name": "Nonna",
+        "ability": "Inizi conoscendo un giocatore e il suo personaggio. Se il Demone lo uccide, muori anche tu.",
+        "firstNightReminder": "Mostra il gettone personaggio scelto. Indica il giocatore scelto.",
+        "otherNightReminder": "Se il nipote della Nonna viene ucciso dal Demone stanotte: la Nonna muore.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Nipote"
+        ]
+    },
+    {
+        "id": "gunslinger",
+        "name": "Pistolero",
+        "ability": "Ogni giorno, dopo che il 1° voto è stato fatto, puoi scegliere un giocatore che ha votato: muore.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "harlot",
+        "name": "Meretrice",
+        "ability": "Ogni notte*, scegli un giocatore vivo: se è d'accordo, apprendi il suo personaggio, ma potreste morire entrambi.",
+        "firstNightReminder": "",
+        "otherNightReminder": "La Meretrice indica un giocatore. Dopodiché fai addormentare la Meretrice. Sveglia il giocatore scelto, mostragli la carta \"Questo personaggio ha scelto te\", poi il gettone della Meretrice. Quel giocatore può scegliere di annuire per \"Sì\" o di scuotere la testa per \"No\". Se annuisce per \"Sì\", sveglia la Meretrice e mostragli il gettone personaggio del giocatore scelto. Poi puoi decidere che entrambi i giocatori muoiano.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Morto"
+        ]
+    },
+    {
+        "id": "harpy",
+        "name": "Arpia",
+        "ability": "Ogni notte, scegli 2 giocatori: domani, il 1° è \"Folle\" che il 2° sia malvagio, o potrebbero morire entrambi.",
+        "firstNightReminder": "Sveglia l'Arpia; questa indica un giocatore, poi un altro. Sveglia il 1° giocatore indicato dall'Arpia, mostragli la carta \"Questo personaggio ha scelto te\", mostragli il gettone dell'Arpia, poi indica al 2° giocatore scelto dall'arpia.",
+        "otherNightReminder": "Sveglia l'Arpia; questa indica un giocatore, poi un altro. Sveglia il 1° giocatore indicato dall'Arpia, mostragli la carta \"Questo personaggio ha scelto te\", mostragli il gettone dell'Arpia, poi indica al 2° giocatore scelto dall'arpia.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Folle",
+            "Secondo"
+        ]
+    },
+    {
+        "id": "hatter",
+        "name": "Cappellaio",
+        "ability": "Se sei morto oggi (giorno o notte), i Seguaci e il Demone possono scegliere di diventare diversi Seguaci un diverso Demone rispettivamente.",
+        "firstNightReminder": "",
+        "otherNightReminder": "Se il Cappellaio è morto oggi: sveglia i Seguaci e il Demone. Mostragli la carta \"Questo personaggio ha scelto te\", poi il gettone del Cappellaio. Ogni giocatore sceglie se fare segno di \"No\" con la testa oppure indica un altro personaggio dello stesso tipo del loro attuale personaggio. Nel caso in cui così facendo un secondo giocatore ottenesse lo stesso personaggio di un altro giocatore, fai segno di \"No\" con la testa e indicagli di scegliere nuovamente. Falli addormentale. Cambia il gettone personaggio di ciascun giocatore con quello del personaggio da loro scelto.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Stasera festa"
+        ]
+    },
+    {
+        "id": "hellslibrarian",
+        "name": "Bibliotecario Infernale",
+        "ability": "Qualcosa di brutto potrebbe accadere a chi parla quando il Narratore ha chiesto il silenzio.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": [
+            "Qualcosa di brutto"
+        ]
+    },
+    {
+        "id": "heretic",
+        "name": "Eretico",
+        "ability": "Chi vince, perde e chi perde, vince, anche se sei morto.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "highpriestess",
+        "name": "Papessa",
+        "ability": "Ogni notte, apprendi con quale giocatore dovresti parlare con più urgenza secondo il Narratore.",
+        "firstNightReminder": "Indica un giocatore.",
+        "otherNightReminder": "Indica un giocatore.",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "huntsman",
+        "name": "Cacciatore",
+        "ability": "Una volta per partita, di notte, scegli un giocatore in vita: la Damigella, se scelta diventa un Cittadino non in gioco [+Damigella]",
+        "firstNightReminder": "Il Cacciatore fa segno di \"No\" con la testa o indica un giocatore. Se indica la Damigella, sveglia quel giocatore, mostragli la carta \"Tu sei\" e un gettone di un personaggio non in gioco.",
+        "otherNightReminder": "Il Cacciatore fa segno di \"No\" con la testa o indica un giocatore. Se indica la Damigella, sveglia quel giocatore, mostragli la carta \"Tu sei\" e un gettone di un personaggio non in gioco.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Nessuna abilità"
+        ]
+    },
+    {
+        "id": "imp",
+        "name": "Folletto",
+        "ability": "Ogni notte*, scegli un giocatore: muore. Se uccidi te stesso in questo modo, un Seguace diventa il Folletto.",
+        "firstNightReminder": "",
+        "otherNightReminder": "Il Folletto indica un giocatore. Quel giocatore muore. Se il Folletto sceglie sé stesso: rimpiazza il personaggio di 1 Seguace vivo con un gettone Folletto aggiuntivo. Mostra al giocatore la carta \"Tu sei\" e il gettone Folletto.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Morto"
+        ]
+    },
+    {
+        "id": "innkeeper",
+        "name": "Locandiere",
+        "ability": "Ogni notte*, scegli 2 giocatori: non possono morire, ma 1 è ubriaco fino al tramonto.",
+        "firstNightReminder": "",
+        "otherNightReminder": "I giocatori precedentemente protetti e ubriachi perdono i loro promemoria. Il Locandiere indica due giocatori. Quei giocatori sono protetti. Uno è ubriaco.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Protetto",
+            "Ubriaco"
+        ]
+    },
+    {
+        "id": "investigator",
+        "name": "Investigatore",
+        "ability": "Inizi sapendo che 1 di 2 giocatori è uno specifico Seguace.",
+        "firstNightReminder": "Mostra il gettone personaggio di un Seguace in gioco. Indica due giocatori, uno dei quali è quel personaggio.",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": [
+            "Sbagliato",
+            "Seguace"
+        ]
+    },
+    {
+        "id": "judge",
+        "name": "Giudice",
+        "ability": "Una volta per partita, se un altro giocatore ha accusato, puoi scegliere se l'esecuzione in corso ha successo o fallisce immediatamente, indipendentemente dai voti.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": [
+            "Nessuna abilità"
+        ]
+    },
+    {
+        "id": "juggler",
+        "name": "Giocoliere",
+        "ability": "Il tuo 1° giorno, prova a indovinare fino a 5 personaggi di giocatori. Quella notte, apprendi quanti erano corretti.",
+        "firstNightReminder": "",
+        "otherNightReminder": "Se oggi è stato il 1° giorno del Giocoliere: mostragli il numero con le dita (0, 1, 2, ecc.) di promemoria \"Corretto\" posizionati. Rimuovi i promemoria.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Corretto"
+        ]
+    },
+    {
+        "id": "kazali",
+        "name": "Kazali",
+        "ability": "Ogni notte*, scegli un giocatore: muore. [Scegli Tu quali giocatori sono quali Seguaci. Da -? a +? Forestieri]",
+        "firstNightReminder": "Il Kazali indica un giocatore e un Seguace sulla scheda personaggi. Sostituisci il vecchio gettone personaggi con il gettone del Seguace scelto, mostra al giocatore scelto la carta \"Tu sei\", poi il gettone del Seguace scelto con il segno del pollice in giù \"malvagio\". Ripeti finché il numero normale Seguaci è in gioco. Fai addormentare il Kazali",
+        "otherNightReminder": "Il Kazali indica un giocatore, quel giocatore muore.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Morto"
+        ]
+    },
+    {
+        "id": "king",
+        "name": "Re",
+        "ability": "Ogni notte, se ci sono più morti che vivi, apprendi 1 personaggio vivo. Il Demone sa chi sei.",
+        "firstNightReminder": "Sveglia il demone, mostragli la carta \"Questo personaggio ha scelto te\", mostragli il gettone del Re e indica il giocatore Re.",
+        "otherNightReminder": "Se ci sono più morti che giocatori vivi, mostra al Re il gettone personaggio di un giocatore in vita.",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "klutz",
+        "name": "Pasticcione",
+        "ability": "Quando scopri di essere morto, scegli pubblicamente 1 giocatore vivo: se è malvagio, la tua squadra perde",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "knight",
+        "name": "Cavaliere",
+        "ability": "Inizi conoscendo 2 giocatori che non sono il Demone.",
+        "firstNightReminder": "Indica 2 giocatori che non sono il Demone",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": [
+            "Conosce",
+            "Conosce"
+        ]
+    },
+    {
+        "id": "legion",
+        "name": "Legione",
+        "ability": "Ogni notte*, un giocatore potrebbe morire. Le esecuzioni falliscono se solo cattivi hanno votato. Appari anche come un Seguace. [Il numero di buoni e cattivi è invertito. [Tutti i Seguaci sono Legione]",
+        "firstNightReminder": "",
+        "otherNightReminder": "Scegli un giocatore, quel giocatore muore.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Morto",
+            "Sta per morire"
+        ]
+    },
+    {
+        "id": "leviathan",
+        "name": "Leviatano",
+        "ability": "Se più di 1 giocatore buono viene giustiziato, vinci. Tutti i giocatori sanno che sei in gioco. Dopo il 5° giorno, i cattivi vincono.",
+        "firstNightReminder": "Posiziona il promemoria Leviatano \"Giorno 1\". Annuncia \"Il Leviatano è in gioco, questo è il giorno 1\".",
+        "otherNightReminder": "Cambia il promemoria Leviatano dal giorno attuale al giorno successivo.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Buono Giustiziato",
+            "Giorno 1",
+            "Giorno 2",
+            "Giorno 3",
+            "Giorno 4",
+            "Giorno 5"
+        ]
+    },
+    {
+        "id": "librarian",
+        "name": "Bibliotecario",
+        "ability": "Inizi sapendo che 1 di 2 giocatori è uno specifico Forestiero. (O che non ce ne sono in gioco)",
+        "firstNightReminder": "Mostra il gettone personaggio di un Forestiero in gioco. Indica due giocatori uno dei quali è quel personaggio.",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": [
+            "Forestiero",
+            "Sbagliato"
+        ]
+    },
+    {
+        "id": "lilmonsta",
+        "name": "Piccolo Mostro",
+        "ability": "Ogni notte, i Seguaci scelgono chi accudisce il Piccolo Mostro ed \"È il Demone\". Un giocatore muore ogni notte*. [+1 Seguace]",
+        "firstNightReminder": "Sveglia tutti i Seguaci, permetti loro di votare indicando chi debba accudire il Piccolo Mostro.",
+        "otherNightReminder": "Sveglia tutti i Seguaci, permetti loro di votare indicando chi debba accudire il Piccolo Mostro. Scegli un giocatore, quel giocatore muore.",
+        "remindersGlobal": [
+            "Morto",
+            "È il Demone"
+        ],
+        "reminders": []
+    },
+    {
+        "id": "lleech",
+        "name": "Lleech",
+        "ability": "Ogni notte*, scegli un giocatore: muore. Inizi scegliendo un giocatore vivo: è avvelenato - muori se e solo se quel giocatore muore.",
+        "firstNightReminder": "Il Lleech indica un giocatore. Posiziona il promemoria Avvelenato.",
+        "otherNightReminder": "Il Lleech indica un giocatore. Quel giocatore muore.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Avvelenato",
+            "Morto"
+        ]
+    },
+    {
+        "id": "lunatic",
+        "name": "Lunatico",
+        "ability": "Pensi di essere un Demone, ma non lo sei. Il Demone sa chi sei e chi scegli di notte.",
+        "firstNightReminder": "Nel caso in cui siano presenti 7 o più giocatori: Mostra al Lunatico un numero di Seguaci scelti arbitrariamente uguale al numero di Seguaci in gioco. Mostra 3 gettone personaggio di personaggi buoni scelti arbitrariamente. Se il gettone ricevuto dal Lunatico è quello di un Demone che si sveglierebbe stanotte: permetti al Lunatico di svolgere le azioni del demone. Posiziona i suoi promemoria \"attacco\". Sveglia il Demone. Mostra il vero gettone personaggio del Demone. Indica il giocatore Lunatico. Se il Lunatico attacca dei giocatori: indica al vero Demone ogni giocatore scelto dal Lunatico. Rimuovi ogni promemoria \"attacco\" del Lunatico.",
+        "otherNightReminder": "Permetti al Lunatico di svolgere le azioni del Demone. Posiziona i suoi promemoria \"attacco\". Sveglia il Demone. Mostra il vero gettone personaggio del Demone. Indica il giocatore Lunatico. Se il Lunatico attacca dei giocatori: indica al vero Demone ogni giocatore scelto dal Lunatico. Rimuovi ogni promemoria \"attacco\" del Lunatico.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Attacco 1",
+            "Attacco 2",
+            "Attacco 3"
+        ]
+    },
+    {
+        "id": "lycanthrope",
+        "name": "Licantropo",
+        "ability": "Ogni notte*, scegli un giocatore vivo: se è buono muore e, se lo fa, è l'unico giocatore che può morire stanotte.",
+        "firstNightReminder": "",
+        "otherNightReminder": "Il Licantropo indica un giocatore in vita: se il giocatore è buono, muore e nessun altro può morire questa notte.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Morto"
+        ]
+    },
+    {
+        "id": "magician",
+        "name": "Mago",
+        "ability": "Il Demone pensa che tu sia un Seguace. I Seguaci pensano che tu sia un Demone.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "marionette",
+        "name": "Marionetta",
+        "ability": "Pensi di essere un personaggio buono ma non lo sei. Il Demone sa chi sei. [Sei seduto a fianco al Demone]",
+        "firstNightReminder": "Selezione uno dei personaggi buoni vicini al Demone e posiziona il promemoria \"È la Marionetta\". Sveglia il Demone e mostragli la Marionetta.",
+        "otherNightReminder": "",
+        "remindersGlobal": [
+            "È la Marionetta"
+        ],
+        "reminders": []
+    },
+    {
+        "id": "mastermind",
+        "name": "Cospiratore",
+        "ability": "Se il Demone muore giustiziato (terminando la partita), gioca ancora per 1 giorno. Se un giocatore è giustiziato, la sua squadra perde.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "mathematician",
+        "name": "Matematico",
+        "ability": "Ogni notte, apprendi quante abilità di giocatori hanno funzionato in modo anomalo (dall'alba) per via di abilità di altri personaggi.",
+        "firstNightReminder": "Mostra un numero con le dita (0, 1, 2, ecc.) pari al numero di giocatori la cui abilità non ha funzionato adeguatamente a causa di altre abilità.",
+        "otherNightReminder": "Mostra un numero con le dita (0, 1, 2, ecc.) pari al numero di giocatori la cui abilità non ha funzionato adeguatamente a causa di altre abilità.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Anormale"
+        ]
+    },
+    {
+        "id": "matron",
+        "name": "Matrona",
+        "ability": "Ogni giorno, puoi scegliere fino a 3 coppie di giocatori che si scambiano di posto. I giocatori non possono andarsene per parlare in privato.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "mayor",
+        "name": "Borgomastro",
+        "ability": "Se ci sono solo 3 giocatori vivi e non c'è un'esecuzione, la tua squadra vince. Se muori di notte, un altro giocatore potrebbe morire al tuo posto.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "mezepheles",
+        "name": "Mezefiele",
+        "ability": "Inizi sapendo una parola segreta. Il 1° giocatore a dirla diventa malvagio quella notte.",
+        "firstNightReminder": "Mostra a Mefistofele la sua parola segreta.",
+        "otherNightReminder": "Sveglia il 1° giocatore buono che ha pronunciato la parola segreta di Mefistofele e mostragli la carta \"Tu sei\" con il segno del pollice in giù \"malvagio\".",
+        "remindersGlobal": [],
+        "reminders": [
+            "Diventa malvagio",
+            "Nessuna abilità"
+        ]
+    },
+    {
+        "id": "minstrel",
+        "name": "Menestrello",
+        "ability": "Quando un Seguace muore giustiziato, tutti gli altri giocatori (eccetto i Viaggiatori) sono ubriachi fino al tramonto domani.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": [
+            "Tutti ubriachi"
+        ]
+    },
+    {
+        "id": "monk",
+        "name": "Monaco",
+        "ability": "Ogni notte*, scegli un giocatore (non te stesso): è al sicuro dal Demone stanotte.",
+        "firstNightReminder": "",
+        "otherNightReminder": "Il giocatore precedentemente protetto non è più protetto. Il Monaco indica un giocatore (non sé stesso). Segna quel giocatore come \"Protetto\".",
+        "remindersGlobal": [],
+        "reminders": [
+            "Protetto"
+        ]
+    },
+    {
+        "id": "moonchild",
+        "name": "Strambo",
+        "ability": "Quando apprendi di essere morto, scegli pubblicamente 1 giocatore vivo. Stanotte, se era buono, muore.",
+        "firstNightReminder": "",
+        "otherNightReminder": "Se lo Strambo ha usato la propria abilità per colpire un giocatore oggi: se quel giocatore è buono, muore.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Morto"
+        ]
+    },
+    {
+        "id": "mutant",
+        "name": "Mutante",
+        "ability": "Se sei \"Folle\" di essere un Forestiero, potresti venire giustiziato.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "nightwatchman",
+        "name": "Sentinella",
+        "ability": "Una volta per partita, di notte, scegli un giocatore: scopre chi sei.",
+        "firstNightReminder": "La Sentinella può indicare un giocatore. Sveglia quel giocatore, mostragli la tessera \"Questo personaggio ha scelto te\", il gettone della Sentinella e indica il giocatore Sentinella.",
+        "otherNightReminder": "La Sentinella può indicare un giocatore. Sveglia quel giocatore, mostragli la tessera \"Questo personaggio ha scelto te\", il gettone del Sentinella e indica il giocatore Sentinella.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Nessuna abilità"
+        ]
+    },
+    {
+        "id": "noble",
+        "name": "Nobile",
+        "ability": "Cominci sapendo che tra 3 giocatori, 1 e solo 1 è malvagio.",
+        "firstNightReminder": "Indica 3 giocatori, includendo 1 giocatore malvagio, in nessun ordine specifico.",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": [
+            "Visto"
+        ]
+    },
+    {
+        "id": "nodashii",
+        "name": "No Dashii",
+        "ability": "Ogni notte*, scegli un giocatore: muore. I tuoi 2 vicini Cittadini sono avvelenati.",
+        "firstNightReminder": "",
+        "otherNightReminder": "Il No Dashii indica un giocatore. Quel giocatore muore.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Avvelenato",
+            "Morto"
+        ]
+    },
+    {
+        "id": "ogre",
+        "name": "Orco",
+        "ability": "La prima notte scegli un giocatore (non te stesso): diventerai il suo allineamento (non sai quale) anche se ubriaco o avvelenato.",
+        "firstNightReminder": "L'Orco indica un giocatore (non se stesso) e diventa il suo allineamento.",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "ojo",
+        "name": "Ojo",
+        "ability": "Ogni notte*, scegli un personaggio: muore. Se non è in gioco, il Narratore sceglie chi muore.",
+        "firstNightReminder": "",
+        "otherNightReminder": "L'Ojo indica un personaggio sulla lista; se in gioco, quel giocatore muore. Se non è in gioco, il Narratore sceglie chi muore.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Morto"
+        ]
+    },
+    {
+        "id": "oracle",
+        "name": "Oracolo",
+        "ability": "Ogni notte*, scopri quanti giocatori morti sono malvagi",
+        "firstNightReminder": "",
+        "otherNightReminder": "Mostra con le dita il numero (0, 1, 2, ecc.) di giocatori malvagi morti.",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "organgrinder",
+        "name": "Fisarmonicista",
+        "ability": "Tutti i giocatori chiudono gli occhi durante il voto. Il risultato del voto è segreto. I voti per te contano solo se tu voti.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": [
+            "Sta per morire"
+        ]
+    },
+    {
+        "id": "pacifist",
+        "name": "Pacifista",
+        "ability": "I giocatori buoni che vengono giustiziati potrebbero non morire.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "philosopher",
+        "name": "Filosofo",
+        "ability": "Una volta per partita, di notte, scegli un personaggio buono: ottieni quell'abilità. Se quel personaggio è in gioco, diventa ubriaco.",
+        "firstNightReminder": "Il Filosofo fa segno di \"No\" con la testa, oppure indica un personaggio buono sulla lista. Se sceglie un personaggio: scambia il gettone del personaggio non in gioco con il gettone del Filosofo. Oppure, se il personaggio è in gioco, posiziona il promemoria \"Ubriaco\" accanto a quel giocatore e il promemoria \"È il filosofo\" accanto al filosofo.",
+        "otherNightReminder": "Se il filosofo non ha ancora usato la sua abilità: il Filosofo fa segno di \"No\" con la testa, oppure indica un personaggio buono sulla lista. Se sceglie un personaggio: scambia il gettone del personaggio non in gioco con il gettone del Filosofo. Oppure, se il personaggio è in gioco, posiziona il promemoria \"Ubriaco\" accanto a quel giocatore e il promemoria \"È il filosofo\" accanto al filosofo.",
+        "remindersGlobal": [
+            "Ubriaco",
+            "È il Filosofo"
+        ],
+        "reminders": []
+    },
+    {
+        "id": "pithag",
+        "name": "Megera",
+        "ability": "Ogni notte*, scegli un giocatore e il personaggio che diventa (se non in gioco). Se viene creato un Demone, le morti stanotte saranno arbitrarie.",
+        "firstNightReminder": "",
+        "otherNightReminder": "La Megera indica un giocatore e un personaggio sulla lista. Se questo personaggio non è in gioco, sveglia quel giocatore e mostragli la tessera \"Tu sei\" e il gettone personaggio che è diventato. Se il personaggio è già in gioco, non succede niente.",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "pixie",
+        "name": "Fata",
+        "ability": "Cominci sapendo che un Cittadino è in gioco. Se sei \"Folle\" di essere quel personaggio, ottieni la sua abilità quando muore.",
+        "firstNightReminder": "Mostra alla Fata il gettone di un Cittadino in gioco.",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": [
+            "Ha abilità",
+            "Folle"
+        ]
+    },
+    {
+        "id": "plaguedoctor",
+        "name": "Medico della Peste",
+        "ability": "Se muori, il Narratore riceve l'abilità di un Seguace non in gioco.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": [
+            "Abilità del Narratore"
+        ]
+    },
+    {
+        "id": "po",
+        "name": "Po",
+        "ability": "Ogni notte*, puoi scegliere un giocatore: muore. Se la tua scelta precedente è stata nessuno, stanotte scegli 3 giocatori.",
+        "firstNightReminder": "",
+        "otherNightReminder": "Se il Po non ha scelto nessuno la notte precedente: il Po indica 3 giocatori. Altrimenti, il Po può fare segno di \"No\" con la testa, o scegliere un giocatore. Quel giocatore muore.",
+        "remindersGlobal": [],
+        "reminders": [
+            "3 attacchi",
+            "Morto"
+        ]
+    },
+    {
+        "id": "poisoner",
+        "name": "Untore",
+        "ability": "Ogni notte scegli un giocatore: è avvelenato stanotte e il giorno seguente.",
+        "firstNightReminder": "L'Untore indica un giocatore: quel giocatore è avvelenato.",
+        "otherNightReminder": "Il giocatore precedentemente avvelenato non è più avvelenato. L'Untore indica un giocatore. Quel giocatore è avvelenato.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Avvelenato"
+        ]
+    },
+    {
+        "id": "politician",
+        "name": "Politico",
+        "ability": "Se sei stato il giocatore maggiormente responsabile della sconfitta della tua squadra, cambi allineamento e vinci, anche da morto. ",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "poppygrower",
+        "name": "Mercante d'Oppio",
+        "ability": "Seguaci e demoni non si conoscono. Se muori, si conoscono quella notte.",
+        "firstNightReminder": "Non informare il Demone e i Seguaci sulle rispettive identità.",
+        "otherNightReminder": "Se il Mercante d'Oppio è morto, mostra ai Seguaci e al Demone le rispettive identità.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Malvagi si svegliano"
+        ]
+    },
+    {
+        "id": "preacher",
+        "name": "Predicatore",
+        "ability": "Ogni notte, scegli un giocatore: un Seguace, se scelto, lo viene a sapere. Tutti i Seguaci scelti non hanno abilità.",
+        "firstNightReminder": "Il Predicatore sceglie un giocatore. Se viene scelto un Seguace, sveglia il Seguace e mostragli la carta \"Questo personaggio ha scelto te\" e il gettone Predicatore.",
+        "otherNightReminder": "Il Predicatore sceglie un giocatore. Se viene scelto un Seguace, sveglia il Seguace e mostragli la carta \"Questo personaggio ha scelto te\" e il gettone Predicatore.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Ad un sermone"
+        ]
+    },
+    {
+        "id": "professor",
+        "name": "Professore",
+        "ability": "Una volta per partita, di notte*, scegli un giocatore morto: se è un Cittadino, viene resuscitato.",
+        "firstNightReminder": "",
+        "otherNightReminder": "Se il Professore non ha usato la sua abilità: il Professore fa segno di \"No\" con la testa o indica un giocatore morto. Se quel giocatore è un Cittadino, ora è vivo.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Nessuna abilità",
+            "Vivo"
+        ]
+    },
+    {
+        "id": "psychopath",
+        "name": "Psicopatico",
+        "ability": "Ogni giorno, prima delle nomine, puoi scegliere pubblicamente un giocatore: muore. Se vieni giustiziato, muori solo se perdi a morra cinese.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "pukka",
+        "name": "Pukka",
+        "ability": "Ogni notte, scegli un giocatore: è avvelenato. Il giocatore precedentemente avvelenato muore poi diventa in salute. ",
+        "firstNightReminder": "Il Pukka indica un giocatore. Quel giocatore è avvelenato.",
+        "otherNightReminder": "Il Pukka indica un giocatore. Quel giocatore è avvelenato. Il giocatore precedentemente avvelenato muore.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Avvelenato",
+            "Morto"
+        ]
+    },
+    {
+        "id": "puzzlemaster",
+        "name": "Enigmista",
+        "ability": "1 giocatore è ubriaco, anche se muori. Se indovini (1 volta) chi è, scopri quale giocatore è il demone, ma se sbagli ricevi informazioni false.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": [
+            "Tentativo usato",
+            "Ubriaco"
+        ]
+    },
+    {
+        "id": "ravenkeeper",
+        "name": "Guardiano",
+        "ability": "Se muori di notte, vieni svegliato per scegliere un giocatore: scopri il suo personaggio.",
+        "firstNightReminder": "",
+        "otherNightReminder": "Se il Guardiano è morto stanotte sceglie un giocatore: mostragli il gettone personaggio di quel giocatore.",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "recluse",
+        "name": "Eremita",
+        "ability": "Puoi apparire malvagio e come Seguace o Demone, anche da morto.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "revolutionary",
+        "name": "Rivoluzionario",
+        "ability": "2 giocatori vicini di posto sono dello stesso allineamento e tutti sanno chi sono. Una volta per partita, uno di questi appare dell'allineamento opposto.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": [
+            "Appare opposto"
+        ]
+    },
+    {
+        "id": "riot",
+        "name": "Rivolta",
+        "ability": "Chi viene accusato muore, ma può accusare ancora immediatamente (nel terzo giorno, deve farlo). Dopo il terzo giorno i Malvagi vincono. [tutti i Seguaci sono Rivolta]",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "sage",
+        "name": "Saggio",
+        "ability": "Se il Demone ti uccide, scopri che è uno tra 2 giocatori.",
+        "firstNightReminder": "",
+        "otherNightReminder": "Se il Saggio viene ucciso dal Demone: indica 2 giocatori, uno di questi è il Demone.",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "sailor",
+        "name": "Marinaio",
+        "ability": "Non puoi morire. Ogni notte, scegli un giocatore vivo: 1 di voi è ubriaco fino al tramonto.",
+        "firstNightReminder": "Il Marinaio indica un giocatore vivo. Un giocatore tra il Marinaio e quel giocatore è ubriaco.",
+        "otherNightReminder": "Il giocatore precedentemente ubriaco non è più ubriaco. Il Marinaio indica un giocatore vivo. Un giocatore tra il Marinaio e quel giocatore è ubriaco.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Ubriaco"
+        ]
+    },
+    {
+        "id": "saint",
+        "name": "Santo",
+        "ability": "Se muori tramite esecuzione, la tua squadra perde.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "savant",
+        "name": "Prodigio",
+        "ability": "Ogni giorno, puoi visitare il Narratore per scoprire 2 cose in privato: 1 è vera e 1 è falsa.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "scapegoat",
+        "name": "Capro Espiatorio",
+        "ability": "Se un giocatore del tuo allineamento viene giustiziato, tu potresti essere giustiziato al suo posto.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "scarletwoman",
+        "name": "Donna Scarlatta",
+        "ability": "Se ci sono 5 o più giocatori vivi e il Demone muore, diventi il Demone. (I Viaggiatori non contano)",
+        "firstNightReminder": "",
+        "otherNightReminder": "Se la Donna Scarlatta è diventata il Demone oggi: mostra la tessera \"Tu sei\" e il gettone del Demone.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Demone"
+        ]
+    },
+    {
+        "id": "seamstress",
+        "name": "Sarta",
+        "ability": "Una volta per partita, di notte, scegli 2 giocatori (non te stesso): scopri se sono dello stesso allineamento.",
+        "firstNightReminder": "La Sarta fa segno di \"No\" con la testa oppure indica 2 giocatori. Se la Sarta ha scelto giocatori, annuisci per \"Sì\" o scuoti la testa per \"No\" per comunicare se hanno lo stesso allineamento.",
+        "otherNightReminder": "Se la Sarta non ha ancora usato la sua abilità: la Sarta fa segno di \"No\" con la testa oppure indica 2 giocatori. Se la Sarta ha scelto giocatori, annuisci per \"Sì\" o scuoti la testa per \"No\" per comunicare se hanno lo stesso allineamento.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Nessuna abilità"
+        ]
+    },
+    {
+        "id": "sentinel",
+        "name": "Sentinella",
+        "ability": "Ci potrebbe essere in gioco 1 Forestiero in più o 1 in meno.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "shabaloth",
+        "name": "Shabaloth",
+        "ability": "Ogni notte*, scegli 2 giocatori: muoiono. Un giocatore morto che hai scelto la notte scorsa potrebbe essere rigurgitato.",
+        "firstNightReminder": "",
+        "otherNightReminder": "1 giocatore che lo Shabaloth ha scelto la notte scorsa potrebbe essere resuscitato. Lo Shabaloth indica 2 giocatori. Quei giocatori muoiono.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Morto",
+            "Vivo"
+        ]
+    },
+    {
+        "id": "shugenja",
+        "name": "Shugenja",
+        "ability": "Cominci sapendo se il giocatore malvagio più vicino a te è in senso orario o antiorario. Se equidistanti, questa informazione è arbitraria. ",
+        "firstNightReminder": "Sveglia la Shugenja: indica orizzontalmente verso il giocatore malvagio più vicino. Se i 2 giocatori malvagi più vicini sono equidistanti, indica una direzione qualsiasi.",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "slayer",
+        "name": "Giustiziere",
+        "ability": "Una volta per partita, di giorno, scegli pubblicamente un giocatore: se è il Demone, muore.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": [
+            "Nessuna abilità"
+        ]
+    },
+    {
+        "id": "snakecharmer",
+        "name": "Fachiro",
+        "ability": "Ogni notte, scegli un giocatore vivo: un Demone, se scelto, scambia personaggio e allineamento con te e poi diventa avvelenato.",
+        "firstNightReminder": "Il Fachiro indica un giocatore. Se quel giocatore è il Demone: scambia personaggio e allineamento del Fachiro e del Demone. Sveglia entrambi i giocatori e informali del loro nuovo personaggio e allineamento. Il nuovo Fachiro è avvelenato.",
+        "otherNightReminder": "Il Fachiro indica un giocatore. Se quel giocatore è il Demone: scambia personaggio e allineamento del Fachiro e del Demone. Sveglia entrambi i giocatori e informali del loro nuovo personaggio e allineamento. Il nuovo Fachiro è avvelenato.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Avvelenato"
+        ]
+    },
+    {
+        "id": "snitch",
+        "name": "Delatore",
+        "ability": "I Seguaci cominciano conoscendo 3 personaggi non in gioco.",
+        "firstNightReminder": "Dopo le informazioni per i Seguaci, sveglia ciascun Seguace e mostra 3 gettoni di personaggi non in gioco. Questi possono essere identici o differenti tra loro e rispetto a quelli mostrati al Demone.",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "soldier",
+        "name": "Soldato",
+        "ability": "Sei al sicuro dal Demone.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "spiritofivory",
+        "name": "Spirito d'Avorio",
+        "ability": "Non ci può essere più di un giocatore malvagio aggiuntivo.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": [
+            "No malvagi aggiuntivi"
+        ]
+    },
+    {
+        "id": "spy",
+        "name": "Spia",
+        "ability": "Ogni notte, guarda il Grimorio. Puoi apparire buono e Cittadino o Forestiero, anche da morto.",
+        "firstNightReminder": "Mostra il Grimorio alla Spia per il tempo necessario.",
+        "otherNightReminder": "Mostra il Grimorio alla Spia per il tempo necessario.",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "steward",
+        "name": "Aiutante",
+        "ability": "Cominci conoscendo 1 giocatore buono.",
+        "firstNightReminder": "Indica 1 giocatore buono.",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": [
+            "Conosce"
+        ]
+    },
+    {
+        "id": "stormcatcher",
+        "name": "Domatore di tempeste",
+        "ability": "Dichiara un personaggio buono. Se in gioco, potrà solo morire tramite esecuzione, ma i giocatori malvagi scoprono chi è.",
+        "firstNightReminder": "",
+        "otherNightReminder": "Segna un giocatore dei buoni con il gettone promemoria \"Protetto\". Sveglia ogni giocatore Malvagio e mostragli il giocatore scelto.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Protetto"
+        ]
+    },
+    {
+        "id": "summoner",
+        "name": "Evocatore",
+        "ability": "Ottieni 3 bluff. La 3ª notte scegli un giocatore: esso diventa un Demone scelto da te. [Nessun Demone]",
+        "firstNightReminder": "Mostra la carta \"Questi personaggio non sono in gioco\". Mostra 3 gettone di personaggi buoni non in gioco.",
+        "otherNightReminder": "Se è la 3ª notte, sveglia l'Evocatore. Questi indica un giocatore e un Demone sulla scheda personaggi - quel giocatore diventa quel demone.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Notte 1",
+            "Notte 2",
+            "Notte 3"
+        ]
+    },
+    {
+        "id": "sweetheart",
+        "name": "Innamorato",
+        "ability": "Quando muori, 1 giocatore è ubriaco da quel momento in poi.",
+        "firstNightReminder": "",
+        "otherNightReminder": "Scegli un giocatore che diventa ubriaco",
+        "remindersGlobal": [],
+        "reminders": [
+            "Ubriaco"
+        ]
+    },
+    {
+        "id": "tealady",
+        "name": "Signora del Tè",
+        "ability": "Se entrambi i tuoi vicini di posto vivi sono buoni, non possono morire.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": [
+            "Non può morire"
+        ]
+    },
+    {
+        "id": "thief",
+        "name": "Ladro",
+        "ability": "Ogni notte, scegli un giocatore (non te stesso): domani il suo voto conta come negativo.",
+        "firstNightReminder": "Il Ladro indica un giocatore. Posiziona il promemoria del Ladro \"Voto negativo\" accanto a quel gettone personaggio di quel giocatore. ",
+        "otherNightReminder": "Il Ladro indica un giocatore. Posiziona il promemoria del Ladro \"Voto negativo\" accanto a quel gettone personaggio di quel giocatore. ",
+        "remindersGlobal": [],
+        "reminders": [
+            "Voto negativo"
+        ]
+    },
+    {
+        "id": "tinker",
+        "name": "Tuttofare",
+        "ability": "Puoi morire in qualsiasi momento.",
+        "firstNightReminder": "",
+        "otherNightReminder": "Lo Smanettone potrebbe morire.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Morto"
+        ]
+    },
+    {
+        "id": "towncrier",
+        "name": "Strillone",
+        "ability": "Ogni notte*, scopri se oggi un Seguace ha accusato.",
+        "firstNightReminder": "",
+        "otherNightReminder": "Annuisci per \"Sì\" o scuoti la testa per \"No\" per comunicare se un Seguace abbia accusato o no. Posiziona i gettoni \"Seguace accusa\" o \"Seguace non accusa\" a seconda della situazione.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Seguace accusa",
+            "Seguace non accusa"
+        ]
+    },
+    {
+        "id": "toymaker",
+        "name": "Giocattolaio",
+        "ability": "Il Demone può scegliere di non attaccare e deve fare questa scelta almeno una volta a partita. I giocatori malvagi ricevono informazioni iniziali regolarmente. ",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": [
+            "Nessun attacco"
+        ]
+    },
+    {
+        "id": "undertaker",
+        "name": "Becchino",
+        "ability": "Ogni notte*, scopri quale personaggio oggi è morto tramite esecuzione. ",
+        "firstNightReminder": "",
+        "otherNightReminder": "Se oggi un giocatore è morto tramite esecuzione: mostra il gettone personaggio di quel giocatore.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Giustiziato"
+        ]
+    },
+    {
+        "id": "vigormortis",
+        "name": "Vigormortis",
+        "ability": "Ogni notte*, scegli un giocatore: muore. I Seguaci che uccidi mantengono le loro abilità e avvelenano un Cittadino loro vicino. [-1 Forestiero]",
+        "firstNightReminder": "",
+        "otherNightReminder": "Il Vigormortis indica un giocatore. Quel giocatore more. Se è un Seguace, mantiene la sua abilità e uno dei suoi vicini di posto Cittadini è avvelenato.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Avvelenato",
+            "Ha abilità",
+            "Morto"
+        ]
+    },
+    {
+        "id": "villageidiot",
+        "name": "Scemo del Villaggio",
+        "ability": "Ogni notte, scegli un giocatore: apprendi la sua fazione. [da +0 a +2 Scemi del Villaggio. 1 di loro è ubriaco se ne esiste più di 1]",
+        "firstNightReminder": "Lo Scemo del Villaggio indica un giocatore; mostragli il segno del pollice in su se quel giocatore è buono o un pollice in giù se quel giocatore è malvagio.",
+        "otherNightReminder": "Lo Scemo del Villaggio indica un giocatore; mostragli il segno del pollice in su se quel giocatore è buono o un pollice in giù se quel giocatore è malvagio.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Ubriaco"
+        ]
+    },
+    {
+        "id": "virgin",
+        "name": "Vergine",
+        "ability": "La prima volta che sei accusato, se chi ti accusa è un Cittadino, viene immediatamente giustiziato.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": [
+            "Nessuna abilità"
+        ]
+    },
+    {
+        "id": "vizier",
+        "name": "Visir",
+        "ability": "Tutti i giocatori sanno chi sei. Non puoi morire durante il giorno. Se i buoni hanno votato, puoi decidere di giustiziare immediatamente.",
+        "firstNightReminder": "Annuncia \"Il Visir è in gioco\" e indica quel giocatore.",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "vortox",
+        "name": "Vortox",
+        "ability": "Ogni notte*, scegli un giocatore: muore. Le abilità dei Cittadini forniscono informazioni false. Ogni giorno, se non viene giustiziato nessuno, i malvagi vincono. ",
+        "firstNightReminder": "",
+        "otherNightReminder": "Il Vortox indica un giocatore. Quel giocatore muore.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Morto"
+        ]
+    },
+    {
+        "id": "voudon",
+        "name": "Voudon",
+        "ability": "Potete votare solo tu e i morti. Il gettone di voto non viene usato. La maggioranza del 50% non è necessaria.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "washerwoman",
+        "name": "Lavandaia",
+        "ability": "Cominci sapendo che 1 tra 2 giocatori è un cittadino specifico. ",
+        "firstNightReminder": "Mostra il gettone di un cittadino in gioco. Indica 2 giocatori, uno dei quali è quel personaggio.",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": [
+            "Cittadino",
+            "Sbagliato"
+        ]
+    },
+    {
+        "id": "widow",
+        "name": "Vedova",
+        "ability": "Nella tua prima notte, guarda il Grimorio e scegli un giocatore: è avvelenato. 1 giocatore buono sa che la Vedova è in gioco.",
+        "firstNightReminder": "Mostra il Grimorio alla Vedova per il tempo necessario. La Vedova indica un giocatore. Quel giocatore è avvelenato. Sveglia un giocatore buono. Mostra la carta \"Questo personaggio è in gioco\" e il gettone della Vedova.",
+        "otherNightReminder": "",
+        "remindersGlobal": [
+            "Conosce"
+        ],
+        "reminders": [
+            "Avvelenato"
+        ]
+    },
+    {
+        "id": "witch",
+        "name": "Strega",
+        "ability": "Ogni notte, scegli un giocatore: se domani accusa, muore. Se ci sono solo 3 giocatori in vita, perdi questa abilità.",
+        "firstNightReminder": "La Strega indica un giocatore. Se quel giocatore domani accusa, muore immediatamente.",
+        "otherNightReminder": "Se ci sono 4 o più giocatori in vita: la Strega indica un giocatore. Se quel giocatore domani accusa, muore immediatamente.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Maledetto"
+        ]
+    },
+    {
+        "id": "yaggababble",
+        "name": "Yaggablabla",
+        "ability": "Inizi la partita conoscendo una frase segreta. Ogni volta che pronunci pubblicamente questa frase segreta un giocatore potrebbe morire.",
+        "firstNightReminder": "Mostra al Yaggablabla la sua frase segreta.",
+        "otherNightReminder": "Scegli un numero di giocatori uguale o minore al numero di volte in cui Yaggablabla ha pronunciato la sua frase segreta, questi giocatori muoiono.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Morto"
+        ]
+    },
+    {
+        "id": "zombuul",
+        "name": "Zombuul",
+        "ability": "Ogni notte*, se oggi non è morto nessuno, scegli un giocatore: muore. La prima volta che muori, sopravvivi ma registri come morto.",
+        "firstNightReminder": "",
+        "otherNightReminder": "Se oggi non è morto nessuno: Zombuul indica un giocatore. Quel giocatore muore.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Morto",
+            "Morto oggi"
+        ]
+    }
+]

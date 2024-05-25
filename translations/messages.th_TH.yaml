@@ -1,0 +1,255 @@
+title: Pocket Grimoire
+
+forms:
+    file:
+        placeholder: เลือกไฟล์
+        button: เรียก
+
+dialog:
+    close: ปิด
+
+index:
+    title: เกม
+    description: กรีมัวร์ออนไลน์สำหรับเกม Blood on the Clocktower
+
+sheet:
+    title: ใบตัวละคร
+    description: ใบตัวละครสำหรับ Edition นี้ของ Blood on the Clocktower
+    jinx: ข้อขัดแย้ง
+    each_night: "* ทุกคืนยกเว้นคืนแรก"
+    get_qr_code: ดาวน์โหลดคิวอาร์โค้ดสำหรับแผ่นนี้
+    get_sheet: ดาวน์โหลดแผ่นนี้
+    credit: <a href="https://bloodontheclocktower.com/" target="_blank" rel="noopener noreferrer">Blood on the Clocktower</a> เป็นเครื่องหมายการค้าของ Steven Medway และ <a href="https://www.thepandemoniuminstitute.com/" target="_blank" rel="noopener noreferrer">The Pandemonium Institute</a>
+    breakdown: จำนวนผู้เล่นแต่ละหมวดหมู่ตามจำนวนผู้เล่นทั้งหมด
+    count_plus: "%count%+"
+
+groups:
+    players: ผู้เล่น
+    townsfolk: ชาวบ้าน
+    outsider: คนนอก
+    minion: ลูกสมุน
+    demon: ปีศาจ
+    traveller: นักเดินทาง
+    fabled: ตัวละครในตำนาน
+
+messages:
+    good_team: ฝ่ายดี
+    evil_team: ฝ่ายร้าย
+    empty_character_ability: นี่เป็นตัวละครเปล่าๆ
+    version_change_message: แอปนี้ได้ถูกอัพเดทเป็นเวอร์ชั่นใหม่ เพราะฉะนั้นข้อมูลของคุณบนหน้านี้อาจจะไม่ถูกต้อง เราขอแนะนำให้คุณรีเซททุกอย่างด้วยการ "ล้างแคช" กด "ตกลง" เพื่อที่จะเข้าสู้การล้างแคชหรือกด "ยกเลิก" เพื่อที่จะปิดข้อความนี้
+    invalid_script: ไม่สามารถอ่านรูปแบบไฟล์ของ Script ได้
+    no_characters: Script นี้ไม่มีตัวละครที่รู้จัก
+    player_name: ผู้เล่นนี้ชื่อว่าอะไร
+    custom_info_token: คุณอยากจะให้ป้ายบอกข้อมูลอันใหม่นี้เขียนว่าอะไร ใช้ **ดอกจันทร์สองตัว** ในการทำตัวหนา
+    bag_disabled: "ไม่สามารถเพิ่มตัวละครเหล่านี้ลงในถุงได้: {0}"
+
+setup:
+
+    title: การตั้งเกม
+
+    buttons:
+        select_edition: เลือก Edition
+        select_characters: เลือกตัวละคร
+        qr_code_button: ใบตัวละคร
+        clear_cache_button: ล้างแคช
+        language: ภาษา
+        set_language: เลือกภาษา
+
+    editions:
+        title: เลือก Edition
+        trouble_brewing: Trouble Brewing
+        bad_moon_rising: Bad Moon Rising
+        sects_and_violets: Sects and Violets
+        custom_script: Script สร้างเอง
+        custom_note: อัพโหลด Script สร้างเองด้วยการใส่ URL หรือใส่ JSON ของ Script สร้างเอง
+        custom_warning: โหลดไฟล์ JSON จากเฉพาะเว็บไซต์ที่คุณเชื่อใจเท่านั้น!
+        upload: อัพโหลด Script สร้างเอง
+        url: ใส่ URL
+        paste: วางจากคลิปบอร์ด
+        unsupported: โปรดทราบว่า Pocket Grimoire ยังไม่สามารถเปิด Script ที่ใช้ตัวละครสร้างเองหรือ Script จากภาษาอื่นได้
+        select: เลือก
+
+    character_select:
+        title: เลือกตัวละคร
+        number_players: จำนวนผู้เล่น
+        toggle_abilities: แสดงความสามารถของตัวละคร
+        toggle_duplicates: อนุญาตให้มีตัวละครซ้ำได้
+        highlight_random: เลือกตัวละครแบบซุ่ม
+        draw_characters: เปิดถุงให้ผู้เล่นซุ่มเลือกตัวละคร
+        add_all: เพิ่มตัวละครที่เลือกลงในกรีมัวร์
+        layout: การจัดวาง
+        ellipse: วงรี
+        diagonal: แนวทแยงมุม
+        horizontal: แนวนอน
+        vertical: แนวตั้ง
+
+    character_choice:
+        title: เลือกตัวละคร
+        description: แตะป้ายหมายเลขเพื่อจะสุ่มเลือกตัวละครของคุณ ป้ายที่เป็นสีเทาถูกเลือกไปแล้ว
+
+    character_decision:
+        title: จำตัวละครของคุณ
+        name: คุณชื่ออะไร
+        return: กลับไปที่ถุงเลือกตัวละคร
+
+    qr_code:
+        title: ใบตัวละคร
+        intro: แสกน QR code เพื่อดูใบตัวละคร
+        include: แสดง:
+        travellers: นักเดินทาง
+        fabled: ตัวละครในตำนาน
+
+    clear_cache:
+        title: ล้างแคช
+        clear_all: รีเซททุกอย่าง
+        clear_description: ถ้าปิดปุ่มนี้จะสามารถเลือกได้ว่าจะล้างอะไรเป็นอย่างๆ
+        lookup_label: ล้างข้อมูล
+        lookup_note: ข้อมูลของข้อขัดแย้ง การแบ่งกลุ่ม และข้อมูลตัวละคร
+        characters_label: ล้าง Edition
+        characters_note: Edition หรือ Script ที่ถูกเลือกมา
+        tokens_label: ล้างโทเคน
+        tokens_note: ตำแหน่งของโทเคนที่อยู่บนกรีมัวร์
+        inputs_label: ล้างการตั้งค่ำ
+        inputs_note: การตั้งค่าเว็บไซต์นี้โดยผู้ใช้
+        details_label: ล้าง เปิด/ปิด
+        details_note: การเปิดปิดของแต่ละแถบในหน้านี้
+        info_tokens_label: ล้างโทเคนข้อมูลพิเศษ
+        info_tokens_note: ป้ายโทเคนให้ข้อมูลที่ถูกเพิ่มเข้ามา
+        names_label: ล้างชื่อ
+        names_note: ชื่อขอผู้เล่น
+        height_label: ล้างความสูงของแถบ
+        height_note: ความสูงของแถบกรีมัวร์
+        clear_refresh_label: รีเฟรช
+        clear_refresh_note: การรีเฟรชจะโหลดข้อมูลใหม่สำหรับอะไรที่ถูกล้างออกไป
+        warning: "<strong>คำเตือน:</strong> โทเคนทุกอันที่วางอยู่บนกรีมัวร์จะถูกลบออก"
+        info_token_warning: "<strong>คำเตือน:</strong> โทเคนข้อมูลที่คุณเพิ่มขึ้นมาจะถูกลบออก"
+        clear_cache: ล้างแคช
+
+grimoire:
+
+    title: กรีมัวร์
+
+    grimoire:
+        bluffs: บลัฟของปีศาจ
+        show_bluffs: แสดงบลัฟทั้งหมด
+        add_bluffs: เพิ่มบลัฟ
+        add_token: เพิ่มป้าย
+        add_reminder: เพิ่มป้ายเตือนความจำ
+        add_traveller: เพิ่มนักเดินทาง
+        add_fabled: เพิ่มตัวละครในตำนาน
+        show_tokens: แสดงโทเคน
+        reset_height: ล้างความสูงของแถบ
+        clear_grimoire: ล้างกรีมัวร์
+        clear_grimoire_warning: คุณแน่ใจหรือว่าต้องการจะล้างโทเคนทั้งหมด
+        show_night_order: แสดงลำดับการเล่นตอนกลางคืน
+        character_size: ขนาดของเหรียญโทเคนตัวละคร
+        reminder_size: ขนาดของเหรียญโทเคนเตือนความจำ
+        token_settings: การตั้งค่าโทเคน
+
+    character_list:
+        title: เลือกตัวละคร
+
+    reminder_list:
+        title: แสดงป้ายเตือนความจำ
+        show: แสดงป้ายเตือนความจำทั้งหมด
+        multiple: เพิ่มทีละหลายอัน
+        add_all: เพิ่มทุกอย่างที่เลือก
+
+    character_show:
+        title: โทเคน
+        show: แสดง
+        shroud: ผ้าคลุมศพ
+        rotate: หมุน
+        reminder: ป้ายเตือนความจำ
+        replace: เปลี่ยน
+        remove: ลบโทเคนออก
+        recent_reminders: "ป้ายเตือนความจำที่ใช้ล่าสุด:"
+        player_name: ตั้งชื่อผู้เล่น
+        ghost_vote: โหวตวิญญาณ
+
+    reminder_show:
+        title: ป้ายเตือนความจำ
+        remove: ลบออก
+
+    bluff_show:
+        title: โทเคน
+        empty: ว่างเปล่า
+        show: แสดง
+        change: เปลี่ยน
+
+    bluff_list:
+        title: เลือกบลัฟ
+        show_existing: แสดงตัวละครที่ใช้อยู่
+        show_travellers: แสดงนักเดินทาง
+        show_evil: แสดงตัวละครฝ่ายร้าย
+
+    token_list:
+        title: ตัวละคร
+        add: เพิ่มป้าย
+
+    traveller_list:
+        title: นักเดินทาง
+        show_all: แสดงนักเดินทางทั้งหมด
+
+    fabled_list:
+        title: ตัวละครในตำนาน
+
+    token:
+        title: โทเคน
+
+jinxes:
+    title: ข้อขัดแย้ง
+    target: เป้าหมาย
+    trick: หลอก
+    reason: เหตุผล
+    show: แสดงข้อขัดแย้งที่ไม่ได้ใช้
+
+night_order:
+    title: ลำดับการเล่นตอนกลางคืน
+    first_night: คืนแรก
+    other_night: คืนอื่นๆ
+    swipe_change: ปัดเพื่อที่จะเปลี่ยนคืน
+    show: แสดงตัวละครที่ไม่ได้ใช้อยู่
+    show_dead: แสดงตัวละครที่ตายแล้ว
+
+info_tokens:
+    title: ป้ายโทเคนข้อมูล
+    info_tokens:
+        isdemon: คนนี้เป็น <strong>ปีศาจ</strong>
+        isminion: คนเหล่านี้คือ <strong>ลูกสมุน</strong>
+        notinplay: ตัวละครเหล่านี้ไม่ถูกใช้
+        nominatetoday: คุณ<strong>เสนอชื่อ</strong>วันนี้หรือเปล่า
+        playeris: <strong>ผู้เล่นคนนี้</strong>เป็น
+        votetoday: คุณ<strong>โหวต</strong>วันนี้หรือเปล่า
+        youare: <strong>คุณ</strong>คือ
+        selectedyou: ตัวละครนี้<strong>เลือ</strong>กคุณ
+    custom: ป้ายโทเคนข้อมูลพิเศษ
+    add_custom: เพิ่มป้ายบอกข้อมูล
+    edit_custom: เปลี่ยนข้อมูลบนป้าย
+    delete_custom: ลบโทเคนข้อมูลออก
+
+notes:
+    title: บันทึกช่วยจำของนักเล่าเรื่อง
+    label: บันทึก
+    clear: ล้างบันทึก
+    clear_warning: คุณแน่ใจหรือว่าต้องการจะล้างบันทึกความจำ
+
+acknowledgements:
+    title: กิตติกรรมประกาศ
+    acknowledgements:
+        - <a href="https://bloodontheclocktower.com/" target="_blank" rel="noopener noreferrer">Blood on the Clocktower</a> เป็นเครื่องหมายการค้าของ Steven Medway และ <a href="https://www.thepandemoniuminstitute.com/" target="_blank" rel="noopener noreferrer">The Pandemonium Institute</a>
+        - Night reminders and other auxiliary text written by <a href="http://bignose.whitetree.org/projects/botc/diy/" target="_blank" rel="noopener noreferrer">Ben Finney</a>.
+        - Icons are taken from <a href="https://fontawesome.com/v5.15/icons" target="_blank" rel="noopener noreferrer">Font Awesome</a>.
+        - Many images and data are taken from <a href="https://www.clocktower.online" target="_blank" rel="noopener noreferrer">Clocktower.online</a> and the <a href="https://bloodontheclocktower.com/" target="_blank" rel="noopener noreferrer">Blood on the Clocktower website</a>.
+        - This is an unofficial virtual grimoire for Blood on the Clocktower. This project is free and the source code can be found on <a href="https://github.com/Skateside/pocket-grimoire" target="_blank" rel="noopener noreferrer">GitHub</a>. This project is not affiliated with the Pandemonium Institute. If you enjoy playing Blood on the Clocktower, <a href="https://bloodontheclocktower.com/buy" target="_blank" rel="noopener noreferrer">please consider buying your own grimoire</a> - as well as being more flexible than this digital version, it also supports the creators.
+        - Noticed a bug or have an improvement suggestion? Let me know in the <a href="https://discord.com/invite/Gd7ybwWbFk" target="_blank" rel="noopener noreferrer">pocket-grimoire channel on the unofficial discord server</a> (my name on there is "Skateside") or <a href="https://github.com/Skateside/pocket-grimoire/issues" target="_blank" rel="noopener noreferrer">raise an issue in GitHub</a>.
+        - <small>Version <span id="version"></span></small>
+
+errors:
+    homebrew_json:
+        not_homebrew: ไม่ใช่ตัวละคร homebrew "%id%"
+        unrecognised_team: ไม่รู้ว่าอยู่ฝ่ายไหน "%team%"
+        not_find_id: หา ID ไม่เจอ "%id%"
+        .not_recognise_character: ไม่เจอตัวละครนี้ "%id%"
+        invalid_entry: "Invalid entry for \"%id%\": %reasons%"
+        empty_teams: "Empty teams: %teams%"

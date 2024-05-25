@@ -58,6 +58,10 @@
         font-size: clamp(1rem, 8vw, 3rem);
     }
 
+    &:lang(kv) {
+        font-size: clamp(1rem, 7vw, 2.5rem);
+    }
+
     > strong {
         font-family: var(--serif-font);
         font-size: 1.3em;

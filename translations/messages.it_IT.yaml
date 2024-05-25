@@ -1,0 +1,255 @@
+title: Pocket Grimoire
+
+forms:
+    file:
+        placeholder: Scegli un file
+        button: Sfoglia
+
+dialog:
+    close: Chiudi
+
+index:
+    title: Gioco
+    description: Un Grimorio virtuale per Blood on the Clocktower
+
+sheet:
+    title: Copione dei Personaggi
+    description: Il Copione dei Personaggi per questa edizione di Blood on the Clocktower
+    jinx: Jinx
+    each_night: "* Ogni notte eccetto la prima"
+    get_qr_code: Ottieni il QR code per questo foglio dei Personaggi
+    get_sheet: Ottieni questo Copione
+    credit: <a href="https://bloodontheclocktower.com/" target="_blank" rel="noopener noreferrer">Blood on the Clocktower</a> è un marchio registrato di Steven Medway e <a href="https://www.thepandemoniuminstitute.com/" target="_blank" rel="noopener noreferrer">The Pandemonium Institute</a>
+    breakdown: Il numero di giocatori in ogni squadra per ogni numero di giocatori.
+    count_plus: "%count%+"
+
+groups:
+    players: Giocatori
+    townsfolk: Cittadini
+    outsider: Forestieri
+    minion: Seguaci
+    demon: Demoni
+    traveller: Viaggiatori
+    fabled: Fatati
+
+messages:
+    good_team: Buoni
+    evil_team: Malvagi
+    empty_character_ability: Questo è un personaggio vuoto.
+    version_change_message: Quest'app è stata aggiornata.Ti consigliamo di cancellare tutto premendo "Cancella la Cache", per non rischiare che i tuoi dati siano errati o corrotti. Premi "OK" per aprire la schermata o "cancel" per ignorare.
+    invalid_script: Formato non riconosciuto per il copione.
+    no_characters: Questo copione non contiene personaggi riconosciuti
+    player_name: Come si chiama questo giocatore?
+    custom_info_token: "Cosa vuoi scrivere sul nuovo token informazioni? Usa i **doppi asterischi** per evidenziare il testo."
+    bag_disabled: "Impossibile aggiungere questi personaggi al carrello: {0}"
+
+setup:
+
+    title: Setup
+
+    buttons:
+        select_edition: Scegli edizione
+        select_characters: Scegli i personaggi
+        qr_code_button: Copione dei Personaggi
+        clear_cache_button: Cancella la Cache
+        language: Lingua
+        set_language: Seleziona Lingua
+
+    editions:
+        title: Scegli edizione
+        trouble_brewing: Trouble Brewing
+        bad_moon_rising: Bad Moon Rising
+        sects_and_violets: Sects and Violets
+        custom_script: Copione Custom
+        custom_note: Carica un copione Custom, inserisci l'URL di un copione custom, o incolla direttamente il JSON.
+        custom_warning: Carica file JSON solo da fonti affidabili!
+        upload: Carica un Copione Custom
+        url: Inserisci un URL
+        paste: Incolla dagli appunti
+        unsupported: Ci scusiamo, ma Pocket Grimoire attualmente non supporta copioni Homebrew o in lingue diverse.
+        select: Seleziona
+
+    character_select:
+        title: Seleziona Personaggi
+        number_players: Numero di giocatori
+        toggle_abilities: Mostra abilità dei personaggi
+        toggle_duplicates: Consenti personaggi duplicati
+        highlight_random: Scegli a caso
+        draw_characters: Pesca Personaggi
+        add_all: Aggiungi tutti
+        layout: Layout
+        ellipse: Ellisse
+        diagonal: Diagonale
+        horizontal: Orizzontale
+        vertical: Verticale
+
+    character_choice:
+        title: Scegli il tuo personaggio
+        description: Tocca un token numerato per scegliere il tuo Personaggio. Quelli più scuri sono già stati scelti.
+
+    character_decision:
+        title: Ricordati il tuo personaggio
+        name: Qual è il tuo nome?
+        return: Ritorna al Copione dei Personaggi
+
+    qr_code:
+        title: Copione dei Personaggi
+        intro: Scansiona questo codice QR per vedere il Copione dei Personaggi
+        include: "Includi:"
+        travellers: Viaggiatori
+        fabled: Fatati
+
+    clear_cache:
+        title: Cancella la Cache
+        clear_all: Cancella Tutto
+        clear_description: Disattivare questa impostazione permetterà a parti idividuali della Cache di venire cancellate.
+        lookup_label: Cancella tutti i dati
+        lookup_note: I dati per i Jinx, i membri delle squadre e le informazioni dei personaggi
+        characters_label: Cancella l'edizione
+        characters_note: L'edizione, o il copione, che è stata selezionata e caricata
+        tokens_label: Cancella i token
+        tokens_note: La posizione dei token nel Grimorio
+        inputs_label: Cancella gli input
+        inputs_note: Impostazioni utente per questo sito
+        details_label: Cancella aperto/chiuso.
+        details_note: Quali sezioni sono aperte o chiuse.
+        info_tokens_label: Cancella i token informazioni personalizzati.
+        info_tokens_note: I token informazioni personalizzati che sono stati aggiunti.
+        names_label: Cancella nomi
+        names_note: I nomi suggeriti dai giocatori
+        height_label: Cancella altezza del riquadro
+        height_note: Altezza del riquadro nel grimorio
+        clear_refresh_label: Aggiorna dopo
+        clear_refresh_note: Aggiornare immetterà nuovi dati per tutto ciò che è stato cancellato
+        warning: "<strong>Attenzione:</strong> ogni token che è stato aggiunto nel grimorio verrà cancellato"
+        info_token_warning: "<strong>Attenzione:</strong> ogni token informazioni personalizzato verrà cancellato"
+        clear_cache: Cancella la Cache
+
+grimoire:
+
+    title: Grimorio
+
+    grimoire:
+        bluffs: Bluff del Demone
+        show_bluffs: Mostra tutti i bluff
+        add_bluffs: Aggiungi bluffs
+        add_token: Aggiungi token
+        add_reminder: Aggiungi promemoria
+        add_traveller: Aggiungi viaggiatore
+        add_fabled: Aggiungi fatato
+        show_tokens: Mostra i token
+        reset_height: Ripristina altezza riquadro
+        clear_grimoire: Pulisci Grimorio
+        clear_grimoire_warning: Sei sicuro di voler cancellare tutti i token?
+        show_night_order: Mostra ordine della notte
+        character_size: Dimensioni token personaggi
+        reminder_size: Dimensioni token promemoria
+        token_settings: Impostazioni token
+
+    character_list:
+        title: Seleziona personaggio
+
+    reminder_list:
+        title: Seleziona promemoria
+        show: Mostra tutti i promemoria
+        multiple: Aggiunta multipla
+        add_all: Aggiungi tutti
+
+    character_show:
+        title: Token
+        show: Mostra
+        shroud: Morte
+        rotate: Ruota
+        reminder: Promemoria
+        replace: Rimpiazza
+        remove: Rimuovi token
+        recent_reminders: "Promemoria aggiunti di recente:"
+        player_name: Imposta nome giocatore
+        ghost_vote: Voto del fantasma
+
+    reminder_show:
+        title: Promemoria
+        remove: Rimuovi
+
+    bluff_show:
+        title: Token
+        empty: Vuoto
+        show: Mostra
+        change: Cambia
+
+    bluff_list:
+        title: Scegli i bluff
+        show_existing: Mostra personaggi esistenti
+        show_travellers: Mostra viaggiatori
+        show_evil: Mostra personaggi malvagi
+
+    token_list:
+        title: Personaggi
+        add: Aggiungi token
+
+    traveller_list:
+        title: Viaggiatori
+        show_all: Mostra tutti i viaggiatori
+
+    fabled_list:
+        title: Fatati
+
+    token:
+        title: Token
+
+jinxes:
+    title: Jinxes
+    target: Obiettivo
+    trick: Trucco
+    reason: Ragione
+    show: Mostra jinx non in gioco
+
+night_order:
+    title: Ordine della notte
+    first_night: Prima notte
+    other_night: Altre notti
+    swipe_change: Scorri per cambiare notte
+    show: Mostra personaggi non in gioco
+    show_dead: Mostra personaggi morti
+
+info_tokens:
+    title: Token informazioni
+    info_tokens:
+        isdemon: Questo è il <strong>Demone</strong>
+        isminion: Questi sono i tuoi <strong>Seguagi</strong>
+        notinplay: Questi personaggi <strong>non sono in gioco</strong>
+        nominatetoday: Hai <strong>nominato</strong> oggi?
+        playeris: <strong>Questo giocatore</strong> è
+        votetoday: Hai <strong>votato</strong> oggi?
+        youare: <strong>Tu</strong> sei
+        selectedyou: Questo personaggio ha <strong>scelto</strong> te
+    custom: Token informazioni personalizzati
+    add_custom: Aggiungi token informazioni
+    edit_custom: Modifica token informazioni
+    delete_custom: Elimina token informazioni
+
+notes:
+    title: Note del Narratore
+    label: Note
+    clear: Cancella note
+    clear_warning: Sei sicuro di voler cancellare le note?
+
+acknowledgements:
+    title: Ringraziamenti
+    acknowledgements:
+        - <a href="https://bloodontheclocktower.com/" target="_blank" rel="noopener noreferrer">Blood on the Clocktower</a> è un marchio registrato di Steven Medway e <a href="https://www.thepandemoniuminstitute.com/" target="_blank" rel="noopener noreferrer">The Pandemonium Institute</a>.
+        - I promemoria della Notte e altri testi accessori scritti da <a href="http://bignose.whitetree.org/projects/botc/diy/" target="_blank" rel="noopener noreferrer">Ben Finney</a>.
+        - Le icone sono prese da <a href="https://fontawesome.com/v5.15/icons" target="_blank" rel="noopener noreferrer">Font Awesome</a>.
+        - Molte immagini e informazioni sono prese da <a href="https://www.clocktower.online" target="_blank" rel="noopener noreferrer">Clocktower.online</a> e <a href="https://bloodontheclocktower.com/" target="_blank" rel="noopener noreferrer">Blood on the Clocktower website</a>.
+        - Questo è un grimorio virtuale non ufficiale per Blood on the Clocktower. Questo progetto è gratis è il codice sorgente può essere trovato su <a href="https://github.com/Skateside/pocket-grimoire" target="_blank" rel="noopener noreferrer">GitHub</a>. Questo progetto non è affiliato con il Pandemonium Institute. Se ti diverte giocare Blood on the Clocktower, <a href="https://bloodontheclocktower.com/buy" target="_blank" rel="noopener noreferrer">ti chiediamo di prendere in considerazione l'acquisto del tuo grimorio personale</a> - oltre a essere più flessibile che questa versione digitale, supporta direttamente i creatori del gioco.
+        - Hai notato un bug o hai qualche suggerimento per migliorare questo sito? Fammelo sapere sul <a href="https://discord.com/invite/Gd7ybwWbFk" target="_blank" rel="noopener noreferrer">canale pocket-grimoire nel server discord non ufficiale</a> (il mion nome lì è Skateside) <a href="https://github.com/Skateside/pocket-grimoire/issues" target="_blank" rel="noopener noreferrer">o apri un issue su Github</a>.
+        - <small>Version <span id="version"></span></small>
+
+errors:
+    homebrew_json:
+        not_homebrew: Voce non homebrew "%id%"
+        unrecognised_team: Squadra non riconosciuta "%team%"
+        not_find_id: Impossibile trovare l'ID "%id%"
+        .not_recognise_character: Impossibile riconoscere il carattere "%id%"
+        invalid_entry: "Voce non valida per \"%id%\": %reasons%"
+        empty_teams: "Squadre vuote: %teams%"
