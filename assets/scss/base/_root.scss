@@ -144,5 +144,18 @@
         "Noto Sans CJK JP",
         TakaoPGothic,
         sans-serif;
-;
+}
+
+:lang(th) {
+    --serif-font:
+        Georgia,
+        "Times New Roman",
+        "Noto Serif Thai",
+        Times,
+        serif;
+    --sans-font:
+        Helvetica,
+        Arial,
+        "Noto Sans Thai Looped",
+        sans-serif;
 }
