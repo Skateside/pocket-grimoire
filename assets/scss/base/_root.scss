@@ -146,16 +146,19 @@
         sans-serif;
 }
 
+// Apple devices don't render Thai diacritics correctly in an SVG. This should
+// correct that.
+
 :lang(th) {
     --serif-font:
-        Georgia,
-        "Times New Roman",
         "Noto Serif Thai",
+        "Times New Roman",
+        Georgia,
         Times,
         serif;
     --sans-font:
+        "Noto Sans Thai Looped",
         Helvetica,
         Arial,
-        "Noto Sans Thai Looped",
         sans-serif;
 }
