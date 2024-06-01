@@ -426,14 +426,14 @@ form.addEventListener("submit", (e) => {
 
                 });
 
-                reader.readAsBinaryString(fileInput.files[0]);
+                reader.readAsArrayBuffer(fileInput.files[0]);
 
             } else if (pasteInput.value) {
 
                 let json = [];
 
                 try {
-                    json = JSON.parse(readUTF8(pasteInput.value)); // [1]
+                    json = JSON.parse(pasteInput.value);
                 } catch (error) {
                     return showInputError(pasteInput, I18N.invalidScript);
                 }
