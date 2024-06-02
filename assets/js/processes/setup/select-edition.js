@@ -426,7 +426,7 @@ form.addEventListener("submit", (e) => {
 
                 });
 
-                reader.readAsArrayBuffer(fileInput.files[0]);
+                reader.readAsText(fileInput.files[0]);
 
             } else if (pasteInput.value) {
 
