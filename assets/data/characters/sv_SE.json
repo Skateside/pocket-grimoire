@@ -106,15 +106,14 @@
         "id": "balloonist",
         "name": "Ballongfararen",
         "ability": "Varje natt får du veta 1 spelare per rolltyp tills du gått igenom alla typer. [+1 Utböling]",
-        "firstNightReminder": "Välj en rolltyp. Peka på en spelare vars roll är den typen. Sätt motsvarande ”Visad”-påminnelse bredvid den rollens bricka.",
-        "otherNightReminder": "Välj en rolltyp som Ballongfararen inte sett än. Peka på en spelare vars roll är den typen. Sätt motsvarande ”Visad”-påminnelse bredvid den rollens bricka.",
+        "firstNightReminder": "Välj en rolltyp. Peka på en spelare vars roll är den typen. Sätt motsvarande påminnelse bredvid den rollens bricka.",
+        "otherNightReminder": "Välj en rolltyp som Ballongfararen inte sett än. Peka på en spelare vars roll är den typen. Sätt motsvarande påminnelse bredvid den rollens bricka.",
         "remindersGlobal": [],
         "reminders": [
-            "Visad Bybo",
-            "Visad Utböling",
-            "Visad Hantlangare",
-            "Visad Demon",
-            "Visad Resenär"
+            "Bybo",
+            "Utböling",
+            "Hantlangare",
+            "Demon"
         ]
     },
     {
@@ -420,7 +419,7 @@
         "firstNightReminder": "",
         "otherNightReminder": "",
         "remindersGlobal": [
-            "Full"
+            "Är Fyllot"
         ],
         "reminders": []
     },
@@ -1469,7 +1468,7 @@
     {
         "id": "spy",
         "name": "Spionen",
-        "ability": "Varje natt ser du Spelbokens innehåll. Du kan registreras som god och Bybo eller Utböling, även om du är död.",
+        "ability": "Varje natt ser du Spelboken. Du kan registreras som god och Bybo eller Utböling, även om du är död.",
         "firstNightReminder": "Visa Spelboken för Spionen så länge hen behöver.",
         "otherNightReminder": "Visa Spelboken för Spionen så länge hen behöver.",
         "remindersGlobal": [],

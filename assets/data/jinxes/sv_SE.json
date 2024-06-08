@@ -47,12 +47,12 @@
     {
         "target": "pithag",
         "trick": "cultleader",
-        "reason": "Om Pit-Hag förvandlar en ond spelare till en kultledare, kan de inte bli bra på grund av sin egen förmåga."
+        "reason": "Om Trollpackan gör en ond spelare till Kultledaren kan den spelaren inte bli god av sin egen förmåga."
     },
     {
         "target": "pithag",
         "trick": "goon",
-        "reason": "Om Pit-Hag förvandlar en ond spelare till Goon, kan de inte bli bra på grund av sin egen förmåga."
+        "reason": "Om Trollpackan gör en ond spelare till Hejduken kan den spelaren inte bli god av sin egen förmåga."
     },
     {
         "target": "pithag",
@@ -192,12 +192,12 @@
     {
         "target": "spy",
         "trick": "plaguedoctor",
-        "reason": "Om Pestläkaren dör får en levande Undersåte Spionens förmåga utöver sin egen förmåga, och får veta detta."
+        "reason": "Om Pestläkaren dör får en levande Hantlangare Spionens förmåga utöver sin egen förmåga, och får veta detta."
     },
     {
         "target": "spy",
         "trick": "damsel",
-        "reason": "Om spionen är (eller har varit) i spel, förgiftas damseln."
+        "reason": "Om Spionen är (eller har varit) i spel är Ungmön förgiftad."
     },
     {
         "target": "spy",
@@ -227,7 +227,7 @@
     {
         "target": "widow",
         "trick": "damsel",
-        "reason": "Om änkan är (eller har varit) i spel, är flickan förgiftad."
+        "reason": "Om Änkan är (eller har varit) i spel är Ungmön förgiftad."
     },
     {
         "target": "widow",
@@ -282,37 +282,37 @@
     {
         "target": "summoner",
         "trick": "pithag",
-        "reason": "Summonern kan inte skapa en demon i spelet. Om Summoner skapar en demon som inte är i spelet är dödsfallen ikväll godtyckliga."
+        "reason": "Åkallaren kan inte skapa en Demon som är i spel. Om Åkallaren skapar en Demon som inte är i spel dör spelare godtyckligt inatt."
     },
     {
         "target": "summoner",
         "trick": "hatter",
-        "reason": "Summonern kan inte skapa en demon i spelet. Om Summoner skapar en demon som inte är i spelet är dödsfallen ikväll godtyckliga."
+        "reason": "Åkallaren kan inte skapa en Demon som är i spel. Om Åkallaren skapar en Demon som inte är i spel dör spelare godtyckligt inatt."
     },
     {
         "target": "summoner",
         "trick": "courtier",
-        "reason": "Om Summoner är full den 3:e natten väljer Summoner vilken Demon, men Storyteller väljer vilken spelare."
+        "reason": "Om Åkallaren är full den tredje natten får Åkallaren välja Demon, men Berättaren väljer spelare."
     },
     {
         "target": "summoner",
         "trick": "engineer",
-        "reason": "Om ingenjören tar bort en Summoner från spel innan den Summoner använder sin förmåga, använder Summoner sin förmåga omedelbart."
+        "reason": "Om Ingenjören tar Åkallaren ur spel innan Åkallaren använt sin förmåga så använder Åkallaren sin förmåga omedelbart."
     },
     {
         "target": "summoner",
         "trick": "zombuul",
-        "reason": "Om Summoner förvandlar en död spelare till Zombuul, behandlar Storyteller den spelaren som en Zombuul som har dött en gång."
+        "reason": "Om Åkallaren gör en död spelare till Zombuul behandlas den spelaren som en Zombuul som dött en gång."
     },
     {
         "target": "summoner",
         "trick": "pukka",
-        "reason": "Kallaren kan välja en spelare som ska bli Pukka den 2:a natten."
+        "reason": "Åkallaren får göra en spelare till Pukka den andra natten."
     },
     {
         "target": "summoner",
         "trick": "riot",
-        "reason": "Om Summoner skapar Riot blir alla Minions Riot."
+        "reason": "Om Åkallaren skapar Upproret blir alla Hantlangare till Upproret."
     },
     {
         "target": "summoner",
@@ -322,7 +322,7 @@
     {
         "target": "summoner",
         "trick": "kazali",
-        "reason": "Summonern kan inte skapa en demon i spelet. Om Summoner skapar en demon som inte är i spelet är dödsfallen ikväll godtyckliga."
+        "reason": "Åkallaren kan inte skapa en Demon som är i spel. Om Åkallaren skapar en Demon som inte är i spel dör spelare godtyckligt inatt."
     },
     {
         "target": "baron",
@@ -607,7 +607,7 @@
     {
         "target": "vizier",
         "trick": "magician",
-        "reason": "Endast 1 av rollerna får vara i spel. Onda spelare vet från början vilken spelare och roll det är."
+        "reason": "Om både Vesiren och Magikern är i spel så får Demonen inte veta om sina Hantlangare."
     },
     {
         "target": "vizier",
@@ -617,7 +617,7 @@
     {
         "target": "vizier",
         "trick": "politician",
-        "reason": "Politikern kan registrera sig som ond för vesiren."
+        "reason": "Politikern kan registreras som ond för Vesiren."
     },
     {
         "target": "vortox",
