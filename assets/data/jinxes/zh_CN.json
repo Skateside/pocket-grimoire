@@ -572,7 +572,7 @@
     {
         "target": "organgrinder",
         "trick": "flowergirl",
-        "reason": "如果街头风琴手使得玩家需要闭眼投票，卖花女孩在夜晚会改为得知恶魔在白天投票的总次数。"
+        "reason": "如果“手摇风琴手”引发闭眼投票，那么“花姑娘”今晚就会醒来选择一名玩家：他们会了解该玩家今天是否投票。"
     },
     {
         "target": "organgrinder",
@@ -628,5 +628,10 @@
         "target": "ogre",
         "trick": "recluse",
         "reason": "如果隐士向食人魔表明自己是邪恶的，那么食人魔就会知道他们是邪恶的。"
+    },
+    {
+        "target": "philosopher",
+        "trick": "bountyhunter",
+        "reason": "如果“哲学家”获得“赏金猎人”能力，那么“镇民”可能会变得邪恶。"
     }
 ]

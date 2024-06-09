@@ -558,7 +558,7 @@
             },
             {
                 "id": "Flowergirl",
-                "reason": "If players' eyes were closed during the nominations, the Flowergirl learns how many times the Demon voted."
+                "reason": "If the Organ Grinder is causing eyes-closed voting, the Flowergirl wakes tonight to choose a player: they learn if that player voted today."
             },
             {
                 "id": "Minstrel",
@@ -786,6 +786,15 @@
             {
                 "id": "Recluse",
                 "reason": "If the Recluse registers as evil to the Ogre, the Ogre learns that they are evil."
+            }
+        ]
+    },
+    {
+        "id": "Philosopher",
+        "jinx": [
+            {
+                "id": "Bounty Hunter",
+                "reason": "If the Philosopher gains the Bounty Hunter ability, a Townsfolk might turn evil."
             }
         ]
     }

@@ -572,7 +572,7 @@
     {
         "target": "organgrinder",
         "trick": "flowergirl",
-        "reason": "Wenn die Augen der Spieler während der nominierung geschlossen waren, erfährt das Blumenmädchen wie oft der Dämon abgestimmt hat."
+        "reason": "Wenn der Leierkastenmann eine Abstimmung mit geschlossenen Augen verursacht, wacht das Blumenmädchen heute Nacht auf, um einen Spieler auszuwählen: Es erfährt, ob dieser Spieler heute abgestimmt hat."
     },
     {
         "target": "organgrinder",
@@ -628,5 +628,10 @@
         "target": "ogre",
         "trick": "recluse",
         "reason": "Wenn sich der Einsiedler gegenüber dem Oger als böse registriert, erfährt der Oger, dass er böse ist."
+    },
+    {
+        "target": "philosopher",
+        "trick": "bountyhunter",
+        "reason": "Wenn der Philosoph die Fähigkeit des Kopfgeldjägers erhält, könnte ein Stadtbewohner böse werden."
     }
 ]

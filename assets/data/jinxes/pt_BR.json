@@ -572,7 +572,7 @@
     {
         "target": "organgrinder",
         "trick": "flowergirl",
-        "reason": "Se os olhos dos jogadores estiverem fechados durante as nomeações, a Florista descobre quantas vezes o Demônio votou."
+        "reason": "Se os olhos dos jogadores estiverem fechados durante as nomeações devido ao Organista, a Florista acorda a noite para escolher um jogador: ela sabe se esse jogador votou hoje. (invés da sua habilidade normal)"
     },
     {
         "target": "organgrinder",
@@ -628,5 +628,10 @@
         "target": "ogre",
         "trick": "recluse",
         "reason": "Se o Recluso registrar como do mau para o Ogro, o Ogro sabe que virou do mau."
+    },
+    {
+        "target": "philosopher",
+        "trick": "bountyhunter",
+        "reason": "Se o Filósofo ganhar a habilidade Caçador de Recompensas, um habitante da cidade pode se tornar mau."
     }
 ]

@@ -572,7 +572,7 @@
     {
         "target": "organgrinder",
         "trick": "flowergirl",
-        "reason": "Si les yeux des joueurs étaient fermés lors des nominations, la Fleuriste apprend combien de fois le Démon a voté."
+        "reason": "Si les yeux des joueurs étaient fermés lors des nominations, la Fleuriste se réveille cette nuit pour choisir un joueur: elle apprend si ce joueur a voté."
     },
     {
         "target": "organgrinder",
@@ -628,5 +628,10 @@
         "target": "ogre",
         "trick": "recluse",
         "reason": "Si le Reclus est reconnu comme étant maléfique à l'Ogre, l'Ogre apprend qu'il est maléfique"
+    },
+    {
+        "target": "philosopher",
+        "trick": "bountyhunter",
+        "reason": "Si le Faussaire prend la capacité du Chasseur de Prime, un Villageois pourrait devenir maléfique"
     }
 ]

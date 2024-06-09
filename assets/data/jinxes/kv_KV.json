@@ -572,7 +572,7 @@
     {
         "target": "organgrinder",
         "trick": "flowergirl",
-        "reason": "Если глаза игроков были закрыты во время номинаций, Цветочница узнает, сколько раз проголосовал Демон."
+        "reason": "If the Organ Grinder is causing eyes-closed voting, the Flowergirl wakes tonight to choose a player: they learn if that player voted today."
     },
     {
         "target": "organgrinder",
@@ -628,5 +628,10 @@
         "target": "ogre",
         "trick": "recluse",
         "reason": "If the Recluse registers as evil to the Ogre, the Ogre learns that they are evil."
+    },
+    {
+        "target": "philosopher",
+        "trick": "bountyhunter",
+        "reason": "If the Philosopher gains the Bounty Hunter ability, a Townsfolk might turn evil."
     }
 ]

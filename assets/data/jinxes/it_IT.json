@@ -572,7 +572,7 @@
     {
         "target": "organgrinder",
         "trick": "flowergirl",
-        "reason": "Se gli occhi dei giocatori erano chiusi durante le nomine, la Fioraia apprende quante volte il Demone ha votato."
+        "reason": "Se il suonatore d'organetto provoca una votazione ad occhi chiusi, la fioraia si sveglia stasera per scegliere un giocatore: apprendono se quel giocatore ha votato oggi."
     },
     {
         "target": "organgrinder",
@@ -628,5 +628,10 @@
         "target": "ogre",
         "trick": "recluse",
         "reason": "Se l'Eremita viene considerato malvagio dall'Orco, l'Orco apprende che è malvagio."
+    },
+    {
+        "target": "philosopher",
+        "trick": "bountyhunter",
+        "reason": "Se il Filosofo acquisisce l'abilità Cacciatore di taglie, un Cittadino potrebbe diventare malvagio."
     }
 ]
