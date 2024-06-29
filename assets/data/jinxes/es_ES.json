@@ -127,7 +127,7 @@
     {
         "target": "lilmonsta",
         "trick": "magician",
-        "reason": "Solo puede haber 1 personaje maldito en juego."
+        "reason": "Cada noche, el Mago elige un Minion: si ese Minion y Lil' Monsta están vivos, ese Minion cuida a Lil' Monsta."
     },
     {
         "target": "lilmonsta",
@@ -162,7 +162,12 @@
     {
         "target": "legion",
         "trick": "preacher",
-        "reason": "Solo puede haber 1 personaje maldito en juego."
+        "reason": "Si el Predicador elige Legión, Legión conserva su habilidad, pero el Predicador podría saber que es Legión."
+    },
+    {
+        "target": "legion",
+        "trick": "minstrel",
+        "reason": "Si Legion murió hoy en una ejecución, Legion conserva su habilidad, pero el Minstrel podría saber que son Legion."
     },
     {
         "target": "legion",
@@ -325,6 +330,11 @@
         "reason": "El Invocador no puede crear un Demonio en juego. Si el Invocador crea un Demonio que no está en juego, las muertes de esta noche son arbitrarias."
     },
     {
+        "target": "summoner",
+        "trick": "preacher",
+        "reason": "Si el Predicador eligió al Invocador en la tercera noche o antes, el Invocador elige qué Demonio, pero el Narrador elige qué jugador."
+    },
+    {
         "target": "baron",
         "trick": "heretic",
         "reason": "El Barón puede meter solo 1 Forastero, no 2."
@@ -408,6 +418,11 @@
         "target": "kazali",
         "trick": "choirboy",
         "reason": "Kazali no puede elegir al Rey para convertirse en Esbirro si el Chico del coro está en juego."
+    },
+    {
+        "target": "kazali",
+        "trick": "soldier",
+        "reason": "Si el Kazali convierte al Soldado en un Minion, el Soldado elige en qué Minion que no está en juego convertirse."
     },
     {
         "target": "riot",
@@ -560,29 +575,19 @@
         "reason": "Si hay 2 Al-Hadikhia vivos, la Mujer escarlata Al-Hadikhia se convierte otra vez en Mujer escarlata."
     },
     {
-        "target": "alhadikhia",
-        "trick": "mastermind",
-        "reason": "Solo puede haber 1 personaje maldito en juego. Los malos empiezan sabiendo qué jugador y rol es."
-    },
-    {
         "target": "organgrinder",
         "trick": "butler",
         "reason": "Si el Organillero está causando la votación con ojos cerrados, el Mayordomo puede levantar la mano pero su voto solo cuenta si su amo votó también."
     },
     {
         "target": "organgrinder",
-        "trick": "flowergirl",
-        "reason": "Si el Organillero está provocando una votación con los ojos cerrados, la Florista se despierta esta noche para elegir un jugador: sabrán si ese jugador votó hoy."
-    },
-    {
-        "target": "organgrinder",
         "trick": "minstrel",
-        "reason": "Solo puede haber 1 personaje maldito en juego. Los malos empiezan sabiendo qué jugador y rol es."
+        "reason": "Si el Juglar emborracha a todos, el Organillero conserva su habilidad, pero el Juglar mantiene los ojos abiertos al votar."
     },
     {
         "target": "organgrinder",
         "trick": "preacher",
-        "reason": "Solo puede haber 1 personaje maldito en juego. Los malos empiezan sabiendo qué jugador y rol es."
+        "reason": "Si el Predicador elimina la habilidad del Organillero, el Organillero mantiene su habilidad pero el Predicador mantiene los ojos abiertos al votar."
     },
     {
         "target": "vizier",
@@ -620,6 +625,11 @@
         "reason": "El político podría considerarse malvado ante el visir."
     },
     {
+        "target": "vizier",
+        "trick": "alsaahir",
+        "reason": "Si el Visir está en juego, el Alsaahir también debe adivinar qué demonio(s) están en juego."
+    },
+    {
         "target": "vortox",
         "trick": "banshee",
         "reason": "Si el Vortox está en juego y el Demonio mata a la Banshee, los jugadores aún se enteran de que la Banshee ha muerto."
@@ -633,5 +643,10 @@
         "target": "philosopher",
         "trick": "bountyhunter",
         "reason": "Si el Filósofo obtiene la habilidad Cazarrecompensas, un ciudadano podría volverse malvado."
+    },
+    {
+        "target": "mastermind",
+        "trick": "alhadikhia",
+        "reason": "Si Al-Hadikhia muere en la ejecución y Mastermind está vivo, Al-Hadikhia elige esta noche a 3 buenos jugadores: si los 3 eligen vivir, el mal gana. De lo contrario, lo bueno gana."
     }
 ]

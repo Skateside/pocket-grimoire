@@ -37,6 +37,15 @@
         ]
     },
     {
+        "id": "alsaahir",
+        "name": "Alsaahir",
+        "ability": "Chaque jour, si vous devinez publiquement quels joueurs est/sont Sbires et quels joueurs est/sont Démons, les Bons gagnent.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
         "id": "amnesiac",
         "name": "Amnesique",
         "ability": "Vous ne connaissez pas votre capacité. Chaque jour, tentez de la deviner en privé: vous apprenez à quel point vous êtes précis.",
@@ -105,7 +114,7 @@
     {
         "id": "balloonist",
         "name": "Aéronaute",
-        "ability": "Chaque nuit, vous apprenez 1 joueur de chaque type, jusqu'à ce qu'il n'y ait plus de types à découvrir [+1 Étranger].",
+        "ability": "Chaque nuit, vous apprenez 1 joueur de chaque type, jusqu'à ce qu'il n'y ait plus de types à découvrir [+0/+1 Étranger].",
         "firstNightReminder": "Choisissez un type de rôle. Pointez un joueur dont le rôle est de ce type. Placez le rappel « Vu » de l'Aéronaute sous ce rôle.",
         "otherNightReminder": "Choisissez un type de rôle que vous n'avez pas encore choisi. Pointez un joueur dont le rôle est de ce type. Placez le rappel « Vu » de l'Aéronaute sous ce rôle.",
         "remindersGlobal": [],
@@ -694,7 +703,7 @@
     {
         "id": "harpy",
         "name": "Harpie",
-        "ability": "Chaque nuit, choisissez 2 joueurs: demain, le 1er joueur est Dément que le 2nd est Maléfique, ou les deux pourraient mourir.",
+        "ability": "Chaque nuit, choisissez 2 joueurs: demain, le 1er joueur est Dément que le 2nd est Maléfique, ou l'un ou les deux pourraient mourir.",
         "firstNightReminder": "Réveillez la Harpie; elle pointe un jouer, puis un autre. Réveillez le 1er joueur que la Harpie a pointé, montrez lui la carte \"Ce personnage vous a choisis\", montrez leur le jeton de la Harpie, puis pointez le 2eme joueur que la Harpie a pointé.",
         "otherNightReminder": "Réveillez la Harpie; elle pointe un jouer, puis un autre. Réveillez le 1er joueur que la Harpie a pointé, montrez lui la carte \"Ce personnage vous a choisis\", montrez leur le jeton de la Harpie, puis pointez le 2eme joueur que la Harpie a pointé.",
         "remindersGlobal": [],
@@ -1094,7 +1103,9 @@
         "firstNightReminder": "L'Ogre choisit un joueur: il change d'alignement pour ce joueur. Ne lui annoncez pas son nouvel alignement.",
         "otherNightReminder": "",
         "remindersGlobal": [],
-        "reminders": []
+        "reminders": [
+            "Ami"
+        ]
     },
     {
         "id": "ojo",
@@ -1172,7 +1183,7 @@
     {
         "id": "plaguedoctor",
         "name": "Médecin de Peste",
-        "ability": "Si vous mourrez, le Conteur gagne la capacité d'un Sbire pas en jeu.",
+        "ability": "Si vous mourrez, le Conteur gagne la capacité d'un Sbire.",
         "firstNightReminder": "",
         "otherNightReminder": "",
         "remindersGlobal": [],

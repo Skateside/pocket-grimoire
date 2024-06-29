@@ -127,7 +127,7 @@
     {
         "target": "lilmonsta",
         "trick": "magician",
-        "reason": "Solo ad 1 personaggio può essere attribuito un Jinx in partita."
+        "reason": "Ogni notte, il Mago sceglie un Minion: se quel Minion e Lil' Monsta sono vivi, quel Minion farà da babysitter a Lil' Monsta."
     },
     {
         "target": "lilmonsta",
@@ -162,7 +162,12 @@
     {
         "target": "legion",
         "trick": "preacher",
-        "reason": "Solo ad 1 personaggio può essere attribuito un Jinx in partita."
+        "reason": "Se il Predicatore sceglie Legione, Legione manterrà la sua abilità, ma il Predicatore potrebbe scoprire di essere Legione."
+    },
+    {
+        "target": "legion",
+        "trick": "minstrel",
+        "reason": "Se Legion morisse per esecuzione oggi, Legion manterrebbe la sua abilità, ma il Minstrel potrebbe scoprire di essere Legion."
     },
     {
         "target": "legion",
@@ -325,6 +330,11 @@
         "reason": "L'Evocatore non può creare un Demone in gioco. Se l'Evocatore crea un Demone non in gioco, le morti stasera sono arbitrarie."
     },
     {
+        "target": "summoner",
+        "trick": "preacher",
+        "reason": "Se il Predicatore sceglie l'Evocatore entro la terza notte, l'Evocatore sceglie quale Demone, ma il Narratore sceglie quale giocatore."
+    },
+    {
         "target": "baron",
         "trick": "heretic",
         "reason": "Il Barone potrebbe aggiungere 1 solo Forestiero, non 2."
@@ -408,6 +418,11 @@
         "target": "kazali",
         "trick": "choirboy",
         "reason": "Il Kazali non può scegliere di tramutare un Re in un Seguace se un Corista è in gioco."
+    },
+    {
+        "target": "kazali",
+        "trick": "soldier",
+        "reason": "Se il Kazali trasforma il Soldato in un Servitore, il Soldato sceglie quale Servitore non in gioco diventare."
     },
     {
         "target": "riot",
@@ -560,29 +575,19 @@
         "reason": "Se ci sono due Al-Hadikhia vivi, la Donna Scarlatta Al-Hadikhia diventa nuovamente la Donna Scarlatta."
     },
     {
-        "target": "alhadikhia",
-        "trick": "mastermind",
-        "reason": "Solo ad 1 personaggio può essere attribuito un Jinx in partita. I giocatori cattivi iniziano sapendo di quale giocatore e personaggio si tratta."
-    },
-    {
         "target": "organgrinder",
         "trick": "butler",
         "reason": "Se il Giraorgani causa una votazione ad occhi chiusi, il Maggiordomo può alzare la propria mano per votare ma il suo voto conta solo se il suo padrone ha votato."
     },
     {
         "target": "organgrinder",
-        "trick": "flowergirl",
-        "reason": "Se il suonatore d'organetto provoca una votazione ad occhi chiusi, la fioraia si sveglia stasera per scegliere un giocatore: apprendono se quel giocatore ha votato oggi."
-    },
-    {
-        "target": "organgrinder",
         "trick": "minstrel",
-        "reason": "Solo ad 1 personaggio può essere attribuito un Jinx in partita."
+        "reason": "Se il Menestrello fa ubriacare tutti, il Suonatore d'organetto mantiene la sua abilità ma il Menestrello tiene gli occhi aperti quando vota."
     },
     {
         "target": "organgrinder",
         "trick": "preacher",
-        "reason": "Solo ad 1 personaggio può essere attribuito un Jinx in partita."
+        "reason": "Se il Predicatore rimuove l'abilità Suonatore d'organo, manterrà la sua abilità ma il Predicatore terrà gli occhi aperti durante il voto."
     },
     {
         "target": "vizier",
@@ -620,6 +625,11 @@
         "reason": "Il Politico potrebbe essere considerato malvagio dal Visir."
     },
     {
+        "target": "vizier",
+        "trick": "alsaahir",
+        "reason": "Se è in gioco il Visir, l'Alsaahir deve anche indovinare quali Demoni sono in gioco."
+    },
+    {
         "target": "vortox",
         "trick": "banshee",
         "reason": "Se Vortox è in gioco e il Demone uccide la Banshee, i giocatori apprendono comunque che la Banshee è morta."
@@ -633,5 +643,10 @@
         "target": "philosopher",
         "trick": "bountyhunter",
         "reason": "Se il Filosofo acquisisce l'abilità Cacciatore di taglie, un Cittadino potrebbe diventare malvagio."
+    },
+    {
+        "target": "mastermind",
+        "trick": "alhadikhia",
+        "reason": "Se l'Al-Hadikhia muore per esecuzione e il Mastermind è vivo, l'Al-Hadikhia sceglie 3 buoni giocatori stasera: se tutti e 3 scelgono di vivere, il male vince. Altrimenti vince il bene."
     }
 ]

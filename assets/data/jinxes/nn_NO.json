@@ -127,7 +127,7 @@
     {
         "target": "lilmonsta",
         "trick": "magician",
-        "reason": "Berre 1 ganda rolle kan vere i spel."
+        "reason": "Hver natt velger tryllekunstneren en Minion: hvis Minion og Lil' Monsta er i live, er den Minion barnevakt for Lil' Monsta."
     },
     {
         "target": "lilmonsta",
@@ -162,7 +162,12 @@
     {
         "target": "legion",
         "trick": "preacher",
-        "reason": "Berre 1 ganda rolle kan vere i spel."
+        "reason": "Hvis Preacher velger Legion, beholder Legion sine evner, men Preacheren kan lære at de er Legion."
+    },
+    {
+        "target": "legion",
+        "trick": "minstrel",
+        "reason": "Hvis Legion døde ved henrettelse i dag, beholder Legion sine evner, men Minstrelen kan finne ut at de er Legion."
     },
     {
         "target": "legion",
@@ -325,6 +330,11 @@
         "reason": "Hvis Summoner lager Legion, blir de fleste spillere (inkludert alle onde spillere) onde Legion."
     },
     {
+        "target": "summoner",
+        "trick": "preacher",
+        "reason": "Hvis forkynneren valgte innkalleren på eller før den tredje natten, velger innkalleren hvilken demon, men historiefortelleren velger hvilken spiller."
+    },
+    {
         "target": "baron",
         "trick": "heretic",
         "reason": "Det kan hende Greven berre legg til 1 Einstøing, ikkje 2."
@@ -408,6 +418,11 @@
         "target": "kazali",
         "trick": "choirboy",
         "reason": "Kazalien kan ikke velge kongen til å bli en Minion hvis en Choirboy er i spill."
+    },
+    {
+        "target": "kazali",
+        "trick": "soldier",
+        "reason": "Hvis Kazali gjør soldaten til en Minion, velger soldaten hvilken minion som ikke er i spill."
     },
     {
         "target": "riot",
@@ -560,29 +575,19 @@
         "reason": "Om det er 2 levande Al-Hadikhiaer, vert Babylon-Al-Hadikhiaen til Babylon att."
     },
     {
-        "target": "alhadikhia",
-        "trick": "mastermind",
-        "reason": "Berre 1 ganda rolle kan vere i spel. Vonde spelarar lærer innleiingsvis kva spelar og rolle det er."
-    },
-    {
         "target": "organgrinder",
         "trick": "butler",
         "reason": "Om Veivspelaren gjer at ein lukkar augo under avrøystingar, kan Hovmeisteren rekkje opp handa for å røyste, men røysta deira tel berre om herren deira også røysta for."
     },
     {
         "target": "organgrinder",
-        "trick": "flowergirl",
-        "reason": "Hvis Orgelkvernen forårsaker avstemning med øyne lukket, våkner Blomsterjenta i kveld for å velge en spiller: de får vite om den spilleren stemte i dag."
-    },
-    {
-        "target": "organgrinder",
         "trick": "minstrel",
-        "reason": "Berre 1 ganda rolle kan vere i spel."
+        "reason": "Hvis Minstrel gjør alle fulle, beholder orgelkvernen deres evner, men Minstrel holder øynene åpne når de stemmer."
     },
     {
         "target": "organgrinder",
         "trick": "preacher",
-        "reason": "Berre 1 ganda rolle kan vere i spel."
+        "reason": "Hvis predikanten fjerner evnen til orgelkvern, beholder orgelkvernen sin evne, men predikanten holder øynene åpne når de stemmer."
     },
     {
         "target": "vizier",
@@ -620,6 +625,11 @@
         "reason": "Politikeren kan registrere seg som ond for vesiren."
     },
     {
+        "target": "vizier",
+        "trick": "alsaahir",
+        "reason": "Hvis vesiren er i spill, må Alsahiren også gjette hvilken(e) demon(er) som er i spill."
+    },
+    {
         "target": "vortox",
         "trick": "banshee",
         "reason": "Hvis Vortox er i spill og demonen dreper Banshee, lærer spillerne fortsatt at Banshee har dødd."
@@ -633,5 +643,10 @@
         "target": "philosopher",
         "trick": "bountyhunter",
         "reason": "Hvis filosofen får Bounty Hunter-evnen, kan en byfolk bli ond."
+    },
+    {
+        "target": "mastermind",
+        "trick": "alhadikhia",
+        "reason": "Hvis Al-Hadikhia dør ved henrettelse, og Mastermind er i live, velger Al-Hadikhia 3 gode spillere i kveld: hvis alle 3 velger å leve, vinner ondskapen. Ellers gode seire."
     }
 ]

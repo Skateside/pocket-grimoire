@@ -37,6 +37,15 @@
         ]
     },
     {
+        "id": "alsaahir",
+        "name": "Alsaahir",
+        "ability": "Una vez al día, si adivinas públicamente qué jugadores son Minion(s) y cuáles son Demon(s), el bien gana.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
         "id": "amnesiac",
         "name": "Amnésico",
         "ability": "No sabes cual es tu habilidad. Cada dia, en privado, intenta adivinar cual es: aprendes que tan acertado estuviste.",
@@ -105,7 +114,7 @@
     {
         "id": "balloonist",
         "name": "Aeronauta",
-        "ability": "Cada noche, aprendes 1 jugador de cada tipo de personaje, hasta que no queden más tipos para aprender [+1 Forastero]",
+        "ability": "Cada noche, aprendes 1 jugador de cada tipo de personaje, hasta que no queden más tipos para aprender [+0 o +1 Forastero]",
         "firstNightReminder": "Elegí un tipo de personaje. Apunta a un jugador de ese tipo de personaje. Pone el recordatorio de 'Vio (tipo)' junto al personaje.",
         "otherNightReminder": "Elegí un tipo de personaje que no tenga el recordatorio 'Vio (tipo)' de ese tipo. Apunta a un jugador de ese tipo de personaje, si hay alguno. Pone el recordatorio de 'Vio (tipo)' junto al personaje.",
         "remindersGlobal": [],
@@ -1083,7 +1092,9 @@
         "firstNightReminder": "El Ogro señala a un jugador (no a sí mismo) y se convierte en su alineación.",
         "otherNightReminder": "",
         "remindersGlobal": [],
-        "reminders": []
+        "reminders": [
+            "Amigo"
+        ]
     },
     {
         "id": "ojo",

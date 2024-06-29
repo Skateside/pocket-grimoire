@@ -37,6 +37,15 @@
         ]
     },
     {
+        "id": "alsaahir",
+        "name": "Alsaahir",
+        "ability": "Einmal am Tag gewinnt der Gute, wenn Sie öffentlich erraten, welche Spieler Diener und welche Dämonen sind.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
         "id": "amnesiac",
         "name": "Amnesiker",
         "ability": "Du kennst deine Fähigkeit nicht. Jeden Tag, versuche, sie privat zu erraten: du erfährst, wie richtig du liegst.",
@@ -105,7 +114,7 @@
     {
         "id": "balloonist",
         "name": "Ballonfahrer",
-        "ability": "Du erfährst jede Nacht 1 Spieler eines anderen Charaktertyps, bis keine übrig bleiben. [+1 Außenseiter]",
+        "ability": "Du erfährst jede Nacht 1 Spieler eines anderen Charaktertyps, bis keine übrig bleiben. [+0 oder +1 Außenseiter]",
         "firstNightReminder": "Wähle eine Charakterklasse. Zeige auf einen Spieler dessen Charakter dieser Klasse entspricht. Platziere den \"Gesehen\" Reminder neben den Charakter.",
         "otherNightReminder": "Wähle eine Charakterklasse neben dem noch kein \"Gesehen\" reminder liegt. Zeige auf einen Spieler dessen Charakter dieser Klasse entspricht. Platziere den \"Gesehen\" Reminder neben den Charakter.",
         "remindersGlobal": [],
@@ -1092,7 +1101,9 @@
         "firstNightReminder": "Der Oger zeigt auf einen Spieler (nicht auf sich selbst) und wird zu seiner Gesinnung.",
         "otherNightReminder": "",
         "remindersGlobal": [],
-        "reminders": []
+        "reminders": [
+            "Freund"
+        ]
     },
     {
         "id": "ojo",

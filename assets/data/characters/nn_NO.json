@@ -37,6 +37,15 @@
         ]
     },
     {
+        "id": "alsaahir",
+        "name": "Alsahir",
+        "ability": "En gang om dagen, hvis du offentlig gjetter hvilke spillere som er Minion(er) og hvilke som er Demon(er), gode gevinster.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
         "id": "amnesiac",
         "name": "Forgløymd",
         "ability": "Du veit ikkje kva evna di er. Kvar dag, giss i fortrulegheit kva ho er: lær kor presis du er.",
@@ -105,7 +114,7 @@
     {
         "id": "balloonist",
         "name": "Ballongfarar",
-        "ability": "Kvar natt, lær 1 spelar av kvar rolletype, til det ikkje er fleire typar å lære att. [+1 Einstøing]",
+        "ability": "Kvar natt, lær 1 spelar av kvar rolletype, til det ikkje er fleire typar å lære att. [+0 eller +1 Einstøing]",
         "firstNightReminder": "Vel ein rolletype. Peik mot ein spelar som har ei rolle av den typen. Marker spelaren med \"Sett\"-påminninga.",
         "otherNightReminder": "Vel ein rolletype som ikkje allereie har ei \"Sett\"-påminning attmed ei rolle av denne typen. Peik mot ein spelar som har ei rolle av den typen. Marker spelaren med \"Sett\"-påminninga.",
         "remindersGlobal": [],
@@ -1084,7 +1093,9 @@
         "firstNightReminder": "Ogre peker på en spiller (ikke seg selv) og blir deres justering.",
         "otherNightReminder": "",
         "remindersGlobal": [],
-        "reminders": []
+        "reminders": [
+            "Venn"
+        ]
     },
     {
         "id": "ojo",

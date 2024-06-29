@@ -37,6 +37,15 @@
         ]
     },
     {
+        "id": "alsaahir",
+        "name": "Alsaahir",
+        "ability": "每天一次，如果你公开猜出哪些玩家是奴才，哪些是恶魔，好人获胜。",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
         "id": "amnesiac",
         "name": "失忆者",
         "ability": "你不知道你的能力是什么。每个白天你可以找说书人猜测一次，你会得知你的猜测有多准确。",
@@ -105,7 +114,7 @@
     {
         "id": "balloonist",
         "name": "气球驾驶员",
-        "ability": "每个夜晚，你会得知一名不同角色类型的玩家，直到场上所有的角色类型你都得知过一次。[+1 外来者]",
+        "ability": "每个夜晚，你会得知一名不同角色类型的玩家，直到场上所有的角色类型你都得知过一次。[+0或+1 外来者]",
         "firstNightReminder": "选择一种角色类型，并告知其一个符合该类型的玩家。在该玩家旁边标记已被知晓。",
         "otherNightReminder": "选择一种尚未被气球驾驶员知晓的角色类型，并告知其一个符合该类型的玩家。在该玩家旁边标记已被知晓。如果所有类型均已被知晓或无该种类型，气球驾驶员不会醒来。",
         "remindersGlobal": [],
@@ -1371,7 +1380,9 @@
         "firstNightReminder": "食人魔指向一名玩家（不是他们自己）并成为他们的阵营。",
         "otherNightReminder": "",
         "remindersGlobal": [],
-        "reminders": []
+        "reminders": [
+            "朋友"
+        ]
     },
     {
         "id": "ojo",

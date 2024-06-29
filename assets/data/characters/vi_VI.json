@@ -37,6 +37,15 @@
         ]
     },
     {
+        "id": "alsaahir",
+        "name": "Alsaahir",
+        "ability": "Một lần mỗi ngày, nếu bạn công khai đoán được (những) ai là Quỷ và (những) ai là Tay sai, phe tốt thắng.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
         "id": "amnesiac",
         "name": "Mất trí nhớ",
         "ability": "Bạn không biết bạn có chức năng gì. Mỗi ngày, đoán nó là gì: bạn biết độ chính xác của dự đôán.",
@@ -105,7 +114,7 @@
     {
         "id": "balloonist",
         "name": "Khinh khí cầu gia",
-        "ability": "Mỗi đêm, bạn biết 1 người thuộc về mỗi loại nhân vật cho đến khi hết loại nhân vật. [+1 Lữ khách]",
+        "ability": "Mỗi đêm, bạn biết 1 người thuộc về mỗi loại nhân vật cho đến khi hết loại nhân vật. [+0 or +1 Lữ khách]",
         "firstNightReminder": "Chọn 1 loại nhân vật. Chỉ người thuộc về loại nhân vật đó. Đặt đánh dấu Đã biết của Khinh khí cầu gia cạnh nhân vật đó.",
         "otherNightReminder": "Chọn 1 loại nhân vật chưa có thẻ đánh dấu Đã biết cạnh nhân vật. Chỉ 1 người có nhân vật thuộc loại đó, nếu còn. Đặt đánh dấu Đã biết của Khinh khí cầu gia cạnh nhân vật đó.",
         "remindersGlobal": [],
@@ -1093,7 +1102,9 @@
         "firstNightReminder": "Yêu tinh chỉ vào một người chơi (không phải chính họ) và trở thành sự liên kết của họ.",
         "otherNightReminder": "",
         "remindersGlobal": [],
-        "reminders": []
+        "reminders": [
+            "Bạn bè"
+        ]
     },
     {
         "id": "ojo",

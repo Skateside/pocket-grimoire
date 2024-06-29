@@ -67,7 +67,7 @@
     {
         "target": "goblin",
         "trick": "plaguedoctor",
-        "reason": "Om Pestläkaren dör så får en levande Hantlangare Vättens förmåga utöver sin egen, och får veta om det."
+        "reason": "Om Pestläkaren dör så får en levande Lakej Vättens förmåga utöver sin egen, och får veta om det."
     },
     {
         "target": "leviathan",
@@ -122,12 +122,12 @@
     {
         "target": "lilmonsta",
         "trick": "poppygrower",
-        "reason": "Om Vallmoodlaren är i spel så vaknar Hantlangarna inte tillsammans; de vaknar en och en tills en väljer att ta hand om Lillmonstret."
+        "reason": "Om Vallmoodlaren är i spel så vaknar Lakejerna inte tillsammans; de vaknar en och en tills en väljer att ta hand om Lillmonstret."
     },
     {
         "target": "lilmonsta",
         "trick": "magician",
-        "reason": "Endast 1 av rollerna får vara i spel."
+        "reason": "Varje natt väljer Magikern en Lakej; om den Lakejen och Lillmonstret lever får den Lakejen sköta Lillmonstret."
     },
     {
         "target": "lilmonsta",
@@ -147,7 +147,7 @@
     {
         "target": "lilmonsta",
         "trick": "hatter",
-        "reason": "Om Demonen väljer Lillmonstret väljer hen också en Hantlangare. Hen blir till Hantlangaren och tar hand om Lillmonstret inatt."
+        "reason": "Om Demonen väljer Lillmonstret väljer hen också en Lakej. Hen blir till den Lakejen och tar hand om Lillmonstret inatt."
     },
     {
         "target": "lycanthrope",
@@ -162,7 +162,12 @@
     {
         "target": "legion",
         "trick": "preacher",
-        "reason": "Endast 1 av rollerna får vara i spel."
+        "reason": "Om Predikanten väljer Legionen får Legionen behålla sin förmåga, men Predikanten kanske får veta att hen är Legionen."
+    },
+    {
+        "target": "legion",
+        "trick": "minstrel",
+        "reason": "Om Legionen dog av avrättning idag behåller Legionen sin förmåga, men Trubaden kanske får veta att de är Legionen."
     },
     {
         "target": "legion",
@@ -192,7 +197,7 @@
     {
         "target": "spy",
         "trick": "plaguedoctor",
-        "reason": "Om Pestläkaren dör får en levande Hantlangare Spionens förmåga utöver sin egen förmåga, och får veta detta."
+        "reason": "Om Pestläkaren dör får en levande Lakej Spionens förmåga utöver sin egen, och får veta detta."
     },
     {
         "target": "spy",
@@ -242,7 +247,7 @@
     {
         "target": "scarletwoman",
         "trick": "plaguedoctor",
-        "reason": "Om Pestläkaren dör får en levande Hantlangare Röda damens förmåga utöver sin egen, och får veta detta."
+        "reason": "Om Pestläkaren dör får en levande Lakej Röda damens förmåga utöver sin egen, och får veta detta."
     },
     {
         "target": "boomdandy",
@@ -252,7 +257,7 @@
     {
         "target": "fearmonger",
         "trick": "plaguedoctor",
-        "reason": "Om Pestläkaren dör får en levande Hantlangare Skräckspridarens förmåga utöver sin egen, och får veta detta."
+        "reason": "Om Pestläkaren dör får en levande Lakej Skräckspridarens förmåga utöver sin egen, och får veta detta."
     },
     {
         "target": "yaggababble",
@@ -312,7 +317,7 @@
     {
         "target": "summoner",
         "trick": "riot",
-        "reason": "Om Åkallaren skapar Upproret blir alla Hantlangare till Upproret."
+        "reason": "Om Åkallaren skapar Upproret blir alla Lakejer till Upproret."
     },
     {
         "target": "summoner",
@@ -323,6 +328,11 @@
         "target": "summoner",
         "trick": "kazali",
         "reason": "Åkallaren kan inte skapa en Demon som är i spel. Om Åkallaren skapar en Demon som inte är i spel dör spelare godtyckligt inatt."
+    },
+    {
+        "target": "summoner",
+        "trick": "preacher",
+        "reason": "Om Predikanten väljer Åkallaren den 3:e natten eller tidigare så får Åkallaren välja Demon, men Berättaren väljer spelare."
     },
     {
         "target": "baron",
@@ -337,7 +347,7 @@
     {
         "target": "marionette",
         "trick": "lilmonsta",
-        "reason": "Marionetten sitter bredvid en Hantlangare, inte Demonen. Marionetten vaknar inte för att välja vem som tar Lillmonstrets bricka, och får inte veta att hen är Marionetten om hen har Lillmonstrets bricka."
+        "reason": "Marionetten sitter bredvid en Lakej, inte Demonen. Marionetten vaknar inte för att välja vem som tar Lillmonstrets bricka, och får inte veta att hen är Marionetten om hen har Lillmonstrets bricka."
     },
     {
         "target": "marionette",
@@ -392,7 +402,7 @@
     {
         "target": "kazali",
         "trick": "goon",
-        "reason": "Om Kazali väljer att Hejduken ska bli en Hantlangare så väljer Berättaren återstående Hantlangare."
+        "reason": "Om Kazali väljer att Hejduken ska bli en Lakej så väljer Berättaren återstående Lakejer."
     },
     {
         "target": "kazali",
@@ -402,12 +412,17 @@
     {
         "target": "kazali",
         "trick": "huntsman",
-        "reason": "Om Kazali väljer att Ungmön ska bli Hantlangare och Jägaren är i spel så blir en god spelare till Ungmön."
+        "reason": "Om Kazali väljer att Ungmön ska bli Lakej och Jägaren är i spel så blir en god spelare till Ungmön."
     },
     {
         "target": "kazali",
         "trick": "choirboy",
-        "reason": "Kazali kan inte välja att Kungen ska bli Hantlangare om en Korgosse är i spel."
+        "reason": "Kazali kan inte välja att Kungen ska bli Lakej om en Korgosse är i spel."
+    },
+    {
+        "target": "kazali",
+        "trick": "soldier",
+        "reason": "Om Kazali förvandlar Soldaten till Lakej så väljer Soldaten en Lakej som inte är i spel att bli."
     },
     {
         "target": "riot",
@@ -527,42 +542,37 @@
     {
         "target": "riot",
         "trick": "investigator",
-        "reason": "Upproret registreras som Hantlangare för Detektiven."
+        "reason": "Upproret registreras som Lakej för Detektiven."
     },
     {
         "target": "riot",
         "trick": "clockmaker",
-        "reason": "Upproret registreras som Hantlangare för Urmakaren."
+        "reason": "Upproret registreras som Lakej för Urmakaren."
     },
     {
         "target": "riot",
         "trick": "towncrier",
-        "reason": "Upproret registreras som Hantlangare för Härolden."
+        "reason": "Upproret registreras som Lakej för Härolden."
     },
     {
         "target": "riot",
         "trick": "damsel",
-        "reason": "Upproret registreras som Hantlangare för Ungmön."
+        "reason": "Upproret registreras som Lakej för Ungmön."
     },
     {
         "target": "riot",
         "trick": "preacher",
-        "reason": "Upproret registreras som Hantlangare för Predikanten."
+        "reason": "Upproret registreras som Lakej för Predikanten."
     },
     {
         "target": "riot",
         "trick": "hatter",
-        "reason": "Om Hattmakaren dör, Upproret är i spel och någon i Upproret väljer en annan Demon så blir alla i Upproret till ett vanligt ont lag. Om Hattmakaren dör och Demonen väljer Upproret så blir alla Hantlangare också till Upproret."
+        "reason": "Om Hattmakaren dör, Upproret är i spel och någon i Upproret väljer en annan Demon så blir alla i Upproret till ett vanligt ont lag. Om Hattmakaren dör och Demonen väljer Upproret så blir alla Lakejer också till Upproret."
     },
     {
         "target": "alhadikhia",
         "trick": "scarletwoman",
         "reason": "Om det finns två levande al Hadikhia så slutar Röda damen att vara al Hadikhia och blir Röda damen igen."
-    },
-    {
-        "target": "alhadikhia",
-        "trick": "mastermind",
-        "reason": "Endast 1 av rollerna får vara i spel. Onda spelare vet från början vilken spelare och roll det är."
     },
     {
         "target": "organgrinder",
@@ -571,18 +581,13 @@
     },
     {
         "target": "organgrinder",
-        "trick": "flowergirl",
-        "reason": "Om Positivhalaren gör att alla blundar när de röstar så vaknar Floristen på natten och får välja en spelare: hen får veta om den spelaren röstade idag (istället för sin vanliga förmåga)."
-    },
-    {
-        "target": "organgrinder",
         "trick": "minstrel",
-        "reason": "Endast 1 av rollerna får vara i spel. Onda spelare vet från början vilken spelare och roll det är."
+        "reason": "Om Trubaduren gör alla fulla så behåller Positivhalaren sin förmåga, men Trubaduren får ha ögonen öppna under röstning."
     },
     {
         "target": "organgrinder",
         "trick": "preacher",
-        "reason": "Endast 1 av rollerna får vara i spel. Onda spelare vet från början vilken spelare och roll det är."
+        "reason": "Om Predikanten väljer Positivhalaren så behåller Positivhalaren sin förmåga, men Predikanten får ha ögonen öppna under röstning."
     },
     {
         "target": "vizier",
@@ -607,7 +612,7 @@
     {
         "target": "vizier",
         "trick": "magician",
-        "reason": "Om både Vesiren och Magikern är i spel så får Demonen inte veta om sina Hantlangare."
+        "reason": "Om både Vesiren och Magikern är i spel så får Demonen inte veta om sina Lakejer."
     },
     {
         "target": "vizier",
@@ -620,9 +625,14 @@
         "reason": "Politikern kan registreras som ond för Vesiren."
     },
     {
+        "target": "vizier",
+        "trick": "alsaahir",
+        "reason": "Om Vesiren är i spel måste al Saahir också gissa vilken Demon (eller vilka Demoner) som är i spel."
+    },
+    {
         "target": "vortox",
         "trick": "banshee",
-        "reason": "Om Vortox är i spel och Demonen dödar Bansheen får spelarna fortfarande veta att Bansheen har dött."
+        "reason": "Om Vortox är i spel och Demonen dödar Bansheen så får spelarna fortfarande veta att Bansheen har dött."
     },
     {
         "target": "ogre",
@@ -633,5 +643,10 @@
         "target": "philosopher",
         "trick": "bountyhunter",
         "reason": "Om Filosofen får Prisjägarens förmåga så kan en Bybo bli ond."
+    },
+    {
+        "target": "mastermind",
+        "trick": "alhadikhia",
+        "reason": "Om al Hadikhia dör av avrättning och Mästaren lever så väljer al Hadikhia 3 goda spelare inatt; om alla 3 väljer att leva så vinner de onda, annars vinner de goda."
     }
 ]

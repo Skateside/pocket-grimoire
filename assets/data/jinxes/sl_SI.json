@@ -92,7 +92,7 @@
     {
         "target": "leviathan",
         "trick": "banshee",
-        "reason": "Če je Leviathan v igri in Banshee umre zaradi usmrtitve, vsi igralci izvedo, da je Banshee umrl, in Banshee pridobi njihovo sposobnost."
+        "reason": "If Leviathan is in play, and the Banshee dies by execution, all players learn that the Banshee has died, and the Banshee gains their ability."
     },
     {
         "target": "leviathan",
@@ -127,7 +127,7 @@
     {
         "target": "lilmonsta",
         "trick": "magician",
-        "reason": "Samo ena od uročenih vlog je lahko v igri."
+        "reason": "Čarovnik vsako noč izbere Miniona: če sta ta Minion in Lil' Monsta živa, ta Minion varuje Lil' Monsta."
     },
     {
         "target": "lilmonsta",
@@ -162,7 +162,12 @@
     {
         "target": "legion",
         "trick": "preacher",
-        "reason": "Samo ena od uročenih vlog je lahko v igri."
+        "reason": "Če Pridigar izbere Legijo, Legija obdrži svojo sposobnost, toda Pridigar lahko izve, da so Legija."
+    },
+    {
+        "target": "legion",
+        "trick": "minstrel",
+        "reason": "Če bi Legion danes umrl zaradi usmrtitve, bi Legija obdržala svojo sposobnost, toda Minstrel bi lahko izvedel, da so Legija."
     },
     {
         "target": "legion",
@@ -325,6 +330,11 @@
         "reason": "Summoner ne more ustvariti demona v igri. Če Summoner ustvari demona, ki ni v igri, so nocojšnje smrti poljubne."
     },
     {
+        "target": "summoner",
+        "trick": "preacher",
+        "reason": "Če je Pridigar izbral Priklicovalca na ali pred 3. nočjo, Priklicavalec izbere, katerega demona, pripovedovalec pa izbere, katerega igralca."
+    },
+    {
         "target": "baron",
         "trick": "heretic",
         "reason": "Baron morda doda le enega Izobčenca in ne dveh."
@@ -408,6 +418,11 @@
         "target": "kazali",
         "trick": "choirboy",
         "reason": "Kazali ne more izbrati kralja, da postane Minion, če je v igri zborovski deček."
+    },
+    {
+        "target": "kazali",
+        "trick": "soldier",
+        "reason": "Če Kazali spremeni vojaka v Miniona, Vojak izbere, kateri Minion, ki ni v igri, bo postal."
     },
     {
         "target": "riot",
@@ -560,29 +575,19 @@
         "reason": "Če kadarkoli živita 2 Al-Hadikhia, Škrlatna dama znova postane Škrlatna dama."
     },
     {
-        "target": "alhadikhia",
-        "trick": "mastermind",
-        "reason": "Samo ena od uročenih vlog je lahko v igri. Zlobni igralci ponoči izvedo, katera vloga je v igri in kdo jo ima."
-    },
-    {
         "target": "organgrinder",
         "trick": "butler",
         "reason": "Če morajo igralci mižati, lahko Služabnik vedno glasuje, a njegov glas šteje, samo če je glasoval tudi Gospodar."
     },
     {
         "target": "organgrinder",
-        "trick": "flowergirl",
-        "reason": "Če Mlilec orgel povzroči glasovanje z zaprtimi očmi, se Cvetličarka nocoj zbudi, da izbere igralca: izvejo, ali je ta igralec glasoval danes."
-    },
-    {
-        "target": "organgrinder",
         "trick": "minstrel",
-        "reason": "Samo ena od uročenih vlog je lahko v igri."
+        "reason": "Če Minstrel vse napije, Mlilec orgel ohrani svojo sposobnost, Minstrel pa med glasovanjem drži odprte oči."
     },
     {
         "target": "organgrinder",
         "trick": "preacher",
-        "reason": "Samo ena od uročenih vlog je lahko v igri."
+        "reason": "Če pridigar odstrani sposobnost brusilnika organov, mlinček obdrži svojo sposobnost, pridigar pa med glasovanjem drži odprte oči."
     },
     {
         "target": "vizier",
@@ -620,6 +625,11 @@
         "reason": "Politik bi se lahko vezirju prijavil kot zloben."
     },
     {
+        "target": "vizier",
+        "trick": "alsaahir",
+        "reason": "Če je v igri vezir, mora tudi Alsaahir uganiti, kateri demoni so v igri."
+    },
+    {
         "target": "vortox",
         "trick": "banshee",
         "reason": "Če je Vortox v igri in Demon ubije Banshee, igralci še vedno izvedo, da je Banshee umrl."
@@ -633,5 +643,10 @@
         "target": "philosopher",
         "trick": "bountyhunter",
         "reason": "Če Filozof pridobi sposobnost lovca na glave, lahko Meščani postanejo zlobni."
+    },
+    {
+        "target": "mastermind",
+        "trick": "alhadikhia",
+        "reason": "Če Al-Hadikhia umre z usmrtitvijo, glavni um pa je živ, Al-Hadikhia nocoj izbere 3 dobre igralce: če se vsi 3 odločijo živeti, zmaga zlo. Sicer pa dobro zmaga."
     }
 ]

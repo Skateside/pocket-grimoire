@@ -127,7 +127,7 @@
     {
         "target": "lilmonsta",
         "trick": "magician",
-        "reason": "Bare 1 gandet rolle kan være i spill."
+        "reason": "Hver natt velger tryllekunstneren en Minion: hvis Minion og Lil' Monsta er i live, er den Minion barnevakt for Lil' Monsta."
     },
     {
         "target": "lilmonsta",
@@ -162,7 +162,12 @@
     {
         "target": "legion",
         "trick": "preacher",
-        "reason": "Bare 1 gandet rolle kan være i spill."
+        "reason": "Hvis Preacher velger Legion, beholder Legion sine evner, men Preacheren kan lære at de er Legion."
+    },
+    {
+        "target": "legion",
+        "trick": "minstrel",
+        "reason": "Hvis Legion døde ved henrettelse i dag, beholder Legion sine evner, men Minstrelen kan finne ut at de er Legion."
     },
     {
         "target": "legion",
@@ -277,7 +282,7 @@
     {
         "target": "summoner",
         "trick": "marionette",
-        "reason": "Marionetten er nabo til Summoner. The Summoner vet hvem Marionetten er."
+        "reason": "The Marionette neighbours the Summoner. The Summoner knows who the Marionette is."
     },
     {
         "target": "summoner",
@@ -323,6 +328,11 @@
         "target": "summoner",
         "trick": "kazali",
         "reason": "Hvis Summoner lager Legion, blir de fleste spillere (inkludert alle onde spillere) onde Legion."
+    },
+    {
+        "target": "summoner",
+        "trick": "preacher",
+        "reason": "Hvis forkynneren valgte innkalleren på eller før den tredje natten, velger innkalleren hvilken demon, men historiefortelleren velger hvilken spiller."
     },
     {
         "target": "baron",
@@ -408,6 +418,11 @@
         "target": "kazali",
         "trick": "choirboy",
         "reason": "Kazalien kan ikke velge kongen til å bli en Minion hvis en Choirboy er i spill."
+    },
+    {
+        "target": "kazali",
+        "trick": "soldier",
+        "reason": "Hvis Kazali gjør soldaten til en Minion, velger soldaten hvilken minion som ikke er i spill."
     },
     {
         "target": "riot",
@@ -560,29 +575,19 @@
         "reason": "Om det er 2 levende Al-Hadikhiaer, blir Babylon-Al-Hadikhiaen til Babylon igjen."
     },
     {
-        "target": "alhadikhia",
-        "trick": "mastermind",
-        "reason": "Bare 1 gandet rolle kan være i spill. Onde spillere lærer innledningsvis hvilken spiller og rolle det er."
-    },
-    {
         "target": "organgrinder",
         "trick": "butler",
         "reason": "Om Veivspilleren gjør at man lukker øynene under avstemninger, kan Hovmesteren rekke opp hånden for å stemme, men stemmen deres teller bare om herren deres også stemte for."
     },
     {
         "target": "organgrinder",
-        "trick": "flowergirl",
-        "reason": "Hvis Orgelkvernen forårsaker avstemning med øyne lukket, våkner Blomsterjenta i kveld for å velge en spiller: de får vite om den spilleren stemte i dag."
-    },
-    {
-        "target": "organgrinder",
         "trick": "minstrel",
-        "reason": "Bare 1 gandet rolle kan være i spill."
+        "reason": "Hvis Minstrel gjør alle fulle, beholder orgelkvernen deres evner, men Minstrel holder øynene åpne når de stemmer."
     },
     {
         "target": "organgrinder",
         "trick": "preacher",
-        "reason": "Bare 1 gandet rolle kan være i spill."
+        "reason": "Hvis predikanten fjerner evnen til orgelkvern, beholder orgelkvernen sin evne, men predikanten holder øynene åpne når de stemmer."
     },
     {
         "target": "vizier",
@@ -620,6 +625,11 @@
         "reason": "Politikeren kan registrere seg som ond for vesiren."
     },
     {
+        "target": "vizier",
+        "trick": "alsaahir",
+        "reason": "Hvis vesiren er i spill, må Alsahiren også gjette hvilken(e) demon(er) som er i spill."
+    },
+    {
         "target": "vortox",
         "trick": "banshee",
         "reason": "Hvis Vortox er i spill og demonen dreper Banshee, lærer spillerne fortsatt at Banshee har dødd."
@@ -633,5 +643,10 @@
         "target": "philosopher",
         "trick": "bountyhunter",
         "reason": "Hvis filosofen får Bounty Hunter-evnen, kan en byfolk bli ond."
+    },
+    {
+        "target": "mastermind",
+        "trick": "alhadikhia",
+        "reason": "Hvis Al-Hadikhia dør ved henrettelse, og Mastermind er i live, velger Al-Hadikhia 3 gode spillere i kveld: hvis alle 3 velger å leve, vinner ondskapen. Ellers gode seire."
     }
 ]

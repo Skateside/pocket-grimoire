@@ -31,6 +31,15 @@
         "reminders": []
     },
     {
+        "id": "alsaahir",
+        "name": "Alsahir",
+        "ability": "Una volta al giorno, se indovini pubblicamente quali giocatori sono Minion e quali Demoni, vince il buono.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
         "id": "amnesiac",
         "name": "Smemorato",
         "ability": "Non sai quale sia la tua abilità. Ogni giorno, prova a indovinare in privato quale sia: apprendi quanto ci sei andato vicino.",
@@ -96,7 +105,7 @@
     {
         "id": "balloonist",
         "name": "Aeronauta",
-        "ability": "Ogni notte, apprendi 1 giocatore per ogni tipo (es. Giocatore 1 / Cittadino, Giocatore 2 / Seguace, ...), finché non ci sono più tipi da apprendere. [+1 Forestiero]",
+        "ability": "Ogni notte, apprendi 1 giocatore per ogni tipo (es. Giocatore 1 / Cittadino, Giocatore 2 / Seguace, ...), finché non ci sono più tipi da apprendere. [+0 oppure +1 Forestiero]",
         "firstNightReminder": "Scegli un tipo (es. Cittadino). Indica un giocatore che è di quel tipo. Affiancagli il promemoria \"Visto\" di quel tipo.",
         "otherNightReminder": "Scegli un tipo non ancora visto (es. Seguace). Indica un giocatore che è di quel tipo. Affiancagli il promemoria \"Visto\" di quel tipo.",
         "remindersGlobal": [],
@@ -1084,7 +1093,9 @@
         "firstNightReminder": "L'Orco indica un giocatore (non se stesso) e diventa il suo allineamento.",
         "otherNightReminder": "",
         "remindersGlobal": [],
-        "reminders": []
+        "reminders": [
+            "Amico"
+        ]
     },
     {
         "id": "ojo",

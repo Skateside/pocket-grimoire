@@ -206,6 +206,10 @@
             {
                 "id": "戏子",
                 "reason": "在戏子存在于剧本中时，军团可以在游戏中任意时候\n向说书人示意自己“想要死亡”，说书人会在其中一名玩家示意后\n在夜晚一同唤醒所有军团，并询问这些玩家是否要一同死亡。"
+            },
+            {
+                "id": "Minstrel",
+                "reason": "If Legion died by execution today, Legion keeps their ability, but the Minstrel might learn they are Legion."
             }
         ]
     },
@@ -542,10 +546,6 @@
             {
                 "id": "Scarlet Woman",
                 "reason": "If there are two living Al-Hadikhias, the Scarlet Woman Al-Hadikhia becomes the Scarlet Woman again."
-            },
-            {
-                "id": "Mastermind",
-                "reason": "Only 1 jinxed character can be in play. Evil players start knowing which player and character it is."
             }
         ]
     },
@@ -555,10 +555,6 @@
             {
                 "id": "Butler",
                 "reason": "If the Organ Grinder is causing eyes closed voting, the Butler may raise their hand to vote but their vote is only counted if their master voted too."
-            },
-            {
-                "id": "Flowergirl",
-                "reason": "If the Organ Grinder is causing eyes-closed voting, the Flowergirl wakes tonight to choose a player: they learn if that player voted today."
             },
             {
                 "id": "Minstrel",
@@ -604,6 +600,10 @@
             {
                 "id": "Politician",
                 "reason": "The Politician might register as evil to the Vizier."
+            },
+            {
+                "id": "Alsaahir",
+                "reason": "If the Vizier is in play, the Alsaahir must also guess which Demon(s) are in play."
             }
         ]
     },
@@ -689,6 +689,10 @@
             {
                 "id": "Choirboy",
                 "reason": "The Kazali can not choose the King to become a Minion if a Choirboy is in play."
+            },
+            {
+                "id": "Soldier",
+                "reason": "If the Kazali turns the Soldier into a Minion, the Soldier chooses which not-in-play Minion to become."
             }
         ]
     },
@@ -755,6 +759,10 @@
             {
                 "id": "Kazali",
                 "reason": "The Summoner cannot create an in-play Demon. If the Summoner creates a not-in-play Demon, deaths tonight are arbitrary."
+            },
+            {
+                "id": "Preacher",
+                "reason": "If the Preacher chose the Summoner on or before the 3rd night, the Summoner chooses which Demon, but the Storyteller chooses which player."
             }
         ]
     },
@@ -795,6 +803,15 @@
             {
                 "id": "Bounty Hunter",
                 "reason": "If the Philosopher gains the Bounty Hunter ability, a Townsfolk might turn evil."
+            }
+        ]
+    },
+    {
+        "id": "Mastermind",
+        "jinx": [
+            {
+                "id": "Al-Hadikhia",
+                "reason": "If the Al-Hadikhia dies by execution, and the Mastermind is alive, the Al-Hadikhia chooses 3 good players tonight: if all 3 choose to live, evil wins. Otherwise, good wins."
             }
         ]
     }

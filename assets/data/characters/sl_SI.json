@@ -37,6 +37,15 @@
         ]
     },
     {
+        "id": "alsaahir",
+        "name": "Alsaahir",
+        "ability": "Če enkrat na dan javno ugibate, kateri igralci so minioni in kateri demoni, zmaga dobro.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
         "id": "amnesiac",
         "name": "Pozabljivec",
         "ability": "Imaš moč, a ne veš, kaj je. Vsak dan lahko Pripovedovalca na samem vprašaš nekaj o njej. Izveš, kako blizu si.",
@@ -105,7 +114,7 @@
     {
         "id": "balloonist",
         "name": "Balonar",
-        "ability": "Vsako noč izveš enega igralca vsake vrste, dokler ne zmanjka vrst. [+1 Izobčenec]",
+        "ability": "Vsako noč izveš enega igralca vsake vrste, dokler ne zmanjka vrst. [+0 ali +1 Izobčenec]",
         "firstNightReminder": "Izberi si vrsto vloge (Meščan, Izobčenec, Sledilec, Demon, Popotnik). Pokaži na eno osebo z vlogo te vrste in dodaj Balonarjev \"Opažen\" opomnik k temu igralcu v knjigi.",
         "otherNightReminder": "Izberi si vrsto vloge, ki še nima nobenega igralca z \"Opažen\" opomnikom. Pokaži na eno osebo z vlogo te vrste in dodaj Balonarjev \"Opažen\" opomnik k temu igralcu v knjigi.",
         "remindersGlobal": [],
@@ -1084,7 +1093,9 @@
         "firstNightReminder": "Ogre kaže na igralca (ne na sebe) in postane njegova poravnava.",
         "otherNightReminder": "",
         "remindersGlobal": [],
-        "reminders": []
+        "reminders": [
+            "Prijatelj"
+        ]
     },
     {
         "id": "ojo",

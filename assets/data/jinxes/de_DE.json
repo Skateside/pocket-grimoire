@@ -127,7 +127,7 @@
     {
         "target": "lilmonsta",
         "trick": "magician",
-        "reason": "Nur 1 verhexter Character kann gleichzeitig im Spiel sein"
+        "reason": "Jede Nacht wählt der Magier einen Diener: Wenn dieser Diener und Lil' Monsta am Leben sind, passt dieser Diener auf Lil' Monsta auf."
     },
     {
         "target": "lilmonsta",
@@ -162,7 +162,12 @@
     {
         "target": "legion",
         "trick": "preacher",
-        "reason": "Nur 1 verfluchter Charakter kann gleichzeitig im Spiel sein"
+        "reason": "Wenn der Prediger Legion wählt, behält Legion seine Fähigkeit, aber der Prediger könnte erfahren, dass sie Legion sind."
+    },
+    {
+        "target": "legion",
+        "trick": "minstrel",
+        "reason": "Wenn Legion heute durch Hinrichtung gestorben ist, behält Legion seine Fähigkeit, aber der Minnesänger könnte erfahren, dass sie Legion sind."
     },
     {
         "target": "legion",
@@ -297,7 +302,7 @@
     {
         "target": "summoner",
         "trick": "engineer",
-        "reason": "Wenn der Ingenieur einen Beschwörer aus dem Spiel entfernt, bevor dieser Beschwörer seine Fähigkeit nutzt, nutzt der Beschwörer seine Fähigkeit sofort."
+        "reason": "If the Engineer removes a Summoner from play before that Summoner uses their ability, the Summoner uses their ability immediately."
     },
     {
         "target": "summoner",
@@ -322,7 +327,12 @@
     {
         "target": "summoner",
         "trick": "kazali",
-        "reason": "Der Beschwörer kann keinen Dämon im Spiel erschaffen. Wenn der Beschwörer einen nicht im Spiel befindlichen Dämon erschafft, sind die Todesfälle heute Nacht willkürlich."
+        "reason": "The Summoner cannot create an in-play Demon. If the Summoner creates a not-in-play Demon, deaths tonight are arbitrary."
+    },
+    {
+        "target": "summoner",
+        "trick": "preacher",
+        "reason": "Wenn der Prediger den Beschwörer in der 3. Nacht oder früher gewählt hat, wählt der Beschwörer den Dämon, aber der Geschichtenerzähler wählt den Spieler."
     },
     {
         "target": "baron",
@@ -408,6 +418,11 @@
         "target": "kazali",
         "trick": "choirboy",
         "reason": "Der Kazali kann den König nicht als Diener wählen, wenn ein Chorknabe im Spiel ist."
+    },
+    {
+        "target": "kazali",
+        "trick": "soldier",
+        "reason": "Wenn der Kazali den Soldaten in einen Diener verwandelt, wählt der Soldat, welcher nicht im Spiel befindliche Diener er werden soll."
     },
     {
         "target": "riot",
@@ -560,29 +575,19 @@
         "reason": "Wenn es zwei lebende Al-Hadikhias gibt, wird der \"Frau in Rot\" Al-Hadikhia wieder zu \"Frau in Rot\"."
     },
     {
-        "target": "alhadikhia",
-        "trick": "mastermind",
-        "reason": "Nur 1 verhexter Character kann gleichzeitig im Spiel sein. Böse Spieler wissen von Spielbeginn an welcher und Spieler und Character es ist."
-    },
-    {
         "target": "organgrinder",
         "trick": "butler",
         "reason": "Wenn wegen dem Leiermann mit geschlossenen Augen abgestimmt wird, darf der Butler seine Hand heben um abzustimmen  aber die Stimme wird nur gezählt wenn sein Dienstherr auch abgestimmt hat."
     },
     {
         "target": "organgrinder",
-        "trick": "flowergirl",
-        "reason": "Wenn der Leierkastenmann eine Abstimmung mit geschlossenen Augen verursacht, wacht das Blumenmädchen heute Nacht auf, um einen Spieler auszuwählen: Es erfährt, ob dieser Spieler heute abgestimmt hat."
-    },
-    {
-        "target": "organgrinder",
         "trick": "minstrel",
-        "reason": "Nur 1 verhexter Character kann gleichzeitig im Spiel sein"
+        "reason": "Wenn der Minnesänger alle betrunken macht, behält der Leierkastenmann seine Fähigkeit, aber der Minnesänger hält beim Abstimmen die Augen offen."
     },
     {
         "target": "organgrinder",
         "trick": "preacher",
-        "reason": "Nur 1 verhexter Character kann gleichzeitig im Spiel sein"
+        "reason": "Wenn der Prediger die Fähigkeit des Leierkastenmanns entfernt, behält der Leierkastenmann seine Fähigkeit, aber der Prediger hält beim Abstimmen die Augen offen."
     },
     {
         "target": "vizier",
@@ -620,6 +625,11 @@
         "reason": "Der Politiker könnte sich gegenüber dem Wesir als böse einstufen."
     },
     {
+        "target": "vizier",
+        "trick": "alsaahir",
+        "reason": "Wenn der Wesir im Spiel ist, muss der Alsaahir auch erraten, welcher/welche Dämon(en) im Spiel sind."
+    },
+    {
         "target": "vortox",
         "trick": "banshee",
         "reason": "Wenn der Vortox im Spiel ist und der Dämon die Banshee tötet, erfahren die Spieler trotzdem, dass die Banshee gestorben ist."
@@ -633,5 +643,10 @@
         "target": "philosopher",
         "trick": "bountyhunter",
         "reason": "Wenn der Philosoph die Fähigkeit des Kopfgeldjägers erhält, könnte ein Stadtbewohner böse werden."
+    },
+    {
+        "target": "mastermind",
+        "trick": "alhadikhia",
+        "reason": "Wenn Al-Hadikhia durch Hinrichtung stirbt und der Mastermind am Leben ist, wählt Al-Hadikhia heute Abend 3 gute Spieler aus: Wenn alle 3 sich entscheiden zu leben, gewinnt das Böse. Andernfalls gewinnt das Gute."
     }
 ]

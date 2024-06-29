@@ -127,7 +127,7 @@
     {
         "target": "lilmonsta",
         "trick": "magician",
-        "reason": "Il ne peut y avoir qu'un personnage jinxé en jeu."
+        "reason": "Chaque nuit, le Magicien choisit un Sbire: si ce Sbire et le P'tit monstre sont en vie, ce sbire garde le jeton du P'tit monstre."
     },
     {
         "target": "lilmonsta",
@@ -162,7 +162,12 @@
     {
         "target": "legion",
         "trick": "preacher",
-        "reason": "Il ne peut y avoir qu'un seul personnage jinxé en jeu."
+        "reason": "Si le Prédicateur choisit une Légion, la Légion garde sa capacité mais le Prédicateur pourrait l'apprendre."
+    },
+    {
+        "target": "legion",
+        "trick": "minstrel",
+        "reason": "Si une Légion meurt par éxécution, la Légion garde sa capacité, mais le Ménestrel pourrait l'apprendre."
     },
     {
         "target": "legion",
@@ -325,6 +330,11 @@
         "reason": "L'Invocateur ne peut pas créer de démon en jeu. Si l'Invocateur crée un démon qui n'est pas en jeu, les morts cette nuit sont arbitraire."
     },
     {
+        "target": "summoner",
+        "trick": "preacher",
+        "reason": "Si le prédicateur choisit l'Invocateur avant ou pendant la troisième nuit, l'Invocateur choisit quel Démon créer mais le Conteur choisit quel joueur"
+    },
+    {
         "target": "baron",
         "trick": "heretic",
         "reason": "Le Baron peut n'ajouter qu'un seul Étranger, pas deux."
@@ -408,6 +418,11 @@
         "target": "kazali",
         "trick": "choirboy",
         "reason": "Le Kazali ne peut pas choisir le Roi comme Sbire si l'Enfant de Chœur est en jeu."
+    },
+    {
+        "target": "kazali",
+        "trick": "soldier",
+        "reason": "Si le Kazali choisit le Soldat comme Sbire, le soldat choisit quel Sbire hors-jeu devenir."
     },
     {
         "target": "riot",
@@ -560,29 +575,19 @@
         "reason": "S'il y a deux Al-Hadikhias vivants, la Croqueuse d'Homme Al-Hadikhia redevient la Croqueuse d'Homme."
     },
     {
-        "target": "alhadikhia",
-        "trick": "mastermind",
-        "reason": "Il ne peut y avoir qu'un seul personnage jinxé en jeu. Les maléfiques savent de quel joueur et de quel personnage il s'agit dès le début."
-    },
-    {
         "target": "organgrinder",
         "trick": "butler",
         "reason": "Si le Joueur d'Orgue provoque un vote les yeux fermés, le Majordome peut lever la main pour voter mais son vote n'est compté que si son maître a également voté."
     },
     {
         "target": "organgrinder",
-        "trick": "flowergirl",
-        "reason": "Si les yeux des joueurs étaient fermés lors des nominations, la Fleuriste se réveille cette nuit pour choisir un joueur: elle apprend si ce joueur a voté."
-    },
-    {
-        "target": "organgrinder",
         "trick": "minstrel",
-        "reason": "Il ne peut y avoir qu'un seul personnage jinxé en jeu."
+        "reason": "Si le Ménestrel rend tout le monde ivre, le Joueur d'Orgue garde sa capacité mais le Ménestrel garde les yeux ouverts pendant les votes."
     },
     {
         "target": "organgrinder",
         "trick": "preacher",
-        "reason": "Il ne peut y avoir qu'un seul personnage jinxé en jeu."
+        "reason": "Si le prédicateur retire la capacité du joueur d'Orgue, le Joueur d'Orgue garde sa capacité mais le Prédicateur garde les yeux ouverts pendant les votes."
     },
     {
         "target": "vizier",
@@ -607,7 +612,7 @@
     {
         "target": "vizier",
         "trick": "magician",
-        "reason": "Il ne peut y avoir qu'un seul personnage jinxé en jeu."
+        "reason": "Si le Vizir et le Magicien sont tous les deux en jeu, le Démon n'apprend pas qui sont les sbires"
     },
     {
         "target": "vizier",
@@ -618,6 +623,11 @@
         "target": "vizier",
         "trick": "politician",
         "reason": "Le politicien peut être reconnu comme étant maléfique par le Vizir."
+    },
+    {
+        "target": "vizier",
+        "trick": "alsaahir",
+        "reason": "Si le Vizir est en jeu, l'Alsaahir doit également deviner quel(s) Démon(s) sont en jeu."
     },
     {
         "target": "vortox",
@@ -633,5 +643,10 @@
         "target": "philosopher",
         "trick": "bountyhunter",
         "reason": "Si le Faussaire prend la capacité du Chasseur de Prime, un Villageois pourrait devenir maléfique"
+    },
+    {
+        "target": "mastermind",
+        "trick": "alhadikhia",
+        "reason": "Si l'Al-Hadikhia meurt par éxécution, et que le Conspirateur est en vie. L'Al-Hadikhia choisit 3 joueurs bons cette nuit: Si les 3 décident de vivre, le mal gagne. Sinon, les bons gagnent."
     }
 ]

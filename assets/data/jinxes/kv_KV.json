@@ -127,7 +127,7 @@
     {
         "target": "lilmonsta",
         "trick": "magician",
-        "reason": "Только 1 из этих двух ролей может находиться в игре."
+        "reason": "Each night, the Magician chooses a Minion: if that Minion & Lil' Monsta are alive, that Minion babysits Lil' Monsta."
     },
     {
         "target": "lilmonsta",
@@ -162,7 +162,12 @@
     {
         "target": "legion",
         "trick": "preacher",
-        "reason": "Только 1 из этих двух ролей может находиться в игре."
+        "reason": "If the Preacher chooses Legion, Legion keeps their ability, but the Preacher might learn they are Legion."
+    },
+    {
+        "target": "legion",
+        "trick": "minstrel",
+        "reason": "If Legion died by execution today, Legion keeps their ability, but the Minstrel might learn they are Legion."
     },
     {
         "target": "legion",
@@ -325,6 +330,11 @@
         "reason": "The Summoner cannot create an in-play Demon. If the Summoner creates a not-in-play Demon, deaths tonight are arbitrary."
     },
     {
+        "target": "summoner",
+        "trick": "preacher",
+        "reason": "If the Preacher chose the Summoner on or before the 3rd night, the Summoner chooses which Demon, but the Storyteller chooses which player."
+    },
+    {
         "target": "baron",
         "trick": "heretic",
         "reason": "Барон иногда может добавить в игру только 1 Изгоя вместо 2."
@@ -408,6 +418,11 @@
         "target": "kazali",
         "trick": "choirboy",
         "reason": "Казали не может превратить Короля в Приспешника, если в игре находится Служка."
+    },
+    {
+        "target": "kazali",
+        "trick": "soldier",
+        "reason": "If the Kazali turns the Soldier into a Minion, the Soldier chooses which not-in-play Minion to become."
     },
     {
         "target": "riot",
@@ -560,29 +575,19 @@
         "reason": "Если в живых находятся два Аль-Адихии, то тот из них, что был Блудницей, превращается обратно в Блудницу."
     },
     {
-        "target": "alhadikhia",
-        "trick": "mastermind",
-        "reason": "Только 1 из этих двух ролей может находиться в игре. В начале игры злые игроки узнают, какая из них в игре и кому принадлежит."
-    },
-    {
         "target": "organgrinder",
         "trick": "butler",
         "reason": "Если Шарманщик вызывает голосование с закрытыми глазами, Дворецкий может поднять руку, чтобы проголосовать, но его голос засчитывается только в том случае, если его хозяин тоже проголосовал."
     },
     {
         "target": "organgrinder",
-        "trick": "flowergirl",
-        "reason": "If the Organ Grinder is causing eyes-closed voting, the Flowergirl wakes tonight to choose a player: they learn if that player voted today."
-    },
-    {
-        "target": "organgrinder",
         "trick": "minstrel",
-        "reason": "Только 1 из этих двух ролей может находиться в игре."
+        "reason": "If the Minstrel makes everyone drunk, the Organ Grinder keeps their ability but the Minstrel keeps their eyes open when voting."
     },
     {
         "target": "organgrinder",
         "trick": "preacher",
-        "reason": "Только 1 из этих двух ролей может находиться в игре."
+        "reason": "If the Preacher removes the Organ Grinder ability, the Organ Grinder keeps their ability but the Preacher keeps their eyes open when voting."
     },
     {
         "target": "vizier",
@@ -620,6 +625,11 @@
         "reason": "The Politician might register as evil to the Vizier."
     },
     {
+        "target": "vizier",
+        "trick": "alsaahir",
+        "reason": "If the Vizier is in play, the Alsaahir must also guess which Demon(s) are in play."
+    },
+    {
         "target": "vortox",
         "trick": "banshee",
         "reason": "If the Vortox is in play and the Demon kills the Banshee, the players still learn that the Banshee has died."
@@ -633,5 +643,10 @@
         "target": "philosopher",
         "trick": "bountyhunter",
         "reason": "If the Philosopher gains the Bounty Hunter ability, a Townsfolk might turn evil."
+    },
+    {
+        "target": "mastermind",
+        "trick": "alhadikhia",
+        "reason": "If the Al-Hadikhia dies by execution, and the Mastermind is alive, the Al-Hadikhia chooses 3 good players tonight: if all 3 choose to live, evil wins. Otherwise, good wins."
     }
 ]

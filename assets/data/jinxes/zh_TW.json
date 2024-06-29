@@ -7,7 +7,7 @@
     {
         "target": "eviltwin",
         "trick": "plaguedoctor",
-        "reason": "如果瘟疫醫生死亡，說書人將無法獲得邪惡雙子的能力。"
+        "reason": "說書人無法在瘟疫醫生死亡時獲得邪惡雙子的能力。"
     },
     {
         "target": "cannibal",
@@ -17,7 +17,7 @@
     {
         "target": "cannibal",
         "trick": "juggler",
-        "reason": "如果雜耍者在第一天就猜對了並被處決而死，今晚活著的食人者就會知道雜耍者有多少猜測是正確的。"
+        "reason": "如果雜耍人在自己的第一天進行了猜測並被處死，當晚食人族會得知雜耍人能力猜對的數量。"
     },
     {
         "target": "lunatic",
@@ -47,17 +47,17 @@
     {
         "target": "pithag",
         "trick": "cultleader",
-        "reason": "如果魔女將邪惡玩家變成邪教領袖，由於他們自身的能力，他們無法變好。"
+        "reason": "如果魔女將邪惡玩家變成邪教領袖，他無法以自身能力變成好人隊伍。"
     },
     {
         "target": "pithag",
         "trick": "goon",
-        "reason": "如果魔女將邪惡玩家變成傻瓜，由於他們自身的能力，他們無法變好。"
+        "reason": "如果魔女將邪惡玩家變成傻瓜，他無法以自身能力變成好人隊伍。"
     },
     {
         "target": "pithag",
         "trick": "ogre",
-        "reason": "如果魔女將邪惡玩家變成食人魔，由於他們自身的能力，他們無法變好。"
+        "reason": "如果魔女將邪惡玩家變成食人魔，他無法以自身能力變成好人隊伍。"
     },
     {
         "target": "cerenovus",
@@ -67,7 +67,7 @@
     {
         "target": "goblin",
         "trick": "plaguedoctor",
-        "reason": "如果瘟疫醫生死亡，一個活著的僕從除了自己的能力之外，額外獲得哥布林的能力，並得知此事。"
+        "reason": "如果瘟疫醫生死亡而使說書人獲得哥布林的能力，則改為一個活著的僕從除了自己的能力之外，額外獲得哥布林的能力，並得知此事。"
     },
     {
         "target": "leviathan",
@@ -92,7 +92,7 @@
     {
         "target": "leviathan",
         "trick": "banshee",
-        "reason": "如果利維坦在遊戲中時女妖被處決，則所有玩家得知女妖已死亡，且女妖得到能力。"
+        "reason": "如果利維坦在遊戲中時女妖被處死，則所有玩家得知女妖已死亡，且女妖得到能力。"
     },
     {
         "target": "leviathan",
@@ -112,12 +112,12 @@
     {
         "target": "leviathan",
         "trick": "hatter",
-        "reason": "如果帽匠在第五天或之後死亡，惡魔就不能選擇利維坦。"
+        "reason": "如果帽匠在第五天或之後死亡，惡魔就不能選擇變成利維坦。"
     },
     {
         "target": "leviathan",
         "trick": "pithag",
-        "reason": "第五天之後，魔女不能選擇利維坦。"
+        "reason": "第五天之後，魔女不能選擇玩家變成利維坦。"
     },
     {
         "target": "lilmonsta",
@@ -127,7 +127,7 @@
     {
         "target": "lilmonsta",
         "trick": "magician",
-        "reason": "只有其中一個角色可以出現在遊戲中。"
+        "reason": "每天晚上，魔術師都會選擇一個小兵：如果該小兵和小蒙斯塔還活著，則該小兵會照顧小蒙斯塔。"
     },
     {
         "target": "lilmonsta",
@@ -137,7 +137,7 @@
     {
         "target": "lilmonsta",
         "trick": "organgrinder",
-        "reason": "如果風琴手正在看顧莉萌絲塔，則對風琴手的投票有效。"
+        "reason": "如果風琴手正在看顧莉萌絲塔，則對風琴手的投票始終有效。"
     },
     {
         "target": "lilmonsta",
@@ -162,7 +162,12 @@
     {
         "target": "legion",
         "trick": "preacher",
-        "reason": "只有其中一個角色可以出現在遊戲中。"
+        "reason": "如果傳教士選擇軍團，軍團將保留他們的能力，但傳教士可能會知道他們是軍團。"
+    },
+    {
+        "target": "legion",
+        "trick": "minstrel",
+        "reason": "如果軍團今天被處決而死亡，軍團會保留他們的能力，但吟遊詩人可能會知道他們是軍團。"
     },
     {
         "target": "legion",
@@ -192,12 +197,12 @@
     {
         "target": "spy",
         "trick": "plaguedoctor",
-        "reason": "如果瘟疫醫生死亡，一個活著的僕從除了自己的能力之外，額外獲得間諜的能力，並得知此事。"
+        "reason": "如果瘟疫醫生死亡而使說書人獲得間諜的能力，則改為一個活著的僕從除了自己的能力之外，額外獲得間諜的能力，並得知此事。"
     },
     {
         "target": "spy",
         "trick": "damsel",
-        "reason": "如果間諜正在（或已經）在場，少女就會中毒。"
+        "reason": "如果間諜曾在遊戲中，則少女中毒。"
     },
     {
         "target": "spy",
@@ -207,7 +212,7 @@
     {
         "target": "spy",
         "trick": "ogre",
-        "reason": "間諜對食人魔來說是邪惡的。"
+        "reason": "間諜會被食人魔的能力視為邪惡。"
     },
     {
         "target": "widow",
@@ -227,7 +232,7 @@
     {
         "target": "widow",
         "trick": "damsel",
-        "reason": "如果寡婦正在（或已經）在場，則少女會中毒。"
+        "reason": "如果寡婦曾在遊戲中，則少女中毒。"
     },
     {
         "target": "widow",
@@ -242,17 +247,17 @@
     {
         "target": "scarletwoman",
         "trick": "plaguedoctor",
-        "reason": "如果瘟疫醫生死亡，一個活著的僕從除了自己的能力之外，額外獲得淫魔的能力，並得知此事。"
+        "reason": "如果瘟疫醫生死亡而使說書人獲得淫魔的能力，則改為一個活著的僕從除了自己的能力之外，額外獲得淫魔的能力，並得知此事。"
     },
     {
         "target": "boomdandy",
         "trick": "plaguedoctor",
-        "reason": "如果瘟疫醫生被處決並且使說書人獲得炸彈客能力，則該能力會立即觸發。"
+        "reason": "如果瘟疫醫生被處決而使說書人獲得炸彈客能力，則該能力會立即觸發。"
     },
     {
         "target": "fearmonger",
         "trick": "plaguedoctor",
-        "reason": "如果瘟疫醫生死亡，一個活著的僕從除了自己的能力之外，額外獲得恐懼販子的能力，並得知此事。"
+        "reason": "如果瘟疫醫生死亡而使說書人獲得恐懼販子的能力，則改為一個活著的僕從除了自己的能力之外，額外獲得恐懼販子的能力，並得知此事。"
     },
     {
         "target": "yaggababble",
@@ -272,7 +277,7 @@
     {
         "target": "summoner",
         "trick": "poppygrower",
-        "reason": "如果召喚師行動時罌粟農活著，則召喚師選擇惡魔種類，說書人決定是哪位玩家。"
+        "reason": "如果召喚師行動時罌粟農活著，則召喚師選擇惡魔種類，由說書人決定是哪位玩家。"
     },
     {
         "target": "summoner",
@@ -282,37 +287,37 @@
     {
         "target": "summoner",
         "trick": "pithag",
-        "reason": "召喚師無法創造遊戲中的惡魔。如果召喚師創造了一個不在場的惡魔，今晚的死亡是任意的。"
+        "reason": "召喚師不能產生已在場的惡魔，如果召喚師產生了不在遊戲中的惡魔，則今晚的死亡由說書人決定。"
     },
     {
         "target": "summoner",
         "trick": "hatter",
-        "reason": "召喚師無法創造遊戲中的惡魔。如果召喚師創造了一個不在場的惡魔，今晚的死亡是任意的。"
+        "reason": "召喚師不能產生已在場的惡魔，如果召喚師產生了不在遊戲中的惡魔，則今晚的死亡由說書人決定。"
     },
     {
         "target": "summoner",
         "trick": "courtier",
-        "reason": "如果召喚者在第三天晚上喝醉了，則召喚者選擇哪個惡魔，但故事講述者選擇哪個玩家。"
+        "reason": "如果召喚師在第三晚醉酒，則他選擇惡魔種類，但由說書人選擇成為惡魔的玩家。"
     },
     {
         "target": "summoner",
         "trick": "engineer",
-        "reason": "如果工程師在召喚者使用其能力之前將其從遊戲中移除，則該召喚者會立即使用其能力。"
+        "reason": "如果工程師在召喚師使用能力之前將召喚師移除，則召喚師立刻使用他的能力。"
     },
     {
         "target": "summoner",
         "trick": "zombuul",
-        "reason": "如果召喚師將死去的玩家變成了殭屍，故事講述者會將該玩家視為死過一次的殭屍。"
+        "reason": "如果召喚師將一位死亡玩家變成殭屍，則視為殭屍能力的\"第一次死亡\"已經觸發過。"
     },
     {
         "target": "summoner",
         "trick": "pukka",
-        "reason": "召喚師可以在第二天晚上選擇一名玩家成為普卡。"
+        "reason": "召喚師可以在第二晚就選擇一位玩家變成普卡。"
     },
     {
         "target": "summoner",
         "trick": "riot",
-        "reason": "如果召喚者製造暴動，所有小兵都會變得暴動。"
+        "reason": "如果召喚師產生了暴徒，則所有僕從變成暴徒。"
     },
     {
         "target": "summoner",
@@ -322,7 +327,12 @@
     {
         "target": "summoner",
         "trick": "kazali",
-        "reason": "召喚師無法創造遊戲中的惡魔。如果召喚師創造了一個不在場的惡魔，今晚的死亡是任意的。"
+        "reason": "召喚師不能產生已在場的惡魔，如果召喚師產生了不在遊戲中的惡魔，則今晚的死亡由說書人決定。"
+    },
+    {
+        "target": "summoner",
+        "trick": "preacher",
+        "reason": "如果傳教士在第三晚或之前選擇召喚師，則召喚師選擇哪個惡魔，但故事講述者選擇哪個玩家。"
     },
     {
         "target": "baron",
@@ -332,7 +342,7 @@
     {
         "target": "baron",
         "trick": "plaguedoctor",
-        "reason": "如果說書人獲得男爵的能力，最多會有兩名玩家成為城外人。"
+        "reason": "如果說書人獲得男爵的能力，最多會有兩名玩家變成城外人。"
     },
     {
         "target": "marionette",
@@ -362,7 +372,7 @@
     {
         "target": "marionette",
         "trick": "plaguedoctor",
-        "reason": "當瘟疫醫生死亡時，一位與惡魔相鄰的鎮民或城外人會成為邪惡的木偶。如果已經有額外的邪惡玩家，則不會發生這種情況。"
+        "reason": "如果瘟疫醫生死亡而使說書人獲得傀儡的能力，則改為一位與惡魔相鄰的鎮民或城外人成為邪惡的傀儡。如果已經有額外的邪惡玩家，則不會發生這種情況。"
     },
     {
         "target": "marionette",
@@ -372,7 +382,7 @@
     {
         "target": "lleech",
         "trick": "mastermind",
-        "reason": "如果策劃者活著而水蛭怪的宿主被處死，則水蛭怪活著但失去能力。"
+        "reason": "如果策劃者活著而水蛭怪的宿主被處死，則水蛭怪繼續活著但失去能力。"
     },
     {
         "target": "lleech",
@@ -392,7 +402,7 @@
     {
         "target": "kazali",
         "trick": "goon",
-        "reason": "如果卡札力選擇傻瓜成為僕從，則剩下的僕從及他們的角色由說書人決定。"
+        "reason": "如果卡札力選擇了傻瓜成為僕從，則剩下的僕從及他們的角色由說書人決定。"
     },
     {
         "target": "kazali",
@@ -408,6 +418,11 @@
         "target": "kazali",
         "trick": "choirboy",
         "reason": "如果詩童在遊戲中，卡札力不能使國王變成僕從。"
+    },
+    {
+        "target": "kazali",
+        "trick": "soldier",
+        "reason": "如果卡扎利將士兵變成小兵，士兵選擇成為哪個非遊戲中的小兵。"
     },
     {
         "target": "riot",
@@ -442,7 +457,7 @@
     {
         "target": "riot",
         "trick": "mayor",
-        "reason": "如果在第三天開始時只有三位玩家活著，玩家可以(代表小組)選擇不提名任何人，如果他們如此做且市長活著，則市長的隊伍獲勝。"
+        "reason": "如果在第三天開始時只有三位玩家活著，玩家們可以(代表小組)選擇不提名任何人，如果他們如此做且市長活著，則市長的隊伍獲勝。"
     },
     {
         "target": "riot",
@@ -560,29 +575,19 @@
         "reason": "如果有兩個活著的哈迪基亞，則淫魔變成的哈迪基亞再次變回淫魔。"
     },
     {
-        "target": "alhadikhia",
-        "trick": "mastermind",
-        "reason": "只有其中一個角色可以出現在遊戲中。邪惡玩家遊戲開始時得知它是哪個玩家及角色。"
-    },
-    {
         "target": "organgrinder",
         "trick": "butler",
         "reason": "當風琴手導致閉眼投票時，管家都可以舉手投票，但只有當他的主人也投票時，他的投票才會被計算在內。"
     },
     {
         "target": "organgrinder",
-        "trick": "flowergirl",
-        "reason": "如果風琴研磨機引起閉眼投票，花姑娘今晚就會醒來選擇一名玩家：他們會知道該玩家今天是否投票。"
-    },
-    {
-        "target": "organgrinder",
         "trick": "minstrel",
-        "reason": "只有其中一個角色可以出現在遊戲中。"
+        "reason": "如果吟遊詩人讓每個人都喝醉了，風琴研磨師會保留他們的能力，但吟遊詩人在投票時會睜大眼睛。"
     },
     {
         "target": "organgrinder",
         "trick": "preacher",
-        "reason": "只有其中一個角色可以出現在遊戲中。"
+        "reason": "如果傳教士移除了風琴研磨機的能力，風琴研磨機會保留其能力，但傳教士在投票時會睜大眼睛。"
     },
     {
         "target": "vizier",
@@ -617,7 +622,12 @@
     {
         "target": "vizier",
         "trick": "politician",
-        "reason": "政客可能會被維齊爾認為是邪惡的。"
+        "reason": "政治家可能會被宰相的能力視為邪惡。"
+    },
+    {
+        "target": "vizier",
+        "trick": "alsaahir",
+        "reason": "如果維齊爾在場，阿爾薩希爾也必須猜測哪些惡魔在場。"
     },
     {
         "target": "vortox",
@@ -627,11 +637,16 @@
     {
         "target": "ogre",
         "trick": "recluse",
-        "reason": "如果隱士向食人魔表明自己是邪惡的，那麼食人魔就會知道他們是邪惡的。"
+        "reason": "如果隱居者被食人魔的能力視為邪惡，食人魔會得知自己是邪惡的。"
     },
     {
         "target": "philosopher",
         "trick": "bountyhunter",
-        "reason": "如果哲學家獲得賞金獵人能力，城鎮居民可能會變得邪惡。"
+        "reason": "如果教授獲得了寶藏獵人的能力，可能會有一位鎮民變成邪惡的。"
+    },
+    {
+        "target": "mastermind",
+        "trick": "alhadikhia",
+        "reason": "如果 Al-Hadikhia 被處決而死亡，而策劃者還活著，那麼 Al-Hadikhia 今晚會選擇 3 名善良的玩家：如果 3 個人都選擇活著，則邪惡獲勝。否則，善勝。"
     }
 ]

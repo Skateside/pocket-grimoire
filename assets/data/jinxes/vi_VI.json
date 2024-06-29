@@ -17,7 +17,7 @@
     {
         "target": "cannibal",
         "trick": "juggler",
-        "reason": "Nếu Người tung hứng đoán vào ngày đầu tiên của họ và bị xử tử, tối nay Kẻ ăn thịt người còn sống sẽ biết được Người tung hứng đã đoán đúng bao nhiêu lần."
+        "reason": "Nếu Tung hứng đoán trong ngày đầu tiên và bị hành quyết, tối nay Ăn thịt người biết có bao nhiêu người Tung hứng đoán dúng."
     },
     {
         "target": "lunatic",
@@ -47,17 +47,17 @@
     {
         "target": "pithag",
         "trick": "cultleader",
-        "reason": "Nếu Pit-Hag biến một người chơi xấu xa thành Giáo chủ, họ không thể trở thành người tốt do khả năng của chính họ."
+        "reason": "Nếu Pit-hag biến người xấu thành Trưởng giáo phái, họ không thể trờ thành người tốt bằng chức năng của họ."
     },
     {
         "target": "pithag",
         "trick": "goon",
-        "reason": "Nếu Pit-Hag biến một người chơi ác thành Goon, họ không thể trở thành người tốt do khả năng của chính họ."
+        "reason": "Nếu Pit-hag biến người xấu thành Bất lương, họ không thể trờ thành người tốt bằng chức năng của họ."
     },
     {
         "target": "pithag",
         "trick": "ogre",
-        "reason": "Nếu Pit-Hag biến một người chơi xấu thành Yêu tinh, họ không thể trở thành người tốt do khả năng của chính họ."
+        "reason": "Nếu Pit-hag biến người xấu thành Orge, họ không thể trờ thành người tốt bằng chức năng của họ."
     },
     {
         "target": "cerenovus",
@@ -127,7 +127,7 @@
     {
         "target": "lilmonsta",
         "trick": "magician",
-        "reason": "Chỉ có 1 nhân vật jinx trong cuộc."
+        "reason": "Mỗi đêm, Pháp sư chọn một Minion: nếu Minion và Lil' Monsta đó còn sống, Minion đó sẽ trông trẻ cho Lil' Monsta."
     },
     {
         "target": "lilmonsta",
@@ -162,7 +162,12 @@
     {
         "target": "legion",
         "trick": "preacher",
-        "reason": "Chỉ có 1 nhân vật jinx trong cuộc."
+        "reason": "Nếu Nhà truyền giáo chọn Quân đoàn, Quân đoàn sẽ giữ nguyên khả năng của họ, nhưng Nhà truyền giáo có thể biết họ là Quân đoàn."
+    },
+    {
+        "target": "legion",
+        "trick": "minstrel",
+        "reason": "Nếu hôm nay Legion chết do bị hành quyết, Legion vẫn giữ được khả năng của họ, nhưng Minstrel có thể biết họ là Legion."
     },
     {
         "target": "legion",
@@ -197,7 +202,7 @@
     {
         "target": "spy",
         "trick": "damsel",
-        "reason": "Nếu Điệp viên đang (hoặc đã) chơi đùa, Thiếu nữ sẽ bị đầu độc."
+        "reason": "Nếu Gián điệp đang (hoặc đã) có trong game, Thiếu nữ bị trúng độc."
     },
     {
         "target": "spy",
@@ -207,7 +212,7 @@
     {
         "target": "spy",
         "trick": "ogre",
-        "reason": "Điệp viên được coi là ác quỷ đối với Yêu tinh."
+        "reason": "Gián điệp tính là người xấu với Orge."
     },
     {
         "target": "widow",
@@ -227,7 +232,7 @@
     {
         "target": "widow",
         "trick": "damsel",
-        "reason": "Nếu Góa phụ đang (hoặc đã) chơi đùa, Thiếu nữ sẽ bị đầu độc."
+        "reason": "Nếu Góa phụ đang (hoặc đã) có trong game, Thiếu nữ bị trúng độc."
     },
     {
         "target": "widow",
@@ -282,37 +287,37 @@
     {
         "target": "summoner",
         "trick": "pithag",
-        "reason": "Người triệu hồi không thể tạo Ác ma đang chơi. Nếu Người triệu hồi tạo ra một Ác ma không có mặt, cái chết đêm nay là tùy tiện."
+        "reason": "Kẻ triệu hồi không thể tạo ra Quỷ trong game. Nếu Kẻ triệu hồi tạo ra Quỷ ngoài game, cái chết đêm nay là ngẫu nhiên."
     },
     {
         "target": "summoner",
         "trick": "hatter",
-        "reason": "Người triệu hồi không thể tạo Ác ma đang chơi. Nếu Người triệu hồi tạo ra một Ác ma không có mặt, cái chết đêm nay là tùy tiện."
+        "reason": "Kẻ triệu hồi không thể tạo ra Quỷ trong game. Nếu Kẻ triệu hồi tạo ra Quỷ ngoài game, cái chết đêm nay là ngẫu nhiên."
     },
     {
         "target": "summoner",
         "trick": "courtier",
-        "reason": "Nếu Người triệu hồi say rượu vào đêm thứ 3, Người triệu hồi sẽ chọn Ác ma nào, nhưng Người kể chuyện sẽ chọn người chơi nào."
+        "reason": "Nếu Kẻ triệu hồi bị say vào đêm thứ 3, Kẻ triệu hồi chọn Quỷ, nhưng Người kể chuyện chọn người là Quỷ."
     },
     {
         "target": "summoner",
         "trick": "engineer",
-        "reason": "Nếu Kỹ sư loại Nhà triệu hồi khỏi cuộc chơi trước khi Nhà triệu hồi đó sử dụng khả năng của họ, thì Nhà triệu hồi đó sẽ sử dụng khả năng của họ ngay lập tức."
+        "reason": "Nếu Kĩ sư loại bỏ Kẻ triệu hồi khỏi game trước khi họ được dùng chức năng, Kẻ triệu hồi được dùng chức năng ngay lập tức."
     },
     {
         "target": "summoner",
         "trick": "zombuul",
-        "reason": "Nếu Người triệu hồi biến một người chơi đã chết thành Zombuul, Người kể chuyện sẽ coi người chơi đó như một Zombuul đã chết một lần."
+        "reason": "Nếu Kẻ triệu hồi biến người chết thành Zombuul, Người kể chuyện sẽ coi người đó là Zombuul đã chết lần đầu."
     },
     {
         "target": "summoner",
         "trick": "pukka",
-        "reason": "Người triệu hồi có thể chọn một người chơi trở thành Pukka vào đêm thứ 2."
+        "reason": "Kẻ triệu hồi có thể biến 1 người thành Pukka từ đêm thứ 2."
     },
     {
         "target": "summoner",
         "trick": "riot",
-        "reason": "Nếu Người triệu hồi tạo ra Riot, tất cả Minion đều trở thành Riot."
+        "reason": "Nếu Kẻ triệu hồi tạo Nổi loạn, tất cả Tay sai trở thành Nổi loạn."
     },
     {
         "target": "summoner",
@@ -322,7 +327,12 @@
     {
         "target": "summoner",
         "trick": "kazali",
-        "reason": "Người triệu hồi không thể tạo Ác ma đang chơi. Nếu Người triệu hồi tạo ra một Ác ma không có mặt, cái chết đêm nay là tùy tiện."
+        "reason": "Kẻ triệu hồi không thể tạo ra Quỷ trong game. Nếu Kẻ triệu hồi tạo ra Quỷ ngoài game, cái chết đêm nay là ngẫu nhiên."
+    },
+    {
+        "target": "summoner",
+        "trick": "preacher",
+        "reason": "Nếu Nhà truyền giáo chọn Người triệu hồi vào hoặc trước đêm thứ 3, Người triệu hồi sẽ chọn Ác quỷ nào, nhưng Người kể chuyện sẽ chọn người chơi nào."
     },
     {
         "target": "baron",
@@ -372,7 +382,7 @@
     {
         "target": "lleech",
         "trick": "mastermind",
-        "reason": "Nếu Chủ mưu còn sông và vật chủ của Lleech chết vì hành quyết, Lleech sống nhưng mất chức năng."
+        "reason": "Nếu Chủ mưu còn sống và vật chủ của Lleech chết vì hành quyết, Lleech sống nhưng mất chức năng."
     },
     {
         "target": "lleech",
@@ -408,6 +418,11 @@
         "target": "kazali",
         "trick": "choirboy",
         "reason": "Kazali không được chọn Ông vua trở thành Tay sai nếu có Ca đoàn trong game."
+    },
+    {
+        "target": "kazali",
+        "trick": "soldier",
+        "reason": "Nếu Kazali biến Người lính thành Minion, Người lính sẽ chọn Minion không có trong trò chơi để trở thành."
     },
     {
         "target": "riot",
@@ -560,29 +575,19 @@
         "reason": "Nếu có 2 Al-Hadikhia còn sống, Phụ nữ đỏ là Al-Hadikhia trở về thành Phụ nữ đỏ bình thường."
     },
     {
-        "target": "alhadikhia",
-        "trick": "mastermind",
-        "reason": "Chỉ có 1 nhân vật jinx trong cuộc. Phe ác biết đó là nhân vật nào và là người nào."
-    },
-    {
         "target": "organgrinder",
         "trick": "butler",
         "reason": "Nếu Nhạc công đường phố tạo ra bỏ phiếu ẩn, Quản gia có thể bỏ phiếu nhưng phiếu của họ được đếm khi chủ nhân của họ bỏ phiếu."
     },
     {
         "target": "organgrinder",
-        "trick": "flowergirl",
-        "reason": "Nếu Máy mài đàn organ gây ra cuộc bỏ phiếu nhắm mắt, Cô gái bán hoa sẽ thức dậy tối nay để chọn một người chơi: họ sẽ biết liệu người chơi đó có bỏ phiếu hôm nay hay không."
-    },
-    {
-        "target": "organgrinder",
         "trick": "minstrel",
-        "reason": "Chỉ có 1 nhân vật jinx trong cuộc."
+        "reason": "Nếu Minstrel làm mọi người say, Máy mài đàn organ vẫn giữ được khả năng của họ nhưng Minstrel vẫn mở mắt khi bỏ phiếu."
     },
     {
         "target": "organgrinder",
         "trick": "preacher",
-        "reason": "Chỉ có 1 nhân vật jinx trong cuộc."
+        "reason": "Nếu Nhà truyền giáo loại bỏ khả năng Máy mài đàn organ, Người mài đàn organ vẫn giữ được khả năng của họ nhưng Nhà truyền đạo vẫn mở mắt khi bỏ phiếu."
     },
     {
         "target": "vizier",
@@ -617,7 +622,12 @@
     {
         "target": "vizier",
         "trick": "politician",
-        "reason": "Chính trị gia có thể bị coi là xấu xa đối với Vizier."
+        "reason": "Chính trị gia có thể thấy là người xấu với Tể tướng."
+    },
+    {
+        "target": "vizier",
+        "trick": "alsaahir",
+        "reason": "Nếu Tể tướng đang chơi, Alsaahir cũng phải đoán xem (những) Ác quỷ nào đang chơi."
     },
     {
         "target": "vortox",
@@ -627,11 +637,16 @@
     {
         "target": "ogre",
         "trick": "recluse",
-        "reason": "Nếu Recluse cho rằng Ogre là ác quỷ, thì Ogre sẽ biết rằng chúng là ác quỷ."
+        "reason": "Nếu Người ẩn dật được thấy là người xấu với Orge, Orge được thông báo họ là người xấu"
     },
     {
         "target": "philosopher",
         "trick": "bountyhunter",
-        "reason": "Nếu Nhà triết học có được khả năng Thợ săn tiền thưởng, Người dân thị trấn có thể trở thành ác quỷ."
+        "reason": "Nếu Triết gia nhận chức năng của Thợ săn tiền thưởng, 1 Dân làng có thể trở thành người xấu."
+    },
+    {
+        "target": "mastermind",
+        "trick": "alhadikhia",
+        "reason": "Nếu Al-Hadikhia chết do bị hành quyết và Kẻ chủ mưu còn sống, Al-Hadikhia chọn 3 người chơi tốt đêm nay: nếu cả 3 người chọn sống, cái ác sẽ thắng. Nếu không, chiến thắng tốt."
     }
 ]

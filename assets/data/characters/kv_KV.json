@@ -37,6 +37,15 @@
         ]
     },
     {
+        "id": "alsaahir",
+        "name": "Alsaahir",
+        "ability": "Once per day, if you publicly guess which players are Minion(s) and which are Demon(s), good wins.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
         "id": "amnesiac",
         "name": "Амнезиак",
         "ability": "Вы не знаете, что у вас за способность. Каждый день, в личной беседе с Рассказчиком пробуйте её угадать: узнаете, насколько точной была догадка.",
@@ -105,7 +114,7 @@
     {
         "id": "balloonist",
         "name": "Аэронавт",
-        "ability": "Каждую ночью вам показывают 1-го игрока из каждого класса ролей (Местные, Аутсайдеры, Приспешники, Демон), с случайном порядке. [+1 Аутсайдер]",
+        "ability": "Каждую ночью вам показывают 1-го игрока из каждого класса ролей (Местные, Аутсайдеры, Приспешники, Демон), с случайном порядке. [+0 или +1 Аутсайдер]",
         "firstNightReminder": "Выберите класс ролей. Укажите на игрока, чья роль принадлежит к этому классу. Положите рядом с этой ролью напоминающий жетон \"Видел _\".",
         "otherNightReminder": "Выберите класс ролей, роли в котором еще не были отмечены жетоном \"Видел _\". Укажите на игрока, чья роль принадлежит к этому классу, если такой имеется. Положите рядом с этой ролью напоминающий жетон \"Видел _\".",
         "remindersGlobal": [],
@@ -1093,7 +1102,9 @@
         "firstNightReminder": "The Ogre points to a player (not themselves) and becomes their alignment.",
         "otherNightReminder": "",
         "remindersGlobal": [],
-        "reminders": []
+        "reminders": [
+            "Friend"
+        ]
     },
     {
         "id": "ojo",

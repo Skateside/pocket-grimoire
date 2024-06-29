@@ -53,6 +53,20 @@
         "image": "/build/img/icons/demon/alhadikhia.webp"
     },
     {
+        "id": "alsaahir",
+        "name": "Alsaahir",
+        "edition": "",
+        "team": "townsfolk",
+        "firstNight": 0,
+        "firstNightReminder": "",
+        "otherNight": 0,
+        "otherNightReminder": "Choose a player, that player dies.",
+        "reminders": [],
+        "setup": false,
+        "ability": "Once per day, if you publicly guess which players are Minion(s) and which are Demon(s), good wins.",
+        "image": "/build/img/icons/townsfolk/alsaahir.webp"
+    },
+    {
         "id": "amnesiac",
         "name": "Amnesiac",
         "edition": "",
@@ -162,7 +176,7 @@
             "Seen Traveller"
         ],
         "setup": true,
-        "ability": "Each night, you learn 1 player of each character type, until there are no more types to learn. [+1 Outsider]",
+        "ability": "Each night, you learn 1 player of each character type, until there are no more types to learn. [+0 or +1 Outsider]",
         "image": "/build/img/icons/townsfolk/balloonist.webp"
     },
     {
@@ -1247,7 +1261,7 @@
             "2nd"
         ],
         "setup": false,
-        "ability": "Each night, choose 2 players: tomorrow, the 1st player is mad that the 2nd is evil, or both might die.",
+        "ability": "Each night, choose 2 players: tomorrow, the 1st player is mad that the 2nd is evil, or one or both might die.",
         "image": "/build/img/icons/minion/harpy.webp"
     },
     {
@@ -2034,7 +2048,9 @@
         "firstNightReminder": "The Ogre points to a player (not themselves) and becomes their alignment.",
         "otherNight": 0,
         "otherNightReminder": "",
-        "reminders": [],
+        "reminders": [
+            "Friend"
+        ],
         "setup": false,
         "ability": "On your 1st night, choose a player (not yourself): you become their alignment (you don't know which) even if drunk or poisoned.",
         "image": "/build/img/icons/outsider/ogre.webp"
@@ -2176,7 +2192,7 @@
             "Storyteller Ability"
         ],
         "setup": false,
-        "ability": "If you die, the Storyteller gains a not-in-play Minion ability.",
+        "ability": "If you die, the Storyteller gains a Minion ability.",
         "image": "/build/img/icons/outsider/plaguedoctor.webp"
     },
     {

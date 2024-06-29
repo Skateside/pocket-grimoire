@@ -17,7 +17,7 @@
     {
         "target": "cannibal",
         "trick": "juggler",
-        "reason": "如果杂耍者在第一天就猜对了并被处决而死，今晚活着的食人者就会知道杂耍者有多少猜测是正确的。"
+        "reason": "如果杂耍艺人在自己的首个白天猜测后在当天死于处决，当晚食人族会替杂耍艺人得知对应的信息。"
     },
     {
         "target": "lunatic",
@@ -47,17 +47,17 @@
     {
         "target": "pithag",
         "trick": "cultleader",
-        "reason": "如果麻脸巫婆将邪恶玩家变成邪教领袖，由于他们自身的能力，他们无法变好。"
+        "reason": "被麻脸巫婆创造的邪恶异教领袖无法因为自身能力转变为善良阵营。"
     },
     {
         "target": "pithag",
         "trick": "goon",
-        "reason": "如果麻脸巫婆将邪恶玩家变成莽夫，由于他们自身的能力，他们无法变好。"
+        "reason": "被麻脸巫婆创造的邪恶莽夫无法因为自身能力转变为善良阵营。"
     },
     {
         "target": "pithag",
         "trick": "ogre",
-        "reason": "如果麻脸巫婆将邪恶玩家变成食人魔，由于他们自身的能力，他们无法变好。"
+        "reason": "被麻脸巫婆创造的邪恶食人魔无法因为自身能力转变为善良阵营。"
     },
     {
         "target": "cerenovus",
@@ -127,7 +127,7 @@
     {
         "target": "lilmonsta",
         "trick": "magician",
-        "reason": "互为克星的角色在同一时间里只能有其中一个角色在场。"
+        "reason": "每个晚上，魔术师都会选择一个仆从：如果那个仆从和小怪物都还活着，那个仆从就会照顾小怪物。"
     },
     {
         "target": "lilmonsta",
@@ -162,7 +162,12 @@
     {
         "target": "legion",
         "trick": "preacher",
-        "reason": "互为克星的角色在同一时间里只能有其中一个角色在场。"
+        "reason": "如果传教士选择军团，军团会保留他们的能力，但传教士可能会知道他们是军团。"
+    },
+    {
+        "target": "legion",
+        "trick": "minstrel",
+        "reason": "如果军团今天被处决，军团会保留他们的能力，但吟游诗人可能会知道他们是军团。"
     },
     {
         "target": "legion",
@@ -197,7 +202,7 @@
     {
         "target": "spy",
         "trick": "damsel",
-        "reason": "如果间谍正在（或已经）在场，少女就会中毒。"
+        "reason": "如果间谍正在场或曾经在场，落难少女中毒。"
     },
     {
         "target": "spy",
@@ -207,7 +212,7 @@
     {
         "target": "spy",
         "trick": "ogre",
-        "reason": "间谍对食人魔来说是邪恶的。"
+        "reason": "间谍必定被食人魔当作邪恶阵营。"
     },
     {
         "target": "widow",
@@ -227,7 +232,7 @@
     {
         "target": "widow",
         "trick": "damsel",
-        "reason": "如果寡妇正在（或已经）在场，则少女会中毒。"
+        "reason": "如果寡妇正在场或曾经在场，落难少女中毒。"
     },
     {
         "target": "widow",
@@ -282,37 +287,37 @@
     {
         "target": "summoner",
         "trick": "pithag",
-        "reason": "召唤师无法创建游戏中的恶魔。如果召唤师创造了一个不在场的恶魔，今晚的死亡是任意的。"
+        "reason": "召唤师无法创造已经在场的恶魔。如果召唤师创造了一个不在场的恶魔，当晚的死亡由说书人决定。"
     },
     {
         "target": "summoner",
         "trick": "hatter",
-        "reason": "召唤师无法创建游戏中的恶魔。如果召唤师创造了一个不在场的恶魔，今晚的死亡是任意的。"
+        "reason": "召唤师无法创造已经在场的恶魔。如果召唤师创造了一个不在场的恶魔，当晚的死亡由说书人决定。"
     },
     {
         "target": "summoner",
         "trick": "courtier",
-        "reason": "如果召唤者在第三天晚上喝醉了，则召唤者选择哪个恶魔，但故事讲述者选择哪个玩家。"
+        "reason": "如果召唤师因为侍臣的能力在第三个夜晚醉酒，由召唤师来选择创造哪种恶魔，由说书人来决定哪名玩家发生转变。"
     },
     {
         "target": "summoner",
         "trick": "engineer",
-        "reason": "如果工程师在召唤者使用其能力之前将其从游戏中移除，则该召唤者会立即使用其能力。"
+        "reason": "如果工程师的能力使得召唤师在使用自己的能力前离场，召唤师会在此前立即使用自己的能力。"
     },
     {
         "target": "summoner",
         "trick": "zombuul",
-        "reason": "如果召唤师将死去的玩家变成了僵尸，故事讲述者会将该玩家视为死过一次的僵尸。"
+        "reason": "如果召唤师将一名已死亡的玩家变成了僵怖，该玩家会变成“已经死过一次”的僵怖。"
     },
     {
         "target": "summoner",
         "trick": "pukka",
-        "reason": "召唤师可以在第二天晚上选择一名玩家成为普卡。"
+        "reason": "召唤师可以选择在第二个夜晚将一名玩家变成普卡。"
     },
     {
         "target": "summoner",
         "trick": "riot",
-        "reason": "如果召唤者制造暴动，所有小兵都会变得暴动。"
+        "reason": "如果召唤师创造了暴乱，被选择的玩家和所有邪恶玩家都变成邪恶的暴乱。"
     },
     {
         "target": "summoner",
@@ -322,7 +327,12 @@
     {
         "target": "summoner",
         "trick": "kazali",
-        "reason": "召唤师无法创建游戏中的恶魔。如果召唤师创造了一个不在场的恶魔，今晚的死亡是任意的。"
+        "reason": "召唤师无法创造已经在场的恶魔。如果召唤师创造了一个不在场的恶魔，当晚的死亡由说书人决定。"
+    },
+    {
+        "target": "summoner",
+        "trick": "preacher",
+        "reason": "如果传教士在第 3 天或之前选择了召唤师，召唤师会选择哪个恶魔，但讲故事的人会选择哪个玩家。"
     },
     {
         "target": "baron",
@@ -408,6 +418,11 @@
         "target": "kazali",
         "trick": "choirboy",
         "reason": "如果唱诗男孩在场，卡扎力在选择国王后无法将他变成爪牙。"
+    },
+    {
+        "target": "kazali",
+        "trick": "soldier",
+        "reason": "如果卡扎利将士兵变成仆从，士兵会选择成为哪个不在场的仆从。"
     },
     {
         "target": "riot",
@@ -560,29 +575,19 @@
         "reason": "如果出现两名存活的哈迪寂亚，则红唇女郎变成的哈迪寂亚会变回红唇女郎。"
     },
     {
-        "target": "alhadikhia",
-        "trick": "mastermind",
-        "reason": "互为克星的角色在同一时间里只能有其中一个角色在场。邪恶阵营玩家在游戏开始时知道这两者中是什么角色在场，是哪一名玩家。"
-    },
-    {
         "target": "organgrinder",
         "trick": "butler",
         "reason": "如果街头风琴手使得玩家需要闭眼投票，管家可以自由举手投票，但只在他的主人投票时他的票才会被统计。"
     },
     {
         "target": "organgrinder",
-        "trick": "flowergirl",
-        "reason": "如果“手摇风琴手”引发闭眼投票，那么“花姑娘”今晚就会醒来选择一名玩家：他们会了解该玩家今天是否投票。"
-    },
-    {
-        "target": "organgrinder",
         "trick": "minstrel",
-        "reason": "互为克星的角色在同一时间里只能有其中一个角色在场。"
+        "reason": "如果吟游诗人让每个人都喝醉，手摇风琴者保留他们的能力，但吟游诗人在投票时会睁大眼睛。"
     },
     {
         "target": "organgrinder",
         "trick": "preacher",
-        "reason": "互为克星的角色在同一时间里只能有其中一个角色在场。"
+        "reason": "如果传教士移除手摇风琴者的能力，手摇风琴者保留他们的能力，但传教士在投票时会睁大眼睛。"
     },
     {
         "target": "vizier",
@@ -617,7 +622,12 @@
     {
         "target": "vizier",
         "trick": "politician",
-        "reason": "政客可能会被维齐尔认为是邪恶的。"
+        "reason": "维齐尔的能力可能会将政客当作邪恶阵营。"
+    },
+    {
+        "target": "vizier",
+        "trick": "alsaahir",
+        "reason": "如果维齐尔在场，Alsaahir 还必须猜测哪些恶魔在场。"
     },
     {
         "target": "vortox",
@@ -627,11 +637,16 @@
     {
         "target": "ogre",
         "trick": "recluse",
-        "reason": "如果隐士向食人魔表明自己是邪恶的，那么食人魔就会知道他们是邪恶的。"
+        "reason": "如果陌客被食人魔当作邪恶阵营，食人魔会得知自己转变为邪恶。"
     },
     {
         "target": "philosopher",
         "trick": "bountyhunter",
         "reason": "如果“哲学家”获得“赏金猎人”能力，那么“镇民”可能会变得邪恶。"
+    },
+    {
+        "target": "mastermind",
+        "trick": "alhadikhia",
+        "reason": "如果 Al-Hadikhia 被处决而策划者还活着，Al-Hadikhia 今晚会选择 3 名好玩家：如果所有 3 名玩家都选择活下去，那么邪恶获胜。否则，善良获胜。"
     }
 ]

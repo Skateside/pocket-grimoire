@@ -47,12 +47,12 @@
     {
         "target": "pithag",
         "trick": "cultleader",
-        "reason": "Se a Bruxa transformar um jogador maligno no Líder do Culto, ele não poderá se tornar bom devido à sua própria habilidade."
+        "reason": "Se a Bruxa do Fosso criar um Líder da Seita do mau, ele não pode se tornar do bem devido a própria habilidade."
     },
     {
         "target": "pithag",
         "trick": "goon",
-        "reason": "Se a Bruxa transformar um jogador malvado em um Goon, ele não poderá se tornar bom devido à sua própria habilidade."
+        "reason": "Se a Bruxa do Fosso criar um Capanga do mau, ele não pode se tornar do bem devido a própria habilidade."
     },
     {
         "target": "pithag",
@@ -92,7 +92,7 @@
     {
         "target": "leviathan",
         "trick": "banshee",
-        "reason": "Se o Leviatã estiver em jogo e o Banshee morrer por execução, todos os jogadores descobrem que o Banshee morreu e o Banshee ganha sua habilidade."
+        "reason": "Se o Leviatã estiver em jogo, e a Banshee morrer por execução, todos os jogadores são informados que a Banshee morreu, e a Banshee ganha sua abilidade."
     },
     {
         "target": "leviathan",
@@ -127,7 +127,7 @@
     {
         "target": "lilmonsta",
         "trick": "magician",
-        "reason": "Apenas um destes personagens pode estar em jogo."
+        "reason": "A cada noite, o Mágico escolhe um Lacaio: Se esse Lacaio & o Monstrinho estão vivos, esse Lacaio cuidará do Monstrinho."
     },
     {
         "target": "lilmonsta",
@@ -162,7 +162,12 @@
     {
         "target": "legion",
         "trick": "preacher",
-        "reason": "Apenas um destes personagens pode estar em jogo."
+        "reason": "Se o Pregador escolhe um Legião, ele mantém sua habilidade, mas o Pregador pode saber que ele é um Legião."
+    },
+    {
+        "target": "legion",
+        "trick": "minstrel",
+        "reason": "Se a Legião morrer por execução hoje, a Legião manterá sua habilidade, mas o Menestrel poderá descobrir que eles são da Legião."
     },
     {
         "target": "legion",
@@ -207,7 +212,7 @@
     {
         "target": "spy",
         "trick": "ogre",
-        "reason": "O Espião registra como do mau para o Ogro."
+        "reason": "O Espião registra como do mal para o Ogro."
     },
     {
         "target": "widow",
@@ -257,7 +262,7 @@
     {
         "target": "yaggababble",
         "trick": "exorcist",
-        "reason": "Se o Exorcista escolher a Yaggamatraca, a habilidade da Yaggamatraca não mata esta noite."
+        "reason": "Se o Exorcista escolher a Yaggarela, a habilidade da Yaggarela não mata esta noite."
     },
     {
         "target": "summoner",
@@ -282,12 +287,12 @@
     {
         "target": "summoner",
         "trick": "pithag",
-        "reason": "O Invocador não pode criar um Demônio em jogo. Se o Invocador criar um Demônio que não esteja em jogo, as mortes esta noite serão arbitrárias."
+        "reason": "O Invocador não pode criar um Dêmonio que está em jogo. Se o Invocador criar um Dêmonio que não está em jogo, as mortes essa noite são arbitrárias."
     },
     {
         "target": "summoner",
         "trick": "hatter",
-        "reason": "O Invocador não pode criar um Demônio em jogo. Se o Invocador criar um Demônio que não esteja em jogo, as mortes esta noite serão arbitrárias."
+        "reason": "O Invocador não pode criar um Dêmonio que está em jogo. Se o Invocador criar um Dêmonio que não está em jogo, as mortes essa noite são arbitrárias."
     },
     {
         "target": "summoner",
@@ -297,22 +302,22 @@
     {
         "target": "summoner",
         "trick": "engineer",
-        "reason": "Se o Engineer remover um Invocador do jogo antes que ele use sua habilidade, o Invocador usará sua habilidade imediatamente."
+        "reason": "Se o Engenheiro remove um Invocador do jogo antes dele usar sua habilidade o Invocador usa sua habilidade imediatamente."
     },
     {
         "target": "summoner",
         "trick": "zombuul",
-        "reason": "Se o Invocador transformar um jogador morto no Zombuul, o Narrador trata aquele jogador como um Zombuul que morreu uma vez."
+        "reason": "Se o Invocador escolhe um jogador morto para virar o Zumbuul, o Narrador deve tratá-lo, como um Zumbuul que morreu uma vez."
     },
     {
         "target": "summoner",
         "trick": "pukka",
-        "reason": "O Invocador pode escolher um jogador para se tornar o Pukka na 2ª noite."
+        "reason": "O Invocador pode escolher um jogador para se tornar a Pukka na 2ª noite."
     },
     {
         "target": "summoner",
         "trick": "riot",
-        "reason": "Se o Invocador criar Riot, todos os Minions se tornarão Riot."
+        "reason": "Se o Invocador criar um Pandemônio, todos os Lacaios se tornam Pandemônios."
     },
     {
         "target": "summoner",
@@ -322,7 +327,12 @@
     {
         "target": "summoner",
         "trick": "kazali",
-        "reason": "O Invocador não pode criar um Demônio em jogo. Se o Invocador criar um Demônio que não esteja em jogo, as mortes esta noite serão arbitrárias."
+        "reason": "O Invocador não pode criar um Dêmonio que está em jogo. Se o Invocador criar um Dêmonio que não está em jogo, as mortes essa noite são arbitrárias."
+    },
+    {
+        "target": "summoner",
+        "trick": "preacher",
+        "reason": "Se o Pregador escolheu o Invocador na 3ª noite ou antes, o Invocador escolhe qual Demônio, mas o Narrador escolhe qual jogador."
     },
     {
         "target": "baron",
@@ -408,6 +418,11 @@
         "target": "kazali",
         "trick": "choirboy",
         "reason": "O Kazali não pode escolher o Rei para virar Lacaio se um Coroinha estiver em jogo."
+    },
+    {
+        "target": "kazali",
+        "trick": "soldier",
+        "reason": "Se o Kazali transformar o Soldado em um Minion, o Soldier escolhe qual Minion que não está em jogo se tornará."
     },
     {
         "target": "riot",
@@ -560,29 +575,19 @@
         "reason": "Se há dois Al-Hadikhia vivos, o Al-Hadikhia que antes era Mulher Escarlate se torna Mulher Escarlate novamente."
     },
     {
-        "target": "alhadikhia",
-        "trick": "mastermind",
-        "reason": "Apenas um destes personagens pode estar em jogo. Jogadores do mal sabem qual deles está em jogo e qual jogador é esse personagem."
-    },
-    {
         "target": "organgrinder",
         "trick": "butler",
         "reason": "Se o Organista estiver causando votação de olhos fechados, o Mordomo pode levantar a mão para votar, mas seu voto só é contado se seu mestre também votou."
     },
     {
         "target": "organgrinder",
-        "trick": "flowergirl",
-        "reason": "Se os olhos dos jogadores estiverem fechados durante as nomeações devido ao Organista, a Florista acorda a noite para escolher um jogador: ela sabe se esse jogador votou hoje. (invés da sua habilidade normal)"
-    },
-    {
-        "target": "organgrinder",
         "trick": "minstrel",
-        "reason": "Apenas um destes personagens pode estar em jogo."
+        "reason": "Se o Bardo deixa todos bêbados, o Organista mantém sua habilidade, mas o Bardo pode abrir os olhos durante a votação."
     },
     {
         "target": "organgrinder",
         "trick": "preacher",
-        "reason": "Apenas um destes personagens pode estar em jogo."
+        "reason": "Se o Pregador remove a habilidade do Organista, o Organista mantém sua habilidade, mas o Pregador pode abrir os olhos durante a votação."
     },
     {
         "target": "vizier",
@@ -607,7 +612,7 @@
     {
         "target": "vizier",
         "trick": "magician",
-        "reason": "Apenas um destes personagens pode estar em jogo."
+        "reason": "Se o Vizir e o Mágico estão os dois em jogo, o Demônio não sabe seus Lacaios."
     },
     {
         "target": "vizier",
@@ -617,12 +622,17 @@
     {
         "target": "vizier",
         "trick": "politician",
-        "reason": "O Político pode ser considerado um mal para o Vizir."
+        "reason": "O Político pode registrar como do mau para o Vizir."
+    },
+    {
+        "target": "vizier",
+        "trick": "alsaahir",
+        "reason": "Se o Vizir estiver em jogo, o Alsaahir também deverá adivinhar qual(is) Demônio(s) está(ão) em jogo."
     },
     {
         "target": "vortox",
         "trick": "banshee",
-        "reason": "Se o Vortox estiver em jogo e o Demônio matar o Banshee, os jogadores ainda descobrirão que o Banshee morreu."
+        "reason": "Se o Vortox está em jogo e o Demônio mata a Banshee, os jogadores ainda são informados que a Banshee morreu."
     },
     {
         "target": "ogre",
@@ -632,6 +642,11 @@
     {
         "target": "philosopher",
         "trick": "bountyhunter",
-        "reason": "Se o Filósofo ganhar a habilidade Caçador de Recompensas, um habitante da cidade pode se tornar mau."
+        "reason": "Se o Filósofo ganhar a habilidade do Mercenário, um Cidadão pode tornar-se mau."
+    },
+    {
+        "target": "mastermind",
+        "trick": "alhadikhia",
+        "reason": "Se a Al-Hadikhia morre por execução e o Mentor está vivo, a Al-Hadikhia escolhe 3 jogadores do bem essa noite: se todos escolherem viver, o mau vence, caso contrário o bem vence."
     }
 ]

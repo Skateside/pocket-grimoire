@@ -37,6 +37,15 @@
         ]
     },
     {
+        "id": "alsaahir",
+        "name": "Alsaahir",
+        "ability": "每天白天一次，如果你公開猜出哪些玩家是僕從、哪些玩家是惡魔，則好人隊伍獲勝。",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
         "id": "amnesiac",
         "name": "失憶患者",
         "ability": "你不知道你擁有的能力。每天白天，私下猜測你的能力，你得知你的猜測有多準確。",
@@ -105,7 +114,7 @@
     {
         "id": "balloonist",
         "name": "氣球飛行員",
-        "ability": "每天晚上，你得知每種角色類別的一位玩家，直到你已得知所有類別。[+1 城外人]",
+        "ability": "每天晚上，你得知每種角色類別的一位玩家，直到你已得知所有類別。[+0 或 +1 城外人]",
         "firstNightReminder": "選擇一個角色類別，指向一個為該類別的玩家，以「已得知」標記該玩家。",
         "otherNightReminder": "選擇一個旁邊還沒放置「已得知」標記的角色類別，有選擇到的話，指向一個為該類別的玩家，以「已得知」標記該玩家。",
         "remindersGlobal": [],
@@ -1093,7 +1102,9 @@
         "firstNightReminder": "食人魔指向一名玩家（不是他們自己）並成為他們的陣營。",
         "otherNightReminder": "",
         "remindersGlobal": [],
-        "reminders": []
+        "reminders": [
+            "朋友"
+        ]
     },
     {
         "id": "ojo",
