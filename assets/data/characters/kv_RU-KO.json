@@ -38,8 +38,8 @@
     },
     {
         "id": "alsaahir",
-        "name": "Alsaahir",
-        "ability": "Once per day, if you publicly guess which players are Minion(s) and which are Demon(s), good wins.",
+        "name": "Алсаахир",
+        "ability": "Луннас ӧтчыд, публично кӧ гӧгӧрвоан, кутшӧм ворсысьяс Миньон(ъяс), а кутшӧм Демон(ъяс), бур вермӧмъяс.",
         "firstNightReminder": "",
         "otherNightReminder": "",
         "remindersGlobal": [],
@@ -128,13 +128,13 @@
     },
     {
         "id": "banshee",
-        "name": "Banshee",
-        "ability": "If the Demon kills you, all players learn this. From now on, you may nominate twice per day and vote twice per nomination.",
+        "name": "Банши",
+        "ability": "Демон кӧ тэнӧ виас, став ворсысьыс велӧдчӧны та вылӧ. Талунсянь ті верманныд луннас кыкысь петкӧдлыны да гӧлӧсуйтны кыкысь быд номинацияысь.",
         "firstNightReminder": "",
-        "otherNightReminder": "Announce that the Banshee has died.",
+        "otherNightReminder": "Юӧртӧй, мый Банши куліс.",
         "remindersGlobal": [],
         "reminders": [
-            "Has Ability"
+            "Имеет способность"
         ]
     },
     {
@@ -214,8 +214,8 @@
     {
         "id": "bootlegger",
         "name": "Бутлегер",
-        "ability": "This script has homebrew characters or rules.",
-        "firstNightReminder": "Announce the Bootlegger is in play and inform the group of all homebrew characters and/or rules you are using in this game.",
+        "ability": "Тайӧ скриптын эмӧсь гортса шыпасъяс либӧ правилӧяс.",
+        "firstNightReminder": "Юӧртӧй, мый Бутлеггер ворсӧмын да юӧртӧй группалы став гортса персонажъяс йылысь да/либӧ правилӧяс йылысь, кодъясӧн ті ​​вӧдитчанныд тайӧ ворсӧмас.",
         "otherNightReminder": "",
         "remindersGlobal": [],
         "reminders": []
@@ -367,12 +367,12 @@
     {
         "id": "deusexfiasco",
         "name": "Фиаско",
-        "ability": "Once per game, the Storyteller will make a \"mistake\", correct it and publicly admit to it.",
+        "ability": "Ворсӧм вылӧ ӧтчыд Мойдысь лӧсьӧдас «ӧшыбка», бурмӧдас сійӧс да публично признайтчас та йылысь.",
         "firstNightReminder": "",
         "otherNightReminder": "",
         "remindersGlobal": [],
         "reminders": [
-            "Whoops"
+            "Уп"
         ]
     },
     {
@@ -1097,13 +1097,13 @@
     },
     {
         "id": "ogre",
-        "name": "Ogre",
-        "ability": "On your 1st night, choose a player (not yourself): you become their alignment (you don't know which) even if drunk or poisoned.",
-        "firstNightReminder": "The Ogre points to a player (not themselves) and becomes their alignment.",
+        "name": "Огр",
+        "ability": "1-ӧд войнас бӧрйы ворсысьӧс (абу ассьыд): тэ лоан налӧн выравниваниеӧн (тэ он тӧд, кутшӧм) кӧть и юӧмӧн либӧ отравитӧмӧн.",
+        "firstNightReminder": "Огр петкӧдлӧ ворсысьӧс (абу асьнысӧ) да лоӧ налӧн выравниваниеӧн.",
         "otherNightReminder": "",
         "remindersGlobal": [],
         "reminders": [
-            "Friend"
+            "Ёрт"
         ]
     },
     {
@@ -1510,15 +1510,15 @@
     },
     {
         "id": "summoner",
-        "name": "Summoner",
-        "ability": "You get 3 bluffs. On the 3rd night, choose a player: they become an evil Demon of your choice. [No Demon]",
-        "firstNightReminder": "Show the 'These characters are not in play' card. Show 3 character tokens of good characters not in play.",
-        "otherNightReminder": "If it is the 3rd night, wake the Summoner. They point to a player and a Demon on the character sheet - that player becomes that Demon.",
+        "name": "Призывник",
+        "ability": "Ті босьтанныд 3 блеф. 3-ӧд войнас бӧрйы ворсысьӧс: найӧ лоӧны тэнад бӧрйӧм лёк Демонӧн. [Но Демон].",
+        "firstNightReminder": "Петкӧдлӧй «Тайӧ персонажъясыс абу ворсӧмын» карточка. Петкӧдлӧй 3 персонажлысь жетонъяс бур персонажъяслысь абу ворсӧмын.",
+        "otherNightReminder": "3-ӧд вой кӧ, ловзьӧд Призывникӧс. Найӧ петкӧдлӧны персонаж лист вылын ворсысьӧс да Демонӧс - сійӧ ворсысьыс лоӧ сійӧ Демонӧн.",
         "remindersGlobal": [],
         "reminders": [
-            "Night 1",
-            "Night 2",
-            "Night 3"
+            "вой",
+            "2-ӧд вой",
+            "3-ӧд вой"
         ]
     },
     {

@@ -41,7 +41,7 @@ messages:
     no_characters: В сценарии не обнаружено подходящих ролей.
     player_name: Как зовут этого игрока?
     custom_info_token: Введите текст токена. Используйте **двойные звездочки**, чтобы выделить текст.
-    bag_disabled: "Cannot add these characters to the bag: {0}"
+    bag_disabled: "Верманныд содтыны тайӧ шыпасъяссӧ сумкаӧ: {0}"
 
 setup:
 
@@ -237,19 +237,19 @@ notes:
 acknowledgements:
     title: Права
     acknowledgements:
-        - <a href="https://bloodontheclocktower.com/" target="_blank" rel="noopener noreferrer">Blood on the Clocktower</a> is a trademark of Steven Medway and <a href="https://www.thepandemoniuminstitute.com/" target="_blank" rel="noopener noreferrer">The Pandemonium Institute</a>.
-        - Night reminders and other auxiliary text written by <a href="http://bignose.whitetree.org/projects/botc/diy/" target="_blank" rel="noopener noreferrer">Ben Finney</a>.
-        - Icons are taken from <a href="https://fontawesome.com/v5.15/icons" target="_blank" rel="noopener noreferrer">Font Awesome</a>.
-        - Many images and data are taken from <a href="https://www.clocktower.online" target="_blank" rel="noopener noreferrer">Clocktower.online</a> and the <a href="https://bloodontheclocktower.com/" target="_blank" rel="noopener noreferrer">Blood on the Clocktower website</a>.
-        - This is an unofficial virtual grimoire for Blood on the Clocktower. This project is free and the source code can be found on <a href="https://github.com/Skateside/pocket-grimoire" target="_blank" rel="noopener noreferrer">GitHub</a>. This project is not affiliated with the Pandemonium Institute. If you enjoy playing Blood on the Clocktower, <a href="https://bloodontheclocktower.com/buy" target="_blank" rel="noopener noreferrer">please consider buying your own grimoire</a> - as well as being more flexible than this digital version, it also supports the creators.
-        - Noticed a bug or have an improvement suggestion? Let me know in the <a href="https://discord.com/invite/Gd7ybwWbFk" target="_blank" rel="noopener noreferrer">pocket-grimoire channel on the unofficial discord server</a> (my name on there is "Skateside") or <a href="https://github.com/Skateside/pocket-grimoire/issues" target="_blank" rel="noopener noreferrer">raise an issue in GitHub</a>.
-        - <small>Version <span id="version"></span></small>
+        - <a href="https://bloodontheclocktower.com/" target="_blank" rel="noopener noreferrer">Вир часі вылын</a> - тайӧ Стивен Медуэйлӧн да <a href="https:/ вузасян пас. /www.пандемония институт</a>.
+        - Войся казьтылӧмъяс да мукӧд отсасян текст, кодӧс гижис <a href="http://bignose.whitetree.org/projects/botc/diy/" target="_blank" rel="noopener noreferrer">Бен Финни</a>.
+        - Иконкаяс босьтӧма <a href="https://fontawesome.com/v5.15/icons" target="_blank" rel="ноопенер нореферрер">Шрифт Удивительнӧй</a> .
+        - Уна серпас да юӧр босьтӧма <a href="https://www.clocktower.online" target="_blank" rel="noopener noreferrer">Часъяс.онлайн</a> да <a href="https . ://cloodontheclocktower.com/" target="_blank" rel="ноопенер ни реферер">Вир часіяс сайт вылын</a>.
+        - Тайӧ неофициальнӧй виртуальнӧй гримуар «Кровь на часовой башне» вылӧ. Тайӧ проектыс дон босьттӧг да юр кодсӧ позьӧ аддзыны <a href="https://github.com/Skateside/pocket-grimoire" target="_blank" rel="noopener noreferrer">GitHub</a> сайтысь. Тайӧ проектыс абу йитчӧма «Пандемония» институткӧд. Ті кӧ радейтанныд ворсны «Вир часі вылын», мӧвпыштӧй ньӧбны ассьыныд гримуар</a> - а сідзжӧ лоӧмӧн ёнджыка гибкӧйӧн тайӧ цифрӧвӧй версияысь, сійӧ тшӧтш отсалӧ лӧсьӧдысьяслы.
+        - Пасъянныд тырмытӧмтор либӧ эм бурмӧдӧм йылысь мӧвп? Тӧдмӧдӧй менӧ <a href="https://discord.com/invite/Gd7ybwWbFk" target="_blank" rel="noopener noreferrer">карманнӧй-гримуар каналын неофициальнӧй дискорд сервер вылын</a> (менам ним вылын эм "Скейтсайд") либӧ <a href="https://github.com/Скейтсайд/карманнӧй-гримуар/вопросъяс" target="_blank" rel="noopener noreferrer">лэптыны GitHub-ын мытшӧд</a> .
+        - <small>Версия <span id="version"></span></small>
 
 errors:
     homebrew_json:
-        not_homebrew: Not homebrew entry "%id%"
-        unrecognised_team: Unrecognised team "%team%"
-        not_find_id: Could not find ID "%id%"
-        not_recognise_character: Could not recognise character "%id%"
-        invalid_entry: 'Invalid entry for "%id%": %reasons%'
-        empty_teams: 'Empty teams: %teams%'
+        not_homebrew: Абу гортса гижӧд "%id%"
+        unrecognised_team: Тӧдтӧм команда "%команда%"
+        not_find_id: Эз вермы аддзыны "%id%" идентификатор
+        not_recognise_character: Эз вермы тӧдмавны "%id%" шыпас
+        invalid_entry: '"%id%" вылӧ лӧсявтӧм гижӧд: %reasons%'
+        empty_teams: 'Пуста командаяс: %teams%'
