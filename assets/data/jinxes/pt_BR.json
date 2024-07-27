@@ -20,6 +20,11 @@
         "reason": "Se o Malabarista tenta adivinhar no seu primeiro dia e morre por execução, a noite o Canibal vivo, sabe quantos estavam corretos."
     },
     {
+        "target": "cannibal",
+        "trick": "zealot",
+        "reason": "Se o Canibal ganhar a habilidade Zealot, o Canibal aprende isso."
+    },
+    {
         "target": "lunatic",
         "trick": "mathematician",
         "reason": "Se o Lunático não atacar o(s) mesmo(s) jogador(es) que o Demônio, isto conta para o Matemático."
@@ -173,6 +178,11 @@
         "target": "legion",
         "trick": "hatter",
         "reason": "Se o Chapeleiro morrer e Legião estiver em jogo, nada acontece. Se o Chapeleiro morrer e um jogador do mal escolher Legião, todos os jogadores do mal atuais se tornarão Legião."
+    },
+    {
+        "target": "legion",
+        "trick": "zealot",
+        "reason": "O Zealot pode ser registrado como maligno para a habilidade da Legion."
     },
     {
         "target": "fanggu",
@@ -570,6 +580,11 @@
         "reason": "Se o Chapeleiro morrer, Pandemônio estiver em jogo e um Pandemônio escolhe um Demônio diferente, um time do mal normal é criado dos jogadores Pandemônio. Se o Chapeleiro morrer e o Demônio escolher Pandemônio, Lacaios também se tornam Pandemônio."
     },
     {
+        "target": "riot",
+        "trick": "zealot",
+        "reason": "Se você for nomeado, você deve nomear novamente, mesmo se estiver morto."
+    },
+    {
         "target": "alhadikhia",
         "trick": "scarletwoman",
         "reason": "Se há dois Al-Hadikhia vivos, o Al-Hadikhia que antes era Mulher Escarlate se torna Mulher Escarlate novamente."
@@ -628,6 +643,11 @@
         "target": "vizier",
         "trick": "alsaahir",
         "reason": "Se o Vizir estiver em jogo, o Alsaahir também deverá adivinhar qual(is) Demônio(s) está(ão) em jogo."
+    },
+    {
+        "target": "vizier",
+        "trick": "zealot",
+        "reason": "O Zealot pode ser registrado como maligno para o Vizir."
     },
     {
         "target": "vortox",

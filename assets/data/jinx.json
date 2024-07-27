@@ -210,6 +210,10 @@
             {
                 "id": "Minstrel",
                 "reason": "If Legion died by execution today, Legion keeps their ability, but the Minstrel might learn they are Legion."
+            },
+            {
+                "id": "Zealot",
+                "reason": "The Zealot might register as evil to Legion’s ability."
             }
         ]
     },
@@ -515,6 +519,10 @@
                 "reason": "If the Hatter dies, Riot is in play and a Riot chooses a different Demon, a normal evil team is created from the Riot players. If the Hatter dies and the Demon chooses Riot, Minions become Riot too."
             },
             {
+                "id": "Zealot",
+                "reason": "If you are nominated, you must nominate again, even if dead."
+            },
+            {
                 "id": "半仙",
                 "reason": "当且仅当暴乱提名了半仙时，半仙不会死亡，而是让另一名\n存活的邪恶玩家死亡。（随后那名死亡的邪恶玩家可以立即\n发起新的提名。如果场上已经没有其他存活的邪恶玩家，那么\n半仙在被唯一存活的暴乱提名时会正常死亡。）"
             },
@@ -604,6 +612,10 @@
             {
                 "id": "Alsaahir",
                 "reason": "If the Vizier is in play, the Alsaahir must also guess which Demon(s) are in play."
+            },
+            {
+                "id": "Zealot",
+                "reason": "The Zealot might register as evil to the Vizier."
             }
         ]
     },
@@ -785,6 +797,10 @@
             {
                 "id": "Juggler",
                 "reason": "If the Juggler guesses on their first day and dies by execution, tonight the living Cannibal learns how many guesses the Juggler got correct."
+            },
+            {
+                "id": "Zealot",
+                "reason": "If the Cannibal gains the Zealot ability, the Cannibal learns this."
             }
         ]
     },

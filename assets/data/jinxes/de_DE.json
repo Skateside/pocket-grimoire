@@ -20,6 +20,11 @@
         "reason": "Wenn der Jongleur am ersten Tag rät und durch Hinrichtung stirbt, erfährt der lebende Kannibale heute Abend, wie viele Schätzungen der Jongleur richtig gemacht hat."
     },
     {
+        "target": "cannibal",
+        "trick": "zealot",
+        "reason": "Wenn der Kannibale die Fähigkeit des Eiferers erlangt, erfährt der Kannibale dies."
+    },
+    {
         "target": "lunatic",
         "trick": "mathematician",
         "reason": "Der Mathematiker erfährt, wenn der Wahnsinnige einen anderen Spieler angreift als der echte Dämon angegriffen hat."
@@ -173,6 +178,11 @@
         "target": "legion",
         "trick": "hatter",
         "reason": "Wenn der Hutmacher stirbt und Legion im Spiel ist, passiert nichts. Wenn der Hutmacher stirbt und ein böser Spieler Legion wählt, werden alle aktuellen bösen Spieler zu Legion."
+    },
+    {
+        "target": "legion",
+        "trick": "zealot",
+        "reason": "Der Eiferer könnte für die Fähigkeit der Legion als böse gelten."
     },
     {
         "target": "fanggu",
@@ -570,6 +580,11 @@
         "reason": "Wenn der Hutmacher stirbt, Riot im Spiel ist und ein Riot einen anderen Dämon wählt, wird aus den Riot-Spielern ein normales böses Team erstellt. Wenn der Hutmacher stirbt und der Dämon sich für Riot entscheidet, werden auch Minions zu Riot."
     },
     {
+        "target": "riot",
+        "trick": "zealot",
+        "reason": "Wenn Sie nominiert werden, müssen Sie erneut nominieren, auch wenn Sie tot sind."
+    },
+    {
         "target": "alhadikhia",
         "trick": "scarletwoman",
         "reason": "Wenn es zwei lebende Al-Hadikhias gibt, wird der \"Frau in Rot\" Al-Hadikhia wieder zu \"Frau in Rot\"."
@@ -628,6 +643,11 @@
         "target": "vizier",
         "trick": "alsaahir",
         "reason": "Wenn der Wesir im Spiel ist, muss der Alsaahir auch erraten, welcher/welche Dämon(en) im Spiel sind."
+    },
+    {
+        "target": "vizier",
+        "trick": "zealot",
+        "reason": "Der Eiferer könnte für den Wesir als böse gelten."
     },
     {
         "target": "vortox",

@@ -20,6 +20,11 @@
         "reason": "Hvis gjøgleren gjetter på sin første dag og dør ved henrettelse, i kveld får den levende kannibalen vite hvor mange gjetninger gjøgleren fikk riktige."
     },
     {
+        "target": "cannibal",
+        "trick": "zealot",
+        "reason": "Hvis kannibalen får Zealot-evnen, lærer kannibalen dette."
+    },
+    {
         "target": "lunatic",
         "trick": "mathematician",
         "reason": "Matematikaren lærer om den Sinnssjuke åtek spelarar annleis enn dei den ekte Demonen åtok."
@@ -173,6 +178,11 @@
         "target": "legion",
         "trick": "hatter",
         "reason": "Hvis Hattemakeren dør og Legion er i spill, skjer ingenting. Hvis hattemakeren dør og en ond spiller velger Legion, blir alle nåværende onde spillere Legion."
+    },
+    {
+        "target": "legion",
+        "trick": "zealot",
+        "reason": "Zeloten kan registrere seg som ond etter Legions evner."
     },
     {
         "target": "fanggu",
@@ -570,6 +580,11 @@
         "reason": "Hvis hattemakeren dør, er Riot i spill og en Riot velger en annen demon, et normalt ondt lag blir skapt fra Riot-spillerne. Hvis hattemakeren dør og demonen velger Riot, blir Minions også Riot."
     },
     {
+        "target": "riot",
+        "trick": "zealot",
+        "reason": "Hvis du er nominert, må du nominere på nytt, selv om du er død."
+    },
+    {
         "target": "alhadikhia",
         "trick": "scarletwoman",
         "reason": "Om det er 2 levande Al-Hadikhiaer, vert Babylon-Al-Hadikhiaen til Babylon att."
@@ -628,6 +643,11 @@
         "target": "vizier",
         "trick": "alsaahir",
         "reason": "Hvis vesiren er i spill, må Alsahiren også gjette hvilken(e) demon(er) som er i spill."
+    },
+    {
+        "target": "vizier",
+        "trick": "zealot",
+        "reason": "Zeloten kan registrere seg som ond for vesiren."
     },
     {
         "target": "vortox",

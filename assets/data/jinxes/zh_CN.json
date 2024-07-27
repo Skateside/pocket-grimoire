@@ -20,6 +20,11 @@
         "reason": "如果杂耍艺人在自己的首个白天猜测后在当天死于处决，当晚食人族会替杂耍艺人得知对应的信息。"
     },
     {
+        "target": "cannibal",
+        "trick": "zealot",
+        "reason": "如果食人族获得狂热者能力，食人族就会知道这一点。"
+    },
+    {
         "target": "lunatic",
         "trick": "mathematician",
         "reason": "数学家会得知疯子是否攻击了与真正的恶魔不同的目标。"
@@ -173,6 +178,11 @@
         "target": "legion",
         "trick": "hatter",
         "reason": "如果帽匠死亡时军团在场，则无事发生。如果帽匠死亡时一名邪恶玩家选择变成军团，当前所有邪恶玩家都会一同变成军团。"
+    },
+    {
+        "target": "legion",
+        "trick": "zealot",
+        "reason": "狂热者可能会在军团的能力中被视为邪恶。"
     },
     {
         "target": "fanggu",
@@ -570,6 +580,11 @@
         "reason": "如果帽匠死亡时暴乱在场，一名暴乱选择变成其他恶魔，则其他所有暴乱需要选择变成其他爪牙。如果帽匠死亡时恶魔选择变成暴乱，所有爪牙会一同变成暴乱（如果发生在第三天后，则游戏会多进行一天）。"
     },
     {
+        "target": "riot",
+        "trick": "zealot",
+        "reason": "如果你被提名，你必须再次提名，即使死了。"
+    },
+    {
         "target": "alhadikhia",
         "trick": "scarletwoman",
         "reason": "如果出现两名存活的哈迪寂亚，则红唇女郎变成的哈迪寂亚会变回红唇女郎。"
@@ -628,6 +643,11 @@
         "target": "vizier",
         "trick": "alsaahir",
         "reason": "如果维齐尔在场，Alsaahir 还必须猜测哪些恶魔在场。"
+    },
+    {
+        "target": "vizier",
+        "trick": "zealot",
+        "reason": "狂热者可能会在维齐尔眼中被视为邪恶。"
     },
     {
         "target": "vortox",

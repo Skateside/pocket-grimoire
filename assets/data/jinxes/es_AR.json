@@ -20,6 +20,11 @@
         "reason": "Si el Malabarista adivina el primer día y muere en la ejecución, esta noche el Caníbal vivo aprende cuántas conjeturas acertó el Malabarista."
     },
     {
+        "target": "cannibal",
+        "trick": "zealot",
+        "reason": "Si el caníbal obtiene la habilidad de zelote, aprende esto."
+    },
+    {
         "target": "lunatic",
         "trick": "mathematician",
         "reason": "El Matemático sabe si el Lunático ataca a jugadores diferentes que el Demonio real."
@@ -173,6 +178,11 @@
         "target": "legion",
         "trick": "hatter",
         "reason": "Si el Sombrerero muere y la Legión está en juego, no pasa nada. Si el Sombrerero muere y un jugador malvado elige Legión, todos los jugadores malvados actuales se convierten en Legión."
+    },
+    {
+        "target": "legion",
+        "trick": "zealot",
+        "reason": "El zelote puede registrarse como malvado para la habilidad de Legion."
     },
     {
         "target": "fanggu",
@@ -570,6 +580,11 @@
         "reason": "Si el Sombrerero muere, Riot está en juego y Riot elige un Demonio diferente, se crea un equipo malvado normal a partir de los jugadores de Riot. Si el Sombrerero muere y el Demonio elige a Riot, los Minions también se convierten en Riot."
     },
     {
+        "target": "riot",
+        "trick": "zealot",
+        "reason": "Si te nominan, debes nominar de nuevo, incluso si estás muerto."
+    },
+    {
         "target": "alhadikhia",
         "trick": "scarletwoman",
         "reason": "Si hay dos Al-Hadikhias vivos, la Mujer Escarlata Al-Hadikhia vuelve a ser la Mujer Escarlata."
@@ -628,6 +643,11 @@
         "target": "vizier",
         "trick": "alsaahir",
         "reason": "Si el Visir está en juego, el Alsaahir también debe adivinar qué demonio(s) están en juego."
+    },
+    {
+        "target": "vizier",
+        "trick": "zealot",
+        "reason": "El zelote puede registrarse como malvado para el visir."
     },
     {
         "target": "vortox",

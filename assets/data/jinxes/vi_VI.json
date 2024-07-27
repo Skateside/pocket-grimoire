@@ -20,6 +20,11 @@
         "reason": "Nếu Tung hứng đoán trong ngày đầu tiên và bị hành quyết, tối nay Ăn thịt người biết có bao nhiêu người Tung hứng đoán dúng."
     },
     {
+        "target": "cannibal",
+        "trick": "zealot",
+        "reason": "Nếu Cannibal có được khả năng Zealot, Cannibal sẽ học được điều này."
+    },
+    {
         "target": "lunatic",
         "trick": "mathematician",
         "reason": "Nhà toán học biết khi Người điên tấn công (những) người khác với người Quỷ thật tấn công."
@@ -173,6 +178,11 @@
         "target": "legion",
         "trick": "hatter",
         "reason": "Nếu Thợ làm mũ chết mà có Legion trong game, không có gì xảy ra. Nếu Thợ làm mũ chết và người xấu chon Legion, tất cả người xấu hiện tại trở thành Legion."
+    },
+    {
+        "target": "legion",
+        "trick": "zealot",
+        "reason": "Zealot có thể được ghi nhận là ác quỷ đối với khả năng của Legion."
     },
     {
         "target": "fanggu",
@@ -570,6 +580,11 @@
         "reason": "Nếu Thợ làm mũ chết, có Nổi loạn trong game và Nổi loạn chọn Quỷ khác, một phe xấu cơ bản được tạo ra từ những Nổi loạn. Nếu Thợ làm mũ chết và Quỷ chọn Nổi loạn, Tay sai sẽ cũng trở thành Riot."
     },
     {
+        "target": "riot",
+        "trick": "zealot",
+        "reason": "Nếu bạn được đề cử, bạn phải đề cử lại, ngay cả khi đã chết."
+    },
+    {
         "target": "alhadikhia",
         "trick": "scarletwoman",
         "reason": "Nếu có 2 Al-Hadikhia còn sống, Phụ nữ đỏ là Al-Hadikhia trở về thành Phụ nữ đỏ bình thường."
@@ -628,6 +643,11 @@
         "target": "vizier",
         "trick": "alsaahir",
         "reason": "Nếu Tể tướng đang chơi, Alsaahir cũng phải đoán xem (những) Ác quỷ nào đang chơi."
+    },
+    {
+        "target": "vizier",
+        "trick": "zealot",
+        "reason": "Zealot có thể được ghi nhận là ác quỷ đối với Vizier."
     },
     {
         "target": "vortox",

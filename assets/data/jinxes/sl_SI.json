@@ -20,6 +20,11 @@
         "reason": "Če žongler prvi dan ugiba in zaradi usmrtitve umre, nocoj živi kanibal izve, koliko ugibanj je žongler pravilnih."
     },
     {
+        "target": "cannibal",
+        "trick": "zealot",
+        "reason": "Če kanibal pridobi sposobnost Zealot, se kanibal tega nauči."
+    },
+    {
         "target": "lunatic",
         "trick": "mathematician",
         "reason": "Matematik izve, če Blaznež izbere drugega igralca, kot ga Demon napade."
@@ -173,6 +178,11 @@
         "target": "legion",
         "trick": "hatter",
         "reason": "Če Klobučar umre in je Legion v igri, se ne zgodi nič. Če Klobučar umre in zlobni igralec izbere Legion, vsi trenutni zlobni igralci postanejo Legion."
+    },
+    {
+        "target": "legion",
+        "trick": "zealot",
+        "reason": "Zealot bi se lahko prijavil kot zlo za Legionino sposobnost."
     },
     {
         "target": "fanggu",
@@ -570,6 +580,11 @@
         "reason": "Če Klobučar umre, je v igri Riot in Riot izbere drugega demona, se iz igralcev Riot ustvari običajna zlobna ekipa. Če Klobučar umre in Demon izbere Riot, postanejo tudi Minioni Riot."
     },
     {
+        "target": "riot",
+        "trick": "zealot",
+        "reason": "Če ste nominirani, morate ponovno nominirati, tudi če ste mrtvi."
+    },
+    {
         "target": "alhadikhia",
         "trick": "scarletwoman",
         "reason": "Če kadarkoli živita 2 Al-Hadikhia, Škrlatna dama znova postane Škrlatna dama."
@@ -628,6 +643,11 @@
         "target": "vizier",
         "trick": "alsaahir",
         "reason": "Če je v igri vezir, mora tudi Alsaahir uganiti, kateri demoni so v igri."
+    },
+    {
+        "target": "vizier",
+        "trick": "zealot",
+        "reason": "Zelot se lahko vezirju pripiše kot zlo."
     },
     {
         "target": "vortox",

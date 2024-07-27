@@ -224,7 +224,7 @@
         "otherNightReminder": "Om den avslöjade onda spelaren har dött, peka på en annan ond spelare.",
         "remindersGlobal": [],
         "reminders": [
-            "Avslöjad"
+            "Visad"
         ]
     },
     {
@@ -270,7 +270,7 @@
     {
         "id": "cannibal",
         "name": "Kannibalen",
-        "ability": "Du har förmågan från den som sist dog av avrättning. Om hen är ond är du förgiftad tills en god spelare dör av avrättning.",
+        "ability": "Du har samma förmåga som den som sist dog av avrättning. Om hen är ond är du förgiftad tills en god spelare dör av avrättning.",
         "firstNightReminder": "",
         "otherNightReminder": "",
         "remindersGlobal": [],
@@ -282,12 +282,12 @@
     {
         "id": "cerenovus",
         "name": "Cerenovus",
-        "ability": "Välj en spelare och en god roll varje natt; hen låtsas att hen är den rollen nästa dag, annars kanske hen avrättas.",
+        "ability": "Välj en spelare och en god roll varje natt; hen är rabiat om att hen är den rollen nästa dag, annars kanske hen avrättas.",
         "firstNightReminder": "Cerenovus pekar på en spelare och sedan på en roll på sitt ark. Väck den spelaren. Visa kortet ”Den här rollen valde dig” följt av Cerenovus bricka. Visa den valda rollens bricka. Om spelaren inte försöker övertyga de andra om att hen är den rollen imorgon kan hen avrättas.",
         "otherNightReminder": "Cerenovus pekar på en spelare och sedan på en roll på sitt ark. Väck den spelaren. Visa kortet ”Den här rollen valde dig” följt av Cerenovus bricka. Visa den valda rollens bricka. Om spelaren inte försöker övertyga de andra om att hen är den rollen imorgon kan hen avrättas.",
         "remindersGlobal": [],
         "reminders": [
-            "Låtsas"
+            "Rabiat"
         ]
     },
     {
@@ -617,7 +617,7 @@
         "otherNightReminder": "",
         "remindersGlobal": [],
         "reminders": [
-            "Avslöjad"
+            "Hävdad"
         ]
     },
     {
@@ -699,12 +699,12 @@
     {
         "id": "harpy",
         "name": "Harpyan",
-        "ability": "Välj 2 spelare varje natt; nästa dag låtsas den första att den andra är ond, annars kanske en eller båda dör.",
+        "ability": "Välj 2 spelare varje natt; nästa dag är den första rabiat om att den andra är ond, annars kanske en eller båda dör.",
         "firstNightReminder": "Väck Harpyan; hen pekar på två spelare, en i taget. Väck den första spelaren som Harpyan pekade på, visa kortet ”Den här rollen valde dig”, visa Harpyans rollbricka och peka på den andra spelaren som Harpyan pekade på.",
         "otherNightReminder": "Väck Harpyan; hen pekar på två spelare, en i taget. Väck den första spelaren som Harpyan pekade på, visa kortet ”Den här rollen valde dig”, visa Harpyans rollbricka och peka på den andra spelaren som Harpyan pekade på.",
         "remindersGlobal": [],
         "reminders": [
-            "Låtsas",
+            "Rabiat",
             "Utpekad"
         ]
     },
@@ -853,8 +853,7 @@
         "otherNightReminder": "",
         "remindersGlobal": [],
         "reminders": [
-            "Avslöjad",
-            "Avslöjad"
+            "Visad"
         ]
     },
     {
@@ -912,7 +911,7 @@
     {
         "id": "lleech",
         "name": "Lleech",
-        "ability": "Välj en spelare varje natt*; hen dör. I början väljer du en levnade spelare; hen förgiftas, och du dör endast om hen dör.",
+        "ability": "Välj en spelare varje natt*; hen dör. I början väljer du en spelare; hen förgiftas. Du dör endast om hen är död.",
         "firstNightReminder": "Lleech pekar på en spelare. Sätt brickan ”Förgiftad” vid den valda spelarens rollbricka.",
         "otherNightReminder": "Lleech pekar på en spelare. Den spelaren dör.",
         "remindersGlobal": [],
@@ -925,13 +924,11 @@
         "id": "lunatic",
         "name": "Galningen",
         "ability": "Du tror att du är en Demon, men det är du inte. Demonen vet vem du är och vem du väljer på natten.",
-        "firstNightReminder": "Om det är 7 eller fler spelare: Visa Galningen godtyckliga spelare som ”Lakejer”, lika många som antalet faktiska Lakejer i spel. Visa 3 godtyckliga goda rollers brickor. Om Galningens bricka är en Demon som skulle vakna inatt, låt Galningen utföra Demonhandlingen. Sätt ut Galningens ”Attack”-markörer. Väck Demonen. Visa Demonens riktiga roll. Visa Demonen vilken spelare som är Galningen. Om Galningen valde spelare, visa den riktiga Demonen varje vald spelare. Ta bort Galningens ”Attack”-markörer.",
-        "otherNightReminder": "Låt Galningen utföra Demonens handling och sätt ut Galningens ”Attack”-markörer. Om Galningen valde spelare så väck Demonen, visa ”Attack”-markören och peka på varje markerad spelare. Ta bort Galningens ”Attack”-markörer.",
+        "firstNightReminder": "Om det är 7 eller fler spelare: Visa Galningen godtyckliga spelare som ”Lakejer”, lika många som antalet faktiska Lakejer i spel. Visa 3 godtyckliga goda rollers brickor. Om Galningens bricka är en Demon som skulle vakna inatt, låt Galningen utföra Demonhandlingen. Sätt ut Galningens ”Vald”-markörer. Väck Demonen. Visa Demonens riktiga roll. Visa Demonen vilken spelare som är Galningen. Om Galningen valde spelare, visa den riktiga Demonen varje vald spelare. Ta bort Galningens ”Vald”-markörer.",
+        "otherNightReminder": "Låt Galningen utföra Demonens handling och sätt ut Galningens ”Vald”-markörer. Om Galningen valde spelare så väck Demonen, visa ”Vald”-markören och peka på varje markerad spelare. Ta bort Galningens ”Vald”-markörer.",
         "remindersGlobal": [],
         "reminders": [
-            "Attack 1",
-            "Attack 2",
-            "Attack 3"
+            "Vald"
         ]
     },
     {
@@ -1051,7 +1048,7 @@
     {
         "id": "mutant",
         "name": "Mutanten",
-        "ability": "Om du försöker avslöja att du är Utböling kanske du blir avrättad.",
+        "ability": "Om du är rabiat om att du är Utböling kanske du blir avrättad.",
         "firstNightReminder": "",
         "otherNightReminder": "",
         "remindersGlobal": [],
@@ -1094,7 +1091,7 @@
     {
         "id": "ogre",
         "name": "Trollet",
-        "ability": "Din första natt väljer du en spelare (inte dig själv); du går över till hens lag (men vet inte vilket) även om du är full eller förgiftad.",
+        "ability": "Din första natt väljer du en spelare (inte dig själv); du går över till hens lag (men vet inte vilket), även om du är full eller förgiftad.",
         "firstNightReminder": "Trollet pekar på en spelare (inte sig själv) och går över till hens lag.",
         "otherNightReminder": "",
         "remindersGlobal": [],
@@ -1166,12 +1163,12 @@
     {
         "id": "pixie",
         "name": "Älvan",
-        "ability": "Du vet från början 1 Bybo som är i spel. Om du låtsas att du är den rollen får du dess förmåga när den dör.",
+        "ability": "Du vet från början 1 Bybo som är i spel. Om du är rabiat om att du är den rollen får du dess förmåga när den dör.",
         "firstNightReminder": "Visa Älvan rollbrickan för en Bybo som är i spel.",
         "otherNightReminder": "",
         "remindersGlobal": [],
         "reminders": [
-            "Låtsas",
+            "Rabiat",
             "Har förmåga"
         ]
     },
@@ -1191,7 +1188,7 @@
         "name": "Po",
         "ability": "Varje natt* kan du välja en spelare; hen dör. Om du inte valde någon sist väljer du 3 nästa natt.",
         "firstNightReminder": "",
-        "otherNightReminder": "Om Po inte valde någon igår natt pekar Po på tre spelare. Annars skaka Po på huvudet för nej eller pekar på en spelare. Alla valda spelare dör.",
+        "otherNightReminder": "Om Po inte valde någon igår natt pekar Po på tre spelare. Annars skakar Po på huvudet för nej eller pekar på en spelare. Alla valda spelare dör.",
         "remindersGlobal": [],
         "reminders": [
             "Död",
@@ -1490,7 +1487,7 @@
         "otherNightReminder": "",
         "remindersGlobal": [],
         "reminders": [
-            "Avslöjad"
+            "Visad"
         ]
     },
     {
@@ -1705,6 +1702,15 @@
         "reminders": [
             "Död"
         ]
+    },
+    {
+        "id": "zealot",
+        "name": "Fanatikern",
+        "ability": "Om minst 5 spelare lever måste du rösta för varje nominering.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": []
     },
     {
         "id": "zombuul",

@@ -20,6 +20,11 @@
         "reason": "Se il Giocoliere indovina il primo giorno e muore per esecuzione, stasera il Cannibale vivente apprende quante ipotesi il Giocoliere ha corretto."
     },
     {
+        "target": "cannibal",
+        "trick": "zealot",
+        "reason": "Se il Cannibale ottiene l'abilità Zelota, il Cannibale impara questo."
+    },
+    {
         "target": "lunatic",
         "trick": "mathematician",
         "reason": "Il Matematico apprende se il Lunatico attacca un giocatore (o giocatori) diverso da quello che il vero demone ha attaccato."
@@ -173,6 +178,11 @@
         "target": "legion",
         "trick": "hatter",
         "reason": "Se il Cappellaio muore e Legione è in gioco, non succede niente. Se il Cappellaio muore e un giocatore malvagio sceglie Legione, tutti i giocatori attualmente cattivi diventano Legione."
+    },
+    {
+        "target": "legion",
+        "trick": "zealot",
+        "reason": "Lo Zelota potrebbe essere registrato come malvagio per l'abilità della Legione."
     },
     {
         "target": "fanggu",
@@ -570,6 +580,11 @@
         "reason": "Se il Cappellaio muore, Rivolta è in gioco e Rivolta sceglie un diverso Demone, una normale squadra cattiva è creata con i giocatori Rivolta. Se il Cappellaio muore e il Demone sceglie Rivolta, anche i Seguaci diventano Rivolta."
     },
     {
+        "target": "riot",
+        "trick": "zealot",
+        "reason": "Se vieni nominato, devi nominare di nuovo, anche se morto."
+    },
+    {
         "target": "alhadikhia",
         "trick": "scarletwoman",
         "reason": "Se ci sono due Al-Hadikhia vivi, la Donna Scarlatta Al-Hadikhia diventa nuovamente la Donna Scarlatta."
@@ -628,6 +643,11 @@
         "target": "vizier",
         "trick": "alsaahir",
         "reason": "Se è in gioco il Visir, l'Alsaahir deve anche indovinare quali Demoni sono in gioco."
+    },
+    {
+        "target": "vizier",
+        "trick": "zealot",
+        "reason": "Lo Zelota potrebbe essere registrato come malvagio per il Visir."
     },
     {
         "target": "vortox",

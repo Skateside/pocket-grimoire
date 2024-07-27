@@ -20,6 +20,11 @@
         "reason": "Si le Jongleur a tenté de deviner des rôles son premier jour et qu'il meurt éxécuté, cette nuit nuit le Cannibale apprend combien de combinaisons correctes le Jongleur a eu."
     },
     {
+        "target": "cannibal",
+        "trick": "zealot",
+        "reason": "Si le Cannibale obtiens la capacité du Fanatique, le Cannibale l'apprend."
+    },
+    {
         "target": "lunatic",
         "trick": "mathematician",
         "reason": "Le Mathématicien apprend si le Lunatique attaque des joueurs differents de ceux attaqués par le démon."
@@ -173,6 +178,11 @@
         "target": "legion",
         "trick": "hatter",
         "reason": "Si le Chapelier meurt et que la Légion est en jeu, rien ne se passe. Si le Chapelier meurt et qu'un joueur maléfique choisit Légion, tous les joueurs maléfiques actuels deviennent Légion."
+    },
+    {
+        "target": "legion",
+        "trick": "zealot",
+        "reason": "Le Fanatique peut être reconnu comme étant maléfique par la Légion."
     },
     {
         "target": "fanggu",
@@ -570,6 +580,11 @@
         "reason": "Si le Chapelier meurt, que les Emeutiers sont en jeu et que l'un d'entre eux choisit un Démon différent, une équipe maléfique normale est créée à partir des Emeutiers. Si le Chapelier meurt et que le Démon choisit Emeutier, les Sbires deviennent également des Emeutiers."
     },
     {
+        "target": "riot",
+        "trick": "zealot",
+        "reason": "Si vous êtes nomminé, vous devez nomminer à nouveau, même si vous êtes mort."
+    },
+    {
         "target": "alhadikhia",
         "trick": "scarletwoman",
         "reason": "S'il y a deux Al-Hadikhias vivants, la Croqueuse d'Homme Al-Hadikhia redevient la Croqueuse d'Homme."
@@ -628,6 +643,11 @@
         "target": "vizier",
         "trick": "alsaahir",
         "reason": "Si le Vizir est en jeu, l'Alsaahir doit également deviner quel(s) Démon(s) sont en jeu."
+    },
+    {
+        "target": "vizier",
+        "trick": "zealot",
+        "reason": "Le Fanatique peut être reconnu comme étant maléfique par le Vizir."
     },
     {
         "target": "vortox",

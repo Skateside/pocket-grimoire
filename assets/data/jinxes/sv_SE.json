@@ -20,6 +20,11 @@
         "reason": "Om Jonglören gissar på första dagen och dör av avrättning får den levande Kannibalen inatt veta hur många rätt Jonglören hade."
     },
     {
+        "target": "cannibal",
+        "trick": "zealot",
+        "reason": "Om kannibalen får selotförmågan lär sig kannibalen detta."
+    },
+    {
         "target": "lunatic",
         "trick": "mathematician",
         "reason": "Matematikern får veta om Galningen attackerar någon annan än den riktiga Demonen."
@@ -173,6 +178,11 @@
         "target": "legion",
         "trick": "hatter",
         "reason": "Om Hattmakaren dör och Legionen är i spel händer ingenting. Om Hattmakaren dör och en ond spelare väljer Legionen blir alla onda spelare till Legionen."
+    },
+    {
+        "target": "legion",
+        "trick": "zealot",
+        "reason": "Zeloten kan registrera sig som ond enligt Legions förmåga."
     },
     {
         "target": "fanggu",
@@ -570,6 +580,11 @@
         "reason": "Om Hattmakaren dör, Upproret är i spel och någon i Upproret väljer en annan Demon så blir alla i Upproret till ett vanligt ont lag. Om Hattmakaren dör och Demonen väljer Upproret så blir alla Lakejer också till Upproret."
     },
     {
+        "target": "riot",
+        "trick": "zealot",
+        "reason": "Om du är nominerad måste du nominera igen, även om du är död."
+    },
+    {
         "target": "alhadikhia",
         "trick": "scarletwoman",
         "reason": "Om det finns två levande al Hadikhia så slutar Röda damen att vara al Hadikhia och blir Röda damen igen."
@@ -628,6 +643,11 @@
         "target": "vizier",
         "trick": "alsaahir",
         "reason": "Om Vesiren är i spel måste al Saahir också gissa vilken Demon (eller vilka Demoner) som är i spel."
+    },
+    {
+        "target": "vizier",
+        "trick": "zealot",
+        "reason": "Zeloten kan registrera sig som ond för vesiren."
     },
     {
         "target": "vortox",

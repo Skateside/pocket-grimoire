@@ -20,6 +20,11 @@
         "reason": "如果雜耍人在自己的第一天進行了猜測並被處死，當晚食人族會得知雜耍人能力猜對的數量。"
     },
     {
+        "target": "cannibal",
+        "trick": "zealot",
+        "reason": "如果食人者獲得了狂熱者能力，食人者就會學到這一點。"
+    },
+    {
         "target": "lunatic",
         "trick": "mathematician",
         "reason": "數學家得知瘋子攻擊的玩家是否與真正的惡魔不同(計入數學家的能力)。"
@@ -173,6 +178,11 @@
         "target": "legion",
         "trick": "hatter",
         "reason": "如果帽匠死亡時軍團在遊戲中則無事發生。如果帽匠死亡時有邪惡玩家選擇軍團，則所有邪惡玩家變成軍團。"
+    },
+    {
+        "target": "legion",
+        "trick": "zealot",
+        "reason": "對於軍團的能力來說，狂熱者可能被認為是邪惡的。"
     },
     {
         "target": "fanggu",
@@ -570,6 +580,11 @@
         "reason": "如果帽匠死亡時暴徒在遊戲中且有暴徒選擇另一個惡魔，則暴徒們變成正常遊戲時的邪惡隊伍組合。如果帽匠死亡時惡魔選擇暴徒，則所有邪惡玩家變成暴徒。"
     },
     {
+        "target": "riot",
+        "trick": "zealot",
+        "reason": "如果您被提名，即使去世，也必須再次提名。"
+    },
+    {
         "target": "alhadikhia",
         "trick": "scarletwoman",
         "reason": "如果有兩個活著的哈迪基亞，則淫魔變成的哈迪基亞再次變回淫魔。"
@@ -628,6 +643,11 @@
         "target": "vizier",
         "trick": "alsaahir",
         "reason": "如果維齊爾在場，阿爾薩希爾也必須猜測哪些惡魔在場。"
+    },
+    {
+        "target": "vizier",
+        "trick": "zealot",
+        "reason": "狂熱者可能會被維齊爾視為邪惡。"
     },
     {
         "target": "vortox",
