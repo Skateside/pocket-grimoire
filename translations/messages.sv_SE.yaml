@@ -20,14 +20,14 @@ sheet:
     get_qr_code: Få QR-koden för det här rollarket
     get_sheet: Hämta det här arket
     credit: <a href="https://bloodontheclocktower.com/" target="_blank" rel="noopener noreferrer">Blood on the Clocktower</a> är ett varumärke som tillhör Steven Medway och <a href="https://www.thepandemoniuminstitute.com/" target="_blank" rel="noopener noreferrer">The Pandemonium Institute</a>
-    breakdown: Antalet för varje lag för antalet spelare.
+    breakdown: Antalet roller av varje typ för antalet spelare.
     count_plus: '%count%+'
 
 groups:
     players: Spelare
     townsfolk: Bybor
     outsider: Utbölingar
-    minion: Hantlangare
+    minion: Lakejer
     demon: Demoner
     traveller: Resenärer
     fabled: Fabler
@@ -35,17 +35,17 @@ groups:
 messages:
     good_team: Goda laget
     evil_team: Onda laget
-    empty_character_ability: Det här är en tom karaktär.
+    empty_character_ability: Det här är en tom roll.
     version_change_message: Den här appen har uppdaterats. Eftersom du kan ha fel data rekommenderar vi att du rensar allt i fönstret Rensa cache. Klicka på OK för att öppna fönstret eller Avbryt för att stänga det här meddelandet.
     invalid_script: Skriptformatet kändes inte igen.
     no_characters: Det gick inte att hitta några roller i skriptet.
     player_name: Vad heter den här spelaren?
     custom_info_token: Vad vill du att det ska stå på infobrickan? Använd **dubbla asterisker** för att framhäva text.
-    bag_disabled: 'Det går inte att lägga till dessa tecken i väskan: {0}'
+    bag_disabled: 'Du kan inte lägga följande roller i påsen: [X]'
 
 setup:
 
-    title: Uppsättning
+    title: Förberedelser
 
     buttons:
         select_edition: Välj upplaga
@@ -61,11 +61,11 @@ setup:
         bad_moon_rising: Bad Moon Rising
         sects_and_violets: Sects and Violets
         custom_script: Eget skript
-        custom_note: Ladda upp ett eget skript eller skriv in en URL till skriptet.
+        custom_note: Ladda upp ett eget skript, ange ett skripts URL, eller klistra in ett skripts JSON.
         custom_warning: Ladda bara JSON-filer från källor du litar på!
         upload: Ladda upp ett eget skript
         url: Fyll i en URL
-        paste: Klistra in från urklipp
+        paste: Klistra in
         unsupported: Pocket Grimoire stödjer inte hemmagjorda roller eller egna översättningar.
         select: Välj
 
@@ -85,7 +85,7 @@ setup:
 
     character_choice:
         title: Välj roll
-        description: Tryck på en bricka för att välja roll. Mörkare brickor har redan blivit valda.
+        description: Tryck på en bricka för att välja roll. Skuggade brickor har redan blivit valda.
 
     character_decision:
         title: Kom ihåg din roll
@@ -165,7 +165,7 @@ grimoire:
         remove: Ta bort brickan
         recent_reminders: 'Senaste påminnelserna:'
         player_name: Ange spelarnamn
-        ghost_vote: Spökröstning
+        ghost_vote: Röstbricka
 
     reminder_show:
         title: Påminnelse
@@ -210,19 +210,19 @@ night_order:
     other_night: Övriga nätter
     swipe_change: Svep för att ändra natt
     show: Visa roller som inte är i spel
-    show_dead: Visa döda karaktärer
+    show_dead: Visa döda roller
 
 info_tokens:
     title: Infobrickor
     info_tokens:
         isdemon: Det här är <strong>Demonen</strong>
-        isminion: Det här är dina <strong>Hantlangare</strong>
+        isminion: Det här är dina <strong>Lakejer</strong>
         notinplay: De här rollerna är <strong>inte i spel</strong>
         nominatetoday: <strong>Nominerade</strong> du idag?
         playeris: <strong>Den här spelaren</strong> är
         votetoday: <strong>Röstade</strong> du idag?
         youare: <strong>Du</strong> är
-        selectedyou: Denna roll <strong>valde</strong> dig
+        selectedyou: Denna förmåga <strong>påverkar</strong> dig
     custom: Egna infobrickor
     add_custom: Lägg till infobricka
     edit_custom: Redigera infobricka
@@ -231,25 +231,25 @@ info_tokens:
 notes:
     title: Berättaranteckningar
     label: Anteckningar
-    clear: Tydliga anteckningar
-    clear_warning: Är du säker på att du vill rensa anteckningarna?
+    clear: Ta bort anteckningar
+    clear_warning: Vill du verkligen ta bort alla anteckningar?
 
 acknowledgements:
-    title: Medverkande
+    title: Upphovsrätt
     acknowledgements:
         - <a href="https://bloodontheclocktower.com/" target="_blank" rel="noopener noreferrer">Blood on the Clocktower</a> är ett varumärke som tillhör Steven Medway och <a href="https://www.thepandemoniuminstitute.com/" target="_blank" rel="noopener noreferrer">The Pandemonium Institute</a>.
         - Nattpåminnelser och annan text är skriven av <a href="http://bignose.whitetree.org/projects/botc/diy/" target="_blank" rel="noopener noreferrer">Ben Finney</a>.
         - Ikonerna kommer från <a href="https://fontawesome.com/v5.15/icons" target="_blank" rel="noopener noreferrer">Font Awesome</a>.
         - Många bilder och data är hämtade från <a href="https://www.clocktower.online" target="_blank" rel="noopener noreferrer">Clocktower.online</a> och <a href="https://bloodontheclocktower.com/" target="_blank" rel="noopener noreferrer">Blood on the Clocktowers webbplats</a>.
         - Det här är en inofficiell virtuell spelbok för Blood on the Clocktower. Koden är öppen och finns på <a href="https://github.com/Skateside/pocket-grimoire" target="_blank" rel="noopener noreferrer">GitHub</a>. Projektet är inte knutet till The Pandemonium Institute. Om du gillar Blood on the Clocktower kan du <a href="https://bloodontheclocktower.com/buy" target="_blank" rel="noopener noreferrer">köpa din egen spelbok</a> för att stödja spelets skapare och få en mer flexibel spelbok än denna virtuella.
-        - 'Är det något som inte funkar som det ska? Tagga mig (på engelska) i <a href="https://discord.com/invite/Gd7ybwWbFk" target="_blank" rel="noopener noreferrer">kanalen #pocket-grimoire på den inofficiella Discordservern</a> (där heter jag Skateside) eller anmäl problemet i <a href="https://github.com/Skateside/pocket-grimoire/issues" target="_blank" rel="noopener noreferrer">GitHub</a>.'
+        - 'Är det något som inte funkar som det ska? Tagga @skateside (på engelska) i <a href="https://discord.com/invite/Gd7ybwWbFk" target="_blank" rel="noopener noreferrer">kanalen #pocket-grimoire på den inofficiella Discordservern</a> eller anmäl problemet i <a href="https://github.com/Skateside/pocket-grimoire/issues" target="_blank" rel="noopener noreferrer">raise an issue in GitHub</a>.'
         - <small>Version <span id="version"></span></small>
 
 errors:
     homebrew_json:
-        not_homebrew: Inte homebrew-posten "%id%"
-        unrecognised_team: Okänt team "%team%"
-        not_find_id: Kunde inte hitta ID "%id%"
-        not_recognise_character: Kunde inte känna igen tecknet "%id%"
-        invalid_entry: 'Ogiltig post för "%id%": %reasons%'
-        empty_teams: 'Tomma lag: %teams%'
+        not_homebrew: Det gick inte att känna igen "%id%"
+        unrecognised_team: Det gick inte att känna igen rolltypen "%team%"
+        not_find_id: Det gick inte att hitta ID "%id%"
+        not_recognise_character: Det gick inte att känna igen rollen "%id%"
+        invalid_entry: 'Ogiltig data för "%id%": %reasons%'
+        empty_teams: Inga roller av typen %teams%
