@@ -22,7 +22,7 @@
     {
         "target": "cannibal",
         "trick": "zealot",
-        "reason": "Nếu Cannibal có được khả năng Zealot, Cannibal sẽ học được điều này."
+        "reason": "Nếu Ăn thịt người có chức năng của Kẻ quá khích, Ăn thịt người biết điều này."
     },
     {
         "target": "lunatic",
@@ -132,7 +132,7 @@
     {
         "target": "lilmonsta",
         "trick": "magician",
-        "reason": "Mỗi đêm, Pháp sư chọn một Minion: nếu Minion và Lil' Monsta đó còn sống, Minion đó sẽ trông trẻ cho Lil' Monsta."
+        "reason": "Mỗi đêm, Ảo thuật gia chọn 1 Tay sai: nếu Tay sai đó và Lil' Monsta cùng còn sống, Tay sai đó trông non Lil' Monsta."
     },
     {
         "target": "lilmonsta",
@@ -167,12 +167,12 @@
     {
         "target": "legion",
         "trick": "preacher",
-        "reason": "Nếu Nhà truyền giáo chọn Quân đoàn, Quân đoàn sẽ giữ nguyên khả năng của họ, nhưng Nhà truyền giáo có thể biết họ là Quân đoàn."
+        "reason": "Nếu Mục sư chọn trúng Legion, Legion được giữ chức năng, nhưng Mục sư có thể biết họ là Legion."
     },
     {
         "target": "legion",
         "trick": "minstrel",
-        "reason": "Nếu hôm nay Legion chết do bị hành quyết, Legion vẫn giữ được khả năng của họ, nhưng Minstrel có thể biết họ là Legion."
+        "reason": "Nếu Legion chết vì hành quyết hôm nay, Legion được giữ chức năng, nhưng Người hát rong có thể biết họ là Legion."
     },
     {
         "target": "legion",
@@ -182,7 +182,7 @@
     {
         "target": "legion",
         "trick": "zealot",
-        "reason": "Zealot có thể được ghi nhận là ác quỷ đối với khả năng của Legion."
+        "reason": "Kẻ quá khích có thể thấy là người xấu với chức năng của Legion"
     },
     {
         "target": "fanggu",
@@ -342,7 +342,7 @@
     {
         "target": "summoner",
         "trick": "preacher",
-        "reason": "Nếu Nhà truyền giáo chọn Người triệu hồi vào hoặc trước đêm thứ 3, Người triệu hồi sẽ chọn Ác quỷ nào, nhưng Người kể chuyện sẽ chọn người chơi nào."
+        "reason": "Nếu Mục sư chọn trúng Kẻ triệu hồi trong hoặc trước ngày 3, Kẻ triệu hồi chọn 1 Quỷ, Người kể chuyện chọn người làm Quỷ."
     },
     {
         "target": "baron",
@@ -432,7 +432,7 @@
     {
         "target": "kazali",
         "trick": "soldier",
-        "reason": "Nếu Kazali biến Người lính thành Minion, Người lính sẽ chọn Minion không có trong trò chơi để trở thành."
+        "reason": "Nếu Kazali biến Chiến sĩ thành Tay sai, Chiến sĩ chọn 1 chức năng Tay sai ngoài game để trở thành."
     },
     {
         "target": "riot",
@@ -582,7 +582,7 @@
     {
         "target": "riot",
         "trick": "zealot",
-        "reason": "Nếu bạn được đề cử, bạn phải đề cử lại, ngay cả khi đã chết."
+        "reason": "Nếu bạn bị biểu quyết, bạn phải biểu quyết tiếp, ngay cả khi chết."
     },
     {
         "target": "alhadikhia",
@@ -597,12 +597,12 @@
     {
         "target": "organgrinder",
         "trick": "minstrel",
-        "reason": "Nếu Minstrel làm mọi người say, Máy mài đàn organ vẫn giữ được khả năng của họ nhưng Minstrel vẫn mở mắt khi bỏ phiếu."
+        "reason": "Nếu Người hát rong khiến mọi người say, Nhạc công đường phố được giữ chức năng nhưng người hát rong được mở mắt khi bỏ phiếu."
     },
     {
         "target": "organgrinder",
         "trick": "preacher",
-        "reason": "Nếu Nhà truyền giáo loại bỏ khả năng Máy mài đàn organ, Người mài đàn organ vẫn giữ được khả năng của họ nhưng Nhà truyền đạo vẫn mở mắt khi bỏ phiếu."
+        "reason": "Nếu Mục sư làm mất chức năng của Nhạc công đường phố, Nhạc công đường phố được giữ chức năng nhưng Mục sư được mở mắt khi bỏ phiếu."
     },
     {
         "target": "vizier",
@@ -642,12 +642,12 @@
     {
         "target": "vizier",
         "trick": "alsaahir",
-        "reason": "Nếu Tể tướng đang chơi, Alsaahir cũng phải đoán xem (những) Ác quỷ nào đang chơi."
+        "reason": "Nếu có Tể tướng trong game, Alsaahir phải đoán đúng vai trò của Quỷ."
     },
     {
         "target": "vizier",
         "trick": "zealot",
-        "reason": "Zealot có thể được ghi nhận là ác quỷ đối với Vizier."
+        "reason": "Kẻ quá khích có thể thấy là người xấu với chức năng của Tể tướng"
     },
     {
         "target": "vortox",
@@ -667,6 +667,6 @@
     {
         "target": "mastermind",
         "trick": "alhadikhia",
-        "reason": "Nếu Al-Hadikhia chết do bị hành quyết và Kẻ chủ mưu còn sống, Al-Hadikhia chọn 3 người chơi tốt đêm nay: nếu cả 3 người chọn sống, cái ác sẽ thắng. Nếu không, chiến thắng tốt."
+        "reason": "Nếu Al-Hadikhia chết vì hành quyết, và Kẻ chủ mưu còn sống, Al-Hadikhia chọn 3 người tốt đêm nay: nếu cả 3 cùng chọn sống, phe xấu thắng. Ngược lại, phe tốt thắng."
     }
 ]

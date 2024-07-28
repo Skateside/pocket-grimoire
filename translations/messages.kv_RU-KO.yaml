@@ -16,21 +16,21 @@ sheet:
     title: Список ролей
     description: Список ролей для данного сценария Blood on the Clocktower
     jinx: Особые правила
-    each_night: "* Каждой ночью, кроме первой"
+    each_night: '* Каждую ночь, кроме первой'
     get_qr_code: Отобразить QR-код для данного списка
     get_sheet: Получить этот список
     credit: <a href="https://bloodontheclocktower.com/" target="_blank" rel="noopener noreferrer">Blood on the Clocktower</a> is a trademark of Steven Medway and <a href="https://www.thepandemoniuminstitute.com/" target="_blank" rel="noopener noreferrer">The Pandemonium Institute</a>
-    breakdown: Количество игроков каждой команды по общему количеству игроков.
-    count_plus: "%count%+"
+    breakdown: Количество игроков каждой команды в зависимости от общего количества игроков.
+    count_plus: '%count%+'
 
 groups:
     players: Игроки
-    townsfolk: Горожане
-    outsider: Чужеземцы
-    minion: Приспешники
+    townsfolk: Горожане - Местные жители
+    outsider: Горожане - Аутсайдеры (Чужеземцы)
+    minion: Команда Демона - Приспешники (Миньоны)
     demon: Демоны
     traveller: Странники
-    fabled: Сказочные персонажи
+    fabled: Сказочники
 
 messages:
     good_team: Добро
@@ -40,12 +40,12 @@ messages:
     invalid_script: Не удалось распознать формат сценария.
     no_characters: В сценарии не обнаружено подходящих ролей.
     player_name: Как зовут этого игрока?
-    custom_info_token: Введите текст токена. Используйте **двойные звездочки**, чтобы выделить текст.
-    bag_disabled: "Верманныд содтыны тайӧ шыпасъяссӧ сумкаӧ: {0}"
+    custom_info_token: Введите текст. Используйте **двойные звездочки**, чтобы выделить текст.
+    bag_disabled: 'Невозможно добавить эти роли: [X]'
 
 setup:
 
-    title: Подготовка
+    title: Подготовка игры
 
     buttons:
         select_edition: Выбрать сценарий
@@ -85,7 +85,7 @@ setup:
 
     character_choice:
         title: Выберите свою роль
-        description: Нажмите на один из пронумерованных жетонов, чтобы выбрать роль. Затемненные жетоны уже были выбраны.
+        description: Нажмите на одну из цифр, чтобы выбрать роль. Затемненные цифры уже были выбраны.
 
     character_decision:
         title: Запомните свою роль
@@ -95,9 +95,9 @@ setup:
     qr_code:
         title: Список ролей
         intro: Отсканируйте QR-код, чтобы увидеть список ролей
-        include: Включить:
+        include: 'Включить:'
         travellers: Странников
-        fabled: Сказочных персонажей
+        fabled: Сказочников
 
     clear_cache:
         title: Очистить кэш
@@ -121,8 +121,8 @@ setup:
         height_note: Высота рабочего пространства Гримуара.
         clear_refresh_label: Обновить после очищения.
         clear_refresh_note: Обновление страницы загрузит новые данные взамен очищенных.
-        warning: "<strong>Внимание:</strong> все жетоны, размещенные в Гримуаре, будут потеряны."
-        info_token_warning: "<strong>Внимание:</strong> любые пользовательские информационные токены будут забыты."
+        warning: '<strong>Внимание:</strong> все токены, размещенные в Гримуаре, будут потеряны.'
+        info_token_warning: '<strong>Внимание:</strong> любые пользовательские информационные токены будут забыты.'
         clear_cache: Очистить кэш
 
 grimoire:
@@ -130,21 +130,21 @@ grimoire:
     title: Гримуар
 
     grimoire:
-        bluffs: Маски Демона
+        bluffs: Роли, отсутствующие в игре (Блефы для Демона)
         show_bluffs: Показать все блефы
         add_bluffs: Добавить блеф
-        add_token: Добавить жетон
+        add_token: Добавить токен
         add_reminder: Добавить напоминание
         add_traveller: Добавить Странника
-        add_fabled: Добавить Сказочного персонажа
-        show_tokens: Показать жетоны
+        add_fabled: Добавить Сказочника
+        show_tokens: Показать токены
         reset_height: Сбросить высоту пространства
         clear_grimoire: Очистить Гримуар
-        clear_grimoire_warning: Вы действительно хотите очистить все жетоны?
+        clear_grimoire_warning: Вы действительно хотите очистить все токены?
         show_night_order: Показать порядок ночных действий
         character_size: Размер токена персонажа
         reminder_size: Размер токена напоминания
-        token_settings: Настройки токена
+        token_settings: Настройки токенов
 
     character_list:
         title: Выберите роль
@@ -172,7 +172,7 @@ grimoire:
         remove: Убрать
 
     bluff_show:
-        title: Жетон
+        title: Токен
         empty: Пусто
         show: Показать
         change: Изменить
@@ -185,20 +185,20 @@ grimoire:
 
     token_list:
         title: Роли
-        add: Добавить жетон
+        add: Добавить токен
 
     traveller_list:
         title: Странники
         show_all: Показать всех Странников
 
     fabled_list:
-        title: Сказочные персонажи
+        title: Сказочники
 
     token:
         title: Токен
 
 jinxes:
-    title: Особые правила
+    title: Особые правила (Правила Джинна)
     target: Цель
     trick: Осложнение
     reason: Правило
@@ -210,23 +210,23 @@ night_order:
     other_night: Другие ночи
     swipe_change: Проведите пальцем, чтобы поменять ночи
     show: Показать роли, отсутствующие в игре
-    show_dead: Show dead characters
+    show_dead: Показать роли мертвых игроков
 
 info_tokens:
     title: Информационные таблички
     info_tokens:
         isdemon: Этот игрок - <strong>Демон</strong>
         isminion: Это - ваши <strong>Приспешники</strong>
-        notinplay: Эти роли <strong>находятся вне игры</strong>
+        notinplay: Эти роли <strong>не</strong> участвуют <strong>в игре</strong>
         nominatetoday: <strong>Вы</strong> сегодня номинировали?
         playeris: <strong>Роль</strong> этого игрока
         votetoday: Вы сегодня <strong>голосовали</strong>?
         youare: <strong>Ваша</strong> роль
         selectedyou: <strong>Этот персонаж</strong> выбрал вас
-    custom: Пользовательские информационные таблички
-    add_custom: Добавить информационную табличку
-    edit_custom: Изменить информационную табличку
-    delete_custom: Удалить информационную табличку
+    custom: Пользовательские токены
+    add_custom: Добавить токен
+    edit_custom: Изменить токен
+    delete_custom: Удалить токен
 
 notes:
     title: Заметки Рассказчика
@@ -237,19 +237,19 @@ notes:
 acknowledgements:
     title: Права
     acknowledgements:
-        - <a href="https://bloodontheclocktower.com/" target="_blank" rel="noopener noreferrer">Вир часі вылын</a> - тайӧ Стивен Медуэйлӧн да <a href="https:/ вузасян пас. /www.пандемония институт</a>.
-        - Войся казьтылӧмъяс да мукӧд отсасян текст, кодӧс гижис <a href="http://bignose.whitetree.org/projects/botc/diy/" target="_blank" rel="noopener noreferrer">Бен Финни</a>.
-        - Иконкаяс босьтӧма <a href="https://fontawesome.com/v5.15/icons" target="_blank" rel="ноопенер нореферрер">Шрифт Удивительнӧй</a> .
-        - Уна серпас да юӧр босьтӧма <a href="https://www.clocktower.online" target="_blank" rel="noopener noreferrer">Часъяс.онлайн</a> да <a href="https . ://cloodontheclocktower.com/" target="_blank" rel="ноопенер ни реферер">Вир часіяс сайт вылын</a>.
-        - Тайӧ неофициальнӧй виртуальнӧй гримуар «Кровь на часовой башне» вылӧ. Тайӧ проектыс дон босьттӧг да юр кодсӧ позьӧ аддзыны <a href="https://github.com/Skateside/pocket-grimoire" target="_blank" rel="noopener noreferrer">GitHub</a> сайтысь. Тайӧ проектыс абу йитчӧма «Пандемония» институткӧд. Ті кӧ радейтанныд ворсны «Вир часі вылын», мӧвпыштӧй ньӧбны ассьыныд гримуар</a> - а сідзжӧ лоӧмӧн ёнджыка гибкӧйӧн тайӧ цифрӧвӧй версияысь, сійӧ тшӧтш отсалӧ лӧсьӧдысьяслы.
-        - Пасъянныд тырмытӧмтор либӧ эм бурмӧдӧм йылысь мӧвп? Тӧдмӧдӧй менӧ <a href="https://discord.com/invite/Gd7ybwWbFk" target="_blank" rel="noopener noreferrer">карманнӧй-гримуар каналын неофициальнӧй дискорд сервер вылын</a> (менам ним вылын эм "Скейтсайд") либӧ <a href="https://github.com/Скейтсайд/карманнӧй-гримуар/вопросъяс" target="_blank" rel="noopener noreferrer">лэптыны GitHub-ын мытшӧд</a> .
+        - Торговая марка <a href="https://bloodontheclocktower.com/" target="_blank" rel="noopener noreferrer">Blood on the Clocktower</a> принадлежит Стивену Медвею и компании <a href="https://www.thepandemoniuminstitute.com/" target="_blank" rel="noopener noreferrer">The Pandemonium Institute</a>.
+        - Напоминания о ночных действиях и прочая дополнительная информация за авторством <a href="http://bignose.whitetree.org/projects/botc/diy/" target="_blank" rel="noopener noreferrer">Бена Финни</a>.
+        - Источник иконок - <a href="https://fontawesome.com/v5.15/icons" target="_blank" rel="noopener noreferrer">Font Awesome</a>.
+        - Многие изображения и данные взяты с сайта <a href="https://www.clocktower.online" target="_blank" rel="noopener noreferrer">clocktower.online</a> и официального сайта Blood on the Clocktower.
+        - Это - неофициальный виртуальный гримуар для Blood on the Clocktower. Это некоммерческий проект, исходный код которого можно найти на <a href="https://github.com/Skateside/pocket-grimoire" target="_blank" rel="noopener noreferrer">GitHub</a>. Этот проект не имеет связи с компанией The Pandemonium Institute. Если вам нравится игра Blood on the Clocktower, настоятельно рекомендуем приобрести физическую версию, чтобы не только играть с большим удобством, но и поддержать создателей.
+        - 'У вас есть информация об ошибках или предложения? Дайте мне знать <a href="https://discord.com/invite/Gd7ybwWbFk" target="_blank" rel="noopener noreferrer">в канале #toolmakers на неофициальном discord-сервере игры</a> (мой никнейм там - Skateside) или <a href="https://github.com/Skateside/pocket-grimoire/issues" target="_blank" rel="noopener noreferrer">подайте заявку на GitHub</a>.'
         - <small>Версия <span id="version"></span></small>
 
 errors:
     homebrew_json:
-        not_homebrew: Абу гортса гижӧд "%id%"
-        unrecognised_team: Тӧдтӧм команда "%команда%"
-        not_find_id: Эз вермы аддзыны "%id%" идентификатор
-        not_recognise_character: Эз вермы тӧдмавны "%id%" шыпас
-        invalid_entry: '"%id%" вылӧ лӧсявтӧм гижӧд: %reasons%'
-        empty_teams: 'Пуста командаяс: %teams%'
+        not_homebrew: Не локализованная роль "%id%"
+        unrecognised_team: Команда не опознана "%team%"
+        not_find_id: ID не найден "%id%"
+        not_recognise_character: Неизвестный символ "%id%"
+        invalid_entry: 'Не верный ввод для "%id%": %reasons%'
+        empty_teams: 'Пустые команды: %teams%'

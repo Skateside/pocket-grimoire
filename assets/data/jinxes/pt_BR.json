@@ -22,7 +22,7 @@
     {
         "target": "cannibal",
         "trick": "zealot",
-        "reason": "Se o Canibal ganhar a habilidade Zealot, o Canibal aprende isso."
+        "reason": "Se o Canibal ganhar a habilidade do Fanático, o Canibal é avisado disso."
     },
     {
         "target": "lunatic",
@@ -172,7 +172,7 @@
     {
         "target": "legion",
         "trick": "minstrel",
-        "reason": "Se a Legião morrer por execução hoje, a Legião manterá sua habilidade, mas o Menestrel poderá descobrir que eles são da Legião."
+        "reason": "Se o Bardo deixa todos bêbados, Legião mantém sua habilidade, mas o Bardo pode saber que ele é um Legião."
     },
     {
         "target": "legion",
@@ -182,7 +182,7 @@
     {
         "target": "legion",
         "trick": "zealot",
-        "reason": "O Zealot pode ser registrado como maligno para a habilidade da Legion."
+        "reason": "O Político pode registrar como do mau para a Legião."
     },
     {
         "target": "fanggu",
@@ -342,7 +342,7 @@
     {
         "target": "summoner",
         "trick": "preacher",
-        "reason": "Se o Pregador escolheu o Invocador na 3ª noite ou antes, o Invocador escolhe qual Demônio, mas o Narrador escolhe qual jogador."
+        "reason": "Se o Pregador escolhe o Invocador antes ou durante a 3ª noite, o Invocador escolhe que Demônio, mas o Narrador escolhe qual jogador."
     },
     {
         "target": "baron",
@@ -432,7 +432,7 @@
     {
         "target": "kazali",
         "trick": "soldier",
-        "reason": "Se o Kazali transformar o Soldado em um Minion, o Soldier escolhe qual Minion que não está em jogo se tornará."
+        "reason": "Se o Kazali torna o Soldado num Lacaio, o Soldado escolhe que Lacaio fora de jogo virar."
     },
     {
         "target": "riot",
@@ -492,7 +492,7 @@
     {
         "target": "riot",
         "trick": "banshee",
-        "reason": "Se a Riot nomear e matar o Banshee, todos os jogadores saberão que o Banshee morreu e o Banshee poderá nomear dois jogadores imediatamente."
+        "reason": "Se o Pandemônio nomeia e mata a Banshee, todos os jogador sabem que a Banshee morreu e ela pode nomear 2 jogadores imediatamente."
     },
     {
         "target": "riot",
@@ -582,7 +582,7 @@
     {
         "target": "riot",
         "trick": "zealot",
-        "reason": "Se você for nomeado, você deve nomear novamente, mesmo se estiver morto."
+        "reason": "Se você for nomeado, deve nomear de novo, mesmo se morto."
     },
     {
         "target": "alhadikhia",
@@ -642,12 +642,12 @@
     {
         "target": "vizier",
         "trick": "alsaahir",
-        "reason": "Se o Vizir estiver em jogo, o Alsaahir também deverá adivinhar qual(is) Demônio(s) está(ão) em jogo."
+        "reason": "Se o Vizir está em jogo, O Alsaahir deve também adivinhar quais Demônio(s) estão em jogo."
     },
     {
         "target": "vizier",
         "trick": "zealot",
-        "reason": "O Zealot pode ser registrado como maligno para o Vizir."
+        "reason": "O Fanático pode registrar como do mau para o Vizir."
     },
     {
         "target": "vortox",
