@@ -41,7 +41,7 @@ messages:
     no_characters: Scenarioet inneholder ingen gjenkjennelige roller.
     player_name: Hva heter denne spilleren?
     custom_info_token: Hva ønsker du at din nye kunnskapsbrikke skal si? Bruk **dobbel stjerne** for å fremheve tekst.
-    bag_disabled: 'Kan ikke legge til disse tegnene i vesken: {0}'
+    bag_disabled: 'Kan ikke legge disse rollene i posen: {0}'
 
 setup:
 
@@ -60,12 +60,12 @@ setup:
         trouble_brewing: Trøbbel i gjære
         bad_moon_rising: Fullmånenatt
         sects_and_violets: Okkulte affærer
-        custom_script: Annet scenario
-        custom_note: Enten last opp et annet scenario eller skriv inn nettadressen til et annet scenario.
+        custom_script: Eget scenario
+        custom_note: Last opp et eget scenario, skriv nettadressen til et eget scenario eller lim inn fra JSON-filen direkte.
         custom_warning: Bare last opp JSON-filer fra pålitelige kilder!
-        upload: Last opp annet scenario
+        upload: Last opp eget scenario
         url: Skriv inn nettadresse
-        paste: Lim inn fra utklippstavlen
+        paste: Lim inn fra utklippstavla
         unsupported: Vennligst bemerk at Veslegrimoiren for øyeblikket ikke støtter heimebrygg eller lokaliserte scenario.
         select: Velg
 
@@ -104,11 +104,11 @@ setup:
         clear_all: Rydd alt
         clear_description: Å skru denne av gjør det mulig å rydde vekk enkeltstående deler av cachen.
         lookup_label: Rydd data
-        lookup_note: Dataet til gandene, lagoppbyggingen, og rolleinformasjonen.
+        lookup_note: Dataet til gandene, lagoppbygningen og rolleinformasjonen.
         characters_label: Rydd utgave
-        characters_note: Utgaven, eller scenarioet, som er valgt og lastet inn.
+        characters_note: Utgaven eller scenarioet som er valgt og lastet inn.
         tokens_label: Rydd brikker
-        tokens_note: Stillingen til brikkene i Boka.
+        tokens_note: Plasseringen til brikkene i Boka.
         inputs_label: Rydd inndata
         inputs_note: Brukerinnstillinger for nettsiden.
         details_label: Rydd åpen/lukket
@@ -121,8 +121,8 @@ setup:
         height_note: Høyden på underlaget i Boka.
         clear_refresh_label: Oppdater etterpå
         clear_refresh_note: Å oppdatere vil laste inn ny data for alt som er ryddet vekk.
-        warning: '<strong>OBS!</strong> Alle brikker plassert i Boka vil bli glemt.'
-        info_token_warning: '<strong>OBS!</strong> Alle egne kunnskapsbrikker vil bli glemt.'
+        warning: <strong>OBS!</strong> Alle brikker plassert i Boka vil bli glemt.
+        info_token_warning: <strong>OBS!</strong> Alle egne kunnskapsbrikker vil bli glemt.
         clear_cache: Rydd cache
 
 grimoire:
@@ -136,7 +136,7 @@ grimoire:
         add_token: Legg til brikke
         add_reminder: Legg til påminnelse
         add_traveller: Legg til Omreisende
-        add_fabled: Legg til Sagnomsuste
+        add_fabled: Legg til Sagnomsust
         show_tokens: Vis brikker
         reset_height: Tilbakestill underlagshøyde
         clear_grimoire: Rydd Boka
@@ -151,7 +151,7 @@ grimoire:
 
     reminder_list:
         title: Velg påminnelse
-        show: Vis alle påminnelser
+        show: Vis alle påminnelsene
         multiple: Legg til flere
         add_all: Legg til alle
 
@@ -162,14 +162,14 @@ grimoire:
         rotate: Vri
         reminder: Påminnelse
         replace: Erstatt
-        remove: Fjern brikke
-        recent_reminders: 'Påminnelser nyligst lagt til:'
+        remove: Ta bort brikke
+        recent_reminders: 'Påminnelsene nyligst lagt til:'
         player_name: Navngi spiller
-        ghost_vote: Ghost stemme
+        ghost_vote: Dødestemme
 
     reminder_show:
         title: Påminnelse
-        remove: Fjern
+        remove: Ta bort
 
     bluff_show:
         title: Brikke
@@ -200,7 +200,7 @@ grimoire:
 jinxes:
     title: Gander
     target: Mål
-    trick: Triks
+    trick: Knep
     reason: Regel
     show: Vis gander ikke i spill
 
@@ -208,9 +208,9 @@ night_order:
     title: Nattens gang
     first_night: Første natt
     other_night: Andre netter
-    swipe_change: Sveip for å endre netter.
+    swipe_change: Sveip for å bytte netter.
     show: Vis roller ikke i spill
-    show_dead: Vis døde karakterer
+    show_dead: Vis døde roller
 
 info_tokens:
     title: Kunnskapsbrikker
@@ -229,10 +229,10 @@ info_tokens:
     delete_custom: Slett kunnskapsbrikke
 
 notes:
-    title: Fortellernotater
+    title: Notatblokk
     label: Notater
-    clear: Tydelige notater
-    clear_warning: Er du sikker på at du vil slette notatene?
+    clear: Visk ut
+    clear_warning: Er du sikker på at du vil viske ut alle notatene?
 
 acknowledgements:
     title: Erkjennelser
@@ -247,9 +247,9 @@ acknowledgements:
 
 errors:
     homebrew_json:
-        not_homebrew: Ikke hjemmebrygget oppføring "%id%"
-        unrecognised_team: Ukjent team "%team%"
-        not_find_id: Fant ikke ID "%id%"
-        not_recognise_character: Kunne ikke gjenkjenne tegnet "%id%"
-        invalid_entry: 'Ugyldig oppføring for "%id%": %reasons%'
+        not_homebrew: Ikke heimebrygg "%id%"
+        unrecognised_team: Ugjenkjennelig lag "%team%"
+        not_find_id: Kunne ikke finne ID "%id%"
+        not_recognise_character: Kunne ikke gjenkjenne rollen "%id%"
+        invalid_entry: 'Ugyldig input for "%id%": %reasons%'
         empty_teams: 'Tomme lag: %teams%'

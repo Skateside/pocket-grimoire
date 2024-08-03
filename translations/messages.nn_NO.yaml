@@ -19,8 +19,8 @@ sheet:
     each_night: '* Kvar natt utanom den fyrste natta'
     get_qr_code: Få QR-koden for arket
     get_sheet: Få arket
-    credit: Blood on the Clocktower er eit varemerke som høyrer til Steven Medway og The Pandemonium Institute
-    breakdown: Tallene til hvert lag for antall spillere.
+    credit: <a href="https://bloodontheclocktower.com/" target="_blank" rel="noopener noreferrer">Blood on the Clocktower</a> er eit varemerke som høyrer til Steven Medway og <a href="https://www.thepandemoniuminstitute.com/" target="_blank" rel="noopener noreferrer">The Pandemonium Institute</a>
+    breakdown: Tala til kvart lag for mengda spelarar.
     count_plus: '%count%+'
 
 groups:
@@ -41,7 +41,7 @@ messages:
     no_characters: Scenarioet inneheld ingen attkjennande roller.
     player_name: Kva heiter denne spelaren?
     custom_info_token: Kva ynskjer du at den nye kunnskapsbrikka di skal seie? Nytt **dobbel stjerne** for å framheve tekst.
-    bag_disabled: 'Kan ikke legge til disse tegnene i vesken: {0}'
+    bag_disabled: 'Kan ikkje leggje desse rollene i posen: {0}'
 
 setup:
 
@@ -60,13 +60,13 @@ setup:
         trouble_brewing: Trøbbel i gjære
         bad_moon_rising: Fullmånenatt
         sects_and_violets: Okkulte affærar
-        custom_script: Anna scenario
-        custom_note: Anten last opp eit anna scenario eller før inn nettadressa til eit anna scenario.
+        custom_script: Eige scenario
+        custom_note: Last opp eit eige scenario, skriv nettadressa til eit eige scenario eller lim inn frå JSON-fila direkte.
         custom_warning: Berre last opp JSON-filer frå pålitelege kjelder!
-        upload: Last opp anna scenario
+        upload: Last opp eige scenario
         url: Før inn nettadresse
-        paste: Lim inn fra utklippstavlen
-        unsupported: Ver klår over at Veslegrimoiren for augeblinken ikkje stør heimebrygg eller lokaliserte scenario.
+        paste: Lim inn frå utklippstavla
+        unsupported: Ver klår over at Veslegrimoiren for augneblinken ikkje stør heimebrygg eller lokaliserte scenario.
         select: Vel
 
     character_select:
@@ -85,17 +85,17 @@ setup:
 
     character_choice:
         title: Vel rolla di
-        description: Trykk på ei av dei numererte brikkene for å velje rolla di. Mørkare brikker er allereie vald.
+        description: Trykk på ei av dei numererte brikkene for å velje rolla di. Mørklagde brikker er allereie valde.
 
     character_decision:
         title: Hugs rolla di
-        name: Gjev deg sjølv eit namn (valfritt)
+        name: Gje deg sjølv eit namn (valfritt)
         return: Returner til rollearket
 
     qr_code:
         title: Rolleark
         intro: Scan QR-koden for å sjå rollearket
-        include: Tak med
+        include: Ta med
         travellers: Omreisande
         fabled: Segnomspunne
 
@@ -104,25 +104,25 @@ setup:
         clear_all: Ryd alt
         clear_description: Å skru denne av gjer det mogeleg å rydje unna enkelståande delar av cachen.
         lookup_label: Ryd data
-        lookup_note: Dataet til gandane, lagoppbygginga, og rolleinformasjonen.
+        lookup_note: Dataet til gandane, lagoppbygginga og rolleinformasjonen.
         characters_label: Ryd utgåve
-        characters_note: Utgåva, eller scenarioet, som er vald/valt og lasta inn.
+        characters_note: Utgåva eller scenarioet som er vald/valt og lasta inn.
         tokens_label: Ryd brikker
-        tokens_note: Stillinga til brikkene i Boka.
+        tokens_note: Plasseringa til brikkene i Boka.
         inputs_label: Ryd inndata
         inputs_note: Brukarinnstillingar for nettsida.
         details_label: Ryd open/lukka
         details_note: Kva delar er opne eller lukka.
         info_tokens_label: Ryd eigne kunnskapsbrikker
-        info_tokens_note: Dei eigne kunnskapsbrikkene som er lagt til.
+        info_tokens_note: Dei eigne kunnskapsbrikkene som er lagde til.
         names_label: Ryd namn
         names_note: Framlegga til spelarnamn.
         height_label: Ryd underlagshøgd
         height_note: Høgda på underlaget i Boka.
         clear_refresh_label: Oppdater etterpå
         clear_refresh_note: Å oppdatere vil laste inn ny data for alt som er rudd unna.
-        warning: '<strong>OBS!</strong> Alle brikker plassert i Boka vil verte gløymd.'
-        info_token_warning: '<strong>OBS!</strong> Alle eigne kunnskapsbrikker vil verte gløymd.'
+        warning: <strong>OBS!</strong> Alle plasserte brikker i Boka vil verte gløymde.
+        info_token_warning: <strong>OBS!</strong> Alle eigne kunnskapsbrikker vil verte gløymde.
         clear_cache: Ryd cache
 
 grimoire:
@@ -132,11 +132,11 @@ grimoire:
     grimoire:
         bluffs: Demonbløffar
         show_bluffs: Vis alle bløffar
-        add_bluffs: Legg til bløffer
+        add_bluffs: Legg til bløffar
         add_token: Legg til brikke
         add_reminder: Legg til påminning
         add_traveller: Legg til Omreisande
-        add_fabled: Legg til Segnomspunne
+        add_fabled: Legg til Segnomspunnen
         show_tokens: Vis brikker
         reset_height: Still underlagshøgd attende
         clear_grimoire: Ryd Boka
@@ -151,25 +151,25 @@ grimoire:
 
     reminder_list:
         title: Vel påminning
-        show: Vis alle påminningar
-        multiple: Legg til flere
+        show: Vis alle påminningane
+        multiple: Legg til fleire
         add_all: Legg til alle
 
     character_show:
         title: Brikke
         show: Vis
         shroud: Slør
-        rotate: Vrid
+        rotate: Vri
         reminder: Påminning
         replace: Byt ut
-        remove: Fjern brikke
-        recent_reminders: 'Påminningar lagt til nylegast:'
-        player_name: Namngjev spelar
-        ghost_vote: Ghost stemme
+        remove: Ta bort brikke
+        recent_reminders: Påminningane lagt til nylegast:
+        player_name: Namngje spelar
+        ghost_vote: Dauderøyst
 
     reminder_show:
         title: Påminning
-        remove: Fjern
+        remove: Ta bort
 
     bluff_show:
         title: Brikke
@@ -200,7 +200,7 @@ grimoire:
 jinxes:
     title: Gandar
     target: Mål
-    trick: Triks
+    trick: Knep
     reason: Regel
     show: Vis gandar ikkje i spel
 
@@ -208,9 +208,9 @@ night_order:
     title: Natta sin gang
     first_night: Fyrste natta
     other_night: Andre netter
-    swipe_change: Sveip for å endre netter.
+    swipe_change: Sveip for å byte netter.
     show: Vis roller ikkje i spel
-    show_dead: Vis døde karakterer
+    show_dead: Vis daude roller
 
 info_tokens:
     title: Kunnskapsbrikker
@@ -229,27 +229,27 @@ info_tokens:
     delete_custom: Slett kunnskapsbrikke
 
 notes:
-    title: Fortellernotater
-    label: Notater
-    clear: Tydelige notater
-    clear_warning: Er du sikker på at du vil slette notatene?
+    title: Notatblokk
+    label: Notat
+    clear: Visk ut
+    clear_warning: Er du sikker på at du vil viske ut alle notata?
 
 acknowledgements:
     title: Erkjenningar
     acknowledgements:
         - <a href="https://bloodontheclocktower.com/" target="_blank" rel="noopener noreferrer">Blood on the Clocktower</a> er eit varemerke som høyrer til Steven Medway og <a href="https://www.thepandemoniuminstitute.com/" target="_blank" rel="noopener noreferrer">The Pandemonium Institute</a>.
-        - Nattepåminningar og anna tilleggstekst er skrive av <a href="http://bignose.whitetree.org/projects/botc/diy/" target="_blank" rel="noopener noreferrer">Ben Finney</a>.
-        - Ikon er henta frå <a href="https://fontawesome.com/v5.15/icons" target="_blank" rel="noopener noreferrer">Font Awesome</a>.
+        - Nattepåminningar og anna tilleggstekst er skrivne av <a href="http://bignose.whitetree.org/projects/botc/diy/" target="_blank" rel="noopener noreferrer">Ben Finney</a>.
+        - Ikon er tekne frå <a href="https://fontawesome.com/v5.15/icons" target="_blank" rel="noopener noreferrer">Font Awesome</a>.
         - Mange bilete og mykje data er henta frå <a href="https://www.clocktower.online" target="_blank" rel="noopener noreferrer">Clocktower.online</a> og <a href="https://bloodontheclocktower.com/" target="_blank" rel="noopener noreferrer">Blood on the Clocktower-nettsida</a>.
         - Dette er ein uoffisiell virtuell grimoire for Blodet på klokketårnet. Prosjektet er gratis og kjeldekoden finst på <a href="https://github.com/Skateside/pocket-grimoire" target="_blank" rel="noopener noreferrer">GitHub</a>. Prosjektet er ikkje knytt til the Pandemonium Institute. Om du har glede av å spele Blodet på klokketårnet, <a href="https://bloodontheclocktower.com/buy" target="_blank" rel="noopener noreferrer">vurder gjerne å kjøpe din eigen grimoire</a> - i tillegg til å vere meir fleksibel enn denne digitale utgåva, stør det også utviklarane.
-        - Lagt merke til ein teknisk feil eller har du eit framlegg til forbetring? Lat meg få vite det i <a href="https://discord.com/invite/Gd7ybwWbFk" target="_blank" rel="noopener noreferrer">pocket-grimoire-kanalen på den uoffisielle discord-serveren</a> (namnet mitt der er "Skateside") eller <a href="https://github.com/Skateside/pocket-grimoire/issues" target="_blank" rel="noopener noreferrer">tak eventuelle problem opp på GitHub</a>.
+        - Lagt merke til ein teknisk feil eller har du eit framlegg til forbetring? La meg få vite det i <a href="https://discord.com/invite/Gd7ybwWbFk" target="_blank" rel="noopener noreferrer">pocket-grimoire-kanalen på den uoffisielle discord-serveren</a> (namnet mitt der er "Skateside") eller <a href="https://github.com/Skateside/pocket-grimoire/issues" target="_blank" rel="noopener noreferrer">ta eventuelle problem opp på GitHub</a>.
         - <small>Versjon <span id="version"></span></small>
 
 errors:
     homebrew_json:
-        not_homebrew: Ikke hjemmebrygget oppføring "%id%"
-        unrecognised_team: Ukjent team "%team%"
-        not_find_id: Fant ikke ID "%id%"
-        not_recognise_character: Kunne ikke gjenkjenne tegnet "%id%"
-        invalid_entry: 'Ugyldig oppføring for "%id%": %reasons%'
+        not_homebrew: Ikkje heimebrygg "%id%"
+        unrecognised_team: Uattkjennande lag "%team%"
+        not_find_id: Kunne ikkje finne ID "%id%"
+        not_recognise_character: Kunne ikkje attkjenne rolla "%id%"
+        invalid_entry: 'Ugyldig input for "%id%": %reasons%'
         empty_teams: 'Tomme lag: %teams%'
