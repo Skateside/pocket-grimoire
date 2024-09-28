@@ -345,6 +345,11 @@
         "reason": "Wenn der Prediger den Beschwörer in der 3. Nacht oder früher gewählt hat, wählt der Beschwörer den Dämon, aber der Geschichtenerzähler wählt den Spieler."
     },
     {
+        "target": "summoner",
+        "trick": "lordoftyphon",
+        "reason": "If the Summoner creates a Lord of Typhon, the Lord of Typhon must neighbor a Minion. The other neighbor becomes a not-in-play evil Minion."
+    },
+    {
         "target": "baron",
         "trick": "heretic",
         "reason": "Der Baron fügt unter umständen nur einen anstatt 2 Außenseiter zum Spiel hinzu."
@@ -668,5 +673,45 @@
         "target": "mastermind",
         "trick": "alhadikhia",
         "reason": "Wenn Al-Hadikhia durch Hinrichtung stirbt und der Mastermind am Leben ist, wählt Al-Hadikhia heute Abend 3 gute Spieler aus: Wenn alle 3 sich entscheiden zu leben, gewinnt das Böse. Andernfalls gewinnt das Gute."
+    },
+    {
+        "target": "boffin",
+        "trick": "heretic",
+        "reason": "Der Dämon kann nicht die Fähigkeit „Ketzer“ haben."
+    },
+    {
+        "target": "boffin",
+        "trick": "cultleader",
+        "reason": "Wenn der Dämon die Fähigkeit „Sektenführer“ hat, kann er aufgrund dieser Fähigkeit nicht gut werden."
+    },
+    {
+        "target": "boffin",
+        "trick": "goon",
+        "reason": "Wenn der Dämon die Fähigkeit „Schläger“ hat, kann er aufgrund dieser Fähigkeit nicht gut werden."
+    },
+    {
+        "target": "boffin",
+        "trick": "ogre",
+        "reason": "Der Dämon kann nicht die Fähigkeit „Oger“ haben."
+    },
+    {
+        "target": "boffin",
+        "trick": "politician",
+        "reason": "Der Dämon kann nicht die Fähigkeit „Politiker“ haben."
+    },
+    {
+        "target": "boffin",
+        "trick": "drunk",
+        "reason": "Wenn der Dämon die Fähigkeit „Betrunkener“ hätte, wählt der Boffin einen Stadtbewohner-Spieler aus, der diese Fähigkeit stattdessen hat."
+    },
+    {
+        "target": "boffin",
+        "trick": "alchemist",
+        "reason": "Wenn der Alchemist die Fähigkeit „Boffin“ hat, erfährt der Alchemist nicht, welche Fähigkeit der Dämon hat."
+    },
+    {
+        "target": "boffin",
+        "trick": "villageidiot",
+        "reason": "Wenn ein Ersatzmarker vorhanden ist, kann der Boffin dem Dämon die Fähigkeit „Dorftrottel“ geben."
     }
 ]

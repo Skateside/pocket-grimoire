@@ -345,6 +345,11 @@
         "reason": "如果传教士在第 3 天或之前选择了召唤师，召唤师会选择哪个恶魔，但讲故事的人会选择哪个玩家。"
     },
     {
+        "target": "summoner",
+        "trick": "lordoftyphon",
+        "reason": "如果召唤师创造了一个提丰之王，提丰之王必须与一个仆从为邻。另一个邻居将成为不在场的邪恶仆从。"
+    },
+    {
         "target": "baron",
         "trick": "heretic",
         "reason": "如果异端分子在剧本中，男爵的效果可能会只增加一个而非两个外来者。"
@@ -668,5 +673,45 @@
         "target": "mastermind",
         "trick": "alhadikhia",
         "reason": "如果 Al-Hadikhia 被处决而策划者还活着，Al-Hadikhia 今晚会选择 3 名好玩家：如果所有 3 名玩家都选择活下去，那么邪恶获胜。否则，善良获胜。"
+    },
+    {
+        "target": "boffin",
+        "trick": "heretic",
+        "reason": "恶魔不能拥有异教徒能力。"
+    },
+    {
+        "target": "boffin",
+        "trick": "cultleader",
+        "reason": "如果恶魔拥有邪教领袖能力，他们就不能因为这个能力而变得善良。"
+    },
+    {
+        "target": "boffin",
+        "trick": "goon",
+        "reason": "如果恶魔拥有暴徒能力，他们就不能因为这个能力而变得善良。"
+    },
+    {
+        "target": "boffin",
+        "trick": "ogre",
+        "reason": "恶魔不能拥有食人魔能力。"
+    },
+    {
+        "target": "boffin",
+        "trick": "politician",
+        "reason": "恶魔不能拥有政客能力。"
+    },
+    {
+        "target": "boffin",
+        "trick": "drunk",
+        "reason": "如果恶魔拥有醉汉能力，博芬会选择一名镇民玩家来代替他拥有这个能力。"
+    },
+    {
+        "target": "boffin",
+        "trick": "alchemist",
+        "reason": "如果炼金术士拥有博芬能力，炼金术士不会知道恶魔拥有什么能力。"
+    },
+    {
+        "target": "boffin",
+        "trick": "villageidiot",
+        "reason": "如果有多余的令牌，博芬可以给恶魔村里傻瓜的能力。"
     }
 ]

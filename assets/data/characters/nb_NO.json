@@ -191,6 +191,15 @@
         ]
     },
     {
+        "id": "boffin",
+        "name": "Boffin",
+        "ability": "Demonen (selv om den er full eller forgiftet) har en god karakter som ikke er i spillet. Dere vet begge hvilke.",
+        "firstNightReminder": "Vekk Boffin og hvordan de viser tegn på evnen demonen har. Sett Boffin i dvale igjen. Vekk demonen, vis Boffin-tokenet, og vis deretter symbolet på den gode evnen demonen har.",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
         "id": "bonecollector",
         "name": "Knokkelsamler",
         "ability": "Én gang i løpet av spillet, om natten, velg en død spiller: evnen deres virker på ny frem til daggry.",
@@ -923,6 +932,17 @@
         "reminders": [
             "Død",
             "Forgiftet"
+        ]
+    },
+    {
+        "id": "lordoftyphon",
+        "name": "Lord of Typhon",
+        "ability": "Hver natt*, velg en spiller: de dør. [Onde karakterer er på linje. Du er i midten. +1 Minion. -? Til +? Outsiders]",
+        "firstNightReminder": "Vekk spillerne på hver side av demonen. Vis dem 'You Are'-kortet, tokenet til Minion de nå er, og en tommel ned for å indikere at de er onde.",
+        "otherNightReminder": "The Lord of Typhon peker på en spiller. Den spilleren dør.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Død"
         ]
     },
     {

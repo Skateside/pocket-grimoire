@@ -345,6 +345,11 @@
         "reason": "Si le prédicateur choisit l'Invocateur avant ou pendant la troisième nuit, l'Invocateur choisit quel Démon créer mais le Conteur choisit quel joueur"
     },
     {
+        "target": "summoner",
+        "trick": "lordoftyphon",
+        "reason": "Si l'Invocateur crée un Lord of Typhon, le Lord of Typhon doit être voisin d'un Sbire. Son autre voisin devient un sbire maléfique qui n'est pas en jeu."
+    },
+    {
         "target": "baron",
         "trick": "heretic",
         "reason": "Le Baron peut n'ajouter qu'un seul Étranger, pas deux."
@@ -668,5 +673,45 @@
         "target": "mastermind",
         "trick": "alhadikhia",
         "reason": "Si l'Al-Hadikhia meurt par éxécution, et que le Conspirateur est en vie. L'Al-Hadikhia choisit 3 joueurs bons cette nuit: Si les 3 décident de vivre, le mal gagne. Sinon, les bons gagnent."
+    },
+    {
+        "target": "boffin",
+        "trick": "heretic",
+        "reason": "Le Démon ne peut pas avoir la capacité de l'Hérétique."
+    },
+    {
+        "target": "boffin",
+        "trick": "cultleader",
+        "reason": "Si le Démon a la capacité du Chef de Secte, il ne peut pas devenir bon en raison de sa capacité"
+    },
+    {
+        "target": "boffin",
+        "trick": "goon",
+        "reason": "Si le Démon a la capacité de la Brute, il ne peut pas devenir bon en raison de sa capacité"
+    },
+    {
+        "target": "boffin",
+        "trick": "ogre",
+        "reason": "Le Démon ne peut pas avoir la capacité de l'Ogre."
+    },
+    {
+        "target": "boffin",
+        "trick": "politician",
+        "reason": "Le Démon ne peut pas avoir la capacité du Politicien."
+    },
+    {
+        "target": "boffin",
+        "trick": "drunk",
+        "reason": "Si le Démon devait avoir la capacité du Soulard, Le Boffin choisit à la place un joueur villageois qui aura cette capacité."
+    },
+    {
+        "target": "boffin",
+        "trick": "alchemist",
+        "reason": "Si l'Alchimiste a la capacité du Boffin, l'Alchimiste n'apprend pas quelle capacité le Démon a."
+    },
+    {
+        "target": "boffin",
+        "trick": "villageidiot",
+        "reason": "Si il reste un jeton, Le Boffin peut avoir la capacité de l'Idiot du Village."
     }
 ]

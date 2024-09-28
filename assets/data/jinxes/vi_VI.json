@@ -345,6 +345,11 @@
         "reason": "Nếu Mục sư chọn trúng Kẻ triệu hồi trong hoặc trước ngày 3, Kẻ triệu hồi chọn 1 Quỷ, Người kể chuyện chọn người làm Quỷ."
     },
     {
+        "target": "summoner",
+        "trick": "lordoftyphon",
+        "reason": "Nếu Người triệu hồi tạo ra Chúa tể Typhon, Chúa tể Typhon phải là hàng xóm của một Minion. Hàng xóm kia trở thành một Minion độc ác không tham gia chơi."
+    },
+    {
         "target": "baron",
         "trick": "heretic",
         "reason": "Có thể Nam tước chỉ thêm 1 Lữ khách, không phải 2."
@@ -668,5 +673,45 @@
         "target": "mastermind",
         "trick": "alhadikhia",
         "reason": "Nếu Al-Hadikhia chết vì hành quyết, và Kẻ chủ mưu còn sống, Al-Hadikhia chọn 3 người tốt đêm nay: nếu cả 3 cùng chọn sống, phe xấu thắng. Ngược lại, phe tốt thắng."
+    },
+    {
+        "target": "boffin",
+        "trick": "heretic",
+        "reason": "Ác quỷ không thể có khả năng Heretic."
+    },
+    {
+        "target": "boffin",
+        "trick": "cultleader",
+        "reason": "Nếu Ác quỷ có khả năng Cult Leader, chúng không thể trở nên tốt do khả năng này."
+    },
+    {
+        "target": "boffin",
+        "trick": "goon",
+        "reason": "Nếu Ác quỷ có khả năng Goon, chúng không thể trở nên tốt do khả năng này."
+    },
+    {
+        "target": "boffin",
+        "trick": "ogre",
+        "reason": "Ác quỷ không thể có khả năng Ogre."
+    },
+    {
+        "target": "boffin",
+        "trick": "politician",
+        "reason": "Ác quỷ không thể có khả năng Politician."
+    },
+    {
+        "target": "boffin",
+        "trick": "drunk",
+        "reason": "Nếu Ác quỷ có khả năng Drunk, Boffin sẽ chọn một người chơi Townsfolk để có khả năng này thay thế."
+    },
+    {
+        "target": "boffin",
+        "trick": "alchemist",
+        "reason": "Nếu Nhà giả kim có khả năng Boffin, Nhà giả kim sẽ không biết Ác quỷ có khả năng gì."
+    },
+    {
+        "target": "boffin",
+        "trick": "villageidiot",
+        "reason": "Nếu có một token dự phòng, Boffin có thể trao cho Ác quỷ khả năng Village Idiot."
     }
 ]

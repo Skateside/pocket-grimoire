@@ -345,6 +345,11 @@
         "reason": "Če je Pridigar izbral Priklicovalca na ali pred 3. nočjo, Priklicavalec izbere, katerega demona, pripovedovalec pa izbere, katerega igralca."
     },
     {
+        "target": "summoner",
+        "trick": "lordoftyphon",
+        "reason": "Če Summoner ustvari Lord of Typhon, mora Lord of Typhon biti sosed Miniona. Drugi sosed postane zlobni minion, ki ni v igri."
+    },
+    {
         "target": "baron",
         "trick": "heretic",
         "reason": "Baron morda doda le enega Izobčenca in ne dveh."
@@ -668,5 +673,45 @@
         "target": "mastermind",
         "trick": "alhadikhia",
         "reason": "Če Al-Hadikhia umre z usmrtitvijo, glavni um pa je živ, Al-Hadikhia nocoj izbere 3 dobre igralce: če se vsi 3 odločijo živeti, zmaga zlo. Sicer pa dobro zmaga."
+    },
+    {
+        "target": "boffin",
+        "trick": "heretic",
+        "reason": "Demon ne more imeti heretične sposobnosti."
+    },
+    {
+        "target": "boffin",
+        "trick": "cultleader",
+        "reason": "Če ima Demon sposobnost Cult Leader, zaradi te sposobnosti ne more postati dober."
+    },
+    {
+        "target": "boffin",
+        "trick": "goon",
+        "reason": "Če ima Demon sposobnost Goon, zaradi te sposobnosti ne more postati dober."
+    },
+    {
+        "target": "boffin",
+        "trick": "ogre",
+        "reason": "Demon ne more imeti sposobnosti Ogra."
+    },
+    {
+        "target": "boffin",
+        "trick": "politician",
+        "reason": "Demon ne more imeti sposobnosti politika."
+    },
+    {
+        "target": "boffin",
+        "trick": "drunk",
+        "reason": "Če bi imel Demon sposobnost Pijan, Boffin namesto tega izbere igralca iz mestnega prebivalstva, ki ima to sposobnost."
+    },
+    {
+        "target": "boffin",
+        "trick": "alchemist",
+        "reason": "Če ima alkimist sposobnost Boffina, se alkimist ne nauči, katero sposobnost ima demon."
+    },
+    {
+        "target": "boffin",
+        "trick": "villageidiot",
+        "reason": "Če obstaja rezervni žeton, lahko Boffin da Demon the Village Idiot sposobnost."
     }
 ]

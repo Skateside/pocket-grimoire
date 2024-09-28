@@ -307,6 +307,20 @@
         "image": "/build/img/icons/traveller/bishop.webp"
     },
     {
+        "id": "boffin",
+        "name": "Boffin",
+        "edition": "",
+        "team": "minion",
+        "firstNight": 0.3,
+        "firstNightReminder": "Wake the Boffin and how them the token of the ability the Demon has. Put the Boffin back to sleep. Wake the Demon, show the Boffin token, then show the token of the good ability the Demon has.",
+        "otherNight": 0,
+        "otherNightReminder": "",
+        "reminders": [],
+        "setup": false,
+        "ability": "The Demon (even if drunk or poisoned) has a not-in-play good character’s ability. You both know which.",
+        "image": "/build/img/icons/minion/boffin.webp"
+    },
+    {
         "id": "bonecollector",
         "name": "Bone Collector",
         "edition": "snv",
@@ -1749,6 +1763,22 @@
         "setup": false,
         "ability": "Each night*, choose a player: they die. You start by choosing an alive player: they are poisoned - you die if & only if they die.",
         "image": "/build/img/icons/demon/lleech.webp"
+    },
+    {
+        "id": "lordoftyphon",
+        "name": "Lord of Typhon",
+        "edition": "",
+        "team": "demon",
+        "firstNight": 0.1,
+        "firstNightReminder": "Wake the players on either side of the Demon. Show them the 'You Are' card, the token of the Minion they now are, and a thumbs down to indicate they are evil.",
+        "otherNight": 31.1,
+        "otherNightReminder": "The Lord of Typhon points to a player. That player dies.",
+        "reminders": [
+            "Dead"
+        ],
+        "setup": true,
+        "ability": "Each night*, choose a player: they die. [Evil characters are in a line. You are in the middle. +1 Minion. -? To +? Outsiders]",
+        "image": "/build/img/icons/demon/lordoftyphon.webp"
     },
     {
         "id": "lunatic",

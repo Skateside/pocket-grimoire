@@ -191,6 +191,15 @@
         ]
     },
     {
+        "id": "boffin",
+        "name": "Boffin",
+        "ability": "Le Démon (même si ivre ou empoisonné) obtient la capacité d'un rôle bon hors-jeu. Vous apprenez tous les 2 lequel.",
+        "firstNightReminder": "Réveillez le Boffin et montrez-lui le jeton de la capacité du Démon. Remettez le Boffin en sommeil. Réveillez le Démon, montrez le jeton Boffin, puis montrez le jeton de la bonne capacité du Démon.",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
         "id": "bonecollector",
         "name": "Collecteur d'os",
         "ability": "Une fois par partie, au crépuscule, choisissez un joueur mort: il retrouvera ses capacités jusqu'au crépuscule suivant.",
@@ -922,6 +931,17 @@
         "remindersGlobal": [],
         "reminders": [
             "Empoisonné",
+            "Mort"
+        ]
+    },
+    {
+        "id": "lordoftyphon",
+        "name": "Seigneur du Typhon",
+        "ability": "Chaque nuit*, choisissez un joueur : il meurt. [Les rôles maléfiques sont alignés. Vous êtes au mileu. +1 Sbire, -?/+? Etrangers]",
+        "firstNightReminder": "Réveillez les joueurs de chaque côté du Démon. Montrez-leur la carte \"Tu es\" suivi du jeton de Sbire qu'ils deviennent, et un pouce vers le bas pour indiquer qu'ils sont désormais maléfiques.",
+        "otherNightReminder": "Le Seigneur du Typhon désigne un joueur. Ce joueur meurt.",
+        "remindersGlobal": [],
+        "reminders": [
             "Mort"
         ]
     },

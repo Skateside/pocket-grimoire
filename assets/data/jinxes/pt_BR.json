@@ -345,6 +345,11 @@
         "reason": "Se o Pregador escolhe o Invocador antes ou durante a 3ª noite, o Invocador escolhe que Demônio, mas o Narrador escolhe qual jogador."
     },
     {
+        "target": "summoner",
+        "trick": "lordoftyphon",
+        "reason": "Se o Summoner criar um Lord of Typhon, o Lord of Typhon deve ser vizinho de um Minion. O outro vizinho se torna um Minion maligno que não está em jogo."
+    },
+    {
         "target": "baron",
         "trick": "heretic",
         "reason": "O Barão adiciona apenas 1 Forasteiro em vez de 2."
@@ -668,5 +673,45 @@
         "target": "mastermind",
         "trick": "alhadikhia",
         "reason": "Se a Al-Hadikhia morre por execução e o Mentor está vivo, a Al-Hadikhia escolhe 3 jogadores do bem essa noite: se todos escolherem viver, o mau vence, caso contrário o bem vence."
+    },
+    {
+        "target": "boffin",
+        "trick": "heretic",
+        "reason": "O Demon não pode ter a habilidade Herege."
+    },
+    {
+        "target": "boffin",
+        "trick": "cultleader",
+        "reason": "Se o Demon tiver a habilidade Cult Leader, ele não pode se tornar bom devido a essa habilidade."
+    },
+    {
+        "target": "boffin",
+        "trick": "goon",
+        "reason": "Se o Demon tiver a habilidade Goon, ele não pode se tornar bom devido a essa habilidade."
+    },
+    {
+        "target": "boffin",
+        "trick": "ogre",
+        "reason": "O Demon não pode ter a habilidade Ogre."
+    },
+    {
+        "target": "boffin",
+        "trick": "politician",
+        "reason": "O Demon não pode ter a habilidade Politician."
+    },
+    {
+        "target": "boffin",
+        "trick": "drunk",
+        "reason": "Se o Demon tiver a habilidade Drunk, o Boffin escolhe um jogador Townsfolk para ter essa habilidade."
+    },
+    {
+        "target": "boffin",
+        "trick": "alchemist",
+        "reason": "Se o Alchemist tiver a habilidade Boffin, o Alchemist não aprende qual habilidade o Demon tem."
+    },
+    {
+        "target": "boffin",
+        "trick": "villageidiot",
+        "reason": "Se houver um token sobrando, o Boffin pode dar ao Demon a habilidade Village Idiot."
     }
 ]

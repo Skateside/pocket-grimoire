@@ -191,6 +191,15 @@
         ]
     },
     {
+        "id": "boffin",
+        "name": "Boffin",
+        "ability": "El Demonio (incluso si está borracho o envenenado) tiene la habilidad de un personaje bueno que no está en juego. Ambos saben cuál.",
+        "firstNightReminder": "Despierta al Boffin y muéstrale la ficha de la habilidad que tiene el Demonio. Vuelve a poner al Boffin a dormir. Despierta al Demonio, muestra la ficha de Boffin y luego muestra la ficha de la habilidad buena que tiene el Demonio.",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
         "id": "bonecollector",
         "name": "Coleccionista de huesos",
         "ability": "Una vez por partida, por la noche, elige 1 jugador muerto: vuelve a ganar su habilidad hasta el crepúsculo.",
@@ -922,6 +931,17 @@
         "remindersGlobal": [],
         "reminders": [
             "Envenenado",
+            "Muerto"
+        ]
+    },
+    {
+        "id": "lordoftyphon",
+        "name": "Lord of Typhon",
+        "ability": "Cada noche*, Elegí un jugador: muere. [Personajes malvados están en una linea. Sos el medio. +1 Secuaz. -? a +? Forasteros]",
+        "firstNightReminder": "Levanta a los jugadores de ambos lados del demonio. Mostrales la carta \"Vos sos\", la ficha del Secuaz que son ahora y un pulgar abajo para indicar que son malos.",
+        "otherNightReminder": "El Lord of Typhon señala a un jugador. El jugador muere.",
+        "remindersGlobal": [],
+        "reminders": [
             "Muerto"
         ]
     },

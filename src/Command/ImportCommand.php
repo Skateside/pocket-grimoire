@@ -178,7 +178,7 @@ class ImportCommand extends Command
 
         foreach ($jinxes as $target) {
 
-            $targetRole = $this->roleRepo->findOneBy(['name' => $target['id']]);
+            $targetRole = $this->roleRepo->findOneBy(['identifier' => $target['id']]);
 
             if (is_null($targetRole)) {
                 $this->io->writeln("Jinx: unable to find target role '{$target['id']}'");
@@ -187,7 +187,7 @@ class ImportCommand extends Command
 
             foreach ($target['jinx'] as $trick) {
 
-                $trickRole = $this->roleRepo->findOneBy(['name' => $trick['id']]);
+                $trickRole = $this->roleRepo->findOneBy(['identifier' => $trick['id']]);
 
                 if (is_null($trickRole)) {
                     $this->io->writeln("Jinx: unable to find trick role '{$trick['id']}'");
@@ -254,7 +254,7 @@ class ImportCommand extends Command
 
         foreach ($nightOrder['firstNight'] as $firstNightName) {
 
-            $character = $this->roleRepo->findOneBy(['name' => $firstNightName]);
+            $character = $this->roleRepo->findOneBy(['identifier' => $firstNightName]);
 
             if (!is_null($character)) {
 
@@ -271,7 +271,7 @@ class ImportCommand extends Command
 
         foreach ($nightOrder['otherNight'] as $otherNightName) {
 
-            $character = $this->roleRepo->findOneBy(['name' => $otherNightName]);
+            $character = $this->roleRepo->findOneBy(['identifier' => $otherNightName]);
 
             if (!is_null($character)) {
 

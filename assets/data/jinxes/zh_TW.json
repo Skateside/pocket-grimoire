@@ -345,6 +345,11 @@
         "reason": "如果傳教士在第三晚或之前選擇召喚師，則召喚師選擇哪個惡魔，但故事講述者選擇哪個玩家。"
     },
     {
+        "target": "summoner",
+        "trick": "lordoftyphon",
+        "reason": "如果召喚師創造了提豐領主，提豐領主必須與一個僕從相鄰。另一個鄰居變成了不在遊戲中的邪惡小小兵。"
+    },
+    {
         "target": "baron",
         "trick": "heretic",
         "reason": "男爵可能只添加一個城外人。"
@@ -668,5 +673,45 @@
         "target": "mastermind",
         "trick": "alhadikhia",
         "reason": "如果 Al-Hadikhia 被處決而死亡，而策劃者還活著，那麼 Al-Hadikhia 今晚會選擇 3 名善良的玩家：如果 3 個人都選擇活著，則邪惡獲勝。否則，善勝。"
+    },
+    {
+        "target": "boffin",
+        "trick": "heretic",
+        "reason": "惡魔不可能擁有異端能力。"
+    },
+    {
+        "target": "boffin",
+        "trick": "cultleader",
+        "reason": "如果惡魔擁有邪教領袖能力，他們就不會因為這個能力而變得更好。"
+    },
+    {
+        "target": "boffin",
+        "trick": "goon",
+        "reason": "如果惡魔擁有 Goon 能力，他們就不會因為這種能力而變得更好。"
+    },
+    {
+        "target": "boffin",
+        "trick": "ogre",
+        "reason": "惡魔不能擁有食人魔的能力。"
+    },
+    {
+        "target": "boffin",
+        "trick": "politician",
+        "reason": "惡魔不可能擁有政治家的能力。"
+    },
+    {
+        "target": "boffin",
+        "trick": "drunk",
+        "reason": "如果惡魔擁有醉酒能力，那麼科學家會選擇一名城鎮居民玩家來擁有此能力。"
+    },
+    {
+        "target": "boffin",
+        "trick": "alchemist",
+        "reason": "如果煉金術士具有博芬能力，則煉金術師不會了解惡魔具有什麼能力。"
+    },
+    {
+        "target": "boffin",
+        "trick": "villageidiot",
+        "reason": "如果有多餘的令牌，科學家可以賦予惡魔村白痴能力。"
     }
 ]

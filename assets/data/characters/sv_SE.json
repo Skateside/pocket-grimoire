@@ -187,6 +187,15 @@
         ]
     },
     {
+        "id": "boffin",
+        "name": "Boffin",
+        "ability": "Demonen (även om den är berusad eller förgiftad) har en bra karaktärs förmåga som inte är i spelet. Ni vet båda vilken.",
+        "firstNightReminder": "Väck Boffin och hur de visar tecken på förmågan som demonen har. Sätt Boffin i sömn igen. Väck demonen, visa Boffin-token och visa sedan tecken på den goda förmåga demonen har.",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
         "id": "bonecollector",
         "name": "Bensamlaren",
         "ability": "En gång per spel, på natten, kan du välja en död spelare; hen återfår sin förmåga fram till skymningen.",
@@ -918,6 +927,17 @@
         "reminders": [
             "Död",
             "Förgiftad"
+        ]
+    },
+    {
+        "id": "lordoftyphon",
+        "name": "Tyfons herre",
+        "ability": "Välj en spelare varje natt*; hen dör. [Onda sitter på rad & du är inte ytterst. +1 Lakej. ±? Utbölingar]",
+        "firstNightReminder": "Väck spelarna på var sida om Demonen. Visa dem kortet ”Du är”, sedan brickan för den Lakej de har blivit, och tummen ner för att visa att de är onda.",
+        "otherNightReminder": "Tyfons herre pekar på en spelare. Den spelaren dör.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Död"
         ]
     },
     {

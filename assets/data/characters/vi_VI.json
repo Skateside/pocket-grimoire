@@ -187,6 +187,15 @@
         ]
     },
     {
+        "id": "boffin",
+        "name": "Boffin",
+        "ability": "Quỷ dữ (kể cả khi say rượu hoặc bị đầu độc) có một khả năng tốt của nhân vật không chơi. Cả hai bạn đều biết khả năng đó.",
+        "firstNightReminder": "Đánh thức Boffin và cho họ xem mã thông báo về khả năng mà Quỷ dữ có. Đưa Boffin trở lại trạng thái ngủ. Đánh thức Quỷ dữ, cho xem mã thông báo Boffin, sau đó cho xem mã thông báo về khả năng tốt mà Quỷ dữ có.",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
         "id": "bonecollector",
         "name": "Nhà sưu tầm xương",
         "ability": "Một lần trong game, vào buổi đêm, chọn người chết: họ lấy lại chức năng đến hoàng hôn.",
@@ -919,6 +928,17 @@
         "reminders": [
             "Chết",
             "Trúng độc"
+        ]
+    },
+    {
+        "id": "lordoftyphon",
+        "name": "Thần Typhon",
+        "ability": "Mỗi đêm*, chọn 1 người: họ chết [Tất cả người xấu ngồi theo hàng. Bạn là người ở giữa. +1 Tay sai. -? đến +? Lữ khách]",
+        "firstNightReminder": "Gọi những người ngồi 2 bên của Quỷ dậy. Cho xem lá \"Bạn Là\", token Tay sai họ biến thành, và ngón cái xuống thể hiện họ là người xấu.",
+        "otherNightReminder": "Thần Typhon chỉ 1 người. Họ chết.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Chết"
         ]
     },
     {

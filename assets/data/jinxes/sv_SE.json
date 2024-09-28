@@ -345,6 +345,11 @@
         "reason": "Om Predikanten väljer Åkallaren den 3:e natten eller tidigare så får Åkallaren välja Demon, men Berättaren väljer spelare."
     },
     {
+        "target": "summoner",
+        "trick": "lordoftyphon",
+        "reason": "Om Åkallaren skapar Tyfons herre måste Tyfons herre sitta granne med en Lakej. Den andra grannen blir en ond Lakej som inte redan är i spel."
+    },
+    {
         "target": "baron",
         "trick": "heretic",
         "reason": "Baronen lägger bara till 1 Utböling, inte 2."
@@ -668,5 +673,45 @@
         "target": "mastermind",
         "trick": "alhadikhia",
         "reason": "Om al Hadikhia dör av avrättning och Mästaren lever så väljer al Hadikhia 3 goda spelare inatt; om alla 3 väljer att leva så vinner de onda, annars vinner de goda."
+    },
+    {
+        "target": "boffin",
+        "trick": "heretic",
+        "reason": "Demonen kan inte ha Kättarens förmåga."
+    },
+    {
+        "target": "boffin",
+        "trick": "cultleader",
+        "reason": "Om Demonen har Kultledarens förmåga kan hen inte bli god av den förmågan."
+    },
+    {
+        "target": "boffin",
+        "trick": "goon",
+        "reason": "Om Demonen har Hejdukens förmåga kan hen inte bli god av den förmågan."
+    },
+    {
+        "target": "boffin",
+        "trick": "ogre",
+        "reason": "Demonen kan inte ha Trollets förmåga."
+    },
+    {
+        "target": "boffin",
+        "trick": "politician",
+        "reason": "Demonen kan inte ha Politikerns förmåga."
+    },
+    {
+        "target": "boffin",
+        "trick": "drunk",
+        "reason": "Om Demonen skulle ha Fyllots förmåga så väljer Vetenskaparen en spelare som är Bybo; hen får Fyllots förmåga istället."
+    },
+    {
+        "target": "boffin",
+        "trick": "alchemist",
+        "reason": "Om Alkemisten har Vetenskaparens förmåga får Alkemisten inte veta vilken förmåga Demonen har."
+    },
+    {
+        "target": "boffin",
+        "trick": "villageidiot",
+        "reason": "Om det finns en ledig bricka kan Vetenskaparen ge Demonen Byfånens förmåga."
     }
 ]

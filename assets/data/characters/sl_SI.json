@@ -191,6 +191,15 @@
         ]
     },
     {
+        "id": "boffin",
+        "name": "Boffin",
+        "ability": "Demon (tudi če je pijan ali zastrupljen) ima sposobnost dobrega lika, ki ni v igri. Oba veste, katero.",
+        "firstNightReminder": "Zbudite Boffina in pokažite znak sposobnosti, ki jo ima demon. Uspajte Boffina nazaj. Zbudite demona, pokažite žeton Boffina, nato pokažite znak dobre sposobnosti, ki jo ima demon.",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
         "id": "bonecollector",
         "name": "Zbiralec kosti",
         "ability": "Enkrat na igro lahko ponoči izbereš mrtvega igralca. Do naslednjega mraka znova dobi svojo moč.",
@@ -914,6 +923,17 @@
         "reminders": [
             "Mrtev",
             "Zastrupljen"
+        ]
+    },
+    {
+        "id": "lordoftyphon",
+        "name": "Lord of Typhon",
+        "ability": "Vsako noč* izberite igralca: umrejo. [Zlobni liki so v vrsti. Vi ste v sredini. +1 Minion. -? Do +? Outsiders]",
+        "firstNightReminder": "Prebudite igralce na obeh straneh Demona. Pokažite jim karto 'Ti si', žeton Miniona, ki so zdaj, in palec navzdol, da pokažeš, da so zlobni.",
+        "otherNightReminder": "Gospodar Typhona pokaže na igralca. Ta igralec umre.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Mrtev"
         ]
     },
     {

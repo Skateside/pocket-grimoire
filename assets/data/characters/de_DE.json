@@ -160,6 +160,15 @@
         ]
     },
     {
+        "id": "boffin",
+        "name": "Boffin",
+        "ability": "Der Dämon (selbst wenn er betrunken oder vergiftet ist) hat eine nicht im Spiel befindliche gute Charakterfähigkeit. Ihr wisst beide, welche.",
+        "firstNightReminder": "Wecke den Boffin auf und zeige ihm das Zeichen der Fähigkeit, die der Dämon hat. Bringe den Boffin wieder zum Schlafen. Wecke den Dämon auf, zeige das Boffin-Zeichen und dann das Zeichen der guten Fähigkeit, die der Dämon hat.",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
         "id": "baron",
         "name": "Baron",
         "ability": "Es sind zusätzliche Außenseiter im Spiel. [+2 Außenseiter]",
@@ -922,6 +931,17 @@
         "reminders": [
             "Tot",
             "Vergiftet"
+        ]
+    },
+    {
+        "id": "lordoftyphon",
+        "name": "Lord of Typhon",
+        "ability": "Wähle jede Nacht* einen Spieler: Er stirbt. [Böse Charaktere stehen in einer Reihe. Du bist in der Mitte. +1 Diener. -? Zu +? Außenseiter]",
+        "firstNightReminder": "Wecke die Spieler auf beiden Seiten des Dämons auf. Zeige ihnen das 'Du Sind-Karte, das Zeichen des Dieners, der sie jetzt sind, und ein Daumen nach unten, um anzuzeigen, dass sie böse sind.",
+        "otherNightReminder": "Der Lord von Typhon zeigt auf einen Spieler. Dieser Spieler stirbt.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Tot"
         ]
     },
     {

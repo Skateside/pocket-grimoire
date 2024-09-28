@@ -191,6 +191,15 @@
         ]
     },
     {
+        "id": "boffin",
+        "name": "博芬",
+        "ability": "惡魔（即使喝醉或中毒）具有非遊戲中的好角色的能力。你們都知道。",
+        "firstNightReminder": "喚醒 Boffin 以及如何顯示惡魔擁有的能力標記。讓 Boffin 重新進入睡眠狀態。喚醒惡魔，顯示 Boffin 標記，然後顯示惡魔擁有的良好能力標記。",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
         "id": "bonecollector",
         "name": "集骨家",
         "ability": "每場遊戲一次，晚上時，選擇一位死亡的玩家，該玩家恢復自己的能力直到隔天黃昏。",
@@ -922,6 +931,17 @@
         "remindersGlobal": [],
         "reminders": [
             "中毒",
+            "死亡"
+        ]
+    },
+    {
+        "id": "lordoftyphon",
+        "name": "提豐領主",
+        "ability": "每天晚上*，選一個玩家：他們會死。[邪惡角色排成一列。你在中間。+1 小兵。-？到+？外來者]",
+        "firstNightReminder": "喚醒惡魔兩側的玩家。向他們展示“你是”卡片，這是他們現在的小黃人的標記，並且大拇指朝下表示他們是邪惡的。",
+        "otherNightReminder": "提豐之主指向一名玩家。該玩家死亡。",
+        "remindersGlobal": [],
+        "reminders": [
             "死亡"
         ]
     },

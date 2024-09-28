@@ -191,6 +191,15 @@
         ]
     },
     {
+        "id": "boffin",
+        "name": "Boffin",
+        "ability": "O Demônio (mesmo bêbado ou envenenado) tem uma habilidade de personagem bom que não está em jogo. Vocês dois sabem qual.",
+        "firstNightReminder": "Acorde o Boffin e mostre a ele o símbolo da habilidade que o Demônio tem. Coloque o Boffin para dormir novamente. Acorde o Demônio, mostre o símbolo do Boffin e, em seguida, mostre o símbolo da habilidade boa que o Demônio tem.",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
         "id": "bonecollector",
         "name": "Coletor de Ossos",
         "ability": "Uma vez por jogo, à noite, escolha um jogador morto: ele recupera a habilidade até o anoitecer.",
@@ -940,6 +949,17 @@
         "reminders": [
             "Morto",
             "Envenenado"
+        ]
+    },
+    {
+        "id": "lordoftyphon",
+        "name": "Lorde do TIfão",
+        "ability": "A cada noite* escolha um jogador: ele morre. [Jogadores do mal estão em linha. Voce está no meio. +1 Lacaio. -? a +? Forasteiros]",
+        "firstNightReminder": "Acorde os vizinhos do Lorde do Tifão. Mostre o token *VOCÊ É*, com o Lacaio que ele é agora e joinha para baixo para indicar que ele é mal.",
+        "otherNightReminder": "Lorde do Tifao escolhe um jogador: o alvo morre.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Morto"
         ]
     },
     {

@@ -182,6 +182,15 @@
         ]
     },
     {
+        "id": "boffin",
+        "name": "Boffin",
+        "ability": "Il Demone (anche se ubriaco o avvelenato) ha un'abilità di un personaggio buono non in gioco. Sapete entrambi quale.",
+        "firstNightReminder": "Sveglia il Boffin e mostra loro il token dell'abilità che ha il Demone. Rimetti a dormire il Boffin. Sveglia il Demone, mostra il token Boffin, quindi mostra il token dell'abilità buona che ha il Demone.",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
         "id": "bonecollector",
         "name": "Imbalsamatore",
         "ability": "Una volta durante la partita, di notte, scegli un giocatore morto: egli riacquisisce la sua abilità fino al tramonto.",
@@ -914,6 +923,17 @@
         "reminders": [
             "Avvelenato",
             "Morto"
+        ]
+    },
+    {
+        "id": "lordoftyphon",
+        "name": "Signore di Tifone",
+        "ability": "Ogni notte*, scegli un giocatore: muoiono. [I personaggi malvagi sono in fila. Tu sei nel mezzo. +1 Minion. -? A +? Esterni]",
+        "firstNightReminder": "Sveglia i giocatori su entrambi i lati del Demone. Mostra loro la carta \"Tu sei\", il segnalino del Minion che ora sono e un pollice in giù per indicare che sono malvagi.",
+        "otherNightReminder": "Il Signore di Tifone indica un giocatore. Quel giocatore muore.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Dead"
         ]
     },
     {

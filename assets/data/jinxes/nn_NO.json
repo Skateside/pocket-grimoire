@@ -345,6 +345,11 @@
         "reason": "Om Predikanten vel Svartemanaren innan den tredje natta, vel Svartemanaren Demonen men Forteljaren kva spelar."
     },
     {
+        "target": "summoner",
+        "trick": "lordoftyphon",
+        "reason": "Hvis tilkalleren skaper en Herre av Typhon, må Herren av Typhon være nabo til en Minion. Den andre naboen blir en ond minion som ikke er i spill."
+    },
+    {
         "target": "baron",
         "trick": "heretic",
         "reason": "Det kan hende Greven berre legg til 1 Einstøing, ikkje 2."
@@ -668,5 +673,45 @@
         "target": "mastermind",
         "trick": "alhadikhia",
         "reason": "Om Al-Hadikhia døyr ved avretting, og Geniet lever, vel Al-Hadikhia 3 gode spelarar i natt. Om alle 3 vel å leve vinn vondt, elles vinn godt."
+    },
+    {
+        "target": "boffin",
+        "trick": "heretic",
+        "reason": "Demonen kan ikke ha den kjetterske evnen."
+    },
+    {
+        "target": "boffin",
+        "trick": "cultleader",
+        "reason": "Hvis demonen har kultlederevnen, kan de ikke bli gode på grunn av denne evnen."
+    },
+    {
+        "target": "boffin",
+        "trick": "goon",
+        "reason": "Hvis demonen har Goon-evnen, kan de ikke bli gode på grunn av denne evnen."
+    },
+    {
+        "target": "boffin",
+        "trick": "ogre",
+        "reason": "Demonen kan ikke ha Ogre-evnen."
+    },
+    {
+        "target": "boffin",
+        "trick": "politician",
+        "reason": "Demonen kan ikke ha politikerevnen."
+    },
+    {
+        "target": "boffin",
+        "trick": "drunk",
+        "reason": "Hvis demonen ville ha Drunk-evnen, velger Boffin en Townsfolk-spiller til å ha denne evnen i stedet."
+    },
+    {
+        "target": "boffin",
+        "trick": "alchemist",
+        "reason": "Hvis alkymisten har Boffin-evnen, lærer ikke alkymisten hvilken evne demonen har."
+    },
+    {
+        "target": "boffin",
+        "trick": "villageidiot",
+        "reason": "Hvis det er en ekstra token, kan Boffin gi Demon the Village Idiot-evne."
     }
 ]

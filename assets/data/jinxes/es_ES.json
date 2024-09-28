@@ -345,6 +345,11 @@
         "reason": "Si el Predicador eligió al Invocador en la tercera noche o antes, el Invocador elige qué Demonio, pero el Narrador elige qué jugador."
     },
     {
+        "target": "summoner",
+        "trick": "lordoftyphon",
+        "reason": "Si el invocador crea un Señor de Tifón, este debe tener como vecino a un esbirro. El otro vecino se convierte en un esbirro malvado que no está en juego."
+    },
+    {
         "target": "baron",
         "trick": "heretic",
         "reason": "El Barón puede meter solo 1 Forastero, no 2."
@@ -668,5 +673,45 @@
         "target": "mastermind",
         "trick": "alhadikhia",
         "reason": "Si Al-Hadikhia muere en la ejecución y Mastermind está vivo, Al-Hadikhia elige esta noche a 3 buenos jugadores: si los 3 eligen vivir, el mal gana. De lo contrario, lo bueno gana."
+    },
+    {
+        "target": "boffin",
+        "trick": "heretic",
+        "reason": "El demonio no puede tener la habilidad Hereje."
+    },
+    {
+        "target": "boffin",
+        "trick": "cultleader",
+        "reason": "Si el demonio tiene la habilidad Líder de culto, no puede volverse bueno debido a esta habilidad."
+    },
+    {
+        "target": "boffin",
+        "trick": "goon",
+        "reason": "Si el demonio tiene la habilidad Matón, no puede volverse bueno debido a esta habilidad."
+    },
+    {
+        "target": "boffin",
+        "trick": "ogre",
+        "reason": "El demonio no puede tener la habilidad Ogro."
+    },
+    {
+        "target": "boffin",
+        "trick": "politician",
+        "reason": "El demonio no puede tener la habilidad Político."
+    },
+    {
+        "target": "boffin",
+        "trick": "drunk",
+        "reason": "Si el demonio tuviera la habilidad Borracho, el Boffin elige a un jugador de la gente del pueblo para que tenga esta habilidad en su lugar."
+    },
+    {
+        "target": "boffin",
+        "trick": "alchemist",
+        "reason": "Si el alquimista tiene la habilidad Boffin, el alquimista no sabe qué habilidad tiene el demonio."
+    },
+    {
+        "target": "boffin",
+        "trick": "villageidiot",
+        "reason": "Si hay una ficha de sobra, el Boffin puede darle al demonio la habilidad Idiota del pueblo."
     }
 ]

@@ -345,6 +345,11 @@
         "reason": "Se il Predicatore sceglie l'Evocatore entro la terza notte, l'Evocatore sceglie quale Demone, ma il Narratore sceglie quale giocatore."
     },
     {
+        "target": "summoner",
+        "trick": "lordoftyphon",
+        "reason": "Se l'evocatore crea un Lord di Tifone, il Lord di Tifone deve avere come vicino un Minion. L'altro vicino diventa un Minion malvagio non in gioco."
+    },
+    {
         "target": "baron",
         "trick": "heretic",
         "reason": "Il Barone potrebbe aggiungere 1 solo Forestiero, non 2."
@@ -668,5 +673,45 @@
         "target": "mastermind",
         "trick": "alhadikhia",
         "reason": "Se l'Al-Hadikhia muore per esecuzione e il Mastermind è vivo, l'Al-Hadikhia sceglie 3 buoni giocatori stasera: se tutti e 3 scelgono di vivere, il male vince. Altrimenti vince il bene."
+    },
+    {
+        "target": "boffin",
+        "trick": "heretic",
+        "reason": "Il Demone non può avere l'abilità Eretico."
+    },
+    {
+        "target": "boffin",
+        "trick": "cultleader",
+        "reason": "Se il Demone ha l'abilità Capo del Culto, non può diventare buono a causa di questa abilità."
+    },
+    {
+        "target": "boffin",
+        "trick": "goon",
+        "reason": "Se il Demone ha l'abilità Scagnozzo, non può diventare buono a causa di questa abilità."
+    },
+    {
+        "target": "boffin",
+        "trick": "ogre",
+        "reason": "Il Demone non può avere l'abilità Orco."
+    },
+    {
+        "target": "boffin",
+        "trick": "politician",
+        "reason": "Il Demone non può avere l'abilità Politico."
+    },
+    {
+        "target": "boffin",
+        "trick": "drunk",
+        "reason": "Se il Demone avrebbe l'abilità Ubriaco, il Boffin sceglie un giocatore Cittadino che abbia questa abilità al suo posto."
+    },
+    {
+        "target": "boffin",
+        "trick": "alchemist",
+        "reason": "Se l'Alchimista ha l'abilità Boffin, l'Alchimista non scopre quale abilità ha il Demone."
+    },
+    {
+        "target": "boffin",
+        "trick": "villageidiot",
+        "reason": "Se c'è un segnalino di riserva, il Boffin può dare al Demone l'abilità Idiota del Villaggio."
     }
 ]
