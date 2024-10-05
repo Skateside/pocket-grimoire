@@ -104,7 +104,15 @@ TokenStore.ready((tokenStore) => {
 
                 character.getData("jinxes").forEach(({ id, reason }) => {
 
-                    const trick = tokenStore.getCharacter(id);
+                    // Get the trick from the token store or the characters
+                    // that have been passed in - this allows one homebrew
+                    // character to be jinxed with another.
+                    const trick = (
+                        tokenStore.getCharacter(id)
+                        || characters.find((character) => {
+                            return character.getId() === id;
+                        })
+                    );
                     const jinx = new Jinx(trick, reason);
                     jinx.setIsHomebrew(true);
                     character.addJinx(jinx);

@@ -162,35 +162,20 @@ class MainController extends AbstractController
             // Generate any homebrew characters and store them in a map. This
             // allows us to reference them in the next loop, preventing an issue
             // where a jinx references a character that's defined lated and
-            // creating a rendering issue on the character sheet. Only define
-            // the "target" because the "trick" wouldn't have all the data.
+            // creating a rendering issue on the character sheet.
             $characterMap = [];
             foreach ($homebrew->getJson() as $character) {
 
-                if (
-                    !array_key_exists('jinxes', $character)
-                    || !array_key_exists('id', $character)
-                ) {
+                if (!array_key_exists('id', $character)) {
                     continue;
                 }
 
-                foreach ($character['jinxes'] as $maybeJinx) {
-
-                    if (!is_array($maybeJinx)) {
-                        continue;
-                    }
-
-                    $characterId = $this->homebrewModel->normaliseId($character['id']);
-                    $target = (
-                        $characterMap[$characterId]
-                        ?? $this->roleRepo->findOneBy([
-                            'identifier' => $characterId
-                        ])
-                        ?? $this->roleRepo->createTemp($character)
-                    );
-                    $characterMap[$characterId] = $target;
-
-                }
+                $characterId = $this->homebrewModel->normaliseId($character['id']);
+                $target = (
+                    $this->roleRepo->findOneBy([ 'identifier' => $characterId ])
+                    ?? $this->roleRepo->createTemp($character)
+                );
+                $characterMap[$characterId] = $target;
 
             }
 
