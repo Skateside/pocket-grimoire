@@ -25,12 +25,12 @@ sheet:
 
 groups:
     players: Spieler
-    townsfolk: Dorfbewohner
+    townsfolk: Bürger
     outsider: Außenseiter
-    minion: Untergebene
+    minion: Schergen
     demon: Dämonen
     traveller: Reisende
-    fabled: Sagenhaften
+    fabled: Sagenhafte
 
 messages:
     good_team: Gutes Team
@@ -216,7 +216,7 @@ info_tokens:
     title: Infoplättchen
     info_tokens:
         isdemon: Dies ist der <strong>Dämon</strong>
-        isminion: Das sind deine <strong>Untergebenen</strong>
+        isminion: Das sind deine <strong>Schergen</strong>
         notinplay: Diese Charaktere sind <strong>nicht im Spiel</strong>
         nominatetoday: Hast du heute <strong>nominiert</strong>?
         playeris: <strong>Dieser Spieler</strong> ist
