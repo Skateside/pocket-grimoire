@@ -114,7 +114,7 @@
 // Sans-serif:
 // https://gist.github.com/prantlf/fbd12acc69a022edd589dea48dafe3f8
 
-:lang(ja-JP) {
+:lang(ja) {
     --serif-font:
         Georgia,
         "Times New Roman",
@@ -161,4 +161,17 @@
         Helvetica,
         Arial,
         sans-serif;
+}
+
+// Korean needs it own serif font.
+// I couldn't find a good recommendation for a font stack online so I've assumed
+// that it's the same as the Thai stack.
+
+:lang(ko) {
+    --serif-font:
+        "Noto Serif Korean",
+        "Times New Roman",
+        Georgia,
+        Times,
+        serif;
 }

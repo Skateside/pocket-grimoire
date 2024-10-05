@@ -1,0 +1,717 @@
+[
+    {
+        "target": "chambermaid",
+        "trick": "mathematician",
+        "reason": " 하녀 learns if  수학자 wakes tonight or not, even though  하녀 wakes first."
+    },
+    {
+        "target": "eviltwin",
+        "trick": "plaguedoctor",
+        "reason": "이야기꾼 cannot gain  사악한 쌍둥이 ability if 전염병 의사 dies."
+    },
+    {
+        "target": "cannibal",
+        "trick": "butler",
+        "reason": "If  식인종 gains  집사 ability,  식인종 learns this."
+    },
+    {
+        "target": "cannibal",
+        "trick": "juggler",
+        "reason": "If  저글러 guesses on ir first day and dies by 처형, tonight  living 식인종 learns how many guesses  저글러 got correct."
+    },
+    {
+        "target": "cannibal",
+        "trick": "zealot",
+        "reason": "If  식인종 gains  광신도 ability,  식인종 learns this."
+    },
+    {
+        "target": "lunatic",
+        "trick": "mathematician",
+        "reason": " 수학자 learns if  미치광이 attacks a different 플레이어(s) than  real 악마 attacked."
+    },
+    {
+        "target": "pithag",
+        "trick": "heretic",
+        "reason": "A 피트해그 can not create a 이교도."
+    },
+    {
+        "target": "pithag",
+        "trick": "damsel",
+        "reason": "If a 피트해그 creates a 아가씨,  이야기꾼 chooses which 플레이어 it is."
+    },
+    {
+        "target": "pithag",
+        "trick": "politician",
+        "reason": "A 피트해그 can not create an evil 정치가."
+    },
+    {
+        "target": "pithag",
+        "trick": "villageidiot",
+        "reason": "If re is a spare token,  피트해그 can create an extra 동네바보. If so,  주정뱅이 동네바보 might change."
+    },
+    {
+        "target": "pithag",
+        "trick": "cultleader",
+        "reason": "If  피트해그 turns an evil 플레이어 into  교주, y can't turn good due to ir own ability."
+    },
+    {
+        "target": "pithag",
+        "trick": "goon",
+        "reason": "If  피트해그 turns an evil 플레이어 into  깡패, y can't turn good due to ir own ability."
+    },
+    {
+        "target": "pithag",
+        "trick": "ogre",
+        "reason": "If  피트해그 turns an evil 플레이어 into  오우거, y can't turn good due to ir own ability."
+    },
+    {
+        "target": "cerenovus",
+        "trick": "goblin",
+        "reason": " 세레노부스 may choose to make a 플레이어 mad that y are  고블린."
+    },
+    {
+        "target": "goblin",
+        "trick": "plaguedoctor",
+        "reason": "If 전염병의사 dies, a living 하수인 gains  고블린 ability in addition to ir own ability, and learns this."
+    },
+    {
+        "target": "leviathan",
+        "trick": "soldier",
+        "reason": "If 레비아탄 nominates and executes  군인,  군인 does not die."
+    },
+    {
+        "target": "leviathan",
+        "trick": "monk",
+        "reason": "If 레비아탄 nominates and executes  플레이어  수도승 chose, that 플레이어 does not die."
+    },
+    {
+        "target": "leviathan",
+        "trick": "innkeeper",
+        "reason": "If 레비아탄 nominates and executes a 플레이어  여관주인 chose, that 플레이어 does not die."
+    },
+    {
+        "target": "leviathan",
+        "trick": "ravenkeeper",
+        "reason": "If 레비아탄 is in play &  레이븐키퍼 dies by 처형, y wake that night to use ir ability."
+    },
+    {
+        "target": "leviathan",
+        "trick": "banshee",
+        "reason": "If 레비아탄 is in play, and  밴시 dies by 처형, all 플레이어s learn that  밴시 has died, and  밴시 gains ir ability."
+    },
+    {
+        "target": "leviathan",
+        "trick": "sage",
+        "reason": "If 레비아탄 is in play &  현자 dies by 처형, y wake that night to use ir ability."
+    },
+    {
+        "target": "leviathan",
+        "trick": "farmer",
+        "reason": "If 레비아탄 is in play & a 농부 dies by 처형, a good 플레이어 becomes a 농부 that night."
+    },
+    {
+        "target": "leviathan",
+        "trick": "mayor",
+        "reason": "If 레비아탄 is in play & no 처형 occurs on day 5, good wins."
+    },
+    {
+        "target": "leviathan",
+        "trick": "hatter",
+        "reason": "If  모자장수 dies on or after day 5,  악마 cannot choose 레비아탄."
+    },
+    {
+        "target": "leviathan",
+        "trick": "pithag",
+        "reason": "After day 5,  피트해그 cannot choose 레비아탄."
+    },
+    {
+        "target": "lilmonsta",
+        "trick": "poppygrower",
+        "reason": "If  양귀비 재배자 is in play, 하수인들 don't wake toger. y are woken one by one, until one of m chooses to take 릴몬스타 token."
+    },
+    {
+        "target": "lilmonsta",
+        "trick": "magician",
+        "reason": "Each night,  마술사 chooses 하수인: if that 하수인 & 릴몬스타 are alive, that 하수인 babysits 릴몬스타"
+    },
+    {
+        "target": "lilmonsta",
+        "trick": "scarletwoman",
+        "reason": "If re are 5 or more 플레이어s alive and  플레이어 holding  릴몬스타 token dies,  부정한 여자 is given  릴몬스타 token tonight."
+    },
+    {
+        "target": "lilmonsta",
+        "trick": "organgrinder",
+        "reason": "Votes for  오르간 연주자 count if  오르간 연주자 is babysitting 릴몬스타"
+    },
+    {
+        "target": "lilmonsta",
+        "trick": "vizier",
+        "reason": " 수상 can die by 처형 if y are babysitting 릴몬스타"
+    },
+    {
+        "target": "lilmonsta",
+        "trick": "hatter",
+        "reason": "If a 악마 chooses 릴몬스타, y also choose 하수인 to become and babysit 릴몬스타 tonight."
+    },
+    {
+        "target": "lycanthrope",
+        "trick": "gambler",
+        "reason": "If  늑대인간 is alive and  도박꾼 kills mself at night, no or 플레이어s can die tonight."
+    },
+    {
+        "target": "legion",
+        "trick": "engineer",
+        "reason": "군단 and  엔지니어 can not both be in play at  start of  game. If  엔지니어 creates 군단, most 플레이어s (including all evil 플레이어s) become evil 군단."
+    },
+    {
+        "target": "legion",
+        "trick": "preacher",
+        "reason": "If  전도사 chooses 군단, 군단 keeps ir ability, but  전도사 might learn y are 군단."
+    },
+    {
+        "target": "legion",
+        "trick": "minstrel",
+        "reason": "If 군단 died by 처형 today, 군단 keeps ir ability, but  음유시인 might learn y are 군단."
+    },
+    {
+        "target": "legion",
+        "trick": "hatter",
+        "reason": "If  모자장수 dies and 군단 is in play, nothing happens. If  모자장수 dies and an evil 플레이어 chooses 군단, all current evil 플레이어s become 군단."
+    },
+    {
+        "target": "legion",
+        "trick": "zealot",
+        "reason": " 광신도 might register as evil to 군단’s ability."
+    },
+    {
+        "target": "fanggu",
+        "trick": "scarletwoman",
+        "reason": "If 팡구 chooses an 이방인 and dies,  부정한 여자 does not become 팡구"
+    },
+    {
+        "target": "spy",
+        "trick": "alchemist",
+        "reason": " 연금술사 can not have  스파이 ability."
+    },
+    {
+        "target": "spy",
+        "trick": "magician",
+        "reason": "When  스파이 sees  Grimoire,  악마 and 마술사's 캐릭터 tokens are removed."
+    },
+    {
+        "target": "spy",
+        "trick": "poppygrower",
+        "reason": "If  양귀비 재배자 is in play,  스파이 does not see  Grimoire until  양귀비 재배자 dies."
+    },
+    {
+        "target": "spy",
+        "trick": "plaguedoctor",
+        "reason": "If 전염병 의사 dies, a living 하수인 gains  스파이 ability in addition to ir own ability, and learns this."
+    },
+    {
+        "target": "spy",
+        "trick": "damsel",
+        "reason": "If  스파이 is (or has been) in play,  아가씨 is poisoned"
+    },
+    {
+        "target": "spy",
+        "trick": "heretic",
+        "reason": "Only 1 jinxed 캐릭터 can be in play."
+    },
+    {
+        "target": "spy",
+        "trick": "ogre",
+        "reason": " 스파이 registers as evil to  오우거."
+    },
+    {
+        "target": "widow",
+        "trick": "alchemist",
+        "reason": " 연금술사 can not have  마녀 ability."
+    },
+    {
+        "target": "widow",
+        "trick": "magician",
+        "reason": "When  마녀 sees  Grimoire,  악마 and 마술사's 캐릭터 tokens are removed."
+    },
+    {
+        "target": "widow",
+        "trick": "poppygrower",
+        "reason": "If  양귀비 재배자 is in play,  마녀 does not see  Grimoire until  양귀비 재배자 dies."
+    },
+    {
+        "target": "widow",
+        "trick": "damsel",
+        "reason": "If  마녀 is (or has been) in play,  아가씨 is poisoned."
+    },
+    {
+        "target": "widow",
+        "trick": "heretic",
+        "reason": "Only 1 jinxed 캐릭터 can be in play."
+    },
+    {
+        "target": "godfather",
+        "trick": "heretic",
+        "reason": "Only 1 jinxed 캐릭터 can be in play."
+    },
+    {
+        "target": "scarletwoman",
+        "trick": "plaguedoctor",
+        "reason": "If 전염병 의사 dies, a living 하수인 gains  부정한 여자 ability in addition to ir own ability, and learns this."
+    },
+    {
+        "target": "boomdandy",
+        "trick": "plaguedoctor",
+        "reason": "If 전염병 의사 is executed and  이야기꾼 would gain  봄버맨 ability,  봄버맨 ability triggers immediately."
+    },
+    {
+        "target": "fearmonger",
+        "trick": "plaguedoctor",
+        "reason": "If 전염병 의사 dies, a living 하수인 gains  공포조장자 ability in addition to ir own ability, and learns this."
+    },
+    {
+        "target": "yaggababble",
+        "trick": "exorcist",
+        "reason": "If  엑소시스트 chooses  야가보블,  야가보블 ability does not kill tonight."
+    },
+    {
+        "target": "summoner",
+        "trick": "clockmaker",
+        "reason": "If  소환사 is in play,  시계공 does not receive ir information until a 악마 is created."
+    },
+    {
+        "target": "summoner",
+        "trick": "alchemist",
+        "reason": "If re is an 연금술사-소환사 in play,  game starts with a 악마 in play, as normal. If  연금술사-소환사 chooses a 플레이어, y make that 플레이어 a 악마 but do not change ir alignment."
+    },
+    {
+        "target": "summoner",
+        "trick": "poppygrower",
+        "reason": "If  양귀비 재배자 is alive when  소환사 acts,  소환사 chooses which 악마, but  이야기꾼 chooses which 플레이어."
+    },
+    {
+        "target": "summoner",
+        "trick": "marionette",
+        "reason": " 꼭두각시 neighbours  소환사.  소환사 knows who  꼭두각시 is."
+    },
+    {
+        "target": "summoner",
+        "trick": "pithag",
+        "reason": " 소환사 cannot create an in-play 악마. If  소환사 creates a not-in-play 악마, deaths tonight are arbitrary."
+    },
+    {
+        "target": "summoner",
+        "trick": "hatter",
+        "reason": " 소환사 cannot create an in-play 악마. If  소환사 creates a not-in-play 악마, deaths tonight are arbitrary."
+    },
+    {
+        "target": "summoner",
+        "trick": "courtier",
+        "reason": "If  소환사 is 주정뱅이 on  3rd night,  소환사 chooses which 악마, but  이야기꾼 chooses which 플레이어."
+    },
+    {
+        "target": "summoner",
+        "trick": "engineer",
+        "reason": "If  엔지니어 removes a 소환사 from play before that 소환사 uses ir ability,  소환사 uses ir ability immediately."
+    },
+    {
+        "target": "summoner",
+        "trick": "zombuul",
+        "reason": "If  소환사 turns a dead 플레이어 into  좀부울,  이야기꾼 treats that 플레이어 as a 좀부울 that has died once."
+    },
+    {
+        "target": "summoner",
+        "trick": "pukka",
+        "reason": " 소환사 may choose a 플레이어 to become  푸카 on  2nd night."
+    },
+    {
+        "target": "summoner",
+        "trick": "riot",
+        "reason": "If  소환사 creates 폭도, all 하수인들 become 폭도."
+    },
+    {
+        "target": "summoner",
+        "trick": "legion",
+        "reason": "If  소환사 creates 군단, most 플레이어s (including all evil 플레이어s) become evil 군단."
+    },
+    {
+        "target": "summoner",
+        "trick": "kazali",
+        "reason": " 소환사 cannot create an in-play 악마. If  소환사 creates a not-in-play 악마, deaths tonight are arbitrary."
+    },
+    {
+        "target": "summoner",
+        "trick": "preacher",
+        "reason": "If  전도사 chose  소환사 on or before  3rd night,  소환사 chooses which 악마, but  이야기꾼 chooses which 플레이어."
+    },
+    {
+        "target": "summoner",
+        "trick": "lordoftyphon",
+        "reason": "If the Summoner creates a Lord of Typhon, the Lord of Typhon must neighbor a Minion. The other neighbor becomes a not-in-play evil Minion."
+    },
+    {
+        "target": "baron",
+        "trick": "heretic",
+        "reason": " 남작 might only add 1 이방인, not 2."
+    },
+    {
+        "target": "baron",
+        "trick": "plaguedoctor",
+        "reason": "If  이야기꾼 gains  남작 ability, up to two 플레이어s become out-of-play 이방인s."
+    },
+    {
+        "target": "marionette",
+        "trick": "lilmonsta",
+        "reason": " 꼭두각시 neighbors 하수인, not  악마.  꼭두각시 is not woken to choose who takes  릴몬스타 token, and does not learn y are  꼭두각시 if y have  릴몬스타 token."
+    },
+    {
+        "target": "marionette",
+        "trick": "poppygrower",
+        "reason": "When  양귀비 재배자 dies,  악마 learns  꼭두각시 but  꼭두각시 learns nothing."
+    },
+    {
+        "target": "marionette",
+        "trick": "snitch",
+        "reason": " 꼭두각시 does not learn 3 not in-play 캐릭터s.  악마 learns an extra 3 instead."
+    },
+    {
+        "target": "marionette",
+        "trick": "balloonist",
+        "reason": "If  꼭두각시 thinks that y are   기구비행사, +1 이방인 was added."
+    },
+    {
+        "target": "marionette",
+        "trick": "damsel",
+        "reason": " 꼭두각시 does not learn that a 아가씨 is in play."
+    },
+    {
+        "target": "marionette",
+        "trick": "plaguedoctor",
+        "reason": "If  악마 has a neighbour who is alive and a 마을주민 or 이방인 when 전염병 의사 dies, that 플레이어 becomes an evil 꼭두각시. If re is already an extra evil 플레이어, this does not happen."
+    },
+    {
+        "target": "marionette",
+        "trick": "huntsman",
+        "reason": "If  꼭두각시 thinks that y are  헌츠맨,  아가씨 was added."
+    },
+    {
+        "target": "lleech",
+        "trick": "mastermind",
+        "reason": "If  흑막 is alive and  리치's host dies by 처형,  리치 lives but loses ir ability."
+    },
+    {
+        "target": "lleech",
+        "trick": "slayer",
+        "reason": "If  슬레이어 slays  리치's host,  host dies."
+    },
+    {
+        "target": "lleech",
+        "trick": "heretic",
+        "reason": "If  리치 has poisoned  이교도 n  리치 dies,  이교도 remains poisoned"
+    },
+    {
+        "target": "kazali",
+        "trick": "bountyhunter",
+        "reason": "An evil 마을주민 is only created if  현상금 사냥꾼 is still in play after  카질리 acts."
+    },
+    {
+        "target": "kazali",
+        "trick": "goon",
+        "reason": "If  카질리 chooses  깡패 to become 하수인, remaining 하수인 choices are decided by  이야기꾼."
+    },
+    {
+        "target": "kazali",
+        "trick": "marionette",
+        "reason": "If  카질리 chooses to create a 꼭두각시, y must choose one of ir neighbours."
+    },
+    {
+        "target": "kazali",
+        "trick": "huntsman",
+        "reason": "If  카질리 chooses  아가씨 to become 하수인, and a 헌츠맨 is in play, a good 플레이어 becomes  아가씨."
+    },
+    {
+        "target": "kazali",
+        "trick": "choirboy",
+        "reason": " 카질리 can not choose  왕 to become 하수인 if a 성가대원 is in play."
+    },
+    {
+        "target": "kazali",
+        "trick": "soldier",
+        "reason": "If  카질리 turns  군인 into 하수인,  군인 chooses which not-in-play 하수인 to become."
+    },
+    {
+        "target": "riot",
+        "trick": "engineer",
+        "reason": "폭도 and  엔지니어 can not both be in play at  start of  game. If  엔지니어 creates 폭도,  evil 플레이어s become 폭도."
+    },
+    {
+        "target": "riot",
+        "trick": "golem",
+        "reason": "If  골렘 nominates 폭도,  폭도 플레이어 does not die."
+    },
+    {
+        "target": "riot",
+        "trick": "snitch",
+        "reason": "If  밀고자 is in play, each 폭도 플레이어 gets an extra 3 bluffs."
+    },
+    {
+        "target": "riot",
+        "trick": "saint",
+        "reason": "If a good 플레이어 nominates and kills  성자,  성자's team loses."
+    },
+    {
+        "target": "riot",
+        "trick": "butler",
+        "reason": " 집사 can not nominate ir master."
+    },
+    {
+        "target": "riot",
+        "trick": "pithag",
+        "reason": "If  피트해그 creates 폭도, all evil 플레이어s become 폭도. If  피트해그 creates 폭도 after day 3,  game continues for one more day."
+    },
+    {
+        "target": "riot",
+        "trick": "mayor",
+        "reason": "If  3rd day begins with just three 플레이어s alive,  플레이어s may choose (as a group) not to nominate at all. If so (and a 시장 is alive) n  시장's team wins."
+    },
+    {
+        "target": "riot",
+        "trick": "monk",
+        "reason": "If a 폭도 플레이어 nominates and kills  수도승-protected-플레이어,  수도승-protected-플레이어 does not die."
+    },
+    {
+        "target": "riot",
+        "trick": "farmer",
+        "reason": "If a 폭도 플레이어 nominates and kills a 농부,  농부 uses ir ability tonight."
+    },
+    {
+        "target": "riot",
+        "trick": "innkeeper",
+        "reason": "If a 폭도 플레이어 nominates an 여관주인-protected-플레이어,  여관주인-protected-플레이어 does not die."
+    },
+    {
+        "target": "riot",
+        "trick": "sage",
+        "reason": "If a 폭도 플레이어 nominates and kills a 현자,  현자 uses ir ability tonight."
+    },
+    {
+        "target": "riot",
+        "trick": "banshee",
+        "reason": "If 폭도 nominates and kills  밴시, all 플레이어s learn that  밴시 has died, and  밴시 may nominate two 플레이어s immediately."
+    },
+    {
+        "target": "riot",
+        "trick": "ravenkeeper",
+        "reason": "If a 폭도 플레이어 nominates and kills  레이븐키퍼,  레이븐키퍼 uses ir ability tonight."
+    },
+    {
+        "target": "riot",
+        "trick": "soldier",
+        "reason": "If a 폭도 플레이어 nominates  군인,  군인 does not die."
+    },
+    {
+        "target": "riot",
+        "trick": "grandmother",
+        "reason": "If a 폭도 플레이어 nominates and kills  손주,  할머니 dies too."
+    },
+    {
+        "target": "riot",
+        "trick": "king",
+        "reason": "If a 폭도 플레이어 nominates and kills  왕 and  성가대원 is alive,  성가대원 uses ir ability tonight."
+    },
+    {
+        "target": "riot",
+        "trick": "exorcist",
+        "reason": "Only 1 jinxed 캐릭터 can be in play."
+    },
+    {
+        "target": "riot",
+        "trick": "minstrel",
+        "reason": "Only 1 jinxed 캐릭터 can be in play."
+    },
+    {
+        "target": "riot",
+        "trick": "flowergirl",
+        "reason": "Only 1 jinxed 캐릭터 can be in play."
+    },
+    {
+        "target": "riot",
+        "trick": "undertaker",
+        "reason": "플레이어s that die by nomination register as being executed to  장의사."
+    },
+    {
+        "target": "riot",
+        "trick": "cannibal",
+        "reason": "플레이어s that die by nomination register as being executed to  식인종."
+    },
+    {
+        "target": "riot",
+        "trick": "pacifist",
+        "reason": "플레이어s that die by nomination register as being executed to  평화주의자."
+    },
+    {
+        "target": "riot",
+        "trick": "devilsadvocate",
+        "reason": "플레이어s that die by nomination register as being executed to  악마의 변호사"
+    },
+    {
+        "target": "riot",
+        "trick": "investigator",
+        "reason": "폭도 registers as 하수인 to  조사관."
+    },
+    {
+        "target": "riot",
+        "trick": "clockmaker",
+        "reason": "폭도 registers as 하수인 to  시계공."
+    },
+    {
+        "target": "riot",
+        "trick": "towncrier",
+        "reason": "폭도 registers as 하수인 to  포고꾼"
+    },
+    {
+        "target": "riot",
+        "trick": "damsel",
+        "reason": "폭도 registers as 하수인 to  아가씨."
+    },
+    {
+        "target": "riot",
+        "trick": "preacher",
+        "reason": "폭도 registers as 하수인 to  전도사."
+    },
+    {
+        "target": "riot",
+        "trick": "hatter",
+        "reason": "If  모자장수 dies, 폭도 is in play and a 폭도 chooses a different 악마, a normal evil team is created from  폭도 플레이어s. If  모자장수 dies and  악마 chooses 폭도, 하수인들 become 폭도 too."
+    },
+    {
+        "target": "riot",
+        "trick": "zealot",
+        "reason": "If you are nominated, you must nominate again, even if dead."
+    },
+    {
+        "target": "alhadikhia",
+        "trick": "scarletwoman",
+        "reason": "If re are two living 알하디키아s,  부정한 여자 알하디키아 becomes  부정한 여자 again."
+    },
+    {
+        "target": "organgrinder",
+        "trick": "butler",
+        "reason": "If  오르간 연주자 is causing eyes closed voting,  집사 may raise ir hand to vote but ir vote is only counted if ir master voted too."
+    },
+    {
+        "target": "organgrinder",
+        "trick": "minstrel",
+        "reason": "If  음유시인 makes everyone 주정뱅이,  오르간 연주자 keeps ir ability but  음유시인 keeps ir eyes open when voting."
+    },
+    {
+        "target": "organgrinder",
+        "trick": "preacher",
+        "reason": "If  전도사 removes  오르간 연주자 ability,  오르간 연주자 keeps ir ability but  전도사 keeps ir eyes open when voting."
+    },
+    {
+        "target": "vizier",
+        "trick": "investigator",
+        "reason": "If  조사관 learns that  수상 is in play,  existence of  수상 is not announced by  이야기꾼."
+    },
+    {
+        "target": "vizier",
+        "trick": "preacher",
+        "reason": "If  수상 loses ir ability, y learn this and if  수상 is executed while y have ir ability, ir team wins."
+    },
+    {
+        "target": "vizier",
+        "trick": "courtier",
+        "reason": "If  수상 loses ir ability, y learn this and if  수상 is executed while y have ir ability, ir team wins."
+    },
+    {
+        "target": "vizier",
+        "trick": "alchemist",
+        "reason": "If  연금술사 has  수상 ability, y may only choose to execute immediately if three or more 플레이어s voted."
+    },
+    {
+        "target": "vizier",
+        "trick": "magician",
+        "reason": "Only 1 jinxed 캐릭터 can be in play."
+    },
+    {
+        "target": "vizier",
+        "trick": "fearmonger",
+        "reason": " 수상 wakes with  공포조장자, learns who y choose and cannot choose to execute that 플레이어."
+    },
+    {
+        "target": "vizier",
+        "trick": "politician",
+        "reason": " 정치가 might register as evil to  수상."
+    },
+    {
+        "target": "vizier",
+        "trick": "alsaahir",
+        "reason": "If  수상 is in play,  알사히르 must also guess which 악마(s) are in play."
+    },
+    {
+        "target": "vizier",
+        "trick": "zealot",
+        "reason": " 광신도 might register as evil to  수상."
+    },
+    {
+        "target": "vortox",
+        "trick": "banshee",
+        "reason": "If  볼텍스 is in play and  악마 kills  밴시,  플레이어s still learn that  밴시 has died."
+    },
+    {
+        "target": "ogre",
+        "trick": "recluse",
+        "reason": "If  은둔자 registers as evil to  오우거,  오우거 learns that y are evil."
+    },
+    {
+        "target": "philosopher",
+        "trick": "bountyhunter",
+        "reason": "If  철학자 gains  현상금 사냥꾼 ability, a 마을주민 might turn evil."
+    },
+    {
+        "target": "mastermind",
+        "trick": "alhadikhia",
+        "reason": "If  알하디키아 dies by 처형, and  흑막 is alive,  알하디키아 chooses 3 good 플레이어s tonight: if all 3 choose to live, evil wins. Orwise, good wins."
+    },
+    {
+        "target": "boffin",
+        "trick": "heretic",
+        "reason": "The Demon cannot have the Heretic ability."
+    },
+    {
+        "target": "boffin",
+        "trick": "cultleader",
+        "reason": "If the Demon has the Cult Leader ability, they can’t turn good due to this ability."
+    },
+    {
+        "target": "boffin",
+        "trick": "goon",
+        "reason": "If the Demon has the Goon ability, they can’t turn good due to this ability."
+    },
+    {
+        "target": "boffin",
+        "trick": "ogre",
+        "reason": "The Demon cannot have the Ogre ability."
+    },
+    {
+        "target": "boffin",
+        "trick": "politician",
+        "reason": "The Demon cannot have the Politician ability."
+    },
+    {
+        "target": "boffin",
+        "trick": "drunk",
+        "reason": "If the Demon would have the Drunk ability, the Boffin chooses a Townsfolk player to have this ability instead."
+    },
+    {
+        "target": "boffin",
+        "trick": "alchemist",
+        "reason": "If the Alchemist has the Boffin ability, the Alchemist does not learn what ability the Demon has."
+    },
+    {
+        "target": "boffin",
+        "trick": "villageidiot",
+        "reason": "If there is a spare token, the Boffin can give the Demon the Village Idiot ability."
+    }
+]
