@@ -46,9 +46,9 @@ TokenStore.ready((tokenStore) => {
      */
     function unregisterJinx(jinx) {
 
-        const trickId = jinx.getTrick().getId();
+        const trickId = jinx.getTrick()?.getId();
 
-        if (!trickToTarget[trickId]) {
+        if (!trickId || !trickToTarget[trickId]) {
             return;
         }
 

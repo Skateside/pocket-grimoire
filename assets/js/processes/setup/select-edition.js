@@ -211,11 +211,7 @@ function convertCharacterId(item) {
         id = item.id || "";
     }
 
-    // The script tool creates IDs differently from our data.
-    // Examples: script = lil_monsta, data = lilmonsta
-    // Examples: script = al-hadikhia, data = alhadikhia
-    // The .replace() here is designed to convert their IDs to ours.
-    return id.replace(/[-_]/g, "")
+    return TokenStore.normaliseId(id);
 
 }
 

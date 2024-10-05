@@ -87,7 +87,10 @@ class MainController extends AbstractController
 
         if ($characters = $request->query->get('characters')) {
 
-            $ids = explode(',', $characters);
+            $ids = array_map(function (string $id) {
+                return $this->homebrewModel->normaliseId($id);
+            }, explode(',', $characters));
+
             foreach ($ids as $id) {
 
                 $character = $this->roleRepo->findOneBy(['identifier' => $id]);
@@ -107,10 +110,14 @@ class MainController extends AbstractController
 
                 foreach ($character->getJinxes() as $jinx) {
 
-                    if (
-                        in_array($jinx->getTarget()->getIdentifier(), $ids)
-                        && in_array($jinx->getTrick()->getIdentifier(), $ids)
-                    ) {
+                    $targetId = $this->homebrewModel->normaliseId(
+                        $jinx->getTarget()->getIdentifier()
+                    );
+                    $trickId = $this->homebrewModel->normaliseId(
+                        $jinx->getTarget()->getIdentifier()
+                    );
+
+                    if (in_array($targetId, $ids) && in_array($trickId, $ids)) {
 
                         $jinx->setActive(true);
                         $jinxes[] = $jinx;
@@ -135,17 +142,57 @@ class MainController extends AbstractController
             // Work out the IDs that we're using.
             $ids = array_reduce($homebrew->getJson(), function (array $carry, array $character): array {
 
+                if (!array_key_exists('id', $character)) {
+                    return $carry;
+                }
+
+                $id = $this->homebrewModel->normaliseId($character['id']);
+
                 if (
-                    array_key_exists('id', $character)
-                    && !in_array($character['id'], $carry)
+                    !in_array($id, $carry)
                     && !$this->homebrewModel->isMetaEntry($character)
                 ) {
-                    $carry[] = $character['id'];
+                    $carry[] = $id;
                 }
 
                 return $carry;
 
             }, []);
+
+            // Generate any homebrew characters and store them in a map. This
+            // allows us to reference them in the next loop, preventing an issue
+            // where a jinx references a character that's defined lated and
+            // creating a rendering issue on the character sheet. Only define
+            // the "target" because the "trick" wouldn't have all the data.
+            $characterMap = [];
+            foreach ($homebrew->getJson() as $character) {
+
+                if (
+                    !array_key_exists('jinxes', $character)
+                    || !array_key_exists('id', $character)
+                ) {
+                    continue;
+                }
+
+                foreach ($character['jinxes'] as $maybeJinx) {
+
+                    if (!is_array($maybeJinx)) {
+                        continue;
+                    }
+
+                    $characterId = $this->homebrewModel->normaliseId($character['id']);
+                    $target = (
+                        $characterMap[$characterId]
+                        ?? $this->roleRepo->findOneBy([
+                            'identifier' => $characterId
+                        ])
+                        ?? $this->roleRepo->createTemp($character)
+                    );
+                    $characterMap[$characterId] = $target;
+
+                }
+
+            }
 
             $tempJinxes = [];
 
@@ -188,7 +235,10 @@ class MainController extends AbstractController
                 // Convert any homebrew jinxes into Jinx entities. We need to
                 // ensure that the character data has an ID to prevent an error
                 // appearing if an older upload URL is checked.
-                if (array_key_exists('jinxes', $character) && array_key_exists('id', $character)) {
+                if (
+                    array_key_exists('jinxes', $character)
+                    && array_key_exists('id', $character)
+                ) {
 
                     $characterJinxes = [];
 
@@ -196,14 +246,18 @@ class MainController extends AbstractController
 
                         if (is_array($maybeJinx)) {
 
-                            $target = (
-                                $this->roleRepo->findOneBy(['identifier' => $character['id']])
-                                ?? $this->roleRepo->createTemp($character)
-                            );
+                            $targetId = $this->homebrewModel->normaliseId($character['id']);
+                            $target = $characterMap[$targetId];
+
+                            $jinxId = $this->homebrewModel->normaliseId($maybeJinx['id']);
                             $trick = (
-                                $this->roleRepo->findOneBy(['identifier' => $maybeJinx['id']])
+                                $characterMap[$jinxId]
+                                ?? $this->roleRepo->findOneBy([
+                                    'identifier' => $jinxId
+                                ])
                                 ?? $this->roleRepo->createTemp($maybeJinx)
                             );
+                            // $characterMap[$jinxId] = $trick;
 
                             $jinx = (new Jinx())
                                 ->setTarget($target)
@@ -237,10 +291,14 @@ class MainController extends AbstractController
 
             foreach ($tempJinxes as $jinx) {
 
-                if (
-                    in_array($jinx->getTarget()->getIdentifier(), $ids)
-                    && in_array($jinx->getTrick()->getIdentifier(), $ids)
-                ) {
+                $targetId = $this->homebrewModel->normaliseId(
+                    $jinx->getTarget()->getIdentifier()
+                );
+                $trickId = $this->homebrewModel->normaliseId(
+                    $jinx->getTrick()->getIdentifier()
+                );
+
+                if (in_array($targetId, $ids) && in_array($trickId, $ids)) {
 
                     $jinx->setActive(true);
                     $jinxes[] = $jinx;

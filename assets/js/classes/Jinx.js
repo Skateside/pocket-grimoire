@@ -73,7 +73,7 @@ export default class Jinx {
     }
 
     /**
-     * Sets hte target of the jinx, which is to say the larger icon on the
+     * Sets the target of the jinx, which is to say the larger icon on the
      * character sheet.
      *
      * @param {CharacterToken} target

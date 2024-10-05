@@ -254,6 +254,21 @@ export default class TokenStore {
     }
 
     /**
+     * The script tool used to create IDs with a slightly different format from
+     * our version. This function converts the old ID format into our one.
+     * Examples: was = lil_monsta, now = lilmonsta
+     * Examples: was = al-hadikhia, now = alhadikhia
+     *
+     * @param  {String} id
+     *         Character ID.
+     * @return {String}
+     *         Correctly formatted character ID.
+     */
+    static normaliseId(id) {
+        return id.replace(/[-_]/g, "");
+    }
+
+    /**
      * Gets the character for the given ID.
      *
      * @param  {String} id
@@ -262,7 +277,7 @@ export default class TokenStore {
      *         The matching instance or undefined if the character isn't found.
      */
     getCharacter(id) {
-        return this.characters[id];
+        return this.characters[this.constructor.normaliseId(id)];
     }
 
     /**
