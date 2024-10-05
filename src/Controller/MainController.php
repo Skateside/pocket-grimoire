@@ -114,7 +114,7 @@ class MainController extends AbstractController
                         $jinx->getTarget()->getIdentifier()
                     );
                     $trickId = $this->homebrewModel->normaliseId(
-                        $jinx->getTarget()->getIdentifier()
+                        $jinx->getTrick()->getIdentifier()
                     );
 
                     if (in_array($targetId, $ids) && in_array($trickId, $ids)) {
