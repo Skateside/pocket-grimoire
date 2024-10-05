@@ -347,7 +347,7 @@
     {
         "target": "summoner",
         "trick": "lordoftyphon",
-        "reason": "Se o Summoner criar um Lord of Typhon, o Lord of Typhon deve ser vizinho de um Minion. O outro vizinho se torna um Minion maligno que não está em jogo."
+        "reason": "Se o Invocador criar o Lorde do Tifão, o Lorde do Tifão precisa ser vizinho de um Lacaio. O outro vizinho vira um Lacaio fora de jogo."
     },
     {
         "target": "baron",
@@ -677,41 +677,41 @@
     {
         "target": "boffin",
         "trick": "heretic",
-        "reason": "O Demon não pode ter a habilidade Herege."
+        "reason": "O Demônio não pode ter a habilidade do Herege."
     },
     {
         "target": "boffin",
         "trick": "cultleader",
-        "reason": "Se o Demon tiver a habilidade Cult Leader, ele não pode se tornar bom devido a essa habilidade."
+        "reason": "Se o Demônio tem a habilidade do Líder da Seita, ele não pode se tornar do bem devido a esta habilidade."
     },
     {
         "target": "boffin",
         "trick": "goon",
-        "reason": "Se o Demon tiver a habilidade Goon, ele não pode se tornar bom devido a essa habilidade."
+        "reason": "Se o Demônio tem a habilidade do Capanga, ele não pode se tornar do bem devido a esta habilidade."
     },
     {
         "target": "boffin",
         "trick": "ogre",
-        "reason": "O Demon não pode ter a habilidade Ogre."
+        "reason": "O Demônio não pode ter a habilidade do Ogro."
     },
     {
         "target": "boffin",
         "trick": "politician",
-        "reason": "O Demon não pode ter a habilidade Politician."
+        "reason": "O Demônio não pode ter a habilidade do Polítco."
     },
     {
         "target": "boffin",
         "trick": "drunk",
-        "reason": "Se o Demon tiver a habilidade Drunk, o Boffin escolhe um jogador Townsfolk para ter essa habilidade."
+        "reason": "Se o Demônio teria a habilidade do Bêbado, o Químico escolhe um Cidadão para ter essa habilidade no lugar."
     },
     {
         "target": "boffin",
         "trick": "alchemist",
-        "reason": "Se o Alchemist tiver a habilidade Boffin, o Alchemist não aprende qual habilidade o Demon tem."
+        "reason": "Se o Alquimista tem a habilidade do Químico, o Alquimista não sabe qual habilidade o Demônio ganhou."
     },
     {
         "target": "boffin",
         "trick": "villageidiot",
-        "reason": "Se houver um token sobrando, o Boffin pode dar ao Demon a habilidade Village Idiot."
+        "reason": "Se há tokens do Idiota da Vila sobrando, o Químico pode dar ao Demônio a habilidade do Idiota da Vila."
     }
 ]

@@ -420,6 +420,12 @@ class ImportCommand extends Command
             return $contents;
         }
 
+        // Hack to pretend that the default Jinx file looks like the data for
+        // the other locales.
+        if (is_array($contents) && $locale === self::DEFAULT_LOCALE) {
+            $contents = $this->convertJinxes($contents);
+        }
+
         $listing = [];
 
         foreach ($contents as $data) {
@@ -459,12 +465,50 @@ class ImportCommand extends Command
 
     private function getFileName(string $type, string $locale): string
     {
-        return realpath(dirname(__FILE__) . "/../../assets/data/{$type}/{$locale}.json");
+
+        $path = "/../../assets/data/{$type}/{$locale}.json";
+
+        // Hack to pretend that the default locale (en_GB) is actually a
+        // language, allowing us to update it.
+        if ($locale === self::DEFAULT_LOCALE) {
+
+            if ($type === 'jinxes') {
+                $type = 'jinx';
+            }
+
+            $path = "/../../assets/data/{$type}.json";
+        }
+
+        return realpath(dirname(__FILE__) . $path);
+
     }
 
     private function getFileContents(string $file): array
     {
         return json_decode(file_get_contents($file), true);
+    }
+
+    private function convertJinxes(array $rawJinxes): array
+    {
+
+        $jinx = [];
+
+        foreach ($rawJinxes as $data) {
+
+            $target = $data['id'];
+
+            foreach ($data['jinx'] as $jinxData) {
+                $jinx[] = [
+                    'target' => $target,
+                    'trick' => $jinxData['id'],
+                    'reason' => $jinxData['reason']
+                ];
+            }
+
+        }
+
+        return $jinx;
+
     }
 
     private function read(string $type, string $locale)

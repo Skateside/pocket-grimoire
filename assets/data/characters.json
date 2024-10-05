@@ -176,7 +176,7 @@
             "Seen Traveller"
         ],
         "setup": true,
-        "ability": "Each night, you learn 1 player of each character type, until there are no more types to learn. [+0 or +1 Outsider]",
+        "ability": "Each night, you learn a player of a different character type than last night. [+0 or +1 Outsider]",
         "image": "/build/img/icons/townsfolk/balloonist.webp"
     },
     {
@@ -977,7 +977,7 @@
             "No ability"
         ],
         "setup": false,
-        "ability": "Once per game, during the day, visit the Storyteller for some advice to help you win.",
+        "ability": "Once per game, during the day, visit the Storyteller for some advice to help your team win.",
         "image": "/build/img/icons/townsfolk/fisherman.webp"
     },
     {
@@ -1583,7 +1583,7 @@
         "name": "Kazali",
         "team": "demon",
         "image": "/build/img/icons/demon/kazali.webp",
-        "ability": "Each night*, choose a player: they die. [You choose which players are Minions. -? to +? Outsiders]",
+        "ability": "Each night*, choose a player: they die. [You choose which players are which Minions. -? to +? Outsiders]",
         "setup": true,
         "firstNight": 2,
         "firstNightReminder": "The Kazali points at a player and a Minion on the character sheet. Replace their old character token with the Minion token, show them the “You Are” info token then the Minion character token, and give a thumbs down. Repeat until the normal number of Minions exist. Put the Kazali to sleep.",
@@ -1703,7 +1703,7 @@
             "Good player executed"
         ],
         "setup": false,
-        "ability": "If more than 1 good player is executed, you win. All players know you are in play. After day 5, evil wins.",
+        "ability": "If more than 1 good player is executed, evil wins. All players know you are in play. After day 5, evil wins.",
         "image": "/build/img/icons/demon/leviathan.webp"
     },
     {
@@ -1744,7 +1744,7 @@
             }
         ],
         "setup": true,
-        "ability": "Each night, Minions choose who babysits Lil' Monsta's token & \"is the Demon\". A player dies each night*. [+1 Minion]",
+        "ability": "Each night, Minions choose who babysits Lil' Monsta & 'is the Demon'. Each night*, a player might die. [+1 Minion]",
         "image": "/build/img/icons/demon/lilmonsta.webp"
     },
     {
@@ -1761,7 +1761,7 @@
             "Poisoned"
         ],
         "setup": false,
-        "ability": "Each night*, choose a player: they die. You start by choosing an alive player: they are poisoned - you die if & only if they die.",
+        "ability": "Each night*, choose a player: they die. You start by choosing a player: they are poisoned. You die if & only if they are dead.",
         "image": "/build/img/icons/demon/lleech.webp"
     },
     {
