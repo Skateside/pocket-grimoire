@@ -210,6 +210,23 @@
         "image": "/build/img/icons/townsfolk/banxian.webp"
     },
     {
+        "id": "baojun",
+        "name": "暴君",
+        "edition": "syyl",
+        "team": "demo",
+        "firstNight": 0,
+        "firstNightReminder": "",
+        "otherNight": 8420,
+        "otherNightReminder": "唤醒典狱长，让其选择至多两名玩家。在这些玩家角色标记旁放置“死亡”提示标记。如果暴君选择的玩家数量与上个夜晚死亡的玩家数量相同，摇头示意其重新选择",
+        "reminders": [
+            "死亡"
+        ],
+        "remindersGlobal": [],
+        "setup": false,
+        "ability": "每个夜晚*，你可以选择至多两名玩家：他们死亡。你选择的玩家数量不能与上个夜晚死亡的玩家数量相同（超过二人时算作二人）。",
+        "image": "/build/img/icons/demon/baojun.webp"
+    },
+    {
         "id": "barber",
         "name": "Barber",
         "edition": "snv",
@@ -288,6 +305,21 @@
         "setup": false,
         "ability": "每个白天，如果你“疯狂”地证明自己是一个善良角色（与之前不同），你会在当晚获得那个角色的能力，直到下个黄昏。",
         "image": "/build/img/icons/townsfolk/bianlianshi.webp"
+    },
+    {
+        "id": "bingbi",
+        "name": "秉笔",
+        "edition": "syyl",
+        "team": "townsfolk",
+        "firstNight": 0,
+        "firstNightReminder": "",
+        "otherNight": 10310,
+        "otherNightReminder": "如果秉笔人在夜晚死去，唤醒他并指向一名邪恶玩家；如果秉笔在白天死去，唤醒他并指向一名善良玩家。随后让他重新入睡。",
+        "reminders": [],
+        "remindersGlobal": [],
+        "setup": false,
+        "ability": "如果你在白天死亡，当晚你会得知一名善良玩家。如果你在夜晚死亡，当晚你会得知一名邪恶玩家。",
+        "image": "/build/img/icons/townsfolk/bingbi.webp"
     },
     {
         "id": "bishop",
@@ -621,6 +653,24 @@
         "image": "/build/img/icons/outsider/damsel.webp"
     },
     {
+        "id": "daoke",
+        "name": "刀客",
+        "edition": "syyl",
+        "team": "townsfolk",
+        "firstNight": 9410,
+        "firstNightReminder": "在为首个夜晚做准备时，将刀客的“追杀”标记放置在一个爪牙角色标记旁。在首个夜晚，唤醒刀客。对他展示标记了“追杀”的爪牙角色标记。让刀客重新入睡。",
+        "otherNight": 0,
+        "otherNightReminder": "",
+        "reminders": [
+            "追杀",
+            "失去能力"
+        ],
+        "remindersGlobal": [],
+        "setup": false,
+        "ability": "在你的首个夜晚，你会得知一个在场的爪牙角色。每局游戏限一次，你可以在白天公开选择一名玩家：如果他是你得知的角色，他死亡。",
+        "image": "/build/img/icons/townsfolk/daoke.webp"
+    },
+    {
         "id": "daoshi",
         "name": "道士",
         "edition": "hdcs",
@@ -712,6 +762,23 @@
         "setup": false,
         "ability": "每个夜晚，你要选择一至三名玩家。如果明天白天其中之一被处决，其余玩家会在当晚死亡。否则，当晚他们之中会有一名玩家死亡。",
         "image": "/build/img/icons/demon/dianyuzhang.webp"
+    },
+    {
+        "id": "diaomin",
+        "name": "刁民",
+        "edition": "syyl",
+        "team": "traveller",
+        "firstNight": 0,
+        "firstNightReminder": "",
+        "otherNight": 0,
+        "otherNightReminder": "",
+        "reminders": [
+            "醉酒"
+        ],
+        "remindersGlobal": [],
+        "setup": false,
+        "ability": "曾在白天粗暴地打断过你的发言的玩家之一会在当晚醉酒，即使你已死亡。",
+        "image": "/build/img/icons/traveller/diaomin.webp"
     },
     {
         "id": "djinn",
@@ -1232,6 +1299,23 @@
         "image": "/build/img/icons/minion/gudiao.webp"
     },
     {
+        "id": "guhuoniao",
+        "name": "姑获鸟",
+        "edition": "syyl",
+        "team": "demon",
+        "firstNight": 0,
+        "firstNightReminder": "",
+        "otherNight": 8430,
+        "otherNightReminder": "唤醒姑获鸟，让其选择一名玩家，在玩家角色标记旁放置“死亡”提示标记。",
+        "reminders": [
+            "死于处决"
+        ],
+        "remindersGlobal": [],
+        "setup": false,
+        "ability": "每个夜晚*，你要选择一名玩家：他死亡。你可能会拥有上一个死于处决的爪牙的能力。",
+        "image": "/build/img/icons/demon/guhuoniao.webp"
+    },
+    {
         "id": "gunslinger",
         "name": "Gunslinger",
         "edition": "tb",
@@ -1366,6 +1450,24 @@
         "setup": false,
         "ability": "Each night, learn which player the Storyteller believes you should talk to most.",
         "image": "/build/img/icons/townsfolk/highpriestess.webp"
+    },
+    {
+        "id": "huapi",
+        "name": "画皮",
+        "edition": "syyl",
+        "team": "minion",
+        "firstNight": 6310,
+        "firstNightReminder": "首个夜晚，唤醒画皮，让其选择一名玩家，该玩家进入“活尸”状态。在魔典中该玩家的角色标记上添加帷幕标记，和“以为存活”标记。但不要宣布该玩家已经死亡，也不要在城镇广场上将该玩家的生命标记翻面。",
+        "otherNight": 8810,
+        "otherNightReminder": "如果画皮选择的玩家重生，在画皮的角色标记旁放置“重获能力”标记。每个夜晚，如果画皮有“重获能力”标记，唤醒画皮，让其选择一名玩家，该玩家进入“活尸”状态。在魔典中该玩家的角色标记上添加帷幕标记，和“以为存活”标记。但不要宣布该玩家已经死亡，也不要在城镇广场上将该玩家的生命标记翻面。",
+        "reminders": [
+            "以为存活",
+            "重获能力"
+        ],
+        "remindersGlobal": [],
+        "setup": false,
+        "ability": "在你的首个夜晚，你要选择一名存活玩家：他死亡但会被当作存活。当他下一次死亡时，他重生，随后你重获能力。",
+        "image": "/build/img/icons/minion/huapi.webp"
     },
     {
         "id": "humeiniang",
@@ -1513,6 +1615,24 @@
         "setup": false,
         "ability": "“疯狂”地想要死亡的玩家可能会立即被处决。",
         "image": "/build/img/icons/minion/jinweijun.webp"
+    },
+    {
+        "id": "jinweijun2",
+        "name": "禁卫军Ⅱ",
+        "edition": "syyl",
+        "team": "minion",
+        "firstNight": 5610,
+        "firstNightReminder": "唤醒禁卫军，给他展示“求生”和“求死”标记，让其选择一枚，并让他重新入睡。",
+        "otherNight": 0,
+        "otherNightReminder": "",
+        "reminders": [
+            "求生",
+            "求死"
+        ],
+        "remindersGlobal": [],
+        "setup": false,
+        "ability": "在你的首个夜晚，你要选择存活或死亡。“疯狂”地想要这样做的玩家可能会立即被处决。",
+        "image": "/build/img/icons/minion/jinweijun2.webp"
     },
     {
         "id": "jinyiwei",
@@ -1748,6 +1868,24 @@
         "image": "/build/img/icons/demon/lilmonsta.webp"
     },
     {
+        "id": "limao",
+        "name": "狸猫",
+        "edition": "syyl",
+        "team": "townsfolk",
+        "firstNight": 0,
+        "firstNightReminder": "",
+        "otherNight": 2510,
+        "otherNightReminder": "唤醒狸猫，让他指向一名玩家。让狸猫重新入睡。将“太子”标记放在对应玩家角色标记旁。 如果标记太子的玩家死亡且不是恶魔，在魔典中交换狸猫和太子的角色标记。在新的交换后的角色旁放置“醉酒”提示标记。唤醒新的狸猫并依次向他展示“你是”信息标记、狸猫的角色标记。让狸猫重新入睡。唤醒原来的狸猫并依次向他展示“你是”信息标记，“太子”的角色标记。",
+        "reminders": [
+            "太子",
+            "醉酒"
+        ],
+        "remindersGlobal": [],
+        "setup": false,
+        "ability": "每个夜晚*，你要选择一名除你及旅行者以外的玩家：如果恶魔在今晚杀死了他，你和他交换角色，然后你醉酒。",
+        "image": "/build/img/icons/townsfolk/limao.webp"
+    },
+    {
         "id": "lleech",
         "name": "Lleech",
         "edition": "",
@@ -1908,6 +2046,24 @@
         "setup": false,
         "ability": "If only 3 players live & no execution occurs, your team wins. If you die at night, another player might die instead.",
         "image": "/build/img/icons/townsfolk/mayor.webp"
+    },
+    {
+        "id": "mengpo",
+        "name": "孟婆",
+        "edition": "syyl",
+        "team": "minion",
+        "firstNight": 0,
+        "firstNightReminder": "",
+        "otherNight": 8820,
+        "otherNightReminder": "唤醒孟婆，让其选择一名玩家，随后让孟婆闭眼。唤醒孟婆选择的玩家，依次向他展示“该角色的能力对你生效”信息标记、孟婆的角色标记，随后让其用点头或者摇头来表示想要生死。如果其点头，放置“失去能力”标记，如果其摇头，放置“保留能力”标记。",
+        "reminders": [
+            "保留能力",
+            "失去能力"
+        ],
+        "remindersGlobal": [],
+        "setup": false,
+        "ability": "每个夜晚*，你要选择一名玩家：如果他存活，那么他要选择让自己失去能力，或死亡并保留能力直到下个黄昏。",
+        "image": "/build/img/icons/minion/mengpo.webp"
     },
     {
         "id": "mezepheles",
@@ -2386,6 +2542,23 @@
         "image": "/build/img/icons/townsfolk/qianke.webp"
     },
     {
+        "id": "qilin",
+        "name": "麒麟",
+        "edition": "syyl",
+        "team": "fabled",
+        "firstNight": 0,
+        "firstNightReminder": "",
+        "otherNight": 0,
+        "otherNightReminder": "",
+        "reminders": [
+            "好的事情"
+        ],
+        "remindersGlobal": [],
+        "setup": false,
+        "ability": "在游戏的最后一天，最幸运的玩家身上会发生一些好的事情。",
+        "image": "/build/img/icons/fabled/qilin.webp"
+    },
+    {
         "id": "qintianjian",
         "name": "钦天监",
         "edition": "hdcs",
@@ -2414,6 +2587,23 @@
         "setup": false,
         "ability": "每个夜晚*，你要选择一名玩家：他死亡。所有的外来者都可能会被当作邪恶阵营、爪牙角色或恶魔角色。",
         "image": "/build/img/icons/demon/qiongqi.webp"
+    },
+    {
+        "id": "ranfangfangzhu",
+        "name": "染坊坊主",
+        "edition": "syyl",
+        "team": "townsfolk",
+        "firstNight": 0,
+        "firstNightReminder": "",
+        "otherNight": 0,
+        "otherNightReminder": "",
+        "reminders": [
+            "沉默"
+        ],
+        "remindersGlobal": [],
+        "setup": false,
+        "ability": "如果你在夜晚死亡，恶魔的能力变成“每个夜晚*，可能会有一名玩家死亡。”",
+        "image": "/build/img/icons/townsfolk/"
     },
     {
         "id": "ravenkeeper",
@@ -2635,6 +2825,36 @@
         "image": "/build/img/icons/outsider/shaxing.webp"
     },
     {
+        "id": "shelingchengzhi",
+        "name": "赦令承旨",
+        "edition": "syyl",
+        "team": "fabled",
+        "firstNight": 0,
+        "firstNightReminder": "",
+        "otherNight": 0,
+        "otherNightReminder": "",
+        "reminders": [],
+        "remindersGlobal": [],
+        "setup": false,
+        "ability": "解除所有角色能力在进行选择时的限制条件。",
+        "image": "/build/img/icons/fabled/shelingchengzhi.webp"
+    },
+    {
+        "id": "shiguan",
+        "name": "史官",
+        "edition": "syyl",
+        "team": "townsfolk",
+        "firstNight": 0,
+        "firstNightReminder": "",
+        "otherNight": 13110,
+        "otherNightReminder": "如果死亡玩家人数大于存活玩家，唤醒史官并展示数字手势来告诉他存活镇民数量。",
+        "reminders": [],
+        "remindersGlobal": [],
+        "setup": false,
+        "ability": "每个夜晚*，如果白天有玩家死于处决，你会得知存活镇民的数量。",
+        "image": "/build/img/icons/townsfolk/shiguan.webp"
+    },
+    {
         "id": "shijie",
         "name": "使节",
         "edition": "hdcs",
@@ -2697,6 +2917,24 @@
         "setup": false,
         "ability": "恶魔知道你在场。每局游戏限一次，恶魔可以拜访说书人并猜测谁是书生。如果恶魔猜测正确，即使你已死亡，当晚该恶魔可以选择一名玩家：他死亡。",
         "image": "/build/img/icons/outsider/shusheng.webp"
+    },
+    {
+        "id": "shutong",
+        "name": "书童",
+        "edition": "syyl",
+        "team": "outsider",
+        "firstNight": 7430,
+        "firstNightReminder": "唤醒书童，让其选择一名玩家，在其选择的玩家标记旁放置“选择”。",
+        "otherNight": 8910,
+        "otherNightReminder": "如果标记有“选择”的玩家被邪恶玩家的能力选择或影响时，在书童旁放置“死亡”标记。",
+        "reminders": [
+            "选择",
+            "死亡"
+        ],
+        "remindersGlobal": [],
+        "setup": false,
+        "ability": "在你的首个夜晚，你要选择除你以外的一名玩家：除首个夜晚以外，当他被邪恶玩家的能力选择或影响时，你会在当晚死亡。",
+        "image": "/build/img/icons/outsider/shutong.webp"
     },
     {
         "id": "slayer",
@@ -3216,6 +3454,23 @@
         "image": "/build/img/icons/townsfolk/xizi.webp"
     },
     {
+        "id": "xuncha",
+        "name": "巡察",
+        "edition": "syyl",
+        "team": "townsfolk",
+        "firstNight": 0,
+        "firstNightReminder": "",
+        "otherNight": 4420,
+        "otherNightReminder": "唤醒巡查，让其选择两个善良角色，如果这两个角色都在场，在对应玩家角色标记旁放置“保护”标记。",
+        "reminders": [
+            "保护"
+        ],
+        "remindersGlobal": [],
+        "setup": false,
+        "ability": "每个夜晚*，你要选择除你以外的两个善良角色：如果他们都存活，他们当晚不会死亡。",
+        "image": "/build/img/icons/townsfolk/xuncha.webp"
+    },
+    {
         "id": "yaggababble",
         "name": "Yaggababble",
         "edition": "",
@@ -3249,6 +3504,39 @@
         "image": "/build/img/icons/minion/yangguren.webp"
     },
     {
+        "id": "yanluo",
+        "name": "阎罗",
+        "edition": "syyl",
+        "team": "demon",
+        "firstNight": 11710,
+        "firstNightReminder": "首个夜晚，唤醒阎罗并让他按自己意愿的时长来查看魔典。 让阎罗选择一名玩家，放置“选择”标记在其角色图标旁，其在覅三个夜晚必定会死亡。 让阎罗选择一名玩家，放置“即将死亡”标记在其角色图标旁。",
+        "otherNight": 8410,
+        "otherNightReminder": "让阎罗选择一名玩家，放置“即将死亡”标记在其角色图标旁。",
+        "reminders": [
+            "即将死亡",
+            "选择"
+        ],
+        "remindersGlobal": [],
+        "setup": false,
+        "ability": "在你的首个夜晚，你能查看魔典并选择一名玩家：他在第三个夜晚死亡，即使因为任何原因让他不会死亡。每个夜晚，你要选择一名玩家：上个夜晚被你选择的玩家死亡。",
+        "image": "/build/img/icons/demon/yanluo.webp"
+    },
+    {
+        "id": "yanshi",
+        "name": "偃师",
+        "edition": "syyl",
+        "team": "townsfolk",
+        "firstNight": 0,
+        "firstNightReminder": "",
+        "otherNight": 0,
+        "otherNightReminder": "",
+        "reminders": [],
+        "remindersGlobal": [],
+        "setup": false,
+        "ability": "如果你在夜晚死亡，你与一名存活爪牙玩家交换角色。",
+        "image": "/build/img/icons/townsfolk/yanshi.webp"
+    },
+    {
         "id": "yinluren",
         "name": "引路人",
         "edition": "hdcs",
@@ -3277,6 +3565,39 @@
         "image": "/build/img/icons/townsfolk/yinyangshi.webp"
     },
     {
+        "id": "yishi",
+        "name": "驿使",
+        "edition": "syyl",
+        "team": "townsfolk",
+        "firstNight": 0,
+        "firstNightReminder": "",
+        "otherNight": 12210,
+        "otherNightReminder": "在每个白天，如果驿使声明使用他的能力，如果驿使声明的角色在场，放置“猜测正确”提示标记在驿使角色标记旁。 当晚，唤醒驿使艺人。如果他猜测正确，对他点头表示“是”，对他摇头表示“否”，如果你对他摇头，放置一枚“失去能力”的标记在其角色旁",
+        "reminders": [
+            "猜测正确",
+            "失去能力"
+        ],
+        "remindersGlobal": [],
+        "setup": false,
+        "ability": "每个白天，你可以公开声明一个角色。在当晚，你会得知该角色是否在场。如果你因此得知了否，你失去此能力。",
+        "image": "/build/img/icons/townsfolk/yishi.webp"
+    },
+    {
+        "id": "yongjiang",
+        "name": "俑匠",
+        "edition": "syyl",
+        "team": "townsfolk",
+        "firstNight": 0,
+        "firstNightReminder": "",
+        "otherNight": 0,
+        "otherNightReminder": "",
+        "reminders": [],
+        "remindersGlobal": [],
+        "setup": false,
+        "ability": "如果已死亡玩家中没有邪恶玩家，你只会死于处决。",
+        "image": "/build/img/icons/townsfolk/yongjiang.webp"
+    },
+    {
         "id": "zealot",
         "name": "Zealot",
         "edition": "",
@@ -3289,6 +3610,40 @@
         "setup": false,
         "ability": "If there are 5 or more players alive, you must vote for every nomination.",
         "image": "/build/img/icons/outsider/zealot.webp"
+    },
+    {
+        "id": "zhen",
+        "name": "鸩",
+        "edition": "syyl",
+        "team": "townsfolk",
+        "firstNight": 0,
+        "firstNightReminder": "",
+        "otherNight": 8899,
+        "otherNightReminder": "唤醒鸩，让其选择一个镇民角色，如果该角色在场，在其角色标记旁放置“死亡”和“醉酒”提示标记",
+        "reminders": [
+            "死亡",
+            "失去能力",
+            "醉酒"
+        ],
+        "remindersGlobal": [],
+        "setup": false,
+        "ability": "每局游戏限一次，在夜晚时*，你可以选择一个镇民角色：如果他在场，他醉酒并死亡。",
+        "image": "/build/img/icons/townsfolk/zhen.webp"
+    },
+    {
+        "id": "zhifu",
+        "name": "知府",
+        "edition": "syyl",
+        "team": "townsfolk",
+        "firstNight": 0,
+        "firstNightReminder": "",
+        "otherNight": 12220,
+        "otherNightReminder": "如果在白天以及夜晚，只有镇民玩家死亡，对司民摇头表示“否”，否则点头表示“是”。",
+        "reminders": [],
+        "remindersGlobal": [],
+        "setup": false,
+        "ability": "每个夜晚*，你会得知今天是否有非镇民且非旅行者玩家死亡。",
+        "image": "/build/img/icons/townsfolk/zhifu.wbp"
     },
     {
         "id": "zombuul",
