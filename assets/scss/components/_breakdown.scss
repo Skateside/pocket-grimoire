@@ -18,6 +18,12 @@
 
 .breakdown__heading {
     text-align: end;
+
+    &:lang(ja),
+    &:lang(ko),
+    &:lang(zh) {
+        word-break: keep-all;
+    }
 }
 
 .breakdown__cell {

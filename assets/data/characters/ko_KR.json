@@ -1,0 +1,1754 @@
+[
+    {
+        "id": "acrobat",
+        "name": "곡예사",
+        "ability": "매일 밤*(첫날 제외), 살아있는 이웃이 취하거나 중독되면 당신은 죽습니다.",
+        "firstNightReminder": "",
+        "otherNightReminder": "만약 이웃이 취하거나 중독되었다면, 곡예사는 사망합니다",
+        "remindersGlobal": [],
+        "reminders": [
+            "사망"
+        ]
+    },
+    {
+        "id": "alchemist",
+        "name": "연금술사",
+        "ability": "당신은 플레이되지 않은 하수인의 능력을 갖습니다. (첫날 밤 능력 얻음)",
+        "firstNightReminder": "연금술사에게 플레이되지 않는 하수인 토큰을 보여줍니다",
+        "otherNightReminder": "",
+        "remindersGlobal": [
+            "연금술사"
+        ],
+        "reminders": []
+    },
+    {
+        "id": "alhadikhia",
+        "name": "알하디키아",
+        "ability": "매일 밤*(첫날 제외), 3명의 플레이어를 선택합니다(사망자도 가능하며, 모든 플레이어에게 공지합니다). 각자는 스스로 생사를 선택합니다. 하지만 모두 살기를 고른경우, 3명다 죽습니다",
+        "firstNightReminder": "",
+        "otherNightReminder": "알하디키아는 3명의 플레이어를 선택합니다. 순서대로, 각자는 스스로 생사를 선택합니다. 하지만 모두 살기를 고른경우, 3명다 죽습니다",
+        "remindersGlobal": [],
+        "reminders": [
+            "1",
+            "2",
+            "3",
+            "사망",
+            "생존"
+        ]
+    },
+    {
+        "id": "alsaahir",
+        "name": "알사히르",
+        "ability": "매일 낮 한번 공개적으로 모든 악마와 모든 하수인을 추측할수 있습니다. 추측이 맞다면 당신의 진영이 승리합니다.(정확한 캐릭터X)",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "amnesiac",
+        "name": "기억상실자",
+        "ability": "당신은 자신의 능력을 모르지만, 능력은 계속 발동합니다, 매일 낮 이야기꾼을 찾아가 본인의 능력을 추측해볼 수 있습니다. (이야기꾼은 차가움/따뜻함/뜨거움/빙고 로 단계별 답변을 줍니다)",
+        "firstNightReminder": "기억상실자의 능력이 무엇인지 결정합니다. 만약 첫날밤에 발동한다면, 기억상실자를 깨우고, 능력을 발동합니다",
+        "otherNightReminder": "만약 매일밤 발동하는 능력이라면, 기억상실자를 깨우고, 능력을 발동합니다",
+        "remindersGlobal": [],
+        "reminders": [
+            "?"
+        ]
+    },
+    {
+        "id": "angel",
+        "name": "천사",
+        "ability": "새로운 플레이어의 죽음에 가장 큰 책임이 있는 사람에게는 나쁜 일이 일어날 수도 있습니다. 해당 플레이어의 동의를 얻은후, 그 플레이어가 보호됨을 알립니다",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": [
+            "보호됨",
+            "불행한 일"
+        ]
+    },
+    {
+        "id": "apprentice",
+        "name": "견습생",
+        "ability": "첫째날 밤에는 마을 사람 능력(선한 경우)을 얻고, 하수인 능력(악한 경우)을 얻습니다.",
+        "firstNightReminder": "견습생에게 '당신은' 카드를 보여주고, 마을주민이나 하수인토큰을 보여줍니다. 그리모어에서 견습생토큰을 해당 캐릭터로 변경하고, '견습생임' 알림을 표기합니다.",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": [
+            "견습생임"
+        ]
+    },
+    {
+        "id": "artist",
+        "name": "예술가",
+        "ability": "게임당 한 번, 낮에 이야기꾼에게 예/아니오로 대답할 수 있는 질문을 개별적으로 물어볼 수 있습니다.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": [
+            "능력없음"
+        ]
+    },
+    {
+        "id": "assassin",
+        "name": "암살자",
+        "ability": "게임당 한 번, 밤*에 플레이어를 선택합니다. 해당 플레이어가 어떤 이유로도 죽을 수 없더라도 죽게 됩니다.",
+        "firstNightReminder": "매일밤, 암살자를 깨웁니다, 능력을 사용하기로 했다면, 플레이어를 가르킵니다",
+        "otherNightReminder": "매일밤, 암살자를 깨웁니다, 능력을 사용하기로 했다면, 플레이어를 가르킵니다",
+        "remindersGlobal": [],
+        "reminders": [
+            "사망",
+            "능력없음"
+        ]
+    },
+    {
+        "id": "atheist",
+        "name": "무신론자",
+        "ability": "이야기꾼는 게임 규칙을 깰 수 있고, 만약 이야기꾼을 처형하면 선한 쪽이 이깁니다. 당신이 죽었더라도요. [악한 캐릭터는 없습니다]",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "balloonist",
+        "name": " 기구비행사",
+        "ability": "매일 밤 (살아있거나 죽은) 마을주민/이방인/하수인/악마 중 1명씩을 알게 됩니다. (최대 4명) [+0 또는 +1 이방인]",
+        "firstNightReminder": "캐릭터 타입을 고릅니다. 해당 타입의 플레이어를 가르킵니다. 확인한 알림토큰을 캐릭터 옆에 둡니다",
+        "otherNightReminder": "이전 밤들과 다른 타입의 캐릭터를 선택합니다. 각 타입의 캐릭터를 가르키고, 확인한 알림토큰을 추가하고, 이전 알림토큰은 제거합니다",
+        "remindersGlobal": [],
+        "reminders": [
+            "마을주민 봄",
+            "이방인 봄",
+            "하수인 봄",
+            "악마 봄",
+            "여행자 봄"
+        ]
+    },
+    {
+        "id": "banshee",
+        "name": "밴시",
+        "ability": "당신이 악마에게 죽는 다면, 모든 플레이어가 이 사실을 알게됩니다. 이제부터 당신은 재판을 두번씩 열 수 있으며 투표를 두표씩 할 수 있습니다.",
+        "firstNightReminder": "",
+        "otherNightReminder": "밴시가 사망했음을 알립니다",
+        "remindersGlobal": [],
+        "reminders": [
+            "능력 발동"
+        ]
+    },
+    {
+        "id": "barber",
+        "name": "이발사",
+        "ability": "낮이나 밤에 당신이 죽으면 악마는 직업을 교체할 플레이어 2명(다른 악마 제외)을 선택할 수 있습니다.",
+        "firstNightReminder": "",
+        "otherNightReminder": "만약 이발사가 오늘 죽었다면, 악마를 꺠웁니다. \"이 캐릭터가 당신을 선택했습니다\" 카드와 이발사 토큰을 보여주세요. 악마는 고개를 좌우로 흔들거나 두명을 선택합니다. 해당 캐릭터들의 토큰을 교환합니다. 만약 진영이 다르다면, 뒤집어 놓습니다",
+        "remindersGlobal": [],
+        "reminders": [
+            "오늘밤 이발"
+        ]
+    },
+    {
+        "id": "barista",
+        "name": "바리스타",
+        "ability": "매일밤, 해가 질때까지 한 플레이어에게 취함(또는 중독)을 깨게 하거나, 능력을 두번 발동하게 합니다. 해당 플레이어는 그 사실을 알게됩니다.(이 플레이어는 이야기꾼이 보장하는 진실된 정보를 얻습니다)",
+        "firstNightReminder": "플레이어를 선택합니다. 그들을 깨우고 바리스타가 능력을 사용했음을 알립니다. ('건강' / '능력 두번' 효과중 적용한 것을 알려줍니다)",
+        "otherNightReminder": "플레이어를 선택합니다. 그들을 깨우고 바리스타가 능력을 사용했음을 알립니다. ('건강' / '능력 두번' 효과중 적용한 것을 알려줍니다)",
+        "remindersGlobal": [],
+        "reminders": [
+            "건강",
+            "능력 두번"
+        ]
+    },
+    {
+        "id": "baron",
+        "name": "남작",
+        "ability": "2명의 이방인을 마을시민 대신 추가합니다. [+2 이방인]",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "beggar",
+        "name": "거지",
+        "ability": "투표토큰이 있어야만 투표를 할 수 있습니다. 죽은 플레이어가 투표 토큰을 주면, 당신은 그들의 성향을 알게됩니다. 당신은 항상 건강합니다",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "bishop",
+        "name": "주교",
+        "ability": "오직 이야기꾼만 지명할 수 있습니다. 매일 최소 1명의 상대 플레이어가 지명되어야 합니다",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": [
+            "선을 지명",
+            "악을 지명"
+        ]
+    },
+    {
+        "id": "boffin",
+        "name": "Boffin",
+        "ability": "The Demon (even if drunk or poisoned) has a not-in-play good character’s ability. You both know which.",
+        "firstNightReminder": "Wake the Boffin and show them the token of the ability the Demon has. Put the Boffin back to sleep. Wake the Demon, show the Boffin token, then show the token of the good ability the Demon has.",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "bonecollector",
+        "name": "뼈 수집가",
+        "ability": "게임당 한 번씩, 밤에 죽은 플레이어를 한 명 선택하세요. 그 플레이어는 해가 질 때까지 능력을 회복합니다.",
+        "firstNightReminder": "",
+        "otherNightReminder": "뼈 수집가는 고개를 젓던가, 또는 죽은 플레이어를 선택합니다. 만약 죽은 플레이어를 지명한다면, 뼈 수집가의 '능력있음'  을 해당 플레이어 캐릭터 옆에 추가합니다. (그리고 다음 황혼에 그들은 능력을 잃습니다 알림토큰을 제거합니다",
+        "remindersGlobal": [],
+        "reminders": [
+            "능력없음",
+            "능력있음"
+        ]
+    },
+    {
+        "id": "boomdandy",
+        "name": "봄버맨",
+        "ability": "당신이 처형 당하면, 즉시 3명을 제외한 모든 플레이어가 사망합니다. 1분 뒤 모든 플레이어는 살아남은 플레이어를 대상으로 누구를 죽일지 투표를 진행합니다",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "bootlegger",
+        "name": "부틀레거",
+        "ability": "이 스크립트에는 홈브류 캐릭터나 규칙이 있습니다.",
+        "firstNightReminder": "게임을 시작할 때 캐릭터 시트에 홈브류 캐릭터가 있거나 홈브류 규칙을 적용하고 있다면, 부틀레거가 플레이 중임을 선언하고 이 게임에서 사용하는 모든 홈브류 캐릭터 및/또는 규칙을 그룹에 알려주세요",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "bountyhunter",
+        "name": "현상금 사냥꾼",
+        "ability": "당신은 악한 플레이어 1명을 알고 시작합니다. 알고있는 플레이어가 죽으면, 밤에 또다른 악한 플레이어를 알게됩니다. [마을시민 중 1명은 악한 진영]",
+        "firstNightReminder": "악한 플레이어를 한명 가르킵니다. 악한 마을주민 한명을 꺠우고 \"당신은\" 카드을 보여주고, 엄지를 아래로 내려 악한 편임을 알려줍니다(캐릭터 토큰을 뒤집어서 표시하세요)",
+        "otherNightReminder": "확인한 악한 플레이어가 죽는다면, 다른 악한 플레이어를 가르킵니다",
+        "remindersGlobal": [],
+        "reminders": [
+            "알고있음"
+        ]
+    },
+    {
+        "id": "buddhist",
+        "name": "불교",
+        "ability": "매일 처음 2분 동안은 베테랑 선수들은 말을 할 수 없습니다.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "bureaucrat",
+        "name": "관료",
+        "ability": "매일 밤, 플레이어를 한 명 선택하세요(자신이 아닌). 그 사람의 투표는 내일 3표로 계산됩니다.",
+        "firstNightReminder": "관료는 한 플레이어를 선택합니다. 관료의 '3표' 알람을 해당 플레이어 토큰 옆에 둡니다",
+        "otherNightReminder": "관료는 한 플레이어를 선택합니다. 관료의 '3표' 알람을 해당 플레이어 토큰 옆에 둡니다",
+        "remindersGlobal": [],
+        "reminders": [
+            "3표"
+        ]
+    },
+    {
+        "id": "butcher",
+        "name": "정육점 주인",
+        "ability": "매일 1차 처형 후 다시 지명할 수 있습니다.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "butler",
+        "name": "집사",
+        "ability": "매일 밤 플레이어(본인 제외)를 선택합니다. 내일 해당 플레이어가 투표할 때만 투표할 수 있습니다.",
+        "firstNightReminder": "집사는 플레이어를 선택합니다. '마스터' 마커를 표시합니다",
+        "otherNightReminder": "집사는 플레이어를 선택합니다. '마스터' 마커를 표시합니다",
+        "remindersGlobal": [],
+        "reminders": [
+            "마스터"
+        ]
+    },
+    {
+        "id": "cannibal",
+        "name": "식인종",
+        "ability": "당신은 최근에 죽은자의 능력을 가집니다. 그들이 사악하다면, 선한 플레이어가 처형으로 죽을 때까지 중독됩니다 (무슨 능력인지는 모릅니다)",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": [
+            "중독됨",
+            "처형됨"
+        ]
+    },
+    {
+        "id": "cerenovus",
+        "name": "세레노부스",
+        "ability": "매일 밤, 플레이어와 선한 직업을 선택합니다. 그 플레이어는 그 직업에 미쳐야합니다 그렇지 않으면 처형당할 수 있습니다.",
+        "firstNightReminder": "세레노부스가 한 플레이어와, 캐릭터를 가르킵니다(캐릭터시트 위의). 그 캐릭터를 꺠우고, \"이 캐릭터가 당신을 선택했습니다\" 카드를 보여주고, 세레노부스 토큰을 보여준 후, 선택된 캐릭터 토큰을 보여주세요. 만약 그 플레이어가 다음날 그 캐릭터에 충분히 미치지 않았다면, 그들을 처형시킬수 있습니다(이야기꾼이)",
+        "otherNightReminder": "세레노부스가 한 플레이어와, 캐릭터를 가르킵니다(캐릭터시트 위의). 그 캐릭터를 꺠우고, \"이 캐릭터가 당신을 선택했습니다\" 카드를 보여주고, 세레노부스 토큰을 보여준 후, 선택된 캐릭터 토큰을 보여주세요. 만약 그 플레이어가 다음날 그 캐릭터에 충분히 미치지 않았다면, 그들을 처형시킬수 있습니다(이야기꾼이)",
+        "remindersGlobal": [],
+        "reminders": [
+            "미침"
+        ]
+    },
+    {
+        "id": "chambermaid",
+        "name": "하녀",
+        "ability": "매일 밤, 생존 플레이어 2명(본인 제외)을 선택합니다. 본인의 능력으로 오늘 밤 깨어난 플레이어가 몇 명인지 알게 됩니다.",
+        "firstNightReminder": "하녀는 두명의 생존 플레이어를 지명합니다, 그리고 그날 밤에 깨어나는 능력을 가진 플레이어 숫자를 알려줍니다",
+        "otherNightReminder": "하녀는 두명의 생존 플레이어를 지명합니다, 그리고 그날 밤에 깨어나는 능력을 가진 플레이어 숫자를 알려줍니다",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "chef",
+        "name": "요리사",
+        "ability": "얼마나 많은 악한 플레이어가 붙어 앉아 있는지 알고 시작합니다.(몇 쌍이 있는지)",
+        "firstNightReminder": "이웃한 악한 플레이어 쌍 수를 알려줍니다",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "choirboy",
+        "name": "성가대원",
+        "ability": "악마가 왕을 죽이면, 그날 밤 어느 플레이어가 악마인지 알 수 있습니다. [+1 왕]",
+        "firstNightReminder": "",
+        "otherNightReminder": "왕이 악마에게 죽는다면, 성가대원을 깨우고 악마를 알려주세요",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "clockmaker",
+        "name": "시계공",
+        "ability": "악마가 가장 가까운 하수인까지 몇 자리만큼 떨어졌는지 확인합니다.",
+        "firstNightReminder": "가장 가까운 악마와 하수인이 몇자리 떨어졌는지 숫자로 알려줍니다",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "courtier",
+        "name": "대신",
+        "ability": "게임당 한 번, 밤에 캐릭터를 선택합니다. 그 캐릭터는 3일 동안 취합니다.",
+        "firstNightReminder": "대신을 꺠웁니다, 아니오 또는 캐릭터 시트의 한명을 가르킵니다, 그 캐릭터에 '취함3' 알림토큰을 표기하고, 대신에게 '능력없음' 알림으로 표기합니다.(취함3,2,1 을 밤마다 바꿉니다)",
+        "otherNightReminder": "대신을 꺠웁니다, 아니오 또는 캐릭터 시트의 한명을 가르킵니다, 그 캐릭터에 '취함3' 알림토큰을 표기하고, 대신에게 '능력없음' 알림으로 표기합니다.(취함3,2,1 을 밤마다 바꿉니다)",
+        "remindersGlobal": [],
+        "reminders": [
+            "취함3",
+            "취함2",
+            "취함1",
+            "능력없음"
+        ]
+    },
+    {
+        "id": "cultleader",
+        "name": "교주",
+        "ability": "매일 밤, 살아있는 이웃의 진영에 따라 당신의 진영이 바뀝니다. 모든 선한 플레이어가 당신의 교단에 가입했다면 당신의 진영이 승리합니다.",
+        "firstNightReminder": "만약 교주의 진영이 바뀌었다면, 엄지를 위아래로 표기하여 알려주세요",
+        "otherNightReminder": "만약 교주의 진영이 바뀌었다면, 엄지를 위아래로 표기하여 알려주세요",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "damsel",
+        "name": "아가씨",
+        "ability": "게임당 한 번, 하수인이 공개적으로 당신을 추측하여 성공하면 당신의 진영은 패배합니다. (하수인들은 당신이 플레이 중이라는 것을 압니다)",
+        "firstNightReminder": "모든 하수인들을 깨우고, \"이 캐릭터가 당신을 선택했습니다\" 카드를 보여주고, 아가씨 토큰을 보여줍니다",
+        "otherNightReminder": "만약 헌츠맨에게 선택되었다면, 아가씨에게 \"당신은\" 카드를 보여주고, 플레이되지 않은 마을주민 토큰을 보여줍니다",
+        "remindersGlobal": [],
+        "reminders": [
+            "추측 사용"
+        ]
+    },
+    {
+        "id": "deusexfiasco",
+        "name": "이런! 실수",
+        "ability": "게임당 한 번씩 이야기꾼은 \"실수\"를 하고 이를 수정한 후 공개적으로 인정합니다.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": [
+            "이런!"
+        ]
+    },
+    {
+        "id": "deviant",
+        "name": "일탈꾼",
+        "ability": "오늘 당신이 재밌었다면, 당신은 추방당해 죽을 수 없을 겁니다",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "devilsadvocate",
+        "name": "악마의 변호사",
+        "ability": "매일 밤, 살아있는 플레이어(어제 밤과 다른 플레이어)를 선택합니다. 내일 처형하더라도 죽지 않습니다.",
+        "firstNightReminder": "악마의 변호사는 살이있는 플레이어를 가르킵니다. 해당 플레이어는 내일 처형당해도 죽지 않습니다",
+        "otherNightReminder": "악마의 변호사는 어제와 다른 살이있는 플레이어를 가르킵니다. 해당 플레이어는 내일 처형당해도 죽지 않습니다",
+        "remindersGlobal": [],
+        "reminders": [
+            "처형 생존"
+        ]
+    },
+    {
+        "id": "djinn",
+        "name": "진",
+        "ability": "진의 스페셜 룰을 사용하세요. 모든 플레이어가 그것이 무엇인지 알고 있습니다.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "doomsayer",
+        "name": "파멸주의자",
+        "ability": "4명 이상의 플레이어가 살아남는 경우, 살아남은 각 플레이어는 (게임당 한 번씩) 자신의 진영에 속한 플레이어가 죽는 것을 공개적으로 선택할 수 있습니다.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "dreamer",
+        "name": "몽상가",
+        "ability": "매일 밤 플레이어(본인 제외)를 선택합니다. 선/악 직업을 각1개씩 알게됩니다. 그중 1개가 해당 플레이어의 직업입니다.",
+        "firstNightReminder": "몽상가가 한 플레이어를 가르키면, 그 플레이어의 직업과 반대 진영의 토큰 하나를 보여줍니다",
+        "otherNightReminder": "몽상가가 한 플레이어를 가르키면, 그 플레이어의 직업과 반대 진영의 토큰 하나를 보여줍니다",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "drunk",
+        "name": "주정뱅이",
+        "ability": "당신은 자신이 주정뱅이인지 모릅니다, 당신은 자신이 마을사람 캐릭터인줄 압니다",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [
+            "취함"
+        ],
+        "reminders": []
+    },
+    {
+        "id": "duchess",
+        "name": "공작부인",
+        "ability": "매일 밤*, 3명의 플레이어가 당신을 방문하기로 선택할 수 있습니다. 밤에 각 방문자는 얼마나 많은 방문자가 사악한지 알게 되지만, 1명은 거짓 정보를 얻습니다. (3명은 낮에 미리 상의하여 결정 필요)",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": [
+            "방문자",
+            "거짓정보"
+        ]
+    },
+    {
+        "id": "empath",
+        "name": "공감능력자",
+        "ability": "매일 밤, 살아있는 두 이웃 중 몇 명이 악한 플레이어인지 알게 됩니다.",
+        "firstNightReminder": "공감능력자 좌우에 있는 살아있는 악한팀의 숫자를 손으로 알려줍니다",
+        "otherNightReminder": "공감능력자 좌우에 있는 살아있는 악한팀의 숫자를 손으로 알려줍니다",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "engineer",
+        "name": "엔지니어",
+        "ability": "게임당 한 번, 밤에 일어나 하수인 혹은 악마의 직업을 선택해 바꿀 수 있습니다",
+        "firstNightReminder": "엔지니어에게 능력 사용 여부를 확인합니다. 만약 쓰기로 했다면, 캐릭터 시트에서 악마나 하수인을 가르키게 하세요. 해당 직업이 게임에 추가됩니다(유형은 유지됩니다), 새롭게 직업이 바뀐 캐릭터에게 \"당신은\" 카드를 보여주고, 새 직업 토큰을 보여주세요. (만약 이미 플레이중이라면 바뀌지 않고, 엔지니어는 능력을 잃습니다)",
+        "otherNightReminder": "엔지니어에게 능력 사용 여부를 확인합니다. 만약 쓰기로 했다면, 캐릭터 시트에서 악마나 하수인을 가르키게 하세요. 해당 직업이 게임에 추가됩니다(유형은 유지됩니다), 새롭게 직업이 바뀐 캐릭터에게 \"당신은\" 카드를 보여주고, 새 직업 토큰을 보여주세요. (만약 이미 플레이중이라면 바뀌지 않고, 엔지니어는 능력을 잃습니다)",
+        "remindersGlobal": [],
+        "reminders": [
+            "능력없음"
+        ]
+    },
+    {
+        "id": "eviltwin",
+        "name": "사악한 쌍둥이",
+        "ability": "당신과 상대 플레이어는 서로를 알고 있습니다. 선한 플레이어가 처형되면 악이 승리합니다. 두 사람 모두 살아남는다면 선은 이길 수 없습니다(악마가 처형당할지라도)",
+        "firstNightReminder": "악한 쌍둥이와 선한 쌍둥이를 같이 깨웁니다. 선/악 쌍둥이 토큰으로 서로를 알려줍니다.",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": [
+            "쌍둥이"
+        ]
+    },
+    {
+        "id": "exorcist",
+        "name": "엑소시스트",
+        "ability": "매일 밤*(첫날 제외) 어제와 다른 플레이어를 선택 합니다. 악마를 선택한 경우, 악마는 오늘 밤 깨어나지 않습니다(악마는 당신이 누구인지 알게됩니다).",
+        "firstNightReminder": "",
+        "otherNightReminder": "엑소시스트가 어젯밤과 다른 플레이어를 지명합니다. 만약 악마라면, 악마를 꺠우고 엑소시스트 토큰을 보여주고 플레이어를 알려줍니다. 오늘밤 악마는 죽이는 행동을 할 수 없습니다. ",
+        "remindersGlobal": [],
+        "reminders": [
+            "선택됨"
+        ]
+    },
+    {
+        "id": "fanggu",
+        "name": "팡구",
+        "ability": "매일 밤*(첫날 제외), 플레이어를 선택합니다. 플레이어는 죽습니다. 첫 번째로 팡구가 죽이는 이방인은 사악한 팡구가 되고 대신 당신이 죽습니다. [+1 이방인]",
+        "firstNightReminder": "",
+        "otherNightReminder": "팡구가 플레이어를 가르킵니다. 그 플레이어는 죽습니다. 만약 그 플레이어가 이방인이고, 다른 팡구가 게임에 없다면, 그 팡구는 대신 죽고 선택한 플레이어가 새로운 팡구가 됩니다. 새로운 팡구를 꺠우고, \"당신은\" 카드를 보여주고 팡구 토큰을 보여주고, 엄지를  내려 악한 편임을 알립니다",
+        "remindersGlobal": [],
+        "reminders": [
+            "사망",
+            "한번"
+        ]
+    },
+    {
+        "id": "farmer",
+        "name": "농부",
+        "ability": "밤에 죽으면 살아있는 선한 플레이어가 농부가 됩니다.",
+        "firstNightReminder": "",
+        "otherNightReminder": "만약 농부가 밤에 죽었다면, 다른 선한 플레이어을 농부로 만드세요. 그 플레이어를 깨우고, \"당신은\" 카드를 보여준 후 농부토큰을 보여줍니다.",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "fearmonger",
+        "name": "공포조장자",
+        "ability": "매일 밤 플레이어를 선택합니다. 선택했다면 공개적으로 알려줍니다,(누군지는 알려주지 않습니다) 공포조장자가 선택된 플레이어를 처형시킬경우 죽은 플레이어의 진영은 패배합니다",
+        "firstNightReminder": "공포조장자는 플레이어를 가르킵니다. 공포토큰을 그 플레이어 옆에 배치하고, 새로운 플레이어가 공포조장자에게 선택되었다고 알립니다 ",
+        "otherNightReminder": "공포조장자는 플레이어를 가르킵니다. 공포토큰을 그 플레이어 옆에 배치하고, 새로운 플레이어가 공포조장자에게 선택되었다고 알립니다 ",
+        "remindersGlobal": [],
+        "reminders": [
+            "공포"
+        ]
+    },
+    {
+        "id": "fibbin",
+        "name": "피빈",
+        "ability": "한 게임당 한 명의 뛰어난 플레이어가 잘못된 정보를 얻을 수도 있습니다.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": [
+            "사용됨"
+        ]
+    },
+    {
+        "id": "fiddler",
+        "name": "바이올리니스트",
+        "ability": "게임당 한 번씩 악마는 비밀리에 상대 플레이어를 선택합니다. 모든 플레이어는 이 두 플레이어 중 누가 승리할지 선택합니다.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "fisherman",
+        "name": "어부",
+        "ability": "게임당 한 번, 이야기꾼을 방문해 당신의 진영의 승리에 도움이 되는 조언(사실이 아닐 수 있음)을 들을 수 있습니다",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": [
+            "능력없음"
+        ]
+    },
+    {
+        "id": "flowergirl",
+        "name": "꽃파는소녀",
+        "ability": "매일 밤*(첫날 제외), 오늘 낮에 악마가 투표했는지 알 수 있습니다.",
+        "firstNightReminder": "",
+        "otherNightReminder": "악마가 투표했는지여부를 알려줍니다.(예/아니오)",
+        "remindersGlobal": [],
+        "reminders": [
+            "악마 투표",
+            "악마 미투표"
+        ]
+    },
+    {
+        "id": "fool",
+        "name": "광대",
+        "ability": "처음 죽었을 때 죽지 않습니다.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": [
+            "능력없음"
+        ]
+    },
+    {
+        "id": "fortuneteller",
+        "name": "점쟁이",
+        "ability": "매일 밤, 2명의 플레이어를 선택합니다. 두명 중 악마가 있는지 알게 됩니다. *당신에게 악마로 보이는 선한 플레이어가 한 명 있습니다.",
+        "firstNightReminder": "점쟁이는 두명의 플레이어를 선택합니다. 그중 악마가 있는지 Yes/No로 알려줍니다",
+        "otherNightReminder": "점쟁이는 두명의 플레이어를 선택합니다. 그중 악마가 있는지 Yes/No로 알려줍니다",
+        "remindersGlobal": [],
+        "reminders": [
+            "레드 헤링"
+        ]
+    },
+    {
+        "id": "gambler",
+        "name": "도박꾼",
+        "ability": "매일 밤*(첫날 제외) 플레이어를 선택해 캐릭터를 맞춰보세요. 틀리면 죽습니다. (자신도 맞출수 있습니다)",
+        "firstNightReminder": "",
+        "otherNightReminder": "도박꾼은 플레이어를 가르키고, 캐릭터 시트도 가르킵니다. 만약 틀리다면, 도박꾼은 죽습니다",
+        "remindersGlobal": [],
+        "reminders": [
+            "사망"
+        ]
+    },
+    {
+        "id": "gangster",
+        "name": "갱스터",
+        "ability": "하루에 한 번, 다른 살아있는 이웃이 동의할 경우 살아있는 이웃을 죽일 수 있습니다.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "general",
+        "name": "장군",
+        "ability": "매일 밤, 당신은 현재 유리한 진영이 어디인지 알게 됩니다. (이야기꾼의 판단)",
+        "firstNightReminder": "장군에게 엄지로 선/악 중 어디가 유리한지 알려줍니다",
+        "otherNightReminder": "장군에게 엄지로 선/악 중 어디가 유리한지 알려줍니다",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "goblin",
+        "name": "고블린",
+        "ability": "당신이 지명되었을 때 공개적으로 고블린이라고 주장하고, 그 날 처형된다면 당신의 진영이 승리합니다.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": [
+            "주장됨"
+        ]
+    },
+    {
+        "id": "godfather",
+        "name": "대부",
+        "ability": "어떤 이방인이 플레이중인지 알고 시작합니다. 이방인이 처형당한 날 밤에 일어나 플레이어 한명을 죽일 수 있습니다. [-1 또는 +1 이방인]",
+        "firstNightReminder": "이방인들의 토큰을 보여줍니다",
+        "otherNightReminder": "만약 이방인이 오늘 죽었다면, 다른 플레이어 한명을 죽일 수 있습니다",
+        "remindersGlobal": [],
+        "reminders": [
+            "오늘 사망",
+            "사망"
+        ]
+    },
+    {
+        "id": "golem",
+        "name": "골렘",
+        "ability": "게임당 한 번만 지명 할 수 있습니다. 지명한 사람이 악마가 아니라면, 해당 플레이어는 죽습니다. (투표는 정상 진행)",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": [
+            "지명 불가"
+        ]
+    },
+    {
+        "id": "goon",
+        "name": "깡패",
+        "ability": "매일 밤, 당신을 능력으로 선택한 첫 번째 플레이어는 해가 질 때까지 취해 있습니다. 당신은 그들의 진영이 됩니다",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": [
+            "취함"
+        ]
+    },
+    {
+        "id": "gossip",
+        "name": "험담꾼",
+        "ability": "매일 낮 공개적으로 험담을 발표할 수 있습니다. 그것이 사실이면 오늘 밤, 플레이어 1명이 죽습니다.",
+        "firstNightReminder": "",
+        "otherNightReminder": "험담꾼의 공개적인 험담이 진실이라면, 아무 플레이어를 선택하고 죽입니다 (죽음면역이 없는)",
+        "remindersGlobal": [],
+        "reminders": [
+            "사망"
+        ]
+    },
+    {
+        "id": "grandmother",
+        "name": "할머니",
+        "ability": "당신은 선한 플레이어(손주)와 그의 직업을 알고 시작합니다. 악마가 손주를 죽이면 당신도 죽습니다.",
+        "firstNightReminder": "손주의 캐릭터 토큰과 플레이어를 알려줍니다",
+        "otherNightReminder": "손주가 악마에게 죽는다면, 할머니도 죽습니다",
+        "remindersGlobal": [],
+        "reminders": [
+            "손주"
+        ]
+    },
+    {
+        "id": "gunslinger",
+        "name": "총잡이",
+        "ability": "매일 1차 투표가 집계된 후, 투표한 플레이어를 선택할 수 있습니다. 선택하신 플레이어는 죽습니다.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "harlot",
+        "name": "매춘부",
+        "ability": "매일 밤*(첫날 제외), 살아있는 플레이어를 선택하세요. 그들이 동의하면, 당신은 그 플레이어의 성격을 알게 되지만, 두 분 다 죽을 수도 있습니다.(이야기꾼이 선택)",
+        "firstNightReminder": "",
+        "otherNightReminder": "매춘부가 플레이어를 가르키고, 매춘부는 다시 잠듭니다. 선택된 플레이어를 꺠워서 \"이 캐릭터가 당신을 선택했습니다\" 카드를 보여주고, 그리고 매춘부 토큰을 보여줍니다. 그 플레이어는 매춘부에게 캐릭터를 공개할지 선택할 수 있습니다. 만약 공개하기로 선택했다면, 이야기꾼은 둘다 함께 죽일지 말지 선택합니다",
+        "remindersGlobal": [],
+        "reminders": [
+            "사망"
+        ]
+    },
+    {
+        "id": "harpy",
+        "name": "하피",
+        "ability": "매일 밤, 두 명의 플레이어를 선택합니다. 다음날 첫 번째로 지목당한 플레이어는 두 번째로 지목당한 플레이어가 악이라고 \"미쳐\"야 합니다. (악이라고 주장해야 합니다. 제대로 미치지 않았다고 판단된다면, 이야기꾼이 한명 또는 두명을 죽일수 있습니다)",
+        "firstNightReminder": "하피를 깨워서, 한명, 한명 차례로 가르키게 합니다. 첫번쨰 지목한 플레이어를 깨우고, \"이 플레이어가 당신을 선택했습니다\" 카드를 보여주고, 두번쨰 지목됝 플레이어를 알려줍니다. ",
+        "otherNightReminder": "하피를 깨워서, 한명, 한명 차례로 가르키게 합니다. 첫번쨰 지목한 플레이어를 깨우고, \"이 플레이어가 당신을 선택했습니다\" 카드를 보여주고, 두번쨰 지목됝 플레이어를 알려줍니다. ",
+        "remindersGlobal": [],
+        "reminders": [
+            "미침",
+            "두번쨰"
+        ]
+    },
+    {
+        "id": "hatter",
+        "name": "모자장수",
+        "ability": "오늘이나 오늘 밤에 죽으면 하수인과 악마 플레이어는 새로운 하수인과 악마 캐릭터를 선택할 수 있습니다",
+        "firstNightReminder": "",
+        "otherNightReminder": "만약 모자장수가 오늘 죽었다면, 하수인들과 악마를 꺠우고, \"이 캐릭터가 당신을 선택했습니다\" 카드를 보여줍니다. 그리고 그들은 같은 유형의 새로운 캐릭터를 선택합니다(바꾸지 않을수도 있습니다), 차례로 반복합니다 ",
+        "remindersGlobal": [],
+        "reminders": [
+            "오늘밤 티파티"
+        ]
+    },
+    {
+        "id": "hellslibrarian",
+        "name": "지옥의 사서",
+        "ability": "이야기꾼이 침묵을 요청했을 때 말하는 사람에게는 나쁜 일이 일어날 수도 있습니다.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": [
+            "불행한 일"
+        ]
+    },
+    {
+        "id": "heretic",
+        "name": "이교도",
+        "ability": "어떤 진영이든 이길때 지게되며, 질때 이기게 됩니다 당신이 죽더라도 지속됩니다",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "highpriestess",
+        "name": "대사제",
+        "ability": "매일 밤, 이야기꾼이 당신이 가장 대화를 나눠야 한다고 생각하는 플레이어가 누구인지 알아보세요.",
+        "firstNightReminder": "플레이어를 가르키세요",
+        "otherNightReminder": "플레이어를 가르키세요",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "huntsman",
+        "name": "헌츠맨",
+        "ability": "게임당 한 번, 밤에 살아있는 플레이어를 선택하세요. 아가씨을 선택하면 플레이에 참여하지 않는 마을주민이 됩니다. [+아가씨]",
+        "firstNightReminder": "헌츠맨에게 능력 사용여부를 확인합니다. 사용하기로 했다면, 플레이어를 가르키게 합니다. 만약 아가씨를 선택했다면, 아가씨를 깨우고 \"당신은\" 카드를 보여주고 플레이중이 아닌 마을사람 하나를 보여줍니다, 이제 아가씨는 그 마을사람으로 바뀌고 토큰도 바꿉니다",
+        "otherNightReminder": "헌츠맨에게 능력 사용여부를 확인합니다. 사용하기로 했다면, 플레이어를 가르키게 합니다. 만약 아가씨를 선택했다면, 아가씨를 깨우고 \"당신은\" 카드를 보여주고 플레이중이 아닌 마을사람 하나를 보여줍니다, 이제 아가씨는 그 마을사람으로 바뀌고 토큰도 바꿉니다",
+        "remindersGlobal": [],
+        "reminders": [
+            "능력없음"
+        ]
+    },
+    {
+        "id": "imp",
+        "name": "임프",
+        "ability": "매일 밤*(첫날 제외) 플레이어를 선택합니다. 해당플레이어는 죽습니다. 만약 자살하게 되면 하수인이 임프가 됩니다.",
+        "firstNightReminder": "",
+        "otherNightReminder": "임프는 플레이어를 가르킵니다. 그 플레이어는 죽습니다. 만약 임프가 스스로를 가르킨다면, 살아있는 하수인중 하나를 임프로 만듭니다. 그 하수인에게 \"당신은\" 카드를 보여주고, 임프를 보여주세요",
+        "remindersGlobal": [],
+        "reminders": [
+            "사망"
+        ]
+    },
+    {
+        "id": "innkeeper",
+        "name": "여관주인",
+        "ability": "매일 밤*(첫날 제외) 2명의 플레이어를 선택합니다, 해당 플레이어들은 오늘 밤엔 죽지 않지만, 둘 중 1명은 다음날 낮까지 취합니다.",
+        "firstNightReminder": "",
+        "otherNightReminder": "이전에 보호 & 취한 플레이어는 그 마커가 제거됩니다. 여관주인은 두명을 가르킵니다. 그들은 보호되고, 그중 한명은 취합니다",
+        "remindersGlobal": [],
+        "reminders": [
+            "보호됨",
+            "취함"
+        ]
+    },
+    {
+        "id": "investigator",
+        "name": "조사관",
+        "ability": "플레이어 2명 중 1명이 특정 하수인이라는 걸 알게 됩니다",
+        "firstNightReminder": "게임에 사용중인 하수인 토큰 한개를 보여줍니다. 그리고 그 하수인을 포함해 두명을 가르킵니다",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": [
+            "하수인",
+            "가짜"
+        ]
+    },
+    {
+        "id": "judge",
+        "name": "판사",
+        "ability": "게임당 한 번씩, 다른 플레이어가 지명한 경우 현재 투표를 통과 또는 실패로 강제할 수 있습니다",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": [
+            "능력 없음"
+        ]
+    },
+    {
+        "id": "juggler",
+        "name": "저글러",
+        "ability": "첫 번째 낮에 최대 5명의 플레이어 & 직업을 공개적으로 추측할 수 있습니다. 그날 밤, 당신은 몇 개를 맞혔는지 알게 됩니다.",
+        "firstNightReminder": "",
+        "otherNightReminder": "만약 저글러가 능력을 사용한 첫번쨰 날이라면, 손으로 정확히 맞춘 직업 숫자를 알려주세요",
+        "remindersGlobal": [],
+        "reminders": [
+            "맞춤"
+        ]
+    },
+    {
+        "id": "kazali",
+        "name": "카질리",
+        "ability": "매일 밤*(첫날 제외) 플레이어를 선택합니다. 플레이어는 죽습니다. [첫날밤, 당신은 하수인(직업포함)을 스스로 선택합니다][-?,+? 이방인]",
+        "firstNightReminder": "카질리는 플레이어와 하수인 캐릭터를 시트에서 고릅니다. 그들을 이전토큰에서 하수인 토큰으로 변경합니다. 그들에게 \"당신은\" 카드와 하수인 토큰을 보여주세요 그리고 엄지를 내려, 악의 세력임을 알려줍니다. 모든 필요한 하수인 수만큼(전체 플레이어 수에 맞는) 반복합니다. ",
+        "otherNightReminder": "카질리는 플레이어를 가르킵니다. 그 플레이어는 죽습니다",
+        "remindersGlobal": [],
+        "reminders": [
+            "사망"
+        ]
+    },
+    {
+        "id": "king",
+        "name": "왕",
+        "ability": "매일 밤, 죽은 사람이 산 사람과 같거나 더 많으면, 당신은 살아있는 캐릭터 1개를 배웁니다. 악마는 당신이 누구인지 압니다",
+        "firstNightReminder": "악마를 깨우서 \"이 플레이어는\" 카드를 보여주고, 왕 토큰과 플레이어를 가르킵니다",
+        "otherNightReminder": "만약 죽은사람이 산사람보다 같거나 많다면, 살아있는 캐릭터 토큰을 보여줍니다",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "klutz",
+        "name": "모지리",
+        "ability": "당신이 죽었다는 사실을 알게 되면 공개적으로 살아있는 플레이어 1명을 선택합니다. 악한 플레이어라면 당신의 진영은 패배합니다.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "knight",
+        "name": "기사",
+        "ability": "당신은 악마가 아닌 플레이어 2명을 알고 시작합니다.",
+        "firstNightReminder": "악마가 아닌 두명을 가르킵니다",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": [
+            "알고있음",
+            "알고있음"
+        ]
+    },
+    {
+        "id": "legion",
+        "name": "군단",
+        "ability": "매일 밤*(첫날 제외) 플레이어는 죽을 수 있습니다. 악만 투표한다면 투표는 무효화됩니다. 당신 한 하수인으로 보입니다[이 캐릭터가 포함된는 경우, 선과 악의 비율이 반대입니다]",
+        "firstNightReminder": "",
+        "otherNightReminder": "이야기꾼이 플레이어를 선택합니다. 그 플레이어는 죽습니다",
+        "remindersGlobal": [],
+        "reminders": [
+            "사망",
+            "사망예정"
+        ]
+    },
+    {
+        "id": "leviathan",
+        "name": "레비아탄",
+        "ability": "플레이어들은 레비아탄이 참가중임을 알게됩니다, 선한 플레이어가 두명 이상 처형당하거나, 5일뒤 악한 진영이 승리합니다",
+        "firstNightReminder": "레비아탄의 1일차 알람을 둡니다. 레비아탄이 있다고 알리고, 첫쨰날임을 알립니다",
+        "otherNightReminder": "레비아탄의 날짜 알림 토큰을 다음날로 바꿉니다",
+        "remindersGlobal": [],
+        "reminders": [
+            "1일차",
+            "2일차",
+            "3일차",
+            "4일차",
+            "5일차",
+            "선한 플레이어 처형됨"
+        ]
+    },
+    {
+        "id": "librarian",
+        "name": "사서",
+        "ability": "2명 중 1명이 특정 이방인이라는 것을 알고 시작합니다. (또는 이방인이 없다는 것을 압니다)",
+        "firstNightReminder": "게임중인 이방인 토큰을 보여주고, 그 이방인을 포함하여 두명을 가르킵니다.",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": [
+            "이방인",
+            "가짜"
+        ]
+    },
+    {
+        "id": "lilmonsta",
+        "name": "릴몬스타",
+        "ability": "매일 밤, 하수인들은 누가 릴몬스타를 육아(선택된 하수인은 악마)할지 정합니다, 매일 밤*(첫날 제외) 플레이어 한명은 죽을 수 있습니다[하수인 +1]",
+        "firstNightReminder": "하수인들을 같이 꺠우고, 릴몬스탈르 돌볼 사람을 투표합니다",
+        "otherNightReminder": "하수인들을 같이 꺠우고, 릴몬스탈르 돌볼 사람을 투표합니다. 이야기꾼은 적당한때에 돌보고 있지 않는 하수인을 죽일 수 있습니다(마지막날에 두명이상의 하수인이 남지 않도록 주의하세요)",
+        "remindersGlobal": [
+            "악마입니다",
+            "사망"
+        ],
+        "reminders": []
+    },
+    {
+        "id": "lleech",
+        "name": "리치",
+        "ability": "매일 밤*(첫날 제외) 플레이어를 선택합니다. 플레이어는 죽습니다, 리치는 게임시작시 플레이어 한명을 선택합니다, 해당 플레이어가 죽을때만 죽습니다",
+        "firstNightReminder": "리치가 플레이어를 가르킵니다. 중독도미 토큰으로 표기하세요",
+        "otherNightReminder": "리치가 플레이어를 가르킵니다 그 플레이어는 죽습니다",
+        "remindersGlobal": [],
+        "reminders": [
+            "사망",
+            "중독됨"
+        ]
+    },
+    {
+        "id": "lordoftyphon",
+        "name": "타이폰의 군주",
+        "ability": "매일 밤*(첫날 제외) 플레이어를 선택합니다. 플레이어는 죽습니다. 모든 악한 진영은 붙어있고 가능하면 중간에 악마가 있습니다. [+1 하수인, -? 또는 +? 이방인]",
+        "firstNightReminder": "악마 옆의 플레이어를 깨우세요. 그들에게 \"당신은\" 카드와, 하수인 토큰을 보여주며 엄지로 이제부터 악의 세력임을 알려줍니다.",
+        "otherNightReminder": "타이폰의 군주가 플레이어를 가르킵니다. 그 플레이어는 죽습니다",
+        "remindersGlobal": [],
+        "reminders": [
+            "사망"
+        ]
+    },
+    {
+        "id": "lunatic",
+        "name": "미치광이",
+        "ability": "당신은 자신이 악마라고 생각하지만, 당신은 악마가 아닙니다. 악마는 당신이 누구인지, 그리고 당신이 밤에 누구를 선택하는지 알고 있습니다.(7인 이상게임에서 사용)",
+        "firstNightReminder": "미치광이에게 그들의 가짜 하수인들을 알려줍니다. 숫자는 실제 게임의 하수인의 수와 동일합니다. 세개의 가짜 직업을 알려줍니다(실제 게임에 있는 직업도 가능합니다). 진짜 악마는 그 뒤에 깨웁니다. 그리고 누가 미치광이인지 알려줍니다 ",
+        "otherNightReminder": "미치광이에게 악마처럼 행동하게 합니다. 그들에게 \"공격\" 마커를 표시합니다. 그 후 악마를 깨워, 공격 마커를 보여주고, 공격받은 캐릭터를 가르킵니다.(미치광이가 죽이려한 플레이어를 알게합니다). 미치광이의 공격 토큰을 치웁니다",
+        "remindersGlobal": [],
+        "reminders": [
+            "공격1",
+            "공격2",
+            "공격3"
+        ]
+    },
+    {
+        "id": "lycanthrope",
+        "name": "늑대인간",
+        "ability": "매일 밤*(첫날 제외), 살아있는 플레이어를 한 명 선택하세요. 선한 플레이어라면 죽지만, 오늘 밤 죽을 수 있는 플레이어는 그뿐입니다.",
+        "firstNightReminder": "",
+        "otherNightReminder": "늑대인간은 살아있는 플레이어를 가르킵니다. 만약 선 진영이라면, 그들은 죽고 오늘밤 아무도 죽지 않습니다",
+        "remindersGlobal": [],
+        "reminders": [
+            "사망"
+        ]
+    },
+    {
+        "id": "magician",
+        "name": "마술사",
+        "ability": "악마는 당신이 미니언이라고 생각합니다. 미니언은 당신이 악마라고 생각합니다",
+        "firstNightReminder": "하수인들에게 악마를 알려줄떄, 같이 알려줍니다 악마에게 하수인들을 알려줄떄, 마술사도 포함됩니다",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "marionette",
+        "name": "꼭두각시",
+        "ability": "당신은 자신이 마을주민이라고 생각하지만 그렇지 않습니다. 악마는 당신이 누구인지 알고 있습니다. (당신은 악마의 이웃입니다)",
+        "firstNightReminder": "악마옆의 플레이어를 선택해, 꼭두각시 알림을 표기합니다. 악마를 깨워 그가 꼭두각시임을 알려줍니다",
+        "otherNightReminder": "",
+        "remindersGlobal": [
+            "꼭두각시입니다"
+        ],
+        "reminders": []
+    },
+    {
+        "id": "mastermind",
+        "name": "흑막",
+        "ability": "악마가 처형(게임 종료)으로 죽으면 1일 더 플레이합니다. 그런 다음 플레이어가 처형되면 해당 팀이 집니다.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "mathematician",
+        "name": "수학자",
+        "ability": "매일 밤, 다른 직업의 능력으로 인해 능력이 비정상적으로 작동한(새벽부터) 플레이어의 수를 알게 됩니다.",
+        "firstNightReminder": "효과가 오작동한 플레이어의 수를 알려줍니다",
+        "otherNightReminder": "효과가 오작동한 플레이어의 수를 알려줍니다",
+        "remindersGlobal": [],
+        "reminders": [
+            "비정상"
+        ]
+    },
+    {
+        "id": "matron",
+        "name": "여감독",
+        "ability": "매일, 최대 3세트의 2명의 플레이어를 선택하여 자리를 바꿀 수 있습니다. 플레이어는 자리를 떠나서 개인적으로 이야기할 수 없습니다.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "mayor",
+        "name": "시장",
+        "ability": "3명의 플레이어가 살아있을때,그날 아침동안 처형이 발생하지 않으면 당신의 진영이 승리합니다. 밤에 죽으면 다른 플레이어가 대신 죽을 수도 있습니다.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "mezepheles",
+        "name": "메제펠레스",
+        "ability": "당신은 비밀 단어를 알고 시작합니다. 게임중 공개적으로 첫번째로 비밀단어를 외친 선한 플레이어는 그날 밤 악한 진영이 됩니다.",
+        "firstNightReminder": "메제펠레스에게 비밀 단어를 보여줍니다 ",
+        "otherNightReminder": "첫번쨰로 비밀단어를 말한 플레이어에게 \"당신은\" 카드와 악의 세력임을 알려줍니다 ",
+        "remindersGlobal": [],
+        "reminders": [
+            "타락",
+            "능력없음"
+        ]
+    },
+    {
+        "id": "minstrel",
+        "name": "음유시인",
+        "ability": "하수인이 처형으로 죽으면, 다른 모든 플레이어는 내일 낮까지 취합니다.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": [
+            "모두 취함"
+        ]
+    },
+    {
+        "id": "monk",
+        "name": "수도승",
+        "ability": "매일 밤*(첫날 제외), 플레이어를 한 명 선택하세요(자신이 아닌): 그들은 오늘 밤 악마로부터 안전할 것입니다.",
+        "firstNightReminder": "",
+        "otherNightReminder": "이전 보호 알림을 제거하고, 새로 보호할 캐릭터를 선택하게 합니다. ",
+        "remindersGlobal": [],
+        "reminders": [
+            "보호됨"
+        ]
+    },
+    {
+        "id": "moonchild",
+        "name": "달의아이",
+        "ability": "당신이 죽었다는 것을 알게 되면, 공개적으로 살아있는 플레이어 1명을 선택하세요. 오늘 밤, 만약 좋은 플레이어였다면, 그들은 죽습니다",
+        "firstNightReminder": "",
+        "otherNightReminder": "달의아이가 능력을 사용했고, 선하다면, 그들은 죽습니다",
+        "remindersGlobal": [],
+        "reminders": [
+            "사망"
+        ]
+    },
+    {
+        "id": "mutant",
+        "name": "돌연변이",
+        "ability": "당신은 본인이 이방인이 아니라는 사실에 미쳐야합니다, 그렇지 않으면 처형 될 수 있습니다. 처형되면 즉시 밤이 됩니다.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "nightwatchman",
+        "name": "야간경비원",
+        "ability": "게임당 한 번씩, 밤에 플레이어를 선택하세요. 그러면 그들은 당신이 누구인지 알게 됩니다",
+        "firstNightReminder": "능력을 사용하기로 했다면, 플레이어를 선택합니다. 그 플레이어를 꺠워 \"이 캐릭터가 당신을 선택했습니다\" 카드와 야간경비원 토큰을 보여줍니다",
+        "otherNightReminder": "능력을 사용하기로 했다면, 플레이어를 선택합니다. 그 플레이어를 꺠워 \"이 캐릭터가 당신을 선택했습니다\" 카드와 야간경비원 토큰을 보여줍니다",
+        "remindersGlobal": [],
+        "reminders": [
+            "능력없음"
+        ]
+    },
+    {
+        "id": "noble",
+        "name": "귀족",
+        "ability": "당신은 3명의 플레이어를 알게 되고, 그 중 1명만이 악한 쪽입니다.",
+        "firstNightReminder": "악한 플레이어 한명만 포함해서, 3명의 플레이어를 가르킵니다 ",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": [
+            "확인함"
+        ]
+    },
+    {
+        "id": "nodashii",
+        "name": "노다시이",
+        "ability": "매일 밤*(첫날 제외), 플레이어를 선택하세요: 그들은 죽습니다. 당신의 두 마을 사람 이웃은 독살당합니다.",
+        "firstNightReminder": "",
+        "otherNightReminder": "노다시이는 플레이어를 선택합니다. 그들은 죽습니다",
+        "remindersGlobal": [],
+        "reminders": [
+            "사망",
+            "중독됨"
+        ]
+    },
+    {
+        "id": "ogre",
+        "name": "오우거",
+        "ability": "첫날 밤에 플레이어를 하나 고르세요(자신이 아닌): 당신은 그들의 진영이 됩니다(어디인지는 알 수 없음) 심지어 취했거나 독살당했더라도요.",
+        "firstNightReminder": "오우거가 한 플레이어를 가르키고, 그 플레이어 진영이 됩니다",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": [
+            "친구"
+        ]
+    },
+    {
+        "id": "ojo",
+        "name": "오조",
+        "ability": "매일 밤*(첫날 제외), 캐릭터(직업)를 선택하세요: 그들은 죽습니다. 만약 없다면, 이야기꾼이 선택하여 죽입니다 (여러명인 경우 한명만)",
+        "firstNightReminder": "",
+        "otherNightReminder": "오조가 캐릭터를 시트에서 고르게 합니다. 있다면, 그 플레이어는 죽습니다. 없다면, 이야기꾼이 대신죽을 플레이어를 고릅니다",
+        "remindersGlobal": [],
+        "reminders": [
+            "사망"
+        ]
+    },
+    {
+        "id": "oracle",
+        "name": "오라클",
+        "ability": "매일 밤, 당신은 얼마나 많은 죽은 플레이어들 중에 사악한 사람들이 있는지 알게 됩니다",
+        "firstNightReminder": "",
+        "otherNightReminder": "죽은 악한 진영 사람 수를 알려줍니다",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "organgrinder",
+        "name": "오르간 연주자",
+        "ability": "투표할 때 모든 플레이어는 눈을 감고 있고 투표 집계는 비밀입니다. 스스로에게 투표한 경우에만 당신에게 투표가 적용됩니다.(0표로 간주)",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": [
+            "사망 예정"
+        ]
+    },
+    {
+        "id": "pacifist",
+        "name": "평화주의자",
+        "ability": "평화주의자는 선한 플레이어가 처형당해 죽는 것을 막아줄 수 도 있습니다. (이야기꾼 재량에 따릅니다)",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "philosopher",
+        "name": "철학자",
+        "ability": "게임당 한 번, 밤에 좋은 캐릭터를 선택하세요: 그 능력을 얻으세요. 이 캐릭터가 플레이 중이라면, 그들은 취해 있습니다.",
+        "firstNightReminder": "철학자는 능력 사용여부를 결정합니다. 만약 사용한다면, 시트의 선한 캐릭터를 가르킵니다. 만약 플레이에 없던 캐릭터라면, 그 캐릭터로 교체하고, \"철학자이다\" 알림을 표기합니다. 만약 플레이중이라면, 그 캐릭터는 취하게 됩니다. 철학자가 사망시 그 플레이어는 술에서 깹니다.",
+        "otherNightReminder": "철학자는 능력 사용여부를 결정합니다. 만약 사용한다면, 시트의 선한 캐릭터를 가르킵니다. 만약 플레이에 없던 캐릭터라면, 그 캐릭터로 교체하고, \"철학자이다\" 알림을 표기합니다. 만약 플레이중이라면, 그 캐릭터는 취하게 됩니다. 철학자가 사망시 그 플레이어는 술에서 깹니다.",
+        "remindersGlobal": [
+            "취함",
+            "철학자이다"
+        ],
+        "reminders": []
+    },
+    {
+        "id": "pithag",
+        "name": "피트해그",
+        "ability": "매일 밤*(첫날 제외), 플레이어와 그들이 될 캐릭터를 선택하세요(진영은 유지됩니다. 만약 이미 플레이중인 캐릭터라면, 아무일도 없습니다). 악마가 만들어지면 오늘 밤의 죽음은 임의적입니다.(이야기꾼이 조정합니다)",
+        "firstNightReminder": "",
+        "otherNightReminder": "피트해그가 플레이어와 시트위의 캐릭터를 선택합니다.만약 해당 캐릭터가 플레이중이 아니라면, 그 플레이어를 깨우고 \"당신은\" 카드와 새로운 캐릭터 토큰을 보여줍니다. 만약 플레이중이라면, 아무일도 없습니다",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "pixie",
+        "name": "픽시",
+        "ability": "당신은 게임에 플레이되고 있는 1명의 마을주민을 알고 시작합니다. 만약 당신이 충분히 그 캐릭터에 미쳐있다면, 그 캐릭터가 죽고 나서 그 캐릭터의 능력을 얻습니다(이야기꾼이 판정)",
+        "firstNightReminder": "플레이중인 마을주민 토큰 하나를 보여줍니다",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": [
+            "미침",
+            "능력획득"
+        ]
+    },
+    {
+        "id": "plaguedoctor",
+        "name": "전염병 의사",
+        "ability": "만약 당신이 죽으면, 이야기꾼은 하수인 능력을 얻습니다",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": [
+            "이야기꾼 능력"
+        ]
+    },
+    {
+        "id": "po",
+        "name": "포",
+        "ability": "매일 밤*(첫날 제외),당신은 플레이어를 선택할 수 있습니다: 그들은 죽습니다. 만약 당신의 마지막 선택이 아무도 없다면, 오늘 밤 3명의 플레이어를 선택하세요.",
+        "firstNightReminder": "",
+        "otherNightReminder": "만약 포가 전날밤 아무도 죽이지 않았다면, 포는 세명을 선택하고 죽입니다. 그렇지 않다면, 포는 한명을 선택해 죽이거나 아무도 죽이지 않습니다",
+        "remindersGlobal": [],
+        "reminders": [
+            "사망",
+            "3공격"
+        ]
+    },
+    {
+        "id": "poisoner",
+        "name": "독살범",
+        "ability": "매일 밤, 플레이어를 선택하세요: 그들은 오늘 밤과 내일 중독됩니다.",
+        "firstNightReminder": "독살범이 플레이어를 선택합니다. 그 플레이어는 중독됩니다",
+        "otherNightReminder": "이전 중독 토큰을 제거합니다. 독살범이 플레이어를 선택합니다. 그 플레이어는 중독됩니다",
+        "remindersGlobal": [],
+        "reminders": [
+            "중독됨"
+        ]
+    },
+    {
+        "id": "politician",
+        "name": "정치가",
+        "ability": "만약 당신이 팀의 패배에 가장 큰 책임이 있는 선수라면, 당신은 진형을 바꾸고 승리할 수 있습니다. 비록 죽었더라도요 (이야기꾼이 판단)",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "poppygrower",
+        "name": "양귀비 재배자",
+        "ability": "하수인과 악마는 서로를 모릅니다. 당신이 죽으면, 그들은 그날 밤 서로가 누구인지 알게됩니다.",
+        "firstNightReminder": "악마와 하수인들에게 서로를 알려주지 않습니다",
+        "otherNightReminder": "양귀비 재배자가 죽었다면,  하수인과 악마에게 서로 알려줍니다",
+        "remindersGlobal": [],
+        "reminders": [
+            "악이 깨어납니다"
+        ]
+    },
+    {
+        "id": "preacher",
+        "name": "전도사",
+        "ability": "매일밤, 플레이어를 선택합니다. 만약 하수인이라면, 그 능력을 배우고, 그 하수인들은 능력을 잃습니다",
+        "firstNightReminder": "전도사는 플레이어를 선택합니다. 만약 하수인이라면, 그 하수인을 깨우고, \"이 캐릭터가 너를 선택하였다\"카드를 보여주고, 전도사 토큰을 보여줍니다",
+        "otherNightReminder": "전도사는 플레이어를 선택합니다. 만약 하수인이라면, 그 하수인을 깨우고, \"이 캐릭터가 너를 선택하였다\"카드를 보여주고, 전도사 토큰을 보여줍니다",
+        "remindersGlobal": [],
+        "reminders": [
+            "능력 없음"
+        ]
+    },
+    {
+        "id": "professor",
+        "name": "교수",
+        "ability": "게임당 한 번씩, 밤에* 죽은 플레이어를 선택하세요. 그 플레이어가 마을 사람이라면 부활합니다.",
+        "firstNightReminder": "",
+        "otherNightReminder": "능력을 사용할지 확인합니다. 사용한다면, 플레이어를 가르키게하고, 그게 마을주민이라면, 그는 살아납니다",
+        "remindersGlobal": [],
+        "reminders": [
+            "부활",
+            "능력 없음"
+        ]
+    },
+    {
+        "id": "psychopath",
+        "name": "싸이코패스",
+        "ability": "매일 지명 전에, 당신은 공개적으로 플레이어를 선택할 수 있습니다: 그들은 죽습니다. 처형당하면, 당신은 지명자와 가위바위보를 해서 졌을 때만 죽습니다.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "pukka",
+        "name": "푸카",
+        "ability": "매일 밤, 플레이어를 하나 선택하세요: 그들은 중독당합니다. 이전에 중독당한 플레이어는 죽고 건강해집니다.",
+        "firstNightReminder": "푸카는 플레이어를 선택합니다. 그 플레이어는 중독됩니다",
+        "otherNightReminder": "푸카는 플레이어를 선택합니다. 그 플레이어는 중독됩니다. 이전에 중독되었던 플레이어는 죽습니다",
+        "remindersGlobal": [],
+        "reminders": [
+            "중독됨",
+            "사망"
+        ]
+    },
+    {
+        "id": "puzzlemaster",
+        "name": "퍼즐박사",
+        "ability": "1명의 플레이어는 취해 있습니다. 당신이 죽더라도요. (게임 중 한 번) 누구인지 맞히면, 악마가 누구인지 알지만, 틀리게 추측하면 거짓 정보를 얻습니다.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": [
+            "취함",
+            "추측사용함"
+        ]
+    },
+    {
+        "id": "ravenkeeper",
+        "name": "레이븐키퍼",
+        "ability": "밤에 죽으면 깨어나 플레이어를 선택하게 됩니다. 플레이어의 캐릭터를 알게 됩니다",
+        "firstNightReminder": "",
+        "otherNightReminder": "레이븐키퍼가 오늘밤에 죽었다면, 꺠워서 플레이어를 알려줍니다. 그 플레이어의 캐릭터 토큰을 보여줍니다",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "recluse",
+        "name": "은둔자",
+        "ability": "언제나(살아서도, 죽어서도) 악한거나, 하수인이나 악마로 보일 수 있습니다. (이야기꾼 선택)",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "revolutionary",
+        "name": "혁명",
+        "ability": "이웃 플레이어 2명이 같은 진영으로 알려져 있습니다. 게임당 한 번, 그중 한 명이 잘못 등록됩니다.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": [
+            "오등록?"
+        ]
+    },
+    {
+        "id": "riot",
+        "name": "폭도",
+        "ability": "지명된 후보자들은 죽지만, 즉시 다시 지명할 수 있습니다(3초안에 반드시 지명해야 함). 3일차 이후에는 악이 승리합니다. [모든 하수인은 폭동입니다]",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "sage",
+        "name": "현자",
+        "ability": "악마가 당신을 죽이면, 당신은 그가 두 플레이어 중 하나라는 것을 알게 됩니다",
+        "firstNightReminder": "",
+        "otherNightReminder": "만약 현자가 악마에게 죽는다면, 악마를 포함해 두명을 알려줍니다 ",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "sailor",
+        "name": "선원",
+        "ability": "매일 밤, 살아있는 플레이어를 선택하세요: 당신이나 그들이 황혼까지 취해 있을 것입니다. 당신은 죽을 수 없습니다. (이야기꾼이 어느쪽이 취할지 선택, 취한 상태이면 죽을수 있습니다)",
+        "firstNightReminder": "선원이 살아있는 플레이어를 가르킵니다. 선원 또는 그 플레이어는 취합니다",
+        "otherNightReminder": "이전에 취한 플레이어는 술에서 깹니다. 살아있는 플레이어를 선택하세요: 당신이나 그들이 황혼까지 취해 있을 것입니다. 당신은 죽을 수 없습니다.",
+        "remindersGlobal": [],
+        "reminders": [
+            "취함"
+        ]
+    },
+    {
+        "id": "saint",
+        "name": "성자",
+        "ability": "처형으로 죽으면 당신의 팀이 패배합니다",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "savant",
+        "name": "학자",
+        "ability": "매일 이야기꾼을 방문하여 비공개로 2가지 사실을 알아보세요. 1은 사실이고 1은 거짓입니다.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "scapegoat",
+        "name": "속죄하는 염소",
+        "ability": "당신과 같은 성향의 플레이어가 처형당하면, 당신도 대신 처형당할 수 있습니다.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "scarletwoman",
+        "name": "부정한 여자",
+        "ability": "살아있는 플레이어가 5명 이상이고 악마가 죽으면 당신은 악마가 됩니다. (여행자는 포함되지 않습니다)",
+        "firstNightReminder": "",
+        "otherNightReminder": "만약 부정한 여자가 악마가 되었다면, \"당신은\" 카드와 악마 토큰을 보여줍니다",
+        "remindersGlobal": [],
+        "reminders": [
+            "악마"
+        ]
+    },
+    {
+        "id": "seamstress",
+        "name": "재봉사",
+        "ability": "게임당 한 번씩, 밤에 플레이어 2명을 선택하세요(자신 제외): 그들이 같은 진영인지 알게됩니다",
+        "firstNightReminder": "재봉사가 능력을 쓰기로 했다면, 두명을 가르킵니다. 두명이 같은 진영인지 아닌지 알려줍니다",
+        "otherNightReminder": "재봉사가 능력을 쓰기로 했다면, 두명을 가르킵니다. 두명이 같은 진영인지 아닌지 알려줍니다",
+        "remindersGlobal": [],
+        "reminders": [
+            "능력 없음"
+        ]
+    },
+    {
+        "id": "sentinel",
+        "name": "보초",
+        "ability": "플레이에 이방인이 1명 더 있거나 1명 더 적을 수 있습니다",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "shabaloth",
+        "name": "샤발롯",
+        "ability": "매일 밤*(첫날 제외), 플레이어 2명을 선택하세요: 그들은 죽습니다. 어젯밤에 선택한 죽은 플레이어는 토해낼 수도 있습니다. (이야기꾼이 결정)",
+        "firstNightReminder": "",
+        "otherNightReminder": "샤발롯이 이전에 선택한 플레이어가 살아날수도 있습니다. 샤발롯이 두명을 지정하고, 그 플레이어들은 죽습니다",
+        "remindersGlobal": [],
+        "reminders": [
+            "사망",
+            "부활"
+        ]
+    },
+    {
+        "id": "shugenja",
+        "name": "순례자",
+        "ability": "첫날 밤, 가장 가까운 사악한 플레이어가 시계 방향인지 반시계 방향인지 알게 됩니다. 거리가 같다면 이 정보는 임의적입니다.",
+        "firstNightReminder": "가장 가까운 악한 플레이어 방향을 알려줍니다 (시계/반시계), 같다면, 임의로 알려줍니다",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "slayer",
+        "name": "슬레이어",
+        "ability": "게임당 한 번씩, 하루 동안 공개적으로 플레이어를 선택하세요. 그들이 악마라면, 그들은 죽습니다.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": [
+            "능력없음"
+        ]
+    },
+    {
+        "id": "snakecharmer",
+        "name": "뱀 조련사",
+        "ability": "매일 밤, 살아있는 플레이어를 선택하세요.(자신 가능) 악마라면, 당신과 진영과 캐릭터를 바꾸고, 그 후 플레이어는 영구히 중독됩니다.",
+        "firstNightReminder": "뱀 조련사가 플레이어를 선택합니다. 만약 악마라면, 뱀 조련사와 캐릭터와 진영을 바꿉니다. 각 캐릭터를 깨우고, 새로운 캐릭터와 진영을 알려줍니다. 새로운 뱀 조련사는 중독됩니다(영구히)",
+        "otherNightReminder": "뱀 조련사가 플레이어를 선택합니다. 만약 악마라면, 뱀 조련사와 캐릭터와 진영을 바꿉니다. 각 캐릭터를 깨우고, 새로운 캐릭터와 진영을 알려줍니다. 새로운 뱀 조련사는 중독됩니다(영구히)",
+        "remindersGlobal": [],
+        "reminders": [
+            "중독됨"
+        ]
+    },
+    {
+        "id": "snitch",
+        "name": "밀고자",
+        "ability": "하수인들도 악마처럼 게임에 사용되지 않는 3가지 캐릭터를 알게됩니다.(3가지는 이야기꾼이 배정, 같을수도, 다를수도 있습니다)",
+        "firstNightReminder": "각 하수인들에게 \"이 캐릭터는 플레이중이 아닙니다\" 카드를 보여주고, 세개의 비 플레이 캐릭터를 보여줍니다.",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "soldier",
+        "name": "군인",
+        "ability": "악마로부터 죽지 않습니다",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "spiritofivory",
+        "name": "아이보리의 영혼",
+        "ability": "악한 플레이어는 +1명 이상 있을 수 없습니다.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": [
+            "추가악 없음"
+        ]
+    },
+    {
+        "id": "spy",
+        "name": "스파이",
+        "ability": "매일 밤, 당신은 그리모어르를 보게 됩니다. 당신은 죽었더라도, 선량하고 마을 사람이나 이방인으로 등록될 수 있습니다. (이야기꾼이 결정합니다)",
+        "firstNightReminder": "그리모어를 필요한만큼 스파이에게 보여줍니다",
+        "otherNightReminder": "그리모어를 필요한만큼 스파이에게 보여줍니다",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "steward",
+        "name": "청지기",
+        "ability": "선한 플레이어 한명을 알고 시작합니다",
+        "firstNightReminder": "선한 플레이어 1명을 알려줍니다",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": [
+            "알고있음"
+        ]
+    },
+    {
+        "id": "stormcatcher",
+        "name": "스톰캐쳐",
+        "ability": "캐릭터를 하나 지명합니다. 플레이 중이라면 처형으로만 죽을 수 있지만, 사악한 플레이어는 그 캐릭터가 누구인지 알게 됩니다.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": [
+            "안전"
+        ]
+    },
+    {
+        "id": "summoner",
+        "name": "소환사",
+        "ability": "플레이중이 아닌 캐릭터 세개를 알고 시작합니다. 셋째날 밤에, 선택한 플레이어(자신 가능)는 당신이 선택한 악마가 됩니다 [악마없음]",
+        "firstNightReminder": "\"이 캐릭터들은 플레이되고 있지 않습니다\" 카드를 보여주고, 플레이되고 있지 않는 캐릭터 세개를 보여줍니다",
+        "otherNightReminder": "세번쨰 밤이라면, 소환사를 꺠워 캐릭터시트의 특정 악마가 될 플레이어를 고르게합니다. 그 플레이어는 악마가 됩니다.(악진영) 그 플레이어에게 알려줍니다",
+        "remindersGlobal": [],
+        "reminders": [
+            "첫쨰밤",
+            "둘쨰밤",
+            "셋째밤"
+        ]
+    },
+    {
+        "id": "sweetheart",
+        "name": "연인",
+        "ability": "당신이 죽으면, 지금부터 플레이어 중 한 명이 취하게 됩니다.",
+        "firstNightReminder": "",
+        "otherNightReminder": "연인이 죽었다면 취할 플레이어를 고릅니다 (이야기꾼이)",
+        "remindersGlobal": [],
+        "reminders": [
+            "취함"
+        ]
+    },
+    {
+        "id": "tealady",
+        "name": "티 레이디",
+        "ability": "살아있는 두 이웃이 모두 좋은 사람이라면, 그들은 죽을 수 없습니다.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": [
+            "죽지 않습니다"
+        ]
+    },
+    {
+        "id": "thief",
+        "name": "도둑",
+        "ability": "매일 밤, 플레이어를 한 명 선택하세요(자신이 아닌). 그 사람의 투표는 내일 마이너스로 계산됩니다.",
+        "firstNightReminder": "플레이어를 선택합니다. 도둑의 부정투표 알림을 표기합니다",
+        "otherNightReminder": "플레이어를 선택합니다. 도둑의 부정투표 알림을 표기합니다",
+        "remindersGlobal": [],
+        "reminders": [
+            "부정투표"
+        ]
+    },
+    {
+        "id": "tinker",
+        "name": "땜장이",
+        "ability": "당신은 언제든지 죽을지도 몰라요(이야기꾼 선택)",
+        "firstNightReminder": "",
+        "otherNightReminder": "떔장이가 죽을 수도 있습니다",
+        "remindersGlobal": [],
+        "reminders": [
+            "사망"
+        ]
+    },
+    {
+        "id": "towncrier",
+        "name": "포고꾼",
+        "ability": "매일 밤*(첫날 제외), 오늘 하수인이 후보에 올랐는지 알게 됩니다",
+        "firstNightReminder": "",
+        "otherNightReminder": "하수인이 오늘 지명했는지 예/아니오로 알려줍니다. ",
+        "remindersGlobal": [],
+        "reminders": [
+            "하수인이 지명하지 않았다",
+            "하수인이 지명했다"
+        ]
+    },
+    {
+        "id": "toymaker",
+        "name": "장난감 제작자",
+        "ability": "악마는 공격하지 않기로 선택할 수 있으며 게임당 최소 한 번은 이를 해야 합니다. 사악한 플레이어는 정상적인 시작 정보를 얻습니다",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": [
+            "공격 안함"
+        ]
+    },
+    {
+        "id": "undertaker",
+        "name": "장의사",
+        "ability": "매일 밤*(첫날 제외), 오늘 어떤 캐릭터가 처형당했는지 알게 됩니다.",
+        "firstNightReminder": "",
+        "otherNightReminder": "오늘 플레이어가 처형당했다면, 그 플레이어 토큰을 보여줍니다",
+        "remindersGlobal": [],
+        "reminders": [
+            "처형됨"
+        ]
+    },
+    {
+        "id": "vigormortis",
+        "name": "비고모르티스",
+        "ability": "매일 밤*(첫날 제외), 플레이어를 하나 선택하세요: 그들은 죽습니다. 당신이 죽인 하수인은 능력을 유지하고 마을 사람 이웃 1명을 중독시킵니다. [-1 이방인]",
+        "firstNightReminder": "",
+        "otherNightReminder": "비고모르티스가 플레이어를 가르킵니다. 그 플레이어는 죽습니다. 만약 하수인이라면, 능력을 유지하고, 주변의 마을사람중 하나를 중독시킵니다",
+        "remindersGlobal": [],
+        "reminders": [
+            "사망",
+            "능력있음",
+            "중독됨"
+        ]
+    },
+    {
+        "id": "villageidiot",
+        "name": "동네바보",
+        "ability": "매일 밤, 플레이어를 선택하세요: 그들의 성향을 알게 됩니다. [+0에서 +2 동네바보. 추가된 동네바보 중 1명이 취함]",
+        "firstNightReminder": "동네바보는 한명을 가르킵니다. 선한지 악한지 알려줍니다",
+        "otherNightReminder": "동네바보는 한명을 가르킵니다. 선한지 악한지 알려줍니다",
+        "remindersGlobal": [],
+        "reminders": [
+            "취함"
+        ]
+    },
+    {
+        "id": "virgin",
+        "name": "처녀",
+        "ability": "처음으로 지명될 때, 지명자가 마을 사람인 경우, 즉시 처형됩니다",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": [
+            "능력 없음"
+        ]
+    },
+    {
+        "id": "vizier",
+        "name": "수상",
+        "ability": "모든 플레이어는 당신이 누구인지 압니다. 낮에는 죽을 수 없습니다. 선한플레어가 참여한 투표에서 즉시 처형을 선택할 수 있습니다",
+        "firstNightReminder": "수상이 게임에 있음을 알리고 누구인지 알려줍니다",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "vortox",
+        "name": "볼텍스",
+        "ability": "매일 밤*(첫날 제외), 플레이어를 선택하세요. 그들은 죽습니다. 마을 사람들의 능력은 거짓 정보만 제공합니다. 매일, 아무도 처형되지 않으면 악이 승리합니다.",
+        "firstNightReminder": "",
+        "otherNightReminder": "볼텍스는 플레이어를 가르킵니다 그 플레이어는 죽습니다",
+        "remindersGlobal": [],
+        "reminders": [
+            "사망"
+        ]
+    },
+    {
+        "id": "voudon",
+        "name": "부두술사",
+        "ability": "당신과 죽은 자만 투표할 수 있습니다. 투표 토큰이 필요하지 않습니다. 50%의 과반수는 필요하지 않습니다.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "washerwoman",
+        "name": "세탁부",
+        "ability": "플레이어 2명 중 1명이 특정 마을주민이라는 걸 알게 됩니다.",
+        "firstNightReminder": "현재 플레이중인 마을주민 하나를 보여줍니다. 그 캐릭터를 포함해 두명을 가르킵니다",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": [
+            "마을주민",
+            "가짜"
+        ]
+    },
+    {
+        "id": "widow",
+        "name": "과부",
+        "ability": "첫날 밤, 그리모어를 보고 플레이어를 하나 고르세요: 그들은 중독당했습니다. 선한 플레이어 한 명은 과부가 있다는 것을 압니다.",
+        "firstNightReminder": "과부에서 그리모어를 필요한 만큼 보게 합니다. 과부는 한명을 선택하고, 그 플레이어는 중독됩니다. 선한 플레이어 한명을 꺠우고, \"이 캐릭터는 플레이 중 입니다\" 카드를 보여주고, 과부 토큰을 보여줍니다",
+        "otherNightReminder": "",
+        "remindersGlobal": [
+            "알고있음"
+        ],
+        "reminders": [
+            "중독됨"
+        ]
+    },
+    {
+        "id": "witch",
+        "name": "마녀",
+        "ability": "매일 밤, 플레이어를 선택하세요. 내일 투표를 열면(다른 플레이어를 지명하면) 죽습니다. 플레이어 3명만 살아남으면 이 능력을 잃습니다.",
+        "firstNightReminder": "마녀는 플레이어를 선택합니다. 만약 그 플레이어가 내일 누군가를 지명한다면, 즉시 사망합니다",
+        "otherNightReminder": "만약 4명 이상이 살아있다면, 마녀는 플레이어를 지명합니다. 만약 그 플레이어가 내일 누군가를 지명한다면, 즉시 사망합니다",
+        "remindersGlobal": [],
+        "reminders": [
+            "저주받음"
+        ]
+    },
+    {
+        "id": "yaggababble",
+        "name": "야가보블",
+        "ability": "비밀 문구를 알게 됩니다. 오늘 공개적으로 말할 때마다 플레이어가 죽을 수 있습니다.",
+        "firstNightReminder": "야가보블에게 비밀 문구를 보여주세요",
+        "otherNightReminder": "야가보블이 비밀 문구를 공개적으로 말한 횟수보다 적게 플레이어를 선택합니다. 그들은 죽습니다",
+        "remindersGlobal": [],
+        "reminders": [
+            "사망"
+        ]
+    },
+    {
+        "id": "zealot",
+        "name": "광신도",
+        "ability": "살아있는 플레이어가 5명 이상인 경우, 모든 후보에 투표해야 합니다",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "zombuul",
+        "name": "좀부울",
+        "ability": "매일 밤*(첫날 제외), 만약 오늘 낮에 아무도 죽지 않았다면, 좀부울은 플레이어 1명을 선택합니다 : 해당 플레이어는 죽습니다. 좀부울이 처음으로 사망할 경우, 죽은 것처럼 취급되지만 실제로는 살아있습니다.",
+        "firstNightReminder": "",
+        "otherNightReminder": "만약 오늘 낮에 아무도 죽지 않았다면, 좀부울은 플레이어 1명을 선택합니다 : 해당 플레이어는 죽습니다. ",
+        "remindersGlobal": [],
+        "reminders": [
+            "오늘 사망함",
+            "사망"
+        ]
+    }
+]
