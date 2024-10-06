@@ -27,6 +27,13 @@ function createLangJSON(lang) {
         return row;
     });
 
+    // Validate the language.
+    complete.forEach((row) => {
+        if (!keys.every((key) => Object.hasOwn(row, key))) {
+            console.warn("Invalid data for %o", row);
+        }
+    });
+
     return complete;
 
 }

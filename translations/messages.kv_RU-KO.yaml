@@ -25,9 +25,9 @@ sheet:
 
 groups:
     players: Игроки
-    townsfolk: Горожане - Местные жители
-    outsider: Горожане - Аутсайдеры (Чужеземцы)
-    minion: Команда Демона - Приспешники (Миньоны)
+    townsfolk: Горожане
+    outsider: Аутсайдеры
+    minion: Приспешники (Миньоны)
     demon: Демоны
     traveller: Странники
     fabled: Сказочники
@@ -41,7 +41,7 @@ messages:
     no_characters: В сценарии не обнаружено подходящих ролей.
     player_name: Как зовут этого игрока?
     custom_info_token: Введите текст. Используйте **двойные звездочки**, чтобы выделить текст.
-    bag_disabled: 'Невозможно добавить эти роли: [X]'
+    bag_disabled: 'Невозможно добавить эти роли: {0}'
 
 setup:
 
@@ -198,7 +198,7 @@ grimoire:
         title: Токен
 
 jinxes:
-    title: Особые правила (Правила Джинна)
+    title: Правила Джинна (при конфликте ролей)
     target: Цель
     trick: Осложнение
     reason: Правило
@@ -240,7 +240,7 @@ acknowledgements:
         - Торговая марка <a href="https://bloodontheclocktower.com/" target="_blank" rel="noopener noreferrer">Blood on the Clocktower</a> принадлежит Стивену Медвею и компании <a href="https://www.thepandemoniuminstitute.com/" target="_blank" rel="noopener noreferrer">The Pandemonium Institute</a>.
         - Напоминания о ночных действиях и прочая дополнительная информация за авторством <a href="http://bignose.whitetree.org/projects/botc/diy/" target="_blank" rel="noopener noreferrer">Бена Финни</a>.
         - Источник иконок - <a href="https://fontawesome.com/v5.15/icons" target="_blank" rel="noopener noreferrer">Font Awesome</a>.
-        - Многие изображения и данные взяты с сайта <a href="https://www.clocktower.online" target="_blank" rel="noopener noreferrer">clocktower.online</a> и официального сайта Blood on the Clocktower.
+        - Многие изображения и данные взяты с сайта <a href="https://www.clocktower.online" target="_blank" rel="noopener noreferrer">clocktower.online</a> и официального сайта <a href="https://bloodontheclocktower.com/" target="_blank" rel="noopener noreferrer">Blood on the Clocktower</a>.
         - Это - неофициальный виртуальный гримуар для Blood on the Clocktower. Это некоммерческий проект, исходный код которого можно найти на <a href="https://github.com/Skateside/pocket-grimoire" target="_blank" rel="noopener noreferrer">GitHub</a>. Этот проект не имеет связи с компанией The Pandemonium Institute. Если вам нравится игра Blood on the Clocktower, настоятельно рекомендуем приобрести физическую версию, чтобы не только играть с большим удобством, но и поддержать создателей.
         - 'У вас есть информация об ошибках или предложения? Дайте мне знать <a href="https://discord.gg/FyZwg75H" target="_blank" rel="noopener noreferrer">в канале #toolmakers на неофициальном discord-сервере игры</a> (мой никнейм там - Skateside) или <a href="https://github.com/Skateside/pocket-grimoire/issues" target="_blank" rel="noopener noreferrer">подайте заявку на GitHub</a>.'
         - <small>Версия <span id="version"></span></small>

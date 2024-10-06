@@ -58,7 +58,8 @@
         font-size: clamp(1rem, 8vw, 3rem);
     }
 
-    &:lang(kv) {
+    &:lang(kv),
+    &:lang(tr) {
         font-size: clamp(1rem, 7vw, 2.5rem);
     }
 

@@ -10,6 +10,13 @@ function createJinxJSON(lang) {
         return Object.assign(data, { [keys[i]]: cell });
     }, {}));
 
+    // Validate the language.
+    data.forEach((row) => {
+        if (!keys.every((key) => Object.hasOwn(row, key))) {
+            console.warn("Invalid data for %o", row);
+        }
+    });
+
     return data;
 
 }

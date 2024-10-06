@@ -217,7 +217,7 @@
     {
         "target": "spy",
         "trick": "heretic",
-        "reason": "Только 1 из этих двух ролей может находиться в игре."
+        "reason": "Только одна из этих двух ролей может находиться в игре."
     },
     {
         "target": "spy",
@@ -247,12 +247,12 @@
     {
         "target": "widow",
         "trick": "heretic",
-        "reason": "Только 1 из этих двух ролей может находиться в игре."
+        "reason": "Только одна из этих двух ролей может находиться в игре."
     },
     {
         "target": "godfather",
         "trick": "heretic",
-        "reason": "Только 1 из этих двух ролей может находиться в игре."
+        "reason": "Только одна из этих двух ролей может находиться в игре."
     },
     {
         "target": "scarletwoman",
@@ -347,7 +347,7 @@
     {
         "target": "summoner",
         "trick": "lordoftyphon",
-        "reason": "Призывник кӧ лӧсьӧдас Тифонлысь Господьӧс, Тифонлысь Господьӧс колӧ суседуйтны Миньонкӧд. Мӧд суседыс лоӧ неворсан лёк Миньонӧн."
+        "reason": "If the Summoner creates a Lord of Typhon, the Lord of Typhon must neighbor a Minion. The other neighbor becomes a not-in-play evil Minion."
     },
     {
         "target": "baron",
@@ -522,17 +522,17 @@
     {
         "target": "riot",
         "trick": "exorcist",
-        "reason": "Только 1 из этих двух ролей может находиться в игре."
+        "reason": "Только одна из этих двух ролей может находиться в игре."
     },
     {
         "target": "riot",
         "trick": "minstrel",
-        "reason": "Только 1 из этих двух ролей может находиться в игре."
+        "reason": "Только одна из этих двух ролей может находиться в игре."
     },
     {
         "target": "riot",
         "trick": "flowergirl",
-        "reason": "Только 1 из этих двух ролей может находиться в игре."
+        "reason": "Только одна из этих двух ролей может находиться в игре."
     },
     {
         "target": "riot",
@@ -632,7 +632,7 @@
     {
         "target": "vizier",
         "trick": "magician",
-        "reason": "Только 1 из этих двух ролей может находиться в игре."
+        "reason": "Только одна из этих двух ролей может находиться в игре."
     },
     {
         "target": "vizier",
@@ -677,41 +677,41 @@
     {
         "target": "boffin",
         "trick": "heretic",
-        "reason": "Демонлӧн вермас лоны Еретическӧй способность."
+        "reason": "The Demon cannot have the Heretic ability."
     },
     {
         "target": "boffin",
         "trick": "cultleader",
-        "reason": "Демонлӧн кӧ эм Культӧн веськӧдлысь позянлун, найӧ оз вермыны бурӧн бергӧдчыны тайӧ позянлун помысь."
+        "reason": "If the Demon has the Cult Leader ability, they can’t turn good due to this ability."
     },
     {
         "target": "boffin",
         "trick": "goon",
-        "reason": "Демонлӧн кӧ эм Гун позянлун, найӧ оз вермыны бурӧн бергӧдчыны тайӧ позянлун помысь."
+        "reason": "If the Demon has the Goon ability, they can’t turn good due to this ability."
     },
     {
         "target": "boffin",
         "trick": "ogre",
-        "reason": "Демонлӧн вермас лоны Огр способность."
+        "reason": "The Demon cannot have the Ogre ability."
     },
     {
         "target": "boffin",
         "trick": "politician",
-        "reason": "Демонлӧн вермас лоны Политик способность."
+        "reason": "The Demon cannot have the Politician ability."
     },
     {
         "target": "boffin",
         "trick": "drunk",
-        "reason": "Демонлӧн кӧ эськӧ лоис Пьяный позянлун, Боффин бӧрйӧ Таунсфолк ворсысьӧс, медым сы пыдди лоис тайӧ позянлуныс."
+        "reason": "If the Demon would have the Drunk ability, the Boffin chooses a Townsfolk player to have this ability instead."
     },
     {
         "target": "boffin",
         "trick": "alchemist",
-        "reason": "Алхимиклӧн кӧ эм Боффин позянлун, Алхимик оз тӧд, кутшӧм позянлун эм Демонлӧн."
+        "reason": "If the Alchemist has the Boffin ability, the Alchemist does not learn what ability the Demon has."
     },
     {
         "target": "boffin",
         "trick": "villageidiot",
-        "reason": "Эм кӧ запаснӧй жетон, Боффин вермас сетны Демонлы Сиктса Идиот позянлун."
+        "reason": "If there is a spare token, the Boffin can give the Demon the Village Idiot ability."
     }
 ]

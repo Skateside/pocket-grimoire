@@ -1,0 +1,255 @@
+title: Pocket Grimoire
+
+forms:
+    file:
+        placeholder: Dosya Seç
+        button: Gözat
+
+dialog:
+    close: Kapat
+
+index:
+    title: Oyun
+    description: Blood on the Clocktower için sanal bir grimoire
+
+sheet:
+    title: Karakter Kağıdı
+    description: Blood on the Clocktower'ın bu versiyonu için bir karakter kağıdı
+    jinx: Uğursuzluk
+    each_night: '* İlk gece hariç her gece'
+    get_qr_code: Bu kağıt için QR kodunu al
+    get_sheet: Bu kağıdı al
+    credit: <a href="https://bloodontheclocktower.com/" target="_blank" rel="noopener noreferrer">Blood on the Clocktower</a> is a trademark of Steven Medway and <a href="https://www.thepandemoniuminstitute.com/" target="_blank" rel="noopener noreferrer">The Pandemonium Institute</a>
+    breakdown: Oyuncu sayısı için her takımın numaraları.
+    count_plus: '%count%+'
+
+groups:
+    players: Oyuncular
+    townsfolk: Kasabalılar
+    outsider: Yabancılar
+    minion: Minyonlar
+    demon: İblisler
+    traveller: Gezginler
+    fabled: Efsanevi
+
+messages:
+    good_team: İyi takım
+    evil_team: Kötü takım
+    empty_character_ability: Bu boş bir karakterdir.
+    version_change_message: Bu uygulama sürümünü güncelledi. Verileriniz doğru olmayabileceğinden, "Önbelleği Temizle" iletişim kutusundaki her şeyi temizlemenizi öneririz. İletişim kutusunu açmak için "Tamam"a veya bu mesajı kapatmak için "İptal"e basın.
+    invalid_script: Bu senaryo formatı tanınmadı.
+    no_characters: Bu senaryo tanınan karakterleri içermiyor.
+    player_name: Bu oyuncunun ismi nedir?
+    custom_info_token: Yeni bilgi simgenizin ne söylemesini istiyorsunuz? Metni vurgulamak için **çift yıldız** kullanın.
+    bag_disabled: 'Bu karakterler torbaya eklenemez: {0}'
+
+setup:
+
+    title: Kurulum
+
+    buttons:
+        select_edition: Edisyon Seç
+        select_characters: Karakterleri Seç
+        qr_code_button: Karakter Kağıdı
+        clear_cache_button: Önbelleği Temizle
+        language: Dil
+        set_language: Dili Seç
+
+    editions:
+        title: Edisyon Seç
+        trouble_brewing: Trouble Brewing
+        bad_moon_rising: Bad Moon Rising
+        sects_and_violets: Sects and Violets
+        custom_script: Özel Senaryo
+        custom_note: Özel bir senaryo yükleyin, özel bir senaryonun URL'sini girin veya JSON'u doğrudan yapıştırın.
+        custom_warning: Özel JSON dosyalarını yalnızca güvendiğiniz kaynaklardan yükleyin!
+        upload: Özel bir senaryo yükle
+        url: URL gir
+        paste: Panodan yapıştır
+        unsupported: Pocket Grimoire'un şu anda homebrew veya yerelleştirilmiş senaryoları desteklemediğini lütfen unutmayın.
+        select: Seç
+
+    character_select:
+        title: Karakterleri Seç
+        number_players: Oyuncu Sayısı
+        toggle_abilities: Karakter özelliklerini göster
+        toggle_duplicates: Yinelenen karakterlere izin ver
+        highlight_random: Rastgele öner
+        draw_characters: Karakterleri Dağıt
+        add_all: Hepsini Ekle
+        layout: Düzen
+        ellipse: Elips
+        diagonal: Diyagonal
+        horizontal: Yatay
+        vertical: Dikey
+
+    character_choice:
+        title: Karakterini Seç
+        description: Karakterinizi seçmek için numaralı jetonlardan herhangi birine dokunun. Daha koyu olanlar zaten seçilmiştir.
+
+    character_decision:
+        title: Karakterini Hatırla
+        name: İsmini gir (opsiyonel)
+        return: Karakter Seçimine Geri Dön
+
+    qr_code:
+        title: Karakter Kağıdı
+        intro: Karakter kağıdını görmek için bu QR kodunu tarayın
+        include: 'Dahil et:'
+        travellers: Gezginler
+        fabled: Efsanevi
+
+    clear_cache:
+        title: Önbelleği Temizle
+        clear_all: Her Şeyi temizle
+        clear_description: Bunun kapatılması, önbelleğin ayrı ayrı bölümlerinin temizlenmesini sağlayacaktır.
+        lookup_label: Verileri temizle
+        lookup_note: Uğursuzluklar, takım dağılımı ve karakter bilgileri için veriler.
+        characters_label: Edisyonu Temizle
+        characters_note: Seçilen ve yüklenen edisyon veya senaryo.
+        tokens_label: Simgeleri temizle
+        tokens_note: Grimoire'daki simgelerin konumu.
+        inputs_label: Girdileri temizle
+        inputs_note: Bu website için kullanıcıların girdileri.
+        details_label: Açık/Kapalı temizle
+        details_note: Hangi kısımlar açık ya da kapalı.
+        info_tokens_label: Özel bilgi simgelerini temizle
+        info_tokens_note: Eklenen özel bilgi simgeleri.
+        names_label: İsimleri temizle
+        names_note: Oyuncu ismi önerileri.
+        height_label: Üst tabla yüksekliğini temizle
+        height_note: Grimoire üst tablasının yüksekliği.
+        clear_refresh_label: Sonrasında yenile
+        clear_refresh_note: Yenileme, silinmiş olan her şey için yeni verileri yükleyecektir.
+        warning: '<strong>Uyarı:</strong> Grimoire üzerine yerleştirilmiş olan tüm simgeler unutulacaktır.'
+        info_token_warning: '<strong>Uyarı:</strong> tüm özel bilgi simgeleri unutulacaktır.'
+        clear_cache: Önbelleği Temizle
+
+grimoire:
+
+    title: Grimoire
+
+    grimoire:
+        bluffs: İblis Blöfleri
+        show_bluffs: Tüm blöfleri göster
+        add_bluffs: Blöf ekle
+        add_token: Simge ekle
+        add_reminder: Hatırlatıcı ekle
+        add_traveller: Gezgin ekle
+        add_fabled: Efsanevi ekle
+        show_tokens: Simgeleri göster
+        reset_height: Tabla yüksekliğini sıfırla
+        clear_grimoire: Grimoire'u temizle
+        clear_grimoire_warning: Tüm simgeleri temizlemek istediğinizden emin misiniz?
+        show_night_order: Gece sırasını göster
+        character_size: Karakter simgesi boyutu
+        reminder_size: Hatırlatıcı simgesi boyutu
+        token_settings: Simge Ayarları
+
+    character_list:
+        title: Karakter Seç
+
+    reminder_list:
+        title: Hatırlatıcı Seç
+        show: Tüm hatırlatıcıları göster
+        multiple: Birden fazla ekle
+        add_all: Tümünü ekle
+
+    character_show:
+        title: Simge
+        show: Göster
+        shroud: Kefenle
+        rotate: Döndür
+        reminder: Hatırlatıcı
+        replace: Değiştir
+        remove: Simgeyi kaldır
+        recent_reminders: 'Yakın zamanda eklenen hatırlatıcılar:'
+        player_name: Oyuncu ismini ayarla
+        ghost_vote: Ölü oyu
+
+    reminder_show:
+        title: Hatırlatıcı
+        remove: Kaldır
+
+    bluff_show:
+        title: Simge
+        empty: Boş
+        show: Göster
+        change: Değiştir
+
+    bluff_list:
+        title: Blöf Seç
+        show_existing: Var olan karakterleri göster
+        show_travellers: Gezginleri göster
+        show_evil: Kötü karakterleri göster
+
+    token_list:
+        title: Karakterler
+        add: Simge ekle
+
+    traveller_list:
+        title: Gezginler
+        show_all: Tüm gezginleri göster
+
+    fabled_list:
+        title: Efsanevi
+
+    token:
+        title: Simge
+
+jinxes:
+    title: Uğursuzluklar
+    target: Hedef
+    trick: Hile
+    reason: Sebep
+    show: Oyunda olmayan uğursuzlukları göster
+
+night_order:
+    title: Gece Sırası
+    first_night: İlk gece
+    other_night: Sonraki geceler
+    swipe_change: Geceleri değiştirmek için kaydır
+    show: Oyunda olmayan karakterleri göster
+    show_dead: Ölü karakterleri göster
+
+info_tokens:
+    title: Bilgi Simgeleri
+    info_tokens:
+        isdemon: Bu <strong>İblis</strong>
+        isminion: Bunlar <strong>Minyonlarınız</strong>
+        notinplay: Bu karakterler <strong>oyunda yok</strong>
+        nominatetoday: Bugün <strong>aday</strong> gösterdin mi?
+        playeris: <strong>Bu oyuncu</strong> şudur
+        votetoday: Bugün <strong>oy</strong> verdin mi?
+        youare: <strong>Sen</strong> şusun
+        selectedyou: Bu karakter seni <strong>seçti</strong>
+    custom: Özel bilgi simgeleri
+    add_custom: Bilgi simgesi ekle
+    edit_custom: Bilgi simgesi düzenle
+    delete_custom: Bilgi simgesi sil
+
+notes:
+    title: Hikaye Anlatıcısı Notları
+    label: Notlar
+    clear: Notları temizle
+    clear_warning: Notları temizlemek istediğinize emin misiniz?
+
+acknowledgements:
+    title: Teşekkürler
+    acknowledgements:
+        - <a href="https://bloodontheclocktower.com/" target="_blank" rel="noopener noreferrer">Blood on the Clocktower</a> is a trademark of Steven Medway and <a href="https://www.thepandemoniuminstitute.com/" target="_blank" rel="noopener noreferrer">The Pandemonium Institute</a>.
+        - Night reminders and other auxiliary text written by <a href="http://bignose.whitetree.org/projects/botc/diy/" target="_blank" rel="noopener noreferrer">Ben Finney</a>.
+        - Icons are taken from <a href="https://fontawesome.com/v5.15/icons" target="_blank" rel="noopener noreferrer">Font Awesome</a>.
+        - Many images and data are taken from <a href="https://www.clocktower.online" target="_blank" rel="noopener noreferrer">Clocktower.online</a> and the <a href="https://bloodontheclocktower.com/" target="_blank" rel="noopener noreferrer">Blood on the Clocktower website</a>.
+        - Bu, Blood on the Clocktower için resmi olmayan bir sanal grimoire'dur. Bu proje ücretsizdir ve kaynak kodu <a href="https://github.com/Skateside/pocket-grimoire" target="_blank" rel="noopener noreferrer">GitHub'da</a> bulunabilir. Bu proje Pandemonium Enstitüsü ile bağlantılı değildir. Blood on the Clocktower oynamaktan hoşlanıyorsanız, <a href="https://bloodontheclocktower.com/buy" target="_blank" rel="noopener noreferrer">lütfen kendi grimoire'ınızı satın almayı düşünün</a> - bu dijital sürümden daha esnek olmasının yanı sıra, yapımcıları da destekleyecektir.
+        - Bir hata mı fark ettiniz veya bir iyileştirme öneriniz mi var? <a href="https://discord.gg/FyZwg75H" target="_blank" rel="noopener noreferrer">Resmi olmayan discord sunucusundaki pocket-grimoire kanalında</a> (oradaki adım "Skateside") bana bildirin veya GitHub'da bir issue oluşturun.
+        - <small>Versiyon <span id="version"></span></small>
+
+errors:
+    homebrew_json:
+        not_homebrew: Homebrew girişi değil "%id%"
+        unrecognised_team: Tanınmayan takım "%team%"
+        not_find_id: ID "%id%" bulunamadı
+        .not_recognise_character: Tanınmayan karakter "%id%"
+        invalid_entry: '"%id%": %reasons% için geçersiz giriş'
+        empty_teams: 'Boş Takımlar: %teams%'
