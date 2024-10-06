@@ -638,6 +638,26 @@
             {
                 "id": "eviltwin",
                 "reason": "互为克星的角色在同一时间里只能有其中一个角色在场。"
+            },
+            {
+                "id": "gudiao",
+                "reason": "互为克星的角色在同一时间里只能有其中一个角色在场。"
+            },
+            {
+                "id": "goblin",
+                "reason": "戏子无法反转由哥布林角色能力产生的胜负结果。"
+            },
+            {
+                "id": "fearmonger",
+                "reason": "戏子无法反转由恐惧之灵角色能力产生的胜负结果。"
+            },
+            {
+                "id": "atheist",
+                "reason": "无神论者在剧本中时，处决说书人导致的胜负结果不会被戏子反转。"
+            },
+            {
+                "id": "pukka",
+                "reason": "在戏子存在于剧本中时，普卡可以在游戏中任意时候向说书人示意自己“想要死亡”， 说书人会在当晚杀死这名玩家。"
             }
         ]
     },
@@ -705,6 +725,10 @@
             {
                 "id": "soldier",
                 "reason": "If the Kazali turns the Soldier into a Minion, the Soldier chooses which not-in-play Minion to become."
+            },
+            {
+                "id": "xizi",
+                "reason": "卡扎力和戏子不能在初始时同时在场。如果有角色能力能够使得善良玩家在第一个夜晚变成戏子，卡扎力会在这一效果生效之前先进行转变爪牙的行动。"
             }
         ]
     },
@@ -779,6 +803,18 @@
             {
                 "id": "lordoftyphon",
                 "reason": "If the Summoner creates a Lord of Typhon, the Lord of Typhon must neighbor a Minion. The other neighbor becomes a not-in-play evil Minion."
+            },
+            {
+                "id": "xizi",
+                "reason": "互为克星的角色在同一时间里只能有其中一个角色在场。"
+            },
+            {
+                "id": "dianyuzhang",
+                "reason": "召唤师可以选择在第二个夜晚将一名玩家变成典狱长。"
+            },
+            {
+                "id": "yanluo",
+                "reason": "召唤师可以选择在第二个夜晚将一名玩家变成阎罗。"
             }
         ]
     },
@@ -869,6 +905,95 @@
             {
                 "id": "villageidiot",
                 "reason": "If there is a spare token, the Boffin can give the Demon the Village Idiot ability."
+            }
+        ]
+    },
+    {
+        "id": "villageidiot",
+        "jinx": [
+            {
+                "id": "wudaozhe",
+                "reason": "如果村夫在场数量不足3人，悟道者可以变成新的村夫。如果因此使得村夫的在场数量超过1人，会有一名村夫醉酒。"
+            }
+        ]
+    },
+    {
+        "id": "yanluo",
+        "jinx": [
+            {
+                "id": "magician",
+                "reason": "当阎罗查看魔典时，魔术师和爪牙的角色标记会被说书人移除。"
+            },
+            {
+                "id": "poppygrower",
+                "reason": "互为克星的角色在同一时间里只能有其中一个角色在场。"
+            },
+            {
+                "id": "damsel",
+                "reason": "如果阎罗正在场或曾经在场，落难少女中毒。"
+            },
+            {
+                "id": "heretic",
+                "reason": "互为克星的角色在同一时间里只能有其中一个角色在场。"
+            },
+            {
+                "id": "xizi",
+                "reason": "互为克星的角色在同一时间里只能有其中一个角色在场。"
+            }
+        ]
+    },
+    {
+        "id": "gudiao",
+        "jinx": [
+            {
+                "id": "damsel",
+                "reason": "如果蛊雕得知了落难少女的角色，落难少女中毒。"
+            },
+            {
+                "id": "heretic",
+                "reason": "互为克星的角色在同一时间里只能有其中一个角色在场。"
+            },
+            {
+                "id": "magician",
+                "reason": "蛊雕飞行时会越过魔术师。"
+            }
+        ]
+    },
+    {
+        "id": "panguan",
+        "jinx": [
+            {
+                "id": "vortox",
+                "reason": "判官无法使用自身能力触发涡流的特殊能力获胜。"
+            }
+        ]
+    },
+    {
+        "id": "rulianshi",
+        "jinx": [
+            {
+                "id": "lleech",
+                "reason": "入殓师提名并处决了痢蛭的宿主，导致了痢蛭的死亡，且存活玩家大于四人时，入殓师会变为邪恶的痢蛭。"
+            },
+            {
+                "id": "scarletwoman",
+                "reason": "入殓师提名并处决了恶魔时，红唇女郎不会触发能力。"
+            },
+            {
+                "id": "lilmonsta",
+                "reason": "入殓师提名并处决了照顾小怪宝的玩家，入殓师会变为邪恶的爪牙且在当晚照顾小怪宝。"
+            },
+            {
+                "id": "riot",
+                "reason": "入殓师提名杀死了暴乱，入殓师会立即变为邪恶的暴乱。"
+            },
+            {
+                "id": "alhadikhia",
+                "reason": "如果出现两名存活的哈迪寂亚，则入殓师变成的哈迪寂亚会变回入殓师。"
+            },
+            {
+                "id": "taowu",
+                "reason": "入殓师可以提名处决并且杀死梼杌，且不会因此移除原本梼杌的“失去能力”提示标记。"
             }
         ]
     }

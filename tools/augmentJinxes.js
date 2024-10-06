@@ -44,4 +44,4 @@ function copyAugmentedJinxes(current) {
     copy(JSON.stringify(augmentJinxes(current, window.json), null, "    "));
 }
 
-// This prevents the 29 Chinese jinxes from being lost.
+// This prevents the 53 Chinese jinxes from being lost.

@@ -713,5 +713,275 @@
         "target": "boffin",
         "trick": "villageidiot",
         "reason": "如果有多余的令牌，博芬可以给恶魔村里傻瓜的能力。"
+    },
+    {
+        "target": "pithag",
+        "trick": "xizi",
+        "reason": "麻脸巫婆无法创造戏子。"
+    },
+    {
+        "target": "pithag",
+        "trick": "taowu",
+        "reason": "如果梼杌变成了其他恶魔，因为梼杌而失去能力的爪牙会立即死亡。"
+    },
+    {
+        "target": "leviathan",
+        "trick": "heshang",
+        "reason": "如果利维坦发起的提名中被处决的玩家是与和尚邻近的存活玩家，\n那么那名玩家不会死亡，并且当晚和尚得知\n他的能力被触发。（如常在和尚旁放置“已生效”提示标记，\n因为黎明时才会移除此标记，因此当晚和尚无法再触发他的能力。）"
+    },
+    {
+        "target": "leviathan",
+        "trick": "xizi",
+        "reason": "在戏子存在于剧本中时，利维坦可以在游戏中\n任意时候向说书人示意自己“想要死亡”， 说书人会在当晚杀死这名玩家。"
+    },
+    {
+        "target": "lilmonsta",
+        "trick": "xizi",
+        "reason": "在戏子存在于剧本中时，照顾小怪宝的玩家可以在游戏中\n任意时候向说书人示意自己“想要死亡”， 说书人会在当晚杀死这名玩家。"
+    },
+    {
+        "target": "lycanthrope",
+        "trick": "dagengren",
+        "reason": "如果打更人猜测正确的玩家是半兽人攻击的玩家，\n那么当晚只会有打更人死亡。"
+    },
+    {
+        "target": "lycanthrope",
+        "trick": "jinyiwei",
+        "reason": "如果半兽人选择了锦衣卫保护的善良玩家，\n那么当晚只会有锦衣卫死亡。"
+    },
+    {
+        "target": "legion",
+        "trick": "xizi",
+        "reason": "在戏子存在于剧本中时，军团可以在游戏中任意时候\n向说书人示意自己“想要死亡”，说书人会在其中一名玩家示意后\n在夜晚一同唤醒所有军团，并询问这些玩家是否要一同死亡。"
+    },
+    {
+        "target": "spy",
+        "trick": "xizi",
+        "reason": "互为克星的角色在同一时间里只能有其中一个角色在场。"
+    },
+    {
+        "target": "widow",
+        "trick": "xizi",
+        "reason": "互为克星的角色在同一时间里只能有其中一个角色在场。"
+    },
+    {
+        "target": "godfather",
+        "trick": "xizi",
+        "reason": "互为克星的角色在同一时间里只能有其中一个角色在场。"
+    },
+    {
+        "target": "marionette",
+        "trick": "taowu",
+        "reason": "梼杌不会得知谁是提线木偶。在梼杌使得提线木偶\n失去能力后，梼杌会得知对应的那一名提线木偶是谁，\n但提线木偶会仍然以为自己是一个善良角色。"
+    },
+    {
+        "target": "riot",
+        "trick": "banxian",
+        "reason": "当且仅当暴乱提名了半仙时，半仙不会死亡，而是让另一名\n存活的邪恶玩家死亡。（随后那名死亡的邪恶玩家可以立即\n发起新的提名。如果场上已经没有其他存活的邪恶玩家，那么\n半仙在被唯一存活的暴乱提名时会正常死亡。）"
+    },
+    {
+        "target": "riot",
+        "trick": "dagengren",
+        "reason": "如果在夜晚无人死亡，打更人的能力能保护下一个白天\n首次死亡的玩家（如果打更人的猜测正确）。然而集体免死的效果\n不会在白天触发，打更人也不会因此在\n白天死亡。"
+    },
+    {
+        "target": "riot",
+        "trick": "heshang",
+        "reason": "如果暴乱提名了与和尚邻近的存活玩家，那么那名玩家不会死亡，\n并且当晚和尚得知他的能力被触发。（如常在和尚旁\n放置“已生效”提示标记，因为黎明时才会移除此标记，\n因此当晚和尚无法再触发他的能力。）"
+    },
+    {
+        "target": "riot",
+        "trick": "xizi",
+        "reason": "在戏子存在于剧本中时，暴乱可以在游戏中任意时候\n向说书人示意自己“想要死亡”，说书人会在其中一名玩家示意\n后在夜晚一同唤醒所有暴乱，并询问这些\n玩家是否要一同死亡。"
+    },
+    {
+        "target": "riot",
+        "trick": "nichen",
+        "reason": "被提名且死亡的玩家算作被处决。"
+    },
+    {
+        "target": "riot",
+        "trick": "humeiniang",
+        "reason": "被提名且死亡的玩家算作被处决。"
+    },
+    {
+        "target": "organgrinder",
+        "trick": "taowu",
+        "reason": "当梼杌被处决时，如果街头风琴手具有能力，\n说书人会宣布“无人被处决”。"
+    },
+    {
+        "target": "plaguedoctor",
+        "trick": "yangguren",
+        "reason": "如果瘟疫医生死亡且说书人会因此获得养蛊人的能力，\n改为一名存活的爪牙玩家获得此能力，且他会得知此事。"
+    },
+    {
+        "target": "plaguedoctor",
+        "trick": "ganshiren",
+        "reason": "如果瘟疫医生死亡且说书人会因此获得赶尸人的能力，改为一名存活的爪牙玩家获得此能力，且他会得知此事。"
+    },
+    {
+        "target": "xizi",
+        "trick": "eviltwin",
+        "reason": "互为克星的角色在同一时间里只能有其中一个角色在场。"
+    },
+    {
+        "target": "xizi",
+        "trick": "gudiao",
+        "reason": "互为克星的角色在同一时间里只能有其中一个角色在场。"
+    },
+    {
+        "target": "xizi",
+        "trick": "goblin",
+        "reason": "戏子无法反转由哥布林角色能力产生的胜负结果。"
+    },
+    {
+        "target": "xizi",
+        "trick": "fearmonger",
+        "reason": "戏子无法反转由恐惧之灵角色能力产生的胜负结果。"
+    },
+    {
+        "target": "xizi",
+        "trick": "atheist",
+        "reason": "无神论者在剧本中时，处决说书人导致的胜负结果不会被戏子反转。"
+    },
+    {
+        "target": "xizi",
+        "trick": "pukka",
+        "reason": "在戏子存在于剧本中时，普卡可以在游戏中任意时候向说书人示意自己“想要死亡”， 说书人会在当晚杀死这名玩家。"
+    },
+    {
+        "target": "humeiniang",
+        "trick": "heretic",
+        "reason": "互为克星的角色在同一时间里只能有其中一个角色在场。"
+    },
+    {
+        "target": "taowu",
+        "trick": "scarletwoman",
+        "reason": "红唇女郎在梼杌的能力判断中被当作“不具有能力”。"
+    },
+    {
+        "target": "taowu",
+        "trick": "mastermind",
+        "reason": "主谋在梼杌的能力判断中被当作“不具有能力”。"
+    },
+    {
+        "target": "taowu",
+        "trick": "hatter",
+        "reason": "如果梼杌变成了其他恶魔，因为梼杌而失去能力的爪牙会立即死亡。"
+    },
+    {
+        "target": "taowu",
+        "trick": "engineer",
+        "reason": "如果梼杌变成了其他恶魔，因为梼杌而失去能力的爪牙会立即死亡。"
+    },
+    {
+        "target": "taowu",
+        "trick": "snakecharmer",
+        "reason": "如果梼杌的角色发生了交换，不会因此移除原本梼杌的“失去能力”提示标记。"
+    },
+    {
+        "target": "taowu",
+        "trick": "barber",
+        "reason": "如果梼杌的角色发生了交换，不会因此移除原本梼杌的“失去能力”提示标记。"
+    },
+    {
+        "target": "kazali",
+        "trick": "xizi",
+        "reason": "卡扎力和戏子不能在初始时同时在场。如果有角色能力能够使得善良玩家在第一个夜晚变成戏子，卡扎力会在这一效果生效之前先进行转变爪牙的行动。"
+    },
+    {
+        "target": "summoner",
+        "trick": "xizi",
+        "reason": "互为克星的角色在同一时间里只能有其中一个角色在场。"
+    },
+    {
+        "target": "summoner",
+        "trick": "dianyuzhang",
+        "reason": "召唤师可以选择在第二个夜晚将一名玩家变成典狱长。"
+    },
+    {
+        "target": "summoner",
+        "trick": "yanluo",
+        "reason": "召唤师可以选择在第二个夜晚将一名玩家变成阎罗。"
+    },
+    {
+        "target": "villageidiot",
+        "trick": "wudaozhe",
+        "reason": "如果村夫在场数量不足3人，悟道者可以变成新的村夫。如果因此使得村夫的在场数量超过1人，会有一名村夫醉酒。"
+    },
+    {
+        "target": "yanluo",
+        "trick": "magician",
+        "reason": "当阎罗查看魔典时，魔术师和爪牙的角色标记会被说书人移除。"
+    },
+    {
+        "target": "yanluo",
+        "trick": "poppygrower",
+        "reason": "互为克星的角色在同一时间里只能有其中一个角色在场。"
+    },
+    {
+        "target": "yanluo",
+        "trick": "damsel",
+        "reason": "如果阎罗正在场或曾经在场，落难少女中毒。"
+    },
+    {
+        "target": "yanluo",
+        "trick": "heretic",
+        "reason": "互为克星的角色在同一时间里只能有其中一个角色在场。"
+    },
+    {
+        "target": "yanluo",
+        "trick": "xizi",
+        "reason": "互为克星的角色在同一时间里只能有其中一个角色在场。"
+    },
+    {
+        "target": "gudiao",
+        "trick": "damsel",
+        "reason": "如果蛊雕得知了落难少女的角色，落难少女中毒。"
+    },
+    {
+        "target": "gudiao",
+        "trick": "heretic",
+        "reason": "互为克星的角色在同一时间里只能有其中一个角色在场。"
+    },
+    {
+        "target": "gudiao",
+        "trick": "magician",
+        "reason": "蛊雕飞行时会越过魔术师。"
+    },
+    {
+        "target": "panguan",
+        "trick": "vortox",
+        "reason": "判官无法使用自身能力触发涡流的特殊能力获胜。"
+    },
+    {
+        "target": "rulianshi",
+        "trick": "lleech",
+        "reason": "入殓师提名并处决了痢蛭的宿主，导致了痢蛭的死亡，且存活玩家大于四人时，入殓师会变为邪恶的痢蛭。"
+    },
+    {
+        "target": "rulianshi",
+        "trick": "scarletwoman",
+        "reason": "入殓师提名并处决了恶魔时，红唇女郎不会触发能力。"
+    },
+    {
+        "target": "rulianshi",
+        "trick": "lilmonsta",
+        "reason": "入殓师提名并处决了照顾小怪宝的玩家，入殓师会变为邪恶的爪牙且在当晚照顾小怪宝。"
+    },
+    {
+        "target": "rulianshi",
+        "trick": "riot",
+        "reason": "入殓师提名杀死了暴乱，入殓师会立即变为邪恶的暴乱。"
+    },
+    {
+        "target": "rulianshi",
+        "trick": "alhadikhia",
+        "reason": "如果出现两名存活的哈迪寂亚，则入殓师变成的哈迪寂亚会变回入殓师。"
+    },
+    {
+        "target": "rulianshi",
+        "trick": "taowu",
+        "reason": "入殓师可以提名处决并且杀死梼杌，且不会因此移除原本梼杌的“失去能力”提示标记。"
     }
 ]
