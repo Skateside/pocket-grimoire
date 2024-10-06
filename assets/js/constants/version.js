@@ -2,4 +2,4 @@
  * The current version, in semver.
  * @type {String}
  */
-export const VERSION = "0.9.21";
+export const VERSION = "0.9.22";
