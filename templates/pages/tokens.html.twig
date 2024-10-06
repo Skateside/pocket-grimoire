@@ -45,27 +45,50 @@
     <ul class="no-list slot">
         {% for token in group.tokens %}
             <li>
-                {% set leaves = '' %}
-                {% if token.setup %}{% set leaves = leaves ~ ' character--setup' %}{% endif %}
-                {% if token.firstNight > 0 %}{% set leaves = leaves ~ ' character--left-1' %}{% endif %}
-                {% if token.otherNight > 0 %}{% set leaves = leaves ~ ' character--right-1' %}{% endif %}
-                {% if token.reminders|length > 0 %}{% set leaves = leaves ~ ' character--top-' ~ token.reminders|length %}{% endif %}
-                <span class="character {{ leaves }}">
-                    <span class="character__image">
-                        <img src="{{ token.image }}" alt="" class="character__icon" width="177" height="124" loading="lazy">
+                <button
+                    type="button"
+                    class="no-btn js--token-show"
+                    data-id="{{ token.id|e('html') }}"
+                    data-name="{{ token.name|e('html') }}"
+                    data-ability="{{ token.ability|e('html') }}"
+                    data-edition="{{ token.edition|e('html') }}"
+                >
+                    {% set leaves = '' %}
+                    {% if token.setup %}{% set leaves = leaves ~ ' character--setup' %}{% endif %}
+                    {% if token.firstNight > 0 %}{% set leaves = leaves ~ ' character--left-1' %}{% endif %}
+                    {% if token.otherNight > 0 %}{% set leaves = leaves ~ ' character--right-1' %}{% endif %}
+                    {% if token.reminders|length > 0 %}{% set leaves = leaves ~ ' character--top-' ~ token.reminders|length %}{% endif %}
+                    <span class="character {{ leaves }}">
+                        <span class="character__image">
+                            <img src="{{ token.image }}" alt="" class="character__icon" width="177" height="124" loading="lazy">
+                        </span>
+                        <svg viewBox="0 0 150 150" class="character__text">
+                            <path d="M 13 75 C 13 160, 138 160, 138 75" id="curve" fill="transparent"></path>
+                            <text width="150" x="66.6%" text-anchor="middle" class="character__name">
+                                <textPath xlink:href="#curve" style="fill: currentColor;" class="">{{ token.name }}</textPath>
+                            </text>
+                        </svg>
                     </span>
-                    <svg viewBox="0 0 150 150" class="character__text">
-                        <path d="M 13 75 C 13 160, 138 160, 138 75" id="curve" fill="transparent"></path>
-                        <text width="150" x="66.6%" text-anchor="middle" class="character__name">
-                            <textPath xlink:href="#curve" style="fill: currentColor;" class="">{{ token.name }}</textPath>
-                        </text>
-                    </svg>
-                </span>
+                </button>
             </li>
         {% endfor %}
     </ul>
 
 {% endfor %}
+
+{% embed 'includes/dialog.html.twig' with {
+    id: 'token',
+    background: 'blur'
+} %}
+    {% block title %}
+        <span id="token-title"></span>
+    {% endblock %}
+    {% block body %}
+        <div id="token-image"></div>
+        <p id="token-ability" class="mt-4"></p>
+        <p class="mt-4"><span id="token-id"></span> / <span id="token-edition"></span></p>
+    {% endblock %}
+{% endembed %}
 
 {% endblock %}
 
@@ -75,5 +98,53 @@ document.getElementById("locale-form").addEventListener("submit", (e) => {
     e.preventDefault();
     window.location.href = document.getElementById("select-locale").value;
 });
+
+(function () {
+
+    const dialog = document.getElementById("token");
+    const title = document.getElementById("token-title");
+    const ability = document.getElementById("token-ability");
+    const image = document.getElementById("token-image");
+    const id = document.getElementById("token-id");
+    const edition = document.getElementById("token-edition");
+
+    dialog.addEventListener("click", ({ target }) => {
+
+        if (
+            target.closest("[data-dialog-hide]")
+            || !target.closest(".dialog__content")
+        ) {
+            dialog.close();
+        }
+
+    });
+
+    document.addEventListener("keyup", ({ key }) => {
+
+        if (key === "Esc" && dialog.open) {
+            dialog.close();
+        }
+
+    });
+
+    document.addEventListener("click", ({ target }) => {
+
+        const trigger = target.closest(".js--token-show");
+
+        if (!trigger) {
+            return;
+        }
+
+        title.textContent = trigger.dataset.name;
+        ability.textContent = trigger.dataset.ability;
+        image.innerHTML = trigger.querySelector(".character").outerHTML;
+        id.textContent = trigger.dataset.id;
+        edition.textContent = trigger.dataset.edition;
+
+        dialog.showModal();
+
+    });
+
+}());
 </script>
 {% endblock %}
