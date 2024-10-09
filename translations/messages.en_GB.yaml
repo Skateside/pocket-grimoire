@@ -254,3 +254,4 @@ errors:
         not_recognise_character: Could not recognise character "%id%"
         invalid_entry: 'Invalid entry for "%id%": %reasons%'
         empty_teams: 'Empty teams: %teams%'
+        invalid_property: 'Property "%property%" should be of type %expected% but was type %given% instead'

@@ -152,6 +152,43 @@ class HomebrewModel
 
         }
 
+        try {
+            $role = $this->roleRepo->createTemp($entry);
+        } catch (\TypeError $error) {
+            // $reason[] = $error->getMessage();
+
+            $message = $error->getMessage();
+            $matches = [];
+            $test = preg_match(
+                '/::(\w+)\(\)[\s\w]+type (\w+),\s(\w+) given/',
+                $message,
+                $matches,
+            );
+
+            if ($test === 1) {
+
+                // $property = ;
+                // $reason[] = "property: {$property} expected {$matches[2]} got {$matches[3]}";
+
+                $reason[] = $this->translator->trans(
+                    'errors.homebrew_json.invalid_property',
+                    [
+                        '%property%' => lcfirst(substr($matches[1], 3)),
+                        '%expected%' => $matches[2],
+                        '%given%' => $matches[3],
+                    ]
+                );
+
+            } else {
+                $reason[] = $message;
+            }
+
+
+            // $reason[] = json_encode(['$matches' => $matches]);
+
+            $isValid = false;
+        }
+
         return $isValid;
 
     }

@@ -254,3 +254,4 @@ errors:
         not_recognise_character: 文字「%id%」を認識できませんでした
         invalid_entry: '「%id%」のエントリが無効です: %reasons%'
         empty_teams: '空のチーム: %teams%'
+        invalid_property: プロパティ「%property%」はタイプ %expected% である必要がありますが、タイプ %given% でした

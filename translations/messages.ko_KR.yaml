@@ -253,3 +253,4 @@ errors:
         not_recognise_character: 캐릭터 "%id%" 를 인식할 수 없습니다
         invalid_entry: '"%id%" 에대해 잘못된 항목 : %reasons%'
         empty_teams: '빈 팀: %teams%'
+        invalid_property: 속성 "%property%"은 %expected% 유형이어야 하지만 대신 %given% 유형이었습니다.
