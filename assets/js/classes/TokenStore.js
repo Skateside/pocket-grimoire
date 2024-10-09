@@ -75,6 +75,21 @@ export default class TokenStore {
     }
 
     /**
+     * The script tool used to create IDs with a slightly different format from
+     * our version. This function converts the old ID format into our one.
+     * Examples: was = lil_monsta, now = lilmonsta
+     * Examples: was = al-hadikhia, now = alhadikhia
+     *
+     * @param  {String} id
+     *         Character ID.
+     * @return {String}
+     *         Correctly formatted character ID.
+     */
+    static normaliseId(id) {
+        return id.replace(/[-_]/g, "");
+    }
+
+    /**
      * Executes the given function when {@link TokenStore.promise} has resolved.
      * Be aware that this is always asynchronous.
      *
@@ -167,12 +182,12 @@ export default class TokenStore {
     createCharacter(data) {
 
         const {
-            id,
             name,
             image,
             reminders = [],
             remindersGlobal = []
         } = data;
+        const id = this.constructor.normaliseId(data.id);
         const character = new CharacterToken(data);
 
         reminders
@@ -231,12 +246,12 @@ export default class TokenStore {
     createReminder(data, index) {
 
         const {
-            id,
             name,
             text,
             image,
             isGlobal
         } = data;
+        const id = this.constructor.normaliseId(data.id);
         const reminderId = `${id}:${index}`.toLowerCase().replace(/\s+/g, "-");
         const reminder = new ReminderToken({
             text,
@@ -251,21 +266,6 @@ export default class TokenStore {
 
         return reminder;
 
-    }
-
-    /**
-     * The script tool used to create IDs with a slightly different format from
-     * our version. This function converts the old ID format into our one.
-     * Examples: was = lil_monsta, now = lilmonsta
-     * Examples: was = al-hadikhia, now = alhadikhia
-     *
-     * @param  {String} id
-     *         Character ID.
-     * @return {String}
-     *         Correctly formatted character ID.
-     */
-    static normaliseId(id) {
-        return id.replace(/[-_]/g, "");
     }
 
     /**
