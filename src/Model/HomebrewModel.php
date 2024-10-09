@@ -155,7 +155,6 @@ class HomebrewModel
         try {
             $role = $this->roleRepo->createTemp($entry);
         } catch (\TypeError $error) {
-            // $reason[] = $error->getMessage();
 
             $message = $error->getMessage();
             $matches = [];
@@ -166,9 +165,6 @@ class HomebrewModel
             );
 
             if ($test === 1) {
-
-                // $property = ;
-                // $reason[] = "property: {$property} expected {$matches[2]} got {$matches[3]}";
 
                 $reason[] = $this->translator->trans(
                     'errors.homebrew_json.invalid_property',
@@ -183,10 +179,8 @@ class HomebrewModel
                 $reason[] = $message;
             }
 
-
-            // $reason[] = json_encode(['$matches' => $matches]);
-
             $isValid = false;
+
         }
 
         return $isValid;
