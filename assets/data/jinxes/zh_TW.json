@@ -22,7 +22,7 @@
     {
         "target": "cannibal",
         "trick": "zealot",
-        "reason": "如果食人者獲得了狂熱者能力，食人者就會學到這一點。"
+        "reason": "如果食人族得到了狂熱者的能力，則他得知這件事。"
     },
     {
         "target": "lunatic",
@@ -132,7 +132,7 @@
     {
         "target": "lilmonsta",
         "trick": "magician",
-        "reason": "每天晚上，魔術師都會選擇一個小兵：如果該小兵和小蒙斯塔還活著，則該小兵會照顧小蒙斯塔。"
+        "reason": "每天晚上，魔術師從角色表上選擇一位僕從，如果該僕從和莉萌絲塔都活著，則該僕從看顧莉萌絲塔。"
     },
     {
         "target": "lilmonsta",
@@ -167,12 +167,12 @@
     {
         "target": "legion",
         "trick": "preacher",
-        "reason": "如果傳教士選擇軍團，軍團將保留他們的能力，但傳教士可能會知道他們是軍團。"
+        "reason": "如果傳教士選擇了軍團，則軍團保留能力但傳教士可能會得知軍團的身分。"
     },
     {
         "target": "legion",
         "trick": "minstrel",
-        "reason": "如果軍團今天被處決而死亡，軍團會保留他們的能力，但吟遊詩人可能會知道他們是軍團。"
+        "reason": "如果軍團被處死，則軍團保留能力但吟遊詩人可能會得知軍團的身分。"
     },
     {
         "target": "legion",
@@ -182,7 +182,7 @@
     {
         "target": "legion",
         "trick": "zealot",
-        "reason": "對於軍團的能力來說，狂熱者可能被認為是邪惡的。"
+        "reason": "狂熱者可能會被軍團的能力視為邪惡。"
     },
     {
         "target": "fanggu",
@@ -192,7 +192,7 @@
     {
         "target": "spy",
         "trick": "alchemist",
-        "reason": "煉金術士不能得到間諜的能力。"
+        "reason": "煉金術士看到的魔典只會有角色代幣，並且只有煉金術士和另一個角色是正確的。"
     },
     {
         "target": "spy",
@@ -217,7 +217,7 @@
     {
         "target": "spy",
         "trick": "heretic",
-        "reason": "只有其中一個角色可以出現在遊戲中。"
+        "reason": "異教徒會被間諜視為一個不在場的城外人角色，異教徒知道是哪個角色。"
     },
     {
         "target": "spy",
@@ -227,7 +227,7 @@
     {
         "target": "widow",
         "trick": "alchemist",
-        "reason": "煉金術士不能得到寡婦的能力。"
+        "reason": "寡婦看到的魔典只會有角色代幣，並且只有寡婦和另一個角色是正確的。"
     },
     {
         "target": "widow",
@@ -247,12 +247,12 @@
     {
         "target": "widow",
         "trick": "heretic",
-        "reason": "只有其中一個角色可以出現在遊戲中。"
+        "reason": "異教徒會被寡婦視為一個不在場的城外人角色，異教徒知道是哪個角色。"
     },
     {
         "target": "godfather",
         "trick": "heretic",
-        "reason": "只有其中一個角色可以出現在遊戲中。"
+        "reason": "異教徒會被教父視為一個不在場的城外人角色，異教徒知道是哪個角色。"
     },
     {
         "target": "scarletwoman",
@@ -342,12 +342,12 @@
     {
         "target": "summoner",
         "trick": "preacher",
-        "reason": "如果傳教士在第三晚或之前選擇召喚師，則召喚師選擇哪個惡魔，但故事講述者選擇哪個玩家。"
+        "reason": "如果傳教士在第三晚或之前選擇了召喚師，則召喚師選擇惡魔種類，但由說書人選擇成為惡魔的玩家。"
     },
     {
         "target": "summoner",
         "trick": "lordoftyphon",
-        "reason": "如果召喚師創造了提豐領主，提豐領主必須與一個僕從相鄰。另一個鄰居變成了不在遊戲中的邪惡小小兵。"
+        "reason": "如果召喚師產生了風暴領主，則風暴領主必須與一個僕從相鄰，他另一側的玩家變成一個不在遊戲中的邪惡僕從。"
     },
     {
         "target": "baron",
@@ -437,7 +437,7 @@
     {
         "target": "kazali",
         "trick": "soldier",
-        "reason": "如果卡扎利將士兵變成小兵，士兵選擇成為哪個非遊戲中的小兵。"
+        "reason": "如果卡札力將士兵變成僕從，則由士兵選擇變成一個不在遊戲中的僕從。"
     },
     {
         "target": "riot",
@@ -587,7 +587,7 @@
     {
         "target": "riot",
         "trick": "zealot",
-        "reason": "如果您被提名，即使去世，也必須再次提名。"
+        "reason": "如果狂熱者被提名，則他必須再次提名，即使他死亡。"
     },
     {
         "target": "alhadikhia",
@@ -602,12 +602,12 @@
     {
         "target": "organgrinder",
         "trick": "minstrel",
-        "reason": "如果吟遊詩人讓每個人都喝醉了，風琴研磨師會保留他們的能力，但吟遊詩人在投票時會睜大眼睛。"
+        "reason": "如果吟遊詩人讓所有人醉酒，則風琴手保留能力但吟遊詩人可在投票時睜眼。"
     },
     {
         "target": "organgrinder",
         "trick": "preacher",
-        "reason": "如果傳教士移除了風琴研磨機的能力，風琴研磨機會保留其能力，但傳教士在投票時會睜大眼睛。"
+        "reason": "如果傳教士使風琴手失去能力，則風琴手保留能力但傳教士可在投票時睜眼。"
     },
     {
         "target": "vizier",
@@ -632,7 +632,7 @@
     {
         "target": "vizier",
         "trick": "magician",
-        "reason": "只有其中一個角色可以出現在遊戲中。"
+        "reason": "如果宰相和魔術師都在遊戲中，則惡魔不會得知誰是僕從。"
     },
     {
         "target": "vizier",
@@ -647,12 +647,12 @@
     {
         "target": "vizier",
         "trick": "alsaahir",
-        "reason": "如果維齊爾在場，阿爾薩希爾也必須猜測哪些惡魔在場。"
+        "reason": "如果宰相在遊戲中，Alsaahir還需要猜出是哪些惡魔在遊戲中。"
     },
     {
         "target": "vizier",
         "trick": "zealot",
-        "reason": "狂熱者可能會被維齊爾視為邪惡。"
+        "reason": "狂熱者可能會被宰相的能力視為邪惡。"
     },
     {
         "target": "vortox",
@@ -672,22 +672,22 @@
     {
         "target": "mastermind",
         "trick": "alhadikhia",
-        "reason": "如果 Al-Hadikhia 被處決而死亡，而策劃者還活著，那麼 Al-Hadikhia 今晚會選擇 3 名善良的玩家：如果 3 個人都選擇活著，則邪惡獲勝。否則，善勝。"
+        "reason": "如果哈迪基亞被處死而策劃者還活著，哈迪基亞在當晚一樣選擇三位玩家，如果他們都選擇「活著」，則邪惡隊伍獲勝，否則好人隊伍獲勝。"
     },
     {
         "target": "boffin",
         "trick": "heretic",
-        "reason": "惡魔不可能擁有異端能力。"
+        "reason": "惡魔不能擁有異教徒的能力。"
     },
     {
         "target": "boffin",
         "trick": "cultleader",
-        "reason": "如果惡魔擁有邪教領袖能力，他們就不會因為這個能力而變得更好。"
+        "reason": "如果惡魔擁有邪教領袖的能力，他不能因此能力變成好人。"
     },
     {
         "target": "boffin",
         "trick": "goon",
-        "reason": "如果惡魔擁有 Goon 能力，他們就不會因為這種能力而變得更好。"
+        "reason": "如果惡魔擁有傻瓜的能力，他不能因此能力變成好人。"
     },
     {
         "target": "boffin",
@@ -697,21 +697,21 @@
     {
         "target": "boffin",
         "trick": "politician",
-        "reason": "惡魔不可能擁有政治家的能力。"
+        "reason": "惡魔不能擁有政治家的能力。"
     },
     {
         "target": "boffin",
         "trick": "drunk",
-        "reason": "如果惡魔擁有醉酒能力，那麼科學家會選擇一名城鎮居民玩家來擁有此能力。"
+        "reason": "如果惡魔將擁有醉漢的能力，則改為瘋狂科學家選擇一位鎮民玩家，該玩家得到此能力。"
     },
     {
         "target": "boffin",
         "trick": "alchemist",
-        "reason": "如果煉金術士具有博芬能力，則煉金術師不會了解惡魔具有什麼能力。"
+        "reason": "如果煉金術士擁有瘋狂科學家的能力，則他不會得知惡魔得到哪種能力。"
     },
     {
         "target": "boffin",
         "trick": "villageidiot",
-        "reason": "如果有多餘的令牌，科學家可以賦予惡魔村白痴能力。"
+        "reason": "如果有多餘的角色代幣，惡魔可以得到愚民的能力。"
     }
 ]
