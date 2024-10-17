@@ -15,9 +15,17 @@ use Doctrine\Persistence\ManagerRegistry;
 class RoleRepository extends ServiceEntityRepository
 {
 
-    public function __construct(ManagerRegistry $registry)
-    {
+    private $editionRepo;
+    private $teamRepo;
+
+    public function __construct(
+        ManagerRegistry $registry,
+        EditionRepository $editionRepo,
+        TeamRepository $teamRepo
+    ) {
         parent::__construct($registry, Role::class);
+        $this->editionRepo = $editionRepo;
+        $this->teamRepo = $teamRepo;
     }
 
     public function getFeed(): array
@@ -66,7 +74,7 @@ class RoleRepository extends ServiceEntityRepository
             'id',
             'name',
             'edition',
-            // 'team',
+            'team',
             'firstNight',
             'firstNightReminder',
             'otherNight',
@@ -77,17 +85,33 @@ class RoleRepository extends ServiceEntityRepository
             'ability',
             'image'
         ];
-        $map = ['id' => 'identifier'];
+        $keyMap = ['id' => 'identifier'];
+        $repos = [
+            'edition' => $this->editionRepo,
+            'team' => $this->teamRepo,
+        ];
 
         foreach ($keys as $key) {
 
-            if (!array_key_exists($key, $data)) {
+            if (!array_key_exists($key, $data) || empty($data[$key])) {
                 continue;
             }
 
-            $mapped = array_key_exists($key, $map) ? $map[$key] : $key;
+            $value = $data[$key];
+
+            if (array_key_exists($key, $repos)) {
+
+                $value = $repos[$key]->findOneBy(['identifier' => $value]);
+
+                if (!$value) {
+                    continue;
+                }
+
+            }
+
+            $mapped = array_key_exists($key, $keyMap) ? $keyMap[$key] : $key;
             $method = 'set' . ucfirst($mapped);
-            $role->$method($data[$key]);
+            $role->$method($value);
 
         }
 
