@@ -254,3 +254,7 @@ errors:
         invalid_entry: "Voce non valida per \"%id%\": %reasons%"
         empty_teams: "Squadre vuote: %teams%"
         invalid_property: La proprietà "%property%" dovrebbe essere di tipo %expected% ma era di tipo %given%
+    url:
+        no_url: URL non valido o mancante
+        cannot_access: Impossibile accedere all'URL
+        not_json: Impossibile analizzare JSON dall'URL

@@ -253,4 +253,8 @@ errors:
         not_recognise_character: 無法辨識角色："%id%"
         invalid_entry: '無效輸入："%id%": %reasons%'
         empty_teams: 隊伍為空：%teams%
-        invalid_property: 屬性「%property%」的類型應為 %expected%，但卻是類型 %given%
+        invalid_property: 方法"%property%"需要是%expected%類別但給出了%given%類別
+    url:
+        no_url: 網址無效或缺失
+        cannot_access: 無法存取網址
+        not_json: 無法從 URL 解析 JSON

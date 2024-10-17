@@ -254,3 +254,7 @@ errors:
         invalid_entry: 'Ungültiger EIntrag für "%id%": %reasons%'
         empty_teams: 'Leere Teams: %teams%'
         invalid_property: Eigenschaft "%property%" sollte vom Typ %expected% sein, war aber stattdessen vom Typ %given%
+    url:
+        no_url: Ungültige oder fehlende URL
+        cannot_access: Kein Zugriff auf URL möglich
+        not_json: JSON kann nicht aus URL analysiert werden

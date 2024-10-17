@@ -3,9 +3,11 @@
 namespace App\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Contracts\Translation\TranslatorInterface;
 
 use App\Repository\RoleRepository;
 use App\Repository\JinxRepository;
@@ -53,6 +55,59 @@ class DataController extends AbstractController
     public function gameAction(): Response
     {
         return new JsonResponse($this->gameModel->getFeed());
+    }
+
+    /**
+     * @Route("/url", name="url")
+     */
+    public function urlAction(
+        Request $request,
+        TranslatorInterface $translator
+    ): Response {
+
+        $url = $request->query->get('url', '');
+
+        if ($url === '' || filter_var($url, FILTER_VALIDATE_URL) === false) {
+
+            return new JsonResponse([
+                'success' => false,
+                'message' => $translator->trans('errors.url.no_url')
+            ]);
+
+        }
+
+        try {
+            $string = file_get_contents($url);
+        } catch (\Exception $ignore) {
+            $string = false;
+        }
+
+        if ($string === false) {
+
+            return new JsonResponse([
+                'success' => false,
+                'message' => $translator->trans('errors.url.cannot_access')
+            ]);
+
+        }
+
+        $json = json_decode($string);
+
+        if ($json === null) {
+
+            return new JsonResponse([
+                'success' => false,
+                'message' => $translator->trans('errors.url.not_json'),
+                'reasons' => $invalidReasons
+            ]);
+
+        }
+
+        return new JsonResponse([
+            'success' => true,
+            'data' => $json
+        ]);
+
     }
 
 }

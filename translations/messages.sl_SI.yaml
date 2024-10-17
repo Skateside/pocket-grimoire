@@ -254,3 +254,7 @@ errors:
         invalid_entry: 'Neveljaven vnos za "%id%": %reasons%'
         empty_teams: 'Prazne ekipe: %teams%'
         invalid_property: Lastnost »%property%« bi morala biti vrste %expected%, vendar je bila namesto tega vrsta %given%
+    url:
+        no_url: URL je neveljaven ali manjka
+        cannot_access: URL ni mogoč
+        not_json: JSON ni mogoče razčleniti iz URL-ja

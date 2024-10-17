@@ -254,3 +254,7 @@ errors:
         invalid_entry: 'Ugyldig input for "%id%": %reasons%'
         empty_teams: 'Tomme lag: %teams%'
         invalid_property: Egenskapen "%property%" skal være av typen %expected%, men var typen %given% i stedet
+    url:
+        no_url: Ugyldig eller manglende URL
+        cannot_access: Får ikke tilgang til URL
+        not_json: Kan ikke analysere JSON fra URL

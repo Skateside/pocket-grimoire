@@ -254,3 +254,7 @@ errors:
         invalid_entry: 'ערך לא חוקי עבור "%id%": %reasons%'
         empty_teams: 'צוותים ריקים: %teams%'
         invalid_property: המאפיין "%property%" צריך להיות מסוג %expected% אך היה מסוג %given% במקום זאת
+    url:
+        no_url: כתובת אתר לא חוקית או חסרה
+        cannot_access: לא ניתן לגשת לכתובת האתר
+        not_json: לא ניתן לנתח JSON מ-URL

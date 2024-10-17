@@ -254,3 +254,7 @@ errors:
         invalid_entry: '"%id%": %reasons% için geçersiz giriş'
         empty_teams: 'Boş Takımlar: %teams%'
         invalid_property: '"%property%" özelliği %expected% türünde olmalıydı ancak bunun yerine %given% türündeydi'
+    url:
+        no_url: Geçersiz veya eksik URL
+        cannot_access: URL'ye erişilemiyor
+        not_json: URL'den JSON ayrıştırılamıyor

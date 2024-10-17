@@ -254,3 +254,7 @@ errors:
         invalid_entry: 无效输入“%id%”：%reasons%
         empty_teams: 空阵营：%teams%
         invalid_property: 属性“%property%”应为类型 %expected%，但实际为类型 %given%
+    url:
+        no_url: URL 无效或缺失
+        cannot_access: 无法访问 URL
+        not_json: 无法从 URL 解析 JSON

@@ -254,3 +254,7 @@ errors:
         invalid_entry: 'Недійсний запис для "%id%": %reasons%'
         empty_teams: 'Порожні команди: %teams%'
         invalid_property: Властивість "%property%" має бути типу %expected%, але замість цього була типу %given%
+    url:
+        no_url: Недійсна або відсутня URL-адреса
+        cannot_access: Неможливо отримати доступ до URL-адреси
+        not_json: Не вдається розібрати JSON з URL-адреси

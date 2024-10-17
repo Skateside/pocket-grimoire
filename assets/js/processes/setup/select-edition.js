@@ -9,7 +9,8 @@ import {
     announceInput
 } from "../../utils/elements.js";
 import {
-    readUTF8
+    readUTF8,
+    supplant
 } from "../../utils/strings.js";
 import {
     post
@@ -175,6 +176,13 @@ function extractMetaEntry(json) {
  */
 function setFormLoadingState(form, state) {
 
+    if (
+        form.dataset.isLoading === state
+        || String(form.dataset.isLoading) === String(state)
+    ) {
+        return;
+    }
+
     form.dataset.isLoading = state;
 
     const submit = lookupOneCached("[type=\"submit\"]", form);
@@ -218,16 +226,18 @@ function convertCharacterId(item) {
 /**
  * Processes the JSON to set up the game.
  *
- * @param {Object} json
- *        JSON to process.
- * @param {Element} json.form
- *        The form that was submitted so the JSON could be processed.
- * @param {Array.<Object>} json.json
- *        Script to process.
- * @param {Element} json.input
- *        File input that uploads scripts.
- * @param {TokenStore} json.store
- *        Store for any data.
+ * @param  {Object} json
+ *         JSON to process.
+ * @param  {Element} json.form
+ *         The form that was submitted so the JSON could be processed.
+ * @param  {Array.<Object>} json.json
+ *         Script to process.
+ * @param  {Element} json.input
+ *         File input that uploads scripts.
+ * @param  {TokenStore} json.store
+ *         Store for any data.
+ * @return {Promise}
+ *         An empty, resolved Promise.
  */
 function processJSON({
     form,
@@ -239,7 +249,7 @@ function processJSON({
     if (!isScriptJson(json)) {
 
         showInputError(input, I18N.invalidScript);
-        return;
+        return Promise.resolve();
 
     }
 
@@ -288,11 +298,12 @@ function processJSON({
     if (!characters.length) {
 
         showInputError(input, I18N.noCharacters);
-        return;
+        return Promise.resolve();
 
     }
 
     announceScript(name, characters);
+    return Promise.resolve();
 
 }
 
@@ -381,19 +392,43 @@ form.addEventListener("submit", (e) => {
 
             if (urlInput.value) {
 
-                fetch(urlInput.value)
-                    .catch((error) => showInputError(urlInput, error.message))
+                setFormLoadingState(form, true);
+
+                const myURL = supplant(window.decodeURIComponent(URLS.url), {
+                    url: window.encodeURIComponent(urlInput.value)
+                });
+
+                fetch(myURL)
+                    .catch((error) => {
+                        showInputError(urlInput, error.message);
+                        setFormLoadingState(form, false);
+                    })
                     .then((response) => response.json())
                     .catch(() => {
-                        showInputError(urlInput, I18N.invalidScript)
-                        return [];
+                        showInputError(urlInput, I18N.invalidScript);
+                        setFormLoadingState(form, false);
+                        return null;
                     })
-                    .then((json) => processJSON({
-                        form,
-                        json,
-                        input: urlInput,
-                        store: tokenStore
-                    }));
+                    .then((json) => {
+
+                        if (json === null) {
+                            return;
+                        }
+
+                        if (!json.success) {
+                            showInputError(urlInput, json.message);
+                            setFormLoadingState(form, false);
+                            return;
+                        }
+
+                        processJSON({
+                            form,
+                            json: json.data,
+                            input: urlInput,
+                            store: tokenStore
+                        }).then(() => setFormLoadingState(form, false));
+
+                    });
 
             } else if (fileInput.files.length) {
 

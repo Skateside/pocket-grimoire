@@ -254,3 +254,7 @@ errors:
         invalid_entry: "Invalid entry for \"%id%\": %reasons%"
         empty_teams: "Empty teams: %teams%"
         invalid_property: คุณสมบัติ "%property%" ควรเป็นประเภท %expected% แต่กลับเป็นประเภท %given% แทน
+    url:
+        no_url: URL ไม่ถูกต้องหรือขาดหายไป
+        cannot_access: ไม่สามารถเข้าถึง URL ได้
+        not_json: ไม่สามารถแยกวิเคราะห์ JSON จาก URL ได้

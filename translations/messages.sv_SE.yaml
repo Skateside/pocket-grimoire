@@ -254,3 +254,7 @@ errors:
         invalid_entry: 'Ogiltig data för "%id%": %reasons%'
         empty_teams: Inga roller av typen %teams%
         invalid_property: Egenskapen "%property%" borde vara av typen %expected% men var istället typen %given%
+    url:
+        no_url: Ogiltig eller saknad webbadress
+        cannot_access: Det går inte att komma åt URL
+        not_json: Det går inte att analysera JSON från URL

@@ -254,3 +254,7 @@ errors:
         invalid_entry: 'Mục nhập không hợp lệ cho "%id%": %reasons%'
         empty_teams: 'Các đội trống: %teams%'
         invalid_property: Thuộc tính "%property%" phải là loại %expected% nhưng thay vào đó là loại %given%
+    url:
+        no_url: URL không hợp lệ hoặc bị thiếu
+        cannot_access: Không thể truy cập URL
+        not_json: Không thể phân tích cú pháp JSON từ URL

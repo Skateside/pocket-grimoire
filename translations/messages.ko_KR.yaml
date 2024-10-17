@@ -254,3 +254,7 @@ errors:
         invalid_entry: '"%id%" 에대해 잘못된 항목 : %reasons%'
         empty_teams: '빈 팀: %teams%'
         invalid_property: 속성 "%property%"은 %expected% 유형이어야 하지만 대신 %given% 유형이었습니다.
+    url:
+        no_url: URL이 잘못되었거나 누락됨
+        cannot_access: URL에 액세스할 수 없음
+        not_json: URL에서 JSON을 구문 분석할 수 없음

@@ -254,3 +254,7 @@ errors:
         invalid_entry: 'Entrada inválida para "%id%": %reasons%'
         empty_teams: 'Equipes vazias: %teams%'
         invalid_property: A propriedade "%property%" deveria ser do tipo %expected%, mas era do tipo %given%
+    url:
+        no_url: URL inválida ou ausente
+        cannot_access: Não é possível acessar a URL
+        not_json: Não é possível analisar JSON da URL

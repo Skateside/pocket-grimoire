@@ -255,3 +255,7 @@ errors:
         invalid_entry: '「%id%」のエントリが無効です: %reasons%'
         empty_teams: '空のチーム: %teams%'
         invalid_property: プロパティ「%property%」はタイプ %expected% である必要がありますが、タイプ %given% でした
+    url:
+        no_url: URL が無効または見つかりません
+        cannot_access: URL にアクセスできません
+        not_json: URL から JSON を解析できません

@@ -255,3 +255,7 @@ errors:
         invalid_entry: 'Неверная запись для «%id%»: %reasons%'
         empty_teams: 'Пустые команды: %teams%'
         invalid_property: Свойство "%property%" должно было быть типа %expected%, но вместо этого имело тип %given%
+    url:
+        no_url: Недействительный или отсутствующий URL
+        cannot_access: Невозможно получить доступ к URL
+        not_json: Невозможно проанализировать JSON из URL

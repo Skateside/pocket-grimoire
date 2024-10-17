@@ -255,3 +255,7 @@ errors:
         invalid_entry: 'Invalid entry for "%id%": %reasons%'
         empty_teams: 'Empty teams: %teams%'
         invalid_property: 'Property "%property%" should be of type %expected% but was type %given% instead'
+    url:
+        no_url: Invalid or missing URL
+        cannot_access: Unable to access URL
+        not_json: Cannot parse JSON from URL
