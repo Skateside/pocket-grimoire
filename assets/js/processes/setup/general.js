@@ -76,14 +76,14 @@ Promise.all([
                 id: TokenStore.EMPTY,
                 name: "",
                 text: I18N.goodTeam,
-                image: "/build/img/icons/townsfolk.png",
+                image: "/build/img/icons/townsfolk.webp",
                 isGlobal: true
             },
             {
                 id: TokenStore.EMPTY,
                 name: "",
                 text: I18N.evilTeam,
-                image: "/build/img/icons/demon.png",
+                image: "/build/img/icons/demon.webp",
                 isGlobal: true
             }
         ],
