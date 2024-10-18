@@ -261,6 +261,10 @@ characterShowDialog.on(Dialog.SHOW, () => {
     const token = getToken(characterShowDialog.getElement());
     characterNameInput.value = pad.getPlayerNameForToken(token);
 
+    lookupOneCached("#character-show-orphan").hidden = (
+        !token.classList.contains("is-orphan")
+    );
+
 });
 
 characterShowDialog.on(Dialog.HIDE, () => {
@@ -434,9 +438,7 @@ gameObserver.on("characters-selected", ({ detail }) => {
 // #131 - highlight any orphan character and reminder tokens.
 gameObserver.on("characters-selected", ({ detail }) => {
 
-    TokenStore.ready((tokenStore) => {
-
-        const pad = lookupOneCached(".js--pad").pad;
+    TokenStore.ready(() => {
 
         pad.characters.forEach(({ character, token }) => {
 

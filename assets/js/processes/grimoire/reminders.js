@@ -137,6 +137,9 @@ TokenStore.ready((tokenStore) => {
 
         empty(reminderHolder).append(reminder.drawToken());
         reminderHolder.dataset.token = `#${identify(element)}`;
+        lookupOneCached("#reminder-show-orphan").hidden = (
+            !element.classList.contains("is-orphan")
+        );
         reminderDialog.show();
 
     });

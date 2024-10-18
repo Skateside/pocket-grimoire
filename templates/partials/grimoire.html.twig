@@ -147,6 +147,7 @@
     {% block title %}<span id="character-show-name">{{ 'grimoire.character_show.title'|trans }}</span>{% endblock %}
     {% block body %}
     <p id="character-show-ability" class="character-show__ability"></p>
+    <p id="character-show-orphan" hidden><strong class="character-show__orphan">{{ 'grimoire.character_show.orphan'|trans }}</strong></p>
     <ul class="button-list">
         <li><button type="button" class="button button--full-height" id="character-show-token">{{ 'grimoire.character_show.show'|trans }}</button></li>
         <li><button type="button" class="button button--full-height" id="character-shroud-toggle">{{ 'grimoire.character_show.shroud'|trans }}</button></li>
@@ -176,6 +177,7 @@
     {% block title %}<span id="reminder-show-name">{{ 'grimoire.reminder_show.title'|trans }}</span>{% endblock %}
     {% block body %}
     <div id="reminder-show-token" class="character-show__token"></div>
+    <p id="reminder-show-orphan" class="mt-4" hidden><strong class="character-show__orphan">{{ 'grimoire.character_show.orphan'|trans }}</strong></p>
     <p class="mt-4"><button type="button" class="button button--warning" id="reminder-remove">{{ 'grimoire.reminder_show.remove'|trans }}</button></p>
     {% endblock %}
 {% endembed %}
