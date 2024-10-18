@@ -431,6 +431,37 @@ gameObserver.on("characters-selected", ({ detail }) => {
 
 });
 
+// #131 - highlight any orphan character and reminder tokens.
+gameObserver.on("characters-selected", ({ detail }) => {
+
+    TokenStore.ready((tokenStore) => {
+
+        const pad = lookupOneCached(".js--pad").pad;
+
+        pad.characters.forEach(({ character, token }) => {
+
+            const index = detail.characters.findIndex((char) => {
+                return char.getId() === character.getId();
+            });
+
+            token.classList.toggle("is-orphan", index < 0);
+
+        });
+
+        pad.reminders.forEach(({ reminder, token }) => {
+
+            const index = detail.characters.findIndex((char) => {
+                return char.getId() === reminder.getCharacterId();
+            });
+
+            token.classList.toggle("is-orphan", index < 0);
+
+        });
+
+    });
+
+});
+
 TokenStore.ready((tokenStore) => {
 
     tokenDialog.setTokenStore(tokenStore);
@@ -449,6 +480,14 @@ TokenStore.ready((tokenStore) => {
         tokenListDialog.hide();
 
     });
+
+    // gameObserver.on("characters-selected", ({ detail }) => {
+
+    //     const pad = lookupOneCached(".js--pad").pad;
+
+    //     console.log({ detail, pad, characters: pad.characters });
+
+    // });
 
 });
 

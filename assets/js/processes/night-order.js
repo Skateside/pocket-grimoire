@@ -21,15 +21,36 @@ gameObserver.on("characters-selected", ({ detail }) => {
 });
 
 tokenObserver.on("character-add", ({ detail }) => {
+
+    // #131 - check the character isn't from the previous script.
+    if (!nightOrder.hasCharacter(detail.character)) {
+        return;
+    }
+
     nightOrder.addCharacter(detail.character);
+
 });
 
 tokenObserver.on("character-remove", ({ detail }) => {
+
+    // #131 - check the character isn't from the previous script.
+    if (!nightOrder.hasCharacter(detail.character)) {
+        return;
+    }
+
     nightOrder.removeCharacter(detail.character);
+
 });
 
 tokenObserver.on("shroud-toggle", ({ detail }) => {
+
+    // #131 - check the character isn't from the previous script.
+    if (!nightOrder.hasCharacter(detail.character)) {
+        return;
+    }
+
     nightOrder.toggleDead(detail.character, detail.isDead);
+
 });
 
 const showDead = lookupOne("#show-dead");
