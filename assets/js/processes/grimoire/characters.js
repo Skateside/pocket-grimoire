@@ -483,14 +483,6 @@ TokenStore.ready((tokenStore) => {
 
     });
 
-    // gameObserver.on("characters-selected", ({ detail }) => {
-
-    //     const pad = lookupOneCached(".js--pad").pad;
-
-    //     console.log({ detail, pad, characters: pad.characters });
-
-    // });
-
 });
 
 // Update the list of suggested names that can be set when a token is drawn.

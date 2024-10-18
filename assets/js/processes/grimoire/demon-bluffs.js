@@ -60,7 +60,10 @@ TokenStore.ready((tokenStore) => {
         }
 
         bluffGroups.setInnerIndex(button.dataset.index);
-        bluffDialog.display(bluffGroups.getVisibleGroup().getCharacter());
+        bluffDialog.display(
+            bluffGroups.getVisibleGroup().getCharacter(),
+            button.classList.contains("is-orphan")
+        );
 
     });
 
@@ -252,6 +255,36 @@ TokenStore.ready((tokenStore) => {
 
         bluffGroups.removeAll();
         bluffGroups.addEmpty();
+
+    });
+
+    // #131 - highlight any orphan characters.
+    gameObserver.on("characters-selected", ({ detail }) => {
+
+        TokenStore.ready(() => {
+
+            const group = bluffGroups.getVisibleGroup();
+
+            group
+                .element
+                .querySelectorAll(".js--demon-bluffs--bluff")
+                .forEach((button) => {
+
+                    const index = button.dataset.index;
+                    const character = group.bluffSet.characters[index];
+
+                    if (character.getId() === BluffSet.emptyCharacter.getId()) {
+                        return;
+                    }
+
+                    const charIndex = detail.characters.findIndex((char) => {
+                        return char.getId() === character.getId();
+                    });
+                    button.classList.toggle("is-orphan", charIndex < 0);
+
+                });
+
+        });
 
     });
 

@@ -35,6 +35,7 @@
     {% block title %}<span id="bluff-show-name" data-no-character="{{ 'grimoire.bluff_show.empty'|trans }}">{{ 'grimoire.bluff_show.title'|trans }}</span>{% endblock %}
     {% block body %}
     <p id="bluff-show-ability" class="character-show__ability"></p>
+    <p id="bluff-show-orphan"><strong class="character-show__orphan">{{ 'grimoire.character_show.orphan'|trans }}</strong></p>
     <ul class="button-list">
         <li><button type="button" class="button" id="bluff-show-token">{{ 'grimoire.bluff_show.show'|trans }}</button></li>
         <li><button type="button" class="button" data-dialog="#bluff-list">{{ 'grimoire.bluff_show.change'|trans }}</button></li>
