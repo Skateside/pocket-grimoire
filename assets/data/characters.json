@@ -2326,10 +2326,11 @@
         "firstNightReminder": "The Philosopher either shows a 'no' head signal, or points to a good character on their sheet. If they chose a character: Swap the out-of-play character token with the Philosopher token. Or, if the character is in play, place the drunk marker by that player and the Not the Philosopher token by the Philosopher.",
         "otherNight": 2,
         "otherNightReminder": "If the Philosopher has not used their ability: the Philosopher either shows a 'no' head signal, or points to a good character on their sheet. If they chose a character: Swap the out-of-play character token with the Philosopher token. Or, if the character is in play, place the drunk marker by that player and the Not the Philosopher token by the Philosopher.",
-        "reminders": [
+        "remindersGlobal": [
             "Drunk",
             "Is the Philosopher"
         ],
+        "reminders": [],
         "setup": false,
         "ability": "Once per game, at night, choose a good character: gain that ability. If this character is in play, they are drunk.",
         "image": "/build/img/icons/townsfolk/philosopher.webp"
