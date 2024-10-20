@@ -77,12 +77,14 @@ class DataController extends AbstractController
         }
 
         try {
-            $string = file_get_contents($url);
+            $contents = file_get_contents($url);
         } catch (\Exception $ignore) {
-            $string = false;
+            // file_get_contents() returns `false` on failure, so set $contents
+            // to `false` on error for a simple check.
+            $contents = false;
         }
 
-        if ($string === false) {
+        if ($contents === false) {
 
             return new JsonResponse([
                 'success' => false,
@@ -91,14 +93,13 @@ class DataController extends AbstractController
 
         }
 
-        $json = json_decode($string);
+        $json = json_decode($contents);
 
         if ($json === null) {
 
             return new JsonResponse([
                 'success' => false,
-                'message' => $translator->trans('errors.url.not_json'),
-                'reasons' => $invalidReasons
+                'message' => $translator->trans('errors.url.not_json')
             ]);
 
         }
