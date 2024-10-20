@@ -8,7 +8,7 @@ A digital version of the [Blood on the Clocktower](https://bloodontheclocktower.
 
 - [Getting Started](#getting-started)
 - [Custom Scripts](#custom-scripts)
-- [Custom Character Support](#custom-character-support)
+- [Homebrew Characters](homebrew.md)
 - [Translations and Typos](#translations-and-typos)
 - [Contributing](CONTRIBUTING.md)
 
@@ -26,7 +26,8 @@ Once you've selected your edition, the buttons in the Setup screen will enable. 
 
 ![A QR code that will link to the "Trouble Brewing" script](https://raw.githubusercontent.com/Skateside/pocket-grimoire/main/assets/img/docs/qr-code.jpg)
 
-> :information_source: Notice how the background fully obscures the grimoire instead of blurring it? If the background is blurred then the screen should only be seen by the Story Teller, but if the grimoire is fully hidden by the background then the screen can be shown to the players.
+> [!NOTE]
+> Notice how the background fully obscures the grimoire instead of blurring it? If the background is blurred then the screen should only be seen by the Story Teller, but if the grimoire is fully hidden by the background then the screen can be shown to the players.
 
 As your players are familiarising themselves with the script, you can close that screen and tap the "Select Characters" button to select the characters . The characters can be selected manually or you can tap the "Highlight random" button to randomly select the tokens for you.
 
@@ -56,33 +57,33 @@ As well as the three official scripts, the Pocket Grimoire can allow you to work
 
 ```json
 [
-    { "id": "washerwoman" },
-    { "id": "librarian" },
-    { "id": "investigator" },
-    { "id": "chef" },
-    { "id": "empath" },
-    { "id": "fortuneteller" },
-    { "id": "undertaker" },
-    { "id": "monk" },
-    { "id": "ravenkeeper" },
-    { "id": "virgin" },
-    { "id": "slayer" },
-    { "id": "soldier" },
-    { "id": "mayor" },
-    { "id": "butler" },
-    { "id": "drunk" },
-    { "id": "recluse" },
-    { "id": "saint" },
-    { "id": "poisoner" },
-    { "id": "spy" },
-    { "id": "scarletwoman" },
-    { "id": "baron" },
-    { "id": "imp" },
-    { "id": "bureaucrat" },
-    { "id": "thief" },
-    { "id": "gunslinger" },
-    { "id": "scapegoat" },
-    { "id": "beggar" }
+    "washerwoman",
+    "librarian",
+    "investigator",
+    "chef",
+    "empath",
+    "fortuneteller",
+    "undertaker",
+    "monk",
+    "ravenkeeper",
+    "virgin",
+    "slayer",
+    "soldier",
+    "mayor",
+    "butler",
+    "drunk",
+    "recluse",
+    "saint",
+    "poisoner",
+    "spy",
+    "scarletwoman",
+    "baron",
+    "imp",
+    "bureaucrat",
+    "thief",
+    "gunslinger",
+    "scapegoat",
+    "beggar"
 ]
 ```
 
@@ -96,47 +97,6 @@ Optionally, you can include a name for the script. To do this, include an entry 
     // ...
 ]
 ```
-
-## Custom Character Support
-
-The Pocket Grimoire understands custom characters. In order to use them, you'll need to create a JSON definition. The JSON definition uses the same format that [clocktower.online](https://clocktower.online/) does.
-
-> :information_source: You can combine official and homebrew character by simply adding your homebrew character to a list of recognised IDs, such as the Trouble Brewing example in the [Custom Scripts](#custom-scripts) section.
-
-```json
-[
-    {
-        "id": "acrobat",
-        "image": "https://github.com/bra1n/townsquare/blob/main/src/assets/icons/acrobat.png?raw=true",
-        "firstNight": 0,
-        "firstNightReminder": "",
-        "otherNight": 49,
-        "otherNightReminder": "If either good living neighbour is drunk or poisoned, the Acrobat dies.",
-        "reminders": ["Die"],
-        "remindersGlobal": [],
-        "setup": false,
-        "name": "Acrobat",
-        "team": "outsider",
-        "ability": "Each night*, if either good living neighbour is drunk or poisoned, you die."
-    }
-]
-```
-
-**Required properties**: `name`, `ability`, `image`, `team`, `reminders`, `remindersGlobal`
-
--   `id`: A unique ID for the character. It shouldn't have any spaces or special characters.
--   `image`: A URL to a PNG of the character token icon. It should have a transparent background.
--   `firstNight` / `otherNight`: The position that this character acts on the first / other nights, compared to other characters.
-    <br>_Note:_ this must be a positive whole number or zero, with zero being treated as "does not act during the night".
--   `firstNightReminder` / `otherNightReminder`: reminder text for the first / other nights.
--   `reminders`: reminder tokens. It should be an empty array (`[]`) if there are none.
--   `remindersGlobal`: global reminder tokens that will always be available, no matter if the character is assigned to a player or not. It should be an empty array (`[]`) if there are none.
--   `setup`: whether this token affects the setup.
--   `name`: name of the character.
--   `team`: the team of the character. It has to be one of `townsfolk`, `outsider`, `minion`, `demon`, `traveler` (`traveller` is understood as an alternative spelling), or `fabled`.
--   `ability`: the displayed ability of the character.
-
-> :warning: The text for custom characters is not translated if the language is changed.
 
 ## Translations and Typos
 

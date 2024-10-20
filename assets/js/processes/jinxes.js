@@ -191,11 +191,8 @@ TokenStore.ready((tokenStore) => {
     // grimoire pad.
     const characters = [];
 
-    tokenObserver.on("character-add", ({ detail }) => {
+    function addCharacter(character) {
 
-        const {
-            character
-        } = detail;
         const jinxes = Object.create(null);
 
         character.getJinxes().forEach((jinx) => {
@@ -212,13 +209,10 @@ TokenStore.ready((tokenStore) => {
         });
         characters.push(character);
 
-    });
+    }
 
-    tokenObserver.on("character-remove", ({ detail }) => {
+    function removeCharacter(character) {
 
-        const {
-            character
-        } = detail;
         const id = character.getId();
 
         characters.splice(characters.indexOf(character), 1);
@@ -228,6 +222,50 @@ TokenStore.ready((tokenStore) => {
             character.getJinxes().forEach((jinx) => jinx.toggleTarget(false));
             characters.forEach((char) => char.toggleJinxTrick(character, false));
 
+        }
+
+    }
+
+    tokenObserver.on("character-add", ({ detail }) => {
+        addCharacter(detail.character);
+    });
+
+    tokenObserver.on("character-remove", ({ detail }) => {
+        removeCharacter(detail.character);
+    });
+
+    // #128 - some reminders stand in place of the actual token.
+    tokenObserver.on("reminder-add", ({ detail }) => {
+
+        const {
+            reminder
+        } = detail;
+        const character = tokenStore.getCharacter(reminder.getCharacterId());
+
+        if (
+            reminder.getIsGlobal()
+            && reminder.getId().endsWith(":0")
+            && character.hasSpecialData("reveal", "replace-character")
+        ) {
+            addCharacter(character);
+        }
+
+    });
+
+    // #128 - some reminders stand in place of the actual token.
+    tokenObserver.on("reminder-remove", ({ detail }) => {
+
+        const {
+            reminder
+        } = detail;
+        const character = tokenStore.getCharacter(reminder.getCharacterId());
+
+        if (
+            reminder.getIsGlobal()
+            && reminder.getId().endsWith(":0")
+            && character.hasSpecialData("reveal", "replace-character")
+        ) {
+            removeCharacter(character);
         }
 
     });

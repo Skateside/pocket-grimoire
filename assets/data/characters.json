@@ -28,6 +28,12 @@
         "remindersGlobal": [
             "Is the Alchemist"
         ],
+        "special": [
+            {
+                "type": "reveal",
+                "name": "replace-character"
+            }
+        ],
         "setup": false,
         "ability": "You have a not-in-play Minion ability.",
         "image": "/build/img/icons/townsfolk/alchemist.webp"
@@ -834,6 +840,10 @@
             {
                 "type": "selection",
                 "name": "bag-disabled"
+            },
+            {
+                "type": "reveal",
+                "name": "replace-character"
             }
         ],
         "setup": true,
@@ -1861,6 +1871,10 @@
             {
                 "type": "selection",
                 "name": "bag-disabled"
+            },
+            {
+                "type": "reveal",
+                "name": "replace-character"
             }
         ],
         "setup": true,
@@ -1983,6 +1997,10 @@
             {
                 "type": "selection",
                 "name": "bag-disabled"
+            },
+            {
+                "type": "reveal",
+                "name": "replace-character"
             }
         ],
         "setup": true,
@@ -2326,11 +2344,17 @@
         "firstNightReminder": "The Philosopher either shows a 'no' head signal, or points to a good character on their sheet. If they chose a character: Swap the out-of-play character token with the Philosopher token. Or, if the character is in play, place the drunk marker by that player and the Not the Philosopher token by the Philosopher.",
         "otherNight": 2,
         "otherNightReminder": "If the Philosopher has not used their ability: the Philosopher either shows a 'no' head signal, or points to a good character on their sheet. If they chose a character: Swap the out-of-play character token with the Philosopher token. Or, if the character is in play, place the drunk marker by that player and the Not the Philosopher token by the Philosopher.",
-        "remindersGlobal": [
-            "Drunk",
-            "Is the Philosopher"
-        ],
         "reminders": [],
+        "remindersGlobal": [
+            "Is the Philosopher",
+            "Drunk"
+        ],
+        "special": [
+            {
+                "type": "reveal",
+                "name": "replace-character"
+            }
+        ],
         "setup": false,
         "ability": "Once per game, at night, choose a good character: gain that ability. If this character is in play, they are drunk.",
         "image": "/build/img/icons/townsfolk/philosopher.webp"

@@ -365,17 +365,7 @@ lookupOne("#player-select").addEventListener("submit", (e) => {
             .flat();
 
         const bagDisabled = filtered.filter((character) => {
-
-            const special = character.getSpecial();
-
-            return (
-                special
-                && Array.isArray(special)
-                && special.find(({ name, type }) => {
-                    return name === "bag-disabled" && type === "selection";
-                })
-            );
-
+            return character.hasSpecialData("selection", "bag-disabled");
         });
 
         if (bagDisabled.length) {
