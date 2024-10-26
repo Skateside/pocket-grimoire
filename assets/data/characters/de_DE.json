@@ -2,9 +2,9 @@
     {
         "id": "acrobat",
         "name": "Akrobat",
-        "ability": "Jede Nacht*, wenn einer deiner guten lebenden Nachbarn vergiftet oder betrunken ist, stirbst du.",
+        "ability": "Wählen Sie jede Nacht* einen Spieler: Wenn dieser heute Nacht betrunken oder vergiftet ist oder wird, sterben Sie.",
         "firstNightReminder": "",
-        "otherNightReminder": "Der Akrobat stirbt wenn ein guter, lebender Nachbar betrunken ist oder vergiftet wurde.",
+        "otherNightReminder": "Der Akrobat wählt einen Spieler. Wenn dieser heute Nacht betrunken oder vergiftet wird, stirbt der Akrobat-Spieler.",
         "remindersGlobal": [],
         "reminders": [
             "Tot"
@@ -1148,7 +1148,7 @@
     {
         "id": "organgrinder",
         "name": "Leiermann",
-        "ability": "Alle Spieler schliessen während Abstimmungen die Augen & das Abstimmungsergebnis ist geheim. Stimmen für dich zählen nur wenn du abstimmst.",
+        "ability": "Alle Spieler halten beim Abstimmen die Augen geschlossen und das Ergebnis der Abstimmung ist geheim. Wählen Sie jede Nacht, ob Sie betrunken sind oder nicht.",
         "firstNightReminder": "",
         "otherNightReminder": "",
         "remindersGlobal": [],

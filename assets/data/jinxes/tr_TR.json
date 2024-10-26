@@ -417,7 +417,7 @@
     {
         "target": "kazali",
         "trick": "goon",
-        "reason": "Eğer Kazali, Serseri'nin Minyon olmasını seçerse, kalan Minyon seçimlerine Hikaye Anlatıcısı karar verir."
+        "reason": "Kazali, Goon oyuncusunun kötü Minyonlarından biri olmasını seçebilir."
     },
     {
         "target": "kazali",
@@ -437,7 +437,7 @@
     {
         "target": "kazali",
         "trick": "soldier",
-        "reason": "Eğer Kazali Asker'i bir Minyon'a çevirirse, Asker hangi oyunda olmayan Minyon olacağını seçer."
+        "reason": "Kazali, Soldier oyuncusunun kötü Minyonlarından biri olmasını seçebilir."
     },
     {
         "target": "riot",
@@ -598,16 +598,6 @@
         "target": "organgrinder",
         "trick": "butler",
         "reason": "Orgcu gözleri kapalı oylamaya neden oluyorsa, Uşak oy vermek için elini kaldırabilir ancak oyları sadece efendisi de oy verdi ise sayılır."
-    },
-    {
-        "target": "organgrinder",
-        "trick": "minstrel",
-        "reason": "Ozan herkesi sarhoş ederse, Orgcu yeteneğini korur ancak Ozan oylama sırasında gözlerini açık tutar."
-    },
-    {
-        "target": "organgrinder",
-        "trick": "preacher",
-        "reason": "Vaiz Orgcu'nun yeteneğini kaldırırsa, Orgcu yeteneğini korur ancak Vaiz oylama sırasında gözlerini açık tutar."
     },
     {
         "target": "vizier",

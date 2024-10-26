@@ -2,9 +2,9 @@
     {
         "id": "acrobat",
         "name": "Akrobat",
-        "ability": "Hver natt*, om en av dine gode, levende naboer er full eller forgiftet, dør du.",
+        "ability": "Hver natt*, velg en spiller: hvis de er eller blir fulle eller forgiftet i kveld, dør du.",
         "firstNightReminder": "",
-        "otherNightReminder": "Om en god, levende nabo er full eller forgiftet, dør Akrobaten.",
+        "otherNightReminder": "Akrobaten velger en spiller. Hvis de blir fulle eller forgiftet i kveld, dør Acrobat-spilleren.",
         "remindersGlobal": [],
         "reminders": [
             "Død"
@@ -1147,7 +1147,7 @@
     {
         "id": "organgrinder",
         "name": "Veivspiller",
-        "ability": "Alle spillere lukker øynene under avstemninger & antall stemmer holdes hemmelig. Stemmer for deg teller bare om du også stemmer for.",
+        "ability": "Alle spillere holder øynene lukket når de stemmer, og avstemningen er hemmelig. Hver natt velger du om du er full eller ikke.",
         "firstNightReminder": "",
         "otherNightReminder": "",
         "remindersGlobal": [],

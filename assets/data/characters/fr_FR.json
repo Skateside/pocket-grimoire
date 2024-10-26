@@ -2,9 +2,9 @@
     {
         "id": "acrobat",
         "name": "Acrobate",
-        "ability": "Chaque nuit*, si un de vos voisins « bon » vivant est ivre ou empoisonné, vous mourrez.",
+        "ability": "Chaque nuit*, choisissez un joueur: s'il est ou devient ivre ou empoisonné, vous mourrez.",
         "firstNightReminder": "",
-        "otherNightReminder": "Si l'un des voisins « bon » est ivre ou empoisonné, l'acrobate meurt.",
+        "otherNightReminder": "L'Acrobate choisit un joueur: s'il est ou devient ivre ou empoisonné, il meurt",
         "remindersGlobal": [],
         "reminders": [
             "Mort"
@@ -1150,7 +1150,7 @@
     {
         "id": "organgrinder",
         "name": "Joueur d'Orgue",
-        "ability": "Tout les joueurs gardent leur yeux fermés pendant les votes et le décompte des votes est secret. Les votes pour vous ne compte que si vous votez.",
+        "ability": "Tout les joueurs gardent leur yeux fermés pendant les votes et le décompte des votes est secret. Chaque nuit, choisissez si vous êtes ivre ou non.",
         "firstNightReminder": "",
         "otherNightReminder": "",
         "remindersGlobal": [],

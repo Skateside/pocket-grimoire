@@ -2,9 +2,9 @@
     {
         "id": "acrobat",
         "name": "Acrobata",
-        "ability": "A cada noite*, escolha um jogador: se ele ficar bêbado ou envenenado essa noite, você morre.",
+        "ability": "Cada noite*, escolha um jogador: se eles estiverem ou ficarem bêbados ou envenenados esta noite, você morre.",
         "firstNightReminder": "",
-        "otherNightReminder": "O acrobata escolhe um jogador.",
+        "otherNightReminder": "O Acrobata escolhe um jogador. Se eles ficarem bêbados ou envenenados esta noite, o jogador Acrobata morre.",
         "remindersGlobal": [],
         "reminders": [
             "Morto"
@@ -1164,7 +1164,7 @@
     {
         "id": "organgrinder",
         "name": "Organista",
-        "ability": "Todos os jogadores mantêm seus olhos fechados durante votação e a contagem de votos é secreta. A cada noite escolha se você está ou não bêbado. ",
+        "ability": "Todos os jogadores mantêm os olhos fechados ao votar e a contagem dos votos é secreta. Cada noite, escolha se você está bêbado ou não.",
         "firstNightReminder": "O Organista indica com a cabeça se quer ou não ficar bêbado.",
         "otherNightReminder": "O Organista indica com a cabeça se quer ou não ficar bêbado.",
         "remindersGlobal": [],

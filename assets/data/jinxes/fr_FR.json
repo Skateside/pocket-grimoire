@@ -417,7 +417,7 @@
     {
         "target": "kazali",
         "trick": "goon",
-        "reason": "Si le Kazali choisit la Brute comme Sbire, les choix de Sbires restants sont réalisés par le Conteur."
+        "reason": "Le Kazali peut choisir la Brute comme Sbire."
     },
     {
         "target": "kazali",
@@ -437,7 +437,7 @@
     {
         "target": "kazali",
         "trick": "soldier",
-        "reason": "Si le Kazali choisit le Soldat comme Sbire, le soldat choisit quel Sbire hors-jeu devenir."
+        "reason": "Le Kazali peut choisir le Soldat comme Sbire."
     },
     {
         "target": "riot",
@@ -598,16 +598,6 @@
         "target": "organgrinder",
         "trick": "butler",
         "reason": "Si le Joueur d'Orgue provoque un vote les yeux fermés, le Majordome peut lever la main pour voter mais son vote n'est compté que si son maître a également voté."
-    },
-    {
-        "target": "organgrinder",
-        "trick": "minstrel",
-        "reason": "Si le Ménestrel rend tout le monde ivre, le Joueur d'Orgue garde sa capacité mais le Ménestrel garde les yeux ouverts pendant les votes."
-    },
-    {
-        "target": "organgrinder",
-        "trick": "preacher",
-        "reason": "Si le prédicateur retire la capacité du joueur d'Orgue, le Joueur d'Orgue garde sa capacité mais le Prédicateur garde les yeux ouverts pendant les votes."
     },
     {
         "target": "vizier",

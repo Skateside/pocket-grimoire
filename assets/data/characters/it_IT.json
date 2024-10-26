@@ -2,9 +2,9 @@
     {
         "id": "acrobat",
         "name": "Acrobata",
-        "ability": "Ogni notte*, se uno dei tuoi vicini vivi buoni è ubriaco o avvelenato, muori.",
+        "ability": "Ogni notte*, scegli un giocatore: se è o diventa ubriaco o avvelenato stasera, muori.",
         "firstNightReminder": "",
-        "otherNightReminder": "Se un suo vicino buono è ubriaco o avvelenato, l'Acrobata muore.",
+        "otherNightReminder": "L'Acrobata sceglie un giocatore. Se è ubriaco o avvelenato stasera, il giocatore Acrobata muore.",
         "remindersGlobal": [],
         "reminders": [
             "Morto"
@@ -1140,7 +1140,7 @@
     {
         "id": "organgrinder",
         "name": "Fisarmonicista",
-        "ability": "Tutti i giocatori chiudono gli occhi durante il voto. Il risultato del voto è segreto. I voti per te contano solo se tu voti.",
+        "ability": "Tutti i giocatori tengono gli occhi chiusi quando votano e il conteggio dei voti è segreto. Ogni notte, scegli se sei ubriaco o no.",
         "firstNightReminder": "",
         "otherNightReminder": "",
         "remindersGlobal": [],

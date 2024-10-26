@@ -2,9 +2,9 @@
     {
         "id": "acrobat",
         "name": "곡예사",
-        "ability": "매일 밤*(첫날 제외), 살아있는 이웃이 취하거나 중독되면 당신은 죽습니다.",
+        "ability": "매일 밤*, 플레이어를 선택하세요: 오늘 밤 취하거나 중독되면 당신은 죽습니다.",
         "firstNightReminder": "",
-        "otherNightReminder": "만약 이웃이 취하거나 중독되었다면, 곡예사는 사망합니다",
+        "otherNightReminder": "아크로뱃이 플레이어를 선택합니다. 오늘 밤 취하거나 중독되면 아크로뱃 플레이어가 죽습니다.",
         "remindersGlobal": [],
         "reminders": [
             "사망"
@@ -1149,7 +1149,7 @@
     {
         "id": "organgrinder",
         "name": "오르간 연주자",
-        "ability": "투표할 때 모든 플레이어는 눈을 감고 있고 투표 집계는 비밀입니다. 스스로에게 투표한 경우에만 당신에게 투표가 적용됩니다.(0표로 간주)",
+        "ability": "모든 플레이어는 투표할 때 눈을 감고 투표 집계는 비밀입니다. 매일 밤 취했는지 아닌지 선택하세요.",
         "firstNightReminder": "",
         "otherNightReminder": "",
         "remindersGlobal": [],

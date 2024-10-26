@@ -2,9 +2,9 @@
     {
         "id": "acrobat",
         "name": "雜技演員",
-        "ability": "每天晚上*，如果你的其中一位好人鄰居醉酒或中毒，則你死亡。",
+        "ability": "每天晚上*，選擇一名玩家：如果他們今晚喝醉或中毒，你就會死。",
         "firstNightReminder": "",
-        "otherNightReminder": "如果雜技演員的其中一位好人鄰居醉酒或中毒，雜技演員死亡。",
+        "otherNightReminder": "雜技演員選擇一名選手。如果他們今晚喝醉或中毒，雜技演員就會死亡。",
         "remindersGlobal": [],
         "reminders": [
             "死亡"
@@ -1149,7 +1149,7 @@
     {
         "id": "organgrinder",
         "name": "風琴手",
-        "ability": "所有玩家在投票時閉眼且票數不公開。對你的投票只在你有投票時通過。",
+        "ability": "所有玩家投票時都是閉著眼睛的，並且計票結果是秘密的。每天晚上，選擇你是否喝醉了。",
         "firstNightReminder": "",
         "otherNightReminder": "",
         "remindersGlobal": [],

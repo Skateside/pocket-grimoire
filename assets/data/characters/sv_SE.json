@@ -2,9 +2,9 @@
     {
         "id": "acrobat",
         "name": "Akrobaten",
-        "ability": "Om någon av dina goda levande grannar är full eller förgiftad dör du på natten*.",
+        "ability": "Välj en spelare varje natt*: om de är eller blir fulla eller förgiftade ikväll dör du.",
         "firstNightReminder": "",
-        "otherNightReminder": "Om en god levande granne är full eller förgiftad dör Akrobaten.",
+        "otherNightReminder": "Akrobaten väljer en spelare. Om de blir berusade eller förgiftade ikväll dör Acrobat-spelaren.",
         "remindersGlobal": [],
         "reminders": [
             "Död"
@@ -1142,7 +1142,7 @@
     {
         "id": "organgrinder",
         "name": "Positivhalaren",
-        "ability": "Alla spelare blundar när de röstar, och resultatet är hemligt. Röster på dig räknas bara om du själv röstar.",
+        "ability": "Alla spelare håller ögonen stängda när de röstar och rösträkningen är hemlig. Välj varje kväll om du är full eller inte.",
         "firstNightReminder": "",
         "otherNightReminder": "",
         "remindersGlobal": [],

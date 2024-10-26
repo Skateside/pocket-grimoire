@@ -2,9 +2,9 @@
     {
         "id": "acrobat",
         "name": "Akrobat",
-        "ability": "Her gece*, yaşayan iyi komşularınızdan biri sarhoş olur ya da zehirlenirse ölürsünüz.",
+        "ability": "Her gece*, bir oyuncu seçin: Eğer bu gece sarhoş olurlarsa veya zehirlenirlerse, siz ölürsünüz.",
         "firstNightReminder": "",
-        "otherNightReminder": "Eğer yaşayan iyi bir komşusu sarhoş olur ya da zehirlenirse, Akrobat oyuncu ölür.",
+        "otherNightReminder": "Akrobat bir oyuncu seçer. Eğer bu gece sarhoş olurlarsa veya zehirlenirlerse, Akrobat oyuncusu ölür.",
         "remindersGlobal": [],
         "reminders": [
             "Ölü"
@@ -1147,7 +1147,7 @@
     {
         "id": "organgrinder",
         "name": "Orgcu",
-        "ability": "Tüm oyuncular oy verirken gözlerini kapalı tutar ve oy sayımı gizlidir. Size verilen oylar sadece siz de oy verirseniz sayılır.",
+        "ability": "Tüm oyuncular oylama sırasında gözlerini kapalı tutar ve oy sayısı gizlidir. Her gece, sarhoş olup olmadığınızı seçin.",
         "firstNightReminder": "",
         "otherNightReminder": "",
         "remindersGlobal": [],

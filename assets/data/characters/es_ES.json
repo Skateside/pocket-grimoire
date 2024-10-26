@@ -2,9 +2,9 @@
     {
         "id": "acrobat",
         "name": "Acróbata",
-        "ability": "Cada noche*, si alguno de tus vecinos vivos buenos está borracho o envenenado, mueres.",
+        "ability": "Cada noche*, elige un jugador: si está borracho o se envenena esta noche, mueres.",
         "firstNightReminder": "",
-        "otherNightReminder": "Si un vecino bueno está borracho o intoxicado, el jugador Acróbata muere.",
+        "otherNightReminder": "El acróbata elige un jugador. Si está borracho o se envenena esta noche, el jugador acróbata muere.",
         "remindersGlobal": [],
         "reminders": [
             "Muerto"
@@ -1149,7 +1149,7 @@
     {
         "id": "organgrinder",
         "name": "Organ Grinder",
-        "ability": "Todos los jugadores cierran los ojos al votar y su voto se cuenta en secreto. Los votos contra ti solo cuentan si tú votas.",
+        "ability": "Todos los jugadores mantienen los ojos cerrados cuando votan y el recuento de votos es secreto. Cada noche, elige si estás borracho o no.",
         "firstNightReminder": "",
         "otherNightReminder": "",
         "remindersGlobal": [],

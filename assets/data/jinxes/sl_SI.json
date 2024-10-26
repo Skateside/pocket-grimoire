@@ -417,7 +417,7 @@
     {
         "target": "kazali",
         "trick": "goon",
-        "reason": "Če Kazali izbere Goona, da postane Minion, o preostalih Minionskih odločitvah odloča Pripovedovalec."
+        "reason": "Kazali lahko izbere, da je Goon igralec eden od njihovih zlobnih Minionov."
     },
     {
         "target": "kazali",
@@ -437,7 +437,7 @@
     {
         "target": "kazali",
         "trick": "soldier",
-        "reason": "Če Kazali spremeni vojaka v Miniona, Vojak izbere, kateri Minion, ki ni v igri, bo postal."
+        "reason": "Kazali lahko izbere, da je igralec Vojak eden od njihovih zlobnih Minionov."
     },
     {
         "target": "riot",
@@ -598,16 +598,6 @@
         "target": "organgrinder",
         "trick": "butler",
         "reason": "Če morajo igralci mižati, lahko Služabnik vedno glasuje, a njegov glas šteje, samo če je glasoval tudi Gospodar."
-    },
-    {
-        "target": "organgrinder",
-        "trick": "minstrel",
-        "reason": "Če Minstrel vse napije, Mlilec orgel ohrani svojo sposobnost, Minstrel pa med glasovanjem drži odprte oči."
-    },
-    {
-        "target": "organgrinder",
-        "trick": "preacher",
-        "reason": "Če pridigar odstrani sposobnost brusilnika organov, mlinček obdrži svojo sposobnost, pridigar pa med glasovanjem drži odprte oči."
     },
     {
         "target": "vizier",

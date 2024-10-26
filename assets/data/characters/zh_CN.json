@@ -2,9 +2,9 @@
     {
         "id": "acrobat",
         "name": "杂技演员",
-        "ability": "每个夜晚*，如果与你邻近的存活善良玩家之一醉酒或中毒，你死亡。",
+        "ability": "每晚*，选择一名玩家：如果他们今晚喝醉或中毒，你就会死。",
         "firstNightReminder": "",
-        "otherNightReminder": "如果杂技演员左右两侧最近的存活善良玩家之一中毒或醉酒，杂技演员死亡。",
+        "otherNightReminder": "杂技演员选择一名玩家。如果他们今晚喝醉或中毒，杂技演员就会死。",
         "remindersGlobal": [],
         "reminders": [
             "死亡"
@@ -1529,7 +1529,7 @@
     {
         "id": "organgrinder",
         "name": "街头风琴手",
-        "ability": "所有玩家在投票时闭眼，且票数会秘密统计。对你的提名只在你投票时才会统计票数。",
+        "ability": "所有玩家投票时都闭上眼睛，投票结果保密。每晚，选择你是否喝醉。",
         "firstNightReminder": "",
         "otherNightReminder": "",
         "remindersGlobal": [],
