@@ -366,7 +366,7 @@ class MainController extends AbstractController
     }
 
     /**
-     * @Route("/", name="tokens_stub")
+     * @Route("/tokens", name="tokens_stub")
      */
     public function tokensStubAction(Request $request): Response
     {
