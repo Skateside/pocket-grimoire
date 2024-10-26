@@ -9,7 +9,7 @@ use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 
 /**
- * @ORM\Table(name="roles", indexes={@ORM\Index(name="identifier_idx", columns={"identifier"})})
+ * @ORM\Table(name="roles", indexes={@ORM\Index(name="roles_identifier_idx", columns={"identifier"})})
  * @ORM\Entity(repositoryClass=RoleRepository::class)
  */
 class Role

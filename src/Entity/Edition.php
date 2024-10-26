@@ -9,7 +9,7 @@ use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 
 /**
- * @ORM\Table(name="editions", indexes={@ORM\Index(name="identifier_idx", columns={"identifier"})})
+ * @ORM\Table(name="editions", indexes={@ORM\Index(name="editions_identifier_idx", columns={"identifier"})})
  * @ORM\Entity(repositoryClass=EditionRepository::class)
  */
 class Edition
