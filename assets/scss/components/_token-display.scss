@@ -6,6 +6,8 @@
     &.is-multiple {
         --columns: 2;
     }
+
+    max-width: min(40em, 80vw);
 }
 
 .token-display__item {
