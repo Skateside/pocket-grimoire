@@ -47,7 +47,7 @@
     {
         "target": "pithag",
         "trick": "villageidiot",
-        "reason": "Om det finns en ledig bricka kan Trollpackan skapa en extra Byfåne. Det kan ändra vilken av Byfånarna som är full."
+        "reason": "Om det finns en ledig bricka kan Trollpackan skapa en extra Byfåne. Detta kan ändra vilken av Byfånarna som är full."
     },
     {
         "target": "pithag",
@@ -172,7 +172,7 @@
     {
         "target": "legion",
         "trick": "minstrel",
-        "reason": "Om Legionen dog av avrättning idag behåller Legionen sin förmåga, men Trubaden kanske får veta att de är Legionen."
+        "reason": "Om Legionen dog av avrättning idag behåller Legionen sin förmåga, men Trubaden kanske får veta att hen är Legionen."
     },
     {
         "target": "legion",
@@ -327,7 +327,7 @@
     {
         "target": "summoner",
         "trick": "riot",
-        "reason": "Om Åkallaren skapar Upproret blir alla Lakejer till Upproret."
+        "reason": "Om Åkallaren skapar Kravallen blir alla Lakejer till Kravallen."
     },
     {
         "target": "summoner",
@@ -377,7 +377,7 @@
     {
         "target": "marionette",
         "trick": "balloonist",
-        "reason": "Om Marionetten tror sig vara Ballongfararen så läggs 1 extra Utböling till."
+        "reason": "Om Marionetten tror sig vara Ballongfararen så kan 1 extra Utböling ha lagts till."
     },
     {
         "target": "marionette",
@@ -392,7 +392,7 @@
     {
         "target": "marionette",
         "trick": "huntsman",
-        "reason": "Om Marionetten tror sig vara Jägaren så läggs Ungmön till."
+        "reason": "Om Marionetten tror sig vara Jägaren så har Ungmön lagts till."
     },
     {
         "target": "lleech",
@@ -417,7 +417,7 @@
     {
         "target": "kazali",
         "trick": "goon",
-        "reason": "Kazalien kan välja att Goon-spelaren är en av deras onda Minions."
+        "reason": "Om Kazali väljer att göra Hejduken till Lakej så blir Kazali inte full."
     },
     {
         "target": "kazali",
@@ -437,22 +437,22 @@
     {
         "target": "kazali",
         "trick": "soldier",
-        "reason": "Kazalien kan välja att Soldier-spelaren är en av deras onda Minions."
+        "reason": "Soldaten är inte skyddad från att göras till Kazalis Lakej."
     },
     {
         "target": "riot",
         "trick": "engineer",
-        "reason": "Både Upproret och Ingenjören kan inte vara i spel i början av spelet. Om Ingenjören skapar Upproret så blir de onda spelarna till Upproret."
+        "reason": "Både Kravallen och Ingenjören kan inte vara i spel i början av spelet. Om Ingenjören skapar Kravallen så blir de onda spelarna till Kravallen."
     },
     {
         "target": "riot",
         "trick": "golem",
-        "reason": "Om Golem nominerar Upproret så dör inte den nominerade spelaren."
+        "reason": "Om Golem nominerar Kravallen så dör inte den nominerade spelaren."
     },
     {
         "target": "riot",
         "trick": "snitch",
-        "reason": "Om Golaren är i spel får varje spelare som är Upproret 3 extra bluffar."
+        "reason": "Om Golaren är i spel får varje spelare som är Kravallen 3 extra bluffar."
     },
     {
         "target": "riot",
@@ -467,7 +467,7 @@
     {
         "target": "riot",
         "trick": "pithag",
-        "reason": "Om Trollpackan skapar Upproret så blir alla onda spelare till Upproret. Om Trollpackan skapar Upproret efter dag 3 så pågår spelet i en dag till."
+        "reason": "Om Trollpackan skapar Kravallen så blir alla onda spelare till Kravallen. Om Trollpackan skapar Kravallen efter dag 3 så pågår spelet i en dag till."
     },
     {
         "target": "riot",
@@ -477,47 +477,47 @@
     {
         "target": "riot",
         "trick": "monk",
-        "reason": "Om någon som är Upproret nominerar och dödar spelaren som är skyddad av Munken så dör inte den skyddade spelaren."
+        "reason": "Om någon som är Kravallen nominerar och dödar spelaren som är skyddad av Munken så dör inte den skyddade spelaren."
     },
     {
         "target": "riot",
         "trick": "farmer",
-        "reason": "Om någon som är Upproret nominerar och dödar en Bonde så använder Bonden sin förmåga samma natt."
+        "reason": "Om någon som är Kravallen nominerar och dödar en Bonde så använder Bonden sin förmåga samma natt."
     },
     {
         "target": "riot",
         "trick": "innkeeper",
-        "reason": "Om någon som är Upproret nominerar en spelare som är skyddad av Gästgivaren så dör inte den skyddade spelaren."
+        "reason": "Om någon som är Kravallen nominerar en spelare som är skyddad av Gästgivaren så dör inte den skyddade spelaren."
     },
     {
         "target": "riot",
         "trick": "sage",
-        "reason": "Om någon som är Upproret nominerar och dödar Gurun så använder Gurun sin förmåga samma natt."
+        "reason": "Om någon som är Kravallen nominerar och dödar Gurun så använder Gurun sin förmåga samma natt."
     },
     {
         "target": "riot",
         "trick": "banshee",
-        "reason": "Om Upproret nominerar och dödad Bansheen får alla spelare veta att Bansheen har dött, och Bansheen kan omedelbart nominera två spelare."
+        "reason": "Om Kravallen nominerar och dödad Bansheen får alla spelare veta att Bansheen har dött, och Bansheen kan omedelbart nominera två spelare."
     },
     {
         "target": "riot",
         "trick": "ravenkeeper",
-        "reason": "Om någon som är Upproret nominerar och dödar Korpskötaren så använder Korpskötaren sin förmåga samma natt."
+        "reason": "Om någon som är Kravallen nominerar och dödar Korpskötaren så använder Korpskötaren sin förmåga samma natt."
     },
     {
         "target": "riot",
         "trick": "soldier",
-        "reason": "Om någon som är Upproret nominerar Soldaten så dör inte Soldaten."
+        "reason": "Om någon som är Kravallen nominerar Soldaten så dör inte Soldaten."
     },
     {
         "target": "riot",
         "trick": "grandmother",
-        "reason": "Om någon som är Upproret nominerar och dödar barnbarnet så dör Farmorn också."
+        "reason": "Om någon som är Kravallen nominerar och dödar barnbarnet så dör Farmorn också."
     },
     {
         "target": "riot",
         "trick": "king",
-        "reason": "Om någon som är Upproret nominerar och dödar Kungen och Korgossen fortfarande lever så använder Korgossen sin förmåga samma natt."
+        "reason": "Om någon som är Kravallen nominerar och dödar Kungen och Korgossen fortfarande lever så använder Korgossen sin förmåga samma natt."
     },
     {
         "target": "riot",
@@ -557,32 +557,32 @@
     {
         "target": "riot",
         "trick": "investigator",
-        "reason": "Upproret registreras som Lakej för Detektiven."
+        "reason": "Kravallen registreras som Lakej för Detektiven."
     },
     {
         "target": "riot",
         "trick": "clockmaker",
-        "reason": "Upproret registreras som Lakej för Urmakaren."
+        "reason": "Kravallen registreras som Lakej för Urmakaren."
     },
     {
         "target": "riot",
         "trick": "towncrier",
-        "reason": "Upproret registreras som Lakej för Härolden."
+        "reason": "Kravallen registreras som Lakej för Härolden."
     },
     {
         "target": "riot",
         "trick": "damsel",
-        "reason": "Upproret registreras som Lakej för Ungmön."
+        "reason": "Kravallen registreras som Lakej för Ungmön."
     },
     {
         "target": "riot",
         "trick": "preacher",
-        "reason": "Upproret registreras som Lakej för Predikanten."
+        "reason": "Kravallen registreras som Lakej för Predikanten."
     },
     {
         "target": "riot",
         "trick": "hatter",
-        "reason": "Om Hattmakaren dör, Upproret är i spel och någon i Upproret väljer en annan Demon så blir alla i Upproret till ett vanligt ont lag. Om Hattmakaren dör och Demonen väljer Upproret så blir alla Lakejer också till Upproret."
+        "reason": "Om Hattmakaren dör, Kravallen är i spel och någon i Kravallen väljer en annan Demon så blir alla i Kravallen till ett vanligt ont lag. Om Hattmakaren dör och Demonen väljer Kravallen så blir alla Lakejer också till Kravallen."
     },
     {
         "target": "riot",

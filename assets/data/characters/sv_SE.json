@@ -2,9 +2,9 @@
     {
         "id": "acrobat",
         "name": "Akrobaten",
-        "ability": "Välj en spelare varje natt*: om de är eller blir fulla eller förgiftade ikväll dör du.",
+        "ability": "Välj en spelare varje natt*; om hen är eller blir full eller förgiftad inatt dör du.",
         "firstNightReminder": "",
-        "otherNightReminder": "Akrobaten väljer en spelare. Om de blir berusade eller förgiftade ikväll dör Acrobat-spelaren.",
+        "otherNightReminder": "Akrobaten väljer en spelare. Om den spelaren är eller blir full eller förgiftad under natten dör Akrobaten.",
         "remindersGlobal": [],
         "reminders": [
             "Död"
@@ -39,7 +39,7 @@
     {
         "id": "alsaahir",
         "name": "al Saahir",
-        "ability": "En gång om dagen kan du gissa vilka spelare som är Lakejer och Demon(er). Om du har rätt vinner de goda.",
+        "ability": "En gång om dagen kan du gissa vilka spelare som är Lakej(er) och Demon(er). Om du har rätt vinner de goda.",
         "firstNightReminder": "",
         "otherNightReminder": "",
         "remindersGlobal": [],
@@ -210,7 +210,7 @@
     {
         "id": "boomdandy",
         "name": "Sprängaren",
-        "ability": "Om du avrättas dör alla utom 3 spelare; 1 minut senare dör den spelare som flest pekar på.",
+        "ability": "Om du avrättas dör alla utom 3 spelare. Efter en minut dör den spelare som flest pekar på.",
         "firstNightReminder": "",
         "otherNightReminder": "",
         "remindersGlobal": [],
@@ -402,8 +402,8 @@
     },
     {
         "id": "djinn",
-        "name": "Anden",
-        "ability": "Använd Andens specialregel. Alla spelare vet vilken det är.",
+        "name": "Djinnen",
+        "ability": "Använd Djinnens specialregel. Alla spelare vet vilken det är.",
         "firstNightReminder": "",
         "otherNightReminder": "",
         "remindersGlobal": [],
@@ -943,7 +943,7 @@
     {
         "id": "lunatic",
         "name": "Galningen",
-        "ability": "Du tror att du är en Demon, men det är du inte. Demonen vet vem du är och vem du väljer på natten.",
+        "ability": "Du tror att du är en Demon, men det är du inte. Demonen vet vem du är och vad du väljer på natten.",
         "firstNightReminder": "Om det är 7 eller fler spelare: Visa Galningen godtyckliga spelare som ”Lakejer”, lika många som antalet faktiska Lakejer i spel. Visa 3 godtyckliga goda rollers brickor. Om Galningens bricka är en Demon som skulle vakna inatt, låt Galningen utföra Demonhandlingen. Sätt ut Galningens ”Vald”-markörer. Väck Demonen. Visa Demonens riktiga roll. Visa Demonen vilken spelare som är Galningen. Om Galningen valde spelare, visa den riktiga Demonen varje vald spelare. Ta bort Galningens ”Vald”-markörer.",
         "otherNightReminder": "Låt Galningen utföra Demonens handling och sätt ut Galningens ”Vald”-markörer. Om Galningen valde spelare så väck Demonen, visa ”Vald”-markören och peka på varje markerad spelare. Ta bort Galningens ”Vald”-markörer.",
         "remindersGlobal": [],
@@ -954,9 +954,9 @@
     {
         "id": "lycanthrope",
         "name": "Lykantropen",
-        "ability": "Välj en levande spelare varje natt*; om hen är god dör hen, och är den enda som kan dö den natten.",
+        "ability": "Välj en levande spelare varje natt*; om hen är god dör hen och är den enda som kan dö inatt.",
         "firstNightReminder": "",
-        "otherNightReminder": "Lykantropen pekar på en levande spelare. Om hen är god dör hen, och ingen annan kan dö inatt.",
+        "otherNightReminder": "Lykantropen pekar på en levande spelare. Om hen är god dör hen, och Demonen får inte döda någon inatt.",
         "remindersGlobal": [],
         "reminders": [
             "Död"
@@ -1124,7 +1124,7 @@
         "name": "Ojo",
         "ability": "Välj en roll varje natt*; hen dör. Om rollen inte är i spel väljer Berättaren vem som dör.",
         "firstNightReminder": "",
-        "otherNightReminder": "Ojo pekar på en roll på sitt rollark; om rollen är i spel så dör den spelaren. Om rollen inte är i spel så väljer Berättaren vem som dör istället.",
+        "otherNightReminder": "Ojo pekar på en roll på sitt rollark; om rollen är i spel så dör den spelaren. Om rollen inte är i spel så väljer Berättaren vem eller vilka som dör istället.",
         "remindersGlobal": [],
         "reminders": [
             "Död"
@@ -1142,11 +1142,12 @@
     {
         "id": "organgrinder",
         "name": "Positivhalaren",
-        "ability": "Alla spelare håller ögonen stängda när de röstar och rösträkningen är hemlig. Välj varje kväll om du är full eller inte.",
+        "ability": "Alla spelare blundar när de röstar, och resultatet är hemligt. Varje natt väljer du om du ska vara full.",
         "firstNightReminder": "",
         "otherNightReminder": "",
         "remindersGlobal": [],
         "reminders": [
+            "Full",
             "Nära döden"
         ]
     },
@@ -1333,8 +1334,8 @@
     },
     {
         "id": "riot",
-        "name": "Upproret",
-        "ability": "Nominerade dör, men kan nominera direkt (och måste på dag 3). Efter dag 3 vinner de onda. [Alla Lakejer är Upproret]",
+        "name": "Kravallen",
+        "ability": "Nominerade dör, men kan nominera direkt (och måste på dag 3). Efter dag 3 vinner de onda. [Alla Lakejer är Kravallen]",
         "firstNightReminder": "",
         "otherNightReminder": "",
         "remindersGlobal": [],
