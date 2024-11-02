@@ -438,9 +438,13 @@ gameObserver.on("characters-selected", ({ detail }) => {
 // #131 - highlight any orphan character and reminder tokens.
 gameObserver.on("characters-selected", ({ detail }) => {
 
-    TokenStore.ready(() => {
+    TokenStore.ready((store) => {
 
         pad.characters.forEach(({ character, token }) => {
+
+            if (["traveller", "fabled"].includes(character.getTeam())) {
+                return;
+            }
 
             const index = detail.characters.findIndex((char) => {
                 return char.getId() === character.getId();
@@ -452,8 +456,14 @@ gameObserver.on("characters-selected", ({ detail }) => {
 
         pad.reminders.forEach(({ reminder, token }) => {
 
+            const character = store.getCharacter(reminder.getCharacterId());
+
+            if (["traveller", "fabled"].includes(character.getTeam())) {
+                return;
+            }
+
             const index = detail.characters.findIndex((char) => {
-                return char.getId() === reminder.getCharacterId();
+                return char.getId() === character.getId();
             });
 
             token.classList.toggle("is-orphan", index < 0);
