@@ -386,7 +386,7 @@
         "otherNightReminder": "",
         "reminders": [],
         "setup": false,
-        "ability": "If you are executed, all but 3 players die. 1 minute later, the player with the most players pointing at them dies.",
+        "ability": "If you are executed, all but 3 players die. After a 10 to 1 countdown, the player with the most players pointing at them, dies.",
         "image": "/build/img/icons/minion/boomdandy.webp"
     },
     {
@@ -1960,10 +1960,11 @@
         "otherNight": 23,
         "otherNightReminder": "The Lycanthrope points to a living player: if good, they die and no one else can die tonight.",
         "reminders": [
-            "Dead"
+            "Dead",
+            "Can't Kill"
         ],
         "setup": false,
-        "ability": "Each night*, choose a living player: if good, they die, but they are the only player that can die tonight.",
+        "ability": "Each night*, choose an alive player. If good, they die & the Demon doesn’t kill tonight. One good player registers as evil.",
         "image": "/build/img/icons/townsfolk/lycanthrope.webp"
     },
     {
