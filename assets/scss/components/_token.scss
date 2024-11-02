@@ -76,9 +76,6 @@
         }
     }
     &.is-upside-down {
-        --shadow-rotation: -1;
-        transform: rotate(180deg);
-
         // Colorize rotated townsfolk and outsiders as red.
         &:is([data-team=townsfolk i], [data-team=outsider i]) .character__icon {
             filter: var(--blue-to-red);
