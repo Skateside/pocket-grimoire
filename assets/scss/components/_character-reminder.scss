@@ -51,7 +51,7 @@
     }
 
     &.is-dead {
-        filter: grayscale(1) brightness(0.8);
+        filter: brightness(0.5);
     }
 }
 
@@ -139,6 +139,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    position: relative;
 }
 
 .character__shroud {
@@ -182,6 +183,7 @@
     width: 90%;
     aspect-ratio: 1/1;
     object-fit: contain;
+    position: absolute;
 }
 
 .character__name {
