@@ -623,6 +623,17 @@
         "reminders": []
     },
     {
+        "id": "gnome",
+        "name": "侏儒",
+        "ability": "所有玩家都開始認識與您陣營相同的玩家。你可以選擇殺死任何提名他們的人。",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": [
+            "朋友"
+        ]
+    },
+    {
         "id": "goblin",
         "name": "哥布林",
         "ability": "如果你被提名時公開聲明自己是哥布林並且在該天被處決，你的隊伍獲勝。",
@@ -966,7 +977,8 @@
         "otherNightReminder": "狼人選擇一位活著的玩家，如果該玩家是好人則他死亡且今晚其他人不會死。",
         "remindersGlobal": [],
         "reminders": [
-            "死亡"
+            "死亡",
+            "假爪子"
         ]
     },
     {

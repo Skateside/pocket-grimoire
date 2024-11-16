@@ -619,6 +619,17 @@
         "reminders": []
     },
     {
+        "id": "gnome",
+        "name": "Pysslingen",
+        "ability": "Alla spelare vet från början en spelare på ditt lag. Du kan välja att döda alla som nominerar hen.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": [
+            "Kompis"
+        ]
+    },
+    {
         "id": "goblin",
         "name": "Vätten",
         "ability": "Ditt lag vinner om du öppet säger att du är Vätten när du nomineras, och därefter avrättas.",
@@ -959,7 +970,8 @@
         "otherNightReminder": "Lykantropen pekar på en levande spelare. Om hen är god dör hen, och Demonen får inte döda någon inatt.",
         "remindersGlobal": [],
         "reminders": [
-            "Död"
+            "Död",
+            "Registreras fel"
         ]
     },
     {

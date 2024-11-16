@@ -175,10 +175,6 @@
         "id": "lycanthrope",
         "jinx": [
             {
-                "id": "gambler",
-                "reason": "If the Lycanthrope is alive and the Gambler kills themself at night, no other players can die tonight."
-            },
-            {
                 "id": "dagengren",
                 "reason": "如果打更人猜测正确的玩家是半兽人攻击的玩家，\n那么当晚只会有打更人死亡。"
             },
@@ -833,6 +829,10 @@
             {
                 "id": "zealot",
                 "reason": "If the Cannibal gains the Zealot ability, the Cannibal learns this."
+            },
+            {
+                "id": "poppygrower",
+                "reason": "If the Cannibal eats the Poppy Grower, then dies or loses the Poppy Grower ability, the Demon and Minions learn each other that night."
             }
         ]
     },

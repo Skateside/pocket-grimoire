@@ -623,6 +623,17 @@
         "reminders": []
     },
     {
+        "id": "gnome",
+        "name": "Gnomo",
+        "ability": "Todos los jugadores comienzan conociendo a un jugador de tu alineación. Puedes elegir matar a cualquiera que lo nomine.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": [
+            "Amigo"
+        ]
+    },
+    {
         "id": "goblin",
         "name": "Goblin",
         "ability": "Si públicamente declaras ser el goblin (Goblin) cuando te nominen y eres ejecutado ese día, tu equipo gana.",
@@ -966,7 +977,8 @@
         "otherNightReminder": "El Licántropo señala a un jugador vivo: si es bueno, muere y nadie más puede morir esta noche.",
         "remindersGlobal": [],
         "reminders": [
-            "Muerto"
+            "Muerto",
+            "Faux Paw"
         ]
     },
     {

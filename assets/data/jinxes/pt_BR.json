@@ -25,6 +25,11 @@
         "reason": "Se o Canibal ganhar a habilidade do Fanático, o Canibal é avisado disso."
     },
     {
+        "target": "cannibal",
+        "trick": "poppygrower",
+        "reason": "Se o Canibal comer o Cultivador de Papoulas e depois morrer ou perder a habilidade Cultivador de Papoulas, o Demônio e os Lacaios se conhecerão naquela noite."
+    },
+    {
         "target": "lunatic",
         "trick": "mathematician",
         "reason": "Se o Lunático não atacar o(s) mesmo(s) jogador(es) que o Demônio, isto conta para o Matemático."
@@ -153,11 +158,6 @@
         "target": "lilmonsta",
         "trick": "hatter",
         "reason": "Se um Demônio escolher Monstrinho, ele também escolhe um Lacaio para se tornar e cuida do Monstrinho esta noite."
-    },
-    {
-        "target": "lycanthrope",
-        "trick": "gambler",
-        "reason": "Se o Licantropo estiver vivo e o Apostador se matar à noite, nenhum outro jogador poderá morrer naquela noite."
     },
     {
         "target": "legion",

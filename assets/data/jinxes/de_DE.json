@@ -25,6 +25,11 @@
         "reason": "Wenn der Kannibale die Fähigkeit des Eiferers erlangt, erfährt der Kannibale dies."
     },
     {
+        "target": "cannibal",
+        "trick": "poppygrower",
+        "reason": "Wenn der Kannibale den Mohnanbauer frisst und dann stirbt oder die Mohnanbauer-Fähigkeit verliert, lernen der Dämon und die Schergen sich in dieser Nacht kennen."
+    },
+    {
         "target": "lunatic",
         "trick": "mathematician",
         "reason": "Der Mathematiker erfährt, wenn der Wahnsinnige einen anderen Spieler angreift als der echte Dämon angegriffen hat."
@@ -153,11 +158,6 @@
         "target": "lilmonsta",
         "trick": "hatter",
         "reason": "Wenn sich ein Dämon für Lil' Monsta entscheidet, wählt er auch einen Diener aus, der heute Abend Lil' Monsta werden und auf ihn aufpassen soll."
-    },
-    {
-        "target": "lycanthrope",
-        "trick": "gambler",
-        "reason": "Wenn der Lykanthrop am Leben ist und der Glücksspieler tötet sich in der Nacht kann kein weiterer Spieler in dieser nacht sterben."
     },
     {
         "target": "legion",

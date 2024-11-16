@@ -623,6 +623,17 @@
         "reminders": []
     },
     {
+        "id": "gnome",
+        "name": "Gnome",
+        "ability": "Alle spillere begynner å kjenne en spiller i din posisjon. Du kan velge å drepe alle som nominerer dem.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": [
+            "Amigo"
+        ]
+    },
+    {
         "id": "goblin",
         "name": "Småtroll",
         "ability": "Om du offentleg kunngjer at du er Småtrollet når du vert nominert & vert avretta same dagen, vinn laget ditt.",
@@ -966,7 +977,8 @@
         "otherNightReminder": "Lykantropen peiker mot ein levande spelar: om dei er god, døyr dei. I så fall kan ingen andre døy i natt.",
         "remindersGlobal": [],
         "reminders": [
-            "Daud"
+            "Daud",
+            "Faux pote"
         ]
     },
     {

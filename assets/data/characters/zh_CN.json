@@ -792,6 +792,17 @@
         "reminders": []
     },
     {
+        "id": "gnome",
+        "name": "侏儒",
+        "ability": "所有玩家开始认识一个与你阵营相同的玩家。你可以选择杀死任何提名他们的人。",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": [
+            "朋友"
+        ]
+    },
+    {
         "id": "goblin",
         "name": "哥布林",
         "ability": "如果你在被提名后公开声明自己是哥布林且在那个白天被处决，你的阵营获胜。",
@@ -1312,7 +1323,8 @@
         "otherNightReminder": "半兽人指向一名存活玩家：如果那名玩家善良，则立刻死去且今夜不会再有玩家死亡。",
         "remindersGlobal": [],
         "reminders": [
-            "死亡"
+            "死亡",
+            "假爪子"
         ]
     },
     {

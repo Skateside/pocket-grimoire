@@ -619,6 +619,17 @@
         "reminders": []
     },
     {
+        "id": "gnome",
+        "name": "Chú lùn",
+        "ability": "Tất cả người chơi bắt đầu biết một người chơi có cùng phe với bạn. Bạn có thể chọn giết bất kỳ ai đề cử họ.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": [
+            "Amigo"
+        ]
+    },
+    {
         "id": "goblin",
         "name": "Yêu tinh",
         "ability": "Nếu bạn công khai rằng mình là Yêu tinh khi bị biểu quyết & bị hành quyết ngày hôm đó, đội bạn thắng.",
@@ -962,7 +973,8 @@
         "otherNightReminder": "Người sói chỉ người sống: nếu là tốt, họ chết và những người khác không thế chết đêm nay.",
         "remindersGlobal": [],
         "reminders": [
-            "Chết"
+            "Chết",
+            "Móng giả"
         ]
     },
     {

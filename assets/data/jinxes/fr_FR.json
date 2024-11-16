@@ -25,6 +25,11 @@
         "reason": "Si le Cannibale obtiens la capacité du Fanatique, le Cannibale l'apprend."
     },
     {
+        "target": "cannibal",
+        "trick": "poppygrower",
+        "reason": "Si le Cannibale obtient la capacité du Cultivateur de Pavot puis meurt ou est éxécuté, les Sbires et le Démon se reconnaissent."
+    },
+    {
         "target": "lunatic",
         "trick": "mathematician",
         "reason": "Le Mathématicien apprend si le Lunatique attaque des joueurs differents de ceux attaqués par le démon."
@@ -153,11 +158,6 @@
         "target": "lilmonsta",
         "trick": "hatter",
         "reason": "Si un Démon choisit P'tit monstre, il choisit également un Sbire, le devient, et garde le jeton du P'tit monstre ce soir."
-    },
-    {
-        "target": "lycanthrope",
-        "trick": "gambler",
-        "reason": "Si le Lycanthrope est en vie et que le Parieur se tue cette nuit, aucun autre joueur ne peut mourir cette nuit."
     },
     {
         "target": "legion",

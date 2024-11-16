@@ -25,6 +25,11 @@
         "reason": "만약 식인종이 광신도의 능력을 얻는다면, 식인종은 그것에 대해 배웁니다."
     },
     {
+        "target": "cannibal",
+        "trick": "poppygrower",
+        "reason": "만약 식인종이 양귀비 재배자를 먹고 죽거나 양귀비 재배자 능력을 잃으면, 그날 밤 악마와 미니언은 서로에 대해 배웁니다."
+    },
+    {
         "target": "lunatic",
         "trick": "mathematician",
         "reason": "수학자는 만약 미치광이가 다른 플레이어를 공격했다면, 실제 악마가 공격한 플레이어와 다르다면 알게됩니다"
@@ -153,11 +158,6 @@
         "target": "lilmonsta",
         "trick": "hatter",
         "reason": "만약 악마가 릴몬스타를 선택한다면, 그들은 변할 하수인 뿐 아니라 릴몬스타를 돌볼 사람도 선택됩니다."
-    },
-    {
-        "target": "lycanthrope",
-        "trick": "gambler",
-        "reason": "만약 늑대인간이 살아있고 도박꾼이 자살한다면, 다른플레이어는 오늘밤 죽을 수 없습니다"
     },
     {
         "target": "legion",

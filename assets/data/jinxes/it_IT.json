@@ -25,6 +25,11 @@
         "reason": "Se il Cannibale ottiene l'abilità Zelota, il Cannibale impara questo."
     },
     {
+        "target": "cannibal",
+        "trick": "poppygrower",
+        "reason": "Se il Cannibale mangia il Coltivatore di Papaveri e poi muore o perde l'abilità Coltivatore di Papaveri, il Demone e i Minion impareranno a riconoscersi quella notte stessa."
+    },
+    {
         "target": "lunatic",
         "trick": "mathematician",
         "reason": "Il Matematico apprende se il Lunatico attacca un giocatore (o giocatori) diverso da quello che il vero demone ha attaccato."
@@ -153,11 +158,6 @@
         "target": "lilmonsta",
         "trick": "hatter",
         "reason": "Se un demone sceglie Piccolo Mostro, di notte sceglie un Seguage in cui trasformarsi e continua ad accudire Piccolo Mostro."
-    },
-    {
-        "target": "lycanthrope",
-        "trick": "gambler",
-        "reason": "Se il Licantropo è vivo e lo Scommettitore uccide sé stesso di notte, nessun altro giocatore può morire quella notte."
     },
     {
         "target": "legion",

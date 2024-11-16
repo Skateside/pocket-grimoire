@@ -69,7 +69,7 @@
         "otherNightReminder": "Choose a player, that player dies.",
         "reminders": [],
         "setup": false,
-        "ability": "Once per day, if you publicly guess which players are Minion(s) and which are Demon(s), good wins.",
+        "ability": "Each day, if you publicly guess which players are Minion(s) and which are Demon(s), good wins.",
         "image": "/build/img/icons/townsfolk/alsaahir.webp"
     },
     {
@@ -655,7 +655,7 @@
             "Guess used"
         ],
         "setup": false,
-        "ability": "All Minions know you are in play. If a Minion publicly guesses you (once), your team loses.",
+        "ability": "All Minions know a Damsel is in play. If a Minion publicly guesses you (once), your team loses.",
         "image": "/build/img/icons/outsider/damsel.webp"
     },
     {
@@ -971,7 +971,7 @@
         "otherNightReminder": "If a Farmer died tonight, choose another good player and make them the Farmer. Wake this player, show them the 'You are' card and the Farmer character token.",
         "reminders": [],
         "setup": false,
-        "ability": "If you die at night, an alive good player becomes a Farmer.",
+        "ability": "When you die at night, an alive good player becomes a Farmer.",
         "image": "/build/img/icons/townsfolk/farmer.webp"
     },
     {
@@ -1194,6 +1194,20 @@
         "setup": false,
         "ability": "Each night, you learn which alignment the Storyteller believes is winning: good, evil, or neither.",
         "image": "/build/img/icons/townsfolk/general.webp"
+    },
+    {
+        "id": "gnome",
+        "name": "Gnome",
+        "edition": "",
+        "team": "traveller",
+        "firstNight": 0,
+        "firstNightReminder": "",
+        "otherNight": 0,
+        "otherNightReminder": "",
+        "reminders": ["Amigo"],
+        "setup": false,
+        "ability": "All players start knowing a player of your alignment. You may choose to kill anyone who nominates them.",
+        "image": "/build/img/icons/traveller/gnome.webp"
     },
     {
         "id": "goblin",
@@ -1734,7 +1748,7 @@
         "otherNightReminder": "If there are more dead than living, show the King a character token of a living player.",
         "reminders": [],
         "setup": false,
-        "ability": "Each night, if the dead equal or outnumber the living, you learn 1 alive character. The Demon knows who you are.",
+        "ability": "Each night, if the dead equal or outnumber the living, you learn 1 alive character. The Demon knows you are the King.",
         "image": "/build/img/icons/townsfolk/king.webp"
     },
     {
@@ -1961,7 +1975,7 @@
         "otherNightReminder": "The Lycanthrope points to a living player: if good, they die and no one else can die tonight.",
         "reminders": [
             "Dead",
-            "Can't Kill"
+            "Faux Paw"
         ],
         "setup": false,
         "ability": "Each night*, choose an alive player. If good, they die & the Demon doesn’t kill tonight. One good player registers as evil.",
@@ -2208,7 +2222,7 @@
             "No ability"
         ],
         "setup": false,
-        "ability": "Once per game, at night, choose a player: they learn who you are.",
+        "ability": "Once per game, at night, choose a player: they learn you are the Nightwatchman.",
         "image": "/build/img/icons/townsfolk/nightwatchman.webp"
     },
     {
@@ -2405,7 +2419,7 @@
             "Storyteller Ability"
         ],
         "setup": false,
-        "ability": "If you die, the Storyteller gains a Minion ability.",
+        "ability": "When you die, the Storyteller gains a Minion ability.",
         "image": "/build/img/icons/outsider/plaguedoctor.webp"
     },
     {
@@ -3006,7 +3020,7 @@
         "otherNightReminder": "",
         "reminders": [],
         "setup": false,
-        "ability": "Minions start knowing 3 not-in-play characters.",
+        "ability": "Each Minion gets 3 bluffs.",
         "image": "/build/img/icons/outsider/snitch.webp"
     },
     {
@@ -3318,7 +3332,7 @@
         "otherNightReminder": "",
         "reminders": [],
         "setup": false,
-        "ability": "All players know who you are. You can not die during the day. If good voted, you may choose to execute immediately.",
+        "ability": "All players know you are the Vizier. You can not die during the day. If good voted, you may choose to execute immediately.",
         "image": "/build/img/icons/minion/vizier.webp"
     },
     {

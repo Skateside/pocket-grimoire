@@ -622,6 +622,17 @@
         "reminders": []
     },
     {
+        "id": "gnome",
+        "name": "Gnom",
+        "ability": "Alle Spieler kennen zu Beginn einen Spieler Ihrer Gesinnung. Sie können jeden töten, der ihn nominiert.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": [
+            "Amigo"
+        ]
+    },
+    {
         "id": "goblin",
         "name": "Kobold",
         "ability": "Wenn du öffentlich behauptest, der Kobold zu sein wenn du nominiert wirst & am selben Tag hingerichtet wirst, gewinnt dein Team.",
@@ -965,7 +976,8 @@
         "otherNightReminder": "Der Lykanthrop zeigt auf einen lebenden Spieler. Ist er gut, stirbt er und niemand sonst stirbt in der Nacht",
         "remindersGlobal": [],
         "reminders": [
-            "Tot"
+            "Tot",
+            "Faux Paw"
         ]
     },
     {

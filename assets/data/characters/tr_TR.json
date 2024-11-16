@@ -623,6 +623,17 @@
         "reminders": []
     },
     {
+        "id": "gnome",
+        "name": "Cüce",
+        "ability": "Tüm oyuncular sizin hizalamanızdaki bir oyuncuyu tanımaya başlar. Onları aday gösteren herkesi öldürmeyi seçebilirsiniz.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": [
+            "Amigo"
+        ]
+    },
+    {
         "id": "goblin",
         "name": "Goblin",
         "ability": "Aday gösterildiğinizde herkese açık bir şekilde Goblin olduğunuzu iddia ederseniz ve o gün idam edilirseniz, takımınız kazanır.",
@@ -966,7 +977,8 @@
         "otherNightReminder": "Kurtadam hayatta olan bir oyuncuyu işaret eder: eğer iyiyse, ölür ve bu gece başka kimse ölemez.",
         "remindersGlobal": [],
         "reminders": [
-            "Ölü"
+            "Ölü",
+            "Sahte Pençe"
         ]
     },
     {

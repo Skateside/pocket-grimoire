@@ -614,6 +614,17 @@
         "reminders": []
     },
     {
+        "id": "gnome",
+        "name": "Gnome",
+        "ability": "Vsi igralci začnejo poznati igralca tvojega razreda. Lahko se odločite, da boste ubili vsakogar, ki jih predlaga.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": [
+            "amigo"
+        ]
+    },
+    {
         "id": "goblin",
         "name": "Goblin",
         "ability": "Če javno trdiš, da si Goblin, ko si nominiran in te usmrtijo ta dan, tvoja ekipa zmaga.",
@@ -957,7 +968,8 @@
         "otherNightReminder": "Volkodlak pokaže na živega igralca, če je dober, umre, in nihče drug ne more umreti to noč.",
         "remindersGlobal": [],
         "reminders": [
-            "Mrtev"
+            "Mrtev",
+            "Faux Paw"
         ]
     },
     {

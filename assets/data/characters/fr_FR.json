@@ -623,6 +623,17 @@
         "reminders": []
     },
     {
+        "id": "gnome",
+        "name": "Gnome",
+        "ability": "Tous les joueurs apprennent un joueur de votre alignement. Vous pouvez choisir de tuer quiconque le nomine.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": [
+            "Connu"
+        ]
+    },
+    {
         "id": "goblin",
         "name": "Gobelin",
         "ability": "Une fois nommé, vous pouvez prétendre publiquement être le Gobelin : si vous êtes exécuté malgré tout, votre équipe gagne.",
@@ -967,7 +978,8 @@
         "otherNightReminder": "Le Lycanthrope pointe vers un joueur vivant: s'il est bon, il meurt et personne d'autre ne peut mourir cette nuit.",
         "remindersGlobal": [],
         "reminders": [
-            "Mort"
+            "Mort",
+            "Faux Paw"
         ]
     },
     {

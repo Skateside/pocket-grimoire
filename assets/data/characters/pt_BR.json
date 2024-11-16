@@ -640,6 +640,17 @@
         "reminders": []
     },
     {
+        "id": "gnome",
+        "name": "Gnome",
+        "ability": "Todos os jogadores começam conhecendo um jogador do seu alinhamento. Você pode escolher matar qualquer um que os indique.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": [
+            "Amigo"
+        ]
+    },
+    {
         "id": "goblin",
         "name": "Goblin",
         "ability": "Quando nomeado, você pode publicamente alegar ser o Goblin: Se for executado naquele dia, seu time vence.",
@@ -981,7 +992,8 @@
         "otherNightReminder": "O Licantropo escolhe um jogador vivo: se o alvo for bom, morre e ninguém mais pode morrer esta noite. Se por algum motivo o jogador escolhido for bom, mas não morrer, ahabilidade do Licantropo não impede outras mortes esta noite.",
         "remindersGlobal": [],
         "reminders": [
-            "Morto"
+            "Morto",
+            "Faux Paw"
         ]
     },
     {

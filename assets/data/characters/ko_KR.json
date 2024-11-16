@@ -623,6 +623,17 @@
         "reminders": []
     },
     {
+        "id": "gnome",
+        "name": "그놈",
+        "ability": "모든 플레이어는 당신의 정렬에 대한 플레이어를 알게 됩니다. 당신은 그들을 지명한 사람을 죽이기로 선택할 수 있습니다.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": [
+            "아미고"
+        ]
+    },
+    {
         "id": "goblin",
         "name": "고블린",
         "ability": "당신이 지명되었을 때 공개적으로 고블린이라고 주장하고, 그 날 처형된다면 당신의 진영이 승리합니다.",
@@ -966,7 +977,8 @@
         "otherNightReminder": "늑대인간은 살아있는 플레이어를 가르킵니다. 만약 선 진영이라면, 그들은 죽고 오늘밤 아무도 죽지 않습니다",
         "remindersGlobal": [],
         "reminders": [
-            "사망"
+            "사망",
+            "Faux Paw"
         ]
     },
     {

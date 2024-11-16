@@ -634,6 +634,17 @@
         "reminders": []
     },
     {
+        "id": "gnome",
+        "name": "ノーム",
+        "ability": "すべてのプレイヤーは、あなたのアラインメントのプレイヤーを知り始めます。指名したプレイヤーを殺すこともできます。",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": [
+            "アミーゴ"
+        ]
+    },
+    {
         "id": "goblin",
         "name": "ゴブリン",
         "ability": "指名されたときに自分がゴブリンであると公言し、その日に処刑されれば、あなたのチームが勝ちます。",
@@ -956,7 +967,8 @@
         "otherNightReminder": "ライカンスロープは生きているプレイヤーを指します。善良であれば彼らは死に、今夜は他の誰も死ぬことはできません。",
         "remindersGlobal": [],
         "reminders": [
-            "死者"
+            "死者",
+            "失礼な行為"
         ]
     },
     {
