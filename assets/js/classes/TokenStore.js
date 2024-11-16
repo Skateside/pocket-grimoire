@@ -71,7 +71,7 @@ export default class TokenStore {
      *         true if the ID looks like a reminder id, false if it doesn't.
      */
     static isReminderId(id) {
-        return (/^\w*:[\w-]+$/).test(id);
+        return (/:\d+$/).test(id);
     }
 
     /**
@@ -86,7 +86,7 @@ export default class TokenStore {
      *         Correctly formatted character ID.
      */
     static normaliseId(id) {
-        return id.replace(/[-_]/g, "");
+        return id.replace(/[-_]/g, "").toLowerCase();
     }
 
     /**

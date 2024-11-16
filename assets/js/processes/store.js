@@ -76,7 +76,9 @@ tokenObserver.on("move", ({ detail }) => {
         || pad.getReminderByToken(element)
     );
 
-    store.moveToken(token, left, top, zIndex);
+    if (token) {
+        store.moveToken(token, left, top, zIndex);
+    }
 
 });
 
@@ -91,7 +93,9 @@ tokenObserver.on("zindex", ({ detail }) => {
         || pad.getReminderByToken(element)
     );
 
-    store.alignToken(token, zIndex);
+    if (token) {
+        store.alignToken(token, zIndex);
+    }
 
 });
 
