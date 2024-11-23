@@ -1,4 +1,4 @@
-import "./processes/errors.js";
+// import "./processes/errors.js";
 
 import "./processes/setup/general.js";
 import "./processes/setup/select-edition.js";
