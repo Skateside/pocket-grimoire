@@ -3451,6 +3451,25 @@
         "image": "/build/img/icons/townsfolk/wushiren.webp"
     },
     {
+        "id": "xaan",
+        "name": "Xaan",
+        "edition": "",
+        "team": "minion",
+        "firstNight": 22,
+        "firstNightReminder": "If the X token is placed in the Grimoire, all Townsfolk are poisoned.",
+        "otherNight": 5,
+        "otherNightReminder": "If the X token is placed in the Grimoire, all Townsfolk are poisoned.",
+        "reminders": [
+            "Night 1",
+            "Night 2",
+            "Night 3",
+            "X"
+        ],
+        "setup": true,
+        "ability": "On night X, all Townsfolk are poisoned until dusk. [X Outsiders]",
+        "image": "/build/img/icons/minion/xaan.webp"
+    },
+    {
         "id": "xingjiaoshang",
         "name": "行脚商",
         "edition": "hdcs",

@@ -1738,6 +1738,20 @@
         ]
     },
     {
+        "id": "xaan",
+        "name": "Xaan",
+        "ability": "La nuit X, tous les Villageois sont empoisonnés jusqu'au crépuscule. [X Etrangers]",
+        "firstNightReminder": "Marquez le Xaan avec le rappel 'Nuit 1'. Si X est 1, marquez le Xaan avec le jeton de rappel 'X'.",
+        "otherNightReminder": "Changez le jeton de rappel du Xaan pour la nuit appropriée. S'il s'agit de la nuit X, marquez le Xaan avec le jeton de rappel 'X'.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Nuit 1",
+            "Nuit 2",
+            "Nuit 3",
+            "X"
+        ]
+    },
+    {
         "id": "yaggababble",
         "name": "Yaggababble",
         "ability": "Vous commencez à connaître une phrase secrète. À chaque fois que vous le dites publiquement aujourd’hui, un joueur risque de mourir.",
