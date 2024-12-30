@@ -1,0 +1,707 @@
+[
+    {
+        "target": "chambermaid",
+        "trick": "mathematician",
+        "reason": "Chambermaid mengetahui apakah Mathematician bangun malam ini atau tidak, meskipun Chambermaid bangun lebih dulu."
+    },
+    {
+        "target": "eviltwin",
+        "trick": "plaguedoctor",
+        "reason": "Storyteller tidak dapat memperoleh kemampuan Evil Twin jika Plague Doctor mati."
+    },
+    {
+        "target": "cannibal",
+        "trick": "butler",
+        "reason": "Jika Cannibal mendapatkan kemampuan Butler, Cannibal mengetahuinya."
+    },
+    {
+        "target": "cannibal",
+        "trick": "juggler",
+        "reason": "Jika Juggler membuat tebakan pada hari pertama dan dieksekusi, malam ini Cannibal yang masih hidup mengetahui berapa banyak tebakan Juggler yang benar."
+    },
+    {
+        "target": "cannibal",
+        "trick": "zealot",
+        "reason": "Jika Cannibal mendapatkan kemampuan Zealot, Cannibal mengetahuinya."
+    },
+    {
+        "target": "cannibal",
+        "trick": "poppygrower",
+        "reason": "Jika Cannibal memakan Poppy Grower, kemudian mati atau kehilangan kemampuan Poppy Grower, Demon dan Minion saling mengenali satu sama lain malam itu."
+    },
+    {
+        "target": "lunatic",
+        "trick": "mathematician",
+        "reason": "Mathematician mengetahui jika Lunatic menyerang pemain yang berbeda dari pemain yang diserang oleh Demon asli."
+    },
+    {
+        "target": "pithag",
+        "trick": "heretic",
+        "reason": "Pit-Hag tidak dapat menciptakan Heretic."
+    },
+    {
+        "target": "pithag",
+        "trick": "damsel",
+        "reason": "Jika Pit-Hag menciptakan Damsel, Storyteller memilih pemain mana yang menjadi Damsel."
+    },
+    {
+        "target": "pithag",
+        "trick": "politician",
+        "reason": "Pit-Hag tidak dapat menciptakan Politician jahat."
+    },
+    {
+        "target": "pithag",
+        "trick": "villageidiot",
+        "reason": "Jika ada token cadangan, Pit-Hag dapat menciptakan Village Idiot tambahan. Jika demikian, Village Idiot yang mabuk mungkin berubah."
+    },
+    {
+        "target": "pithag",
+        "trick": "cultleader",
+        "reason": "Jika Pit-Hag mengubah pemain jahat menjadi Cult Leader, mereka tidak bisa menjadi baik karena kemampuan mereka sendiri."
+    },
+    {
+        "target": "pithag",
+        "trick": "goon",
+        "reason": "Jika Pit-Hag mengubah pemain jahat menjadi Goon, mereka tidak bisa menjadi baik karena kemampuan mereka sendiri."
+    },
+    {
+        "target": "pithag",
+        "trick": "ogre",
+        "reason": "Jika Pit-Hag mengubah pemain jahat menjadi Ogre, mereka tidak bisa menjadi baik karena kemampuan mereka sendiri."
+    },
+    {
+        "target": "cerenovus",
+        "trick": "goblin",
+        "reason": "Cerenovus dapat memilih untuk membuat seorang pemain menjadi marah bahwa mereka adalah Goblin."
+    },
+    {
+        "target": "goblin",
+        "trick": "plaguedoctor",
+        "reason": "Jika Plague Doctor mati, seorang Minion yang masih hidup mendapatkan kemampuan Goblin selain kemampuan mereka sendiri, dan mengetahuinya."
+    },
+    {
+        "target": "leviathan",
+        "trick": "soldier",
+        "reason": "Jika Leviathan menominasikan dan mengeksekusi Soldier, Soldier tidak mati."
+    },
+    {
+        "target": "leviathan",
+        "trick": "monk",
+        "reason": "Jika Leviathan menominasikan dan mengeksekusi pemain yang dipilih oleh Monk, pemain tersebut tidak mati."
+    },
+    {
+        "target": "leviathan",
+        "trick": "innkeeper",
+        "reason": "Jika Leviathan menominasikan dan mengeksekusi pemain yang dipilih oleh Innkeeper, pemain tersebut tidak mati."
+    },
+    {
+        "target": "leviathan",
+        "trick": "ravenkeeper",
+        "reason": "Jika Leviathan dimainkan dan Ravenkeeper mati melalui eksekusi, mereka bangun malam itu untuk menggunakan kemampuan mereka."
+    },
+    {
+        "target": "leviathan",
+        "trick": "banshee",
+        "reason": "Jika Leviathan dimainkan, dan Banshee mati melalui eksekusi, semua pemain mengetahui bahwa Banshee telah mati, dan Banshee mendapatkan kemampuan mereka."
+    },
+    {
+        "target": "leviathan",
+        "trick": "sage",
+        "reason": "Jika Leviathan dimainkan dan Sage mati melalui eksekusi, mereka bangun malam itu untuk menggunakan kemampuan mereka."
+    },
+    {
+        "target": "leviathan",
+        "trick": "farmer",
+        "reason": "Jika Leviathan dimainkan dan seorang Farmer mati melalui eksekusi, seorang pemain baik menjadi Farmer malam itu."
+    },
+    {
+        "target": "leviathan",
+        "trick": "mayor",
+        "reason": "Jika Leviathan dimainkan dan tidak ada eksekusi pada hari ke-5, pihak baik menang."
+    },
+    {
+        "target": "leviathan",
+        "trick": "hatter",
+        "reason": "Jika Hatter mati pada atau setelah hari ke-5, Demon tidak dapat memilih Leviathan."
+    },
+    {
+        "target": "leviathan",
+        "trick": "pithag",
+        "reason": "Setelah hari ke-5, Pit-Hag tidak dapat memilih Leviathan."
+    },
+    {
+        "target": "lilmonsta",
+        "trick": "poppygrower",
+        "reason": "Jika Poppy Grower dimainkan, Minion tidak bangun bersama. Mereka dibangunkan satu per satu, hingga salah satu dari mereka memilih untuk mengambil token Lil' Monsta."
+    },
+    {
+        "target": "lilmonsta",
+        "trick": "magician",
+        "reason": "Setiap malam, Magician memilih seorang Minion: jika Minion tersebut dan Lil' Monsta masih hidup, Minion tersebut menjaga Lil' Monsta."
+    },
+    {
+        "target": "lilmonsta",
+        "trick": "scarletwoman",
+        "reason": "Jika ada 5 atau lebih pemain yang masih hidup dan pemain yang memegang token Lil' Monsta mati, Scarlet Woman diberikan token Lil' Monsta malam itu."
+    },
+    {
+        "target": "lilmonsta",
+        "trick": "organgrinder",
+        "reason": "Suara untuk Organ Grinder dihitung jika Organ Grinder sedang menjaga Lil' Monsta."
+    },
+    {
+        "target": "lilmonsta",
+        "trick": "vizier",
+        "reason": "Vizier dapat mati melalui eksekusi jika mereka sedang menjaga Lil' Monsta."
+    },
+    {
+        "target": "lilmonsta",
+        "trick": "hatter",
+        "reason": "Jika Demon memilih Lil' Monsta, mereka juga memilih seorang Minion untuk menjadi penjaga Lil' Monsta malam itu."
+    },
+    {
+        "target": "legion",
+        "trick": "engineer",
+        "reason": "Legion dan Engineer tidak dapat keduanya dimainkan di awal permainan. Jika Engineer menciptakan Legion, sebagian besar pemain (termasuk semua pemain jahat) menjadi Legion jahat."
+    },
+    {
+        "target": "legion",
+        "trick": "preacher",
+        "reason": "Jika Preacher memilih Legion, Legion tetap memiliki kemampuan mereka, tetapi Preacher mungkin mengetahui bahwa mereka adalah Legion."
+    },
+    {
+        "target": "legion",
+        "trick": "minstrel",
+        "reason": "Jika Legion mati melalui eksekusi hari ini, Legion tetap memiliki kemampuan mereka, tetapi Minstrel mungkin mengetahui bahwa mereka adalah Legion."
+    },
+    {
+        "target": "legion",
+        "trick": "hatter",
+        "reason": "Jika Hatter mati dan Legion dimainkan, tidak ada yang terjadi. Jika Hatter mati dan seorang pemain jahat memilih Legion, semua pemain jahat saat ini menjadi Legion."
+    },
+    {
+        "target": "legion",
+        "trick": "zealot",
+        "reason": "Zealot mungkin terdaftar sebagai jahat oleh kemampuan Legion."
+    },
+    {
+        "target": "fanggu",
+        "trick": "scarletwoman",
+        "reason": "Jika Fang Gu memilih Outsider dan mati, Scarlet Woman tidak menjadi Fang Gu."
+    },
+    {
+        "target": "spy",
+        "trick": "alchemist",
+        "reason": "Alchemist tidak dapat memiliki kemampuan Spy."
+    },
+    {
+        "target": "spy",
+        "trick": "magician",
+        "reason": "Ketika Spy melihat Grimoire, token karakter Demon dan Magician dihapus."
+    },
+    {
+        "target": "spy",
+        "trick": "poppygrower",
+        "reason": "Jika Poppy Grower dimainkan, Spy tidak melihat Grimoire hingga Poppy Grower mati."
+    },
+    {
+        "target": "spy",
+        "trick": "plaguedoctor",
+        "reason": "Jika Plague Doctor mati, seorang Minion yang masih hidup mendapatkan kemampuan Spy selain kemampuan mereka sendiri, dan mengetahuinya."
+    },
+    {
+        "target": "spy",
+        "trick": "damsel",
+        "reason": "Jika Spy sedang (atau pernah) dimainkan, Damsel menjadi keracunan."
+    },
+    {
+        "target": "spy",
+        "trick": "heretic",
+        "reason": "Hanya 1 karakter yang \"terkutuk\" (jinxed) yang dapat dimainkan."
+    },
+    {
+        "target": "spy",
+        "trick": "ogre",
+        "reason": "Spy terdaftar sebagai jahat oleh Ogre."
+    },
+    {
+        "target": "widow",
+        "trick": "alchemist",
+        "reason": "Alchemist tidak dapat memiliki kemampuan Widow."
+    },
+    {
+        "target": "widow",
+        "trick": "magician",
+        "reason": "Ketika Widow melihat Grimoire, token karakter Demon dan Magician dihapus."
+    },
+    {
+        "target": "widow",
+        "trick": "poppygrower",
+        "reason": "Jika Poppy Grower dimainkan, Widow tidak melihat Grimoire hingga Poppy Grower mati."
+    },
+    {
+        "target": "widow",
+        "trick": "damsel",
+        "reason": "Jika Widow sedang (atau pernah) dimainkan, Damsel menjadi keracunan."
+    },
+    {
+        "target": "widow",
+        "trick": "heretic",
+        "reason": "Hanya 1 karakter yang \"terkutuk\" (jinxed) yang dapat dimainkan."
+    },
+    {
+        "target": "godfather",
+        "trick": "heretic",
+        "reason": "Hanya 1 karakter yang \"terkutuk\" (jinxed) yang dapat dimainkan."
+    },
+    {
+        "target": "scarletwoman",
+        "trick": "plaguedoctor",
+        "reason": "Jika Plague Doctor mati, seorang Minion yang masih hidup mendapatkan kemampuan Scarlet Woman selain kemampuan mereka sendiri, dan mengetahuinya."
+    },
+    {
+        "target": "boomdandy",
+        "trick": "plaguedoctor",
+        "reason": "Jika Plague Doctor dieksekusi dan Storyteller akan mendapatkan kemampuan Boomdandy, kemampuan Boomdandy segera aktif."
+    },
+    {
+        "target": "fearmonger",
+        "trick": "plaguedoctor",
+        "reason": "Jika Plague Doctor mati, seorang Minion yang masih hidup mendapatkan kemampuan Fearmonger selain kemampuan mereka sendiri, dan mengetahuinya."
+    },
+    {
+        "target": "yaggababble",
+        "trick": "exorcist",
+        "reason": "Jika Exorcist memilih Yaggababble, kemampuan Yaggababble tidak membunuh malam ini."
+    },
+    {
+        "target": "summoner",
+        "trick": "clockmaker",
+        "reason": "Jika Summoner dimainkan, Clockmaker tidak menerima informasi mereka hingga seorang Demon tercipta."
+    },
+    {
+        "target": "summoner",
+        "trick": "alchemist",
+        "reason": "Jika ada Alchemist-Summoner dalam permainan, permainan dimulai dengan seorang Demon, seperti biasa. Jika Alchemist-Summoner memilih seorang pemain, mereka menjadikan pemain tersebut sebagai Demon tetapi tidak mengubah keselarasan mereka."
+    },
+    {
+        "target": "summoner",
+        "trick": "poppygrower",
+        "reason": "Jika Poppy Grower masih hidup saat Summoner bertindak, Summoner memilih Demon mana yang dibuat, tetapi Storyteller memilih pemain mana yang menjadi Demon."
+    },
+    {
+        "target": "summoner",
+        "trick": "marionette",
+        "reason": "Marionette bertetangga dengan Summoner. Summoner mengetahui siapa Marionette."
+    },
+    {
+        "target": "summoner",
+        "trick": "pithag",
+        "reason": "Summoner tidak dapat menciptakan Demon yang sudah dimainkan. Jika Summoner menciptakan Demon yang belum dimainkan, kematian malam ini menjadi acak."
+    },
+    {
+        "target": "summoner",
+        "trick": "hatter",
+        "reason": "Summoner tidak dapat menciptakan Demon yang sudah dimainkan. Jika Summoner menciptakan Demon yang belum dimainkan, kematian malam ini menjadi acak."
+    },
+    {
+        "target": "summoner",
+        "trick": "courtier",
+        "reason": "Jika Summoner mabuk pada malam ke-3, Summoner memilih Demon, tetapi Storyteller memilih pemain."
+    },
+    {
+        "target": "summoner",
+        "trick": "engineer",
+        "reason": "Jika Engineer menghapus Summoner dari permainan sebelum Summoner menggunakan kemampuan mereka, Summoner langsung menggunakan kemampuan mereka."
+    },
+    {
+        "target": "summoner",
+        "trick": "zombuul",
+        "reason": "Jika Summoner mengubah pemain mati menjadi Zombuul, Storyteller memperlakukan pemain tersebut sebagai Zombuul yang telah mati sekali."
+    },
+    {
+        "target": "summoner",
+        "trick": "pukka",
+        "reason": "Summoner dapat memilih seorang pemain untuk menjadi Pukka pada malam ke-2."
+    },
+    {
+        "target": "summoner",
+        "trick": "riot",
+        "reason": "Jika Summoner menciptakan Riot, semua Minions menjadi Riot."
+    },
+    {
+        "target": "summoner",
+        "trick": "legion",
+        "reason": "Jika Summoner menciptakan Legion, sebagian besar pemain (termasuk semua pemain jahat) menjadi Legion jahat."
+    },
+    {
+        "target": "summoner",
+        "trick": "kazali",
+        "reason": "Summoner tidak dapat menciptakan Demon yang sudah dimainkan. Jika Summoner menciptakan Demon yang belum dimainkan, kematian malam ini menjadi acak."
+    },
+    {
+        "target": "summoner",
+        "trick": "preacher",
+        "reason": "Jika Preacher memilih Summoner pada atau sebelum malam ke-3, Summoner memilih Demon, tetapi Storyteller memilih pemain."
+    },
+    {
+        "target": "summoner",
+        "trick": "lordoftyphon",
+        "reason": "Jika Summoner menciptakan Lord of Typhon, Lord of Typhon harus bertetangga dengan seorang Minion. Tetangga lainnya menjadi Minion jahat yang belum dimainkan."
+    },
+    {
+        "target": "baron",
+        "trick": "heretic",
+        "reason": "Baron hanya bisa menambahkan 1 Outsider, bukan 2."
+    },
+    {
+        "target": "baron",
+        "trick": "plaguedoctor",
+        "reason": "Jika Storyteller mendapatkan kemampuan Baron, hingga dua pemain menjadi Outsiders yang tidak aktif."
+    },
+    {
+        "target": "marionette",
+        "trick": "lilmonsta",
+        "reason": "Marionette bertetangga dengan Minion, bukan Demon. Marionette tidak dibangunkan untuk memilih siapa yang mengambil token Lil' Monsta, dan tidak mengetahui mereka adalah Marionette jika mereka memiliki token Lil' Monsta."
+    },
+    {
+        "target": "marionette",
+        "trick": "poppygrower",
+        "reason": "Ketika Poppy Grower mati, Demon mengetahui Marionette, tetapi Marionette tidak mengetahui apapun."
+    },
+    {
+        "target": "marionette",
+        "trick": "snitch",
+        "reason": "Marionette tidak mengetahui 3 karakter yang tidak dimainkan. Demon mengetahui 3 tambahan karakter."
+    },
+    {
+        "target": "marionette",
+        "trick": "balloonist",
+        "reason": "Jika Marionette mengira mereka adalah Balloonist, +1 Outsider mungkin telah ditambahkan."
+    },
+    {
+        "target": "marionette",
+        "trick": "damsel",
+        "reason": "Marionette tidak mengetahui bahwa Damsel sedang dimainkan."
+    },
+    {
+        "target": "marionette",
+        "trick": "plaguedoctor",
+        "reason": "Jika Demon memiliki tetangga yang masih hidup dan merupakan Townsfolk atau Outsider ketika Plague Doctor mati, pemain tersebut menjadi Marionette jahat. Jika sudah ada pemain jahat tambahan, ini tidak terjadi."
+    },
+    {
+        "target": "marionette",
+        "trick": "huntsman",
+        "reason": "Jika Marionette mengira mereka adalah Huntsman, Damsel telah ditambahkan."
+    },
+    {
+        "target": "lleech",
+        "trick": "mastermind",
+        "reason": "Jika Mastermind masih hidup dan Lleech's host mati karena eksekusi, Lleech hidup tetapi kehilangan kemampuan mereka."
+    },
+    {
+        "target": "lleech",
+        "trick": "slayer",
+        "reason": "Jika Slayer membunuh Lleech's host, host mati."
+    },
+    {
+        "target": "lleech",
+        "trick": "heretic",
+        "reason": "Jika Lleech telah meracuni Heretic, kemudian Lleech mati, Heretic tetap diracuni."
+    },
+    {
+        "target": "kazali",
+        "trick": "bountyhunter",
+        "reason": "Seorang Townsfolk jahat hanya diciptakan jika Bounty Hunter masih dimainkan setelah Kazali bertindak."
+    },
+    {
+        "target": "kazali",
+        "trick": "goon",
+        "reason": "Kazali dapat memilih bahwa pemain Goon adalah salah satu Minion jahat mereka."
+    },
+    {
+        "target": "kazali",
+        "trick": "marionette",
+        "reason": "Jika Kazali memilih untuk menciptakan Marionette, mereka harus memilih salah satu tetangga mereka."
+    },
+    {
+        "target": "kazali",
+        "trick": "huntsman",
+        "reason": "Jika Kazali memilih Damsel untuk menjadi Minion, dan Huntsman dimainkan, seorang pemain baik menjadi Damsel."
+    },
+    {
+        "target": "kazali",
+        "trick": "choirboy",
+        "reason": "Kazali tidak dapat memilih King untuk menjadi Minion jika Choirboy dimainkan."
+    },
+    {
+        "target": "kazali",
+        "trick": "soldier",
+        "reason": "Kazali dapat memilih bahwa pemain Soldier adalah salah satu Minion jahat mereka."
+    },
+    {
+        "target": "riot",
+        "trick": "engineer",
+        "reason": "Riot dan Engineer tidak dapat keduanya dimainkan di awal permainan. Jika Engineer menciptakan Riot, pemain jahat menjadi Riot."
+    },
+    {
+        "target": "riot",
+        "trick": "golem",
+        "reason": "Jika Golem menominasikan Riot, pemain Riot tidak mati."
+    },
+    {
+        "target": "riot",
+        "trick": "snitch",
+        "reason": "Jika Snitch dimainkan, setiap pemain Riot mendapatkan tambahan 3 bluffs."
+    },
+    {
+        "target": "riot",
+        "trick": "saint",
+        "reason": "Jika seorang pemain baik menominasikan dan membunuh Saint, tim Saint kalah."
+    },
+    {
+        "target": "riot",
+        "trick": "butler",
+        "reason": "Butler tidak dapat menominasikan tuannya."
+    },
+    {
+        "target": "riot",
+        "trick": "pithag",
+        "reason": "Jika Pit-Hag menciptakan Riot, semua pemain jahat menjadi Riot. Jika Pit-Hag menciptakan Riot setelah hari ke-3, permainan dilanjutkan selama satu hari lagi."
+    },
+    {
+        "target": "riot",
+        "trick": "mayor",
+        "reason": "Jika hari ke-3 dimulai dengan hanya tiga pemain yang masih hidup, pemain dapat memilih (sebagai kelompok) untuk tidak menominasikan sama sekali. Jika demikian (dan Mayor masih hidup), tim Mayor menang."
+    },
+    {
+        "target": "riot",
+        "trick": "monk",
+        "reason": "Jika pemain Riot menominasikan dan membunuh pemain yang dilindungi Monk, pemain yang dilindungi Monk tidak mati."
+    },
+    {
+        "target": "riot",
+        "trick": "farmer",
+        "reason": "Jika pemain Riot menominasikan dan membunuh Farmer, Farmer menggunakan kemampuan mereka malam ini."
+    },
+    {
+        "target": "riot",
+        "trick": "innkeeper",
+        "reason": "Jika pemain Riot menominasikan pemain yang dilindungi Innkeeper, pemain yang dilindungi Innkeeper tidak mati."
+    },
+    {
+        "target": "riot",
+        "trick": "sage",
+        "reason": "Jika pemain Riot menominasikan dan membunuh Sage, Sage menggunakan kemampuan mereka malam ini."
+    },
+    {
+        "target": "riot",
+        "trick": "banshee",
+        "reason": "Jika Riot menominasikan dan membunuh Banshee, semua pemain mengetahui bahwa Banshee telah mati, dan Banshee dapat menominasikan dua pemain segera."
+    },
+    {
+        "target": "riot",
+        "trick": "ravenkeeper",
+        "reason": "Jika pemain Riot menominasikan dan membunuh Ravenkeeper, Ravenkeeper menggunakan kemampuan mereka malam ini."
+    },
+    {
+        "target": "riot",
+        "trick": "soldier",
+        "reason": "Jika pemain Riot menominasikan Soldier, Soldier tidak mati."
+    },
+    {
+        "target": "riot",
+        "trick": "grandmother",
+        "reason": "Jika pemain Riot menominasikan dan membunuh Grandchild, Grandmother juga mati."
+    },
+    {
+        "target": "riot",
+        "trick": "king",
+        "reason": "Jika pemain Riot menominasikan dan membunuh King dan Choirboy masih hidup, Choirboy menggunakan kemampuan mereka malam ini."
+    },
+    {
+        "target": "riot",
+        "trick": "exorcist",
+        "reason": "Hanya 1 karakter jinxed yang dapat dimainkan."
+    },
+    {
+        "target": "riot",
+        "trick": "minstrel",
+        "reason": "Hanya 1 karakter jinxed yang dapat dimainkan."
+    },
+    {
+        "target": "riot",
+        "trick": "flowergirl",
+        "reason": "Hanya 1 karakter jinxed yang dapat dimainkan."
+    },
+    {
+        "target": "riot",
+        "trick": "undertaker",
+        "reason": "Pemain yang mati karena nominasi tercatat sebagai dieksekusi oleh Undertaker."
+    },
+    {
+        "target": "riot",
+        "trick": "cannibal",
+        "reason": "Pemain yang mati karena nominasi tercatat sebagai dieksekusi oleh Cannibal."
+    },
+    {
+        "target": "riot",
+        "trick": "pacifist",
+        "reason": "Pemain yang mati karena nominasi tercatat sebagai dieksekusi oleh Pacifist."
+    },
+    {
+        "target": "riot",
+        "trick": "devilsadvocate",
+        "reason": "Pemain yang mati karena nominasi tercatat sebagai dieksekusi oleh Devil's Advocate."
+    },
+    {
+        "target": "riot",
+        "trick": "investigator",
+        "reason": "Riot tercatat sebagai Minion untuk Investigator."
+    },
+    {
+        "target": "riot",
+        "trick": "clockmaker",
+        "reason": "Riot tercatat sebagai Minion untuk Clockmaker."
+    },
+    {
+        "target": "riot",
+        "trick": "towncrier",
+        "reason": "Riot tercatat sebagai Minion untuk Town Crier."
+    },
+    {
+        "target": "riot",
+        "trick": "damsel",
+        "reason": "Riot tercatat sebagai Minion untuk Damsel."
+    },
+    {
+        "target": "riot",
+        "trick": "preacher",
+        "reason": "Riot tercatat sebagai Minion untuk Preacher."
+    },
+    {
+        "target": "riot",
+        "trick": "hatter",
+        "reason": "Jika Hatter mati, Riot dimainkan dan Riot memilih Demon lain, sebuah tim jahat normal diciptakan dari pemain Riot. Jika Hatter mati dan Demon memilih Riot, Minions juga menjadi Riot."
+    },
+    {
+        "target": "riot",
+        "trick": "zealot",
+        "reason": "Jika Anda dinominasikan, Anda harus menominasikan lagi, meskipun sudah mati."
+    },
+    {
+        "target": "alhadikhia",
+        "trick": "scarletwoman",
+        "reason": "Jika ada dua Al-Hadikhias yang masih hidup, Scarlet Woman Al-Hadikhia menjadi Scarlet Woman lagi."
+    },
+    {
+        "target": "organgrinder",
+        "trick": "butler",
+        "reason": "Jika Organ Grinder menyebabkan pemungutan suara dengan mata tertutup, Butler dapat mengangkat tangan untuk memilih, tetapi suara mereka hanya dihitung jika tuannya juga memilih."
+    },
+    {
+        "target": "vizier",
+        "trick": "investigator",
+        "reason": "Jika Investigator mengetahui bahwa Vizier sedang dimainkan, keberadaan Vizier tidak diumumkan oleh Storyteller."
+    },
+    {
+        "target": "vizier",
+        "trick": "preacher",
+        "reason": "Jika Vizier kehilangan kemampuan mereka, mereka mengetahui ini dan jika Vizier dieksekusi saat mereka masih memiliki kemampuan, tim mereka menang."
+    },
+    {
+        "target": "vizier",
+        "trick": "courtier",
+        "reason": "Jika Vizier kehilangan kemampuan mereka, mereka mengetahui ini dan jika Vizier dieksekusi saat mereka masih memiliki kemampuan, tim mereka menang."
+    },
+    {
+        "target": "vizier",
+        "trick": "alchemist",
+        "reason": "Jika Alchemist memiliki kemampuan Vizier, mereka hanya dapat memilih untuk mengeksekusi segera jika tiga atau lebih pemain memilih."
+    },
+    {
+        "target": "vizier",
+        "trick": "magician",
+        "reason": "Hanya 1 karakter jinxed yang dapat dimainkan."
+    },
+    {
+        "target": "vizier",
+        "trick": "fearmonger",
+        "reason": "Vizier dibangunkan dengan Fearmonger, mengetahui siapa yang mereka pilih dan tidak dapat memilih untuk mengeksekusi pemain tersebut."
+    },
+    {
+        "target": "vizier",
+        "trick": "politician",
+        "reason": "Politician mungkin tercatat sebagai jahat untuk Vizier."
+    },
+    {
+        "target": "vizier",
+        "trick": "alsaahir",
+        "reason": "Jika Vizier sedang dimainkan, Alsaahir juga harus menebak Demon yang mana yang sedang dimainkan."
+    },
+    {
+        "target": "vizier",
+        "trick": "zealot",
+        "reason": "Zealot mungkin tercatat sebagai jahat untuk Vizier."
+    },
+    {
+        "target": "vortox",
+        "trick": "banshee",
+        "reason": "Jika Vortox sedang dimainkan dan Demon membunuh Banshee, pemain tetap mengetahui bahwa Banshee telah mati."
+    },
+    {
+        "target": "ogre",
+        "trick": "recluse",
+        "reason": "Jika Recluse tercatat sebagai jahat untuk Ogre, Ogre mengetahui bahwa mereka jahat."
+    },
+    {
+        "target": "philosopher",
+        "trick": "bountyhunter",
+        "reason": "Jika Philosopher mendapatkan kemampuan Bounty Hunter, seorang Townsfolk mungkin menjadi jahat."
+    },
+    {
+        "target": "mastermind",
+        "trick": "alhadikhia",
+        "reason": "Jika Al-Hadikhia mati karena eksekusi, dan Mastermind masih hidup, Al-Hadikhia memilih 3 pemain baik malam ini: jika semua 3 memilih untuk hidup, jahat menang. Jika tidak, baik menang."
+    },
+    {
+        "target": "boffin",
+        "trick": "heretic",
+        "reason": "Demon tidak dapat memiliki kemampuan Heretic."
+    },
+    {
+        "target": "boffin",
+        "trick": "cultleader",
+        "reason": "Jika Demon memiliki kemampuan Cult Leader, mereka tidak dapat berubah menjadi baik karena kemampuan ini."
+    },
+    {
+        "target": "boffin",
+        "trick": "goon",
+        "reason": "Jika Demon memiliki kemampuan Goon, mereka tidak dapat berubah menjadi baik karena kemampuan ini."
+    },
+    {
+        "target": "boffin",
+        "trick": "ogre",
+        "reason": "Demon tidak dapat memiliki kemampuan Ogre."
+    },
+    {
+        "target": "boffin",
+        "trick": "politician",
+        "reason": "Demon tidak dapat memiliki kemampuan Politician."
+    },
+    {
+        "target": "boffin",
+        "trick": "drunk",
+        "reason": "Jika Demon seharusnya memiliki kemampuan Drunk, Boffin memilih pemain Townsfolk untuk memiliki kemampuan ini sebagai gantinya."
+    },
+    {
+        "target": "boffin",
+        "trick": "alchemist",
+        "reason": "Jika Alchemist memiliki kemampuan Boffin, Alchemist tidak mengetahui kemampuan apa yang dimiliki Demon."
+    },
+    {
+        "target": "boffin",
+        "trick": "villageidiot",
+        "reason": "Jika ada token cadangan, Boffin dapat memberi Demon kemampuan Village Idiot."
+    }
+]
