@@ -471,7 +471,7 @@
         "id": "engineer",
         "name": "Inżynier",
         "ability": "Raz na grę, w nocy, wybierz, jacy Sługusi lub Demon będą w grze.",
-        "firstNightReminder": "Inżynier pokazuje kręci głową na \"nie\" lub wskazuje na Demona lub wskazuje na odpowiednią liczbę Sługusów. Jeśli Inżynier wybrał postacie, zastąp Demona lub Sługusy zgodnie z wyborem, a następnie obudź odpowiednich graczy i pokaż im kartę \"Jesteś\" i odpowiednie tokeny postaci.",
+        "firstNightReminder": "Inżynier kręci głową na \"nie\" lub wskazuje na Demona lub wskazuje na odpowiednią liczbę Sługusów. Jeśli Inżynier wybrał postacie, zastąp Demona lub Sługusy zgodnie z wyborem, a następnie obudź odpowiednich graczy i pokaż im kartę \"Jesteś\" i odpowiednie tokeny postaci.",
         "otherNightReminder": "Inżynier kręci głową na \"nie\" lub wskazuje na Demona lub wskazuje na odpowiednią liczbę Sługusów. Jeśli Inżynier wybrał postacie, zastąp Demona lub Sługusy zgodnie z wyborem, a następnie obudź odpowiednich graczy i pokaż im kartę \"Jesteś\" i odpowiednie tokeny postaci.",
         "remindersGlobal": [],
         "reminders": [
@@ -597,7 +597,7 @@
     {
         "id": "fortuneteller",
         "name": "Wróżka",
-        "ability": "Każdej nocy wybierasz 2 graczy – dowiadujesz się, czy któryś z nich jest Demonem. Jeden z dobrych graczy pokazuje Ci się jako zły.",
+        "ability": "Każdej nocy wybierasz 2 graczy – dowiadujesz się, czy któryś z nich jest Demonem. Jeden z dobrych graczy jest przez Ciebie rejestrowany jako zły.",
         "firstNightReminder": "Wróżka wskazuje na dwóch graczy. Pokręć głową na \"\"tak\"\" lub \"\"nie\"\" w zależności od tego czy jeden z tych graczy jest Demonem.",
         "otherNightReminder": "Wróżka wskazuje na dwóch graczy. Pokręć głową na \"\"tak\"\" lub \"\"nie\"\" w zależności od tego czy jeden z tych graczy jest Demonem.",
         "remindersGlobal": [],
@@ -668,7 +668,7 @@
     {
         "id": "godfather",
         "name": "Ojciec Chrzestny",
-        "ability": "Każdej nocy wybierz żywego gracza (innego niż poprzedniej nocy). Jeśli jutro zostanie stracony, nie umrze.",
+        "ability": "Zaczynasz wiedząc jacy Outsiderzy są w grze. Jeśli dzisiaj któryś z nich umarł, dzisiejszą nocą wybierz gracza: ten gracz umiera. [-1 lub +1 Outsider]",
         "firstNightReminder": "Pokaż tokeny wszystkich Outsiderów biorących udział w grze.",
         "otherNightReminder": "Jeśli dzisiaj zmarł Outsider: Ojciec Chrzestny wskazuje na gracza. Ten gracz umiera.",
         "remindersGlobal": [],
@@ -905,7 +905,7 @@
     {
         "id": "legion",
         "name": "Legion",
-        "ability": "Każdej nocy* gracz może umrzeć. Egzekucje kończą się niepowodzeniem, jeśli tylko zło głosowało. Pokazujesz się również jako Sługus. [Większość graczy to Legion].",
+        "ability": "Każdej nocy* gracz może umrzeć. Egzekucje kończą się niepowodzeniem, jeśli tylko zło głosowało. Jesteś rejestrowany zarówno jako Demon jak i Sługus. [Większość graczy to Legion].",
         "firstNightReminder": "",
         "otherNightReminder": "Wybierz gracza, ten gracz umiera.",
         "remindersGlobal": [],
@@ -1348,7 +1348,7 @@
     {
         "id": "recluse",
         "name": "Odludek",
-        "ability": "Możesz pokazać się jako zły i jako Sługus lub Demon, nawet po śmierci.",
+        "ability": "Możesz być rejestrowany jako zły i jako Sługus lub Demon, nawet po śmierci.",
         "firstNightReminder": "",
         "otherNightReminder": "",
         "remindersGlobal": [],
@@ -1357,12 +1357,12 @@
     {
         "id": "revolutionary",
         "name": "Rewolucjonista",
-        "ability": "Wiadomo, że 2 sąsiadujących graczy jest w tej samej drużynie. Raz na grę, jeden z nich pokazuje się niezgodnie z prawdą",
+        "ability": "Wiadomo, że 2 sąsiadujących graczy jest w tej samej drużynie. Raz na grę, jeden z nich jest rejestrowany niezgodnie z prawdą",
         "firstNightReminder": "",
         "otherNightReminder": "",
         "remindersGlobal": [],
         "reminders": [
-            "Pokazuje się nieprawdziwie?"
+            "Jest rejestrowany nieprawdziwie?"
         ]
     },
     {
@@ -1527,7 +1527,7 @@
     {
         "id": "spy",
         "name": "Szpieg",
-        "ability": "Każdej nocy zaglądasz do Grymuaru. Możesz pokazać się jako dobry i jako Mieszczanin lub Outsider, nawet po śmierci.",
+        "ability": "Każdej nocy zaglądasz do Grymuaru. Możesz być rejestrowany jako dobry i jako Mieszczanin lub Outsider, nawet po śmierci.",
         "firstNightReminder": "Pokaż Grymuar Szpiegowi tak długo, jak gracz tego chce.",
         "otherNightReminder": "Pokaż Grymuar Szpiegowi tak długo, jak gracz tego chce.",
         "remindersGlobal": [],
@@ -1783,7 +1783,7 @@
     {
         "id": "zombuul",
         "name": "Zombuul",
-        "ability": "Każdej nocy*, jeśli dziś nikt nie zginął: wybierz gracza, który umrze. Kiedy umrzesz po raz pierwszy, będziesz nadal żyć, ale będziesz się pokazywać jako martwy.",
+        "ability": "Każdej nocy*, jeśli dziś nikt nie zginął: wybierz gracza, który umrze. Kiedy umrzesz po raz pierwszy, będziesz nadal żyć, ale będziesz rejestrowany jako martwy.",
         "firstNightReminder": "",
         "otherNightReminder": "Jeśli nikt nie umarł w ciągu dnia: Zombuul wskazuje na gracza. Ten gracz umiera.",
         "remindersGlobal": [],
