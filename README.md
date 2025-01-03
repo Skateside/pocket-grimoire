@@ -107,7 +107,7 @@ If you've noticed a typo, or you have a better translation or would like to add 
     <br>Since this file wasn't created by me, you'll need to let me know of any updates.
     <br>This file has many more translations than the Pocket Grimoire has.
 
-2.  [The Jinxes](https://docs.google.com/spreadsheets/d/1EJQzuQNlzTvNzAOJEIldu0ILKNU3UhsgFr-TZnhxpVM/edit#gid=1649450121)
+2.  [The Jinxes](https://docs.google.com/spreadsheets/d/193DMlJzVSzArj1hV1DF6jcr-NsGRaecAy1ahLflu-Qo/edit?usp=sharing)
     <br>This file contains translations for the jinxes.
     <br>It was created as a separate file so that it could be easily used in other projects.
 
