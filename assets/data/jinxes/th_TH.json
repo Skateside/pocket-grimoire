@@ -17,12 +17,12 @@
     {
         "target": "cannibal",
         "trick": "juggler",
-        "reason": "If the Juggler guesses on their first day and dies by execution, tonight the living Cannibal learns how many guesses the Juggler got correct."
+        "reason": "หากนักเล่นกลเดาได้ในวันแรกและเสียชีวิตจากการประหารชีวิต คืนนี้นักเล่นกลที่ยังมีชีวิตอยู่จะเรียนรู้ว่านักเล่นกลเดาถูกกี่ครั้ง"
     },
     {
         "target": "cannibal",
         "trick": "poppygrower",
-        "reason": "If the Cannibal eats the Poppy Grower, then dies or loses the Poppy Grower ability, the Demon and Minions learn each other that night."
+        "reason": "หาก Cannibal กิน Poppy Grower แล้วตายหรือสูญเสียความสามารถของ Poppy Grower ปีศาจและมินเนี่ยนจะได้เรียนรู้ซึ่งกันและกันในคืนนั้น"
     },
     {
         "target": "cannibal",
@@ -52,7 +52,7 @@
     {
         "target": "heretic",
         "trick": "boffin",
-        "reason": "The Demon cannot have the Heretic ability."
+        "reason": "ปีศาจไม่สามารถมีความสามารถนอกรีตได้"
     },
     {
         "target": "heretic",
@@ -87,7 +87,7 @@
     {
         "target": "plaguedoctor",
         "trick": "baron",
-        "reason": "If the Storyteller gains the Baron ability, up to two players become not-in-play Outsiders."
+        "reason": "หากผู้เล่าเรื่องได้รับความสามารถของบารอน ผู้เล่นสูงสุดสองคนจะกลายเป็นคนนอกที่ไม่อยู่ในเกม"
     },
     {
         "target": "plaguedoctor",
@@ -112,7 +112,7 @@
     {
         "target": "plaguedoctor",
         "trick": "marionette",
-        "reason": "If the Demon has a neighbor who is alive and a Townsfolk or Outsider when the Plague Doctor dies, that player becomes an evil Marionette. If there is already an extra evil player, this does not happen."
+        "reason": "หากปีศาจมีเพื่อนบ้านที่ยังมีชีวิตอยู่และมีชาวเมืองหรือคนนอกเมื่อ Plague Doctor ตาย ผู้เล่นคนนั้นจะกลายเป็นหุ่นเชิดที่ชั่วร้าย หากมีผู้เล่นชั่วร้ายเพิ่มอยู่แล้ว สิ่งนี้จะไม่เกิดขึ้น"
     },
     {
         "target": "plaguedoctor",
@@ -127,37 +127,37 @@
     {
         "target": "boffin",
         "trick": "alchemist",
-        "reason": "If the Alchemist has the Boffin ability, the Alchemist does not learn what ability the Demon has."
+        "reason": "หากนักเล่นแร่แปรธาตุมีความสามารถ Boffin นักเล่นแร่แปรธาตุจะไม่เรียนรู้ว่าปีศาจมีความสามารถอะไร"
     },
     {
         "target": "boffin",
         "trick": "cultleader",
-        "reason": "If the Demon has the Cult Leader ability, they can’t turn good due to this ability."
+        "reason": "หากปีศาจมีความสามารถเป็นผู้นำลัทธิ พวกมันจะไม่สามารถกลายเป็นคนดีได้เนื่องจากความสามารถนี้"
     },
     {
         "target": "boffin",
         "trick": "drunk",
-        "reason": "If the Demon would have the Drunk ability, the Boffin chooses a Townsfolk player to have this ability instead."
+        "reason": "หากปีศาจมีความสามารถเมา Boffin จะเลือกผู้เล่น Townsfolk ที่จะมีความสามารถนี้แทน"
     },
     {
         "target": "boffin",
         "trick": "goon",
-        "reason": "If the Demon has the Goon ability, they can’t turn good due to this ability."
+        "reason": "หากปีศาจมีความสามารถ Goon พวกมันจะไม่สามารถกลายเป็นคนดีได้เนื่องจากความสามารถนี้"
     },
     {
         "target": "boffin",
         "trick": "ogre",
-        "reason": "The Demon cannot have the Ogre ability."
+        "reason": "อสูรไม่สามารถมีความสามารถของอสูรได้"
     },
     {
         "target": "boffin",
         "trick": "politician",
-        "reason": "The Demon cannot have the Politician ability."
+        "reason": "ปีศาจไม่สามารถมีความสามารถทางการเมืองได้"
     },
     {
         "target": "boffin",
         "trick": "villageidiot",
-        "reason": "If there is a spare token, the Boffin can give the Demon the Village Idiot ability."
+        "reason": "หากมีโทเค็นสำรอง Boffin สามารถมอบความสามารถ Village Idiot ให้กับ Demon ได้"
     },
     {
         "target": "cerenovus",
@@ -217,7 +217,7 @@
     {
         "target": "pithag",
         "trick": "ogre",
-        "reason": "If the Pit-Hag turns an evil player into the Ogre, they can't turn good due to their own ability."
+        "reason": "หาก Pit-Hag เปลี่ยนผู้เล่นที่ชั่วร้ายให้กลายเป็น Ogre พวกเขาก็จะเปลี่ยนความดีไม่ได้เนื่องจากความสามารถของตัวเอง"
     },
     {
         "target": "pithag",
@@ -242,7 +242,7 @@
     {
         "target": "spy",
         "trick": "alchemist",
-        "reason": "If the Alchemist has the Spy ability, they do not see the Grimoire, and the real Spy cannot register falsely."
+        "reason": "หากนักเล่นแร่แปรธาตุมีความสามารถสายลับ พวกเขาจะไม่เห็นคัมภีร์มัวร์ และสายลับตัวจริงจะไม่สามารถลงทะเบียนผิดพลาดได้"
     },
     {
         "target": "spy",
@@ -302,12 +302,12 @@
     {
         "target": "summoner",
         "trick": "lordoftyphon",
-        "reason": "If the Summoner creates a Lord of Typhon, the Lord of Typhon must neighbor a Minion. The other neighbor becomes a not-in-play evil Minion."
+        "reason": "หากผู้อัญเชิญสร้างลอร์ดแห่งไทฟอน ลอร์ดแห่งไทฟอนจะต้องตั้งเพื่อนบ้านกับมินเนี่ยน เพื่อนบ้านอีกคนกลายเป็นมินเนี่ยนตัวร้ายที่ไม่ได้เล่นอยู่"
     },
     {
         "target": "summoner",
         "trick": "marionette",
-        "reason": "The Marionette neighbors the Summoner. The Summoner knows who the Marionette is."
+        "reason": "หุ่นเชิดเพื่อนบ้านกับซัมมอนเนอร์ ผู้อัญเชิญรู้ว่าหุ่นกระบอกคือใคร"
     },
     {
         "target": "summoner",
@@ -342,12 +342,12 @@
     {
         "target": "vizier",
         "trick": "courtier",
-        "reason": "If the Vizier loses their ability, they learn this. If the Vizier is executed while they have their ability, their team wins."
+        "reason": "หากท่านราชมนตรีสูญเสียความสามารถ พวกเขาก็เรียนรู้สิ่งนี้ หากท่านราชมนตรีถูกประหารในขณะที่พวกเขามีความสามารถ ทีมของพวกเขาจะชนะ"
     },
     {
         "target": "vizier",
         "trick": "fearmonger",
-        "reason": "The Vizier wakes with the Fearmonger, learns who they choose and cannot choose to immediately execute that player."
+        "reason": "ท่านราชมนตรีตื่นขึ้นมาพร้อมกับ Fearmonger เรียนรู้ว่าพวกเขาเลือกใคร และไม่สามารถเลือกที่จะประหารผู้เล่นคนนั้นได้ในทันที"
     },
     {
         "target": "vizier",
@@ -357,7 +357,7 @@
     {
         "target": "vizier",
         "trick": "magician",
-        "reason": "If the Vizier and Magician are both in play, the Demon does not learn the Minions."
+        "reason": "หาก Vizier และ Magician ทั้งคู่เล่นกัน Demon จะไม่เรียนรู้มินเนี่ยน"
     },
     {
         "target": "vizier",
@@ -367,7 +367,7 @@
     {
         "target": "vizier",
         "trick": "preacher",
-        "reason": "If the Vizier loses their ability, they learn this. If the Vizier is executed while they have their ability, their team wins."
+        "reason": "หากท่านราชมนตรีสูญเสียความสามารถ พวกเขาก็เรียนรู้สิ่งนี้ หากท่านราชมนตรีถูกประหารในขณะที่พวกเขามีความสามารถ ทีมของพวกเขาจะชนะ"
     },
     {
         "target": "vizier",
@@ -377,7 +377,7 @@
     {
         "target": "widow",
         "trick": "alchemist",
-        "reason": "If the Alchemist has the Widow ability, they do not see the Grimoire."
+        "reason": "หากนักเล่นแร่แปรธาตุมีความสามารถเป็นแม่ม่าย พวกเขาจะไม่เห็นคัมภีร์"
     },
     {
         "target": "widow",
@@ -402,7 +402,7 @@
     {
         "target": "kazali",
         "trick": "goon",
-        "reason": "The Kazali can choose that the Goon player is one of their evil Minions."
+        "reason": "คาซาลีสามารถเลือกได้ว่าผู้เล่นกูนจะเป็นหนึ่งในมินเนี่ยนที่ชั่วร้ายของพวกเขา"
     },
     {
         "target": "kazali",
@@ -412,12 +412,12 @@
     {
         "target": "kazali",
         "trick": "marionette",
-        "reason": "If the Kazali chooses to create a Marionette, they must choose one of their neighbors."
+        "reason": "หากคาซาลีเลือกที่จะสร้างหุ่นกระบอก พวกเขาจะต้องเลือกเพื่อนบ้านคนใดคนหนึ่ง"
     },
     {
         "target": "kazali",
         "trick": "soldier",
-        "reason": "The Kazali can choose that the Soldier player is one of their evil Minions."
+        "reason": "คาซาลีสามารถเลือกได้ว่าผู้เล่นทหารเป็นหนึ่งในมินเนี่ยนที่ชั่วร้ายของพวกเขา"
     },
     {
         "target": "legion",
@@ -442,27 +442,27 @@
     {
         "target": "legion",
         "trick": "zealot",
-        "reason": "The Zealot might register as evil to Legion's ability."
+        "reason": "Zealot อาจถือว่าชั่วร้ายต่อความสามารถของ Legion"
     },
     {
         "target": "leviathan",
         "trick": "banshee",
-        "reason": "Each night*, the Leviathan chooses an alive good player (different to previous nights): a chosen Banshee dies & gains their ability."
+        "reason": "ในแต่ละคืน* เลวีอาธานจะเลือกผู้เล่นที่ดีที่ยังมีชีวิตอยู่ (แตกต่างจากคืนก่อนๆ) แบนชีที่ถูกเลือกจะตายและได้รับความสามารถเพิ่มขึ้น"
     },
     {
         "target": "leviathan",
         "trick": "exorcist",
-        "reason": "Evil does not win when more than 1 good player has been executed, if the Exorcist is alive and has ever successfully chosen the Leviathan."
+        "reason": "ความชั่วร้ายจะไม่ชนะหากมีผู้เล่นที่ดีถูกประหารชีวิตมากกว่า 1 คน หากหมอผียังมีชีวิตอยู่และเลือกเลวีอาธานได้สำเร็จ"
     },
     {
         "target": "leviathan",
         "trick": "farmer",
-        "reason": "Each night*, the Leviathan chooses an alive good player (different to previous nights): a chosen Farmer uses their ability but does not die."
+        "reason": "ในแต่ละคืน* เลวีอาธานจะเลือกผู้เล่นที่ดีที่ยังมีชีวิตอยู่ (แตกต่างจากคืนก่อนๆ): ชาวนาที่ถูกเลือกจะใช้ความสามารถของตนแต่ไม่ตาย"
     },
     {
         "target": "leviathan",
         "trick": "grandmother",
-        "reason": "If Leviathan is in play and the Grandchild dies by execution, evil wins."
+        "reason": "ถ้าเลวีอาธานเล่นอยู่และหลานชายตายจากการประหาร ความชั่วร้ายจะเป็นฝ่ายชนะ"
     },
     {
         "target": "leviathan",
@@ -472,22 +472,22 @@
     {
         "target": "leviathan",
         "trick": "innkeeper",
-        "reason": "If the Leviathan is in play, the Innkeeper-protected-players are safe from all evil abilities."
+        "reason": "หากเลวีอาธานเล่นอยู่ ผู้เล่นที่ได้รับการคุ้มครองจากเจ้าของโรงแรมจะปลอดภัยจากความสามารถชั่วร้ายทั้งหมด"
     },
     {
         "target": "leviathan",
         "trick": "king",
-        "reason": "If the Leviathan is in play, and at least 1 player is dead, the King learns an alive character each night."
+        "reason": "หากเลวีอาธานอยู่ในเกมและมีผู้เล่นอย่างน้อย 1 คนเสียชีวิต กษัตริย์จะเรียนรู้ตัวละครที่ยังมีชีวิตอยู่ในแต่ละคืน"
     },
     {
         "target": "leviathan",
         "trick": "mayor",
-        "reason": "If the Leviathan is in play & no execution occurs on day 5, good wins."
+        "reason": "หาก Leviathan อยู่ในเกมและไม่มีการประหารชีวิตเกิดขึ้นในวันที่ 5 ถือว่าชนะ"
     },
     {
         "target": "leviathan",
         "trick": "monk",
-        "reason": "If the Leviathan is in play, the Monk-protected-player is safe from all evil abilities."
+        "reason": "หากมีเลวีอาธานเล่นอยู่ ผู้เล่นที่ได้รับการคุ้มครองโดยนักบวชจะปลอดภัยจากความสามารถชั่วร้ายทั้งหมด"
     },
     {
         "target": "leviathan",
@@ -497,17 +497,17 @@
     {
         "target": "leviathan",
         "trick": "ravenkeeper",
-        "reason": "Each night*, the Leviathan chooses an alive player (different to previous nights): a chosen Ravenkeeper uses their ability but does not die."
+        "reason": "ในแต่ละคืน* เลวีอาธานจะเลือกผู้เล่นที่ยังมีชีวิตอยู่ (แตกต่างจากคืนก่อนๆ): Ravenkeeper ที่ถูกเลือกจะใช้ความสามารถของตนแต่ไม่ตาย"
     },
     {
         "target": "leviathan",
         "trick": "sage",
-        "reason": "Each night*, the Leviathan chooses an alive good player (different to previous nights): a chosen Sage uses their ability but does not die."
+        "reason": "ในแต่ละคืน* เลวีอาธานจะเลือกผู้เล่นที่ดีที่ยังมีชีวิตอยู่ (แตกต่างจากคืนก่อนๆ): ปราชญ์ที่ถูกเลือกจะใช้ความสามารถของตนแต่ไม่ตาย"
     },
     {
         "target": "leviathan",
         "trick": "soldier",
-        "reason": "If the Leviathan is in play, the Soldier is safe from all evil abilities."
+        "reason": "หากมีเลวีอาธานเล่นอยู่ ทหารก็จะปลอดภัยจากความสามารถชั่วร้ายทั้งหมด"
     },
     {
         "target": "lilmonsta",
@@ -517,7 +517,7 @@
     {
         "target": "lilmonsta",
         "trick": "magician",
-        "reason": "Each night, the Magician chooses a Minion: if that Minion & Lil' Monsta are alive, that Minion babysits Lil’ Monsta."
+        "reason": "ในแต่ละคืน นักมายากลจะเลือกมินเนี่ยนหนึ่งตัว หากมินเนียนและลิล มอนสตายังมีชีวิตอยู่ มินเนียนนั้นจะดูแลลิล มอนสตา"
     },
     {
         "target": "lilmonsta",
@@ -547,57 +547,57 @@
     {
         "target": "riot",
         "trick": "banshee",
-        "reason": "Each night*, Riot chooses an alive good player (different to previous nights): a chosen Banshee dies & gains their ability."
+        "reason": "ในแต่ละคืน* Riot จะเลือกผู้เล่นที่ดีที่ยังมีชีวิตอยู่ (แตกต่างจากคืนก่อนหน้า): Banshee ที่ถูกเลือกจะตายและได้รับความสามารถของพวกเขา"
     },
     {
         "target": "riot",
         "trick": "exorcist",
-        "reason": "If the Exorcist chooses Riot on the 3rd night, Minions do not become Riot."
+        "reason": "หากหมอผีเลือก Riot ในคืนที่ 3 มินเนี่ยนจะไม่กลายเป็น Riot"
     },
     {
         "target": "riot",
         "trick": "farmer",
-        "reason": "Each night*, Riot chooses an alive good player (different to previous nights): a chosen Farmer uses their ability but does not die."
+        "reason": "ในแต่ละคืน* Riot จะเลือกผู้เล่นที่ดีที่ยังมีชีวิตอยู่ (แตกต่างจากคืนก่อนหน้า): ชาวนาที่ถูกเลือกจะใช้ความสามารถของตนแต่ไม่ตาย"
     },
     {
         "target": "riot",
         "trick": "grandmother",
-        "reason": "If Riot is in play and the Grandchild dies during the day, the Grandmother dies too."
+        "reason": "หาก Riot กำลังเล่นอยู่และหลานชายเสียชีวิตในระหว่างวัน คุณย่าก็จะตายด้วย"
     },
     {
         "target": "riot",
         "trick": "innkeeper",
-        "reason": "If Riot is in play, the Innkeeper-protected player is safe from all evil abilities."
+        "reason": "หากมีการแข่งขัน Riot ผู้เล่นที่ได้รับการคุ้มครองจากเจ้าของโรงแรมจะปลอดภัยจากความสามารถชั่วร้ายทั้งหมด"
     },
     {
         "target": "riot",
         "trick": "king",
-        "reason": "If Riot is in play, and at least 1 player is dead, the King learns an alive character each night."
+        "reason": "หาก Riot กำลังเล่นอยู่ และมีผู้เล่นอย่างน้อย 1 คนเสียชีวิต ราชาจะเรียนรู้ตัวละครที่ยังมีชีวิตอยู่ในแต่ละคืน"
     },
     {
         "target": "riot",
         "trick": "mayor",
-        "reason": "The Mayor may choose to stop nominations. If they do so when only 1 Riot is alive, good wins. Otherwise, evil wins."
+        "reason": "นายกเทศมนตรีอาจเลือกที่จะยุติการเสนอชื่อ หากพวกเขาทำเช่นนั้นเมื่อมี Riot เหลืออยู่เพียง 1 ตัว ถือว่าชนะ มิฉะนั้นความชั่วร้ายจะชนะ"
     },
     {
         "target": "riot",
         "trick": "monk",
-        "reason": "If Riot is in play, the Monk-protected player is safe from all evil abilities."
+        "reason": "หากมีการเล่น Riot ผู้เล่นที่ได้รับการคุ้มครองจาก Monk จะปลอดภัยจากความสามารถชั่วร้ายทั้งหมด"
     },
     {
         "target": "riot",
         "trick": "ravenkeeper",
-        "reason": "Each night*, Riot chooses an alive good player (different to previous nights): a chosen Ravenkeeper uses their ability but does not die."
+        "reason": "ในแต่ละคืน* Riot จะเลือกผู้เล่นที่ดีที่ยังมีชีวิตอยู่ (แตกต่างจากคืนก่อนหน้า): Ravenkeeper ที่ถูกเลือกจะใช้ความสามารถของพวกเขาแต่ไม่ตาย"
     },
     {
         "target": "riot",
         "trick": "sage",
-        "reason": "Each night*, Riot chooses an alive good player (different to previous nights): a chosen Sage uses their ability but does not die."
+        "reason": "ในแต่ละคืน* Riot จะเลือกผู้เล่นที่ดีที่ยังมีชีวิตอยู่ (แตกต่างจากคืนก่อนหน้า): ปราชญ์ที่ถูกเลือกจะใช้ความสามารถของพวกเขาแต่ไม่ตาย"
     },
     {
         "target": "riot",
         "trick": "soldier",
-        "reason": "If Riot is in play, the Soldier is safe from all evil abilities."
+        "reason": "หากมีการเล่น Riot ทหารจะปลอดภัยจากความสามารถชั่วร้ายทั้งหมด"
     },
     {
         "target": "vortox",

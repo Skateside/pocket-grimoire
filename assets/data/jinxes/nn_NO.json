@@ -17,12 +17,12 @@
     {
         "target": "cannibal",
         "trick": "juggler",
-        "reason": "If the Juggler guesses on their first day and dies by execution, tonight the living Cannibal learns how many guesses the Juggler got correct."
+        "reason": "Hvis gjøgleren gjetter på sin første dag og dør ved henrettelse, får den levende kannibalen i kveld vite hvor mange gjetninger gjøgleren fikk riktige."
     },
     {
         "target": "cannibal",
         "trick": "poppygrower",
-        "reason": "If the Cannibal eats the Poppy Grower, then dies or loses the Poppy Grower ability, the Demon and Minions learn each other that night."
+        "reason": "Hvis kannibalen spiser valmuedyrkeren, dør eller mister valmuedyrkerevnen, lærer demonen og undersåttene hverandre den kvelden."
     },
     {
         "target": "cannibal",
@@ -52,7 +52,7 @@
     {
         "target": "heretic",
         "trick": "boffin",
-        "reason": "The Demon cannot have the Heretic ability."
+        "reason": "Demonen kan ikke ha den kjetterske evnen."
     },
     {
         "target": "heretic",
@@ -87,7 +87,7 @@
     {
         "target": "plaguedoctor",
         "trick": "baron",
-        "reason": "If the Storyteller gains the Baron ability, up to two players become not-in-play Outsiders."
+        "reason": "Hvis historiefortelleren får Baron-evnen, blir opptil to spillere utenforstående utenfor spillet."
     },
     {
         "target": "plaguedoctor",
@@ -112,7 +112,7 @@
     {
         "target": "plaguedoctor",
         "trick": "marionette",
-        "reason": "If the Demon has a neighbor who is alive and a Townsfolk or Outsider when the Plague Doctor dies, that player becomes an evil Marionette. If there is already an extra evil player, this does not happen."
+        "reason": "Hvis demonen har en nabo som er i live og en bybefolkning eller utenforstående når pestdoktoren dør, blir den spilleren en ond marionette. Hvis det allerede er en ekstra ond spiller, skjer ikke dette."
     },
     {
         "target": "plaguedoctor",
@@ -127,37 +127,37 @@
     {
         "target": "boffin",
         "trick": "alchemist",
-        "reason": "If the Alchemist has the Boffin ability, the Alchemist does not learn what ability the Demon has."
+        "reason": "Hvis alkymisten har Boffin-evnen, lærer ikke alkymisten hvilken evne demonen har."
     },
     {
         "target": "boffin",
         "trick": "cultleader",
-        "reason": "If the Demon has the Cult Leader ability, they can’t turn good due to this ability."
+        "reason": "Hvis demonen har kultlederevnen, kan de ikke bli gode på grunn av denne evnen."
     },
     {
         "target": "boffin",
         "trick": "drunk",
-        "reason": "If the Demon would have the Drunk ability, the Boffin chooses a Townsfolk player to have this ability instead."
+        "reason": "Hvis Demon ville ha Drunk-evnen, velger Boffin en Townsfolk-spiller til å ha denne evnen i stedet."
     },
     {
         "target": "boffin",
         "trick": "goon",
-        "reason": "If the Demon has the Goon ability, they can’t turn good due to this ability."
+        "reason": "Hvis demonen har Goon-evnen, kan de ikke bli gode på grunn av denne evnen."
     },
     {
         "target": "boffin",
         "trick": "ogre",
-        "reason": "The Demon cannot have the Ogre ability."
+        "reason": "Demonen kan ikke ha Ogre-evnen."
     },
     {
         "target": "boffin",
         "trick": "politician",
-        "reason": "The Demon cannot have the Politician ability."
+        "reason": "Demonen kan ikke ha politikerevnen."
     },
     {
         "target": "boffin",
         "trick": "villageidiot",
-        "reason": "If there is a spare token, the Boffin can give the Demon the Village Idiot ability."
+        "reason": "Hvis det er en ekstra token, kan Boffin gi Demon the Village Idiot-evne."
     },
     {
         "target": "cerenovus",
@@ -217,7 +217,7 @@
     {
         "target": "pithag",
         "trick": "ogre",
-        "reason": "If the Pit-Hag turns an evil player into the Ogre, they can't turn good due to their own ability."
+        "reason": "Hvis Pit-Hag gjør en ond spiller til Ogre, kan de ikke bli gode på grunn av sin egen evne."
     },
     {
         "target": "pithag",
@@ -242,7 +242,7 @@
     {
         "target": "spy",
         "trick": "alchemist",
-        "reason": "If the Alchemist has the Spy ability, they do not see the Grimoire, and the real Spy cannot register falsely."
+        "reason": "Hvis alkymisten har spionevnen, ser de ikke Grimoire, og den ekte spionen kan ikke registrere seg feilaktig."
     },
     {
         "target": "spy",
@@ -302,12 +302,12 @@
     {
         "target": "summoner",
         "trick": "lordoftyphon",
-        "reason": "If the Summoner creates a Lord of Typhon, the Lord of Typhon must neighbor a Minion. The other neighbor becomes a not-in-play evil Minion."
+        "reason": "Hvis tilkalleren skaper en Herre av Typhon, må Herren av Typhon være nabo til en Minion. Den andre naboen blir en ond minion som ikke er i spill."
     },
     {
         "target": "summoner",
         "trick": "marionette",
-        "reason": "The Marionette neighbors the Summoner. The Summoner knows who the Marionette is."
+        "reason": "Marionetten er nabo til Summoner. The Summoner vet hvem Marionetten er."
     },
     {
         "target": "summoner",
@@ -342,12 +342,12 @@
     {
         "target": "vizier",
         "trick": "courtier",
-        "reason": "If the Vizier loses their ability, they learn this. If the Vizier is executed while they have their ability, their team wins."
+        "reason": "Hvis vesiren mister evnen, lærer de dette. Hvis vesiren blir henrettet mens de har sine evner, vinner laget deres."
     },
     {
         "target": "vizier",
         "trick": "fearmonger",
-        "reason": "The Vizier wakes with the Fearmonger, learns who they choose and cannot choose to immediately execute that player."
+        "reason": "Vizieren våkner sammen med Fearmonger, lærer hvem de velger og kan ikke velge å henrette den spilleren umiddelbart."
     },
     {
         "target": "vizier",
@@ -357,7 +357,7 @@
     {
         "target": "vizier",
         "trick": "magician",
-        "reason": "If the Vizier and Magician are both in play, the Demon does not learn the Minions."
+        "reason": "Hvis både vesiren og tryllekunstneren er i spill, lærer ikke demonen undersåttene."
     },
     {
         "target": "vizier",
@@ -367,7 +367,7 @@
     {
         "target": "vizier",
         "trick": "preacher",
-        "reason": "If the Vizier loses their ability, they learn this. If the Vizier is executed while they have their ability, their team wins."
+        "reason": "Hvis vesiren mister evnen, lærer de dette. Hvis vesiren blir henrettet mens de har sine evner, vinner laget deres."
     },
     {
         "target": "vizier",
@@ -377,7 +377,7 @@
     {
         "target": "widow",
         "trick": "alchemist",
-        "reason": "If the Alchemist has the Widow ability, they do not see the Grimoire."
+        "reason": "Hvis alkymisten har enkeevnen, ser de ikke Grimoire."
     },
     {
         "target": "widow",
@@ -402,7 +402,7 @@
     {
         "target": "kazali",
         "trick": "goon",
-        "reason": "The Kazali can choose that the Goon player is one of their evil Minions."
+        "reason": "Kazalien kan velge at Goon-spilleren er en av deres onde Minions."
     },
     {
         "target": "kazali",
@@ -412,12 +412,12 @@
     {
         "target": "kazali",
         "trick": "marionette",
-        "reason": "If the Kazali chooses to create a Marionette, they must choose one of their neighbors."
+        "reason": "Hvis Kazali velger å lage en Marionette, må de velge en av naboene sine."
     },
     {
         "target": "kazali",
         "trick": "soldier",
-        "reason": "The Kazali can choose that the Soldier player is one of their evil Minions."
+        "reason": "Kazalien kan velge at Soldier-spilleren er en av deres onde Minions."
     },
     {
         "target": "legion",
@@ -442,27 +442,27 @@
     {
         "target": "legion",
         "trick": "zealot",
-        "reason": "The Zealot might register as evil to Legion's ability."
+        "reason": "Zeloten kan registrere seg som ond etter Legions evner."
     },
     {
         "target": "leviathan",
         "trick": "banshee",
-        "reason": "Each night*, the Leviathan chooses an alive good player (different to previous nights): a chosen Banshee dies & gains their ability."
+        "reason": "Hver natt* velger Leviathan en levende god spiller (forskjellig fra tidligere netter): en valgt Banshee dør og får sin evne."
     },
     {
         "target": "leviathan",
         "trick": "exorcist",
-        "reason": "Evil does not win when more than 1 good player has been executed, if the Exorcist is alive and has ever successfully chosen the Leviathan."
+        "reason": "Ondskap vinner ikke når mer enn 1 god spiller har blitt henrettet, hvis eksorcisten er i live og noen gang har valgt Leviathan."
     },
     {
         "target": "leviathan",
         "trick": "farmer",
-        "reason": "Each night*, the Leviathan chooses an alive good player (different to previous nights): a chosen Farmer uses their ability but does not die."
+        "reason": "Hver natt* velger Leviathan en levende god spiller (forskjellig fra tidligere netter): en utvalgt bonde bruker evnene sine, men dør ikke."
     },
     {
         "target": "leviathan",
         "trick": "grandmother",
-        "reason": "If Leviathan is in play and the Grandchild dies by execution, evil wins."
+        "reason": "Hvis Leviathan er i spill og barnebarnet dør ved henrettelse, vinner ondskapen."
     },
     {
         "target": "leviathan",
@@ -472,22 +472,22 @@
     {
         "target": "leviathan",
         "trick": "innkeeper",
-        "reason": "If the Leviathan is in play, the Innkeeper-protected-players are safe from all evil abilities."
+        "reason": "Hvis Leviathan er i spill, er de innkeeper-beskyttede spillerne sikre fra alle onde evner."
     },
     {
         "target": "leviathan",
         "trick": "king",
-        "reason": "If the Leviathan is in play, and at least 1 player is dead, the King learns an alive character each night."
+        "reason": "Hvis Leviathan er i spill, og minst 1 spiller er død, lærer kongen en levende karakter hver natt."
     },
     {
         "target": "leviathan",
         "trick": "mayor",
-        "reason": "If the Leviathan is in play & no execution occurs on day 5, good wins."
+        "reason": "Hvis Leviathan er i spill og ingen henrettelse skjer på dag 5, vil gode gevinster."
     },
     {
         "target": "leviathan",
         "trick": "monk",
-        "reason": "If the Leviathan is in play, the Monk-protected-player is safe from all evil abilities."
+        "reason": "Hvis Leviathan er i spill, er den Monk-beskyttede spilleren trygg fra alle onde evner."
     },
     {
         "target": "leviathan",
@@ -497,17 +497,17 @@
     {
         "target": "leviathan",
         "trick": "ravenkeeper",
-        "reason": "Each night*, the Leviathan chooses an alive player (different to previous nights): a chosen Ravenkeeper uses their ability but does not die."
+        "reason": "Hver natt* velger Leviathan en levende spiller (forskjellig fra tidligere netter): en valgt ravnkeeper bruker evnen deres, men dør ikke."
     },
     {
         "target": "leviathan",
         "trick": "sage",
-        "reason": "Each night*, the Leviathan chooses an alive good player (different to previous nights): a chosen Sage uses their ability but does not die."
+        "reason": "Hver natt* velger Leviathan en levende god spiller (forskjellig fra tidligere netter): en valgt vismann bruker evnen deres, men dør ikke."
     },
     {
         "target": "leviathan",
         "trick": "soldier",
-        "reason": "If the Leviathan is in play, the Soldier is safe from all evil abilities."
+        "reason": "Hvis Leviathan er i spill, er soldaten trygg fra alle onde evner."
     },
     {
         "target": "lilmonsta",
@@ -517,7 +517,7 @@
     {
         "target": "lilmonsta",
         "trick": "magician",
-        "reason": "Each night, the Magician chooses a Minion: if that Minion & Lil' Monsta are alive, that Minion babysits Lil’ Monsta."
+        "reason": "Hver natt velger tryllekunstneren en Minion: hvis Minion og Lil' Monsta er i live, er den Minion barnevakt for Lil' Monsta."
     },
     {
         "target": "lilmonsta",
@@ -547,57 +547,57 @@
     {
         "target": "riot",
         "trick": "banshee",
-        "reason": "Each night*, Riot chooses an alive good player (different to previous nights): a chosen Banshee dies & gains their ability."
+        "reason": "Hver natt* velger Riot en levende god spiller (forskjellig fra tidligere netter): en valgt Banshee dør og får sin evne."
     },
     {
         "target": "riot",
         "trick": "exorcist",
-        "reason": "If the Exorcist chooses Riot on the 3rd night, Minions do not become Riot."
+        "reason": "Hvis eksorcisten velger Riot den tredje natten, blir ikke Minions Riot."
     },
     {
         "target": "riot",
         "trick": "farmer",
-        "reason": "Each night*, Riot chooses an alive good player (different to previous nights): a chosen Farmer uses their ability but does not die."
+        "reason": "Hver natt* velger Riot en levende god spiller (forskjellig fra tidligere netter): en utvalgt bonde bruker evnen sin, men dør ikke."
     },
     {
         "target": "riot",
         "trick": "grandmother",
-        "reason": "If Riot is in play and the Grandchild dies during the day, the Grandmother dies too."
+        "reason": "Hvis Riot er i spill og barnebarnet dør i løpet av dagen, dør bestemoren også."
     },
     {
         "target": "riot",
         "trick": "innkeeper",
-        "reason": "If Riot is in play, the Innkeeper-protected player is safe from all evil abilities."
+        "reason": "Hvis Riot er i spill, er den Innkeeper-beskyttede spilleren trygg fra alle onde evner."
     },
     {
         "target": "riot",
         "trick": "king",
-        "reason": "If Riot is in play, and at least 1 player is dead, the King learns an alive character each night."
+        "reason": "Hvis Riot er i spill, og minst 1 spiller er død, lærer kongen en levende karakter hver natt."
     },
     {
         "target": "riot",
         "trick": "mayor",
-        "reason": "The Mayor may choose to stop nominations. If they do so when only 1 Riot is alive, good wins. Otherwise, evil wins."
+        "reason": "Ordføreren kan velge å stoppe nominasjoner. Hvis de gjør det når bare 1 Riot er i live, vinner gode. Ellers vinner ondskapen."
     },
     {
         "target": "riot",
         "trick": "monk",
-        "reason": "If Riot is in play, the Monk-protected player is safe from all evil abilities."
+        "reason": "Hvis Riot er i spill, er den Monk-beskyttede spilleren trygg fra alle onde evner."
     },
     {
         "target": "riot",
         "trick": "ravenkeeper",
-        "reason": "Each night*, Riot chooses an alive good player (different to previous nights): a chosen Ravenkeeper uses their ability but does not die."
+        "reason": "Hver natt* velger Riot en levende god spiller (forskjellig fra tidligere netter): en valgt ravnkeeper bruker evnen sin, men dør ikke."
     },
     {
         "target": "riot",
         "trick": "sage",
-        "reason": "Each night*, Riot chooses an alive good player (different to previous nights): a chosen Sage uses their ability but does not die."
+        "reason": "Hver natt* velger Riot en levende god spiller (forskjellig fra tidligere netter): en valgt vismann bruker evnen deres, men dør ikke."
     },
     {
         "target": "riot",
         "trick": "soldier",
-        "reason": "If Riot is in play, the Soldier is safe from all evil abilities."
+        "reason": "Hvis Riot er i spill, er soldaten trygg fra alle onde evner."
     },
     {
         "target": "vortox",

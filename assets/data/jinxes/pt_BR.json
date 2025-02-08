@@ -17,7 +17,7 @@
     {
         "target": "cannibal",
         "trick": "juggler",
-        "reason": "If the Juggler guesses on their first day and dies by execution, tonight the living Cannibal learns how many guesses the Juggler got correct."
+        "reason": "Se o Malabarista adivinhar no primeiro dia e morrer na execução, esta noite o Canibal vivo saberá quantas suposições o Malabarista acertou."
     },
     {
         "target": "cannibal",
@@ -112,7 +112,7 @@
     {
         "target": "plaguedoctor",
         "trick": "marionette",
-        "reason": "If the Demon has a neighbor who is alive and a Townsfolk or Outsider when the Plague Doctor dies, that player becomes an evil Marionette. If there is already an extra evil player, this does not happen."
+        "reason": "Se o Demônio tiver um vizinho que esteja vivo e um cidadão ou forasteiro quando o Doutor da Peste morrer, esse jogador se tornará uma marionete maligna. Se já existir um jogador maligno extra, isso não acontece."
     },
     {
         "target": "plaguedoctor",
@@ -217,7 +217,7 @@
     {
         "target": "pithag",
         "trick": "ogre",
-        "reason": "If the Pit-Hag turns an evil player into the Ogre, they can't turn good due to their own ability."
+        "reason": "Se a Pit-Hag transformar um jogador malvado em Ogro, ele não poderá se tornar bom devido à sua própria habilidade."
     },
     {
         "target": "pithag",
@@ -242,7 +242,7 @@
     {
         "target": "spy",
         "trick": "alchemist",
-        "reason": "If the Alchemist has the Spy ability, they do not see the Grimoire, and the real Spy cannot register falsely."
+        "reason": "Se o Alquimista tiver a habilidade Spy, ele não verá o Grimório, e o verdadeiro Spy não poderá registrar-se falsamente."
     },
     {
         "target": "spy",
@@ -307,7 +307,7 @@
     {
         "target": "summoner",
         "trick": "marionette",
-        "reason": "The Marionette neighbors the Summoner. The Summoner knows who the Marionette is."
+        "reason": "A Marionete é vizinha do Invocador. O Invocador sabe quem é a Marionete."
     },
     {
         "target": "summoner",
@@ -342,12 +342,12 @@
     {
         "target": "vizier",
         "trick": "courtier",
-        "reason": "If the Vizier loses their ability, they learn this. If the Vizier is executed while they have their ability, their team wins."
+        "reason": "Se o Vizir perder a habilidade, eles aprendem isso. Se o Vizir for executado enquanto estiver com sua habilidade, seu time vence."
     },
     {
         "target": "vizier",
         "trick": "fearmonger",
-        "reason": "The Vizier wakes with the Fearmonger, learns who they choose and cannot choose to immediately execute that player."
+        "reason": "O Vizir acorda com o Fearmonger, descobre quem ele escolhe e não pode escolher executar imediatamente aquele jogador."
     },
     {
         "target": "vizier",
@@ -357,7 +357,7 @@
     {
         "target": "vizier",
         "trick": "magician",
-        "reason": "If the Vizier and Magician are both in play, the Demon does not learn the Minions."
+        "reason": "Se o Vizir e o Mago estiverem em jogo, o Demônio não aprende os Minions."
     },
     {
         "target": "vizier",
@@ -367,7 +367,7 @@
     {
         "target": "vizier",
         "trick": "preacher",
-        "reason": "If the Vizier loses their ability, they learn this. If the Vizier is executed while they have their ability, their team wins."
+        "reason": "Se o Vizir perder a habilidade, eles aprendem isso. Se o Vizir for executado enquanto estiver com sua habilidade, seu time vence."
     },
     {
         "target": "vizier",
@@ -377,7 +377,7 @@
     {
         "target": "widow",
         "trick": "alchemist",
-        "reason": "If the Alchemist has the Widow ability, they do not see the Grimoire."
+        "reason": "Se o Alquimista tiver a habilidade Viúva, ele não verá o Grimório."
     },
     {
         "target": "widow",
@@ -402,7 +402,7 @@
     {
         "target": "kazali",
         "trick": "goon",
-        "reason": "The Kazali can choose that the Goon player is one of their evil Minions."
+        "reason": "O Kazali pode escolher que o jogador Goon seja um de seus Minions malvados."
     },
     {
         "target": "kazali",
@@ -412,12 +412,12 @@
     {
         "target": "kazali",
         "trick": "marionette",
-        "reason": "If the Kazali chooses to create a Marionette, they must choose one of their neighbors."
+        "reason": "Se o Kazali decidir criar uma marionete, ele deverá escolher um de seus vizinhos."
     },
     {
         "target": "kazali",
         "trick": "soldier",
-        "reason": "The Kazali can choose that the Soldier player is one of their evil Minions."
+        "reason": "O Kazali pode escolher que o jogador Soldado seja um de seus Minions malignos."
     },
     {
         "target": "legion",
@@ -442,27 +442,27 @@
     {
         "target": "legion",
         "trick": "zealot",
-        "reason": "The Zealot might register as evil to Legion's ability."
+        "reason": "O Zelote pode ser considerado um mal para a habilidade da Legião."
     },
     {
         "target": "leviathan",
         "trick": "banshee",
-        "reason": "Each night*, the Leviathan chooses an alive good player (different to previous nights): a chosen Banshee dies & gains their ability."
+        "reason": "A cada noite*, o Leviatã escolhe um bom jogador vivo (diferente das noites anteriores): um Banshee escolhido morre e ganha sua habilidade."
     },
     {
         "target": "leviathan",
         "trick": "exorcist",
-        "reason": "Evil does not win when more than 1 good player has been executed, if the Exorcist is alive and has ever successfully chosen the Leviathan."
+        "reason": "O mal não vence quando mais de 1 jogador bom for executado, se o Exorcista estiver vivo e tiver escolhido o Leviatã com sucesso."
     },
     {
         "target": "leviathan",
         "trick": "farmer",
-        "reason": "Each night*, the Leviathan chooses an alive good player (different to previous nights): a chosen Farmer uses their ability but does not die."
+        "reason": "Cada noite*, o Leviatã escolhe um bom jogador vivo (diferente das noites anteriores): um Fazendeiro escolhido usa sua habilidade, mas não morre."
     },
     {
         "target": "leviathan",
         "trick": "grandmother",
-        "reason": "If Leviathan is in play and the Grandchild dies by execution, evil wins."
+        "reason": "Se o Leviatã estiver em jogo e o neto morrer na execução, o mal vence."
     },
     {
         "target": "leviathan",
@@ -472,22 +472,22 @@
     {
         "target": "leviathan",
         "trick": "innkeeper",
-        "reason": "If the Leviathan is in play, the Innkeeper-protected-players are safe from all evil abilities."
+        "reason": "Se o Leviatã estiver em jogo, os jogadores protegidos pelo Estalajadeiro estarão protegidos de todas as habilidades malignas."
     },
     {
         "target": "leviathan",
         "trick": "king",
-        "reason": "If the Leviathan is in play, and at least 1 player is dead, the King learns an alive character each night."
+        "reason": "Se o Leviatã estiver em jogo e pelo menos 1 jogador estiver morto, o Rei aprende um personagem vivo a cada noite."
     },
     {
         "target": "leviathan",
         "trick": "mayor",
-        "reason": "If the Leviathan is in play & no execution occurs on day 5, good wins."
+        "reason": "Se o Leviatã estiver em jogo e nenhuma execução ocorrer no dia 5, boas vitórias."
     },
     {
         "target": "leviathan",
         "trick": "monk",
-        "reason": "If the Leviathan is in play, the Monk-protected-player is safe from all evil abilities."
+        "reason": "Se o Leviatã estiver em jogo, o jogador protegido pelo Monge estará a salvo de todas as habilidades malignas."
     },
     {
         "target": "leviathan",
@@ -497,17 +497,17 @@
     {
         "target": "leviathan",
         "trick": "ravenkeeper",
-        "reason": "Each night*, the Leviathan chooses an alive player (different to previous nights): a chosen Ravenkeeper uses their ability but does not die."
+        "reason": "Cada noite*, o Leviatã escolhe um jogador vivo (diferente das noites anteriores): um Ravenkeeper escolhido usa sua habilidade, mas não morre."
     },
     {
         "target": "leviathan",
         "trick": "sage",
-        "reason": "Each night*, the Leviathan chooses an alive good player (different to previous nights): a chosen Sage uses their ability but does not die."
+        "reason": "Cada noite*, o Leviatã escolhe um bom jogador vivo (diferente das noites anteriores): um Sábio escolhido usa sua habilidade, mas não morre."
     },
     {
         "target": "leviathan",
         "trick": "soldier",
-        "reason": "If the Leviathan is in play, the Soldier is safe from all evil abilities."
+        "reason": "Se o Leviatã estiver em jogo, o Soldier estará a salvo de todas as habilidades malignas."
     },
     {
         "target": "lilmonsta",
@@ -517,7 +517,7 @@
     {
         "target": "lilmonsta",
         "trick": "magician",
-        "reason": "Each night, the Magician chooses a Minion: if that Minion & Lil' Monsta are alive, that Minion babysits Lil’ Monsta."
+        "reason": "Cada noite, o Mago escolhe um Minion: se esse Minion e Lil' Monsta estiverem vivos, esse Minion tomará conta de Lil' Monsta."
     },
     {
         "target": "lilmonsta",
@@ -547,22 +547,22 @@
     {
         "target": "riot",
         "trick": "banshee",
-        "reason": "Each night*, Riot chooses an alive good player (different to previous nights): a chosen Banshee dies & gains their ability."
+        "reason": "A cada noite*, a Riot escolhe um bom jogador vivo (diferente das noites anteriores): um Banshee escolhido morre e ganha sua habilidade."
     },
     {
         "target": "riot",
         "trick": "exorcist",
-        "reason": "If the Exorcist chooses Riot on the 3rd night, Minions do not become Riot."
+        "reason": "Se o Exorcista escolher Riot na 3ª noite, os Minions não se tornarão Riot."
     },
     {
         "target": "riot",
         "trick": "farmer",
-        "reason": "Each night*, Riot chooses an alive good player (different to previous nights): a chosen Farmer uses their ability but does not die."
+        "reason": "A cada noite*, a Riot escolhe um bom jogador vivo (diferente das noites anteriores): um Fazendeiro escolhido usa sua habilidade, mas não morre."
     },
     {
         "target": "riot",
         "trick": "grandmother",
-        "reason": "If Riot is in play and the Grandchild dies during the day, the Grandmother dies too."
+        "reason": "Se a Riot estiver em jogo e o neto morrer durante o dia, a avó também morre."
     },
     {
         "target": "riot",
@@ -572,32 +572,32 @@
     {
         "target": "riot",
         "trick": "king",
-        "reason": "If Riot is in play, and at least 1 player is dead, the King learns an alive character each night."
+        "reason": "Se Riot estiver em jogo e pelo menos 1 jogador estiver morto, o Rei descobre um personagem vivo a cada noite."
     },
     {
         "target": "riot",
         "trick": "mayor",
-        "reason": "The Mayor may choose to stop nominations. If they do so when only 1 Riot is alive, good wins. Otherwise, evil wins."
+        "reason": "O prefeito pode optar por interromper as nomeações. Se fizerem isso quando apenas 1 Riot estiver vivo, o bom vence. Caso contrário, o mal vence."
     },
     {
         "target": "riot",
         "trick": "monk",
-        "reason": "If Riot is in play, the Monk-protected player is safe from all evil abilities."
+        "reason": "Se Riot estiver em jogo, o jogador protegido pelo Monge estará a salvo de todas as habilidades malignas."
     },
     {
         "target": "riot",
         "trick": "ravenkeeper",
-        "reason": "Each night*, Riot chooses an alive good player (different to previous nights): a chosen Ravenkeeper uses their ability but does not die."
+        "reason": "A cada noite*, a Riot escolhe um bom jogador vivo (diferente das noites anteriores): um Ravenkeeper escolhido usa sua habilidade, mas não morre."
     },
     {
         "target": "riot",
         "trick": "sage",
-        "reason": "Each night*, Riot chooses an alive good player (different to previous nights): a chosen Sage uses their ability but does not die."
+        "reason": "A cada noite*, a Riot escolhe um bom jogador vivo (diferente das noites anteriores): um Sábio escolhido usa sua habilidade, mas não morre."
     },
     {
         "target": "riot",
         "trick": "soldier",
-        "reason": "If Riot is in play, the Soldier is safe from all evil abilities."
+        "reason": "Se Riot estiver em jogo, o Soldier estará protegido de todas as habilidades malignas."
     },
     {
         "target": "vortox",

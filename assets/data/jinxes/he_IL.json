@@ -2,12 +2,12 @@
     {
         "target": "bountyhunter",
         "trick": "kazali",
-        "reason": "An evil Townsfolk is only created if the Bounty Hunter is still in play after the Kazali acts."
+        "reason": "עיר מרושעת נוצרת רק אם צייד הראשים עדיין במשחק לאחר פעולות הקזאלי."
     },
     {
         "target": "bountyhunter",
         "trick": "philosopher",
-        "reason": "If the Philosopher gains the Bounty Hunter ability, a Townsfolk might turn evil."
+        "reason": "אם הפילוסוף ישיג את יכולת צייד ראשים, תושבי העיר עלולים להפוך לרשע."
     },
     {
         "target": "cannibal",
@@ -17,17 +17,17 @@
     {
         "target": "cannibal",
         "trick": "juggler",
-        "reason": "If the Juggler guesses on their first day and dies by execution, tonight the living Cannibal learns how many guesses the Juggler got correct."
+        "reason": "אם הלהטוטן מנחש ביום הראשון שלהם ומת בהוצאה להורג, הלילה הקניבל החי לומד כמה ניחושים הלהטוטן צדק."
     },
     {
         "target": "cannibal",
         "trick": "poppygrower",
-        "reason": "If the Cannibal eats the Poppy Grower, then dies or loses the Poppy Grower ability, the Demon and Minions learn each other that night."
+        "reason": "אם הקניבל אוכל את מגדל הפרג, אז מת או מאבד את יכולת מגדל הפרג, השד והמיניונים לומדים זה את זה באותו לילה."
     },
     {
         "target": "cannibal",
         "trick": "zealot",
-        "reason": "If the Cannibal gains the Zealot ability, the Cannibal learns this."
+        "reason": "אם הקניבל משיג את יכולת הקנאים, הקניבל לומד זאת."
     },
     {
         "target": "mathematician",
@@ -52,7 +52,7 @@
     {
         "target": "heretic",
         "trick": "boffin",
-        "reason": "The Demon cannot have the Heretic ability."
+        "reason": "השד לא יכול להיות בעל יכולת כפירה."
     },
     {
         "target": "heretic",
@@ -82,12 +82,12 @@
     {
         "target": "ogre",
         "trick": "recluse",
-        "reason": "If the Recluse registers as evil to the Ogre, the Ogre learns that they are evil."
+        "reason": "אם המתבודד נרשם כרשע למפלצת, המפלש לומד שהם מרושעים."
     },
     {
         "target": "plaguedoctor",
         "trick": "baron",
-        "reason": "If the Storyteller gains the Baron ability, up to two players become not-in-play Outsiders."
+        "reason": "אם מספר הסיפורים משיג את יכולת הברון, עד שני שחקנים הופכים לאאוטסיידרים שאינם במשחק."
     },
     {
         "target": "plaguedoctor",
@@ -112,7 +112,7 @@
     {
         "target": "plaguedoctor",
         "trick": "marionette",
-        "reason": "If the Demon has a neighbor who is alive and a Townsfolk or Outsider when the Plague Doctor dies, that player becomes an evil Marionette. If there is already an extra evil player, this does not happen."
+        "reason": "אם לשד יש שכן בחיים ועם עירוני או אאוטסיידר כאשר רופא המגפה מת, השחקן הזה הופך למריונטה רעה. אם כבר יש שחקן מרושע נוסף, זה לא קורה."
     },
     {
         "target": "plaguedoctor",
@@ -127,37 +127,37 @@
     {
         "target": "boffin",
         "trick": "alchemist",
-        "reason": "If the Alchemist has the Boffin ability, the Alchemist does not learn what ability the Demon has."
+        "reason": "אם לאלכימאי יש את יכולת בופין, האלכימאי לא לומד איזו יכולת יש לשד."
     },
     {
         "target": "boffin",
         "trick": "cultleader",
-        "reason": "If the Demon has the Cult Leader ability, they can’t turn good due to this ability."
+        "reason": "אם לשד יש את יכולת מנהיג הכת, הם לא יכולים להפוך לטובים בגלל היכולת הזו."
     },
     {
         "target": "boffin",
         "trick": "drunk",
-        "reason": "If the Demon would have the Drunk ability, the Boffin chooses a Townsfolk player to have this ability instead."
+        "reason": "אם לשד תהיה יכולת השיכור, הבופין בוחר בשחקן Townsfolk לקבל את היכולת הזו במקום זאת."
     },
     {
         "target": "boffin",
         "trick": "goon",
-        "reason": "If the Demon has the Goon ability, they can’t turn good due to this ability."
+        "reason": "אם לשד יש את יכולת הגון, הם לא יכולים להפוך לטובים בגלל היכולת הזו."
     },
     {
         "target": "boffin",
         "trick": "ogre",
-        "reason": "The Demon cannot have the Ogre ability."
+        "reason": "השד לא יכול לקבל את יכולת העוף."
     },
     {
         "target": "boffin",
         "trick": "politician",
-        "reason": "The Demon cannot have the Politician ability."
+        "reason": "לשד אין יכולת פוליטיקאית."
     },
     {
         "target": "boffin",
         "trick": "villageidiot",
-        "reason": "If there is a spare token, the Boffin can give the Demon the Village Idiot ability."
+        "reason": "אם יש אסימון רזרבי, ה-Boffin יכול לתת לשד יכולת אידיוט הכפר."
     },
     {
         "target": "cerenovus",
@@ -197,12 +197,12 @@
     {
         "target": "mastermind",
         "trick": "alhadikhia",
-        "reason": "If the Al-Hadikhia dies by execution, and the Mastermind is alive, the Al-Hadikhia chooses 3 good players tonight: if all 3 choose to live, evil wins. Otherwise, good wins."
+        "reason": "אם האל-הדיקיה מת בהוצאה להורג, והמוח חי, האל-הדיקיה בוחר 3 שחקנים טובים הלילה: אם כל השלושה בוחרים לחיות, הרוע מנצח. אחרת, מנצחים טובים."
     },
     {
         "target": "pithag",
         "trick": "cultleader",
-        "reason": "If the Pit-Hag turns an evil player into the Cult Leader, they can't turn good due to their own ability."
+        "reason": "אם הפיט-האג הופך שחקן מרושע למנהיג הכת, הם לא יכולים להפוך לטובים בגלל היכולת שלהם."
     },
     {
         "target": "pithag",
@@ -212,12 +212,12 @@
     {
         "target": "pithag",
         "trick": "goon",
-        "reason": "If the Pit-Hag turns an evil player into the Goon, they can't turn good due to their own ability."
+        "reason": "אם ה-Pit-Hag הופך שחקן מרושע לגון, הם לא יכולים להפוך לטובים בגלל היכולת שלהם."
     },
     {
         "target": "pithag",
         "trick": "ogre",
-        "reason": "If the Pit-Hag turns an evil player into the Ogre, they can't turn good due to their own ability."
+        "reason": "אם ה-Pit-Hag הופך שחקן מרושע ל-Ogre, הם לא יכולים להפוך לטובים בגלל היכולת שלהם."
     },
     {
         "target": "pithag",
@@ -227,7 +227,7 @@
     {
         "target": "pithag",
         "trick": "villageidiot",
-        "reason": "If there is a spare token, the Pit-Hag can create an extra Village Idiot. If so, the drunk Village Idiot might change."
+        "reason": "אם יש אסימון פנוי, הפיט-האג יכול ליצור אידיוט כפר נוסף. אם כן, אידיוט הכפר השיכור עלול להשתנות."
     },
     {
         "target": "scarletwoman",
@@ -242,12 +242,12 @@
     {
         "target": "spy",
         "trick": "alchemist",
-        "reason": "If the Alchemist has the Spy ability, they do not see the Grimoire, and the real Spy cannot register falsely."
+        "reason": "אם לאלכימאי יש את יכולת המרגלים, הם לא רואים את ה-Grimoire, והמרגל האמיתי לא יכול לרשום כוזב."
     },
     {
         "target": "spy",
         "trick": "damsel",
-        "reason": "If the Spy is (or has been) in play, the Damsel is poisoned."
+        "reason": "אם המרגל נמצא (או היה) במשחק, העלמה מורעלת."
     },
     {
         "target": "spy",
@@ -257,7 +257,7 @@
     {
         "target": "spy",
         "trick": "ogre",
-        "reason": "The Spy registers as evil to the Ogre."
+        "reason": "המרגל נרשם כרשע בעיני המפלצת."
     },
     {
         "target": "spy",
@@ -267,67 +267,67 @@
     {
         "target": "summoner",
         "trick": "alchemist",
-        "reason": "If there is an Alchemist-Summoner in play, the game starts with a Demon in play, as normal. If the Alchemist-Summoner chooses a player, they make that player a Demon but do not change their alignment."
+        "reason": "אם יש אלכימאי-זימון במשחק, המשחק מתחיל עם שד במשחק, כרגיל. אם האלכימאי-המזעיק בוחר שחקן, הם הופכים את השחקן הזה לשד אבל לא ישנו את היישור שלו."
     },
     {
         "target": "summoner",
         "trick": "clockmaker",
-        "reason": "If the Summoner is in play, the Clockmaker does not receive their information until a Demon is created."
+        "reason": "אם הזימון נמצא במשחק, יוצר השעון לא מקבל את המידע שלו עד שנוצר שד."
     },
     {
         "target": "summoner",
         "trick": "courtier",
-        "reason": "If the Summoner is drunk on the 3rd night, the Summoner chooses which Demon, but the Storyteller chooses which player."
+        "reason": "אם המזימון שיכור בלילה השלישי, המזימון בוחר איזה שד, אבל מספר הסיפורים בוחר איזה שחקן."
     },
     {
         "target": "summoner",
         "trick": "engineer",
-        "reason": "If the Engineer removes a Summoner from play before that Summoner uses their ability, the Summoner uses their ability immediately."
+        "reason": "אם המהנדס מסיר מזימון מהמשחק לפני שהזימון ישתמש ביכולת שלו, המזימון ישתמש ביכולת שלו באופן מיידי."
     },
     {
         "target": "summoner",
         "trick": "hatter",
-        "reason": "The Summoner cannot create an in-play Demon. If the Summoner creates a not-in-play Demon, deaths tonight are arbitrary."
+        "reason": "הזימון לא יכול ליצור שד במשחק. אם המזימון יוצר שד שאינו במשחק, מקרי המוות הלילה הם שרירותיים."
     },
     {
         "target": "summoner",
         "trick": "kazali",
-        "reason": "The Summoner cannot create an in-play Demon. If the Summoner creates a not-in-play Demon, deaths tonight are arbitrary."
+        "reason": "הזימון לא יכול ליצור שד במשחק. אם המזימון יוצר שד שאינו במשחק, מקרי המוות הלילה הם שרירותיים."
     },
     {
         "target": "summoner",
         "trick": "legion",
-        "reason": "If the Summoner creates Legion, most players (including all evil players) become evil Legion."
+        "reason": "אם הזימון יוצר את לגיון, רוב השחקנים (כולל כל השחקנים הרעים) הופכים ללגיון הרשע."
     },
     {
         "target": "summoner",
         "trick": "lordoftyphon",
-        "reason": "If the Summoner creates a Lord of Typhon, the Lord of Typhon must neighbor a Minion. The other neighbor becomes a not-in-play evil Minion."
+        "reason": "אם המזימון יוצר אדון טייפון, אדון טייפון חייב להיות שכן למיניון. השכן השני הופך למיניון מרושע שאינו במשחק."
     },
     {
         "target": "summoner",
         "trick": "marionette",
-        "reason": "The Marionette neighbors the Summoner. The Summoner knows who the Marionette is."
+        "reason": "המריונטה שכנה למזמון. הזימון יודע מי היא המריונטה."
     },
     {
         "target": "summoner",
         "trick": "pithag",
-        "reason": "The Summoner cannot create an in-play Demon. If the Summoner creates a not-in-play Demon, deaths tonight are arbitrary."
+        "reason": "הזימון לא יכול ליצור שד במשחק. אם המזימון יוצר שד שאינו במשחק, מקרי המוות הלילה הם שרירותיים."
     },
     {
         "target": "summoner",
         "trick": "poppygrower",
-        "reason": "If the Poppy Grower is alive when the Summoner acts, the Summoner chooses which Demon, but the Storyteller chooses which player."
+        "reason": "אם מגדל הפרג חי כאשר הזימון פועל, המזימון בוחר איזה שד, אבל מספר הסיפורים בוחר איזה שחקן."
     },
     {
         "target": "summoner",
         "trick": "preacher",
-        "reason": "If the Preacher chose the Summoner on or before the 3rd night, the Summoner chooses which Demon, but the Storyteller chooses which player."
+        "reason": "אם המטיף בחר בזימון בלילה השלישי או לפניו, המזימון בוחר איזה שד, אבל מספר הסיפורים בוחר איזה שחקן."
     },
     {
         "target": "summoner",
         "trick": "pukka",
-        "reason": "The Summoner may choose a player to become the Pukka on the 2nd night."
+        "reason": "הזימון יכול לבחור שחקן שיהפוך לפוקה בלילה השני."
     },
     {
         "target": "summoner",
@@ -337,17 +337,17 @@
     {
         "target": "vizier",
         "trick": "alsaahir",
-        "reason": "If the Vizier is in play, the Alsaahir must also guess which Demon(s) are in play."
+        "reason": "אם הווזיר נמצא במשחק, האלסאהיר חייב גם לנחש איזה שד(ים) משחקים."
     },
     {
         "target": "vizier",
         "trick": "courtier",
-        "reason": "If the Vizier loses their ability, they learn this. If the Vizier is executed while they have their ability, their team wins."
+        "reason": "אם הווזיר מאבד את יכולתו, הם לומדים זאת. אם הווזיר מוצא להורג בזמן שיש לו את היכולת שלו, הצוות שלו מנצח."
     },
     {
         "target": "vizier",
         "trick": "fearmonger",
-        "reason": "The Vizier wakes with the Fearmonger, learns who they choose and cannot choose to immediately execute that player."
+        "reason": "הווזיר מתעורר עם הפחדן, לומד במי הם בוחרים ולא יכול לבחור להוציא להורג מיד את השחקן הזה."
     },
     {
         "target": "vizier",
@@ -357,32 +357,32 @@
     {
         "target": "vizier",
         "trick": "magician",
-        "reason": "If the Vizier and Magician are both in play, the Demon does not learn the Minions."
+        "reason": "אם הווזיר והקוסם שניהם במשחק, השד לא לומד את המיניונים."
     },
     {
         "target": "vizier",
         "trick": "politician",
-        "reason": "The Politician might register as evil to the Vizier."
+        "reason": "הפוליטיקאי עלול להירשם כמרושע לווזיר."
     },
     {
         "target": "vizier",
         "trick": "preacher",
-        "reason": "If the Vizier loses their ability, they learn this. If the Vizier is executed while they have their ability, their team wins."
+        "reason": "אם הווזיר מאבד את יכולתו, הם לומדים זאת. אם הווזיר מוצא להורג בזמן שיש לו את היכולת שלו, הצוות שלו מנצח."
     },
     {
         "target": "vizier",
         "trick": "zealot",
-        "reason": "The Zealot might register as evil to the Vizier."
+        "reason": "הקנאי עלול להירשם כרשע בעיני הווזיר."
     },
     {
         "target": "widow",
         "trick": "alchemist",
-        "reason": "If the Alchemist has the Widow ability, they do not see the Grimoire."
+        "reason": "אם לאלכימאי יש את יכולת האלמנה, הם לא רואים את ה-Grimoire."
     },
     {
         "target": "widow",
         "trick": "damsel",
-        "reason": "If the Widow is (or has been) in play, the Damsel is poisoned."
+        "reason": "אם האלמנה נמצאת (או הייתה) במשחק, העלמה מורעלת."
     },
     {
         "target": "widow",
@@ -397,27 +397,27 @@
     {
         "target": "kazali",
         "trick": "choirboy",
-        "reason": "The Kazali can not choose the King to become a Minion if a Choirboy is in play."
+        "reason": "הקזאלי לא יכול לבחור במלך להפוך למיניון אם נער מקהלה משחק."
     },
     {
         "target": "kazali",
         "trick": "goon",
-        "reason": "The Kazali can choose that the Goon player is one of their evil Minions."
+        "reason": "הקזאלי יכול לבחור ששחקן הגון הוא אחד מהמיניונים המרושעים שלהם."
     },
     {
         "target": "kazali",
         "trick": "huntsman",
-        "reason": "If the Kazali chooses the Damsel to become a Minion, and a Huntsman is in play, a good player becomes the Damsel."
+        "reason": "אם הקזאלי בוחר את העלמה להפוך למיניון, וצייד נמצא במשחק, שחקן טוב הופך להיות העלמה."
     },
     {
         "target": "kazali",
         "trick": "marionette",
-        "reason": "If the Kazali chooses to create a Marionette, they must choose one of their neighbors."
+        "reason": "אם הקזאלי בוחר ליצור מריונטה, עליהם לבחור באחד משכניהם."
     },
     {
         "target": "kazali",
         "trick": "soldier",
-        "reason": "The Kazali can choose that the Soldier player is one of their evil Minions."
+        "reason": "הקזאלי יכול לבחור ששחקן החייל הוא אחד מהמיניונים המרושעים שלהם."
     },
     {
         "target": "legion",
@@ -432,37 +432,37 @@
     {
         "target": "legion",
         "trick": "minstrel",
-        "reason": "If Legion died by execution today, Legion keeps their ability, but the Minstrel might learn they are Legion."
+        "reason": "אם לגיון מת בהוצאה להורג היום, לגיון שומר על יכולתם, אבל המינסטרל עשוי ללמוד שהם לגיון."
     },
     {
         "target": "legion",
         "trick": "preacher",
-        "reason": "If the Preacher chooses Legion, Legion keeps their ability, but the Preacher might learn they are Legion."
+        "reason": "אם המטיף בוחר בלגיון, לגיון שומר על יכולתם, אבל המטיף עשוי ללמוד שהם לגיון."
     },
     {
         "target": "legion",
         "trick": "zealot",
-        "reason": "The Zealot might register as evil to Legion's ability."
+        "reason": "הקנאים עלולים להירשם כרשעים ליכולתו של לגיון."
     },
     {
         "target": "leviathan",
         "trick": "banshee",
-        "reason": "Each night*, the Leviathan chooses an alive good player (different to previous nights): a chosen Banshee dies & gains their ability."
+        "reason": "בכל לילה*, הלוויתן בוחר שחקן טוב בחיים (שונה ללילות קודמים): בנשי נבחר מת ומשיג את היכולת שלו."
     },
     {
         "target": "leviathan",
         "trick": "exorcist",
-        "reason": "Evil does not win when more than 1 good player has been executed, if the Exorcist is alive and has ever successfully chosen the Leviathan."
+        "reason": "הרוע לא מנצח כאשר יותר משחקן טוב אחד הוצא להורג, אם מגרש השדים חי ואי פעם בחר בהצלחה את הלוויתן."
     },
     {
         "target": "leviathan",
         "trick": "farmer",
-        "reason": "Each night*, the Leviathan chooses an alive good player (different to previous nights): a chosen Farmer uses their ability but does not die."
+        "reason": "בכל לילה*, הלוויתן בוחר שחקן טוב בחיים (שונה ללילות קודמים): איכר נבחר משתמש ביכולת שלו אבל לא מת."
     },
     {
         "target": "leviathan",
         "trick": "grandmother",
-        "reason": "If Leviathan is in play and the Grandchild dies by execution, evil wins."
+        "reason": "אם לויתן משחק והנכד מת בהוצאה להורג, הרוע מנצח."
     },
     {
         "target": "leviathan",
@@ -472,22 +472,22 @@
     {
         "target": "leviathan",
         "trick": "innkeeper",
-        "reason": "If the Leviathan is in play, the Innkeeper-protected-players are safe from all evil abilities."
+        "reason": "אם הלוויתן במשחק, השחקנים המוגנים על הפונדק בטוחים מכל היכולות הרעות."
     },
     {
         "target": "leviathan",
         "trick": "king",
-        "reason": "If the Leviathan is in play, and at least 1 player is dead, the King learns an alive character each night."
+        "reason": "אם הלוויתן במשחק, ולפחות שחקן אחד מת, המלך לומד דמות חיה בכל לילה."
     },
     {
         "target": "leviathan",
         "trick": "mayor",
-        "reason": "If the Leviathan is in play & no execution occurs on day 5, good wins."
+        "reason": "אם הלוויתן במשחק ולא מתרחשת ביצוע ביום 5, טוב מנצח."
     },
     {
         "target": "leviathan",
         "trick": "monk",
-        "reason": "If the Leviathan is in play, the Monk-protected-player is safe from all evil abilities."
+        "reason": "אם הלוויתן נמצא במשחק, השחקן המוגן על ידי הנזיר בטוח מכל היכולות הרעות."
     },
     {
         "target": "leviathan",
@@ -497,17 +497,17 @@
     {
         "target": "leviathan",
         "trick": "ravenkeeper",
-        "reason": "Each night*, the Leviathan chooses an alive player (different to previous nights): a chosen Ravenkeeper uses their ability but does not die."
+        "reason": "בכל לילה*, הלוויתן בוחר שחקן חי (שונה ללילות קודמים): עורב נבחר משתמש ביכולת שלו אבל לא מת."
     },
     {
         "target": "leviathan",
         "trick": "sage",
-        "reason": "Each night*, the Leviathan chooses an alive good player (different to previous nights): a chosen Sage uses their ability but does not die."
+        "reason": "בכל לילה*, הלוויתן בוחר שחקן חי (שונה ללילות קודמים): עורב נבחר משתמש ביכולת שלו אבל לא מת."
     },
     {
         "target": "leviathan",
         "trick": "soldier",
-        "reason": "If the Leviathan is in play, the Soldier is safe from all evil abilities."
+        "reason": "אם הלוויתן במשחק, החייל בטוח מכל היכולות הרעות."
     },
     {
         "target": "lilmonsta",
@@ -517,7 +517,7 @@
     {
         "target": "lilmonsta",
         "trick": "magician",
-        "reason": "Each night, the Magician chooses a Minion: if that Minion & Lil' Monsta are alive, that Minion babysits Lil’ Monsta."
+        "reason": "בכל לילה, הקוסם בוחר במיניון: אם המיניון וליל'מונסטה האלה בחיים, המיניון הזה שומר על ליל'מונסטה."
     },
     {
         "target": "lilmonsta",
@@ -547,66 +547,66 @@
     {
         "target": "riot",
         "trick": "banshee",
-        "reason": "Each night*, Riot chooses an alive good player (different to previous nights): a chosen Banshee dies & gains their ability."
+        "reason": "בכל לילה*, Riot בוחר שחקן טוב בחיים (שונה ללילות קודמים): בנשי נבחר מת ומשיג את היכולת שלו."
     },
     {
         "target": "riot",
         "trick": "exorcist",
-        "reason": "If the Exorcist chooses Riot on the 3rd night, Minions do not become Riot."
+        "reason": "אם מגרש השדים בוחר ב- Riot בלילה השלישי, המיניונים לא הופכים ל- Riot."
     },
     {
         "target": "riot",
         "trick": "farmer",
-        "reason": "Each night*, Riot chooses an alive good player (different to previous nights): a chosen Farmer uses their ability but does not die."
+        "reason": "בכל לילה*, Riot בוחר שחקן טוב בחיים (שונה ללילות קודמים): חוואי נבחר משתמש ביכולת שלו אבל לא מת."
     },
     {
         "target": "riot",
         "trick": "grandmother",
-        "reason": "If Riot is in play and the Grandchild dies during the day, the Grandmother dies too."
+        "reason": "אם Riot נמצאת במשחק והנכד מת במהלך היום, הסבתא מתה גם היא."
     },
     {
         "target": "riot",
         "trick": "innkeeper",
-        "reason": "If Riot is in play, the Innkeeper-protected player is safe from all evil abilities."
+        "reason": "אם Riot נמצא במשחק, השחקן המוגן על הפונדק בטוח מכל היכולות הרעות."
     },
     {
         "target": "riot",
         "trick": "king",
-        "reason": "If Riot is in play, and at least 1 player is dead, the King learns an alive character each night."
+        "reason": "אם Riot נמצא במשחק, ולפחות שחקן אחד מת, המלך לומד דמות חיה בכל לילה."
     },
     {
         "target": "riot",
         "trick": "mayor",
-        "reason": "The Mayor may choose to stop nominations. If they do so when only 1 Riot is alive, good wins. Otherwise, evil wins."
+        "reason": "ראש העיר רשאי להפסיק את המועמדויות. אם הם עושים זאת כשרק 1 Riot חי, טוב ינצח. אחרת, הרוע מנצח."
     },
     {
         "target": "riot",
         "trick": "monk",
-        "reason": "If Riot is in play, the Monk-protected player is safe from all evil abilities."
+        "reason": "אם Riot נמצא במשחק, השחקן המוגן על נזיר בטוח מכל היכולות הרעות."
     },
     {
         "target": "riot",
         "trick": "ravenkeeper",
-        "reason": "Each night*, Riot chooses an alive good player (different to previous nights): a chosen Ravenkeeper uses their ability but does not die."
+        "reason": "בכל לילה*, Riot בוחר שחקן טוב בחיים (שונה ללילות קודמים): עורב נבחר משתמש ביכולת שלו אבל לא מת."
     },
     {
         "target": "riot",
         "trick": "sage",
-        "reason": "Each night*, Riot chooses an alive good player (different to previous nights): a chosen Sage uses their ability but does not die."
+        "reason": "בכל לילה*, Riot בוחר שחקן טוב בחיים (שונה ללילות קודמים): חכם נבחר משתמש ביכולת שלו אבל לא מת."
     },
     {
         "target": "riot",
         "trick": "soldier",
-        "reason": "If Riot is in play, the Soldier is safe from all evil abilities."
+        "reason": "אם Riot נמצא במשחק, החייל בטוח מכל היכולות הרעות."
     },
     {
         "target": "vortox",
         "trick": "banshee",
-        "reason": "If the Vortox is in play and the Demon kills the Banshee, the players still learn that the Banshee has died."
+        "reason": "אם הוורטוקס נמצא במשחק והשד הורג את הבנשי, השחקנים עדיין לומדים שהבנשי מת."
     },
     {
         "target": "yaggababble",
         "trick": "exorcist",
-        "reason": "If the Exorcist chooses the Yaggababble, the Yaggababble ability does not kill tonight."
+        "reason": "אם מגרש השדים בוחר את ה-Yaggababble, יכולת ה-Yaggababble לא הורגת הלילה."
     }
 ]

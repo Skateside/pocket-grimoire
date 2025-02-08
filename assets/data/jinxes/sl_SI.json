@@ -2,12 +2,12 @@
     {
         "target": "bountyhunter",
         "trick": "kazali",
-        "reason": "An evil Townsfolk is only created if the Bounty Hunter is still in play after the Kazali acts."
+        "reason": "Zlobni meščani nastanejo le, če je lovec na glave še vedno v igri po dejanjih Kazali."
     },
     {
         "target": "bountyhunter",
         "trick": "philosopher",
-        "reason": "If the Philosopher gains the Bounty Hunter ability, a Townsfolk might turn evil."
+        "reason": "Če Filozof pridobi sposobnost lovca na glave, lahko Meščani postanejo zlobni."
     },
     {
         "target": "cannibal",
@@ -17,17 +17,17 @@
     {
         "target": "cannibal",
         "trick": "juggler",
-        "reason": "If the Juggler guesses on their first day and dies by execution, tonight the living Cannibal learns how many guesses the Juggler got correct."
+        "reason": "Če žongler prvi dan ugiba in zaradi usmrtitve umre, nocoj živi kanibal izve, koliko ugibanj je žongler pravilnih."
     },
     {
         "target": "cannibal",
         "trick": "poppygrower",
-        "reason": "If the Cannibal eats the Poppy Grower, then dies or loses the Poppy Grower ability, the Demon and Minions learn each other that night."
+        "reason": "Če Kanibal poje Pridelovalca maka, nato umre ali izgubi sposobnost Pridelovalca maka, se Demon in Minioni tisto noč učijo drug drugega."
     },
     {
         "target": "cannibal",
         "trick": "zealot",
-        "reason": "If the Cannibal gains the Zealot ability, the Cannibal learns this."
+        "reason": "Če kanibal pridobi sposobnost Zealot, se kanibal tega nauči."
     },
     {
         "target": "mathematician",
@@ -52,7 +52,7 @@
     {
         "target": "heretic",
         "trick": "boffin",
-        "reason": "The Demon cannot have the Heretic ability."
+        "reason": "Demon ne more imeti heretične sposobnosti."
     },
     {
         "target": "heretic",
@@ -82,12 +82,12 @@
     {
         "target": "ogre",
         "trick": "recluse",
-        "reason": "If the Recluse registers as evil to the Ogre, the Ogre learns that they are evil."
+        "reason": "Če se Samotar Ogru prijavi kot hudoben, se Ogre nauči, da so hudobni."
     },
     {
         "target": "plaguedoctor",
         "trick": "baron",
-        "reason": "If the Storyteller gains the Baron ability, up to two players become not-in-play Outsiders."
+        "reason": "Če Pripovedovalec pridobi sposobnost barona, do dva igralca postaneta Outsidersa, ki nista v igri."
     },
     {
         "target": "plaguedoctor",
@@ -112,7 +112,7 @@
     {
         "target": "plaguedoctor",
         "trick": "marionette",
-        "reason": "If the Demon has a neighbor who is alive and a Townsfolk or Outsider when the Plague Doctor dies, that player becomes an evil Marionette. If there is already an extra evil player, this does not happen."
+        "reason": "Če ima Demon živega soseda in Meščana ali Tujca, ko kužni zdravnik umre, ta igralec postane zlobna marioneta. Če že obstaja dodatni zlobni igralec, se to ne zgodi."
     },
     {
         "target": "plaguedoctor",
@@ -122,42 +122,42 @@
     {
         "target": "plaguedoctor",
         "trick": "spy",
-        "reason": "If the Plague Doctor dies, a living Minion gains the Spy ability in addition to their own ability, and learns this."
+        "reason": "Če kužni zdravnik umre, živi Minion poleg lastne sposobnosti pridobi še sposobnost vohuna in se tega nauči."
     },
     {
         "target": "boffin",
         "trick": "alchemist",
-        "reason": "If the Alchemist has the Boffin ability, the Alchemist does not learn what ability the Demon has."
+        "reason": "Če ima alkimist sposobnost Boffina, se alkimist ne nauči, katero sposobnost ima demon."
     },
     {
         "target": "boffin",
         "trick": "cultleader",
-        "reason": "If the Demon has the Cult Leader ability, they can’t turn good due to this ability."
+        "reason": "Če ima Demon sposobnost Cult Leader, zaradi te sposobnosti ne more postati dober."
     },
     {
         "target": "boffin",
         "trick": "drunk",
-        "reason": "If the Demon would have the Drunk ability, the Boffin chooses a Townsfolk player to have this ability instead."
+        "reason": "Če bi imel Demon sposobnost Pijan, Boffin namesto tega izbere igralca iz mestnega prebivalstva, ki ima to sposobnost."
     },
     {
         "target": "boffin",
         "trick": "goon",
-        "reason": "If the Demon has the Goon ability, they can’t turn good due to this ability."
+        "reason": "Če ima Demon sposobnost Goon, zaradi te sposobnosti ne more postati dober."
     },
     {
         "target": "boffin",
         "trick": "ogre",
-        "reason": "The Demon cannot have the Ogre ability."
+        "reason": "Demon ne more imeti sposobnosti Ogra."
     },
     {
         "target": "boffin",
         "trick": "politician",
-        "reason": "The Demon cannot have the Politician ability."
+        "reason": "Demon ne more imeti sposobnosti politika."
     },
     {
         "target": "boffin",
         "trick": "villageidiot",
-        "reason": "If there is a spare token, the Boffin can give the Demon the Village Idiot ability."
+        "reason": "Če obstaja rezervni žeton, lahko Boffin da Demon the Village Idiot sposobnost."
     },
     {
         "target": "cerenovus",
@@ -197,12 +197,12 @@
     {
         "target": "mastermind",
         "trick": "alhadikhia",
-        "reason": "If the Al-Hadikhia dies by execution, and the Mastermind is alive, the Al-Hadikhia chooses 3 good players tonight: if all 3 choose to live, evil wins. Otherwise, good wins."
+        "reason": "Če Al-Hadikhia umre z usmrtitvijo, glavni um pa je živ, Al-Hadikhia nocoj izbere 3 dobre igralce: če se vsi 3 odločijo živeti, zmaga zlo. Sicer pa dobro zmaga."
     },
     {
         "target": "pithag",
         "trick": "cultleader",
-        "reason": "If the Pit-Hag turns an evil player into the Cult Leader, they can't turn good due to their own ability."
+        "reason": "Če Pit-Hag zlobnega igralca spremeni v vodjo kulta, ta zaradi lastnih sposobnosti ne more postati dober."
     },
     {
         "target": "pithag",
@@ -212,12 +212,12 @@
     {
         "target": "pithag",
         "trick": "goon",
-        "reason": "If the Pit-Hag turns an evil player into the Goon, they can't turn good due to their own ability."
+        "reason": "Če Pit-Hag zlobnega igralca spremeni v Goona, ta zaradi lastnih sposobnosti ne more postati dober."
     },
     {
         "target": "pithag",
         "trick": "ogre",
-        "reason": "If the Pit-Hag turns an evil player into the Ogre, they can't turn good due to their own ability."
+        "reason": "Če Pit-Hag zlobnega igralca spremeni v Ogra, ta zaradi lastnih sposobnosti ne more postati dober."
     },
     {
         "target": "pithag",
@@ -227,7 +227,7 @@
     {
         "target": "pithag",
         "trick": "villageidiot",
-        "reason": "If there is a spare token, the Pit-Hag can create an extra Village Idiot. If so, the drunk Village Idiot might change."
+        "reason": "Če obstaja rezervni žeton, lahko Pit-Hag ustvari dodatnega vaškega idiota. Če je tako, se lahko pijani vaški idiot spremeni."
     },
     {
         "target": "scarletwoman",
@@ -242,12 +242,12 @@
     {
         "target": "spy",
         "trick": "alchemist",
-        "reason": "If the Alchemist has the Spy ability, they do not see the Grimoire, and the real Spy cannot register falsely."
+        "reason": "Če ima Alkimist sposobnost Vohuna, ne vidi Grimoira in pravi Vohun se ne more lažno registrirati."
     },
     {
         "target": "spy",
         "trick": "damsel",
-        "reason": "If the Spy is (or has been) in play, the Damsel is poisoned."
+        "reason": "Če je vohun (ali je bil) v igri, je deklica zastrupljena."
     },
     {
         "target": "spy",
@@ -257,7 +257,7 @@
     {
         "target": "spy",
         "trick": "ogre",
-        "reason": "The Spy registers as evil to the Ogre."
+        "reason": "Vohun se za Ogra označi kot zloben."
     },
     {
         "target": "spy",
@@ -267,87 +267,87 @@
     {
         "target": "summoner",
         "trick": "alchemist",
-        "reason": "If there is an Alchemist-Summoner in play, the game starts with a Demon in play, as normal. If the Alchemist-Summoner chooses a player, they make that player a Demon but do not change their alignment."
+        "reason": "Če je v igri Alchemist-Summoner, se igra začne z Demonom v igri, kot običajno. Če Alchemist-Summoner izbere igralca, tega igralca naredi za demona, vendar ne spremeni svoje poravnave."
     },
     {
         "target": "summoner",
         "trick": "clockmaker",
-        "reason": "If the Summoner is in play, the Clockmaker does not receive their information until a Demon is created."
+        "reason": "Če je Summoner v igri, Clockmaker ne prejme njegovih informacij, dokler ni ustvarjen demon."
     },
     {
         "target": "summoner",
         "trick": "courtier",
-        "reason": "If the Summoner is drunk on the 3rd night, the Summoner chooses which Demon, but the Storyteller chooses which player."
+        "reason": "Če je Summoner tretjo noč pijan, Summoner izbere, katerega demona, Storyteller pa izbere, katerega igralca."
     },
     {
         "target": "summoner",
         "trick": "engineer",
-        "reason": "If the Engineer removes a Summoner from play before that Summoner uses their ability, the Summoner uses their ability immediately."
+        "reason": "Če Inženir odstrani Summonerja iz igre, preden ta Summoner uporabi svojo sposobnost, Summoner svojo sposobnost uporabi takoj."
     },
     {
         "target": "summoner",
         "trick": "hatter",
-        "reason": "The Summoner cannot create an in-play Demon. If the Summoner creates a not-in-play Demon, deaths tonight are arbitrary."
+        "reason": "Summoner ne more ustvariti demona v igri. Če Summoner ustvari demona, ki ni v igri, so nocojšnje smrti poljubne."
     },
     {
         "target": "summoner",
         "trick": "kazali",
-        "reason": "The Summoner cannot create an in-play Demon. If the Summoner creates a not-in-play Demon, deaths tonight are arbitrary."
+        "reason": "Summoner ne more ustvariti demona v igri. Če Summoner ustvari demona, ki ni v igri, so nocojšnje smrti poljubne."
     },
     {
         "target": "summoner",
         "trick": "legion",
-        "reason": "If the Summoner creates Legion, most players (including all evil players) become evil Legion."
+        "reason": "Če Summoner ustvari Legion, večina igralcev (vključno z vsemi zlobnimi igralci) postane zlobna Legija."
     },
     {
         "target": "summoner",
         "trick": "lordoftyphon",
-        "reason": "If the Summoner creates a Lord of Typhon, the Lord of Typhon must neighbor a Minion. The other neighbor becomes a not-in-play evil Minion."
+        "reason": "Če Summoner ustvari Lord of Typhon, mora Lord of Typhon biti sosed Miniona. Drugi sosed postane zlobni minion, ki ni v igri."
     },
     {
         "target": "summoner",
         "trick": "marionette",
-        "reason": "The Marionette neighbors the Summoner. The Summoner knows who the Marionette is."
+        "reason": "Marioneta je soseda Summonerja. Summoner ve, kdo je marioneta."
     },
     {
         "target": "summoner",
         "trick": "pithag",
-        "reason": "The Summoner cannot create an in-play Demon. If the Summoner creates a not-in-play Demon, deaths tonight are arbitrary."
+        "reason": "Summoner ne more ustvariti demona v igri. Če Summoner ustvari demona, ki ni v igri, so nocojšnje smrti poljubne."
     },
     {
         "target": "summoner",
         "trick": "poppygrower",
-        "reason": "If the Poppy Grower is alive when the Summoner acts, the Summoner chooses which Demon, but the Storyteller chooses which player."
+        "reason": "Če je pridelovalec maka živ, ko klicalec deluje, klicalec izbere, katerega demona, pripovedovalec pa izbere, katerega igralca."
     },
     {
         "target": "summoner",
         "trick": "preacher",
-        "reason": "If the Preacher chose the Summoner on or before the 3rd night, the Summoner chooses which Demon, but the Storyteller chooses which player."
+        "reason": "Če je Pridigar izbral Priklicovalca na ali pred 3. nočjo, Priklicavalec izbere, katerega demona, pripovedovalec pa izbere, katerega igralca."
     },
     {
         "target": "summoner",
         "trick": "pukka",
-        "reason": "The Summoner may choose a player to become the Pukka on the 2nd night."
+        "reason": "Summoner lahko 2. noč izbere igralca, ki bo postal Pukka."
     },
     {
         "target": "summoner",
         "trick": "zombuul",
-        "reason": "If the Summoner turns a dead player into the Zombuul, the Storyteller treats that player as a Zombuul that has died once."
+        "reason": "Če Summoner mrtvega igralca spremeni v Zombuula, Storyteller tega igralca obravnava kot Zombuula, ki je enkrat umrl."
     },
     {
         "target": "vizier",
         "trick": "alsaahir",
-        "reason": "If the Vizier is in play, the Alsaahir must also guess which Demon(s) are in play."
+        "reason": "Če je v igri vezir, mora tudi Alsaahir uganiti, kateri demoni so v igri."
     },
     {
         "target": "vizier",
         "trick": "courtier",
-        "reason": "If the Vizier loses their ability, they learn this. If the Vizier is executed while they have their ability, their team wins."
+        "reason": "Če vezir izgubi svojo sposobnost, se tega naučijo. Če je vezir usmrčen, medtem ko imajo svoje sposobnosti, njihova ekipa zmaga."
     },
     {
         "target": "vizier",
         "trick": "fearmonger",
-        "reason": "The Vizier wakes with the Fearmonger, learns who they choose and cannot choose to immediately execute that player."
+        "reason": "Vezir se zbudi s Strahovcem, izve, koga so izbrali in se ne more odločiti za takojšnjo usmrtitev tega igralca."
     },
     {
         "target": "vizier",
@@ -357,27 +357,27 @@
     {
         "target": "vizier",
         "trick": "magician",
-        "reason": "If the Vizier and Magician are both in play, the Demon does not learn the Minions."
+        "reason": "Če sta vezir in čarovnik oba v igri, se Demon ne nauči Minionov."
     },
     {
         "target": "vizier",
         "trick": "politician",
-        "reason": "The Politician might register as evil to the Vizier."
+        "reason": "Politik bi se lahko vezirju prijavil kot zloben."
     },
     {
         "target": "vizier",
         "trick": "preacher",
-        "reason": "If the Vizier loses their ability, they learn this. If the Vizier is executed while they have their ability, their team wins."
+        "reason": "Če vezir izgubi svojo sposobnost, se tega naučijo. Če je vezir usmrčen, medtem ko imajo svoje sposobnosti, njihova ekipa zmaga."
     },
     {
         "target": "vizier",
         "trick": "zealot",
-        "reason": "The Zealot might register as evil to the Vizier."
+        "reason": "Zelot se lahko vezirju pripiše kot zlo."
     },
     {
         "target": "widow",
         "trick": "alchemist",
-        "reason": "If the Alchemist has the Widow ability, they do not see the Grimoire."
+        "reason": "Če ima alkimist sposobnost vdove, ne vidi Grimoira."
     },
     {
         "target": "widow",
@@ -387,7 +387,7 @@
     {
         "target": "widow",
         "trick": "magician",
-        "reason": "If the Widow is (or has been) in play, the Damsel is poisoned."
+        "reason": "Če je vdova (ali je bila) v igri, je deklica zastrupljena."
     },
     {
         "target": "widow",
@@ -397,27 +397,27 @@
     {
         "target": "kazali",
         "trick": "choirboy",
-        "reason": "The Kazali can not choose the King to become a Minion if a Choirboy is in play."
+        "reason": "Kazali ne more izbrati kralja, da postane Minion, če je v igri zborovski deček."
     },
     {
         "target": "kazali",
         "trick": "goon",
-        "reason": "The Kazali can choose that the Goon player is one of their evil Minions."
+        "reason": "Kazali lahko izbere, da je Goon igralec eden od njihovih zlobnih Minionov."
     },
     {
         "target": "kazali",
         "trick": "huntsman",
-        "reason": "If the Kazali chooses the Damsel to become a Minion, and a Huntsman is in play, a good player becomes the Damsel."
+        "reason": "Če Kazali izbere Deklico, da postane Minion, in je v igri Huntsman, dober igralec postane Deklica."
     },
     {
         "target": "kazali",
         "trick": "marionette",
-        "reason": "If the Kazali chooses to create a Marionette, they must choose one of their neighbors."
+        "reason": "Če se Kazali odloči ustvariti marioneto, mora izbrati enega od svojih sosedov."
     },
     {
         "target": "kazali",
         "trick": "soldier",
-        "reason": "The Kazali can choose that the Soldier player is one of their evil Minions."
+        "reason": "Kazali lahko izbere, da je igralec Vojak eden od njihovih zlobnih Minionov."
     },
     {
         "target": "legion",
@@ -432,37 +432,37 @@
     {
         "target": "legion",
         "trick": "minstrel",
-        "reason": "If Legion died by execution today, Legion keeps their ability, but the Minstrel might learn they are Legion."
+        "reason": "Če bi Legion danes umrl zaradi usmrtitve, bi Legija obdržala svojo sposobnost, toda Minstrel bi lahko izvedel, da so Legija."
     },
     {
         "target": "legion",
         "trick": "preacher",
-        "reason": "If the Preacher chooses Legion, Legion keeps their ability, but the Preacher might learn they are Legion."
+        "reason": "Če Pridigar izbere Legijo, Legija obdrži svojo sposobnost, toda Pridigar lahko izve, da so Legija."
     },
     {
         "target": "legion",
         "trick": "zealot",
-        "reason": "The Zealot might register as evil to Legion's ability."
+        "reason": "Zealot bi se lahko prijavil kot zlo za Legionino sposobnost."
     },
     {
         "target": "leviathan",
         "trick": "banshee",
-        "reason": "Each night*, the Leviathan chooses an alive good player (different to previous nights): a chosen Banshee dies & gains their ability."
+        "reason": "Vsako noč* Leviathan izbere živega dobrega igralca (različnega od prejšnjih noči): izbrani Banshee umre in pridobi svojo sposobnost."
     },
     {
         "target": "leviathan",
         "trick": "exorcist",
-        "reason": "Evil does not win when more than 1 good player has been executed, if the Exorcist is alive and has ever successfully chosen the Leviathan."
+        "reason": "Zlo ne zmaga, če je bil usmrčen več kot 1 dober igralec, če je Izganjalec hudiča živ in je kdaj uspešno izbral Levijatana."
     },
     {
         "target": "leviathan",
         "trick": "farmer",
-        "reason": "Each night*, the Leviathan chooses an alive good player (different to previous nights): a chosen Farmer uses their ability but does not die."
+        "reason": "Vsako noč* Leviathan izbere živega dobrega igralca (drugačen kot prejšnje noči): izbrani kmet uporabi svojo sposobnost, vendar ne umre."
     },
     {
         "target": "leviathan",
         "trick": "grandmother",
-        "reason": "If Leviathan is in play and the Grandchild dies by execution, evil wins."
+        "reason": "Če je Leviatan v igri in Vnuk umre z usmrtitvijo, zlo zmaga."
     },
     {
         "target": "leviathan",
@@ -472,22 +472,22 @@
     {
         "target": "leviathan",
         "trick": "innkeeper",
-        "reason": "If the Leviathan is in play, the Innkeeper-protected-players are safe from all evil abilities."
+        "reason": "Če je Leviathan v igri, so igralci, zaščiteni z gostilničarjem, varni pred vsemi zlimi sposobnostmi."
     },
     {
         "target": "leviathan",
         "trick": "king",
-        "reason": "If the Leviathan is in play, and at least 1 player is dead, the King learns an alive character each night."
+        "reason": "Če je Leviathan v igri in je vsaj 1 igralec mrtev, kralj vsako noč spozna živega lika."
     },
     {
         "target": "leviathan",
         "trick": "mayor",
-        "reason": "If the Leviathan is in play & no execution occurs on day 5, good wins."
+        "reason": "Če je Leviathan v igri in 5. dan ne pride do usmrtitve, zmaga dobro."
     },
     {
         "target": "leviathan",
         "trick": "monk",
-        "reason": "If the Leviathan is in play, the Monk-protected-player is safe from all evil abilities."
+        "reason": "Če je v igri Leviathan, je igralec, zaščiten z menihom, varen pred vsemi zlimi sposobnostmi."
     },
     {
         "target": "leviathan",
@@ -497,17 +497,17 @@
     {
         "target": "leviathan",
         "trick": "ravenkeeper",
-        "reason": "Each night*, the Leviathan chooses an alive player (different to previous nights): a chosen Ravenkeeper uses their ability but does not die."
+        "reason": "Vsako noč* Leviathan izbere živega igralca (drugačen kot prejšnje noči): izbrani Ravenkeeper uporabi svojo sposobnost, vendar ne umre."
     },
     {
         "target": "leviathan",
         "trick": "sage",
-        "reason": "Each night*, the Leviathan chooses an alive good player (different to previous nights): a chosen Sage uses their ability but does not die."
+        "reason": "Vsako noč* Leviathan izbere živega dobrega igralca (različnega od prejšnjih noči): izbrani modrec uporabi svojo sposobnost, vendar ne umre."
     },
     {
         "target": "leviathan",
         "trick": "soldier",
-        "reason": "If the Leviathan is in play, the Soldier is safe from all evil abilities."
+        "reason": "Če je Leviatan v igri, je Vojak varen pred vsemi zlimi sposobnostmi."
     },
     {
         "target": "lilmonsta",
@@ -517,7 +517,7 @@
     {
         "target": "lilmonsta",
         "trick": "magician",
-        "reason": "Each night, the Magician chooses a Minion: if that Minion & Lil' Monsta are alive, that Minion babysits Lil’ Monsta."
+        "reason": "Vsako noč čarovnik izbere Miniona: če sta ta Minion in Lil' Monsta živa, ta Minion varuje Lil' Monsta."
     },
     {
         "target": "lilmonsta",
@@ -547,66 +547,66 @@
     {
         "target": "riot",
         "trick": "banshee",
-        "reason": "Each night*, Riot chooses an alive good player (different to previous nights): a chosen Banshee dies & gains their ability."
+        "reason": "Vsako noč* Riot izbere živega dobrega igralca (različnega od prejšnjih noči): izbrani Banshee umre in pridobi svojo sposobnost."
     },
     {
         "target": "riot",
         "trick": "exorcist",
-        "reason": "If the Exorcist chooses Riot on the 3rd night, Minions do not become Riot."
+        "reason": "Če Exorcist izbere Riot na 3. noč, Minioni ne postanejo Riot."
     },
     {
         "target": "riot",
         "trick": "farmer",
-        "reason": "Each night*, Riot chooses an alive good player (different to previous nights): a chosen Farmer uses their ability but does not die."
+        "reason": "Vsako noč* Riot izbere živega dobrega igralca (različnega od prejšnjih noči): izbrani kmet uporabi svojo sposobnost, vendar ne umre."
     },
     {
         "target": "riot",
         "trick": "grandmother",
-        "reason": "If Riot is in play and the Grandchild dies during the day, the Grandmother dies too."
+        "reason": "Če je v igri Riot in vnuk čez dan umre, umre tudi babica."
     },
     {
         "target": "riot",
         "trick": "innkeeper",
-        "reason": "If Riot is in play, the Innkeeper-protected player is safe from all evil abilities."
+        "reason": "Če je v igri Riot, je igralec, zaščiten z gostilničarjem, varen pred vsemi zlimi sposobnostmi."
     },
     {
         "target": "riot",
         "trick": "king",
-        "reason": "If Riot is in play, and at least 1 player is dead, the King learns an alive character each night."
+        "reason": "Če je v igri Riot in je vsaj 1 igralec mrtev, kralj vsako noč spozna živega lika."
     },
     {
         "target": "riot",
         "trick": "mayor",
-        "reason": "The Mayor may choose to stop nominations. If they do so when only 1 Riot is alive, good wins. Otherwise, evil wins."
+        "reason": "Župan se lahko odloči, da ustavi imenovanje. Če to storijo, ko je živ samo 1 Riot, zmaga dobro. V nasprotnem primeru zmaga zlo."
     },
     {
         "target": "riot",
         "trick": "monk",
-        "reason": "If Riot is in play, the Monk-protected player is safe from all evil abilities."
+        "reason": "Če je v igri Riot, je igralec, zaščiten z Monkom, varen pred vsemi zlimi sposobnostmi."
     },
     {
         "target": "riot",
         "trick": "ravenkeeper",
-        "reason": "Each night*, Riot chooses an alive good player (different to previous nights): a chosen Ravenkeeper uses their ability but does not die."
+        "reason": "Vsako noč* Riot izbere živega dobrega igralca (različnega od prejšnjih noči): izbrani Ravenkeeper uporabi svojo sposobnost, vendar ne umre."
     },
     {
         "target": "riot",
         "trick": "sage",
-        "reason": "Each night*, Riot chooses an alive good player (different to previous nights): a chosen Sage uses their ability but does not die."
+        "reason": "Vsako noč* Riot izbere živega dobrega igralca (različnega od prejšnjih noči): izbrani modrec uporabi svojo sposobnost, vendar ne umre."
     },
     {
         "target": "riot",
         "trick": "soldier",
-        "reason": "If Riot is in play, the Soldier is safe from all evil abilities."
+        "reason": "Če je v igri Riot, je Vojak varen pred vsemi zlimi sposobnostmi."
     },
     {
         "target": "vortox",
         "trick": "banshee",
-        "reason": "If the Vortox is in play and the Demon kills the Banshee, the players still learn that the Banshee has died."
+        "reason": "Če je Vortox v igri in Demon ubije Banshee, igralci še vedno izvedo, da je Banshee umrl."
     },
     {
         "target": "yaggababble",
         "trick": "exorcist",
-        "reason": "If the Exorcist chooses the Yaggababble, the Yaggababble ability does not kill tonight."
+        "reason": "Če Exorcist izbere Yaggababble, sposobnost Yaggababble nocoj ne ubija."
     }
 ]
