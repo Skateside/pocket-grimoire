@@ -3418,6 +3418,22 @@
         "image": "/build/img/icons/minion/witch.webp"
     },
     {
+        "id": "wizard",
+        "name": "Wizard",
+        "edition": "",
+        "team": "minion",
+        "firstNight": 24,
+        "firstNightReminder": "Run the Wizard ability if applicable.",
+        "otherNight": 15,
+        "otherNightReminder": "Run the Wizard ability if applicable.",
+        "reminders": [
+            "?"
+        ],
+        "setup": false,
+        "ability": "Once per game, choose to make a wish.  If granted, it might have a price & leave a clue as to its nature.",
+        "image": "/build/img/icons/minion/wizard.webp"
+    },
+    {
         "id": "wudaozhe",
         "name": "悟道者",
         "edition": "hdcs",
