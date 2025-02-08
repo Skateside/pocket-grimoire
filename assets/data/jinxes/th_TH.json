@@ -1,13 +1,13 @@
 [
     {
-        "target": "chambermaid",
-        "trick": "mathematician",
-        "reason": "นางต้นห้องรู้ว่านักคณิตจะตื่นหรือไม่ แม้ว่านางต้นห้องตื่นก่อนก็ตาม"
+        "target": "bountyhunter",
+        "trick": "kazali",
+        "reason": "พลังของนักล่าค่าหัวจะเปลี่ยนชาวบ้านหนึ่งคนเป็นฝ่ายร้ายก็ต่อเมื่อนักล่าค่าหัวยังอยู่ในเกมหลังจากคาซาลิทำงาน"
     },
     {
-        "target": "eviltwin",
-        "trick": "plaguedoctor",
-        "reason": "นักเล่าเรื่องไม่สามารถรับพลังของแฝดนรกได้ ถ้าหมอกาฬโรคตาย"
+        "target": "bountyhunter",
+        "trick": "philosopher",
+        "reason": "ถ้าพหูสูตได้พลังของนักล่าค่าหัว ชาวบ้านหนึ่งคนอาจจะกลายเป็นฝ่ายร้าย"
     },
     {
         "target": "cannibal",
@@ -17,57 +17,147 @@
     {
         "target": "cannibal",
         "trick": "juggler",
-        "reason": "ถ้านักโยนกระบองใช้พลังเดาในวันแรกแล้วตายด้วยการถูกประหาร มนุษย์กินคนจะรู้ว่านักโยนกระบองเดาถูกกี่ข้อในคืนนี้"
-    },
-    {
-        "target": "cannibal",
-        "trick": "zealot",
-        "reason": "หาก Cannibal ได้รับความสามารถของ Zealot Cannibal ก็จะเรียนรู้สิ่งนี้"
+        "reason": "If the Juggler guesses on their first day and dies by execution, tonight the living Cannibal learns how many guesses the Juggler got correct."
     },
     {
         "target": "cannibal",
         "trick": "poppygrower",
-        "reason": "หาก Cannibal กิน Poppy Grower แล้วตายหรือสูญเสียความสามารถของ Poppy Grower ปีศาจและมินเนี่ยนก็จะเรียนรู้ซึ่งกันและกันในคืนนั้น"
+        "reason": "If the Cannibal eats the Poppy Grower, then dies or loses the Poppy Grower ability, the Demon and Minions learn each other that night."
     },
     {
-        "target": "lunatic",
-        "trick": "mathematician",
+        "target": "cannibal",
+        "trick": "zealot",
+        "reason": "ถ้ามนุษย์กินคนได้พลังของหัวรุนแรง มนุษย์กินคนจะรู้"
+    },
+    {
+        "target": "mathematician",
+        "trick": "chambermaid",
+        "reason": "นางต้นห้องรู้ว่านักคณิตจะตื่นหรือไม่ แม้ว่านางต้นห้องตื่นก่อนก็ตาม"
+    },
+    {
+        "target": "mathematician",
+        "trick": "lunatic",
         "reason": "นักคณิตจะได้เลขเพิ่ม ถ้าปีศาจเลือกฆ่าคนละคนกับที่คนบ้าเลือก"
     },
     {
-        "target": "pithag",
-        "trick": "heretic",
+        "target": "butler",
+        "trick": "organgrinder",
+        "reason": "ถ้านักแสดงเรี่ยไรทำให้ทุกคนต้องหลับตาโหวต พ่อบ้านจะยกมือโหวตเมื่อไหร่ก็ได้ แต่โหวตของเขาจะถูกนับถ้าเจ้านายโหวตด้วย"
+    },
+    {
+        "target": "heretic",
+        "trick": "baron",
+        "reason": "ถ้ามีทั้ง อำมาตย์ และ คนนอกรีต ในเกมนี้ พลังของอำมาตย์เพิ่มคนนอกแค่หนึ่งคน"
+    },
+    {
+        "target": "heretic",
+        "trick": "boffin",
+        "reason": "The Demon cannot have the Heretic ability."
+    },
+    {
+        "target": "heretic",
+        "trick": "godfather",
+        "reason": "เจ้าพ่อ และ คนนอกรีต จะถูกใช้อยู่ในเกมเดียวกันไม่ได้"
+    },
+    {
+        "target": "heretic",
+        "trick": "lleech",
+        "reason": "ถ้าปลิงปีศาจทำให้คนนอกรีตติดพิษแล้วปลิงปีศาจตาย คนนอกรีตจะยังติดพิษอยู่"
+    },
+    {
+        "target": "heretic",
+        "trick": "pithag",
         "reason": "ผีพรายแปลงกายสร้างคนนอกรีตไม่ได้"
     },
     {
-        "target": "pithag",
-        "trick": "damsel",
-        "reason": "ถ้าผีพรายแปลงกายสร้างเจ้าหญิง นักเล่าเรื่องจะเป็นคนเลือกผู้เล่นที่จะกลายเป็นเจ้าหญิง"
+        "target": "heretic",
+        "trick": "spy",
+        "reason": "ไส้ศึก และ คนนอกรีต จะถูกใช้อยู่ในเกมเดียวกันไม่ได้"
     },
     {
-        "target": "pithag",
-        "trick": "politician",
-        "reason": "ผีพรายแปลงกายสร้างนักการเมืองฝ่ายร้ายไม่ได้"
+        "target": "heretic",
+        "trick": "widow",
+        "reason": "แม่ม่ายดำ และ คนนอกรีต จะถูกใช้อยู่ในเกมเดียวกันไม่ได้"
     },
     {
-        "target": "pithag",
-        "trick": "villageidiot",
-        "reason": "ถ้ายังมีโทเคนตัวละครบักสิเด๋อเหลือ ผีพรายแปลงกายสามารถสร้างบักสิเด๋อได้, ถ้าสร้าง บักสิเด๋อที่เมาอาจจะเปลี่ยนคน"
+        "target": "ogre",
+        "trick": "recluse",
+        "reason": "ถ้ายักษ์เพื่อนรักเลือกฤษี แล้วพลังของยักษ์เพื่อนรักนับว่าฤษีเป็นฝ่ายร้าย ยักษ์เพื่อนรักจะรู้ว่าเป็นฝ่ายร้าย"
     },
     {
-        "target": "pithag",
+        "target": "plaguedoctor",
+        "trick": "baron",
+        "reason": "If the Storyteller gains the Baron ability, up to two players become not-in-play Outsiders."
+    },
+    {
+        "target": "plaguedoctor",
+        "trick": "boomdandy",
+        "reason": "ถ้าหมอกาฬโรคถูกประหาร และนักเล่าเรื่องจะได้พลังของมือระเบิดพลีชีพ พลังของมือระเบิดพลีชีพจะถูกใช้ทันที"
+    },
+    {
+        "target": "plaguedoctor",
+        "trick": "eviltwin",
+        "reason": "นักเล่าเรื่องไม่สามารถรับพลังของแฝดนรกได้ ถ้าหมอกาฬโรคตาย"
+    },
+    {
+        "target": "plaguedoctor",
+        "trick": "fearmonger",
+        "reason": "ถ้าหมอกาฬโรคตาย ลูกสมุนหนึ่งคนที่มีชีวิตจะได้พลังของนักปลุกปั่น และรู้เรื่องนี้"
+    },
+    {
+        "target": "plaguedoctor",
+        "trick": "goblin",
+        "reason": "ถ้าหมอกาฬโรคตาย ลูกสมุนที่ยังมีชีวิตคนหนึ่งได้พลังก็อบลินเพิ่มเติมจากพลังที่มีอยู่ แล้วรู้สิ่งนี้"
+    },
+    {
+        "target": "plaguedoctor",
+        "trick": "marionette",
+        "reason": "If the Demon has a neighbor who is alive and a Townsfolk or Outsider when the Plague Doctor dies, that player becomes an evil Marionette. If there is already an extra evil player, this does not happen."
+    },
+    {
+        "target": "plaguedoctor",
+        "trick": "scarletwoman",
+        "reason": "ถ้าหมอกาฬโรคตาย ลูกสมุนหนึ่งคนที่มีชีวิตจะได้พลังของนางคณิกา และรู้เรื่องนี้"
+    },
+    {
+        "target": "plaguedoctor",
+        "trick": "spy",
+        "reason": "ถ้าหมอกาฬโรคตาย ลูกสมุนหนึ่งคนที่มีชีวิตจะได้พลังของไส้ศึก และรู้เรื่องนี้"
+    },
+    {
+        "target": "boffin",
+        "trick": "alchemist",
+        "reason": "If the Alchemist has the Boffin ability, the Alchemist does not learn what ability the Demon has."
+    },
+    {
+        "target": "boffin",
         "trick": "cultleader",
-        "reason": "ถ้าผีพรายแปลงกายเปลี่ยนผู้เล่นฝ่ายร้ายเป็นเจ้าลัทธิ เจ้าลัทธิจะไม่สามารถเปลี่ยนเป็นฝ่ายดีได้ด้วยพลังตัวเอง"
+        "reason": "If the Demon has the Cult Leader ability, they can’t turn good due to this ability."
     },
     {
-        "target": "pithag",
+        "target": "boffin",
+        "trick": "drunk",
+        "reason": "If the Demon would have the Drunk ability, the Boffin chooses a Townsfolk player to have this ability instead."
+    },
+    {
+        "target": "boffin",
         "trick": "goon",
-        "reason": "ถ้าผีพรายแปลงกายเปลี่ยนผู้เล่นฝ่ายร้ายเป็นลูกกระจ๊อก ลูกกระจ๊อกจะไม่สามารถเปลี่ยนเป็นฝ่ายดีได้ด้วยพลังตัวเอง"
+        "reason": "If the Demon has the Goon ability, they can’t turn good due to this ability."
     },
     {
-        "target": "pithag",
+        "target": "boffin",
         "trick": "ogre",
-        "reason": "ถ้าผีพรายแปลงกายเปลี่ยนผู้เล่นฝ่ายร้ายเป็นยักษ์เพื่อนรัก ยักษ์เพื่อนรักจะไม่สามารถเปลี่ยนเป็นฝ่ายดีได้ด้วยพลังตัวเอง"
+        "reason": "The Demon cannot have the Ogre ability."
+    },
+    {
+        "target": "boffin",
+        "trick": "politician",
+        "reason": "The Demon cannot have the Politician ability."
+    },
+    {
+        "target": "boffin",
+        "trick": "villageidiot",
+        "reason": "If there is a spare token, the Boffin can give the Demon the Village Idiot ability."
     },
     {
         "target": "cerenovus",
@@ -75,289 +165,19 @@
         "reason": "นักสะกดจิตสามารถเลือกให้ผู้เล่นเพ้อว่าเขาเป็นก็อบลิน"
     },
     {
-        "target": "goblin",
-        "trick": "plaguedoctor",
-        "reason": "ถ้าหมอกาฬโรคตาย ลูกสมุนที่ยังมีชีวิตคนหนึ่งได้พลังก็อบลินเพิ่มเติมจากพลังที่มีอยู่ แล้วรู้สิ่งนี้"
+        "target": "marionette",
+        "trick": "balloonist",
+        "reason": "ถ้าหุ่นเชิดถูกบอกว่าเขาเป็นนักบินบอลลูน เพิ่มคนนอกหนึ่งคน"
     },
     {
-        "target": "leviathan",
-        "trick": "soldier",
-        "reason": "ถ้าเลวีอาธานเสนอชื่อและประหารทหาร ทหารจะไม่ตาย"
-    },
-    {
-        "target": "leviathan",
-        "trick": "monk",
-        "reason": "ถ้าเลวีอาธานเสนอชื่อและประหารผู้เล่นที่บาทหลวงปกป้อง คนนั้นจะไม่ตาย"
-    },
-    {
-        "target": "leviathan",
-        "trick": "innkeeper",
-        "reason": "ถ้าเลวีอาธานเสนอชื่อและประหารผู้เล่นที่เถ้าแก่โรงเตี๊ยมปกป้อง คนนั้นจะไม่ตาย"
-    },
-    {
-        "target": "leviathan",
-        "trick": "ravenkeeper",
-        "reason": "ถ้ามีเลวีอาธานอยู่ในเกมและคนเลี้ยงกาตายด้วยการประหารวันนี้ คนเลี้ยงกาจะได้ตื่นมาใช้พลังในคืนนี้"
-    },
-    {
-        "target": "leviathan",
-        "trick": "banshee",
-        "reason": "ถ้ามีเลวีอาธานอยู่ในเกมและแบนชีตายด้วยการประหาร ทุกคนจะรู้ว่าแบนชีตาย และแบนชีจะได้พลัง"
-    },
-    {
-        "target": "leviathan",
-        "trick": "sage",
-        "reason": "ถ้ามีเลวีอาธานอยู่ในเกมและนักปราชญ์ตายด้วยการประหารวันนี้ นักปราชญ์จะได้ตื่นมาใช้พลังในคืนนี้"
-    },
-    {
-        "target": "leviathan",
-        "trick": "farmer",
-        "reason": "ถ้ามีเลวีอาธานอยู่ในเกมและชาวนาตายด้วยการประหารวันนี้ ผู้เล่นฝ่ายดีหนึ่งคนจะกลายเป็นชาวนาคืนนี้"
-    },
-    {
-        "target": "leviathan",
-        "trick": "mayor",
-        "reason": "ถ้าเลวีอาธานอยู่ในเกมและผู้ใหญ่บ้านยังมีชีวิต: ถ้าไม่มีการประหารในวันที่ 5: ฝ่ายดีชนะ"
-    },
-    {
-        "target": "leviathan",
-        "trick": "hatter",
-        "reason": "ถ้าคนบ้าสานหมวกตายในวันที่ 5 หรือหลังจากนั้น ปีศาจไม่สามารถเลือกเปลี่ยนเป็นเลวีอาธาน."
-    },
-    {
-        "target": "leviathan",
-        "trick": "pithag",
-        "reason": "หลังจากวันที่ 5 ผีพรายแปลงกายจะเลือกเปลี่ยนคนเป็นเลวีอาธานไม่ได้"
-    },
-    {
-        "target": "lilmonsta",
-        "trick": "poppygrower",
-        "reason": "ถ้าคนปลูกฝิ่นอยู่ในเกมนี้ ลูกสมุนจะไม่ตื่นพร้อมๆกันมาเลือกคนเลี้ยงมอนสเตอร์น้อย, ลูกสมุนจะถูกปลุกทีละคนจนกว่าจะมีหนึ่งคนที่เลือกเอาโทเคนมอนสเตอร์น้อยไปเลี้ยง"
-    },
-    {
-        "target": "lilmonsta",
-        "trick": "magician",
-        "reason": "ในแต่ละคืน นักมายากลจะเลือกมินเนี่ยนหนึ่งตัว หากมินเนียนและลิล มอนสตายังมีชีวิตอยู่ มินเนียนนั้นจะดูแลลิล มอนสตา"
-    },
-    {
-        "target": "lilmonsta",
-        "trick": "scarletwoman",
-        "reason": "ถ้ามีคนมีชีวิตอยู่ตั้งแต่ห้าคนขึ้นไปและลูกสมุนที่ถือโทเคนมอนสเตอร์น้อยอยู่ตาย นางคณิกาจะได้โทเคนมอนสเตอร์น้อยในคืนนี้"
-    },
-    {
-        "target": "lilmonsta",
-        "trick": "organgrinder",
-        "reason": "โหวตเพื่อประหารนักแสดงเรี่ยไรให้นับตามปกติ ถ้านักแสดงเรี่ยไรเลี้ยงมอนสเตอร์น้อยอยู่."
-    },
-    {
-        "target": "lilmonsta",
-        "trick": "vizier",
-        "reason": "เสนาบดีสามารถตายได้ด้วยการประหาร ถ้าเขาเลี้ยงมอนสเตอร์น้อยอยู่"
-    },
-    {
-        "target": "lilmonsta",
-        "trick": "hatter",
-        "reason": "ถ้าปีศาจเลือกมอนสเตอร์น้อยในปาร์ตี้น้ำชา เขาจะต้องเลือกลูกสมุนมาเลี้ยงมอนสเตอร์น้อยคืนนี้"
-    },
-    {
-        "target": "legion",
-        "trick": "engineer",
-        "reason": "ลีเจี้ยน และ วิศวกร จะอยู่ในเกมเดียวกันไม่ได้ตั้งแต่เริ่ม แต่ถ้าวิศวกรสร้างลีเจี้ยน ผู้เล่นโดนมาก (รวมทั้งฝ่ายร้ายทั้งหมด) จะกลายเป็นลีเจี้ยนฝ่ายร้าย"
-    },
-    {
-        "target": "legion",
-        "trick": "preacher",
-        "reason": "หากนักเทศน์เลือกลีเจียน ลีเจียนจะยังคงความสามารถของพวกเขาไว้ แต่นักเทศน์อาจเรียนรู้ว่าพวกเขาคือลีเจียน"
-    },
-    {
-        "target": "legion",
-        "trick": "minstrel",
-        "reason": "หาก Legion เสียชีวิตจากการประหารชีวิตในวันนี้ Legion จะยังคงความสามารถของพวกเขาไว้ แต่ Minstrel อาจเรียนรู้ว่าพวกเขาคือ Legion"
-    },
-    {
-        "target": "legion",
-        "trick": "hatter",
-        "reason": "ถ้าทั้ง คนบ้าสานหมวก และ ลีเจี้ยน เริ่มเกมพร้อมกันจะไม่มีอะไรเกิดขึ้นช่วงปาร์ตี้น้ำชา, ถ้าคนบ้าสานหมวกตายแล้วฝ่ายร้ายเลือกลีเจี้ยน ผู้เล่นฝ่ายร้ายทุกคนกลายเป็นลีเจี้ยน"
-    },
-    {
-        "target": "legion",
-        "trick": "zealot",
-        "reason": "Zealot อาจลงทะเบียนเป็นปีศาจในความสามารถของ Legion"
-    },
-    {
-        "target": "fanggu",
-        "trick": "scarletwoman",
-        "reason": "ถ้าฟางกู่เลือกคนนอกแล้วตาย นางคณิกาจะไม่กลายเป็นฟางกู่"
-    },
-    {
-        "target": "spy",
-        "trick": "alchemist",
-        "reason": "นักแปรธาตุ ไม่สามารถได้พลังของ ไส้ศึก"
-    },
-    {
-        "target": "spy",
-        "trick": "magician",
-        "reason": "เวลาที่ไส้ศึกดูกรีมัวร์ โทเคนของปีศาจและนักมายากลจะถูกเอาออกชั่วคราว"
-    },
-    {
-        "target": "spy",
-        "trick": "poppygrower",
-        "reason": "ถ้าคนปลูกฝิ่นอยู่ในเกม ไส้ศึกจะไม่สามารถดูกรีมัวร์ได้ จนกว่าคนปลูกฝิ่นจะตาย"
-    },
-    {
-        "target": "spy",
-        "trick": "plaguedoctor",
-        "reason": "ถ้าหมอกาฬโรคตาย ลูกสมุนหนึ่งคนที่มีชีวิตจะได้พลังของไส้ศึก และรู้เรื่องนี้"
-    },
-    {
-        "target": "spy",
+        "target": "marionette",
         "trick": "damsel",
-        "reason": "ถ้าไส้ศึกอยู่ในเกมนี้หรือเคยอยู่ในเกมนี้ เจ้าหญิงจะติดพิษ"
+        "reason": "หุ่นเชิดจะไม่ถูกบอกว่าเจ้าหญิงอยู่ในเกมนี้"
     },
     {
-        "target": "spy",
-        "trick": "heretic",
-        "reason": "ไส้ศึก และ คนนอกรีต จะถูกใช้อยู่ในเกมเดียวกันไม่ได้"
-    },
-    {
-        "target": "spy",
-        "trick": "ogre",
-        "reason": "ไส้ศึกนับเป็นฝ่ายร้ายหากถูกเลือกด้วยพลังยักษ์เพื่อนรัก"
-    },
-    {
-        "target": "widow",
-        "trick": "alchemist",
-        "reason": "นักแปรธาตุ ไม่สามารถได้พลังของ แม่ม่ายดำ"
-    },
-    {
-        "target": "widow",
-        "trick": "magician",
-        "reason": "เวลาที่แม่ม่ายดำดูกรีมัวร์ โทเคนของปีศาจและนักมายากลจะถูกเอาออกชั่วคราว"
-    },
-    {
-        "target": "widow",
-        "trick": "poppygrower",
-        "reason": "ถ้าคนปลูกฝิ่นอยู่ในเกม แม่ม่ายดำจะไม่สามารถดูกรีมัวร์ได้ จนกว่าคนปลูกฝิ่นจะตาย"
-    },
-    {
-        "target": "widow",
-        "trick": "damsel",
-        "reason": "ถ้าแม่ม่ายดำอยู่ในเกมนี้หรือเคยอยู่ในเกมนี้ เจ้าหญิงจะติดพิษ"
-    },
-    {
-        "target": "widow",
-        "trick": "heretic",
-        "reason": "แม่ม่ายดำ และ คนนอกรีต จะถูกใช้อยู่ในเกมเดียวกันไม่ได้"
-    },
-    {
-        "target": "godfather",
-        "trick": "heretic",
-        "reason": "เจ้าพ่อ และ คนนอกรีต จะถูกใช้อยู่ในเกมเดียวกันไม่ได้"
-    },
-    {
-        "target": "scarletwoman",
-        "trick": "plaguedoctor",
-        "reason": "ถ้าหมอกาฬโรคตาย ลูกสมุนหนึ่งคนที่มีชีวิตจะได้พลังของนางคณิกา และรู้เรื่องนี้"
-    },
-    {
-        "target": "boomdandy",
-        "trick": "plaguedoctor",
-        "reason": "ถ้าหมอกาฬโรคถูกประหาร และนักเล่าเรื่องจะได้พลังของมือระเบิดพลีชีพ พลังของมือระเบิดพลีชีพจะถูกใช้ทันที"
-    },
-    {
-        "target": "fearmonger",
-        "trick": "plaguedoctor",
-        "reason": "ถ้าหมอกาฬโรคตาย ลูกสมุนหนึ่งคนที่มีชีวิตจะได้พลังของนักปลุกปั่น และรู้เรื่องนี้"
-    },
-    {
-        "target": "yaggababble",
-        "trick": "exorcist",
-        "reason": "ถ้าหมอผีเลือกยักกาบับเบิล พลังของยักกาบับเบิลไม่ฆ่าใครในคืนนี้"
-    },
-    {
-        "target": "summoner",
-        "trick": "clockmaker",
-        "reason": "ถ้าผู้อัญเชิญอยู่ในเกมนี้ ช่างนาฬิกาจะไม่ได้ข้อมูลจนกว่าปีศาจจะถูกอัญเชิญ"
-    },
-    {
-        "target": "summoner",
-        "trick": "alchemist",
-        "reason": "ถ้ามีนักแปรธาตุที่มีพลังของผู้อัญเชิญอยู่ในเกมนี้ เกมนี้จะเริ่มด้วยปีศาจหนึ่งตัวตามปกติ ถ้านักแปรธาตุใช้พลังผู้อัญเชิญแล้วเลือกผู้เล่น ผู้เล่นนั้นจะกลายเป็นปีศาจแต่ไม่เปลี่ยนฝ่าย"
-    },
-    {
-        "target": "summoner",
-        "trick": "poppygrower",
-        "reason": "ถ้าคนปลูกฝิ่นยังมีชีวิตอยู่ตอนที่ผู้อัญเชิญเรียกปีศาจ ผู้อัญเชิญเลือกตัวละครปีศาจ แต่นักเล่าเรื่องเลือกผู้เล่นที่จะกลายเป็นปีศาจ"
-    },
-    {
-        "target": "summoner",
-        "trick": "marionette",
-        "reason": "หุ่นเชิดนั่งติดกับผู้อัญเชิญ ผู้อัญเชิญรู้ว่าผู้เล่นไหนเป็นหุ่นเชิด"
-    },
-    {
-        "target": "summoner",
-        "trick": "pithag",
-        "reason": "ผู้อัญเชิญไม่สามารถอัญเชิญปีศาจที่ถูกใช้อยู่ในเกมนี้ได้ ถ้าผู้อัญเชิญเรียกปีศาจตัวอื่น การตายในคืนนี้จะเป็นไปตามอำเภอใจผู้เล่าเรื่อง"
-    },
-    {
-        "target": "summoner",
-        "trick": "hatter",
-        "reason": "ผู้อัญเชิญไม่สามารถอัญเชิญปีศาจที่ถูกใช้อยู่ในเกมนี้ได้ ถ้าผู้อัญเชิญเรียกปีศาจตัวอื่น การตายในคืนนี้จะเป็นไปตามอำเภอใจผู้เล่าเรื่อง"
-    },
-    {
-        "target": "summoner",
-        "trick": "courtier",
-        "reason": "ถ้าผู้อัญเชิญเมาในคืนที่สาม ผู้อัญเชิญเลือกตัวละครปีศาจ แต่นักเล่าเรื่องเลือกผู้เล่นที่จะกลายเป็นปีศาจ"
-    },
-    {
-        "target": "summoner",
-        "trick": "engineer",
-        "reason": "ถ้าวิศวกรเอาผู้อัญเชิญออกจากเกมก่อนที่ผู้อัญเชิญจะใช้พลัง ให้ผู้อัญเชิญใช้พลังทันที"
-    },
-    {
-        "target": "summoner",
-        "trick": "zombuul",
-        "reason": "ถ้าผู้อัญเชิญเปลี่ยนคนตายแล้วเป็นซอมบูล ให้นักเล่าเรื่องนับว่าซอมบูลตายแล้วหนึ่งครั้ง"
-    },
-    {
-        "target": "summoner",
-        "trick": "pukka",
-        "reason": "ผู้อัญเชิญสามารถเลือกที่จะอัญเชิญพุกก้าได้ในคืนที่สอง แทนที่จะเป็นคืนที่สาม"
-    },
-    {
-        "target": "summoner",
-        "trick": "riot",
-        "reason": "ถ้าผู้อัญเชิญสร้างนักก่อจนาจล ลูกสมุนทุกคนกลายเป็นนักก่อจลาจล"
-    },
-    {
-        "target": "summoner",
-        "trick": "legion",
-        "reason": "ถ้าผู้อัญเชิญเรียกลีเจี้ยน ผู้เล่นโดนมาก (รวมทั้งฝ่ายร้ายทั้งหมด) จะกลายเป็นลีเจี้ยนฝ่ายร้าย"
-    },
-    {
-        "target": "summoner",
-        "trick": "kazali",
-        "reason": "ผู้อัญเชิญไม่สามารถอัญเชิญปีศาจที่ถูกใช้อยู่ในเกมนี้ได้ ถ้าผู้อัญเชิญเรียกปีศาจตัวอื่น การตายในคืนนี้จะเป็นไปตามอำเภอใจผู้เล่าเรื่อง"
-    },
-    {
-        "target": "summoner",
-        "trick": "preacher",
-        "reason": "หากนักเทศน์เลือกผู้อัญเชิญในหรือก่อนคืนที่ 3 ผู้อัญเชิญจะเลือกอสูรตัวใด แต่นักเล่าเรื่องจะเลือกผู้เล่นคนใด"
-    },
-    {
-        "target": "summoner",
-        "trick": "lordoftyphon",
-        "reason": "หากผู้เรียกสร้างลอร์ดแห่งไทฟอน ลอร์ดแห่งไทฟอนจะต้องมีมินเนียนอยู่เคียงข้าง มินเนียนข้างเคียงอีกคนจะกลายเป็นมินเนียนชั่วร้ายที่ไม่ได้อยู่ในเกม"
-    },
-    {
-        "target": "baron",
-        "trick": "heretic",
-        "reason": "ถ้ามีทั้ง อำมาตย์ และ คนนอกรีต ในเกมนี้ พลังของอำมาตย์เพิ่มคนนอกแค่หนึ่งคน"
-    },
-    {
-        "target": "baron",
-        "trick": "plaguedoctor",
-        "reason": "ถ้าหมอกาฬโรคตายแล้วนักเล่าเรื่องได้พลังของอำมาตย์ ผู้เล่นสองคนจะกลายเป็นตัวละครคนนอกที่ไม่ถูกใช้อยู่ในเกมนี้"
+        "target": "marionette",
+        "trick": "huntsman",
+        "reason": "ถ้าหุ่นเชิดถูกบอกว่าเขาเป็นนายพราน เพิ่มเจ้าหญิงเข้ามาในเกม"
     },
     {
         "target": "marionette",
@@ -375,24 +195,344 @@
         "reason": "หุ่นเชิดจะไม่ได้ 3 บลัปจากคนปากพล่อย แต่ว่าปีศาจจะได้บลัฟเพิ่มอีก 3 ตัวละครแทน"
     },
     {
-        "target": "marionette",
-        "trick": "balloonist",
-        "reason": "ถ้าหุ่นเชิดถูกบอกว่าเขาเป็นนักบินบอลลูน เพิ่มคนนอกหนึ่งคน"
+        "target": "mastermind",
+        "trick": "alhadikhia",
+        "reason": "ถ้าอัล-ฮาดิเคียถูกประหารและจอมบงการยังมีชีวิตอยู่, ให้อัล-ฮาดิเคียเลือกผู้เล่นฝ่ายดีสามคนในคืนนี้: ถ้าทั้งสามคนเลือกที่จะมีชีวิต, ฝ่ายร้ายชนะทันที. มิฉะนั้น, ฝ่ายดีชนะ."
     },
     {
-        "target": "marionette",
+        "target": "pithag",
+        "trick": "cultleader",
+        "reason": "ถ้าผีพรายแปลงกายเปลี่ยนผู้เล่นฝ่ายร้ายเป็นเจ้าลัทธิ เจ้าลัทธิจะไม่สามารถเปลี่ยนเป็นฝ่ายดีได้ด้วยพลังตัวเอง"
+    },
+    {
+        "target": "pithag",
         "trick": "damsel",
-        "reason": "หุ่นเชิดจะไม่ถูกบอกว่าเจ้าหญิงอยู่ในเกมนี้"
+        "reason": "ถ้าผีพรายแปลงกายสร้างเจ้าหญิง นักเล่าเรื่องจะเป็นคนเลือกผู้เล่นที่จะกลายเป็นเจ้าหญิง"
     },
     {
-        "target": "marionette",
-        "trick": "plaguedoctor",
-        "reason": "ถ้าปีศาจมีเพื่อนบ้านที่ยังมีชีวิตที่เป็นฝ่ายดีตอนที่หมอกาฬโรคตาย ผู้เล่นนั้นกลายเป็นหุ่นเชิดฝ่ายร้าย แต่ถ้ามีผู้เล่นฝ่ายร้ายเกินจำนวนที่กำหนดแล้ว จะไม่เกิดอะไรขึ้น"
+        "target": "pithag",
+        "trick": "goon",
+        "reason": "ถ้าผีพรายแปลงกายเปลี่ยนผู้เล่นฝ่ายร้ายเป็นลูกกระจ๊อก ลูกกระจ๊อกจะไม่สามารถเปลี่ยนเป็นฝ่ายดีได้ด้วยพลังตัวเอง"
     },
     {
-        "target": "marionette",
+        "target": "pithag",
+        "trick": "ogre",
+        "reason": "If the Pit-Hag turns an evil player into the Ogre, they can't turn good due to their own ability."
+    },
+    {
+        "target": "pithag",
+        "trick": "politician",
+        "reason": "ผีพรายแปลงกายสร้างนักการเมืองฝ่ายร้ายไม่ได้"
+    },
+    {
+        "target": "pithag",
+        "trick": "villageidiot",
+        "reason": "ถ้ายังมีโทเคนตัวละครบักสิเด๋อเหลือ ผีพรายแปลงกายสามารถสร้างบักสิเด๋อได้, ถ้าสร้าง บักสิเด๋อที่เมาอาจจะเปลี่ยนคน"
+    },
+    {
+        "target": "scarletwoman",
+        "trick": "alhadikhia",
+        "reason": "ถ้ามีอัล-ฮาดิเคียที่มีชีวิตสองคน นางคณิกาที่กลายเป็นอัล-ฮาดิเคีย จะกลับมาเป็นนางคณิกาเหมือนเดิม"
+    },
+    {
+        "target": "scarletwoman",
+        "trick": "fanggu",
+        "reason": "ถ้าฟางกู่เลือกคนนอกแล้วตาย นางคณิกาจะไม่กลายเป็นฟางกู่"
+    },
+    {
+        "target": "spy",
+        "trick": "alchemist",
+        "reason": "If the Alchemist has the Spy ability, they do not see the Grimoire, and the real Spy cannot register falsely."
+    },
+    {
+        "target": "spy",
+        "trick": "damsel",
+        "reason": "ถ้าไส้ศึกอยู่ในเกมนี้หรือเคยอยู่ในเกมนี้ เจ้าหญิงจะติดพิษ"
+    },
+    {
+        "target": "spy",
+        "trick": "magician",
+        "reason": "เวลาที่ไส้ศึกดูกรีมัวร์ โทเคนของปีศาจและนักมายากลจะถูกเอาออกชั่วคราว"
+    },
+    {
+        "target": "spy",
+        "trick": "ogre",
+        "reason": "ไส้ศึกนับเป็นฝ่ายร้ายหากถูกเลือกด้วยพลังยักษ์เพื่อนรัก"
+    },
+    {
+        "target": "spy",
+        "trick": "poppygrower",
+        "reason": "ถ้าคนปลูกฝิ่นอยู่ในเกม ไส้ศึกจะไม่สามารถดูกรีมัวร์ได้ จนกว่าคนปลูกฝิ่นจะตาย"
+    },
+    {
+        "target": "summoner",
+        "trick": "alchemist",
+        "reason": "ถ้ามีนักแปรธาตุที่มีพลังของผู้อัญเชิญอยู่ในเกมนี้ เกมนี้จะเริ่มด้วยปีศาจหนึ่งตัวตามปกติ ถ้านักแปรธาตุใช้พลังผู้อัญเชิญแล้วเลือกผู้เล่น ผู้เล่นนั้นจะกลายเป็นปีศาจแต่ไม่เปลี่ยนฝ่าย"
+    },
+    {
+        "target": "summoner",
+        "trick": "clockmaker",
+        "reason": "ถ้าผู้อัญเชิญอยู่ในเกมนี้ ช่างนาฬิกาจะไม่ได้ข้อมูลจนกว่าปีศาจจะถูกอัญเชิญ"
+    },
+    {
+        "target": "summoner",
+        "trick": "courtier",
+        "reason": "ถ้าผู้อัญเชิญเมาในคืนที่สาม ผู้อัญเชิญเลือกตัวละครปีศาจ แต่นักเล่าเรื่องเลือกผู้เล่นที่จะกลายเป็นปีศาจ"
+    },
+    {
+        "target": "summoner",
+        "trick": "engineer",
+        "reason": "ถ้าวิศวกรเอาผู้อัญเชิญออกจากเกมก่อนที่ผู้อัญเชิญจะใช้พลัง ให้ผู้อัญเชิญใช้พลังทันที"
+    },
+    {
+        "target": "summoner",
+        "trick": "hatter",
+        "reason": "ผู้อัญเชิญไม่สามารถอัญเชิญปีศาจที่ถูกใช้อยู่ในเกมนี้ได้ ถ้าผู้อัญเชิญเรียกปีศาจตัวอื่น การตายในคืนนี้จะเป็นไปตามอำเภอใจผู้เล่าเรื่อง"
+    },
+    {
+        "target": "summoner",
+        "trick": "kazali",
+        "reason": "ผู้อัญเชิญไม่สามารถอัญเชิญปีศาจที่ถูกใช้อยู่ในเกมนี้ได้ ถ้าผู้อัญเชิญเรียกปีศาจตัวอื่น การตายในคืนนี้จะเป็นไปตามอำเภอใจผู้เล่าเรื่อง"
+    },
+    {
+        "target": "summoner",
+        "trick": "legion",
+        "reason": "ถ้าผู้อัญเชิญเรียกลีเจี้ยน ผู้เล่นโดนมาก (รวมทั้งฝ่ายร้ายทั้งหมด) จะกลายเป็นลีเจี้ยนฝ่ายร้าย"
+    },
+    {
+        "target": "summoner",
+        "trick": "lordoftyphon",
+        "reason": "If the Summoner creates a Lord of Typhon, the Lord of Typhon must neighbor a Minion. The other neighbor becomes a not-in-play evil Minion."
+    },
+    {
+        "target": "summoner",
+        "trick": "marionette",
+        "reason": "The Marionette neighbors the Summoner. The Summoner knows who the Marionette is."
+    },
+    {
+        "target": "summoner",
+        "trick": "pithag",
+        "reason": "ผู้อัญเชิญไม่สามารถอัญเชิญปีศาจที่ถูกใช้อยู่ในเกมนี้ได้ ถ้าผู้อัญเชิญเรียกปีศาจตัวอื่น การตายในคืนนี้จะเป็นไปตามอำเภอใจผู้เล่าเรื่อง"
+    },
+    {
+        "target": "summoner",
+        "trick": "poppygrower",
+        "reason": "ถ้าคนปลูกฝิ่นยังมีชีวิตอยู่ตอนที่ผู้อัญเชิญเรียกปีศาจ ผู้อัญเชิญเลือกตัวละครปีศาจ แต่นักเล่าเรื่องเลือกผู้เล่นที่จะกลายเป็นปีศาจ"
+    },
+    {
+        "target": "summoner",
+        "trick": "preacher",
+        "reason": "ถ้านักเทศน์เลือกผู้อัญเชิญในคืนที่สามหรือก่อนนั้น ให้ผู้อัญเชิญเลือกว่าจะอัญเชิญปีศาจตัวไหน, แต่ให้นักเล่าเรื่องเลือกว่าใครจะเป็นปีศาจตัวนั้น"
+    },
+    {
+        "target": "summoner",
+        "trick": "pukka",
+        "reason": "ผู้อัญเชิญสามารถเลือกที่จะอัญเชิญพุกก้าได้ในคืนที่สอง แทนที่จะเป็นคืนที่สาม"
+    },
+    {
+        "target": "summoner",
+        "trick": "zombuul",
+        "reason": "ถ้าผู้อัญเชิญเปลี่ยนคนตายแล้วเป็นซอมบูล ให้นักเล่าเรื่องนับว่าซอมบูลตายแล้วหนึ่งครั้ง"
+    },
+    {
+        "target": "vizier",
+        "trick": "alsaahir",
+        "reason": "ถ้าเสนาบดีอยู่ในเกมนี้, อัลซาเฮียต้องเดาด้วยว่าผู้เล่นที่เป็นปีศาจได้บทเป็นปีศาจตัวไหน"
+    },
+    {
+        "target": "vizier",
+        "trick": "courtier",
+        "reason": "If the Vizier loses their ability, they learn this. If the Vizier is executed while they have their ability, their team wins."
+    },
+    {
+        "target": "vizier",
+        "trick": "fearmonger",
+        "reason": "The Vizier wakes with the Fearmonger, learns who they choose and cannot choose to immediately execute that player."
+    },
+    {
+        "target": "vizier",
+        "trick": "investigator",
+        "reason": "ถ้านักสืบรู้ว่าเสนาบดีอยู่ในเกมนี้ นักเล่าเรื่องจะไม่ประกาศว่าเสนาบดีอยู่ในเกมให้ทุกคนรู้"
+    },
+    {
+        "target": "vizier",
+        "trick": "magician",
+        "reason": "If the Vizier and Magician are both in play, the Demon does not learn the Minions."
+    },
+    {
+        "target": "vizier",
+        "trick": "politician",
+        "reason": "เสนาบดีอาจจะเห็นนักการเมืองเป็นฝ่ายร้าย"
+    },
+    {
+        "target": "vizier",
+        "trick": "preacher",
+        "reason": "If the Vizier loses their ability, they learn this. If the Vizier is executed while they have their ability, their team wins."
+    },
+    {
+        "target": "vizier",
+        "trick": "zealot",
+        "reason": "หัวรุนแรงอาจจะถูกนับเป็นฝ่ายร้ายสำหรับเสนาบดี"
+    },
+    {
+        "target": "widow",
+        "trick": "alchemist",
+        "reason": "If the Alchemist has the Widow ability, they do not see the Grimoire."
+    },
+    {
+        "target": "widow",
+        "trick": "damsel",
+        "reason": "ถ้าแม่ม่ายดำอยู่ในเกมนี้หรือเคยอยู่ในเกมนี้ เจ้าหญิงจะติดพิษ"
+    },
+    {
+        "target": "widow",
+        "trick": "magician",
+        "reason": "เวลาที่แม่ม่ายดำดูกรีมัวร์ โทเคนของปีศาจและนักมายากลจะถูกเอาออกชั่วคราว"
+    },
+    {
+        "target": "widow",
+        "trick": "poppygrower",
+        "reason": "ถ้าคนปลูกฝิ่นอยู่ในเกม แม่ม่ายดำจะไม่สามารถดูกรีมัวร์ได้ จนกว่าคนปลูกฝิ่นจะตาย"
+    },
+    {
+        "target": "kazali",
+        "trick": "choirboy",
+        "reason": "คาซาลิไม่สามารถเปลี่ยนพระราชาเป็นลูกสมุนได้ ถ้านักดนตรีหลวงอยู่ในเกม"
+    },
+    {
+        "target": "kazali",
+        "trick": "goon",
+        "reason": "The Kazali can choose that the Goon player is one of their evil Minions."
+    },
+    {
+        "target": "kazali",
         "trick": "huntsman",
-        "reason": "ถ้าหุ่นเชิดถูกบอกว่าเขาเป็นนายพราน เพิ่มเจ้าหญิงเข้ามาในเกม"
+        "reason": "ถ้าคาซาลิเลือกเปลี่ยนเจ้าหญิงเป็นลูกสมุน และนายพรานยังอยู่ในเกม ผู้เล่นฝ่ายดีหนึ่งคนจะกลายเป็นเจ้าหญิง"
+    },
+    {
+        "target": "kazali",
+        "trick": "marionette",
+        "reason": "If the Kazali chooses to create a Marionette, they must choose one of their neighbors."
+    },
+    {
+        "target": "kazali",
+        "trick": "soldier",
+        "reason": "The Kazali can choose that the Soldier player is one of their evil Minions."
+    },
+    {
+        "target": "legion",
+        "trick": "engineer",
+        "reason": "ลีเจี้ยน และ วิศวกร จะอยู่ในเกมเดียวกันไม่ได้ตั้งแต่เริ่ม แต่ถ้าวิศวกรสร้างลีเจี้ยน ผู้เล่นโดนมาก (รวมทั้งฝ่ายร้ายทั้งหมด) จะกลายเป็นลีเจี้ยนฝ่ายร้าย"
+    },
+    {
+        "target": "legion",
+        "trick": "hatter",
+        "reason": "ถ้าทั้ง คนบ้าสานหมวก และ ลีเจี้ยน เริ่มเกมพร้อมกันจะไม่มีอะไรเกิดขึ้นช่วงปาร์ตี้น้ำชา, ถ้าคนบ้าสานหมวกตายแล้วฝ่ายร้ายเลือกลีเจี้ยน ผู้เล่นฝ่ายร้ายทุกคนกลายเป็นลีเจี้ยน"
+    },
+    {
+        "target": "legion",
+        "trick": "minstrel",
+        "reason": "ถ้าลีเจี้ยนถูกประหารวันนี้, ลีเจี้ยนยังมีพลังอยู่, แต่กวีพเนจรอาจจะรู้ว่าคนนั้นเป็นลีเจี้ยน"
+    },
+    {
+        "target": "legion",
+        "trick": "preacher",
+        "reason": "ถ้านักเทศน์เลือกลีเจี้ยน, ลีเจี้ยนยังมีพลังอยู่, แต่นักเทศน์อาจจะรู้ว่าคนนั้นเป็นลีเจี้ยน"
+    },
+    {
+        "target": "legion",
+        "trick": "zealot",
+        "reason": "The Zealot might register as evil to Legion's ability."
+    },
+    {
+        "target": "leviathan",
+        "trick": "banshee",
+        "reason": "Each night*, the Leviathan chooses an alive good player (different to previous nights): a chosen Banshee dies & gains their ability."
+    },
+    {
+        "target": "leviathan",
+        "trick": "exorcist",
+        "reason": "Evil does not win when more than 1 good player has been executed, if the Exorcist is alive and has ever successfully chosen the Leviathan."
+    },
+    {
+        "target": "leviathan",
+        "trick": "farmer",
+        "reason": "Each night*, the Leviathan chooses an alive good player (different to previous nights): a chosen Farmer uses their ability but does not die."
+    },
+    {
+        "target": "leviathan",
+        "trick": "grandmother",
+        "reason": "If Leviathan is in play and the Grandchild dies by execution, evil wins."
+    },
+    {
+        "target": "leviathan",
+        "trick": "hatter",
+        "reason": "ถ้าคนบ้าสานหมวกตายในวันที่ 5 หรือหลังจากนั้น ปีศาจไม่สามารถเลือกเปลี่ยนเป็นเลวีอาธาน."
+    },
+    {
+        "target": "leviathan",
+        "trick": "innkeeper",
+        "reason": "If the Leviathan is in play, the Innkeeper-protected-players are safe from all evil abilities."
+    },
+    {
+        "target": "leviathan",
+        "trick": "king",
+        "reason": "If the Leviathan is in play, and at least 1 player is dead, the King learns an alive character each night."
+    },
+    {
+        "target": "leviathan",
+        "trick": "mayor",
+        "reason": "If the Leviathan is in play & no execution occurs on day 5, good wins."
+    },
+    {
+        "target": "leviathan",
+        "trick": "monk",
+        "reason": "If the Leviathan is in play, the Monk-protected-player is safe from all evil abilities."
+    },
+    {
+        "target": "leviathan",
+        "trick": "pithag",
+        "reason": "หลังจากวันที่ 5 ผีพรายแปลงกายจะเลือกเปลี่ยนคนเป็นเลวีอาธานไม่ได้"
+    },
+    {
+        "target": "leviathan",
+        "trick": "ravenkeeper",
+        "reason": "Each night*, the Leviathan chooses an alive player (different to previous nights): a chosen Ravenkeeper uses their ability but does not die."
+    },
+    {
+        "target": "leviathan",
+        "trick": "sage",
+        "reason": "Each night*, the Leviathan chooses an alive good player (different to previous nights): a chosen Sage uses their ability but does not die."
+    },
+    {
+        "target": "leviathan",
+        "trick": "soldier",
+        "reason": "If the Leviathan is in play, the Soldier is safe from all evil abilities."
+    },
+    {
+        "target": "lilmonsta",
+        "trick": "hatter",
+        "reason": "ถ้าปีศาจเลือกมอนสเตอร์น้อยในปาร์ตี้น้ำชา เขาจะต้องเลือกลูกสมุนมาเลี้ยงมอนสเตอร์น้อยคืนนี้"
+    },
+    {
+        "target": "lilmonsta",
+        "trick": "magician",
+        "reason": "Each night, the Magician chooses a Minion: if that Minion & Lil' Monsta are alive, that Minion babysits Lil’ Monsta."
+    },
+    {
+        "target": "lilmonsta",
+        "trick": "poppygrower",
+        "reason": "ถ้าคนปลูกฝิ่นอยู่ในเกมนี้ ลูกสมุนจะไม่ตื่นพร้อมๆกันมาเลือกคนเลี้ยงมอนสเตอร์น้อย, ลูกสมุนจะถูกปลุกทีละคนจนกว่าจะมีหนึ่งคนที่เลือกเอาโทเคนมอนสเตอร์น้อยไปเลี้ยง"
+    },
+    {
+        "target": "lilmonsta",
+        "trick": "scarletwoman",
+        "reason": "ถ้ามีคนมีชีวิตอยู่ตั้งแต่ห้าคนขึ้นไปและลูกสมุนที่ถือโทเคนมอนสเตอร์น้อยอยู่ตาย นางคณิกาจะได้โทเคนมอนสเตอร์น้อยในคืนนี้"
+    },
+    {
+        "target": "lilmonsta",
+        "trick": "vizier",
+        "reason": "เสนาบดีสามารถตายได้ด้วยการประหาร ถ้าเขาเลี้ยงมอนสเตอร์น้อยอยู่"
     },
     {
         "target": "lleech",
@@ -405,244 +545,59 @@
         "reason": "ถ้านักล่าอสูรเลือกใช้พลังกับโฮสต์ของปลิงปีศาจ โฮสต์จะตาย"
     },
     {
-        "target": "lleech",
-        "trick": "heretic",
-        "reason": "ถ้าปลิงปีศาจทำให้คนนอกรีตติดพิษแล้วปลิงปีศาจตาย คนนอกรีตจะยังติดพิษอยู่"
-    },
-    {
-        "target": "kazali",
-        "trick": "bountyhunter",
-        "reason": "พลังของนักล่าค่าหัวจะเปลี่ยนชาวบ้านหนึ่งคนเป็นฝ่ายร้ายก็ต่อเมื่อนักล่าค่าหัวยังอยู่ในเกมหลังจากคาซาลิทำงาน"
-    },
-    {
-        "target": "kazali",
-        "trick": "goon",
-        "reason": "คาซาลีสามารถเลือกให้ผู้เล่นกูนเป็นหนึ่งในมินเนียนชั่วร้ายของตนได้"
-    },
-    {
-        "target": "kazali",
-        "trick": "marionette",
-        "reason": "ถ้าคาซาลิเลือกจะสร้างหุ่นเชิด คาซาลิจะต้องเลือกเพื่อนบ้านเท่านั้น"
-    },
-    {
-        "target": "kazali",
-        "trick": "huntsman",
-        "reason": "ถ้าคาซาลิเลือกเปลี่ยนเจ้าหญิงเป็นลูกสมุน และนายพรานยังอยู่ในเกม ผู้เล่นฝ่ายดีหนึ่งคนจะกลายเป็นเจ้าหญิง"
-    },
-    {
-        "target": "kazali",
-        "trick": "choirboy",
-        "reason": "คาซาลิไม่สามารถเปลี่ยนพระราชาเป็นลูกสมุนได้ ถ้านักดนตรีหลวงอยู่ในเกม"
-    },
-    {
-        "target": "kazali",
-        "trick": "soldier",
-        "reason": "คาซาลีสามารถเลือกให้ผู้เล่นทหารเป็นหนึ่งในมินเนียนชั่วร้ายของตนได้"
-    },
-    {
-        "target": "riot",
-        "trick": "engineer",
-        "reason": "นักก่อจราจล และ วิศวกร จะอยู่ในเกมเดียวกันไม่ได้ตั้งแต่เริ่ม แต่ถ้าวิศวกรสร้างนักก่อจราจล ผู้เล่นฝ่ายร้ายทั้งหมดจะกลายเป็นนักก่อจราจล"
-    },
-    {
-        "target": "riot",
-        "trick": "golem",
-        "reason": "ถ้าโกเล็มเสนอชื่อนักก่อจลาจล นักก่อจลาจลไม่ตาย"
-    },
-    {
-        "target": "riot",
-        "trick": "snitch",
-        "reason": "ถ้าคนปากพล่อยอยู่ในเกมนี้ ผู้เล่นที่เป็นนักก่อจลาจลทุกคนจะได้บลัฟเพิ่มอีก 3 ตัวละคร"
-    },
-    {
-        "target": "riot",
-        "trick": "saint",
-        "reason": "ถ้าผู้เล่นฝ่ายดีเสนอชื่อและทำให้ตายนักบุญตายผ่านพลังนักก่อจราจล ทีมของนักบุญแพ้ทันที"
-    },
-    {
-        "target": "riot",
-        "trick": "butler",
-        "reason": "พ่อบ้านไม่สามารถเสนอชื่อเจ้านายของเขาได้"
-    },
-    {
-        "target": "riot",
-        "trick": "pithag",
-        "reason": "ถ้าผีพรายแปลงกายสร้างนักก่อจราจล ผู้เล่นฝ่ายร้ายทั้งหมดจะกลายเป็นนักก่อจราจล, ถ้าผีพรายแปลงกายสร้างนักก่อจลาจลหลังจากวันที่ 3 ให้เล่นเกมต่อไปอีกหนึ่งวัน"
-    },
-    {
-        "target": "riot",
-        "trick": "mayor",
-        "reason": "ถ้าวันที่สามเริ่มโดยมีคนมีชีวิตเหลืออยู่สามคน ผู้เล่นทุกคนสามารถลงความเห็นไม่เสนอชื่อใครเลย ถ้าสิ่งนั่นเกิดขึ้นและผู้ใหญ่บ้านยังมีชีวิต ทีมผู้ใหญ่บ้านชนะ"
-    },
-    {
-        "target": "riot",
-        "trick": "monk",
-        "reason": "ถ้านักก่อจลาจลเสนอชื่อและฆ่าผู้เล่นที่ถูกปกป้องโดยบาทหลวง ผู้เล่นคนนั้นจะไม่ตาย"
-    },
-    {
-        "target": "riot",
-        "trick": "farmer",
-        "reason": "ถ้านักก่อจลาจลเสนอชื่อและฆ่าชาวนา พลังของชาวนาจะถูกใช้ในคืนนี้"
-    },
-    {
-        "target": "riot",
-        "trick": "innkeeper",
-        "reason": "ถ้านักก่อจลาจลเสนอชื่อและฆ่าผู้เล่นที่ถูกปกป้องโดยเถ้าแก่โรงเตี๊ยม ผู้เล่นคนนั้นจะไม่ตาย"
-    },
-    {
-        "target": "riot",
-        "trick": "sage",
-        "reason": "ถ้านักก่อจลาจลเสนอชื่อและฆ่านักปราชญ์ นักปราชญ์จะได้ใช้พลังในคืนนี้"
-    },
-    {
         "target": "riot",
         "trick": "banshee",
-        "reason": "ถ้านักก่อจลาจลเสนอชื่อและฆ่าแบนชี ทุกคนจะรู้ว่าแบนชีตาย และแบนชีจะได้พลังและสามารถเสนอชื่อสองครั้งได้ทันที"
-    },
-    {
-        "target": "riot",
-        "trick": "ravenkeeper",
-        "reason": "ถ้านักก่อจลาจลเสนอชื่อและฆ่าคนเลี้ยงกา คนเลี้ยงกาจะได้ใช้พลังในคืนนี้"
-    },
-    {
-        "target": "riot",
-        "trick": "soldier",
-        "reason": "ถ้านักก่อจลาจลเสนอชื่อและฆ่าทหาร ทหารจะไม่ตาย"
-    },
-    {
-        "target": "riot",
-        "trick": "grandmother",
-        "reason": "ถ้านักก่อจลาจลเสนอชื่อและฆ่าหลานของคุณยาย คุณยายจะตายด้วยทันที"
-    },
-    {
-        "target": "riot",
-        "trick": "king",
-        "reason": "ถ้านักก่อจลาจลเสนอชื่อและฆ่าพระราชา และนักดนตรีหลวงยังมีชีวิต นักดนตรีหลวงจะได้ใช้พลังในคืนนี้"
+        "reason": "Each night*, Riot chooses an alive good player (different to previous nights): a chosen Banshee dies & gains their ability."
     },
     {
         "target": "riot",
         "trick": "exorcist",
-        "reason": "นักก่อจลาจล และ หมอผี จะถูกใช้อยู่ในเกมเดียวกันไม่ได้"
+        "reason": "If the Exorcist chooses Riot on the 3rd night, Minions do not become Riot."
     },
     {
         "target": "riot",
-        "trick": "minstrel",
-        "reason": "นักก่อจลาจล และ กวีพเนจร จะถูกใช้อยู่ในเกมเดียวกันไม่ได้"
+        "trick": "farmer",
+        "reason": "Each night*, Riot chooses an alive good player (different to previous nights): a chosen Farmer uses their ability but does not die."
     },
     {
         "target": "riot",
-        "trick": "flowergirl",
-        "reason": "นักก่อจลาจล และ เด็กถือดอกไม้ จะถูกใช้อยู่ในเกมเดียวกันไม่ได้"
+        "trick": "grandmother",
+        "reason": "If Riot is in play and the Grandchild dies during the day, the Grandmother dies too."
     },
     {
         "target": "riot",
-        "trick": "undertaker",
-        "reason": "คนที่ตายเพราะถูกเสนอชื่อ ให้ถือว่าถูกประหารสำหรับพลังของสัปเหร่อ"
+        "trick": "innkeeper",
+        "reason": "If Riot is in play, the Innkeeper-protected player is safe from all evil abilities."
     },
     {
         "target": "riot",
-        "trick": "cannibal",
-        "reason": "คนที่ตายเพราะถูกเสนอชื่อ ให้ถือว่าถูกประหารสำหรับพลังของมนุษย์กินคน"
+        "trick": "king",
+        "reason": "If Riot is in play, and at least 1 player is dead, the King learns an alive character each night."
     },
     {
         "target": "riot",
-        "trick": "pacifist",
-        "reason": "คนที่ตายเพราะถูกเสนอชื่อ ให้ถือว่าถูกประหารสำหรับพลังของนักสันตินิยม"
+        "trick": "mayor",
+        "reason": "The Mayor may choose to stop nominations. If they do so when only 1 Riot is alive, good wins. Otherwise, evil wins."
     },
     {
         "target": "riot",
-        "trick": "devilsadvocate",
-        "reason": "คนที่ตายเพราะถูกเสนอชื่อ ให้ถือว่าถูกประหารสำหรับพลังของทนายมาร"
+        "trick": "monk",
+        "reason": "If Riot is in play, the Monk-protected player is safe from all evil abilities."
     },
     {
         "target": "riot",
-        "trick": "investigator",
-        "reason": "นักก่อจราจล จะนับเป็นลูกสมุนสำหรับความสามารถของ นักสืบ"
+        "trick": "ravenkeeper",
+        "reason": "Each night*, Riot chooses an alive good player (different to previous nights): a chosen Ravenkeeper uses their ability but does not die."
     },
     {
         "target": "riot",
-        "trick": "clockmaker",
-        "reason": "นักก่อจราจลจะนับเป็นลูกสมุนสำหรับพลังของช่างนาฬิกา"
+        "trick": "sage",
+        "reason": "Each night*, Riot chooses an alive good player (different to previous nights): a chosen Sage uses their ability but does not die."
     },
     {
         "target": "riot",
-        "trick": "towncrier",
-        "reason": "นักก่อจราจลจะนับเป็นลูกสมุนสำหรับพลังของเด็กเลี้ยงแกะ"
-    },
-    {
-        "target": "riot",
-        "trick": "damsel",
-        "reason": "นักก่อจราจลจะนับเป็นลูกสมุนสำหรับพลังของเจ้าหญิง"
-    },
-    {
-        "target": "riot",
-        "trick": "preacher",
-        "reason": "นักก่อจราจลจะนับเป็นลูกสมุนสำหรับพลังของนักเทศน์"
-    },
-    {
-        "target": "riot",
-        "trick": "hatter",
-        "reason": "ถ้าคนบ้าสานหมวกตาย นักก่อจลาจลอยู่ในเกม และนักก่อจลาจลเลือกจะเปลี่ยนเป็นตัวละครปีศาจอื่น ทีมฝ่ายร้ายปกติจะถูกสร้างขึ้นสำหรับผู้เล่นที่เป็นนักก่อจราจล ถ้าคนบ้าสานหมวกตายแล้วปีศาจเลือกนักก่อจลาจล ลูกสมุนกลายเป็นนักก่อจลาจลด้วย"
-    },
-    {
-        "target": "riot",
-        "trick": "zealot",
-        "reason": "หากคุณได้รับการเสนอชื่อ คุณต้องเสนอชื่ออีกครั้ง แม้ว่าจะตายแล้วก็ตาม"
-    },
-    {
-        "target": "alhadikhia",
-        "trick": "scarletwoman",
-        "reason": "ถ้ามีอัล-ฮาดิเคียที่มีชีวิตสองคน นางคณิกาที่กลายเป็นอัล-ฮาดิเคีย จะกลับมาเป็นนางคณิกาเหมือนเดิม"
-    },
-    {
-        "target": "organgrinder",
-        "trick": "butler",
-        "reason": "ถ้านักแสดงเรี่ยไรทำให้ทุกคนต้องหลับตาโหวต พ่อบ้านจะยกมือโหวตเมื่อไหร่ก็ได้ แต่โหวตของเขาจะถูกนับถ้าเจ้านายโหวตด้วย"
-    },
-    {
-        "target": "vizier",
-        "trick": "investigator",
-        "reason": "ถ้านักสืบรู้ว่าเสนาบดีอยู่ในเกมนี้ นักเล่าเรื่องจะไม่ประกาศว่าเสนาบดีอยู่ในเกมให้ทุกคนรู้"
-    },
-    {
-        "target": "vizier",
-        "trick": "preacher",
-        "reason": "ถ้าเสนาบดีเสียพลังเพราะนักเทศน์ เขาจะรู้, ถ้าเสนาบดีถูกประหารตอนที่เขายังมีพลัง ทีมเขาจะชนะ"
-    },
-    {
-        "target": "vizier",
-        "trick": "courtier",
-        "reason": "ถ้าเสนาบดีเสียพลังเพราะปุโรหิต เขาจะรู้, ถ้าเสนาบดีถูกประหารตอนที่เขายังมีพลัง ทีมเขาจะชนะ"
-    },
-    {
-        "target": "vizier",
-        "trick": "alchemist",
-        "reason": "ถ้านักแปรธาตุได้พลังของเสนาบดี เขาจะใช้พลังประหารทันทีได้ก็ต่อเมื่อมีคนโหวตตั้งแต่สามคนขึ้นไป"
-    },
-    {
-        "target": "vizier",
-        "trick": "magician",
-        "reason": "เสนาบดี และ นักมายากล จะถูกใช้อยู่ในเกมเดียวกันไม่ได้"
-    },
-    {
-        "target": "vizier",
-        "trick": "fearmonger",
-        "reason": "เสนาบดีตื่นพร้อมกับนักปลุกปั่น เสนาบดีรู้ว่านักปลุกปั่นเลือกใคร แต่จะใช้พลังประหารคนนั้นไม่ได้"
-    },
-    {
-        "target": "vizier",
-        "trick": "politician",
-        "reason": "เสนาบดีอาจจะเห็นนักการเมืองเป็นฝ่ายร้าย"
-    },
-    {
-        "target": "vizier",
-        "trick": "alsaahir",
-        "reason": "หากท่านราชมนตรีอยู่ในการเล่น Alsaahir จะต้องเดาด้วยว่าปีศาจตัวใดกำลังเล่นอยู่"
-    },
-    {
-        "target": "vizier",
-        "trick": "zealot",
-        "reason": "Zealot อาจลงทะเบียนเป็นปีศาจในสายตาของ Vizier"
+        "trick": "soldier",
+        "reason": "If Riot is in play, the Soldier is safe from all evil abilities."
     },
     {
         "target": "vortox",
@@ -650,58 +605,8 @@
         "reason": "ถ้าวอร์ท็อกซ์อยู่ในเกมนี้และปีศาจฆ่าแบนชี ผู้เล่นทุกคนจะยังได้รับข้อมูลที่ถูกว่าแบนชีตาย"
     },
     {
-        "target": "ogre",
-        "trick": "recluse",
-        "reason": "ถ้ายักษ์เพื่อนรักเลือกฤษี แล้วพลังของยักษ์เพื่อนรักนับว่าฤษีเป็นฝ่ายร้าย ยักษ์เพื่อนรักจะรู้ว่าเป็นฝ่ายร้าย"
-    },
-    {
-        "target": "philosopher",
-        "trick": "bountyhunter",
-        "reason": "If the Philosopher gains the Bounty Hunter ability, a Townsfolk might turn evil."
-    },
-    {
-        "target": "mastermind",
-        "trick": "alhadikhia",
-        "reason": "หาก Al-Hadikhia เสียชีวิตจากการประหารชีวิต และผู้บงการยังมีชีวิตอยู่ Al-Hadikhia จะเลือกผู้เล่นที่ดี 3 คนในคืนนี้ หากทั้ง 3 คนเลือกที่จะมีชีวิตอยู่ ความชั่วร้ายจะเป็นฝ่ายชนะ ไม่งั้นก็ชนะอยู่ดี"
-    },
-    {
-        "target": "boffin",
-        "trick": "heretic",
-        "reason": "ปีศาจไม่สามารถมีความสามารถนอกรีตได้"
-    },
-    {
-        "target": "boffin",
-        "trick": "cultleader",
-        "reason": "หากปีศาจมีความสามารถผู้นำลัทธิ พวกเขาจะไม่สามารถกลายเป็นคนดีได้เนื่องจากความสามารถนี้"
-    },
-    {
-        "target": "boffin",
-        "trick": "goon",
-        "reason": "หากปีศาจมีความสามารถกูน พวกเขาจะไม่สามารถกลายเป็นคนดีได้เนื่องจากความสามารถนี้"
-    },
-    {
-        "target": "boffin",
-        "trick": "ogre",
-        "reason": "ปีศาจไม่สามารถมีความสามารถอสูรได้"
-    },
-    {
-        "target": "boffin",
-        "trick": "politician",
-        "reason": "ปีศาจไม่สามารถมีความสามารถนักการเมืองได้"
-    },
-    {
-        "target": "boffin",
-        "trick": "drunk",
-        "reason": "หากปีศาจมีความสามารถเมา บอฟฟินจะเลือกผู้เล่นชาวเมืองเพื่อมีความสามารถนี้แทน"
-    },
-    {
-        "target": "boffin",
-        "trick": "alchemist",
-        "reason": "หากนักเล่นแร่แปรธาตุมีความสามารถบอฟฟิน นักเล่นแร่แปรธาตุจะไม่เรียนรู้ว่าปีศาจมีความสามารถอะไร"
-    },
-    {
-        "target": "boffin",
-        "trick": "villageidiot",
-        "reason": "หากมีโทเค็นสำรอง บอฟฟินสามารถให้ความสามารถคนโง่หมู่บ้านแก่ปีศาจได้"
+        "target": "yaggababble",
+        "trick": "exorcist",
+        "reason": "ถ้าหมอผีเลือกยักกาบับเบิล พลังของยักกาบับเบิลไม่ฆ่าใครในคืนนี้"
     }
 ]

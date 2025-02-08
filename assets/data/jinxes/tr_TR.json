@@ -1,13 +1,13 @@
 [
     {
-        "target": "chambermaid",
-        "trick": "mathematician",
-        "reason": "Hizmetçi, Matematikçi'nin bu gece uyanıp uyanmadığını öğrenir, Hizmetçi önce uyansa bile."
+        "target": "bountyhunter",
+        "trick": "kazali",
+        "reason": "Kötü bir Kasabalı, sadece Kelle Avcısı Kazali harekete geçtikten sonra hala oyundaysa yaratılır."
     },
     {
-        "target": "eviltwin",
-        "trick": "plaguedoctor",
-        "reason": "Hikaye Anlatıcısı, Veba Doktoru ölürse Şeytani İkiz yeteneğini kazanamaz."
+        "target": "bountyhunter",
+        "trick": "philosopher",
+        "reason": "Filozof, Kelle Avcısı yeteneğini kazanırsa, bir Kasabalı kötü olabilir."
     },
     {
         "target": "cannibal",
@@ -17,7 +17,12 @@
     {
         "target": "cannibal",
         "trick": "juggler",
-        "reason": "Hokkabaz ilk gün tahmin eder ve idam edilerek ölürse, bu gece hayatta olan Yamyam Hokkabaz'ın kaç tahmininin doğru olduğunu öğrenir."
+        "reason": "Eğer Hokkabaz ilk gününde tahminde bulunur ve infazla ölürse, bu gece yaşayan Yamyam, Hokkabazın kaç tahmininin doğru olduğunu öğrenir."
+    },
+    {
+        "target": "cannibal",
+        "trick": "poppygrower",
+        "reason": "Yamyam Haşhaş Yetiştiricisini yerse ve ardından ölürse veya Haşhaş Yetiştiricisi yeteneğini kaybederse, Şeytan ve Minyonlar o gece birbirlerini öğrenirler."
     },
     {
         "target": "cannibal",
@@ -25,629 +30,54 @@
         "reason": "Yamyam, Bağnaz yeteneğini kazanırsa, bunu öğrenir."
     },
     {
-        "target": "cannibal",
-        "trick": "poppygrower",
-        "reason": "Yamyam Haşhaş Yetiştiricisini yerse ve sonra ölürse veya Haşhaş Yetiştiricisi yeteneğini kaybederse, o gece Şeytan ve Minyonlar birbirlerini tanırlar."
+        "target": "mathematician",
+        "trick": "chambermaid",
+        "reason": "Hizmetçi, Matematikçi'nin bu gece uyanıp uyanmadığını öğrenir, Hizmetçi önce uyansa bile."
     },
     {
-        "target": "lunatic",
-        "trick": "mathematician",
+        "target": "mathematician",
+        "trick": "lunatic",
         "reason": "Matematikçi, Akıl Hastası'nın gerçek İblis'in saldırdığından farklı bir oyuncuya/oyunculara saldırdığını öğrenir."
     },
     {
-        "target": "pithag",
-        "trick": "heretic",
-        "reason": "Çukur Cadısı bir Kafir yaratamaz."
-    },
-    {
-        "target": "pithag",
-        "trick": "damsel",
-        "reason": "Çukur Cadısı bir Küçük Hanım yaratırsa, Hikaye Anlatıcısı hangi oyuncu olduğunu seçer."
-    },
-    {
-        "target": "pithag",
-        "trick": "politician",
-        "reason": "Çukur Cadısı kötü bir Politikacı yaratamaz."
-    },
-    {
-        "target": "pithag",
-        "trick": "villageidiot",
-        "reason": "Yedek bir simge varsa, Çukur Cadısı ekstra bir Köyün Delisi yaratabilir. Eğer öyleyse, sarhoş Köyün Delisi değişebilir."
-    },
-    {
-        "target": "pithag",
-        "trick": "cultleader",
-        "reason": "Çukur Cadısı kötü bir oyuncuyu Tarikat Lideri'ne çevirirse, kendi yetenekleri nedeniyle iyi olamazlar."
-    },
-    {
-        "target": "pithag",
-        "trick": "goon",
-        "reason": "Çukur Cadısı kötü bir oyuncuyu Serseri'ye çevirirse, kendi yetenekleri nedeniyle iyi olamazlar."
-    },
-    {
-        "target": "pithag",
-        "trick": "ogre",
-        "reason": "Çukur Cadısı kötü bir oyuncuyu Ogre'ye çevirirse, kendi yetenekleri nedeniyle iyi olamazlar."
-    },
-    {
-        "target": "cerenovus",
-        "trick": "goblin",
-        "reason": "Akılçelen, bir oyuncuyu Goblin oldukları konusunda delirtmeyi seçebilir."
-    },
-    {
-        "target": "goblin",
-        "trick": "plaguedoctor",
-        "reason": "Veba Doktoru ölürse, hayatta kalan bir Minyon kendi yeteneğine ek olarak Goblin yeteneğini kazanır ve bunu öğrenir."
-    },
-    {
-        "target": "leviathan",
-        "trick": "soldier",
-        "reason": "Leviathan, Asker'i aday gösterir ve idam ettirirse, Asker ölmez."
-    },
-    {
-        "target": "leviathan",
-        "trick": "monk",
-        "reason": "Leviathan, Keşiş'in seçtiği oyuncuyu aday gösterir ve idam ettirirse, o oyuncu ölmez."
-    },
-    {
-        "target": "leviathan",
-        "trick": "innkeeper",
-        "reason": "Leviathan, Hancı'nın seçtiği bir oyuncuyu aday gösterir ve idam ettirirse, o oyuncu ölmez."
-    },
-    {
-        "target": "leviathan",
-        "trick": "ravenkeeper",
-        "reason": "Leviathan oyundaysa ve Kuzgun Bekçisi idam edilerek ölürse, o gece yeteneklerini kullanmak için uyanırlar."
-    },
-    {
-        "target": "leviathan",
-        "trick": "banshee",
-        "reason": "Leviathan oyundaysa ve Ölüm Çığlığı idam edilerek ölürse, tüm oyuncular Ölüm Çığlığı'nın öldüğünü öğrenir ve Ölüm Çığlığı yeteneğini kazanır."
-    },
-    {
-        "target": "leviathan",
-        "trick": "sage",
-        "reason": "Leviathan oyundaysa ve Bilge idam edilerek ölürse, o gece yeteneklerini kullanmak için uyanırlar."
-    },
-    {
-        "target": "leviathan",
-        "trick": "farmer",
-        "reason": "Leviathan oyundaysa ve bir Çiftçi idam edilerek ölürse, o gece iyi bir oyuncu Çiftçi olur."
-    },
-    {
-        "target": "leviathan",
-        "trick": "mayor",
-        "reason": "Leviathan oyundaysa ve 5. günde idam olmazsa, iyiler kazanır."
-    },
-    {
-        "target": "leviathan",
-        "trick": "hatter",
-        "reason": "Şapkacı 5. gün veya daha sonra ölürse, İblis Leviathan'ı seçemez."
-    },
-    {
-        "target": "leviathan",
-        "trick": "pithag",
-        "reason": "5. günden sonra, Çukur Cadısı Leviathan'ı seçemez."
-    },
-    {
-        "target": "lilmonsta",
-        "trick": "poppygrower",
-        "reason": "Gelincikçi oyundaysa, Minyonlar birlikte uyanmaz. Biri Lil' Monsta simgesini almayı seçene kadar teker teker uyandırılırlar."
-    },
-    {
-        "target": "lilmonsta",
-        "trick": "magician",
-        "reason": "Her gece, Büyücü bir Minyon seçer: eğer o Minyon ve Lil' Monsta hayattaysa, o Minyon Lil' Monsta'ya bakar."
-    },
-    {
-        "target": "lilmonsta",
-        "trick": "scarletwoman",
-        "reason": "5 veya daha fazla oyuncu hayattaysa ve Lil' Monsta simgesini tutan oyuncu ölürse, Kızıl Kraliçe'ye bu gece Lil' Monsta simgesi verilir."
-    },
-    {
-        "target": "lilmonsta",
+        "target": "butler",
         "trick": "organgrinder",
-        "reason": "Orgcu'ya verilen oylar, Orgcu Lil' Monsta'ya bakıyorsa sayılır."
-    },
-    {
-        "target": "lilmonsta",
-        "trick": "vizier",
-        "reason": "Vezir, Lil' Monsta'ya bakıyorsa idam edilerek ölebilir."
-    },
-    {
-        "target": "lilmonsta",
-        "trick": "hatter",
-        "reason": "Bir İblis Lil' Monsta'yı seçerse, bu gece olmak ve Lil' Monsta'ya bakmak için bir Minyon da seçer."
-    },
-    {
-        "target": "legion",
-        "trick": "engineer",
-        "reason": "Lejyon ve Mühendis oyunun başında aynı anda oyunda olamazlar. Eğer Mühendis Lejyon yaratırsa, çoğu oyuncu (tüm kötü oyuncular dahil) kötü Lejyon olur."
-    },
-    {
-        "target": "legion",
-        "trick": "preacher",
-        "reason": "Eğer Vaiz Lejyon'u seçerse, Lejyon yeteneğini korur, ancak Vaiz Lejyon olduklarını öğrenebilir."
-    },
-    {
-        "target": "legion",
-        "trick": "minstrel",
-        "reason": "Eğer Lejyon bugün idam edilerek öldüyse, Lejyon yeteneğini korur, ancak Ozan Lejyon olduklarını öğrenebilir."
-    },
-    {
-        "target": "legion",
-        "trick": "hatter",
-        "reason": "Eğer Şapkacı ölürse ve Lejyon oyundaysa, hiçbir şey olmaz. Eğer Şapkacı ölürse ve kötü bir oyuncu Lejyon'u seçerse, mevcut tüm kötü oyuncular Lejyon olur."
-    },
-    {
-        "target": "legion",
-        "trick": "zealot",
-        "reason": "Bağnaz, Lejyon'un yeteneğine kötü olarak görünebilir."
-    },
-    {
-        "target": "fanggu",
-        "trick": "scarletwoman",
-        "reason": "Eğer Fang Gu bir Yabancı seçer ve ölürse, Kızıl Kraliçe Fang Gu olmaz."
-    },
-    {
-        "target": "spy",
-        "trick": "alchemist",
-        "reason": "Simyacı, Casus yeteneğine sahip olamaz."
-    },
-    {
-        "target": "spy",
-        "trick": "magician",
-        "reason": "Casus Grimoire'ı gördüğünde, İblis ve Büyücü'nün karakter simgeleri kaldırılır."
-    },
-    {
-        "target": "spy",
-        "trick": "poppygrower",
-        "reason": "Gelincikçi oyundaysa, Casus, Gelincikçi ölene kadar Grimoire'ı görmez."
-    },
-    {
-        "target": "spy",
-        "trick": "plaguedoctor",
-        "reason": "Veba Doktoru ölürse, hayatta kalan bir Minyon kendi yeteneğine ek olarak Casus yeteneğini kazanır ve bunu öğrenir."
-    },
-    {
-        "target": "spy",
-        "trick": "damsel",
-        "reason": "Eğer Casus oyundaysa (veya olmuşsa), Küçük Hanım zehirlenir."
-    },
-    {
-        "target": "spy",
-        "trick": "heretic",
-        "reason": "Oyunda sadece 1 uğursuz karakter olabilir."
-    },
-    {
-        "target": "spy",
-        "trick": "ogre",
-        "reason": "Casus, Ogre'ye kötü olarak görünür."
-    },
-    {
-        "target": "widow",
-        "trick": "alchemist",
-        "reason": "Simyacı, Dul yeteneğine sahip olamaz."
-    },
-    {
-        "target": "widow",
-        "trick": "magician",
-        "reason": "Dul Grimoire'ı gördüğünde, İblis ve Büyücü'nün karakter simgeleri kaldırılır."
-    },
-    {
-        "target": "widow",
-        "trick": "poppygrower",
-        "reason": "Gelincikçi oyundaysa, Dul, Gelincikçi ölene kadar Grimoire'ı görmez."
-    },
-    {
-        "target": "widow",
-        "trick": "damsel",
-        "reason": "Eğer Dul oyundaysa (veya olmuşsa), Küçük Hanım zehirlenir."
-    },
-    {
-        "target": "widow",
-        "trick": "heretic",
-        "reason": "Oyunda sadece 1 uğursuz karakter olabilir."
-    },
-    {
-        "target": "godfather",
-        "trick": "heretic",
-        "reason": "Oyunda sadece 1 uğursuz karakter olabilir."
-    },
-    {
-        "target": "scarletwoman",
-        "trick": "plaguedoctor",
-        "reason": "Veba Doktoru ölürse, hayatta kalan bir Minyon kendi yeteneğine ek olarak Kızıl Kraliçe yeteneğini kazanır ve bunu öğrenir."
-    },
-    {
-        "target": "boomdandy",
-        "trick": "plaguedoctor",
-        "reason": "Veba Doktoru idam edilirse ve Hikaye Anlatıcısı Bombacı Mülayim yeteneğini kazanırsa, Bombacı Mülayim yeteneği hemen tetiklenir."
-    },
-    {
-        "target": "fearmonger",
-        "trick": "plaguedoctor",
-        "reason": "Veba Doktoru ölürse, hayatta kalan bir Minyon kendi yeteneğine ek olarak Korku Tacırı yeteneğini kazanır ve bunu öğrenir."
-    },
-    {
-        "target": "yaggababble",
-        "trick": "exorcist",
-        "reason": "Üfürükçü Yasak Kelime'yi seçerse, Yasak Kelime yeteneği bu gece öldürmez."
-    },
-    {
-        "target": "summoner",
-        "trick": "clockmaker",
-        "reason": "Çağırıcı oyundaysa, Saatçi bir İblis yaratılana kadar bilgisini almaz."
-    },
-    {
-        "target": "summoner",
-        "trick": "alchemist",
-        "reason": "Eğer bir Simyacı-Çağırıcı oyundaysa, oyun normalde olduğu gibi bir İblis ile başlar. Eğer Simyacı-Çağırıcı bir oyuncu seçerse, o oyuncuyu İblis yapar ancak hizibini değiştirmez."
-    },
-    {
-        "target": "summoner",
-        "trick": "poppygrower",
-        "reason": "Çağırıcı harekete geçtiğinde Gelincikçi hayattaysa, Çağırıcı hangi İblis'i seçeceğini seçer, ancak Hikaye Anlatıcısı hangi oyuncuyu seçeceğini seçer."
-    },
-    {
-        "target": "summoner",
-        "trick": "marionette",
-        "reason": "Kukla, Çağırıcı'nın komşusudur. Çağırıcı, Kukla'nın kim olduğunu bilir."
-    },
-    {
-        "target": "summoner",
-        "trick": "pithag",
-        "reason": "Çağırıcı oyunda olan bir İblis yaratamaz. Eğer Çağırıcı oyunda olmayan bir İblis yaratırsa, bu geceki ölümler rastgeledir."
-    },
-    {
-        "target": "summoner",
-        "trick": "hatter",
-        "reason": "Çağırıcı oyunda olan bir İblis yaratamaz. Eğer Çağırıcı oyunda olmayan bir İblis yaratırsa, bu geceki ölümler rastgeledir."
-    },
-    {
-        "target": "summoner",
-        "trick": "courtier",
-        "reason": "Çağırıcı 3. gece sarhoşsa, Çağırıcı hangi İblis'i seçeceğini seçer, ancak Hikaye Anlatıcısı hangi oyuncuyu seçeceğini seçer."
-    },
-    {
-        "target": "summoner",
-        "trick": "engineer",
-        "reason": "Mühendis, Çağırıcı yeteneğini kullanmadan önce onu oyundan çıkarırsa, Çağırıcı yeteneğini hemen kullanır."
-    },
-    {
-        "target": "summoner",
-        "trick": "zombuul",
-        "reason": "Çağırıcı ölü bir oyuncuyu Zombuul'a çevirirse, Hikaye Anlatıcısı o oyuncuyu bir kez ölmüş bir Zombuul olarak ele alır."
-    },
-    {
-        "target": "summoner",
-        "trick": "pukka",
-        "reason": "Çağırıcı, 2. gece bir oyuncunun Pukka olmasını seçebilir."
-    },
-    {
-        "target": "summoner",
-        "trick": "riot",
-        "reason": "Çağırıcı Ayaklanma yaratırsa, tüm Minyonlar Ayaklanma olur."
-    },
-    {
-        "target": "summoner",
-        "trick": "legion",
-        "reason": "Çağırıcı Lejyon yaratırsa, çoğu oyuncu (tüm kötü oyuncular dahil) kötü Lejyon olur."
-    },
-    {
-        "target": "summoner",
-        "trick": "kazali",
-        "reason": "Çağırıcı oyunda olan bir İblis yaratamaz. Eğer Çağırıcı oyunda olmayan bir İblis yaratırsa, bu geceki ölümler rastgeledir."
-    },
-    {
-        "target": "summoner",
-        "trick": "preacher",
-        "reason": "Eğer Vaiz 3. gece veya öncesinde Çağırıcı'yı seçerse, Çağırıcı hangi İblis'i seçeceğini seçer, ancak Hikaye Anlatıcısı hangi oyuncuyu seçeceğini seçer."
-    },
-    {
-        "target": "summoner",
-        "trick": "lordoftyphon",
-        "reason": "Eğer Çağırıcı bir Typhon Lordu yaratırsa, Typhon Lordu bir Minyon'un komşusu olmalıdır. Diğer komşu, oyunda olmayan kötü bir Minyon olur."
-    },
-    {
-        "target": "baron",
-        "trick": "heretic",
-        "reason": "Baron sadece 1 Yabancı ekleyebilir, 2 değil."
-    },
-    {
-        "target": "baron",
-        "trick": "plaguedoctor",
-        "reason": "Hikaye Anlatıcısı Baron yeteneğini kazanırsa, en fazla iki oyuncu oyunda olmayan Yabancı olur."
-    },
-    {
-        "target": "marionette",
-        "trick": "lilmonsta",
-        "reason": "Kukla, İblis'in değil, bir Minyon'un komşusudur. Kukla, Lil' Monsta simgesini kimin alacağını seçmek için uyandırılmaz ve Lil' Monsta simgesine sahiplerse Kukla olduklarını öğrenmezler."
-    },
-    {
-        "target": "marionette",
-        "trick": "poppygrower",
-        "reason": "Gelincikçi öldüğünde, İblis Kukla'yı öğrenir ancak Kukla hiçbir şey öğrenmez."
-    },
-    {
-        "target": "marionette",
-        "trick": "snitch",
-        "reason": "Kukla oyunda olmayan 3 karakteri öğrenmez. İblis onun yerine fazladan 3 tane öğrenir."
-    },
-    {
-        "target": "marionette",
-        "trick": "balloonist",
-        "reason": "Kukla kendisinin Baloncu olduğunu düşünüyorsa, +1 Yabancı eklenmiş olabilir."
-    },
-    {
-        "target": "marionette",
-        "trick": "damsel",
-        "reason": "Kukla, oyunda bir Küçük Hanım olduğunu öğrenmez."
-    },
-    {
-        "target": "marionette",
-        "trick": "plaguedoctor",
-        "reason": "Veba Doktoru öldüğünde, İblis'in hayatta ve bir Kasabalı veya Yabancı olan bir komşusu varsa, o oyuncu kötü bir Kukla olur. Zaten fazladan bir kötü oyuncu varsa, bu olmaz."
-    },
-    {
-        "target": "marionette",
-        "trick": "huntsman",
-        "reason": "Kukla kendisinin Avcı olduğunu düşünüyorsa, Küçük Hanım eklenmiştir."
-    },
-    {
-        "target": "lleech",
-        "trick": "mastermind",
-        "reason": "Eğer Deha hayattaysa ve Lleech'in konağı idam edilerek ölürse, Lleech yaşar ancak yeteneğini kaybeder."
-    },
-    {
-        "target": "lleech",
-        "trick": "slayer",
-        "reason": "Eğer Cellat Lleech'in konağını öldürürse, konak ölür."
-    },
-    {
-        "target": "lleech",
-        "trick": "heretic",
-        "reason": "Eğer Lleech Kafir'i zehirlediyse ve sonra Lleech ölürse, Kafir zehirli kalır."
-    },
-    {
-        "target": "kazali",
-        "trick": "bountyhunter",
-        "reason": "Kötü bir Kasabalı, sadece Kelle Avcısı Kazali harekete geçtikten sonra hala oyundaysa yaratılır."
-    },
-    {
-        "target": "kazali",
-        "trick": "goon",
-        "reason": "Kazali, Goon oyuncusunun kötü Minyonlarından biri olmasını seçebilir."
-    },
-    {
-        "target": "kazali",
-        "trick": "marionette",
-        "reason": "Eğer Kazali bir Kukla yaratmayı seçerse, komşularından birini seçmelidir."
-    },
-    {
-        "target": "kazali",
-        "trick": "huntsman",
-        "reason": "Eğer Kazali, Küçük Hanım'ın bir Minyon olmasını seçerse ve bir Avcı oyundaysa, iyi bir oyuncu Küçük Hanım olur."
-    },
-    {
-        "target": "kazali",
-        "trick": "choirboy",
-        "reason": "Eğer bir Koro Oğlanı oyundaysa, Kazali Kral'ın Minyon olmasını seçemez."
-    },
-    {
-        "target": "kazali",
-        "trick": "soldier",
-        "reason": "Kazali, Soldier oyuncusunun kötü Minyonlarından biri olmasını seçebilir."
-    },
-    {
-        "target": "riot",
-        "trick": "engineer",
-        "reason": "Ayaklanma ve Mühendis oyunun başında aynı anda oyunda olamazlar. Eğer Mühendis Ayaklanma yaratırsa, kötü oyuncular Ayaklanma olur."
-    },
-    {
-        "target": "riot",
-        "trick": "golem",
-        "reason": "Eğer Golem Ayaklanma'yı aday gösterirse, Ayaklanma oyuncusu ölmez."
-    },
-    {
-        "target": "riot",
-        "trick": "snitch",
-        "reason": "Eğer Muhalif oyundaysa, her Ayaklanma oyuncusu ekstra 3 blöf alır."
-    },
-    {
-        "target": "riot",
-        "trick": "saint",
-        "reason": "Eğer iyi bir oyuncu Aziz'i aday gösterir ve öldürürse, Aziz'in takımı kaybeder."
-    },
-    {
-        "target": "riot",
-        "trick": "butler",
-        "reason": "Uşak efendisini aday gösteremez."
-    },
-    {
-        "target": "riot",
-        "trick": "pithag",
-        "reason": "Eğer Çukur Cadısı Ayaklanma yaratırsa, tüm kötü oyuncular Ayaklanma olur. Eğer Çukur Cadısı 3. günden sonra Ayaklanma yaratırsa, oyun bir gün daha devam eder."
-    },
-    {
-        "target": "riot",
-        "trick": "mayor",
-        "reason": "Eğer 3. gün sadece üç oyuncu hayattayken başlarsa, oyuncular (bir grup olarak) hiç aday göstermemeyi seçebilirler. Eğer öyleyse (ve bir Belediye Başkanı hayattaysa), Belediye Başkanı'nın takımı kazanır."
-    },
-    {
-        "target": "riot",
-        "trick": "monk",
-        "reason": "Eğer bir Ayaklanma oyuncusu Keşiş tarafından korunan oyuncuyu aday gösterir ve öldürürse, Keşiş tarafından korunan oyuncu ölmez."
-    },
-    {
-        "target": "riot",
-        "trick": "farmer",
-        "reason": "Eğer bir Ayaklanma oyuncusu bir Çiftçi'yi aday gösterir ve öldürürse, Çiftçi bu gece yeteneğini kullanır."
-    },
-    {
-        "target": "riot",
-        "trick": "innkeeper",
-        "reason": "Eğer bir Ayaklanma oyuncusu Hancı tarafından korunan bir oyuncuyu aday gösterirse, Hancı tarafından korunan oyuncu ölmez."
-    },
-    {
-        "target": "riot",
-        "trick": "sage",
-        "reason": "Eğer bir Ayaklanma oyuncusu bir Bilge'yi aday gösterir ve öldürürse, Bilge bu gece yeteneğini kullanır."
-    },
-    {
-        "target": "riot",
-        "trick": "banshee",
-        "reason": "Eğer Ayaklanma Ölüm Çığlığı'nı aday gösterir ve öldürürse, tüm oyuncular Ölüm Çığlığı'nın öldüğünü öğrenir ve Ölüm Çığlığı hemen iki oyuncuyu aday gösterebilir."
-    },
-    {
-        "target": "riot",
-        "trick": "ravenkeeper",
-        "reason": "Eğer bir Ayaklanma oyuncusu Kuzgun Bekçisi'ni aday gösterir ve öldürürse, Kuzgun Bekçisi bu gece yeteneğini kullanır."
-    },
-    {
-        "target": "riot",
-        "trick": "soldier",
-        "reason": "Eğer bir Ayaklanma oyuncusu Asker'i aday gösterirse, Asker ölmez."
-    },
-    {
-        "target": "riot",
-        "trick": "grandmother",
-        "reason": "Eğer bir Ayaklanma oyuncusu Torun'u aday gösterir ve öldürürse, Büyükanne de ölür."
-    },
-    {
-        "target": "riot",
-        "trick": "king",
-        "reason": "Eğer bir Ayaklanma oyuncusu Kral'ı aday gösterir ve öldürürse ve Koro Oğlanı hayattaysa, Koro Oğlanı bu gece yeteneğini kullanır."
-    },
-    {
-        "target": "riot",
-        "trick": "exorcist",
-        "reason": "Oyunda sadece 1 uğursuz karakter olabilir."
-    },
-    {
-        "target": "riot",
-        "trick": "minstrel",
-        "reason": "Oyunda sadece 1 uğursuz karakter olabilir."
-    },
-    {
-        "target": "riot",
-        "trick": "flowergirl",
-        "reason": "Oyunda sadece 1 uğursuz karakter olabilir."
-    },
-    {
-        "target": "riot",
-        "trick": "undertaker",
-        "reason": "Aday gösterilerek ölen oyuncular, Cenaze İşleri'ne idam edilmiş olarak kaydedilir."
-    },
-    {
-        "target": "riot",
-        "trick": "cannibal",
-        "reason": "Aday gösterilerek ölen oyuncular, Yamyam'a idam edilmiş olarak kaydedilir."
-    },
-    {
-        "target": "riot",
-        "trick": "pacifist",
-        "reason": "Aday gösterilerek ölen oyuncular, Pasifist'e idam edilmiş olarak kaydedilir."
-    },
-    {
-        "target": "riot",
-        "trick": "devilsadvocate",
-        "reason": "Aday gösterilerek ölen oyuncular, Şeytanın Avukatı'na idam edilmiş olarak kaydedilir."
-    },
-    {
-        "target": "riot",
-        "trick": "investigator",
-        "reason": "Ayaklanma, Araştırmacı'ya Minyon olarak görünür."
-    },
-    {
-        "target": "riot",
-        "trick": "clockmaker",
-        "reason": "Ayaklanma, Saatçi'ye Minyon olarak görünür."
-    },
-    {
-        "target": "riot",
-        "trick": "towncrier",
-        "reason": "Ayaklanma, Tellal'a Minyon olarak görünür."
-    },
-    {
-        "target": "riot",
-        "trick": "damsel",
-        "reason": "Ayaklanma, Küçük Hanım'a Minyon olarak görünür."
-    },
-    {
-        "target": "riot",
-        "trick": "preacher",
-        "reason": "Ayaklanma, Vaiz'e Minyon olarak görünür."
-    },
-    {
-        "target": "riot",
-        "trick": "hatter",
-        "reason": "Şapkacı ölürse, Ayaklanma oyundaysa ve bir Ayaklanma farklı bir İblis seçerse, Ayaklanma oyuncularından normal bir kötü takım oluşturulur. Eğer Şapkacı ölürse ve İblis Ayaklanma'yı seçerse, Minyonlar da Ayaklanma olur."
-    },
-    {
-        "target": "riot",
-        "trick": "zealot",
-        "reason": "Eğer aday gösterilirseniz, ölmüş olsanız bile tekrar aday göstermelisiniz."
-    },
-    {
-        "target": "alhadikhia",
-        "trick": "scarletwoman",
-        "reason": "Eğer iki hayatta olan Kader Ağları varsa, Kızıl Kraliçe Kader Ağları tekrar Kızıl Kraliçe olur."
-    },
-    {
-        "target": "organgrinder",
-        "trick": "butler",
         "reason": "Orgcu gözleri kapalı oylamaya neden oluyorsa, Uşak oy vermek için elini kaldırabilir ancak oyları sadece efendisi de oy verdi ise sayılır."
     },
     {
-        "target": "vizier",
-        "trick": "investigator",
-        "reason": "Eğer Araştırmacı Vezir'in oyunda olduğunu öğrenirse, Vezir'in varlığı Hikaye Anlatıcısı tarafından duyurulmaz."
+        "target": "heretic",
+        "trick": "baron",
+        "reason": "Baron sadece 1 Yabancı ekleyebilir, 2 değil."
     },
     {
-        "target": "vizier",
-        "trick": "preacher",
-        "reason": "Eğer Vezir yeteneğini kaybederse, bunu öğrenir ve Vezir yeteneği varken idam edilirse, takımı kazanır."
+        "target": "heretic",
+        "trick": "boffin",
+        "reason": "İblis, Kafir yeteneğine sahip olamaz."
     },
     {
-        "target": "vizier",
-        "trick": "courtier",
-        "reason": "Eğer Vezir yeteneğini kaybederse, bunu öğrenir ve Vezir yeteneği varken idam edilirse, takımı kazanır."
-    },
-    {
-        "target": "vizier",
-        "trick": "alchemist",
-        "reason": "Eğer Simyacı Vezir yeteneğine sahipse, sadece üç veya daha fazla oyuncu oy verdi ise hemen idam etmeyi seçebilir."
-    },
-    {
-        "target": "vizier",
-        "trick": "magician",
+        "target": "heretic",
+        "trick": "godfather",
         "reason": "Oyunda sadece 1 uğursuz karakter olabilir."
     },
     {
-        "target": "vizier",
-        "trick": "fearmonger",
-        "reason": "Vezir, Korku Tacırı ile uyanır, kimi seçtiğini öğrenir ve o oyuncuyu idam etmeyi seçemez."
+        "target": "heretic",
+        "trick": "lleech",
+        "reason": "Eğer Lleech Kafir'i zehirlediyse ve sonra Lleech ölürse, Kafir zehirli kalır."
     },
     {
-        "target": "vizier",
-        "trick": "politician",
-        "reason": "Politikacı, Vezir'e kötü olarak görünebilir."
+        "target": "heretic",
+        "trick": "pithag",
+        "reason": "Çukur Cadısı bir Kafir yaratamaz."
     },
     {
-        "target": "vizier",
-        "trick": "alsaahir",
-        "reason": "Vezir oyundaysa, Hakikatgörür hangi İblis(ler)in oyunda olduğunu da tahmin etmelidir."
+        "target": "heretic",
+        "trick": "spy",
+        "reason": "Oyunda sadece 1 uğursuz karakter olabilir."
     },
     {
-        "target": "vizier",
-        "trick": "zealot",
-        "reason": "Bağnaz, Vezir'e kötü olarak görünebilir."
-    },
-    {
-        "target": "vortox",
-        "trick": "banshee",
-        "reason": "Hortum oyundaysa ve İblis Ölüm Çığlığı'nı öldürürse, oyuncular yine de Ölüm Çığlığı'nın öldüğünü öğrenirler."
+        "target": "heretic",
+        "trick": "widow",
+        "reason": "Oyunda sadece 1 uğursuz karakter olabilir."
     },
     {
         "target": "ogre",
@@ -655,24 +85,59 @@
         "reason": "Münzevi, Ogre'ye kötü olarak görünürse, Ogre kötü olduklarını öğrenir."
     },
     {
-        "target": "philosopher",
-        "trick": "bountyhunter",
-        "reason": "Filozof, Kelle Avcısı yeteneğini kazanırsa, bir Kasabalı kötü olabilir."
+        "target": "plaguedoctor",
+        "trick": "baron",
+        "reason": "Hikaye Anlatıcı Baron yeteneğini kazanırsa en fazla iki oyuncu oyunda olmayan Yabancı olur."
     },
     {
-        "target": "mastermind",
-        "trick": "alhadikhia",
-        "reason": "Kader Ağları idam edilerek ölürse ve Deha hayattaysa, Kader Ağları bu gece 3 iyi oyuncu seçer: eğer 3'ü de yaşamayı seçerse, kötüler kazanır. Aksi takdirde, iyiler kazanır."
+        "target": "plaguedoctor",
+        "trick": "boomdandy",
+        "reason": "Veba Doktoru idam edilirse ve Hikaye Anlatıcısı Bombacı Mülayim yeteneğini kazanırsa, Bombacı Mülayim yeteneği hemen tetiklenir."
+    },
+    {
+        "target": "plaguedoctor",
+        "trick": "eviltwin",
+        "reason": "Hikaye Anlatıcısı, Veba Doktoru ölürse Şeytani İkiz yeteneğini kazanamaz."
+    },
+    {
+        "target": "plaguedoctor",
+        "trick": "fearmonger",
+        "reason": "Veba Doktoru ölürse, hayatta kalan bir Minyon kendi yeteneğine ek olarak Korku Tacırı yeteneğini kazanır ve bunu öğrenir."
+    },
+    {
+        "target": "plaguedoctor",
+        "trick": "goblin",
+        "reason": "Veba Doktoru ölürse, hayatta kalan bir Minyon kendi yeteneğine ek olarak Goblin yeteneğini kazanır ve bunu öğrenir."
+    },
+    {
+        "target": "plaguedoctor",
+        "trick": "marionette",
+        "reason": "Eğer Demon'un hayatta olan bir komşusu varsa ve Veba Doktoru öldüğünde bir Kasaba Halkı veya Yabancı varsa, o oyuncu kötü bir Kuklaya dönüşür. Zaten fazladan bir kötü oyuncu varsa bu gerçekleşmez."
+    },
+    {
+        "target": "plaguedoctor",
+        "trick": "scarletwoman",
+        "reason": "Veba Doktoru ölürse, hayatta kalan bir Minyon kendi yeteneğine ek olarak Kızıl Kraliçe yeteneğini kazanır ve bunu öğrenir."
+    },
+    {
+        "target": "plaguedoctor",
+        "trick": "spy",
+        "reason": "Veba Doktoru ölürse, hayatta kalan bir Minyon kendi yeteneğine ek olarak Casus yeteneğini kazanır ve bunu öğrenir."
     },
     {
         "target": "boffin",
-        "trick": "heretic",
-        "reason": "İblis, Kafir yeteneğine sahip olamaz."
+        "trick": "alchemist",
+        "reason": "Simyacı Alim yeteneğine sahipse, Simyacı İblis'in hangi yeteneğe sahip olduğunu öğrenmez."
     },
     {
         "target": "boffin",
         "trick": "cultleader",
         "reason": "İblis, Tarikat Lideri yeteneğine sahipse, bu yetenek nedeniyle iyi olamaz."
+    },
+    {
+        "target": "boffin",
+        "trick": "drunk",
+        "reason": "İblis Sarhoş yeteneğine sahip olacaksa, Alim bunun yerine bu yeteneğe sahip olacak bir Kasabalı oyuncu seçer."
     },
     {
         "target": "boffin",
@@ -691,17 +156,457 @@
     },
     {
         "target": "boffin",
-        "trick": "drunk",
-        "reason": "İblis Sarhoş yeteneğine sahip olacaksa, Alim bunun yerine bu yeteneğe sahip olacak bir Kasabalı oyuncu seçer."
-    },
-    {
-        "target": "boffin",
-        "trick": "alchemist",
-        "reason": "Simyacı Alim yeteneğine sahipse, Simyacı İblis'in hangi yeteneğe sahip olduğunu öğrenmez."
-    },
-    {
-        "target": "boffin",
         "trick": "villageidiot",
         "reason": "Yedek bir simge varsa, Alim İblis'e Köyün Delisi yeteneğini verebilir."
+    },
+    {
+        "target": "cerenovus",
+        "trick": "goblin",
+        "reason": "Akılçelen, bir oyuncuyu Goblin oldukları konusunda delirtmeyi seçebilir."
+    },
+    {
+        "target": "marionette",
+        "trick": "balloonist",
+        "reason": "Kukla kendisinin Baloncu olduğunu düşünüyorsa, +1 Yabancı eklenmiş olabilir."
+    },
+    {
+        "target": "marionette",
+        "trick": "damsel",
+        "reason": "Kukla, oyunda bir Küçük Hanım olduğunu öğrenmez."
+    },
+    {
+        "target": "marionette",
+        "trick": "huntsman",
+        "reason": "Kukla kendisinin Avcı olduğunu düşünüyorsa, Küçük Hanım eklenmiştir."
+    },
+    {
+        "target": "marionette",
+        "trick": "lilmonsta",
+        "reason": "Kukla, İblis'in değil, bir Minyon'un komşusudur. Kukla, Lil' Monsta simgesini kimin alacağını seçmek için uyandırılmaz ve Lil' Monsta simgesine sahiplerse Kukla olduklarını öğrenmezler."
+    },
+    {
+        "target": "marionette",
+        "trick": "poppygrower",
+        "reason": "Gelincikçi öldüğünde, İblis Kukla'yı öğrenir ancak Kukla hiçbir şey öğrenmez."
+    },
+    {
+        "target": "marionette",
+        "trick": "snitch",
+        "reason": "Kukla oyunda olmayan 3 karakteri öğrenmez. İblis onun yerine fazladan 3 tane öğrenir."
+    },
+    {
+        "target": "mastermind",
+        "trick": "alhadikhia",
+        "reason": "Kader Ağları idam edilerek ölürse ve Deha hayattaysa, Kader Ağları bu gece 3 iyi oyuncu seçer: eğer 3'ü de yaşamayı seçerse, kötüler kazanır. Aksi takdirde, iyiler kazanır."
+    },
+    {
+        "target": "pithag",
+        "trick": "cultleader",
+        "reason": "Çukur Cadısı kötü bir oyuncuyu Tarikat Lideri'ne çevirirse, kendi yetenekleri nedeniyle iyi olamazlar."
+    },
+    {
+        "target": "pithag",
+        "trick": "damsel",
+        "reason": "Çukur Cadısı bir Küçük Hanım yaratırsa, Hikaye Anlatıcısı hangi oyuncu olduğunu seçer."
+    },
+    {
+        "target": "pithag",
+        "trick": "goon",
+        "reason": "Çukur Cadısı kötü bir oyuncuyu Serseri'ye çevirirse, kendi yetenekleri nedeniyle iyi olamazlar."
+    },
+    {
+        "target": "pithag",
+        "trick": "ogre",
+        "reason": "Pit-Hag kötü bir oyuncuyu Ogre'ye dönüştürürse, kendi yetenekleri nedeniyle iyiye dönüşemezler."
+    },
+    {
+        "target": "pithag",
+        "trick": "politician",
+        "reason": "Çukur Cadısı kötü bir Politikacı yaratamaz."
+    },
+    {
+        "target": "pithag",
+        "trick": "villageidiot",
+        "reason": "Yedek bir simge varsa, Çukur Cadısı ekstra bir Köyün Delisi yaratabilir. Eğer öyleyse, sarhoş Köyün Delisi değişebilir."
+    },
+    {
+        "target": "scarletwoman",
+        "trick": "alhadikhia",
+        "reason": "Eğer iki hayatta olan Kader Ağları varsa, Kızıl Kraliçe Kader Ağları tekrar Kızıl Kraliçe olur."
+    },
+    {
+        "target": "scarletwoman",
+        "trick": "fanggu",
+        "reason": "Eğer Fang Gu bir Yabancı seçer ve ölürse, Kızıl Kraliçe Fang Gu olmaz."
+    },
+    {
+        "target": "spy",
+        "trick": "alchemist",
+        "reason": "Eğer Simyacı Spy yeteneğine sahipse Grimoire'ı görmez ve gerçek Spy yanlış kayıt yapamaz."
+    },
+    {
+        "target": "spy",
+        "trick": "damsel",
+        "reason": "Eğer Casus oyundaysa (veya olmuşsa), Küçük Hanım zehirlenir."
+    },
+    {
+        "target": "spy",
+        "trick": "magician",
+        "reason": "Casus Grimoire'ı gördüğünde, İblis ve Büyücü'nün karakter simgeleri kaldırılır."
+    },
+    {
+        "target": "spy",
+        "trick": "ogre",
+        "reason": "Casus, Ogre'ye kötü olarak görünür."
+    },
+    {
+        "target": "spy",
+        "trick": "poppygrower",
+        "reason": "Gelincikçi oyundaysa, Casus, Gelincikçi ölene kadar Grimoire'ı görmez."
+    },
+    {
+        "target": "summoner",
+        "trick": "alchemist",
+        "reason": "Eğer bir Simyacı-Çağırıcı oyundaysa, oyun normalde olduğu gibi bir İblis ile başlar. Eğer Simyacı-Çağırıcı bir oyuncu seçerse, o oyuncuyu İblis yapar ancak hizibini değiştirmez."
+    },
+    {
+        "target": "summoner",
+        "trick": "clockmaker",
+        "reason": "Çağırıcı oyundaysa, Saatçi bir İblis yaratılana kadar bilgisini almaz."
+    },
+    {
+        "target": "summoner",
+        "trick": "courtier",
+        "reason": "Çağırıcı 3. gece sarhoşsa, Çağırıcı hangi İblis'i seçeceğini seçer, ancak Hikaye Anlatıcısı hangi oyuncuyu seçeceğini seçer."
+    },
+    {
+        "target": "summoner",
+        "trick": "engineer",
+        "reason": "Mühendis, Çağırıcı yeteneğini kullanmadan önce onu oyundan çıkarırsa, Çağırıcı yeteneğini hemen kullanır."
+    },
+    {
+        "target": "summoner",
+        "trick": "hatter",
+        "reason": "Çağırıcı oyunda olan bir İblis yaratamaz. Eğer Çağırıcı oyunda olmayan bir İblis yaratırsa, bu geceki ölümler rastgeledir."
+    },
+    {
+        "target": "summoner",
+        "trick": "kazali",
+        "reason": "Çağırıcı oyunda olan bir İblis yaratamaz. Eğer Çağırıcı oyunda olmayan bir İblis yaratırsa, bu geceki ölümler rastgeledir."
+    },
+    {
+        "target": "summoner",
+        "trick": "legion",
+        "reason": "Çağırıcı Lejyon yaratırsa, çoğu oyuncu (tüm kötü oyuncular dahil) kötü Lejyon olur."
+    },
+    {
+        "target": "summoner",
+        "trick": "lordoftyphon",
+        "reason": "Eğer Çağırıcı bir Typhon Lordu yaratırsa, Typhon Lordu bir Minyon'un komşusu olmalıdır. Diğer komşu, oyunda olmayan kötü bir Minyon olur."
+    },
+    {
+        "target": "summoner",
+        "trick": "marionette",
+        "reason": "Kukla, Oyuncu'nun komşusudur. Oyuncu, Kukla'nın kim olduğunu biliyor."
+    },
+    {
+        "target": "summoner",
+        "trick": "pithag",
+        "reason": "Çağırıcı oyunda olan bir İblis yaratamaz. Eğer Çağırıcı oyunda olmayan bir İblis yaratırsa, bu geceki ölümler rastgeledir."
+    },
+    {
+        "target": "summoner",
+        "trick": "poppygrower",
+        "reason": "Çağırıcı harekete geçtiğinde Gelincikçi hayattaysa, Çağırıcı hangi İblis'i seçeceğini seçer, ancak Hikaye Anlatıcısı hangi oyuncuyu seçeceğini seçer."
+    },
+    {
+        "target": "summoner",
+        "trick": "preacher",
+        "reason": "Eğer Vaiz 3. gece veya öncesinde Çağırıcı'yı seçerse, Çağırıcı hangi İblis'i seçeceğini seçer, ancak Hikaye Anlatıcısı hangi oyuncuyu seçeceğini seçer."
+    },
+    {
+        "target": "summoner",
+        "trick": "pukka",
+        "reason": "Çağırıcı, 2. gece bir oyuncunun Pukka olmasını seçebilir."
+    },
+    {
+        "target": "summoner",
+        "trick": "zombuul",
+        "reason": "Çağırıcı ölü bir oyuncuyu Zombuul'a çevirirse, Hikaye Anlatıcısı o oyuncuyu bir kez ölmüş bir Zombuul olarak ele alır."
+    },
+    {
+        "target": "vizier",
+        "trick": "alsaahir",
+        "reason": "Vezir oyundaysa, Hakikatgörür hangi İblis(ler)in oyunda olduğunu da tahmin etmelidir."
+    },
+    {
+        "target": "vizier",
+        "trick": "courtier",
+        "reason": "Vezir yeteneğini kaybederse bunu öğrenirler. Vezir yeteneği varken idam edilirse takımı kazanır."
+    },
+    {
+        "target": "vizier",
+        "trick": "fearmonger",
+        "reason": "Vezir, Fearmonger ile birlikte uyanır, kimi seçtiğini öğrenir ve o oyuncuyu hemen idam etmeyi seçemez."
+    },
+    {
+        "target": "vizier",
+        "trick": "investigator",
+        "reason": "Eğer Araştırmacı Vezir'in oyunda olduğunu öğrenirse, Vezir'in varlığı Hikaye Anlatıcısı tarafından duyurulmaz."
+    },
+    {
+        "target": "vizier",
+        "trick": "magician",
+        "reason": "Eğer Vezir ve Sihirbaz her ikisi de oyundaysa, İblis Minyonları öğrenmez."
+    },
+    {
+        "target": "vizier",
+        "trick": "politician",
+        "reason": "Politikacı, Vezir'e kötü olarak görünebilir."
+    },
+    {
+        "target": "vizier",
+        "trick": "preacher",
+        "reason": "Vezir yeteneğini kaybederse bunu öğrenirler. Vezir yeteneği varken idam edilirse takımı kazanır."
+    },
+    {
+        "target": "vizier",
+        "trick": "zealot",
+        "reason": "Bağnaz, Vezir'e kötü olarak görünebilir."
+    },
+    {
+        "target": "widow",
+        "trick": "alchemist",
+        "reason": "Eğer Simyacı Dul yeteneğine sahipse Grimoire'ı görmezler."
+    },
+    {
+        "target": "widow",
+        "trick": "damsel",
+        "reason": "Eğer Dul oyundaysa (veya olmuşsa), Küçük Hanım zehirlenir."
+    },
+    {
+        "target": "widow",
+        "trick": "magician",
+        "reason": "Dul Grimoire'ı gördüğünde, İblis ve Büyücü'nün karakter simgeleri kaldırılır."
+    },
+    {
+        "target": "widow",
+        "trick": "poppygrower",
+        "reason": "Gelincikçi oyundaysa, Dul, Gelincikçi ölene kadar Grimoire'ı görmez."
+    },
+    {
+        "target": "kazali",
+        "trick": "choirboy",
+        "reason": "Eğer bir Koro Oğlanı oyundaysa, Kazali Kral'ın Minyon olmasını seçemez."
+    },
+    {
+        "target": "kazali",
+        "trick": "goon",
+        "reason": "Kazali, Goon oyuncusunun kötü Minyonlarından biri olmasını seçebilir."
+    },
+    {
+        "target": "kazali",
+        "trick": "huntsman",
+        "reason": "Eğer Kazali, Küçük Hanım'ın bir Minyon olmasını seçerse ve bir Avcı oyundaysa, iyi bir oyuncu Küçük Hanım olur."
+    },
+    {
+        "target": "kazali",
+        "trick": "marionette",
+        "reason": "Kazalı bir Kukla yaratmayı seçerse komşularından birini seçmek zorundadır."
+    },
+    {
+        "target": "kazali",
+        "trick": "soldier",
+        "reason": "Kazali, Soldier oyuncusunun kötü Minyonlarından biri olmasını seçebilir."
+    },
+    {
+        "target": "legion",
+        "trick": "engineer",
+        "reason": "Lejyon ve Mühendis oyunun başında aynı anda oyunda olamazlar. Eğer Mühendis Lejyon yaratırsa, çoğu oyuncu (tüm kötü oyuncular dahil) kötü Lejyon olur."
+    },
+    {
+        "target": "legion",
+        "trick": "hatter",
+        "reason": "Eğer Şapkacı ölürse ve Lejyon oyundaysa, hiçbir şey olmaz. Eğer Şapkacı ölürse ve kötü bir oyuncu Lejyon'u seçerse, mevcut tüm kötü oyuncular Lejyon olur."
+    },
+    {
+        "target": "legion",
+        "trick": "minstrel",
+        "reason": "Eğer Lejyon bugün idam edilerek öldüyse, Lejyon yeteneğini korur, ancak Ozan Lejyon olduklarını öğrenebilir."
+    },
+    {
+        "target": "legion",
+        "trick": "preacher",
+        "reason": "Eğer Vaiz Lejyon'u seçerse, Lejyon yeteneğini korur, ancak Vaiz Lejyon olduklarını öğrenebilir."
+    },
+    {
+        "target": "legion",
+        "trick": "zealot",
+        "reason": "Zealot, Legion'un yeteneği açısından kötü olarak algılanabilir."
+    },
+    {
+        "target": "leviathan",
+        "trick": "banshee",
+        "reason": "Leviathan her gece* iyi bir oyuncu seçer (önceki gecelerden farklı olarak): Seçilen bir Banshee ölür ve yeteneğini kazanır."
+    },
+    {
+        "target": "leviathan",
+        "trick": "exorcist",
+        "reason": "Eğer Exorcist hayattaysa ve Leviathan'ı başarıyla seçmişse, 1'den fazla iyi oyuncu idam edildiğinde kötülük kazanamaz."
+    },
+    {
+        "target": "leviathan",
+        "trick": "farmer",
+        "reason": "Her gece*, Leviathan canlı ve iyi bir oyuncu seçer (önceki gecelerden farklı olarak): Seçilen bir Çiftçi yeteneğini kullanır ama ölmez."
+    },
+    {
+        "target": "leviathan",
+        "trick": "grandmother",
+        "reason": "Eğer Leviathan oyundaysa ve Torun idam edilerek ölürse, kötülük kazanır."
+    },
+    {
+        "target": "leviathan",
+        "trick": "hatter",
+        "reason": "Şapkacı 5. gün veya daha sonra ölürse, İblis Leviathan'ı seçemez."
+    },
+    {
+        "target": "leviathan",
+        "trick": "innkeeper",
+        "reason": "Eğer Leviathan oyundaysa, Hancı tarafından korunan oyuncular tüm kötü yeteneklere karşı güvendedir."
+    },
+    {
+        "target": "leviathan",
+        "trick": "king",
+        "reason": "Leviathan oyundaysa ve en az 1 oyuncu ölürse, Kral her gece yaşayan bir karakter öğrenir."
+    },
+    {
+        "target": "leviathan",
+        "trick": "mayor",
+        "reason": "Leviathan oyundaysa ve 5. günde infaz gerçekleşmezse iyi olan kazanır."
+    },
+    {
+        "target": "leviathan",
+        "trick": "monk",
+        "reason": "Eğer Leviathan oyundaysa, Monk'un koruduğu oyuncu tüm kötü yeteneklerden korunur."
+    },
+    {
+        "target": "leviathan",
+        "trick": "pithag",
+        "reason": "5. günden sonra, Çukur Cadısı Leviathan'ı seçemez."
+    },
+    {
+        "target": "leviathan",
+        "trick": "ravenkeeper",
+        "reason": "Her gece*, Leviathan canlı bir oyuncu seçer (önceki gecelerden farklı olarak): Seçilen bir Kuzgun Bekçisi yeteneğini kullanır ama ölmez."
+    },
+    {
+        "target": "leviathan",
+        "trick": "sage",
+        "reason": "Leviathan her gece* iyi bir oyuncu seçer (önceki gecelerden farklı olarak): Seçilen bir Bilge onun yeteneğini kullanır ama ölmez."
+    },
+    {
+        "target": "leviathan",
+        "trick": "soldier",
+        "reason": "Eğer Leviathan oyundaysa, Asker tüm kötü yeteneklerden korunur."
+    },
+    {
+        "target": "lilmonsta",
+        "trick": "hatter",
+        "reason": "Bir İblis Lil' Monsta'yı seçerse, bu gece olmak ve Lil' Monsta'ya bakmak için bir Minyon da seçer."
+    },
+    {
+        "target": "lilmonsta",
+        "trick": "magician",
+        "reason": "Sihirbaz her gece bir Minion seçer: Eğer o Minion ve Lil' Monsta hayattaysa, o Minion Lil' Monsta'ya bebek bakıcılığı yapar."
+    },
+    {
+        "target": "lilmonsta",
+        "trick": "poppygrower",
+        "reason": "Gelincikçi oyundaysa, Minyonlar birlikte uyanmaz. Biri Lil' Monsta simgesini almayı seçene kadar teker teker uyandırılırlar."
+    },
+    {
+        "target": "lilmonsta",
+        "trick": "scarletwoman",
+        "reason": "5 veya daha fazla oyuncu hayattaysa ve Lil' Monsta simgesini tutan oyuncu ölürse, Kızıl Kraliçe'ye bu gece Lil' Monsta simgesi verilir."
+    },
+    {
+        "target": "lilmonsta",
+        "trick": "vizier",
+        "reason": "Vezir, Lil' Monsta'ya bakıyorsa idam edilerek ölebilir."
+    },
+    {
+        "target": "lleech",
+        "trick": "mastermind",
+        "reason": "Eğer Deha hayattaysa ve Lleech'in konağı idam edilerek ölürse, Lleech yaşar ancak yeteneğini kaybeder."
+    },
+    {
+        "target": "lleech",
+        "trick": "slayer",
+        "reason": "Eğer Cellat Lleech'in konağını öldürürse, konak ölür."
+    },
+    {
+        "target": "riot",
+        "trick": "banshee",
+        "reason": "Her gece*, Riot çok iyi bir oyuncu seçer (önceki gecelerden farklı olarak): Seçilen bir Banshee ölür ve yeteneğini kazanır."
+    },
+    {
+        "target": "riot",
+        "trick": "exorcist",
+        "reason": "Exorcist 3. gecede Riot'u seçerse Minyonlar Riot olmaz."
+    },
+    {
+        "target": "riot",
+        "trick": "farmer",
+        "reason": "Her gece*, Riot çok iyi bir oyuncu seçer (önceki gecelerden farklı olarak): Seçilen bir Çiftçi yeteneğini kullanır ama ölmez."
+    },
+    {
+        "target": "riot",
+        "trick": "grandmother",
+        "reason": "Riot oyundaysa ve gün içinde Torun ölürse Büyükanne de ölür."
+    },
+    {
+        "target": "riot",
+        "trick": "innkeeper",
+        "reason": "Riot oyundaysa Hancı tarafından korunan oyuncu tüm kötü yeteneklerden korunur."
+    },
+    {
+        "target": "riot",
+        "trick": "king",
+        "reason": "Riot oyundaysa ve en az 1 oyuncu ölürse, Kral her gece canlı bir karakter öğrenir."
+    },
+    {
+        "target": "riot",
+        "trick": "mayor",
+        "reason": "Belediye Başkanı adaylıkları durdurmayı seçebilir. Yalnızca 1 Riot hayattayken bunu yaparlarsa iyi olan kazanır. Aksi halde kötülük kazanır."
+    },
+    {
+        "target": "riot",
+        "trick": "monk",
+        "reason": "Eğer Riot oyundaysa, Monk tarafından korunan oyuncu tüm kötü yeteneklere karşı güvende olur."
+    },
+    {
+        "target": "riot",
+        "trick": "ravenkeeper",
+        "reason": "Her gece*, Riot çok iyi bir oyuncu seçer (önceki gecelerden farklı olarak): Seçilen bir Kuzgun Bekçisi yeteneğini kullanır ama ölmez."
+    },
+    {
+        "target": "riot",
+        "trick": "sage",
+        "reason": "Her gece*, Riot çok iyi bir oyuncu seçer (önceki gecelerden farklı olarak): Seçilen bir Bilge, yeteneğini kullanır ama ölmez."
+    },
+    {
+        "target": "riot",
+        "trick": "soldier",
+        "reason": "Riot oyundaysa Soldier tüm kötü yeteneklerden korunur."
+    },
+    {
+        "target": "vortox",
+        "trick": "banshee",
+        "reason": "Hortum oyundaysa ve İblis Ölüm Çığlığı'nı öldürürse, oyuncular yine de Ölüm Çığlığı'nın öldüğünü öğrenirler."
+    },
+    {
+        "target": "yaggababble",
+        "trick": "exorcist",
+        "reason": "Üfürükçü Yasak Kelime'yi seçerse, Yasak Kelime yeteneği bu gece öldürmez."
     }
 ]

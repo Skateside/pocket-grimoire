@@ -1,13 +1,13 @@
 [
     {
-        "target": "chambermaid",
-        "trick": "mathematician",
-        "reason": "Husan får veta om Matematikern vaknar inatt eller inte, trots att Husan vaknar först."
+        "target": "bountyhunter",
+        "trick": "kazali",
+        "reason": "En ond Bybo skapas bara om Prisjägaren fortfarande är i spel efter att Kazali har agerat."
     },
     {
-        "target": "eviltwin",
-        "trick": "plaguedoctor",
-        "reason": "Berättaren kan inte få Onda tvillingens förmåga om Pestläkaren dör."
+        "target": "bountyhunter",
+        "trick": "philosopher",
+        "reason": "Om Filosofen får Prisjägarens förmåga så kan en Bybo bli ond."
     },
     {
         "target": "cannibal",
@@ -17,7 +17,12 @@
     {
         "target": "cannibal",
         "trick": "juggler",
-        "reason": "Om Jonglören gissar på första dagen och dör av avrättning får den levande Kannibalen inatt veta hur många rätt Jonglören hade."
+        "reason": "Om Jonglören gissar på första dagen och dör av avrättning så får den levande Kannibalen inatt veta hur många rätt Jonglören hade."
+    },
+    {
+        "target": "cannibal",
+        "trick": "poppygrower",
+        "reason": "Om Kannibalen äter Vallmoodlaren och därefter dör eller förlorar Vallmoodlarens förmåga så får Demonen och Lakejerna veta om varandra den natten."
     },
     {
         "target": "cannibal",
@@ -25,629 +30,54 @@
         "reason": "Om Kannibalen får Fanatikerns förmåga så får Kannibalen veta det."
     },
     {
-        "target": "cannibal",
-        "trick": "poppygrower",
-        "reason": "Om kannibalen äter vallmoodlaren, sedan dör eller förlorar vallmoodlarförmågan, lär sig demonen och minionerna varandra den natten."
+        "target": "mathematician",
+        "trick": "chambermaid",
+        "reason": "Husan får veta om Matematikern vaknar inatt eller inte, trots att Husan vaknar först."
     },
     {
-        "target": "lunatic",
-        "trick": "mathematician",
+        "target": "mathematician",
+        "trick": "lunatic",
         "reason": "Matematikern får veta om Galningen attackerar någon annan än den riktiga Demonen."
     },
     {
-        "target": "pithag",
-        "trick": "heretic",
+        "target": "butler",
+        "trick": "organgrinder",
+        "reason": "Om Positivhalaren gör att alla blundar när de röstar så får Butlern rösta, men hens röst räknas bara om hens husbonde också röstade."
+    },
+    {
+        "target": "heretic",
+        "trick": "baron",
+        "reason": "Baronen kanske bara lägger till 1 Utböling, inte 2."
+    },
+    {
+        "target": "heretic",
+        "trick": "boffin",
+        "reason": "Demonen kan inte ha Kättarens förmåga."
+    },
+    {
+        "target": "heretic",
+        "trick": "godfather",
+        "reason": "Endast 1 av rollerna får vara i spel."
+    },
+    {
+        "target": "heretic",
+        "trick": "lleech",
+        "reason": "Om Lleech har förgiftat Kättaren och Kättaren dör, så dör Lleech och Kättaren förblir förgiftad."
+    },
+    {
+        "target": "heretic",
+        "trick": "pithag",
         "reason": "Trollpackan kan inte skapa en Kättare."
     },
     {
-        "target": "pithag",
-        "trick": "damsel",
-        "reason": "Om Trollpackan skapar en Ungmö bestämmer Berättaren vilken spelare det blir."
-    },
-    {
-        "target": "pithag",
-        "trick": "politician",
-        "reason": "Trollpackan kan inte skapa en ond Politiker."
-    },
-    {
-        "target": "pithag",
-        "trick": "villageidiot",
-        "reason": "Om det finns en ledig bricka kan Trollpackan skapa en extra Byfåne. Detta kan ändra vilken av Byfånarna som är full."
-    },
-    {
-        "target": "pithag",
-        "trick": "cultleader",
-        "reason": "Om Trollpackan gör en ond spelare till Kultledaren kan den spelaren inte bli god av sin egen förmåga."
-    },
-    {
-        "target": "pithag",
-        "trick": "goon",
-        "reason": "Om Trollpackan gör en ond spelare till Hejduken kan den spelaren inte bli god av sin egen förmåga."
-    },
-    {
-        "target": "pithag",
-        "trick": "ogre",
-        "reason": "Om Trollpackan gör en ond spelare till Trollet kan den spelaren inte bli god av sin egen förmåga."
-    },
-    {
-        "target": "cerenovus",
-        "trick": "goblin",
-        "reason": "Cerenovus får välja att en spelare ska låtsas vara Vätten."
-    },
-    {
-        "target": "goblin",
-        "trick": "plaguedoctor",
-        "reason": "Om Pestläkaren dör så får en levande Lakej Vättens förmåga utöver sin egen, och får veta om det."
-    },
-    {
-        "target": "leviathan",
-        "trick": "soldier",
-        "reason": "Om Leviatan nominerar och avrättar Soldaten så dör Soldaten inte."
-    },
-    {
-        "target": "leviathan",
-        "trick": "monk",
-        "reason": "Om Leviatan nominerar och avrättar spelaren som Munken valde så dör inte den spelaren."
-    },
-    {
-        "target": "leviathan",
-        "trick": "innkeeper",
-        "reason": "Om Leviatan nominerar och avrättar en spelare som Gästgivaren valt så dör inte den spelaren."
-    },
-    {
-        "target": "leviathan",
-        "trick": "ravenkeeper",
-        "reason": "Om Leviatan är i spel och Korpskötaren avrättas och dör så vaknar Korpskötaren samma natt och använder sin förmåga."
-    },
-    {
-        "target": "leviathan",
-        "trick": "banshee",
-        "reason": "Om Leviatan är i spel och Bansheen dör av avrättning får alla spelare veta att Bansheen har dött, och Bansheen får sin förmåga."
-    },
-    {
-        "target": "leviathan",
-        "trick": "sage",
-        "reason": "Om Leviatan är i spel och Gurun avrättas och dör så vaknar Gurun samma natt och använder sin förmåga."
-    },
-    {
-        "target": "leviathan",
-        "trick": "farmer",
-        "reason": "Om Leviatan är i spel och en Bonde avrättas och dör så blir en god spelare Bonde samma natt."
-    },
-    {
-        "target": "leviathan",
-        "trick": "mayor",
-        "reason": "Om Leviatan är i spel och ingen avrättas dag 5 så vinner de goda."
-    },
-    {
-        "target": "leviathan",
-        "trick": "hatter",
-        "reason": "Om Hattmakaren dör dag 5 eller senare kan Demonen inte välja Leviatan."
-    },
-    {
-        "target": "leviathan",
-        "trick": "pithag",
-        "reason": "Efter dag 5 kan Trollpackan inte välja Leviatan."
-    },
-    {
-        "target": "lilmonsta",
-        "trick": "poppygrower",
-        "reason": "Om Vallmoodlaren är i spel så vaknar Lakejerna inte tillsammans; de vaknar en och en tills en väljer att ta hand om Lillmonstret."
-    },
-    {
-        "target": "lilmonsta",
-        "trick": "magician",
-        "reason": "Varje natt väljer Magikern en Lakej; om den Lakejen och Lillmonstret lever får den Lakejen sköta Lillmonstret."
-    },
-    {
-        "target": "lilmonsta",
-        "trick": "scarletwoman",
-        "reason": "Om 5 eller fler spelare lever och spelaren som tar hand om Lillmonstret dör så får Röda damen Lillmonstret inatt."
-    },
-    {
-        "target": "lilmonsta",
-        "trick": "organgrinder",
-        "reason": "Röster på Positivhalaren räknas om Positivhalaren tar hand om Lillmonstret."
-    },
-    {
-        "target": "lilmonsta",
-        "trick": "vizier",
-        "reason": "Vesiren kan avrättas och dö om hen har hand om Lillmonstret samtidigt."
-    },
-    {
-        "target": "lilmonsta",
-        "trick": "hatter",
-        "reason": "Om Demonen väljer Lillmonstret väljer hen också en Lakej. Hen blir till den Lakejen och tar hand om Lillmonstret inatt."
-    },
-    {
-        "target": "legion",
-        "trick": "engineer",
-        "reason": "Legionen och Ingenjören kan inte vara i spel samtidigt när spelet börjar. Om Ingenjören skapar Legionen blir de flesta spelare, inklusive alla spelare, den onda Legionen."
-    },
-    {
-        "target": "legion",
-        "trick": "preacher",
-        "reason": "Om Predikanten väljer Legionen får Legionen behålla sin förmåga, men Predikanten kanske får veta att hen är Legionen."
-    },
-    {
-        "target": "legion",
-        "trick": "minstrel",
-        "reason": "Om Legionen dog av avrättning idag behåller Legionen sin förmåga, men Trubaden kanske får veta att hen är Legionen."
-    },
-    {
-        "target": "legion",
-        "trick": "hatter",
-        "reason": "Om Hattmakaren dör och Legionen är i spel händer ingenting. Om Hattmakaren dör och en ond spelare väljer Legionen blir alla onda spelare till Legionen."
-    },
-    {
-        "target": "legion",
-        "trick": "zealot",
-        "reason": "Fanatikern kan registreras som ond för Legionens förmåga."
-    },
-    {
-        "target": "fanggu",
-        "trick": "scarletwoman",
-        "reason": "Om Fang Gu väljer en Utböling och dör så blir Röda damen inte till Fang Gu."
-    },
-    {
-        "target": "spy",
-        "trick": "alchemist",
-        "reason": "Alkemisten kan inte få Spionens förmåga."
-    },
-    {
-        "target": "spy",
-        "trick": "magician",
-        "reason": "När Spionen ser Spelboken tas Demonens och Magikerns rollbrickor bort."
-    },
-    {
-        "target": "spy",
-        "trick": "poppygrower",
-        "reason": "Om Vallmoodlaren är i spel får Spionen inte se spelboken förrän Vallmoodlaren dör."
-    },
-    {
-        "target": "spy",
-        "trick": "plaguedoctor",
-        "reason": "Om Pestläkaren dör får en levande Lakej Spionens förmåga utöver sin egen, och får veta detta."
-    },
-    {
-        "target": "spy",
-        "trick": "damsel",
-        "reason": "Om Spionen är (eller har varit) i spel är Ungmön förgiftad."
-    },
-    {
-        "target": "spy",
-        "trick": "heretic",
+        "target": "heretic",
+        "trick": "spy",
         "reason": "Endast 1 av rollerna får vara i spel."
     },
     {
-        "target": "spy",
-        "trick": "ogre",
-        "reason": "Spionen registreras som ond för Trollet."
-    },
-    {
-        "target": "widow",
-        "trick": "alchemist",
-        "reason": "Alkemisten kan inte få Änkans förmåga."
-    },
-    {
-        "target": "widow",
-        "trick": "magician",
-        "reason": "När Änkan ser Spelboken tas Demonens och Magikerns rollbrickor bort."
-    },
-    {
-        "target": "widow",
-        "trick": "poppygrower",
-        "reason": "Om Vallmoodlaren är i spel får Änkan inte se spelboken förrän Vallmoodlaren dör."
-    },
-    {
-        "target": "widow",
-        "trick": "damsel",
-        "reason": "Om Änkan är (eller har varit) i spel är Ungmön förgiftad."
-    },
-    {
-        "target": "widow",
-        "trick": "heretic",
+        "target": "heretic",
+        "trick": "widow",
         "reason": "Endast 1 av rollerna får vara i spel."
-    },
-    {
-        "target": "godfather",
-        "trick": "heretic",
-        "reason": "Endast 1 av rollerna får vara i spel."
-    },
-    {
-        "target": "scarletwoman",
-        "trick": "plaguedoctor",
-        "reason": "Om Pestläkaren dör får en levande Lakej Röda damens förmåga utöver sin egen, och får veta detta."
-    },
-    {
-        "target": "boomdandy",
-        "trick": "plaguedoctor",
-        "reason": "Om Pestläkaren avrättas och Berättaren skulle få Sprängarens förmåga så aktiveras Sprängarens förmåga direkt."
-    },
-    {
-        "target": "fearmonger",
-        "trick": "plaguedoctor",
-        "reason": "Om Pestläkaren dör får en levande Lakej Skräckspridarens förmåga utöver sin egen, och får veta detta."
-    },
-    {
-        "target": "yaggababble",
-        "trick": "exorcist",
-        "reason": "Om Exorcisten väljer Yaggababbel kan Yaggababbels förmåga inte döda någon inatt."
-    },
-    {
-        "target": "summoner",
-        "trick": "clockmaker",
-        "reason": "Om Åkallaren är i spel får Urmakaren inte sin information förrän en Demon har skapats."
-    },
-    {
-        "target": "summoner",
-        "trick": "alchemist",
-        "reason": "Om Alkemisten har Åkallarens förmåga börjar spelet med en Demon i spel som vanligt. Om Alkemisten väljer en spelare blir den spelaren till en Demon, men byter inte lag."
-    },
-    {
-        "target": "summoner",
-        "trick": "poppygrower",
-        "reason": "Om Vallmoodlaren lever när Åkallaren agerar får Åkallaren välja Demon, men Berättaren väljer vilken spelare som ska bli den Demonen."
-    },
-    {
-        "target": "summoner",
-        "trick": "marionette",
-        "reason": "Marionetten sitter bredvid Åkallaren. Åkallaren vet vem Marionetten är."
-    },
-    {
-        "target": "summoner",
-        "trick": "pithag",
-        "reason": "Åkallaren kan inte skapa en Demon som är i spel. Om Åkallaren skapar en Demon som inte är i spel dör spelare godtyckligt inatt."
-    },
-    {
-        "target": "summoner",
-        "trick": "hatter",
-        "reason": "Åkallaren kan inte skapa en Demon som är i spel. Om Åkallaren skapar en Demon som inte är i spel dör spelare godtyckligt inatt."
-    },
-    {
-        "target": "summoner",
-        "trick": "courtier",
-        "reason": "Om Åkallaren är full den tredje natten får Åkallaren välja Demon, men Berättaren väljer spelare."
-    },
-    {
-        "target": "summoner",
-        "trick": "engineer",
-        "reason": "Om Ingenjören tar Åkallaren ur spel innan Åkallaren använt sin förmåga så använder Åkallaren sin förmåga omedelbart."
-    },
-    {
-        "target": "summoner",
-        "trick": "zombuul",
-        "reason": "Om Åkallaren gör en död spelare till Zombuul behandlas den spelaren som en Zombuul som dött en gång."
-    },
-    {
-        "target": "summoner",
-        "trick": "pukka",
-        "reason": "Åkallaren får göra en spelare till Pukka den andra natten."
-    },
-    {
-        "target": "summoner",
-        "trick": "riot",
-        "reason": "Om Åkallaren skapar Kravallen blir alla Lakejer till Kravallen."
-    },
-    {
-        "target": "summoner",
-        "trick": "legion",
-        "reason": "Om Åkallaren skapar Legionen blir de flesta spelarna (inklusive alla onda spelare) till den onda Legionen."
-    },
-    {
-        "target": "summoner",
-        "trick": "kazali",
-        "reason": "Åkallaren kan inte skapa en Demon som är i spel. Om Åkallaren skapar en Demon som inte är i spel dör spelare godtyckligt inatt."
-    },
-    {
-        "target": "summoner",
-        "trick": "preacher",
-        "reason": "Om Predikanten väljer Åkallaren den 3:e natten eller tidigare så får Åkallaren välja Demon, men Berättaren väljer spelare."
-    },
-    {
-        "target": "summoner",
-        "trick": "lordoftyphon",
-        "reason": "Om Åkallaren skapar Tyfons herre måste Tyfons herre sitta granne med en Lakej. Den andra grannen blir en ond Lakej som inte redan är i spel."
-    },
-    {
-        "target": "baron",
-        "trick": "heretic",
-        "reason": "Baronen lägger bara till 1 Utböling, inte 2."
-    },
-    {
-        "target": "baron",
-        "trick": "plaguedoctor",
-        "reason": "Om Berättaren får Baronens förmåga så blir upp till två spelare till Utbölingar som inte är i spel."
-    },
-    {
-        "target": "marionette",
-        "trick": "lilmonsta",
-        "reason": "Marionetten sitter bredvid en Lakej, inte Demonen. Marionetten vaknar inte för att välja vem som tar Lillmonstrets bricka, och får inte veta att hen är Marionetten om hen har Lillmonstrets bricka."
-    },
-    {
-        "target": "marionette",
-        "trick": "poppygrower",
-        "reason": "När Vallmoodlaren dör får Demonen veta vem Marionetten är, men Marionetten får inte veta något."
-    },
-    {
-        "target": "marionette",
-        "trick": "snitch",
-        "reason": "Marionetten får inte veta 3 roller som inte är spel; istället får Demonen veta ytterligare 3."
-    },
-    {
-        "target": "marionette",
-        "trick": "balloonist",
-        "reason": "Om Marionetten tror sig vara Ballongfararen så kan 1 extra Utböling ha lagts till."
-    },
-    {
-        "target": "marionette",
-        "trick": "damsel",
-        "reason": "Marionetten får inte veta att Ungmön är i spel."
-    },
-    {
-        "target": "marionette",
-        "trick": "plaguedoctor",
-        "reason": "Om Demonen har en granne som lever och är Bybo eller Utböling när Pestläkaren dör så blir den spelaren en ond Marionett. Om det redan finns en extra ond spelare händer detta inte."
-    },
-    {
-        "target": "marionette",
-        "trick": "huntsman",
-        "reason": "Om Marionetten tror sig vara Jägaren så har Ungmön lagts till."
-    },
-    {
-        "target": "lleech",
-        "trick": "mastermind",
-        "reason": "Om Mästaren lever och Lleechs värd avrättas och dör så överlever Lleech men förlorar sin förmåga."
-    },
-    {
-        "target": "lleech",
-        "trick": "slayer",
-        "reason": "Om Dråparen dräper Lleechs värd så dör värden."
-    },
-    {
-        "target": "lleech",
-        "trick": "heretic",
-        "reason": "Om Lleech har förgiftat Kättaren så dör Lleech, och Kättaren förblir förgiftad."
-    },
-    {
-        "target": "kazali",
-        "trick": "bountyhunter",
-        "reason": "En ond Bybo skapas bara om Prisjägaren fortfarande är i spel efter att Kazali har agerat."
-    },
-    {
-        "target": "kazali",
-        "trick": "goon",
-        "reason": "Om Kazali väljer att göra Hejduken till Lakej så blir Kazali inte full."
-    },
-    {
-        "target": "kazali",
-        "trick": "marionette",
-        "reason": "Om Kazali väljer att skapa en Marionett måste hen välja en av sina grannar."
-    },
-    {
-        "target": "kazali",
-        "trick": "huntsman",
-        "reason": "Om Kazali väljer att Ungmön ska bli Lakej och Jägaren är i spel så blir en god spelare till Ungmön."
-    },
-    {
-        "target": "kazali",
-        "trick": "choirboy",
-        "reason": "Kazali kan inte välja att Kungen ska bli Lakej om en Korgosse är i spel."
-    },
-    {
-        "target": "kazali",
-        "trick": "soldier",
-        "reason": "Soldaten är inte skyddad från att göras till Kazalis Lakej."
-    },
-    {
-        "target": "riot",
-        "trick": "engineer",
-        "reason": "Både Kravallen och Ingenjören kan inte vara i spel i början av spelet. Om Ingenjören skapar Kravallen så blir de onda spelarna till Kravallen."
-    },
-    {
-        "target": "riot",
-        "trick": "golem",
-        "reason": "Om Golem nominerar Kravallen så dör inte den nominerade spelaren."
-    },
-    {
-        "target": "riot",
-        "trick": "snitch",
-        "reason": "Om Golaren är i spel får varje spelare som är Kravallen 3 extra bluffar."
-    },
-    {
-        "target": "riot",
-        "trick": "saint",
-        "reason": "Om en god spelare nominerar och dödar Helgonet så förlorar Helgonets lag."
-    },
-    {
-        "target": "riot",
-        "trick": "butler",
-        "reason": "Butlern kan inte nominera sin husbonde."
-    },
-    {
-        "target": "riot",
-        "trick": "pithag",
-        "reason": "Om Trollpackan skapar Kravallen så blir alla onda spelare till Kravallen. Om Trollpackan skapar Kravallen efter dag 3 så pågår spelet i en dag till."
-    },
-    {
-        "target": "riot",
-        "trick": "mayor",
-        "reason": "Om det bara är 3 levande spelare kvar när dag 3 börjar så får spelarna gemensamt välja att inte nominera någon. Om de gör det och Borgmästaren lever så vinner Borgmästarens lag."
-    },
-    {
-        "target": "riot",
-        "trick": "monk",
-        "reason": "Om någon som är Kravallen nominerar och dödar spelaren som är skyddad av Munken så dör inte den skyddade spelaren."
-    },
-    {
-        "target": "riot",
-        "trick": "farmer",
-        "reason": "Om någon som är Kravallen nominerar och dödar en Bonde så använder Bonden sin förmåga samma natt."
-    },
-    {
-        "target": "riot",
-        "trick": "innkeeper",
-        "reason": "Om någon som är Kravallen nominerar en spelare som är skyddad av Gästgivaren så dör inte den skyddade spelaren."
-    },
-    {
-        "target": "riot",
-        "trick": "sage",
-        "reason": "Om någon som är Kravallen nominerar och dödar Gurun så använder Gurun sin förmåga samma natt."
-    },
-    {
-        "target": "riot",
-        "trick": "banshee",
-        "reason": "Om Kravallen nominerar och dödad Bansheen får alla spelare veta att Bansheen har dött, och Bansheen kan omedelbart nominera två spelare."
-    },
-    {
-        "target": "riot",
-        "trick": "ravenkeeper",
-        "reason": "Om någon som är Kravallen nominerar och dödar Korpskötaren så använder Korpskötaren sin förmåga samma natt."
-    },
-    {
-        "target": "riot",
-        "trick": "soldier",
-        "reason": "Om någon som är Kravallen nominerar Soldaten så dör inte Soldaten."
-    },
-    {
-        "target": "riot",
-        "trick": "grandmother",
-        "reason": "Om någon som är Kravallen nominerar och dödar barnbarnet så dör Farmorn också."
-    },
-    {
-        "target": "riot",
-        "trick": "king",
-        "reason": "Om någon som är Kravallen nominerar och dödar Kungen och Korgossen fortfarande lever så använder Korgossen sin förmåga samma natt."
-    },
-    {
-        "target": "riot",
-        "trick": "exorcist",
-        "reason": "Endast 1 av rollerna får vara i spel."
-    },
-    {
-        "target": "riot",
-        "trick": "minstrel",
-        "reason": "Endast 1 av rollerna får vara i spel."
-    },
-    {
-        "target": "riot",
-        "trick": "flowergirl",
-        "reason": "Endast 1 av rollerna får vara i spel."
-    },
-    {
-        "target": "riot",
-        "trick": "undertaker",
-        "reason": "Spelare som dör av nominering registreras som avrättade för Dödgrävaren."
-    },
-    {
-        "target": "riot",
-        "trick": "cannibal",
-        "reason": "Spelare som dör av nominering registreras som avrättade för Kannibalen."
-    },
-    {
-        "target": "riot",
-        "trick": "pacifist",
-        "reason": "Spelare som dör av nominering registreras som avrättade för Pacifisten."
-    },
-    {
-        "target": "riot",
-        "trick": "devilsadvocate",
-        "reason": "Spelare som dör av nominering registreras som avrättade för Djävulens advokat."
-    },
-    {
-        "target": "riot",
-        "trick": "investigator",
-        "reason": "Kravallen registreras som Lakej för Detektiven."
-    },
-    {
-        "target": "riot",
-        "trick": "clockmaker",
-        "reason": "Kravallen registreras som Lakej för Urmakaren."
-    },
-    {
-        "target": "riot",
-        "trick": "towncrier",
-        "reason": "Kravallen registreras som Lakej för Härolden."
-    },
-    {
-        "target": "riot",
-        "trick": "damsel",
-        "reason": "Kravallen registreras som Lakej för Ungmön."
-    },
-    {
-        "target": "riot",
-        "trick": "preacher",
-        "reason": "Kravallen registreras som Lakej för Predikanten."
-    },
-    {
-        "target": "riot",
-        "trick": "hatter",
-        "reason": "Om Hattmakaren dör, Kravallen är i spel och någon i Kravallen väljer en annan Demon så blir alla i Kravallen till ett vanligt ont lag. Om Hattmakaren dör och Demonen väljer Kravallen så blir alla Lakejer också till Kravallen."
-    },
-    {
-        "target": "riot",
-        "trick": "zealot",
-        "reason": "Om du nomineras måste du nominera igen, även om du är död."
-    },
-    {
-        "target": "alhadikhia",
-        "trick": "scarletwoman",
-        "reason": "Om det finns två levande al Hadikhia så slutar Röda damen att vara al Hadikhia och blir Röda damen igen."
-    },
-    {
-        "target": "organgrinder",
-        "trick": "butler",
-        "reason": "Om Positivhalaren gör att alla blundar när de röstar så får Butlern rösta, men hens röst räknas bara om husbonden också röstade."
-    },
-    {
-        "target": "vizier",
-        "trick": "investigator",
-        "reason": "Om Detektiven får veta att Vesiren är i spel så tillkännager Berättaren inte att Vesiren är i spel för övriga spelare."
-    },
-    {
-        "target": "vizier",
-        "trick": "preacher",
-        "reason": "Om Vesiren förlorar sin förmåga så får hen veta det, och om Vesiren avrättas medan hen har sin förmåga så vinner hens lag."
-    },
-    {
-        "target": "vizier",
-        "trick": "courtier",
-        "reason": "Om Vesiren förlorar sin förmåga så får hen veta det, och om Vesiren avrättas medan hen har sin förmåga så vinner hens lag."
-    },
-    {
-        "target": "vizier",
-        "trick": "alchemist",
-        "reason": "Om Alkemisten har Vesirens förmåga får hen bara avrätta direkt om minst tre spelare röstade."
-    },
-    {
-        "target": "vizier",
-        "trick": "magician",
-        "reason": "Om både Vesiren och Magikern är i spel så får Demonen inte veta om sina Lakejer."
-    },
-    {
-        "target": "vizier",
-        "trick": "fearmonger",
-        "reason": "Vesiren vaknar med Skräckspridaren, får veta vem Skräckspridaren väljer och får inte välja att avrätta den spelaren."
-    },
-    {
-        "target": "vizier",
-        "trick": "politician",
-        "reason": "Politikern kan registreras som ond för Vesiren."
-    },
-    {
-        "target": "vizier",
-        "trick": "alsaahir",
-        "reason": "Om Vesiren är i spel måste al Saahir också gissa vilken Demon (eller vilka Demoner) som är i spel."
-    },
-    {
-        "target": "vizier",
-        "trick": "zealot",
-        "reason": "Fanatikern kan registreras som ond för Vesiren."
-    },
-    {
-        "target": "vortox",
-        "trick": "banshee",
-        "reason": "Om Vortox är i spel och Demonen dödar Bansheen så får spelarna fortfarande veta att Bansheen har dött."
     },
     {
         "target": "ogre",
@@ -655,29 +85,64 @@
         "reason": "Om Enslingen registreras som ond för Trollet får Trollet veta att hen är ond."
     },
     {
-        "target": "philosopher",
-        "trick": "bountyhunter",
-        "reason": "Om Filosofen får Prisjägarens förmåga så kan en Bybo bli ond."
+        "target": "plaguedoctor",
+        "trick": "baron",
+        "reason": "Om Berättaren får Baronens förmåga så blir upp till två spelare till Utbölingar som inte redan är i spel."
     },
     {
-        "target": "mastermind",
-        "trick": "alhadikhia",
-        "reason": "Om al Hadikhia dör av avrättning och Mästaren lever så väljer al Hadikhia 3 goda spelare inatt; om alla 3 väljer att leva så vinner de onda, annars vinner de goda."
+        "target": "plaguedoctor",
+        "trick": "boomdandy",
+        "reason": "Om Pestläkaren avrättas och Berättaren skulle få Sprängarens förmåga så aktiveras Sprängarens förmåga direkt."
+    },
+    {
+        "target": "plaguedoctor",
+        "trick": "eviltwin",
+        "reason": "Berättaren kan inte få Onda Tvillingens förmåga om Pestläkaren dör."
+    },
+    {
+        "target": "plaguedoctor",
+        "trick": "fearmonger",
+        "reason": "Om Pestläkaren dör så får en levande Lakej Skräckspridarens förmåga utöver sin egen, och får veta detta."
+    },
+    {
+        "target": "plaguedoctor",
+        "trick": "goblin",
+        "reason": "Om Pestläkaren dör så får en levande Lakej Vättens förmåga utöver sin egen, och får veta detta."
+    },
+    {
+        "target": "plaguedoctor",
+        "trick": "marionette",
+        "reason": "Om Demonen har en granne som lever och är Bybo eller Utböling när Pestläkaren dör så blir den spelaren en ond Marionett. Om det redan finns en extra ond spelare händer detta inte."
+    },
+    {
+        "target": "plaguedoctor",
+        "trick": "scarletwoman",
+        "reason": "Om Pestläkaren dör så får en levande Lakej Röda Damens förmåga utöver sin egen, och får veta detta."
+    },
+    {
+        "target": "plaguedoctor",
+        "trick": "spy",
+        "reason": "Om Pestläkaren dör så får en levande Lakej Spionens förmåga utöver sin egen, och får veta detta."
     },
     {
         "target": "boffin",
-        "trick": "heretic",
-        "reason": "Demonen kan inte ha Kättarens förmåga."
+        "trick": "alchemist",
+        "reason": "Om Alkemisten har Vetenskaparens förmåga så får Alkemisten inte veta vilken förmåga Demonen har."
     },
     {
         "target": "boffin",
         "trick": "cultleader",
-        "reason": "Om Demonen har Kultledarens förmåga kan hen inte bli god av den förmågan."
+        "reason": "Om Demonen har Kultledarens förmåga så kan hen inte bli god av den förmågan."
+    },
+    {
+        "target": "boffin",
+        "trick": "drunk",
+        "reason": "Om Demonen skulle ha Fyllots förmåga så väljer Vetenskaparen en spelare som är Bybo; hen får Fyllots förmåga istället."
     },
     {
         "target": "boffin",
         "trick": "goon",
-        "reason": "Om Demonen har Hejdukens förmåga kan hen inte bli god av den förmågan."
+        "reason": "Om Demonen har Hejdukens förmåga så kan hen inte bli god av den förmågan."
     },
     {
         "target": "boffin",
@@ -691,17 +156,457 @@
     },
     {
         "target": "boffin",
-        "trick": "drunk",
-        "reason": "Om Demonen skulle ha Fyllots förmåga så väljer Vetenskaparen en spelare som är Bybo; hen får Fyllots förmåga istället."
-    },
-    {
-        "target": "boffin",
-        "trick": "alchemist",
-        "reason": "Om Alkemisten har Vetenskaparens förmåga får Alkemisten inte veta vilken förmåga Demonen har."
-    },
-    {
-        "target": "boffin",
         "trick": "villageidiot",
-        "reason": "Om det finns en ledig bricka kan Vetenskaparen ge Demonen Byfånens förmåga."
+        "reason": "Om det finns en ledig bricka så kan Vetenskaparen ge Demonen Byfånens förmåga."
+    },
+    {
+        "target": "cerenovus",
+        "trick": "goblin",
+        "reason": "Cerenovus får välja att en spelare ska låtsas vara Vätten."
+    },
+    {
+        "target": "marionette",
+        "trick": "balloonist",
+        "reason": "Om Marionetten tror sig vara Ballongfararen så kan 1 extra Utböling ha lagts till."
+    },
+    {
+        "target": "marionette",
+        "trick": "damsel",
+        "reason": "Marionetten får inte veta att Ungmön är i spel."
+    },
+    {
+        "target": "marionette",
+        "trick": "huntsman",
+        "reason": "Om Marionetten tror sig vara Jägaren så har Ungmön lagts till."
+    },
+    {
+        "target": "marionette",
+        "trick": "lilmonsta",
+        "reason": "Marionetten sitter bredvid en Lakej, inte Demonen. Marionetten vaknar inte för att välja vem som tar Lillmonstrets bricka, och får inte veta att hen är Marionetten om hen har Lillmonstrets bricka."
+    },
+    {
+        "target": "marionette",
+        "trick": "poppygrower",
+        "reason": "När Vallmoodlaren dör så får Demonen veta vem Marionetten är, men Marionetten får inte veta något."
+    },
+    {
+        "target": "marionette",
+        "trick": "snitch",
+        "reason": "Marionetten får inte 3 bluffar; istället får Demonen ytterligare 3."
+    },
+    {
+        "target": "mastermind",
+        "trick": "alhadikhia",
+        "reason": "Om al Hadikhia dör av avrättning och Mästaren lever så väljer al Hadikhia 3 goda spelare inatt; om alla 3 väljer att leva så vinner de onda, annars vinner de goda."
+    },
+    {
+        "target": "pithag",
+        "trick": "cultleader",
+        "reason": "Om Trollpackan gör en ond spelare till Kultledaren så kan den spelaren inte bli god av sin egen förmåga."
+    },
+    {
+        "target": "pithag",
+        "trick": "damsel",
+        "reason": "Om Trollpackan skapar en Ungmö så bestämmer Berättaren vilken spelare det blir."
+    },
+    {
+        "target": "pithag",
+        "trick": "goon",
+        "reason": "Om Trollpackan gör en ond spelare till Hejduken så kan den spelaren inte bli god av sin egen förmåga."
+    },
+    {
+        "target": "pithag",
+        "trick": "ogre",
+        "reason": "Om Trollpackan gör en ond spelare till Trollet så kan den spelaren inte bli god av sin egen förmåga."
+    },
+    {
+        "target": "pithag",
+        "trick": "politician",
+        "reason": "Om Trollpackan gör en ond spelare till Politikern så kan den spelaren inte bli god av sin egen förmåga."
+    },
+    {
+        "target": "pithag",
+        "trick": "villageidiot",
+        "reason": "Om det finns en ledig bricka så kan Trollpackan skapa en extra Byfåne. Detta kan ändra vilken av Byfånarna som är full."
+    },
+    {
+        "target": "scarletwoman",
+        "trick": "alhadikhia",
+        "reason": "Om det finns två levande al Hadikhia så slutar Röda Damen att vara al Hadikhia och blir Röda Damen igen."
+    },
+    {
+        "target": "scarletwoman",
+        "trick": "fanggu",
+        "reason": "Om Fang Gu väljer en Utböling och dör så blir Röda Damen inte till Fang Gu."
+    },
+    {
+        "target": "spy",
+        "trick": "alchemist",
+        "reason": "Om Alkemisten har Spionens förmåga så får hen inte se Spelboken, och den riktiga Spionen kan inte felregistreras."
+    },
+    {
+        "target": "spy",
+        "trick": "damsel",
+        "reason": "Om Spionen är (eller har varit) i spel så är Ungmön förgiftad."
+    },
+    {
+        "target": "spy",
+        "trick": "magician",
+        "reason": "När Spionen ser Spelboken så tas Demonens och Magikerns rollbrickor bort."
+    },
+    {
+        "target": "spy",
+        "trick": "ogre",
+        "reason": "Spionen registreras som ond för Trollet."
+    },
+    {
+        "target": "spy",
+        "trick": "poppygrower",
+        "reason": "Om Vallmoodlaren är i spel så får Spionen inte se Spelboken förrän Vallmoodlaren dör."
+    },
+    {
+        "target": "summoner",
+        "trick": "alchemist",
+        "reason": "Om Alkemisten har Åkallarens förmåga så börjar spelet med en Demon i spel som vanligt. Om Alkemisten med Åkallarens förmåga väljer en spelare så blir den spelaren till en Demon, men byter inte lag."
+    },
+    {
+        "target": "summoner",
+        "trick": "clockmaker",
+        "reason": "Om Åkallaren är i spel så får Urmakaren inte sin information förrän en Demon har skapats."
+    },
+    {
+        "target": "summoner",
+        "trick": "courtier",
+        "reason": "Om Åkallaren är full den tredje natten så får Åkallaren välja Demon, men Berättaren väljer spelare."
+    },
+    {
+        "target": "summoner",
+        "trick": "engineer",
+        "reason": "Om Ingenjören tar Åkallaren ur spel innan Åkallaren använt sin förmåga så använder Åkallaren sin förmåga omedelbart."
+    },
+    {
+        "target": "summoner",
+        "trick": "hatter",
+        "reason": "Åkallaren kan inte skapa en Demon som redan är i spel. Om Åkallaren skapar en Demon som inte är i spel så dör spelare godtyckligt inatt."
+    },
+    {
+        "target": "summoner",
+        "trick": "kazali",
+        "reason": "Åkallaren kan inte skapa en Demon som redan är i spel. Om Åkallaren skapar en Demon som inte är i spel så dör spelare godtyckligt inatt."
+    },
+    {
+        "target": "summoner",
+        "trick": "legion",
+        "reason": "Om Åkallaren skapar Legionen så blir de flesta spelarna (inklusive alla onda spelare) till den onda Legionen."
+    },
+    {
+        "target": "summoner",
+        "trick": "lordoftyphon",
+        "reason": "Om Åkallaren skapar Tyfons Herre så måste Tyfons Herre sitta granne med en Lakej. Den andra grannen blir en ond Lakej som inte redan är i spel."
+    },
+    {
+        "target": "summoner",
+        "trick": "marionette",
+        "reason": "Marionetten sitter bredvid Åkallaren. Åkallaren vet vem Marionetten är."
+    },
+    {
+        "target": "summoner",
+        "trick": "pithag",
+        "reason": "Åkallaren kan inte skapa en Demon som redan är i spel. Om Åkallaren skapar en Demon som inte är i spel så dör spelare godtyckligt inatt."
+    },
+    {
+        "target": "summoner",
+        "trick": "poppygrower",
+        "reason": "Om Vallmoodlaren lever när Åkallaren agerar så får Åkallaren välja Demon, men Berättaren väljer spelare."
+    },
+    {
+        "target": "summoner",
+        "trick": "preacher",
+        "reason": "Om Predikanten har valt Åkallaren senast den tredje natten så får Åkallaren välja Demon, men Berättaren väljer spelare."
+    },
+    {
+        "target": "summoner",
+        "trick": "pukka",
+        "reason": "Åkallaren får göra en spelare till Pukka den andra natten."
+    },
+    {
+        "target": "summoner",
+        "trick": "zombuul",
+        "reason": "Om Åkallaren gör en död spelare till Zombuul så behandlas den spelaren som en Zombuul som dött en gång."
+    },
+    {
+        "target": "vizier",
+        "trick": "alsaahir",
+        "reason": "Om Vesiren är i spel så måste al Saahir också gissa vilken Demon (eller vilka Demoner) som är i spel."
+    },
+    {
+        "target": "vizier",
+        "trick": "courtier",
+        "reason": "Om Vesiren förlorar sin förmåga så får hen veta det. Om Vesiren avrättas medan hen har sin förmåga så vinner hens lag."
+    },
+    {
+        "target": "vizier",
+        "trick": "fearmonger",
+        "reason": "Vesiren vaknar med Skräckspridaren, får veta vem Skräckspridaren väljer och får inte välja att avrätta den spelaren."
+    },
+    {
+        "target": "vizier",
+        "trick": "investigator",
+        "reason": "Om Detektiven får veta att Vesiren är i spel så tillkännager Berättaren inte att Vesiren är i spel för övriga spelare."
+    },
+    {
+        "target": "vizier",
+        "trick": "magician",
+        "reason": "Om både Vesiren och Magikern är i spel så får Demonen inte veta om sina Lakejer."
+    },
+    {
+        "target": "vizier",
+        "trick": "politician",
+        "reason": "Politikern kan registreras som ond för Vesiren."
+    },
+    {
+        "target": "vizier",
+        "trick": "preacher",
+        "reason": "Om Vesiren förlorar sin förmåga så får hen veta det. Om Vesiren avrättas medan hen har sin förmåga så vinner hens lag."
+    },
+    {
+        "target": "vizier",
+        "trick": "zealot",
+        "reason": "Fanatikern kan registreras som ond för Vesiren."
+    },
+    {
+        "target": "widow",
+        "trick": "alchemist",
+        "reason": "Om Alkemisten har Änkans förmåga så får hen inte se Spelboken."
+    },
+    {
+        "target": "widow",
+        "trick": "damsel",
+        "reason": "Om Änkan är (eller har varit) i spel så är Ungmön förgiftad."
+    },
+    {
+        "target": "widow",
+        "trick": "magician",
+        "reason": "När Änkan ser Spelboken så tas Demonens och Magikerns rollbrickor bort."
+    },
+    {
+        "target": "widow",
+        "trick": "poppygrower",
+        "reason": "Om Vallmoodlaren är i spel så får Änkan inte se spelboken förrän Vallmoodlaren dör."
+    },
+    {
+        "target": "kazali",
+        "trick": "choirboy",
+        "reason": "Kazali kan inte välja att Kungen ska bli Lakej om en Korgosse är i spel."
+    },
+    {
+        "target": "kazali",
+        "trick": "goon",
+        "reason": "Kazali kan välja att göra Hejduken till en ond Lakej."
+    },
+    {
+        "target": "kazali",
+        "trick": "huntsman",
+        "reason": "Om Kazali väljer att Ungmön ska bli Lakej och Jägaren är i spel så blir en god spelare till Ungmön."
+    },
+    {
+        "target": "kazali",
+        "trick": "marionette",
+        "reason": "Om Kazali väljer att skapa en Marionett så måste hen välja en av sina grannar."
+    },
+    {
+        "target": "kazali",
+        "trick": "soldier",
+        "reason": "Kazali kan välja att göra Soldaten till en ond Lakej."
+    },
+    {
+        "target": "legion",
+        "trick": "engineer",
+        "reason": "Legionen och Ingenjören kan inte vara i spel samtidigt när spelet börjar. Om Ingenjören skapar Legionen så blir de flesta spelare (inklusive alla onda spelare) till den onda Legionen."
+    },
+    {
+        "target": "legion",
+        "trick": "hatter",
+        "reason": "Om Hattmakaren dör och Legionen är i spel så händer ingenting. Om Hattmakaren dör och en ond spelare väljer Legionen så blir alla då onda spelare till Legionen."
+    },
+    {
+        "target": "legion",
+        "trick": "minstrel",
+        "reason": "Om Legionen dog av avrättning idag så behåller Legionen sin förmåga, men Trubaden kanske får veta att hen är Legionen."
+    },
+    {
+        "target": "legion",
+        "trick": "preacher",
+        "reason": "Om Predikanten väljer Legionen så får Legionen behålla sin förmåga, men Predikanten kanske får veta att hen är Legionen."
+    },
+    {
+        "target": "legion",
+        "trick": "zealot",
+        "reason": "Fanatikern kan registreras som ond för Legionens förmåga."
+    },
+    {
+        "target": "leviathan",
+        "trick": "banshee",
+        "reason": "Varje natt* väljer Leviatan en levande god spelare (en ny varje natt); en vald Banshee dör och får sin förmåga."
+    },
+    {
+        "target": "leviathan",
+        "trick": "exorcist",
+        "reason": "Om Exorcisten lever och har valt Leviatan någon gång under spelet så kan det onda laget inte vinna av att mer än 1 god spelare avrättas."
+    },
+    {
+        "target": "leviathan",
+        "trick": "farmer",
+        "reason": "Varje natt* väljer Leviatan en levande god spelare (en ny varje natt); en vald Bonde använder sin förmåga men dör inte."
+    },
+    {
+        "target": "leviathan",
+        "trick": "grandmother",
+        "reason": "Om Leviatan är i spel och barnbarnet dör av avrättning så vinner det onda laget."
+    },
+    {
+        "target": "leviathan",
+        "trick": "hatter",
+        "reason": "Om Hattmakaren dör dag 5 eller senare så kan Demonen inte välja Leviatan."
+    },
+    {
+        "target": "leviathan",
+        "trick": "innkeeper",
+        "reason": "Om Leviatan är i spel så är Gästgivarens valda spelare skyddade från alla onda förmågor."
+    },
+    {
+        "target": "leviathan",
+        "trick": "king",
+        "reason": "Om Leviatan är i spel och minst 1 spelare är död så får Kungen veta om en levande karaktär varje natt."
+    },
+    {
+        "target": "leviathan",
+        "trick": "mayor",
+        "reason": "Om Leviatan är i spel och ingen avrättas dag 5 så vinner det goda laget."
+    },
+    {
+        "target": "leviathan",
+        "trick": "monk",
+        "reason": "Om Leviatan är i spel så är Munkens valda spelare skyddad från alla onda förmågor."
+    },
+    {
+        "target": "leviathan",
+        "trick": "pithag",
+        "reason": "Efter dag 5 kan Trollpackan inte välja Leviatan."
+    },
+    {
+        "target": "leviathan",
+        "trick": "ravenkeeper",
+        "reason": "Varje natt* väljer Leviatan en levande god spelare (en ny varje natt); en vald Korpskötare använder sin förmåga men dör inte."
+    },
+    {
+        "target": "leviathan",
+        "trick": "sage",
+        "reason": "Varje natt* väljer Leviatan en levande god spelare (en ny varje natt); en vald Guru använder sin förmåga men dör inte."
+    },
+    {
+        "target": "leviathan",
+        "trick": "soldier",
+        "reason": "Om Leviatan är i spel så är Soldaten skyddad från alla onda förmågor."
+    },
+    {
+        "target": "lilmonsta",
+        "trick": "hatter",
+        "reason": "Om Demonen väljer Lillmonstret så väljer hen också en Lakej. Hen blir till den Lakejen och tar hand om Lillmonstret inatt."
+    },
+    {
+        "target": "lilmonsta",
+        "trick": "magician",
+        "reason": "Varje natt väljer Magikern en Lakej; om den Lakejen och Lillmonstret lever så får den Lakejen ta hand om Lillmonstret."
+    },
+    {
+        "target": "lilmonsta",
+        "trick": "poppygrower",
+        "reason": "Om Vallmoodlaren är i spel så vaknar Lakejerna inte tillsammans; de vaknar en och en tills någon väljer att ta hand om Lillmonstret."
+    },
+    {
+        "target": "lilmonsta",
+        "trick": "scarletwoman",
+        "reason": "Om 5 eller fler spelare lever och spelaren som tar hand om Lillmonstret dör så får Röda Damen Lillmonstret inatt."
+    },
+    {
+        "target": "lilmonsta",
+        "trick": "vizier",
+        "reason": "Vesiren kan avrättas och dö när hen har hand om Lillmonstret."
+    },
+    {
+        "target": "lleech",
+        "trick": "mastermind",
+        "reason": "Om Mästaren lever och Lleechs värd avrättas och dör så överlever Lleech men förlorar sin förmåga."
+    },
+    {
+        "target": "lleech",
+        "trick": "slayer",
+        "reason": "Om Dråparen dräper Lleechs värd så dör värden."
+    },
+    {
+        "target": "riot",
+        "trick": "banshee",
+        "reason": "Varje natt* väljer Kravallen en levande god spelare (en ny varje natt); en vald Banshee dör och får sin förmåga."
+    },
+    {
+        "target": "riot",
+        "trick": "exorcist",
+        "reason": "Om Exorcisten väljer Kravallen den tredje natten så blir Lakejerna inte till Kravaller."
+    },
+    {
+        "target": "riot",
+        "trick": "farmer",
+        "reason": "Varje natt* väljer Kravallen en levande god spelare (en ny varje natt); en vald Bonde använder sin förmåga men dör inte."
+    },
+    {
+        "target": "riot",
+        "trick": "grandmother",
+        "reason": "Om Kravallen är i spel och barnbarnet dör på dagen så dör Farmorn också."
+    },
+    {
+        "target": "riot",
+        "trick": "innkeeper",
+        "reason": "Om Kravallen är i spel så är Gästgivarens valda spelare skyddade från alla onda förmågor."
+    },
+    {
+        "target": "riot",
+        "trick": "king",
+        "reason": "Om Kravallen är i spel och minst 1 spelare är död så får Kungen veta om en levande karaktär varje natt."
+    },
+    {
+        "target": "riot",
+        "trick": "mayor",
+        "reason": "Borgmästaren kan välja att sätta stopp för nomineringar. Om hen gör det när bara 1 Kravall lever så vinner det goda laget, annars vinner det onda laget."
+    },
+    {
+        "target": "riot",
+        "trick": "monk",
+        "reason": "Om Kravallen är i spel så är Munkens valda spelare skyddad från alla onda förmågor."
+    },
+    {
+        "target": "riot",
+        "trick": "ravenkeeper",
+        "reason": "Varje natt* väljer Kravallen en levande god spelare (en ny varje natt); en vald Korpskötare använder sin förmåga men dör inte."
+    },
+    {
+        "target": "riot",
+        "trick": "sage",
+        "reason": "Varje natt* väljer Kravallen en levande god spelare (en ny varje natt); en vald Guru använder sin förmåga men dör inte."
+    },
+    {
+        "target": "riot",
+        "trick": "soldier",
+        "reason": "Om Kravallen är i spel så är Soldaten skyddad från alla onda förmågor."
+    },
+    {
+        "target": "vortox",
+        "trick": "banshee",
+        "reason": "Om Vortox är i spel och Demonen dödar Bansheen så får spelarna fortfarande veta att Bansheen har dött."
+    },
+    {
+        "target": "yaggababble",
+        "trick": "exorcist",
+        "reason": "Om Exorcisten väljer Yaggababbel kan Yaggababbels förmåga inte döda någon inatt."
     }
 ]

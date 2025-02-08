@@ -1,13 +1,13 @@
 [
     {
-        "target": "chambermaid",
-        "trick": "mathematician",
-        "reason": "侍女は、たとえ侍女が先に目覚めたとしても、数学者が今夜目覚めるかどうかを知ります。"
+        "target": "bountyhunter",
+        "trick": "kazali",
+        "reason": "An evil Townsfolk is only created if the Bounty Hunter is still in play after the Kazali acts."
     },
     {
-        "target": "eviltwin",
-        "trick": "plaguedoctor",
-        "reason": "ペストドクターが死亡した場合、ストーリーテラーは邪悪な双子の能力を得ることができません。"
+        "target": "bountyhunter",
+        "trick": "philosopher",
+        "reason": "If the Philosopher gains the Bounty Hunter ability, a Townsfolk might turn evil."
     },
     {
         "target": "cannibal",
@@ -17,57 +17,147 @@
     {
         "target": "cannibal",
         "trick": "juggler",
-        "reason": "ジャグラーが初日に予想を当てて処刑によって死亡した場合、今夜、生きているカニバルはジャグラーが何回正解したかを知ります。"
-    },
-    {
-        "target": "cannibal",
-        "trick": "zealot",
-        "reason": "カニバルが熱心者の能力を獲得した場合、カニバルはこれを学習します。"
+        "reason": "If the Juggler guesses on their first day and dies by execution, tonight the living Cannibal learns how many guesses the Juggler got correct."
     },
     {
         "target": "cannibal",
         "trick": "poppygrower",
-        "reason": "カニバルがポピー栽培者を食べ、その後死亡するかポピー栽培者の能力を失った場合、その夜に悪魔と手先はお互いを知ることになります。"
+        "reason": "If the Cannibal eats the Poppy Grower, then dies or loses the Poppy Grower ability, the Demon and Minions learn each other that night."
     },
     {
-        "target": "lunatic",
-        "trick": "mathematician",
+        "target": "cannibal",
+        "trick": "zealot",
+        "reason": "If the Cannibal gains the Zealot ability, the Cannibal learns this."
+    },
+    {
+        "target": "mathematician",
+        "trick": "chambermaid",
+        "reason": "侍女は、たとえ侍女が先に目覚めたとしても、数学者が今夜目覚めるかどうかを知ります。"
+    },
+    {
+        "target": "mathematician",
+        "trick": "lunatic",
         "reason": "数学者は、狂人が実際のデーモンが攻撃したプレイヤーとは別のプレイヤーを攻撃したかどうかを学びます。"
     },
     {
-        "target": "pithag",
-        "trick": "heretic",
+        "target": "butler",
+        "trick": "organgrinder",
+        "reason": "オルガングラインダーが目を閉じて投票を引き起こしている場合、執事は手を挙げて投票することができますが、彼らの投票はマスターも投票した場合にのみカウントされます。"
+    },
+    {
+        "target": "heretic",
+        "trick": "baron",
+        "reason": "男爵はアウトサイダーを 2 人ではなく 1 人だけ追加する可能性があります。"
+    },
+    {
+        "target": "heretic",
+        "trick": "boffin",
+        "reason": "The Demon cannot have the Heretic ability."
+    },
+    {
+        "target": "heretic",
+        "trick": "godfather",
+        "reason": "ジンクスされたキャラクターは1人だけ場に出すことができます。"
+    },
+    {
+        "target": "heretic",
+        "trick": "lleech",
+        "reason": "ヒルが異端者を毒殺した場合、ヒルは死亡し、異端者は毒を受けたままになります。"
+    },
+    {
+        "target": "heretic",
+        "trick": "pithag",
         "reason": "ピットハグは異端者を生み出すことはできません。"
     },
     {
-        "target": "pithag",
-        "trick": "damsel",
-        "reason": "ピットハグがダムゼルを作成した場合、ストーリーテラーはそれがどのプレイヤーであるかを選択します。"
+        "target": "heretic",
+        "trick": "spy",
+        "reason": "ジンクスされたキャラクターは1人だけ場に出すことができます。"
     },
     {
-        "target": "pithag",
-        "trick": "politician",
-        "reason": "ピットババアが悪の政治家を生み出すことはできません。"
+        "target": "heretic",
+        "trick": "widow",
+        "reason": "ジンクスされたキャラクターは1人だけ場に出すことができます。"
     },
     {
-        "target": "pithag",
-        "trick": "villageidiot",
-        "reason": "予備のトークンがある場合、痘痕の老婆は追加の村の愚か者を作成できます。そうすれば酔っぱらった村バカも変わるかもしれない。"
+        "target": "ogre",
+        "trick": "recluse",
+        "reason": "If the Recluse registers as evil to the Ogre, the Ogre learns that they are evil."
     },
     {
-        "target": "pithag",
+        "target": "plaguedoctor",
+        "trick": "baron",
+        "reason": "If the Storyteller gains the Baron ability, up to two players become not-in-play Outsiders."
+    },
+    {
+        "target": "plaguedoctor",
+        "trick": "boomdandy",
+        "reason": "ストーリーテラーが男爵能力を獲得すると、最大 2 人のプレイヤーがアウトオブプレイのアウトサイダーになります。"
+    },
+    {
+        "target": "plaguedoctor",
+        "trick": "eviltwin",
+        "reason": "ペストドクターが死亡した場合、ストーリーテラーは邪悪な双子の能力を得ることができません。"
+    },
+    {
+        "target": "plaguedoctor",
+        "trick": "fearmonger",
+        "reason": "ペストドクターが死亡すると、生きているミニオンは自分の能力に加えてフィアーモンガーの能力を獲得し、これを学習します。"
+    },
+    {
+        "target": "plaguedoctor",
+        "trick": "goblin",
+        "reason": "ペストドクターが死亡すると、生きているミニオンは自分の能力に加えてゴブリンの能力を獲得し、これを学習します。"
+    },
+    {
+        "target": "plaguedoctor",
+        "trick": "marionette",
+        "reason": "If the Demon has a neighbor who is alive and a Townsfolk or Outsider when the Plague Doctor dies, that player becomes an evil Marionette. If there is already an extra evil player, this does not happen."
+    },
+    {
+        "target": "plaguedoctor",
+        "trick": "scarletwoman",
+        "reason": "ペストドクターが死亡すると、生きているミニオンは自分の能力に加えてスカーレットウーマンの能力を獲得し、これを学びます。"
+    },
+    {
+        "target": "plaguedoctor",
+        "trick": "spy",
+        "reason": "ペストドクターが死亡すると、生きているミニオンは自分の能力に加えてスパイ能力を獲得し、これを学習します。"
+    },
+    {
+        "target": "boffin",
+        "trick": "alchemist",
+        "reason": "If the Alchemist has the Boffin ability, the Alchemist does not learn what ability the Demon has."
+    },
+    {
+        "target": "boffin",
         "trick": "cultleader",
-        "reason": "痘痕の老婆が悪のプレイヤーをカルトの指導者に変えても、彼ら自身の能力のせいで善に変わることはできません。"
+        "reason": "If the Demon has the Cult Leader ability, they can’t turn good due to this ability."
     },
     {
-        "target": "pithag",
+        "target": "boffin",
+        "trick": "drunk",
+        "reason": "If the Demon would have the Drunk ability, the Boffin chooses a Townsfolk player to have this ability instead."
+    },
+    {
+        "target": "boffin",
         "trick": "goon",
-        "reason": "痘痕の老婆が悪のプレイヤーをうすのろに変えても、彼ら自身の能力によって善に変えることはできません。"
+        "reason": "If the Demon has the Goon ability, they can’t turn good due to this ability."
     },
     {
-        "target": "pithag",
+        "target": "boffin",
         "trick": "ogre",
-        "reason": "If the Pit-Hag turns an evil player into the Ogre, they can't turn good due to their own ability."
+        "reason": "The Demon cannot have the Ogre ability."
+    },
+    {
+        "target": "boffin",
+        "trick": "politician",
+        "reason": "The Demon cannot have the Politician ability."
+    },
+    {
+        "target": "boffin",
+        "trick": "villageidiot",
+        "reason": "If there is a spare token, the Boffin can give the Demon the Village Idiot ability."
     },
     {
         "target": "cerenovus",
@@ -75,289 +165,19 @@
         "reason": "セレノバスは、自分たちがゴブリンであるということでプレイヤーを怒らせることを選択するかもしれません。"
     },
     {
-        "target": "goblin",
-        "trick": "plaguedoctor",
-        "reason": "ペストドクターが死亡すると、生きているミニオンは自分の能力に加えてゴブリンの能力を獲得し、これを学習します。"
+        "target": "marionette",
+        "trick": "balloonist",
+        "reason": "マリオネットが自分をバルーニストだと思った場合、+1 アウトサイダーが追加されます。"
     },
     {
-        "target": "leviathan",
-        "trick": "soldier",
-        "reason": "リヴァイアサンが兵士を指名して処刑しても、兵士は死にません。"
-    },
-    {
-        "target": "leviathan",
-        "trick": "monk",
-        "reason": "リヴァイアサンがモンクが選んだプレイヤーを指名して処刑した場合、そのプレイヤーは死にません。"
-    },
-    {
-        "target": "leviathan",
-        "trick": "innkeeper",
-        "reason": "リヴァイアサンが宿屋の主人が選んだプレイヤーを指名して処刑した場合、そのプレイヤーは死にません。"
-    },
-    {
-        "target": "leviathan",
-        "trick": "ravenkeeper",
-        "reason": "リヴァイアサンが場にあり、レイヴンキーパーが処刑によって死亡した場合、彼らはその夜目覚めて能力を使用します。"
-    },
-    {
-        "target": "leviathan",
-        "trick": "banshee",
-        "reason": "リヴァイアサンが場にあり、バンシーが処刑によって死亡した場合、すべてのプレイヤーはバンシーが死亡したことを知り、バンシーは能力を獲得します。"
-    },
-    {
-        "target": "leviathan",
-        "trick": "sage",
-        "reason": "リヴァイアサンが場にあり、賢者が処刑によって死亡した場合、彼らはその夜目覚めて能力を使用します。"
-    },
-    {
-        "target": "leviathan",
-        "trick": "farmer",
-        "reason": "リヴァイアサンが場に出ていてファーマーが処刑で死亡した場合、優秀なプレイヤーはその夜にファーマーになります。"
-    },
-    {
-        "target": "leviathan",
-        "trick": "mayor",
-        "reason": "リヴァイアサンが場に出ていて、5 日目に処刑が行われなかった場合、善の勝ちです。"
-    },
-    {
-        "target": "leviathan",
-        "trick": "hatter",
-        "reason": "帽子屋が 5 日目以降に死亡した場合、デーモンはリヴァイアサンを選択できません。"
-    },
-    {
-        "target": "leviathan",
-        "trick": "pithag",
-        "reason": "5日目以降、痘痕の老婆はリヴァイアサンを選択できなくなります。"
-    },
-    {
-        "target": "lilmonsta",
-        "trick": "poppygrower",
-        "reason": "ポピー栽培者が場に出ている場合、ミニオンは一緒に目覚めません。彼らは一人ずつ目覚めさせられ、そのうちの一人がリル・モンスタ・トークンを受け取ることを選択します。"
-    },
-    {
-        "target": "lilmonsta",
-        "trick": "magician",
-        "reason": "毎晩、マジシャンはミニオンを選択します。そのミニオンとリトル モンスターが生きている場合、そのミニオンがリトル モンスターの子守をします。"
-    },
-    {
-        "target": "lilmonsta",
-        "trick": "scarletwoman",
-        "reason": "生存しているプレイヤーが 5 人以上いて、リル モンスタ トークンを持っているプレイヤーが死亡した場合、今夜スカーレット ウーマンにリル モンスタ トークンが与えられます。"
-    },
-    {
-        "target": "lilmonsta",
-        "trick": "organgrinder",
-        "reason": "オーガン グラインダーがリル モンスタの子守をしている場合、オルガン グラインダーへの投票はカウントされます。"
-    },
-    {
-        "target": "lilmonsta",
-        "trick": "vizier",
-        "reason": "宰相は、リル・モンスタの子守をしている場合、処刑によって死ぬ可能性がある。"
-    },
-    {
-        "target": "lilmonsta",
-        "trick": "hatter",
-        "reason": "デーモンがリル・モンスタを選択した場合、彼らは今夜リル・モンスタの子守をするミニオンも選択します。"
-    },
-    {
-        "target": "legion",
-        "trick": "engineer",
-        "reason": "レギオンとエンジニアの両方をゲーム開始時に場に出すことはできません。エンジニアがレギオンを作成すると、ほとんどのプレイヤー (すべての邪悪なプレイヤーを含む) が邪悪なレギオンになります。"
-    },
-    {
-        "target": "legion",
-        "trick": "preacher",
-        "reason": "プリーチャーがレギオンを選択した場合、レギオンは能力を保持しますが、プリーチャーはレギオンであることを知る可能性があります。"
-    },
-    {
-        "target": "legion",
-        "trick": "minstrel",
-        "reason": "レギオンが今日処刑によって死亡した場合、レギオンは能力を保持しますが、ミンストレルはレギオンであることを知る可能性があります。"
-    },
-    {
-        "target": "legion",
-        "trick": "hatter",
-        "reason": "帽子屋が死亡し、軍団が場に出ている場合は何も起こりません。 帽子屋が死亡し、邪悪なプレイヤーがレギオンを選択した場合、現在の邪悪なプレイヤーはすべてレギオンになります。"
-    },
-    {
-        "target": "legion",
-        "trick": "zealot",
-        "reason": "熱心者はレギオンの能力に対して悪として登録される可能性があります。"
-    },
-    {
-        "target": "fanggu",
-        "trick": "scarletwoman",
-        "reason": "方谷がアウトサイダーを選んで死亡した場合、緋女は方谷にはなりません。"
-    },
-    {
-        "target": "spy",
-        "trick": "alchemist",
-        "reason": "錬金術師はスパイ能力を持つことができません。"
-    },
-    {
-        "target": "spy",
-        "trick": "magician",
-        "reason": "スパイがグリモアを見ると、デーモンとマジシャンのキャラクタートークンが取り除かれます。"
-    },
-    {
-        "target": "spy",
-        "trick": "poppygrower",
-        "reason": "ポピー栽培者が場に出ている場合、スパイはポピー栽培者が死ぬまでグリモアを見ることができません。"
-    },
-    {
-        "target": "spy",
-        "trick": "plaguedoctor",
-        "reason": "ペストドクターが死亡すると、生きているミニオンは自分の能力に加えてスパイ能力を獲得し、これを学習します。"
-    },
-    {
-        "target": "spy",
+        "target": "marionette",
         "trick": "damsel",
-        "reason": "スパイが場に出ている（または出ていた）場合、乙女は毒されます。"
+        "reason": "マリオネットはダムゼルがプレイ中であることを知りません。"
     },
     {
-        "target": "spy",
-        "trick": "heretic",
-        "reason": "ジンクスされたキャラクターは1人だけ場に出すことができます。"
-    },
-    {
-        "target": "spy",
-        "trick": "ogre",
-        "reason": "スパイはオーガにとって悪として登録されます。"
-    },
-    {
-        "target": "widow",
-        "trick": "alchemist",
-        "reason": "錬金術師は未亡人の能力を持つことができません。"
-    },
-    {
-        "target": "widow",
-        "trick": "magician",
-        "reason": "未亡人がグリモアを見ると、デーモンとマジシャンのキャラクタートークンが取り除かれます。"
-    },
-    {
-        "target": "widow",
-        "trick": "poppygrower",
-        "reason": "ポピー栽培者が場に出ている場合、未亡人はポピー栽培者が死ぬまでグリモアを見ることができません。"
-    },
-    {
-        "target": "widow",
-        "trick": "damsel",
-        "reason": "未亡人が場に出ている（または出ていた）場合、乙女は毒されます。"
-    },
-    {
-        "target": "widow",
-        "trick": "heretic",
-        "reason": "ジンクスされたキャラクターは1人だけ場に出すことができます。"
-    },
-    {
-        "target": "godfather",
-        "trick": "heretic",
-        "reason": "ジンクスされたキャラクターは1人だけ場に出すことができます。"
-    },
-    {
-        "target": "scarletwoman",
-        "trick": "plaguedoctor",
-        "reason": "ペストドクターが死亡すると、生きているミニオンは自分の能力に加えてスカーレットウーマンの能力を獲得し、これを学びます。"
-    },
-    {
-        "target": "boomdandy",
-        "trick": "plaguedoctor",
-        "reason": "ペストドクターが処刑され、ストーリーテラーがブームダンディ能力を獲得した場合、ブームダンディ能力は直ちに発動します。"
-    },
-    {
-        "target": "fearmonger",
-        "trick": "plaguedoctor",
-        "reason": "ペストドクターが死亡すると、生きているミニオンは自分の能力に加えてフィアーモンガーの能力を獲得し、これを学習します。"
-    },
-    {
-        "target": "yaggababble",
-        "trick": "exorcist",
-        "reason": "エクソシストがヤガバブルを選択した場合、ヤガバブルの能力は今夜は人を殺しません。"
-    },
-    {
-        "target": "summoner",
-        "trick": "clockmaker",
-        "reason": "サモナーが場にいる場合、クロックメーカーはデーモンが作成されるまでその情報を受け取りません。"
-    },
-    {
-        "target": "summoner",
-        "trick": "alchemist",
-        "reason": "錬金術師-サモナーが場に出ている場合、ゲームは通常どおりデーモンが場に出た状態で始まります。錬金術師兼召喚師がプレイヤーを選択すると、そのプレイヤーはデーモンになりますが、属性は変更されません。"
-    },
-    {
-        "target": "summoner",
-        "trick": "poppygrower",
-        "reason": "サモナーが行動するときにポピー栽培者が生きている場合、サモナーはどのデーモンを選択しますが、ストーリーテラーはどのプレイヤーを選択します。"
-    },
-    {
-        "target": "summoner",
-        "trick": "marionette",
-        "reason": "マリオネットはサモナーの隣にいます。サモナーはマリオネットが誰であるかを知っています。"
-    },
-    {
-        "target": "summoner",
-        "trick": "pithag",
-        "reason": "サモナーはプレイ中のデーモンを作成できません。サモナーが非プレイデーモンを作成した場合、今夜の死は任意です。"
-    },
-    {
-        "target": "summoner",
-        "trick": "hatter",
-        "reason": "サモナーはプレイ中のデーモンを作成できません。サモナーが非プレイデーモンを作成した場合、今夜の死は任意です。"
-    },
-    {
-        "target": "summoner",
-        "trick": "courtier",
-        "reason": "3日目の夜にサモナーが酔っている場合、サモナーがどのデーモンを選ぶかはストーリーテラーがどのプレイヤーを選ぶかです。"
-    },
-    {
-        "target": "summoner",
-        "trick": "engineer",
-        "reason": "サモナーが能力を使用する前にエンジニアがサモナーを場から除外した場合、サモナーはすぐに能力を使用します。"
-    },
-    {
-        "target": "summoner",
-        "trick": "zombuul",
-        "reason": "サモナーが死んだプレイヤーをゾンブールに変えた場合、ストーリーテラーはそのプレイヤーを一度死亡したゾンブールとして扱います。"
-    },
-    {
-        "target": "summoner",
-        "trick": "pukka",
-        "reason": "サモナーは、2 日目の夜にプッカになるプレイヤーを選択できます。"
-    },
-    {
-        "target": "summoner",
-        "trick": "riot",
-        "reason": "サモナーがライオットを作成すると、すべてのミニオンがライオットになります。"
-    },
-    {
-        "target": "summoner",
-        "trick": "legion",
-        "reason": "サモナーがレギオンを作成すると、ほとんどのプレイヤー (すべての邪悪なプレイヤーを含む) が邪悪なレギオンになります。"
-    },
-    {
-        "target": "summoner",
-        "trick": "kazali",
-        "reason": "サモナーはプレイ中のデーモンを作成できません。サモナーが非プレイデーモンを作成した場合、今夜の死は任意です。"
-    },
-    {
-        "target": "summoner",
-        "trick": "preacher",
-        "reason": "プリーチャーが 3 日目までにサモナーを選択した場合、サモナーはどの悪魔を選択するかを選択しますが、ストーリーテラーはどのプレイヤーを選択するかを選択します。"
-    },
-    {
-        "target": "summoner",
-        "trick": "lordoftyphon",
-        "reason": "召喚者がタイフォンの王を作成する場合、タイフォンの王はミニオンの隣にいなければなりません。他の隣は場にいない邪悪なミニオンになります。"
-    },
-    {
-        "target": "baron",
-        "trick": "heretic",
-        "reason": "男爵はアウトサイダーを 2 人ではなく 1 人だけ追加する可能性があります。"
-    },
-    {
-        "target": "baron",
-        "trick": "plaguedoctor",
-        "reason": "ストーリーテラーが男爵能力を獲得すると、最大 2 人のプレイヤーがアウトオブプレイのアウトサイダーになります。"
+        "target": "marionette",
+        "trick": "huntsman",
+        "reason": "マリオネットが自分たちがハンツマンであると考える場合、ダムゼルが追加されます。"
     },
     {
         "target": "marionette",
@@ -375,24 +195,344 @@
         "reason": "マリオネットは、プレイ中に登場しない 3 人のキャラクターを学習しません。デーモンは代わりに追加の 3 を学びます。"
     },
     {
-        "target": "marionette",
-        "trick": "balloonist",
-        "reason": "マリオネットが自分をバルーニストだと思った場合、+1 アウトサイダーが追加されます。"
+        "target": "mastermind",
+        "trick": "alhadikhia",
+        "reason": "If the Al-Hadikhia dies by execution, and the Mastermind is alive, the Al-Hadikhia chooses 3 good players tonight: if all 3 choose to live, evil wins. Otherwise, good wins."
     },
     {
-        "target": "marionette",
+        "target": "pithag",
+        "trick": "cultleader",
+        "reason": "If the Pit-Hag turns an evil player into the Cult Leader, they can't turn good due to their own ability."
+    },
+    {
+        "target": "pithag",
         "trick": "damsel",
-        "reason": "マリオネットはダムゼルがプレイ中であることを知りません。"
+        "reason": "ピットハグがダムゼルを作成した場合、ストーリーテラーはそれがどのプレイヤーであるかを選択します。"
     },
     {
-        "target": "marionette",
-        "trick": "plaguedoctor",
-        "reason": "ペストドクターが死亡したときにデーモンに生きている隣人と町民または部外者がいた場合、そのプレイヤーは邪悪なマリオネットになります。 すでに追加の邪悪なプレイヤーがいる場合、これは起こりません。"
+        "target": "pithag",
+        "trick": "goon",
+        "reason": "If the Pit-Hag turns an evil player into the Goon, they can't turn good due to their own ability."
     },
     {
-        "target": "marionette",
+        "target": "pithag",
+        "trick": "ogre",
+        "reason": "If the Pit-Hag turns an evil player into the Ogre, they can't turn good due to their own ability."
+    },
+    {
+        "target": "pithag",
+        "trick": "politician",
+        "reason": "ピットババアが悪の政治家を生み出すことはできません。"
+    },
+    {
+        "target": "pithag",
+        "trick": "villageidiot",
+        "reason": "If there is a spare token, the Pit-Hag can create an extra Village Idiot. If so, the drunk Village Idiot might change."
+    },
+    {
+        "target": "scarletwoman",
+        "trick": "alhadikhia",
+        "reason": "生きているアル・ハディキアが 2 人いる場合、緋色の女性アル・ハディキアが再び緋色の女性になります。"
+    },
+    {
+        "target": "scarletwoman",
+        "trick": "fanggu",
+        "reason": "方谷がアウトサイダーを選んで死亡した場合、緋女は方谷にはなりません。"
+    },
+    {
+        "target": "spy",
+        "trick": "alchemist",
+        "reason": "If the Alchemist has the Spy ability, they do not see the Grimoire, and the real Spy cannot register falsely."
+    },
+    {
+        "target": "spy",
+        "trick": "damsel",
+        "reason": "ジンクスされたキャラクターは1人だけ場に出すことができます。"
+    },
+    {
+        "target": "spy",
+        "trick": "magician",
+        "reason": "スパイがグリモアを見ると、デーモンとマジシャンのキャラクタートークンが取り除かれます。"
+    },
+    {
+        "target": "spy",
+        "trick": "ogre",
+        "reason": "The Spy registers as evil to the Ogre."
+    },
+    {
+        "target": "spy",
+        "trick": "poppygrower",
+        "reason": "ポピー栽培者が場に出ている場合、スパイはポピー栽培者が死ぬまでグリモアを見ることができません。"
+    },
+    {
+        "target": "summoner",
+        "trick": "alchemist",
+        "reason": "If there is an Alchemist-Summoner in play, the game starts with a Demon in play, as normal. If the Alchemist-Summoner chooses a player, they make that player a Demon but do not change their alignment."
+    },
+    {
+        "target": "summoner",
+        "trick": "clockmaker",
+        "reason": "If the Summoner is in play, the Clockmaker does not receive their information until a Demon is created."
+    },
+    {
+        "target": "summoner",
+        "trick": "courtier",
+        "reason": "If the Summoner is drunk on the 3rd night, the Summoner chooses which Demon, but the Storyteller chooses which player."
+    },
+    {
+        "target": "summoner",
+        "trick": "engineer",
+        "reason": "If the Engineer removes a Summoner from play before that Summoner uses their ability, the Summoner uses their ability immediately."
+    },
+    {
+        "target": "summoner",
+        "trick": "hatter",
+        "reason": "The Summoner cannot create an in-play Demon. If the Summoner creates a not-in-play Demon, deaths tonight are arbitrary."
+    },
+    {
+        "target": "summoner",
+        "trick": "kazali",
+        "reason": "The Summoner cannot create an in-play Demon. If the Summoner creates a not-in-play Demon, deaths tonight are arbitrary."
+    },
+    {
+        "target": "summoner",
+        "trick": "legion",
+        "reason": "If the Summoner creates Legion, most players (including all evil players) become evil Legion."
+    },
+    {
+        "target": "summoner",
+        "trick": "lordoftyphon",
+        "reason": "If the Summoner creates a Lord of Typhon, the Lord of Typhon must neighbor a Minion. The other neighbor becomes a not-in-play evil Minion."
+    },
+    {
+        "target": "summoner",
+        "trick": "marionette",
+        "reason": "The Marionette neighbors the Summoner. The Summoner knows who the Marionette is."
+    },
+    {
+        "target": "summoner",
+        "trick": "pithag",
+        "reason": "The Summoner cannot create an in-play Demon. If the Summoner creates a not-in-play Demon, deaths tonight are arbitrary."
+    },
+    {
+        "target": "summoner",
+        "trick": "poppygrower",
+        "reason": "If the Poppy Grower is alive when the Summoner acts, the Summoner chooses which Demon, but the Storyteller chooses which player."
+    },
+    {
+        "target": "summoner",
+        "trick": "preacher",
+        "reason": "If the Preacher chose the Summoner on or before the 3rd night, the Summoner chooses which Demon, but the Storyteller chooses which player."
+    },
+    {
+        "target": "summoner",
+        "trick": "pukka",
+        "reason": "The Summoner may choose a player to become the Pukka on the 2nd night."
+    },
+    {
+        "target": "summoner",
+        "trick": "zombuul",
+        "reason": "If the Summoner turns a dead player into the Zombuul, the Storyteller treats that player as a Zombuul that has died once."
+    },
+    {
+        "target": "vizier",
+        "trick": "alsaahir",
+        "reason": "If the Vizier is in play, the Alsaahir must also guess which Demon(s) are in play."
+    },
+    {
+        "target": "vizier",
+        "trick": "courtier",
+        "reason": "If the Vizier loses their ability, they learn this. If the Vizier is executed while they have their ability, their team wins."
+    },
+    {
+        "target": "vizier",
+        "trick": "fearmonger",
+        "reason": "The Vizier wakes with the Fearmonger, learns who they choose and cannot choose to immediately execute that player."
+    },
+    {
+        "target": "vizier",
+        "trick": "investigator",
+        "reason": "探索者が宰相がプレイしていることを知った場合、宰相の存在はストーリーテラーによって発表されません。"
+    },
+    {
+        "target": "vizier",
+        "trick": "magician",
+        "reason": "If the Vizier and Magician are both in play, the Demon does not learn the Minions."
+    },
+    {
+        "target": "vizier",
+        "trick": "politician",
+        "reason": "The Politician might register as evil to the Vizier."
+    },
+    {
+        "target": "vizier",
+        "trick": "preacher",
+        "reason": "If the Vizier loses their ability, they learn this. If the Vizier is executed while they have their ability, their team wins."
+    },
+    {
+        "target": "vizier",
+        "trick": "zealot",
+        "reason": "The Zealot might register as evil to the Vizier."
+    },
+    {
+        "target": "widow",
+        "trick": "alchemist",
+        "reason": "If the Alchemist has the Widow ability, they do not see the Grimoire."
+    },
+    {
+        "target": "widow",
+        "trick": "damsel",
+        "reason": "If the Widow is (or has been) in play, the Damsel is poisoned."
+    },
+    {
+        "target": "widow",
+        "trick": "magician",
+        "reason": "未亡人がグリモアを見ると、デーモンとマジシャンのキャラクタートークンが取り除かれます。"
+    },
+    {
+        "target": "widow",
+        "trick": "poppygrower",
+        "reason": "ポピー栽培者が場に出ている場合、未亡人はポピー栽培者が死ぬまでグリモアを見ることができません。"
+    },
+    {
+        "target": "kazali",
+        "trick": "choirboy",
+        "reason": "The Kazali can not choose the King to become a Minion if a Choirboy is in play."
+    },
+    {
+        "target": "kazali",
+        "trick": "goon",
+        "reason": "The Kazali can choose that the Goon player is one of their evil Minions."
+    },
+    {
+        "target": "kazali",
         "trick": "huntsman",
-        "reason": "マリオネットが自分たちがハンツマンであると考える場合、ダムゼルが追加されます。"
+        "reason": "If the Kazali chooses the Damsel to become a Minion, and a Huntsman is in play, a good player becomes the Damsel."
+    },
+    {
+        "target": "kazali",
+        "trick": "marionette",
+        "reason": "If the Kazali chooses to create a Marionette, they must choose one of their neighbors."
+    },
+    {
+        "target": "kazali",
+        "trick": "soldier",
+        "reason": "The Kazali can choose that the Soldier player is one of their evil Minions."
+    },
+    {
+        "target": "legion",
+        "trick": "engineer",
+        "reason": "Legion と Engineer の両方をゲーム開始時に場に出すことはできません。エンジニアがレギオンを作成すると、ほとんどのプレイヤー (すべての邪悪なプレイヤーを含む) が邪悪なレギオンになります。"
+    },
+    {
+        "target": "legion",
+        "trick": "hatter",
+        "reason": "帽子屋が死亡し、軍団が場に出ている場合は何も起こりません。 帽子屋が死亡し、邪悪なプレイヤーがレギオンを選択した場合、現在の邪悪なプレイヤーはすべてレギオンになります。"
+    },
+    {
+        "target": "legion",
+        "trick": "minstrel",
+        "reason": "If Legion died by execution today, Legion keeps their ability, but the Minstrel might learn they are Legion."
+    },
+    {
+        "target": "legion",
+        "trick": "preacher",
+        "reason": "If the Preacher chooses Legion, Legion keeps their ability, but the Preacher might learn they are Legion."
+    },
+    {
+        "target": "legion",
+        "trick": "zealot",
+        "reason": "The Zealot might register as evil to Legion's ability."
+    },
+    {
+        "target": "leviathan",
+        "trick": "banshee",
+        "reason": "Each night*, the Leviathan chooses an alive good player (different to previous nights): a chosen Banshee dies & gains their ability."
+    },
+    {
+        "target": "leviathan",
+        "trick": "exorcist",
+        "reason": "Evil does not win when more than 1 good player has been executed, if the Exorcist is alive and has ever successfully chosen the Leviathan."
+    },
+    {
+        "target": "leviathan",
+        "trick": "farmer",
+        "reason": "Each night*, the Leviathan chooses an alive good player (different to previous nights): a chosen Farmer uses their ability but does not die."
+    },
+    {
+        "target": "leviathan",
+        "trick": "grandmother",
+        "reason": "If Leviathan is in play and the Grandchild dies by execution, evil wins."
+    },
+    {
+        "target": "leviathan",
+        "trick": "hatter",
+        "reason": "帽子屋が 5 日目以降に死亡した場合、デーモンはリヴァイアサンを選択できません。"
+    },
+    {
+        "target": "leviathan",
+        "trick": "innkeeper",
+        "reason": "If the Leviathan is in play, the Innkeeper-protected-players are safe from all evil abilities."
+    },
+    {
+        "target": "leviathan",
+        "trick": "king",
+        "reason": "If the Leviathan is in play, and at least 1 player is dead, the King learns an alive character each night."
+    },
+    {
+        "target": "leviathan",
+        "trick": "mayor",
+        "reason": "If the Leviathan is in play & no execution occurs on day 5, good wins."
+    },
+    {
+        "target": "leviathan",
+        "trick": "monk",
+        "reason": "If the Leviathan is in play, the Monk-protected-player is safe from all evil abilities."
+    },
+    {
+        "target": "leviathan",
+        "trick": "pithag",
+        "reason": "5日目以降、ピットハグはリヴァイアサンを選択できなくなります。"
+    },
+    {
+        "target": "leviathan",
+        "trick": "ravenkeeper",
+        "reason": "Each night*, the Leviathan chooses an alive player (different to previous nights): a chosen Ravenkeeper uses their ability but does not die."
+    },
+    {
+        "target": "leviathan",
+        "trick": "sage",
+        "reason": "Each night*, the Leviathan chooses an alive good player (different to previous nights): a chosen Sage uses their ability but does not die."
+    },
+    {
+        "target": "leviathan",
+        "trick": "soldier",
+        "reason": "If the Leviathan is in play, the Soldier is safe from all evil abilities."
+    },
+    {
+        "target": "lilmonsta",
+        "trick": "hatter",
+        "reason": "デーモンがリル・モンスタを選択した場合、彼らは今夜リル・モンスタの子守をするミニオンも選択します。"
+    },
+    {
+        "target": "lilmonsta",
+        "trick": "magician",
+        "reason": "Each night, the Magician chooses a Minion: if that Minion & Lil' Monsta are alive, that Minion babysits Lil’ Monsta."
+    },
+    {
+        "target": "lilmonsta",
+        "trick": "poppygrower",
+        "reason": "ポピー栽培者が場に出ている場合、ミニオンは一緒に目覚めません。彼らは一人ずつ目覚めさせられ、そのうちの一人がリル・モンスタ・トークンを受け取ることを選択します。"
+    },
+    {
+        "target": "lilmonsta",
+        "trick": "scarletwoman",
+        "reason": "生存しているプレイヤーが 5 人以上いて、リル モンスタ トークンを持っているプレイヤーが死亡した場合、今夜スカーレット ウーマンにリル モンスタ トークンが与えられます。"
+    },
+    {
+        "target": "lilmonsta",
+        "trick": "vizier",
+        "reason": "宰相は、リル・モンスタの子守をしている場合、処刑によって死ぬ可能性がある。"
     },
     {
         "target": "lleech",
@@ -405,303 +545,68 @@
         "reason": "スレイヤーがリーチの宿主を殺した場合、宿主は死亡します。"
     },
     {
-        "target": "lleech",
-        "trick": "heretic",
-        "reason": "ヒルが異端者を毒殺した場合、ヒルは死亡し、異端者は毒を受けたままになります。"
-    },
-    {
-        "target": "kazali",
-        "trick": "bountyhunter",
-        "reason": "邪悪な町民は、カザリの行為後も賞金稼ぎがまだプレイしている場合にのみ作成されます。"
-    },
-    {
-        "target": "kazali",
-        "trick": "goon",
-        "reason": "カザリは、グーン プレイヤーを邪悪な手下の 1 つとして選択できます。"
-    },
-    {
-        "target": "kazali",
-        "trick": "marionette",
-        "reason": "カザリがマリオネットを作成することを選択した場合、隣人の 1 人を選択する必要があります。"
-    },
-    {
-        "target": "kazali",
-        "trick": "huntsman",
-        "reason": "カザリがミニオンになるためにダムゼルを選択し、ハンツマンが場に出ている場合、優れたプレイヤーがダムゼルになります。"
-    },
-    {
-        "target": "kazali",
-        "trick": "choirboy",
-        "reason": "聖歌隊少年が場に出ている場合、カザリはキングをミニオンにすることはできません。"
-    },
-    {
-        "target": "kazali",
-        "trick": "soldier",
-        "reason": "カザリは、ソルジャー プレイヤーを邪悪な手下の 1 つとして選択できます。"
-    },
-    {
-        "target": "riot",
-        "trick": "engineer",
-        "reason": "ゲーム開始時にライオットとエンジニアの両方をプレイすることはできません。エンジニアがライオットを作成すると、邪悪なプレイヤーがライオットになります。"
-    },
-    {
-        "target": "riot",
-        "trick": "golem",
-        "reason": "ゴーレムが暴動を指名した場合、暴動プレイヤーは死にません。"
-    },
-    {
-        "target": "riot",
-        "trick": "snitch",
-        "reason": "スニッチがプレイ中の場合、各ライオット プレイヤーは追加のブラフを 3 回得ます。"
-    },
-    {
-        "target": "riot",
-        "trick": "saint",
-        "reason": "優秀なプレイヤーが指名してセイントを殺害した場合、セイントのチームは負けます。"
-    },
-    {
-        "target": "riot",
-        "trick": "butler",
-        "reason": "執事は主人を指名することはできません。"
-    },
-    {
-        "target": "riot",
-        "trick": "pithag",
-        "reason": "痘痕の老婆が暴動を作成すると、すべての邪悪なプレイヤーが暴動になります。 3 日目後に痘痕の老婆が暴動を作成した場合、ゲームはさらに 1 日続きます。"
-    },
-    {
-        "target": "riot",
-        "trick": "mayor",
-        "reason": "3 人のプレイヤーだけが生き残った状態で 3 日目が始まる場合、プレイヤーは (グループとして) まったく指名しないことを選択できます。そうであれば（そして市長が生きている場合）、市長のチームが勝ちます。"
-    },
-    {
-        "target": "riot",
-        "trick": "monk",
-        "reason": "暴動プレイヤーがモンクで保護されたプレイヤーを指名して殺害した場合でも、モンクで保護されたプレイヤーは死亡しません。"
-    },
-    {
-        "target": "riot",
-        "trick": "farmer",
-        "reason": "暴動プレイヤーがファーマーを指名して殺害した場合、ファーマーは今夜その能力を使用します。"
-    },
-    {
-        "target": "riot",
-        "trick": "innkeeper",
-        "reason": "暴動プレイヤーが宿屋の主人で保護されたプレイヤーを指名した場合、宿屋の主人で保護されたプレイヤーは死亡しません。"
-    },
-    {
-        "target": "riot",
-        "trick": "sage",
-        "reason": "暴動プレイヤーが賢者を指名して殺害した場合、賢者は今夜その能力を使用します。"
-    },
-    {
         "target": "riot",
         "trick": "banshee",
-        "reason": "ライオットがバンシーを指名して殺害した場合、すべてのプレイヤーはバンシーが死亡したことを知り、バンシーは直ちに 2 人のプレイヤーを指名する可能性があります。"
-    },
-    {
-        "target": "riot",
-        "trick": "ravenkeeper",
-        "reason": "暴動プレイヤーがレイブンキーパーを指名して殺害した場合、レイブンキーパーは今夜その能力を使用します。"
-    },
-    {
-        "target": "riot",
-        "trick": "soldier",
-        "reason": "暴動選手が兵士を指名した場合、兵士は死なない。"
-    },
-    {
-        "target": "riot",
-        "trick": "grandmother",
-        "reason": "暴動選手が孫を指名して殺すと、祖母も死にます。"
-    },
-    {
-        "target": "riot",
-        "trick": "king",
-        "reason": "ライオットのプレイヤーがキングを指名して殺害し、聖歌隊の少年が生きている場合、聖歌隊の少年は今夜その能力を使用します。"
+        "reason": "Each night*, Riot chooses an alive good player (different to previous nights): a chosen Banshee dies & gains their ability."
     },
     {
         "target": "riot",
         "trick": "exorcist",
-        "reason": "ジンクスされたキャラクターは1人だけ場に出すことができます。"
+        "reason": "If the Exorcist chooses Riot on the 3rd night, Minions do not become Riot."
     },
     {
         "target": "riot",
-        "trick": "minstrel",
-        "reason": "ジンクスされたキャラクターは1人だけ場に出すことができます。"
+        "trick": "farmer",
+        "reason": "Each night*, Riot chooses an alive good player (different to previous nights): a chosen Farmer uses their ability but does not die."
     },
     {
         "target": "riot",
-        "trick": "flowergirl",
-        "reason": "ジンクスされたキャラクターは1人だけ場に出すことができます。"
+        "trick": "grandmother",
+        "reason": "If Riot is in play and the Grandchild dies during the day, the Grandmother dies too."
     },
     {
         "target": "riot",
-        "trick": "undertaker",
-        "reason": "指名によって死亡したプレイヤーは、アンダーテイカーに処刑されたものとして登録されます。"
+        "trick": "innkeeper",
+        "reason": "If Riot is in play, the Innkeeper-protected player is safe from all evil abilities."
     },
     {
         "target": "riot",
-        "trick": "cannibal",
-        "reason": "指名によって死亡したプレイヤーは、人食い人種に処刑されたものとして登録されます。"
+        "trick": "king",
+        "reason": "If Riot is in play, and at least 1 player is dead, the King learns an alive character each night."
     },
     {
         "target": "riot",
-        "trick": "pacifist",
-        "reason": "指名によって死亡したプレイヤーは、平和主義者に処刑されたものとして登録されます。"
+        "trick": "mayor",
+        "reason": "The Mayor may choose to stop nominations. If they do so when only 1 Riot is alive, good wins. Otherwise, evil wins."
     },
     {
         "target": "riot",
-        "trick": "devilsadvocate",
-        "reason": "指名によって死亡したプレイヤーは、悪魔の代弁者に処刑されたものとして登録されます。"
+        "trick": "monk",
+        "reason": "If Riot is in play, the Monk-protected player is safe from all evil abilities."
     },
     {
         "target": "riot",
-        "trick": "investigator",
-        "reason": "ライオットは捜査官にミニオンとして登録する。"
+        "trick": "ravenkeeper",
+        "reason": "Each night*, Riot chooses an alive good player (different to previous nights): a chosen Ravenkeeper uses their ability but does not die."
     },
     {
         "target": "riot",
-        "trick": "clockmaker",
-        "reason": "ライオットはクロックメーカーにミニオンとして登録します。"
+        "trick": "sage",
+        "reason": "Each night*, Riot chooses an alive good player (different to previous nights): a chosen Sage uses their ability but does not die."
     },
     {
         "target": "riot",
-        "trick": "towncrier",
-        "reason": "ライオットはミニオンとしてタウンクライアーに登録します。"
-    },
-    {
-        "target": "riot",
-        "trick": "damsel",
-        "reason": "ライオットはダムゼルにミニオンとして登録されます。"
-    },
-    {
-        "target": "riot",
-        "trick": "preacher",
-        "reason": "ライオットはダムゼルにミニオンとして登録されます。"
-    },
-    {
-        "target": "riot",
-        "trick": "hatter",
-        "reason": "帽子屋が死亡し、ライオットがプレイ中で、ライオットが別のデーモンを選択した場合、通常の悪のチームがライオットのプレイヤーから作成されます。 帽子屋が死んでデーモンが暴動を選択した場合、ミニオンも暴動になります。"
-    },
-    {
-        "target": "riot",
-        "trick": "zealot",
-        "reason": "指名された場合、死亡していても再度指名する必要があります。"
-    },
-    {
-        "target": "alhadikhia",
-        "trick": "scarletwoman",
-        "reason": "生きているアル・ハディキアが 2 人いる場合、緋色の女性アル・ハディキアが再び緋色の女性になります。"
-    },
-    {
-        "target": "organgrinder",
-        "trick": "butler",
-        "reason": "オルガングラインダーが目を閉じて投票を引き起こしている場合、執事は手を挙げて投票することができますが、彼らの投票はマスターも投票した場合にのみカウントされます。"
-    },
-    {
-        "target": "vizier",
-        "trick": "investigator",
-        "reason": "探索者が宰相がプレイしていることを知った場合、宰相の存在はストーリーテラーによって発表されません。"
-    },
-    {
-        "target": "vizier",
-        "trick": "preacher",
-        "reason": "宰相が能力を失った場合、彼らはこれを学び、能力がある間に宰相が処刑された場合、彼らのチームが勝利します。"
-    },
-    {
-        "target": "vizier",
-        "trick": "courtier",
-        "reason": "宰相が能力を失った場合、彼らはこれを学び、能力がある間に宰相が処刑された場合、彼らのチームが勝利します。"
-    },
-    {
-        "target": "vizier",
-        "trick": "alchemist",
-        "reason": "錬金術師が大臣の能力を持っている場合、3 人以上のプレイヤーが投票した場合にのみ、即時処刑を選択できます。"
-    },
-    {
-        "target": "vizier",
-        "trick": "magician",
-        "reason": "ジンクスされたキャラクターは1人だけ場に出すことができます。"
-    },
-    {
-        "target": "vizier",
-        "trick": "fearmonger",
-        "reason": "宰相は恐怖を煽る者とともに目覚め、彼らが誰を選んだのかを学び、そのプレイヤーを処刑することを選択することはできません。"
-    },
-    {
-        "target": "vizier",
-        "trick": "politician",
-        "reason": "政治家は宰相にとって悪者として登録されるかもしれない。"
-    },
-    {
-        "target": "vizier",
-        "trick": "alsaahir",
-        "reason": "宰相がプレイ中の場合、アルサーヒルはどの悪魔がプレイ中であるかを推測する必要があります。"
-    },
-    {
-        "target": "vizier",
-        "trick": "zealot",
-        "reason": "熱心者は宰相に対して悪として登録される可能性があります。"
+        "trick": "soldier",
+        "reason": "If Riot is in play, the Soldier is safe from all evil abilities."
     },
     {
         "target": "vortox",
         "trick": "banshee",
-        "reason": "ヴォルトックスがプレイ中にデーモンがバンシーを殺した場合でも、プレイヤーはバンシーが死んだことを知ります。"
+        "reason": "If the Vortox is in play and the Demon kills the Banshee, the players still learn that the Banshee has died."
     },
     {
-        "target": "ogre",
-        "trick": "recluse",
-        "reason": "世捨て人がオーガにとって悪であると登録すると、オーガは彼らが悪であることを学びます。"
-    },
-    {
-        "target": "philosopher",
-        "trick": "bountyhunter",
-        "reason": "哲学者が賞金稼ぎの能力を獲得した場合、町民が悪に変わる可能性があります。"
-    },
-    {
-        "target": "mastermind",
-        "trick": "alhadikhia",
-        "reason": "アルハディキアが処刑によって死亡し、首謀者が生きている場合、アルハディキアは今夜 3 人の善良なプレイヤーを選択します。3 人全員が生き残ることを選択した場合、悪が勝ちます。そうでない場合は、善が勝ちます。"
-    },
-    {
-        "target": "boffin",
-        "trick": "heretic",
-        "reason": "悪魔は異端者の能力を持つことはできません。"
-    },
-    {
-        "target": "boffin",
-        "trick": "cultleader",
-        "reason": "悪魔がカルトリーダーの能力を持っている場合、この能力により善に転じることはできません。"
-    },
-    {
-        "target": "boffin",
-        "trick": "goon",
-        "reason": "悪魔が悪党の能力を持っている場合、この能力により善に転じることはできません。"
-    },
-    {
-        "target": "boffin",
-        "trick": "ogre",
-        "reason": "悪魔はオーガの能力を持つことはできません。"
-    },
-    {
-        "target": "boffin",
-        "trick": "politician",
-        "reason": "悪魔は政治家の能力を持つことはできません。"
-    },
-    {
-        "target": "boffin",
-        "trick": "drunk",
-        "reason": "悪魔が酔っぱらいの能力を持っている場合、科学者は代わりにこの能力を持つ町民プレイヤーを選択します。"
-    },
-    {
-        "target": "boffin",
-        "trick": "alchemist",
-        "reason": "錬金術師が科学者の能力を持っている場合、錬金術師は悪魔が持っている能力を知りません。"
-    },
-    {
-        "target": "boffin",
-        "trick": "villageidiot",
-        "reason": "余ったトークンがある場合、科学者は悪魔に村の馬鹿の能力を与えることができます。"
+        "target": "yaggababble",
+        "trick": "exorcist",
+        "reason": "If the Exorcist chooses the Yaggababble, the Yaggababble ability does not kill tonight."
     }
 ]

@@ -3530,6 +3530,21 @@
         "image": "/build/img/icons/townsfolk/xizi.webp"
     },
     {
+        "id": "xizinew",
+        "name": "戏子（改）",
+        "edition": "syyl",
+        "team": "townsfolk",
+        "firstNight": 13,
+        "firstNightReminder": "同时唤醒所有除了旅行者以外的善良玩家，让他们互认。如有必要，可以向他们展示“该角色的能力对你生效”信息标记并展示戏子（改）角色标记。然后让他们重新入睡。",
+        "otherNight": 0,
+        "otherNightReminder": "",
+        "reminders": [
+            "善良醉酒"
+        ],
+        "setup": true,
+        "ability": "其他善良玩家醉酒（旅行者除外），你们互相认识且无法转变阵营，对调胜负结果，即使你失去能力。",
+        "image": "/build/img/icons/townsfolk/xizi.webp"
+    },    {
         "id": "xuncha",
         "name": "巡察",
         "edition": "syyl",
@@ -3719,7 +3734,7 @@
         "remindersGlobal": [],
         "setup": false,
         "ability": "每个夜晚*，你会得知今天是否有非镇民且非旅行者玩家死亡。",
-        "image": "/build/img/icons/townsfolk/zhifu.wbp"
+        "image": "/build/img/icons/townsfolk/zhifu.webp"
     },
     {
         "id": "zombuul",

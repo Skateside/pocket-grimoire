@@ -1,13 +1,13 @@
 [
     {
-        "target": "chambermaid",
-        "trick": "mathematician",
-        "reason": "Горничная узнаёт, просыпается ли Математик этой ночью, несмотря на то, что она просыпается раньше него."
+        "target": "bountyhunter",
+        "trick": "kazali",
+        "reason": "Злой Горожанин будет создан только в том случае, если после выбора Казали Охотник за головами всё еще в игре."
     },
     {
-        "target": "eviltwin",
-        "trick": "plaguedoctor",
-        "reason": "Рассказчик не сможет получить способность Злого близнеца, если Чумной Доктор умирает."
+        "target": "bountyhunter",
+        "trick": "philosopher",
+        "reason": "Если Философ выбирает Охотника за головами, один из Местных жителей может перейти в команду Демона."
     },
     {
         "target": "cannibal",
@@ -17,7 +17,12 @@
     {
         "target": "cannibal",
         "trick": "juggler",
-        "reason": "Если Жонглёр умирает на казни в первый день, то следующей ночью Людоед узнаёт, сколько ролей Жонглёр угадал корректно."
+        "reason": "If the Juggler guesses on their first day and dies by execution, tonight the living Cannibal learns how many guesses the Juggler got correct."
+    },
+    {
+        "target": "cannibal",
+        "trick": "poppygrower",
+        "reason": "If the Cannibal eats the Poppy Grower, then dies or loses the Poppy Grower ability, the Demon and Minions learn each other that night."
     },
     {
         "target": "cannibal",
@@ -25,629 +30,54 @@
         "reason": "Если Людоед получает способности Фанатика, то Людоед узнаёт об этом."
     },
     {
-        "target": "cannibal",
-        "trick": "poppygrower",
-        "reason": "Каннибал кӧ сёйӧ Мак быдтысьӧс, сэсся кувсьӧ либӧ бырӧдӧ Мак быдтысьлысь позянлунсӧ, Демон да Миньонъяс велӧдчӧны ӧта-мӧдыскӧд сійӧ войнас."
+        "target": "mathematician",
+        "trick": "chambermaid",
+        "reason": "Горничная узнаёт, просыпается ли Математик этой ночью, несмотря на то, что она просыпается раньше него."
     },
     {
-        "target": "lunatic",
-        "trick": "mathematician",
+        "target": "mathematician",
+        "trick": "lunatic",
         "reason": "Математик узнаёт, если Лунатик и Демон атаковали не одних и тех же игроков."
     },
     {
-        "target": "pithag",
-        "trick": "heretic",
-        "reason": "Яга не может создать Еретика."
-    },
-    {
-        "target": "pithag",
-        "trick": "damsel",
-        "reason": "Если Яга создаёт Золушку, то Рассказчик выбирает, кто станет Золушкой."
-    },
-    {
-        "target": "pithag",
-        "trick": "politician",
-        "reason": "Яга не может создать злого Политика."
-    },
-    {
-        "target": "pithag",
-        "trick": "villageidiot",
-        "reason": "Если в игре меньше 3 Деревенских Дурачков, Яга может создать ещё одного. Если это происходит, какой из них пьян может измениться."
-    },
-    {
-        "target": "pithag",
-        "trick": "cultleader",
-        "reason": "Если Яга превращает в Лидера культа одного из команды Демона, этот игрок не может перейти на сторону добра."
-    },
-    {
-        "target": "pithag",
-        "trick": "goon",
-        "reason": "Если Яга превращает в Наёмника одного из команды Демона, этот игрок не может перейти на сторону добра."
-    },
-    {
-        "target": "pithag",
-        "trick": "ogre",
-        "reason": "Если Яга превращает в Огра одного из команды Демона, этот игрок не может перейти на сторону добра."
-    },
-    {
-        "target": "cerenovus",
-        "trick": "goblin",
-        "reason": "Церановус может заставить игрока утверждать, что он Гоблин."
-    },
-    {
-        "target": "goblin",
-        "trick": "plaguedoctor",
-        "reason": "Если Чумной Доктор умирает, живой Приспешник получает способность Гоблина в дополнение к своей собственной способности и узнаёт об этом."
-    },
-    {
-        "target": "leviathan",
-        "trick": "soldier",
-        "reason": "Если Левиафан номинировал и сумел казнить Солдата, Солдат не умирает."
-    },
-    {
-        "target": "leviathan",
-        "trick": "monk",
-        "reason": "Если Левиафан номинировал и сумел казнить выбранного Монахом игрока, этот игрок не умирает."
-    },
-    {
-        "target": "leviathan",
-        "trick": "innkeeper",
-        "reason": "Если Левиафан номинировал и сумел казнить выбранного Трактирщиком игрока, этот игрок не умирает."
-    },
-    {
-        "target": "leviathan",
-        "trick": "ravenkeeper",
-        "reason": "Если Левиафан находится в игре и Птицелов погибает на казни, этой ночью Птицелов просыпается и применяет свою способность."
-    },
-    {
-        "target": "leviathan",
-        "trick": "banshee",
-        "reason": "Когда Левиафан участвует в игре, если Банши умирает на казни, все игроки узнают об этом, и Банши может использовать свои способности."
-    },
-    {
-        "target": "leviathan",
-        "trick": "sage",
-        "reason": "Если Левиафан участует в игре и Мудрец погибает на казни, этой ночью Мудрец просыпается и применяет свою способность."
-    },
-    {
-        "target": "leviathan",
-        "trick": "farmer",
-        "reason": "Если Левиафан участвует в игре и Фермер погибает на казни, один из добрых игроков становится Фермером этой ночью."
-    },
-    {
-        "target": "leviathan",
-        "trick": "mayor",
-        "reason": "Если Левиафан находится в игре и 5-й день завершается без казни, добро побеждает."
-    },
-    {
-        "target": "leviathan",
-        "trick": "hatter",
-        "reason": "Если Шляпник умрет на 5-й день или позже, Демон не сможет выбрать Левиафана."
-    },
-    {
-        "target": "leviathan",
-        "trick": "pithag",
-        "reason": "После 5-го дня Яга не может выбрать Левиафана."
-    },
-    {
-        "target": "lilmonsta",
-        "trick": "poppygrower",
-        "reason": "Если Садовник находится в игре, Приспешники не просыпаются все вместе. Их будят по одному, пока один из них не решит взять себе Монстрика."
-    },
-    {
-        "target": "lilmonsta",
-        "trick": "magician",
-        "reason": "Каждую ночь, Фокусник выбирает Приспешника: если этот Приспешник участвует в игре и жив, Монстрик переходит к нему."
-    },
-    {
-        "target": "lilmonsta",
-        "trick": "scarletwoman",
-        "reason": "Если живы 5 или более игроков и погибает игрок, держащий Монстрика, этой ночью Монстрик переходит к Блуднице."
-    },
-    {
-        "target": "lilmonsta",
+        "target": "butler",
         "trick": "organgrinder",
-        "reason": "Если Шарманщик присматривает за Монстриком, голоса за него всегда учитываются."
-    },
-    {
-        "target": "lilmonsta",
-        "trick": "vizier",
-        "reason": "Если Визирь присматривает за Монстриком и казнён, он умирает."
-    },
-    {
-        "target": "lilmonsta",
-        "trick": "hatter",
-        "reason": "Если Демон выбирает Монстрика, он также выбирает, каким Приспешником стать. Монстрик этой ночью переходит к нему."
-    },
-    {
-        "target": "legion",
-        "trick": "engineer",
-        "reason": "Легион и Инженер не могут одновременно находиться в игре на момент ее начала. Если Инженер создаёт Легион, то большинство игроков (включая всех злых игроков) превращаются в злых Легионеров."
-    },
-    {
-        "target": "legion",
-        "trick": "preacher",
-        "reason": "Если Пастор выбирает Легионера, то Легион сохраняет свою способность, и Пастор может узнать, что выбрал Легионера."
-    },
-    {
-        "target": "legion",
-        "trick": "minstrel",
-        "reason": "Если Легионер умирает на казни, Легион сохраняет свою способность, и Менестрель может узнать, что погибший игрок - Легионер."
-    },
-    {
-        "target": "legion",
-        "trick": "hatter",
-        "reason": "Если Шляпник умрёт, а Легион в игре, ничего не произойдет. Если Шляпник умирает и злой игрок выбирает Легион, все текущие злые игроки становятся Легионерами."
-    },
-    {
-        "target": "legion",
-        "trick": "zealot",
-        "reason": "Фанатик может определяться как зло для Легиона."
-    },
-    {
-        "target": "fanggu",
-        "trick": "scarletwoman",
-        "reason": "Если Фан Гу выбирает Аутсайдера и умирает, Блудница не превращается в Фан Гу."
-    },
-    {
-        "target": "spy",
-        "trick": "alchemist",
-        "reason": "Алхимик не может владеть способностью Шпиона."
-    },
-    {
-        "target": "spy",
-        "trick": "magician",
-        "reason": "Перед тем, как Шпион увидит Гримуар, оттуда убираются жетоны Демона и Фокусника."
-    },
-    {
-        "target": "spy",
-        "trick": "poppygrower",
-        "reason": "Если Садовник находится в игре, Шпион не видит Гримуар, пока Садовник жив."
-    },
-    {
-        "target": "spy",
-        "trick": "plaguedoctor",
-        "reason": "Если Чумной Доктор умирает, живой Приспешник получает способность Шпиона в дополнение к своей собственной способности и узнаёт об этом."
-    },
-    {
-        "target": "spy",
-        "trick": "damsel",
-        "reason": "Если в игре есть или был Шпион, Золушка отравлена."
-    },
-    {
-        "target": "spy",
-        "trick": "heretic",
-        "reason": "Только одна из этих двух ролей может находиться в игре."
-    },
-    {
-        "target": "spy",
-        "trick": "ogre",
-        "reason": "Шпион определяется как зло для Огра."
-    },
-    {
-        "target": "widow",
-        "trick": "alchemist",
-        "reason": "Алхимик не может владеть способностью Вдовы."
-    },
-    {
-        "target": "widow",
-        "trick": "magician",
-        "reason": "Перед тем, как Вдова увидит Гримуар, оттуда убираются жетоны Демона и Фокусника."
-    },
-    {
-        "target": "widow",
-        "trick": "poppygrower",
-        "reason": "Если Садовник находится в игре, Вдова не видит Гримуар, пока Садовник жив."
-    },
-    {
-        "target": "widow",
-        "trick": "damsel",
-        "reason": "Если в игре есть или была Вдова, Золушка отравлена."
-    },
-    {
-        "target": "widow",
-        "trick": "heretic",
-        "reason": "Только одна из этих двух ролей может находиться в игре."
-    },
-    {
-        "target": "godfather",
-        "trick": "heretic",
-        "reason": "Только одна из этих двух ролей может находиться в игре."
-    },
-    {
-        "target": "scarletwoman",
-        "trick": "plaguedoctor",
-        "reason": "Если Чумной Доктор умирает, живой Приспешник получает способность Блудницы в дополнение к своей собственной способности и узнаёт об этом."
-    },
-    {
-        "target": "boomdandy",
-        "trick": "plaguedoctor",
-        "reason": "Если Чумного Доктора казнят, а Рассказчик получит способность Подрывника, способность Подрывника сработает немедленно."
-    },
-    {
-        "target": "fearmonger",
-        "trick": "plaguedoctor",
-        "reason": "Если Чумной Доктор умирает, живой Миньон получает способность Душегуба в дополнение к своей собственной способности и узнаёт об этом."
-    },
-    {
-        "target": "yaggababble",
-        "trick": "exorcist",
-        "reason": "Если Экзорцист выбрал Ворчуна, способность Ворчуна этой ночью не убивает."
-    },
-    {
-        "target": "summoner",
-        "trick": "clockmaker",
-        "reason": "Когда Призыватель в игре, Часовщик получает информацию в ночь пояления Демона."
-    },
-    {
-        "target": "summoner",
-        "trick": "alchemist",
-        "reason": "Когда в игре есть Алхимик-Призыватель, игра начинается с Демоном, как обычно. Если Алхимик-Призыватель выбирает игрока - тот становится Демоном, но команду не меняет."
-    },
-    {
-        "target": "summoner",
-        "trick": "poppygrower",
-        "reason": "Если Садовник жив, когда Призыватель создаёт Демона, Рассказчик выбирает игрока, но не сообщает Призывателю, кто этот игрок."
-    },
-    {
-        "target": "summoner",
-        "trick": "marionette",
-        "reason": "Марионетка соседствует с Призывателем. Призыватель знает, кто является Марионеткой."
-    },
-    {
-        "target": "summoner",
-        "trick": "pithag",
-        "reason": "Призыватель не может создать Демона, который участвует в игре. Если же он создаёт Демона вне игры, смерти этой ночью выбирает Рассказчик."
-    },
-    {
-        "target": "summoner",
-        "trick": "hatter",
-        "reason": "Призыватель не может создать Демона, который участвует в игре. Если же он создаёт Демона вне игры, смерти этой ночью выбирает Рассказчик."
-    },
-    {
-        "target": "summoner",
-        "trick": "courtier",
-        "reason": "Если Призыватель пьян в 3-ю ночь, игрока выбирает Рассказчик (не сообщает Призывателю, кто этот игрок)."
-    },
-    {
-        "target": "summoner",
-        "trick": "engineer",
-        "reason": "Если Инженер убирает Призывателя из игры, в которой нет Демона, Призыватель должен выбрать Демона немедленно."
-    },
-    {
-        "target": "summoner",
-        "trick": "zombuul",
-        "reason": "Если Призыватель выбирает мертвого игрока в качестве Зомбула, Демона достаточно казнить всего лишь один раз для победы."
-    },
-    {
-        "target": "summoner",
-        "trick": "pukka",
-        "reason": "Призыватель может создать Пукку на вторую ночь."
-    },
-    {
-        "target": "summoner",
-        "trick": "riot",
-        "reason": "Если Призыватель создаёт Бедлам, все Приспешники статовятся Бедлам."
-    },
-    {
-        "target": "summoner",
-        "trick": "legion",
-        "reason": "Если Призыватель создаёт Легион, то большинство игроков (включая всех Приспешников) становятся Легионом."
-    },
-    {
-        "target": "summoner",
-        "trick": "kazali",
-        "reason": "Призыватель не может создать Демона, который участвует в игре. Если же он создаёт Демона вне игры, смерти этой ночью выбирает Рассказчик."
-    },
-    {
-        "target": "summoner",
-        "trick": "preacher",
-        "reason": "Если Пастор выбирает Призывателя до появления Демона в игре, Призыватель должен выбрать Демона немедленно, при этом игрока выбирает Рассказчик (не сообщает Призывателю, кто этот игрок).  "
-    },
-    {
-        "target": "summoner",
-        "trick": "lordoftyphon",
-        "reason": "If the Summoner creates a Lord of Typhon, the Lord of Typhon must neighbor a Minion. The other neighbor becomes a not-in-play evil Minion."
-    },
-    {
-        "target": "baron",
-        "trick": "heretic",
-        "reason": "Барон иногда может добавить в игру только одного Аутсайдера вместо двух."
-    },
-    {
-        "target": "baron",
-        "trick": "plaguedoctor",
-        "reason": "Если Рассказчик получает способность Барона, то два игрока становятся Аутсайдерами вне игры."
-    },
-    {
-        "target": "marionette",
-        "trick": "lilmonsta",
-        "reason": "Марионетка сидит рядом с кем-то из Приспешников, а не с Демоном. Марионетка не просыпается при передаче Монстрика, а если получает Монстрика, то не узнаёт, что является Марионеткой."
-    },
-    {
-        "target": "marionette",
-        "trick": "poppygrower",
-        "reason": "Когда Садовник умирает, Демон узнаёт личность Марионетки, а Марионетка ничего не узнаёт."
-    },
-    {
-        "target": "marionette",
-        "trick": "snitch",
-        "reason": "Марионетка не узнаёт 3 роли, находящиеся вне игры. Вместо этого Демон узнаёт шесть ролей вне игры."
-    },
-    {
-        "target": "marionette",
-        "trick": "balloonist",
-        "reason": "Если Марионетка считает, что она - Аэронавт, перед началом игры должен быть добавлен +1 Аутсайдер."
-    },
-    {
-        "target": "marionette",
-        "trick": "damsel",
-        "reason": "Марионетка не узнаёт, что Золушка находится в игре."
-    },
-    {
-        "target": "marionette",
-        "trick": "plaguedoctor",
-        "reason": "Когда Чумной Доктор умирает, если у Демона есть живой сосед из Горожан, этот игрок становится злой Марионеткой. Если уже есть дополнительный злой игрок, этого не происходит."
-    },
-    {
-        "target": "marionette",
-        "trick": "huntsman",
-        "reason": "Если Марионетка считает, что она - Принц, перед началом игры должна быть добавлена Золушка."
-    },
-    {
-        "target": "lleech",
-        "trick": "mastermind",
-        "reason": "Если Криминальный гений жив и носитель Паразита погибает на казни, Паразит выживает, но теряет свою способность."
-    },
-    {
-        "target": "lleech",
-        "trick": "slayer",
-        "reason": "Если Лучник стреляет в носителя Паразита, носитель погибает."
-    },
-    {
-        "target": "lleech",
-        "trick": "heretic",
-        "reason": "Если Паразит отравил Еретика, то Еретик остаётся отравленным в случае смерти Паразита."
-    },
-    {
-        "target": "kazali",
-        "trick": "bountyhunter",
-        "reason": "Злой Горожанин будет создан только в том случае, если после выбора Казали Охотник за головами всё еще в игре."
-    },
-    {
-        "target": "kazali",
-        "trick": "goon",
-        "reason": "Казали вермас бӧрйыны, мый Гун ворсысьыс налӧн лёк Миньонъяс пиысь ӧти."
-    },
-    {
-        "target": "kazali",
-        "trick": "marionette",
-        "reason": "Казали может превратить в Марионетку только одного из своих соседей."
-    },
-    {
-        "target": "kazali",
-        "trick": "huntsman",
-        "reason": "Если Казали превращает Золушку в Приспешника и Принц находится в игре, кто-то из Горожан становится Золушкой."
-    },
-    {
-        "target": "kazali",
-        "trick": "choirboy",
-        "reason": "Казали не может превратить Короля в Приспешника, если в игре находится Хорист."
-    },
-    {
-        "target": "kazali",
-        "trick": "soldier",
-        "reason": "Казалияс вермасны бӧрйыны, мый Салдат ворсысьыс налӧн лёк Миньонъяс пиысь ӧти."
-    },
-    {
-        "target": "riot",
-        "trick": "engineer",
-        "reason": "Бедлам и Инженер не могут одновременно находиться в игре на момент ее начала. Если Инженер создает Бедлам, то все злые игроки превращаются в Бедлам."
-    },
-    {
-        "target": "riot",
-        "trick": "golem",
-        "reason": "Если Голем номинирует Бедлам, Бедлам не умирает."
-    },
-    {
-        "target": "riot",
-        "trick": "snitch",
-        "reason": "Если Болтун находится в игре, каждый Бедлам узнает 3 дополнительных роли вне игры."
-    },
-    {
-        "target": "riot",
-        "trick": "saint",
-        "reason": "Если добрый игрок номинирует и убивает Святого, команда Святого проигрывает."
-    },
-    {
-        "target": "riot",
-        "trick": "butler",
-        "reason": "Дворецкий не может номинировать своего мастера."
-    },
-    {
-        "target": "riot",
-        "trick": "pithag",
-        "reason": "Если Яга создает Бедлам, все злые игроки становятся Бедлам. Если Яга создает Бедлам после 3-го дня, игра продолжается еще один день."
-    },
-    {
-        "target": "riot",
-        "trick": "mayor",
-        "reason": "Если начинается 3-й день и живы ровно три игрока, игроки могут сообща решить никого не выдвигать. Если они это делают (и Мэр жив), то команда Мэра побеждает."
-    },
-    {
-        "target": "riot",
-        "trick": "monk",
-        "reason": "Если Бедлам номинирует защищенного Монахом игрока, этот игрок не умирает."
-    },
-    {
-        "target": "riot",
-        "trick": "farmer",
-        "reason": "Если Бедлам номинирует и убивает Фермера, этой ночью способность Фермера срабатывает."
-    },
-    {
-        "target": "riot",
-        "trick": "innkeeper",
-        "reason": "Если Бедлам номинирует защищенного Трактирщиком игрока, этот игрок не умирает."
-    },
-    {
-        "target": "riot",
-        "trick": "sage",
-        "reason": "Если Бедлам номинирует и убивает Мудреца, этой ночью способность Мудреца срабатывает."
-    },
-    {
-        "target": "riot",
-        "trick": "banshee",
-        "reason": "Если Бедлам номинирует и убивает Банши, все игроки узнают об этом, и Банши может сразу же номинировать двух игроков."
-    },
-    {
-        "target": "riot",
-        "trick": "ravenkeeper",
-        "reason": "Если Бедлам номинирует и убивает Птицелова, этой ночью способность Прицелова срабатывает."
-    },
-    {
-        "target": "riot",
-        "trick": "soldier",
-        "reason": "Если Бедлам номинирует Солдата, Солдат не умирает."
-    },
-    {
-        "target": "riot",
-        "trick": "grandmother",
-        "reason": "Если Бедлам номинирует и убивает внука Бабашки, то Бабушка умирает тоже."
-    },
-    {
-        "target": "riot",
-        "trick": "king",
-        "reason": "Если Бедлам номинирует и убивает Короля, и Хорист жив, этой ночью способность Хориста срабатывает."
-    },
-    {
-        "target": "riot",
-        "trick": "exorcist",
-        "reason": "Только одна из этих двух ролей может находиться в игре."
-    },
-    {
-        "target": "riot",
-        "trick": "minstrel",
-        "reason": "Только одна из этих двух ролей может находиться в игре."
-    },
-    {
-        "target": "riot",
-        "trick": "flowergirl",
-        "reason": "Только одна из этих двух ролей может находиться в игре."
-    },
-    {
-        "target": "riot",
-        "trick": "undertaker",
-        "reason": "Игроки, убитые при номинировании, определяются как казненные для Гробовщика."
-    },
-    {
-        "target": "riot",
-        "trick": "cannibal",
-        "reason": "Игроки, убитые при номинировании, определяются как казненные для Людоеда."
-    },
-    {
-        "target": "riot",
-        "trick": "pacifist",
-        "reason": "Игроки, убитые при номинировании, определяются как казненные для Пацифиста."
-    },
-    {
-        "target": "riot",
-        "trick": "devilsadvocate",
-        "reason": "Игроки, убитые при номинировании, определяются как казненные для Адвоката дьявола."
-    },
-    {
-        "target": "riot",
-        "trick": "investigator",
-        "reason": "Бедлам определяется Приспешником для Сыщика."
-    },
-    {
-        "target": "riot",
-        "trick": "clockmaker",
-        "reason": "Бедлам определяется Приспешником для Часовщика."
-    },
-    {
-        "target": "riot",
-        "trick": "towncrier",
-        "reason": "Бедлам определяется Приспешником для Звонаря."
-    },
-    {
-        "target": "riot",
-        "trick": "damsel",
-        "reason": "Бедлам определяется Приспешником для Золушки."
-    },
-    {
-        "target": "riot",
-        "trick": "preacher",
-        "reason": "Бедлам определяется Приспешником для Пастора."
-    },
-    {
-        "target": "riot",
-        "trick": "hatter",
-        "reason": "Если Шляпник умирает, когда в игре участвует Бедлам и Бедлам выбирает другого Демона, из игроков-Бедлам создаётся обычная злая команда. Если Шляпник умрёт, а Демон выберет Бедлам, Приспешники тоже станут Бедлам."
-    },
-    {
-        "target": "riot",
-        "trick": "zealot",
-        "reason": "Если вас номинировали, вы должны номинировать опять, даже если мертвы."
-    },
-    {
-        "target": "alhadikhia",
-        "trick": "scarletwoman",
-        "reason": "Если в живых находятся два Альхадикии, то тот из них, что был Блудницей, превращается обратно в Блудницу."
-    },
-    {
-        "target": "organgrinder",
-        "trick": "butler",
         "reason": "Если Шарманщик вызывает голосование с закрытыми глазами, Дворецкий может голосовать всегда, но его голос засчитывается только в том случае, если его мастер тоже проголосовал."
     },
     {
-        "target": "vizier",
-        "trick": "investigator",
-        "reason": "Если Сыщик узнаёт, что Визирь находится в игре, Рассказчик не объявляет о существовании Визиря."
+        "target": "heretic",
+        "trick": "baron",
+        "reason": "Барон иногда может добавить в игру только одного Аутсайдера вместо двух."
     },
     {
-        "target": "vizier",
-        "trick": "preacher",
-        "reason": "Если Визирь теряет свою способность, он узнаёт об этом. Если Визирь казнён, и у него есть его способность, его команда побеждает."
+        "target": "heretic",
+        "trick": "boffin",
+        "reason": "The Demon cannot have the Heretic ability."
     },
     {
-        "target": "vizier",
-        "trick": "courtier",
-        "reason": "Если Визирь теряет свою способность, он узнаёт об этом. Если Визирь казнён, и у него есть его способность, его команда побеждает."
-    },
-    {
-        "target": "vizier",
-        "trick": "alchemist",
-        "reason": "Если у Алхимика есть способность Визиря, он может утвердить казнь только если проголосовали три или более игроков."
-    },
-    {
-        "target": "vizier",
-        "trick": "magician",
+        "target": "heretic",
+        "trick": "godfather",
         "reason": "Только одна из этих двух ролей может находиться в игре."
     },
     {
-        "target": "vizier",
-        "trick": "fearmonger",
-        "reason": "Визирь просыпается вместе со Душегубом, узнаёт, кого тот выбрал, и не может казнить этого игрока."
+        "target": "heretic",
+        "trick": "lleech",
+        "reason": "Если Паразит отравил Еретика, то Еретик остаётся отравленным в случае смерти Паразита."
     },
     {
-        "target": "vizier",
-        "trick": "politician",
-        "reason": "Политик может определяться как зло для Визиря."
+        "target": "heretic",
+        "trick": "pithag",
+        "reason": "Яга не может создать Еретика."
     },
     {
-        "target": "vizier",
-        "trick": "alsaahir",
-        "reason": "Если Визирь в игре, Альсахир должен ещё угадать, какой из Демонов в игре."
+        "target": "heretic",
+        "trick": "spy",
+        "reason": "Только одна из этих двух ролей может находиться в игре."
     },
     {
-        "target": "vizier",
-        "trick": "zealot",
-        "reason": "Фанатик может определяться как зло для Визиря."
-    },
-    {
-        "target": "vortox",
-        "trick": "banshee",
-        "reason": "Если Вортокс убивает Банши, все игроки узнают об этом."
+        "target": "heretic",
+        "trick": "widow",
+        "reason": "Только одна из этих двух ролей может находиться в игре."
     },
     {
         "target": "ogre",
@@ -655,24 +85,59 @@
         "reason": "Огр, выбрав Отшельника, переходит в команду Демона и узнаёт об этом."
     },
     {
-        "target": "philosopher",
-        "trick": "bountyhunter",
-        "reason": "Если Философ выбирает Охотника за головами, один из Местных жителей может перейти в команду Демона."
+        "target": "plaguedoctor",
+        "trick": "baron",
+        "reason": "If the Storyteller gains the Baron ability, up to two players become not-in-play Outsiders."
     },
     {
-        "target": "mastermind",
-        "trick": "alhadikhia",
-        "reason": "Если Альхадикия умирает на казни и Криминальный гений жив, следующей ночью Альхадикия выбирает трёх игроков из Горожан: если все они выживают - Демон побеждает, иначе побеждают Горожане."
+        "target": "plaguedoctor",
+        "trick": "boomdandy",
+        "reason": "Если Рассказчик получает способность Барона, то два игрока становятся Аутсайдерами вне игры."
+    },
+    {
+        "target": "plaguedoctor",
+        "trick": "eviltwin",
+        "reason": "Рассказчик не сможет получить способность Злого близнеца, если Чумной Доктор умирает."
+    },
+    {
+        "target": "plaguedoctor",
+        "trick": "fearmonger",
+        "reason": "Если Чумной Доктор умирает, живой Миньон получает способность Душегуба в дополнение к своей собственной способности и узнаёт об этом."
+    },
+    {
+        "target": "plaguedoctor",
+        "trick": "goblin",
+        "reason": "Если Чумной Доктор умирает, живой Приспешник получает способность Гоблина в дополнение к своей собственной способности и узнаёт об этом."
+    },
+    {
+        "target": "plaguedoctor",
+        "trick": "marionette",
+        "reason": "If the Demon has a neighbor who is alive and a Townsfolk or Outsider when the Plague Doctor dies, that player becomes an evil Marionette. If there is already an extra evil player, this does not happen."
+    },
+    {
+        "target": "plaguedoctor",
+        "trick": "scarletwoman",
+        "reason": "Если Чумной Доктор умирает, живой Приспешник получает способность Блудницы в дополнение к своей собственной способности и узнаёт об этом."
+    },
+    {
+        "target": "plaguedoctor",
+        "trick": "spy",
+        "reason": "Если Чумной Доктор умирает, живой Приспешник получает способность Шпиона в дополнение к своей собственной способности и узнаёт об этом."
     },
     {
         "target": "boffin",
-        "trick": "heretic",
-        "reason": "The Demon cannot have the Heretic ability."
+        "trick": "alchemist",
+        "reason": "If the Alchemist has the Boffin ability, the Alchemist does not learn what ability the Demon has."
     },
     {
         "target": "boffin",
         "trick": "cultleader",
         "reason": "If the Demon has the Cult Leader ability, they can’t turn good due to this ability."
+    },
+    {
+        "target": "boffin",
+        "trick": "drunk",
+        "reason": "If the Demon would have the Drunk ability, the Boffin chooses a Townsfolk player to have this ability instead."
     },
     {
         "target": "boffin",
@@ -691,17 +156,457 @@
     },
     {
         "target": "boffin",
-        "trick": "drunk",
-        "reason": "If the Demon would have the Drunk ability, the Boffin chooses a Townsfolk player to have this ability instead."
-    },
-    {
-        "target": "boffin",
-        "trick": "alchemist",
-        "reason": "If the Alchemist has the Boffin ability, the Alchemist does not learn what ability the Demon has."
-    },
-    {
-        "target": "boffin",
         "trick": "villageidiot",
         "reason": "If there is a spare token, the Boffin can give the Demon the Village Idiot ability."
+    },
+    {
+        "target": "cerenovus",
+        "trick": "goblin",
+        "reason": "Церановус может заставить игрока утверждать, что он Гоблин."
+    },
+    {
+        "target": "marionette",
+        "trick": "balloonist",
+        "reason": "Если Марионетка считает, что она - Аэронавт, перед началом игры должен быть добавлен +1 Аутсайдер."
+    },
+    {
+        "target": "marionette",
+        "trick": "damsel",
+        "reason": "Марионетка не узнаёт, что Золушка находится в игре."
+    },
+    {
+        "target": "marionette",
+        "trick": "huntsman",
+        "reason": "Если Марионетка считает, что она - Принц, перед началом игры должна быть добавлена Золушка."
+    },
+    {
+        "target": "marionette",
+        "trick": "lilmonsta",
+        "reason": "Марионетка сидит рядом с кем-то из Приспешников, а не с Демоном. Марионетка не просыпается при передаче Монстрика, а если получает Монстрика, то не узнаёт, что является Марионеткой."
+    },
+    {
+        "target": "marionette",
+        "trick": "poppygrower",
+        "reason": "Когда Садовник умирает, Демон узнаёт личность Марионетки, а Марионетка ничего не узнаёт."
+    },
+    {
+        "target": "marionette",
+        "trick": "snitch",
+        "reason": "Марионетка не узнаёт 3 роли, находящиеся вне игры. Вместо этого Демон узнаёт шесть ролей вне игры."
+    },
+    {
+        "target": "mastermind",
+        "trick": "alhadikhia",
+        "reason": "Если Альхадикия умирает на казни и Криминальный гений жив, следующей ночью Альхадикия выбирает трёх игроков из Горожан: если все они выживают - Демон побеждает, иначе побеждают Горожане."
+    },
+    {
+        "target": "pithag",
+        "trick": "cultleader",
+        "reason": "Если Яга превращает в Лидера культа одного из команды Демона, этот игрок не может перейти на сторону добра."
+    },
+    {
+        "target": "pithag",
+        "trick": "damsel",
+        "reason": "Если Яга создаёт Золушку, то Рассказчик выбирает, кто станет Золушкой."
+    },
+    {
+        "target": "pithag",
+        "trick": "goon",
+        "reason": "Если Яга превращает в Наёмника одного из команды Демона, этот игрок не может перейти на сторону добра."
+    },
+    {
+        "target": "pithag",
+        "trick": "ogre",
+        "reason": "If the Pit-Hag turns an evil player into the Ogre, they can't turn good due to their own ability."
+    },
+    {
+        "target": "pithag",
+        "trick": "politician",
+        "reason": "Яга не может создать злого Политика."
+    },
+    {
+        "target": "pithag",
+        "trick": "villageidiot",
+        "reason": "Если в игре меньше 3 Деревенских Дурачков, Яга может создать ещё одного. Если это происходит, какой из них пьян может измениться."
+    },
+    {
+        "target": "scarletwoman",
+        "trick": "alhadikhia",
+        "reason": "Если в живых находятся два Альхадикии, то тот из них, что был Блудницей, превращается обратно в Блудницу."
+    },
+    {
+        "target": "scarletwoman",
+        "trick": "fanggu",
+        "reason": "Если Фан Гу выбирает Аутсайдера и умирает, Блудница не превращается в Фан Гу."
+    },
+    {
+        "target": "spy",
+        "trick": "alchemist",
+        "reason": "If the Alchemist has the Spy ability, they do not see the Grimoire, and the real Spy cannot register falsely."
+    },
+    {
+        "target": "spy",
+        "trick": "damsel",
+        "reason": "Если в игре есть или был Шпион, Золушка отравлена."
+    },
+    {
+        "target": "spy",
+        "trick": "magician",
+        "reason": "Перед тем, как Шпион увидит Гримуар, оттуда убираются жетоны Демона и Фокусника."
+    },
+    {
+        "target": "spy",
+        "trick": "ogre",
+        "reason": "Шпион определяется как зло для Огра."
+    },
+    {
+        "target": "spy",
+        "trick": "poppygrower",
+        "reason": "Если Садовник находится в игре, Шпион не видит Гримуар, пока Садовник жив."
+    },
+    {
+        "target": "summoner",
+        "trick": "alchemist",
+        "reason": "Когда в игре есть Алхимик-Призыватель, игра начинается с Демоном, как обычно. Если Алхимик-Призыватель выбирает игрока - тот становится Демоном, но команду не меняет."
+    },
+    {
+        "target": "summoner",
+        "trick": "clockmaker",
+        "reason": "Когда Призыватель в игре, Часовщик получает информацию в ночь пояления Демона."
+    },
+    {
+        "target": "summoner",
+        "trick": "courtier",
+        "reason": "Если Призыватель пьян в 3-ю ночь, игрока выбирает Рассказчик (не сообщает Призывателю, кто этот игрок)."
+    },
+    {
+        "target": "summoner",
+        "trick": "engineer",
+        "reason": "Если Инженер убирает Призывателя из игры, в которой нет Демона, Призыватель должен выбрать Демона немедленно."
+    },
+    {
+        "target": "summoner",
+        "trick": "hatter",
+        "reason": "Призыватель не может создать Демона, который участвует в игре. Если же он создаёт Демона вне игры, смерти этой ночью выбирает Рассказчик."
+    },
+    {
+        "target": "summoner",
+        "trick": "kazali",
+        "reason": "Призыватель не может создать Демона, который участвует в игре. Если же он создаёт Демона вне игры, смерти этой ночью выбирает Рассказчик."
+    },
+    {
+        "target": "summoner",
+        "trick": "legion",
+        "reason": "Если Призыватель создаёт Легион, то большинство игроков (включая всех Приспешников) становятся Легионом."
+    },
+    {
+        "target": "summoner",
+        "trick": "lordoftyphon",
+        "reason": "If the Summoner creates a Lord of Typhon, the Lord of Typhon must neighbor a Minion. The other neighbor becomes a not-in-play evil Minion."
+    },
+    {
+        "target": "summoner",
+        "trick": "marionette",
+        "reason": "The Marionette neighbors the Summoner. The Summoner knows who the Marionette is."
+    },
+    {
+        "target": "summoner",
+        "trick": "pithag",
+        "reason": "Призыватель не может создать Демона, который участвует в игре. Если же он создаёт Демона вне игры, смерти этой ночью выбирает Рассказчик."
+    },
+    {
+        "target": "summoner",
+        "trick": "poppygrower",
+        "reason": "Если Садовник жив, когда Призыватель создаёт Демона, Рассказчик выбирает игрока, но не сообщает Призывателю, кто этот игрок."
+    },
+    {
+        "target": "summoner",
+        "trick": "preacher",
+        "reason": "Если Пастор выбирает Призывателя до появления Демона в игре, Призыватель должен выбрать Демона немедленно, при этом игрока выбирает Рассказчик (не сообщает Призывателю, кто этот игрок).  "
+    },
+    {
+        "target": "summoner",
+        "trick": "pukka",
+        "reason": "Призыватель может создать Пукку на вторую ночь."
+    },
+    {
+        "target": "summoner",
+        "trick": "zombuul",
+        "reason": "Если Призыватель выбирает мертвого игрока в качестве Зомбула, Демона достаточно казнить всего лишь один раз для победы."
+    },
+    {
+        "target": "vizier",
+        "trick": "alsaahir",
+        "reason": "Если Визирь в игре, Альсахир должен ещё угадать, какой из Демонов в игре."
+    },
+    {
+        "target": "vizier",
+        "trick": "courtier",
+        "reason": "If the Vizier loses their ability, they learn this. If the Vizier is executed while they have their ability, their team wins."
+    },
+    {
+        "target": "vizier",
+        "trick": "fearmonger",
+        "reason": "The Vizier wakes with the Fearmonger, learns who they choose and cannot choose to immediately execute that player."
+    },
+    {
+        "target": "vizier",
+        "trick": "investigator",
+        "reason": "Если Сыщик узнаёт, что Визирь находится в игре, Рассказчик не объявляет о существовании Визиря."
+    },
+    {
+        "target": "vizier",
+        "trick": "magician",
+        "reason": "If the Vizier and Magician are both in play, the Demon does not learn the Minions."
+    },
+    {
+        "target": "vizier",
+        "trick": "politician",
+        "reason": "Политик может определяться как зло для Визиря."
+    },
+    {
+        "target": "vizier",
+        "trick": "preacher",
+        "reason": "If the Vizier loses their ability, they learn this. If the Vizier is executed while they have their ability, their team wins."
+    },
+    {
+        "target": "vizier",
+        "trick": "zealot",
+        "reason": "Фанатик может определяться как зло для Визиря."
+    },
+    {
+        "target": "widow",
+        "trick": "alchemist",
+        "reason": "If the Alchemist has the Widow ability, they do not see the Grimoire."
+    },
+    {
+        "target": "widow",
+        "trick": "damsel",
+        "reason": "Если в игре есть или была Вдова, Золушка отравлена."
+    },
+    {
+        "target": "widow",
+        "trick": "magician",
+        "reason": "Перед тем, как Вдова увидит Гримуар, оттуда убираются жетоны Демона и Фокусника."
+    },
+    {
+        "target": "widow",
+        "trick": "poppygrower",
+        "reason": "Если Садовник находится в игре, Вдова не видит Гримуар, пока Садовник жив."
+    },
+    {
+        "target": "kazali",
+        "trick": "choirboy",
+        "reason": "Казали не может превратить Короля в Приспешника, если в игре находится Хорист."
+    },
+    {
+        "target": "kazali",
+        "trick": "goon",
+        "reason": "The Kazali can choose that the Goon player is one of their evil Minions."
+    },
+    {
+        "target": "kazali",
+        "trick": "huntsman",
+        "reason": "Если Казали превращает Золушку в Приспешника и Принц находится в игре, кто-то из Горожан становится Золушкой."
+    },
+    {
+        "target": "kazali",
+        "trick": "marionette",
+        "reason": "If the Kazali chooses to create a Marionette, they must choose one of their neighbors."
+    },
+    {
+        "target": "kazali",
+        "trick": "soldier",
+        "reason": "The Kazali can choose that the Soldier player is one of their evil Minions."
+    },
+    {
+        "target": "legion",
+        "trick": "engineer",
+        "reason": "Легион и Инженер не могут одновременно находиться в игре на момент ее начала. Если Инженер создаёт Легион, то большинство игроков (включая всех злых игроков) превращаются в злых Легионеров."
+    },
+    {
+        "target": "legion",
+        "trick": "hatter",
+        "reason": "Если Шляпник умрёт, а Легион в игре, ничего не произойдет. Если Шляпник умирает и злой игрок выбирает Легион, все текущие злые игроки становятся Легионерами."
+    },
+    {
+        "target": "legion",
+        "trick": "minstrel",
+        "reason": "Если Легионер умирает на казни, Легион сохраняет свою способность, и Менестрель может узнать, что погибший игрок - Легионер."
+    },
+    {
+        "target": "legion",
+        "trick": "preacher",
+        "reason": "Если Пастор выбирает Легионера, то Легион сохраняет свою способность, и Пастор может узнать, что выбрал Легионера."
+    },
+    {
+        "target": "legion",
+        "trick": "zealot",
+        "reason": "The Zealot might register as evil to Legion's ability."
+    },
+    {
+        "target": "leviathan",
+        "trick": "banshee",
+        "reason": "Each night*, the Leviathan chooses an alive good player (different to previous nights): a chosen Banshee dies & gains their ability."
+    },
+    {
+        "target": "leviathan",
+        "trick": "exorcist",
+        "reason": "Evil does not win when more than 1 good player has been executed, if the Exorcist is alive and has ever successfully chosen the Leviathan."
+    },
+    {
+        "target": "leviathan",
+        "trick": "farmer",
+        "reason": "Each night*, the Leviathan chooses an alive good player (different to previous nights): a chosen Farmer uses their ability but does not die."
+    },
+    {
+        "target": "leviathan",
+        "trick": "grandmother",
+        "reason": "If Leviathan is in play and the Grandchild dies by execution, evil wins."
+    },
+    {
+        "target": "leviathan",
+        "trick": "hatter",
+        "reason": "Если Шляпник умрет на 5-й день или позже, Демон не сможет выбрать Левиафана."
+    },
+    {
+        "target": "leviathan",
+        "trick": "innkeeper",
+        "reason": "If the Leviathan is in play, the Innkeeper-protected-players are safe from all evil abilities."
+    },
+    {
+        "target": "leviathan",
+        "trick": "king",
+        "reason": "If the Leviathan is in play, and at least 1 player is dead, the King learns an alive character each night."
+    },
+    {
+        "target": "leviathan",
+        "trick": "mayor",
+        "reason": "If the Leviathan is in play & no execution occurs on day 5, good wins."
+    },
+    {
+        "target": "leviathan",
+        "trick": "monk",
+        "reason": "If the Leviathan is in play, the Monk-protected-player is safe from all evil abilities."
+    },
+    {
+        "target": "leviathan",
+        "trick": "pithag",
+        "reason": "После 5-го дня Яга не может выбрать Левиафана."
+    },
+    {
+        "target": "leviathan",
+        "trick": "ravenkeeper",
+        "reason": "Each night*, the Leviathan chooses an alive player (different to previous nights): a chosen Ravenkeeper uses their ability but does not die."
+    },
+    {
+        "target": "leviathan",
+        "trick": "sage",
+        "reason": "Each night*, the Leviathan chooses an alive good player (different to previous nights): a chosen Sage uses their ability but does not die."
+    },
+    {
+        "target": "leviathan",
+        "trick": "soldier",
+        "reason": "If the Leviathan is in play, the Soldier is safe from all evil abilities."
+    },
+    {
+        "target": "lilmonsta",
+        "trick": "hatter",
+        "reason": "Если Демон выбирает Монстрика, он также выбирает, каким Приспешником стать. Монстрик этой ночью переходит к нему."
+    },
+    {
+        "target": "lilmonsta",
+        "trick": "magician",
+        "reason": "Each night, the Magician chooses a Minion: if that Minion & Lil' Monsta are alive, that Minion babysits Lil’ Monsta."
+    },
+    {
+        "target": "lilmonsta",
+        "trick": "poppygrower",
+        "reason": "Если Садовник находится в игре, Приспешники не просыпаются все вместе. Их будят по одному, пока один из них не решит взять себе Монстрика."
+    },
+    {
+        "target": "lilmonsta",
+        "trick": "scarletwoman",
+        "reason": "Если живы 5 или более игроков и погибает игрок, держащий Монстрика, этой ночью Монстрик переходит к Блуднице."
+    },
+    {
+        "target": "lilmonsta",
+        "trick": "vizier",
+        "reason": "Если Визирь присматривает за Монстриком и казнён, он умирает."
+    },
+    {
+        "target": "lleech",
+        "trick": "mastermind",
+        "reason": "Если Криминальный гений жив и носитель Паразита погибает на казни, Паразит выживает, но теряет свою способность."
+    },
+    {
+        "target": "lleech",
+        "trick": "slayer",
+        "reason": "Если Лучник стреляет в носителя Паразита, носитель погибает."
+    },
+    {
+        "target": "riot",
+        "trick": "banshee",
+        "reason": "Each night*, Riot chooses an alive good player (different to previous nights): a chosen Banshee dies & gains their ability."
+    },
+    {
+        "target": "riot",
+        "trick": "exorcist",
+        "reason": "If the Exorcist chooses Riot on the 3rd night, Minions do not become Riot."
+    },
+    {
+        "target": "riot",
+        "trick": "farmer",
+        "reason": "Each night*, Riot chooses an alive good player (different to previous nights): a chosen Farmer uses their ability but does not die."
+    },
+    {
+        "target": "riot",
+        "trick": "grandmother",
+        "reason": "If Riot is in play and the Grandchild dies during the day, the Grandmother dies too."
+    },
+    {
+        "target": "riot",
+        "trick": "innkeeper",
+        "reason": "If Riot is in play, the Innkeeper-protected player is safe from all evil abilities."
+    },
+    {
+        "target": "riot",
+        "trick": "king",
+        "reason": "If Riot is in play, and at least 1 player is dead, the King learns an alive character each night."
+    },
+    {
+        "target": "riot",
+        "trick": "mayor",
+        "reason": "The Mayor may choose to stop nominations. If they do so when only 1 Riot is alive, good wins. Otherwise, evil wins."
+    },
+    {
+        "target": "riot",
+        "trick": "monk",
+        "reason": "If Riot is in play, the Monk-protected player is safe from all evil abilities."
+    },
+    {
+        "target": "riot",
+        "trick": "ravenkeeper",
+        "reason": "Each night*, Riot chooses an alive good player (different to previous nights): a chosen Ravenkeeper uses their ability but does not die."
+    },
+    {
+        "target": "riot",
+        "trick": "sage",
+        "reason": "Each night*, Riot chooses an alive good player (different to previous nights): a chosen Sage uses their ability but does not die."
+    },
+    {
+        "target": "riot",
+        "trick": "soldier",
+        "reason": "If Riot is in play, the Soldier is safe from all evil abilities."
+    },
+    {
+        "target": "vortox",
+        "trick": "banshee",
+        "reason": "Если Вортокс убивает Банши, все игроки узнают об этом."
+    },
+    {
+        "target": "yaggababble",
+        "trick": "exorcist",
+        "reason": "Если Экзорцист выбрал Ворчуна, способность Ворчуна этой ночью не убивает."
     }
 ]
