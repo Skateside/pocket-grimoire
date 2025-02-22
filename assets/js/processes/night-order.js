@@ -20,6 +20,11 @@ gameObserver.on("characters-selected", ({ detail }) => {
 
 });
 
+// #145 - Show the "First Night" order after clearing the grimoire.
+gameObserver.on("clear", () => {
+    lookupOneCached(".js--night-order--carousel").scrollLeft = 0;
+});
+
 tokenObserver.on("character-add", ({ detail }) => {
 
     // #131 - check the character isn't from the previous script.
