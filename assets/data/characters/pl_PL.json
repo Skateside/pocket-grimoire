@@ -116,7 +116,7 @@
         "name": "Baloniarz",
         "ability": "Każdej nocy dowiadujesz się o graczu innego typu niż poprzedniej nocy. [+0 lub +1 Outsider]",
         "firstNightReminder": "Wybierz typ postaci. Wskaż gracza, którego postać jest tego typu. Umieść przypomnienie \"Widział ...\" obok tej postaci.",
-        "otherNightReminder": "Wybierz typ znaku, który nie posiada jeszcze przypomnienia \"Widział ...\" obok tokenu tego typu. Wskaż gracza, którego postać jest tego typu. Umieść przypomnienie \"Widział ...\" obok tej postaci.",
+        "otherNightReminder": "Wybierz typ postaci, który nie posiada jeszcze przypomnienia \"Widział ...\" obok tokenu tego typu. Wskaż gracza, którego postać jest tego typu. Umieść przypomnienie \"Widział ...\" obok tej postaci.",
         "remindersGlobal": [],
         "reminders": [
             "Widział Demona",
@@ -357,8 +357,8 @@
         "id": "cultleader",
         "name": "Przywódca Kultu",
         "ability": "Każdej nocy dołączasz do drużyny żywego sąsiada. Jeśli wszyscy dobrzy gracze dołączą do twojego kultu, twoja drużyna wygrywa.",
-        "firstNightReminder": "Jeśli przywódca kultu zmienił stronę, pokaż mu kciukiem w górę dobry sygnał lub kciukiem w dół zły sygnał w zależności od nowej strony.",
-        "otherNightReminder": "Jeśli przywódca kultu zmienił stronę, pokaż mu kciukim w górę dobry sygnał lub kciukiem w dół zły sygnał w zależności od nowej strony.",
+        "firstNightReminder": "Jeśli przywódca kultu zmienił stronę, pokaż mu kciukiem w górę sygnał dobra lub kciukiem w dół sygnał zła w zależności od nowej strony.",
+        "otherNightReminder": "Jeśli przywódca kultu zmienił stronę, pokaż mu kciukim w górę sygnał dobra lub kciukiem w dół sygnał zła w zależności od nowej strony.",
         "remindersGlobal": [],
         "reminders": []
     },
@@ -505,7 +505,7 @@
         "name": "Fang Gu",
         "ability": "Każdej nocy* wybierz gracza, który umiera. Pierwszy Outsider, którego zabijesz w ten sposób, zostaje złym Fang Gu, a Ty giniesz zamiast niego. [+1 Outsider].",
         "firstNightReminder": "",
-        "otherNightReminder": "Fang Gu wskazuje gracza. Gracz ten umiera. Lub, jeśli ten gracz jest Outsiderem i nie ma w grze innego Fang Gu - Demon ginie zamiast wybranego gracza. Wybrany gracz jest teraz złym Fang Gu. Obudź nowego Fang Gu. Pokaż mu kartę 'JESTEŚ' i token Fang Gu, potem pokaż kciukiem do dołu, że jest zły.",
+        "otherNightReminder": "Fang Gu wskazuje gracza. Gracz ten umiera. Lub, jeśli ten gracz jest Outsiderem i nie ma w grze innego Fang Gu - Demon ginie zamiast wybranego gracza. Wybrany gracz jest teraz złym Fang Gu. Obudź nowego Fang Gu. Pokaż mu kartę 'JESTEŚ' i token Fang Gu, potem pokaż kciukiem w dół, że jest zły.",
         "remindersGlobal": [],
         "reminders": [
             "Ginie"
@@ -514,7 +514,7 @@
     {
         "id": "farmer",
         "name": "Rolnik",
-        "ability": "Jeśli umrzesz w nocy, żywy dobry gracz staje się Farmerem.",
+        "ability": "Jeśli umrzesz w nocy, żywy dobry gracz staje się Rolnikiem.",
         "firstNightReminder": "",
         "otherNightReminder": "Jeśli Rolnik zmarł dzisiejszej nocy, wybierz innego dobrego, żywego gracza i uczyń go Rolnikiem. Obudź tego gracza, pokaż mu kartę 'Jesteś' i token Rolnika.",
         "remindersGlobal": [],
@@ -597,22 +597,13 @@
     {
         "id": "fortuneteller",
         "name": "Wróżka",
-        "ability": "Każdej nocy wybierasz 2 graczy – dowiadujesz się, czy któryś z nich jest Demonem. Jeden z dobrych graczy jest przez Ciebie rejestrowany jako zły.",
+        "ability": "Każdej nocy wybierasz 2 graczy – dowiadujesz się, czy któryś z nich jest Demonem. Jeden z dobrych graczy jest przez Ciebie rejestrowany jako Demon.",
         "firstNightReminder": "Wróżka wskazuje na dwóch graczy. Pokręć głową na \"\"tak\"\" lub \"\"nie\"\" w zależności od tego czy jeden z tych graczy jest Demonem.",
         "otherNightReminder": "Wróżka wskazuje na dwóch graczy. Pokręć głową na \"\"tak\"\" lub \"\"nie\"\" w zależności od tego czy jeden z tych graczy jest Demonem.",
         "remindersGlobal": [],
         "reminders": [
             "Wabik"
         ]
-    },
-    {
-        "id": "gardener",
-        "name": "Ogrodnik",
-        "ability": "Bajarz przydziela przynajmniej jedną postać graczom.",
-        "firstNightReminder": "",
-        "otherNightReminder": "",
-        "remindersGlobal": [],
-        "reminders": []
     },
     {
         "id": "gambler",
@@ -629,6 +620,15 @@
         "id": "gangster",
         "name": "Gangster",
         "ability": "Raz dziennie możesz zabić żywego sąsiada, jeśli twój drugi sąsiad się zgodzi.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "gardener",
+        "name": "Ogrodnik",
+        "ability": "Bajarz przydziela przynajmniej jedną postać graczom.",
         "firstNightReminder": "",
         "otherNightReminder": "",
         "remindersGlobal": [],
@@ -745,8 +745,8 @@
         "id": "harpy",
         "name": "Harpia",
         "ability": "Każdej nocy, wybierz 2 graczy: jutro pierwszy będzie szalał, że drugi jest zły, albo obaj mogą zginąć.",
-        "firstNightReminder": "Obudź Harpię; wskazuje ona na jednego gracza, a następnie na drugiego. Obudź pierwszego gracza, którego wskazała Harpia, pokaż mu kartę 'Ta postać Cię wybrała', pokaż im token Harpii, a następnie wskaż na drugiego gracza, na który wskazała Harpia.",
-        "otherNightReminder": "Obudź Harpię; wskazuje ona na jednego gracza, a następnie na drugiego. Obudź pierwszego gracza, którego wskazała Harpia, pokaż mu kartę 'Ta postać Cię wybrała', pokaż im token Harpii, a następnie wskaż na drugiego gracza, na który wskazała Harpia.",
+        "firstNightReminder": "Obudź Harpię; wskazuje ona na jednego gracza, a następnie na drugiego. Obudź pierwszego gracza, którego wskazała Harpia, pokaż mu kartę 'Ta postać Cię wybrała', pokaż mu token Harpii, a następnie wskaż na drugiego gracza, na którego wskazała Harpia.",
+        "otherNightReminder": "Obudź Harpię; wskazuje ona na jednego gracza, a następnie na drugiego. Obudź pierwszego gracza, którego wskazała Harpia, pokaż mu kartę 'Ta postać Cię wybrała', pokaż mu token Harpii, a następnie wskaż na drugiego gracza, na który wskazała Harpia.",
         "remindersGlobal": [],
         "reminders": [
             "Szaleje",
@@ -796,7 +796,7 @@
     {
         "id": "huntsman",
         "name": "Łowczy",
-        "ability": "Raz na grę, w nocy, wybierz żywego gracza: Panienka, jeśli zostanie wybrana, staje się nie będącym w grz Mieszczaninem. [+ Panienka]",
+        "ability": "Raz na grę, w nocy, wybierz żywego gracza: Panienka, jeśli zostanie wybrana, staje się nie będącym w grze Mieszczaninem. [+ Panienka]",
         "firstNightReminder": "Łowczy potrząsa głową na 'nie' lub wskazuje na gracza. Jeśli wskazał na Panienkę, obudź tego gracza, pokaż kartę 'Jesteś' i token postaci nie będącej w grze.",
         "otherNightReminder": "Łowczy potrząsa głową na 'nie' lub wskazuje na gracza. Jeśli wskazał na Panienkę, obudź tego gracza, pokaż kartę 'Jesteś' i token postaci nie będącej w grze.",
         "remindersGlobal": [],
@@ -876,7 +876,7 @@
         "id": "king",
         "name": "Król",
         "ability": "Każdej nocy, jeśli umarli przewyższają liczebnie żywych, dowiadujesz się 1 żywej postaci. Demon wie, kim jesteś.",
-        "firstNightReminder": "Obudź Demona, pokaż im kartę 'Ta postać cię wybrała', pokaż token Króla i wskaż gracza będącego Królem.",
+        "firstNightReminder": "Obudź Demona, pokaż mu kartę 'Ten gracz jest', pokaż token Króla i wskaż gracza będącego Królem.",
         "otherNightReminder": "Jeśli jest więcej martwych niż żywych, pokaż Królowi token postaci żywego gracza.",
         "remindersGlobal": [],
         "reminders": []
@@ -928,7 +928,7 @@
     {
         "id": "librarian",
         "name": "Bibliotekarz",
-        "ability": "Na początku gry dowiadujesz się, że jeden z graczy jest konkretnym Outsiderem (lub że jest ich 0 w grze).",
+        "ability": "Na początku gry dowiadujesz się, że jeden z dwóch graczy jest konkretnym Outsiderem (lub że jest ich 0 w grze).",
         "firstNightReminder": "Pokaż token postaci Outsidera w grze. Wskaż dwóch graczy, z których jeden jest tą postacią.",
         "otherNightReminder": "",
         "remindersGlobal": [],
@@ -976,7 +976,7 @@
         "id": "lunatic",
         "name": "Szaleniec",
         "ability": "Myślisz, że jesteś Demonem, ale nim nie jesteś. Demon wie, kim jesteś, oraz kogo wybierasz nocą.",
-        "firstNightReminder": "Jeśli 7 lub więcej graczy: Pokaż Szaleńcowi 'dowolne' Informacje podane w Informacjach Demona. Jeśli token otrzymany przez Szaleńca jest Demonem, który obudzi się dziś wieczorem: Pozwól Szaleńcowi wykonać akcje Demona. Umieść tokeny 'Atak'. Obudź Demona. Pokaż Demonowi prawdziwy token postaci. Pokaż im gracza Szaleńca. Jeśli Szaleniec zaatakował graczy: Pokaż prawdziwemu Demonowi każdego zaznaczonego gracza. Usuń wszystkie tokeny \"Atak\" Szaleńca.",
+        "firstNightReminder": "Jeśli 7 lub więcej graczy: Pokaż Szaleńcowi 'dowolne' Informacje podane w Informacjach Demona. Jeśli token otrzymany przez Szaleńca jest Demonem, który obudzi się dziś wieczorem: Pozwól Szaleńcowi wykonać akcje Demona. Umieść tokeny 'Atak'. Obudź Demona. Pokaż Demonowi prawdziwy token postaci. Pokaż mu gracza Szaleńca. Jeśli Szaleniec zaatakował graczy: Pokaż prawdziwemu Demonowi każdego zaznaczonego gracza. Usuń wszystkie tokeny \"Atak\" Szaleńca.",
         "otherNightReminder": "Pozwól Szaleńcowi wykonać akcje Demona. Umieść tokeny 'Atak'. Jeśli Szaleniec zaatakował graczy: Obudź Demona. Pokaż prawdziwemu Demonowi każdego zaznaczonego gracza. Usuń wszystkie tokeny \"Atak\" Szaleńca.",
         "remindersGlobal": [],
         "reminders": [
@@ -1059,7 +1059,7 @@
         "name": "Mezofeles",
         "ability": "Zaczynasz znając sekretne słowo. Pierwszy dobry gracz, który wypowie to słowo, tej nocy staje się zły.",
         "firstNightReminder": "Pokaż Mezofelesowi jego sekretne słowo.",
-        "otherNightReminder": "Obudź pierwszego dobrego gracza, który wypowiedział sekretne słowo Mezofelesa i pokaż mu kartę 'Jesteś' oraz zły sygnał kciukami w dół.",
+        "otherNightReminder": "Obudź pierwszego dobrego gracza, który wypowiedział sekretne słowo Mezofelesa i pokaż mu kartę 'Jesteś' oraz kciukiem w dół sygnał zła",
         "remindersGlobal": [],
         "reminders": [
             "Brak zdolności",
@@ -1638,7 +1638,7 @@
     {
         "id": "undertaker",
         "name": "Grabarz",
-        "ability": "Każdej nocy* dowiadujesz się, którą postać stracono dziś podczas egzekucji.",
+        "ability": "Każdej nocy* dowiadujesz się, jaką postać stracono dziś podczas egzekucji.",
         "firstNightReminder": "",
         "otherNightReminder": "Jeśli gracz został dzisiaj stracony przez egzekucję: Pokaż token tego gracza Grabarzowi.",
         "remindersGlobal": [],
