@@ -7,7 +7,7 @@
         "otherNightReminder": "Akrobat memilih seorang pemain. Jika mereka menjadi mabuk atau diracuni malam ini, pemain Acrobat akan mati.",
         "remindersGlobal": [],
         "reminders": [
-            "Mati"
+            "Dead"
         ]
     },
     {
@@ -17,7 +17,7 @@
         "firstNightReminder": "Tunjukkan kepada Alchemist token Minion yang tidak sedang dimainkan.",
         "otherNightReminder": "",
         "remindersGlobal": [
-            "Adalah Alchemist"
+            "Is the Alchemist"
         ],
         "reminders": []
     },
@@ -32,8 +32,8 @@
             "1",
             "2",
             "3",
-            "Pilih mati",
-            "Pilih hidup"
+            "Chose death",
+            "Chose life"
         ]
     },
     {
@@ -64,19 +64,19 @@
         "otherNightReminder": "",
         "remindersGlobal": [],
         "reminders": [
-            "Lindungi",
-            "Sesuatu yang Buruk"
+            "Protect",
+            "Something Bad"
         ]
     },
     {
         "id": "apprentice",
         "name": "Apprentice",
         "ability": "Pada malam pertamamu, kamu mendapatkan kemampuan Townsfolk (jika baik), atau kemampuan Minion (jika jahat).",
-        "firstNightReminder": "Tunjukkan kartu 'Kamu adalah' kepada Apprentice, lalu token Townsfolk atau Minion. Dalam Grimoire, ganti token Apprentice dengan token karakter tersebut, dan letakkan pengingat 'Adalah Apprentice' milik Apprentice di samping token karakter tersebut.",
+        "firstNightReminder": "Tunjukkan kartu 'Kamu adalah' kepada Apprentice, lalu token Townsfolk atau Minion. Dalam Grimoire, ganti token Apprentice dengan token karakter tersebut, dan letakkan pengingat 'Is the Apprentice' milik Apprentice di samping token karakter tersebut.",
         "otherNightReminder": "",
         "remindersGlobal": [],
         "reminders": [
-            "Adalah Apprentice"
+            "Is the Apprentice"
         ]
     },
     {
@@ -87,7 +87,7 @@
         "otherNightReminder": "",
         "remindersGlobal": [],
         "reminders": [
-            "Tidak ada Kemampuan"
+            "No ability"
         ]
     },
     {
@@ -98,8 +98,8 @@
         "otherNightReminder": "Jika Pembunuh belum menggunakan kemampuannya: Pembunuh antara menunjukkan sinyal kepala 'tidak', atau menunjuk ke seorang pemain. Pemain itu mati.",
         "remindersGlobal": [],
         "reminders": [
-            "Mati",
-            "Tidak ada Kemampuan"
+            "Dead",
+            "No ability"
         ]
     },
     {
@@ -115,15 +115,15 @@
         "id": "balloonist",
         "name": "Balloonist",
         "ability": "Setiap malam, kamu mengetahui tentang pemain dengan tipe karakter yang berbeda dari malam sebelumnya. [+0 atau +1 Outsider]",
-        "firstNightReminder": "Pilih jenis karakter. Tunjuk pada pemain yang karakternya sesuai dengan tipe itu. Tempatkan pengingat Dilihat dari Balonis di sebelah karakter itu.",
-        "otherNightReminder": "Pilih tipe karakter yang berbeda dari malam sebelumnya. Tunjuk ke seorang pemain yang karakternya sesuai dengan tipe itu. Tempatkan pengingat Dilihat dari Balloonist di samping karakter itu, hapus pengingat Dilihat dari karakter sebelumnya.",
+        "firstNightReminder": "Pilih jenis karakter. Tunjuk pada pemain yang karakternya sesuai dengan tipe itu. Tempatkan pengingat Dilihat oleh Balloonist di sebelah karakter itu.",
+        "otherNightReminder": "Pilih tipe karakter yang berbeda dari malam sebelumnya. Tunjuk ke seorang pemain yang karakternya sesuai dengan tipe itu. Tempatkan pengingat Dilihat oleh Balloonist di samping karakter itu, hapus pengingat Dilihat dari karakter sebelumnya.",
         "remindersGlobal": [],
         "reminders": [
-            "Townsfolk Terlihat",
-            "Outsider Terlihat",
-            "Minion Terlihat",
-            "Demon Terlihat",
-            "Traveller Terlihat"
+            "Seen Townsfolk",
+            "Seen Outsider",
+            "Seen Minion",
+            "Seen Demon",
+            "Seen Traveller"
         ]
     },
     {
@@ -134,7 +134,7 @@
         "otherNightReminder": "Umumkan bahwa Banshee telah mati",
         "remindersGlobal": [],
         "reminders": [
-            "Memiliki Kemampuan"
+            "Has Ability"
         ]
     },
     {
@@ -145,7 +145,7 @@
         "otherNightReminder": "Jika Barber mati hari ini: Bangunkan Demon. Tunjukkan kartu 'Karakter ini memilih Anda', lalu token Barber. Demon tersebut antara menunjukkan sinyal kepala 'tidak', atau menunjuk ke 2 pemain. Jika mereka memilih pemain: Tukar token karakter. Bangunkan setiap pemain. Tunjukkan 'Kamu adalah', lalu token karakter baru mereka.",
         "remindersGlobal": [],
         "reminders": [
-            "Potong rambut malam ini"
+            "Haircuts tonight"
         ]
     },
     {
@@ -156,8 +156,8 @@
         "otherNightReminder": "Pilih seorang pemain, bangunkan mereka dan beri tahu kekuatan Barista yang mana yang mempengaruhi mereka. Perlakukan mereka sesuai (sadar/sehat/informasi yang benar atau aktifkan kemampuan mereka dua kali).",
         "remindersGlobal": [],
         "reminders": [
-            "Sadar & Sehat",
-            "Kemampuan dua kali lipat"
+            "Sober & Healthy",
+            "Ability twice"
         ]
     },
     {
@@ -186,8 +186,8 @@
         "otherNightReminder": "",
         "remindersGlobal": [],
         "reminders": [
-            "Nominasikan Tim Baik",
-            "Nominasikan Tim Jahat"
+            "Nominate good",
+            "Nominate evil"
         ]
     },
     {
@@ -204,11 +204,11 @@
         "name": "Bone Collector",
         "ability": "Sekali per permainan, di malam hari, pilih pemain yang sudah mati: mereka mendapatkan kembali kemampuannya hingga senja.",
         "firstNightReminder": "",
-        "otherNightReminder": "The Bone Collector antara menggelengkan kepala 'tidak' atau menunjuk ke pemain yang sudah mati. Jika mereka menunjuk pemain yang sudah mati, letakkan pengingat 'Memiliki Kemapuan' Bone Collector di samping token karakter pemain yang dipilih. (Mereka mungkin perlu dibangunkan malam ini untuk menggunakannya.)",
+        "otherNightReminder": "The Bone Collector antara menggelengkan kepala 'tidak' atau menunjuk ke pemain yang sudah mati. Jika mereka menunjuk pemain yang sudah mati, letakkan pengingat 'Has Ablity' Bone Collector di samping token karakter pemain yang dipilih. (Mereka mungkin perlu dibangunkan malam ini untuk menggunakannya.)",
         "remindersGlobal": [],
         "reminders": [
-            "Tidak ada Kemampuan",
-            "Memilliki Kemampuan"
+            "No ability",
+            "Has ability"
         ]
     },
     {
@@ -237,7 +237,7 @@
         "otherNightReminder": "Jika pemain jahat yang diketahui telah mati, tunjuk pemain jahat lainnya.",
         "remindersGlobal": [],
         "reminders": [
-            "Diketahui"
+            "Known"
         ]
     },
     {
@@ -253,11 +253,11 @@
         "id": "bureaucrat",
         "name": "Bureaucrat",
         "ability": "Setiap malam, pilih seorang pemain (bukan dirimu sendiri): suara mereka dihitung sebagai 3 suara besok.",
-        "firstNightReminder": "Bureaucrat menunjuk ke seorang pemain. Letakkan pengingat '3 suara' dari Birokrat di samping token karakter pemain yang dipilih.",
-        "otherNightReminder": "The Bureaucrat points to a player. Put the Bureaucrat's '3 votes' reminder by the chosen player's character token.",
+        "firstNightReminder": "Bureaucrat menunjuk ke seorang pemain. Letakkan pengingat '3 votes' dari Bureaucrat di samping token karakter pemain yang dipilih.",
+        "otherNightReminder": "Bureaucrat menunjuk ke seorang pemain. Letakkan pengingat '3 votes' dari Bureaucrat di samping token karakter pemain yang dipilih.",
         "remindersGlobal": [],
         "reminders": [
-            "3 suara"
+            "3 votes"
         ]
     },
     {
@@ -273,11 +273,11 @@
         "id": "butler",
         "name": "Butler",
         "ability": "Setiap malam, pilih seorang pemain (bukan dirimu sendiri): besok, kamu hanya boleh memberikan suara jika mereka juga memberikan suara.",
-        "firstNightReminder": "Butler menunjuk ke seorang pemain. Tandai pemain itu sebagai 'Tuan'..",
-        "otherNightReminder": "Butler menunjuk ke seorang pemain. Tandai pemain itu sebagai 'Tuan'..",
+        "firstNightReminder": "Butler menunjuk ke seorang pemain. Tandai pemain itu sebagai 'Master'.",
+        "otherNightReminder": "Butler menunjuk ke seorang pemain. Tandai pemain itu sebagai 'Master'.",
         "remindersGlobal": [],
         "reminders": [
-            "Tuan"
+            "Master"
         ]
     },
     {
@@ -288,19 +288,19 @@
         "otherNightReminder": "",
         "remindersGlobal": [],
         "reminders": [
-            "Diracuni",
-            "Mati Hari Ini"
+            "Poisoned",
+            "Died today"
         ]
     },
     {
         "id": "cerenovus",
         "name": "Cerenovus",
-        "ability": "Setiap malam, pilih seorang pemain & karakter baik: mereka \"Marah\" mereka adalah karakter ini besok, atau mungkin dieksekusi.",
-        "firstNightReminder": "Cerenovus menunjuk ke seorang pemain, lalu ke karakter di lembar mereka. Bangunkan pemain itu. Tunjukkan kartu 'Karakter ini memilih Anda', lalu token Cerenovus. Tunjukkan token karakter yang dipilih. Jika pemain tidak \"Marah\" menjadi karakter itu besok, mereka bisa dieksekusi.",
-        "otherNightReminder": "Cerenovus menunjuk ke seorang pemain, lalu ke karakter di lembar mereka. Bangunkan pemain itu. Tunjukkan kartu 'Karakter ini memilih Anda', lalu token Cerenovus. Tunjukkan token karakter yang dipilih. Jika pemain tidak \"Marah\" menjadi karakter itu besok, mereka bisa dieksekusi.",
+        "ability": "Setiap malam, pilih seorang pemain & karakter baik yang ada dalam lembar karakter (Townsfolk atau Outsider): mereka harus berusaha (\"Mad/Menggila\") sebisa mungkin meyakinkan semua orang bahwa mereka adalah karakter itu besok, jika tidak ia mungkin dieksekusi (oleh Storyteller).",
+        "firstNightReminder": "Cerenovus menunjuk ke seorang pemain, lalu ke karakter di lembar mereka. Bangunkan pemain itu. Tunjukkan kartu 'Karakter ini memilih Anda', lalu token Cerenovus. Tunjukkan token karakter yang dipilih. Jika pemain tidak \"Menggila\" menjadi karakter itu besok, mereka bisa dieksekusi.",
+        "otherNightReminder": "Cerenovus menunjuk ke seorang pemain, lalu ke karakter di lembar mereka. Bangunkan pemain itu. Tunjukkan kartu 'Karakter ini memilih Anda', lalu token Cerenovus. Tunjukkan token karakter yang dipilih. Jika pemain tidak \"Menggila\" menjadi karakter itu besok, mereka bisa dieksekusi.",
         "remindersGlobal": [],
         "reminders": [
-            "Marah"
+            "Mad"
         ]
     },
     {
@@ -347,10 +347,10 @@
         "otherNightReminder": "Kurangi jumlah hari tersisa pemain yang ditandai diracuni. Jika Courtier belum menggunakan kemampuannya: Courtier antara menunjukkan sinyal kepala 'tidak', atau menunjuk ke karakter di lembar list karakter. Jika Courtiers menggunakan kemampuannya: Jika karakter tersebut ada dalam permainan, pemain tersebut mabuk.",
         "remindersGlobal": [],
         "reminders": [
-            "Mabuk 3",
-            "Mabuk 2",
-            "Mabuk 1",
-            "Tidak ada Kemampuan"
+            "Drunk 3",
+            "Drunk 2",
+            "Drunk 1",
+            "No ability"
         ]
     },
     {
@@ -370,7 +370,7 @@
         "otherNightReminder": "Jika dipilih oleh Huntsman, bangunkan Damsel, tunjukkan kartu 'Kamu Adalah' dan token Townsfolk yang tidak sedang dimainkan.",
         "remindersGlobal": [],
         "reminders": [
-            "Tebakan digunakan"
+            "Guess used"
         ]
     },
     {
@@ -381,7 +381,7 @@
         "otherNightReminder": "",
         "remindersGlobal": [],
         "reminders": [
-            "Upss"
+            "Whoops"
         ]
     },
     {
@@ -401,7 +401,7 @@
         "otherNightReminder": "Devil’s Advocate menunjuk ke pemain yang masih hidup. Pemain itu selamat dari eksekusi besok.",
         "remindersGlobal": [],
         "reminders": [
-            "Selamat dari eksekusi"
+            "Survives execution"
         ]
     },
     {
@@ -438,7 +438,7 @@
         "firstNightReminder": "",
         "otherNightReminder": "",
         "remindersGlobal": [
-            "Mabuk"
+            "Drunk"
         ],
         "reminders": []
     },
@@ -450,8 +450,8 @@
         "otherNightReminder": "",
         "remindersGlobal": [],
         "reminders": [
-            "Pengunjung",
-            "Informasi Keliru"
+            "Visitor",
+            "False Info"
         ]
     },
     {
@@ -471,7 +471,7 @@
         "otherNightReminder": "Engineer menunjukkan sinyal kepala 'tidak', atau menunjuk ke Demon atau menunjuk ke jumlah Minion yang relevan. Jika Engineer memilih karakter, ganti Demon atau Minion dengan pilihan tersebut, lalu bangunkan pemain yang relevan dan tunjukkan kartu \"Kamu Adalah\" dan token karakter yang relevan.",
         "remindersGlobal": [],
         "reminders": [
-            "Tidak ada Kemampuan"
+            "No ability"
         ]
     },
     {
@@ -482,7 +482,7 @@
         "otherNightReminder": "",
         "remindersGlobal": [],
         "reminders": [
-            "Kembar"
+            "Twin"
         ]
     },
     {
@@ -493,7 +493,7 @@
         "otherNightReminder": "Exorcist menunjuk ke seorang pemain, berbeda dari malam sebelumnya. Jika pemain itu adalah Demon: Bangunkan Demon. Tunjukkan token Exorcist, lalu Tunjuk ke pemain Exorcist. Demon tidak bertindak malam ini.",
         "remindersGlobal": [],
         "reminders": [
-            "Terpilih"
+            "Chosen"
         ]
     },
     {
@@ -504,8 +504,8 @@
         "otherNightReminder": "Fang Gu menunjuk ke seorang pemain. Pemain itu mati. Atau, jika pemain tersebut adalah seorang Outsider dan tidak ada Fang Gu lain yang sedang bermain: Fang Gu tersebut mati sebagai pengganti pemain yang dipilih. Pemain yang dipilih sekarang adalah Fang Gu jahat. Bangunkan pemain Fang Gu yang baru. Tunjukkan kartu 'Kamu adalah', lalu tunjukkan token Fang Gu. Tunjukkan kartu 'Kamu adalah', lalu tunjukan sinyal tangan 'jahat' dengan jempol ke bawah.",
         "remindersGlobal": [],
         "reminders": [
-            "Mati",
-            "Sekali"
+            "Dead",
+            "Once"
         ]
     },
     {
@@ -525,7 +525,7 @@
         "otherNightReminder": "Fearmonger menunjuk ke seorang pemain. Jika berbeda dari malam sebelumnya, letakkan token Ketakutan di sebelah pemain tersebut dan umumkan bahwa pemain baru telah dipilih dengan kemampuan Fearmonger.",
         "remindersGlobal": [],
         "reminders": [
-            "Ketakutan"
+            "Fear"
         ]
     },
     {
@@ -545,7 +545,7 @@
         "otherNightReminder": "",
         "remindersGlobal": [],
         "reminders": [
-            "Digunakan"
+            "Used"
         ]
     },
     {
@@ -565,7 +565,7 @@
         "otherNightReminder": "",
         "remindersGlobal": [],
         "reminders": [
-            "Tidak ada Kemampuan"
+            "No ability"
         ]
     },
     {
@@ -573,11 +573,11 @@
         "name": "Flowergirl",
         "ability": "Setiap malam*, kamu akan tahu jika seorang Demon memberikan suara hari ini.",
         "firstNightReminder": "",
-        "otherNightReminder": "Anggukkan kepala 'ya' atau gelengkan kepala 'tidak' untuk apakah Demon memilih hari ini. Tempatkan penanda 'Demon tidak memilih' (hapus 'Demon memilih', jika ada).",
+        "otherNightReminder": "Anggukkan kepala 'ya' atau gelengkan kepala 'tidak' untuk apakah Demon memilih hari ini. Tempatkan penanda 'Demon not voted' (hapus 'Demon voted', jika ada).",
         "remindersGlobal": [],
         "reminders": [
-            "Demon memberikan suara",
-            "Demon tidak memberikan suara."
+            "Demon voted",
+            "Demon not voted"
         ]
     },
     {
@@ -588,7 +588,7 @@
         "otherNightReminder": "",
         "remindersGlobal": [],
         "reminders": [
-            "Tidak ada Kemampuan"
+            "No ability"
         ]
     },
     {
@@ -609,9 +609,7 @@
         "firstNightReminder": "",
         "otherNightReminder": "Gambler menunjuk ke seorang pemain, dan karakter di list lembar karakter mereka. Jika salah, Gambler mati.",
         "remindersGlobal": [],
-        "reminders": [
-            "Mati"
-        ]
+        "reminders": []
     },
     {
         "id": "gangster",
@@ -620,7 +618,9 @@
         "firstNightReminder": "",
         "otherNightReminder": "",
         "remindersGlobal": [],
-        "reminders": []
+        "reminders": [
+            "Dead"
+        ]
     },
     {
         "id": "gardener",
@@ -648,7 +648,7 @@
         "otherNightReminder": "",
         "remindersGlobal": [],
         "reminders": [
-            "Teman"
+            "Amigo"
         ]
     },
     {
@@ -659,7 +659,7 @@
         "otherNightReminder": "",
         "remindersGlobal": [],
         "reminders": [
-            "Diklaim"
+            "Claimed"
         ]
     },
     {
@@ -670,8 +670,8 @@
         "otherNightReminder": "Jika seorang Outsider mati hari ini: Godfather menunjuk seorang pemain. Pemain itu mati.",
         "remindersGlobal": [],
         "reminders": [
-            "Mati hari ini",
-            "Mati"
+            "Died today",
+            "Dead"
         ]
     },
     {
@@ -682,7 +682,7 @@
         "otherNightReminder": "",
         "remindersGlobal": [],
         "reminders": [
-            "Tidak Bisa Nominasi"
+            "Can not nominate"
         ]
     },
     {
@@ -693,7 +693,7 @@
         "otherNightReminder": "",
         "remindersGlobal": [],
         "reminders": [
-            "Mabuk"
+            "Drunk"
         ]
     },
     {
@@ -704,7 +704,7 @@
         "otherNightReminder": "Jika pernyataan publik Gossip itu benar: Pilih seorang pemain yang tidak dilindungi dari kematian malam ini. Pemain itu mati.",
         "remindersGlobal": [],
         "reminders": [
-            "Mati"
+            "Dead"
         ]
     },
     {
@@ -715,7 +715,7 @@
         "otherNightReminder": "Jika Cucu Grandmother dibunuh oleh Demon malam ini: Grandmother mati.",
         "remindersGlobal": [],
         "reminders": [
-            "Cucu"
+            "Grandchild"
         ]
     },
     {
@@ -735,19 +735,19 @@
         "otherNightReminder": "Harlot menunjuk ke pemain mana saja. Kemudian, tidurkan Harlot. Bangunkan pemain yang dipilih, tunjukkan token 'Karakter ini memilihmu', lalu token Harlot. Pemain tersebut antara mengangguk sebagai tanda setuju atau menggelengkan kepala sebagai tanda tidak setuju. Jika mereka mengangguk, bangunkan Harlot dan tunjukkan token karakter pemain yang dipilih. Kemudian, Anda dapat memutuskan bahwa kedua pemain mati.",
         "remindersGlobal": [],
         "reminders": [
-            "Mati"
+            "Dead"
         ]
     },
     {
         "id": "harpy",
         "name": "Harpy",
-        "ability": "Setiap malam, pilih 2 pemain: besok, pemain pertama \"marah\" karena pemain kedua adalah tim jahat, atau salah satu atau keduanya mungkin mati.",
+        "ability": "Setiap malam, pilih 2 pemain: besok, pemain pertama (\"Mad/Menggila\") harus menunjukan peran untuk menuduh karena pemain kedua adalah tim jahat. Jika tidak salah satu atau keduanya mungkin mati. (ditentukan oleh Storyteller)",
         "firstNightReminder": "Bangunkan Harpy; mereka menunjuk satu pemain, lalu yang lain. Bangunkan pemain pertama yang ditunjuk Harpy, tunjukkan kartu 'Karakter ini telah memilih Anda' kepada mereka, tunjukkan token Harpy kepada mereka, lalu tunjukkan pemain kedua yang ditunjuk Harpy.",
         "otherNightReminder": "Bangunkan Harpy; mereka menunjuk satu pemain, lalu yang lain. Bangunkan pemain pertama yang ditunjuk Harpy, tunjukkan kartu 'Karakter ini telah memilih Anda' kepada mereka, tunjukkan token Harpy kepada mereka, lalu tunjukkan pemain kedua yang ditunjuk Harpy.",
         "remindersGlobal": [],
         "reminders": [
-            "Marah",
-            "Kedua"
+            "Mad",
+            "2nd"
         ]
     },
     {
@@ -755,10 +755,10 @@
         "name": "Hatter",
         "ability": "Jika kamu mati siang ini atau malam ini, para pemain Minion & Demon dapat memilih karakter Minion & Demon baru untuk dimainkan.",
         "firstNightReminder": "",
-        "otherNightReminder": "Jika Hatter mati hari ini: Bangunkan Minion dan Demon. Tunjukkan kepada mereka token info 'Karakter Ini Memilih Anda', lalu token Hatter. Setiap pemain antara menggelengkan kepala 'tidak' atau menunjuk karakter lain dari jenis yang sama dengan karakter mereka saat ini. Jika pemain kedua akan mendapatkan karakter yang sama dengan pemain lain, goyangkan kepala Anda tidak dan isyaratkan agar mereka memilih lagi. Tidurkan mereka. Ganti setiap pemain ke karakter yang mereka pilih.",
+        "otherNightReminder": "Jika Hatter mati hari ini: Bangunkan Minion dan Demon. Tunjukkan kepada mereka token info 'Karakter Ini Memilih Anda', lalu token Hatter. Setiap pemain antara menggelengkan kepala 'tidak' atau menunjuk karakter lain dari jenis yang sama dengan karakter mereka saat ini. Jika pemain kedua akan mendapatkan karakter yang sama dengan pemain lain, goyangkan kepala Anda 'tidak' dan isyaratkan agar mereka memilih lagi. Tidurkan mereka. Ganti setiap pemain ke karakter yang mereka pilih.",
         "remindersGlobal": [],
         "reminders": [
-            "Pesta Teh Malam Ini"
+            "Tea Party Tonight"
         ]
     },
     {
@@ -769,13 +769,13 @@
         "otherNightReminder": "",
         "remindersGlobal": [],
         "reminders": [
-            "Sesuatu yang Buruk"
+            "Something Bad"
         ]
     },
     {
         "id": "heretic",
         "name": "Heretic",
-        "ability": "Whoever wins, loses & whoever loses, wins, even if you are dead.",
+        "ability": "Siapapun yang menang, menjadi kalah & Siapapun yang kalah, menjadi menang, meskipun kamu sudah mati.",
         "firstNightReminder": "",
         "otherNightReminder": "",
         "remindersGlobal": [],
@@ -798,7 +798,7 @@
         "otherNightReminder": "Huntsman menggelengkan kepala 'tidak' atau menunjuk ke seorang pemain. Jika mereka menunjuk ke Damsel, bangunkan pemain tersebut, tunjukkan kartu 'Kamu Adalah' dan token karakter yang tidak sedang dimainkan.",
         "remindersGlobal": [],
         "reminders": [
-            "Tidak Ada Kemampuan"
+            "No ability"
         ]
     },
     {
@@ -809,7 +809,7 @@
         "otherNightReminder": "Imp menunjuk ke seorang pemain. Pemain itu mati. Jika Imp memilih dirinya sendiri: Ganti karakter dari 1 minion yang masih hidup dengan token Imp cadangan. Tunjukkan kartu 'Kamu adalah', lalu token Imp.",
         "remindersGlobal": [],
         "reminders": [
-            "Mati"
+            "Dead"
         ]
     },
     {
@@ -820,8 +820,8 @@
         "otherNightReminder": "Pemain yang sebelumnya dilindungi dan mabuk kehilangan penanda tersebut. Innkeeper menunjuk dua pemain. Pemain-pemain itu dilindungi. Salah satunya mabuk.",
         "remindersGlobal": [],
         "reminders": [
-            "Terlindungi",
-            "Mabuk"
+            "Protected",
+            "Drunk"
         ]
     },
     {
@@ -833,7 +833,7 @@
         "remindersGlobal": [],
         "reminders": [
             "Minion",
-            "Salah"
+            "Wrong"
         ]
     },
     {
@@ -844,7 +844,7 @@
         "otherNightReminder": "",
         "remindersGlobal": [],
         "reminders": [
-            "Tidak ada Kemampuan"
+            "No ability"
         ]
     },
     {
@@ -852,10 +852,10 @@
         "name": "Juggler",
         "ability": "Pada hari pertamamu, tebak secara publik karakter hingga 5 pemain. Malam itu, kamu akan tahu berapa banyak yang benar.",
         "firstNightReminder": "",
-        "otherNightReminder": "Jika hari ini adalah hari pertama Juggler: Tunjukkan sinyal tangan untuk jumlah (0, 1, 2, dll.) penanda 'Benar'. Hapus penanda.",
+        "otherNightReminder": "Jika hari ini adalah hari pertama Juggler: Tunjukkan sinyal tangan untuk jumlah (0, 1, 2, dll.) penanda 'Correct'. Hapus penanda.",
         "remindersGlobal": [],
         "reminders": [
-            "Benar"
+            "Correct"
         ]
     },
     {
@@ -866,7 +866,7 @@
         "otherNightReminder": "Kazali menunjuk ke seorang pemain. Pemain itu mati.",
         "remindersGlobal": [],
         "reminders": [
-            "Mati"
+            "Dead"
         ]
     },
     {
@@ -895,8 +895,8 @@
         "otherNightReminder": "",
         "remindersGlobal": [],
         "reminders": [
-            "Tahu",
-            "Tahu"
+            "Know",
+            "Know"
         ]
     },
     {
@@ -907,24 +907,24 @@
         "otherNightReminder": "Pilih seorang pemain, pemain itu mati.",
         "remindersGlobal": [],
         "reminders": [
-            "Mati",
-            "Akan mati"
+            "Dead",
+            "About to die"
         ]
     },
     {
         "id": "leviathan",
         "name": "Leviathan",
         "ability": "Jika lebih dari 1 pemain baik dieksekusi, kamu menang. Semua pemain tahu bahwa kamu ada dalam permainan. Setelah hari ke-5, Tim Jahat menang.",
-        "firstNightReminder": "Tempatkan penanda 'Hari 1' Leviathan. Umumkan 'Leviathan sedang dimainkan; ini adalah Hari 1.'",
+        "firstNightReminder": "Tempatkan penanda 'Day 1' Leviathan. Umumkan 'Leviathan sedang dimainkan; ini adalah Hari 1.'",
         "otherNightReminder": "Ubah pengingat Hari Leviathan untuk hari berikutnya.",
         "remindersGlobal": [],
         "reminders": [
-            "Hari 1",
-            "Hari 2",
-            "Hari 3",
-            "Hari 4",
-            "Hari 5",
-            "Pemain Baik dieksekusi"
+            "Day 1",
+            "Day 2",
+            "Day 3",
+            "Day 4",
+            "Day 5",
+            "Good player executed"
         ]
     },
     {
@@ -936,7 +936,7 @@
         "remindersGlobal": [],
         "reminders": [
             "Outsider",
-            "Salah"
+            "Wrong"
         ]
     },
     {
@@ -946,8 +946,8 @@
         "firstNightReminder": "Bangunkan semua Minion bersama-sama, biarkan mereka memilih dengan menunjuk siapa yang mereka inginkan untuk menjaga Lil' Monsta.",
         "otherNightReminder": "Bangunkan semua Minion bersama-sama, biarkan mereka memilih dengan menunjuk siapa yang ingin mereka tugaskan untuk menjaga Lil' Monsta. Pilih seorang pemain, pemain itu mati.",
         "remindersGlobal": [
-            "adalah Demon",
-            "Mati"
+            "Is the Demon",
+            "Dead"
         ],
         "reminders": []
     },
@@ -959,8 +959,8 @@
         "otherNightReminder": "Lleech menunjuk ke seorang pemain. Pemain itu mati.",
         "remindersGlobal": [],
         "reminders": [
-            "Mati",
-            "Diracuni"
+            "Dead",
+            "Poisoned"
         ]
     },
     {
@@ -971,20 +971,20 @@
         "otherNightReminder": "Lord of Typhon menunjuk ke seorang pemain. Pemain itu mati.",
         "remindersGlobal": [],
         "reminders": [
-            "Mati"
+            "Dead"
         ]
     },
     {
         "id": "lunatic",
         "name": "Lunatic",
         "ability": "Kamu pikir kamu adalah Demon, tapi sebenarnya bukan. Demon tahu siapa dirimu dan siapa yang kau pilih di malam hari.",
-        "firstNightReminder": "Jika ada 7 atau lebih pemain: Tunjukkan kepada Lunatic sejumlah 'Minion' apa saja (sebagai pengecoh), yang  sama dengan jumlah Minion yang ada di permainan lalu tunjukkan 3 token karakter dari karakter baik apa saja seolah ia adalah demon asli. Jika token yang diterima oleh Lunatic di awal setup adalah Demon yang akan bangun malam ini: Izinkan Lunatic melakukan tindakan Demon. Tempatkan penanda 'serangan' mereka. Bangunkan Demon yang sesungguhnya. Tunjukkan token karakter asli Demon. Tunjukkan kepadanya pemain Lunatic. Jika Lunatic menyerang pemain: Tunjukkan Demon asli kepada setiap pemain yang ditandai oleh serangan tersebut. Hapus semua penanda 'serangan' Lunatic.",
+        "firstNightReminder": "Jika ada 7 atau lebih pemain: Tunjukkan kepada Lunatic sejumlah 'Minion' apa saja (sebagai pengecoh), yang  sama dengan jumlah Minion yang ada di permainan lalu tunjukkan 3 token karakter dari karakter baik apa saja seolah ia adalah demon asli. Jika token yang diterima oleh Lunatic di awal setup adalah Demon yang akan bangun malam ini: Izinkan Lunatic melakukan tindakan Demon. Tempatkan penanda 'Attack' mereka. Bangunkan Demon yang sesungguhnya. Tunjukkan token karakter asli Demon. Tunjukkan kepadanya pemain Lunatic. Jika Lunatic menyerang pemain: Tunjukkan Demon asli kepada setiap pemain yang ditandai oleh serangan tersebut. Hapus semua penanda 'Attack' Lunatic.",
         "otherNightReminder": "Izinkan Lunatic untuk melakukan aksi Demon. Tempatkan marker 'attack' mereka. Jika Lunatic memilih pemain: Bangunkan Demon. Tunjukkan marker 'attack', kemudian tunjukkan setiap pemain yang diberi tanda. Hapus semua marker 'attack' Lunatic.",
         "remindersGlobal": [],
         "reminders": [
-            "Serangan 1",
-            "Serangan 2",
-            "Serangan 3"
+            "Attack 1",
+            "Attack 2",
+            "Attack 3"
         ]
     },
     {
@@ -992,7 +992,7 @@
         "name": "Lycanthrope",
         "ability": "Setiap malam*, pilih satu pemain yang masih hidup. Jika baik, mereka mati & Demon tidak membunuh malam ini. Satu pemain baik akan terdaftar sebagai tim jahat.",
         "firstNightReminder": "",
-        "otherNightReminder": "The Lycanthrope points to a living player: if good, they die and the Demon doesn't kill tonight",
+        "otherNightReminder": "The Lycanthrope menunjuk seorang pemain yang masih hidup: jika pemain itu baik, mereka akan mati, dan Demon tidak akan membunuh malam ini.",
         "remindersGlobal": [],
         "reminders": [
             "Dead",
@@ -1012,10 +1012,10 @@
         "id": "marionette",
         "name": "Marionette",
         "ability": "Kamu pikir kamu adalah karakter yang baik, tapi sebenarnya tidak. Demon tahu siapa kamu. [Kamu bertetangga dengan Demon]",
-        "firstNightReminder": "Pilih salah satu pemain baik di samping Demon dan letakkan token pengingat \"Adalah Marionette\". Bangunkan Demon dan tunjukkan Marionette kepada mereka.",
+        "firstNightReminder": "Pilih salah satu pemain baik di samping Demon dan letakkan token pengingat \"Is The Marionette\". Bangunkan Demon dan tunjukkan Marionette kepada mereka.",
         "otherNightReminder": "",
         "remindersGlobal": [
-            "Adalah Marionette"
+            "Is the Marionette"
         ],
         "reminders": []
     },
@@ -1065,8 +1065,8 @@
         "otherNightReminder": "Bangunkan pemain baik pertama yang mengatakan kata rahasia Mezepheles dan tunjukkan kartu 'Kamu adalah' serta isyarat jempol ke bawah yang jahat.",
         "remindersGlobal": [],
         "reminders": [
-            "Berubah jahat",
-            "Tidak ada Kemampuan"
+            "Turns evil",
+            "No ability"
         ]
     },
     {
@@ -1077,7 +1077,7 @@
         "otherNightReminder": "",
         "remindersGlobal": [],
         "reminders": [
-            "Semua orang Mabuk"
+            "Everyone drunk"
         ]
     },
     {
@@ -1088,7 +1088,7 @@
         "otherNightReminder": "Pemain yang sebelumnya dilindungi tidak lagi dilindungi. Monk menunjuk ke seorang pemain, bukan dirinya sendiri. Tandai pemain itu sebagai 'Dilindungi'.",
         "remindersGlobal": [],
         "reminders": [
-            "Dilindungi"
+            "Protected"
         ]
     },
     {
@@ -1099,13 +1099,13 @@
         "otherNightReminder": "Jika Moonchild menggunakan kemampuannya untuk menargetkan seorang pemain hari ini: Jika pemain tersebut baik, mereka mati.",
         "remindersGlobal": [],
         "reminders": [
-            "Mati"
+            "Dead"
         ]
     },
     {
         "id": "mutant",
         "name": "Mutant",
-        "ability": "Jika Kamu \"marah\" karena menjadi Outsider, Kamu mungkin akan dieksekusi.",
+        "ability": "Jika Kamu (\"Mad/Menggila\") karena meyakinkan orang-orang bahwa kamu menjadi Outsider, Kamu mungkin akan dieksekusi. (Oleh Storyteller)",
         "firstNightReminder": "",
         "otherNightReminder": "",
         "remindersGlobal": [],
@@ -1119,18 +1119,18 @@
         "otherNightReminder": "Nightwatchman dapat menunjuk seorang pemain. Bangunkan pemain itu, tunjukkan kartu 'Karakter ini memilihmu' dan token Nightwatchman, lalu tunjukkan kepada pemain Nightwatchman.",
         "remindersGlobal": [],
         "reminders": [
-            "Tidak ada Kemampuan"
+            "No ability"
         ]
     },
     {
         "id": "noble",
         "name": "Noble",
-        "ability": "Anda mulai dengan mengetahui 3 pemain, 1 dan hanya 1 yang jahat.",
+        "ability": "Kamu mulai dengan mengetahui 3 pemain, 1 dan hanya 1 yang jahat.",
         "firstNightReminder": "Tunjuk 3 pemain termasuk satu pemain jahat, tanpa urutan tertentu.",
         "otherNightReminder": "",
         "remindersGlobal": [],
         "reminders": [
-            "Terlihat"
+            "Seen"
         ]
     },
     {
@@ -1141,8 +1141,8 @@
         "otherNightReminder": "No Dashii menunjuk ke seorang pemain. Pemain itu mati.",
         "remindersGlobal": [],
         "reminders": [
-            "Mati",
-            "Diracuni"
+            "Dead",
+            "Poisoned"
         ]
     },
     {
@@ -1153,7 +1153,7 @@
         "otherNightReminder": "",
         "remindersGlobal": [],
         "reminders": [
-            "Teman"
+            "Friend"
         ]
     },
     {
@@ -1164,7 +1164,7 @@
         "otherNightReminder": "Ojo menunjuk ke karakter di lembar list karakter; jika karakter itu ada dalam permainan, pemain tersebut mati. Jika tidak dalam permainan, Storyteller memilih siapa yang mati sebagai gantinya.",
         "remindersGlobal": [],
         "reminders": [
-            "Mati"
+            "Dead"
         ]
     },
     {
@@ -1184,8 +1184,8 @@
         "otherNightReminder": "",
         "remindersGlobal": [],
         "reminders": [
-            "Mabuk",
-            "Akan Mati"
+            "Drunk",
+            "About to die"
         ]
     },
     {
@@ -1201,11 +1201,11 @@
         "id": "philosopher",
         "name": "Philosopher",
         "ability": "Sekali per permainan, di malam hari, pilih karakter baik: dapatkan kemampuan itu. Jika karakter ini sedang dimainkan, mereka sedang mabuk.",
-        "firstNightReminder": "Philosopher antara menunjukkan sinyal kepala 'tidak', atau menunjuk ke karakter baik di lembar list karakter mereka. Jika mereka memilih karakter: Tukar token karakter yang tidak dimainkan dengan token Philosopher dan tambahkan pengingat 'Adalah Philosopher'. Jika karakter tersebut sedang dimainkan, letakkan penanda mabuk di samping token pemain yang memiliki karakter tersebut.",
-        "otherNightReminder": "Jika Philosopher belum menggunakan kemampuannya : Philosopher antara menunjukkan sinyal kepala 'tidak', atau menunjuk ke karakter baik di lembar list karakter mereka. Jika mereka memilih karakter: Tukar token karakter yang tidak dimainkan dengan token Philosopher dan tambahkan pengingat 'Adalah Philosopher'. Jika karakter tersebut sedang dimainkan, letakkan penanda mabuk di samping token pemain yang memiliki karakter tersebut.",
+        "firstNightReminder": "Philosopher antara menunjukkan sinyal kepala 'tidak', atau menunjuk ke karakter baik di lembar list karakter mereka. Jika mereka memilih karakter: Tukar token karakter yang tidak dimainkan dengan token Philosopher dan tambahkan pengingat 'Is The Philosopher'. Jika karakter tersebut sedang dimainkan, letakkan penanda mabuk di samping token pemain yang memiliki karakter tersebut.",
+        "otherNightReminder": "Jika Philosopher belum menggunakan kemampuannya : Philosopher antara menunjukkan sinyal kepala 'tidak', atau menunjuk ke karakter baik di lembar list karakter mereka. Jika mereka memilih karakter: Tukar token karakter yang tidak dimainkan dengan token Philosopher dan tambahkan pengingat 'Is The Philosopher'. Jika karakter tersebut sedang dimainkan, letakkan penanda mabuk di samping token pemain yang memiliki karakter tersebut.",
         "remindersGlobal": [
-            "Adalah Philosopher",
-            "Mabuk"
+            "Is the Philosopher",
+            "Drunk"
         ],
         "reminders": []
     },
@@ -1221,13 +1221,13 @@
     {
         "id": "pixie",
         "name": "Pixie",
-        "ability": "Kamu mulai dengan mengetahui 1 Townsfolk yang sedang ada dalam permainan. Jika kamu 'marah' karena kamu adalah karakter ini, kamu akan mendapatkan kemampuannya ketika dia mati.",
+        "ability": "Kamu mulai dengan mengetahui 1 Townsfolk yang sedang ada dalam permainan. Jika kamu (\"Mad/Menggila\") sebisa mungkin berusaha meyakinkan orang-orang bahwa kamu adalah karakter tersebut, kamu akan mendapatkan kemampuannya ketika dia mati. (Storyteller yang menentukan)",
         "firstNightReminder": "Tunjukkan pada Pixie 1 token karakter Townsfolk yang sedang dimainkan.",
         "otherNightReminder": "",
         "remindersGlobal": [],
         "reminders": [
-            "Marah",
-            "Memiliki kemampuan"
+            "Mad",
+            "Has ability"
         ]
     },
     {
@@ -1238,7 +1238,7 @@
         "otherNightReminder": "",
         "remindersGlobal": [],
         "reminders": [
-            "Kemampuan Storyteller"
+            "Storyteller Ability"
         ]
     },
     {
@@ -1249,8 +1249,8 @@
         "otherNightReminder": "Jika Po tidak memilih siapa pun malam sebelumnya: Po menunjuk ke tiga pemain. Jika tidak: Po antara menunjukkan sinyal kepala 'tidak', atau menunjuk ke seorang pemain. Pemain yang terpilih mati.",
         "remindersGlobal": [],
         "reminders": [
-            "Mati",
-            "3 serangan"
+            "Dead",
+            "3 attacks"
         ]
     },
     {
@@ -1261,7 +1261,7 @@
         "otherNightReminder": "Pemain yang sebelumnya diracun tidak lagi diracun. Poisoner menunjuk ke seorang pemain. Pemain itu diracuni.",
         "remindersGlobal": [],
         "reminders": [
-            "Diracuni"
+            "Poisoned"
         ]
     },
     {
@@ -1281,7 +1281,7 @@
         "otherNightReminder": "Jika Poppy Grower telah mati, tunjukkan kepada Minion/Demon info satu sama lain.",
         "remindersGlobal": [],
         "reminders": [
-            "Tim Jahat Bangun"
+            "Evil wakes"
         ]
     },
     {
@@ -1292,7 +1292,7 @@
         "otherNightReminder": "Preacher memilih seorang pemain. Jika seorang Minion dipilih, bangunkan Minion tersebut dan tunjukkan kartu 'Karakter ini memilihmu' dan kemudian token Preacher.",
         "remindersGlobal": [],
         "reminders": [
-            "Di sebuah khotbah"
+            "At a sermon"
         ]
     },
     {
@@ -1303,8 +1303,8 @@
         "otherNightReminder": "Jika Professor belum menggunakan kemampuannya: Professor antara menggelengkan kepala 'tidak', atau menunjuk ke seorang pemain yang sudah mati. Jika pemain tersebut adalah Townsfolk, mereka sekarang hidup.",
         "remindersGlobal": [],
         "reminders": [
-            "Hidup",
-            "Tidak ada Kemampuan"
+            "Alive",
+            "No ability"
         ]
     },
     {
@@ -1324,8 +1324,8 @@
         "otherNightReminder": "Pukka menunjuk ke seorang pemain. Pemain itu diracuni. Pemain yang sebelumnya teracuni mati.",
         "remindersGlobal": [],
         "reminders": [
-            "Diracuni",
-            "Mati"
+            "Poisoned",
+            "Dead"
         ]
     },
     {
@@ -1336,8 +1336,8 @@
         "otherNightReminder": "",
         "remindersGlobal": [],
         "reminders": [
-            "Mabuk",
-            "Tebakan digunakan"
+            "Drunk",
+            "Guess used"
         ]
     },
     {
@@ -1366,7 +1366,7 @@
         "otherNightReminder": "",
         "remindersGlobal": [],
         "reminders": [
-            "Daftar Palsu?"
+            "Register Falsely?"
         ]
     },
     {
@@ -1395,7 +1395,7 @@
         "otherNightReminder": "Pemain yang mabuk sebelumnya tidak lagi mabuk. Sailor menunjuk ke pemain yang masih hidup. Entah Sailor, atau pemain yang dipilih, sedang mabuk.",
         "remindersGlobal": [],
         "reminders": [
-            "Mabuk"
+            "Drunk"
         ]
     },
     {
@@ -1444,7 +1444,7 @@
         "otherNightReminder": "Jika Seamstress belum menggunakan kemampuannya: Seamstress akan memberi sinyal kepala 'tidak', atau menunjuk ke dua pemain lain. Jika Seamstress memilih pemain, anggukkan kepala 'ya' atau gelengkan kepala 'tidak' untuk mengetahui apakah mereka memiliki pihak yang sama.",
         "remindersGlobal": [],
         "reminders": [
-            "Tidak ada Kemampuan"
+            "No ability"
         ]
     },
     {
@@ -1464,8 +1464,8 @@
         "otherNightReminder": "Satu pemain yang dipilih Shabaloth malam sebelumnya mungkin dibangkitkan. Shabaloth menunjuk ke dua pemain. Pemain-pemain tersebut mati.",
         "remindersGlobal": [],
         "reminders": [
-            "Mati",
-            "Hidup"
+            "Dead",
+            "Alive"
         ]
     },
     {
@@ -1485,7 +1485,7 @@
         "otherNightReminder": "",
         "remindersGlobal": [],
         "reminders": [
-            "Tidak ada Kemampuan"
+            "No ability"
         ]
     },
     {
@@ -1493,10 +1493,10 @@
         "name": "Snake Charmer",
         "ability": "Setiap malam, pilih seorang pemain yang masih hidup: Demon yang dipilih menukar karakter & pihak denganmu dan kemudian diracuni.",
         "firstNightReminder": "Snake Charmer menunjuk ke seorang pemain. Jika pemain tersebut adalah Demon: tukar karakter dan afiliasi Demon dan Snake Charmer. Bangunkan setiap pemain untuk memberitahukan peran dan afiliasi baru mereka. Snake Charmer yang baru menjadi teracuni.",
-        "otherNightReminder": "Snake Charmer menunjuk ke seorang pemain. Jika pemain tersebut adalah Demon: tukar karakter dan afiliasi Demon dan Snake Charmer. Bangunkan setiap pemain untuk memberitahukan peran dan afiliasi baru mereka. Snake Charmer yang baru menjadi teracuni.",
+        "otherNightReminder": "Snake Charmer menunjuk ke seorang pemain. Jika pemain tersebut adalah Demon: tukar karakter dan pihak Demon dan Snake Charmer. Bangunkan setiap pemain untuk memberitahukan peran dan pihak baru mereka. Snake Charmer yang baru menjadi teracuni.",
         "remindersGlobal": [],
         "reminders": [
-            "Diracuni"
+            "Poisoned"
         ]
     },
     {
@@ -1525,7 +1525,7 @@
         "otherNightReminder": "",
         "remindersGlobal": [],
         "reminders": [
-            "Tidak ada Tim jahat Tambahan"
+            "No extra evil"
         ]
     },
     {
@@ -1545,7 +1545,7 @@
         "otherNightReminder": "",
         "remindersGlobal": [],
         "reminders": [
-            "Tahu"
+            "Know"
         ]
     },
     {
@@ -1556,7 +1556,7 @@
         "otherNightReminder": "",
         "remindersGlobal": [],
         "reminders": [
-            "Aman"
+            "Safe"
         ]
     },
     {
@@ -1567,9 +1567,9 @@
         "otherNightReminder": "Jika ini malam ketiga, bangunkan Summoner. Mereka menunjuk ke seorang pemain dan Demon di lembar karakter - pemain tersebut menjadi Demon itu.",
         "remindersGlobal": [],
         "reminders": [
-            "Malam 1",
-            "Malam 2",
-            "Malam 3"
+            "Night 1",
+            "Night 2",
+            "Night 3"
         ]
     },
     {
@@ -1580,7 +1580,7 @@
         "otherNightReminder": "Pilih pemain yang sedang mabuk.",
         "remindersGlobal": [],
         "reminders": [
-            "Mabuk"
+            "Drunk"
         ]
     },
     {
@@ -1591,18 +1591,18 @@
         "otherNightReminder": "",
         "remindersGlobal": [],
         "reminders": [
-            "Tidak Bisa Mati"
+            "Can not die"
         ]
     },
     {
         "id": "thief",
         "name": "Thief",
         "ability": "Setiap malam, pilih seorang pemain (bukan dirimu): suara mereka dihitung negatif besok.",
-        "firstNightReminder": "Thief menunjuk ke seorang pemain. Letakkan pengingat 'Negatif vote' milik Thief di token karakter pemain yang dipilih.",
-        "otherNightReminder": "Thief menunjuk ke seorang pemain. Letakkan pengingat 'Negatif vote' milik Thief di token karakter pemain yang dipilih.",
+        "firstNightReminder": "Thief menunjuk ke seorang pemain. Letakkan pengingat 'Negative vote' milik Thief di token karakter pemain yang dipilih.",
+        "otherNightReminder": "Thief menunjuk ke seorang pemain. Letakkan pengingat 'Negative vote' milik Thief di token karakter pemain yang dipilih.",
         "remindersGlobal": [],
         "reminders": [
-            "Negatif Vote"
+            "Negative vote"
         ]
     },
     {
@@ -1613,7 +1613,7 @@
         "otherNightReminder": "Tinker mungkin mati.",
         "remindersGlobal": [],
         "reminders": [
-            "Mati"
+            "Dead"
         ]
     },
     {
@@ -1621,11 +1621,11 @@
         "name": "Town Crier",
         "ability": "Setiap malam*, kamu mengetahui jika seorang Minion menominasikan hari ini.",
         "firstNightReminder": "",
-        "otherNightReminder": "Anggukkan kepala 'ya' atau goyangkan kepala 'tidak' apakah ada Minion yang menominasikan hari ini. Letakkan marker 'Minion tidak dinominasikan' (hapus 'Minion dinominasikan', jika ada).",
+        "otherNightReminder": "Anggukkan kepala 'ya' atau goyangkan kepala 'tidak' apakah ada Minion yang menominasikan hari ini. Letakkan marker 'Minions not nominated' (hapus 'Minion nominated', jika ada).",
         "remindersGlobal": [],
         "reminders": [
-            "Minio tidak dinominasikan",
-            "Minion dinominasikan"
+            "Minions not nominated",
+            "Minion nominated"
         ]
     },
     {
@@ -1636,7 +1636,7 @@
         "otherNightReminder": "",
         "remindersGlobal": [],
         "reminders": [
-            "Tidak ada Serangan"
+            "No Attack"
         ]
     },
     {
@@ -1647,7 +1647,7 @@
         "otherNightReminder": "Jika seorang pemain dieksekusi hari ini: Tunjukkan token karakter pemain tersebut.",
         "remindersGlobal": [],
         "reminders": [
-            "Eksekusi"
+            "Executed"
         ]
     },
     {
@@ -1658,9 +1658,9 @@
         "otherNightReminder": "Vigormortis menunjuk ke seorang pemain. Pemain tersebut mati. Jika Minion, mereka tetap memiliki kemampuan dan salah satu tetangga Townsfolk mereka teracuni.",
         "remindersGlobal": [],
         "reminders": [
-            "Mati",
-            "Memiliki Kemampuan",
-            "Diracuni."
+            "Dead",
+            "Has ability",
+            "Poisoned"
         ]
     },
     {
@@ -1671,7 +1671,7 @@
         "otherNightReminder": "Village Idiot menunjuk ke seorang pemain; beri jempol ke atas jika pemain tersebut baik atau jempol ke bawah jika pemain tersebut jahat.",
         "remindersGlobal": [],
         "reminders": [
-            "Mabuk"
+            "Drunk"
         ]
     },
     {
@@ -1682,7 +1682,7 @@
         "otherNightReminder": "",
         "remindersGlobal": [],
         "reminders": [
-            "Tidak ada Kemampuan"
+            "No ability"
         ]
     },
     {
@@ -1702,7 +1702,7 @@
         "otherNightReminder": "Vortox menunjuk ke seorang pemain. Pemain tersebut mati.",
         "remindersGlobal": [],
         "reminders": [
-            "Mati"
+            "Dead"
         ]
     },
     {
@@ -1723,7 +1723,7 @@
         "remindersGlobal": [],
         "reminders": [
             "Townsfolk",
-            "Salah"
+            "Wrong"
         ]
     },
     {
@@ -1736,7 +1736,7 @@
             "Knows"
         ],
         "reminders": [
-            "Diracuni"
+            "Poisoned"
         ]
     },
     {
@@ -1747,15 +1747,15 @@
         "otherNightReminder": "Jika ada 4 atau lebih pemain yang hidup: Witch menunjuk ke seorang pemain. Jika pemain tersebut menominasikan esok hari, mereka langsung mati.",
         "remindersGlobal": [],
         "reminders": [
-            "Dikutuk"
+            "Cursed"
         ]
     },
     {
         "id": "wizard",
-        "name": "Penyihir",
-        "ability": "Sekali per permainan, pilih untuk membuat permintaan.  Jika dikabulkan, mungkin ada harganya & meninggalkan petunjuk tentang sifatnya.",
-        "firstNightReminder": "Jalankan kemampuan Penyihir jika ada.",
-        "otherNightReminder": "Jalankan kemampuan Penyihir jika ada.",
+        "name": "Wizard",
+        "ability": "Sekali dalam satu permainan, kamu bisa memilih untuk mengucapkan sebuah permohonan. Jika permohonan itu dikabulkan, mungkin ada konsekuensinya dan akan memberikan petunjuk tentang sifat permohonan tersebut.",
+        "firstNightReminder": "Jalankan kemampuan Wizard jika dapat diterapkan.",
+        "otherNightReminder": "Jalankan kemampuan Wizard jika dapat diterapkan.",
         "remindersGlobal": [],
         "reminders": [
             "?"
@@ -1769,9 +1769,9 @@
         "otherNightReminder": "",
         "remindersGlobal": [],
         "reminders": [
-            "Malam 1",
-            "Malam2",
-            "malam3",
+            "Night 1",
+            "Night 2",
+            "Night 3",
             "X"
         ]
     },
@@ -1783,7 +1783,7 @@
         "otherNightReminder": "Pilih sejumlah pemain hingga total kali Yaggababble mengucapkan frase rahasia mereka secara publik, pemain-pemain tersebut mati.",
         "remindersGlobal": [],
         "reminders": [
-            "Mati"
+            "Dead"
         ]
     },
     {
@@ -1803,8 +1803,8 @@
         "otherNightReminder": "Jika tidak ada yang mati selama hari itu: Zombuul menunjuk ke seorang pemain. Pemain tersebut mati.",
         "remindersGlobal": [],
         "reminders": [
-            "Mati Hari ini",
-            "Mati"
+            "Died today",
+            "Dead"
         ]
     }
 ]

@@ -10,18 +10,18 @@ dialog:
 
 index:
     title: Permainan
-    description: Sebuah grimoire virtual untuk Blood on the Clocktower
+    description: Sebuah virtual grimoire untuk Blood on the Clocktower
 
 sheet:
     title: Lembar Karakter
     description: Lembar karakter untuk edisi ini dari Blood on the Clocktower
     jinx: Jinx
-    each_night: '* Setiap malam kecuali malam pertama.'
+    each_night: "* Setiap malam kecuali malam pertama."
     get_qr_code: Dapatkan kode QR untuk lembar ini
     get_sheet: Dapatkan lembar ini
     credit: <a href="https://bloodontheclocktower.com/" target="_blank" rel="noopener noreferrer">Blood on the Clocktower</a> adalah merek dagang dari Steven Medway dan <a href="https://www.thepandemoniuminstitute.com/" target="_blank" rel="noopener noreferrer">The Pandemonium Institute</a>
     breakdown: Jumlah masing-masing tim untuk jumlah pemain.
-    count_plus: '%count%+'
+    count_plus: "%count%+"
 
 groups:
     players: Pemain
@@ -39,13 +39,13 @@ messages:
     version_change_message: Aplikasi ini telah memperbarui versinya. Karena data Anda mungkin tidak benar, kami menyarankan Anda untuk menghapus semuanya di dialog "Clear Cache". Tekan "OK" untuk membuka dialog atau "Cancel" untuk menutup pesan ini.
     invalid_script: Format skrip tidak dikenali.
     no_characters: Skrip tidak mengandung karakter yang dikenali.
-    player_name: Apa nama pemain ini?
-    custom_info_token: Apa yang Anda ingin tulis pada token info baru Anda? Gunakan **asterisk ganda** untuk menekankan teks.
-    bag_disabled: 'Karakter-karakter ini tidak dapat ditambahkan ke kantong: {0}'
+    player_name: Siapa nama pemain ini?
+    custom_info_token: "Apa yang Anda ingin tulis pada token info baru Anda? Gunakan **asterisk ganda** untuk menekankan teks."
+    bag_disabled: "Karakter-karakter ini tidak dapat ditambahkan ke kantong: {0}"
 
 setup:
 
-    title: Setup
+    title: Pengaturan
 
     buttons:
         select_edition: Pilih Edisi
@@ -95,7 +95,7 @@ setup:
     qr_code:
         title: Lembar karakter
         intro: Pindai kode QR ini untuk melihat lembar karakter
-        include: 'Termasuk:'
+        include: "Termasuk:"
         travellers: Travellers
         fabled: Fabled
 
@@ -121,8 +121,8 @@ setup:
         height_note: Tinggi pad di grimoire.
         clear_refresh_label: Segarkan setelahnya
         clear_refresh_note: Menyegarkan akan memuat data baru untuk segala sesuatu yang telah dihapus.
-        warning: '<strong>Peringatan:</strong> token yang telah ditempatkan pada grimoire akan terlupakan.'
-        info_token_warning: '<strong>Peringatan:</strong> token info kustom akan terlupakan.'
+        warning: "<strong>Peringatan:</strong> token yang telah ditempatkan pada grimoire akan terlupakan."
+        info_token_warning: "<strong>Peringatan:</strong> token info kustom akan terlupakan."
         clear_cache: Hapus Cache
 
 grimoire:
@@ -130,7 +130,7 @@ grimoire:
     title: Grimoire
 
     grimoire:
-        bluffs: Demon Bluffs
+        bluffs: Gunakan untuk bluffing!
         show_bluffs: Tampilkan semua bluff
         add_bluffs: Tambah bluff
         add_token: Tambah token
@@ -163,10 +163,10 @@ grimoire:
         reminder: Pengingat
         replace: Ganti
         remove: Hapus token
-        recent_reminders: 'Pengingat yang paling baru ditambahkan:'
+        recent_reminders: "Pengingat yang paling baru ditambahkan:"
         player_name: Setel nama pemain
         ghost_vote: Hantu Voting
-        orphan: 'Peringatan: karakter ini tidak ada dalam skrip saat ini.'
+        orphan: "Peringatan: karakter ini tidak ada dalam skrip saat ini."
 
     reminder_show:
         title: Pengingat
@@ -244,7 +244,7 @@ acknowledgements:
         - Pengingat malam dan teks tambahan lainnya ditulis oleh <a href="http://bignose.whitetree.org/projects/botc/diy/" target="_blank" rel="noopener noreferrer">Ben Finney</a>.
         - Ikon diambil dari <a href="https://fontawesome.com/v5.15/icons" target="_blank" rel="noopener noreferrer">Font Awesome</a>.
         - Banyak gambar dan data diambil dari <a href="https://www.clocktower.online" target="_blank" rel="noopener noreferrer">Clocktower.online</a> dan <a href="https://bloodontheclocktower.com/" target="_blank" rel="noopener noreferrer">situs web Blood on the Clocktower</a>.
-        - Ini adalah grimoire virtual tidak resmi untuk Blood on the Clocktower. Proyek ini gratis dan kode sumbernya dapat ditemukan di <a href="https://github.com/Skateside/pocket-grimoire" target="_blank" rel="noopener noreferrer">GitHub</a>. Proyek ini tidak berafiliasi dengan Pandemonium Institute. Jika Anda menikmati bermain Blood on the Clocktower, <a href="https://bloodontheclocktower.com/buy" target="_blank" rel="noopener noreferrer">pertimbangkan untuk membeli grimoire Anda sendiri</a> - selain lebih fleksibel daripada versi digital ini, juga mendukung para pencipta.
+        - Ini adalah virtual grimoire tidak resmi untuk Blood on the Clocktower. Proyek ini gratis dan kode sumbernya dapat ditemukan di <a href="https://github.com/Skateside/pocket-grimoire" target="_blank" rel="noopener noreferrer">GitHub</a>. Proyek ini tidak berafiliasi dengan Pandemonium Institute. Jika Anda menikmati bermain Blood on the Clocktower, <a href="https://bloodontheclocktower.com/buy" target="_blank" rel="noopener noreferrer">pertimbangkan untuk membeli grimoire Anda sendiri</a> - selain lebih fleksibel daripada versi digital ini, juga mendukung para pembuatnya.
         - Melihat bug atau memiliki saran perbaikan? Beri tahu saya di saluran <a href="https://discord.gg/eU89j89" target="_blank" rel="noopener noreferrer">pocket-grimoire di server discord tidak resmi</a> (nama saya di sana adalah "Skateside") atau <a href="https://github.com/Skateside/pocket-grimoire/issues" target="_blank" rel="noopener noreferrer">buka topik permasalahan di GitHub</a>.
         - <small>Versi <span id="version"></span></small>
 

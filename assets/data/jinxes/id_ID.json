@@ -17,7 +17,7 @@
     {
         "target": "cannibal",
         "trick": "juggler",
-        "reason": "Jika Juggler menebak pada hari pertama dan mati karena eksekusi, malam ini Kanibal yang masih hidup mengetahui berapa banyak tebakan Juggler yang benar."
+        "reason": "Jika Juggler menebak pada hari pertama mereka dan mati karena dieksekusi, malam ini Cannibal yang masih hidup akan mengetahui berapa banyak tebakan Juggler yang benar."
     },
     {
         "target": "cannibal",
@@ -87,7 +87,7 @@
     {
         "target": "plaguedoctor",
         "trick": "baron",
-        "reason": "Jika Pendongeng memperoleh kemampuan Baron, maksimal dua pemain menjadi Orang Luar yang tidak ikut bermain."
+        "reason": "Jika Storyteller mendapatkan kemampuan Baron, tambah hingga dua pemain akan menjadi Outsider yang tidak sedang dimainkan "
     },
     {
         "target": "plaguedoctor",
@@ -112,7 +112,7 @@
     {
         "target": "plaguedoctor",
         "trick": "marionette",
-        "reason": "Jika Iblis memiliki tetangga yang masih hidup dan Penduduk Kota atau Orang Luar ketika Dokter Wabah meninggal, pemain tersebut menjadi Marionette yang jahat. Jika sudah ada pemain ekstra jahat, hal ini tidak terjadi."
+        "reason": "Jika Demon memiliki tetangga yang masih hidup dan merupakan anggota Townsfolk atau Outsider ketika Plague Doctor mati, pemain itu akan berubah menjadi Marionette yang jahat. Namun, jika sudah ada pemain jahat tambahan, hal ini tidak terjadi."
     },
     {
         "target": "plaguedoctor",
@@ -217,7 +217,7 @@
     {
         "target": "pithag",
         "trick": "ogre",
-        "reason": "Jika Pit-Hag mengubah pemain jahat menjadi Ogre, mereka tidak bisa berubah menjadi baik karena kemampuannya sendiri."
+        "reason": "Jika Pit-Hag mengubah pemain jahat menjadi Ogre, pemain itu tidak bisa berubah menjadi baik karena kemampuan mereka sendiri."
     },
     {
         "target": "pithag",
@@ -242,7 +242,7 @@
     {
         "target": "spy",
         "trick": "alchemist",
-        "reason": "Jika Alchemist memiliki kemampuan Spy, mereka tidak akan melihat Grimoire, dan Spy asli tidak dapat salah mendaftar."
+        "reason": "Jika Alchemist memiliki kemampuan Spy, mereka tidak bisa melihat Grimoire, dan Spy yang asli tidak bisa terdaftar secara palsu."
     },
     {
         "target": "spy",
@@ -307,7 +307,7 @@
     {
         "target": "summoner",
         "trick": "marionette",
-        "reason": "Marionette bertetangga dengan Summoner. Pemanggil tahu siapa Marionette itu."
+        "reason": "Marionette berada di sebelah Summoner. Summoner tahu siapa Marionette itu."
     },
     {
         "target": "summoner",
@@ -342,12 +342,12 @@
     {
         "target": "vizier",
         "trick": "courtier",
-        "reason": "Jika Wazir kehilangan kemampuannya, mereka mempelajarinya. Jika Wazir dieksekusi saat mereka masih memiliki kemampuannya, tim mereka menang."
+        "reason": "Jika Vizier kehilangan kemampuannya, mereka akan mengetahuinya. Jika Vizier dieksekusi sementara mereka masih memiliki kemampuan, tim mereka menang."
     },
     {
         "target": "vizier",
         "trick": "fearmonger",
-        "reason": "Wazir bangun bersama Fearmonger, mengetahui siapa yang mereka pilih dan tidak dapat memilih untuk segera mengeksekusi pemain itu."
+        "reason": "Vizier bangun bersama Fearmonger, mengetahui siapa yang dipilih Fearmonger, dan tidak bisa memilih untuk langsung mengeksekusi pemain itu."
     },
     {
         "target": "vizier",
@@ -357,7 +357,7 @@
     {
         "target": "vizier",
         "trick": "magician",
-        "reason": "Jika Wazir dan Penyihir sama-sama bermain, Iblis tidak akan mempelajari Minion."
+        "reason": "Jika Vizier dan Magician sama-sama ada dalam permainan, Demon tidak akan mengetahui siapa Minion-nya."
     },
     {
         "target": "vizier",
@@ -367,7 +367,7 @@
     {
         "target": "vizier",
         "trick": "preacher",
-        "reason": "Jika Wazir kehilangan kemampuannya, mereka mempelajarinya. Jika Wazir dieksekusi saat mereka masih memiliki kemampuannya, tim mereka menang."
+        "reason": "Jika Vizier kehilangan kemampuannya, mereka akan mengetahuinya. Jika Vizier dieksekusi sementara mereka masih memiliki kemampuan, tim mereka menang."
     },
     {
         "target": "vizier",
@@ -377,7 +377,7 @@
     {
         "target": "widow",
         "trick": "alchemist",
-        "reason": "Jika Alchemist memiliki kemampuan Widow, mereka tidak akan melihat Grimoire."
+        "reason": "Jika Alchemist memiliki kemampuan Widow, mereka tidak bisa melihat Grimoire."
     },
     {
         "target": "widow",
@@ -442,27 +442,27 @@
     {
         "target": "legion",
         "trick": "zealot",
-        "reason": "Zelot mungkin dianggap jahat terhadap kemampuan Legiun."
+        "reason": "Zealot mungkin terdaftar sebagai jahat terhadap kemampuan Legion."
     },
     {
         "target": "leviathan",
         "trick": "banshee",
-        "reason": "Setiap malam*, Leviathan memilih pemain bagus yang masih hidup (berbeda dengan malam sebelumnya): Banshee terpilih mati & memperoleh kemampuannya."
+        "reason": "Setiap malam*, Leviathan memilih pemain baik yang masih hidup (berbeda dari malam sebelumnya): Banshee yang dipilih mati dan mendapatkan kemampuan mereka."
     },
     {
         "target": "leviathan",
         "trick": "exorcist",
-        "reason": "Kejahatan tidak menang ketika lebih dari 1 pemain baik telah dieksekusi, jika Exorcist masih hidup dan berhasil memilih Leviathan."
+        "reason": "Tim jahat tidak menang ketika lebih dari 1 pemain baik dieksekusi, jika Exorcist masih hidup dan pernah berhasil memilih Leviathan."
     },
     {
         "target": "leviathan",
         "trick": "farmer",
-        "reason": "Setiap malam*, Leviathan memilih pemain bagus yang masih hidup (berbeda dengan malam sebelumnya): Petani terpilih menggunakan kemampuannya tetapi tidak mati."
+        "reason": "Setiap malam*, Leviathan memilih pemain baik yang masih hidup (berbeda dari malam sebelumnya): Farmer yang dipilih menggunakan kemampuan mereka tetapi tidak mati."
     },
     {
         "target": "leviathan",
         "trick": "grandmother",
-        "reason": "Jika Leviathan sedang bermain dan sang Cucu mati karena eksekusi, kejahatan menang."
+        "reason": "Jika Leviathan ada dalam permainan dan Grandchild mati karena dieksekusi, tim jahat menang."
     },
     {
         "target": "leviathan",
@@ -472,22 +472,22 @@
     {
         "target": "leviathan",
         "trick": "innkeeper",
-        "reason": "Jika Leviathan sedang dimainkan, pemain yang dilindungi pemilik penginapan akan aman dari semua kemampuan jahat."
+        "reason": "Jika Leviathan ada dalam permainan, pemain yang dilindungi Innkeeper aman dari semua kemampuan jahat."
     },
     {
         "target": "leviathan",
         "trick": "king",
-        "reason": "Jika Leviathan sedang dimainkan, dan setidaknya 1 pemain mati, Raja mempelajari karakter hidup setiap malam."
+        "reason": "Jika Leviathan ada dalam permainan, dan setidaknya 1 pemain sudah mati, King mempelajari satu karakter yang masih hidup setiap malam."
     },
     {
         "target": "leviathan",
         "trick": "mayor",
-        "reason": "Jika Leviathan sedang dimainkan & tidak ada eksekusi yang terjadi pada hari ke 5, kemenangan bagus."
+        "reason": "Jika Leviathan ada dalam permainan dan tidak ada eksekusi pada hari ke-5, tim baik menang."
     },
     {
         "target": "leviathan",
         "trick": "monk",
-        "reason": "Jika Leviathan sedang dimainkan, pemain yang dilindungi Biksu aman dari semua kemampuan jahat."
+        "reason": "Jika Leviathan ada dalam permainan, pemain yang dilindungi Monk aman dari semua kemampuan jahat."
     },
     {
         "target": "leviathan",
@@ -497,17 +497,17 @@
     {
         "target": "leviathan",
         "trick": "ravenkeeper",
-        "reason": "Setiap malam*, Leviathan memilih pemain yang masih hidup (berbeda dengan malam sebelumnya): Ravenkeeper terpilih menggunakan kemampuannya tetapi tidak mati."
+        "reason": "Setiap malam*, Leviathan memilih pemain yang masih hidup (berbeda dari malam sebelumnya): Ravenkeeper yang dipilih menggunakan kemampuan mereka tetapi tidak mati."
     },
     {
         "target": "leviathan",
         "trick": "sage",
-        "reason": "Setiap malam*, Leviathan memilih pemain bagus yang masih hidup (berbeda dengan malam sebelumnya): Sage yang dipilih menggunakan kemampuannya tetapi tidak mati."
+        "reason": "Setiap malam*, Leviathan memilih pemain baik yang masih hidup (berbeda dari malam sebelumnya): Sage yang dipilih menggunakan kemampuan mereka tetapi tidak mati."
     },
     {
         "target": "leviathan",
         "trick": "soldier",
-        "reason": "Jika Leviathan sedang dimainkan, Prajurit aman dari segala kemampuan jahat."
+        "reason": "Jika Leviathan ada dalam permainan, Soldier aman dari semua kemampuan jahat."
     },
     {
         "target": "lilmonsta",
@@ -517,7 +517,7 @@
     {
         "target": "lilmonsta",
         "trick": "magician",
-        "reason": "Setiap malam, Penyihir memilih Minion: jika Minion & Lil' Monsta masih hidup, Minion tersebut akan mengasuh Lil' Monsta."
+        "reason": "Setiap malam, Magician memilih seorang Minion: jika Minion itu dan Lil' Monsta masih hidup, Minion tersebut mengasuh Lil’ Monsta."
     },
     {
         "target": "lilmonsta",
@@ -547,57 +547,57 @@
     {
         "target": "riot",
         "trick": "banshee",
-        "reason": "Setiap malam*, Riot memilih pemain bagus yang masih hidup (berbeda dengan malam sebelumnya): Banshee terpilih mati & memperoleh kemampuannya."
+        "reason": "Setiap malam*, Riot memilih pemain baik yang masih hidup (berbeda dari malam sebelumnya): Banshee yang dipilih mati dan mendapatkan kemampuan mereka."
     },
     {
         "target": "riot",
         "trick": "exorcist",
-        "reason": "Jika Exorcist memilih Riot pada malam ke-3, Minion tidak menjadi Riot."
+        "reason": "Jika Exorcist memilih Riot pada malam ke-3, Minion tidak berubah menjadi Riot."
     },
     {
         "target": "riot",
         "trick": "farmer",
-        "reason": "Setiap malam*, Riot memilih pemain bagus yang masih hidup (berbeda dengan malam sebelumnya): Petani terpilih menggunakan kemampuannya tetapi tidak mati."
+        "reason": "Setiap malam*, Riot memilih pemain baik yang masih hidup (berbeda dari malam sebelumnya): Farmer yang dipilih menggunakan kemampuan mereka tetapi tidak mati."
     },
     {
         "target": "riot",
         "trick": "grandmother",
-        "reason": "Jika Riot sedang dimainkan dan sang Cucu mati di siang hari, Nenek juga akan mati."
+        "reason": "Jika Riot ada dalam permainan dan Grandchild mati selama siang hari, Grandmother juga mati."
     },
     {
         "target": "riot",
         "trick": "innkeeper",
-        "reason": "Jika Riot sedang dimainkan, pemain yang dilindungi Innkeeper aman dari semua kemampuan jahat."
+        "reason": "Jika Riot ada dalam permainan, pemain yang dilindungi Innkeeper aman dari semua kemampuan jahat."
     },
     {
         "target": "riot",
         "trick": "king",
-        "reason": "Jika Riot sedang dimainkan, dan setidaknya 1 pemain mati, Raja mempelajari karakter hidup setiap malam."
+        "reason": "Jika Riot ada dalam permainan, dan setidaknya 1 pemain sudah mati, King mempelajari satu karakter yang masih hidup setiap malam."
     },
     {
         "target": "riot",
         "trick": "mayor",
-        "reason": "Walikota dapat memilih untuk menghentikan pencalonan. Jika mereka melakukannya ketika hanya 1 Riot yang masih hidup, maka kebaikan akan menang. Kalau tidak, kejahatan akan menang."
+        "reason": "Mayor dapat memilih untuk menghentikan nominasi. Jika mereka melakukannya saat hanya 1 Riot yang masih hidup, tim baik menang. Jika tidak, tim jahat menang."
     },
     {
         "target": "riot",
         "trick": "monk",
-        "reason": "Jika Riot sedang dimainkan, pemain yang dilindungi Monk aman dari semua kemampuan jahat."
+        "reason": "Jika Riot ada dalam permainan, pemain yang dilindungi Monk aman dari semua kemampuan jahat."
     },
     {
         "target": "riot",
         "trick": "ravenkeeper",
-        "reason": "Setiap malam*, Riot memilih pemain bagus yang masih hidup (berbeda dengan malam sebelumnya): Ravenkeeper terpilih menggunakan kemampuannya tetapi tidak mati."
+        "reason": "Setiap malam*, Riot memilih pemain baik yang masih hidup (berbeda dari malam sebelumnya): Ravenkeeper yang dipilih menggunakan kemampuan mereka tetapi tidak mati."
     },
     {
         "target": "riot",
         "trick": "sage",
-        "reason": "Setiap malam*, Riot memilih pemain bagus yang masih hidup (berbeda dengan malam sebelumnya): Sage terpilih menggunakan kemampuannya tetapi tidak mati."
+        "reason": "Setiap malam*, Riot memilih pemain baik yang masih hidup (berbeda dari malam sebelumnya): Sage yang dipilih menggunakan kemampuan mereka tetapi tidak mati."
     },
     {
         "target": "riot",
         "trick": "soldier",
-        "reason": "Jika Riot dimainkan, Prajurit aman dari segala kemampuan jahat."
+        "reason": "Jika Riot ada dalam permainan, Soldier aman dari semua kemampuan jahat."
     },
     {
         "target": "vortox",
