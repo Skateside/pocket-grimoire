@@ -9,7 +9,6 @@ import {
     announceInput
 } from "../../utils/elements.js";
 import {
-    readUTF8,
     supplant
 } from "../../utils/strings.js";
 import {
@@ -434,16 +433,12 @@ form.addEventListener("submit", (e) => {
 
                 const reader = new FileReader();
 
-                // 1. Accented characters were getting mangled. This fix allows
-                //    them to be included. Noticed when trying to upload a
-                //    homebrew Spanish script.
-
                 reader.addEventListener("load", ({ target }) => {
 
                     let json = [];
 
                     try {
-                        json = JSON.parse(readUTF8(target.result)); // [1]
+                        json = JSON.parse(target.result);
                     } catch (error) {
                         return showInputError(fileInput, I18N.invalidScript);
                     }
