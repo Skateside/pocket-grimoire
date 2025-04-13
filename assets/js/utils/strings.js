@@ -7,6 +7,7 @@
  * @return {String}
  *         Converted string.
  * @see    https://stackoverflow.com/a/24282873/557019
+ * @deprecated
  */
 export function readUTF8(bytes) {
 
