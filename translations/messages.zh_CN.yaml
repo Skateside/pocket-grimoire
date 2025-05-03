@@ -198,6 +198,11 @@ grimoire:
     token:
         title: 角色标记
 
+    export:
+        title: 导出游戏
+        markup: 生成二维码，以便将游戏数据导入 <a href="https://the-grim.netlify.app/" target="_blank" rel="noopener noreferrer">The Grim</a>。
+        button: 生成二维码
+
 jinxes:
     title: 相克规则
     target: 角色1

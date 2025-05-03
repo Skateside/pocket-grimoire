@@ -199,6 +199,11 @@ grimoire:
     token:
         title: トークン
 
+    export:
+        title: ゲームのエクスポート
+        markup: ゲームデータを<a href="https://the-grim.netlify.app/" target="_blank" rel="noopener noreferrer">The Grim</a>にインポートするためのQRコードを生成します。
+        button: QRコードを生成
+
 jinxes:
     title: ジンクス
     target: ターゲット

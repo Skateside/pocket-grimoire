@@ -14,6 +14,7 @@ import "./processes/grimoire/demon-bluffs.js";
 import "./processes/grimoire/reset.js";
 import "./processes/grimoire/travellers.js";
 import "./processes/grimoire/fabled.js";
+import "./processes/grimoire/export.js";
 
 import "./processes/jinxes.js";
 

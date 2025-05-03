@@ -199,6 +199,11 @@ grimoire:
     token:
         title: Жетон
 
+    export:
+        title: Экспорт игры
+        markup: Сгенерируйте QR-код, чтобы данные игры можно было импортировать в <a href="https://the-grim.netlify.app/" target="_blank" rel="noopener noreferrer">The Grim</a>.
+        button: Сгенерировать QR-код
+
 jinxes:
     title: Сглазы
     target: Цель

@@ -1,7 +1,7 @@
 import Token from "./Token.js";
 import CharacterToken from "./CharacterToken.js";
 import InfoToken from "./InfoToken.js";
-import BluffsGroups from "./BluffsGroups.js";
+import Observer from "./Observer.js";
 import {
     deepClone,
     deepFreeze
@@ -96,6 +96,16 @@ export default class Store {
          */
         this.infoTokens = [];
 
+        /**
+         * An observer that works behind-the-scenes to allow other code to
+         * listen to changes in the store.
+         */
+        this.observer = new Observer();
+
+    }
+
+    addListener(listener) {
+        this.observer.on("written", listener);
     }
 
     /**
@@ -103,6 +113,7 @@ export default class Store {
      */
     write() {
         window.localStorage.setItem(this.key, JSON.stringify(this.data));
+        this.observer.trigger("written", this.get());
     }
 
     /**

@@ -199,6 +199,11 @@ grimoire:
     token:
         title: Token
 
+    export:
+        title: Export game
+        markup: Generate a QR code so that the game data can be imported into <a href="https://the-grim.netlify.app/" target="_blank" rel="noopener noreferrer">The Grim</a>.
+        button: Generate QR code
+
 jinxes:
     title: Jinxes
     target: Target

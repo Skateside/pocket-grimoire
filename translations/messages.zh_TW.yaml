@@ -198,6 +198,11 @@ grimoire:
     token:
         title: 角色代幣
 
+    export:
+        title: 匯出遊戲
+        markup: 產生二維碼，以便將遊戲資料導入<a href="https://the-grim.netlify.app/" target="_blank" rel="noopener noreferrer">The Grim</a>。
+        button: 產生二維碼
+
 jinxes:
     title: 特殊互動規則
     target: 角色1

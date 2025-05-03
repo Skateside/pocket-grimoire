@@ -198,6 +198,11 @@ grimoire:
     token:
         title: Token
 
+    export:
+        title: Exportar jogo
+        markup: Gerar um código QR para que os dados do jogo possam ser importados para <a href="https://the-grim.netlify.app/" target="_blank" rel="noopener noreferrer">The Grim</a>.
+        button: Gerar código QR
+
 jinxes:
     title: Jinxes
     target: Alvo
