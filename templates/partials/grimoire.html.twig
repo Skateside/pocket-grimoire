@@ -37,6 +37,16 @@
             </div>
 
             <div class="mt-4">
+                {{ forms.switch({
+                    node: 'div',
+                    label: 'grimoire.grimoire.colorize_tokens'|trans,
+                    name: 'colorize-tokens',
+                    id: 'colorize-tokens',
+                    checked: true
+                }) }}
+            </div>
+
+            <div class="mt-4">
                 {{ forms.range({
                     label: 'grimoire.grimoire.character_size'|trans,
                     name: 'token-size',
