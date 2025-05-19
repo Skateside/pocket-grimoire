@@ -81,7 +81,7 @@
     },
     {
         "id": "artist",
-        "name": "Künstlerin",
+        "name": "Künstler",
         "ability": "Einmal pro Spiel, am Tag, stelle dem Erzähler privat 1 beliebge Ja/Nein-Frage.",
         "firstNightReminder": "",
         "otherNightReminder": "",
@@ -138,10 +138,10 @@
     },
     {
         "id": "barber",
-        "name": "Friseur",
+        "name": "Barbier",
         "ability": "Wenn du am Tag oder diese Nacht gestorben bist, kann der Dämon 2 Spieler wählen (nicht einen anderen Dämon), welche Charaktere tauschen.",
         "firstNightReminder": "",
-        "otherNightReminder": "Wenn der Friseur heute gestorben ist: Wecke den Dämon. Zeige ihm die \"Dieser Charakter wählte dich aus\" Karte und dann die Karte des Friseurs. Der Dämon zeigt entweder ein \"Nein\" Signal mit dem Kopf oder zeigt auf zwei Spieler. Wenn er Spieler gewählt hat: Tausche die Charakterkarten. Wecke die Spieler. Zeige Ihnen: \"Du bist' und danach ihren neuen Charakter.",
+        "otherNightReminder": "Wenn der Barbier heute gestorben ist: Wecke den Dämon. Zeige ihm die \"Dieser Charakter wählte dich aus\" Karte und dann die Karte des Barbiers. Der Dämon zeigt entweder ein \"Nein\" Signal mit dem Kopf oder zeigt auf zwei Spieler. Wenn er Spieler gewählt hat: Tausche die Charakterkarten. Wecke die Spieler. Zeige Ihnen: \"Du bist' und danach ihren neuen Charakter.",
         "remindersGlobal": [],
         "reminders": [
             "Heute gibt's Haarschnitte"
@@ -1119,7 +1119,7 @@
         "name": "No Dashii",
         "ability": "Jede Nacht*, wähle 1 Spieler: er stirbt. Deine beiden Bürger-Nachbarn sind vergiftet.",
         "firstNightReminder": "",
-        "otherNightReminder": "Der No Dashii zeigt auf einen Spieler. Dieser Spieler stirbt.",
+        "otherNightReminder": "Die No Dashii zeigt auf einen Spieler. Dieser Spieler stirbt.",
         "remindersGlobal": [],
         "reminders": [
             "Tot",
@@ -1192,10 +1192,10 @@
     },
     {
         "id": "pithag",
-        "name": "Trankbrauerin",
+        "name": "Grubenweib",
         "ability": "Jede Nacht*, wähle 1 Spieler und 1 Charakter zu dem er wird (falls nicht bereits im Spiel). Wenn du auf diesem Weg einen Dämon erschaffst, sind Tode diese Nacht willkürlich. Spieler ändern nur Charakter, nicht Gesinnung.",
         "firstNightReminder": "",
-        "otherNightReminder": "Die Trankbrauerin zeigt auf einen Spieler und auf einen Charakter am Charakterbogen. Wenn dieser Charakter nicht im Spiel ist, wecke den Spieler und zeige ihm die 'Du bist' Karte und den Charaktertoken. Befindet sich der Charakter im Spiel, passiert nichts.",
+        "otherNightReminder": "Das Grubenweib zeigt auf einen Spieler und auf einen Charakter am Charakterbogen. Wenn dieser Charakter nicht im Spiel ist, wecke den Spieler und zeige ihm die 'Du bist' Karte und den Charaktertoken. Befindet sich der Charakter im Spiel, passiert nichts.",
         "remindersGlobal": [],
         "reminders": []
     },
@@ -1361,10 +1361,10 @@
     },
     {
         "id": "sage",
-        "name": "Weiser",
+        "name": "Weise",
         "ability": "Wenn der Dämon dich tötet, erfährst du, dass 1 von 2 Spielern der Dämon ist.",
         "firstNightReminder": "",
-        "otherNightReminder": "Wenn der Weise vom Dämon getötet wird: Zeige auf zwei Spieler, von denen einer der Dämon ist.",
+        "otherNightReminder": "Wenn die Weise vom Dämon getötet wird: Zeige auf zwei Spieler, von denen einer der Dämon ist.",
         "remindersGlobal": [],
         "reminders": []
     },
@@ -1390,7 +1390,7 @@
     },
     {
         "id": "savant",
-        "name": "Gelehrter",
+        "name": "Savant",
         "ability": "Du kannst jeden Tag privat zum Erzähler gehen und 2 Aussagen erhalten: 1 stimmt, 1 ist falsch",
         "firstNightReminder": "",
         "otherNightReminder": "",
@@ -1555,7 +1555,7 @@
     },
     {
         "id": "sweetheart",
-        "name": "Liebling",
+        "name": "Liebchen",
         "ability": "Wenn du stirbst, dann ist 1 Spieler von dem Moment an betrunken.",
         "firstNightReminder": "",
         "otherNightReminder": "Wähle einen Spieler, der betrunken wird.",
@@ -1599,7 +1599,7 @@
     },
     {
         "id": "towncrier",
-        "name": "Stadtschreier",
+        "name": "Marktschreier",
         "ability": "Du erfährst jede Nacht*, ob ein Scherge am Tag jemanden nominiert hat.",
         "firstNightReminder": "",
         "otherNightReminder": "Nicke (Ja) oder schüttle den Kopf (Nein) um zu zeigen, ob ein Scherge heute nominiert hat. Platziere den 'Scherge hat nicht nominiert' bzw. 'Scherge hat nominiert'.",
