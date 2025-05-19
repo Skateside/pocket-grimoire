@@ -92,10 +92,10 @@
     },
     {
         "id": "assassin",
-        "name": "Assassine",
+        "name": "Meuchelmörder",
         "ability": "Einmal pro Spiel, in der Nacht*, wähle 1 Spieler: der Spieler stirbt, auch wenn er eigentlich aus irgendeinem Grund überleben sollte.",
         "firstNightReminder": "",
-        "otherNightReminder": "Hat der Assassine seine Fähigkeit noch nicht verwendet: Der Assassnie zeigt entweder ein 'Nein' Signal mit dem Kopf oder zeigt auf einen Spieler. Dieser Spieler stirbt.",
+        "otherNightReminder": "Hat der Meuchelmörder seine Fähigkeit noch nicht verwendet: Der Meuchelmörder zeigt entweder ein 'Nein' Signal mit dem Kopf oder zeigt auf einen Spieler. Dieser Spieler stirbt.",
         "remindersGlobal": [],
         "reminders": [
             "Keine Fähigkeit",
@@ -304,10 +304,10 @@
     },
     {
         "id": "chambermaid",
-        "name": "Kammermädchen",
+        "name": "Kammerzofe",
         "ability": "Jede Nacht, wähle 2 lebende Spieler (nicht dich selbst): du erfährst, wie viele von ihnen diese Nacht aufgrund ihrer Charakterfähigkeit erwachten.",
-        "firstNightReminder": "Das Kammermädchen zeigt auf zwei Spieler. Zeige dem Spieler wieviele (0, 1 oder 2) dieser Spieler in der letzten Nacht erwacht sind um ihre Fähigkeit zu verwenden.",
-        "otherNightReminder": "Das Kammermädchen zeigt auf zwei Spieler. Zeige dem Spieler wieviele (0, 1 oder 2) dieser Spieler in der letzten Nacht erwacht sind um ihre Fähigkeit zu verwenden.",
+        "firstNightReminder": "Die Kammerzofe zeigt auf zwei Spieler. Zeige dem Spieler wieviele (0, 1 oder 2) dieser Spieler in der letzten Nacht erwacht sind um ihre Fähigkeit zu verwenden.",
+        "otherNightReminder": "Die Kammerzofe zeigt auf zwei Spieler. Zeige dem Spieler wieviele (0, 1 oder 2) dieser Spieler in der letzten Nacht erwacht sind um ihre Fähigkeit zu verwenden.",
         "remindersGlobal": [],
         "reminders": []
     },
@@ -340,10 +340,10 @@
     },
     {
         "id": "courtier",
-        "name": "Schmeichler",
+        "name": "Höfling",
         "ability": "Einmal pro Spiel, in der Nacht, wähle 1 Charakter: falls im Spiel, ist dieser für 3 Nächte und 3 Tage betrunken.",
-        "firstNightReminder": "Der Schmeichler schüttelt entweder den Kopf (Nein) oder zeigt auf einen Charakter am Charakterbogen. Wenn der Schmeichler seine Fähigkeit nutzt: Der ausgewählte Charakter ist für drei Tage und Nächte betrunken, wenn er sich im Spiel befindet.",
-        "otherNightReminder": "Reduziere die Anzahl der Tage, die der ausgewählte Spieler betrunken ist. Falls der Schmeichler seine Fähigkeit noch nicht benutzt hat: Der Schmeichler schüttelt entweder den Kopf (Nein) oder zeigt auf einen Charakter am Charakterbogen. Wenn der Schmeichler seine Fähigkeit nutzt: Der ausgewählte Charakter ist für drei Tage und Nächte betrunken, wenn er sich im Spiel befindet.",
+        "firstNightReminder": "Der Höfling schüttelt entweder den Kopf (Nein) oder zeigt auf einen Charakter am Charakterbogen. Wenn der Höfling seine Fähigkeit nutzt: Der ausgewählte Charakter ist für drei Tage und Nächte betrunken, wenn er sich im Spiel befindet.",
+        "otherNightReminder": "Reduziere die Anzahl der Tage, die der ausgewählte Spieler betrunken ist. Falls der Höfling seine Fähigkeit noch nicht benutzt hat: Der Höfling schüttelt entweder den Kopf (Nein) oder zeigt auf einen Charakter am Charakterbogen. Wenn der Höfling seine Fähigkeit nutzt: Der ausgewählte Charakter ist für drei Tage und Nächte betrunken, wenn er sich im Spiel befindet.",
         "remindersGlobal": [],
         "reminders": [
             "Betrunken 1",
@@ -394,10 +394,10 @@
     },
     {
         "id": "devilsadvocate",
-        "name": "Anwalt des Teufels",
+        "name": "Teufelsadvokat",
         "ability": "Jede Nacht, wähle 1 lebenden Spieler (nicht denselben wie die Nacht zuvor): wird der Spieler morgen hingerichtet, stirbt er nicht.",
-        "firstNightReminder": "Der Anwalt des Teufels zeigt auf einen lebenden Spieler. Dieser Spieler übberlebt die Exekution morgen.",
-        "otherNightReminder": "Der Anwalt des Teufels zeigt auf einen (anderen) lebenden Spieler. Dieser Spieler übberlebt die Exekution morgen.",
+        "firstNightReminder": "Der Teufelsadvokat zeigt auf einen lebenden Spieler. Dieser Spieler übberlebt die Exekution morgen.",
+        "otherNightReminder": "Der Teufelsadvokat zeigt auf einen (anderen) lebenden Spieler. Dieser Spieler übberlebt die Exekution morgen.",
         "remindersGlobal": [],
         "reminders": [
             "Überlebt Exekution"
@@ -668,7 +668,7 @@
     },
     {
         "id": "goon",
-        "name": "Trottel",
+        "name": "Schläger",
         "ability": "Jede Nacht: der erste Spieler, der dich mit seiner Fähigkeit wählt, ist betrunken bis Sonnenuntergang. Du nimmst dessen Gesinnung an (gut oder böse).",
         "firstNightReminder": "",
         "otherNightReminder": "",
@@ -957,10 +957,10 @@
     },
     {
         "id": "lunatic",
-        "name": "Wahnsinniger",
-        "ability": "Du weißt nicht, dass du der Wahnsinnige bist. Du denkst, du seist ein Dämon, bist du aber nicht. Der Dämon weiß, wer du bist und wen du angreifst.",
-        "firstNightReminder": "Bei 7 oder mehr Spielern: Zeige dem Wahnisnnigen  die Anzahl an falschen 'Schergen', die im Spiel sind.Wenn der Dämon, den der Wahnsinnige sieht ein Dämon ist, der in der Nacht erwacht: Erlaube dem Wahnsinnigen Dämonenaktionen durchzuführen. Platziere den 'Attacke' Marker. Wenn der Wahnsinnige einen Spieler auswählt: Wecke den Dämon. Zeige ihm den 'Attackiere' Marker, dann zeige auf jeden vom Wahnsinnigen markierten Spieler. Entferne die Attacke Marker des Wahnsinnigen.",
-        "otherNightReminder": "Erlaube dem Wahnsinnigen Dämonenaktionen durchzuführen. Platziere den 'Attacke' Marker. Wenn der Wahnsinnige einen Spieler auswählt: Wecke den Dämon. Zeige ihm den 'Attackiere' Marker, dann zeige auf jeden vom Wahnsinnigen markierten Spieler. Entferne die Attacke Marker des Wahnsinnigen.",
+        "name": "Verrückte",
+        "ability": "Du weißt nicht, dass du die Verrückte bist. Du denkst, du seist ein Dämon, bist du aber nicht. Der Dämon weiß, wer du bist und wen du angreifst.",
+        "firstNightReminder": "Bei 7 oder mehr Spielern: Zeige der Verrückten die Anzahl an falschen 'Schergen', die im Spiel sind. Wenn der Dämon, den die Verrückte sieht, ein Dämon ist, der in der Nacht erwacht: Erlaube der Verrückten Dämonenaktionen durchzuführen. Platziere den 'Attacke' Marker. Wenn die Verrückte einen Spieler auswählt: Wecke den Dämon. Zeige ihm den 'Attackiere' Marker, dann zeige auf jeden von der Verrückten markierten Spieler. Entferne die Attacke Marker der Verrückten.",
+        "otherNightReminder": "Erlaube der Verrückten Dämonenaktionen durchzuführen. Platziere den 'Attacke' Marker. Wenn die Verrückte einen Spieler auswählt: Wecke den Dämon. Zeige ihm den 'Attackiere' Marker, dann zeige auf jeden von der Verrückten markierten Spieler. Entferne die Attacke Marker der Verrückten.",
         "remindersGlobal": [],
         "reminders": [
             "Angriff 1",
@@ -1002,7 +1002,7 @@
     },
     {
         "id": "mastermind",
-        "name": "Genie",
+        "name": "Strippenzieher",
         "ability": "Wenn der Dämon durch eine Hinrichtung stirbt (und das Spiel beenden würde), spiele für einen weiteren Tag. Wird am darauffolgenden Tag ein Spieler hingerichtet, verliert das Team mit derselben Gesinnung wie der Spieler.",
         "firstNightReminder": "",
         "otherNightReminder": "",
@@ -1224,10 +1224,10 @@
     },
     {
         "id": "po",
-        "name": "Pou",
+        "name": "Poe",
         "ability": "Jede Nacht* kannst du 1 Spieler wählen: er stirbt. Wenn deine letzte Wahl niemand war, wähle 3 Spieler diese Nacht.",
         "firstNightReminder": "",
-        "otherNightReminder": "Wenn der Pou niemanden in der letzten Nacht gewählt hat: Der Pou zeigt auf drei Spieler. Andernfalls: Der Pou zeigt entweder Nein durch Kopfschütteln oder zeigt auf einen Spieler. Ausgewählte Spieler sterben.",
+        "otherNightReminder": "Wenn der Poe niemanden in der letzten Nacht gewählt hat: Der Poe zeigt auf drei Spieler. Andernfalls: Der Poe zeigt entweder Nein durch Kopfschütteln oder zeigt auf einen Spieler. Ausgewählte Spieler sterben.",
         "remindersGlobal": [],
         "reminders": [
             "3 Angriffe",
@@ -1301,8 +1301,8 @@
         "id": "pukka",
         "name": "Pukka",
         "ability": "Jede Nacht, wähle 1 Spieler: er ist vergiftet. Der zuvor vergiftete Spieler stirbt und wird dann gesund.",
-        "firstNightReminder": "Der Pukka zeigt auf einen Spieler. Dieser Spieler ist vergiftet.",
-        "otherNightReminder": "Der Pukka zeigt auf einen Spieler. Dieser Spieler ist vergiftet. Der Spieler der zuvor vergiftet wurde, stirbt.",
+        "firstNightReminder": "Die Pukka zeigt auf einen Spieler. Dieser Spieler ist vergiftet.",
+        "otherNightReminder": "Die Pukka zeigt auf einen Spieler. Dieser Spieler ist vergiftet. Der Spieler der zuvor vergiftet wurde, stirbt.",
         "remindersGlobal": [],
         "reminders": [
             "Tot",
@@ -1370,10 +1370,10 @@
     },
     {
         "id": "sailor",
-        "name": "Seemann",
+        "name": "Segler",
         "ability": "Jede Nacht, wähle 1 lebenden Spieler: entweder du oder er ist bis Sonnenuntergang betrunken. Du kannst nicht sterben.",
-        "firstNightReminder": "Der Seemann zeigt auf einen lebenden Spieler. Entweder der Seemann oder der gewählte Spieler ist betrunken.",
-        "otherNightReminder": "Der Spieler der zuvor betrunken wurde ist wieder nüchtern. Der Seemann zeigt auf einen lebenden Spieler. Entweder der Seemann oder der gewählte Spieler ist betrunken.",
+        "firstNightReminder": "Der Segler zeigt auf einen lebenden Spieler. Entweder der Segler oder der gewählte Spieler ist betrunken.",
+        "otherNightReminder": "Der Segler der zuvor betrunken wurde ist wieder nüchtern. Der Segler zeigt auf einen lebenden Spieler. Entweder der Segler oder der gewählte Spieler ist betrunken.",
         "remindersGlobal": [],
         "reminders": [
             "Betrunken"
@@ -1588,10 +1588,10 @@
     },
     {
         "id": "tinker",
-        "name": "Erfinder",
+        "name": "Bastler",
         "ability": "Du könntest zu jederzeit sterben.",
         "firstNightReminder": "",
-        "otherNightReminder": "Der Erfinder könnte sterben.",
+        "otherNightReminder": "Der Bastler könnte sterben.",
         "remindersGlobal": [],
         "reminders": [
             "Tot"
