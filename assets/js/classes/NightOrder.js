@@ -280,21 +280,38 @@ export default class NightOrder {
 
     /**
      * Gets the index in {@link NightOrder#data} for the data that represents
-     * the given character. If the character cannot be found an error is thrown.
+     * the given character.
      *
      * @param  {CharacterToken} character
      *         Character whose data's index should be returned.
      * @return {Number}
      *         Index of the character within the data.
-     * @throws {ReferenceError}
-     *         The character must exist within the data.
      */
     getDataIndex(character) {
 
         const id = character.getId();
-        const index = this.data.findIndex((data) => {
+
+        return this.data.findIndex((data) => {
             return data.character.getId() === id;
         });
+
+    }
+
+    /**
+     * Helper function for getting the item within {@link NightOrder#data} that
+     * represents the given character. If the character cannot be found an error
+     * is thrown.
+     *
+     * @param  {CharacterToken} character
+     *         Character whose data should be returned.
+     * @return {Object}
+     *         Data for the given character.
+     * @throws {ReferenceError}
+     *         The character must exist within the data.
+     */
+    getData(character) {
+
+        const index = this.getDataIndex(character);
 
         if (index < 0) {
 
@@ -304,21 +321,20 @@ export default class NightOrder {
 
         }
 
-        return index;
+        return this.data[index];
 
     }
 
     /**
-     * Helper function for getting the item within {@link NightOrder#data} that
-     * represents the given character.
+     * Checks to see if the given character exists within the data.
      *
      * @param  {CharacterToken} character
-     *         Character whose data should be returned.
-     * @return {Object}
-     *         Data for the given character.
+     *         Character to check for.
+     * @return {Boolean}
+     *         true if the character exists, false otherwise.
      */
-    getData(character) {
-        return this.data[this.getDataIndex(character)];
+    hasCharacter(character) {
+        return this.getDataIndex(character) > -1;
     }
 
     /**

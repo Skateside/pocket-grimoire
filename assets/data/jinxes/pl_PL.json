@@ -1,0 +1,612 @@
+[
+    {
+        "target": "bountyhunter",
+        "trick": "kazali",
+        "reason": "Zły Mieszkaniec jest stworzony tylko wtedy, gdy Łowca Nagród jest nadal w grze po akcji Kazali."
+    },
+    {
+        "target": "bountyhunter",
+        "trick": "philosopher",
+        "reason": "Jeśli Filozof zyska umiejętność Łowcy Nagród, Mieszkaniec może stać się zły."
+    },
+    {
+        "target": "cannibal",
+        "trick": "butler",
+        "reason": "Jeśli Kanibal zyska umiejętność Lokaja, Kanibal dowiaduje się o tym."
+    },
+    {
+        "target": "cannibal",
+        "trick": "juggler",
+        "reason": "Jeśli Żongler odgadnie pierwszego dnia i umrze w wyniku egzekucji, dziś wieczorem żyjący Kanibal dowie się, ile domysłów Żongler był poprawny."
+    },
+    {
+        "target": "cannibal",
+        "trick": "poppygrower",
+        "reason": "Jeśli Kanibal zje Uprawcę Maku, po czym umrze lub straci umiejętność Uprawcy Maku, wtedy Demon i Sługusi poznają się."
+    },
+    {
+        "target": "cannibal",
+        "trick": "zealot",
+        "reason": "Jeśli Kanibal zyska umiejętność Zelota, Kanibal dowiaduje się o tym."
+    },
+    {
+        "target": "mathematician",
+        "trick": "chambermaid",
+        "reason": "Pokojówka dowiaduje się, czy Matematyk budzi się dzisiejszej nocy, mimo że Pokojówka budzi się pierwsza."
+    },
+    {
+        "target": "mathematician",
+        "trick": "lunatic",
+        "reason": "Matematyk dowiaduje się, czy Szaleniec atakuje innego gracza niż prawdziwy Demon."
+    },
+    {
+        "target": "butler",
+        "trick": "organgrinder",
+        "reason": "Jeśli Kataryniarz sprawia, że gracze zamykają oczy podczas głosowania, Lokaj może podnieść rękę do głosowania, ale jego głos jest liczony tylko wtedy, gdy jego Mistrz też głosuje."
+    },
+    {
+        "target": "heretic",
+        "trick": "baron",
+        "reason": "Baron może dodać tylko 1 Outsidera, nie 2."
+    },
+    {
+        "target": "heretic",
+        "trick": "boffin",
+        "reason": "Demon nie może mieć umiejętności Heretyka."
+    },
+    {
+        "target": "heretic",
+        "trick": "godfather",
+        "reason": "Tylko 1 zauroczona postać może być w grze."
+    },
+    {
+        "target": "heretic",
+        "trick": "lleech",
+        "reason": "Jeśli Pijawka zatruła Heretyka, to umiera, a Heretyk pozostaje zatruty."
+    },
+    {
+        "target": "heretic",
+        "trick": "pithag",
+        "reason": "Jędza nie może stworzyć Heretyka."
+    },
+    {
+        "target": "heretic",
+        "trick": "spy",
+        "reason": "Tylko 1 zauroczona postać może być w grze."
+    },
+    {
+        "target": "heretic",
+        "trick": "widow",
+        "reason": "Tylko 1 zauroczona postać może być w grze."
+    },
+    {
+        "target": "ogre",
+        "trick": "recluse",
+        "reason": "Jeśli Odludek jest rejestrowany przez Ogra jako zły, to Ogr dowiaduje się, że jest zły."
+    },
+    {
+        "target": "plaguedoctor",
+        "trick": "baron",
+        "reason": "Jeśli Narrator zdobędzie zdolność Barona, maksymalnie dwóch graczy stanie się outsiderami niebędącymi w grze."
+    },
+    {
+        "target": "plaguedoctor",
+        "trick": "boomdandy",
+        "reason": "Jeśli Doktor Plagi zostanie stracony, a Bajarz zyska umiejętność Bombera, zostanie ona natychmiast uruchomiona."
+    },
+    {
+        "target": "plaguedoctor",
+        "trick": "eviltwin",
+        "reason": "Bajarz nie może zdobyć umiejętności Złego Bliźniaka, jeśli Doktor Plagi umrze."
+    },
+    {
+        "target": "plaguedoctor",
+        "trick": "fearmonger",
+        "reason": "Jeśli Doktor Plagi umrze, żyjący Sługus zyskuje dodatkową umiejętość Siewcy Strachu, i dowiaduje się o tym."
+    },
+    {
+        "target": "plaguedoctor",
+        "trick": "goblin",
+        "reason": "Jeśli Doktor Plagi umrze, żyjący Sługus zyskuje dodatkową umiejętność Goblina, i dowiaduje się o tym."
+    },
+    {
+        "target": "plaguedoctor",
+        "trick": "marionette",
+        "reason": "Jeśli Demon ma żywego sąsiada oraz Mieszczanina lub Przybysza w chwili śmierci Doktora Zarazy, ten gracz staje się złą Marionetką. Jeśli jest już dodatkowy zły gracz, tak się nie dzieje."
+    },
+    {
+        "target": "plaguedoctor",
+        "trick": "scarletwoman",
+        "reason": "Jeśli Doktor Plagi umrze, żyjący Sługus zyskuje dodatkową umiejętność Kochanicy Diabła, i dowiaduje się o tym."
+    },
+    {
+        "target": "plaguedoctor",
+        "trick": "spy",
+        "reason": "Jeśli Doktor Plagi umrze, żyjący Sługus zyskuje dodatkową umiejętność Szpiega, i dowiaduje się o tym."
+    },
+    {
+        "target": "boffin",
+        "trick": "alchemist",
+        "reason": "Jeśli Alchemik ma umiejętność Jajogłowego, Alchemik nie poznaje umiejętności Demona."
+    },
+    {
+        "target": "boffin",
+        "trick": "cultleader",
+        "reason": "Jeśli Demon ma umiejętość Przywódcy Kultu, nie może stać się dobry na podstawie tej umiejętności."
+    },
+    {
+        "target": "boffin",
+        "trick": "drunk",
+        "reason": "Jeśli Demon miałby mieć umiejętność Pijaka, Jajogłowy wybiera gracza-Mieszkańca, aby miał on tę umiejętność."
+    },
+    {
+        "target": "boffin",
+        "trick": "goon",
+        "reason": "Jeśli Demon ma umiejętość Zbira, nie może stać się dobry na podstawie tej umiejętności."
+    },
+    {
+        "target": "boffin",
+        "trick": "ogre",
+        "reason": "Demon nie może mieć umiejętności Ogra."
+    },
+    {
+        "target": "boffin",
+        "trick": "politician",
+        "reason": "Demon nie może mieć umiejętności Polityka."
+    },
+    {
+        "target": "boffin",
+        "trick": "villageidiot",
+        "reason": "Jeśli istnieje wolny token, Jajogłowy może dać Demonowi umiejętność Głupka Wioskowego."
+    },
+    {
+        "target": "cerenovus",
+        "trick": "goblin",
+        "reason": "Cerenovus może sprawić, aby gracz szalał na punkcie bycia Goblinem."
+    },
+    {
+        "target": "marionette",
+        "trick": "balloonist",
+        "reason": "Jeśli Marionetka myśli, że jest Baloniarzem, +1 Outsider mógł zostać dodany."
+    },
+    {
+        "target": "marionette",
+        "trick": "damsel",
+        "reason": "Marionetka nie dowiaduje się, że Panienka jest w grze."
+    },
+    {
+        "target": "marionette",
+        "trick": "huntsman",
+        "reason": "Jeśli Marionetka myśli, że jest Łowczym, Panienka została dodana."
+    },
+    {
+        "target": "marionette",
+        "trick": "lilmonsta",
+        "reason": "Marionetka sąsiaduje ze Sługusem, nie z Demonem. Marionetka nie budzi się, aby wybrać, kto bierze token Małego Monstrum, i nie dowiaduje się, że jest Marionetką, jeśli niańczy Małe Monstrum."
+    },
+    {
+        "target": "marionette",
+        "trick": "poppygrower",
+        "reason": "Kiedy Hodowca Maku umiera, Demon dowiaduje się kto jest Marionetką, ale Marionetka nie dowiaduje się niczego."
+    },
+    {
+        "target": "marionette",
+        "trick": "snitch",
+        "reason": "Marionetka nie poznaje 3 postaci poza grą. Zamiast tego Demon poznaje dodatkowe 3 postaci."
+    },
+    {
+        "target": "mastermind",
+        "trick": "alhadikhia",
+        "reason": "Jeśli Al-Hadikhia zginie przez egzekucję, a Geniusz Zła żyje, Al-Hadikhia wybierze dzisiejszej nocy 3 dobrych graczy: jeśli wszyscy trzej zdecydują się na życie, zło wygra."
+    },
+    {
+        "target": "pithag",
+        "trick": "cultleader",
+        "reason": "Jeśli Jędza zmieni złego gracza na Przywódcę Kultu, ten gracz nie może się stać dobry na podstawie swojej umiejętności."
+    },
+    {
+        "target": "pithag",
+        "trick": "damsel",
+        "reason": "Jeśli Jędza tworzy Panienkę, Bajarz wybiera, który gracz nią zostanie."
+    },
+    {
+        "target": "pithag",
+        "trick": "goon",
+        "reason": "Jeśli Jędza zmieni złego gracza na Zbira, ten gracz nie może się stać dobry na podstawie swojej umiejętności."
+    },
+    {
+        "target": "pithag",
+        "trick": "ogre",
+        "reason": "Jeśli Pit-Hag zmieni złego gracza w Ogra, nie będzie on mógł zmienić się w dobrego ze względu na swoje własne zdolności."
+    },
+    {
+        "target": "pithag",
+        "trick": "politician",
+        "reason": "Jeśli Jędza zamienia złego gracza w Polityka, nie może on stać się dobry na podstawie swojej umiejętności."
+    },
+    {
+        "target": "pithag",
+        "trick": "villageidiot",
+        "reason": "Jeśli istnieje wolny token, Jędza może stworzyć dodatkowego Głupka Wioskowego. W takim przypadku, pijany Głupek Wioskowy może się zmienić."
+    },
+    {
+        "target": "scarletwoman",
+        "trick": "alhadikhia",
+        "reason": "Jeśli jest dwóch żyjących Al-Hadikhia, Kochanica Diabła Al-Hadikhia ponownie staje się Kochanicą Diabła."
+    },
+    {
+        "target": "scarletwoman",
+        "trick": "fanggu",
+        "reason": "Jeśli Fang Gu wybierze Outsidera i umrze, Kochanica Diabła nie stanie się Fang Gu."
+    },
+    {
+        "target": "spy",
+        "trick": "alchemist",
+        "reason": "Jeśli Alchemik posiada zdolność Szpiega, nie widzi Grimuaru, a prawdziwy Szpieg nie może się fałszywie zarejestrować."
+    },
+    {
+        "target": "spy",
+        "trick": "damsel",
+        "reason": "Jeśli Szpieg jest (lub był) w grze, Panienka jest zatruta."
+    },
+    {
+        "target": "spy",
+        "trick": "magician",
+        "reason": "Kiedy Szpieg ogląda Grymuar, tokeny Demona i Magika są usunięte."
+    },
+    {
+        "target": "spy",
+        "trick": "ogre",
+        "reason": "Szpieg jest rejestrowany przez Ogra jako zły."
+    },
+    {
+        "target": "spy",
+        "trick": "poppygrower",
+        "reason": "Jeśli Hodowca Maku jest w grze, Szpieg nie zobaczy Grymuaru dopóki Hodowca Maku nie umrze."
+    },
+    {
+        "target": "summoner",
+        "trick": "alchemist",
+        "reason": "Jeśli w grze jest Alchemik-Przywoływacz, gra zaczyna się od Demona w grze, jak zwykle. Jeśli Alchemik-Przywoływacz wybiera gracza, czyni go Demonem, ale nie zmienia jego drużyny."
+    },
+    {
+        "target": "summoner",
+        "trick": "clockmaker",
+        "reason": "Jeśli Przywoływacz jest w grze, Zegarmistrz nie otrzyma swoich informacji, dopóki Demon nie zostanie stworzony."
+    },
+    {
+        "target": "summoner",
+        "trick": "courtier",
+        "reason": "Jeśli Przywoływacz jest pijany podczas trzeciej nocy, Przywoływacz wybiera postać Demona, ale Bajarz wybiera, który gracz stanie się Demonem."
+    },
+    {
+        "target": "summoner",
+        "trick": "engineer",
+        "reason": "Jeśli Inżynier usunie z gry Przywoływacza, zanim ten użyje swojej umiejętności, Przywoływacz natychmiast używa swojej umiejętności."
+    },
+    {
+        "target": "summoner",
+        "trick": "hatter",
+        "reason": "Przywoływacz nie może stworzyć Demona, który już jest w grze. Jeśli Przywoływacz stworzy Demona, który nie bierze udziału w grze, śmierci dzisiejszej nocy są arbitralne"
+    },
+    {
+        "target": "summoner",
+        "trick": "kazali",
+        "reason": "Przywoływacz nie może stworzyć Demona, który już jest w grze. Jeśli Przywoływacz stworzy Demona, który nie bierze udziału w grze, śmierci dzisiejszej nocy są arbitralne."
+    },
+    {
+        "target": "summoner",
+        "trick": "legion",
+        "reason": "Jeśli Przywoływacz tworzy Legion, większość graczy (w tym wszyscy źli gracze) staje się złym Legionem."
+    },
+    {
+        "target": "summoner",
+        "trick": "lordoftyphon",
+        "reason": "Jeśli Przywoływacz stwarza Władcę Tyfonu, Władca Tyfonu musi sąsiadować ze Sługusem, a drugi sąsiad staje się złym Sługusem spoza gry."
+    },
+    {
+        "target": "summoner",
+        "trick": "marionette",
+        "reason": "Marionetka sąsiaduje z Przywoływaczem. Przywoływacz wie, kim jest Marionetka."
+    },
+    {
+        "target": "summoner",
+        "trick": "pithag",
+        "reason": "Przywoływacz nie może stworzyć Demona, który już jest w grze. Jeśli Przywoływacz stworzy Demona, który nie bierze udziału w grze, śmierci dzisiejszej nocy są arbitralne."
+    },
+    {
+        "target": "summoner",
+        "trick": "poppygrower",
+        "reason": "Jeśli Hodowca Maku żyje, gdy Przywoływacz działa, Przywoływacz wybiera postać Demona, ale Bajarz wybiera, który gracz stanie się Demonem."
+    },
+    {
+        "target": "summoner",
+        "trick": "preacher",
+        "reason": "Jeśli Kaznodzieja wybrał Przywoływacza w lub przed trzecią nocą, to Przywoływacz wybiera postać Demona, ale Bajarz wybiera, który gracz stanie się Demonem."
+    },
+    {
+        "target": "summoner",
+        "trick": "pukka",
+        "reason": "Przywoływacz może wybrać gracza, aby stał się Pukką podczas drugiej nocy."
+    },
+    {
+        "target": "summoner",
+        "trick": "zombuul",
+        "reason": "Jeśli Przywoływacz zamienia martwego gracza w Zombuula, Bajarz traktuje tego gracza jak Zombuula, który umarł raz."
+    },
+    {
+        "target": "vizier",
+        "trick": "alsaahir",
+        "reason": "Jeśli Wezyr jest w grze, Alsaahir musi również zgadywać, jakie Demony są w grze."
+    },
+    {
+        "target": "vizier",
+        "trick": "courtier",
+        "reason": "Jeśli wezyr straci swoją zdolność, nauczą się tego. Jeśli Wezyr zostanie stracony, gdy ma on swoją zdolność, jego drużyna wygrywa."
+    },
+    {
+        "target": "vizier",
+        "trick": "fearmonger",
+        "reason": "Wezyr budzi się wraz z Podżegaczem Strachu, dowiaduje się, kogo wybiorą i nie może zdecydować się na natychmiastową egzekucję tego gracza."
+    },
+    {
+        "target": "vizier",
+        "trick": "investigator",
+        "reason": "Jeśli Śledczy dowie się, że Wezyr jest w grze, istnienie Wezyra nie zostanie ogłoszone przez Bajarza."
+    },
+    {
+        "target": "vizier",
+        "trick": "magician",
+        "reason": "Jeśli w grze biorą udział zarówno Wezyr, jak i Mag, Demon nie uczy się Sług."
+    },
+    {
+        "target": "vizier",
+        "trick": "politician",
+        "reason": "Polityk może być rejestrowany przez Wezyra jako zły."
+    },
+    {
+        "target": "vizier",
+        "trick": "preacher",
+        "reason": "Jeśli wezyr straci swoją zdolność, nauczą się tego. Jeśli Wezyr zostanie stracony, gdy ma on swoją zdolność, jego drużyna wygrywa."
+    },
+    {
+        "target": "vizier",
+        "trick": "zealot",
+        "reason": "Zelota może być rejestrowany przez Wezyra jako zły."
+    },
+    {
+        "target": "widow",
+        "trick": "alchemist",
+        "reason": "Jeśli Alchemik posiada zdolność Wdowy, nie widzi Grimoire."
+    },
+    {
+        "target": "widow",
+        "trick": "damsel",
+        "reason": "Jeśli Wdowa jest (lub była) w grze, Panienka jest zatruta."
+    },
+    {
+        "target": "widow",
+        "trick": "magician",
+        "reason": "Kiedy Wdowa ogląda Grymuar, tokeny Demona i Magika są usunięte."
+    },
+    {
+        "target": "widow",
+        "trick": "poppygrower",
+        "reason": "Jeśli Hodowca Maku jest w grze, Wdowa nie zobaczy Grymuaru dopóki Hodowca Maku nie umrze."
+    },
+    {
+        "target": "kazali",
+        "trick": "choirboy",
+        "reason": "Kazali nie może wybrać Króla, aby stał się Sługusem, jeśli Chórzysta jest w grze."
+    },
+    {
+        "target": "kazali",
+        "trick": "goon",
+        "reason": "Kazali może wybrać, że gracz-Zbir jest jednym z jego złych Sługusów."
+    },
+    {
+        "target": "kazali",
+        "trick": "huntsman",
+        "reason": "Jeśli Kazali wybierze Panienkę, aby stała się Sługusem, a Łowczy jest w grze, dobry gracz staje się Panienką."
+    },
+    {
+        "target": "kazali",
+        "trick": "marionette",
+        "reason": "Jeśli Kazali zdecyduje się stworzyć marionetkę, musi wybrać jednego ze swoich sąsiadów."
+    },
+    {
+        "target": "kazali",
+        "trick": "soldier",
+        "reason": "Kazali może wybrać, że gracz-Żołnierz jest jednym z jego złych Sługusów."
+    },
+    {
+        "target": "legion",
+        "trick": "engineer",
+        "reason": "Legion i Inżynier nie mogą być razem w grze na początku gry. Jeśli Inżynier tworzy Legion, większość graczy (w tym wszyscy źli gracze) stają się złym Legionem."
+    },
+    {
+        "target": "legion",
+        "trick": "hatter",
+        "reason": "Jeśli Kapelusznik umrze i Legion będzie w grze, nic się nie stanie. Jeśli Kapelusznik umrze, a zły gracz wybierze Legion, wszyscy obecnie źli gracze staną się Legionem."
+    },
+    {
+        "target": "legion",
+        "trick": "minstrel",
+        "reason": "Jeśli Legion zginął dzisiaj przez egzekucję, Legion zachowuje swoją umiejętność, ale Minstrel może się dowiedzieć, że to Legion."
+    },
+    {
+        "target": "legion",
+        "trick": "preacher",
+        "reason": "Jeśli Kaznodzieja wybierze Legion, Legion zachowa swoją umiejętność, ale Kaznodzieja może się dowiedzieć, że jest Legionem."
+    },
+    {
+        "target": "legion",
+        "trick": "zealot",
+        "reason": "Zelota może zostać zarejestrowany jako zły w stosunku do zdolności Legionu."
+    },
+    {
+        "target": "leviathan",
+        "trick": "banshee",
+        "reason": "Każdej nocy* Lewiatan wybiera żywego, dobrego gracza (innego niż poprzednie noce): wybrana Banshee umiera i zyskuje jego zdolność."
+    },
+    {
+        "target": "leviathan",
+        "trick": "exorcist",
+        "reason": "Zło nie zwycięży, jeśli więcej niż 1 dobry gracz zostanie stracony, jeśli Egzorcysta żyje i kiedykolwiek pomyślnie wybrał Lewiatana."
+    },
+    {
+        "target": "leviathan",
+        "trick": "farmer",
+        "reason": "Każdej nocy* Lewiatan wybiera żywego, dobrego gracza (innego niż poprzednie noce): wybrany Rolnik wykorzystuje swoją zdolność, ale nie umiera."
+    },
+    {
+        "target": "leviathan",
+        "trick": "grandmother",
+        "reason": "Jeśli w grze bierze udział Lewiatan, a Wnuk umiera w wyniku egzekucji, zło zwycięża."
+    },
+    {
+        "target": "leviathan",
+        "trick": "hatter",
+        "reason": "Jeśli Kapelusznik umrze piątego dnia lub po piątym dniu, Demon nie może wybrać Lewiatana."
+    },
+    {
+        "target": "leviathan",
+        "trick": "innkeeper",
+        "reason": "Jeśli w grze znajduje się Lewiatan, gracze chronieni przez Karczmarza są bezpieczni przed wszelkimi złymi mocami."
+    },
+    {
+        "target": "leviathan",
+        "trick": "king",
+        "reason": "Jeśli w grze znajduje się Lewiatan, a co najmniej 1 gracz nie żyje, król co noc uczy się żywej postaci."
+    },
+    {
+        "target": "leviathan",
+        "trick": "mayor",
+        "reason": "Jeśli Lewiatan jest w grze i piątego dnia nie nastąpi egzekucja, dobro wygrywa."
+    },
+    {
+        "target": "leviathan",
+        "trick": "monk",
+        "reason": "Jeśli w grze znajduje się Lewiatan, gracz chroniony przez Mnicha jest bezpieczny przed wszelkimi złymi mocami."
+    },
+    {
+        "target": "leviathan",
+        "trick": "pithag",
+        "reason": "Po piątym dniu, Jędza nie może wybrać Lewiatana."
+    },
+    {
+        "target": "leviathan",
+        "trick": "ravenkeeper",
+        "reason": "Każdej nocy* Lewiatan wybiera żywego gracza (innego niż poprzednie noce): wybrany Kruczy Strażnik wykorzystuje swoją zdolność, ale nie umiera."
+    },
+    {
+        "target": "leviathan",
+        "trick": "sage",
+        "reason": "Każdej nocy* Lewiatan wybiera żywego, dobrego gracza (innego niż poprzednie noce): wybrany Mędrzec wykorzystuje swoją zdolność, ale nie umiera."
+    },
+    {
+        "target": "leviathan",
+        "trick": "soldier",
+        "reason": "Jeśli w grze znajduje się Lewiatan, Żołnierz jest bezpieczny przed wszelkimi złymi mocami."
+    },
+    {
+        "target": "lilmonsta",
+        "trick": "hatter",
+        "reason": "Jeśli Demon wybierze Małe Montrum, wybiera też Sługusa, który będzie niańczyć Małe Monstrum dzisiejszej nocy."
+    },
+    {
+        "target": "lilmonsta",
+        "trick": "magician",
+        "reason": "Każdej nocy Mag wybiera Stwora: jeśli ten Minion i Lil' Monsta żyją, ten Minion opiekuje się Lil' Monstą."
+    },
+    {
+        "target": "lilmonsta",
+        "trick": "poppygrower",
+        "reason": "Jeśli Hodowca Maku jest w grze, Sługusi nie obudzą się razem. Obudzą się jeden po drugim, dopóki jeden z nich nie wybierze tokenu Małego Monstrum."
+    },
+    {
+        "target": "lilmonsta",
+        "trick": "scarletwoman",
+        "reason": "Jeśli przynajmniej pięciu graczy jest żywych i gracz trzymający token Małego Monstrum umiera, Kochanica Diabła otrzymuje dziś token Małego Monstrum."
+    },
+    {
+        "target": "lilmonsta",
+        "trick": "vizier",
+        "reason": "Wezyr może zginąć przez egzekucję, jeśli niańczą Małe Monstrum."
+    },
+    {
+        "target": "lleech",
+        "trick": "mastermind",
+        "reason": "Jeśli Geniusz Zła żyje, a żywiciel Pijawki umiera przez egzekucję, Pijawka żyje, ale traci swoją umiejętność."
+    },
+    {
+        "target": "lleech",
+        "trick": "slayer",
+        "reason": "Jeśli Pogromca zabije żywiciela Pijawki, żywiciel zginie."
+    },
+    {
+        "target": "riot",
+        "trick": "banshee",
+        "reason": "Każdej nocy* Riot wybiera żywego, dobrego gracza (innego niż poprzednie noce): wybrana Banshee umiera i zyskuje jego zdolność."
+    },
+    {
+        "target": "riot",
+        "trick": "exorcist",
+        "reason": "Jeśli Egzorcysta trzeciej nocy wybierze Riot, Stwory nie staną się Riot."
+    },
+    {
+        "target": "riot",
+        "trick": "farmer",
+        "reason": "Każdej nocy* Riot wybiera żywego, dobrego gracza (innego niż w poprzednie noce): wybrany Rolnik wykorzystuje swoją zdolność, ale nie umiera."
+    },
+    {
+        "target": "riot",
+        "trick": "grandmother",
+        "reason": "Jeśli w grze jest Riot i wnuk umrze w ciągu dnia, babcia również umrze."
+    },
+    {
+        "target": "riot",
+        "trick": "innkeeper",
+        "reason": "Jeśli w grze jest Riot, gracz chroniony przez Karczmarza jest bezpieczny przed wszelkimi złymi mocami."
+    },
+    {
+        "target": "riot",
+        "trick": "king",
+        "reason": "Jeśli w grze jest Riot i co najmniej 1 gracz nie żyje, Król co noc uczy się żywej postaci."
+    },
+    {
+        "target": "riot",
+        "trick": "mayor",
+        "reason": "Burmistrz może zdecydować o wstrzymaniu nominacji. Jeśli tak zrobią, gdy przy życiu będzie tylko 1 Riot, dobro zwycięży. W przeciwnym razie zło zwycięży."
+    },
+    {
+        "target": "riot",
+        "trick": "monk",
+        "reason": "Jeśli w grze jest Riot, gracz chroniony przez Mnicha jest bezpieczny przed wszelkimi złymi mocami."
+    },
+    {
+        "target": "riot",
+        "trick": "ravenkeeper",
+        "reason": "Każdej nocy* Riot wybiera żywego, dobrego gracza (innego niż w poprzednie noce): wybrany Kruczy Strażnik wykorzystuje swoją zdolność, ale nie umiera."
+    },
+    {
+        "target": "riot",
+        "trick": "sage",
+        "reason": "Każdej nocy* Riot wybiera żywego, dobrego gracza (innego niż poprzednie noce): wybrany Mędrzec wykorzystuje swoją zdolność, ale nie umiera."
+    },
+    {
+        "target": "riot",
+        "trick": "soldier",
+        "reason": "Jeśli w grze jest Riot, Żołnierz jest bezpieczny przed wszelkimi złymi mocami."
+    },
+    {
+        "target": "vortox",
+        "trick": "banshee",
+        "reason": "Jeśli Vortox jest w grze i Demon zabija Banshee, gracze nadal dowiedują się, że Banshee umarła."
+    },
+    {
+        "target": "yaggababble",
+        "trick": "exorcist",
+        "reason": "Jeśli Egzorcysta wybierze Yaggabble, umiejętność Yaggabble nie zabije dzisiejszej nocy."
+    }
+]

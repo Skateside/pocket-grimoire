@@ -1,3 +1,14 @@
+@keyframes orphan {
+    0% {
+        opacity: 1;
+        box-shadow: 0 0 15px var(--evil-team);
+    }
+    100% {
+        opacity: 0.8;
+        box-shadow: 0 0 0 transparent;
+    }
+}
+
 .token {
     width: 60px;
     aspect-ratio: 1 / 1;
@@ -29,6 +40,15 @@
         > .character {
             --shadow-amount: 0;
         }
+    }
+
+    &.is-orphan {
+        box-shadow: 0 0 15px red;
+
+        @media (prefers-reduced-motion: no-preference) {
+            animation: orphan 1s infinite alternate;
+        }
+
     }
 }
 

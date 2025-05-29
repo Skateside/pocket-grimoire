@@ -17,6 +17,7 @@
         <li>{% include 'partials/grimoire/add-traveller.html.twig' %}</li>
         <li>{% include 'partials/grimoire/add-fabled.html.twig' %}</li>
         <li>{% include 'partials/grimoire/show-tokens.html.twig' %}</li>
+        <li>{% include 'partials/grimoire/export-game.html.twig' %}</li>
         <li><button type="button" class="button button--full-height" id="reset-height">{{ 'grimoire.grimoire.reset_height'|trans }}</button></li>
         <li><button type="button" class="button button--full-height button--warning" id="clear-grimoire" data-confirm="{{ 'grimoire.grimoire.clear_grimoire_warning'|trans }}">{{ 'grimoire.grimoire.clear_grimoire'|trans }}</button></li>
     </ul>
@@ -147,6 +148,7 @@
     {% block title %}<span id="character-show-name">{{ 'grimoire.character_show.title'|trans }}</span>{% endblock %}
     {% block body %}
     <p id="character-show-ability" class="character-show__ability"></p>
+    <p id="character-show-orphan" hidden><strong class="character-show__orphan">{{ 'grimoire.character_show.orphan'|trans }}</strong></p>
     <ul class="button-list">
         <li><button type="button" class="button button--full-height" id="character-show-token">{{ 'grimoire.character_show.show'|trans }}</button></li>
         <li><button type="button" class="button button--full-height" id="character-shroud-toggle">{{ 'grimoire.character_show.shroud'|trans }}</button></li>
@@ -176,6 +178,7 @@
     {% block title %}<span id="reminder-show-name">{{ 'grimoire.reminder_show.title'|trans }}</span>{% endblock %}
     {% block body %}
     <div id="reminder-show-token" class="character-show__token"></div>
+    <p id="reminder-show-orphan" class="mt-4" hidden><strong class="character-show__orphan">{{ 'grimoire.character_show.orphan'|trans }}</strong></p>
     <p class="mt-4"><button type="button" class="button button--warning" id="reminder-remove">{{ 'grimoire.reminder_show.remove'|trans }}</button></p>
     {% endblock %}
 {% endembed %}

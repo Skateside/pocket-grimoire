@@ -402,6 +402,49 @@ export default class CharacterToken extends Token {
     }
 
     /**
+     * Gets the special data for this character, if it exists.
+     *
+     * @param  {String} type
+     *         The special type.
+     * @param  {String} name
+     *         The special name.
+     * @return {Object|undefined}
+     *         Either the special object or undefined if the special cannot be
+     *         found.
+     */
+    getSpecialData(type, name) {
+
+        const {
+            special
+        } = this.data;
+        const isArray = Array.isArray(special);
+
+        if (!special || (isArray && !special.length)) {
+            return;
+        }
+
+        return special.find((data) => {
+            return data.type === type && data.name === name;
+        });
+
+    }
+
+    /**
+     * Checks to see if the character has any special data matching the given
+     * type and name.
+     *
+     * @param  {String} type
+     *         The special type.
+     * @param  {String} name
+     *         The special name.
+     * @return {Boolean}
+     *         true if the special exists, false if it doesn't.
+     */
+    hasSpecialData(type, name) {
+        return Boolean(this.getSpecialData(type, name));
+    }
+
+    /**
      * Draws the token that can be shown on the grimoire.
      *
      * @return {DocumentFragment}

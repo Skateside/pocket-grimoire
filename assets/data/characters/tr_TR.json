@@ -2,9 +2,9 @@
     {
         "id": "acrobat",
         "name": "Akrobat",
-        "ability": "Her gece*, yaşayan iyi komşularınızdan biri sarhoş olur ya da zehirlenirse ölürsünüz.",
+        "ability": "Her gece*, bir oyuncu seçin: Eğer bu gece sarhoş olurlarsa veya zehirlenirlerse, siz ölürsünüz.",
         "firstNightReminder": "",
-        "otherNightReminder": "Eğer yaşayan iyi bir komşusu sarhoş olur ya da zehirlenirse, Akrobat oyuncu ölür.",
+        "otherNightReminder": "Akrobat bir oyuncu seçer. Eğer bu gece sarhoş olurlarsa veya zehirlenirlerse, Akrobat oyuncusu ölür.",
         "remindersGlobal": [],
         "reminders": [
             "Ölü"
@@ -623,6 +623,17 @@
         "reminders": []
     },
     {
+        "id": "gnome",
+        "name": "Cüce",
+        "ability": "Tüm oyuncular sizin hizalamanızdaki bir oyuncuyu tanımaya başlar. Onları aday gösteren herkesi öldürmeyi seçebilirsiniz.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": [
+            "Amigo"
+        ]
+    },
+    {
         "id": "goblin",
         "name": "Goblin",
         "ability": "Aday gösterildiğinizde herkese açık bir şekilde Goblin olduğunuzu iddia ederseniz ve o gün idam edilirseniz, takımınız kazanır.",
@@ -966,7 +977,8 @@
         "otherNightReminder": "Kurtadam hayatta olan bir oyuncuyu işaret eder: eğer iyiyse, ölür ve bu gece başka kimse ölemez.",
         "remindersGlobal": [],
         "reminders": [
-            "Ölü"
+            "Ölü",
+            "Sahte Pençe"
         ]
     },
     {
@@ -1147,11 +1159,12 @@
     {
         "id": "organgrinder",
         "name": "Orgcu",
-        "ability": "Tüm oyuncular oy verirken gözlerini kapalı tutar ve oy sayımı gizlidir. Size verilen oylar sadece siz de oy verirseniz sayılır.",
+        "ability": "Tüm oyuncular oylama sırasında gözlerini kapalı tutar ve oy sayısı gizlidir. Her gece, sarhoş olup olmadığınızı seçin.",
         "firstNightReminder": "",
         "otherNightReminder": "",
         "remindersGlobal": [],
         "reminders": [
+            "Sarhoş",
             "Ölüme Yakın"
         ]
     },
@@ -1171,8 +1184,8 @@
         "firstNightReminder": "Filozof ya 'hayır' işareti yapar ya da karakter sayfasındaki iyi bir karakteri işaret eder. Eğer bir karakter seçtiyse: Oyunda olmayan karakter simgesini Filozof simgesiyle değiştirin. Veya, eğer karakter oyundaysa, sarhoş işaretleyicisini o oyuncunun yanına ve Filozof Olmayan simgesini Filozof'un yanına yerleştirin.",
         "otherNightReminder": "Eğer Filozof yeteneğini kullanmadıysa: Filozof ya 'hayır' işareti yapar ya da karakter sayfasındaki iyi bir karakteri işaret eder. Eğer bir karakter seçtiyse: Oyunda olmayan karakter simgesini Filozof simgesiyle değiştirin. Veya, eğer karakter oyundaysa, sarhoş işaretleyicisini o oyuncunun yanına ve Filozof Olmayan simgesini Filozof'un yanına yerleştirin.",
         "remindersGlobal": [
-            "Sarhoş",
-            "Filozof"
+            "Filozof",
+            "Sarhoş"
         ],
         "reminders": []
     },
@@ -1715,6 +1728,31 @@
         "remindersGlobal": [],
         "reminders": [
             "Lanetli"
+        ]
+    },
+    {
+        "id": "wizard",
+        "name": "Sihirbaz",
+        "ability": "Her oyunda bir kez, bir dilek tutmayı seçin.  Kabul edilirse bir bedeli olabilir ve doğasına dair bir ipucu bırakabilir.",
+        "firstNightReminder": "Varsa Sihirbaz yeteneğini çalıştırın.",
+        "otherNightReminder": "Varsa Sihirbaz yeteneğini çalıştırın.",
+        "remindersGlobal": [],
+        "reminders": [
+            "?"
+        ]
+    },
+    {
+        "id": "xaan",
+        "name": "Xaan",
+        "ability": "X gecesi, tüm Kasabalılar alacakaranlığa kadar zehirlenir. [X Outsiders]",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": [
+            "1. Gece",
+            "2. Gece",
+            "3. Gece",
+            "X"
         ]
     },
     {

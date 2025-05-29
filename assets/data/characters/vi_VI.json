@@ -2,9 +2,9 @@
     {
         "id": "acrobat",
         "name": "Nghệ sĩ xiếc",
-        "ability": "Mỗi đêm*, nếu bất kì hàng xóm tốt của bạn bị trúng độc hoặc bị say, bạn chết",
+        "ability": "Mỗi đêm*, hãy chọn một người chơi: nếu họ say hoặc bị đầu độc vào đêm nay, bạn sẽ chết.",
         "firstNightReminder": "",
-        "otherNightReminder": "Nếu bất kì hàng xóm tốt của họ trúng độc hoặc bị say, Nghệ sĩ xiếc chết",
+        "otherNightReminder": "Người nhào lộn sẽ chọn một người chơi. Nếu họ say hoặc bị đầu độc vào đêm nay, người chơi nhào lộn sẽ chết.",
         "remindersGlobal": [],
         "reminders": [
             "Chết"
@@ -619,6 +619,17 @@
         "reminders": []
     },
     {
+        "id": "gnome",
+        "name": "Chú lùn",
+        "ability": "Tất cả người chơi bắt đầu biết một người chơi có cùng phe với bạn. Bạn có thể chọn giết bất kỳ ai đề cử họ.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": [
+            "Amigo"
+        ]
+    },
+    {
         "id": "goblin",
         "name": "Yêu tinh",
         "ability": "Nếu bạn công khai rằng mình là Yêu tinh khi bị biểu quyết & bị hành quyết ngày hôm đó, đội bạn thắng.",
@@ -962,7 +973,8 @@
         "otherNightReminder": "Người sói chỉ người sống: nếu là tốt, họ chết và những người khác không thế chết đêm nay.",
         "remindersGlobal": [],
         "reminders": [
-            "Chết"
+            "Chết",
+            "Móng giả"
         ]
     },
     {
@@ -1145,11 +1157,12 @@
     {
         "id": "organgrinder",
         "name": "Nhạc công đường phố",
-        "ability": "Tất cả người chơi nhắm mắt khi bỏ phiếu & số phiếu được giữ bí mất. Phiếu lên bạn chỉ được tính khi bạn bỏ phiếu.",
+        "ability": "Tất cả người chơi đều nhắm mắt khi bỏ phiếu và số phiếu bầu sẽ được giữ bí mật. Mỗi đêm, hãy chọn xem bạn có say hay không.",
         "firstNightReminder": "",
         "otherNightReminder": "",
         "remindersGlobal": [],
         "reminders": [
+            "Say",
             "Sắp chết"
         ]
     },
@@ -1169,8 +1182,8 @@
         "firstNightReminder": "Nếu Triết gia không dùng chức năng, họ có thể lắc đầu. Nếu Triết gia muốn chọn nhân vật, họ chỉ vào tờ của họ. Tráo thẻ nhân vật của Triết gia với nhân vật ngoài cuộc. Hoặc, nếu nhân vật này trong cuộc, đánh dấu \"Say\" cạnh nhân vật đó và thẻ \"là Triết gia\" cạnh Triết gia.",
         "otherNightReminder": "Nếu Triết gia không dùng chức năng, họ có thể lắc đầu. Nếu Triết gia muốn chọn nhân vật, họ chỉ vào tờ của họ. Tráo thẻ nhân vật của Triết gia với nhân vật ngoài cuộc. Hoặc, nếu nhân vật này trong cuộc, đánh dấu \"Say\" cạnh nhân vật đó và thẻ \"là Triết gia\" cạnh Triết gia.",
         "remindersGlobal": [
-            "Say",
-            "là Triết gia"
+            "là Triết gia",
+            "Say"
         ],
         "reminders": []
     },
@@ -1713,6 +1726,31 @@
         "remindersGlobal": [],
         "reminders": [
             "Bị nguyền"
+        ]
+    },
+    {
+        "id": "wizard",
+        "name": "Pháp sư",
+        "ability": "Một lần trong game, chọn để nói ra 1 điều ước.  Nếu được ban, nó có thể trả giá và để lại chứng cứ liên quan đến nó.",
+        "firstNightReminder": "Chạy khả năng Pháp sư nếu có.",
+        "otherNightReminder": "Chạy khả năng Pháp sư nếu có.",
+        "remindersGlobal": [],
+        "reminders": [
+            "?"
+        ]
+    },
+    {
+        "id": "xaan",
+        "name": "Xaan",
+        "ability": "Vào đêm X, tất cả Dân làng bị độc. [X Lữ khách]",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": [
+            "Đêm 1",
+            "Đêm 2",
+            "Đêm 3",
+            "X"
         ]
     },
     {

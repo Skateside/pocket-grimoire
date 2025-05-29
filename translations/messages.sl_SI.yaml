@@ -166,6 +166,7 @@ grimoire:
         recent_reminders: 'Nedavno dodani opomniki:'
         player_name: Določi ime igralca
         ghost_vote: Glasovanje duhov
+        orphan: 'Opozorilo: tega znaka ni v trenutnem scenariju.'
 
     reminder_show:
         title: Opomnik
@@ -197,6 +198,11 @@ grimoire:
     token:
         title: Žetoni
 
+    export:
+        title: Izvoz igre
+        markup: Ustvarite kodo QR, da bo mogoče podatke o igri uvoziti v <a href="https://the-grim.netlify.app/" target="_blank" rel="noopener noreferrer">The Grim</a>.
+        button: Ustvari kodo QR
+
 jinxes:
     title: Uroki
     target: Tarča
@@ -223,6 +229,8 @@ info_tokens:
         votetoday: Si danes <strong>glasoval-a</strong>?
         youare: <strong>Ti</strong> si
         selectedyou: Ta vloga te je <strong>izbrala</strong>
+        useability: Uporabite svojo <strong>sposobnost</strong>?
+        makechoice: Naredi <strong>izbor</strong>
     custom: Lastni info žetoni
     add_custom: Dodaj info žeton
     edit_custom: Uredi info žeton
@@ -242,7 +250,7 @@ acknowledgements:
         - Ikone so pobrane iz <a href="https://fontawesome.com/v5.15/icons" target="_blank" rel="noopener noreferrer">Font Awesome</a>.
         - Mnogo slik in podatkov smo vzeli iz <a href="https://www.clocktower.online" target="_blank" rel="noopener noreferrer">Clocktower.online</a> in <a href="https://bloodontheclocktower.com/" target="_blank" rel="noopener noreferrer">Spletne strani igre Blood on the Clocktower</a>.
         - To je neuradna virtualna bukla za igro Blood on the Clocktower. Ta projekt je brezplačen, njegovo izvorno kodo lahko najdeš na <a href="https://github.com/Skateside/pocket-grimoire" target="_blank" rel="noopener noreferrer">GitHub-u</a>. Žepna bukla ni povezana z Pandemonium Institute. Če uživaš v igri Blood on the Clocktower, <a href="https://bloodontheclocktower.com/buy" target="_blank" rel="noopener noreferrer">prosim premisli o tem, da si kupiš svojo buklo</a>- poleg tega da je bolj priročna kot ta digitalna izdaja, tudi podpira ustvarjalce igre.
-        - Si opazil hrošča ali bi predlagal izboljšave? Poišči me v kanalu <a href="https://discord.gg/FyZwg75H" target="_blank" rel="noopener noreferrer">"pocket-grimoire" na neuradnem Discord strežniku</a> (moje ime tam je "Scaterside") ali <a href="https://github.com/Skateside/pocket-grimoire/issues" target="_blank" rel="noopener noreferrer">opomni na težavo na Github-u</a>.
+        - Si opazil hrošča ali bi predlagal izboljšave? Poišči me v kanalu <a href="https://discord.gg/eU89j89" target="_blank" rel="noopener noreferrer">"pocket-grimoire" na neuradnem Discord strežniku</a> (moje ime tam je "Scaterside") ali <a href="https://github.com/Skateside/pocket-grimoire/issues" target="_blank" rel="noopener noreferrer">opomni na težavo na Github-u</a>.
         - <small>Verzija <span id="version"></span></small>
 
 errors:
@@ -254,3 +262,7 @@ errors:
         invalid_entry: 'Neveljaven vnos za "%id%": %reasons%'
         empty_teams: 'Prazne ekipe: %teams%'
         invalid_property: Lastnost »%property%« bi morala biti vrste %expected%, vendar je bila namesto tega vrsta %given%
+    url:
+        no_url: URL je neveljaven ali manjka
+        cannot_access: URL ni mogoč
+        not_json: JSON ni mogoče razčleniti iz URL-ja

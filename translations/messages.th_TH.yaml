@@ -166,6 +166,7 @@ grimoire:
         recent_reminders: "ป้ายเตือนความจำที่ใช้ล่าสุด:"
         player_name: ตั้งชื่อผู้เล่น
         ghost_vote: โหวตวิญญาณ
+        orphan: 'คำเตือน: ตัวละครนี้ไม่มีอยู่ในสคริปต์ปัจจุบัน'
 
     reminder_show:
         title: ป้ายเตือนความจำ
@@ -197,6 +198,11 @@ grimoire:
     token:
         title: โทเคน
 
+    export:
+        title: ส่งออกเกม
+        markup: สร้างรหัส QR เพื่อนำข้อมูลเกมเข้าสู่ <a href="https://the-grim.netlify.app/" target="_blank" rel="noopener noreferrer">The Grim</a> ได้
+        button: สร้างรหัส QR
+
 jinxes:
     title: ข้อขัดแย้ง
     target: เป้าหมาย
@@ -223,6 +229,8 @@ info_tokens:
         votetoday: คุณ<strong>โหวต</strong>วันนี้หรือเปล่า
         youare: <strong>คุณ</strong>คือ
         selectedyou: ตัวละครนี้<strong>เลือก</strong>คุณ
+        useability: ใช้ <strong>ความสามารถ</strong> ของคุณ?
+        makechoice: เลือก <strong>ทางเลือก</strong>
     custom: ป้ายโทเคนข้อมูลพิเศษ
     add_custom: เพิ่มป้ายบอกข้อมูล
     edit_custom: เปลี่ยนข้อมูลบนป้าย
@@ -242,7 +250,7 @@ acknowledgements:
         - Icons are taken from <a href="https://fontawesome.com/v5.15/icons" target="_blank" rel="noopener noreferrer">Font Awesome</a>.
         - Many images and data are taken from <a href="https://www.clocktower.online" target="_blank" rel="noopener noreferrer">Clocktower.online</a> and the <a href="https://bloodontheclocktower.com/" target="_blank" rel="noopener noreferrer">Blood on the Clocktower website</a>.
         - This is an unofficial virtual grimoire for Blood on the Clocktower. This project is free and the source code can be found on <a href="https://github.com/Skateside/pocket-grimoire" target="_blank" rel="noopener noreferrer">GitHub</a>. This project is not affiliated with the Pandemonium Institute. If you enjoy playing Blood on the Clocktower, <a href="https://bloodontheclocktower.com/buy" target="_blank" rel="noopener noreferrer">please consider buying your own grimoire</a> - as well as being more flexible than this digital version, it also supports the creators.
-        - Noticed a bug or have an improvement suggestion? Let me know in the <a href="https://discord.gg/FyZwg75H" target="_blank" rel="noopener noreferrer">pocket-grimoire channel on the unofficial discord server</a> (my name on there is "Skateside") or <a href="https://github.com/Skateside/pocket-grimoire/issues" target="_blank" rel="noopener noreferrer">raise an issue in GitHub</a>.
+        - Noticed a bug or have an improvement suggestion? Let me know in the <a href="https://discord.gg/eU89j89" target="_blank" rel="noopener noreferrer">pocket-grimoire channel on the unofficial discord server</a> (my name on there is "Skateside") or <a href="https://github.com/Skateside/pocket-grimoire/issues" target="_blank" rel="noopener noreferrer">raise an issue in GitHub</a>.
         - <small>Version <span id="version"></span></small>
 
 errors:
@@ -254,3 +262,7 @@ errors:
         invalid_entry: "Invalid entry for \"%id%\": %reasons%"
         empty_teams: "Empty teams: %teams%"
         invalid_property: คุณสมบัติ "%property%" ควรเป็นประเภท %expected% แต่กลับเป็นประเภท %given% แทน
+    url:
+        no_url: URL ไม่ถูกต้องหรือขาดหายไป
+        cannot_access: ไม่สามารถเข้าถึง URL ได้
+        not_json: ไม่สามารถแยกวิเคราะห์ JSON จาก URL ได้

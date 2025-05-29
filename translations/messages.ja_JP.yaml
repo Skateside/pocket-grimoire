@@ -167,6 +167,7 @@ grimoire:
         recent_reminders: '直近に追加されたリマインダー:'
         player_name: プレイヤー名を設定
         ghost_vote: 幽霊投票
+        orphan: '警告: この文字は現在のスクリプトには存在しません。'
 
     reminder_show:
         title: リマインダー
@@ -198,6 +199,11 @@ grimoire:
     token:
         title: トークン
 
+    export:
+        title: ゲームのエクスポート
+        markup: ゲームデータを<a href="https://the-grim.netlify.app/" target="_blank" rel="noopener noreferrer">The Grim</a>にインポートするためのQRコードを生成します。
+        button: QRコードを生成
+
 jinxes:
     title: ジンクス
     target: ターゲット
@@ -224,6 +230,8 @@ info_tokens:
         votetoday: 本日<strong>投票</strong>をしましたか？
         youare: <strong>あなた</strong>は
         selectedyou: このキャラクターはあなたを<strong>選択</strong>しました
+        useability: <strong>能力</strong>を使う？
+        makechoice: <strong>選択</strong>をする
     custom: カスタム情報トークン
     add_custom: 情報トークンを追加
     edit_custom: 情報トークンを編集
@@ -243,7 +251,7 @@ acknowledgements:
         - アイコンは <a href="https://fontawesome.com/v5.15/icons" target="_blank" rel="noopener noreferrer">Font Awesome</a> より取得・使用しています
         - 画像およびデータの多くは <a href="https://www.clocktower.online" target="_blank" rel="noopener noreferrer">Clocktower.online</a> と <a href="https://bloodontheclocktower.com/" target="_blank" rel="noopener noreferrer">Blood on the Clocktower</a> ウェブサイト提供のものを使用しています
         - これは非公式の Blood on the Clocktower のための仮想グリモアです。このプロジェクトは無料であり、ソースコードは <a href="https://github.com/Skateside/pocket-grimoire" target="_blank" rel="noopener noreferrer">GitHub</a> 上に公開されています。本プロジェクトは  The Pandemonium Institute とは関連がありません。Blood on the Clocktower をお楽しみいただけた場合、<a href="https://bloodontheclocktower.com/buy" target="_blank" rel="noopener noreferrer">ご自分のグリモアの購入をご検討ください</a> - デジタル版より柔軟性が高く、さらに作成者を支援することができます。
-        - バグを発見した場合や改善についてのご意見がある場合、非公式の<a href="https://discord.gg/FyZwg75H" target="_blank" rel="noopener noreferrer">Discord</a>サーバ内開発者チャンネル（ユーザ名 "Skateslide"）または <a href="https://github.com/Skateside/pocket-grimoire/issues" target="_blank" rel="noopener noreferrer">GitHub の issue</a> にてお知らせください
+        - バグを発見した場合や改善についてのご意見がある場合、非公式の<a href="https://discord.gg/eU89j89" target="_blank" rel="noopener noreferrer">Discord</a>サーバ内開発者チャンネル（ユーザ名 "Skateslide"）または <a href="https://github.com/Skateside/pocket-grimoire/issues" target="_blank" rel="noopener noreferrer">GitHub の issue</a> にてお知らせください
         - <small>バージョン <span id="version"></span></small>
 
 errors:
@@ -255,3 +263,7 @@ errors:
         invalid_entry: '「%id%」のエントリが無効です: %reasons%'
         empty_teams: '空のチーム: %teams%'
         invalid_property: プロパティ「%property%」はタイプ %expected% である必要がありますが、タイプ %given% でした
+    url:
+        no_url: URL が無効または見つかりません
+        cannot_access: URL にアクセスできません
+        not_json: URL から JSON を解析できません

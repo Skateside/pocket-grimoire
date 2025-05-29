@@ -2,9 +2,9 @@
     {
         "id": "acrobat",
         "name": "Akrobat",
-        "ability": "Jede Nacht*, wenn einer deiner guten lebenden Nachbarn vergiftet oder betrunken ist, stirbst du.",
+        "ability": "Wählen Sie jede Nacht* einen Spieler: Wenn dieser heute Nacht betrunken oder vergiftet ist oder wird, sterben Sie.",
         "firstNightReminder": "",
-        "otherNightReminder": "Der Akrobat stirbt wenn ein guter, lebender Nachbar betrunken ist oder vergiftet wurde.",
+        "otherNightReminder": "Der Akrobat wählt einen Spieler. Wenn dieser heute Nacht betrunken oder vergiftet wird, stirbt der Akrobat-Spieler.",
         "remindersGlobal": [],
         "reminders": [
             "Tot"
@@ -622,6 +622,17 @@
         "reminders": []
     },
     {
+        "id": "gnome",
+        "name": "Gnom",
+        "ability": "Alle Spieler kennen zu Beginn einen Spieler Ihrer Gesinnung. Sie können jeden töten, der ihn nominiert.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": [
+            "Amigo"
+        ]
+    },
+    {
         "id": "goblin",
         "name": "Kobold",
         "ability": "Wenn du öffentlich behauptest, der Kobold zu sein wenn du nominiert wirst & am selben Tag hingerichtet wirst, gewinnt dein Team.",
@@ -965,7 +976,8 @@
         "otherNightReminder": "Der Lykanthrop zeigt auf einen lebenden Spieler. Ist er gut, stirbt er und niemand sonst stirbt in der Nacht",
         "remindersGlobal": [],
         "reminders": [
-            "Tot"
+            "Tot",
+            "Faux Paw"
         ]
     },
     {
@@ -1148,11 +1160,12 @@
     {
         "id": "organgrinder",
         "name": "Leiermann",
-        "ability": "Alle Spieler schliessen während Abstimmungen die Augen & das Abstimmungsergebnis ist geheim. Stimmen für dich zählen nur wenn du abstimmst.",
+        "ability": "Alle Spieler halten beim Abstimmen die Augen geschlossen und das Ergebnis der Abstimmung ist geheim. Wählen Sie jede Nacht, ob Sie betrunken sind oder nicht.",
         "firstNightReminder": "",
         "otherNightReminder": "",
         "remindersGlobal": [],
         "reminders": [
+            "Betrunken",
             "About to die"
         ]
     },
@@ -1172,8 +1185,8 @@
         "firstNightReminder": "Der Philosoph schüttelt den Kopf (Nein) oder zeigt auf einen guten CHarakter am Charakterbogen. Wenn er einen Charakter gewählt hat: Tausche den Charaktertoken des Philosophs mit dem neuen Charaktertoken aus. Sollte sich der Charakter bereits im Spiel befunden wird der originale Spieler betrunken.",
         "otherNightReminder": "Wenn der Philosoph seine Fähigkeit noch nicht eingesetzt hat: Der Philosoph schüttelt den Kopf (Nein) oder zeigt auf einen guten CHarakter am Charakterbogen. Wenn er einen Charakter gewählt hat: Tausche den Charaktertoken des Philosophs mit dem neuen Charaktertoken aus. Sollte sich der Charakter bereits im Spiel befunden wird der originale Spieler betrunken.",
         "remindersGlobal": [
-            "Betrunken",
-            "ist der Philosoph"
+            "ist der Philosoph",
+            "Betrunken"
         ],
         "reminders": []
     },
@@ -1716,6 +1729,31 @@
         "remindersGlobal": [],
         "reminders": [
             "Verflucht"
+        ]
+    },
+    {
+        "id": "wizard",
+        "name": "Zauberer",
+        "ability": "Wählen Sie einmal pro Spiel, ob Sie einen Wunsch äußern möchten.  Wenn es gewährt wird, könnte es einen Preis haben und einen Hinweis auf seine Natur hinterlassen.",
+        "firstNightReminder": "Führen Sie ggf. die Fähigkeit Zauberer aus.",
+        "otherNightReminder": "Führen Sie ggf. die Fähigkeit Zauberer aus.",
+        "remindersGlobal": [],
+        "reminders": [
+            "?"
+        ]
+    },
+    {
+        "id": "xaan",
+        "name": "Xaan",
+        "ability": "In Nacht X werden alle Stadtbewohner bis zur Dämmerung vergiftet. [X Außenseiter]",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": [
+            "Nacht 1",
+            "Nacht 2",
+            "Nacht 3",
+            "X"
         ]
     },
     {

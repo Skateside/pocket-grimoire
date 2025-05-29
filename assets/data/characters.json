@@ -3,17 +3,17 @@
         "id": "acrobat",
         "name": "Acrobat",
         "edition": "",
-        "team": "outsider",
+        "team": "townsfolk",
         "firstNight": 0,
         "firstNightReminder": "",
         "otherNight": 39,
-        "otherNightReminder": "If a good living neighbour is drunk or poisoned, the Acrobat player dies.",
+        "otherNightReminder": "The Acrobat chooses a player. If they are become drunk or poisoned tonight, the Acrobat player dies.",
         "reminders": [
             "Dead"
         ],
         "setup": false,
-        "ability": "Each night*, if either good living neighbour is drunk or poisoned, you die.",
-        "image": "/build/img/icons/outsider/acrobat.webp"
+        "ability": "Each night*, choose a player: if they are or become drunk or poisoned tonight, you die.",
+        "image": "/build/img/icons/townsfolk/acrobat.webp"
     },
     {
         "id": "alchemist",
@@ -28,8 +28,14 @@
         "remindersGlobal": [
             "Is the Alchemist"
         ],
+        "special": [
+            {
+                "type": "reveal",
+                "name": "replace-character"
+            }
+        ],
         "setup": false,
-        "ability": "You have a not-in-play Minion ability.",
+        "ability": "You have a Minion ability. When using this, the Storyteller may prompt you to choose differently.",
         "image": "/build/img/icons/townsfolk/alchemist.webp"
     },
     {
@@ -49,7 +55,7 @@
             "Chose life"
         ],
         "setup": false,
-        "ability": "Each night*, choose 3 players (all players learn who): each silently chooses to live or die, but if all live, all die.",
+        "ability": "Each night*, you may choose 3 players (all players learn who): each silently chooses to live or die, but if all live, all die.",
         "image": "/build/img/icons/demon/alhadikhia.webp"
     },
     {
@@ -63,7 +69,7 @@
         "otherNightReminder": "Choose a player, that player dies.",
         "reminders": [],
         "setup": false,
-        "ability": "Once per day, if you publicly guess which players are Minion(s) and which are Demon(s), good wins.",
+        "ability": "Each day, if you publicly guess which players are Minion(s) and which are Demon(s), good wins.",
         "image": "/build/img/icons/townsfolk/alsaahir.webp"
     },
     {
@@ -156,7 +162,7 @@
         "otherNightReminder": "",
         "reminders": [],
         "setup": true,
-        "ability": "The Storyteller can break the game rules & if executed, good wins, even if you are dead. [No evil characters]",
+        "ability": "The Storyteller can break the game rules, and if executed, good wins, even if you are dead. [No evil characters]",
         "image": "/build/img/icons/townsfolk/atheist.webp"
     },
     {
@@ -256,7 +262,7 @@
             "Ability twice"
         ],
         "setup": false,
-        "ability": "Each night, until dusk, 1) a player becomes sober, healthy and gets true info, or 2) their ability works twice. They learn which.",
+        "ability": "Each night, until dusk, 1) a player becomes sober, healthy & gets true info, or 2) their ability works twice. They learn which.",
         "image": "/build/img/icons/traveller/barista.webp"
     },
     {
@@ -284,7 +290,7 @@
         "otherNightReminder": "",
         "reminders": [],
         "setup": false,
-        "ability": "You must use a vote token to vote. Dead players may choose to give you theirs. If so, you learn their alignment.",
+        "ability": "You must use a vote token to vote. If a dead player gives you theirs, you learn their alignment. You are sober & healthy.",
         "image": "/build/img/icons/traveller/beggar.webp"
     },
     {
@@ -335,7 +341,7 @@
             "Nominate evil"
         ],
         "setup": false,
-        "ability": "Only the Storyteller can nominate. At least 1 opposite player must be nominated each day.",
+        "ability": "Only the Storyteller can nominate. At least 1 opposing player must be nominated each day.",
         "image": "/build/img/icons/traveller/bishop.webp"
     },
     {
@@ -366,7 +372,7 @@
             "Has ability"
         ],
         "setup": false,
-        "ability": "Once per game, at night, choose a dead player: they regain their ability until dusk.",
+        "ability": "Once per game, at night*, choose a dead player: they regain their ability until dusk.",
         "image": "/build/img/icons/traveller/bonecollector.webp"
     },
     {
@@ -380,7 +386,7 @@
         "otherNightReminder": "",
         "reminders": [],
         "setup": false,
-        "ability": "If you are executed, all but 3 players die. 1 minute later, the player with the most players pointing at them dies.",
+        "ability": "If you are executed, all but 3 players die. After a 10 to 1 countdown, the player with the most players pointing at them, dies.",
         "image": "/build/img/icons/minion/boomdandy.webp"
     },
     {
@@ -497,7 +503,7 @@
             "Mad"
         ],
         "setup": false,
-        "ability": "Each night, choose a player & a good character: they are \"mad\" they are this character tomorrow, or might be executed.",
+        "ability": "Each night, choose a player & a good character: they are “mad” they are this character tomorrow, or might be executed.",
         "image": "/build/img/icons/minion/cerenovus.webp"
     },
     {
@@ -553,7 +559,7 @@
         "otherNightReminder": "If the King was killed by the Demon, wake the Choirboy and point to the Demon player.",
         "reminders": [],
         "setup": true,
-        "ability": "If the Demon kills the King, you learn which player is the Demon. [+ the King]",
+        "ability": "If the Demon kills the King, you learn which player is the Demon. [+the King]",
         "image": "/build/img/icons/townsfolk/choirboy.webp"
     },
     {
@@ -616,7 +622,7 @@
         "otherNightReminder": "If the cult leader changed alignment, show them the thumbs up good signal of the thumbs down evil signal accordingly.",
         "reminders": [],
         "setup": false,
-        "ability": "Each night, you become the alignment of an alive neighbour. If all good players choose to join your cult, your team wins.",
+        "ability": "Each night, you become the alignment of an alive neighbor. If all good players choose to join your cult, your team wins.",
         "image": "/build/img/icons/townsfolk/cultleader.webp"
     },
     {
@@ -649,7 +655,7 @@
             "Guess used"
         ],
         "setup": false,
-        "ability": "All Minions know you are in play. If a Minion publicly guesses you (once), your team loses.",
+        "ability": "All Minions know a Damsel is in play. If a Minion publicly guesses you (once), your team loses.",
         "image": "/build/img/icons/outsider/damsel.webp"
     },
     {
@@ -814,7 +820,7 @@
         "otherNightReminder": "The Dreamer points to a player. Show 1 good and 1 evil character token; one of these is correct.",
         "reminders": [],
         "setup": false,
-        "ability": "Each night, choose a player (not yourself or Travellers): you learn 1 good and 1 evil character, 1 of which is correct.",
+        "ability": "Each night, choose a player (not yourself or Travellers): you learn 1 good & 1 evil character, 1 of which is correct.",
         "image": "/build/img/icons/townsfolk/dreamer.webp"
     },
     {
@@ -834,6 +840,10 @@
             {
                 "type": "selection",
                 "name": "bag-disabled"
+            },
+            {
+                "type": "reveal",
+                "name": "replace-character"
             }
         ],
         "setup": true,
@@ -866,7 +876,7 @@
         "otherNightReminder": "Show the finger signal (0, 1, 2) for the number of evil neighbours.",
         "reminders": [],
         "setup": false,
-        "ability": "Each night, you learn how many of your 2 alive neighbours are evil.",
+        "ability": "Each night, you learn how many of your 2 alive neighbors are evil.",
         "image": "/build/img/icons/townsfolk/empath.webp"
     },
     {
@@ -961,7 +971,7 @@
         "otherNightReminder": "If a Farmer died tonight, choose another good player and make them the Farmer. Wake this player, show them the 'You are' card and the Farmer character token.",
         "reminders": [],
         "setup": false,
-        "ability": "If you die at night, an alive good player becomes a Farmer.",
+        "ability": "When you die at night, an alive good player becomes a Farmer.",
         "image": "/build/img/icons/townsfolk/farmer.webp"
     },
     {
@@ -977,7 +987,7 @@
             "Fear"
         ],
         "setup": false,
-        "ability": "Each night, choose a player. If you nominate & execute them, their team loses. All players know if you choose a new player.",
+        "ability": "Each night, choose a player: if you nominate & execute them, their team loses. All players know if you choose a new player.",
         "image": "/build/img/icons/minion/fearmonger.webp"
     },
     {
@@ -1017,7 +1027,7 @@
         "setup": false,
         "name": "Fibbin",
         "team": "fabled",
-        "ability": "Once per game, 1 good player might get false information.",
+        "ability": "Once per game, 1 good player might get incorrect information.",
         "image": "/build/img/icons/fabled/fibbin.webp"
     },
     {
@@ -1077,7 +1087,7 @@
             "No ability"
         ],
         "setup": false,
-        "ability": "The first time you die, you don't.",
+        "ability": "The 1st time you die, you don't.",
         "image": "/build/img/icons/townsfolk/fool.webp"
     },
     {
@@ -1123,7 +1133,7 @@
         "otherNightReminder": "",
         "reminders": [],
         "setup": false,
-        "ability": "Once per day, you may choose to kill an alive neighbour, if your other alive neighbour agrees.",
+        "ability": "Once per day, you may choose to kill an alive neighbor, if your other alive neighbor agrees.",
         "image": "/build/img/icons/traveller/gangster.webp"
     },
     {
@@ -1186,6 +1196,22 @@
         "image": "/build/img/icons/townsfolk/general.webp"
     },
     {
+        "id": "gnome",
+        "name": "Gnome",
+        "edition": "",
+        "team": "traveller",
+        "firstNight": 0,
+        "firstNightReminder": "",
+        "otherNight": 0,
+        "otherNightReminder": "",
+        "reminders": [
+            "Amigo"
+        ],
+        "setup": false,
+        "ability": "All players start knowing a player of your alignment. You may choose to kill anyone who nominates them.",
+        "image": "/build/img/icons/traveller/gnome.webp"
+    },
+    {
         "id": "goblin",
         "name": "Goblin",
         "edition": "",
@@ -1215,7 +1241,7 @@
             "Dead"
         ],
         "setup": true,
-        "ability": "You start knowing which Outsiders are in play. If 1 died today, choose a player tonight: they die. [−1 or +1 Outsider]",
+        "ability": "You start knowing which Outsiders are in play. If 1 died today, choose a player tonight: they die. [-1 or +1 Outsider]",
         "image": "/build/img/icons/minion/godfather.webp"
     },
     {
@@ -1724,7 +1750,7 @@
         "otherNightReminder": "If there are more dead than living, show the King a character token of a living player.",
         "reminders": [],
         "setup": false,
-        "ability": "Each night, if the dead equal or outnumber the living, you learn 1 alive character. The Demon knows who you are.",
+        "ability": "Each night, if the dead equal or outnumber the living, you learn 1 alive character. The Demon knows you are the King.",
         "image": "/build/img/icons/townsfolk/king.webp"
     },
     {
@@ -1861,10 +1887,14 @@
             {
                 "type": "selection",
                 "name": "bag-disabled"
+            },
+            {
+                "type": "reveal",
+                "name": "replace-character"
             }
         ],
         "setup": true,
-        "ability": "Each night, Minions choose who babysits Lil' Monsta & 'is the Demon'. Each night*, a player might die. [+1 Minion]",
+        "ability": "Each night, Minions choose who babysits Lil' Monsta & \"is the Demon\". Each night*, a player might die. [+1 Minion]",
         "image": "/build/img/icons/demon/lilmonsta.webp"
     },
     {
@@ -1915,7 +1945,7 @@
             "Dead"
         ],
         "setup": true,
-        "ability": "Each night*, choose a player: they die. [Evil characters are in a line. You are in the middle. +1 Minion. -? To +? Outsiders]",
+        "ability": "Each night*, choose a player: they die. [Evil characters are in a line. You are in the middle. +1 Minion. -? to +? Outsiders]",
         "image": "/build/img/icons/demon/lordoftyphon.webp"
     },
     {
@@ -1946,10 +1976,11 @@
         "otherNight": 23,
         "otherNightReminder": "The Lycanthrope points to a living player: if good, they die and no one else can die tonight.",
         "reminders": [
-            "Dead"
+            "Dead",
+            "Faux Paw"
         ],
         "setup": false,
-        "ability": "Each night*, choose a living player: if good, they die, but they are the only player that can die tonight.",
+        "ability": "Each night*, choose an alive player. If good, they die & the Demon doesn’t kill tonight. One good player registers as evil.",
         "image": "/build/img/icons/townsfolk/lycanthrope.webp"
     },
     {
@@ -1983,10 +2014,14 @@
             {
                 "type": "selection",
                 "name": "bag-disabled"
+            },
+            {
+                "type": "reveal",
+                "name": "replace-character"
             }
         ],
         "setup": true,
-        "ability": "You think you are a good character but you are not. The Demon knows who you are. [You neighbour the Demon]",
+        "ability": "You think you are a good character, but you are not. The Demon knows who you are. [You neighbor the Demon]",
         "image": "/build/img/icons/minion/marionette.webp"
     },
     {
@@ -2016,7 +2051,7 @@
             "Abnormal"
         ],
         "setup": false,
-        "ability": "Each night, you learn how many players' abilities worked abnormally (since dawn) due to another character's ability.",
+        "ability": "Each night, you learn how many players’ abilities worked abnormally (since dawn) due to another character's ability.",
         "image": "/build/img/icons/townsfolk/mathematician.webp"
     },
     {
@@ -2141,7 +2176,7 @@
         "otherNightReminder": "",
         "reminders": [],
         "setup": false,
-        "ability": "If you are \"mad\" about being an Outsider, you might be executed.",
+        "ability": "If you are “mad” about being an Outsider, you might be executed.",
         "image": "/build/img/icons/outsider/mutant.webp"
     },
     {
@@ -2189,7 +2224,7 @@
             "No ability"
         ],
         "setup": false,
-        "ability": "Once per game, at night, choose a player: they learn who you are.",
+        "ability": "Once per game, at night, choose a player: they learn you are the Nightwatchman.",
         "image": "/build/img/icons/townsfolk/nightwatchman.webp"
     },
     {
@@ -2222,7 +2257,7 @@
             "Poisoned"
         ],
         "setup": false,
-        "ability": "Each night*, choose a player: they die. Your 2 Townsfolk neighbours are poisoned.",
+        "ability": "Each night*, choose a player: they die. Your 2 Townsfolk neighbors are poisoned.",
         "image": "/build/img/icons/demon/nodashii.webp"
     },
     {
@@ -2281,10 +2316,11 @@
         "otherNight": 0,
         "otherNightReminder": "",
         "reminders": [
+            "Drunk",
             "About to die"
         ],
         "setup": false,
-        "ability": "All players keep their eyes closed when voting & the vote tally is secret. Votes for you only count if you vote.",
+        "ability": "All players keep their eyes closed when voting and the vote tally is secret. Each night, choose if you are drunk until dusk.",
         "image": "/build/img/icons/minion/organgrinder.webp"
     },
     {
@@ -2326,9 +2362,16 @@
         "firstNightReminder": "The Philosopher either shows a 'no' head signal, or points to a good character on their sheet. If they chose a character: Swap the out-of-play character token with the Philosopher token. Or, if the character is in play, place the drunk marker by that player and the Not the Philosopher token by the Philosopher.",
         "otherNight": 2,
         "otherNightReminder": "If the Philosopher has not used their ability: the Philosopher either shows a 'no' head signal, or points to a good character on their sheet. If they chose a character: Swap the out-of-play character token with the Philosopher token. Or, if the character is in play, place the drunk marker by that player and the Not the Philosopher token by the Philosopher.",
-        "reminders": [
-            "Drunk",
-            "Is the Philosopher"
+        "reminders": [],
+        "remindersGlobal": [
+            "Is the Philosopher",
+            "Drunk"
+        ],
+        "special": [
+            {
+                "type": "reveal",
+                "name": "replace-character"
+            }
         ],
         "setup": false,
         "ability": "Once per game, at night, choose a good character: gain that ability. If this character is in play, they are drunk.",
@@ -2345,7 +2388,7 @@
         "otherNightReminder": "The Pit-Hag points to a player and a character on the sheet. If this character is not in play, wake that player and show them the 'You are' card and the relevant character token. If the character is in play, nothing happens.",
         "reminders": [],
         "setup": false,
-        "ability": "Each night*, choose a player & a character they become (if not-in-play). If a Demon is made, deaths tonight are arbitrary.",
+        "ability": "Each night*, choose a player & a character they become (if not in play). If a Demon is made, deaths tonight are arbitrary.",
         "image": "/build/img/icons/minion/pithag.webp"
     },
     {
@@ -2378,7 +2421,7 @@
             "Storyteller Ability"
         ],
         "setup": false,
-        "ability": "If you die, the Storyteller gains a Minion ability.",
+        "ability": "When you die, the Storyteller gains a Minion ability.",
         "image": "/build/img/icons/outsider/plaguedoctor.webp"
     },
     {
@@ -2643,7 +2686,7 @@
         "setup": false,
         "name": "Revolutionary",
         "team": "fabled",
-        "ability": "2 neighboring players are known to be the same alignment. Once per game, one of them registers falsely.",
+        "ability": "2 neighboring players are known to be the same alignment. Once per game, 1 of them registers falsely.",
         "image": "/build/img/icons/fabled/revolutionary.webp"
     },
     {
@@ -2657,7 +2700,7 @@
         "otherNightReminder": "",
         "reminders": [],
         "setup": true,
-        "ability": "Nominees die, but may nominate again immediately (on day 3, they must). After day 3, evil wins. [All Minions are Riot]",
+        "ability": "On day 3, Minions become Riot & nominees die but nominate an alive player immediately. This must happen.",
         "image": "/build/img/icons/demon/riot.webp"
     },
     {
@@ -2761,7 +2804,7 @@
             "Demon"
         ],
         "setup": false,
-        "ability": "If there are 5 or more players alive & the Demon dies, you become the Demon. (Travellers don't count)",
+        "ability": "If there are 5 or more players alive & the Demon dies, you become the Demon. (Travellers don't count.)",
         "image": "/build/img/icons/minion/scarletwoman.webp"
     },
     {
@@ -2979,7 +3022,7 @@
         "otherNightReminder": "",
         "reminders": [],
         "setup": false,
-        "ability": "Minions start knowing 3 not-in-play characters.",
+        "ability": "Each Minion gets 3 bluffs.",
         "image": "/build/img/icons/outsider/snitch.webp"
     },
     {
@@ -3132,7 +3175,7 @@
             "Can not die"
         ],
         "setup": false,
-        "ability": "If both your alive neighbours are good, they can't die.",
+        "ability": "If both your alive neighbors are good, they can't die.",
         "image": "/build/img/icons/townsfolk/tealady.webp"
     },
     {
@@ -3245,7 +3288,7 @@
             "Poisoned"
         ],
         "setup": true,
-        "ability": "Each night*, choose a player: they die. Minions you kill keep their ability & poison 1 Townsfolk neighbour. [−1 Outsider]",
+        "ability": "Each night*, choose a player: they die. Minions you kill keep their ability & poison 1 Townsfolk neighbor. [-1 Outsider]",
         "image": "/build/img/icons/demon/vigormortis.webp"
     },
     {
@@ -3291,7 +3334,7 @@
         "otherNightReminder": "",
         "reminders": [],
         "setup": false,
-        "ability": "All players know who you are. You can not die during the day. If good voted, you may choose to execute immediately.",
+        "ability": "All players know you are the Vizier. You cannot die during the day. If good voted, you may choose to execute immediately.",
         "image": "/build/img/icons/minion/vizier.webp"
     },
     {
@@ -3321,7 +3364,7 @@
         "otherNightReminder": "",
         "reminders": [],
         "setup": false,
-        "ability": "Only you and the dead can vote. They don't need a vote token to do so. A 50% majority is not required.",
+        "ability": "Only you & the dead can vote. They don't need a vote token to do so. A 50% majority isn't required.",
         "image": "/build/img/icons/traveller/voudon.webp"
     },
     {
@@ -3357,7 +3400,7 @@
             "Knows"
         ],
         "setup": false,
-        "ability": "On your 1st night, look at the Grimoire and choose a player: they are poisoned. 1 good player knows a Widow is in play.",
+        "ability": "On your 1st night, look at the Grimoire & choose a player: they are poisoned. 1 good player knows a Widow is in play.",
         "image": "/build/img/icons/minion/widow.webp"
     },
     {
@@ -3375,6 +3418,22 @@
         "setup": false,
         "ability": "Each night, choose a player: if they nominate tomorrow, they die. If just 3 players live, you lose this ability.",
         "image": "/build/img/icons/minion/witch.webp"
+    },
+    {
+        "id": "wizard",
+        "name": "Wizard",
+        "edition": "",
+        "team": "minion",
+        "firstNight": 24,
+        "firstNightReminder": "Run the Wizard ability if applicable.",
+        "otherNight": 15,
+        "otherNightReminder": "Run the Wizard ability if applicable.",
+        "reminders": [
+            "?"
+        ],
+        "setup": false,
+        "ability": "Once per game, choose to make a wish. If granted, it might have a price & leave a clue as to its nature.",
+        "image": "/build/img/icons/minion/wizard.webp"
     },
     {
         "id": "wudaozhe",
@@ -3408,6 +3467,25 @@
         "setup": false,
         "ability": "每个夜晚，你会得知一个在场角色。每局游戏限一次，你得知的信息改为恶魔的伪装之一。",
         "image": "/build/img/icons/townsfolk/wushiren.webp"
+    },
+    {
+        "id": "xaan",
+        "name": "Xaan",
+        "edition": "",
+        "team": "minion",
+        "firstNight": 22,
+        "firstNightReminder": "If the X token is placed in the Grimoire, all Townsfolk are poisoned.",
+        "otherNight": 5,
+        "otherNightReminder": "If the X token is placed in the Grimoire, all Townsfolk are poisoned.",
+        "reminders": [
+            "Night 1",
+            "Night 2",
+            "Night 3",
+            "X"
+        ],
+        "setup": true,
+        "ability": "On night X, all Townsfolk are poisoned until dusk. [X Outsiders]",
+        "image": "/build/img/icons/minion/xaan.webp"
     },
     {
         "id": "xingjiaoshang",
@@ -3451,6 +3529,22 @@
         "reminders": [],
         "setup": true,
         "ability": "所有戏子互相认识。不论在场的戏子数量多少或存活与否，胜负结果会被对调。[所有善良玩家都是戏子]",
+        "image": "/build/img/icons/townsfolk/xizi.webp"
+    },
+    {
+        "id": "xizinew",
+        "name": "戏子（改）",
+        "edition": "syyl",
+        "team": "townsfolk",
+        "firstNight": 13,
+        "firstNightReminder": "同时唤醒所有除了旅行者以外的善良玩家，让他们互认。如有必要，可以向他们展示“该角色的能力对你生效”信息标记并展示戏子（改）角色标记。然后让他们重新入睡。",
+        "otherNight": 0,
+        "otherNightReminder": "",
+        "reminders": [
+            "善良醉酒"
+        ],
+        "setup": true,
+        "ability": "其他善良玩家醉酒（旅行者除外），你们互相认识且无法转变阵营，对调胜负结果，即使你失去能力。",
         "image": "/build/img/icons/townsfolk/xizi.webp"
     },
     {
@@ -3643,7 +3737,7 @@
         "remindersGlobal": [],
         "setup": false,
         "ability": "每个夜晚*，你会得知今天是否有非镇民且非旅行者玩家死亡。",
-        "image": "/build/img/icons/townsfolk/zhifu.wbp"
+        "image": "/build/img/icons/townsfolk/zhifu.webp"
     },
     {
         "id": "zombuul",

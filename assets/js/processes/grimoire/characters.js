@@ -261,6 +261,10 @@ characterShowDialog.on(Dialog.SHOW, () => {
     const token = getToken(characterShowDialog.getElement());
     characterNameInput.value = pad.getPlayerNameForToken(token);
 
+    lookupOneCached("#character-show-orphan").hidden = (
+        !token.classList.contains("is-orphan")
+    );
+
 });
 
 characterShowDialog.on(Dialog.HIDE, () => {
@@ -428,6 +432,45 @@ gameObserver.on("characters-selected", ({ detail }) => {
             }
         }))
     );
+
+});
+
+// #131 - highlight any orphan character and reminder tokens.
+gameObserver.on("characters-selected", ({ detail }) => {
+
+    TokenStore.ready((store) => {
+
+        pad.characters.forEach(({ character, token }) => {
+
+            if (["traveller", "fabled"].includes(character.getTeam())) {
+                return;
+            }
+
+            const index = detail.characters.findIndex((char) => {
+                return char.getId() === character.getId();
+            });
+
+            token.classList.toggle("is-orphan", index < 0);
+
+        });
+
+        pad.reminders.forEach(({ reminder, token }) => {
+
+            const character = store.getCharacter(reminder.getCharacterId());
+
+            if (["traveller", "fabled"].includes(character.getTeam())) {
+                return;
+            }
+
+            const index = detail.characters.findIndex((char) => {
+                return char.getId() === character.getId();
+            });
+
+            token.classList.toggle("is-orphan", index < 0);
+
+        });
+
+    });
 
 });
 

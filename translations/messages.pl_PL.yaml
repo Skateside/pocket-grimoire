@@ -1,0 +1,268 @@
+title: Kieszonkowy Grymuar
+
+forms:
+    file:
+        placeholder: Wybierz plik
+        button: Przeglądaj
+
+dialog:
+    close: Zamknij
+
+index:
+    title: Gra
+    description: Wirtualny Grymuar dla Blood on the Clocktower
+
+sheet:
+    title: Arkusz postaci
+    description: Arkusz postaci dla tej edycji Blood on the Clocktower
+    jinx: Urok
+    each_night: '* Każdej nocy, z wyjątkiem pierwszej nocy.'
+    get_qr_code: Pobierz kod QR dla tego arkusza
+    get_sheet: Pobierz ten arkusz
+    credit: <a href="https://bloodontheclocktower.com/" target="_blank" rel="noopener noreferrer">Blood on the Clocktower</a> jest znakiem towarowym Stevena Medwaya i <a href="https://www.thepandemoniuminstitute.com/" target="_blank" rel="noopener noreferrer">The Pandemonium Institute</a>
+    breakdown: Liczebności każdego z zespołów dla liczby graczy.
+    count_plus: '%count%+'
+
+groups:
+    players: Gracze
+    townsfolk: Mieszczanie
+    outsider: Outsiderzy
+    minion: Sługusi
+    demon: Demony
+    traveller: Podróżni
+    fabled: Baśniowi
+
+messages:
+    good_team: Dobra drużyna
+    evil_team: Zła drużyna
+    empty_character_ability: To jest pusta postać
+    version_change_message: Ta aplikacja uaktualniła swoją wersję. Ponieważ Twoje dane mogą nie być poprawne, zalecamy wyczyszczenie wszystkiego w oknie dialogowym "Wyczyść pamięć podręczną". Wciśnij "OK" aby otworzyć okno dialogowe lub "Anuluj" aby zamknąć tę wiadomość.
+    invalid_script: Format skryptu nie został rozpoznany.
+    no_characters: Skrypt nie zawiera żadnych znanych rozpoznawalnych postaci.
+    player_name: Jak nazywa się ten gracz?
+    custom_info_token: Jaką informację powinien zawierać nowy token informacyjny? Użyj **podwójne gwiazdki**, aby podkreślić tekst.
+    bag_disabled: 'Nie można dodać tych postaci do woreczka: {0}'
+
+setup:
+
+    title: Ustawienia
+
+    buttons:
+        select_edition: Wybierz Edycję
+        select_characters: Wybierz Postacie
+        qr_code_button: Arkusz Postaci
+        clear_cache_button: Wyczyść Pamięć Podręczną
+        language: Język
+        set_language: Ustaw Język
+
+    editions:
+        title: Wybierz Edycję
+        trouble_brewing: Nadchodzące Kłopoty
+        bad_moon_rising: Wschód Złego Księżyca
+        sects_and_violets: Sekty i Fiołki
+        custom_script: Własny Skrypt
+        custom_note: Załaduj własny skrypt, wprowadź adres URL własnego skryptu lub wklej JSON bezpośrednio.
+        custom_warning: Wczytaj niestandardowe pliki JSON tylko z zaufanych źródeł!
+        upload: Wczytaj własny skrypt
+        url: Podaj adres URL
+        paste: Wklej ze schowka
+        unsupported: Należy pamiętać, że Kieszonkowy Grymuar obecnie nie obsługuje skryptów typu homebrew ani skryptów zlokalizowanych.
+        select: Wybierz
+
+    character_select:
+        title: Wybierz Postacie
+        number_players: Liczba graczy
+        toggle_abilities: Pokaż umiejętności postaci
+        toggle_duplicates: Zezwól na duplikowanie postaci
+        highlight_random: Podświetl losowe postacie
+        draw_characters: Rozlosuj Postacie
+        add_all: Dodaj wszystko
+        layout: Układ
+        ellipse: Elipsa
+        diagonal: Przekątna
+        horizontal: Poziomo
+        vertical: Pionowo
+
+    character_choice:
+        title: Wybierz Swoją Postać
+        description: Dotknij dowolny z ponumerowanych tokenów, aby wybrać swoją postać. Ciemniejsze już zostały wybrane.
+
+    character_decision:
+        title: Zapamiętaj Swoją Postać
+        name: Nazwij się (opcjonalne)
+        return: Wróć do Wyboru Postaci
+
+    qr_code:
+        title: Arkusz postaci
+        intro: Przeskanuj ten kod QR, aby zobaczyć arkusz postaci
+        include: 'Zawiera:'
+        travellers: Podróżni
+        fabled: Baśniowi
+
+    clear_cache:
+        title: Wyczyść pamięć podręczną
+        clear_all: Wyczyść wszystko
+        clear_description: Wyłączenie tego spowoduje usunięcie poszczególnych części pamięci podręcznej.
+        lookup_label: Wyczyść dane
+        lookup_note: Dane dla Uroków, podziału zespołów oraz informacje o postaciach.
+        characters_label: Wyczyść edycję
+        characters_note: Edycja lub skrypt, który został wybrany i wczytany.
+        tokens_label: Wyczyść tokeny
+        tokens_note: Pozycja tokenów w Grymuarze.
+        inputs_label: Wyczyść wejścia
+        inputs_note: Ustawienia użytkownika dla tej strony internetowej.
+        details_label: Wyczyść otwarte/zamknięte
+        details_note: Które sekcje są otwarte lub zamknięte.
+        info_tokens_label: Wyczyść własne tokeny informacyjne
+        info_tokens_note: Własne tokeny informacyjne, które zostały dodane.
+        names_label: Wyczyść nazwy
+        names_note: Sugestie nazw graczy.
+        height_label: Wyczyść wysokość wypełnienia
+        height_note: Wysokość wypełnienia w Grymuarze.
+        clear_refresh_label: Odśwież po wyczyszczeniu
+        clear_refresh_note: Odświeżenie wczyta nowe dane dla wszystkiego, co zostało wyczyszczone.
+        warning: '<strong>Uwaga:</strong> wszystkie tokeny, które zostały umieszczone w Grymuarze zostaną zapomniane.'
+        info_token_warning: '<strong>Uwaga:</strong> wszystkie własne tokeny informacyjne zostaną zapomniane.'
+        clear_cache: Wyczyść pamięć podręczną
+
+grimoire:
+
+    title: Grymuar
+
+    grimoire:
+        bluffs: Blefy Demona
+        show_bluffs: Pokaż wszystkie blefy
+        add_bluffs: Dodaj blefy
+        add_token: Dodaj token
+        add_reminder: Dodaj przypomnienie
+        add_traveller: Dodaj podróżnego
+        add_fabled: Dodaj baśniowego
+        show_tokens: Pokaż tokeny
+        reset_height: Zresetuj wysokość wypełnienia
+        clear_grimoire: Wyczyść Grymuar
+        clear_grimoire_warning: Czy jesteś pewien, że chcesz wyczyścić wszystkie tokeny?
+        show_night_order: Pokaż kolejność podczas nocy
+        character_size: Rozmiar tokenu postaci
+        reminder_size: Rozmiar tokenu przypomnienia
+        token_settings: Ustawienia Tokenów
+
+    character_list:
+        title: Wybierz Postać
+
+    reminder_list:
+        title: Wybierz Przypomnienie
+        show: Pokaż wszystkie przypomnienia
+        multiple: Dodaj wiele
+        add_all: Dodaj wszystkie
+
+    character_show:
+        title: Token
+        show: Pokaż
+        shroud: Całun
+        rotate: Obróć
+        reminder: Przypomnienie
+        replace: Zastąp
+        remove: Usuń token
+        recent_reminders: 'Ostatnio dodane przypomnienia:'
+        player_name: Ustaw nazwę gracza
+        ghost_vote: Głos ducha
+        orphan: 'Uwaga: tej postaci nie ma w obecnym skrypcie.'
+
+    reminder_show:
+        title: Przypomnienie
+        remove: Usuń
+
+    bluff_show:
+        title: Token
+        empty: Pusty
+        show: Pokaż
+        change: Zmień
+
+    bluff_list:
+        title: Wybierz blef
+        show_existing: Pokaż istniejące postacie
+        show_travellers: Pokaż podróżnych
+        show_evil: Pokaż złe postacie
+
+    token_list:
+        title: Postacie
+        add: Dodaj token
+
+    traveller_list:
+        title: Podróżni
+        show_all: Pokaż wszystkich podróżnych
+
+    fabled_list:
+        title: Baśniowi
+
+    token:
+        title: Token
+
+    export:
+        title: Eksportuj grę
+        markup: Wygeneruj kod QR, aby dane gry mogły zostać zaimportowane do <a href="https://the-grim.netlify.app/" target="_blank" rel="noopener noreferrer">The Grim</a>.
+        button: Wygeneruj kod QR
+
+jinxes:
+    title: Uroki
+    target: Cel
+    trick: Trick
+    reason: Uzasadnienie
+    show: Pokaż uroki, które nie są w grze
+
+night_order:
+    title: Kolejność w Nocy
+    first_night: Pierwsza noc
+    other_night: Pozostałe noce
+    swipe_change: Przesuń, żeby zmienić noce.
+    show: Pokaż postacie poza grą
+    show_dead: Pokaż martwe postacie
+
+info_tokens:
+    title: Tokeny Informacyjne
+    info_tokens:
+        isdemon: To jest <strong>Demon</strong>
+        isminion: To są twoi <strong>Sługusi</strong>
+        notinplay: Tych postaci <strong>nie ma w grze</strong>
+        nominatetoday: Czy dzisiaj <strong>nominowałeś</strong>?
+        playeris: <strong>Ten gracz</strong> jest
+        votetoday: Czy dzisiaj <strong>głosowałeś</strong>?
+        youare: <strong>Jesteś</strong>
+        selectedyou: Ta postać <strong>wybrała</strong> ciebie
+        useability: Użyj swojej <strong>zdolności</strong>?
+        makechoice: Dokonaj <strong>wyboru</strong>
+    custom: Własne tokeny informacyjne
+    add_custom: Dodaj token informacyjny
+    edit_custom: Modyfikuj token informacyjny
+    delete_custom: Usuń token informacyjny
+
+notes:
+    title: Notatki Bajarza
+    label: Notatki
+    clear: Wyczyść notatki
+    clear_warning: Czy jesteś pewien, że chcesz wyczyścić notatki?
+
+acknowledgements:
+    title: Podziękowania
+    acknowledgements:
+        - <a href="https://bloodontheclocktower.com/" target="_blank" rel="noopener noreferrer">Blood on the Clocktower</a> jest znakiem towarowym Stevena Medwaya i <a href="https://www.thepandemoniuminstitute.com/" target="_blank" rel="noopener noreferrer">The Pandemonium Institute</a>.
+        - Nocne przypomnienia i inne teksty pomocnicze napisane przez <a href="http://bignose.whitetree.org/projects/botc/diy/" target="_blank" rel="noopener noreferrer">Bena Finneya</a>.
+        - Ikony pochodzą z <a href="https://fontawesome.com/v5.15/icons" target="_blank" rel="noopener noreferrer">Font Awesome</a>.
+        - Wiele zdjęć i danych zostało wziętych z <a href="https://www.clocktower.online" target="_blank" rel="noopener noreferrer">Clocktower.online</a> i <a href="https://bloodontheclocktower.com/" target="_blank" rel="noopener noreferrer">strony internetowej Blood on the Clocktower</a>.
+        - To jest nieoficjalny wirtualny Grymuar dla gry Blood on the Clocktower. Ten projekt jest bezpłatny, a kod źródłowy można znaleźć na <a href="https://github.com/Skateside/pocket-grimoire" target="_blank" rel="noopener noreferrer">GitHub</a>. Ten projekt nie jest powiązany z The Pandemonium Institute. Jeśli lubisz grać w Blood on the Clocktower, <a href="https://bloodontheclocktower.com/buy" target="_blank" rel="noopener noreferrer">rozważ zakup własnego Grymuaru</a>, który pozwoli na łatwiejszą grę w porównaniu do cyfrowej wersji. Dodatkowo w ten sposób wesprzesz twórców.
+        - Zauważyłeś błąd lub masz sugestie poprawy? Daj mi znać na kanale <a href="https://discord.gg/eU89j89" target="_blank" rel="noopener noreferrer">pocket-grimoire na nieoficjalnym serwerze Discord</a> (mój nick to "Skateside") lub <a href="https://github.com/Skateside/pocket-grimoire/issues" target="_blank" rel="noopener noreferrer">otwórz issue w GitHub</a>.
+        - <small>Wersja <span id="version"></span></small>
+
+errors:
+    homebrew_json:
+        not_homebrew: Wpis nie jest homebrew "%id%"
+        unrecognised_team: Nierozpoznany zespół "%team%"
+        not_find_id: Nie można znaleźć ID "%id%"
+        not_recognise_character: Nie rozpoznano postaci "%id%"
+        invalid_entry: 'Niepoprawny wpis dla "%id%": %reasons%'
+        empty_teams: 'Puste zespoły: %teams%'
+        invalid_property: Właściwość "%property%" powinna być typu %expected% ale jest typu %given%
+    url:
+        no_url: Nieprawidłowy lub brakujący adres URL
+        cannot_access: Nie można uzyskać dostępu do adresu URL
+        not_json: Nie można sparsować JSONa z adresu URL

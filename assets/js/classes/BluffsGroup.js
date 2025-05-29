@@ -216,7 +216,7 @@ export default class BluffsGroup {
     }
 
     /**
-     * Finishes the seting pu of this group of Demon Bluffs and dispatches an
+     * Finishes the seting up of this group of Demon Bluffs and dispatches an
      * event to announce that it's ready.
      */
     ready() {

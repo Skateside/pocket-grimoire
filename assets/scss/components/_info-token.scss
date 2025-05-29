@@ -54,11 +54,13 @@
     color: #fff;
 
     &:lang(de),
+    &:lang(id),
     &:lang(ru) {
         font-size: clamp(1rem, 8vw, 3rem);
     }
 
     &:lang(kv),
+    &:lang(pl),
     &:lang(tr) {
         font-size: clamp(1rem, 7vw, 2.5rem);
     }

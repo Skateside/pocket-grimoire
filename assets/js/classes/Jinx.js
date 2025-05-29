@@ -127,6 +127,7 @@ export default class Jinx {
 
             state[name] = forceState;
 
+            // Next line can trigger: toggle-jinx-ready, toggle-jinx-trick, toggle-jinx-target, toggle-jinx-active
             this.observer?.trigger(`toggle-jinx-${name}`, {
                 jinx: this,
                 state: forceState

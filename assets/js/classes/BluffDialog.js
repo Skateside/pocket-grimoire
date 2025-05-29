@@ -24,8 +24,10 @@ export default class BluffDialog extends Dialog {
      *
      * @param {CharacterToken} character
      *        Character to display.
+     * @param {Boolean} isOrphan
+     *        true if the "orphan" note should be shown, false otherwise.
      */
-    display(character) {
+    display(character, isOrphan = false) {
 
         const {
             dialog
@@ -40,6 +42,10 @@ export default class BluffDialog extends Dialog {
             "#bluff-show-ability",
             dialog
         ).textContent = character.getAbility();
+        lookupOneCached(
+            "#bluff-show-orphan",
+            dialog
+        ).hidden = !isOrphan;
         showTokenButton.disabled = character.isEmpty();
         showTokenButton.dataset.characterId = character.getId();
 

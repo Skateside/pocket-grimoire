@@ -37,10 +37,6 @@ a {
     a[href] {
         color: #000;
         text-decoration: none;
-
-        &::after {
-            content: " (" attr(href) ")";
-        }
     }
 
     small {
@@ -69,6 +65,7 @@ a {
         text-shadow: none;
         font-size: 14pt;
         color: #000;
+        margin-bottom: 0.5rem;
     }
 
     .edition {
@@ -77,15 +74,15 @@ a {
 
     .edition > summary {
         font-size: 12pt;
-        text-align: left;
         color: #000;
+        margin-top: 0.25rem;
+        margin-bottom: 0.25rem;
     }
 
     .edition__heading-text {
         border: none;
         background-color: #fff;
-        margin: 0;
-        padding-left: 0;
+        margin-inline-start: 25pt;
         box-shadow: none;
 
         &::before {
@@ -101,7 +98,7 @@ a {
         grid-template-rows: -webkit-min-content;
         grid-template-rows: 1fr min-content;
         gap: 0 4pt;
-        padding: 2pt 0;
+        padding: 0.5pt 0;
         page-break-inside: avoid;
     }
 

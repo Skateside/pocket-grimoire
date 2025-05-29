@@ -166,6 +166,7 @@ grimoire:
         recent_reminders: 가장 최근 알림
         player_name: 플레이어 이름 설정
         ghost_vote: 유령 투표
+        orphan: '경고: 이 캐릭터는 현재 스크립트에 없습니다.'
 
     reminder_show:
         title: 알림
@@ -197,6 +198,11 @@ grimoire:
     token:
         title: 토큰
 
+    export:
+        title: 게임 내보내기
+        markup: <a href="https://the-grim.netlify.app/" target="_blank" rel="noopener noreferrer">The Grim</a>으로 게임 데이터를 가져올 수 있도록 QR 코드를 생성하세요.
+        button: QR 코드 생성
+
 jinxes:
     title: 징크스
     target: 목표
@@ -223,6 +229,8 @@ info_tokens:
         votetoday: 오늘 당신은 <strong>투표</strong>했나요?
         youare: <strong>당신</strong>은
         selectedyou: 이 캐릭터가 당신을 <strong>선택</strong>했습니다
+        useability: 당신의 <strong>능력</strong>을 사용하세요?
+        makechoice: <strong>선택</strong>을 하세요
     custom: 커스텀 정보 토큰
     add_custom: 정보 토큰 추가
     edit_custom: 정보 토큰 수정
@@ -242,7 +250,7 @@ acknowledgements:
         - 아이콘들은 <a href="https://fontawesome.com/v5.15/icons" target="_blank" rel="noopener noreferrer">Font Awesome</a>에서 가져왔습니다
         - 많은 이미지와 자료는 <a href="https://www.clocktower.online" target="_blank" rel="noopener noreferrer">Clocktower.online</a> 과 the <a href="https://bloodontheclocktower.com/" target="_blank" rel="noopener noreferrer">Blood on the Clocktower website</a> 에서 가져왔습니다
         - 이것은 <strong>시계탑의 흐른피</strong> 의 비공식 가상 그리모어 입니다. 이 프로젝트는 무료이며, 소스코드는 <a href="https://github.com/Skateside/pocket-grimoire" target="_blank" rel="noopener noreferrer">GitHub</a> 에서 찾을 수 있습니다. 이 프로젝트는 Pandemonium Institute와 관련이 없습니다. 시계탑의 흐른피 를 즐겨 플레이하신다면 자신만의 그리모어 구입을 고려해 보세요. 이 디지털 버전보다 더 유연할 뿐만 아니라 제작자도 지원합니다.
-        - 버그를 발견했거나 제안이 있으십니까? <a href="https://discord.gg/FyZwg75H" target="_blank" rel="noopener noreferrer">pocket-grimoire channel on the unofficial discord server</a> (제 이름은 "Skateside") 에 제보하거나 또는 <a href="https://github.com/Skateside/pocket-grimoire/issues" target="_blank" rel="noopener noreferrer">GitHub</a>.에 문제를 올려주세요
+        - 버그를 발견했거나 제안이 있으십니까? <a href="https://discord.gg/eU89j89" target="_blank" rel="noopener noreferrer">pocket-grimoire channel on the unofficial discord server</a> (제 이름은 "Skateside") 에 제보하거나 또는 <a href="https://github.com/Skateside/pocket-grimoire/issues" target="_blank" rel="noopener noreferrer">GitHub</a>.에 문제를 올려주세요
         - <small>버전 <span id="version"></span></small>
 
 errors:
@@ -254,3 +262,7 @@ errors:
         invalid_entry: '"%id%" 에대해 잘못된 항목 : %reasons%'
         empty_teams: '빈 팀: %teams%'
         invalid_property: 속성 "%property%"은 %expected% 유형이어야 하지만 대신 %given% 유형이었습니다.
+    url:
+        no_url: URL이 잘못되었거나 누락됨
+        cannot_access: URL에 액세스할 수 없음
+        not_json: URL에서 JSON을 구문 분석할 수 없음

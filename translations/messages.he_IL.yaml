@@ -166,6 +166,7 @@ grimoire:
         recent_reminders: 'התזכורות האחרונות שהתווספו:'
         player_name: קבע שם שחקן
         ghost_vote: הצבעת רפאים
+        orphan: 'אזהרה: דמות זו אינה בתסריט הנוכחי.'
 
     reminder_show:
         title: תזכורת
@@ -197,6 +198,11 @@ grimoire:
     token:
         title: אסימון
 
+    export:
+        title: ייצוא משחק
+        markup: צור קוד QR כדי שניתן יהיה לייבא את נתוני המשחק אל <a href="https://the-grim.netlify.app/" target="_blank" rel="noopener noreferrer">The Grim</a>.
+        button: צור קוד QR
+
 jinxes:
     title: נאחסים
     target: מטרה
@@ -223,6 +229,8 @@ info_tokens:
         votetoday: האם <strong>הצבעת</strong> היום?
         youare: <strong>אתה</strong>
         selectedyou: הדמות הזו <strong>בחרה</strong> בך
+        useability: השתמש ב<strong>יכולת</strong> שלך?
+        makechoice: תעשה <strong>בחירה</strong>
     custom: אסימון מידע מותאם אישית
     add_custom: הוסף אסימון מידע
     edit_custom: עדכן אסימון מידע
@@ -242,7 +250,7 @@ acknowledgements:
         - אייקונים נלקחו <a href="https://fontawesome.com/v5.15/icons" target="_blank" rel="noopener noreferrer">מפונט אדיר</a>
         - תמונות רבות והמידע נלקח מ<a href="https://www.clocktower.online" target="_blank" rel="noopener noreferrer">clocktower.online</a> <a href="https://bloodontheclocktower.com/" target="_blank" rel="noopener noreferrer">ומהאתר של דם על מגדל השעון</a>
         - זהו גרימואר וירטואלי לא רשמי עבור דם על מגדל השעון. פרויקט זה הוא בחינם וניתן למצוא את קוד המקור ב-<a href="https://github.com/Skateside/pocket-grimoire" target="_blank" rel="noopener noreferrer">GitHub</a>. פרויקט זה אינו מזוהה עם מכון הפנדמוניום. אם אתה נהנה לשחק דם על מגדל השעון, <a href="https://bloodontheclocktower.com/buy" target="_blank" rel="noopener noreferrer">אנא שקול לקנות גרימואר משלך </a>- בנוסף להיותו גמיש יותר מהגרסה הדיגיטלית הזו, הוא גם תומך ביוצרים.
-        - שמת לב לבאג או יש לך הצעת שיפור? הודע לי <a href="https://discord.gg/FyZwg75H" target="_blank" rel="noopener noreferrer">בערוץ הכלים בשרת הדיסקורד הלא רשמי (</a>השם שלי שם הוא "Skateside") או <a href="https://github.com/Skateside/pocket-grimoire/issues" target="_blank" rel="noopener noreferrer">העלה בעיה ב-GitHub</a>.
+        - שמת לב לבאג או יש לך הצעת שיפור? הודע לי <a href="https://discord.gg/eU89j89" target="_blank" rel="noopener noreferrer">בערוץ הכלים בשרת הדיסקורד הלא רשמי (</a>השם שלי שם הוא "Skateside") או <a href="https://github.com/Skateside/pocket-grimoire/issues" target="_blank" rel="noopener noreferrer">העלה בעיה ב-GitHub</a>.
         - <small>גרסא <span id="version"></span></small>
 
 errors:
@@ -254,3 +262,7 @@ errors:
         invalid_entry: 'ערך לא חוקי עבור "%id%": %reasons%'
         empty_teams: 'צוותים ריקים: %teams%'
         invalid_property: המאפיין "%property%" צריך להיות מסוג %expected% אך היה מסוג %given% במקום זאת
+    url:
+        no_url: כתובת אתר לא חוקית או חסרה
+        cannot_access: לא ניתן לגשת לכתובת האתר
+        not_json: לא ניתן לנתח JSON מ-URL

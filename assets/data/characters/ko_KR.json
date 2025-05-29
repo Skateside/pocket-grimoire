@@ -2,9 +2,9 @@
     {
         "id": "acrobat",
         "name": "곡예사",
-        "ability": "매일 밤*(첫날 제외), 살아있는 이웃이 취하거나 중독되면 당신은 죽습니다.",
+        "ability": "매일 밤*, 플레이어를 선택하세요: 오늘 밤 취하거나 중독되면 당신은 죽습니다.",
         "firstNightReminder": "",
-        "otherNightReminder": "만약 이웃이 취하거나 중독되었다면, 곡예사는 사망합니다",
+        "otherNightReminder": "아크로뱃이 플레이어를 선택합니다. 오늘 밤 취하거나 중독되면 아크로뱃 플레이어가 죽습니다.",
         "remindersGlobal": [],
         "reminders": [
             "사망"
@@ -623,6 +623,17 @@
         "reminders": []
     },
     {
+        "id": "gnome",
+        "name": "그놈",
+        "ability": "모든 플레이어는 당신의 정렬에 대한 플레이어를 알게 됩니다. 당신은 그들을 지명한 사람을 죽이기로 선택할 수 있습니다.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": [
+            "아미고"
+        ]
+    },
+    {
         "id": "goblin",
         "name": "고블린",
         "ability": "당신이 지명되었을 때 공개적으로 고블린이라고 주장하고, 그 날 처형된다면 당신의 진영이 승리합니다.",
@@ -966,7 +977,8 @@
         "otherNightReminder": "늑대인간은 살아있는 플레이어를 가르킵니다. 만약 선 진영이라면, 그들은 죽고 오늘밤 아무도 죽지 않습니다",
         "remindersGlobal": [],
         "reminders": [
-            "사망"
+            "사망",
+            "Faux Paw"
         ]
     },
     {
@@ -1149,11 +1161,12 @@
     {
         "id": "organgrinder",
         "name": "오르간 연주자",
-        "ability": "투표할 때 모든 플레이어는 눈을 감고 있고 투표 집계는 비밀입니다. 스스로에게 투표한 경우에만 당신에게 투표가 적용됩니다.(0표로 간주)",
+        "ability": "모든 플레이어는 투표할 때 눈을 감고 투표 집계는 비밀입니다. 매일 밤 취했는지 아닌지 선택하세요.",
         "firstNightReminder": "",
         "otherNightReminder": "",
         "remindersGlobal": [],
         "reminders": [
+            "취함",
             "사망 예정"
         ]
     },
@@ -1173,8 +1186,8 @@
         "firstNightReminder": "철학자는 능력 사용여부를 결정합니다. 만약 사용한다면, 시트의 선한 캐릭터를 가르킵니다. 만약 플레이에 없던 캐릭터라면, 그 캐릭터로 교체하고, \"철학자이다\" 알림을 표기합니다. 만약 플레이중이라면, 그 캐릭터는 취하게 됩니다. 철학자가 사망시 그 플레이어는 술에서 깹니다.",
         "otherNightReminder": "철학자는 능력 사용여부를 결정합니다. 만약 사용한다면, 시트의 선한 캐릭터를 가르킵니다. 만약 플레이에 없던 캐릭터라면, 그 캐릭터로 교체하고, \"철학자이다\" 알림을 표기합니다. 만약 플레이중이라면, 그 캐릭터는 취하게 됩니다. 철학자가 사망시 그 플레이어는 술에서 깹니다.",
         "remindersGlobal": [
-            "취함",
-            "철학자이다"
+            "철학자이다",
+            "취함"
         ],
         "reminders": []
     },
@@ -1717,6 +1730,31 @@
         "remindersGlobal": [],
         "reminders": [
             "저주받음"
+        ]
+    },
+    {
+        "id": "wizard",
+        "name": "마법사",
+        "ability": "게임당 한 번씩 소원을 빌도록 선택하세요.  승인된 경우 가격이 책정될 수 있으며 그 성격에 대한 단서를 남길 수 있습니다.",
+        "firstNightReminder": "해당되는 경우 마법사 기능을 실행하십시오.",
+        "otherNightReminder": "해당되는 경우 마법사 기능을 실행하십시오.",
+        "remindersGlobal": [],
+        "reminders": [
+            "?"
+        ]
+    },
+    {
+        "id": "xaan",
+        "name": "Xaan",
+        "ability": "X일 밤, 모든 마을 사람들은 황혼까지 독살당합니다. [X 외부인]",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": [
+            "1일 밤",
+            "2일 밤",
+            "3일 밤",
+            "X"
         ]
     },
     {

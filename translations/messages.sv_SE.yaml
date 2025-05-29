@@ -27,7 +27,7 @@ groups:
     players: Spelare
     townsfolk: Bybor
     outsider: Utbölingar
-    minion: Lakejer
+    minion: Kumpaner
     demon: Demoner
     traveller: Resenärer
     fabled: Fabler
@@ -166,6 +166,7 @@ grimoire:
         recent_reminders: 'Senaste påminnelserna:'
         player_name: Ange spelarnamn
         ghost_vote: Röstbricka
+        orphan: 'Varning: den här karaktären finns inte i det aktuella manuset.'
 
     reminder_show:
         title: Påminnelse
@@ -197,6 +198,11 @@ grimoire:
     token:
         title: Bricka
 
+    export:
+        title: Exportera spel
+        markup: Generera en QR-kod så att speldata kan importeras till <a href="https://the-grim.netlify.app/" target="_blank" rel="noopener noreferrer">The Grim</a>.
+        button: Generera QR-kod
+
 jinxes:
     title: Förbannelser
     target: Mål
@@ -216,13 +222,15 @@ info_tokens:
     title: Infobrickor
     info_tokens:
         isdemon: Det här är <strong>Demonen</strong>
-        isminion: Det här är dina <strong>Lakejer</strong>
+        isminion: Det här är dina <strong>Kumpaner</strong>
         notinplay: De här rollerna är <strong>inte i spel</strong>
         nominatetoday: <strong>Nominerade</strong> du idag?
         playeris: <strong>Den här spelaren</strong> är
         votetoday: <strong>Röstade</strong> du idag?
         youare: <strong>Du</strong> är
         selectedyou: Denna förmåga <strong>påverkar</strong> dig
+        useability: Använd din <strong>förmåga</strong>?
+        makechoice: Gör ett <strong>val</strong>
     custom: Egna infobrickor
     add_custom: Lägg till infobricka
     edit_custom: Redigera infobricka
@@ -242,7 +250,7 @@ acknowledgements:
         - Ikonerna kommer från <a href="https://fontawesome.com/v5.15/icons" target="_blank" rel="noopener noreferrer">Font Awesome</a>.
         - Många bilder och data är hämtade från <a href="https://www.clocktower.online" target="_blank" rel="noopener noreferrer">Clocktower.online</a> och <a href="https://bloodontheclocktower.com/" target="_blank" rel="noopener noreferrer">Blood on the Clocktowers webbplats</a>.
         - Det här är en inofficiell virtuell spelbok för Blood on the Clocktower. Koden är öppen och finns på <a href="https://github.com/Skateside/pocket-grimoire" target="_blank" rel="noopener noreferrer">GitHub</a>. Projektet är inte knutet till The Pandemonium Institute. Om du gillar Blood on the Clocktower kan du <a href="https://bloodontheclocktower.com/buy" target="_blank" rel="noopener noreferrer">köpa din egen spelbok</a> för att stödja spelets skapare och få en mer flexibel spelbok än denna virtuella.
-        - 'Är det något som inte funkar som det ska? Tagga @skateside (på engelska) i <a href="https://discord.gg/FyZwg75H" target="_blank" rel="noopener noreferrer">kanalen #pocket-grimoire på den inofficiella Discordservern</a> eller anmäl problemet i <a href="https://github.com/Skateside/pocket-grimoire/issues" target="_blank" rel="noopener noreferrer">raise an issue in GitHub</a>.'
+        - 'Är det något som inte funkar som det ska? Tagga @skateside (på engelska) i <a href="https://discord.gg/eU89j89" target="_blank" rel="noopener noreferrer">kanalen #pocket-grimoire på den inofficiella Discordservern</a> eller anmäl problemet i <a href="https://github.com/Skateside/pocket-grimoire/issues" target="_blank" rel="noopener noreferrer">raise an issue in GitHub</a>.'
         - <small>Version <span id="version"></span></small>
 
 errors:
@@ -254,3 +262,7 @@ errors:
         invalid_entry: 'Ogiltig data för "%id%": %reasons%'
         empty_teams: Inga roller av typen %teams%
         invalid_property: Egenskapen "%property%" borde vara av typen %expected% men var istället typen %given%
+    url:
+        no_url: Ogiltig eller saknad webbadress
+        cannot_access: Det går inte att komma åt URL
+        not_json: Det går inte att analysera JSON från URL

@@ -166,6 +166,7 @@ grimoire:
         recent_reminders: 'Yakın zamanda eklenen hatırlatıcılar:'
         player_name: Oyuncu ismini ayarla
         ghost_vote: Ölü oyu
+        orphan: 'Uyarı: Bu karakter şu anki senaryoda yok.'
 
     reminder_show:
         title: Hatırlatıcı
@@ -197,6 +198,11 @@ grimoire:
     token:
         title: Simge
 
+    export:
+        title: Oyunu dışa aktar
+        markup: Oyun verilerinin <a href="https://the-grim.netlify.app/" target="_blank" rel="noopener noreferrer">The Grim</a>'e aktarılabilmesi için bir QR kodu oluşturun.
+        button: QR kodu oluştur
+
 jinxes:
     title: Uğursuzluklar
     target: Hedef
@@ -223,6 +229,8 @@ info_tokens:
         votetoday: Bugün <strong>oy</strong> verdin mi?
         youare: <strong>Sen</strong> şusun
         selectedyou: Bu karakter seni <strong>seçti</strong>
+        useability: <strong>Yeteneklerinizi</strong> kullanın?
+        makechoice: Bir <strong>seçim</strong> yapın
     custom: Özel bilgi simgeleri
     add_custom: Bilgi simgesi ekle
     edit_custom: Bilgi simgesi düzenle
@@ -242,7 +250,7 @@ acknowledgements:
         - Icons are taken from <a href="https://fontawesome.com/v5.15/icons" target="_blank" rel="noopener noreferrer">Font Awesome</a>.
         - Many images and data are taken from <a href="https://www.clocktower.online" target="_blank" rel="noopener noreferrer">Clocktower.online</a> and the <a href="https://bloodontheclocktower.com/" target="_blank" rel="noopener noreferrer">Blood on the Clocktower website</a>.
         - Bu, Blood on the Clocktower için resmi olmayan bir sanal grimoire'dur. Bu proje ücretsizdir ve kaynak kodu <a href="https://github.com/Skateside/pocket-grimoire" target="_blank" rel="noopener noreferrer">GitHub'da</a> bulunabilir. Bu proje Pandemonium Enstitüsü ile bağlantılı değildir. Blood on the Clocktower oynamaktan hoşlanıyorsanız, <a href="https://bloodontheclocktower.com/buy" target="_blank" rel="noopener noreferrer">lütfen kendi grimoire'ınızı satın almayı düşünün</a> - bu dijital sürümden daha esnek olmasının yanı sıra, yapımcıları da destekleyecektir.
-        - Bir hata mı fark ettiniz veya bir iyileştirme öneriniz mi var? <a href="https://discord.gg/FyZwg75H" target="_blank" rel="noopener noreferrer">Resmi olmayan discord sunucusundaki pocket-grimoire kanalında</a> (oradaki adım "Skateside") bana bildirin veya GitHub'da bir issue oluşturun.
+        - Bir hata mı fark ettiniz veya bir iyileştirme öneriniz mi var? <a href="https://discord.gg/eU89j89" target="_blank" rel="noopener noreferrer">Resmi olmayan discord sunucusundaki pocket-grimoire kanalında</a> (oradaki adım "Skateside") bana bildirin veya GitHub'da bir issue oluşturun.
         - <small>Versiyon <span id="version"></span></small>
 
 errors:
@@ -254,3 +262,7 @@ errors:
         invalid_entry: '"%id%": %reasons% için geçersiz giriş'
         empty_teams: 'Boş Takımlar: %teams%'
         invalid_property: '"%property%" özelliği %expected% türünde olmalıydı ancak bunun yerine %given% türündeydi'
+    url:
+        no_url: Geçersiz veya eksik URL
+        cannot_access: URL'ye erişilemiyor
+        not_json: URL'den JSON ayrıştırılamıyor

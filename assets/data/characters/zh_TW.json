@@ -2,9 +2,9 @@
     {
         "id": "acrobat",
         "name": "雜技演員",
-        "ability": "每天晚上*，如果你的其中一位好人鄰居醉酒或中毒，則你死亡。",
+        "ability": "每天晚上*，選擇一名玩家：如果他們今晚喝醉或中毒，你就會死。",
         "firstNightReminder": "",
-        "otherNightReminder": "如果雜技演員的其中一位好人鄰居醉酒或中毒，雜技演員死亡。",
+        "otherNightReminder": "雜技演員選擇一名選手。如果他們今晚喝醉或中毒，雜技演員就會死亡。",
         "remindersGlobal": [],
         "reminders": [
             "死亡"
@@ -114,7 +114,7 @@
     {
         "id": "balloonist",
         "name": "氣球飛行員",
-        "ability": "每天晚上，你得知每種角色類別的一位玩家，直到你已得知所有類別。[+0 或 +1 城外人]",
+        "ability": "每天晚上，你得知與昨晚不同角色類別的一位玩家。[+0 或 +1 城外人]",
         "firstNightReminder": "選擇一個角色類別，指向一個為該類別的玩家，以「已得知」標記該玩家。",
         "otherNightReminder": "選擇一個旁邊還沒放置「已得知」標記的角色類別，有選擇到的話，指向一個為該類別的玩家，以「已得知」標記該玩家。",
         "remindersGlobal": [],
@@ -192,9 +192,9 @@
     },
     {
         "id": "boffin",
-        "name": "博芬",
-        "ability": "惡魔（即使喝醉或中毒）具有非遊戲中的好角色的能力。你們都知道。",
-        "firstNightReminder": "喚醒 Boffin 以及如何顯示惡魔擁有的能力標記。讓 Boffin 重新進入睡眠狀態。喚醒惡魔，顯示 Boffin 標記，然後顯示惡魔擁有的良好能力標記。",
+        "name": "Boffin",
+        "ability": "惡魔擁有一個不在遊戲中的好人能力(儘管他醉酒或中毒)，你們都知道是哪種能力。",
+        "firstNightReminder": "喚醒瘋狂科學家與惡魔並展示「這個能力選擇你」提示卡 + 瘋狂科學家的角色代幣 + 該好人能力的角色代幣。",
         "otherNightReminder": "",
         "remindersGlobal": [],
         "reminders": []
@@ -623,6 +623,17 @@
         "reminders": []
     },
     {
+        "id": "gnome",
+        "name": "侏儒",
+        "ability": "所有玩家都開始認識與您陣營相同的玩家。你可以選擇殺死任何提名他們的人。",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": [
+            "朋友"
+        ]
+    },
+    {
         "id": "goblin",
         "name": "哥布林",
         "ability": "如果你被提名時公開聲明自己是哥布林並且在該天被處決，你的隊伍獲勝。",
@@ -636,7 +647,7 @@
     {
         "id": "godfather",
         "name": "教父",
-        "ability": "你開始遊戲時得知哪些城外人在遊戲中。如果今天有城外人死亡，在當晚選擇一位玩家，該玩家死亡。[−1 或 +1 城外人]",
+        "ability": "你開始遊戲時得知哪些城外人在遊戲中。如果今天白天有城外人死亡，在當晚選擇一位玩家，該玩家死亡。[−1 或 +1 城外人]",
         "firstNightReminder": "展示「這些角色在遊戲中」提示卡 + 每個在遊戲中的城外人角色代幣。",
         "otherNightReminder": "如果今天有城外人死亡，教父指向一位玩家，該玩家死亡。",
         "remindersGlobal": [],
@@ -712,7 +723,7 @@
     {
         "id": "harpy",
         "name": "鷹妖",
-        "ability": "每天晚上，選擇兩位玩家，明天第一位玩家需要執著地使其他玩家相信另一位是邪惡的，否則這兩位玩家有可能會死亡。",
+        "ability": "每天晚上，選擇兩位玩家，明天第一位玩家需要執著地使其他玩家相信另一位是邪惡的，否則他們之中可能會有人死亡。",
         "firstNightReminder": "鷹妖輪流指向兩位玩家，喚醒第一位玩家並展示「這個能力選擇你」提示卡 + 鷹妖的角色代幣，然後指向第二位玩家。",
         "otherNightReminder": "鷹妖輪流指向兩位玩家，喚醒第一位玩家並展示「這個能力選擇你」提示卡 + 鷹妖的角色代幣，然後指向第二位玩家。",
         "remindersGlobal": [],
@@ -843,8 +854,8 @@
     {
         "id": "king",
         "name": "國王",
-        "ability": "每天晚上，如果死亡的玩家數超過活著的玩家，你得知一個活著的角色。惡魔知道你是誰。",
-        "firstNightReminder": "喚醒惡魔並展示「這個能力選擇你」提示卡 +  國王的角色代幣並指向國王。",
+        "ability": "每天晚上，如果死亡的玩家數等於或超過活著的玩家，你得知一個活著的角色。惡魔知道你是誰。",
+        "firstNightReminder": "喚醒惡魔並展示「這個能力選擇你」提示卡 + 國王的角色代幣並指向國王。",
         "otherNightReminder": "如果死亡的玩家數超過活著的玩家，展示一位存活玩家的角色代幣。",
         "remindersGlobal": [],
         "reminders": []
@@ -913,9 +924,9 @@
     {
         "id": "lilmonsta",
         "name": "莉萌絲塔",
-        "ability": "每天晚上，僕從們選擇一位玩家看顧莉萌絲塔的角色代幣以及 「這是惡魔」提示卡。每天晚上*，一位玩家死亡。[+1 僕從]",
+        "ability": "每天晚上，僕從們選擇一位玩家看顧莉萌絲塔並且「是惡魔」。每天晚上*，可能會有一位玩家死亡。[+1 僕從]",
         "firstNightReminder": "喚醒所有僕從並讓他們投票選出看顧莉萌絲塔的人選。",
-        "otherNightReminder": "喚醒所有僕從並讓他們投票選出看顧莉萌絲塔的人選，選擇一位玩家，該玩家死亡。",
+        "otherNightReminder": "喚醒所有僕從並讓他們投票選出看顧莉萌絲塔的人選，你可以選擇一位玩家，該玩家死亡。",
         "remindersGlobal": [
             "是惡魔",
             "死亡"
@@ -936,10 +947,10 @@
     },
     {
         "id": "lordoftyphon",
-        "name": "提豐領主",
-        "ability": "每天晚上*，選一個玩家：他們會死。[邪惡角色排成一列。你在中間。+1 小兵。-？到+？外來者]",
-        "firstNightReminder": "喚醒惡魔兩側的玩家。向他們展示“你是”卡片，這是他們現在的小黃人的標記，並且大拇指朝下表示他們是邪惡的。",
-        "otherNightReminder": "提豐之主指向一名玩家。該玩家死亡。",
+        "name": "風暴領主",
+        "ability": "每天晚上*，選擇一位玩家，該玩家死亡。[邪惡玩家坐在一起，你坐在他們之間。+1僕從。+？～-？城外人]",
+        "firstNightReminder": "喚醒惡魔身旁的僕從們，分別展示「你是」提示卡 + 他們的角色代幣，並倒讚表示邪惡。",
+        "otherNightReminder": "風暴領主指向一位玩家，該玩家死亡。",
         "remindersGlobal": [],
         "reminders": [
             "死亡"
@@ -966,7 +977,8 @@
         "otherNightReminder": "狼人選擇一位活著的玩家，如果該玩家是好人則他死亡且今晚其他人不會死。",
         "remindersGlobal": [],
         "reminders": [
-            "死亡"
+            "死亡",
+            "假爪子"
         ]
     },
     {
@@ -981,7 +993,7 @@
     {
         "id": "marionette",
         "name": "傀儡",
-        "ability": "你認為你是某一位好人角色，但你不是。惡魔知道你是誰。[你坐在惡魔旁邊]",
+        "ability": "你認為自己是某一位好人角色，但你不是。惡魔知道你是誰。[你坐在惡魔旁邊]",
         "firstNightReminder": "選擇一位坐在惡魔旁邊的好人玩家並以「是傀儡」標記他，喚醒惡魔並告知傀儡是誰。",
         "otherNightReminder": "",
         "remindersGlobal": [
@@ -1118,12 +1130,12 @@
     {
         "id": "ogre",
         "name": "食人魔",
-        "ability": "在你的第一個晚上，選擇一個玩家（不是你自己）：即使喝醉或中毒，你也會成為他們的陣營（你不知道是哪一個）。",
-        "firstNightReminder": "食人魔指向一名玩家（不是他們自己）並成為他們的陣營。",
+        "ability": "在你的第一晚，選擇另一位玩家，你變成該玩家的陣營(你不會得知它)(即使你醉酒或中毒)。",
+        "firstNightReminder": "食人魔指向另一位玩家並成為該玩家的隊伍。",
         "otherNightReminder": "",
         "remindersGlobal": [],
         "reminders": [
-            "朋友"
+            "Friend"
         ]
     },
     {
@@ -1149,11 +1161,12 @@
     {
         "id": "organgrinder",
         "name": "風琴手",
-        "ability": "所有玩家在投票時閉眼且票數不公開。對你的投票只在你有投票時通過。",
+        "ability": "所有玩家投票時都是閉著眼睛的，並且計票結果是秘密的。每天晚上，選擇你是否喝醉了。",
         "firstNightReminder": "",
         "otherNightReminder": "",
         "remindersGlobal": [],
         "reminders": [
+            "醉酒",
             "將被處決"
         ]
     },
@@ -1202,7 +1215,7 @@
     {
         "id": "plaguedoctor",
         "name": "瘟疫醫師",
-        "ability": "如果你死亡，則說書人得到一個不在場僕從的能力。",
+        "ability": "如果你死亡，則說書人得到一個僕從的能力。",
         "firstNightReminder": "",
         "otherNightReminder": "",
         "remindersGlobal": [],
@@ -1500,7 +1513,7 @@
     {
         "id": "spy",
         "name": "間諜",
-        "ability": "每天晚上，你都可以查看魔典，你的身分可能會被視為好人的鎮民或城外人(即使你死亡)。",
+        "ability": "每天晚上，你都可以查看魔典。你的身分可能會被視為好人的鎮民或城外人(即使你死亡)。",
         "firstNightReminder": "將魔典展示給間諜。",
         "otherNightReminder": "將魔典展示給間諜。",
         "remindersGlobal": [],
@@ -1621,10 +1634,10 @@
     },
     {
         "id": "vigormortis",
-        "name": "食屍魔",
-        "ability": "每天晚上*，選擇一位玩家，該玩家死亡。你殺死的僕從們會保留他們的能力，並且使一位鎮民鄰居中毒。[−1 城外人]",
+        "name": "亡靈之主",
+        "ability": "每天晚上*，選擇一位玩家，該玩家死亡。你殺死的僕從們會保留他們的能力，並且使其兩側最近的其中一位鎮民中毒。[−1 城外人]",
         "firstNightReminder": "",
-        "otherNightReminder": "食屍魔指向一位玩家，該玩家死亡。如果該玩家是僕從，以「具有能力」標記該玩家並讓他的一位鎮民鄰居中毒。",
+        "otherNightReminder": "亡靈之主指向一位玩家，該玩家死亡。如果該玩家是僕從，以「具有能力」標記該玩家並讓他的一位鎮民鄰居中毒。",
         "remindersGlobal": [],
         "reminders": [
             "中毒",
@@ -1635,7 +1648,7 @@
     {
         "id": "villageidiot",
         "name": "愚民",
-        "ability": "每天晚上，選擇一位玩家，你得知他的隊伍。[+0 到 +2 愚民，其中一位醉酒。]",
+        "ability": "每天晚上，選擇一位玩家，你得知他的隊伍。[+0 到 +2 愚民，其中一位醉酒]",
         "firstNightReminder": "愚民指向一位玩家，展示該玩家的隊伍。",
         "otherNightReminder": "愚民指向一位玩家，展示該玩家的隊伍。",
         "remindersGlobal": [],
@@ -1677,7 +1690,7 @@
     {
         "id": "voudon",
         "name": "巫毒教徒",
-        "ability": "只有你和死亡玩家可以投票，死亡玩家投票不需使用投票代幣，也不需要50%的多數票。",
+        "ability": "只有你和死亡玩家可以投票，死亡玩家投票不需使用投票代幣，也不需要50%的票數門檻。",
         "firstNightReminder": "",
         "otherNightReminder": "",
         "remindersGlobal": [],
@@ -1711,12 +1724,37 @@
     {
         "id": "witch",
         "name": "女巫",
-        "ability": "每天晚上，選擇一位玩家，如果該玩家於明天提名，則他會死亡，如果只剩下三位玩家活著，你失去這個能力。",
+        "ability": "每天晚上，選擇一位玩家，如果該玩家於明天提名，則他會死亡，如果只剩下三位玩家存活，你失去這個能力。",
         "firstNightReminder": "女巫指向一位玩家，以「詛咒」標記該玩家。",
         "otherNightReminder": "如果有四位或以上玩家活著，女巫指向一位玩家，以「詛咒」標記該玩家。",
         "remindersGlobal": [],
         "reminders": [
             "詛咒"
+        ]
+    },
+    {
+        "id": "wizard",
+        "name": "巫師",
+        "ability": "每場遊戲一次，許一個願。如果願望成真，可能會有代價和留下有關其性質的線索。",
+        "firstNightReminder": "運行巫師的能力（如果適用）。",
+        "otherNightReminder": "運行巫師的能力（如果適用）。",
+        "remindersGlobal": [],
+        "reminders": [
+            "?"
+        ]
+    },
+    {
+        "id": "xaan",
+        "name": "Xaan",
+        "ability": "在第X晚，所有鎮民中毒直到下個黃昏。[城外人數量為X]",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": [
+            "第一晚",
+            "第二晚",
+            "第三晚",
+            "X"
         ]
     },
     {
@@ -1733,7 +1771,7 @@
     {
         "id": "zealot",
         "name": "狂熱者",
-        "ability": "如果有 5 名或以上活著的玩家，您必須為每項提名投票。",
+        "ability": "如果有五個或更多玩家存活，你在每次提名都需要投票。",
         "firstNightReminder": "",
         "otherNightReminder": "",
         "remindersGlobal": [],

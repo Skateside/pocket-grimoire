@@ -2,9 +2,9 @@
     {
         "id": "acrobat",
         "name": "Acrobate",
-        "ability": "Chaque nuit*, si un de vos voisins « bon » vivant est ivre ou empoisonné, vous mourrez.",
+        "ability": "Chaque nuit*, choisissez un joueur: s'il est ou devient ivre ou empoisonné, vous mourrez.",
         "firstNightReminder": "",
-        "otherNightReminder": "Si l'un des voisins « bon » est ivre ou empoisonné, l'acrobate meurt.",
+        "otherNightReminder": "L'Acrobate choisit un joueur: s'il est ou devient ivre ou empoisonné, il meurt",
         "remindersGlobal": [],
         "reminders": [
             "Mort"
@@ -623,6 +623,17 @@
         "reminders": []
     },
     {
+        "id": "gnome",
+        "name": "Gnome",
+        "ability": "Tous les joueurs apprennent un joueur de votre alignement. Vous pouvez choisir de tuer quiconque le nomine.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": [
+            "Connu"
+        ]
+    },
+    {
         "id": "goblin",
         "name": "Gobelin",
         "ability": "Une fois nommé, vous pouvez prétendre publiquement être le Gobelin : si vous êtes exécuté malgré tout, votre équipe gagne.",
@@ -967,7 +978,8 @@
         "otherNightReminder": "Le Lycanthrope pointe vers un joueur vivant: s'il est bon, il meurt et personne d'autre ne peut mourir cette nuit.",
         "remindersGlobal": [],
         "reminders": [
-            "Mort"
+            "Mort",
+            "Faux Paw"
         ]
     },
     {
@@ -1150,11 +1162,12 @@
     {
         "id": "organgrinder",
         "name": "Joueur d'Orgue",
-        "ability": "Tout les joueurs gardent leur yeux fermés pendant les votes et le décompte des votes est secret. Les votes pour vous ne compte que si vous votez.",
+        "ability": "Tout les joueurs gardent leur yeux fermés pendant les votes et le décompte des votes est secret. Chaque nuit, choisissez si vous êtes ivre ou non.",
         "firstNightReminder": "",
         "otherNightReminder": "",
         "remindersGlobal": [],
         "reminders": [
+            "Ivre",
             "Sur le point de mourir"
         ]
     },
@@ -1722,6 +1735,31 @@
         "remindersGlobal": [],
         "reminders": [
             "Maudit"
+        ]
+    },
+    {
+        "id": "wizard",
+        "name": "Sorcier",
+        "ability": "Une fois par partie, vous pouvez faire un voeu. S'il est exaucé, il peut avoir un prix & laisser un indice sur sa nature.",
+        "firstNightReminder": "Exécutez la capacité Sorcier, le cas échéant.",
+        "otherNightReminder": "Exécutez la capacité Sorcier, le cas échéant.",
+        "remindersGlobal": [],
+        "reminders": [
+            "?"
+        ]
+    },
+    {
+        "id": "xaan",
+        "name": "Xaan",
+        "ability": "La nuit X, tous les Villageois sont empoisonnés jusqu'au crépuscule. [X Etrangers]",
+        "firstNightReminder": "Marquez le Xaan avec le rappel 'Nuit 1'. Si X est 1, marquez le Xaan avec le jeton de rappel 'X'.",
+        "otherNightReminder": "Changez le jeton de rappel du Xaan pour la nuit appropriée. S'il s'agit de la nuit X, marquez le Xaan avec le jeton de rappel 'X'.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Nuit 1",
+            "Nuit 2",
+            "Nuit 3",
+            "X"
         ]
     },
     {

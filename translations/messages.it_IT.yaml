@@ -166,6 +166,7 @@ grimoire:
         recent_reminders: "Promemoria aggiunti di recente:"
         player_name: Imposta nome giocatore
         ghost_vote: Voto del fantasma
+        orphan: 'Attenzione: questo personaggio non è presente nello script attuale.'
 
     reminder_show:
         title: Promemoria
@@ -197,6 +198,11 @@ grimoire:
     token:
         title: Token
 
+    export:
+        title: Esporta partita
+        markup: Genera un codice QR per importare i dati di gioco in <a href="https://the-grim.netlify.app/" target="_blank" rel="noopener noreferrer">The Grim</a>.
+        button: Genera codice QR
+
 jinxes:
     title: Jinxes
     target: Obiettivo
@@ -223,6 +229,8 @@ info_tokens:
         votetoday: Hai <strong>votato</strong> oggi?
         youare: <strong>Tu</strong> sei
         selectedyou: Questo personaggio ha <strong>scelto</strong> te
+        useability: Usa la tua <strong>abilità</strong>?
+        makechoice: Fai una <strong>scelta</strong>
     custom: Token informazioni personalizzati
     add_custom: Aggiungi token informazioni
     edit_custom: Modifica token informazioni
@@ -242,7 +250,7 @@ acknowledgements:
         - Le icone sono prese da <a href="https://fontawesome.com/v5.15/icons" target="_blank" rel="noopener noreferrer">Font Awesome</a>.
         - Molte immagini e informazioni sono prese da <a href="https://www.clocktower.online" target="_blank" rel="noopener noreferrer">Clocktower.online</a> e <a href="https://bloodontheclocktower.com/" target="_blank" rel="noopener noreferrer">Blood on the Clocktower website</a>.
         - Questo è un grimorio virtuale non ufficiale per Blood on the Clocktower. Questo progetto è gratis è il codice sorgente può essere trovato su <a href="https://github.com/Skateside/pocket-grimoire" target="_blank" rel="noopener noreferrer">GitHub</a>. Questo progetto non è affiliato con il Pandemonium Institute. Se ti diverte giocare Blood on the Clocktower, <a href="https://bloodontheclocktower.com/buy" target="_blank" rel="noopener noreferrer">ti chiediamo di prendere in considerazione l'acquisto del tuo grimorio personale</a> - oltre a essere più flessibile che questa versione digitale, supporta direttamente i creatori del gioco.
-        - Hai notato un bug o hai qualche suggerimento per migliorare questo sito? Fammelo sapere sul <a href="https://discord.gg/FyZwg75H" target="_blank" rel="noopener noreferrer">canale pocket-grimoire nel server discord non ufficiale</a> (il mion nome lì è Skateside) <a href="https://github.com/Skateside/pocket-grimoire/issues" target="_blank" rel="noopener noreferrer">o apri un issue su Github</a>.
+        - Hai notato un bug o hai qualche suggerimento per migliorare questo sito? Fammelo sapere sul <a href="https://discord.gg/eU89j89" target="_blank" rel="noopener noreferrer">canale pocket-grimoire nel server discord non ufficiale</a> (il mion nome lì è Skateside) <a href="https://github.com/Skateside/pocket-grimoire/issues" target="_blank" rel="noopener noreferrer">o apri un issue su Github</a>.
         - <small>Version <span id="version"></span></small>
 
 errors:
@@ -254,3 +262,7 @@ errors:
         invalid_entry: "Voce non valida per \"%id%\": %reasons%"
         empty_teams: "Squadre vuote: %teams%"
         invalid_property: La proprietà "%property%" dovrebbe essere di tipo %expected% ma era di tipo %given%
+    url:
+        no_url: URL non valido o mancante
+        cannot_access: Impossibile accedere all'URL
+        not_json: Impossibile analizzare JSON dall'URL

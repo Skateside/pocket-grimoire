@@ -167,6 +167,7 @@ grimoire:
         recent_reminders: Последние добавленные напоминания
         player_name: Установить имя игрока
         ghost_vote: Призрачное голосование
+        orphan: 'Предупреждение: этого персонажа нет в текущем сценарии.'
 
     reminder_show:
         title: Напоминание
@@ -198,6 +199,11 @@ grimoire:
     token:
         title: Жетон
 
+    export:
+        title: Экспорт игры
+        markup: Сгенерируйте QR-код, чтобы данные игры можно было импортировать в <a href="https://the-grim.netlify.app/" target="_blank" rel="noopener noreferrer">The Grim</a>.
+        button: Сгенерировать QR-код
+
 jinxes:
     title: Сглазы
     target: Цель
@@ -224,6 +230,8 @@ info_tokens:
         votetoday: Вы сегодня <strong>голосовали?</strong>
         youare: <strong>Ваша</strong> роль
         selectedyou: Этот персонаж <strong>выбрал</strong> вас
+        useability: Использовать свою <strong>способность</strong>?
+        makechoice: Сделать <strong>выбор</strong>
     custom: Пользовательские информационные таблички
     add_custom: Добавить информационные таблички
     edit_custom: Изменить информационные таблички
@@ -243,7 +251,7 @@ acknowledgements:
         - Источник иконок - <a href="https://fontawesome.com/v5.15/icons" target="_blank" rel="noopener noreferrer">Font Awesome</a>.
         - Многие изображения и данные взяты с сайта <a href="https://www.clocktower.online" target="_blank" rel="noopener noreferrer">clocktower.online</a> и официального <a href="https://bloodontheclocktower.com/" target="_blank" rel="noopener noreferrer">сайта Blood on the Clocktower</a>.
         - Это - неофициальный виртуальный гримуар для Blood on the Clocktower. Это некоммерческий проект, исходный код которого можно найти на <a href="https://github.com/Skateside/pocket-grimoire" target="_blank" rel="noopener noreferrer">GitHub</a>. Этот проект не имеет связи с компанией The Pandemonium Institute. Если вам нравится игра Blood on the Clocktower, настоятельно рекомендуем приобрести физическую версию, чтобы не только играть с большим удобством, но и поддержать создателей.
-        - 'У вас есть информация об ошибках или предложения? Дайте мне знать <a href="https://discord.gg/FyZwg75H" target="_blank" rel="noopener noreferrer">в канале #pocket-grimoire на неофициальном discord-сервере игры</a> (мой никнейм там - Skateside) или <a href="https://github.com/Skateside/pocket-grimoire/issues" target="_blank" rel="noopener noreferrer">подайте заявку на GitHub</a>.'
+        - 'У вас есть информация об ошибках или предложения? Дайте мне знать <a href="https://discord.gg/eU89j89" target="_blank" rel="noopener noreferrer">в канале #pocket-grimoire на неофициальном discord-сервере игры</a> (мой никнейм там - Skateside) или <a href="https://github.com/Skateside/pocket-grimoire/issues" target="_blank" rel="noopener noreferrer">подайте заявку на GitHub</a>.'
         - <small>Версия <span id="version"></span></small>
 
 errors:
@@ -255,3 +263,7 @@ errors:
         invalid_entry: 'Неверная запись для «%id%»: %reasons%'
         empty_teams: 'Пустые команды: %teams%'
         invalid_property: Свойство "%property%" должно было быть типа %expected%, но вместо этого имело тип %given%
+    url:
+        no_url: Недействительный или отсутствующий URL
+        cannot_access: Невозможно получить доступ к URL
+        not_json: Невозможно проанализировать JSON из URL

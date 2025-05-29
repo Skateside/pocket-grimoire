@@ -2,9 +2,9 @@
     {
         "id": "acrobat",
         "name": "Akrobat",
-        "ability": "Kvar natt*, om ein av dine gode, levande grannar er full eller forgifta, døyr du.",
+        "ability": "Hver natt*, velg en spiller: hvis de er eller blir fulle eller forgiftet i kveld, dør du.",
         "firstNightReminder": "",
-        "otherNightReminder": "Om ein god, levande granne er full eller forgifta, døyr Akrobaten.",
+        "otherNightReminder": "Akrobaten velger en spiller. Hvis de blir fulle eller forgiftet i kveld, dør Acrobat-spilleren.",
         "remindersGlobal": [],
         "reminders": [
             "Daud"
@@ -623,6 +623,17 @@
         "reminders": []
     },
     {
+        "id": "gnome",
+        "name": "Gnome",
+        "ability": "Alle spillere begynner å kjenne en spiller i din posisjon. Du kan velge å drepe alle som nominerer dem.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": [
+            "Amigo"
+        ]
+    },
+    {
         "id": "goblin",
         "name": "Småtroll",
         "ability": "Om du offentleg kunngjer at du er Småtrollet når du vert nominert & vert avretta same dagen, vinn laget ditt.",
@@ -966,7 +977,8 @@
         "otherNightReminder": "Lykantropen peiker mot ein levande spelar: om dei er god, døyr dei. I så fall kan ingen andre døy i natt.",
         "remindersGlobal": [],
         "reminders": [
-            "Daud"
+            "Daud",
+            "Faux pote"
         ]
     },
     {
@@ -1147,11 +1159,12 @@
     {
         "id": "organgrinder",
         "name": "Veivspelar",
-        "ability": "Alle spelarar lukkar augo under avrøystingar & talet røyster vert halde løynleg. Røyster for deg tel berre om du også røystar for.",
+        "ability": "Alle spillere holder øynene lukket når de stemmer, og avstemningen er hemmelig. Hver natt velger du om du er full eller ikke.",
         "firstNightReminder": "",
         "otherNightReminder": "",
         "remindersGlobal": [],
         "reminders": [
+            "Full",
             "I ferd med å døy"
         ]
     },
@@ -1171,8 +1184,8 @@
         "firstNightReminder": "Filosofen anten rister på hovudet for \"nei\", eller peiker på ei god rolle på rollearket. Om dei vel rolle: Byt ut Filosof-brikka med den valde rolla, og marker rolla med \"Er Filosofen\". Om rolla allereie er i spel, marker spelaren som har rolla med \"Full\".",
         "otherNightReminder": "Om Filosofen enno ikkje har nytta evna si: Filosofen anten rister på hovudet for \"nei\", eller peiker på ei god rolle på rollearket. Om dei vel rolle: Byt ut Filosof-brikka med den valde rolla, og marker rolla med \"Er Filosofen\". Om rolla allereie er i spel, marker spelaren som har rolla med \"Full\".",
         "remindersGlobal": [
-            "Full",
-            "Er Filosofen"
+            "Er Filosofen",
+            "Full"
         ],
         "reminders": []
     },
@@ -1715,6 +1728,31 @@
         "remindersGlobal": [],
         "reminders": [
             "Forheksa"
+        ]
+    },
+    {
+        "id": "wizard",
+        "name": "Veiviser",
+        "ability": "En gang per spill, velg å komme med et ønske.  Hvis det blir gitt, kan det ha en pris og gi en anelse om dens natur.",
+        "firstNightReminder": "Kjør Veiviser-evnen hvis det er aktuelt.",
+        "otherNightReminder": "Kjør Veiviser-evnen hvis det er aktuelt.",
+        "remindersGlobal": [],
+        "reminders": [
+            "?"
+        ]
+    },
+    {
+        "id": "xaan",
+        "name": "Xaan",
+        "ability": "På natt X blir alle byfolk forgiftet til skumringen. [X utenforstående]",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": [
+            "Natt 1",
+            "Natt 2",
+            "Natt 3",
+            "X"
         ]
     },
     {

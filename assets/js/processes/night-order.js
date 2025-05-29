@@ -20,16 +20,42 @@ gameObserver.on("characters-selected", ({ detail }) => {
 
 });
 
+// #145 - Show the "First Night" order after clearing the grimoire.
+gameObserver.on("clear", () => {
+    lookupOneCached(".js--night-order--carousel").scrollLeft = 0;
+});
+
 tokenObserver.on("character-add", ({ detail }) => {
+
+    // #131 - check the character isn't from the previous script.
+    if (!nightOrder.hasCharacter(detail.character)) {
+        return;
+    }
+
     nightOrder.addCharacter(detail.character);
+
 });
 
 tokenObserver.on("character-remove", ({ detail }) => {
+
+    // #131 - check the character isn't from the previous script.
+    if (!nightOrder.hasCharacter(detail.character)) {
+        return;
+    }
+
     nightOrder.removeCharacter(detail.character);
+
 });
 
 tokenObserver.on("shroud-toggle", ({ detail }) => {
+
+    // #131 - check the character isn't from the previous script.
+    if (!nightOrder.hasCharacter(detail.character)) {
+        return;
+    }
+
     nightOrder.toggleDead(detail.character, detail.isDead);
+
 });
 
 const showDead = lookupOne("#show-dead");

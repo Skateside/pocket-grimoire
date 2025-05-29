@@ -2,9 +2,9 @@
     {
         "id": "acrobat",
         "name": "Akrobat",
-        "ability": "Vsako noč*, če je kateri izmed tvojih sosedov pijan ali zastrupljen, umreš.",
+        "ability": "Vsak večer* izberite igralca: če je nocoj pijan ali zastrupljen, umrete.",
         "firstNightReminder": "",
-        "otherNightReminder": "Če je kateri izmed njegovih sosedov pijan ali zastrupljen, Akrobat umre.",
+        "otherNightReminder": "Akrobat izbere igralca. Če se nocoj napijejo ali zastrupijo, igralec Akrobat umre.",
         "remindersGlobal": [],
         "reminders": [
             "Mrtev"
@@ -614,6 +614,17 @@
         "reminders": []
     },
     {
+        "id": "gnome",
+        "name": "Gnome",
+        "ability": "Vsi igralci začnejo poznati igralca tvojega razreda. Lahko se odločite, da boste ubili vsakogar, ki jih predlaga.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": [
+            "amigo"
+        ]
+    },
+    {
         "id": "goblin",
         "name": "Goblin",
         "ability": "Če javno trdiš, da si Goblin, ko si nominiran in te usmrtijo ta dan, tvoja ekipa zmaga.",
@@ -957,7 +968,8 @@
         "otherNightReminder": "Volkodlak pokaže na živega igralca, če je dober, umre, in nihče drug ne more umreti to noč.",
         "remindersGlobal": [],
         "reminders": [
-            "Mrtev"
+            "Mrtev",
+            "Faux Paw"
         ]
     },
     {
@@ -1140,11 +1152,12 @@
     {
         "id": "organgrinder",
         "name": "Lajnar",
-        "ability": "Vsi igralci med glasovanjem mižijo. Število glasov je skrivnost. Glasovi zate štejejo, samo če tudi ti glasuješ.",
+        "ability": "Vsi igralci imajo med glasovanjem zaprte oči in seštevanje glasov je tajno. Vsak večer izberite, ali ste pijani ali ne.",
         "firstNightReminder": "",
         "otherNightReminder": "",
         "remindersGlobal": [],
         "reminders": [
+            "Pijan",
             "Obsojen"
         ]
     },
@@ -1164,8 +1177,8 @@
         "firstNightReminder": "Filozof bodisi odkima za \"ne\" ali pokaže na dobro vlogo na seznamu. Če to stori, zamenjaj, žeton vloge tega karakterja z žetonom filozofa. Če je vloga v igri, jo označi s \"Pijan\" in filozofa z \"Ne več filozof\".",
         "otherNightReminder": "Če še ni uporabil moči, filozof bodisi odkima za \"ne\" ali pokaže na dobro vlogo na seznamu. Če to stori, zamenjaj, žeton vloge tega karakterja z žetonom filozofa. Če je vloga v igri, jo označi s \"Pijan\" in filozofa z \"Ne več filozof\".",
         "remindersGlobal": [
-            "Drunk",
-            "Je filozof"
+            "Je filozof",
+            "Pijan"
         ],
         "reminders": []
     },
@@ -1708,6 +1721,31 @@
         "remindersGlobal": [],
         "reminders": [
             "Začaran"
+        ]
+    },
+    {
+        "id": "wizard",
+        "name": "Čarovnik",
+        "ability": "Enkrat na igro si zaželite željo.  Če bo odobrena, bo morda imela ceno in pustila namig o svoji naravi.",
+        "firstNightReminder": "Zaženite možnost čarovnika, če je na voljo.",
+        "otherNightReminder": "Zaženite možnost čarovnika, če je na voljo.",
+        "remindersGlobal": [],
+        "reminders": [
+            "?"
+        ]
+    },
+    {
+        "id": "xaan",
+        "name": "Xaan",
+        "ability": "Na noč X so vsi Meščani zastrupljeni do mraka. [X Outsiders]",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": [
+            "Noč 1",
+            "Noč 2",
+            "Noč 3",
+            "X"
         ]
     },
     {

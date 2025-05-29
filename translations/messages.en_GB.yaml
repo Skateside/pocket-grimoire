@@ -167,6 +167,7 @@ grimoire:
         recent_reminders: 'Most recently added reminders:'
         player_name: Set player name
         ghost_vote: Ghost vote
+        orphan: 'Warning: this character is not on the current script.'
 
     reminder_show:
         title: Reminder
@@ -198,6 +199,11 @@ grimoire:
     token:
         title: Token
 
+    export:
+        title: Export game
+        markup: Generate a QR code so that the game data can be imported into <a href="https://the-grim.netlify.app/" target="_blank" rel="noopener noreferrer">The Grim</a>.
+        button: Generate QR code
+
 jinxes:
     title: Jinxes
     target: Target
@@ -224,6 +230,8 @@ info_tokens:
         votetoday: Did you <strong>vote</strong> today?
         youare: "<strong>You</strong> are"
         selectedyou: This character <strong>selected</strong> you
+        useability: Use your <strong>ability</strong>?
+        makechoice: Make a <strong>choice</strong>
     custom: Custom info tokens
     add_custom: Add info token
     edit_custom: Edit info token
@@ -243,7 +251,7 @@ acknowledgements:
         - Icons are taken from <a href="https://fontawesome.com/v5.15/icons" target="_blank" rel="noopener noreferrer">Font Awesome</a>.
         - Many images and data are taken from <a href="https://www.clocktower.online" target="_blank" rel="noopener noreferrer">Clocktower.online</a> and the <a href="https://bloodontheclocktower.com/" target="_blank" rel="noopener noreferrer">Blood on the Clocktower website</a>.
         - This is an unofficial virtual grimoire for Blood on the Clocktower. This project is free and the source code can be found on <a href="https://github.com/Skateside/pocket-grimoire" target="_blank" rel="noopener noreferrer">GitHub</a>. This project is not affiliated with the Pandemonium Institute. If you enjoy playing Blood on the Clocktower, <a href="https://bloodontheclocktower.com/buy" target="_blank" rel="noopener noreferrer">please consider buying your own grimoire</a> - as well as being more flexible than this digital version, it also supports the creators.
-        - Noticed a bug or have an improvement suggestion? Let me know in the <a href="https://discord.gg/FyZwg75H" target="_blank" rel="noopener noreferrer">pocket-grimoire channel on the unofficial discord server</a> (my name on there is "Skateside") or <a href="https://github.com/Skateside/pocket-grimoire/issues" target="_blank" rel="noopener noreferrer">raise an issue in GitHub</a>.
+        - Noticed a bug or have an improvement suggestion? Let me know in the <a href="https://discord.gg/eU89j89" target="_blank" rel="noopener noreferrer">pocket-grimoire channel on the unofficial discord server</a> (my name on there is "Skateside") or <a href="https://github.com/Skateside/pocket-grimoire/issues" target="_blank" rel="noopener noreferrer">raise an issue in GitHub</a>.
         - <small>Version <span id="version"></span></small>
 
 errors:
@@ -255,3 +263,7 @@ errors:
         invalid_entry: 'Invalid entry for "%id%": %reasons%'
         empty_teams: 'Empty teams: %teams%'
         invalid_property: 'Property "%property%" should be of type %expected% but was type %given% instead'
+    url:
+        no_url: Invalid or missing URL
+        cannot_access: Unable to access URL
+        not_json: Cannot parse JSON from URL

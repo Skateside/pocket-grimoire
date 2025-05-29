@@ -166,6 +166,7 @@ grimoire:
         recent_reminders: 'Đánh dấu được thêm gần nhất:'
         player_name: Đặt tên người chơi
         ghost_vote: Cuộc bỏ phiếu ma
+        orphan: 'Cảnh báo: nhân vật này không có trong kịch bản hiện tại.'
 
     reminder_show:
         title: Đánh dấu
@@ -197,6 +198,11 @@ grimoire:
     token:
         title: Token
 
+    export:
+        title: Xuất trò chơi
+        markup: Tạo mã QR để dữ liệu trò chơi có thể được nhập vào <a href="https://the-grim.netlify.app/" target="_blank" rel="noopener noreferrer">The Grim</a>.
+        button: Tạo mã QR
+
 jinxes:
     title: Jinx
     target: Mục tiên
@@ -223,6 +229,8 @@ info_tokens:
         votetoday: Bạn có <strong>bỏ phiếu</strong> hôm nay không?
         youare: <strong>Bạn</strong> là
         selectedyou: Nhân vật này <strong>chọn</strong> bạn
+        useability: Sử dụng <strong>khả năng</strong> của bạn?
+        makechoice: Hãy đưa ra <strong>lựa chọn</strong>
     custom: Token thông tin tự chế
     add_custom: Thêm token thông tin
     edit_custom: Sửa token thông tin
@@ -242,7 +250,7 @@ acknowledgements:
         - Biểu tượng lấy từ <a href="https://fontawesome.com/v5.15/icons" target="_blank" rel="noopener noreferrer">Font Awesome</a>.
         - Ảnh và dữ liệu lấy từ <a href="https://www.clocktower.online" target="_blank" rel="noopener noreferrer">Clocktower.online</a> và trang web <a href="https://bloodontheclocktower.com/" target="_blank" rel="noopener noreferrer">Blood on the Clocktower</a>.
         - Đây là sách ma thuật ảo không chính thức của Tháp đồng hồ nhuốm máu. Dự án này miễn phí và là nguồn mở có thể tìm thấy trên <a href="https://github.com/Skateside/pocket-grimoire" target="_blank" rel="noopener noreferrer">GitHub</a>. Dự án này không liên kết với The Pandemonium Institute. Nếu bạn thích chơi Tháp đồng hồ nhốm máu, <a href="https://bloodontheclocktower.com/buy" target="_blank" rel="noopener noreferrer">vui lòng tính đến mua bản thật của game</a> - ngoài việc nó linh hoạt hơn bản này, nó có thể hỗ trợ nhà phát triển.
-        - Gặp trục trặc hoặc có ý kiến để cải tiến? Cho mình biết tại <a href="https://discord.gg/FyZwg75H" target="_blank" rel="noopener noreferrer">kênh pocket-grimoire trong server không chính thức trên discord</a> (tên mình là "Skateside") hoặc <a href="https://github.com/Skateside/pocket-grimoire/issues" target="_blank" rel="noopener noreferrer">báo lỗi trên Github</a>.
+        - Gặp trục trặc hoặc có ý kiến để cải tiến? Cho mình biết tại <a href="https://discord.gg/eU89j89" target="_blank" rel="noopener noreferrer">kênh pocket-grimoire trong server không chính thức trên discord</a> (tên mình là "Skateside") hoặc <a href="https://github.com/Skateside/pocket-grimoire/issues" target="_blank" rel="noopener noreferrer">báo lỗi trên Github</a>.
         - <small>Phiên bản <span id="version"></span></small>
 
 errors:
@@ -254,3 +262,7 @@ errors:
         invalid_entry: 'Mục nhập không hợp lệ cho "%id%": %reasons%'
         empty_teams: 'Các đội trống: %teams%'
         invalid_property: Thuộc tính "%property%" phải là loại %expected% nhưng thay vào đó là loại %given%
+    url:
+        no_url: URL không hợp lệ hoặc bị thiếu
+        cannot_access: Không thể truy cập URL
+        not_json: Không thể phân tích cú pháp JSON từ URL

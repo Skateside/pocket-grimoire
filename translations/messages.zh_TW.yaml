@@ -166,6 +166,7 @@ grimoire:
         recent_reminders: '最近新增的標記：'
         player_name: 設置玩家姓名
         ghost_vote: 移除投票標記
+        orphan: '警告：該角色不在目前腳本中。'
 
     reminder_show:
         title: 標記
@@ -197,6 +198,11 @@ grimoire:
     token:
         title: 角色代幣
 
+    export:
+        title: 匯出遊戲
+        markup: 產生二維碼，以便將遊戲資料導入<a href="https://the-grim.netlify.app/" target="_blank" rel="noopener noreferrer">The Grim</a>。
+        button: 產生二維碼
+
 jinxes:
     title: 特殊互動規則
     target: 角色1
@@ -210,7 +216,7 @@ night_order:
     other_night: 其他夜晚
     swipe_change: 滑動來切換第一晚/其他夜晚
     show: 顯示不在遊戲中的角色
-    show_dead: 顯示死亡角色
+    show_dead: 顯示死亡的角色
 
 info_tokens:
     title: 提示卡
@@ -223,6 +229,8 @@ info_tokens:
         votetoday: 你今天<strong>投票</strong>了嗎?
         youare: <strong>你是</strong>
         selectedyou: 這個角色<strong>選擇</strong>了你
+        useability: 發揮你的<strong>能力</strong>？
+        makechoice: 做出<strong>選擇</strong>
     custom: 自定義信息提示卡
     add_custom: 添加信息提示卡
     edit_custom: 編輯信息提示卡
@@ -242,7 +250,7 @@ acknowledgements:
         - 圖標取自 <a href="https://fontawesome.com/v5.15/icons" target="_blank" rel="noopener noreferrer">Font Awesome</a>。
         - 許多圖檔資料取自 <a href="https://www.clocktower.online" target="_blank" rel="noopener noreferrer">Clocktower.online</a> 以及 <a href="https://bloodontheclocktower.com/" target="_blank" rel="noopener noreferrer">Blood on the Clocktower website</a>。
         - 這是一個非官方的虛擬魔典，用於 Blood on the Clocktower 血染鐘塔遊戲。這份專案為免費使用並且可在 <a href="https://github.com/Skateside/pocket-grimoire" target="_blank" rel="noopener noreferrer">GitHub</a> 上找到原始碼。這份專案不附屬於 Pandemonium Institute。如果你享受於遊玩 Blood on the Clocktower，請考慮<a href="https://bloodontheclocktower.com/buy" target="_blank" rel="noopener noreferrer">購買你自己的魔典</a> - 除了比這份數位版本更靈活，還能支持遊戲創作者。
-        - 發現漏洞或是有改善建議? 在<a href="https://discord.gg/FyZwg75H" target="_blank" rel="noopener noreferrer">非官方Discord伺服器上的 "pocket-grimoire" 頻道</a>上讓我知道(我的使用者名稱是 "Skateside")，或是<a href="https://github.com/Skateside/pocket-grimoire/issues" target="_blank" rel="noopener noreferrer">在 GitHub 上提出 issue</a>。
+        - 發現漏洞或是有改善建議? <a href="https://discord.gg/eU89j89" target="_blank" rel="noopener noreferrer">在非官方Discord伺服器上的 "pocket-grimoire" 頻道</a>上讓我知道(我的使用者名稱是 "Skateside")，或是<a href="https://github.com/Skateside/pocket-grimoire/issues" target="_blank" rel="noopener noreferrer">在 GitHub 上提出 issue</a>。
         - <small>版本：<span id="version"></span></small>
 
 errors:
@@ -253,4 +261,8 @@ errors:
         not_recognise_character: 無法辨識角色："%id%"
         invalid_entry: '無效輸入："%id%": %reasons%'
         empty_teams: 隊伍為空：%teams%
-        invalid_property: 屬性「%property%」的類型應為 %expected%，但卻是類型 %given%
+        invalid_property: 方法"%property%"需要是%expected%類別但給出了%given%類別
+    url:
+        no_url: 網址無效或缺失
+        cannot_access: 無法存取網址
+        not_json: 無法從 URL 解析 JSON

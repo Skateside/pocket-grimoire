@@ -138,7 +138,6 @@
         currentColor calc(50% - 0.05em),
         transparent calc(50% + 0.05em)
     );
-    text-align: right;
     list-style: none;
 
     > h2 {
@@ -153,7 +152,7 @@
     padding-left: 0.4em;
     padding-right: 0.4em;
     background-color: #fffef0;
-    margin-right: 1em;
+    margin-left: 1em;
     font-family: Metamorphous;
     font-weight: normal;
     letter-spacing: 0.05em;
@@ -161,7 +160,7 @@
 
     &::before {
         content: "▸";
-        margin-right: 0.5em;
+        margin-inline-end: 0.5em;
     }
 
     @at-root {

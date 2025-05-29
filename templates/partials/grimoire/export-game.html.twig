@@ -1,0 +1,23 @@
+<button type="button" class="button button--full-height" id="export-game" data-dialog="#game-export">{{ 'grimoire.export.title'|trans }}</button>
+
+{% embed 'includes/dialog.html.twig' with {
+    id: 'game-export',
+    background: 'hide',
+    title: 'grimoire.export.title'|trans,
+    hideClickBackground: false
+} %}
+    {% block body %}
+        <p>{{ 'grimoire.export.markup'|trans|raw }}</p>
+        <p>
+            <button type="button" class="button" id="export-trigger">
+                <span class="button__text">{{ 'grimoire.export.button'|trans }}</span>
+                <span class="button__loader" role="progressbar" aria-valuetext="Loading" aria-busy="false" aria-live="assertive" aria-valuemin="0" aria-valuemax="1">
+                    <span class="loader" aria-hidden="true"></span>
+                </span>
+            </button>
+        </p>
+        <div id="export-holder" hidden>
+            <img src="" alt="" id="export-image" width="148" height="148" class="mx-auto">
+        </div>
+    {% endblock %}
+{% endembed %}

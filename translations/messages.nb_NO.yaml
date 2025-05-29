@@ -166,6 +166,7 @@ grimoire:
         recent_reminders: 'Påminnelsene nyligst lagt til:'
         player_name: Navngi spiller
         ghost_vote: Dødestemme
+        orphan: 'Advarsel: denne karakteren er ikke på det gjeldende manuset.'
 
     reminder_show:
         title: Påminnelse
@@ -197,6 +198,11 @@ grimoire:
     token:
         title: Brikke
 
+    export:
+        title: Eksporter spillet
+        markup: Generer en QR-kode slik at spilldataene kan importeres til <a href="https://the-grim.netlify.app/" target="_blank" rel="noopener noreferrer">The Grim</a>.
+        button: Generer QR-kode
+
 jinxes:
     title: Gander
     target: Mål
@@ -223,6 +229,8 @@ info_tokens:
         votetoday: <strong>Stemte</strong> du i dag?
         youare: <strong>Du</strong> er
         selectedyou: Denne rollen <strong>valgte</strong> deg
+        useability: Bruk din <strong>evne</strong>?
+        makechoice: Ta et <strong>valg</strong>
     custom: Egne kunnskapsbrikker
     add_custom: Legg til kunnskapsbrikke
     edit_custom: Rediger kunnskapsbrikke
@@ -242,7 +250,7 @@ acknowledgements:
         - Ikoner er hentet fra <a href="https://fontawesome.com/v5.15/icons" target="_blank" rel="noopener noreferrer">Font Awesome</a>.
         - Mange bilder og mye data er hentet fra <a href="https://www.clocktower.online" target="_blank" rel="noopener noreferrer">Clocktower.online</a> og <a href="https://bloodontheclocktower.com/" target="_blank" rel="noopener noreferrer">Blood on the Clocktower-nettsiden</a>.
         - Dette er en uoffisiell virtuell grimoire for Blodet på klokketårnet. Prosjektet er gratis og kildekoden finnes på <a href="https://github.com/Skateside/pocket-grimoire" target="_blank" rel="noopener noreferrer">GitHub</a>. Prosjektet er ikke tilknyttet the Pandemonium Institute. Om du har glede av å spille Blodet på klokketårnet, <a href="https://bloodontheclocktower.com/buy" target="_blank" rel="noopener noreferrer">vurder gjerne å kjøpe din egen grimoire</a> - i tillegg til å være mer fleksibel enn denne digitale utgaven, støtter det også utviklerne.
-        - Lagt merke til en teknisk feil eller har du et forslag til forbedring? La meg få vite det i <a href="https://discord.gg/FyZwg75H" target="_blank" rel="noopener noreferrer">pocket-grimoire-kanalen på den uoffisielle discord-serveren</a> (navnet mitt der er "Skateside") eller <a href="https://github.com/Skateside/pocket-grimoire/issues" target="_blank" rel="noopener noreferrer">ta eventuelle problemer opp på GitHub</a>.
+        - Lagt merke til en teknisk feil eller har du et forslag til forbedring? La meg få vite det i <a href="https://discord.gg/eU89j89" target="_blank" rel="noopener noreferrer">pocket-grimoire-kanalen på den uoffisielle discord-serveren</a> (navnet mitt der er "Skateside") eller <a href="https://github.com/Skateside/pocket-grimoire/issues" target="_blank" rel="noopener noreferrer">ta eventuelle problemer opp på GitHub</a>.
         - <small>Versjon <span id="version"></span></small>
 
 errors:
@@ -254,3 +262,7 @@ errors:
         invalid_entry: 'Ugyldig input for "%id%": %reasons%'
         empty_teams: 'Tomme lag: %teams%'
         invalid_property: Egenskapen "%property%" skal være av typen %expected%, men var typen %given% i stedet
+    url:
+        no_url: Ugyldig eller manglende URL
+        cannot_access: Får ikke tilgang til URL
+        not_json: Kan ikke analysere JSON fra URL

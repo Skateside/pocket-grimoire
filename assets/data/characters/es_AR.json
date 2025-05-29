@@ -2,9 +2,9 @@
     {
         "id": "acrobat",
         "name": "Acróbata",
-        "ability": "Cada noche*, si cualquiera de tus vecinos vivos buenos es emborrachado o envenenado, moris.",
+        "ability": "Cada noche*, elige un jugador: si está borracho o se envenena esta noche, mueres.",
         "firstNightReminder": "",
-        "otherNightReminder": "Si un vecino vivo bueno es emborrachado o envenenado, el Acrobata muere.",
+        "otherNightReminder": "El acróbata elige un jugador. Si está borracho o se envenena esta noche, el jugador acróbata muere.",
         "remindersGlobal": [],
         "reminders": [
             "Muerto"
@@ -614,6 +614,17 @@
         "reminders": []
     },
     {
+        "id": "gnome",
+        "name": "Gnomo",
+        "ability": "Todos los jugadores comienzan conociendo a un jugador de tu alineación. Puedes elegir matar a cualquiera que lo nomine.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": [
+            "Amigo"
+        ]
+    },
+    {
         "id": "goblin",
         "name": "Duende",
         "ability": "Si afirmas ser el Duende y sos nominado y ejecutado ese día, tu equipo gana. ",
@@ -956,7 +967,8 @@
         "otherNightReminder": "El Licántropo apunta a un jugador vivo: si es bueno, muere y nadie más puede morir esa noche.",
         "remindersGlobal": [],
         "reminders": [
-            "Muerto"
+            "Muerto",
+            "Faux Paw"
         ]
     },
     {
@@ -1139,11 +1151,12 @@
     {
         "id": "organgrinder",
         "name": "Moledor de órganos",
-        "ability": "Todos los jugadores mantienen los ojos cerrados cuando votan y el conteo de votos es secreto. Los votos por ti solo cuentan si votas.",
+        "ability": "Todos los jugadores mantienen los ojos cerrados cuando votan y el recuento de votos es secreto. Cada noche, elige si estás borracho o no.",
         "firstNightReminder": "",
         "otherNightReminder": "",
         "remindersGlobal": [],
         "reminders": [
+            "Borracho",
             "A punto de morir"
         ]
     },
@@ -1163,8 +1176,8 @@
         "firstNightReminder": "El Filósofo indica que 'no' con la cabeza o apunta a un personaje bueno en su hoja. Si elige un personaje: Cambia la ficha del personaje fuera de juego con la del Filósofo. O, si el personaje está en juego, pone la marca de borracho junto al jugador, y la ficha No es el Filósofo junto al Filósofo.",
         "otherNightReminder": "Si el Filósofo no usó su habilidad: el Filósofo indica que 'no' con la cabeza o apunta a un personaje bueno en su hoja. Si elige un personaje: Cambia la ficha del personaje fuera de juego con la del Filósofo. O, si el personaje está en juego, pone la marca de borracho junto al jugador, y la ficha No es el Filósofo junto al Filósofo.",
         "remindersGlobal": [
-            "Borracho",
-            "No es el Filósofo"
+            "No es el Filósofo",
+            "Borracho"
         ],
         "reminders": []
     },
@@ -1707,6 +1720,31 @@
         "remindersGlobal": [],
         "reminders": [
             "Maldito"
+        ]
+    },
+    {
+        "id": "wizard",
+        "name": "Mago",
+        "ability": "Una vez por juego, elige pedir un deseo.  Si se concede, podría tener un precio y dejar una pista sobre su naturaleza.",
+        "firstNightReminder": "Ejecute la capacidad del Mago si corresponde.",
+        "otherNightReminder": "Ejecute la capacidad del Mago si corresponde.",
+        "remindersGlobal": [],
+        "reminders": [
+            "?"
+        ]
+    },
+    {
+        "id": "xaan",
+        "name": "Xaan",
+        "ability": "En la noche X, todos los Pueblerinos son envenados hasta el atardecer. [X Extranjeros]",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": [
+            "Noche 1",
+            "Noche 2",
+            "Noche 3",
+            "X"
         ]
     },
     {

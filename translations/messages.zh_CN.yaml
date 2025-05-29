@@ -166,6 +166,7 @@ grimoire:
         recent_reminders: 最近添加过的提示标记：
         player_name: 设置玩家名称
         ghost_vote: 投票标记
+        orphan: '警告：此角色不在当前脚本中。'
 
     reminder_show:
         title: 提示标记
@@ -197,6 +198,11 @@ grimoire:
     token:
         title: 角色标记
 
+    export:
+        title: 导出游戏
+        markup: 生成二维码，以便将游戏数据导入 <a href="https://the-grim.netlify.app/" target="_blank" rel="noopener noreferrer">The Grim</a>。
+        button: 生成二维码
+
 jinxes:
     title: 相克规则
     target: 角色1
@@ -223,6 +229,8 @@ info_tokens:
         votetoday: 你今天<strong>投票</strong>了吗？
         youare: <strong>你</strong>是
         selectedyou: 这个角色<strong>选择</strong>了你
+        useability: 运用你的<strong>能力</strong>？
+        makechoice: 做出<strong>选择</strong>
     custom: 自定义信息标记
     add_custom: 添加信息标记
     edit_custom: 编辑信息标记
@@ -242,7 +250,7 @@ acknowledgements:
         - 图标来自<a href="https://fontawesome.com/v5.15/icons" target="_blank" rel="noopener noreferrer">Font Awesome</a>。
         - 许多图片和数据来自<a href="https://www.clocktower.online" target="_blank" rel="noopener noreferrer">Clocktower.online</a>和<a href="https://bloodontheclocktower.com/" target="_blank" rel="noopener noreferrer">Blood on the Clocktower官网</a>。
         - 这是一部染·钟楼谜团（Blood on the Clocktower）的非官方虚拟魔典。此项目是免费项目，源代码可在<a href="https://github.com/Skateside/pocket-grimoire" target="_blank" rel="noopener noreferrer">GitHub</a>上获取。此项目与The Pandemonium Institute无关。如果您喜欢Blood on the Clocktower，<a href="https://www.gstonegames.com/game/info-13275.html" target="_blank" rel="noopener noreferrer">请考虑购买一部您自己的魔典</a>——它不仅比这个数字魔典更灵活，更能支持这个游戏的创作者。
-        - 发现错误或有改进建议？请在<a href="https://discord.gg/FyZwg75H" target="_blank" rel="noopener noreferrer">非官方Discord服务器的“pocket-grimoire”频道</a>上告诉我（我的用户名是Skateside）或是<a href="https://github.com/Skateside/pocket-grimoire/issues" target="_blank" rel="noopener noreferrer">在GitHub上提出问题</a>。
+        - 发现错误或有改进建议？请在<a href="https://discord.gg/eU89j89" target="_blank" rel="noopener noreferrer">非官方Discord服务器的“pocket-grimoire”频道</a>上告诉我（我的用户名是Skateside）或是<a href="https://github.com/Skateside/pocket-grimoire/issues" target="_blank" rel="noopener noreferrer">在GitHub上提出问题</a>。
         - <small>版本 <span id="version"></span></small>
 
 errors:
@@ -254,3 +262,7 @@ errors:
         invalid_entry: 无效输入“%id%”：%reasons%
         empty_teams: 空阵营：%teams%
         invalid_property: 属性“%property%”应为类型 %expected%，但实际为类型 %given%
+    url:
+        no_url: URL 无效或缺失
+        cannot_access: 无法访问 URL
+        not_json: 无法从 URL 解析 JSON

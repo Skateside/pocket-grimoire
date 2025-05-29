@@ -1,0 +1,269 @@
+title: Pocket Grimoire
+
+forms:
+    file:
+        placeholder: Pilih file
+        button: Telusuri
+
+dialog:
+    close: Tutup
+
+index:
+    title: Permainan
+    description: Sebuah virtual grimoire untuk Blood on the Clocktower
+
+sheet:
+    title: Lembar Karakter
+    description: Lembar karakter untuk edisi ini dari Blood on the Clocktower
+    jinx: Jinx
+    each_night: "* Setiap malam kecuali malam pertama."
+    get_qr_code: Dapatkan kode QR untuk lembar ini
+    get_sheet: Dapatkan lembar ini
+    credit: <a href="https://bloodontheclocktower.com/" target="_blank" rel="noopener noreferrer">Blood on the Clocktower</a> adalah merek dagang dari Steven Medway dan <a href="https://www.thepandemoniuminstitute.com/" target="_blank" rel="noopener noreferrer">The Pandemonium Institute</a>
+    breakdown: Jumlah masing-masing tim untuk jumlah pemain.
+    count_plus: "%count%+"
+
+groups:
+    players: Pemain
+    townsfolk: Townsfolk
+    outsider: Outsiders
+    minion: Minions
+    demon: Demons
+    traveller: Travellers
+    fabled: Fabled
+
+messages:
+    good_team: Tim baik
+    evil_team: Tim jahat
+    empty_character_ability: Ini adalah karakter kosong.
+    version_change_message: Aplikasi ini telah memperbarui versinya. Karena data Anda mungkin tidak benar, kami menyarankan Anda untuk menghapus semuanya di dialog "Clear Cache". Tekan "OK" untuk membuka dialog atau "Cancel" untuk menutup pesan ini.
+    invalid_script: Format skrip tidak dikenali.
+    no_characters: Skrip tidak mengandung karakter yang dikenali.
+    player_name: Siapa nama pemain ini?
+    custom_info_token: "Apa yang Anda ingin tulis pada token info baru Anda? Gunakan **asterisk ganda** untuk menekankan teks."
+    bag_disabled: "Karakter-karakter ini tidak dapat ditambahkan ke kantong: {0}"
+
+setup:
+
+    title: Pengaturan
+
+    buttons:
+        select_edition: Pilih Edisi
+        select_characters: Pilih Karakter
+        qr_code_button: Lembar Karakter
+        clear_cache_button: Hapus Cache
+        language: Bahasa
+        set_language: Atur Bahasa
+
+    editions:
+        title: Pilih Edisi
+        trouble_brewing: Trouble Brewing
+        bad_moon_rising: Bad Moon Rising
+        sects_and_violets: Sects and Violets
+        custom_script: Skrip Kustom
+        custom_note: Unggah skrip kustom, masukkan URL skrip kustom, atau tempelkan JSON langsung.
+        custom_warning: Hanya unggah file JSON kustom dari sumber yang Anda percayai!
+        upload: Unggah skrip kustom
+        url: Masukkan URL
+        paste: Tempel dari clipboard
+        unsupported: Harap dicatat bahwa Pocket Grimoire saat ini tidak mendukung skrip homebrew atau yang dilokalisasi.
+        select: Pilih
+
+    character_select:
+        title: Pilih Karakter
+        number_players: Jumlah pemain
+        toggle_abilities: Tampilkan kemampuan karakter
+        toggle_duplicates: Izinkan karakter duplikat
+        highlight_random: Sorot acak
+        draw_characters: Ambil Karakter
+        add_all: Tambah Semua
+        layout: Layout
+        ellipse: Ellipse
+        diagonal: Diagonal
+        horizontal: Horizontal
+        vertical: Vertikal
+
+    character_choice:
+        title: Pilih Karakter Anda
+        description: Ketuk salah satu token bernomor untuk memilih karakter Anda. Token yang lebih gelap sudah dipilih.
+
+    character_decision:
+        title: Ingat Karakter Anda
+        name: Berikan nama (opsional)
+        return: Kembali ke Pilih Karakter
+
+    qr_code:
+        title: Lembar karakter
+        intro: Pindai kode QR ini untuk melihat lembar karakter
+        include: "Termasuk:"
+        travellers: Travellers
+        fabled: Fabled
+
+    clear_cache:
+        title: Hapus Cache
+        clear_all: Hapus semuanya
+        clear_description: Menonaktifkan ini akan memungkinkan bagian individu dari cache untuk dihapus.
+        lookup_label: Hapus data
+        lookup_note: Data untuk jinx, pembagian tim, dan informasi karakter.
+        characters_label: Hapus edisi
+        characters_note: Edisi, atau skrip, yang telah dipilih dan dimuat.
+        tokens_label: Hapus token
+        tokens_note: Posisi token di grimoire.
+        inputs_label: Hapus input
+        inputs_note: Pengaturan pengguna untuk situs web ini.
+        details_label: Hapus terbuka/tertutup
+        details_note: Bagian mana yang terbuka atau tertutup.
+        info_tokens_label: Hapus token info kustom
+        info_tokens_note: Token info kustom yang telah ditambahkan.
+        names_label: Hapus nama
+        names_note: Saran nama pemain.
+        height_label: Hapus tinggi pad
+        height_note: Tinggi pad di grimoire.
+        clear_refresh_label: Segarkan setelahnya
+        clear_refresh_note: Menyegarkan akan memuat data baru untuk segala sesuatu yang telah dihapus.
+        warning: "<strong>Peringatan:</strong> token yang telah ditempatkan pada grimoire akan terlupakan."
+        info_token_warning: "<strong>Peringatan:</strong> token info kustom akan terlupakan."
+        clear_cache: Hapus Cache
+
+grimoire:
+
+    title: Grimoire
+
+    grimoire:
+        bluffs: Gunakan untuk bluffing!
+        show_bluffs: Tampilkan semua bluff
+        add_bluffs: Tambah bluff
+        add_token: Tambah token
+        add_reminder: Tambah pengingat
+        add_traveller: Tambah traveller
+        add_fabled: Tambah fabled
+        show_tokens: Tampilkan token
+        reset_height: Setel ulang tinggi pad
+        clear_grimoire: Hapus Grimoire
+        clear_grimoire_warning: Apakah Anda yakin ingin menghapus semua token?
+        show_night_order: Tampilkan urutan malam
+        character_size: Ukuran token karakter
+        reminder_size: Ukuran token pengingat
+        token_settings: Pengaturan token
+
+    character_list:
+        title: Pilih Karakter
+
+    reminder_list:
+        title: Pilih Pengingat
+        show: Tampilkan semua pengingat
+        multiple: Tambah beberapa
+        add_all: Tambah semua
+
+    character_show:
+        title: Token
+        show: Tampilkan
+        shroud: Shroud
+        rotate: Putar
+        reminder: Pengingat
+        replace: Ganti
+        remove: Hapus token
+        recent_reminders: "Pengingat yang paling baru ditambahkan:"
+        player_name: Setel nama pemain
+        ghost_vote: Hantu Voting
+        orphan: "Peringatan: karakter ini tidak ada dalam skrip saat ini."
+
+    reminder_show:
+        title: Pengingat
+        remove: Hapus
+
+    bluff_show:
+        title: Token
+        empty: Kosong
+        show: Tampilkan
+        change: Ganti
+
+    bluff_list:
+        title: Pilih Bluff
+        show_existing: Tampilkan karakter yang ada
+        show_travellers: Tampilkan travellers
+        show_evil: Tampilkan karakter jahat
+
+    token_list:
+        title: Karakter
+        add: Tambah token
+
+    traveller_list:
+        title: Travellers
+        show_all: Tampilkan semua travellers
+
+    fabled_list:
+        title: Fabled
+
+    token:
+        title: Token
+
+    export:
+        title: Ekspor game
+        markup: Buat kode QR sehingga data game dapat diimpor ke <a href="https://the-grim.netlify.app/" target="_blank" rel="noopener noreferrer">The Grim</a>.
+        button: Buat kode QR
+
+
+jinxes:
+    title: Jinxes
+    target: Target
+    trick: Trik
+    reason: Alasan
+    show: Tampilkan jinxes yang tidak dimainkan
+
+night_order:
+    title: Urutan Malam
+    first_night: Malam pertama
+    other_night: Malam lainnya
+    swipe_change: Geser untuk mengganti malam.
+    show: Tampilkan karakter yang tidak dimainkan
+    show_dead: Tampilkan karakter yang sudah mati
+
+info_tokens:
+    title: Info Tokens
+    info_tokens:
+        isdemon: Ini adalah <strong>Demon</strong>
+        isminion: Ini adalah <strong>Minions</strong> Anda
+        notinplay: Karakter-karakter ini <strong>tidak dimainkan</strong>
+        nominatetoday: Apakah Anda <strong>menominasikan</strong> hari ini?
+        playeris: <strong>Pemain ini</strong> adalah
+        votetoday: Apakah Anda <strong>melakukan vote</strong> hari ini?
+        youare: <strong>Anda</strong> adalah
+        selectedyou: Karakter ini <strong>memilih</strong> Anda
+        useability: Gunakan <strong>kemampuan</strong> Anda?
+        makechoice: Buatlah <strong>pilihan</strong>
+    custom: Token info kustom
+    add_custom: Tambah token info
+    edit_custom: Edit token info
+    delete_custom: Hapus token info
+
+notes:
+    title: Catatan Storyteller
+    label: Catatan
+    clear: Hapus catatan
+    clear_warning: Apakah Anda yakin ingin menghapus catatan?
+
+acknowledgements:
+    title: Penghargaan
+    acknowledgements:
+        - <a href="https://bloodontheclocktower.com/" target="_blank" rel="noopener noreferrer">Blood on the Clocktower</a> adalah merek dagang dari Steven Medway dan <a href="https://www.thepandemoniuminstitute.com/" target="_blank" rel="noopener noreferrer">The Pandemonium Institute</a>.
+        - Pengingat malam dan teks tambahan lainnya ditulis oleh <a href="http://bignose.whitetree.org/projects/botc/diy/" target="_blank" rel="noopener noreferrer">Ben Finney</a>.
+        - Ikon diambil dari <a href="https://fontawesome.com/v5.15/icons" target="_blank" rel="noopener noreferrer">Font Awesome</a>.
+        - Banyak gambar dan data diambil dari <a href="https://www.clocktower.online" target="_blank" rel="noopener noreferrer">Clocktower.online</a> dan <a href="https://bloodontheclocktower.com/" target="_blank" rel="noopener noreferrer">situs web Blood on the Clocktower</a>.
+        - Ini adalah virtual grimoire tidak resmi untuk Blood on the Clocktower. Proyek ini gratis dan kode sumbernya dapat ditemukan di <a href="https://github.com/Skateside/pocket-grimoire" target="_blank" rel="noopener noreferrer">GitHub</a>. Proyek ini tidak berafiliasi dengan Pandemonium Institute. Jika Anda menikmati bermain Blood on the Clocktower, <a href="https://bloodontheclocktower.com/buy" target="_blank" rel="noopener noreferrer">pertimbangkan untuk membeli grimoire Anda sendiri</a> - selain lebih fleksibel daripada versi digital ini, juga mendukung para pembuatnya.
+        - Melihat bug atau memiliki saran perbaikan? Beri tahu saya di saluran <a href="https://discord.gg/eU89j89" target="_blank" rel="noopener noreferrer">pocket-grimoire di server discord tidak resmi</a> (nama saya di sana adalah "Skateside") atau <a href="https://github.com/Skateside/pocket-grimoire/issues" target="_blank" rel="noopener noreferrer">buka topik permasalahan di GitHub</a>.
+        - <small>Versi <span id="version"></span></small>
+
+errors:
+    homebrew_json:
+        not_homebrew: Bukan entri homebrew "%id%"
+        unrecognised_team: Tim yang tidak dikenali "%team%"
+        not_find_id: Tidak dapat menemukan ID "%id%"
+        not_recognise_character: Tidak dapat mengenali karakter "%id%"
+        invalid_entry: 'Entri tidak valid untuk "%id%": %reasons%'
+        empty_teams: 'Tim kosong: %teams%'
+        invalid_property: Properti "%property%" seharusnya bertipe %expected% tetapi bertipe %given%
+    url:
+        no_url: URL tidak valid atau hilang
+        cannot_access: Tidak dapat mengakses URL
+        not_json: Tidak dapat mengurai JSON dari URL

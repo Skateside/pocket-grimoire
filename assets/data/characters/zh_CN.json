@@ -2,9 +2,9 @@
     {
         "id": "acrobat",
         "name": "杂技演员",
-        "ability": "每个夜晚*，如果与你邻近的存活善良玩家之一醉酒或中毒，你死亡。",
+        "ability": "每晚*，选择一名玩家：如果他们今晚喝醉或中毒，你就会死。",
         "firstNightReminder": "",
-        "otherNightReminder": "如果杂技演员左右两侧最近的存活善良玩家之一中毒或醉酒，杂技演员死亡。",
+        "otherNightReminder": "杂技演员选择一名玩家。如果他们今晚喝醉或中毒，杂技演员就会死。",
         "remindersGlobal": [],
         "reminders": [
             "死亡"
@@ -792,6 +792,17 @@
         "reminders": []
     },
     {
+        "id": "gnome",
+        "name": "侏儒",
+        "ability": "所有玩家开始认识一个与你阵营相同的玩家。你可以选择杀死任何提名他们的人。",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": [
+            "朋友"
+        ]
+    },
+    {
         "id": "goblin",
         "name": "哥布林",
         "ability": "如果你在被提名后公开声明自己是哥布林且在那个白天被处决，你的阵营获胜。",
@@ -1312,7 +1323,8 @@
         "otherNightReminder": "半兽人指向一名存活玩家：如果那名玩家善良，则立刻死去且今夜不会再有玩家死亡。",
         "remindersGlobal": [],
         "reminders": [
-            "死亡"
+            "死亡",
+            "假爪子"
         ]
     },
     {
@@ -1529,11 +1541,12 @@
     {
         "id": "organgrinder",
         "name": "街头风琴手",
-        "ability": "所有玩家在投票时闭眼，且票数会秘密统计。对你的提名只在你投票时才会统计票数。",
+        "ability": "所有玩家投票时都闭上眼睛，投票结果保密。每晚，选择你是否喝醉。",
         "firstNightReminder": "",
         "otherNightReminder": "",
         "remindersGlobal": [],
         "reminders": [
+            "醉酒",
             "即将被处决"
         ]
     },
@@ -1564,8 +1577,8 @@
         "firstNightReminder": "哲学家可以选择一个角色。如果选择的角色不在场，将哲学家的角色标题替换成对应角色，并标记“是哲学家”，否则标记该角色对应的玩家醉酒。从现在开始，你需要以哲学家获得能力的那种角色的行动方式来唤醒哲学家。",
         "otherNightReminder": "哲学家可以选择一个角色。如果选择的角色不在场，将哲学家的角色标题替换成对应角色，并标记“是哲学家”，否则标记该角色对应的玩家醉酒。从现在开始，你需要以哲学家获得能力的那种角色的行动方式来唤醒哲学家。",
         "remindersGlobal": [
-            "醉酒",
-            "是哲学家"
+            "是哲学家",
+            "醉酒"
         ],
         "reminders": []
     },
@@ -2284,6 +2297,17 @@
         ]
     },
     {
+        "id": "wizard",
+        "name": "向导",
+        "ability": "每场比赛一次，选择许一个愿。  如果获得批准，它可能会有一个价格并留下关于其性质的线索。",
+        "firstNightReminder": "运行向导能力（如果适用）。",
+        "otherNightReminder": "运行向导能力（如果适用）。",
+        "remindersGlobal": [],
+        "reminders": [
+            "？"
+        ]
+    },
+    {
         "id": "wudaozhe",
         "name": "悟道者",
         "ability": "你以为你是一个外来者，但你实际上不是。如果有邪恶玩家的能力选择或影响了你，在该效果生效前你会变成一个不在场的镇民角色。",
@@ -2303,6 +2327,20 @@
         "remindersGlobal": [],
         "reminders": [
             "限一次"
+        ]
+    },
+    {
+        "id": "xaan",
+        "name": "Xaan",
+        "ability": "第 X 夜，所有镇民都会中毒，直到黄昏。[X 外来者]",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": [
+            "第 1 夜",
+            "第 2 夜",
+            "第 3 夜",
+            "X"
         ]
     },
     {
