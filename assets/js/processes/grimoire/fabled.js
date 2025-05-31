@@ -97,6 +97,7 @@ lookupOneCached("#fabled-list__list").addEventListener("click", ({ target }) => 
 });
 
 // Night Order.
+// #155 - Let the NightOrder class manage the night order.
 
 const fabledCount = Object.create(null);
 
@@ -116,37 +117,6 @@ tokenObserver.on("character-add", ({ detail }) => {
 
     fabledCount[id] += 1;
 
-    const firstNight = character.getFirstNight();
-
-    if (firstNight) {
-
-        const first = lookupOneCached("#first-night");
-        const nextFirst = lookup("[data-order]", first).find(({ dataset }) => {
-            return dataset.order > firstNight;
-        });
-
-        first.insertBefore(character.drawNightOrder(true), nextFirst);
-
-    }
-
-    const otherNight = character.getOtherNight();
-
-    if (otherNight) {
-
-        const other = lookupOneCached("#other-nights");
-        const nextOther = lookup("[data-order]", other).find(({ dataset }) => {
-            return dataset.order > otherNight;
-        });
-
-        other.insertBefore(character.drawNightOrder(false), nextOther);
-
-    }
-
-    // Since the order of main.js includes this file before including the
-    // night-order file, this event listener will trigger before the one there,
-    // so we don't need to include funtionality to mark these new night orders
-    // as "active" since the night-order file will handle that for us.
-
 });
 
 tokenObserver.on("character-remove", ({ detail }) => {
@@ -161,13 +131,6 @@ tokenObserver.on("character-remove", ({ detail }) => {
 
     if (fabledCount[id]) {
         fabledCount[id] -= 1;
-    }
-
-    if (!fabledCount[id]) {
-
-        lookupOne(`#first-night [data-id="${id}"]`)?.remove();
-        lookupOne(`#other-nights [data-id="${id}"]`)?.remove();
-
     }
 
 });

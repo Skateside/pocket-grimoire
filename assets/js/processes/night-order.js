@@ -1,7 +1,6 @@
 import Observer from "../classes/Observer.js";
 import NightOrder from "../classes/NightOrder.js";
 import {
-    empty,
     lookupOne,
     lookupOneCached,
     announceInput,
@@ -11,12 +10,19 @@ const gameObserver = Observer.create("game");
 const tokenObserver = Observer.create("token");
 const nightOrder = new NightOrder();
 
+nightOrder.setHolders({
+    first: lookupOneCached("#first-night"),
+    other: lookupOneCached("#other-nights")
+});
+
 gameObserver.on("characters-selected", ({ detail }) => {
 
     nightOrder.reset();
-    nightOrder.setCharacters(detail.characters);
-    empty(lookupOneCached("#first-night")).append(nightOrder.drawNightOrder(true));
-    empty(lookupOneCached("#other-nights")).append(nightOrder.drawNightOrder(false));
+    nightOrder.setCharacters(
+        detail.characters
+            .filter((character) => !["fabled", "traveller"].includes(character.getTeam()))
+    );
+    nightOrder.drawAllNightOrders();
 
 });
 
@@ -25,25 +31,78 @@ gameObserver.on("clear", () => {
     lookupOneCached(".js--night-order--carousel").scrollLeft = 0;
 });
 
+// TODO: Travellers and Fabled should be unique, it should only be possible to
+// add 1 of each. Add that limitation so we don't need to count them anymore.
+const specialRoles = {
+    fabled: Object.create(null),
+    traveller: Object.create(null)
+}
+
 tokenObserver.on("character-add", ({ detail }) => {
 
+    const {
+        character
+    } = detail;
+    const team = character.getTeam();
+
+    // #155 - If we have a traveller or a fabled, add it to the night order.
+    if (specialRoles[team]) {
+
+        const id = character.getId();
+
+        if (!specialRoles[team][id]) {
+            specialRoles[team][id] = 0;
+        }
+
+        specialRoles[team][id] += 1;
+
+        nightOrder.setCharacter(character);
+        nightOrder.placeInOrder(character);
+
+    }
+
     // #131 - check the character isn't from the previous script.
-    if (!nightOrder.hasCharacter(detail.character)) {
+    if (!nightOrder.hasCharacter(character)) {
         return;
     }
 
-    nightOrder.addCharacter(detail.character);
+    nightOrder.addCharacter(character);
 
 });
 
 tokenObserver.on("character-remove", ({ detail }) => {
 
+    const {
+        character
+    } = detail;
+    const team = character.getTeam();
+
+    // #155 - If we're removing a fabled or traveller, remove them if necessary.
+    if (specialRoles[team]) {
+
+        const id = character.getId();
+
+        if (specialRoles[team][id]) {
+
+            specialRoles[team][id] -= 1;
+
+            if (specialRoles[team][id] <= 0) {
+
+                nightOrder.unsetCharacter(character);
+                delete specialRoles[team][id];
+
+            }
+
+        }
+
+    }
+
     // #131 - check the character isn't from the previous script.
-    if (!nightOrder.hasCharacter(detail.character)) {
+    if (!nightOrder.hasCharacter(character)) {
         return;
     }
 
-    nightOrder.removeCharacter(detail.character);
+    nightOrder.removeCharacter(character);
 
 });
 

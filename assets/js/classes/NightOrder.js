@@ -1,4 +1,7 @@
 import CharacterToken from "./CharacterToken";
+import {
+    empty
+} from "../utils/elements.js";
 
 /**
  * A class that manages the night order lists.
@@ -25,6 +28,22 @@ export default class NightOrder {
          */
         this.data = [];
 
+        /**
+         * Holders for the night order elements.
+         */
+        this.holders = {
+            first: null,
+            other: null,
+        }
+
+    }
+
+    /**
+     * Sets the holders.
+     * @param {Object} holders
+     */
+    setHolders(holders) {
+        this.holders = holders;
     }
 
     /**
@@ -89,43 +108,141 @@ export default class NightOrder {
      * Sets the characters that are in the lists.
      *
      * @param {Array.<CharacterToken>} characters
+     *        All characters to set.
      */
     setCharacters(characters) {
+        characters.forEach((character) => this.setCharacter(character));
+    }
 
-        characters.forEach((character) => {
+    /**
+     * Sets an individual character, adding it to the list.
+     *
+     * @param {CharacterToken} character
+     *        The character to set.
+     */
+    setCharacter(character) {
 
-            const data = {
-                character,
-                alive: 0,
-                inPlay: 0,
+        const data = {
+            character,
+            alive: 0,
+            inPlay: 0,
+        };
+        const firstNight = character.getFirstNight();
+        const otherNight = character.getOtherNight();
+        const id = character.getId();
+
+        if (firstNight) {
+
+            data.first = {
+                order: firstNight,
+                placeholder: document.createComment(id),
+                element: character.drawNightOrder(true).firstElementChild,
             };
-            const firstNight = character.getFirstNight();
-            const otherNight = character.getOtherNight();
-            const id = character.getId();
 
-            if (firstNight) {
+        }
 
-                data.first = {
-                    order: firstNight,
-                    placeholder: document.createComment(id),
-                    element: character.drawNightOrder(true).firstElementChild,
-                };
+        if (otherNight) {
 
+            data.other = {
+                order: otherNight,
+                placeholder: document.createComment(id),
+                element: character.drawNightOrder(false).firstElementChild,
+            };
+
+        }
+
+        this.data.push(data);
+
+    }
+
+    /**
+     * Place the characters element/placeholder in the correct place in the
+     * appropriate night order list.
+     * This is only needed after adding a character using
+     * {@link NightOrder#setCharacter} manually - the order for all regular
+     * characters in the script should be correctly set in
+     * {@link NightOrder#drawNightOrder}.
+     *
+     * @param {CharacterToken} character
+     *        The character to correctly place.
+     */
+    placeInOrder(character) {
+
+        const index = this.getDataIndex(character);
+
+        if (index < 0) {
+            return;
+        }
+
+        [
+            ["first", "getFirstNight"],
+            ["other", "getOtherNight"]
+        ].forEach(([property, method]) => {
+
+            const data = this.data[index][property];
+
+            if (!data) {
+                return;
             }
 
-            if (otherNight) {
+            const next = this.data
+                .filter((datum) => datum[property])
+                .sort((a, b) => a[property].order - b[property].order)
+                .find(({ order }) => order > character[method]());
+            const insertable = (
+                this.shouldShow(data)
+                ? data.element
+                : data.placeholder
+            );
 
-                data.other = {
-                    order: otherNight,
-                    placeholder: document.createComment(id),
-                    element: character.drawNightOrder(false).firstElementChild,
-                };
+            if (next) {
 
+                this.holders[property].insertBefore(
+                    insertable,
+                    (
+                        next.element.parentElement
+                        ? next.element
+                        : next.placeholder
+                    )
+                );
+
+            } else {
+                this.holders[property].append(insertable);
             }
-
-            this.data.push(data);
 
         });
+
+    }
+
+    /**
+     * Removes the given character from the data and removes all its elements
+     * from the night order lists.
+     * 
+     * @param {CharacterToken} character
+     *        The character to remove.
+     */
+    unsetCharacter(character) {
+
+        const index = this.getDataIndex(character);
+
+        if (index < 0) {
+            return;
+        }
+
+        ["first", "other"].forEach((property) => {
+
+            const data = this.data[index][property];
+
+            if (!data) {
+                return;
+            }
+
+            data.placeholder.remove();
+            data.element.remove();
+
+        });
+
+        this.data.splice(index, 1);
 
     }
 
@@ -150,7 +267,7 @@ export default class NightOrder {
         );
 
         return data
-            .filter((data) => data[property])
+            .filter((datum) => datum[property])
             .sort((a, b) => a[property].order - b[property].order)
             .reduce((fragment, data) => {
 
@@ -169,6 +286,23 @@ export default class NightOrder {
 
             }, document.createDocumentFragment());
 
+
+    }
+
+    /**
+     * Draws all night order elements.
+     */
+    drawAllNightOrders() {
+
+        Object.entries(this.holders).forEach(([name, element]) => {
+
+            if (!element) {
+                return;
+            }
+
+            empty(element).append(this.drawNightOrder(name === "first"));
+
+        });
 
     }
 
