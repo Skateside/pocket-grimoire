@@ -217,7 +217,7 @@ export default class NightOrder {
     /**
      * Removes the given character from the data and removes all its elements
      * from the night order lists.
-     * 
+     *
      * @param {CharacterToken} character
      *        The character to remove.
      */
