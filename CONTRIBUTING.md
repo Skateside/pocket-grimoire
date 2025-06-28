@@ -56,9 +56,58 @@ Hi! I'm really excited that you are interested in contributing to this project. 
 
 This project is built using the [Symfony framework](https://symfony.com/doc/current/index.html) (version 5.4.7 at the moment because my server doesn't support PHP 8 yet) and assets are compiled using [Encore](https://symfony.com/doc/current/frontend/encore/simple-example.html). You may need to familiarise yourself with those frameworks before working on.
 
+I find it easier to use Symfony with their [command line API](https://github.com/symfony-cli/symfony-cli).
+
+<!--
 I use PHP 7.4 locally. My hosting currently doesn't support PHP 8 :pensive:
 
 When I get the time, I'll put together an install file that populates the database so you won't need to ask me for a mysqldump. I've created a [git issue](https://github.com/Skateside/pocket-grimoire/issues/36) to remind myself so feel free to nudge me on that - maybe it'll help me create it faster?
+-->
+
+## Installing the Pocket Grimoire
+
+Download the files and then go into that folder using the command line. You can now install the Pocket Grimoire using these 5 "easy" steps:
+
+### Step 1: Database
+
+Create a database and set up `.env.local` with the connection details.
+
+### Step 2: Set up the database
+
+```sh
+# Create the database
+$ bin/console doctrine:database:create
+# Create the tables
+$ bin/console doctrine:migrations:migrate
+```
+
+### Step 3: Populate the database
+
+```sh
+# Import initial data
+# WARNING: The order is important
+$ bin/console pocket-grimoire:populate-editions -f ./assets/data/editions.json
+$ bin/console pocket-grimoire:populate-teams -f ./assets/data/teams.json
+$ bin/console pocket-grimoire:populate-roles -f ./assets/data/characters.json
+# Import everything else
+$ bin/console pocket-grimoire:import
+```
+
+### Step 4: Create the assets
+
+```sh
+$ yarn encore prod
+```
+
+### Step 5: Start a Symfony server
+
+```sh
+$ symfony server:start
+```
+
+Go to the URL that this command gives you and you should see a version of the Pocket Grimoire running locally.
+
+Process should take 1-2 minutes.
 
 ## Events
 
