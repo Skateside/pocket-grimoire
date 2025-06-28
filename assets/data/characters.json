@@ -697,12 +697,12 @@
         "firstNightReminder": "",
         "otherNightReminder": "",
         "reminders": [
-            "Whoops"
+            "Whoopsie"
         ],
-        "setup": false,
+        "setup": true,
         "name": "Deus ex Fiasco",
         "team": "fabled",
-        "ability": "Once per game, the Storyteller will make a \"mistake\", correct it and publicly admit to it.",
+        "ability": "At least once per game, the Storyteller will make a mistake, correct it, and publicly admit to it",
         "image": "/build/img/icons/fabled/deusexfiasco.webp"
     },
     {
@@ -2516,6 +2516,22 @@
         "setup": false,
         "ability": "Each night, choose a player: a Minion, if chosen, learns this. All chosen Minions have no ability.",
         "image": "/build/img/icons/townsfolk/preacher.webp"
+    },
+    {
+        "id": "princess",
+        "name": "Princess",
+        "edition": "",
+        "team": "townsfolk",
+        "firstNight": 0,
+        "firstNightReminder": "",
+        "otherNight": 34,
+        "otherNightReminder": "If it was the Princess' first day today, and they nominated and executed a player, the Demon doesn't kill.",
+        "reminders": [
+            "Doesn't Kill"
+        ],
+        "setup": false,
+        "ability": "On your 1st day, if you nominated & executed a player, the Demon doesn't kill tonight.",
+        "image": "/build/img/icons/townsfolk/princess.webp"
     },
     {
         "id": "professor",

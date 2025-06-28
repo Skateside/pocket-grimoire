@@ -1291,6 +1291,17 @@
         ]
     },
     {
+        "id": "princess",
+        "name": "公主",
+        "ability": "如果你第一天提名並處決了一名玩家，今晚惡魔不會殺人。",
+        "firstNightReminder": "",
+        "otherNightReminder": "如果今天是公主第一天，提名並處決了一名玩家，惡魔不會殺人。",
+        "remindersGlobal": [],
+        "reminders": [
+            "不會殺人"
+        ]
+    },
+    {
         "id": "professor",
         "name": "教授",
         "ability": "每場遊戲一次，晚上時*，選擇一位死亡的玩家，如果該玩家是鎮民，則他復活。",

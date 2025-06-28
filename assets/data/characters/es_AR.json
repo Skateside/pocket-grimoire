@@ -1281,6 +1281,17 @@
         ]
     },
     {
+        "id": "princess",
+        "name": "Princesa",
+        "ability": "En tu primer día, si nominaste y ejecutaste a un jugador, el Demonio no mata esta noche.",
+        "firstNightReminder": "",
+        "otherNightReminder": "Si hoy fue el primer día de la Princesa y nominaron y ejecutaron a un jugador, el Demonio no mata.",
+        "remindersGlobal": [],
+        "reminders": [
+            "No mata"
+        ]
+    },
+    {
         "id": "professor",
         "name": "Profesor",
         "ability": "Una vez por partida, en la noche*, elegí un jugador muerto: si es un Ciudadano, revive.",

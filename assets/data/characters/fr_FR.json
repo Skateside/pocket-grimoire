@@ -1294,6 +1294,17 @@
         ]
     },
     {
+        "id": "princess",
+        "name": "Princesse",
+        "ability": "Le premier jour, si vous avez nommé et exécuté un joueur, le Démon ne tue pas ce soir.",
+        "firstNightReminder": "",
+        "otherNightReminder": "Si c'était le premier jour de la Princesse aujourd'hui, et qu'elle a nommé et exécuté un joueur, le Démon ne tue pas.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Ne tue pas"
+        ]
+    },
+    {
         "id": "professor",
         "name": "Professeur",
         "ability": "Une fois par partie, pendant la nuit*, choisissez un joueur mort : s'il s'agit d'un Villageois, il sera ressuscité.",

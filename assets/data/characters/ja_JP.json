@@ -1281,6 +1281,17 @@
         ]
     },
     {
+        "id": "princess",
+        "name": "プリンセス",
+        "ability": "初日にプレイヤーを指名して処刑した場合、デーモンは今夜は殺しません。",
+        "firstNightReminder": "",
+        "otherNightReminder": "今日がプリンセスの初日で、プレイヤーを指名して処刑した場合、デーモンは殺しません。",
+        "remindersGlobal": [],
+        "reminders": [
+            "殺しません"
+        ]
+    },
+    {
         "id": "professor",
         "name": "教授",
         "ability": "ゲーム中に1回、夜の間に、死亡しているプレイヤーを1人選ぶ。そのが住民なら、そのプレイヤーは復活する。",

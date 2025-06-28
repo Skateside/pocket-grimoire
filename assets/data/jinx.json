@@ -30,6 +30,10 @@
             {
                 "id": "poppygrower",
                 "reason": "If the Cannibal eats the Poppy Grower, then dies or loses the Poppy Grower ability, the Demon and Minions learn each other that night."
+            },
+            {
+                "id": "princess",
+                "reason": "If the Cannibal nominated & executed the Princess today, the Demon doesn’t kill tonight."
             }
         ]
     },
@@ -697,6 +701,15 @@
             {
                 "id": "kazali",
                 "reason": "An evil Townsfolk is only created if the Bounty Hunter is still in play after the Kazali acts."
+            }
+        ]
+    },
+    {
+        "id": "alhadikhia",
+        "jinx": [
+            {
+                "id": "princess",
+                "reason": "If the Princess nominated & executed a player on their 1st day, no one dies to the Al-Hadikhia ability tonight."
             }
         ]
     },

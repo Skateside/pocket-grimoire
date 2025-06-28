@@ -1305,6 +1305,17 @@
         ]
     },
     {
+        "id": "princess",
+        "name": "Księżniczka",
+        "ability": "W pierwszym dniu, jeśli nominowałaś i zabiłaś gracza, Demon nie zabija dziś wieczorem.",
+        "firstNightReminder": "",
+        "otherNightReminder": "Jeśli to był pierwszy dzień Księżniczki i nominowała i zabiła gracza, Demon nie zabija.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Nie zabija"
+        ]
+    },
+    {
         "id": "professor",
         "name": "Profesor",
         "ability": "Raz w trakcie gry, nocą*, wybierz martwego gracza. Jeśli jest Mieszczaninem, zostaje wskrzeszony.",

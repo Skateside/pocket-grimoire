@@ -1289,6 +1289,17 @@
         ]
     },
     {
+        "id": "princess",
+        "name": "Prenses",
+        "ability": "İlk gününüzde, bir oyuncuyu aday gösterip idam ederseniz, Şeytan bu gece öldürmez.",
+        "firstNightReminder": "",
+        "otherNightReminder": "Eğer bugün Prenses'in ilk günüyse ve bir oyuncuyu aday gösterip idam ederlerse, Şeytan öldürmez.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Öldürmez"
+        ]
+    },
+    {
         "id": "professor",
         "name": "Profesör",
         "ability": "Oyunda bir kez, gece*, ölü bir oyuncu seçin: eğer bir Kasabalı ise, dirilir.",
