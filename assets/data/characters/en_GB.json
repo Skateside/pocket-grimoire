@@ -2,7 +2,7 @@
     {
         "id": "nichen",
         "name": "Scheming Minister",
-        "ability": "On your first night choose a player. If they die by execution first you turn evil and vise versa",
+        "ability": "On your first night choose a player. If they die by execution first you turn evil and vise versa.",
         "firstNightReminder": "Wake the scheming minister and let them choose a player. Place the 'No mutual Heaven' token next to them.",
         "otherNightReminder": "If either the scheming minister or the player marked with the token 'No mutual Heaven' dies by execution first, wake up the other and tell them they are evil.",
         "remindersGlobal": [],
@@ -13,12 +13,12 @@
     {
         "id": "shaxing",
         "name": "Menace",
-        "ability": "When you get die one of your closest alive neighbours may die tonight",
+        "ability": "When you get die one of your alive neighbours may die tonight.",
         "firstNightReminder": "",
-        "otherNightReminder": "If the menace died tonight or today one of their alive neighbours may die tonight",
+        "otherNightReminder": "If the menace died tonight or today: A living neighbour may die, mark them with the 'Dies tonight' token.",
         "remindersGlobal": [],
         "reminders": [
-            "Died today"
+            "Dies tonight"
         ]
     },
     {
