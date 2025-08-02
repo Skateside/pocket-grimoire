@@ -1934,7 +1934,7 @@
         "name": "煞星",
         "ability": "如果你死亡，当晚与你邻近的存活玩家之一可能会死亡。",
         "firstNightReminder": "",
-        "otherNightReminder": "如果天花病人死亡，将与其邻近的存活善良玩家之一标记为死亡。",
+        "otherNightReminder": "如果煞星死亡，可以将与其邻近的存活善良玩家之一标记为死亡。",
         "remindersGlobal": [],
         "reminders": [
             "死亡"
@@ -2330,6 +2330,15 @@
         "reminders": [
             "？"
         ]
+    },
+    {
+        "id": "wraith",
+        "name": "幽灵",
+        "ability": "你可以选择在夜晚睁开眼睛。当其他邪恶玩家醒来时，你也会醒来。",
+        "firstNightReminder": "今晚，每当其他邪恶玩家醒来时，就唤醒幽灵。",
+        "otherNightReminder": "今晚，每当其他邪恶玩家醒来时，就唤醒幽灵。",
+        "remindersGlobal": [],
+        "reminders": []
     },
     {
         "id": "wudaozhe",

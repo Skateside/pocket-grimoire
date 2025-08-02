@@ -121,7 +121,7 @@ function parseArgs(array $args, array $config): array
 {
 
     if (count($args) < 3) {
-        die('ERROR: 2 arguments rquired: type, locale.' . PHP_EOL);
+        die('ERROR: 2 arguments required: type, locale.' . PHP_EOL);
     }
     
     list($ignore, $type, $locale) = $args;
@@ -146,6 +146,7 @@ function parseArgs(array $args, array $config): array
         'type' => $type,
         'locale' => $locale,
         'file' => $fileName,
+        'l10n' => count($args) > 3 && $args[3] === 'true',
     ]);
 
 }
@@ -223,6 +224,123 @@ function writeFile(string $json, string $file)
 }
 
 /**
+ * Translates the JSON.
+ * 
+ * @param array $json JSON to translate.
+ * @param array $keys Keys in each JSON entry to translate.
+ * @param string $to Language to translate into.
+ * @param string $from Language to translate from.
+ * @return array Translated JSON.
+ */
+function translate(array &$json, array $keys, string $to, string $from = 'en')
+{
+
+    foreach ($json as &$entry) {
+
+        foreach ($keys as $key) {
+
+            if (!array_key_exists($key, $entry)) {
+                continue;
+            }
+
+            if (is_array($entry[$key])) {
+
+                foreach ($entry[$key] as $index => $text) {
+                    $entry[$key][$index] = translateText($text, $from, $to);
+                }
+
+            } elseif (is_string($entry[$key])) {
+                $entry[$key] = translateText($entry[$key], $from, $to);
+            }
+
+        }
+
+    }
+
+    return $json;
+
+}
+
+/**
+ * Translates the text if it needs to.
+ * 
+ * @param string $text Text to translate.
+ * @param string $from Language to translate from.
+ * @param string $to Language to translate into.
+ * @return string The text, translated or original.
+ */
+function translateText(string $text, string $from, string $to)
+{
+
+    if (detectLanguage($text) !== $to) {
+        return translateString($text, $from, $to);
+    }
+
+    return $text;
+
+}
+
+/**
+ * Detects the language of the given text.
+ * 
+ * @param string $text to check.
+ * @return string Identified language.
+ */
+function detectLanguage(string $text)
+{
+    return doCurl(
+        'detect',
+        ['q' => $text],
+        function (array $json) {
+            return $json[0]['language'];
+        }
+    );
+}
+
+/**
+ * Translates the given string.
+ * 
+ * @param string $text Text to translate.
+ * @param string $to Language to translate into.
+ * @param string $from Language to translate from.
+ * @return string Translated text.
+ */
+function translateString(string $text, string $from, string $to)
+{
+    return doCurl(
+        'translate',
+        ['q' => $text, 'source' => $from, 'target' => $to],
+        function (array $json) {
+            return $json['translatedText'];
+        }
+    );
+}
+
+/**
+ * Handles the cURL lookup.
+ * 
+ * @param string $type Type ("translate" or "detect").
+ * @param array $data POST data.
+ * @param callable $process Function to process the results.
+ * @return string Processed results.
+ */
+function doCurl(string $type, array $data, callable $process)
+{
+    $ch = curl_init();
+    curl_setopt_array($ch, [
+        CURLOPT_URL => "http://localhost:5000/{$type}",
+        CURLOPT_POST => true,
+        CURLOPT_POSTFIELDS => $data,
+        CURLOPT_RETURNTRANSFER => true,
+    ]);
+    $result = curl_exec($ch);
+    curl_close($ch);
+    $json = json_decode($result, true);
+    return $process($json);
+}
+
+
+/**
  * Runs the entire process.
  */
 function run()
@@ -243,6 +361,15 @@ function run()
             ],
             'tab-map' => [
                 'de_DE' => 'de_DE (official)',
+                'id_ID' => 'id_ID (Official)',
+            ],
+            'translate' => [
+                'name',
+                'ability',
+                'firstNightReminder',
+                'otherNightReminder',
+                'remindersGlobal',
+                'reminders',
             ],
         ],
         'jinxes' => [
@@ -250,7 +377,20 @@ function run()
             'data-map' => [
                 '' => null,
             ],
+            'translate' => [
+                'reason',
+            ],
         ],
+    ];
+
+    $langMap = [
+        'nn_NO' => 'nb',
+        'kv_RU' => false,
+        'pt_BR' => 'pt-BR',
+        'vi_VN' => false,
+        'zh_CN' => 'zh-Hans',
+        // 'zh_TW' => 'zh-Hant',
+        'zh_TW' => false, // NOTE: Currently not working (& takes ages to fail)
     ];
     
     // Augment the raw configuration based on the .env files.
@@ -280,12 +420,41 @@ function run()
     $data = updateAssoc($assoc, $settings['data-map'] ?? []);
     $json = json_encode($data, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE);
 
+    // Possibly translate the text.
+    if ($settings['l10n']) {
+
+        $to = $langMap[$settings['locale']] ?? substr($settings['locale'], 0, 2);
+
+        if ($to !== false) {
+            $translated = translate($data, $settings['translate'], $to);
+            $json = json_encode($translated, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE);
+        }
+
+    }
+
     writeFile($json . PHP_EOL, $settings['file']);
+
+    return $settings;
 
 }
 
+/**
+ * TODO: `--help` or `-h` flag(s)
+ * 
+ * php ./tools/read-sheet.php roles de_DE
+ * php ./tools/read-sheet.php jinxes uk_UA
+ * 
+ * declare -a locales=("es_AR" "es_ES" "fr_FR" "he_IL" "id_ID" "it_IT" "ja_JP" "ko_KR" "kv_RU" "nb_NO" "nn_NO" "pl_PL" "pt_BR" "ru_RU" "sl_SI" "sv_SE" "th_TH" "tr_TR" "uk_UA" "vi_VN" "zh_CN" "zh_TW")
+ * for locale in "${locales[@]}"; do php tools/read-sheet.php jinxes "$locale"; done
+ * 
+ * Optionally pass the translate flag
+ * php ./tools/read-sheet.php roles de_DE true
+ * 
+ * Might need this in `~/Documents/Translate/LibreTranslate`: `docker compose up`
+ */
+
 echo 'Processing ...' . "\r";
 $start = microtime(true);
-run();
+$results = run();
 $duration = microtime(true) - $start;
-echo 'Done in ' . $duration . 'ms' . PHP_EOL;
+echo "Written '{$results['type']}' for '{$results['locale']}' in {$duration}s" . PHP_EOL;

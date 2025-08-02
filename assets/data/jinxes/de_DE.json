@@ -1,18 +1,93 @@
 [
     {
+        "target": "alchemist",
+        "trick": "boffin",
+        "reason": "Wenn der Alchemist die Boffin-Fähigkeit hat, lernt der Alchemist nicht, welche Fähigkeit der Dämon hat."
+    },
+    {
+        "target": "alchemist",
+        "trick": "marionette",
+        "reason": "Ein Alchemist-Marionette hat keine Marionette-Fähigkeit & die Marionette ist im Spiel."
+    },
+    {
+        "target": "alchemist",
+        "trick": "mastermind",
+        "reason": "Ein Alchemist-Mastermind hat keine Mastermind-Fähigkeit und der Mastermind ist nicht-in-play."
+    },
+    {
+        "target": "alchemist",
+        "trick": "organgrinder",
+        "reason": "Wenn der Alchemist die Organschleiferfähigkeit hat, ist der Organschleifer im Spiel und wenn sowohl der Alchemist und Organschleifer nüchtern sind, sind beide betrunken."
+    },
+    {
+        "target": "alchemist",
+        "trick": "spy",
+        "reason": "Wenn der Alchemist die Spy-Fähigkeit hat, tun sie nicht, und eine Spy ist im Spiel. Jeden Tag kann der lebende Alchemist nach der Ausführungsphase einen lebenden Spieler öffentlich als Spy erraten. Wenn richtig, muss der Dämon heute die Spy wählen."
+    },
+    {
+        "target": "alchemist",
+        "trick": "summoner",
+        "reason": "Der Alchemist-Summoner bekommt keine Bluffs und wählt, welche Demon, aber nicht welchen Spieler. Wenn sie sterben, bevor das passiert, gewinnt das Böse. (No Demon)"
+    },
+    {
+        "target": "alchemist",
+        "trick": "widow",
+        "reason": "Wenn der Alchemist die Witwe-Fähigkeit hat, tun sie es nicht, und eine Witwe ist im Spiel. Jeden Tag kann der lebende Alchemist nach der Ausführungsphase einen lebenden Spieler öffentlich als Widow erraten. Wenn richtig, muss der Dämon heute die Witwe wählen."
+    },
+    {
+        "target": "alchemist",
+        "trick": "wraith",
+        "reason": "Wenn der Alchemist die Wraith-Fähigkeit hat, tun sie es nicht, und ein Wraith ist im Spiel. Jeden Tag, nach der Ausführungsphase, kann der lebende Alchemist einen lebenden Spieler als Wraith öffentlich erraten. Wenn richtig, muss der Dämon heute den Wraith wählen."
+    },
+    {
         "target": "alhadikhia",
         "trick": "princess",
-        "reason": "Wenn die Prinzessin einen Spieler an seinem ersten Tag nominiert und hingerichtet hat, stirbt heute Abend niemand durch die Al-Hadikhia-Fähigkeit."
+        "reason": "Wenn die Prinzessin nominiert und einen Spieler an ihrem 1. Tag ausgeführt, stirbt niemand an der Al-Hadikhia Fähigkeit heute Abend."
+    },
+    {
+        "target": "boffin",
+        "trick": "cultleader",
+        "reason": "Wenn der Dämon die Cult Leader-Fähigkeit hat, können sie aufgrund dieser Fähigkeit nicht gut werden."
+    },
+    {
+        "target": "boffin",
+        "trick": "drunk",
+        "reason": "Wenn der Dämon die Drunk-Fähigkeit haben würde, wählt der Boffin einen Townsfolk-Spieler, um diese Fähigkeit statt zu haben."
+    },
+    {
+        "target": "boffin",
+        "trick": "goon",
+        "reason": "Wenn der Dämon die Goon-Fähigkeit hat, können sie sich aufgrund dieser Fähigkeit nicht gut drehen."
+    },
+    {
+        "target": "boffin",
+        "trick": "ogre",
+        "reason": "Der Dämon kann die Ogre-Fähigkeit nicht haben."
+    },
+    {
+        "target": "boffin",
+        "trick": "politician",
+        "reason": "Der Dämon kann die politische Fähigkeit nicht haben."
+    },
+    {
+        "target": "boffin",
+        "trick": "villageidiot",
+        "reason": "Wenn es ein Ersatz-Token gibt, kann der Boffin dem Dämonen die Village Idiot Fähigkeit geben."
     },
     {
         "target": "bountyhunter",
         "trick": "kazali",
-        "reason": "Ein böser Städter entsteht nur, wenn der Kopfgeldjäger nach der Tat von Kazali noch im Spiel ist."
+        "reason": "Ein böser Townsfolk wird nur geschaffen, wenn der Bounty Hunter nach den Kazali-Akten noch im Spiel ist."
     },
     {
         "target": "bountyhunter",
         "trick": "philosopher",
-        "reason": "Wenn der Philosoph die Fähigkeit „Kopfgeldjäger“ erlangt, könnte ein Stadtbewohner böse werden."
+        "reason": "Wenn der Philosoph die Bounty Hunter Fähigkeit gewinnt, könnte ein Townsfolk böse werden."
+    },
+    {
+        "target": "butler",
+        "trick": "organgrinder",
+        "reason": "Wenn wegen dem Leiermann mit geschlossenen Augen abgestimmt wird, darf der Butler seine Hand heben um abzustimmen  aber die Stimme wird nur gezählt wenn sein Dienstherr auch abgestimmt hat."
     },
     {
         "target": "cannibal",
@@ -22,37 +97,27 @@
     {
         "target": "cannibal",
         "trick": "juggler",
-        "reason": "Wenn der Jongleur am ersten Tag rät und durch Hinrichtung stirbt, erfährt der lebende Kannibale heute Abend, wie viele Schätzungen der Jongleur richtig gemacht hat."
+        "reason": "Wenn der Juggler an ihrem ersten Tag errät und durch Hinrichtung stirbt, lernt der lebende Cannibal heute Abend, wie viele Vermutungen der Juggler richtig wurden."
     },
     {
         "target": "cannibal",
         "trick": "poppygrower",
-        "reason": "Wenn der Kannibale den Mohnzüchter frisst, dann stirbt oder die Mohnzüchter-Fähigkeit verliert, lernen der Dämon und die Schergen in dieser Nacht einander kennen."
+        "reason": "Wenn der Cannibal den Poppy Grower isst, dann stirbt oder verliert die Poppy Grower Fähigkeit, die Demon und Minions lernen sich in der Nacht."
     },
     {
         "target": "cannibal",
         "trick": "princess",
-        "reason": "Wenn der Kannibale die Prinzessin heute nominiert und hingerichtet hat, tötet der Dämon heute Abend nicht."
+        "reason": "Wenn der Cannibal heute die Prinzessin nominiert und ausgeführt hat, tötet der Dämon heute nicht."
     },
     {
         "target": "cannibal",
         "trick": "zealot",
-        "reason": "Wenn der Kannibale die Fähigkeit „Eiferer“ erlangt, lernt der Kannibale dies."
+        "reason": "Wenn der Cannibal die Zealot-Fähigkeit gewinnt, lernt der Cannibal dies."
     },
     {
-        "target": "mathematician",
-        "trick": "chambermaid",
-        "reason": "Die Kammerzofe erfährt, ob der Mathematiker heute Nacht aufwacht oder nicht, obwohl die Kammerzofe zuerst aufwacht."
-    },
-    {
-        "target": "mathematician",
-        "trick": "lunatic",
-        "reason": "Der Mathematiker erfährt, wenn der Wahnsinnige einen anderen Spieler angreift als der echte Dämon angegriffen hat."
-    },
-    {
-        "target": "butler",
-        "trick": "organgrinder",
-        "reason": "Wenn wegen dem Leiermann mit geschlossenen Augen abgestimmt wird, darf der Butler seine Hand heben um abzustimmen  aber die Stimme wird nur gezählt wenn sein Dienstherr auch abgestimmt hat."
+        "target": "cerenovus",
+        "trick": "goblin",
+        "reason": "Der Cerenovus kann sich entscheiden einen Spieler davon besessen zu machen der Goblin zu sein."
     },
     {
         "target": "heretic",
@@ -62,7 +127,7 @@
     {
         "target": "heretic",
         "trick": "boffin",
-        "reason": "Der Dämon kann nicht über die Fähigkeit „Ketzer“ verfügen."
+        "reason": "Der Dämon kann nicht die ketzliche Fähigkeit haben."
     },
     {
         "target": "heretic",
@@ -90,89 +155,174 @@
         "reason": "Nur 1 verhexter Character kann gleichzeitig im Spiel sein"
     },
     {
-        "target": "ogre",
-        "trick": "recluse",
-        "reason": "Wenn sich der Einsiedler gegenüber dem Oger als böse registriert, erfährt der Oger, dass er böse ist."
+        "target": "kazali",
+        "trick": "choirboy",
+        "reason": "Der Kazali kann den König nicht wählen, um ein Minion zu werden, wenn ein Choirboy im Spiel ist."
     },
     {
-        "target": "plaguedoctor",
-        "trick": "baron",
-        "reason": "Wenn der Geschichtenerzähler die Baron-Fähigkeit erlangt, werden bis zu zwei Spieler zu Außenseitern, die nicht im Spiel sind."
-    },
-    {
-        "target": "plaguedoctor",
-        "trick": "boomdandy",
-        "reason": "Wenn der Pestdoktor hingerichtet wird und der Geschichtenerzähler die Boomdandy-Fähigkeit erhalten würde, wird die Boomdandy-Fähigkeit sofort ausgelöst."
-    },
-    {
-        "target": "plaguedoctor",
-        "trick": "eviltwin",
-        "reason": "Der Geschichtenerzähler kann die Fähigkeit „Böser Zwilling“ nicht erlangen, wenn der Seuchendoktor stirbt."
-    },
-    {
-        "target": "plaguedoctor",
-        "trick": "fearmonger",
-        "reason": "Wenn der Pestdoktor stirbt, erhält ein lebender Diener zusätzlich zu seiner eigenen Fähigkeit die Fähigkeit „Furchtmacher“ und lernt diese."
-    },
-    {
-        "target": "plaguedoctor",
-        "trick": "goblin",
-        "reason": "Wenn der Pestdoktor stirbt, erhält ein lebender Diener zusätzlich zu seiner eigenen Fähigkeit die Goblin-Fähigkeit und lernt diese."
-    },
-    {
-        "target": "plaguedoctor",
-        "trick": "marionette",
-        "reason": "Wenn der Dämon beim Tod des Seuchendoktors einen lebenden Nachbarn und einen Stadtbewohner oder Außenseiter hat, wird dieser Spieler zu einer bösen Marionette. Wenn es bereits einen zusätzlichen bösen Spieler gibt, passiert dies nicht."
-    },
-    {
-        "target": "plaguedoctor",
-        "trick": "scarletwoman",
-        "reason": "Wenn der Pestdoktor stirbt, erhält ein lebender Diener zusätzlich zu seiner eigenen Fähigkeit die Fähigkeit „Scharlachrote Frau“ und lernt diese."
-    },
-    {
-        "target": "plaguedoctor",
-        "trick": "spy",
-        "reason": "Wenn der Pestdoktor stirbt, erhält ein lebender Diener zusätzlich zu seiner eigenen Fähigkeit die Spionagefähigkeit und lernt diese."
-    },
-    {
-        "target": "boffin",
-        "trick": "alchemist",
-        "reason": "Wenn der Alchemist die Boffin-Fähigkeit besitzt, erfährt der Alchemist nicht, welche Fähigkeit der Dämon hat."
-    },
-    {
-        "target": "boffin",
-        "trick": "cultleader",
-        "reason": "Wenn der Dämon über die Fähigkeit „Kultanführer“ verfügt, kann er aufgrund dieser Fähigkeit nicht zum Guten werden."
-    },
-    {
-        "target": "boffin",
-        "trick": "drunk",
-        "reason": "Wenn der Dämon über die Fähigkeit „Betrunken“ verfügen würde, wählt der Boffin stattdessen einen Stadtbewohner-Spieler mit dieser Fähigkeit."
-    },
-    {
-        "target": "boffin",
+        "target": "kazali",
         "trick": "goon",
-        "reason": "Wenn der Dämon über die Goon-Fähigkeit verfügt, kann er aufgrund dieser Fähigkeit nicht zum Guten werden."
+        "reason": "Der Kazali kann wählen, dass der Goon-Spieler einer ihrer bösen Minionen ist."
     },
     {
-        "target": "boffin",
-        "trick": "ogre",
-        "reason": "Der Dämon kann nicht über die Oger-Fähigkeit verfügen."
+        "target": "kazali",
+        "trick": "huntsman",
+        "reason": "Wenn der Kazali den Damsel zum Minion wählt und ein Huntsman im Spiel ist, wird ein guter Spieler zum Damsel."
     },
     {
-        "target": "boffin",
-        "trick": "politician",
-        "reason": "Der Dämon kann nicht über die Fähigkeit „Politiker“ verfügen."
+        "target": "kazali",
+        "trick": "marionette",
+        "reason": "Wenn die Kazali sich für eine Marionette entscheidet, müssen sie einen ihrer Nachbarn wählen."
     },
     {
-        "target": "boffin",
-        "trick": "villageidiot",
-        "reason": "Wenn ein Ersatzmarker vorhanden ist, kann der Boffin dem Dämon die Fähigkeit „Dorfidiot“ verleihen."
+        "target": "kazali",
+        "trick": "soldier",
+        "reason": "Der Kazali kann wählen, dass der Soldatspieler einer ihrer bösen Minionen ist."
     },
     {
-        "target": "cerenovus",
-        "trick": "goblin",
-        "reason": "Der Cerenovus kann sich entscheiden einen Spieler davon besessen zu machen der Goblin zu sein."
+        "target": "legion",
+        "trick": "engineer",
+        "reason": "Legion und Ingeniuer können nicht beide zu Spielstart im Spiel sein. Wenn der Ingeniuer Legion erschaftt werden die meisten Spieler (inklusiv aller bösen Spieler) zur bösen Legion."
+    },
+    {
+        "target": "legion",
+        "trick": "hatter",
+        "reason": "Wenn der Hutmacher stirbt und Legion im Spiel ist, passiert nichts. Wenn der Hutmacher stirbt und ein böser Spieler Legion wählt, werden alle aktuellen bösen Spieler zu Legion."
+    },
+    {
+        "target": "legion",
+        "trick": "minstrel",
+        "reason": "Wenn Legion heute durch Hinrichtung starb, Legion hält ihre Fähigkeit, aber der Minstrel könnte lernen, dass sie Legion sind."
+    },
+    {
+        "target": "legion",
+        "trick": "preacher",
+        "reason": "Wenn der Prediger Legion wählt, Legion hält ihre Fähigkeit, aber der Prediger kann lernen, dass sie Legion sind."
+    },
+    {
+        "target": "legion",
+        "trick": "zealot",
+        "reason": "Der Zealot könnte sich als böse auf Legions Fähigkeit registrieren."
+    },
+    {
+        "target": "leviathan",
+        "trick": "banshee",
+        "reason": "Jede Nacht* wählt der Leviathan einen lebendigen guten Spieler (unterschiedlich zu früheren Nächten): eine gewählte Banshee stirbt und gewinnt ihre Fähigkeit."
+    },
+    {
+        "target": "leviathan",
+        "trick": "exorcist",
+        "reason": "Der Böse gewinnt nicht, wenn mehr als ein guter Spieler ausgeführt wurde, wenn der Exorzist lebt und den Leviathan jemals erfolgreich gewählt hat."
+    },
+    {
+        "target": "leviathan",
+        "trick": "farmer",
+        "reason": "Jede Nacht* wählt der Leviathan einen lebendigen guten Spieler (unterschiedlich zu früheren Nächten): ein gewählter Farmer verwendet ihre Fähigkeit, aber stirbt nicht."
+    },
+    {
+        "target": "leviathan",
+        "trick": "grandmother",
+        "reason": "Wenn Leviathan im Spiel ist und das Großkind durch Hinrichtung stirbt, gewinnt das Böse."
+    },
+    {
+        "target": "leviathan",
+        "trick": "hatter",
+        "reason": "Wenn der Hutmacher am oder nach Tag 5 stirbt, kann der Dämon keinen Leviathan wählen."
+    },
+    {
+        "target": "leviathan",
+        "trick": "innkeeper",
+        "reason": "Wenn der Leviathan im Spiel ist, sind die Innkeeper-geschützten Spieler sicher vor allen bösen Fähigkeiten."
+    },
+    {
+        "target": "leviathan",
+        "trick": "king",
+        "reason": "Wenn der Leviathan im Spiel ist und mindestens ein Spieler tot ist, lernt der König jede Nacht einen lebendigen Charakter."
+    },
+    {
+        "target": "leviathan",
+        "trick": "mayor",
+        "reason": "Wenn der Leviathan im Spiel ist und keine Ausführung am Tag 5 auftritt, gute Gewinne."
+    },
+    {
+        "target": "leviathan",
+        "trick": "monk",
+        "reason": "Wenn der Leviathan im Spiel ist, ist der Monk-geschützte Spieler sicher vor allen bösen Fähigkeiten."
+    },
+    {
+        "target": "leviathan",
+        "trick": "pithag",
+        "reason": "Nach Tag 5 kann sich die Pit-Hag nicht mehr für Leviathan entscheiden."
+    },
+    {
+        "target": "leviathan",
+        "trick": "ravenkeeper",
+        "reason": "Jede Nacht* wählt der Leviathan einen lebendigen Spieler (unterschiedlich zu früheren Nächten): ein gewählter Ravenkeeper verwendet ihre Fähigkeit, aber stirbt nicht."
+    },
+    {
+        "target": "leviathan",
+        "trick": "sage",
+        "reason": "Jede Nacht* wählt der Leviathan einen lebendigen guten Spieler (unterschiedlich zu früheren Nächten): ein gewählter Sage verwendet ihre Fähigkeit, aber stirbt nicht."
+    },
+    {
+        "target": "leviathan",
+        "trick": "soldier",
+        "reason": "Wenn der Leviathan im Spiel ist, ist der Soldat sicher vor allen bösen Fähigkeiten."
+    },
+    {
+        "target": "lilmonsta",
+        "trick": "hatter",
+        "reason": "Wenn sich ein Dämon für Lil' Monsta entscheidet, wählt er auch einen Diener aus, der heute Abend Lil' Monsta werden und auf ihn aufpassen soll."
+    },
+    {
+        "target": "lilmonsta",
+        "trick": "poppygrower",
+        "reason": "Wenn der Poppy Grower im Spiel ist, wecken Minions nicht zusammen. Sie sind eins nach dem anderen geweckt, bis einer von ihnen das Lil' Monsta-Token zu nehmen."
+    },
+    {
+        "target": "lilmonsta",
+        "trick": "scarletwoman",
+        "reason": "Wenn 5 oder mehr Spieler am Leben sind und der Spieler mit dem Kleinen Monsta Charakterplättchen stirbt, bekommt die Scharlachrote Frau es in der Nacht."
+    },
+    {
+        "target": "lilmonsta",
+        "trick": "vizier",
+        "reason": "Die Wesir können durch Hinrichtung sterben, wenn sie babysitten Kleines Monsta."
+    },
+    {
+        "target": "lleech",
+        "trick": "mastermind",
+        "reason": "Wenn der Strippenzieher am Leben ist und der der Wirt des Eegel am Leben ist, lebt der Eegel aber verliert seine Fähigkeit."
+    },
+    {
+        "target": "lleech",
+        "trick": "slayer",
+        "reason": "Wenn der Dämonenjäger den Wirt des Eegel wählt stirbt der Wirt."
+    },
+    {
+        "target": "magician",
+        "trick": "wraith",
+        "reason": "Jeden Tag, nach der Ausführungsphase, kann der lebende Magier öffentlich einen lebenden Spieler als den Wraith erraten: wenn zutreffend, muss der Dämon heute Abend den Wraith wählen."
+    },
+    {
+        "target": "magician",
+        "trick": "spy",
+        "reason": "Wenn der Spion das Grimoire sieht, werden das Dämon und das Magier Charakterplättchen entfernt."
+    },
+    {
+        "target": "magician",
+        "trick": "vizier",
+        "reason": "Wenn der Vizier und Magier beide im Spiel sind, lernt der Dämon die Minionen nicht."
+    },
+    {
+        "target": "magician",
+        "trick": "widow",
+        "reason": "Wenn die Witwe das Grimoire sieht, werden das Dämon und das Magier Charakterplättchen entfernt."
+    },
+    {
+        "target": "magician",
+        "trick": "lilmonsta",
+        "reason": "Jeden Abend wählt der Zauberer ein Minion: wenn diese Minion & Lil' Monsta lebendig sind, ist diese Minion Babysits Lil’ Monsta."
     },
     {
         "target": "marionette",
@@ -205,14 +355,34 @@
         "reason": "Der Marionette werden keine 3 Charakter die sich nicht im Spiel befinden gezeigt. Stattdessen zeige dem Dämon 3 zusätzliche."
     },
     {
+        "target": "marionette",
+        "trick": "wraith",
+        "reason": "Der Wraith weckt nicht mit der Marionette."
+    },
+    {
         "target": "mastermind",
         "trick": "alhadikhia",
-        "reason": "Wenn Al-Hadikhia durch Hinrichtung stirbt und der Mastermind am Leben ist, wählt Al-Hadikhia heute Abend drei gute Spieler: Wenn sich alle drei dafür entscheiden zu leben, gewinnt das Böse. Ansonsten gewinnt das Gute."
+        "reason": "Wenn die Al-Hadikhia durch Hinrichtung stirbt und der Mastermind lebt, wählt die Al-Hadikhia heute 3 gute Spieler: wenn alle 3 sich entscheiden, zu leben, gewinnt das Böse. Sonst gute Gewinne."
+    },
+    {
+        "target": "mathematician",
+        "trick": "chambermaid",
+        "reason": "Die Kammerzofe erfährt, ob der Mathematiker heute Nacht aufwacht oder nicht, obwohl die Kammerzofe zuerst aufwacht."
+    },
+    {
+        "target": "mathematician",
+        "trick": "lunatic",
+        "reason": "Der Mathematiker erfährt, wenn der Wahnsinnige einen anderen Spieler angreift als der echte Dämon angegriffen hat."
+    },
+    {
+        "target": "ogre",
+        "trick": "recluse",
+        "reason": "Wenn sich die Recluse als böse auf die Ogre registriert, lernt die Ogre, dass sie böse sind."
     },
     {
         "target": "pithag",
         "trick": "cultleader",
-        "reason": "Wenn die Pit-Hag einen bösen Spieler zum Kultanführer macht, kann er aufgrund seiner eigenen Fähigkeiten nicht zum Guten werden."
+        "reason": "Wenn der Pit-Hag einen bösen Spieler in den Cult Leader verwandelt, können sie aufgrund ihrer eigenen Fähigkeit nicht gut werden."
     },
     {
         "target": "pithag",
@@ -222,12 +392,12 @@
     {
         "target": "pithag",
         "trick": "goon",
-        "reason": "Wenn der Pit-Hag einen bösen Spieler in einen Goon verwandelt, kann er aufgrund seiner eigenen Fähigkeiten nicht zum Guten werden."
+        "reason": "Wenn der Pit-Hag einen bösen Spieler in den Goon verwandelt, können sie sich aufgrund ihrer eigenen Fähigkeit nicht gut machen."
     },
     {
         "target": "pithag",
         "trick": "ogre",
-        "reason": "Wenn der Pit-Hag einen bösen Spieler in einen Oger verwandelt, kann er aufgrund seiner eigenen Fähigkeiten nicht zum Guten werden."
+        "reason": "Wenn der Pit-Hag einen bösen Spieler in die Ogre verwandelt, können sie aufgrund ihrer eigenen Fähigkeit nicht gut werden."
     },
     {
         "target": "pithag",
@@ -237,7 +407,107 @@
     {
         "target": "pithag",
         "trick": "villageidiot",
-        "reason": "Wenn ein Ersatzmarker vorhanden ist, kann die Grubenhexe einen zusätzlichen Dorfidioten erschaffen. Wenn ja, könnte sich der betrunkene Dorftrottel ändern."
+        "reason": "Wenn es einen Ersatz-Token gibt, kann der Pit-Hag einen zusätzlichen Village Idiot erstellen. Wenn ja, könnte sich der betrunkene Idiot ändern."
+    },
+    {
+        "target": "plaguedoctor",
+        "trick": "baron",
+        "reason": "Wenn der Geschichtenerzähler die Baron-Fähigkeit gewinnt, werden bis zu zwei Spieler nicht-in-play Außenseiter."
+    },
+    {
+        "target": "plaguedoctor",
+        "trick": "boomdandy",
+        "reason": "Wenn der Pestdoktor hingerichtet wird und der Geschichtenerzähler die Boomdandy-Fähigkeit erhalten würde, wird die Boomdandy-Fähigkeit sofort ausgelöst."
+    },
+    {
+        "target": "plaguedoctor",
+        "trick": "eviltwin",
+        "reason": "Der Geschichtenerzähler kann die Fähigkeit „Böser Zwilling“ nicht erlangen, wenn der Seuchendoktor stirbt."
+    },
+    {
+        "target": "plaguedoctor",
+        "trick": "fearmonger",
+        "reason": "Wenn der Pestdoktor stirbt, erhält ein lebender Diener zusätzlich zu seiner eigenen Fähigkeit die Fähigkeit „Furchtmacher“ und lernt diese."
+    },
+    {
+        "target": "plaguedoctor",
+        "trick": "goblin",
+        "reason": "Wenn der Pestdoktor stirbt, erhält ein lebender Diener zusätzlich zu seiner eigenen Fähigkeit die Goblin-Fähigkeit und lernt diese."
+    },
+    {
+        "target": "plaguedoctor",
+        "trick": "marionette",
+        "reason": "Wenn der Dämon einen Nachbarn hat, der lebt und ein Townsfolk oder Außenseiter, wenn der Pest Doctor stirbt, wird dieser Spieler ein böses Marionette. Wenn es bereits einen bösen Spieler gibt, geschieht dies nicht."
+    },
+    {
+        "target": "plaguedoctor",
+        "trick": "scarletwoman",
+        "reason": "Wenn der Pestdoktor stirbt, erhält ein lebender Diener zusätzlich zu seiner eigenen Fähigkeit die Fähigkeit „Scharlachrote Frau“ und lernt diese."
+    },
+    {
+        "target": "plaguedoctor",
+        "trick": "spy",
+        "reason": "Wenn der Pestdoktor stirbt, erhält ein lebender Diener zusätzlich zu seiner eigenen Fähigkeit die Spionagefähigkeit und lernt diese."
+    },
+    {
+        "target": "plaguedoctor",
+        "trick": "wraith",
+        "reason": "Wenn der Pest Doctor stirbt, ein lebender Minion gewinnt die Wraith Fähigkeit zusätzlich zu ihrer eigenen Fähigkeit, und lernt dies."
+    },
+    {
+        "target": "riot",
+        "trick": "banshee",
+        "reason": "Jede Nacht*, Riot wählt einen lebendigen guten Spieler (unterschiedlich zu früheren Nächten): eine gewählte Banshee stirbt und gewinnt ihre Fähigkeit."
+    },
+    {
+        "target": "riot",
+        "trick": "exorcist",
+        "reason": "Wenn der Exorzist in der 3. Nacht Riot wählt, werden Minions nicht Riot."
+    },
+    {
+        "target": "riot",
+        "trick": "farmer",
+        "reason": "Jede Nacht*, Riot wählt einen lebendigen guten Spieler (unterschiedlich zu früheren Nächten): ein gewählter Farmer verwendet ihre Fähigkeit, aber nicht sterben."
+    },
+    {
+        "target": "riot",
+        "trick": "grandmother",
+        "reason": "Wenn Riot im Spiel ist und das Grandchild tagsüber stirbt, stirbt auch die Großmutter."
+    },
+    {
+        "target": "riot",
+        "trick": "innkeeper",
+        "reason": "Wenn Riot im Spiel ist, ist der Gastwirt-geschützte Spieler sicher vor allen bösen Fähigkeiten."
+    },
+    {
+        "target": "riot",
+        "trick": "king",
+        "reason": "Wenn Riot im Spiel ist und mindestens ein Spieler tot ist, lernt der König jeden Abend einen lebendigen Charakter."
+    },
+    {
+        "target": "riot",
+        "trick": "mayor",
+        "reason": "Der Bürgermeister kann wählen, Nominierungen zu stoppen. Wenn sie dies tun, wenn nur 1 Riot lebt, gewinnt gut. Sonst gewinnt das Böse."
+    },
+    {
+        "target": "riot",
+        "trick": "monk",
+        "reason": "Wenn Riot im Spiel ist, ist der Monk-geschützte Spieler sicher vor allen bösen Fähigkeiten."
+    },
+    {
+        "target": "riot",
+        "trick": "ravenkeeper",
+        "reason": "Jede Nacht*, Riot wählt einen lebendigen guten Spieler (unterschiedlich zu früheren Nächten): ein gewählter Ravenkeeper verwendet ihre Fähigkeit, aber nicht sterben."
+    },
+    {
+        "target": "riot",
+        "trick": "sage",
+        "reason": "Jede Nacht*, Riot wählt einen lebendigen guten Spieler (unterschiedlich zu früheren Nächten): ein gewählter Sage verwendet ihre Fähigkeit, aber nicht sterben."
+    },
+    {
+        "target": "riot",
+        "trick": "soldier",
+        "reason": "Wenn Riot im Spiel ist, ist der Soldat sicher vor allen bösen Fähigkeiten."
     },
     {
         "target": "scarletwoman",
@@ -251,113 +521,98 @@
     },
     {
         "target": "spy",
-        "trick": "alchemist",
-        "reason": "Wenn der Alchemist über die Fähigkeit „Spion“ verfügt, sieht er das Zauberbuch nicht und der echte Spion kann sich nicht fälschlicherweise registrieren."
-    },
-    {
-        "target": "spy",
         "trick": "damsel",
-        "reason": "Wenn der Spion im Spiel ist (oder war), ist die Jungfrau vergiftet."
-    },
-    {
-        "target": "spy",
-        "trick": "magician",
-        "reason": "Wenn der Spion das Grimoire sieht, werden das Dämon und das Magier Charakterplättchen entfernt."
+        "reason": "Wenn der Spy (oder war) im Spiel ist, wird der Damsel vergiftet."
     },
     {
         "target": "spy",
         "trick": "ogre",
-        "reason": "Der Spion registriert sich gegenüber dem Oger als böse."
+        "reason": "Der Spy registriert sich als böse auf die Ogre."
     },
     {
         "target": "spy",
         "trick": "poppygrower",
-        "reason": "Wenn der Mohnzüchter im Spiel ist, sieht der Spion das Zauberbuch erst, wenn der Mohnzüchter stirbt."
-    },
-    {
-        "target": "summoner",
-        "trick": "alchemist",
-        "reason": "Wenn ein Alchemist-Beschwörer im Spiel ist, beginnt das Spiel wie gewohnt mit einem Dämon im Spiel. Wenn der Alchemist-Beschwörer einen Spieler auswählt, macht er diesen Spieler zu einem Dämon, ändert aber nicht seine Ausrichtung."
+        "reason": "Wenn der Poppy Grower im Spiel ist, sieht der Spy das Grimoire nicht, bis der Poppy Grower stirbt."
     },
     {
         "target": "summoner",
         "trick": "clockmaker",
-        "reason": "Wenn der Beschwörer im Spiel ist, erhält der Uhrmacher seine Informationen erst, wenn ein Dämon erschaffen wurde."
+        "reason": "Wenn der Summoner im Spiel ist, erhält der Clockmaker nicht ihre Informationen, bis ein Demon erstellt wird."
     },
     {
         "target": "summoner",
         "trick": "courtier",
-        "reason": "Wenn der Beschwörer in der dritten Nacht betrunken ist, wählt der Beschwörer welchen Dämon, aber der Geschichtenerzähler wählt welchen Spieler."
+        "reason": "Wenn der Beschwörer in der 3. Nacht betrunken ist, wählt der Beschwörer, welche Demon, aber der Geschichtenerzähler wählt den Spieler."
     },
     {
         "target": "summoner",
         "trick": "engineer",
-        "reason": "Wenn der Ingenieur einen Beschwörer aus dem Spiel entfernt, bevor dieser Beschwörer seine Fähigkeit nutzt, nutzt der Beschwörer seine Fähigkeit sofort."
+        "reason": "Wenn der Ingenieur einen Summoner aus dem Spiel entfernt, bevor Summoner ihre Fähigkeit nutzt, verwendet der Summoner sofort ihre Fähigkeit."
     },
     {
         "target": "summoner",
         "trick": "hatter",
-        "reason": "Der Beschwörer kann keinen Dämon im Spiel erschaffen. Wenn der Beschwörer einen nicht im Spiel befindlichen Dämon erschafft, sind die Todesfälle heute Nacht willkürlich."
+        "reason": "Der Summoner kann keine in-play Demon erstellen. Wenn der Summoner einen nicht-in-play Demon erstellt, sind die Todesfälle heute Abend willkürlich."
     },
     {
         "target": "summoner",
         "trick": "kazali",
-        "reason": "Der Beschwörer kann keinen Dämon im Spiel erschaffen. Wenn der Beschwörer einen nicht im Spiel befindlichen Dämon erschafft, sind die Todesfälle heute Nacht willkürlich."
+        "reason": "Der Summoner kann keine in-play Demon erstellen. Wenn der Summoner einen nicht-in-play Demon erstellt, sind die Todesfälle heute Abend willkürlich."
     },
     {
         "target": "summoner",
         "trick": "legion",
-        "reason": "Wenn der Beschwörer eine Legion erschafft, werden die meisten Spieler (einschließlich aller bösen Spieler) zur bösen Legion."
+        "reason": "Wenn der Summoner Legion schafft, werden die meisten Spieler (einschließlich aller bösen Spieler) böse Legion."
     },
     {
         "target": "summoner",
         "trick": "lordoftyphon",
-        "reason": "Wenn der Beschwörer einen Lord of Typhon erschafft, muss der Lord of Typhon als Nachbar einen Diener haben. Der andere Nachbar wird zu einem bösen Diener, der nicht im Spiel ist."
+        "reason": "Wenn der Beschwörer einen Herrn von Typhon erschafft, muss der Herr von Typhon einen Minion benachbart haben. Der andere Nachbar wird ein nicht-in-play böser Minion."
     },
     {
         "target": "summoner",
         "trick": "marionette",
-        "reason": "Die Marionette ist die Nachbarin des Beschwörers. Der Beschwörer weiß, wer die Marionette ist."
+        "reason": "Die Marionette grenzt an den Summoner. Der Summoner weiß, wer die Marionette ist."
     },
     {
         "target": "summoner",
         "trick": "pithag",
-        "reason": "Der Beschwörer kann keinen Dämon im Spiel erschaffen. Wenn der Beschwörer einen nicht im Spiel befindlichen Dämon erschafft, sind die Todesfälle heute Nacht willkürlich."
+        "reason": "Der Summoner kann keine in-play Demon erstellen. Wenn der Summoner einen nicht-in-play Demon erstellt, sind die Todesfälle heute Abend willkürlich."
     },
     {
         "target": "summoner",
         "trick": "poppygrower",
-        "reason": "Wenn der Mohnzüchter am Leben ist, wenn der Beschwörer handelt, wählt der Beschwörer welchen Dämon, aber der Geschichtenerzähler wählt welchen Spieler."
+        "reason": "Wenn der Poppy Grower lebt, wenn der Summoner wirkt, wählt der Summoner, welche Demon, aber der Geschichtenerzähler wählt, welche Spieler."
     },
     {
         "target": "summoner",
         "trick": "preacher",
-        "reason": "Wenn der Prediger den Beschwörer am oder vor der 3. Nacht wählt, wählt der Beschwörer welchen Dämon, aber der Geschichtenerzähler wählt welchen Spieler."
+        "reason": "Wenn der Prediger die Beschwörung auf oder vor der 3. Nacht wählt, wählt der Beschwörer, welche Demon, aber der Geschichtenerzähler wählt, welchen Spieler."
     },
     {
         "target": "summoner",
         "trick": "pukka",
-        "reason": "Der Beschwörer kann in der zweiten Nacht einen Spieler auswählen, der zum Pukka wird."
+        "reason": "Der Summoner kann einen Spieler wählen, um die Pukka in der 2. Nacht zu werden."
     },
     {
         "target": "summoner",
         "trick": "zombuul",
-        "reason": "Wenn der Beschwörer einen toten Spieler in den Zombuul verwandelt, behandelt der Geschichtenerzähler diesen Spieler als einen Zombuul, der einmal gestorben ist."
+        "reason": "Wenn der Summoner einen toten Spieler in die Zombuul verwandelt, behandelt der Geschichtenerzähler diesen Spieler als Zombuul, der einmal gestorben ist."
     },
     {
         "target": "vizier",
         "trick": "alsaahir",
-        "reason": "Wenn der Wesir im Spiel ist, muss der Alsaahir auch erraten, welcher Dämon bzw. welche Dämonen im Spiel sind."
+        "reason": "Wenn der Vizier im Spiel ist, muss der Alsaahir auch erraten, welche Demon(s) im Spiel sind."
     },
     {
         "target": "vizier",
         "trick": "courtier",
-        "reason": "Wenn der Wesir seine Fähigkeit verliert, erfährt er Folgendes. Wenn der Wesir hingerichtet wird, während er über seine Fähigkeit verfügt, gewinnt sein Team."
+        "reason": "Wenn der Vizier seine Fähigkeit verliert, lernen sie das. Wenn der Vizier ausgeführt wird, während sie ihre Fähigkeiten haben, gewinnt sein Team."
     },
     {
         "target": "vizier",
         "trick": "fearmonger",
-        "reason": "Der Wesir erwacht mit dem Angstmacher, erfährt, wen er auswählt, und kann sich nicht dazu entschließen, diesen Spieler sofort hinzurichten."
+        "reason": "Der Vizier weckt mit dem Fearmonger, lernt, wer sie wählen und kann nicht wählen, um sofort diesen Spieler auszuführen."
     },
     {
         "target": "vizier",
@@ -366,38 +621,28 @@
     },
     {
         "target": "vizier",
-        "trick": "magician",
-        "reason": "Wenn Wesir und Magier beide im Spiel sind, lernt der Dämon die Schergen nicht."
-    },
-    {
-        "target": "vizier",
         "trick": "politician",
-        "reason": "Der Politiker könnte sich gegenüber dem Wesir als böse einstufen."
+        "reason": "Der Politiker könnte sich als böse für den Vizier registrieren."
     },
     {
         "target": "vizier",
         "trick": "preacher",
-        "reason": "Wenn der Wesir seine Fähigkeit verliert, erfährt er Folgendes. Wenn der Wesir hingerichtet wird, während er über seine Fähigkeit verfügt, gewinnt sein Team."
+        "reason": "Wenn der Vizier seine Fähigkeit verliert, lernen sie das. Wenn der Vizier ausgeführt wird, während sie ihre Fähigkeiten haben, gewinnt sein Team."
     },
     {
         "target": "vizier",
         "trick": "zealot",
-        "reason": "Der Zelot könnte dem Wesir gegenüber als böse gelten."
+        "reason": "Der Zealot könnte sich dem Vizier als böse registrieren."
     },
     {
-        "target": "widow",
-        "trick": "alchemist",
-        "reason": "Wenn der Alchemist über die Fähigkeit „Witwe“ verfügt, sieht er das Zauberbuch nicht."
+        "target": "vortox",
+        "trick": "banshee",
+        "reason": "Wenn der Vortox im Spiel ist und der Dämon die Banshee tötet, lernen die Spieler immer noch, dass die Banshee gestorben ist."
     },
     {
         "target": "widow",
         "trick": "damsel",
-        "reason": "Wenn die Witwe im Spiel ist (oder war), wird die Jungfrau vergiftet."
-    },
-    {
-        "target": "widow",
-        "trick": "magician",
-        "reason": "Wenn die Witwe das Grimoire sieht, werden das Dämon und das Magier Charakterplättchen entfernt."
+        "reason": "Wenn die Witwe (oder war) im Spiel ist, wird der Damsel vergiftet."
     },
     {
         "target": "widow",
@@ -405,218 +650,8 @@
         "reason": "Wenn der Mohnzüchter im Spiel ist sieht die Witwe das Grimoire erst wenn der Mohnzüchter stirbt."
     },
     {
-        "target": "kazali",
-        "trick": "choirboy",
-        "reason": "Der Kazali kann den König nicht als Diener wählen, wenn ein Chorknabe im Spiel ist."
-    },
-    {
-        "target": "kazali",
-        "trick": "goon",
-        "reason": "Die Kazali können wählen, dass der Goon-Spieler einer ihrer bösen Schergen ist."
-    },
-    {
-        "target": "kazali",
-        "trick": "huntsman",
-        "reason": "Wenn der Kazali die Jungfrau als Dienerin auswählt und ein Jäger im Spiel ist, wird ein guter Spieler zur Jungfrau."
-    },
-    {
-        "target": "kazali",
-        "trick": "marionette",
-        "reason": "Wenn die Kazali eine Marionette erschaffen möchten, müssen sie einen ihrer Nachbarn auswählen."
-    },
-    {
-        "target": "kazali",
-        "trick": "soldier",
-        "reason": "Die Kazali können wählen, dass der Soldatenspieler einer ihrer bösen Schergen ist."
-    },
-    {
-        "target": "legion",
-        "trick": "engineer",
-        "reason": "Legion und Ingeniuer können nicht beide zu Spielstart im Spiel sein. Wenn der Ingeniuer Legion erschaftt werden die meisten Spieler (inklusiv aller bösen Spieler) zur bösen Legion."
-    },
-    {
-        "target": "legion",
-        "trick": "hatter",
-        "reason": "Wenn der Hutmacher stirbt und Legion im Spiel ist, passiert nichts. Wenn der Hutmacher stirbt und ein böser Spieler Legion wählt, werden alle aktuellen bösen Spieler zu Legion."
-    },
-    {
-        "target": "legion",
-        "trick": "minstrel",
-        "reason": "Wenn Legion heute durch Hinrichtung gestorben ist, behält Legion ihre Fähigkeiten, aber der Minstrel könnte erfahren, dass sie Legion sind."
-    },
-    {
-        "target": "legion",
-        "trick": "preacher",
-        "reason": "Wenn der Prediger Legion wählt, behält Legion ihre Fähigkeiten, aber der Prediger erfährt möglicherweise, dass sie Legion sind."
-    },
-    {
-        "target": "legion",
-        "trick": "zealot",
-        "reason": "Der Zelot könnte aufgrund der Fähigkeiten der Legion als böse eingestuft werden."
-    },
-    {
-        "target": "leviathan",
-        "trick": "banshee",
-        "reason": "Jede Nacht* wählt der Leviathan einen lebenden, guten Spieler (anders als in den vorherigen Nächten): Eine ausgewählte Banshee stirbt und erhält ihre Fähigkeit."
-    },
-    {
-        "target": "leviathan",
-        "trick": "exorcist",
-        "reason": "Das Böse gewinnt nicht, wenn mehr als ein guter Spieler hingerichtet wurde, sofern der Exorzist am Leben ist und sich jemals erfolgreich für den Leviathan entschieden hat."
-    },
-    {
-        "target": "leviathan",
-        "trick": "farmer",
-        "reason": "Jede Nacht* wählt der Leviathan einen lebenden guten Spieler (anders als in den vorherigen Nächten): Ein ausgewählter Bauer nutzt seine Fähigkeit, stirbt aber nicht."
-    },
-    {
-        "target": "leviathan",
-        "trick": "grandmother",
-        "reason": "Wenn Leviathan im Spiel ist und das Enkelkind durch Hinrichtung stirbt, siegt das Böse."
-    },
-    {
-        "target": "leviathan",
-        "trick": "hatter",
-        "reason": "Wenn der Hutmacher am oder nach Tag 5 stirbt, kann der Dämon keinen Leviathan wählen."
-    },
-    {
-        "target": "leviathan",
-        "trick": "innkeeper",
-        "reason": "Wenn der Leviathan im Spiel ist, sind die vom Gastwirt geschützten Spieler vor allen bösen Fähigkeiten sicher."
-    },
-    {
-        "target": "leviathan",
-        "trick": "king",
-        "reason": "Wenn der Leviathan im Spiel ist und mindestens ein Spieler tot ist, lernt der König jede Nacht einen lebenden Charakter."
-    },
-    {
-        "target": "leviathan",
-        "trick": "mayor",
-        "reason": "Wenn der Leviathan im Spiel ist und an Tag 5 keine Ausführung erfolgt, gewinnt das Gute."
-    },
-    {
-        "target": "leviathan",
-        "trick": "monk",
-        "reason": "Wenn der Leviathan im Spiel ist, ist der Mönch-geschützte Spieler vor allen bösen Fähigkeiten sicher."
-    },
-    {
-        "target": "leviathan",
-        "trick": "pithag",
-        "reason": "Nach Tag 5 kann sich die Pit-Hag nicht mehr für Leviathan entscheiden."
-    },
-    {
-        "target": "leviathan",
-        "trick": "ravenkeeper",
-        "reason": "Jede Nacht* wählt der Leviathan einen lebenden Spieler (anders als in den vorherigen Nächten): Ein ausgewählter Rabenwächter nutzt seine Fähigkeit, stirbt aber nicht."
-    },
-    {
-        "target": "leviathan",
-        "trick": "sage",
-        "reason": "Jede Nacht* wählt der Leviathan einen lebenden guten Spieler (anders als in den vorherigen Nächten): Ein ausgewählter Weiser nutzt seine Fähigkeit, stirbt aber nicht."
-    },
-    {
-        "target": "leviathan",
-        "trick": "soldier",
-        "reason": "Wenn der Leviathan im Spiel ist, ist der Soldat vor allen bösen Fähigkeiten sicher."
-    },
-    {
-        "target": "lilmonsta",
-        "trick": "hatter",
-        "reason": "Wenn sich ein Dämon für Lil' Monsta entscheidet, wählt er auch einen Diener aus, der heute Abend Lil' Monsta werden und auf ihn aufpassen soll."
-    },
-    {
-        "target": "lilmonsta",
-        "trick": "magician",
-        "reason": "Jede Nacht wählt der Zauberer einen Diener aus: Wenn dieser Diener und das kleine Monsta am Leben sind, kümmert sich dieser Diener um das kleine Monsta."
-    },
-    {
-        "target": "lilmonsta",
-        "trick": "poppygrower",
-        "reason": "Wenn der Mohnzüchter im Spiel ist, erwachen die Minions nicht gemeinsam. Sie werden einer nach dem anderen geweckt, bis einer von ihnen beschließt, den Lil' Monsta-Token zu nehmen."
-    },
-    {
-        "target": "lilmonsta",
-        "trick": "scarletwoman",
-        "reason": "Wenn 5 oder mehr Spieler am Leben sind und der Spieler mit dem Kleinen Monsta Charakterplättchen stirbt, bekommt die Scharlachrote Frau es in der Nacht."
-    },
-    {
-        "target": "lilmonsta",
-        "trick": "vizier",
-        "reason": "Die Wesir können durch Hinrichtung sterben, wenn sie babysitten Kleines Monsta."
-    },
-    {
-        "target": "lleech",
-        "trick": "mastermind",
-        "reason": "Wenn der Strippenzieher am Leben ist und der der Wirt des Eegel am Leben ist, lebt der Eegel aber verliert seine Fähigkeit."
-    },
-    {
-        "target": "lleech",
-        "trick": "slayer",
-        "reason": "Wenn der Dämonenjäger den Wirt des Eegel wählt stirbt der Wirt."
-    },
-    {
-        "target": "riot",
-        "trick": "banshee",
-        "reason": "Jede Nacht* wählt Riot einen lebenden, guten Spieler aus (anders als in den vorherigen Nächten): Ein ausgewählter Banshee stirbt und erhält seine Fähigkeit."
-    },
-    {
-        "target": "riot",
-        "trick": "exorcist",
-        "reason": "Wenn der Exorzist in der dritten Nacht Riot wählt, werden Minions nicht zu Riot."
-    },
-    {
-        "target": "riot",
-        "trick": "farmer",
-        "reason": "Jede Nacht* wählt Riot einen lebenden, guten Spieler aus (anders als in den vorherigen Nächten): Ein ausgewählter Bauer nutzt seine Fähigkeit, stirbt aber nicht."
-    },
-    {
-        "target": "riot",
-        "trick": "grandmother",
-        "reason": "Wenn Riot im Spiel ist und das Enkelkind tagsüber stirbt, stirbt auch die Großmutter."
-    },
-    {
-        "target": "riot",
-        "trick": "innkeeper",
-        "reason": "Wenn Riot im Spiel ist, ist der vom Gastwirt geschützte Spieler vor allen bösen Fähigkeiten sicher."
-    },
-    {
-        "target": "riot",
-        "trick": "king",
-        "reason": "Wenn Riot im Spiel ist und mindestens ein Spieler tot ist, lernt der König jede Nacht einen lebenden Charakter."
-    },
-    {
-        "target": "riot",
-        "trick": "mayor",
-        "reason": "Der Bürgermeister kann sich dafür entscheiden, Nominierungen zu stoppen. Wenn sie dies tun, während nur 1 Riot am Leben ist, gewinnt das Gute. Sonst siegt das Böse."
-    },
-    {
-        "target": "riot",
-        "trick": "monk",
-        "reason": "Wenn Riot im Spiel ist, ist der durch Mönche geschützte Spieler vor allen bösen Fähigkeiten sicher."
-    },
-    {
-        "target": "riot",
-        "trick": "ravenkeeper",
-        "reason": "Jede Nacht* wählt Riot einen lebenden, guten Spieler aus (anders als in den vorherigen Nächten): Ein ausgewählter Ravenkeeper nutzt seine Fähigkeit, stirbt aber nicht."
-    },
-    {
-        "target": "riot",
-        "trick": "sage",
-        "reason": "Jede Nacht* wählt Riot einen lebenden, guten Spieler aus (anders als in den vorherigen Nächten): Ein ausgewählter Weiser nutzt seine Fähigkeit, stirbt aber nicht."
-    },
-    {
-        "target": "riot",
-        "trick": "soldier",
-        "reason": "Wenn Riot im Spiel ist, ist der Soldat vor allen bösen Fähigkeiten sicher."
-    },
-    {
-        "target": "vortox",
-        "trick": "banshee",
-        "reason": "Wenn der Vortox im Spiel ist und der Dämon die Banshee tötet, erfahren die Spieler trotzdem, dass die Banshee gestorben ist."
-    },
-    {
         "target": "yaggababble",
         "trick": "exorcist",
-        "reason": "Wenn der Exorzist Yaggababble wählt, tötet die Yaggababble-Fähigkeit heute Nacht nicht."
+        "reason": "Wenn der Exorzist die Yaggabble wählt, tötet die Yaggabble-Fähigkeit heute nicht."
     }
 ]

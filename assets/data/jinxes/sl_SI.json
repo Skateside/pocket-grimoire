@@ -1,18 +1,93 @@
 [
     {
+        "target": "alchemist",
+        "trick": "boffin",
+        "reason": "Če ima Alkimist Boffinovo sposobnost, se Alkimist ne nauči kakšne sposobnosti ima Demon."
+    },
+    {
+        "target": "alchemist",
+        "trick": "marionette",
+        "reason": "Alchemist-Marionette nima Marionette sposobnosti in Marionette je v igri."
+    },
+    {
+        "target": "alchemist",
+        "trick": "mastermind",
+        "reason": "Alchemist-Mastermind nima sposobnosti Mastermind & Mastermind ni v igri."
+    },
+    {
+        "target": "alchemist",
+        "trick": "organgrinder",
+        "reason": "Če ima Alkimist sposobnost orgle Grinder, je Organ Grinder v igri in če sta tako Alkimist kot Organ Grinder trezna, sta oba pijana."
+    },
+    {
+        "target": "alchemist",
+        "trick": "spy",
+        "reason": "Če ima Alkimist Spy sposobnost, jih nima in vohun je v igri. Vsak dan po fazi izvedbe lahko živi Alchemist javno ugani živega igralca kot vohuna. Demon mora izbrati vohuna."
+    },
+    {
+        "target": "alchemist",
+        "trick": "summoner",
+        "reason": "Alchemist-Summoner ne dobi blefov, in izbere, kateri Demon, vendar ne kateri igralec. Če umrejo, preden se to zgodi, zlo zmaga. [Brez demona]"
+    },
+    {
+        "target": "alchemist",
+        "trick": "widow",
+        "reason": "Če ima Alkimist vdovsko sposobnost, je nimajo in vdova je v igri. Vsak dan po fazi izvajanja lahko živi Alkimist javno ugani živega igralca kot Vdovo. Demon mora izbrati Vdovo."
+    },
+    {
+        "target": "alchemist",
+        "trick": "wraith",
+        "reason": "Če ima Alkimist Wraithove sposobnosti, jih nima in Wraith je v igri. Alkimist lahko vsak dan po fazi usmrtitve javno ugane živega igralca, kot so Wraithi: če je to pravilno, mora Demon nocoj izbrati Wraithe."
+    },
+    {
         "target": "alhadikhia",
         "trick": "princess",
-        "reason": "Če je princesa nominirala in usmrtila igralca na njegov prvi dan, nocoj nihče ne umre zaradi sposobnosti Al-Hadikhia."
+        "reason": "Če je princesa nominirala in izvedla igralca na njihov 1. dan, nihče ne umre za Al-Hadikhia sposobnost nocoj."
+    },
+    {
+        "target": "boffin",
+        "trick": "cultleader",
+        "reason": "Če ima Demon sposobnost Kult Leader, ne morejo obrniti dobro zaradi te sposobnosti."
+    },
+    {
+        "target": "boffin",
+        "trick": "drunk",
+        "reason": "Če bi Demon imel sposobnost pijanca, Boffin izbere igralca Townsfolka, da bi imel to sposobnost."
+    },
+    {
+        "target": "boffin",
+        "trick": "goon",
+        "reason": "Če ima Demon sposobnost Goon, ne morejo obrniti dobro zaradi te sposobnosti."
+    },
+    {
+        "target": "boffin",
+        "trick": "ogre",
+        "reason": "Demon ne more imeti ogrske sposobnosti."
+    },
+    {
+        "target": "boffin",
+        "trick": "politician",
+        "reason": "Demon ne more imeti politične sposobnosti."
+    },
+    {
+        "target": "boffin",
+        "trick": "villageidiot",
+        "reason": "Če obstaja rezervni žeton, lahko Boffin da Demonu Village Idiot sposobnost."
     },
     {
         "target": "bountyhunter",
         "trick": "kazali",
-        "reason": "Zlobni meščani nastanejo le, če je lovec na glave še vedno v igri po dejanjih Kazali."
+        "reason": "Zlobni Townsfolk je ustvarjen le, če je lovec na glave še vedno v igri po Kazalijskih dejanjih."
     },
     {
         "target": "bountyhunter",
         "trick": "philosopher",
-        "reason": "Če Filozof pridobi sposobnost lovca na glave, lahko Meščani postanejo zlobni."
+        "reason": "Če filozof pridobi sposobnost lovca na glave, lahko Townsfolk postane zloben."
+    },
+    {
+        "target": "butler",
+        "trick": "organgrinder",
+        "reason": "Če morajo igralci mižati, lahko Služabnik vedno glasuje, a njegov glas šteje, samo če je glasoval tudi Gospodar."
     },
     {
         "target": "cannibal",
@@ -22,37 +97,27 @@
     {
         "target": "cannibal",
         "trick": "juggler",
-        "reason": "Če žongler prvi dan ugiba in zaradi usmrtitve umre, nocoj živi kanibal izve, koliko ugibanj je žongler pravilnih."
+        "reason": "Če Žongler ugane prvi dan in umre z usmrtitvijo, nocoj živi kanibal izve, koliko ugibanj je Žongler dobil prav."
     },
     {
         "target": "cannibal",
         "trick": "poppygrower",
-        "reason": "Če Kanibal poje Pridelovalca maka, nato umre ali izgubi sposobnost Pridelovalca maka, se Demon in Minioni tisto noč učijo drug drugega."
+        "reason": "Če kanibal poje Poppy Gojitelja, potem umre ali izgubi sposobnost Poppy Gojitelja, se Demoni in Minioni tega večera učijo drug drugega."
     },
     {
         "target": "cannibal",
         "trick": "princess",
-        "reason": "Če je Kanibal danes nominiral in usmrtil princeso, demon nocoj ne ubije."
+        "reason": "Če kanibal nominira & izvede princeso danes, Demon ne ubije nocoj."
     },
     {
         "target": "cannibal",
         "trick": "zealot",
-        "reason": "Če kanibal pridobi sposobnost Zealot, se kanibal tega nauči."
+        "reason": "Če Kanibal pridobi Zealotovo sposobnost, se Kanibal tega nauči."
     },
     {
-        "target": "mathematician",
-        "trick": "chambermaid",
-        "reason": "Perica izve, ali bo Matematik nocoj vstal, čeprav vstane pred njim."
-    },
-    {
-        "target": "mathematician",
-        "trick": "lunatic",
-        "reason": "Matematik izve, če Blaznež izbere drugega igralca, kot ga Demon napade."
-    },
-    {
-        "target": "butler",
-        "trick": "organgrinder",
-        "reason": "Če morajo igralci mižati, lahko Služabnik vedno glasuje, a njegov glas šteje, samo če je glasoval tudi Gospodar."
+        "target": "cerenovus",
+        "trick": "goblin",
+        "reason": "Cerenovus lahko izbere Goblina, ko izbere vlogo, o kateri nori njegova tarča."
     },
     {
         "target": "heretic",
@@ -90,89 +155,174 @@
         "reason": "Samo ena od uročenih vlog je lahko v igri."
     },
     {
-        "target": "ogre",
-        "trick": "recluse",
-        "reason": "Če se Samotar Ogru prijavi kot hudoben, se Ogre nauči, da so hudobni."
+        "target": "kazali",
+        "trick": "choirboy",
+        "reason": "Kazali ne morejo izbrati kralja, da postane rudar, če je v igri Choirboy."
     },
     {
-        "target": "plaguedoctor",
-        "trick": "baron",
-        "reason": "Če Pripovedovalec pridobi sposobnost barona, do dva igralca postaneta Outsidersa, ki nista v igri."
-    },
-    {
-        "target": "plaguedoctor",
-        "trick": "boomdandy",
-        "reason": "Če Pripovedovlec dobi moč Barona, do dva igralca postaneta Izobčenca, ki nista v igri."
-    },
-    {
-        "target": "plaguedoctor",
-        "trick": "eviltwin",
-        "reason": "Če Kužnik umre, Pripovedovalec ne more dobiti moči Dvojčka."
-    },
-    {
-        "target": "plaguedoctor",
-        "trick": "fearmonger",
-        "reason": "Če Kužnik umre, eden od živih Sledilcev dobi še moč Vohuna in to izve."
-    },
-    {
-        "target": "plaguedoctor",
-        "trick": "goblin",
-        "reason": "Če Kužnik umre, eden od živih Sledilcev dobi še moč Goblina in to izve."
-    },
-    {
-        "target": "plaguedoctor",
-        "trick": "marionette",
-        "reason": "Če ima Demon živega soseda in Meščana ali Tujca, ko kužni zdravnik umre, ta igralec postane zlobna marioneta. Če že obstaja dodatni zlobni igralec, se to ne zgodi."
-    },
-    {
-        "target": "plaguedoctor",
-        "trick": "scarletwoman",
-        "reason": "Če Kužnik umre, eden od živih Sledilcev dobi še moč Škrlatne dame in to izve."
-    },
-    {
-        "target": "plaguedoctor",
-        "trick": "spy",
-        "reason": "Če kužni zdravnik umre, živi Minion poleg lastne sposobnosti pridobi še sposobnost vohuna in se tega nauči."
-    },
-    {
-        "target": "boffin",
-        "trick": "alchemist",
-        "reason": "Če ima alkimist sposobnost Boffina, se alkimist ne nauči, katero sposobnost ima demon."
-    },
-    {
-        "target": "boffin",
-        "trick": "cultleader",
-        "reason": "Če ima Demon sposobnost Cult Leader, zaradi te sposobnosti ne more postati dober."
-    },
-    {
-        "target": "boffin",
-        "trick": "drunk",
-        "reason": "Če bi imel Demon sposobnost Pijan, Boffin namesto tega izbere igralca iz mestnega prebivalstva, ki ima to sposobnost."
-    },
-    {
-        "target": "boffin",
+        "target": "kazali",
         "trick": "goon",
-        "reason": "Če ima Demon sposobnost Goon, zaradi te sposobnosti ne more postati dober."
+        "reason": "Kazali lahko izberejo, da je Goon igralec eden od njihovih zlobnih Minionov."
     },
     {
-        "target": "boffin",
-        "trick": "ogre",
-        "reason": "Demon ne more imeti sposobnosti Ogra."
+        "target": "kazali",
+        "trick": "huntsman",
+        "reason": "Če Kazali izbere Damsel, da postane Minion, in Huntsman je v igri, dober igralec postane Damsel."
     },
     {
-        "target": "boffin",
-        "trick": "politician",
-        "reason": "Demon ne more imeti sposobnosti politika."
+        "target": "kazali",
+        "trick": "marionette",
+        "reason": "Če se Kazali odločijo ustvariti Marionetto, morajo izbrati enega od svojih sosedov."
     },
     {
-        "target": "boffin",
-        "trick": "villageidiot",
-        "reason": "Če obstaja rezervni žeton, lahko Boffin da Demon the Village Idiot sposobnost."
+        "target": "kazali",
+        "trick": "soldier",
+        "reason": "Kazali lahko izberejo, da je vojak eden od njihovih zlobnih Minionov."
     },
     {
-        "target": "cerenovus",
-        "trick": "goblin",
-        "reason": "Cerenovus lahko izbere Goblina, ko izbere vlogo, o kateri nori njegova tarča."
+        "target": "legion",
+        "trick": "engineer",
+        "reason": "Inžinir in Legijon ne moreta biti oba v igri, ko se ta začne. Če inžinir naredi Legijon, večina igralcev postane Legijon."
+    },
+    {
+        "target": "legion",
+        "trick": "hatter",
+        "reason": "Če Klobučar umre in je Legion v igri, se ne zgodi nič. Če Klobučar umre in zlobni igralec izbere Legion, vsi trenutni zlobni igralci postanejo Legion."
+    },
+    {
+        "target": "legion",
+        "trick": "minstrel",
+        "reason": "Če je Legija umrla z usmrtitvijo danes, Legija ohrani svoje sposobnosti, vendar bi se Minstrel lahko naučil, da so Legija."
+    },
+    {
+        "target": "legion",
+        "trick": "preacher",
+        "reason": "Če bo pridigar izbral legijo, bo Legija obdržala svoje sposobnosti, toda pridigar se bo morda naučil, da so legije."
+    },
+    {
+        "target": "legion",
+        "trick": "zealot",
+        "reason": "Zealot se lahko registrira kot zlo za Legijine sposobnosti."
+    },
+    {
+        "target": "leviathan",
+        "trick": "banshee",
+        "reason": "Vsako noč* Leviatan izbere živega dobrega igralca (drugače kot prejšnje noči): izbrani Banshee umre & pridobi njihovo sposobnost."
+    },
+    {
+        "target": "leviathan",
+        "trick": "exorcist",
+        "reason": "Zlo ne zmaga, ko je bil usmrčen več kot 1 dober igralec, če je Izganjalec živ in je kdaj uspešno izbral Leviatana."
+    },
+    {
+        "target": "leviathan",
+        "trick": "farmer",
+        "reason": "Vsako noč* Leviatan izbere živega dobrega igralca (drugače kot prejšnje noči): izbrani kmet uporablja svoje sposobnosti, vendar ne umre."
+    },
+    {
+        "target": "leviathan",
+        "trick": "grandmother",
+        "reason": "Če je Leviatan v igri in vnuk umre z usmrtitvijo, zmaga zlo."
+    },
+    {
+        "target": "leviathan",
+        "trick": "hatter",
+        "reason": "Če Klobučar umre 5. dan ali pozneje, Demon ne more izbrati Levijatana."
+    },
+    {
+        "target": "leviathan",
+        "trick": "innkeeper",
+        "reason": "Če je Levijatan v igri, so Inneper-zaščiteni igralci varni pred vsemi zlobnimi sposobnostmi."
+    },
+    {
+        "target": "leviathan",
+        "trick": "king",
+        "reason": "Če je Leviatan v igri in je vsaj en igralec mrtev, se kralj vsako noč nauči živega lika."
+    },
+    {
+        "target": "leviathan",
+        "trick": "mayor",
+        "reason": "Če je Leviatan v igri & nobene izvedbe se zgodi na 5. dan, dobro zmaga."
+    },
+    {
+        "target": "leviathan",
+        "trick": "monk",
+        "reason": "Če je Leviatan v igri, je Monk-zaščiten igralec varen pred vsemi zlobnimi sposobnostmi."
+    },
+    {
+        "target": "leviathan",
+        "trick": "pithag",
+        "reason": "Po 5. dnevu Pit-Hag ne more izbrati Levijatana."
+    },
+    {
+        "target": "leviathan",
+        "trick": "ravenkeeper",
+        "reason": "Vsako noč* Leviatan izbere živega igralca (drugače kot prejšnje noči): izbrani Ravenkeler uporablja svoje sposobnosti, vendar ne umre."
+    },
+    {
+        "target": "leviathan",
+        "trick": "sage",
+        "reason": "Vsako noč* Leviatan izbere živega dobrega igralca (drugače kot prejšnje noči): izbrani Sage uporablja svoje sposobnosti, vendar ne umre."
+    },
+    {
+        "target": "leviathan",
+        "trick": "soldier",
+        "reason": "Če je Leviatan v igri, je vojak varen pred vsemi zlobnimi sposobnostmi."
+    },
+    {
+        "target": "lilmonsta",
+        "trick": "hatter",
+        "reason": "Če demon izbere Lil' Monsta, izbere tudi Miniona, ki bo nocoj postal varuška Lil' Monsta."
+    },
+    {
+        "target": "lilmonsta",
+        "trick": "poppygrower",
+        "reason": "Če je Sejalka v igri, se Sledilci ne zbudijo skupaj, ampak vsak posebej, dokler še eden od njih ne odloči, da bo varuška Pošastku."
+    },
+    {
+        "target": "lilmonsta",
+        "trick": "scarletwoman",
+        "reason": "Če je živih 5 ali več igralcev in Pošastkova varuška umre, Pošastek preživi in Škrlatna dama ponoči postane varuška."
+    },
+    {
+        "target": "lilmonsta",
+        "trick": "vizier",
+        "reason": "Vizir je lahko usmrčen in umre, če je varuška Pošastku."
+    },
+    {
+        "target": "lleech",
+        "trick": "mastermind",
+        "reason": "Če je Veleum živ, ko Grabežev gostitelj umre, Grabež preživi, a izgubi svojo moč."
+    },
+    {
+        "target": "lleech",
+        "trick": "slayer",
+        "reason": "Če ubijalec ustreli Grabeževega gostitelja, ta umre."
+    },
+    {
+        "target": "magician",
+        "trick": "wraith",
+        "reason": "Vsak dan, po fazi usmrtitve, lahko živi Čarovnik javno ugani živega igralca kot Wraith: če je pravilno, mora Demon izbrati Wraithe nocoj."
+    },
+    {
+        "target": "magician",
+        "trick": "spy",
+        "reason": "Ko Vohun pogleda v Buklo, odstrani žetona Demona in Čarovnika."
+    },
+    {
+        "target": "magician",
+        "trick": "vizier",
+        "reason": "Če sta vezir in magij v igri, se Demon ne nauči Minionov."
+    },
+    {
+        "target": "magician",
+        "trick": "widow",
+        "reason": "Če je Vdova (ali je bila) v igri, je Damsel zastrupljen."
+    },
+    {
+        "target": "magician",
+        "trick": "lilmonsta",
+        "reason": "Vsako noč, Čarovnik izbere Minion: če je ta Minion & Lil' Monsta živ, da je Minion varuška Lil’ Monsta."
     },
     {
         "target": "marionette",
@@ -205,14 +355,34 @@
         "reason": "Marioneta ne izve treh vlog, ki niso v igri - namesto tega Demon izve dodatne 3."
     },
     {
+        "target": "marionette",
+        "trick": "wraith",
+        "reason": "Wraithi se ne zbudijo z Marionetto."
+    },
+    {
         "target": "mastermind",
         "trick": "alhadikhia",
-        "reason": "Če Al-Hadikhia umre z usmrtitvijo, glavni um pa je živ, Al-Hadikhia nocoj izbere 3 dobre igralce: če se vsi 3 odločijo živeti, zmaga zlo. Sicer pa dobro zmaga."
+        "reason": "Če Al-Hadikhia umre z usmrtitvijo in je Mastermind živ, Al-Hadikhia nocoj izbere 3 dobre igralce: če se vsi trije odločijo za življenje, zmaga zlo. Sicer pa dobro zmaga."
+    },
+    {
+        "target": "mathematician",
+        "trick": "chambermaid",
+        "reason": "Perica izve, ali bo Matematik nocoj vstal, čeprav vstane pred njim."
+    },
+    {
+        "target": "mathematician",
+        "trick": "lunatic",
+        "reason": "Matematik izve, če Blaznež izbere drugega igralca, kot ga Demon napade."
+    },
+    {
+        "target": "ogre",
+        "trick": "recluse",
+        "reason": "Če Rekluza registrira Ogrsko kot zlo, izve Oger, da so zlobni."
     },
     {
         "target": "pithag",
         "trick": "cultleader",
-        "reason": "Če Pit-Hag zlobnega igralca spremeni v vodjo kulta, ta zaradi lastnih sposobnosti ne more postati dober."
+        "reason": "Če Pit-Hag spremeni zlobnega igralca v vodjo Kulta, zaradi lastne sposobnosti ne morejo spremeniti dobrega."
     },
     {
         "target": "pithag",
@@ -222,12 +392,12 @@
     {
         "target": "pithag",
         "trick": "goon",
-        "reason": "Če Pit-Hag zlobnega igralca spremeni v Goona, ta zaradi lastnih sposobnosti ne more postati dober."
+        "reason": "Če Pit-Hag spremeni zlobnega igralca v Goon, zaradi lastne sposobnosti ne morejo spremeniti dobrega."
     },
     {
         "target": "pithag",
         "trick": "ogre",
-        "reason": "Če Pit-Hag zlobnega igralca spremeni v Ogra, ta zaradi lastnih sposobnosti ne more postati dober."
+        "reason": "Če Pit-Hag spremeni zlobnega igralca v Ogrsko, zaradi lastne sposobnosti ne morejo spremeniti dobrega."
     },
     {
         "target": "pithag",
@@ -237,7 +407,107 @@
     {
         "target": "pithag",
         "trick": "villageidiot",
-        "reason": "Če obstaja rezervni žeton, lahko Pit-Hag ustvari dodatnega vaškega idiota. Če je tako, se lahko pijani vaški idiot spremeni."
+        "reason": "Če obstaja rezervni žeton, lahko Pit-Hag ustvari dodatno Village Idiot. Če je tako, se lahko pijani vaški idiot spremeni."
+    },
+    {
+        "target": "plaguedoctor",
+        "trick": "baron",
+        "reason": "Če Storyteller pridobi Baronovo sposobnost, do dva igralca postaneta neigralska Outsiderja."
+    },
+    {
+        "target": "plaguedoctor",
+        "trick": "boomdandy",
+        "reason": "Če Pripovedovlec dobi moč Barona, do dva igralca postaneta Izobčenca, ki nista v igri."
+    },
+    {
+        "target": "plaguedoctor",
+        "trick": "eviltwin",
+        "reason": "Če Kužnik umre, Pripovedovalec ne more dobiti moči Dvojčka."
+    },
+    {
+        "target": "plaguedoctor",
+        "trick": "fearmonger",
+        "reason": "Če Kužnik umre, eden od živih Sledilcev dobi še moč Vohuna in to izve."
+    },
+    {
+        "target": "plaguedoctor",
+        "trick": "goblin",
+        "reason": "Če Kužnik umre, eden od živih Sledilcev dobi še moč Goblina in to izve."
+    },
+    {
+        "target": "plaguedoctor",
+        "trick": "marionette",
+        "reason": "Če ima Demon soseda, ki je živ, in Townsfolk ali Outsider, ko umre zdravnik kuge, ta igralec postane zloben Marionette. Če že obstaja dodatno zloben igralec, se to ne zgodi."
+    },
+    {
+        "target": "plaguedoctor",
+        "trick": "scarletwoman",
+        "reason": "Če Kužnik umre, eden od živih Sledilcev dobi še moč Škrlatne dame in to izve."
+    },
+    {
+        "target": "plaguedoctor",
+        "trick": "spy",
+        "reason": "Če zdravnik kuga umre, živi Minion pridobi Spy sposobnost poleg svoje sposobnosti, in se nauči to."
+    },
+    {
+        "target": "plaguedoctor",
+        "trick": "wraith",
+        "reason": "Če umre kužni doktor, živi Minion pridobi Wraithove sposobnosti poleg svojih sposobnosti in se nauči tega."
+    },
+    {
+        "target": "riot",
+        "trick": "banshee",
+        "reason": "Vsako noč* Riot izbere živega dobrega igralca (drugače kot prejšnje noči): izbrani Banshee umre in pridobi njihovo sposobnost."
+    },
+    {
+        "target": "riot",
+        "trick": "exorcist",
+        "reason": "Če eksorcist izbere Riot v tretji noči, Minioni ne postanejo Riot."
+    },
+    {
+        "target": "riot",
+        "trick": "farmer",
+        "reason": "Vsako noč* Riot izbere živega dobrega igralca (drugače kot prejšnje noči): izbrani kmet uporablja svoje sposobnosti, vendar ne umre."
+    },
+    {
+        "target": "riot",
+        "trick": "grandmother",
+        "reason": "Če je Riot v igri in vnuk umre čez dan, umre tudi babica."
+    },
+    {
+        "target": "riot",
+        "trick": "innkeeper",
+        "reason": "Če je Riot v igri, je Innkeper-zaščiten igralec varen pred vsemi zlobnimi sposobnostmi."
+    },
+    {
+        "target": "riot",
+        "trick": "king",
+        "reason": "Če je Riot v igri in je vsaj en igralec mrtev, se kralj vsako noč nauči živega lika."
+    },
+    {
+        "target": "riot",
+        "trick": "mayor",
+        "reason": "Župan se lahko odloči ustaviti nominacije. Če to storijo, ko je živ samo 1 Riot, zmaga dobro. Sicer zmaga zlo."
+    },
+    {
+        "target": "riot",
+        "trick": "monk",
+        "reason": "Če je Riot v igri, je Monk-zaščiten igralec varen pred vsemi zlobnimi sposobnostmi."
+    },
+    {
+        "target": "riot",
+        "trick": "ravenkeeper",
+        "reason": "Vsako noč* Riot izbere živega dobrega igralca (drugače kot prejšnje noči): izbrani krokar uporablja svoje sposobnosti, vendar ne umre."
+    },
+    {
+        "target": "riot",
+        "trick": "sage",
+        "reason": "Vsako noč* Riot izbere živega dobrega igralca (drugače kot prejšnje noči): izbrani Sage uporablja svoje sposobnosti, vendar ne umre."
+    },
+    {
+        "target": "riot",
+        "trick": "soldier",
+        "reason": "Če je Riot v igri, je vojak varen pred vsemi zlobnimi sposobnostmi."
     },
     {
         "target": "scarletwoman",
@@ -251,23 +521,13 @@
     },
     {
         "target": "spy",
-        "trick": "alchemist",
-        "reason": "Če ima Alkimist sposobnost Vohuna, ne vidi Grimoira in pravi Vohun se ne more lažno registrirati."
-    },
-    {
-        "target": "spy",
         "trick": "damsel",
-        "reason": "Če je vohun (ali je bil) v igri, je deklica zastrupljena."
-    },
-    {
-        "target": "spy",
-        "trick": "magician",
-        "reason": "Ko Vohun pogleda v Buklo, odstrani žetona Demona in Čarovnika."
+        "reason": "Če je vohun (ali je bil) v igri, je Damsel zastrupljen."
     },
     {
         "target": "spy",
         "trick": "ogre",
-        "reason": "Vohun se za Ogra označi kot zloben."
+        "reason": "Vohuni so za Ogre zlo."
     },
     {
         "target": "spy",
@@ -276,88 +536,83 @@
     },
     {
         "target": "summoner",
-        "trick": "alchemist",
-        "reason": "Če je v igri Alchemist-Summoner, se igra začne z Demonom v igri, kot običajno. Če Alchemist-Summoner izbere igralca, tega igralca naredi za demona, vendar ne spremeni svoje poravnave."
-    },
-    {
-        "target": "summoner",
         "trick": "clockmaker",
-        "reason": "Če je Summoner v igri, Clockmaker ne prejme njegovih informacij, dokler ni ustvarjen demon."
+        "reason": "Če je Pozivalec v igri, urar ne prejme njihovih informacij, dokler se ne ustvari demon."
     },
     {
         "target": "summoner",
         "trick": "courtier",
-        "reason": "Če je Summoner tretjo noč pijan, Summoner izbere, katerega demona, Storyteller pa izbere, katerega igralca."
+        "reason": "Če je Poklicanec pijan v 3. noči, Poklicanec izbere katerega Demona, vendar Storyteller izbere katerega igralca."
     },
     {
         "target": "summoner",
         "trick": "engineer",
-        "reason": "Če Inženir odstrani Summonerja iz igre, preden ta Summoner uporabi svojo sposobnost, Summoner svojo sposobnost uporabi takoj."
+        "reason": "Če Inženir odstrani Pozivalec iz igre pred tem Pozivalec uporabi svoje sposobnosti, Pozivalec takoj uporabi njihove sposobnosti."
     },
     {
         "target": "summoner",
         "trick": "hatter",
-        "reason": "Summoner ne more ustvariti demona v igri. Če Summoner ustvari demona, ki ni v igri, so nocojšnje smrti poljubne."
+        "reason": "Pozivalec ne more ustvariti demona. Če Pozivalec ustvari demona, so smrti samovoljne."
     },
     {
         "target": "summoner",
         "trick": "kazali",
-        "reason": "Summoner ne more ustvariti demona v igri. Če Summoner ustvari demona, ki ni v igri, so nocojšnje smrti poljubne."
+        "reason": "Pozivalec ne more ustvariti demona. Če Pozivalec ustvari demona, so smrti samovoljne."
     },
     {
         "target": "summoner",
         "trick": "legion",
-        "reason": "Če Summoner ustvari Legion, večina igralcev (vključno z vsemi zlobnimi igralci) postane zlobna Legija."
+        "reason": "Če Poziv ustvari Legijo, večina igralcev (vključno z vsemi zlobnimi igralci) postane zlobna Legija."
     },
     {
         "target": "summoner",
         "trick": "lordoftyphon",
-        "reason": "Če Summoner ustvari Lord of Typhon, mora Lord of Typhon biti sosed Miniona. Drugi sosed postane zlobni minion, ki ni v igri."
+        "reason": "Če povzdigovalec ustvari Gospodarja tifona, mora gospodar Tifona sosedovati Minionu. Druga soseda postane ne-v-igrani zlobni Minion."
     },
     {
         "target": "summoner",
         "trick": "marionette",
-        "reason": "Marioneta je soseda Summonerja. Summoner ve, kdo je marioneta."
+        "reason": "Marionette je sosed Povabljenca. Poziv ve, kdo je Marionetta."
     },
     {
         "target": "summoner",
         "trick": "pithag",
-        "reason": "Summoner ne more ustvariti demona v igri. Če Summoner ustvari demona, ki ni v igri, so nocojšnje smrti poljubne."
+        "reason": "Pozivalec ne more ustvariti demona. Če Pozivalec ustvari demona, so smrti samovoljne."
     },
     {
         "target": "summoner",
         "trick": "poppygrower",
-        "reason": "Če je pridelovalec maka živ, ko klicalec deluje, klicalec izbere, katerega demona, pripovedovalec pa izbere, katerega igralca."
+        "reason": "Če je Poppy Gojilec živ, ko Pozivalec deluje, Pozivalec izbere katerega Demona, vendar Storyteller izbere katerega igralca."
     },
     {
         "target": "summoner",
         "trick": "preacher",
-        "reason": "Če je Pridigar izbral Priklicovalca na ali pred 3. nočjo, Priklicavalec izbere, katerega demona, pripovedovalec pa izbere, katerega igralca."
+        "reason": "Če je pridigar izbral Pozivača na ali pred 3. nočjo, Pozivalec izbere katerega Demona, vendar Storyteller izbere katerega igralca."
     },
     {
         "target": "summoner",
         "trick": "pukka",
-        "reason": "Summoner lahko 2. noč izbere igralca, ki bo postal Pukka."
+        "reason": "Pozivalec lahko izbere igralca, ki bo v 2. noči postal Pukka."
     },
     {
         "target": "summoner",
         "trick": "zombuul",
-        "reason": "Če Summoner mrtvega igralca spremeni v Zombuula, Storyteller tega igralca obravnava kot Zombuula, ki je enkrat umrl."
+        "reason": "Če Poziv spremeni mrtvega igralca v Zombuul, Storyteller obravnava tega igralca kot zombija, ki je enkrat umrl."
     },
     {
         "target": "vizier",
         "trick": "alsaahir",
-        "reason": "Če je v igri vezir, mora tudi Alsaahir uganiti, kateri demoni so v igri."
+        "reason": "Če je vezir v igri, morajo tudi Alsahir uganiti, kateri demoni so v igri."
     },
     {
         "target": "vizier",
         "trick": "courtier",
-        "reason": "Če vezir izgubi svojo sposobnost, se tega naučijo. Če je vezir usmrčen, medtem ko imajo svoje sposobnosti, njihova ekipa zmaga."
+        "reason": "Če vezir izgubi sposobnost, se tega naučijo. Če je vezir usmrčen, medtem ko imajo svoje sposobnosti, zmaga njihova ekipa."
     },
     {
         "target": "vizier",
         "trick": "fearmonger",
-        "reason": "Vezir se zbudi s Strahovcem, izve, koga so izbrali in se ne more odločiti za takojšnjo usmrtitev tega igralca."
+        "reason": "Vezir se zbudi s Fearmongerjem, spozna koga izberejo in se ne more takoj odločiti za izvedbo tega igralca."
     },
     {
         "target": "vizier",
@@ -366,28 +621,23 @@
     },
     {
         "target": "vizier",
-        "trick": "magician",
-        "reason": "Če sta vezir in čarovnik oba v igri, se Demon ne nauči Minionov."
-    },
-    {
-        "target": "vizier",
         "trick": "politician",
-        "reason": "Politik bi se lahko vezirju prijavil kot zloben."
+        "reason": "Politik se morda vpiše kot zlo vezirju."
     },
     {
         "target": "vizier",
         "trick": "preacher",
-        "reason": "Če vezir izgubi svojo sposobnost, se tega naučijo. Če je vezir usmrčen, medtem ko imajo svoje sposobnosti, njihova ekipa zmaga."
+        "reason": "Če vezir izgubi sposobnost, se tega naučijo. Če je vezir usmrčen, medtem ko imajo svoje sposobnosti, zmaga njihova ekipa."
     },
     {
         "target": "vizier",
         "trick": "zealot",
-        "reason": "Zelot se lahko vezirju pripiše kot zlo."
+        "reason": "Zealot se lahko registrira kot zlo vezirju."
     },
     {
-        "target": "widow",
-        "trick": "alchemist",
-        "reason": "Če ima alkimist sposobnost vdove, ne vidi Grimoira."
+        "target": "vortox",
+        "trick": "banshee",
+        "reason": "Če je Vortox v igri in Demon ubije Banshee, igralci še vedno izvedo, da je Banshee umrl."
     },
     {
         "target": "widow",
@@ -396,227 +646,12 @@
     },
     {
         "target": "widow",
-        "trick": "magician",
-        "reason": "Če je vdova (ali je bila) v igri, je deklica zastrupljena."
-    },
-    {
-        "target": "widow",
         "trick": "poppygrower",
         "reason": "Če je Sejalka v igri, Vdova ne vidi Bukle, dokler Sejalka ne umre."
     },
     {
-        "target": "kazali",
-        "trick": "choirboy",
-        "reason": "Kazali ne more izbrati kralja, da postane Minion, če je v igri zborovski deček."
-    },
-    {
-        "target": "kazali",
-        "trick": "goon",
-        "reason": "Kazali lahko izbere, da je Goon igralec eden od njihovih zlobnih Minionov."
-    },
-    {
-        "target": "kazali",
-        "trick": "huntsman",
-        "reason": "Če Kazali izbere Deklico, da postane Minion, in je v igri Huntsman, dober igralec postane Deklica."
-    },
-    {
-        "target": "kazali",
-        "trick": "marionette",
-        "reason": "Če se Kazali odloči ustvariti marioneto, mora izbrati enega od svojih sosedov."
-    },
-    {
-        "target": "kazali",
-        "trick": "soldier",
-        "reason": "Kazali lahko izbere, da je igralec Vojak eden od njihovih zlobnih Minionov."
-    },
-    {
-        "target": "legion",
-        "trick": "engineer",
-        "reason": "Inžinir in Legijon ne moreta biti oba v igri, ko se ta začne. Če inžinir naredi Legijon, večina igralcev postane Legijon."
-    },
-    {
-        "target": "legion",
-        "trick": "hatter",
-        "reason": "Če Klobučar umre in je Legion v igri, se ne zgodi nič. Če Klobučar umre in zlobni igralec izbere Legion, vsi trenutni zlobni igralci postanejo Legion."
-    },
-    {
-        "target": "legion",
-        "trick": "minstrel",
-        "reason": "Če bi Legion danes umrl zaradi usmrtitve, bi Legija obdržala svojo sposobnost, toda Minstrel bi lahko izvedel, da so Legija."
-    },
-    {
-        "target": "legion",
-        "trick": "preacher",
-        "reason": "Če Pridigar izbere Legijo, Legija obdrži svojo sposobnost, toda Pridigar lahko izve, da so Legija."
-    },
-    {
-        "target": "legion",
-        "trick": "zealot",
-        "reason": "Zealot bi se lahko prijavil kot zlo za Legionino sposobnost."
-    },
-    {
-        "target": "leviathan",
-        "trick": "banshee",
-        "reason": "Vsako noč* Leviathan izbere živega dobrega igralca (različnega od prejšnjih noči): izbrani Banshee umre in pridobi svojo sposobnost."
-    },
-    {
-        "target": "leviathan",
-        "trick": "exorcist",
-        "reason": "Zlo ne zmaga, če je bil usmrčen več kot 1 dober igralec, če je Izganjalec hudiča živ in je kdaj uspešno izbral Levijatana."
-    },
-    {
-        "target": "leviathan",
-        "trick": "farmer",
-        "reason": "Vsako noč* Leviathan izbere živega dobrega igralca (drugačen kot prejšnje noči): izbrani kmet uporabi svojo sposobnost, vendar ne umre."
-    },
-    {
-        "target": "leviathan",
-        "trick": "grandmother",
-        "reason": "Če je Leviatan v igri in Vnuk umre z usmrtitvijo, zlo zmaga."
-    },
-    {
-        "target": "leviathan",
-        "trick": "hatter",
-        "reason": "Če Klobučar umre 5. dan ali pozneje, Demon ne more izbrati Levijatana."
-    },
-    {
-        "target": "leviathan",
-        "trick": "innkeeper",
-        "reason": "Če je Leviathan v igri, so igralci, zaščiteni z gostilničarjem, varni pred vsemi zlimi sposobnostmi."
-    },
-    {
-        "target": "leviathan",
-        "trick": "king",
-        "reason": "Če je Leviathan v igri in je vsaj 1 igralec mrtev, kralj vsako noč spozna živega lika."
-    },
-    {
-        "target": "leviathan",
-        "trick": "mayor",
-        "reason": "Če je Leviathan v igri in 5. dan ne pride do usmrtitve, zmaga dobro."
-    },
-    {
-        "target": "leviathan",
-        "trick": "monk",
-        "reason": "Če je v igri Leviathan, je igralec, zaščiten z menihom, varen pred vsemi zlimi sposobnostmi."
-    },
-    {
-        "target": "leviathan",
-        "trick": "pithag",
-        "reason": "Po 5. dnevu Pit-Hag ne more izbrati Levijatana."
-    },
-    {
-        "target": "leviathan",
-        "trick": "ravenkeeper",
-        "reason": "Vsako noč* Leviathan izbere živega igralca (drugačen kot prejšnje noči): izbrani Ravenkeeper uporabi svojo sposobnost, vendar ne umre."
-    },
-    {
-        "target": "leviathan",
-        "trick": "sage",
-        "reason": "Vsako noč* Leviathan izbere živega dobrega igralca (različnega od prejšnjih noči): izbrani modrec uporabi svojo sposobnost, vendar ne umre."
-    },
-    {
-        "target": "leviathan",
-        "trick": "soldier",
-        "reason": "Če je Leviatan v igri, je Vojak varen pred vsemi zlimi sposobnostmi."
-    },
-    {
-        "target": "lilmonsta",
-        "trick": "hatter",
-        "reason": "Če demon izbere Lil' Monsta, izbere tudi Miniona, ki bo nocoj postal varuška Lil' Monsta."
-    },
-    {
-        "target": "lilmonsta",
-        "trick": "magician",
-        "reason": "Vsako noč čarovnik izbere Miniona: če sta ta Minion in Lil' Monsta živa, ta Minion varuje Lil' Monsta."
-    },
-    {
-        "target": "lilmonsta",
-        "trick": "poppygrower",
-        "reason": "Če je Sejalka v igri, se Sledilci ne zbudijo skupaj, ampak vsak posebej, dokler še eden od njih ne odloči, da bo varuška Pošastku."
-    },
-    {
-        "target": "lilmonsta",
-        "trick": "scarletwoman",
-        "reason": "Če je živih 5 ali več igralcev in Pošastkova varuška umre, Pošastek preživi in Škrlatna dama ponoči postane varuška."
-    },
-    {
-        "target": "lilmonsta",
-        "trick": "vizier",
-        "reason": "Vizir je lahko usmrčen in umre, če je varuška Pošastku."
-    },
-    {
-        "target": "lleech",
-        "trick": "mastermind",
-        "reason": "Če je Veleum živ, ko Grabežev gostitelj umre, Grabež preživi, a izgubi svojo moč."
-    },
-    {
-        "target": "lleech",
-        "trick": "slayer",
-        "reason": "Če ubijalec ustreli Grabeževega gostitelja, ta umre."
-    },
-    {
-        "target": "riot",
-        "trick": "banshee",
-        "reason": "Vsako noč* Riot izbere živega dobrega igralca (različnega od prejšnjih noči): izbrani Banshee umre in pridobi svojo sposobnost."
-    },
-    {
-        "target": "riot",
-        "trick": "exorcist",
-        "reason": "Če Exorcist izbere Riot na 3. noč, Minioni ne postanejo Riot."
-    },
-    {
-        "target": "riot",
-        "trick": "farmer",
-        "reason": "Vsako noč* Riot izbere živega dobrega igralca (različnega od prejšnjih noči): izbrani kmet uporabi svojo sposobnost, vendar ne umre."
-    },
-    {
-        "target": "riot",
-        "trick": "grandmother",
-        "reason": "Če je v igri Riot in vnuk čez dan umre, umre tudi babica."
-    },
-    {
-        "target": "riot",
-        "trick": "innkeeper",
-        "reason": "Če je v igri Riot, je igralec, zaščiten z gostilničarjem, varen pred vsemi zlimi sposobnostmi."
-    },
-    {
-        "target": "riot",
-        "trick": "king",
-        "reason": "Če je v igri Riot in je vsaj 1 igralec mrtev, kralj vsako noč spozna živega lika."
-    },
-    {
-        "target": "riot",
-        "trick": "mayor",
-        "reason": "Župan se lahko odloči, da ustavi imenovanje. Če to storijo, ko je živ samo 1 Riot, zmaga dobro. V nasprotnem primeru zmaga zlo."
-    },
-    {
-        "target": "riot",
-        "trick": "monk",
-        "reason": "Če je v igri Riot, je igralec, zaščiten z Monkom, varen pred vsemi zlimi sposobnostmi."
-    },
-    {
-        "target": "riot",
-        "trick": "ravenkeeper",
-        "reason": "Vsako noč* Riot izbere živega dobrega igralca (različnega od prejšnjih noči): izbrani Ravenkeeper uporabi svojo sposobnost, vendar ne umre."
-    },
-    {
-        "target": "riot",
-        "trick": "sage",
-        "reason": "Vsako noč* Riot izbere živega dobrega igralca (različnega od prejšnjih noči): izbrani modrec uporabi svojo sposobnost, vendar ne umre."
-    },
-    {
-        "target": "riot",
-        "trick": "soldier",
-        "reason": "Če je v igri Riot, je Vojak varen pred vsemi zlimi sposobnostmi."
-    },
-    {
-        "target": "vortox",
-        "trick": "banshee",
-        "reason": "Če je Vortox v igri in Demon ubije Banshee, igralci še vedno izvedo, da je Banshee umrl."
-    },
-    {
         "target": "yaggababble",
         "trick": "exorcist",
-        "reason": "Če Exorcist izbere Yaggababble, sposobnost Yaggababble nocoj ne ubija."
+        "reason": "Če Izganjalec izbere Yaggabble, Yaggabble ne bo ubil nocoj."
     }
 ]

@@ -156,10 +156,6 @@
                 "reason": "If the Poppy Grower is in play, Minions don't wake together. They are woken one by one, until one of them chooses to take the Lil' Monsta token."
             },
             {
-                "id": "magician",
-                "reason": "Each night, the Magician chooses a Minion: if that Minion & Lil' Monsta are alive, that Minion babysits Lil’ Monsta."
-            },
-            {
                 "id": "scarletwoman",
                 "reason": "If there are 5 or more players alive and the player holding the Lil' Monsta token dies, the Scarlet Woman is given the Lil' Monsta token tonight."
             },
@@ -223,14 +219,6 @@
         "id": "spy",
         "jinx": [
             {
-                "id": "alchemist",
-                "reason": "If the Alchemist has the Spy ability, they do not see the Grimoire, and the real Spy cannot register falsely."
-            },
-            {
-                "id": "magician",
-                "reason": "When the Spy sees the Grimoire, the Demon and Magician's character tokens are removed."
-            },
-            {
                 "id": "poppygrower",
                 "reason": "If the Poppy Grower is in play, the Spy does not see the Grimoire until the Poppy Grower dies."
             },
@@ -251,14 +239,6 @@
     {
         "id": "widow",
         "jinx": [
-            {
-                "id": "alchemist",
-                "reason": "If the Alchemist has the Widow ability, they do not see the Grimoire."
-            },
-            {
-                "id": "magician",
-                "reason": "When the Widow sees the Grimoire, the Demon and Magician's character tokens are removed."
-            },
             {
                 "id": "poppygrower",
                 "reason": "If the Poppy Grower is in play, the Widow does not see the Grimoire until the Poppy Grower dies."
@@ -288,10 +268,6 @@
             {
                 "id": "clockmaker",
                 "reason": "If the Summoner is in play, the Clockmaker does not receive their information until a Demon is created."
-            },
-            {
-                "id": "alchemist",
-                "reason": "If there is an Alchemist-Summoner in play, the game starts with a Demon in play, as normal. If the Alchemist-Summoner chooses a player, they make that player a Demon but do not change their alignment."
             },
             {
                 "id": "poppygrower",
@@ -385,6 +361,10 @@
             {
                 "id": "taowu",
                 "reason": "梼杌不会得知谁是提线木偶。在梼杌使得提线木偶\n失去能力后，梼杌会得知对应的那一名提线木偶是谁，\n但提线木偶会仍然以为自己是一个善良角色。"
+            },
+            {
+                "id": "wraith",
+                "reason": "The Wraith does not wake with the Marionette."
             }
         ]
     },
@@ -528,10 +508,6 @@
                 "reason": "If the Vizier loses their ability, they learn this. If the Vizier is executed while they have their ability, their team wins."
             },
             {
-                "id": "magician",
-                "reason": "If the Vizier and Magician are both in play, the Demon does not learn the Minions."
-            },
-            {
                 "id": "fearmonger",
                 "reason": "The Vizier wakes with the Fearmonger, learns who they choose and cannot choose to immediately execute that player."
             },
@@ -600,10 +576,6 @@
                 "reason": "If the Demon would have the Drunk ability, the Boffin chooses a Townsfolk player to have this ability instead."
             },
             {
-                "id": "alchemist",
-                "reason": "If the Alchemist has the Boffin ability, the Alchemist does not learn what ability the Demon has."
-            },
-            {
                 "id": "villageidiot",
                 "reason": "If there is a spare token, the Boffin can give the Demon the Village Idiot ability."
             },
@@ -655,6 +627,10 @@
             {
                 "id": "ganshiren",
                 "reason": "如果瘟疫医生死亡且说书人会因此获得赶尸人的能力，改为一名存活的爪牙玩家获得此能力，且他会得知此事。"
+            },
+            {
+                "id": "wraith",
+                "reason": "If the Plague Doctor dies, a living Minion gains the Wraith ability in addition to their own ability, and learns this."
             }
         ]
     },
@@ -970,6 +946,68 @@
             {
                 "id": "mathematician",
                 "reason": "引路人会得知数学家是否被影响，即使他是在数学家之前醒来。"
+            }
+        ]
+    },
+    {
+        "id": "alchemist",
+        "jinx": [
+            {
+                "id": "wraith",
+                "reason": "If the Alchemist has the Wraith ability, they do not, and a Wraith is in play. Each day, after the execution phase, the living Alchemist may publicly guess a living player as the Wraith: if correct, the Demon must choose the Wraith tonight."
+            },
+            {
+                "id": "spy",
+                "reason": "If the Alchemist has the Spy ability, they do not, and a Spy is in play. Each day, after the execution phase, the living Alchemist may publicly guess a living player as the Spy. If correct, the Demon must choose the Spy tonight."
+            },
+            {
+                "id": "widow",
+                "reason": "If the Alchemist has the Widow ability, they do not, and a Widow is in play. Each day, after the execution phase, the living Alchemist may publicly guess a living player as the Widow. If correct, the Demon must choose the Widow tonight."
+            },
+            {
+                "id": "marionette",
+                "reason": "An Alchemist-Marionette has no Marionette ability & the Marionette is in play."
+            },
+            {
+                "id": "summoner",
+                "reason": "The Alchemist-Summoner does not get bluffs, and chooses which Demon but not which player. If they die before this happens, evil wins. [No Demon]"
+            },
+            {
+                "id": "mastermind",
+                "reason": "An Alchemist-Mastermind has no Mastermind ability & the Mastermind is not-in-play."
+            },
+            {
+                "id": "organgrinder",
+                "reason": "If the Alchemist has the Organ Grinder ability, the Organ Grinder is in play & if both the Alchemist and Organ Grinder are sober, both are drunk."
+            },
+            {
+                "id": "boffin",
+                "reason": "If the Alchemist has the Boffin ability, the Alchemist does not learn what ability the Demon has."
+            }
+        ]
+    },
+    {
+        "id": "magician",
+        "jinx": [
+            {
+                "id": "widow",
+                "reason": "When the Widow sees the Grimoire, the Demon and Magician's character tokens are removed."
+            },
+            {
+                "id": "spy",
+                "reason": "When the Spy sees the Grimoire, the Demon and Magician's character tokens are removed."
+            },
+            {
+                "id": "wraith",
+                "reason": "Each day, after the execution phase, the living Magician may publicly guess a living player as the Wraith: if correct, the Demon must choose the Wraith tonight."
+            },
+            {
+                "id": "lilmonsta",
+                "reason": "Each night, the Magician chooses a Minion: if that Minion & Lil' Monsta are alive, that Minion babysits Lil’ Monsta."
+            },
+            {
+                "id": "vizier",
+                "reason": "If the Vizier and Magician are both in play, the Demon does not learn the Minions."
             }
         ]
     }

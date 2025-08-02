@@ -474,6 +474,22 @@
         "image": "/build/img/icons/outsider/butler.webp"
     },
     {
+        "id": "cacklejack",
+        "name": "Cacklejack",
+        "edition": "",
+        "team": "traveller",
+        "firstNight": 0,
+        "firstNightReminder": "",        
+        "otherNight": 2,
+        "otherNightReminder": "Replace the character token of any player (besides the player the Cacklejack chose today) with a different character token. Wake that player and show them the 'You are' card and their new character token.",
+        "reminders": [
+            "Not Me"
+        ],
+        "setup": false,
+        "ability": "Each day, choose a player: a different player changes character tonight",
+        "image": "/build/img/icons/traveller/cacklejack.webp"
+    },
+    {
         "id": "cannibal",
         "name": "Cannibal",
         "edition": "",
@@ -3464,6 +3480,20 @@
         "setup": false,
         "ability": "Once per game, choose to make a wish. If granted, it might have a price & leave a clue as to its nature.",
         "image": "/build/img/icons/minion/wizard.webp"
+    },
+    {
+        "id": "wraith",
+        "name": "Wraith",
+        "edition": "",
+        "team": "minion",
+        "firstNight": 1,
+        "firstNightReminder": "Wake the Wraith whenever other evil players wake.",
+        "otherNight": 1,
+        "otherNightReminder": "Wake the Wraith whenever other evil players wake.",
+        "reminders": [],
+        "setup": false,
+        "ability": "You may choose to open your eyes at night. You wake when other evil players do.",
+        "image": "/build/img/icons/demon/wraith.webp"
     },
     {
         "id": "wudaozhe",

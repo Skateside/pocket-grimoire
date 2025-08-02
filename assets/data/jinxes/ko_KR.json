@@ -1,8 +1,78 @@
 [
     {
+        "target": "alchemist",
+        "trick": "boffin",
+        "reason": "만약 연금술사가 연구광의 능력을 얻는다면, 연금술사는 악마가 가지게된 능력을 알 수 없습니다."
+    },
+    {
+        "target": "alchemist",
+        "trick": "marionette",
+        "reason": "Alchemist-Marionette에는 Marionette 능력이 없습니다. Marionette는 놀이에 있습니다."
+    },
+    {
+        "target": "alchemist",
+        "trick": "mastermind",
+        "reason": "Alchemist-Mastermind에는 Mastermind 능력이 없으며 Mastermind는 재생되지 않습니다."
+    },
+    {
+        "target": "alchemist",
+        "trick": "organgrinder",
+        "reason": "Alchemist가 Organ Grinder 능력을 가지고 있다면 Organ Grinder는 Alchemist와 Organ Grinder 모두 소버이며 둘 다 술에 취합니다."
+    },
+    {
+        "target": "alchemist",
+        "trick": "spy",
+        "reason": "Alchemist가 스파이 능력을 가지고 있다면, 그들은하지 않습니다, 스파이는 재생에. 매일, 실행 단계 후, 생활 Alchemist는 Spy로 생활 선수를 공개적으로 추측 할 수 있습니다. 수정하면 악마는 Spy tonight를 선택해야합니다."
+    },
+    {
+        "target": "alchemist",
+        "trick": "summoner",
+        "reason": "Alchemist-Summoner는 bluffs를 얻지 않으며 Demon이 아닌 플레이어를 선택하십시오. 그들이이 일어나기 전에 죽을 경우, 악의 승리. [노 악마]"
+    },
+    {
+        "target": "alchemist",
+        "trick": "widow",
+        "reason": "Alchemist가 Widow 능력을 가지고 있다면, 그들은하지 않으며 Widow는 플레이에 있습니다. 매일, 실행 단계 후에, 살아있는 Alchemist는 Widow로 생활 선수를 공개적으로 추측할지도 모릅니다. 수정하면 악마는 Widow tonight를 선택해야합니다."
+    },
+    {
+        "target": "alchemist",
+        "trick": "wraith",
+        "reason": "Alchemist가 Wraith 능력을 가지고 있다면, 그들은하지 않으며, Wraith는 연극에 있습니다. 매일, 실행 단계 후, 살아있는 Alchemist는 Wraith로 생활 선수를 공개적으로 추측할 수 있습니다: 정확하면, 악마는 Wraith tonight를 선택해야합니다."
+    },
+    {
         "target": "alhadikhia",
         "trick": "princess",
-        "reason": "공주가 첫날에 플레이어를 지명하고 처형했다면, 오늘 밤 알-하디키아 능력으로 아무도 죽지 않습니다."
+        "reason": "공주가 지명 된 경우 1 일 플레이어를 실행하면 Al-Hadikhia 능력의 밤이 없습니다."
+    },
+    {
+        "target": "boffin",
+        "trick": "cultleader",
+        "reason": "만약 악마가 교주의 능력을 가진다면, 그들은 이 능력으로 선하게 될 수 없습니다."
+    },
+    {
+        "target": "boffin",
+        "trick": "drunk",
+        "reason": "만약 악마가 주정뱅이의 능력을 가진다면, 연구광은 마을주민플레이어 한명을 선택하고 그 능력을 대신 가집니다."
+    },
+    {
+        "target": "boffin",
+        "trick": "goon",
+        "reason": "만약 악마가 깡패의 능력을 가진다면, 그들은 이 능력으로 선하게 될 수 없습니다."
+    },
+    {
+        "target": "boffin",
+        "trick": "ogre",
+        "reason": "악마는 오우거의 능력을 가질 수 없습니다."
+    },
+    {
+        "target": "boffin",
+        "trick": "politician",
+        "reason": "악마는 정치가의 능력을 가질 수 없습니다."
+    },
+    {
+        "target": "boffin",
+        "trick": "villageidiot",
+        "reason": "만약 여분 토큰이 있다면, 연구광은 악마에게 동네바보의 능력을 줄 수 있습니다."
     },
     {
         "target": "bountyhunter",
@@ -15,6 +85,11 @@
         "reason": "만약 철학자가 현상금 사냥꾼의 능력을 얻는다면, 한 마을주민은 악하게 변합니다."
     },
     {
+        "target": "butler",
+        "trick": "organgrinder",
+        "reason": "만약 오르간 연주자가 눈을 감고 투표를 하게 하는 경우, 집사는 투표하기 위해 손을 들 수 있지만 그 투표는 마스터와 동일한 투표할때만 유효합니다."
+    },
+    {
         "target": "cannibal",
         "trick": "butler",
         "reason": "만약 식인종이 집사의 능력을 얻었다면, 식인종은 그것에 대해 배웁니다."
@@ -22,17 +97,17 @@
     {
         "target": "cannibal",
         "trick": "juggler",
-        "reason": "저글러가 첫날에 추측하고 처형당하면, 살아있는 식인종은 오늘 밤 저글러가 추측한 것이 몇 개나 맞았는지 알게 됩니다."
+        "reason": "Juggler가 첫날에 추측하고 실행에 의해 죽을 경우, 살아있는 Cannibal는 Juggler가 정확한 추측하는 방법을 배웁니다."
     },
     {
         "target": "cannibal",
         "trick": "poppygrower",
-        "reason": "식인종이 양귀비 재배자를 먹고 죽거나 양귀비 재배자 능력을 잃으면 악마와 하수인은 그날 밤 서로를 배웁니다."
+        "reason": "Cannibal가 Poppy Grower를 먹으면 Poppy Grower 능력을 잃거나 Poppy Grower 능력을 잃고 Demon과 Minions는 서로를 학습합니다."
     },
     {
         "target": "cannibal",
         "trick": "princess",
-        "reason": "식인종이 오늘 공주를 지명하고 처형했다면, 악마는 오늘 밤 사람을 죽이지 않습니다."
+        "reason": "Cannibal가 지명 된 경우, Demon은 오늘 공주를 실행하지 않습니다."
     },
     {
         "target": "cannibal",
@@ -40,19 +115,9 @@
         "reason": "만약 식인종이 광신도의 능력을 얻는다면, 식인종은 그것에 대해 배웁니다."
     },
     {
-        "target": "mathematician",
-        "trick": "chambermaid",
-        "reason": "하녀는 수학자가 오늘밤 깨어나는지 여부를 알 수 있습니다.(하녀가 처음으로 깨어나더라도)"
-    },
-    {
-        "target": "mathematician",
-        "trick": "lunatic",
-        "reason": "수학자는 만약 미치광이가 다른 플레이어를 공격했다면, 실제 악마가 공격한 플레이어와 다르다면 알게됩니다"
-    },
-    {
-        "target": "butler",
-        "trick": "organgrinder",
-        "reason": "만약 오르간 연주자가 눈을 감고 투표를 하게 하는 경우, 집사는 투표하기 위해 손을 들 수 있지만 그 투표는 마스터와 동일한 투표할때만 유효합니다."
+        "target": "cerenovus",
+        "trick": "goblin",
+        "reason": "세레노부스는 한 플레이어를 선택하고, 고블린 역할에 미치게 할 수 있습니다."
     },
     {
         "target": "heretic",
@@ -90,89 +155,174 @@
         "reason": "오직 한 징크스 캐릭터만 플레이될 수 있습니다."
     },
     {
-        "target": "ogre",
-        "trick": "recluse",
-        "reason": "만약 은둔자가 오우거에게 악으로 등록된다면, 오우거는 그들이 악하다고 알게 됩니다."
+        "target": "kazali",
+        "trick": "choirboy",
+        "reason": "성가대원이 플레이중 이라면, 카질리는 왕을 하수인으로 선택할 수 없습니다."
     },
     {
-        "target": "plaguedoctor",
-        "trick": "baron",
-        "reason": "스토리텔러가 남작 능력을 얻으면 최대 2명의 플레이어가 플레이하지 않는 아웃사이더가 됩니다."
-    },
-    {
-        "target": "plaguedoctor",
-        "trick": "boomdandy",
-        "reason": "만약 전염병 의사가 처형되고 이야기꾼이 봄버맨 능력을 가진다면, 봄버맨 능력은 즉시 발동합니다."
-    },
-    {
-        "target": "plaguedoctor",
-        "trick": "eviltwin",
-        "reason": "만약 전염병 의사가 죽었다면, 이야기꾼은 사악한 쌍둥이의 능력을 얻을수 었습니다."
-    },
-    {
-        "target": "plaguedoctor",
-        "trick": "fearmonger",
-        "reason": "만약 전염병 의사가 죽는다면, 살아있는 한 하수인은 공포조장자 능력을 얻고 추가로 그 자신의 능력을 지닙니다. 그리고 그 사실을 알게됩니다"
-    },
-    {
-        "target": "plaguedoctor",
-        "trick": "goblin",
-        "reason": "만약 전염병의사가 죽는다면, 살아있는 하수인은 고블린의 효과를 그들 자신의 효과에 추가로 얻고, 그것을 알게 됩니다."
-    },
-    {
-        "target": "plaguedoctor",
-        "trick": "marionette",
-        "reason": "악마의 이웃이 살아 있고 역병 의사가 죽을 때 마을 사람들이나 외부인이 있는 경우, 그 플레이어는 사악한 마리오네트가 됩니다. 이미 추가 사악한 플레이어가 있는 경우에는 이런 일이 발생하지 않습니다."
-    },
-    {
-        "target": "plaguedoctor",
-        "trick": "scarletwoman",
-        "reason": "만약 전염병 의사가 죽는다면, 살아있는 한 하수인은 부정한 여자 능력을 얻고 추가로 그 자신의 능력을 지닙니다. 그리고 그 사실을 알게됩니다."
-    },
-    {
-        "target": "plaguedoctor",
-        "trick": "spy",
-        "reason": "만약 전염병 의사가 죽는다면, 살아있는 한 하수인은 스파이 능력을 얻고 추가로 그 자신의 능력을 지닙니다. 그리고 그 사실을 알게됩니다."
-    },
-    {
-        "target": "boffin",
-        "trick": "alchemist",
-        "reason": "만약 연금술사가 연구광의 능력을 얻는다면, 연금술사는 악마가 가지게된 능력을 알 수 없습니다."
-    },
-    {
-        "target": "boffin",
-        "trick": "cultleader",
-        "reason": "만약 악마가 교주의 능력을 가진다면, 그들은 이 능력으로 선하게 될 수 없습니다."
-    },
-    {
-        "target": "boffin",
-        "trick": "drunk",
-        "reason": "만약 악마가 주정뱅이의 능력을 가진다면, 연구광은 마을주민플레이어 한명을 선택하고 그 능력을 대신 가집니다."
-    },
-    {
-        "target": "boffin",
+        "target": "kazali",
         "trick": "goon",
-        "reason": "만약 악마가 깡패의 능력을 가진다면, 그들은 이 능력으로 선하게 될 수 없습니다."
+        "reason": "Kazali는 Goon 플레이어가 악의 사역 중 하나임을 선택할 수 있습니다."
     },
     {
-        "target": "boffin",
-        "trick": "ogre",
-        "reason": "악마는 오우거의 능력을 가질 수 없습니다."
+        "target": "kazali",
+        "trick": "huntsman",
+        "reason": "만약 카질리가 아가씨를 하수인으로 선택했고 헌츠맨이 플레이중 이라면 한 선한 플레이어가 아가씨가 됩니다."
     },
     {
-        "target": "boffin",
-        "trick": "politician",
-        "reason": "악마는 정치가의 능력을 가질 수 없습니다."
+        "target": "kazali",
+        "trick": "marionette",
+        "reason": "Kazali가 Marionette를 만들려면 이웃 중 하나를 선택해야합니다."
     },
     {
-        "target": "boffin",
-        "trick": "villageidiot",
-        "reason": "만약 여분 토큰이 있다면, 연구광은 악마에게 동네바보의 능력을 줄 수 있습니다."
+        "target": "kazali",
+        "trick": "soldier",
+        "reason": "Kazali는 군인 선수가 악의 사역 중 하나임을 선택할 수 있습니다."
     },
     {
-        "target": "cerenovus",
-        "trick": "goblin",
-        "reason": "세레노부스는 한 플레이어를 선택하고, 고블린 역할에 미치게 할 수 있습니다."
+        "target": "legion",
+        "trick": "engineer",
+        "reason": "군단과 인지니어는 동시에 게임 시작시 플레이될 수 없습니다. 만약 엔지니어가 군단을 만든다면, 대부분의 플레이어는 군단이 됩니다.(악한플레이어를 포함하여)"
+    },
+    {
+        "target": "legion",
+        "trick": "hatter",
+        "reason": "만약 모자장수가 죽고, 군단이 플레이 중이라면, 아무일도 일어나지 않습니다. 만약 모자장수가 죽고 한 악한 플레이어가 군단을 선택한다면, 현재 모든 악 플레이어는 군단이 됩니다."
+    },
+    {
+        "target": "legion",
+        "trick": "minstrel",
+        "reason": "만약 군단이 처형으로 오늘 사망하면, 군단을 그들의 능력을 유지하지만 음유시인은 그들이 군단임을 알게 될 수도 있습니다."
+    },
+    {
+        "target": "legion",
+        "trick": "preacher",
+        "reason": "만약 전도사가 군단을 선택한다면, 군단은 그들의 능력을 유지하지만 전도사는 자신이 군단임을 알게 될 수도 있습니다."
+    },
+    {
+        "target": "legion",
+        "trick": "zealot",
+        "reason": "Zealot는 Legion의 능력에 대한 악으로 등록 할 수 있습니다."
+    },
+    {
+        "target": "leviathan",
+        "trick": "banshee",
+        "reason": "각 밤*, Leviathan는 살아있는 좋은 선수 (이전 밤에 다른)를 선택합니다: 선택된 Banshee는 죽고 그들의 능력을 얻습니다."
+    },
+    {
+        "target": "leviathan",
+        "trick": "exorcist",
+        "reason": "Evil은 1 개 이상의 좋은 플레이어가 실행되면 승리하지 않습니다. Exorcist가 살아있을 경우 Leviathan을 성공적으로 선택했습니다."
+    },
+    {
+        "target": "leviathan",
+        "trick": "farmer",
+        "reason": "각 밤*, Leviathan는 살아있는 좋은 선수 (이전 밤에 다른)를 선택합니다: 선택한 농부는 그들의 능력을 사용하지만 죽지 않습니다."
+    },
+    {
+        "target": "leviathan",
+        "trick": "grandmother",
+        "reason": "Leviathan이 재생중인 경우, Grandchild는 실행에 의해 죽고, 악의 승리."
+    },
+    {
+        "target": "leviathan",
+        "trick": "hatter",
+        "reason": "만약 모자장수가 5일 이후에 죽는다면, 악마는 레비아탄을 선택할 수 없습니다."
+    },
+    {
+        "target": "leviathan",
+        "trick": "innkeeper",
+        "reason": "Leviathan이 재생중인 경우, Innkeeper-protected-players는 모든 악의 능력에서 안전합니다."
+    },
+    {
+        "target": "leviathan",
+        "trick": "king",
+        "reason": "Leviathan이 재생중인 경우 적어도 1 플레이어가 죽을 때, 왕은 매일 밤 살아있는 캐릭터를 배웁니다."
+    },
+    {
+        "target": "leviathan",
+        "trick": "mayor",
+        "reason": "Leviathan가 재생중인 경우 & 실행은 일 5, 좋은 승리에 발생하지 않습니다."
+    },
+    {
+        "target": "leviathan",
+        "trick": "monk",
+        "reason": "Leviathan이 재생중인 경우, Monk-protected-player는 모든 악의 능력에서 안전합니다."
+    },
+    {
+        "target": "leviathan",
+        "trick": "pithag",
+        "reason": "5일 이후에, 피트해그는 레비아탄을 선택할 수 없습니다."
+    },
+    {
+        "target": "leviathan",
+        "trick": "ravenkeeper",
+        "reason": "각 밤*, Leviathan는 살아있는 선수 (이전 밤에 다른)를 선택합니다: 선택한 Ravenkeeper는 그들의 능력을 사용하지만 죽지 않습니다."
+    },
+    {
+        "target": "leviathan",
+        "trick": "sage",
+        "reason": "각 밤*, Leviathan는 살아있는 좋은 선수 (이전 밤에 다른)를 선택합니다: 선택된 Sage는 그들의 능력을 사용하지만 죽지 않습니다."
+    },
+    {
+        "target": "leviathan",
+        "trick": "soldier",
+        "reason": "Leviathan이 재생중인 경우, 군인은 모든 악의 능력에서 안전합니다."
+    },
+    {
+        "target": "lilmonsta",
+        "trick": "hatter",
+        "reason": "만약 악마가 릴몬스타를 선택한다면, 그들은 변할 하수인 뿐 아니라 릴몬스타를 돌볼 사람도 선택됩니다."
+    },
+    {
+        "target": "lilmonsta",
+        "trick": "poppygrower",
+        "reason": "만약 양귀비 재배자가 플레이중이라면, 하수인들은 같이 깨어나지 않습니다. 그들중 하나가 릴몬스타 토큰을 가져갈때까지, 한명씩 깨어납니다."
+    },
+    {
+        "target": "lilmonsta",
+        "trick": "scarletwoman",
+        "reason": "만약 5명 이상의 플레이어가 살아있고 릴몬스타 토큰을 가진 플레이어가 죽었다면, 부정한 여자는 릴몬스타 토큰을 오늘밤 받습니다."
+    },
+    {
+        "target": "lilmonsta",
+        "trick": "vizier",
+        "reason": "수상은 릴몬스타를 돌보고 있다면, 처형으로 죽지 않습니다."
+    },
+    {
+        "target": "lleech",
+        "trick": "mastermind",
+        "reason": "만약 흑막이 살아있고, 리치의 주인이 처형당했다면, 리치는 살아남으나 능력을 잃습니다."
+    },
+    {
+        "target": "lleech",
+        "trick": "slayer",
+        "reason": "만약 슬레이어가 리치의 주인을 죽인다면, 그 주인은 죽습니다.(리치도 죽습니다)"
+    },
+    {
+        "target": "magician",
+        "trick": "wraith",
+        "reason": "각 일, 실행 단계 후, 살아있는 매디안은 Wraith로 생활 선수를 공개적으로 추측 할 수 있습니다 : 올바른 경우, 악마는 Wraith tonight를 선택해야합니다."
+    },
+    {
+        "target": "magician",
+        "trick": "spy",
+        "reason": "스파이가 그리모어를 볼때, 악마와 마술사의 캐릭터 토큰은 제거됩니다."
+    },
+    {
+        "target": "magician",
+        "trick": "vizier",
+        "reason": "Vizier와 Magician이 모두 재생중인 경우 Demon은 Minions를 배우지 않습니다."
+    },
+    {
+        "target": "magician",
+        "trick": "widow",
+        "reason": "마녀가 그리모어를 볼 때, 악마와 마술사 캐릭터 토큰은 제거됩니다."
+    },
+    {
+        "target": "magician",
+        "trick": "lilmonsta",
+        "reason": "각 밤, 마술사 선택 Minion: 그 Minion & Lil' Monsta는 살아있다면, 그 Minion babysits Lil' Monsta."
     },
     {
         "target": "marionette",
@@ -205,9 +355,29 @@
         "reason": "꼭두각시는 3개의 비-플레이 캐릭터를 배우지 못합니다. 악마는 3개를 더 배웁니다."
     },
     {
+        "target": "marionette",
+        "trick": "wraith",
+        "reason": "Wraith는 Marionette와 함께 일어나지 않습니다."
+    },
+    {
         "target": "mastermind",
         "trick": "alhadikhia",
         "reason": "만약 알하디키아가 처형으로 죽고 흑막이 살아있다면, 알하디키아는 3명의 선한 플레이어를 오늘밤 선택합니다. :\" 만약 3명이 전부 생존을 선택하면, 악이 승리합니다. 반대의 경우, 선이 승리합니다."
+    },
+    {
+        "target": "mathematician",
+        "trick": "chambermaid",
+        "reason": "하녀는 수학자가 오늘밤 깨어나는지 여부를 알 수 있습니다.(하녀가 처음으로 깨어나더라도)"
+    },
+    {
+        "target": "mathematician",
+        "trick": "lunatic",
+        "reason": "수학자는 만약 미치광이가 다른 플레이어를 공격했다면, 실제 악마가 공격한 플레이어와 다르다면 알게됩니다"
+    },
+    {
+        "target": "ogre",
+        "trick": "recluse",
+        "reason": "만약 은둔자가 오우거에게 악으로 등록된다면, 오우거는 그들이 악하다고 알게 됩니다."
     },
     {
         "target": "pithag",
@@ -227,7 +397,7 @@
     {
         "target": "pithag",
         "trick": "ogre",
-        "reason": "Pit-Hag가 사악한 플레이어를 오우거로 변화시킨다면, 그들은 자신의 능력 때문에 선하게 변할 수 없습니다."
+        "reason": "Pit-Hag가 악한 플레이어를 Ogre로 돌리면, 그들은 자신의 능력으로 인해 좋은 전환 할 수 없습니다."
     },
     {
         "target": "pithag",
@@ -238,6 +408,106 @@
         "target": "pithag",
         "trick": "villageidiot",
         "reason": "만약 여분의 토큰이 있다면, 피트해그는 추가 동네바보를 만들수 있습니다. 이 경우 취한 동네바보가 변경될 수 있습니다."
+    },
+    {
+        "target": "plaguedoctor",
+        "trick": "baron",
+        "reason": "Storyteller가 Baron 능력을 얻은 경우, 최대 두 명의 플레이어가 플레이 아우터가되지 않습니다."
+    },
+    {
+        "target": "plaguedoctor",
+        "trick": "boomdandy",
+        "reason": "만약 전염병 의사가 처형되고 이야기꾼이 봄버맨 능력을 가진다면, 봄버맨 능력은 즉시 발동합니다."
+    },
+    {
+        "target": "plaguedoctor",
+        "trick": "eviltwin",
+        "reason": "만약 전염병 의사가 죽었다면, 이야기꾼은 사악한 쌍둥이의 능력을 얻을수 었습니다."
+    },
+    {
+        "target": "plaguedoctor",
+        "trick": "fearmonger",
+        "reason": "만약 전염병 의사가 죽는다면, 살아있는 한 하수인은 공포조장자 능력을 얻고 추가로 그 자신의 능력을 지닙니다. 그리고 그 사실을 알게됩니다"
+    },
+    {
+        "target": "plaguedoctor",
+        "trick": "goblin",
+        "reason": "만약 전염병의사가 죽는다면, 살아있는 하수인은 고블린의 효과를 그들 자신의 효과에 추가로 얻고, 그것을 알게 됩니다."
+    },
+    {
+        "target": "plaguedoctor",
+        "trick": "marionette",
+        "reason": "악마가 살아있는 이웃과 플라그 닥터가 죽을 때 Townsfolk 또는 Outerr가있는 경우 플레이어는 악몽이됩니다. 이미 여분의 악 플레이어가 있다면, 이것은 일어나지 않습니다."
+    },
+    {
+        "target": "plaguedoctor",
+        "trick": "scarletwoman",
+        "reason": "만약 전염병 의사가 죽는다면, 살아있는 한 하수인은 부정한 여자 능력을 얻고 추가로 그 자신의 능력을 지닙니다. 그리고 그 사실을 알게됩니다."
+    },
+    {
+        "target": "plaguedoctor",
+        "trick": "spy",
+        "reason": "만약 전염병 의사가 죽는다면, 살아있는 한 하수인은 스파이 능력을 얻고 추가로 그 자신의 능력을 지닙니다. 그리고 그 사실을 알게됩니다."
+    },
+    {
+        "target": "plaguedoctor",
+        "trick": "wraith",
+        "reason": "Plague 의사가 죽을 경우, 살아있는 Minion은 자신의 능력 이외에 Wraith 능력을 얻고 이것을 배우십시오."
+    },
+    {
+        "target": "riot",
+        "trick": "banshee",
+        "reason": "각 밤*, Riot는 살아있는 좋은 선수를 선택합니다 (이전 밤에 다른): 선택한 Banshee는 죽고 그들의 능력을 얻습니다."
+    },
+    {
+        "target": "riot",
+        "trick": "exorcist",
+        "reason": "Exorcist가 3rd 밤에 Riot를 선택하면, Minions는 Riot가되지 않습니다."
+    },
+    {
+        "target": "riot",
+        "trick": "farmer",
+        "reason": "각 밤*, Riot는 살아있는 좋은 선수를 선택합니다 (이전 밤에 다른): 선택된 농부는 그들의 능력을 사용하지만 죽지 않습니다."
+    },
+    {
+        "target": "riot",
+        "trick": "grandmother",
+        "reason": "리오트가 놀이에 있고 그랑프리가 낮 동안 죽을 경우, 할머니는 너무 죽는다."
+    },
+    {
+        "target": "riot",
+        "trick": "innkeeper",
+        "reason": "Riot가 재생중인 경우 Innkeeper-protected 플레이어는 모든 악의 능력에서 안전합니다."
+    },
+    {
+        "target": "riot",
+        "trick": "king",
+        "reason": "리오트가 연주 중이라면 적어도 1 플레이어가 죽을 것입니다. 왕은 매일 밤 살아있는 캐릭터를 배웁니다."
+    },
+    {
+        "target": "riot",
+        "trick": "mayor",
+        "reason": "시장은 종료를 중지 할 수 있습니다. 그들은 단지 1 리오트가 살아있을 때, 좋은 승리. 그렇지 않으면 악의 승리."
+    },
+    {
+        "target": "riot",
+        "trick": "monk",
+        "reason": "Riot가 재생중인 경우, Monk-protected 플레이어는 모든 악의 능력에서 안전합니다."
+    },
+    {
+        "target": "riot",
+        "trick": "ravenkeeper",
+        "reason": "각 밤*, Riot는 살아있는 좋은 선수 (이전 밤에 다른)를 선택합니다. 선택한 Ravenkeeper는 자신의 능력을 사용하지만 죽지 않습니다."
+    },
+    {
+        "target": "riot",
+        "trick": "sage",
+        "reason": "각 밤*, Riot는 살아있는 좋은 선수 (이전 밤에 다른)를 선택합니다. 선택한 Sage는 자신의 능력을 사용하지만 죽지 않습니다."
+    },
+    {
+        "target": "riot",
+        "trick": "soldier",
+        "reason": "리오트가 연주하는 경우, 군인은 모든 악의 능력에서 안전합니다."
     },
     {
         "target": "scarletwoman",
@@ -251,18 +521,8 @@
     },
     {
         "target": "spy",
-        "trick": "alchemist",
-        "reason": "연금술사가 스파이 능력을 갖고 있다면 그리모어를 볼 수 없으며, 실제 스파이는 거짓으로 등록할 수 없습니다."
-    },
-    {
-        "target": "spy",
         "trick": "damsel",
         "reason": "만약 스파이가 플레이중이거나, 플레이되었었다면, 아가씨는 중독됩니다."
-    },
-    {
-        "target": "spy",
-        "trick": "magician",
-        "reason": "스파이가 그리모어를 볼때, 악마와 마술사의 캐릭터 토큰은 제거됩니다."
     },
     {
         "target": "spy",
@@ -273,11 +533,6 @@
         "target": "spy",
         "trick": "poppygrower",
         "reason": "만약 양귀비 재배자가 플레이중이라면, 스파이는 그리모어를 양귀비 재배자가 죽을때까지 볼 수 없습니다."
-    },
-    {
-        "target": "summoner",
-        "trick": "alchemist",
-        "reason": "만약 연금술사와 소환사가 플레이중이라면, 특별하게 게임시작시 악마도 같이 플레이됩니다. 만약 연금술사-소환사가 한 플레이어를 선택하면, 그들을 한 플레이어를 악마로 바꾸지만 성향은 유지됩니다."
     },
     {
         "target": "summoner",
@@ -317,7 +572,7 @@
     {
         "target": "summoner",
         "trick": "marionette",
-        "reason": "마리오네트는 소환사의 이웃입니다. 소환사는 마리오네트가 누구인지 알고 있습니다."
+        "reason": "Marionette 이웃 스모니어. 소문자는 Marionette가 누구인지 알고 있습니다."
     },
     {
         "target": "summoner",
@@ -352,22 +607,17 @@
     {
         "target": "vizier",
         "trick": "courtier",
-        "reason": "Vizier가 능력을 잃으면 이것을 배웁니다. Vizier가 능력을 가지고 있는 동안 처형되면 해당 팀이 승리합니다."
+        "reason": "Vizier가 자신의 능력을 잃을 경우, 그들은 이것을 배웁니다. Vizier가 실행되는 경우, 그들은 그들의 능력을 가지고, 그들의 팀 승리."
     },
     {
         "target": "vizier",
         "trick": "fearmonger",
-        "reason": "Vizier는 Fearmonger와 함께 깨어나 그들이 누구를 선택했는지 알게 되며 해당 플레이어를 즉시 처형하도록 선택할 수 없습니다."
+        "reason": "Vizier는 Fearmonger와 함께 깨어 났으며, 선택한 학습자는 즉시 플레이어를 실행할 수 없습니다."
     },
     {
         "target": "vizier",
         "trick": "investigator",
         "reason": "만약 조사관인 수상이 플레이중임을 알게된다면, 이야기꾼은 수상이 존재함을 알리지 않습니다."
-    },
-    {
-        "target": "vizier",
-        "trick": "magician",
-        "reason": "Vizier와 Magician이 모두 플레이 중이라면 악마는 하수인을 배우지 않습니다."
     },
     {
         "target": "vizier",
@@ -377,7 +627,7 @@
     {
         "target": "vizier",
         "trick": "preacher",
-        "reason": "Vizier가 능력을 잃으면 이것을 배웁니다. Vizier가 능력을 가지고 있는 동안 처형되면 해당 팀이 승리합니다."
+        "reason": "Vizier가 자신의 능력을 잃을 경우, 그들은 이것을 배웁니다. Vizier가 실행되는 경우, 그들은 그들의 능력을 가지고, 그들의 팀 승리."
     },
     {
         "target": "vizier",
@@ -385,9 +635,9 @@
         "reason": "광신도는 수상에게 악으로 보일 수 있습니다."
     },
     {
-        "target": "widow",
-        "trick": "alchemist",
-        "reason": "연금술사가 미망인 능력을 갖고 있다면 그리모어를 볼 수 없습니다."
+        "target": "vortox",
+        "trick": "banshee",
+        "reason": "만약 볼텍스가 플레이중이고 악마가 밴시를 죽인다면, 플레이어들은 밴시가 죽었음을 알게됩니다."
     },
     {
         "target": "widow",
@@ -396,223 +646,8 @@
     },
     {
         "target": "widow",
-        "trick": "magician",
-        "reason": "마녀가 그리모어를 볼 때, 악마와 마술사 캐릭터 토큰은 제거됩니다."
-    },
-    {
-        "target": "widow",
         "trick": "poppygrower",
         "reason": "만약 양귀비 재배자가 플레이중이라면, 마녀는 양귀비 재배자가 죽을때 까지 그리모어를 볼 수 없습니다."
-    },
-    {
-        "target": "kazali",
-        "trick": "choirboy",
-        "reason": "성가대원이 플레이중 이라면, 카질리는 왕을 하수인으로 선택할 수 없습니다."
-    },
-    {
-        "target": "kazali",
-        "trick": "goon",
-        "reason": "Kazali는 Goon 플레이어를 사악한 하수인 중 하나로 선택할 수 있습니다."
-    },
-    {
-        "target": "kazali",
-        "trick": "huntsman",
-        "reason": "만약 카질리가 아가씨를 하수인으로 선택했고 헌츠맨이 플레이중 이라면 한 선한 플레이어가 아가씨가 됩니다."
-    },
-    {
-        "target": "kazali",
-        "trick": "marionette",
-        "reason": "카잘리가 마리오네트를 만들기로 결정했다면 이웃 중 하나를 선택해야 합니다."
-    },
-    {
-        "target": "kazali",
-        "trick": "soldier",
-        "reason": "Kazali는 솔저 플레이어를 사악한 하수인 중 하나로 선택할 수 있습니다."
-    },
-    {
-        "target": "legion",
-        "trick": "engineer",
-        "reason": "군단과 인지니어는 동시에 게임 시작시 플레이될 수 없습니다. 만약 엔지니어가 군단을 만든다면, 대부분의 플레이어는 군단이 됩니다.(악한플레이어를 포함하여)"
-    },
-    {
-        "target": "legion",
-        "trick": "hatter",
-        "reason": "만약 모자장수가 죽고, 군단이 플레이 중이라면, 아무일도 일어나지 않습니다. 만약 모자장수가 죽고 한 악한 플레이어가 군단을 선택한다면, 현재 모든 악 플레이어는 군단이 됩니다."
-    },
-    {
-        "target": "legion",
-        "trick": "minstrel",
-        "reason": "만약 군단이 처형으로 오늘 사망하면, 군단을 그들의 능력을 유지하지만 음유시인은 그들이 군단임을 알게 될 수도 있습니다."
-    },
-    {
-        "target": "legion",
-        "trick": "preacher",
-        "reason": "만약 전도사가 군단을 선택한다면, 군단은 그들의 능력을 유지하지만 전도사는 자신이 군단임을 알게 될 수도 있습니다."
-    },
-    {
-        "target": "legion",
-        "trick": "zealot",
-        "reason": "Zealot은 Legion의 능력에 악한 존재로 등록될 수도 있습니다."
-    },
-    {
-        "target": "leviathan",
-        "trick": "banshee",
-        "reason": "매일 밤*, 리바이어던은 살아 있는 좋은 플레이어를 선택합니다(이전 밤과 다름). 선택된 밴시가 죽고 능력을 얻습니다."
-    },
-    {
-        "target": "leviathan",
-        "trick": "exorcist",
-        "reason": "엑소시스트가 살아 있고 리바이어던을 성공적으로 선택한 경우, 1명 이상의 선한 플레이어가 처형되면 악은 승리하지 않습니다."
-    },
-    {
-        "target": "leviathan",
-        "trick": "farmer",
-        "reason": "매일 밤*, 리바이어던은 살아 있는 좋은 플레이어를 선택합니다(이전 밤과 다름). 선택된 농부는 자신의 능력을 사용하지만 죽지 않습니다."
-    },
-    {
-        "target": "leviathan",
-        "trick": "grandmother",
-        "reason": "리바이어던이 플레이 중이고 손자가 처형으로 죽으면 악이 승리합니다."
-    },
-    {
-        "target": "leviathan",
-        "trick": "hatter",
-        "reason": "만약 모자장수가 5일 이후에 죽는다면, 악마는 레비아탄을 선택할 수 없습니다."
-    },
-    {
-        "target": "leviathan",
-        "trick": "innkeeper",
-        "reason": "리바이어던이 플레이 중이라면 여관주인이 보호하는 플레이어는 모든 사악한 능력으로부터 안전합니다."
-    },
-    {
-        "target": "leviathan",
-        "trick": "king",
-        "reason": "리바이어던이 플레이 중이고 최소 1명의 플레이어가 사망한 경우, 왕은 매일 밤 살아있는 캐릭터를 배웁니다."
-    },
-    {
-        "target": "leviathan",
-        "trick": "mayor",
-        "reason": "Leviathan이 플레이 중이고 5일차에 실행이 발생하지 않으면 선이 승리합니다."
-    },
-    {
-        "target": "leviathan",
-        "trick": "monk",
-        "reason": "리바이어던이 플레이 중이라면 수도사가 보호하는 플레이어는 모든 사악한 능력으로부터 안전합니다."
-    },
-    {
-        "target": "leviathan",
-        "trick": "pithag",
-        "reason": "5일 이후에, 피트해그는 레비아탄을 선택할 수 없습니다."
-    },
-    {
-        "target": "leviathan",
-        "trick": "ravenkeeper",
-        "reason": "매일 밤*, 리바이어던은 살아있는 플레이어를 선택합니다(이전 밤과 다름). 선택된 까마귀지기는 자신의 능력을 사용하지만 죽지 않습니다."
-    },
-    {
-        "target": "leviathan",
-        "trick": "sage",
-        "reason": "매일 밤*, 리바이어던은 살아 있는 훌륭한 플레이어를 선택합니다(이전 밤과 다름). 선택된 현자는 자신의 능력을 사용하지만 죽지 않습니다."
-    },
-    {
-        "target": "leviathan",
-        "trick": "soldier",
-        "reason": "리바이어던이 플레이 중이라면 솔저는 모든 사악한 능력으로부터 안전합니다."
-    },
-    {
-        "target": "lilmonsta",
-        "trick": "hatter",
-        "reason": "만약 악마가 릴몬스타를 선택한다면, 그들은 변할 하수인 뿐 아니라 릴몬스타를 돌볼 사람도 선택됩니다."
-    },
-    {
-        "target": "lilmonsta",
-        "trick": "magician",
-        "reason": "매일 밤 마술사는 미니언을 선택합니다. 해당 미니언과 Lil' Monsta가 살아 있으면 그 미니언은 Lil' Monsta를 돌봅니다."
-    },
-    {
-        "target": "lilmonsta",
-        "trick": "poppygrower",
-        "reason": "만약 양귀비 재배자가 플레이중이라면, 하수인들은 같이 깨어나지 않습니다. 그들중 하나가 릴몬스타 토큰을 가져갈때까지, 한명씩 깨어납니다."
-    },
-    {
-        "target": "lilmonsta",
-        "trick": "scarletwoman",
-        "reason": "만약 5명 이상의 플레이어가 살아있고 릴몬스타 토큰을 가진 플레이어가 죽었다면, 부정한 여자는 릴몬스타 토큰을 오늘밤 받습니다."
-    },
-    {
-        "target": "lilmonsta",
-        "trick": "vizier",
-        "reason": "수상은 릴몬스타를 돌보고 있다면, 처형으로 죽지 않습니다."
-    },
-    {
-        "target": "lleech",
-        "trick": "mastermind",
-        "reason": "만약 흑막이 살아있고, 리치의 주인이 처형당했다면, 리치는 살아남으나 능력을 잃습니다."
-    },
-    {
-        "target": "lleech",
-        "trick": "slayer",
-        "reason": "만약 슬레이어가 리치의 주인을 죽인다면, 그 주인은 죽습니다.(리치도 죽습니다)"
-    },
-    {
-        "target": "riot",
-        "trick": "banshee",
-        "reason": "매일 밤* Riot는 살아 있는 훌륭한 플레이어를 선택합니다(이전 밤과 다름). 선택한 Banshee가 죽고 해당 능력을 얻습니다."
-    },
-    {
-        "target": "riot",
-        "trick": "exorcist",
-        "reason": "엑소시스트가 3일째 밤에 라이엇을 선택하면 미니언은 라이엇이 되지 않습니다."
-    },
-    {
-        "target": "riot",
-        "trick": "farmer",
-        "reason": "매일 밤* Riot는 살아 있는 좋은 플레이어를 선택합니다(이전 밤과 다름). 선택된 농부는 자신의 능력을 사용하지만 죽지 않습니다."
-    },
-    {
-        "target": "riot",
-        "trick": "grandmother",
-        "reason": "Riot이 플레이 중일 때 손자가 낮에 죽으면 할머니도 죽습니다."
-    },
-    {
-        "target": "riot",
-        "trick": "innkeeper",
-        "reason": "Riot이 플레이 중이라면 여관주인이 보호하는 플레이어는 모든 사악한 능력으로부터 안전합니다."
-    },
-    {
-        "target": "riot",
-        "trick": "king",
-        "reason": "Riot이 플레이 중이고 최소 1명의 플레이어가 사망한 경우, 왕은 매일 밤 살아있는 캐릭터를 배웁니다."
-    },
-    {
-        "target": "riot",
-        "trick": "mayor",
-        "reason": "시장은 지명을 중단하기로 결정할 수도 있습니다. Riot이 1명만 살아 있을 때 그렇게 하면 선이 승리합니다. 그렇지 않으면 악이 승리합니다."
-    },
-    {
-        "target": "riot",
-        "trick": "monk",
-        "reason": "폭동이 플레이 중이라면 몽크가 보호하는 플레이어는 모든 사악한 능력으로부터 안전합니다."
-    },
-    {
-        "target": "riot",
-        "trick": "ravenkeeper",
-        "reason": "매일 밤* Riot는 살아 있는 좋은 플레이어를 선택합니다(이전 밤과 다름). 선택된 Ravenkeeper는 자신의 능력을 사용하지만 죽지 않습니다."
-    },
-    {
-        "target": "riot",
-        "trick": "sage",
-        "reason": "매일 밤*, 라이엇은 살아 있는 좋은 플레이어를 선택합니다(이전 밤과 다름). 선택된 현자는 자신의 능력을 사용하지만 죽지 않습니다."
-    },
-    {
-        "target": "riot",
-        "trick": "soldier",
-        "reason": "Riot이 플레이 중이라면 솔저는 모든 사악한 능력으로부터 안전합니다."
-    },
-    {
-        "target": "vortox",
-        "trick": "banshee",
-        "reason": "만약 볼텍스가 플레이중이고 악마가 밴시를 죽인다면, 플레이어들은 밴시가 죽었음을 알게됩니다."
     },
     {
         "target": "yaggababble",

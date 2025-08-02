@@ -1,143 +1,48 @@
 [
     {
+        "target": "alchemist",
+        "trick": "boffin",
+        "reason": "Si l'Alchimiste a la capacité du Scientifique, l'Alchimiste n'apprend pas quelle capacité le Démon a."
+    },
+    {
+        "target": "alchemist",
+        "trick": "marionette",
+        "reason": "Un Alchimiste-Marionette n'a pas la capacité de la Marionette & une Marionette est en jeu."
+    },
+    {
+        "target": "alchemist",
+        "trick": "mastermind",
+        "reason": "Un Alchimiste-Conspirateur n'a pas la capacité du Conspirateur & un Conspirateur n'est pas en jeu."
+    },
+    {
+        "target": "alchemist",
+        "trick": "organgrinder",
+        "reason": "Si l'Alchimiste a la capacité de l'Organiste Barbare, un Organiste Barbare est en jeu. Si l'Alchimiste et l'Organiste sont tous les deux sobres, ils sont tous les deux ivres."
+    },
+    {
+        "target": "alchemist",
+        "trick": "spy",
+        "reason": "Si l'Alchimiste a la capacité de l'Espion, il ne l'a pas, et un Espion est en jeu. Chaque jour, après la phase d'exécution, l'Alchimiste (s'il est vivant) peut choisir publiquement un joueur vivant: l'Espion, si choisi, doit être choisi par le Démon ce soir."
+    },
+    {
+        "target": "alchemist",
+        "trick": "summoner",
+        "reason": "Un Alchimiste-Invocateur ne reçoit pas de bluffs, et choisit le Démon mais pas le joueur. S'il meurt avant de le faire, le mal gagne. [Pas de Démon]"
+    },
+    {
+        "target": "alchemist",
+        "trick": "widow",
+        "reason": "Si l'Alchimiste a la capacité de la Veuve, il ne l'a pas, et une Veuve est en jeu. Chaque jour, après la phase d'exécution, l'Alchimiste (s'il est vivant) peut choisir publiquement un joueur vivant: la Veuve, si choisie, doit être choisie par le Démon ce soir."
+    },
+    {
+        "target": "alchemist",
+        "trick": "wraith",
+        "reason": "Si l'Alchimiste a la capacité du Spectre, il ne l'a pas, et un Spectre est en jeu. Chaque jour, après la phase d'exécution, l'Alchimiste (s'il est vivant) peut choisir publiquement un joueur vivant: le Spectre, si choisi, doit être choisi par le Démon ce soir."
+    },
+    {
         "target": "alhadikhia",
         "trick": "princess",
-        "reason": "Si la Princesse a nommé et exécuté un joueur le premier jour, personne ne meurt à cause de la capacité Al-Hadikhia ce soir."
-    },
-    {
-        "target": "bountyhunter",
-        "trick": "kazali",
-        "reason": "Un Villageois maléfique n'est créé que si le Chasseur de Primes reste le Chasseur de Primes."
-    },
-    {
-        "target": "bountyhunter",
-        "trick": "philosopher",
-        "reason": "Si le Faussaire prend la capacité du Chasseur de Prime, un Villageois pourrait devenir maléfique"
-    },
-    {
-        "target": "cannibal",
-        "trick": "butler",
-        "reason": "Si le Cannibale obtient la capacité du Majordome, le Cannibale l'apprend."
-    },
-    {
-        "target": "cannibal",
-        "trick": "juggler",
-        "reason": "Si le Jongleur devine le premier jour et meurt par exécution, ce soir, le Cannibale vivant apprend combien de fois le Jongleur a deviné correctement."
-    },
-    {
-        "target": "cannibal",
-        "trick": "poppygrower",
-        "reason": "Si le Cannibale obtient la capacité du Cultivateur de Pavot puis meurt ou est éxécuté, les Sbires et le Démon se reconnaissent."
-    },
-    {
-        "target": "cannibal",
-        "trick": "princess",
-        "reason": "Si le Cannibale a nommé et exécuté la Princesse aujourd'hui, le Démon ne tue pas ce soir."
-    },
-    {
-        "target": "cannibal",
-        "trick": "zealot",
-        "reason": "Si le Cannibale obtient la capacité du Fanatique, le Cannibale l'apprend."
-    },
-    {
-        "target": "mathematician",
-        "trick": "chambermaid",
-        "reason": "La Femme de chambre apprend si le Mathématicien se réveille ce soir ou non, même si la Femme de chambre se réveille en premier."
-    },
-    {
-        "target": "mathematician",
-        "trick": "lunatic",
-        "reason": "Le Mathématicien apprend si le Lunatique attaque des joueurs differents de ceux attaqués par le démon."
-    },
-    {
-        "target": "butler",
-        "trick": "organgrinder",
-        "reason": "Si le Joueur d'Orgue provoque un vote les yeux fermés, le Majordome peut lever la main pour voter mais son vote n'est compté que si son maître a également voté."
-    },
-    {
-        "target": "heretic",
-        "trick": "baron",
-        "reason": "Le Baron peut n'ajouter qu'un seul Étranger, pas deux."
-    },
-    {
-        "target": "heretic",
-        "trick": "boffin",
-        "reason": "Le Démon ne peut pas avoir la capacité de l'Hérétique."
-    },
-    {
-        "target": "heretic",
-        "trick": "godfather",
-        "reason": "Il ne peut y avoir qu'un seul personnage jinxé en jeu."
-    },
-    {
-        "target": "heretic",
-        "trick": "lleech",
-        "reason": "Si l'Hérétique est l'hôte de la Sangsue et qu'il meurt, alors tous deux meurts et l'Hérétique reste empoisonné."
-    },
-    {
-        "target": "heretic",
-        "trick": "pithag",
-        "reason": "Une Vieille-Chouette ne peux pas créer d'Hérétique."
-    },
-    {
-        "target": "heretic",
-        "trick": "spy",
-        "reason": "Il ne peut y avoir qu'un seul personnage jinxé en jeu."
-    },
-    {
-        "target": "heretic",
-        "trick": "widow",
-        "reason": "Il ne peut y avoir qu'un seul personnage jinxé en jeu."
-    },
-    {
-        "target": "ogre",
-        "trick": "recluse",
-        "reason": "Si le Reclus est reconnu comme étant maléfique à l'Ogre, l'Ogre apprend qu'il est maléfique"
-    },
-    {
-        "target": "plaguedoctor",
-        "trick": "baron",
-        "reason": "Si le Conteur acquiert la capacité Baron, jusqu'à deux joueurs deviennent des Outsiders hors-jeu."
-    },
-    {
-        "target": "plaguedoctor",
-        "trick": "boomdandy",
-        "reason": "Si le Médecin de la Peste est exécuté et que le Conteur obtient la capacité du dynamiteur, la capacité du dynamiteur se déclenche immédiatement."
-    },
-    {
-        "target": "plaguedoctor",
-        "trick": "eviltwin",
-        "reason": "Le Conteur ne peut pas acquérir la capacité de Jumeau Maléfique si le Médecin de la Peste meurt."
-    },
-    {
-        "target": "plaguedoctor",
-        "trick": "fearmonger",
-        "reason": "Si le Médecin de la Peste meurt, un sbire vivant gagne la capacité de l'Epouvanteur en plus de sa propre capacité et l'apprend."
-    },
-    {
-        "target": "plaguedoctor",
-        "trick": "goblin",
-        "reason": "Si le Médecin de la Peste meurt, un Sbire vivant acquiert la capacité du Gobelin en plus de sa propre capacité et l'apprend."
-    },
-    {
-        "target": "plaguedoctor",
-        "trick": "marionette",
-        "reason": "If the Demon has a neighbor who is alive and a Townsfolk or Outsider when the Plague Doctor dies, that player becomes an evil Marionette. If there is already an extra evil player, this does not happen."
-    },
-    {
-        "target": "plaguedoctor",
-        "trick": "scarletwoman",
-        "reason": "Si le Médecin de la Peste meurt, un sbire vivant gagne la capacité de la Croqueuse d'Hommes en plus de sa propre capacité et l'apprend."
-    },
-    {
-        "target": "plaguedoctor",
-        "trick": "spy",
-        "reason": "Si le Médecin de la Peste meurt, un sbire vivant obtient la capacité de l'Espion en plus de sa propre capacité et l'apprend."
-    },
-    {
-        "target": "boffin",
-        "trick": "alchemist",
-        "reason": "Si l'Alchimiste a la capacité du Boffin, l'Alchimiste n'apprend pas quelle capacité le Démon a."
+        "reason": "Si la Princess a nominé & exécuté un joueur lors de son 1er jour, personne ne meurt de la capacité de l'Al-Hadikhia cette nuit."
     },
     {
         "target": "boffin",
@@ -167,7 +72,47 @@
     {
         "target": "boffin",
         "trick": "villageidiot",
-        "reason": "Si il reste un jeton, Le Boffin peut avoir la capacité de l'Idiot du Village."
+        "reason": "Si il reste un jeton, le Démon peut avoir la capacité de l'Idiot du Village."
+    },
+    {
+        "target": "bountyhunter",
+        "trick": "kazali",
+        "reason": "Un Villageois maléfique n'est créé que si le Chasseur de Primes reste le Chasseur de Primes."
+    },
+    {
+        "target": "bountyhunter",
+        "trick": "philosopher",
+        "reason": "Si le Philosophe prend la capacité du Chasseur de Prime, un Villageois pourrait devenir maléfique"
+    },
+    {
+        "target": "butler",
+        "trick": "organgrinder",
+        "reason": "Si l'Organiste Barbare provoque un vote les yeux fermés, le Majordome peut lever la main pour voter mais son vote n'est compté que si son maître a également voté."
+    },
+    {
+        "target": "cannibal",
+        "trick": "butler",
+        "reason": "Si le Cannibale obtient la capacité du Majordome, le Cannibale l'apprend."
+    },
+    {
+        "target": "cannibal",
+        "trick": "juggler",
+        "reason": "Si le Jongleur devine pendant leur premier jour et est éxécuté, cette nuit le Cannibale vivant apprend combien de fois le Jongleur a deviné correctement"
+    },
+    {
+        "target": "cannibal",
+        "trick": "poppygrower",
+        "reason": "Si le Cannibale obtient la capacité du Cultivateur de Pavot puis meurt ou perd cette capacité, les Sbires et le Démon apprennent qui ils sont."
+    },
+    {
+        "target": "cannibal",
+        "trick": "princess",
+        "reason": "Si le Cannibale a nominé, exécuté & tué la Princesse aujourd'hui, le Démon ne tue pas cette nuit."
+    },
+    {
+        "target": "cannibal",
+        "trick": "zealot",
+        "reason": "Si le Cannibale obtient la capacité du Fanatique, le Cannibale l'apprend."
     },
     {
         "target": "cerenovus",
@@ -175,234 +120,39 @@
         "reason": "Le Manipulateur peut choisir de faire qu'un joueur est dément d'être le Gobelin"
     },
     {
-        "target": "marionette",
-        "trick": "balloonist",
-        "reason": "Si la Marionnette pense qu'elle est Aéronaute, +1 Etranger peut avoir été ajouté."
+        "target": "heretic",
+        "trick": "baron",
+        "reason": "Le Baron pourrait n'ajouter qu'un seul Étranger, pas deux."
     },
     {
-        "target": "marionette",
-        "trick": "damsel",
-        "reason": "La Marionnette n'apprend pas qu'une Demoiselle est en jeu."
+        "target": "heretic",
+        "trick": "boffin",
+        "reason": "Le Démon ne peut pas avoir la capacité de l'Hérétique."
     },
     {
-        "target": "marionette",
-        "trick": "huntsman",
-        "reason": "Si la Marionnette pense qu'elle est le Chasseur, une Demoiselle est bien ajoutée."
+        "target": "heretic",
+        "trick": "godfather",
+        "reason": "Il ne peut y avoir qu'un seul personnage jinxé en jeu."
     },
     {
-        "target": "marionette",
-        "trick": "lilmonsta",
-        "reason": "La Marionnette est voisine d'un Sbire, pas du Démon. La Marionnette n'est pas réveillée pour choisir qui prend le jeton du P'tit Monstre et n'est pas informée si elle le reçoit."
+        "target": "heretic",
+        "trick": "lleech",
+        "reason": "Si l'Hérétique est l'hôte de la Sangsue et qu'il meurt, alors tous deux meurent et l'Hérétique reste empoisonné."
     },
     {
-        "target": "marionette",
-        "trick": "poppygrower",
-        "reason": "Quand le Cultivateur de Pavots meurt, le Démon apprend qui est la Marionnette mais elle n'apprend rien."
-    },
-    {
-        "target": "marionette",
-        "trick": "snitch",
-        "reason": "La Marionnette n'est pas informée de 3 personnages hors-jeu. Le Démon en apprend 3 de plus à la place."
-    },
-    {
-        "target": "mastermind",
-        "trick": "alhadikhia",
-        "reason": "Si l'Al-Hadikhia meurt par éxécution, et que le Conspirateur est en vie. L'Al-Hadikhia choisit 3 joueurs bons cette nuit: Si les 3 décident de vivre, le mal gagne. Sinon, les bons gagnent."
-    },
-    {
-        "target": "pithag",
-        "trick": "cultleader",
-        "reason": "Si la Vieille Chouette transforme un joueur maléfique en Chef de Secte, il ne peut pas devenir bon en raison de sa capacité."
-    },
-    {
-        "target": "pithag",
-        "trick": "damsel",
-        "reason": "Si la Vieille-Chouette crée une Demoiselle, le Conteur choisit quel joueur est transformé."
-    },
-    {
-        "target": "pithag",
-        "trick": "goon",
-        "reason": "Si la Vieille Chouette transforme un joueur maléfique en Brute, il ne peut pas devenir bon en raison de sa capacité."
-    },
-    {
-        "target": "pithag",
-        "trick": "ogre",
-        "reason": "Si la Pit-Hag transforme un joueur maléfique en Ogre, il ne peut pas devenir bon à cause de sa propre capacité."
-    },
-    {
-        "target": "pithag",
-        "trick": "politician",
-        "reason": "Si la Vieille Chouette transforme un joueur maléfique en Politicien, il ne peut pas devenir bon en raison de sa capacité."
-    },
-    {
-        "target": "pithag",
-        "trick": "villageidiot",
-        "reason": "S'il reste un jeton en plus, la Vieille-Chouette peut créer un Idiot du Village supplémentaire. Si elle le fait, l'Idiot du Village ivre peut changer."
-    },
-    {
-        "target": "scarletwoman",
-        "trick": "alhadikhia",
-        "reason": "S'il y a deux Al-Hadikhias vivants, la Croqueuse d'Homme Al-Hadikhia redevient la Croqueuse d'Homme."
-    },
-    {
-        "target": "scarletwoman",
-        "trick": "fanggu",
-        "reason": "Si le Fang Gu choisit un Étranger puis meurt la même nuit, la Croqueuse d'Homme ne devient pas le Fang Gu."
-    },
-    {
-        "target": "spy",
-        "trick": "alchemist",
-        "reason": "Si l'Alchimiste possède la capacité Espion, il ne voit pas le Grimoire et le véritable Espion ne peut pas s'enregistrer faussement."
-    },
-    {
-        "target": "spy",
-        "trick": "damsel",
-        "reason": "Si l'Espion est (ou était) en jeu, la Demoiselle est empoisonnée."
-    },
-    {
-        "target": "spy",
-        "trick": "magician",
-        "reason": "Quand l'Espion voit le Grimoire, les jetons du Démon et du Magicien sont retirés."
-    },
-    {
-        "target": "spy",
-        "trick": "ogre",
-        "reason": "L'Espion est reconnu comme étant maléfique à l'Ogre"
-    },
-    {
-        "target": "spy",
-        "trick": "poppygrower",
-        "reason": "L'Espion ne voit pas le Grimoire tant que le Cultivateur de Pavots et en jeu."
-    },
-    {
-        "target": "summoner",
-        "trick": "alchemist",
-        "reason": "Si l'Alchimiste a le pouvoir de l'Invocateur, la partie commence avec un Démon en jeu, comme d'habitude. Si l'Alchimiste choisit alors un joueur, ce dernier devient le Démon choisit mais ne change pas d'alignement."
-    },
-    {
-        "target": "summoner",
-        "trick": "clockmaker",
-        "reason": "Si l'Invocateur est en jeu, l'Horloger ne reçoit son information que lorsque le Démon est créé."
-    },
-    {
-        "target": "summoner",
-        "trick": "courtier",
-        "reason": "Si l'Invocateur est ivre durant la 3e nuit, l'Invocateur choisit quel démon, mais le Conteur décide quel joueur."
-    },
-    {
-        "target": "summoner",
-        "trick": "engineer",
-        "reason": "Si l'Ingénieur retire un Invocateur du jeu avant qu'il n'est pu agir, l'Invocateur utilise sa capacité immédiatement."
-    },
-    {
-        "target": "summoner",
-        "trick": "hatter",
-        "reason": "L'Invocateur ne peut pas créer de démon en jeu. Si l'Invocateur crée un démon qui n'est pas en jeu, les morts cette nuit sont arbitraire."
-    },
-    {
-        "target": "summoner",
-        "trick": "kazali",
-        "reason": "L'Invocateur ne peut pas créer de démon en jeu. Si l'Invocateur crée un démon qui n'est pas en jeu, les morts cette nuit sont arbitraire."
-    },
-    {
-        "target": "summoner",
-        "trick": "legion",
-        "reason": "Si l'invocateur crée une Légion, la majorité des joueurs (dont tous les joueurs maléfiques) deviennent une Légion maléfique."
-    },
-    {
-        "target": "summoner",
-        "trick": "lordoftyphon",
-        "reason": "Si l'Invocateur crée un Lord of Typhon, le Lord of Typhon doit être voisin d'un Sbire. Son autre voisin devient un sbire maléfique qui n'est pas en jeu."
-    },
-    {
-        "target": "summoner",
-        "trick": "marionette",
-        "reason": "La Marionnette est voisine de l'Invocateur. L'invocateur sait qui est la marionnette."
-    },
-    {
-        "target": "summoner",
+        "target": "heretic",
         "trick": "pithag",
-        "reason": "L'Invocateur ne peut pas créer de démon en jeu. Si l'Invocateur crée un démon qui n'est pas en jeu, les morts cette nuit sont arbitraire."
+        "reason": "Une Vieille Chouette ne peux pas créer d'Hérétique."
     },
     {
-        "target": "summoner",
-        "trick": "poppygrower",
-        "reason": "Si le Cultivateur de Pavot est vivant au moment où l'Invocateur agit, ce dernier choisit le personnage du Démon, mais le joueur est choisi par le Conteur."
+        "target": "heretic",
+        "trick": "spy",
+        "reason": "Il ne peut y avoir qu'un seul personnage jinxé en jeu."
     },
     {
-        "target": "summoner",
-        "trick": "preacher",
-        "reason": "Si le prédicateur choisit l'Invocateur avant ou pendant la troisième nuit, l'Invocateur choisit quel Démon créer mais le Conteur choisit quel joueur"
-    },
-    {
-        "target": "summoner",
-        "trick": "pukka",
-        "reason": "L'Invocateur peut choisir un joueur pour être le Pukka la seconde nuit."
-    },
-    {
-        "target": "summoner",
-        "trick": "zombuul",
-        "reason": "Si l'Invocateur transforme un joueur mort en Zombuul, le Conteur fait comme s'il était déja mort une fois."
-    },
-    {
-        "target": "vizier",
-        "trick": "alsaahir",
-        "reason": "Si le Vizir est en jeu, l'Alsaahir doit aussi deviner quel Démon est en jeu."
-    },
-    {
-        "target": "vizier",
-        "trick": "courtier",
-        "reason": "Si le Vizir perd ses capacités, il l'apprend. Si le Vizir est exécuté alors qu'il dispose de ses capacités, son équipe gagne."
-    },
-    {
-        "target": "vizier",
-        "trick": "fearmonger",
-        "reason": "Le Vizir se réveille avec le Peur, apprend qui il choisit et ne peut pas choisir d'exécuter immédiatement ce joueur."
-    },
-    {
-        "target": "vizier",
-        "trick": "investigator",
-        "reason": "Si l'Enquêteur apprend que le Vizir est en jeu, l'existence du Vizir n'est pas annoncée par le Conteur."
-    },
-    {
-        "target": "vizier",
-        "trick": "magician",
-        "reason": "Si le Vizir et le Magicien sont tous deux en jeu, le Démon n'apprend pas les Minions."
-    },
-    {
-        "target": "vizier",
-        "trick": "politician",
-        "reason": "Le Politicien peut être reconnu comme étant maléfique par le Vizir."
-    },
-    {
-        "target": "vizier",
-        "trick": "preacher",
-        "reason": "Si le Vizir perd ses capacités, il l'apprend. Si le Vizir est exécuté alors qu'il dispose de ses capacités, son équipe gagne."
-    },
-    {
-        "target": "vizier",
-        "trick": "zealot",
-        "reason": "Le Fanatique peut être reconnu comme étant maléfique par le Vizir."
-    },
-    {
-        "target": "widow",
-        "trick": "alchemist",
-        "reason": "Si l'Alchimiste possède la capacité Veuve, il ne voit pas le Grimoire."
-    },
-    {
-        "target": "widow",
-        "trick": "damsel",
-        "reason": "Si la Veuve Noire est (ou était) en jeu, la Demoiselle est empoisonnée."
-    },
-    {
-        "target": "widow",
-        "trick": "magician",
-        "reason": "Quand la Veuve Noire voit le Grimoire, les jetons du Démon et du Magicien sont retirés."
-    },
-    {
-        "target": "widow",
-        "trick": "poppygrower",
-        "reason": "La Veuve Noire ne voit pas le Grimoire tant que le Cultivateur de Pavots est en jeu."
+        "target": "heretic",
+        "trick": "widow",
+        "reason": "Il ne peut y avoir qu'un seul personnage jinxé en jeu."
     },
     {
         "target": "kazali",
@@ -452,27 +202,27 @@
     {
         "target": "legion",
         "trick": "zealot",
-        "reason": "Le Zélote pourrait être considéré comme maléfique par rapport aux capacités de la Légion."
+        "reason": "Le Fanatique peut être reconnu comme étant maléfique pour la capacité de la Légion."
     },
     {
         "target": "leviathan",
         "trick": "banshee",
-        "reason": "Chaque nuit*, le Léviathan choisit un bon joueur vivant (différent des nuits précédentes) : une Banshee choisie meurt et acquiert sa capacité."
+        "reason": "Chaque nuit*, le Léviathan choisis un joueur vivant bon (différent des nuits précédentes) : une Banshee choisie meurt & obtient sa capacité."
     },
     {
         "target": "leviathan",
         "trick": "exorcist",
-        "reason": "Le Mal ne gagne pas lorsque plus d'un bon joueur a été exécuté, si l'Exorciste est vivant et a déjà choisi avec succès le Léviathan."
+        "reason": "Si l'Exorciste est vivant et choisis le Léviathan au moins une fois alors le Mal ne gagne pas quand plus d'un joueur bon a été éxécuté"
     },
     {
         "target": "leviathan",
         "trick": "farmer",
-        "reason": "Chaque nuit*, le Léviathan choisit un bon joueur vivant (différent des nuits précédentes) : un Fermier choisi utilise sa capacité mais ne meurt pas."
+        "reason": "Chaque nuit*, le Léviathan choisis un joueur vivant bon (différent des nuits précédentes) : un Fermier choisis utilise sa capacité mais ne meurt pas."
     },
     {
         "target": "leviathan",
         "trick": "grandmother",
-        "reason": "Si Léviathan est en jeu et que le petit-enfant meurt par exécution, le mal gagne."
+        "reason": "Si le Léviathan est en jeu et la descendance de la Mamie meurt par éxécution, le Mal gagne."
     },
     {
         "target": "leviathan",
@@ -482,22 +232,22 @@
     {
         "target": "leviathan",
         "trick": "innkeeper",
-        "reason": "Si le Léviathan est en jeu, les joueurs protégés par l'aubergiste sont à l'abri de toutes les capacités maléfiques."
+        "reason": "Si le Léviathan est en jeu, les joueurs protégé par l'Aubergiste sont a l'abri de toutes les capacité du Mal."
     },
     {
         "target": "leviathan",
         "trick": "king",
-        "reason": "Si le Léviathan est en jeu et qu'au moins 1 joueur est mort, le Roi apprend un personnage vivant chaque nuit."
+        "reason": "Si le Léviathan est en jeu et au moins un joueur est mort, le Roi apprend un personnage vivant chaque nuit."
     },
     {
         "target": "leviathan",
         "trick": "mayor",
-        "reason": "Si le Léviathan est en jeu et qu'aucune exécution n'a lieu le jour 5, bon gagne."
+        "reason": "Si le Léviathan est en jeu et il n'y a pas d'éxécution lors du jour 5, le Bien gagne."
     },
     {
         "target": "leviathan",
         "trick": "monk",
-        "reason": "Si le Léviathan est en jeu, le joueur protégé par le moine est à l'abri de toutes les capacités maléfiques."
+        "reason": "Si le Léviathan est en jeu, le joueur protégé par le Moine est a l'abri de toutes les capacité maléfique."
     },
     {
         "target": "leviathan",
@@ -507,32 +257,27 @@
     {
         "target": "leviathan",
         "trick": "ravenkeeper",
-        "reason": "Chaque nuit*, le Léviathan choisit un joueur vivant (différent des nuits précédentes) : un Ravenkeeper choisi utilise sa capacité mais ne meurt pas."
+        "reason": "Chaque nuit*, le Léviathan choisis un joueur vivant (différent des nuits précédentes) : un Gardien choisis utilise sa capacité mais ne meurt pas."
     },
     {
         "target": "leviathan",
         "trick": "sage",
-        "reason": "Chaque nuit*, le Léviathan choisit un bon joueur vivant (différent des nuits précédentes) : un Sage choisi utilise sa capacité mais ne meurt pas."
+        "reason": "Chaque nuit*, le Léviathan choisis un joueur vivant bon (différent des nuits précédentes) : un Sage choisis utilise sa capacité mais ne meurt pas."
     },
     {
         "target": "leviathan",
         "trick": "soldier",
-        "reason": "Si le Léviathan est en jeu, le Soldat est à l'abri de toutes les capacités maléfiques."
+        "reason": "Si le Léviathan est en jeu, le Soldat est a l'abri de toutes les capacité maléfique."
     },
     {
         "target": "lilmonsta",
         "trick": "hatter",
-        "reason": "Si un Démon choisit P'tit monstre, il choisit également un Sbire, le devient, et garde le jeton du P'tit monstre ce soir."
-    },
-    {
-        "target": "lilmonsta",
-        "trick": "magician",
-        "reason": "Chaque nuit, le Magicien choisit un Minion : si ce Minion et Lil' Monsta sont vivants, ce Minion garde Lil' Monsta."
+        "reason": "Si un Démon choisit P'tit Monstre, il choisit également un Sbire, le devient, et garde le jeton du P'tit monstre ce soir."
     },
     {
         "target": "lilmonsta",
         "trick": "poppygrower",
-        "reason": "Les sbires ne se réveillent pas au même moment. Ils sont réveillés un par un jusqu'à ce que l'un d'eux décide de prendre le jeton P'tit Monstre."
+        "reason": "Les Sbires ne se réveillent pas au même moment. Ils sont réveillés un par un jusqu'à ce que l'un d'eux décide de prendre le jeton P'tit Monstre."
     },
     {
         "target": "lilmonsta",
@@ -555,59 +300,339 @@
         "reason": "Si le Mercenaire tue l'hôte de la Sangsue, l'hôte meurt."
     },
     {
+        "target": "magician",
+        "trick": "wraith",
+        "reason": "Chaque jour, après la phase d'exécution, le Magicien (s'il est vivant) peut choisir publiquement un joueur vivant: le Spectre, si choisi, doit être choisi par le Démon ce soir."
+    },
+    {
+        "target": "magician",
+        "trick": "spy",
+        "reason": "Quand l'Espion voit le Grimoire, les jetons du Démon et du Magicien sont retirés."
+    },
+    {
+        "target": "magician",
+        "trick": "vizier",
+        "reason": "Si le Vizir et le Magicien sont tous les deux en jeu, le Démon n'apprend pas qui sont ses Sbires."
+    },
+    {
+        "target": "magician",
+        "trick": "widow",
+        "reason": "Quand la Veuve voit le Grimoire, les jetons du Démon et du Magicien sont retirés."
+    },
+    {
+        "target": "magician",
+        "trick": "lilmonsta",
+        "reason": "Chaque nuit, le Magicien choisis un Sbire : si ce Sbire et le P'tit Monstre sont vivant, ce Sbire garde le P'tit Monstre."
+    },
+    {
+        "target": "marionette",
+        "trick": "balloonist",
+        "reason": "Si la Marionnette pense qu'elle est Aéronaute, +1 Etranger peut avoir été ajouté."
+    },
+    {
+        "target": "marionette",
+        "trick": "damsel",
+        "reason": "La Marionnette n'apprend pas qu'une Demoiselle est en jeu."
+    },
+    {
+        "target": "marionette",
+        "trick": "huntsman",
+        "reason": "Si la Marionnette pense qu'elle est le Chasseur, une Demoiselle est bien ajoutée."
+    },
+    {
+        "target": "marionette",
+        "trick": "lilmonsta",
+        "reason": "La Marionnette est voisine d'un Sbire, pas du Démon. La Marionnette n'est pas réveillée pour choisir qui prend le jeton du P'tit Monstre et n'est pas informée si elle le reçoit."
+    },
+    {
+        "target": "marionette",
+        "trick": "poppygrower",
+        "reason": "Quand le Cultivateur de Pavots meurt, le Démon apprend qui est la Marionnette mais elle n'apprend rien."
+    },
+    {
+        "target": "marionette",
+        "trick": "snitch",
+        "reason": "La Marionnette n'est pas informée de 3 personnages hors-jeu. Le Démon en apprend 3 de plus à la place."
+    },
+    {
+        "target": "marionette",
+        "trick": "wraith",
+        "reason": "Le Spectre ne se réveille pas avec la Marionette."
+    },
+    {
+        "target": "mastermind",
+        "trick": "alhadikhia",
+        "reason": "Si l'Al-Hadikhia meurt par éxécution, et que le Conspirateur est en vie. L'Al-Hadikhia choisit 3 joueurs bons cette nuit: Si les 3 décident de vivre, le mal gagne. Sinon, les bons gagnent."
+    },
+    {
+        "target": "mathematician",
+        "trick": "chambermaid",
+        "reason": "La Femme de chambre apprend si le Mathématicien se réveille ce soir ou non, même si la Femme de chambre se réveille en premier."
+    },
+    {
+        "target": "mathematician",
+        "trick": "lunatic",
+        "reason": "Le Mathématicien apprend si le Lunatique attaque des joueurs differents de ceux attaqués par le vrai démon."
+    },
+    {
+        "target": "ogre",
+        "trick": "recluse",
+        "reason": "Si le Reclus est reconnu comme étant maléfique à l'Ogre, l'Ogre apprend qu'il est maléfique"
+    },
+    {
+        "target": "pithag",
+        "trick": "cultleader",
+        "reason": "Si la Vieille Chouette transforme un joueur maléfique en Chef de Secte, il ne peut pas devenir bon en raison de sa capacité."
+    },
+    {
+        "target": "pithag",
+        "trick": "damsel",
+        "reason": "Si la Vieille-Chouette crée une Demoiselle, le Conteur choisit quel joueur est transformé."
+    },
+    {
+        "target": "pithag",
+        "trick": "goon",
+        "reason": "Si la Vieille Chouette transforme un joueur maléfique en Brute, il ne peut pas devenir bon en raison de sa capacité"
+    },
+    {
+        "target": "pithag",
+        "trick": "ogre",
+        "reason": "Si la Vieille Chouette transforme un joueur maléfique en Ogre, il ne peut pas devenir bon en raison de sa capacité"
+    },
+    {
+        "target": "pithag",
+        "trick": "politician",
+        "reason": "Si la Vieille Chouette transforme un joueur maléfique en Politicien, il ne peut pas devenir bon en raison de sa capacité"
+    },
+    {
+        "target": "pithag",
+        "trick": "villageidiot",
+        "reason": "S'il reste un jeton en plus, la Vieille-Chouette peut créer un Idiot du Village supplémentaire. Si elle le fait, l'Idiot du Village ivre peut changer."
+    },
+    {
+        "target": "plaguedoctor",
+        "trick": "baron",
+        "reason": "Si le Conteur obtient la capacité du Baron, jusqu'a deux joueurs peuvent devenir des Étranger qui ne sont pas en jeu"
+    },
+    {
+        "target": "plaguedoctor",
+        "trick": "boomdandy",
+        "reason": "Si le Médecin de la Peste est exécuté et que le Conteur devrait obtenir la capacité du Dynamiteur, la capacité du Dynamiteur se déclenche immédiatement."
+    },
+    {
+        "target": "plaguedoctor",
+        "trick": "eviltwin",
+        "reason": "Le Conteur ne peut pas acquérir la capacité de Jumeau Maléfique si le Médecin de la Peste meurt."
+    },
+    {
+        "target": "plaguedoctor",
+        "trick": "fearmonger",
+        "reason": "Si le Médecin de la Peste meurt, un Sbire vivant obtient la capacité de l'Epouvanteur en plus de sa propre capacité et l'apprend."
+    },
+    {
+        "target": "plaguedoctor",
+        "trick": "goblin",
+        "reason": "Si le Médecin de la Peste meurt, un Sbire vivant obtient la capacité du Gobelin en plus de sa propre capacité et l'apprend."
+    },
+    {
+        "target": "plaguedoctor",
+        "trick": "marionette",
+        "reason": "Si le Démon a un voisin qui est vivant et Villageois ou Étranger lorsque le Médecin de la Pest meurt, ce joueur devient une Marionnette maléfique. S'il y a déjà un joueur maléfique en plus, ceci ne se produit pas."
+    },
+    {
+        "target": "plaguedoctor",
+        "trick": "scarletwoman",
+        "reason": "Si le Médecin de la Peste meurt, un Sbire vivant obtien la capacité de la Croqueuse d'Hommes en plus de sa propre capacité et l'apprend."
+    },
+    {
+        "target": "plaguedoctor",
+        "trick": "spy",
+        "reason": "Si le Médecin de la Peste meurt, un Sbire vivant obtient la capacité de l'Espion en plus de sa propre capacité et l'apprend."
+    },
+    {
+        "target": "plaguedoctor",
+        "trick": "wraith",
+        "reason": "Si le Médecin de la Peste meurt, un Sbire vivant obtient la capacité du Spectre en plus de sa propre capacité et l'apprend."
+    },
+    {
         "target": "riot",
         "trick": "banshee",
-        "reason": "Chaque nuit*, Riot choisit un bon joueur vivant (différent des nuits précédentes) : une Banshee choisie meurt et acquiert sa capacité."
+        "reason": "Chaque nuit*, l'Émeutier choisis un joueur vivant bon (différent des nuits précédentes) : une Banshee choise meurt & obtient leur capacité."
     },
     {
         "target": "riot",
         "trick": "exorcist",
-        "reason": "Si l'Exorciste choisit Riot la 3ème nuit, les Minions ne deviennent pas Riot."
+        "reason": "Si l'Exorciste choisis l'Émeutier la 3eme nuit, les Sbire ne deviennent pas Émeutiers."
     },
     {
         "target": "riot",
         "trick": "farmer",
-        "reason": "Chaque nuit*, Riot choisit un bon joueur vivant (différent des nuits précédentes) : un Fermier choisi utilise sa capacité mais ne meurt pas."
+        "reason": "Chaque nuit*, l'Émeutier choisis un joueur vivant bon (différent des nuits précédentes) : un Fermier choise utilise leur capacité mais ne meurt pas."
     },
     {
         "target": "riot",
         "trick": "grandmother",
-        "reason": "Si Riot est en jeu et que le petit-enfant meurt pendant la journée, la grand-mère meurt aussi."
+        "reason": "Si l'Émeutier est en jeu et la descendance de la Mamie meurt pendant le jour, la Mamie meurt aussi."
     },
     {
         "target": "riot",
         "trick": "innkeeper",
-        "reason": "Si Riot est en jeu, le joueur protégé par l'aubergiste est à l'abri de toutes les capacités maléfiques."
+        "reason": "Si l'Émeutier est en jeu, les joueurs protégés par l'Aubergiste sont à l'abri de toutes les capacités maléfique."
     },
     {
         "target": "riot",
         "trick": "king",
-        "reason": "Si Riot est en jeu et qu'au moins 1 joueur est mort, le roi apprend un personnage vivant chaque nuit."
+        "reason": "Si l'Émeutier est en jeu et au moins un joueur est mort, le Roi apprend un personnage vivant chaque nuit."
     },
     {
         "target": "riot",
         "trick": "mayor",
-        "reason": "Le maire peut choisir d'arrêter les candidatures. S'ils le font alors qu'un seul Riot est en vie, le bien l'emporte. Sinon, le mal gagne."
+        "reason": "Le Maire peut choisir d'arrêter les nominations. S'il le fait lorsqu'il ne reste qu'un Émeutier vivant, le Bien gagne. Sinon, le Mal gagne."
     },
     {
         "target": "riot",
         "trick": "monk",
-        "reason": "Si Riot est en jeu, le joueur protégé par le Moine est à l'abri de toutes les capacités maléfiques."
+        "reason": "Si l'Émeutier est en jeu, le joueur protégé par le Moine est à l'abri de toutes les capacités maléfique."
     },
     {
         "target": "riot",
         "trick": "ravenkeeper",
-        "reason": "Chaque nuit*, Riot choisit un bon joueur vivant (différent des nuits précédentes) : un Ravenkeeper choisi utilise sa capacité mais ne meurt pas."
+        "reason": "Chaque nuit*, l'Émeutier choisis un joueur vivant bon (différent des nuits précédentes) : un Gardien choisis utilise sa capacité mais ne meurt pas."
     },
     {
         "target": "riot",
         "trick": "sage",
-        "reason": "Chaque nuit*, Riot choisit un bon joueur vivant (différent des nuits précédentes) : un Sage choisi utilise sa capacité mais ne meurt pas."
+        "reason": "Chaque nuit*, l'Émeutier choisis un joueur vivant bon (différent des nuits précédentes) : un Sage choisis utilise sa capacité mais ne meurt pas."
     },
     {
         "target": "riot",
         "trick": "soldier",
-        "reason": "Si Riot est en jeu, le soldat est à l'abri de toutes les capacités maléfiques."
+        "reason": "Si l'Émeutier est en jeu, le Soldat est à l'abri de toutes les capacités maléfique."
+    },
+    {
+        "target": "scarletwoman",
+        "trick": "alhadikhia",
+        "reason": "S'il y a deux Al-Hadikhias vivants, la Croqueuse d'Homme Al-Hadikhia redevient la Croqueuse d'Homme."
+    },
+    {
+        "target": "scarletwoman",
+        "trick": "fanggu",
+        "reason": "Si le Fang Gu choisit un Étranger puis meurt la même nuit, la Croqueuse d'Homme ne devient pas le Fang Gu."
+    },
+    {
+        "target": "spy",
+        "trick": "damsel",
+        "reason": "Si l'Espion est (ou était) en jeu, la Demoiselle est empoisonnée."
+    },
+    {
+        "target": "spy",
+        "trick": "ogre",
+        "reason": "L'Espion est reconnu comme étant maléfique à l'Ogre"
+    },
+    {
+        "target": "spy",
+        "trick": "poppygrower",
+        "reason": "L'Espion ne voit pas le Grimoire tant que le Cultivateur de Pavots et en jeu."
+    },
+    {
+        "target": "summoner",
+        "trick": "clockmaker",
+        "reason": "Si l'Invocateur est en jeu, l'Horloger ne reçoit son information que lorsque le Démon est créé."
+    },
+    {
+        "target": "summoner",
+        "trick": "courtier",
+        "reason": "Si l'Invocateur est ivre durant la 3e nuit, l'Invocateur choisit quel démon, mais le Conteur décide quel joueur."
+    },
+    {
+        "target": "summoner",
+        "trick": "engineer",
+        "reason": "Si l'Ingénieur retire un Invocateur du jeu avant qu'il n'est pu agir, l'Invocateur utilise sa capacité immédiatement."
+    },
+    {
+        "target": "summoner",
+        "trick": "hatter",
+        "reason": "L'Invocateur ne peut pas créer de démon en jeu. Si l'Invocateur crée un démon qui n'est pas en jeu, les morts cette nuit sont arbitraire."
+    },
+    {
+        "target": "summoner",
+        "trick": "kazali",
+        "reason": "L'Invocateur ne peut pas créer de démon en jeu. Si l'Invocateur crée un démon qui n'est pas en jeu, les morts cette nuit sont arbitraire."
+    },
+    {
+        "target": "summoner",
+        "trick": "legion",
+        "reason": "Si l'invocateur crée une Légion, la majorité des joueurs (dont tous les joueurs maléfiques) deviennent une Légion maléfique."
+    },
+    {
+        "target": "summoner",
+        "trick": "lordoftyphon",
+        "reason": "Si l'Invocateur crée un Seigneur du Typhon, le Seigneur du Typhon doit être voisin d'un Sbire. Son autre voisin devient un sbire maléfique qui n'est pas en jeu."
+    },
+    {
+        "target": "summoner",
+        "trick": "marionette",
+        "reason": "La Marionnette est voisine a l'Invocateur. L'Invocateur sait qui est la Marionnette."
+    },
+    {
+        "target": "summoner",
+        "trick": "pithag",
+        "reason": "L'Invocateur ne peut pas créer de démon en jeu. Si l'Invocateur crée un démon qui n'est pas en jeu, les morts cette nuit sont arbitraire."
+    },
+    {
+        "target": "summoner",
+        "trick": "poppygrower",
+        "reason": "Si le Cultivateur de Pavot est vivant au moment où l'Invocateur agit, ce dernier choisit le personnage du Démon, mais le joueur est choisi par le Conteur."
+    },
+    {
+        "target": "summoner",
+        "trick": "preacher",
+        "reason": "Si le prédicateur choisit l'Invocateur avant ou pendant la troisième nuit, l'Invocateur choisit quel Démon créer mais le Conteur choisit quel joueur"
+    },
+    {
+        "target": "summoner",
+        "trick": "pukka",
+        "reason": "L'Invocateur peut choisir un joueur pour être le Pukka la seconde nuit."
+    },
+    {
+        "target": "summoner",
+        "trick": "zombuul",
+        "reason": "Si l'Invocateur transforme un joueur mort en Zombuul, le Conteur fait comme s'il était déja mort une fois."
+    },
+    {
+        "target": "vizier",
+        "trick": "alsaahir",
+        "reason": "Si le Vizir est en jeu, l'Alsaahir doit aussi deviner quel Démon est en jeu."
+    },
+    {
+        "target": "vizier",
+        "trick": "courtier",
+        "reason": "Si le Vizir perd sa capacité, il l'apprend. Si le Vizir est éxécuté quand il a sa capacité, son équipe gagne."
+    },
+    {
+        "target": "vizier",
+        "trick": "fearmonger",
+        "reason": "Le Vizir se réveille avec l'Épouvanteur, apprend qui il a choisis et ne peut pas immédiatement éxécuté ce joueur."
+    },
+    {
+        "target": "vizier",
+        "trick": "investigator",
+        "reason": "Si l'Enquêteur apprend que le Vizir est en jeu, l'existence du Vizir n'est pas annoncée par le Conteur."
+    },
+    {
+        "target": "vizier",
+        "trick": "politician",
+        "reason": "Le Politicien peut être reconnu comme étant maléfique par le Vizir."
+    },
+    {
+        "target": "vizier",
+        "trick": "preacher",
+        "reason": "Si le Vizir perd sa capacité, il l'apprend. Si le Vizir est éxécuté quand il a sa capacité, son équipe gagne"
+    },
+    {
+        "target": "vizier",
+        "trick": "zealot",
+        "reason": "Le Fanatique peut être reconnu comme étant maléfique par le Vizir."
     },
     {
         "target": "vortox",
@@ -615,8 +640,18 @@
         "reason": "Si le Vortox est en jeu et que le Démon tue la Banshee, les joueurs apprenent quand même que la Banshee est morte."
     },
     {
+        "target": "widow",
+        "trick": "damsel",
+        "reason": "Si la Veuve est (ou était) en jeu, la Demoiselle est empoisonnée."
+    },
+    {
+        "target": "widow",
+        "trick": "poppygrower",
+        "reason": "La Veuve ne voit pas le Grimoire tant que le Cultivateur de Pavots est en jeu."
+    },
+    {
         "target": "yaggababble",
         "trick": "exorcist",
-        "reason": "Si l'Exorciste choisit le Yaggablabla, la capacité du Yaggablable ne tue personne cette nuit."
+        "reason": "Si l'Exorciste choisit le Yaggablabla, la capacité du Yaggablabla ne tue personne cette nuit."
     }
 ]
