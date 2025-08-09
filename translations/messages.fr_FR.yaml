@@ -15,12 +15,12 @@ index:
 sheet:
     title: Fiche de personnages
     description: La fiche de personnages pour cette édition de Blood on the Clocktower
-    jinx: Chips
-    each_night: '* Chaque nuit, sauf la première'
+    jinx: Jinxs
+    each_night: "* Chaque nuit, sauf la première"
     get_qr_code: Obtenir le QR code pour cette fiche
     get_sheet: Obtenir cette fiche
     credit: <a href="https://bloodontheclocktower.com/" target="_blank" rel="noopener noreferrer">Blood on the Clocktower</a> est une marque déposée de Steven Medway et <a href="https://www.thepandemoniuminstitute.com/" target="_blank" rel="noopener noreferrer">The Pandemonium Institute</a>
-    breakdown: Les numéros de chaque équipe pour le nombre de joueurs.
+    breakdown: Les nombres de chaque type de personnage pour le nombre de joueurs.
     count_plus: "%count%+"
 
 groups:
@@ -39,14 +39,12 @@ messages:
     version_change_message: Cette application a été mise à jour. Étant donné que vos données peuvent ne pas être correctes, nous recommandons de tout effacer dans la boîte de dialogue "Effacer le cache". Appuyes sur "OK" pour ouvrir la boîte de dialogue ou sur "Annuler" pour fermer ce message.
     invalid_script: Le format de ce script n'a pas été reconnu
     no_characters: Ce script ne contient pas de personnages connus
-    invalid_data: Données invalides.
-    no_data: Aucune donnée envoyée.
     player_name: Comment s'appelle ce joueur ?
-    custom_info_token: "Que voulez-vous que votre nouveau jeton d'information dise ? Utilisez des **doubles astérisques** pour souligner le texte."
-    bag_disabled: "Impossible d'ajouter ces caractères au sac : {0}"
+    custom_info_token: Que veux-tu que ton nouveau jeton d'information dise ? Utilises des **doubles astérisques** pour mettre le texte en gras.
+    bag_disabled: "Impossible d'ajouter ces personnage dans le \"sac\" : {0}"
 
 setup:
-
+    
     title: Mise en place
 
     buttons:
@@ -54,8 +52,8 @@ setup:
         select_characters: Choisir Personnages
         qr_code_button: Fiche de personnages
         clear_cache_button: Effacer le cache
-        language: Langage
-        set_language: Choisir Langage
+        language: Langue
+        set_language: Choisir Langue
 
     editions:
         title: Choisir Édition
@@ -63,11 +61,12 @@ setup:
         bad_moon_rising: Bad Moon Rising
         sects_and_violets: Sects and Violets
         custom_script: Script personnalisé
-        custom_note: Télécharge ou entré une URL vers un script personnalisé.
-        custom_warning: Faire attention à utiliser des fichiers JSON provenant d'une source de confiance !
-        upload: Télécharger un script personnalisé
+        custom_note: Uploade un script personnalisé, entre l'URL d'un script personnalisé, ou colle le JSON directement.
+        custom_warning: Faites attention à utiliser des fichiers JSON provenant d'une source de confiance !
+        upload: Uploader un script personnalisé
         url: Entrer une URL
-        paste: Coller depuis le presse-papiers
+        paste: Collé du presse-papier
+        unsupported: "Note : Le Grimoire de Poche ne gère pas encore les scripts faits maison ou traduits"
         select: Choisir
 
     character_select:
@@ -90,20 +89,20 @@ setup:
 
     character_decision:
         title: Souviens-toi de ton Personnage
-        name: Nommez-vous (facultatif)
+        name: Ecris ton nom (facultatif)
         return: Retour à la Sélection de Personnage
 
     qr_code:
         title: Fiche de personnage
         intro: Scanne ce QR code pour voir la fiche de personnage
-        include: 'Inclure :'
+        include: "Inclure :"
         travellers: Voyageurs
         fabled: Légendaires
 
     clear_cache:
         title: Effacer le Cache
-        clear_all: Tout Éffacer
-        clear_description: La désactivation de cette option permettra d'effacer des parties individuelles du cache.
+        clear_all: Tout Effacer
+        clear_description: Désactiver cette option permettra d'effacer des parties individuelles du cache.
         lookup_label: Effacer données
         lookup_note: Infos sur les jinxs, composition d'équipe, et personnages.
         characters_label: Effacer édition
@@ -117,13 +116,13 @@ setup:
         info_tokens_label: Effacer les jetons d'informations personnalisés
         info_tokens_note: Les jetons d'informations personnalisés qui ont été ajoutés.
         names_label: Effacer les noms
-        names_note: Le joueur nomme des suggestions.
+        names_note: Les suggestions de nom pour les joueurs
         height_label: Rénitialiser la hauteur du bloc
         height_note: La hauteur du bloc dans le grimoire.
-        clear_refresh_label: Raffraîchir après.
-        clear_refresh_note: Raffraîchir rechargera les donnés pour tous les éléments qui ont été effacés.
-        warning: '<strong>Attention :</strong> les jetons placés sur le grimoire seront oubliés'
-        info_token_warning: "<strong>Attention :</strong> tous les jetons d'informations personnalisés seront oubliés."
+        clear_refresh_label: Rafraîchir après.
+        clear_refresh_note: Rafraîchir la page rechargera les donnés pour tous les éléments qui ont été effacés.
+        warning: "<strong>Attention : les jetons placés sur le grimoire seront oubliés"
+        info_token_warning: "<strong>Attention : tous les jetons d'informations personnalisés seront oubliés."
         clear_cache: Effacer le Cache
 
 grimoire:
@@ -133,7 +132,7 @@ grimoire:
     grimoire:
         bluffs: Bluffs Démon
         show_bluffs: Afficher tous les bluffs
-        add_bluffs: Ajouter du bluff
+        add_bluffs: Ajouter des bluffs
         add_token: Ajouter jeton
         add_reminder: Ajouter rappel
         add_traveller: Ajouter voyageur
@@ -141,8 +140,8 @@ grimoire:
         show_tokens: Montrer jetons
         reset_height: Réinitialiser taille du bloc
         clear_grimoire: Effacer Grimoire
-        clear_grimoire_warning: Es-tu sûr de vouloir effacer tous les jetons ?
-        show_night_order: Montrer ordre de nuit
+        clear_grimoire_warning: Es-tu sûr de vouloir éffacer tous les jetons ?
+        show_night_order: Montrer l'ordre de nuit sur les jetons
         character_size: Taille des jetons
         reminder_size: Taille des rappels
         token_settings: Paramètres des jetons
@@ -152,8 +151,8 @@ grimoire:
 
     reminder_list:
         title: Choisir Rappel
-        show: Montrer tous les rappels
-        multiple: Plusieurs Ajouter
+        show: Afficher tous les rappels
+        multiple: Ajouter plusieurs
         add_all: Tout Ajouter
 
     character_show:
@@ -164,10 +163,10 @@ grimoire:
         reminder: Rappel
         replace: Remplacer
         remove: Enlever jeton
-        recent_reminders: 'Jetons rappel les plus récent :'
+        recent_reminders: "Jetons rappel les plus récemment ajouté :"
         player_name: Définir le nom du joueur
         ghost_vote: Vote fantôme
-        orphan: "Attention : ce personnage n'est pas présent dans le script actuel."
+        orphan: "Attention: ce rôle n'est pas dans le script actuel"
 
     reminder_show:
         title: Rappel
@@ -181,9 +180,9 @@ grimoire:
 
     bluff_list:
         title: Sélectionner Bluff
-        show_existing: Montrer personnages existants
-        show_travellers: Montrer voyageurs
-        show_evil: Montrer personnages maléfiques
+        show_existing: Afficher personnages éxistants
+        show_travellers: Afficher les voyageurs
+        show_evil: Afficher les personnages maléfiques
 
     token_list:
         title: Personnages
@@ -191,8 +190,8 @@ grimoire:
 
     traveller_list:
         title: Voyageurs
-        show_all: Montrer tous voyageurs
-
+        show_all: Afficher tous les voyageurs
+    
     fabled_list:
         title: Mythiques
 
@@ -205,43 +204,43 @@ grimoire:
         button: Générer un QR code
 
 jinxes:
-    title: Chips
+    title: Jinxs
     target: Cible
     trick: Piège
     reason: Raison
-    show: Montrer les jinxs hors-jeu
+    show: Afficher les jinxs hors-jeu
 
 night_order:
     title: Ordre de nuit
     first_night: Première nuit
     other_night: Autres nuits
-    swipe_change: Glisser pour changer de nuits.
-    show: Montrer les personnages hors-jeu
-    show_dead: Montrer les personnages morts
+    swipe_change: Glisser de côté pour changer de nuit.
+    show: Afficher les personnages hors-jeu
+    show_dead: Afficher les personnages morts
 
 info_tokens:
     title: Jetons info
     info_tokens:
-        isdemon: Voici le <strong>Démon</strong>
-        isminion: Voici tes <strong>Sbires</strong>
-        notinplay: Ces personnages ne sont <strong>pas en jeu</strong>
+        isdemon: Voici le <strong>Démon :</strong>
+        isminion: Voici tes <strong>Sbires :</strong>
+        notinplay: Ces personnages ne sont <strong>pas en jeu :</strong>
         nominatetoday: As-tu <strong>nommé</strong> aujourd'hui ?
-        playeris: <strong>Ce joueur</strong> est
+        playeris: "<strong>Ce joueur</strong> est :"
         votetoday: As-tu <strong>voté</strong> aujourd'hui ?
-        youare: <strong>Tu</strong> es
-        selectedyou: Ce personnage vous a <strong>sélectionné</strong>
-        useability: Utiliser votre <strong>capacité</strong> ?
-        makechoice: Faire un <strong>choix</strong>
+        youare: "<strong>Tu</strong> es :"
+        selectedyou: Ce personnage t'a <strong>sélectionné :</strong>
+        useability: Veux-tu utilisé <strong>ton pouvoir</strong>?
+        makechoice: Fais un <strong>choix</strong>
     custom: Jetons d'infos personnalisés
     add_custom: Ajouter un jeton info
     edit_custom: Modifier le jeton info
     delete_custom: Supprimer le jeton info
 
 notes:
-    title: Notes du conteur
-    label: Remarques
-    clear: Notes claires
-    clear_warning: Êtes-vous sûr de vouloir effacer les notes ?
+    title: Notes du Conteur
+    label: Notes
+    clear: Effacer les notes
+    clear_warning: Es-tu sur de vouloir éffacer les notes?
 
 acknowledgements:
     title: Remerciements
@@ -250,20 +249,20 @@ acknowledgements:
         - Rappels de nuit et textes auxiliaires anglais écrits par <a href="http://bignose.whitetree.org/projects/botc/diy/" target="_blank" rel="noopener noreferrer">Ben Finney</a>.
         - Les icônes viennent de <a href="https://fontawesome.com/v5.15/icons" target="_blank" rel="noopener noreferrer">Font Awesome</a>.
         - De nombreuses images et données sont récupérées de <a href="https://www.clocktower.online" target="_blank" rel="noopener noreferrer">Clocktower.online</a> et le <a href="https://bloodontheclocktower.com/" target="_blank" rel="noopener noreferrer">site de Blood on the Clocktower</a>.
-        - Il s'agit d'un grimoire virtuel non officiel pour Blood on the Clocktower. Ce projet est gratuit et le code source peut être trouvé sur <a href="https://github.com/Skateside/pocket-grimoire" target="_blank" rel="noopener noreferrer">GitHub</a>. Ce projet n'est pas affilié à The Pandemonium Institute. Si tu aimes jouer à Blood on the Clocktower, <a href="https://bloodontheclocktower.com/buy" target="_blank" rel="noopener noreferrer">considères l'achat ton propre grimoire</a> - en plus d'être plus flexible que cette version numérique, il soutient également les créateurs.
+        - Ceci est un grimoire virtuel non officiel pour Blood on the Clocktower. Ce projet est gratuit et le code source peut être trouvé sur <a href="https://github.com/Skateside/pocket-grimoire" target="_blank" rel="noopener noreferrer">GitHub</a>. Ce projet n'est pas affilié à The Pandemonium Institute. Si tu aimes jouer à Blood on the Clocktower, <a href="https://bloodontheclocktower.com/buy" target="_blank" rel="noopener noreferrer">considères l'achat ton propre grimoire</a> - en plus d'être plus flexible que cette version numérique, il soutient également les créateurs.
         - Tu as remarqué un bug ou as une suggestion d'amélioration ? Fais-le moi savoir sur le salon <a href="https://discord.gg/eU89j89" target="_blank" rel="noopener noreferrer">"pocket-grimoire" sur le serveur discord non officiel</a> (mon nom y est "Skateside") ou <a href="https://github.com/Skateside/pocket-grimoire/issues" target="_blank" rel="noopener noreferrer">ouvre un ticket sur GitHub</a>.
         - <small>Version <span id="version"></span></small>
 
 errors:
     homebrew_json:
-        not_homebrew: Pas d'entrée homebrew "%id%"
-        unrecognised_team: Équipe non reconnue "%team%"
-        not_find_id: Impossible de trouver l'ID "%id%"
-        not_recognise_character: Impossible de reconnaître le caractère "%id%"
-        invalid_entry: 'Entrée invalide pour "%id%" : %reasons%'
-        empty_teams: 'Équipes vides : %teams%'
-        invalid_property: La propriété « %property% » aurait dû être de type %expected% mais était de type %given% à la place
+        not_homebrew: "Votre personnage personnalisé a des donnés manquante : \"%id%\""
+        unrecognised_team: "Équipe non reconnu : \"%team%\""
+        not_find_id: "Impossible de trouver l'ID : \"%id%\""
+        .not_recognise_character: Impossible de reconnaitre le personnage "%id%"
+        invalid_entry: "Donnée invalide pour \"%id%\": %reasons%"
+        empty_teams: "Équipes vide : %teams%"
+        invalid_property: La propriété "%property%" est du type %expected% mais devrait être du type %given% a la place
     url:
-        no_url: URL non valide ou manquante
-        cannot_access: Impossible d'accéder à l'URL
-        not_json: Impossible d'analyser le JSON à partir de l'URL
+        no_url: URL manquant ou invalide
+        cannot_access: Impossible d'accéder a l'URL
+        not_json: Impossible d'analyser le JSON depuis l'URL
