@@ -306,6 +306,8 @@ class MainController extends AbstractController
 
         }
 
+        $gameModel->sortGroups($groups);
+
         return $this->render('pages/sheet.html.twig', [
             'name' => $name,
             'groups' => $groups,

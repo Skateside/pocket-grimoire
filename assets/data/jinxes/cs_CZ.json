@@ -1,0 +1,657 @@
+[
+    {
+        "target": "alchemist",
+        "trick": "boffin",
+        "reason": "Pokud má Alchymista schopnost Boffina, nedozví se, jakou schopnost má Démon."
+    },
+    {
+        "target": "alchemist",
+        "trick": "marionette",
+        "reason": "Alchymista-Loutka nemá schopnost Loutky a Loutka je ve hře."
+    },
+    {
+        "target": "alchemist",
+        "trick": "mastermind",
+        "reason": "Alchymista-Génius nemá schopnost Génia a Génius není ve hře."
+    },
+    {
+        "target": "alchemist",
+        "trick": "organgrinder",
+        "reason": "Pokud má Alchymista schopnost Flašinetáře, Flašinetář je ve hře a pokud jsou Alchymista i Flašinetář střízliví, oba jsou Opilý."
+    },
+    {
+        "target": "alchemist",
+        "trick": "spy",
+        "reason": "Pokud má Alchymista schopnost Špiona, nemá ji a ve hře je Špion. Každý den po fázi popravy může Živý Alchymista veřejně uhodnout Živého hráče jako Špióna. Pokud je správný, musí si Démon dnes večer vybrat Špióna."
+    },
+    {
+        "target": "alchemist",
+        "trick": "summoner",
+        "reason": "Alchymista-Vyvolávač neblafuje a vybírá si, kterého Démona, ale ne kterého hráče. Pokud zemře dříve, vyhrává Zlo. [Žádný Démon]"
+    },
+    {
+        "target": "alchemist",
+        "trick": "widow",
+        "reason": "Pokud má Alchymista schopnost Vdova, nemá ji a ve hře je Vdova. Každý den po fázi popravy může Živý Alchymista veřejně uhodnout Živého hráče jako Vdovu. Pokud je to správně, Démon musí dnes večer vybrat Vdovu."
+    },
+    {
+        "target": "alchemist",
+        "trick": "wraith",
+        "reason": "Pokud má Alchymista schopnost Přízrak, nemá ji a Přízrak je ve hře. Každý den po fázi popravy může Živý Alchymista veřejně uhodnout Živého hráče jako Přízrak. Pokud je to správně, Démon musí dnes večer vybrat Přízraka."
+    },
+    {
+        "target": "alhadikhia",
+        "trick": "princess",
+        "reason": "Pokud Princezna nominovala a popravila hráče v jeho první den, dnes večer nikdo nezemře na schopnost Al-Hadikhia."
+    },
+    {
+        "target": "boffin",
+        "trick": "cultleader",
+        "reason": "Pokud má Démon schopnost Vůdce kultu, nemůže se kvůli této schopnosti změnit v Dobrého."
+    },
+    {
+        "target": "boffin",
+        "trick": "drunk",
+        "reason": "Pokud by Démon měl schopnost Opilý, Boffin si místo toho vybere hráče z řad Měšťanů, který bude mít tuto schopnost."
+    },
+    {
+        "target": "boffin",
+        "trick": "goon",
+        "reason": "Pokud má Démon schopnost Goon, nemůže se kvůli této schopnosti změnit v Dobrého."
+    },
+    {
+        "target": "boffin",
+        "trick": "ogre",
+        "reason": "Démon nemůže mít schopnost Obr."
+    },
+    {
+        "target": "boffin",
+        "trick": "politician",
+        "reason": "Démon nemůže mít schopnost Politik."
+    },
+    {
+        "target": "boffin",
+        "trick": "villageidiot",
+        "reason": "Pokud má Boffin volný žeton, může dát Démonovi schopnost Vesnický idiot."
+    },
+    {
+        "target": "bountyhunter",
+        "trick": "kazali",
+        "reason": "Zlý Měšťan je vytvořen pouze tehdy, pokud je Lovec odměn stále ve hře po akci Kazali."
+    },
+    {
+        "target": "bountyhunter",
+        "trick": "philosopher",
+        "reason": "Pokud Filozof získá schopnost Lovce odměn, může se Měšťan stát Zlým."
+    },
+    {
+        "target": "butler",
+        "trick": "organgrinder",
+        "reason": "Pokud Flašinetář způsobuje hlasování se zavřenýma očima, může Komorník zvednout ruku k hlasování, ale jeho hlas se počítá pouze tehdy, pokud hlasoval i jeho pán."
+    },
+    {
+        "target": "cannibal",
+        "trick": "butler",
+        "reason": "Pokud Kanibal získá schopnost Lokaje, Kanibal se to dozví."
+    },
+    {
+        "target": "cannibal",
+        "trick": "juggler",
+        "reason": "Pokud Žonglér uhádne první den a zemře popravou, dnes večer se Živý Kanibal dozví, kolikrát Žonglér uhodl správně."
+    },
+    {
+        "target": "cannibal",
+        "trick": "poppygrower",
+        "reason": "Pokud Kanibal sní Pěstitele máku a poté zemře nebo ztratí schopnost Pěstitele máku, Démon a Přisluhovači se tuto noc navzájem dozví."
+    },
+    {
+        "target": "cannibal",
+        "trick": "princess",
+        "reason": "Pokud Kanibal dnes nominoval a popravil Princeznu, Démon dnes vecer nezabije."
+    },
+    {
+        "target": "cannibal",
+        "trick": "zealot",
+        "reason": "Pokud Kanibal získá schopnost Fanatik, dozví se to."
+    },
+    {
+        "target": "cerenovus",
+        "trick": "goblin",
+        "reason": "Cerenovus se může rozhodnout, že hráče učiní Posedlým, že je Goblin."
+    },
+    {
+        "target": "heretic",
+        "trick": "baron",
+        "reason": "Baron může přidat pouze 1 Podivína, ne 2."
+    },
+    {
+        "target": "heretic",
+        "trick": "boffin",
+        "reason": "Démon nemůže mít schopnost Heretik."
+    },
+    {
+        "target": "heretic",
+        "trick": "godfather",
+        "reason": "Ve hře může být pouze 1 prokletá postava."
+    },
+    {
+        "target": "heretic",
+        "trick": "lleech",
+        "reason": "Pokud Lleech otrávil Heretika, pak Lleech zemře a Heretik zůstane otrávený. "
+    },
+    {
+        "target": "heretic",
+        "trick": "pithag",
+        "reason": "Pit-Hag nemůže vytvořit Heretika. "
+    },
+    {
+        "target": "heretic",
+        "trick": "spy",
+        "reason": "Ve hře může být pouze 1 prokletá postava. "
+    },
+    {
+        "target": "heretic",
+        "trick": "widow",
+        "reason": "Ve hře může být pouze 1 prokletá postava. "
+    },
+    {
+        "target": "kazali",
+        "trick": "choirboy",
+        "reason": "Kazali si nemůže vybrat Krále, aby se stal Přisluhovačem, pokud je ve hře Chórista. "
+    },
+    {
+        "target": "kazali",
+        "trick": "goon",
+        "reason": "Kazali si může vybrat, že hráč Goon bude jedním z jeho Zlých Přisluhovačů."
+    },
+    {
+        "target": "kazali",
+        "trick": "huntsman",
+        "reason": "Pokud si Kazali vybere Mladou dámu, aby se stala Přisluhovačem, a ve hře je Lovec, Dobrý hráč se stane Mladou dámou."
+    },
+    {
+        "target": "kazali",
+        "trick": "marionette",
+        "reason": "Pokud se Kazali rozhodne vytvořit Loutku, musí si vybrat jednoho ze svých sousedů."
+    },
+    {
+        "target": "kazali",
+        "trick": "soldier",
+        "reason": "Kazali si může vybrat, že hráč Vojáka je jeden z jejich Zlých Přisluhovačů."
+    },
+    {
+        "target": "legion",
+        "trick": "engineer",
+        "reason": "Legionář a Inženýr nemohou být na začátku hry zároveň ve hře. Pokud Inženýr vytvoří Legionáře, většina hráčů (včetně všech Zlých hráčů) se stane Zlým Legionářem."
+    },
+    {
+        "target": "legion",
+        "trick": "hatter",
+        "reason": "Pokud Kloboučník zemře a Legionář je ve hře, nic se nestane. Pokud Kloboučník zemře a Zlý hráč si vybere Legionáře, všichni současní zlí hráči se stanou Legionářem."
+    },
+    {
+        "target": "legion",
+        "trick": "minstrel",
+        "reason": "Pokud by Legionář dnes zemřel popravou, Legionář si svou schopnost ponechá, ale Minstrel by se mohl dozvědět, že je Legionář."
+    },
+    {
+        "target": "legion",
+        "trick": "preacher",
+        "reason": "Pokud si Kazatel zvolí Legionáře, Legionář si svou schopnost ponechá, ale Kazatel se může dozvědět, že je Legionář."
+    },
+    {
+        "target": "legion",
+        "trick": "zealot",
+        "reason": "Fanatik by se mohl registrovat jako Zlý pro schopnost Legionáře."
+    },
+    {
+        "target": "leviathan",
+        "trick": "banshee",
+        "reason": "Každou noc*, si Leviatan vybere Živého Dobrého hráče (jiného od předchozích nocí): vybraná Banshee zemře a získá svou schopnost."
+    },
+    {
+        "target": "leviathan",
+        "trick": "exorcist",
+        "reason": "Zlo nevyhrává, když bylo popraveno více než 1 Dobrý hráče, pokud je Exorcista naživu a úspěšně vybral Leviatana."
+    },
+    {
+        "target": "leviathan",
+        "trick": "farmer",
+        "reason": "Každou noc*, si Leviatan vybere Živého Dobrého hráče (jiného od předchozích nocí): vybraný Farmář použije svou schopnost, ale neumírá."
+    },
+    {
+        "target": "leviathan",
+        "trick": "grandmother",
+        "reason": "Pokud je ve hře Leviatan a Vnuk zemře popravou, Zlo vítězí."
+    },
+    {
+        "target": "leviathan",
+        "trick": "hatter",
+        "reason": "Pokud Kloboučník zemře 5. den nebo později, Démon si nemůže vybrat Leviatana."
+    },
+    {
+        "target": "leviathan",
+        "trick": "innkeeper",
+        "reason": "Pokud je ve hře Leviatan, hráči chránění Hostinským jsou v bezpečí před všemi Zlými schopnostmi."
+    },
+    {
+        "target": "leviathan",
+        "trick": "king",
+        "reason": "Pokud je Leviatan ve hře a alespoň jeden hráč je Mrtvý, Král se každou noc naučí jednu Živou postavu."
+    },
+    {
+        "target": "leviathan",
+        "trick": "mayor",
+        "reason": "Pokud je Leviatan ve hře a 5. den nedojde k žádné popravě, vyhrává Dobro."
+    },
+    {
+        "target": "leviathan",
+        "trick": "monk",
+        "reason": "Pokud je ve hře Leviatan, hráč chráněný Mnichem je v bezpečí před všemi Zlými schopnostmi."
+    },
+    {
+        "target": "leviathan",
+        "trick": "pithag",
+        "reason": "Po 5. dni si Pit-Hag nemůže vybrat Leviatana."
+    },
+    {
+        "target": "leviathan",
+        "trick": "ravenkeeper",
+        "reason": "Každou noc*, si Leviatan vybere Živého hráče (jiného od předchozích nocí): vybraný Strážkyně krkavců použije svou schopnost, ale neumírá."
+    },
+    {
+        "target": "leviathan",
+        "trick": "sage",
+        "reason": "Každou noc*, si Leviatan vybere Živého Dobrého hráče (jiného od předchozích nocí): vybraný Mudrc použije svou schopnost, ale neumírá."
+    },
+    {
+        "target": "leviathan",
+        "trick": "soldier",
+        "reason": "Pokud je ve hře Leviatan, je Voják v bezpečí před všemi Zlými schopnostmi."
+    },
+    {
+        "target": "lilmonsta",
+        "trick": "hatter",
+        "reason": "Pokud si Démon vybere Lil' Monstu, vybere si také Přisluhovače, který se dnes večer stane Lil' Monstou a bude ho hlídat."
+    },
+    {
+        "target": "lilmonsta",
+        "trick": "poppygrower",
+        "reason": "Pokud je ve hře Pěstitel máku, Přisluhovač se neprobouzejí společně. Probouzejí se jeden po druhém, dokud se jeden z nich nerozhodne vzít si žeton Lil' Monsta."
+    },
+    {
+        "target": "lilmonsta",
+        "trick": "scarletwoman",
+        "reason": "Pokud je naživu 5 nebo více hráčů a hráč s žetonem Lil' Monsta zemře, dostane dnes večer žeton Lil' Monsta Šarlatová dáma."
+    },
+    {
+        "target": "lilmonsta",
+        "trick": "vizier",
+        "reason": "Vezír může zemřít popravou, pokud hlídá Lil' Monsta."
+    },
+    {
+        "target": "lleech",
+        "trick": "mastermind",
+        "reason": "Pokud je Génius naživu a hostitel Lleech zemře popravou, Lleech přežije, ale ztratí svou schopnost."
+    },
+    {
+        "target": "lleech",
+        "trick": "slayer",
+        "reason": "Pokud Vrah zabije hostitele Lleeche, hostitel zemře."
+    },
+    {
+        "target": "magician",
+        "trick": "wraith",
+        "reason": "Každý den, po fázi popravy, může Živý Kouzelník veřejně uhodnout Živého hráče jako Přízrak: pokud je tip správný, musí si Démon Přízraka vybrat dnes večer."
+    },
+    {
+        "target": "magician",
+        "trick": "spy",
+        "reason": "Když Špion uvidí Grimoár, žetony postav Démona a Kouzelníka jsou odstraněny."
+    },
+    {
+        "target": "magician",
+        "trick": "vizier",
+        "reason": "Pokud jsou ve hře Vezír i Kouzelník, Démon se nedostane informaci o Přisluhovačích."
+    },
+    {
+        "target": "magician",
+        "trick": "widow",
+        "reason": "Když Vdova uvidí Grimoár, žetony postav Démona a Kouzelníka jsou odstraněny."
+    },
+    {
+        "target": "magician",
+        "trick": "lilmonsta",
+        "reason": "Každou noc si Kouzelník vybere jednoho Přisluhovače: pokud jsou tento Přisluhovač a Lil' Monsta naživu, tento Přisluhovač hlídá Lil' Monstu."
+    },
+    {
+        "target": "marionette",
+        "trick": "balloonist",
+        "reason": "Pokud si Loutka myslí, že je Vzduchoplavec, může být přidán +1 Podivín."
+    },
+    {
+        "target": "marionette",
+        "trick": "damsel",
+        "reason": "Loutka se nedozví, že je ve hře Mladá dáma."
+    },
+    {
+        "target": "marionette",
+        "trick": "huntsman",
+        "reason": "Pokud si Loutka myslí, že je Lovec, přidá se Mladá dáma."
+    },
+    {
+        "target": "marionette",
+        "trick": "lilmonsta",
+        "reason": "Loutka sousedí s Přisluhovačem, ne s Démonem. Loutka se neprobudí, aby si vybrala, kdo si vezme žeton Lil' Monsta, a pokud má žeton Lil' Monsta, nedozví se, že je to ona sama."
+    },
+    {
+        "target": "marionette",
+        "trick": "poppygrower",
+        "reason": "Když Pěstitel máku zemře, Démon se naučí Loutku, ale Loutka se nenaučí nic."
+    },
+    {
+        "target": "marionette",
+        "trick": "snitch",
+        "reason": "Loutka se nenaučí 3 postavy, které nejsou ve hře. Démon se místo toho naučí o 3 navíc."
+    },
+    {
+        "target": "marionette",
+        "trick": "wraith",
+        "reason": "Přízrak se s Loutkou neprobudí."
+    },
+    {
+        "target": "mastermind",
+        "trick": "alhadikhia",
+        "reason": "Pokud Al-Hadikhia zemře popravou a Génius je naživu, Al-Hadikhia si dnes večer vybere 3 Dobré hráče: pokud se všichni 3 rozhodnou žít, Zlo vyhrává. Jinak vyhrává Dobro."
+    },
+    {
+        "target": "mathematician",
+        "trick": "chambermaid",
+        "reason": "Pokojská se dozví, jestli se Matematik dnes večer probudí nebo ne, i když se probudí první."
+    },
+    {
+        "target": "mathematician",
+        "trick": "lunatic",
+        "reason": "Matematik se dozví, zda Šílenec útočí na jiného hráče než na kterého útočí skutečný Démon."
+    },
+    {
+        "target": "ogre",
+        "trick": "recluse",
+        "reason": "Pokud se Samotář zaregistruje u Obra jako Zlý, Obr zjistí, že je Zlý."
+    },
+    {
+        "target": "pithag",
+        "trick": "cultleader",
+        "reason": "Pokud Pit-Hag promění zlého hráče ve Vůdce kultu, nemůže se kvůli svým vlastním schopnostem proměnit v Dobrého."
+    },
+    {
+        "target": "pithag",
+        "trick": "damsel",
+        "reason": "Pokud Pit-Hag vytvoří Mladou dámu, Vypravěč si vybere, o kterého hráče se jedná."
+    },
+    {
+        "target": "pithag",
+        "trick": "goon",
+        "reason": "Pokud Pit-Hag promění zlého hráče v Goona, nemůže se kvůli svým vlastním schopnostem proměnit v Dobrého."
+    },
+    {
+        "target": "pithag",
+        "trick": "ogre",
+        "reason": "Pokud Pit-Hag promění zlého hráče v Ogra, nemůže se kvůli svým vlastním schopnostem proměnit v Dobrého."
+    },
+    {
+        "target": "pithag",
+        "trick": "politician",
+        "reason": "Pokud Pit-Hag promění zlého hráče v Politika, nemůže se díky svým vlastním schopnostem proměnit v Dobrého."
+    },
+    {
+        "target": "pithag",
+        "trick": "villageidiot",
+        "reason": "Pokud je k dispozici volný žeton, může Pit-Hag vytvořit dalšího Vesnického idiota. Pokud ano, opilý Vesnický idiot se může změnit."
+    },
+    {
+        "target": "plaguedoctor",
+        "trick": "baron",
+        "reason": "Pokud Vypravěč získá schopnost Baron, až dva hráči se stanou Podivíni, kteří nejsou ve hře."
+    },
+    {
+        "target": "plaguedoctor",
+        "trick": "boomdandy",
+        "reason": "Pokud je Morový doktor popraven a Vypravěč by získal schopnost Hezouna, schopnost Hezouna se okamžitě spustí."
+    },
+    {
+        "target": "plaguedoctor",
+        "trick": "eviltwin",
+        "reason": "Vypravěč nemůže získat schopnost Zlého dvojčete, pokud zemře Morový doktor."
+    },
+    {
+        "target": "plaguedoctor",
+        "trick": "fearmonger",
+        "reason": "Pokud Morový doktor zemře, Živý Přisluhovač získá kromě své vlastní schopnosti i schopnost Strašák a naučí se ji."
+    },
+    {
+        "target": "plaguedoctor",
+        "trick": "goblin",
+        "reason": "Pokud Morový doktor zemře, Živý Přisluhovač získá kromě své schopnosti i schopnost Goblina a naučí se ji."
+    },
+    {
+        "target": "plaguedoctor",
+        "trick": "marionette",
+        "reason": "Pokud má Démon v okamžiku smrti Morového doktora souseda, který je naživu, a také Měšťana nebo Podivína, stane se z něj zlá Loutka. Pokud už je v týmu další Zlý hráč, tak se tak nestane."
+    },
+    {
+        "target": "plaguedoctor",
+        "trick": "scarletwoman",
+        "reason": "Pokud Morový doktor zemře, Živý Přisluhovač získá kromě své vlastní schopnosti i schopnost Šarlatová žena a naučí se ji."
+    },
+    {
+        "target": "plaguedoctor",
+        "trick": "spy",
+        "reason": "Pokud Morový doktor zemře, Živý Přisluhovač získá kromě své schopnosti i schopnost Špiona a naučí se ji."
+    },
+    {
+        "target": "plaguedoctor",
+        "trick": "wraith",
+        "reason": "Pokud Morový doktor zemře, Živý Přisluhovač získá kromě své schopnosti i schopnost Přízrak a naučí se ji."
+    },
+    {
+        "target": "riot",
+        "trick": "banshee",
+        "reason": "Každou noc*, si Vzpoura vybere Živého Dobrého hráče (rozdílného než předchozí nocí): vybraná Banshee zemře a získá svou schopnost."
+    },
+    {
+        "target": "riot",
+        "trick": "exorcist",
+        "reason": "Pokud si Exorcista třetí noc vybere Vzpoura, Přisluhovači se Chaosem nestanou."
+    },
+    {
+        "target": "riot",
+        "trick": "farmer",
+        "reason": "Každou noc*, si Vzpoura vybere Živého Dobrého hráče (rozdílého než od předchozí noci): vybraný Farmář použije svou schopnost, ale neumírá."
+    },
+    {
+        "target": "riot",
+        "trick": "grandmother",
+        "reason": "Pokud je ve hře Vzpoura a Vnouče zemře během dne, zemře i Babička."
+    },
+    {
+        "target": "riot",
+        "trick": "innkeeper",
+        "reason": "Pokud je ve hře Vzpoura, hráč chráněný Hostinským je v bezpečí před všemi Zlými schopnostmi."
+    },
+    {
+        "target": "riot",
+        "trick": "king",
+        "reason": "Pokud je ve hře Vzpouru a alespoň jeden hráč je Mrtvý, Král se každou noc naučí jednu Živou postavu."
+    },
+    {
+        "target": "riot",
+        "trick": "mayor",
+        "reason": "Starosta se může rozhodnout nominace zastavit. Pokud tak učiní, když je naživu pouze jeden člen Chaosu, vítězí Dobro. Jinak vítězí Zlo."
+    },
+    {
+        "target": "riot",
+        "trick": "monk",
+        "reason": "Pokud je ve hře Vzpoura, hráč chráněný Mnichem je v bezpečí před všemi Zlými schopnostmi."
+    },
+    {
+        "target": "riot",
+        "trick": "ravenkeeper",
+        "reason": "Každou noc*, si Vzpoura vybere Živého Dobrého hráče (na rozdíl od předchozích nocí): vybraný Strážkyně krkavců použije svou schopnost, ale neumírá."
+    },
+    {
+        "target": "riot",
+        "trick": "sage",
+        "reason": "Každou noc*, si Vzpoura vybere Živého Dobrého hráče (na rozdíl od předchozích nocí): vybraný Mudrc použije svou schopnost, ale neumírá."
+    },
+    {
+        "target": "riot",
+        "trick": "soldier",
+        "reason": "Pokud je ve hře Vzpoura, je Voják v bezpečí před všemi Zlými schopnostmi."
+    },
+    {
+        "target": "scarletwoman",
+        "trick": "alhadikhia",
+        "reason": "Pokud existují dva žijící Al-Hadikhias, pak se Šarlatová dáva Al-Hadikhia stává opět Šarlatovou ženou."
+    },
+    {
+        "target": "scarletwoman",
+        "trick": "fanggu",
+        "reason": "Pokud si Fang Gu vybere Podivína a zemře, Šarlatová dáma se Fang Gu nestane."
+    },
+    {
+        "target": "spy",
+        "trick": "damsel",
+        "reason": "Pokud je (nebo byl) ve hře Špion, je Mladá dáma Otrávená."
+    },
+    {
+        "target": "spy",
+        "trick": "ogre",
+        "reason": "Špion se Obrovi jeví jako Zlý."
+    },
+    {
+        "target": "spy",
+        "trick": "poppygrower",
+        "reason": "Pokud je ve hře Pěstitel máku, Špion neuvidí Grimoár, dokud Pěstitel máku nezemře."
+    },
+    {
+        "target": "summoner",
+        "trick": "clockmaker",
+        "reason": "Pokud je Vyvolávač ve hře, Hodinář neobdrží o něm informace, dokud není vytvořen Démon."
+    },
+    {
+        "target": "summoner",
+        "trick": "courtier",
+        "reason": "Pokud je Vyvolávač třetí noc opilý, vybere si Démona, ale hráče si vybere Vypravěč."
+    },
+    {
+        "target": "summoner",
+        "trick": "engineer",
+        "reason": "Pokud Inženýr odstraní Vyvolávače ze hry dříve, než tento Vyvolávač použije svou schopnost, Vyvolávač ji použije okamžitě."
+    },
+    {
+        "target": "summoner",
+        "trick": "hatter",
+        "reason": "Vyvolávač nemůže vytvořit herního Démona. Pokud Vyvolávač vytvoří neherního Démona, úmrtí dnes večer jsou libovolná. "
+    },
+    {
+        "target": "summoner",
+        "trick": "kazali",
+        "reason": "Vyvolávač nemůže vytvořit herního Démona. Pokud Vyvolávač vytvoří neherního Démona, úmrtí dnes večer jsou libovolná. "
+    },
+    {
+        "target": "summoner",
+        "trick": "legion",
+        "reason": "Pokud Vyvolávač vytvoří Legionáře, většina hráčů (včetně všech Zlých hráčů) se stane Zlými Legionáři."
+    },
+    {
+        "target": "summoner",
+        "trick": "lordoftyphon",
+        "reason": "Pokud Vyvolávač vytvoří Pána Typhonu, musí Pán Typhonu postavit vedle sebe Přisluhovače. Druhý soused se stává Zlým Přisluhovačem, který není ve hře."
+    },
+    {
+        "target": "summoner",
+        "trick": "marionette",
+        "reason": "Loutka sousedí s Vyvolávačem. Vyvolávač ví, kdo je Loutka."
+    },
+    {
+        "target": "summoner",
+        "trick": "pithag",
+        "reason": "Vyvolávač nemůže vytvořit Démona ve hře. Pokud vytvoří Démona, který není ve hře, jsou úmrtí dnes večer libovolná."
+    },
+    {
+        "target": "summoner",
+        "trick": "poppygrower",
+        "reason": "Pokud je Pěstitel máku naživu, když Vyvolávač hraje, vybírá si Vyvolávač, kterého Démona vybere, ale Vypravěč si vybírá, kterého hráče."
+    },
+    {
+        "target": "summoner",
+        "trick": "preacher",
+        "reason": "Pokud si Kazatel vybral Vyvolávače třetí noc nebo dříve, Vyvolávač si vybere, kterého Démona, ale Vypravěč si vybere, kterého hráče."
+    },
+    {
+        "target": "summoner",
+        "trick": "pukka",
+        "reason": "Vyvolávač si může vybrat hráče, který se stane Pukka druhou noc."
+    },
+    {
+        "target": "summoner",
+        "trick": "zombuul",
+        "reason": "Pokud Vyvolávač promění Mrtvého hráče v Zombuula, Vypravěč s tímto hráčem zachází jako se Zombuulem, který již jednou zemřel."
+    },
+    {
+        "target": "vizier",
+        "trick": "alsaahir",
+        "reason": "Pokud je ve hře Vezír, musí Alsaahir také uhodnout, který(é) Démon(i) je(jsou) ve hře."
+    },
+    {
+        "target": "vizier",
+        "trick": "courtier",
+        "reason": "Pokud Vezír ztratí svou schopnost, dozví se to. Pokud je Vezír popraven, když má svou schopnost, jeho družstvo vyhrává."
+    },
+    {
+        "target": "vizier",
+        "trick": "fearmonger",
+        "reason": "Vezír se probudí se Strašidlem, dozví se, koho si vybere, a nemůže se rozhodnout daného hráče okamžitě popravit."
+    },
+    {
+        "target": "vizier",
+        "trick": "investigator",
+        "reason": "Pokud se Vyšetřovatel dozví, že je ve hře Vezír, Vypravěč existenci Vezíra neoznámí."
+    },
+    {
+        "target": "vizier",
+        "trick": "politician",
+        "reason": "Politik se může Vezírovi jevit jako Zlý."
+    },
+    {
+        "target": "vizier",
+        "trick": "preacher",
+        "reason": "Pokud Vezír ztratí svou schopnost, dozví se to. Pokud je Vezír popraven, zatímco má Démon svou schopnost, jeho družstvo vyhrává."
+    },
+    {
+        "target": "vizier",
+        "trick": "zealot",
+        "reason": "Fanatik se může Vezírovi jako Zlý."
+    },
+    {
+        "target": "vortox",
+        "trick": "banshee",
+        "reason": "Pokud je ve hře Vortox a Démon zabije Banshee, hráči se i tak dozví, že Banshee zemřela."
+    },
+    {
+        "target": "widow",
+        "trick": "damsel",
+        "reason": "Pokud je ve hře (nebo byla) Vdova, Mladá dáma je Otrávená."
+    },
+    {
+        "target": "widow",
+        "trick": "poppygrower",
+        "reason": "Pokud je ve hře Pěstitel máku, Vdova neuvidí Grimoár, dokud Pěstitel máku nezemře."
+    },
+    {
+        "target": "yaggababble",
+        "trick": "exorcist",
+        "reason": "Pokud si Exorcista zvolí Yaggababble, schopnost Yaggababble dnes vecer nezabije."
+    }
+]

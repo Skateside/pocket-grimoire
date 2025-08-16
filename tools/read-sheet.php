@@ -139,7 +139,8 @@ function parseArgs(array $args, array $config): array
     $fileName = getFileName($config[$type]['folder'], $locale);
     
     if (!file_exists($fileName)) {
-        die('ERROR: file "' . $fileName . '" does not exist.' . PHP_EOL);
+        // die('ERROR: file "' . $fileName . '" does not exist.' . PHP_EOL);
+        file_put_contents($fileName, '');
     }
 
     return array_merge($config[$type], [
@@ -292,7 +293,7 @@ function detectLanguage(string $text)
         'detect',
         ['q' => $text],
         function (array $json) {
-            return $json[0]['language'];
+            return $json[0]['language'] ?? '';
         }
     );
 }
@@ -311,7 +312,7 @@ function translateString(string $text, string $from, string $to)
         'translate',
         ['q' => $text, 'source' => $from, 'target' => $to],
         function (array $json) {
-            return $json['translatedText'];
+            return $json['translatedText'] ?? '';
         }
     );
 }
@@ -352,11 +353,17 @@ function run()
             'folder' => 'characters',
             'data-map' => [
                 'flavor' => null,
+                'firstNightReminder' => function (string $cell) {
+                    return (is_string($cell) && trim($cell)) ? $cell : '';
+                },
+                'otherNightReminder' => function (string $cell) {
+                    return (is_string($cell) && trim($cell)) ? $cell : '';
+                },
                 'remindersGlobal' => function (string $cell) {
-                    return array_map('trim', explode(',', $cell));
+                    return trim($cell) ? array_map('trim', explode(',', $cell)) : [];
                 },
                 'reminders' => function (string $cell) {
-                    return array_map('trim', explode(',', $cell));
+                    return trim($cell) ? array_map('trim', explode(',', $cell)) : [];
                 },
             ],
             'tab-map' => [

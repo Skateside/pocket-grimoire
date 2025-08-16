@@ -44,4 +44,33 @@ class GameModel extends YamlModel
 
     }
 
+    public function clamp(float $min, float $value, float $max): float
+    {
+        return max($min, min($value, $max));
+    }
+
+    public function sortGroups(array &$groups)
+    {
+
+        $order = [
+            'townsfolk',
+            'outsider',
+            'minion',
+            'demon',
+            'traveller',
+            'fabled'
+        ];
+        
+        uksort($groups, function (string $keyA, string $keyB) use ($order) {
+            return floor(
+                $this->clamp(
+                    0,
+                    array_search($keyA, $order) - array_search($keyB, $order),
+                    1
+                )
+            );
+        });
+
+    }
+
 }

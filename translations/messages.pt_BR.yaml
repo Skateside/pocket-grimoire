@@ -16,7 +16,7 @@ sheet:
     title: Ficha de personagens
     description: A ficha de personagens desta edição de Blood on the Clocktower
     jinx: Jinx
-    each_night: '* A cada noite exceto a primeira'
+    each_night: "* A cada noite exceto a primeira"
     get_qr_code: Gerar QR Code desta ficha
     get_sheet: Baixar esta ficha
     credit: <a href="https://bloodontheclocktower.com/" target="_blank" rel="noopener noreferrer">Blood on the Clocktower</a> é uma marca registrada de Steven Medway e <a href="https://www.thepandemoniuminstitute.com/" target="_blank" rel="noopener noreferrer">The Pandemonium Institute</a>
@@ -41,7 +41,7 @@ messages:
     no_characters: Este script não contém nenhum personagem reconhecível.
     player_name: Qual é o nome desse jogador?
     custom_info_token: O que você quer que seu novo token de informações diga? Use **asteriscos duplos** para enfatizar o texto.
-    bag_disabled: 'Não é possível adicionar estes caracteres ao pacote: {0}'
+    bag_disabled: "Não é possível adicionar estes caracteres ao pacote: {0}"
 
 setup:
 
@@ -66,7 +66,7 @@ setup:
         upload: Carregue um script personalizado
         url: Insira uma URL
         paste: Colar da área de transferência
-        unsupported: 'Importante: o Grimório de Bolso ainda não oferece suporte para scripts homebrew ou localizados.'
+        unsupported: "Importante: o Grimório de Bolso ainda não oferece suporte para scripts homebrew ou localizados."
         select: Selecionar
 
     character_select:
@@ -95,7 +95,7 @@ setup:
     qr_code:
         title: Ficha de personagens
         intro: Escaneie este QR code para ver a ficha de personagens
-        include: 'Incluir:'
+        include: "Incluir:"
         travellers: Viajantes
         fabled: Lendas
 
@@ -121,8 +121,8 @@ setup:
         height_note: A altura do quadro que representa o interior do Grimório.
         clear_refresh_label: Atualizar após concluído
         clear_refresh_note: Atualizar carregará novos dados de tudo o que foi limpo.
-        warning: '<strong>Aviso:</strong> qualquer token colocado no Grimório será esquecido.'
-        info_token_warning: '<strong>Aviso:</strong> quaisquer tokens de informação personalizados serão esquecidos.'
+        warning: "<strong>Aviso:</strong> qualquer token colocado no Grimório será esquecido."
+        info_token_warning: "<strong>Aviso:</strong> quaisquer tokens de informação personalizados serão esquecidos."
         clear_cache: Limpar Cache
 
 grimoire:
@@ -163,10 +163,10 @@ grimoire:
         reminder: Lembrete
         replace: Substituir
         remove: Remover token
-        recent_reminders: 'Lembretes adicionados recentemente:'
+        recent_reminders: "Lembretes adicionados recentemente:"
         player_name: Definir nome do jogador
         ghost_vote: Voto fantasma
-        orphan: 'Aviso: esse personagem não está no roteiro atual.'
+        orphan: "Aviso: esse Personagem não está no script atual"
 
     reminder_show:
         title: Lembrete
@@ -229,7 +229,7 @@ info_tokens:
         votetoday: Você <strong>votou</strong> hoje?
         youare: <strong>Você</strong> é
         selectedyou: Este personagem <strong>selecionou</strong> você
-        useability: Use sua <strong>habilidade</strong>?
+        useability: Usar sua <strong>habilidae</strong>
         makechoice: Faça uma <strong>escolha</strong>
     custom: Fichas de informações personalizadas
     add_custom: Adicionar token de informação

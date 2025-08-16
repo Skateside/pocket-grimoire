@@ -1,0 +1,657 @@
+[
+    {
+        "target": "alchemist",
+        "trick": "boffin",
+        "reason": "Ha az Alkimista megkapja a Tudós képességet, nem tudja meg, milyen képessége van a Démonnak."
+    },
+    {
+        "target": "alchemist",
+        "trick": "marionette",
+        "reason": "Egy Alchemist- Marionette nincs Marionette képesség & A Marionette játszik."
+    },
+    {
+        "target": "alchemist",
+        "trick": "mastermind",
+        "reason": "Egy Alchemist- Mastermind nincs Mastermind képesség & a Mastermind nem -in-play."
+    },
+    {
+        "target": "alchemist",
+        "trick": "organgrinder",
+        "reason": "Ha az alkimista rendelkezik a Orgona Daráló képességgel, a Orgona Daráló játékban van, és ha mind az Alkimista, mind a Orgona Daráló józan, mindkettő részeg."
+    },
+    {
+        "target": "alchemist",
+        "trick": "spy",
+        "reason": "Ha az Alkimista képes kémkedni, akkor nem, és egy kém is játszik. Minden nap, a kivégzés után, az élő Alkimista nyilvánosan egy élő játékost találhat kémnek. Ha így van, a Démonnak ma este a Kémet kell választania."
+    },
+    {
+        "target": "alchemist",
+        "trick": "summoner",
+        "reason": "Az Alchemist- Summoner nem kap blöffök, és választja ki, melyik démon, de nem melyik játékos. Ha előbb meghalnak, mint ez, a gonosz győz. [Nincs démon]"
+    },
+    {
+        "target": "alchemist",
+        "trick": "widow",
+        "reason": "Ha az Alkimista rendelkezik az Özvegy képességgel, akkor nem, és egy Özvegy játszik. Minden nap, a kivégzés után, az élő Alkimista nyilvánosan azt hiszi, hogy egy élő játékos az Özvegy. Ha így van, a Démonnak ma este az Özvegyet kell választania."
+    },
+    {
+        "target": "alchemist",
+        "trick": "wraith",
+        "reason": "Ha az Alkimista rendelkezik a Lidérc képességgel, akkor nem, és egy Lidérc játszik. Minden nap, a kivitelezési szakasz után, az élő Alkimista nyilvánosan találhat egy élő játékost, mint a Lidércek: ha helyes, a Démonnak ma este ki kell választania a Lidérceket."
+    },
+    {
+        "target": "alhadikhia",
+        "trick": "princess",
+        "reason": "Ha a herczegné az első napon jelölt és végzett egy játékost, senki sem hal meg az Al- Hadikhia képességei miatt."
+    },
+    {
+        "target": "boffin",
+        "trick": "cultleader",
+        "reason": "Ha a Démonnak megvan a Kultuszvezető képesség, nem válhatnak jóvá e képesség miatt."
+    },
+    {
+        "target": "boffin",
+        "trick": "drunk",
+        "reason": "Ha a Démonnak meglenne a Részeg képesség, a Tudós választ egy Falusi játékost, hogy inkább neki legyen meg ez a képesség."
+    },
+    {
+        "target": "boffin",
+        "trick": "goon",
+        "reason": "Ha a Démonnak megvan a Goon képesség, nem válhatnak jóvá e képesség miatt."
+    },
+    {
+        "target": "boffin",
+        "trick": "ogre",
+        "reason": "A Démon nem rendelkezhet az Ogre képességgel."
+    },
+    {
+        "target": "boffin",
+        "trick": "politician",
+        "reason": "A Démon nem rendelkezhet a Politikus képességgel."
+    },
+    {
+        "target": "boffin",
+        "trick": "villageidiot",
+        "reason": "Ha van egy tartalék token, a Tudós adhatja a Démonnak a Falu Bolondja képességet."
+    },
+    {
+        "target": "bountyhunter",
+        "trick": "kazali",
+        "reason": "Gonosz falusi csak akkor jön létre, ha a Fejvadász még játékban van, miután a Kazali cselekszik."
+    },
+    {
+        "target": "bountyhunter",
+        "trick": "philosopher",
+        "reason": "Ha a Filozófus megszerzi a Fejvadász képességet, egy Falusi gonosszá válhat."
+    },
+    {
+        "target": "butler",
+        "trick": "organgrinder",
+        "reason": "Ha a Vezír elveszíti képességét, ezt megtudja, és ha a Vezírt kivégzik, miközben van képessége, csapata nyer."
+    },
+    {
+        "target": "cannibal",
+        "trick": "butler",
+        "reason": "Ha a Kannibál megszerzi a Komornyik képességét, a Kannibál ezt megtudja."
+    },
+    {
+        "target": "cannibal",
+        "trick": "juggler",
+        "reason": "Ha a Juggler az első napon találgat, és kivégzéssel hal meg, ma este az élő Kannibál megtudja, hogy a Juggler hány találatot kapott."
+    },
+    {
+        "target": "cannibal",
+        "trick": "poppygrower",
+        "reason": "Ha a Kannibál megeszi a Máktermesztőt, majd meghal vagy elveszti a Máktermesztő képességét, a Démon és a Csatlósok megismerik egymást azon az éjszakán."
+    },
+    {
+        "target": "cannibal",
+        "trick": "princess",
+        "reason": "Ha a Kannibál ma jelölte és kivégezte a hercegnőt, a Démon nem öl ma este."
+    },
+    {
+        "target": "cannibal",
+        "trick": "zealot",
+        "reason": "Ha a Kannibál megszerzi a Fanatikus képességét, a Kannibál ezt megtudja."
+    },
+    {
+        "target": "cerenovus",
+        "trick": "goblin",
+        "reason": "A Cerenovus kiválaszthat egy játékost, hogy megőrüljön, hogy ő a Kobold."
+    },
+    {
+        "target": "heretic",
+        "trick": "baron",
+        "reason": "A Báró lehet, hogy csak 1 Kívülállót ad hozzá, nem 2-t."
+    },
+    {
+        "target": "heretic",
+        "trick": "boffin",
+        "reason": "A Démon nem rendelkezhet az Eretnek képességgel."
+    },
+    {
+        "target": "heretic",
+        "trick": "godfather",
+        "reason": "Ha a Pestisdoktor meghal, egy élő Csatlós megszerzi a Vörös Asszony képességet saját képessége mellett, és ezt megtudja."
+    },
+    {
+        "target": "heretic",
+        "trick": "lleech",
+        "reason": "Ha a Leech megmérgezte az Eretneket, majd a Leech meghal, az Eretnek mérgezett marad."
+    },
+    {
+        "target": "heretic",
+        "trick": "pithag",
+        "reason": "A Gödörboszorkány nem hozhat létre Eretneket."
+    },
+    {
+        "target": "heretic",
+        "trick": "spy",
+        "reason": "Csak 1 balszerencsés karakter lehet játékban."
+    },
+    {
+        "target": "heretic",
+        "trick": "widow",
+        "reason": "Csak 1 balszerencsés karakter lehet játékban."
+    },
+    {
+        "target": "kazali",
+        "trick": "choirboy",
+        "reason": "A Kazali nem választhatja a Királyt, hogy Csatlóssá váljon, ha egy Kórista játékban van."
+    },
+    {
+        "target": "kazali",
+        "trick": "goon",
+        "reason": "A Kazali választhatja, hogy a Goon játékos az egyik gonosz Csatlósuk legyen."
+    },
+    {
+        "target": "kazali",
+        "trick": "huntsman",
+        "reason": "Ha a Kazali a Leánykát Csatlóssá változtatja és egy Vadász játékban van, egy jó játékos Leánykává válik."
+    },
+    {
+        "target": "kazali",
+        "trick": "marionette",
+        "reason": "Ha a Kazali úgy dönt, hogy létrehoz egy Marionette, meg kell választani az egyik szomszédjuk."
+    },
+    {
+        "target": "kazali",
+        "trick": "soldier",
+        "reason": "A Kazali választhatja, hogy a Katona játékos az egyik gonosz Csatlósuk legyen."
+    },
+    {
+        "target": "legion",
+        "trick": "engineer",
+        "reason": "Légió és a Mérnök nem lehetnek mindketten játékban a játék kezdetén. Ha a Mérnök létrehozza a Légiót, a legtöbb játék"
+    },
+    {
+        "target": "legion",
+        "trick": "hatter",
+        "reason": "Ha a Kalapos meghal, és a Légió játékban van, semmi sem történik. Ha a Kalapos meghal és egy gonosz játékos választja a Légiót, minden jelenlegi gonosz játékos Légióvá válik."
+    },
+    {
+        "target": "legion",
+        "trick": "minstrel",
+        "reason": "Ha a Légiót ma kivégzik, a Légió megőrzi képességét, de a Miniszter megtudhatja, hogy ők a Légió."
+    },
+    {
+        "target": "legion",
+        "trick": "preacher",
+        "reason": "Ha a Prédikátor a Légiót választja, a Légió megőrzi képességét, de a Prédikátor megtudhatja, hogy ők a Légió."
+    },
+    {
+        "target": "legion",
+        "trick": "zealot",
+        "reason": "A Zealot talán gonosszá teszi a Légió képességét."
+    },
+    {
+        "target": "leviathan",
+        "trick": "banshee",
+        "reason": "Minden éjjel *, a Leviatán választ egy élő jó játékos (eltér a korábbi éjszakák): a kiválasztott Banshee meghal, és növeli a képességét."
+    },
+    {
+        "target": "leviathan",
+        "trick": "exorcist",
+        "reason": "A gonosz nem nyer, ha több mint 1 jó játékost hajtanak végre, ha az Ördögűző él, és sikeresen választotta a Leviatánt."
+    },
+    {
+        "target": "leviathan",
+        "trick": "farmer",
+        "reason": "Minden este *, a Leviatán választ egy élő jó játékos (eltér a korábbi éjszakák): a kiválasztott Farmer használja a képességét, de nem hal meg."
+    },
+    {
+        "target": "leviathan",
+        "trick": "grandmother",
+        "reason": "Ha Leviatán játszik, és az unokája meghal, a gonosz nyer."
+    },
+    {
+        "target": "leviathan",
+        "trick": "hatter",
+        "reason": "Ha a Kalapos az 5. napon vagy utána meghal, a Démon nem választhatja Leviatánt."
+    },
+    {
+        "target": "leviathan",
+        "trick": "innkeeper",
+        "reason": "Ha a Leviatán játszik, az Innkeeper-protected-játékosok biztonságban vannak minden gonosz képességtől."
+    },
+    {
+        "target": "leviathan",
+        "trick": "king",
+        "reason": "Ha a Leviatán játékban van, és legalább egy játékos halott, a király minden este megtanul egy élő karaktert."
+    },
+    {
+        "target": "leviathan",
+        "trick": "mayor",
+        "reason": "Ha a Leviatán játékban van & nincs végrehajtás történik az 5. napon, jó győzelem."
+    },
+    {
+        "target": "leviathan",
+        "trick": "monk",
+        "reason": "Ha a Leviatán játszik, a Monk-protected-lejátszó biztonságban van minden gonosz képességtől."
+    },
+    {
+        "target": "leviathan",
+        "trick": "pithag",
+        "reason": "Az 5. nap után a Gödörboszorkány nem választhatja Leviatánt."
+    },
+    {
+        "target": "leviathan",
+        "trick": "ravenkeeper",
+        "reason": "Minden éjjel * a Leviatán egy élő játékost választ (az előző éjszakáktól eltérően): a kiválasztott Ravenmaker használja a képességét, de nem hal meg."
+    },
+    {
+        "target": "leviathan",
+        "trick": "sage",
+        "reason": "Minden éjjel *, a Leviatán választ egy élő jó játékos (eltér a korábbi éjszakák): a kiválasztott Sage használja a képességét, de nem hal meg."
+    },
+    {
+        "target": "leviathan",
+        "trick": "soldier",
+        "reason": "Ha a Leviatán játszik, a katona biztonságban van minden gonosz képességtől."
+    },
+    {
+        "target": "lilmonsta",
+        "trick": "hatter",
+        "reason": "Ha egy Démon választja a Kis Szörnyet, egy Csatlóst is választ, aki ma este vigyáz a Kis Szörnyre."
+    },
+    {
+        "target": "lilmonsta",
+        "trick": "poppygrower",
+        "reason": "Ha a Máktermesztő játékban van, a Csatlósok nem ébrednek együtt. Egyenként ébresztik őket, amíg egyikük nem választja a Kis Szörny tokenét."
+    },
+    {
+        "target": "lilmonsta",
+        "trick": "scarletwoman",
+        "reason": "Ha 5 vagy több játékos él és a Kis Szörny tokenét tartó játékos meghal, a Vörös Asszony kapja meg a Kis Szörny tokenét ma este."
+    },
+    {
+        "target": "lilmonsta",
+        "trick": "vizier",
+        "reason": "A Vezír kivégzés által meghalhat, ha a Kis Szörnyre vigyáz."
+    },
+    {
+        "target": "lleech",
+        "trick": "mastermind",
+        "reason": "Ha a Mesterelme él és a Leech gazdatestét kivégzik, a Leech él, de elveszíti képességét."
+    },
+    {
+        "target": "lleech",
+        "trick": "slayer",
+        "reason": "Ha a Gyilkos megöli a Leech gazdatestét, a gazdatest meghal."
+    },
+    {
+        "target": "magician",
+        "trick": "wraith",
+        "reason": "Minden nap, a végrehajtási szakasz után, az élő mágus nyilvánosan találhat élő játékos a Lidércek: ha helyes, a démon kell választani a Wraith ma este."
+    },
+    {
+        "target": "magician",
+        "trick": "spy",
+        "reason": "Amikor a Kém meglátja a Grimoárt, a Démon és a Mágus karakter tokenjei eltávolításra kerülnek."
+    },
+    {
+        "target": "magician",
+        "trick": "vizier",
+        "reason": "Ha a Vizier és a Mágus is játszik, a Démon nem tanulja meg a Minionokat."
+    },
+    {
+        "target": "magician",
+        "trick": "widow",
+        "reason": "Amikor az Özvegy meglátja a Grimoárt, a Démon és a Mágus karakter tokenjei eltávolításra kerülnek."
+    },
+    {
+        "target": "magician",
+        "trick": "lilmonsta",
+        "reason": "A Mágus minden este Miniumot választ: ha a Minion & Lil 'Monsta él, akkor a Minion vigyáz Lil' Monsta-ra."
+    },
+    {
+        "target": "marionette",
+        "trick": "balloonist",
+        "reason": "Ha a Marionett azt hiszi, hogy ő a Léghajós, akkor +1 Kívülálló lehetett hozzáadva."
+    },
+    {
+        "target": "marionette",
+        "trick": "damsel",
+        "reason": "A Marionett nem tudja meg, hogy egy Leányka játékban van."
+    },
+    {
+        "target": "marionette",
+        "trick": "huntsman",
+        "reason": "Ha a Marionett azt hiszi, hogy ő a Vadász, akkor a Leányka hozzá lett adva."
+    },
+    {
+        "target": "marionette",
+        "trick": "lilmonsta",
+        "reason": "A Marionett egy Csatlós szomszédja, nem a Démoné. A Marionettet nem ébresztik fel, hogy kiválassza, ki veszi el a Kis Szörny tokenét, és nem tudja meg, hogy ő a Marionett, ha nála van a Kis Szörny token."
+    },
+    {
+        "target": "marionette",
+        "trick": "poppygrower",
+        "reason": "Amikor a Máktermesztő meghal, a Démon megtudja, ki a Marionett, de a Marionett nem tanul semmit."
+    },
+    {
+        "target": "marionette",
+        "trick": "snitch",
+        "reason": "A Marionett nem tanul meg 3 nem játékban lévő karaktert. A Démon helyette tanul meg további 3-at."
+    },
+    {
+        "target": "marionette",
+        "trick": "wraith",
+        "reason": "A Lidércek nem ébrednek fel a Marionettel."
+    },
+    {
+        "target": "mastermind",
+        "trick": "alhadikhia",
+        "reason": "Ha az Al-Hadikhia kivégzés által meghal, és a Mesterelme él, az Al-Hadikhia ma este 3 jó játékost választ: ha mind a 3 élni akar, a gonosz nyer. Máskülönben a jók nyernek."
+    },
+    {
+        "target": "mathematician",
+        "trick": "chambermaid",
+        "reason": "A Szobalány megtudja, hogy a Matematikus ma este felébred-e vagy sem, még akkor is, ha a Szobalány előbb ébred."
+    },
+    {
+        "target": "mathematician",
+        "trick": "lunatic",
+        "reason": "A Matematikus megtudja, ha az Őrült más játékosokat támad meg, mint akiket a valódi Démon támadott."
+    },
+    {
+        "target": "ogre",
+        "trick": "recluse",
+        "reason": "Ha a Remete gonoszként regisztrálódik az Ogrénál, az Ogre megtudja, hogy gonosz."
+    },
+    {
+        "target": "pithag",
+        "trick": "cultleader",
+        "reason": "Ha a Gödörboszorkány egy gonosz játékost Kultuszvezetővé változtat, nem válhatnak jóvá saját képességük miatt."
+    },
+    {
+        "target": "pithag",
+        "trick": "damsel",
+        "reason": "Ha a Gödörboszorkány létrehoz egy Leánykát, a Mesélő választja ki, melyik játékos az."
+    },
+    {
+        "target": "pithag",
+        "trick": "goon",
+        "reason": "Ha a Gödörboszorkány egy gonosz játékost Goonná változtat, nem válhatnak jóvá saját képességük miatt."
+    },
+    {
+        "target": "pithag",
+        "trick": "ogre",
+        "reason": "Ha a Pit- banya egy gonosz játékosból Ogre-t csinál, a saját képességei miatt nem tudnak jóra fordulni."
+    },
+    {
+        "target": "pithag",
+        "trick": "politician",
+        "reason": "A Gödörboszorkány nem hozhat létre gonosz Politikus."
+    },
+    {
+        "target": "pithag",
+        "trick": "villageidiot",
+        "reason": "Ha van egy tartalék token, a Gödörboszorkány létrehozhat egy extra Falu Bolondját. Ha igen, a részeg Falu Bolondja megváltozhat."
+    },
+    {
+        "target": "plaguedoctor",
+        "trick": "baron",
+        "reason": "Ha a mesemondó megszerzi a Báró képességét, akár két játékos nem lesz a-in-play kívülállók."
+    },
+    {
+        "target": "plaguedoctor",
+        "trick": "boomdandy",
+        "reason": "Ha a Mesélő megszerzi a Báró képességet, legfeljebb két játékos válik nem játékban lévő Kívülállóvá."
+    },
+    {
+        "target": "plaguedoctor",
+        "trick": "eviltwin",
+        "reason": "A Mesélő nem szerezheti meg a Gonosz Iker képességet, ha a Pestisdoktor meghal."
+    },
+    {
+        "target": "plaguedoctor",
+        "trick": "fearmonger",
+        "reason": "Ha az Ördögűző a Yaggababble-t választja, a Yaggababble képesség ma este nem öl."
+    },
+    {
+        "target": "plaguedoctor",
+        "trick": "goblin",
+        "reason": "Ha a Pestisdoktor meghal, egy élő Csatlós megszerzi a Kobold képességet saját képessége mellett, és ezt megtudja."
+    },
+    {
+        "target": "plaguedoctor",
+        "trick": "marionette",
+        "reason": "Ha a Démonnak van egy szomszédja, aki él, és egy Townsfolk vagy Outsider, amikor a Pestis Doktor meghal, az a játékos gonosz Marionette lesz. Ha már van egy extra gonosz játékos, ez nem történik meg."
+    },
+    {
+        "target": "plaguedoctor",
+        "trick": "scarletwoman",
+        "reason": "Ha a Pestisdoktort kivégzik és a Mesélő megszerezné a Boomdandy képességet, a Boomdandy képesség azonnal aktiválódik."
+    },
+    {
+        "target": "plaguedoctor",
+        "trick": "spy",
+        "reason": "Ha a Pestisdoktor meghal, egy élő Csatlós megszerzi a Kém képességet saját képessége mellett, és ezt megtudja."
+    },
+    {
+        "target": "plaguedoctor",
+        "trick": "wraith",
+        "reason": "Ha a Pestis Doktor meghal, egy élő Minion a saját képességei mellett a Lidércek képességeit is megszerzi, és ezt is megtanulja."
+    },
+    {
+        "target": "riot",
+        "trick": "banshee",
+        "reason": "Minden éjjel *, A riot egy élő jó játékost választ (a korábbi éjszakáktól eltérően): a kiválasztott Banshee meghal és elnyeri képességeit."
+    },
+    {
+        "target": "riot",
+        "trick": "exorcist",
+        "reason": "Ha az Ördögűző a Riotot választja a harmadik éjszakán, a Minionok nem válnak lázadókká."
+    },
+    {
+        "target": "riot",
+        "trick": "farmer",
+        "reason": "Minden éjjel *, Riot választ egy élő jó játékos (eltér a korábbi éjszakák): a kiválasztott Farmer használja a képességét, de nem hal meg."
+    },
+    {
+        "target": "riot",
+        "trick": "grandmother",
+        "reason": "Ha Riot játszik, és az unokája nappal hal meg, akkor a nagyanyja is."
+    },
+    {
+        "target": "riot",
+        "trick": "innkeeper",
+        "reason": "Ha a Riot játékban van, az Innkeeper által védett játékos biztonságban van minden gonosz képességtől."
+    },
+    {
+        "target": "riot",
+        "trick": "king",
+        "reason": "Ha a Riot játékban van, és legalább 1 játékos halott, a király minden este megtanul egy élő karaktert."
+    },
+    {
+        "target": "riot",
+        "trick": "mayor",
+        "reason": "A polgármester dönthet úgy, hogy leállítja a jelöléseket. Ha ezt teszik, amikor csak egy Riot él, akkor a jó nyer. Különben a gonosz nyer."
+    },
+    {
+        "target": "riot",
+        "trick": "monk",
+        "reason": "Ha Riot játékban van, a Monk- védett játékos biztonságban van minden gonosz képességtől."
+    },
+    {
+        "target": "riot",
+        "trick": "ravenkeeper",
+        "reason": "Minden éjjel *, Riot választ egy élő jó játékos (eltér a korábbi éjszakák): a kiválasztott Ravenmaker használja a képességét, de nem hal meg."
+    },
+    {
+        "target": "riot",
+        "trick": "sage",
+        "reason": "Minden éjjel *, Riot választ egy élő jó játékos (eltér a korábbi éjszakák): a kiválasztott Sage használja a képességét, de nem hal meg."
+    },
+    {
+        "target": "riot",
+        "trick": "soldier",
+        "reason": "Ha Riot játszik, a katona biztonságban van minden gonosz képességtől."
+    },
+    {
+        "target": "scarletwoman",
+        "trick": "alhadikhia",
+        "reason": "Ha a Nyomozó megtudja, hogy a Vezír játékban van, a Vezír létezését a Mesélő nem jelenti be."
+    },
+    {
+        "target": "scarletwoman",
+        "trick": "fanggu",
+        "reason": "Ha a Fang Gu egy Kívülállót választ és meghal, a Vörös Asszony nem válik Fang Gu-vá."
+    },
+    {
+        "target": "spy",
+        "trick": "damsel",
+        "reason": "Ha a Kém játékban van (vagy volt), a Leányka meg van mérgezve."
+    },
+    {
+        "target": "spy",
+        "trick": "ogre",
+        "reason": "A Kém gonosznak regisztrál az Ogrénál."
+    },
+    {
+        "target": "spy",
+        "trick": "poppygrower",
+        "reason": "Ha a Máktermesztő játékban van, a Kém nem látja a Grimoárt, amíg a Máktermesztő meg nem hal."
+    },
+    {
+        "target": "summoner",
+        "trick": "clockmaker",
+        "reason": "Ha van egy Alkimista-Idéző játékban, a játék normál módon kezdődik egy Démonnal. Ha az Alkimista-Idéző választ egy játékost, Démonná teszi azt, de nem változtatja meg annak beállítottságát."
+    },
+    {
+        "target": "summoner",
+        "trick": "courtier",
+        "reason": "Ha az Idéző egy halott játékost Zombuullá változtat, a Mesélő úgy kezeli azt a játékost, mint egy egyszer már meghalt Zombuult."
+    },
+    {
+        "target": "summoner",
+        "trick": "engineer",
+        "reason": "Ha a Mérnök eltávolít egy Idézőt a játékból, mielőtt az Idéző használja képességét, az Idéző azonnal használja képességét."
+    },
+    {
+        "target": "summoner",
+        "trick": "hatter",
+        "reason": "Ha a Mérnök eltávolít egy Idézőt a játékból, mielőtt az Idéző használja képességét, az Idéző azonnal használja képességét."
+    },
+    {
+        "target": "summoner",
+        "trick": "kazali",
+        "reason": "Az Idéző nem hozhat létre játékban lévő Démon. Ha az Idéző nem játékban lévő Démon hoz létre, a mai éjszakai halálesetek önkényesek."
+    },
+    {
+        "target": "summoner",
+        "trick": "legion",
+        "reason": "Ha az Idéző Légiót hoz létre, a legtöbb játékos (beleértve az összes gonosz játékost) gonosz Légióvá válik."
+    },
+    {
+        "target": "summoner",
+        "trick": "lordoftyphon",
+        "reason": "Ha az Idéző létrehoz egy Tüfon Urát, a Tüfon Ura egy Csatlós szomszédja kell legyen. A másik szomszéd egy nem játékban lévő gonosz Csatlós lesz."
+    },
+    {
+        "target": "summoner",
+        "trick": "marionette",
+        "reason": "A Marionette szomszédok a Summoner. A Summoner tudja, ki a Marionette."
+    },
+    {
+        "target": "summoner",
+        "trick": "pithag",
+        "reason": "Ha az Idéző részeg a 3. éjszakán, az Idéző választja ki, melyik Démon, de a Mesélő választja ki, melyik játékos."
+    },
+    {
+        "target": "summoner",
+        "trick": "poppygrower",
+        "reason": "A Marionett az Idéző szomszédja. Az Idéző tudja, ki a Marionett."
+    },
+    {
+        "target": "summoner",
+        "trick": "preacher",
+        "reason": "Ha a Prédikátor az Idézőt választotta a 3. éjszakán vagy előtte, az Idéző választja ki, melyik Démon, de a Mesélő választja ki, melyik játékos."
+    },
+    {
+        "target": "summoner",
+        "trick": "pukka",
+        "reason": "Az Idéző kiválaszthat egy játékost, hogy Pukka legyen a második éjszakán."
+    },
+    {
+        "target": "summoner",
+        "trick": "zombuul",
+        "reason": "Ha az Idéző egy halott játékost Zombuullá változtat, a Mesélő úgy kezeli azt a játékost, mint egy egyszer már meghalt Zombuult."
+    },
+    {
+        "target": "vizier",
+        "trick": "alsaahir",
+        "reason": "Ha a Vezír játékban van, az Alsaahirnak is meg kell tippelnie, melyik Démon(ok) van(nak) játékban."
+    },
+    {
+        "target": "vizier",
+        "trick": "courtier",
+        "reason": "Ha a Vizier elveszíti a képességét, ezt megtanulják. Ha a Vizier-t kivégzik, amíg megvan a képességük, a csapatuk nyer."
+    },
+    {
+        "target": "vizier",
+        "trick": "fearmonger",
+        "reason": "A Vizier a Fearmongerrel ébred, megtanulja, kit választ, és nem tudja azonnal végrehajtani a játékost."
+    },
+    {
+        "target": "vizier",
+        "trick": "investigator",
+        "reason": "Ha az Alkimista a Vezír képesség birtokában van, csak akkor választhatják az azonnali kivégzést, ha három vagy több játékos szavazott."
+    },
+    {
+        "target": "vizier",
+        "trick": "politician",
+        "reason": "A Politikus gonoszként regisztrálódhat a Vezír számára."
+    },
+    {
+        "target": "vizier",
+        "trick": "preacher",
+        "reason": "Ha a Vizier elveszíti a képességét, ezt megtanulják. Ha a Vizier-t kivégzik, amíg megvan a képességük, a csapatuk nyer."
+    },
+    {
+        "target": "vizier",
+        "trick": "zealot",
+        "reason": "A Fanatikus gonoszként regisztrálódhat a Vezír számára."
+    },
+    {
+        "target": "vortox",
+        "trick": "banshee",
+        "reason": "Ha a Vortox játékban van és a Démon megöli a Banshee-t, a játékosok mégis megtudják, hogy a Banshee meghalt."
+    },
+    {
+        "target": "widow",
+        "trick": "damsel",
+        "reason": "Ha az Özvegy játékban van (vagy volt), a Leányka meg van mérgezve."
+    },
+    {
+        "target": "widow",
+        "trick": "poppygrower",
+        "reason": "Ha a Máktermesztő játékban van, az Özvegy nem látja a Grimoárt, amíg a Máktermesztő meg nem hal."
+    },
+    {
+        "target": "yaggababble",
+        "trick": "exorcist",
+        "reason": "Ha az Idéző játékban van, az Órásmester nem kap információt, amíg egy Démon létre nem jön."
+    }
+]

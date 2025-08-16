@@ -1,0 +1,268 @@
+title: Pocket Grimoire
+
+forms:
+    file:
+        placeholder: Válassz egy fájlt
+        button: Kereső
+
+dialog:
+    close: Bezár
+
+index:
+    title: Játék
+    description: Egy virtuális grimoire a Blood on the Clocktower játékhoz
+
+sheet:
+    title: Karakterlap
+    description: A Blood on the Clocktower ezen kiadásának karakterlapja
+    jinx: Balszerencse
+    each_night: "*Minden éjjel, kivéve az első éjjelt."
+    get_qr_code: Szerezd meg a QR-kódot ehhez a laphoz
+    get_sheet: Szerezd meg ezt a lapot
+    credit: A Blood on the Clocktower Steven Medway és a Pandemonium Institute védjegye
+    breakdown: Az egyes csapatok számai a játékosok számához.
+    count_plus: "%count%+"
+
+groups:
+    players: Játékosok
+    townsfolk: Falusiak
+    outsider: Kívülállók
+    minion: Csatlósok
+    demon: Démonok
+    traveller: Utazók
+    fabled: Legendás
+
+messages:
+    good_team: Jó csapat
+    evil_team: Gonosz csapat
+    empty_character_ability: Ez egy üres karakter.
+    version_change_message: Az alkalmazás frissítette a verzióját. Mivel az adatok esetleg nem helyesek, javasoljuk, hogy mindent törölj a "Gyorsítótár törlése" párbeszédablakban. Nyomd meg az "OK" gombot a párbeszédablak megnyitásához, vagy a "Mégsem" gombot az üzenet bezárásához.
+    invalid_script: A forgatókönyv formátuma nem lett felismerve.
+    no_characters: A forgatókönyv nem tartalmaz felismerhető karaktereket.
+    player_name: Mi ennek a játékosnak a neve?
+    custom_info_token: Mit szeretnél, hogy az új információs token tartalmazzon? Használj kettős csillagokat a szöveg kiemeléséhez.
+    bag_disabled: "Nem lehet ezeket a karaktereket a zsákba tenni: {0}"
+
+setup:
+
+    title: Beállítás
+
+    buttons:
+        select_edition: Válassz kiadást
+        select_characters: Karakterek kiválasztása
+        qr_code_button: Karakterlap
+        clear_cache_button: Gyorsítótár törlése
+        language: Nyelv
+        set_language: Nyelv beállítása
+
+    editions:
+        title: Kiadás kiválasztása
+        trouble_brewing: Trouble Brewing
+        bad_moon_rising: Bad Moon Rising
+        sects_and_violets: Sects and Violets
+        custom_script: Egyéni forgatókönyv
+        custom_note: Tölts fel egy egyéni forgatókönyvet, add meg az egyéni forgatókönyv URL-jét, vagy másold be közvetlenül a JSON-t.
+        custom_warning: Csak megbízható forrásból származó egyéni JSON fájlokat tölts be!
+        upload: Egyéni forgatókönyv feltöltése
+        url: URL megadása
+        paste: Beillesztés a vágólapról
+        unsupported: Kérjük, vedd figyelembe, hogy a Pocket Grimoire jelenleg nem támogatja a házi készítésű vagy lokalizált forgatókönyveket.
+        select: Kiválasztás
+
+    character_select:
+        title: Karakterek kiválasztása
+        number_players: Játékosok száma
+        toggle_abilities: Karakterképességek megjelenítése
+        toggle_duplicates: Duplikált karakterek engedélyezése
+        highlight_random: Véletlenszerű kiemelés
+        draw_characters: Karakterek sorsolása
+        add_all: Összes hozzáadása
+        layout: Elrendezés
+        ellipse: Ellipszis
+        diagonal: Átlós
+        horizontal: Vízszintes
+        vertical: Függőleges
+
+    character_choice:
+        title: Válaszd ki a karaktered
+        description: Érintsd meg a számozott tokenek bármelyikét a karaktered kiválasztásához. A sötétebbek már ki lettek választva.
+
+    character_decision:
+        title: Emlékezz a karakteredre
+        name: Nevezd meg magad (opcionális)
+        return: Vissza a karakterválasztáshoz
+
+    qr_code:
+        title: Karakterlap
+        intro: Olvasd be ezt a QR-kódot a karakterlap megtekintéséhez
+        include: Beleértve
+        travellers: Utazók
+        fabled: Legendás
+
+    clear_cache:
+        title: Gyorsítótár törlése
+        clear_all: Minden törlése
+        clear_description: Ennek kikapcsolása lehetővé teszi a gyorsítótár egyes részeinek törlését.
+        lookup_label: Adatok törlése
+        lookup_note: Az átkok, a csapatbontás és a karakterinformációk adatai.
+        characters_label: Kiadás törlése
+        characters_note: A kiválasztott és betöltött kiadás vagy forgatókönyv.
+        tokens_label: Tokenek törlése
+        tokens_note: A tokenek pozíciója a grimoárban.
+        inputs_label: Beviteli adatok törlése
+        inputs_note: Felhasználói beállítások ehhez a weboldalhoz.
+        details_label: Nyitott/zárt törlése
+        details_note: Mely szekciók vannak nyitva vagy zárva.
+        info_tokens_label: Egyéni információs tokenek törlése
+        info_tokens_note: A hozzáadott egyéni információs tokenek.
+        names_label: Nevek törlése
+        names_note: A játékosnév-javaslatok.
+        height_label: Pad magasságának törlése
+        height_note: A pad magassága a grimoárban.
+        clear_refresh_label: Frissítés utána
+        clear_refresh_note: A frissítés új adatokat tölt be minden törölt elemhez.
+        warning: "<strong>Figyelmeztetés:</strong> a grimoárba helyezett tokenek el fognak veszni."
+        info_token_warning: "<strong>Figyelmeztetés:</strong> minden egyéni információs token el fog veszni."
+        clear_cache: Gyorsítótár törlése
+
+grimoire:
+
+    title: Grimoár
+
+    grimoire:
+        bluffs: Démon blöffök
+        show_bluffs: Minden blöff megjelenítése
+        add_bluffs: Blöffök hozzáadása
+        add_token: Token hozzáadása
+        add_reminder: Emlékeztető hozzáadása
+        add_traveller: Utazó hozzáadása
+        add_fabled: Legendás hozzáadása
+        show_tokens: Tokenek megjelenítése
+        reset_height: Pad magasságának visszaállítása
+        clear_grimoire: Grimoár törlése
+        clear_grimoire_warning: Biztosan törölni szeretnéd az összes tokent?
+        show_night_order: Éjszakai sorrend megjelenítése
+        character_size: Karakter token mérete
+        reminder_size: Emlékeztető token mérete
+        token_settings: Token beállítások
+
+    character_list:
+        title: Karakter kiválasztása
+
+    reminder_list:
+        title: Emlékeztető kiválasztása
+        show: Minden emlékeztető megjelenítése
+        multiple: Több hozzáadása
+        add_all: Összes hozzáadása
+
+    character_show:
+        title: Token
+        show: Megjelenítés
+        shroud: Elfedés
+        rotate: Forgatás
+        reminder: Emlékeztető
+        replace: Csere
+        remove: Token eltávolítása
+        recent_reminders: "Legutóbb hozzáadott emlékeztetők:"
+        player_name: Játékosnév beállítása
+        ghost_vote: Szellem szavazat
+        orphan: "Figyelmeztetés: ez a karakter nincs a jelenlegi forgatókönyvben."
+
+    reminder_show:
+        title: Emlékeztető
+        remove: Eltávolítás
+
+    bluff_show:
+        title: Token
+        empty: Üres
+        show: Megjelenítés
+        change: Módosítás
+
+    bluff_list:
+        title: Blöff kiválasztása
+        show_existing: Létező karakterek megjelenítése
+        show_travellers: Utazók megjelenítése
+        show_evil: Gonosz karakterek megjelenítése
+
+    token_list:
+        title: Karakterek
+        add: Token hozzáadása
+
+    traveller_list:
+        title: Utazók
+        show_all: Minden utazó megjelenítése
+
+    fabled_list:
+        title: Legendás
+
+    token:
+        title: Token
+
+    export:
+        title: Export game
+        markup: Generate a QR code so that the game data can be imported into The Grim.
+        button: Generate QR code
+
+jinxes:
+    title: Átkok
+    target: Célpont
+    trick: Trükk
+    reason: Ok
+    show: Játékban nem lévő átkok megjelenítése
+
+night_order:
+    title: Éjszakai sorrend
+    first_night: Első éjszaka
+    other_night: Egyéb éjszakák
+    swipe_change: Húzd el az éjszakák megváltoztatásához.
+    show: Játékban nem lévő karakterek megjelenítése
+    show_dead: Halott karakterek megjelenítése
+
+info_tokens:
+    title: Információs tokenek
+    info_tokens:
+        isdemon: Ez a <strong>démon</strong>
+        isminion: Ezek a <strong>csatlósaid</strong>
+        notinplay: Ezek a karakterek <strong>nincsenek játékban</strong>
+        nominatetoday: <strong>Jelöltél</strong> ma?
+        playeris: Ez a <strong>játékos</strong>
+        votetoday: <strong>Szavaztál</strong> ma?
+        youare: <strong>Te</strong> vagy
+        selectedyou: Ez a karakter <strong>téged választott</strong>
+        useability: <strong>Használja</strong> a képességét?
+        makechoice: <strong>Válasszon</strong>
+    custom: Egyéni információs tokenek
+    add_custom: Információs token hozzáadása
+    edit_custom: Információs token szerkesztése
+    delete_custom: Információs token törlése
+
+notes:
+    title: Mesélő megjegyzések
+    label: Jegyzetek
+    clear: Jegyzetek törlése
+    clear_warning: Biztosan törölni szeretnéd a jegyzeteket?
+
+acknowledgements:
+    title: Köszönetnyilvánítások
+    acknowledgements:
+        - A <a href="https://bloodontheclocktower.com/" target="_blank" rel="noopener noreferrer">Blood on the Clocktower</a> Steven Medway és a <a href="https://www.thepandemoniuminstitute.com/" target="_blank" rel="noopener noreferrer">Pandemonium Institute</a> védjegye.
+        - Éjszakai emlékeztetők és egyéb kiegészítő szövegek <a href="http://bignose.whitetree.org/projects/botc/diy/" target="_blank" rel="noopener noreferrer">Ben Finney</a> tollából.
+        - Az ikonok a <a href="https://fontawesome.com/v5.15/icons" target="_blank" rel="noopener noreferrer">Font Awesome</a>-ból származnak.
+        - Számos kép és adat a <a href="https://www.clocktower.online" target="_blank" rel="noopener noreferrer">Clocktower.online</a> és a <a href="https://bloodontheclocktower.com/" target="_blank" rel="noopener noreferrer">Blood on the Clocktower weboldalról származik</a>.
+        - Ez egy nem hivatalos virtuális grimoár a Blood on the Clocktower játékhoz. Ez a projekt ingyenes, a forráskód elérhető a <a href="https://github.com/Skateside/pocket-grimoire" target="_blank" rel="noopener noreferrer">GitHubon</a>. A projekt nem áll kapcsolatban a Pandemonium Institute-tal. Ha élvezed a Blood on the Clocktower játékot, fontold meg, <a href="https://bloodontheclocktower.com/buy" target="_blank" rel="noopener noreferrer">hogy vásárolsz egy saját grimoárt</a> - az nemcsak rugalmasabb, mint ez a digitális verzió, hanem támogatja a készítőket is.
+        - Hibát észleltél vagy van javaslatod a fejlesztésre? Értesíts a <a href="https://discord.gg/eU89j89" target="_blank" rel="noopener noreferrer">pocket-grimoire csatornán az informális Discord szerveren</a> (a nevem ott "Skateside") <a href="https://github.com/Skateside/pocket-grimoire/issues" target="_blank" rel="noopener noreferrer">vagy jelezd GitHubon</a>.
+        - <small>Verzió <span id="version"></span></small>
+
+errors:
+    homebrew_json:
+        not_homebrew: Nem házi készítésű bejegyzés "%id%"
+        unrecognised_team: Ismeretlen csapat "%team%"
+        not_find_id: Nem található azonosító "%id%"
+        not_recognise_character: Nem felismerhető karakter "%id%"
+        invalid_entry: 'Érvénytelen bejegyzés "%id%": %reasons%'
+        empty_teams: 'Üres csapatok: %teams%'
+        invalid_property: A(z) "%property%" tulajdonságnak %expected% típusúnak kellene lennie, de %given% típusú volt
+    url:
+        no_url: Érvénytelen vagy hiányzó URL
+        cannot_access: Nem lehet elérni az URL-t
+        not_json: Nem lehet elemezni a JSON-t az URL-ből

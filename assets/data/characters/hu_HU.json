@@ -1,0 +1,1850 @@
+[
+    {
+        "id": "acrobat",
+        "name": "Akrobata",
+        "ability": "Éjjelente* ha valamelyik élő Jó szomszédod részeg vagy mérgezett, meghalsz.",
+        "firstNightReminder": "",
+        "otherNightReminder": "Ha egy jó élő szomszéd részeg vagy mérgezett, az akrobata játékos meghal.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Halott"
+        ]
+    },
+    {
+        "id": "alchemist",
+        "name": "Alkimista",
+        "ability": "Megkapod egy nem játékban lévő Követő képességét.",
+        "firstNightReminder": "Mutass az Alkimistának egy nem játékban lévő Minion képességet.",
+        "otherNightReminder": "",
+        "remindersGlobal": [
+            "Az Alkimista"
+        ],
+        "reminders": []
+    },
+    {
+        "id": "alhadikhia",
+        "name": "Al- Hadikhia",
+        "ability": "Éjjelente* válassz 3 játékost (mindenki megtudja kiket): Mindegyik csendben választ, hogy él vagy hal, de ha mindenki élne, mindenki meghal.",
+        "firstNightReminder": "",
+        "otherNightReminder": "Az Al-Hadikhia 3 játékost választ. Bejelenti az első játékost, felébreszti, hogy bólintson igennel az élethez, vagy rázza a fejét nemmel a halálhoz, ennek megfelelően megöli vagy feltámasztja, majd elaltatja, és bejelenti a következő játékost. Ha ezek után mind a 3 játékos életben van, mind a 3 meghal.",
+        "remindersGlobal": [],
+        "reminders": [
+            "1",
+            "2",
+            "3",
+            "Válassz halált",
+            "Válassz életet"
+        ]
+    },
+    {
+        "id": "alsaahir",
+        "name": "Alsaahir",
+        "ability": "Naponta egyszer, ha nyilvánosan kitalálod, hogy mely játékosok a csatlósok és melyek a démonok, a jók nyernek.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "amnesiac",
+        "name": "Amnéziás",
+        "ability": "Nem tudod mi a képességed. Minden nap privátban találgathatsz mi is az: megtudod mennyire tippeltél pontosan.",
+        "firstNightReminder": "Döntsd el az Amnéziás teljes képességét. Ha az Amnéziás képessége miatt ma éjszaka felébred: Ébreszd fel az Amnéziásat, és aktiváljátok a képességét.",
+        "otherNightReminder": "Ha az Amnéziás képessége miatt ma éjszaka felébred: Ébreszd fel az Amnéziásat, és aktiváljátok a képességét.",
+        "remindersGlobal": [],
+        "reminders": [
+            "?"
+        ]
+    },
+    {
+        "id": "angel",
+        "name": "Angyal",
+        "ability": "Valami rossz történhet azzal, aki a legjobban felelős egy új játékos haláláért.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": [
+            "Védelem",
+            "Valami rossz"
+        ]
+    },
+    {
+        "id": "apprentice",
+        "name": "Tanonc",
+        "ability": "Az első éjjeleden megkapod egy Városi (ha Jó) képességét vagy egy Követő (ha Gonosz) képességét.",
+        "firstNightReminder": "Mutasd fel a Tanoncnak a \"Te vagy\" kártyát, majd egy Városlakó vagy Minion jelölőt. A Grimoár-ban cseréljétek le a Tanonc jelölőt erre a karakterjelölőre, és tegyétek a Tanonc 'Te vagy a Tanonc' emlékeztetőjét a karakterjelölő mellé.",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": [
+            "Te vagy a Tanonc"
+        ]
+    },
+    {
+        "id": "artist",
+        "name": "Művész",
+        "ability": "Egyszer a játék során, nappal, privátban kérdezz a Mesélőtől egy eldöntendő kérdést.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": [
+            "Nincs képesség"
+        ]
+    },
+    {
+        "id": "assassin",
+        "name": "Bérgyilkos",
+        "ability": "Egyszer a játék alatt, éjjel, válassz egy játékost: meghal, még akkor is ha valamilyen hatás miatt nem tudna.",
+        "firstNightReminder": "",
+        "otherNightReminder": "Ha az Orgyilkos még nem használta a képességét: az Orgyilkos vagy 'nem'-et jelez a fejével, vagy egy játékosra mutat. Az a játékos meghal.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Halott",
+            "Nincs képesség"
+        ]
+    },
+    {
+        "id": "atheist",
+        "name": "Ateista",
+        "ability": "A Mesélő áthághatja a szabályokat és ha kivégzik, akkor a Jók nyernek még ha halott is vagy. (nincsenek Gonosz karakterek)",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "balloonist",
+        "name": "Hőlégballonos",
+        "ability": "Éjjelente megtudsz egy játékost valamelyik karakter típusból egész addig, amíg már nem lesz több típus, amit megtudj. (+1 Kívülálló)",
+        "firstNightReminder": "Válassz egy karaktertípust. Mutass egy olyan játékosra, akinek a karaktere az adott típusba tartozik. Helyezd a Léghajós emlékeztetőjelölőjét az adott karakter mellé.",
+        "otherNightReminder": "Válass ki egy olyan karaktertípust, amelyhez még nincs emlékeztetőjelölő az adott típusú karakter mellett. Mutass egy olyan játékosra, akinek a karaktere az adott típusú, ha van ilyen. Helyezd a Léghajós emlékeztetőjelölőjét az adott karakter mellé.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Latottak: Démon",
+            "Minion",
+            "Kívülálló",
+            "Városlakó",
+            "Utazó"
+        ]
+    },
+    {
+        "id": "banshee",
+        "name": "Banshee",
+        "ability": "Ha a Démon megöl téged, minden játékos értesül erről. Ettől kezdve naponta kétszer jelölhetsz és minden jelölésnél kétszer szavazhatsz.",
+        "firstNightReminder": "",
+        "otherNightReminder": "Bejelentem, hogy a Banshee meghalt.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Van képessége"
+        ]
+    },
+    {
+        "id": "barber",
+        "name": "Borbély",
+        "ability": "Ha meghalsz napközben vagy éjjel, a Démon választhat 2 játékost (nem egy másik Démont) akik karaktert cserélnek.",
+        "firstNightReminder": "",
+        "otherNightReminder": "Ha a Borbély meghalt ma: Ébreszd fel a Démont. Mutasd a 'This character selected you' kártyát, majd a Borbély tokent. A Démon vagy 'nem'-et jelez a fejével, vagy 2 játékosra mutat. Ha játékosokat választott: Cseréld ki a karakter tokeneket. Keltsd fel mindkét játékost. Mutasd a 'You are' kártyát, majd az új karakterük tokenjét.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Hajvágás éjszaka"
+        ]
+    },
+    {
+        "id": "barista",
+        "name": "Barista",
+        "ability": "Éjjelente szürkületig: 1) egy játékos józan, egészséges és Jó információkat kap. Vagy 2) készeresen működnek a képességei. Megtudja melyik.",
+        "firstNightReminder": "Válassz egy játékost, ébreszd fel, és mondd meg neki, hogy melyik Barista-erő hat rá. Kezeld őket ennek megfelelően (józan\/egészséges\/igaz információ vagy aktiváld kétszer a képességüket).",
+        "otherNightReminder": "Válassz egy játékost, ébreszd fel, és mondd meg neki, hogy melyik Barista-erő hat rá. Kezeld őket ennek megfelelően (józan\/egészséges\/igaz információ vagy aktiváld kétszer a képességüket).",
+        "remindersGlobal": [],
+        "reminders": [
+            "Képesség kétszer",
+            "Józan & Egészséges"
+        ]
+    },
+    {
+        "id": "baron",
+        "name": "Báró",
+        "ability": "Extra Kívülállók vannak játékban. [+2 Kívülálló]",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "beggar",
+        "name": "Koldus",
+        "ability": "Szavazó tokent kell használnod, hogy szavazhass. Ha egy halott játékos neked adja az övét, megtudod a csapatát. Józan és egészséges vagy.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "bishop",
+        "name": "Püspök",
+        "ability": "Csak a Mesélő jelölhet. Legalább 1 ellentétes csapatban lévő játékost jelölnie kell mindennap.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": [
+            "Jót jelölni",
+            "Rosszat jelölni"
+        ]
+    },
+    {
+        "id": "boffin",
+        "name": "Boffin",
+        "ability": "A Démon (még ha részeg vagy megmérgezett is) egy játékban nem lévő jó karakter képességével rendelkezik. Mindketten tudjátok, melyik ez.",
+        "firstNightReminder": "Ébreszd fel a Tudóst, és mutasd meg neki a Démon képességének jelét. Altasd vissza a Tudóst. Ébreszd fel a Démon-t, mutasd meg a Tudós jelét, majd mutasd meg a Démon jó képességének jelét.",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "bonecollector",
+        "name": "Nekromita",
+        "ability": "Egyszer a játék alatt, éjjel* válassz egy halott játékost: vissza kapja a képességét alkonyatig.",
+        "firstNightReminder": "",
+        "otherNightReminder": "A Nekromanta vagy \"nem\"-et jelez a fejével, vagy bármelyik halott játékosra mutat. Ha halott játékosra mutatott, tegye a Nekromanta 'Van képessége' emlékeztetőjét a kiválasztott játékos karakterjelölője mellé. (Lehet, hogy ma éjszaka fel kell ébreszteni őt ahhoz, hogy használni tudja).",
+        "remindersGlobal": [],
+        "reminders": [
+            "Van képessége",
+            "Nincs képesség"
+        ]
+    },
+    {
+        "id": "boomdandy",
+        "name": "Robbantó",
+        "ability": "Ha kivégeznek, akkor 3 játékost kivéve mindenki meghal. 1 perccel később meghal az a játékos, akire a legtöbb játékos mutat.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "bootlegger",
+        "name": "Bootlegger",
+        "ability": "Ez a forgatókönyv házi készítésű karaktereket vagy szabályokat tartalmaz.",
+        "firstNightReminder": "Jelentsd be, hogy a Csempész játékban van, és tájékoztasd a csoportot az összes házi készítésű karakterről és\/vagy szabályról, amit ebben a játékban használsz.",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "bountyhunter",
+        "name": "Fejvadász",
+        "ability": "Megismersz egy Gonosz játékost. Ha a Gonosz játékos, akit ismertél meghal, megismersz egy másikat aznap éjjel. (Egy Városi Gonosz)",
+        "firstNightReminder": "Mutass 1 gonosz játékosra. Ébreszd fel a gonosz Városlakót és mutasd meg neki a \"Te vagy\" kártyát és a hüvelykujj lefelé mutató gonosz jelet.",
+        "otherNightReminder": "Ha az ismert gonosz játékos meghalt, mutass egy másik gonosz játékosra.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Ismert"
+        ]
+    },
+    {
+        "id": "buddhist",
+        "name": "Buddhista",
+        "ability": "Minden nap, az első 2 percben a veterán játékosok nem beszélhetnek.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "bureaucrat",
+        "name": "Bürokrataworld. kgm",
+        "ability": "Éjjelente válassz egy játékost (ne magadat): az ő szavazata 3szor számit másnap.",
+        "firstNightReminder": "A bürokrata egy játékosra mutat. Tegye a bürokrata \"3 szavazat\" emlékeztetőjét a kiválasztott játékos karakterjelölője mellé.",
+        "otherNightReminder": "A bürokrata egy játékosra mutat. Tegye a bürokrata \"3 szavazat\" emlékeztetőjét a kiválasztott játékos karakterjelölője mellé.",
+        "remindersGlobal": [],
+        "reminders": [
+            "3 szavazat"
+        ]
+    },
+    {
+        "id": "butcher",
+        "name": "Hentes",
+        "ability": "Minden nap, az első kivégzés után gyanusíthatsz újra.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "butler",
+        "name": "Komornyik",
+        "ability": "Éjjelente* válassz egy játékost (magadat nem lehet): holnap csak akkor szavazhatsz, ha ő is.",
+        "firstNightReminder": "A Komornyik rámutat egy játékosra. Jelöld azt a játékost, mint 'Uarm'.",
+        "otherNightReminder": "A Komornyik rámutat egy játékosra. Jelöld azt a játékost, mint 'Uram'.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Uram"
+        ]
+    },
+    {
+        "id": "cacklejack",
+        "name": "Cacklejack",
+        "ability": "Minden nap válasszon egy játékost: egy másik játékos megváltoztatja a karaktert ma este.",
+        "firstNightReminder": "",
+        "otherNightReminder": "Ébressz fel egy játékost, aki nincs megjelölve \"Nem én\" felirattal, mutasd meg nekik a \"Te vagy\" kártyát, majd az új karakterüket.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Nem én"
+        ]
+    },
+    {
+        "id": "cannibal",
+        "name": "Kannibál",
+        "ability": "Megkapod az utoljára kivégzet játékos képességét. Ha Gonosz volt, mérgezett leszel amíg egy Jó játékost ki nem végeznek.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": [
+            "Mai halott",
+            "Mérgezett"
+        ]
+    },
+    {
+        "id": "cerenovus",
+        "name": "Agymosó",
+        "ability": "Éjjelente válassz egy játékost és egy Jó karaktert: Rögeszméje lesz másnap, hogy ő az a karakter vagy kivégezhetik.",
+        "firstNightReminder": "A Cerenovus egy játékosra mutat, majd a lapján lévő karakterre. Ébreszd fel azt a játékost. Mutasd meg az \"Ez a karakter téged választott\" kártyát, majd a Cerenovus jelölőt. Mutasd meg a kiválasztott karakter jelölőt. Ha a játékos nem Rögeszmés, hogy holnap ez a karakter, akkor kivégezhető.",
+        "otherNightReminder": "A Cerenovus egy játékosra mutat, majd a lapján lévő karakterre. Ébreszd fel azt a játékost. Mutasd meg az \"Ez a karakter téged választott\" kártyát, majd a Cerenovus jelölőt. Mutasd meg a kiválasztott karakter jelölőt. Ha a játékos nem Rögeszmés , hogy holnap ez a karakter, akkor kivégezhető.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Rögeszmés"
+        ]
+    },
+    {
+        "id": "chambermaid",
+        "name": "Szobalány",
+        "ability": "Éjjelente válassz 2 élő játékost (ne magadat): megtudod hányan ébredtek fel azon az éjjelen a képességük miatt.",
+        "firstNightReminder": "A Szobalány két játékosra mutat. Mutasd az ujjaddal (0, 1, 2, ...), hogy hány játékos ébredt ma éjszaka a képessége miatt.",
+        "otherNightReminder": "A Szobalány két játékosra mutat. Mutasd a számjelet (0, 1, 2, ...), hogy hány játékos ébredt ma éjszaka a képessége miatt.",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "chef",
+        "name": "Séf",
+        "ability": "Megtudod, hogy hány pár Gonosz játékos ül egymás mellett.",
+        "firstNightReminder": "Mutasd az ujjaddal (0,1,2, ...) a szomszédos gonosz játékospárok számát.",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "choirboy",
+        "name": "Koristafiú",
+        "ability": "Ha a Démon megöli a Királyt, megtudja melyik játékos a Démon. (+ a Király)",
+        "firstNightReminder": "",
+        "otherNightReminder": "Ha a Királyt megölte a Démon, ébreszd fel a Kóristafiút, és mutass a Démonjátékosra.",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "clockmaker",
+        "name": "Órásmester",
+        "ability": "Megtudod, hogy hány lépésre ül a Démon a legközelebbi Követőjétől.",
+        "firstNightReminder": "Mutasd az ujjaddal (1, 2, 3, stb.) a Démon és a legközelebbi Minionja közötti helyek számát.",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "courtier",
+        "name": "Udvaronc",
+        "ability": "Egyszer a játék során, éjjel, válassz egy karaktert: részeg lesz 3 éjjel és 3 nappal.",
+        "firstNightReminder": "Az Udvaronc vagy \"nem\"-et jelez a fejével, vagy rámutat a lapon lévő karakterre. Ha az Udvaronc használta a képességét: Ha az a karakter játékban van, az a játékos részeg.",
+        "otherNightReminder": "Csökkentsd a megjelölt játékos hátralévő mérgezett napjainak számát. Ha az Udvaronc még nem használta a képességét: Az Udvaronc vagy \"nem\"-et jelez a fejével vagy rámutat a lapon lévő karakterre. Ha az Udvaronc használta a képességét: hogyha az a karakter játékban van, az a játékos részeg.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Részeg3",
+            "Részeg2",
+            "Részeg1",
+            "Nincs képesség"
+        ]
+    },
+    {
+        "id": "cultleader",
+        "name": "Szektavezető",
+        "ability": "Éjjelente átkerülsz az egyik élő szomszédod csapatába. Ha minden Jó játékos csatlakozik a szektádhoz, akkor győz a csapatod.",
+        "firstNightReminder": "Ha a Szektavezető megváltoztatta az csapatát, akkor ennek megfelelően mutasd meg neki a hüvelykujj felfelé jó jelet, vagy a hüvelykujj lefelé rossz jelet.",
+        "otherNightReminder": "Ha a Kultista vezető megváltoztatta az csapatát, akkor ennek megfelelően mutasd meg neki a hüvelykujj felfelé jó jelet, vagy a hüvelykujj lefelé rossz jelet.",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "damsel",
+        "name": "Leány",
+        "ability": "Minden Követő tudja, hogy játékban vagy. Ha egy Követő nyilvánosan jól megtippeli (1-szer), hogy te vagy a Leány, akkor veszít a csapatod.",
+        "firstNightReminder": "Ébreszd fel az összes Miniont, mutasd meg nekik az \"Ez a karakter téged választott\" kártyát és a Leány jelölőt.",
+        "otherNightReminder": "Ha a Vadász választja ki, ébreszd fel a Leányt, mutasd fel a \"Te vagy\" kártyát és egy nem játékban lévő Városlakó jelölőt.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Kitalálás használata"
+        ]
+    },
+    {
+        "id": "deusexfiasco",
+        "name": "Csapás az égből",
+        "ability": "Egyszer a játék során a Mesélő csinál egy \"hibát\" , helyre hozza és publikusan elismeri azt.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": [
+            "Hupsz"
+        ]
+    },
+    {
+        "id": "deviant",
+        "name": "Különc",
+        "ability": "Ha szórakoztató voltál aznap, nem száműzhetnek.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "devilsadvocate",
+        "name": "Ördög ügyvédje",
+        "ability": "Éjjelente válassz egy élő játékost (mást mint előző éjjel): ha kivégzik másnap, nem hal meg.",
+        "firstNightReminder": "Az Ördög Ügyvédje egy élő játékosra mutat. Ez a játékos túléli a holnapi kivégzést.",
+        "otherNightReminder": "Az Ördög Ügyvédje egy élő játékosra mutat, aki különbözik az előző estitől. Ez a játékos túléli a holnapi kivégzést.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Kivégzés túlélése"
+        ]
+    },
+    {
+        "id": "djinn",
+        "name": "Dzsinn",
+        "ability": "Használd a Djinn különleges szabályát. Minden játékos megtudja mi az.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "doomsayer",
+        "name": "VészRögeszmésár",
+        "ability": "Ha 4 vagy több játékos él: Minden élő játékos publikusan választhatja (egyszer a játék alatt), hogy egy játékos az ő csapatából meghaljon.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "dreamer",
+        "name": "Álmodó",
+        "ability": "Éjjelente válassz egy játékos (magadon vagy Utazón kívül): Megtudsz 1 Jó és 1 Gonosz karaktert, egyiket helyesen.",
+        "firstNightReminder": "Az Álmodozó egy játékosra mutat. Mutasson 1 jó és 1 gonosz karakterjelölőt; ezek közül az egyik helyes.",
+        "otherNightReminder": "Az Álmodozó egy játékosra mutat. Mutasson 1 jó és 1 gonosz karakterjelölőt; ezek közül az egyik helyes.",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "drunk",
+        "name": "Részeg",
+        "ability": "Te nem tudsz róla, hogy te vagy a Részeg. Azt hiszed, hogy Városi vagy, de valójában nem.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [
+            "Részeg"
+        ],
+        "reminders": []
+    },
+    {
+        "id": "duchess",
+        "name": "Hercegnő",
+        "ability": "Mindennap 3 játékos dönthet úgy, hogy meglátogat téged. Éjjel minden vendég megtudja, hogy hányan Gonoszak a vendégek közül, de valamelyikük hamis infót kap.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": [
+            "Hamis információ",
+            "Látogató"
+        ]
+    },
+    {
+        "id": "empath",
+        "name": "Együttérző",
+        "ability": "Éjjelente megtudod, hogy a két élő szomszédod közül hány Gonosz.",
+        "firstNightReminder": "Mutasd az ujjaddal (0, 1, 2) a gonosz szomszédok számát.",
+        "otherNightReminder": "Mutasd az ujjaddal (0, 1, 2) a gonosz szomszédok számát.",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "engineer",
+        "name": "Mérnök",
+        "ability": "Egyszer a játék során, éjjel, válassz, hogy melyik Követő vagy melyik Démon legyen játékban.",
+        "firstNightReminder": "A Mérnök \"nem\"-et jelez a fejével, vagy egy Démonra mutat, vagy a megfelelő számú Minionra mutat. Ha a Mérnök karaktereket választott, cseréljétek ki a Démont vagy a Minionokat a választottakra, majd ébresszétek fel az érintett játékosokat, és mutassátok meg nekik a \"Te vagy\" kártyát és a megfelelő karakterjelölőket.",
+        "otherNightReminder": "A Mérnök \"nem\"-et jelez a fejével, vagy egy Démonra mutat, vagy a megfelelő számú Minionra mutat. Ha a Mérnök karaktereket választott, cseréljétek ki a Démont vagy a Minionokat a választottakra, majd ébresszétek fel az érintett játékosokat, és mutassátok meg nekik a \"Te vagy\" kártyát és a megfelelő karakterjelölőket.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Nincs képesség"
+        ]
+    },
+    {
+        "id": "eviltwin",
+        "name": "Gonosz iker",
+        "ability": "Te és egy másik csapatbeli játékos ismeritek egymást. Ha a Jó játékost kivégzik a Gonoszak nyernek. A Jók nem nyerhetnek amíg mind a ketten éltek.",
+        "firstNightReminder": "Ébreszd fel a Gonosz Ikreket és az ikertestvért. Erősítsd meg, hogy felismerték egymást. Mutass a gonosz ikerre. Mutasd meg a Gonosz iker jelölőt az iker játékosnak. Mutass az ikerre. Mutasd meg a karakterjelolőt a gonosz iker játékosnak.",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": [
+            "Iker"
+        ]
+    },
+    {
+        "id": "exorcist",
+        "name": "Ördögűző",
+        "ability": "Éjjelente* válassz egy játékost (ne azt, akit legutóbb): ha ő a Démon, akkor megtudja, hogy ki vagy, ezután nem ébred fel aznap éjjel.",
+        "firstNightReminder": "",
+        "otherNightReminder": "Az Ördögűző egy olyan játékosra mutat, másra, mint előző éjszaka. Ha ez a játékos a Démon: Ébreszd fel a Démont. Mutasd meg az Ördögűző jelölőt. Mutass az Ördögűzőre. A Démon ma este nem cselekszik.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Kiválasztott"
+        ]
+    },
+    {
+        "id": "fanggu",
+        "name": "Fang Gu",
+        "ability": "Éjjelente* válassz egy játékost: meghal. Az első Kívülálló, aki így halna meg, válik a Gonosz Fang Gu-vá és te halsz meg. (+1 Kívülálló)",
+        "firstNightReminder": "",
+        "otherNightReminder": "A Fang Gu egy játékosra mutat. Az a játékos meghal. Vagy, ha az a játékos Kívülálló volt, és nincs más Fang Gu a játékban: A Fang Gu hal meg a kiválasztott játékos helyett. A kiválasztott játékos mostantól gonosz Fang Gu. Ébresszétek fel az új Fang Gu-t. Mutasd fel a \"Te vagy\" kártyát, majd a Fang Gu jelölőt. Mutasd fel a \"Te vagy\" kártyát, majd a hüvelykujjal lefelé mutató \"gonosz\" kézjelet.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Halott",
+            "Egyszer"
+        ]
+    },
+    {
+        "id": "farmer",
+        "name": "Gazda",
+        "ability": "Ha éjjel meghalsz, egy élő Jó játékos válik a Gazdává.",
+        "firstNightReminder": "",
+        "otherNightReminder": "Ha egy Farmer ma este meghalt, válassz egy másik jó játékost, és tedd meg őt Farmerré. Ébreszd fel ezt a játékost, mutasd meg neki a \"Te vagy\" kártyát és a Farmer karakterjelölőt.",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "fearmonger",
+        "name": "Félelemkeltő",
+        "ability": "Éjjelente válassz egy játékost: Ha megjelölöd és kivégzik, a csapata veszít. Mindenki megtudja, ha új játékost választasz.",
+        "firstNightReminder": "A Félelemkeltő egy játékosra mutat. Helyezd a Félelemjelölőt az adott játékos mellé, és mond el, hogy egy új játékos lett kiválasztva a Félelemkeltő képességgel.",
+        "otherNightReminder": "A Félelemkeltő egy játékosra mutat. Ha az előző estétől eltérő, tedd a félelemjelzőt az adott játékos mellé, és mond el, hogy új játékos lett kiválasztva a Félelemkeltő képességgel.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Félelem"
+        ]
+    },
+    {
+        "id": "ferryman",
+        "name": "Ferryman",
+        "ability": "Az utolsó napon minden halott játékos visszakapja a szavazási jelzőjét.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "fibbin",
+        "name": "Füllentő",
+        "ability": "Egyszer a játék során egy Jó karakter kaphat nem helyes információt.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": [
+            "Használt"
+        ]
+    },
+    {
+        "id": "fiddler",
+        "name": "Hegedűs",
+        "ability": "Egyszer a játék során a Démon titokban kiválaszt egy másik csapatbeli játékost: az összes játékos eldönti, hogy melyikük nyerjen kettejük közül.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "fisherman",
+        "name": "Halász",
+        "ability": "Egyszer a játék során, nappal, látogasd meg a Mesélőt néhány tanácsért, hogy segíts a csapatodnak nyerni.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": [
+            "Nincs képesség"
+        ]
+    },
+    {
+        "id": "flowergirl",
+        "name": "Virágárus",
+        "ability": "Éjjelente* megtudod, ha egy Démon szavazott aznap.",
+        "firstNightReminder": "",
+        "otherNightReminder": "Bólintson igennel, vagy jelezzen \"nem\"-et a fejével, hogy a Démon ma szavazott-e. Helyezd el a \"Démon nem szavazott\" jelölőt (ha van, távolítsd el a \"Démon szavazott\" jelölőt).",
+        "remindersGlobal": [],
+        "reminders": [
+            "Démon szavazott",
+            "Démon nem szavazott"
+        ]
+    },
+    {
+        "id": "fool",
+        "name": "Udvaribolond",
+        "ability": "Első alkalommal amikor meghalnál, nem teszed.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": [
+            "Nincs képesség"
+        ]
+    },
+    {
+        "id": "fortuneteller",
+        "name": "Jós",
+        "ability": "Éjjelente válassz két játékost, akikről megtudod, hogy köztük van-e a Démon. Egy Jó játékosról azt hiszed, hogy ő a Démon.",
+        "firstNightReminder": "A Jós két játékosra mutat. Jelezz fejjel (bólintson igennel, rázza nemmel), hogy melyik játékos a Démon.",
+        "otherNightReminder": "A Jós két játékosra mutat. Jelezz fejjel (bólintás \"igen\", rázza a fejét \"nem\"), hogy melyik játékos a Démon.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Figyelemelterelés"
+        ]
+    },
+    {
+        "id": "gambler",
+        "name": "Szerencsejátékos",
+        "ability": "Éjjelente* válassz egy játékost és tippeld meg a karakterét. Ha rosszul tippelsz meghalsz.",
+        "firstNightReminder": "",
+        "otherNightReminder": "A Szerencsejátékos rámutat egy játékosra, és egy karakterre a lapján. Ha téved, a Szerencsejátékos meghal.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Halott"
+        ]
+    },
+    {
+        "id": "gangster",
+        "name": "Gengszter",
+        "ability": "Naponta egyszer választhatsz, hogy megölöd az egyik szomszédodat, ha a másik szomszédod is beleegyezik.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "gardener",
+        "name": "Kertész",
+        "ability": "A mesélő kijelöl egy vagy több játékos karakterét.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "general",
+        "name": "Tábornok",
+        "ability": "Éjjelente megtudod a Mesélő szerint melyik csapat fog nyerni: Jók, Gonoszak, egyik sem.",
+        "firstNightReminder": "Mutasd meg a Tábornoknak a hüvelykujj felfelé jelet ha a jó győz, a hüvelykujj lefelé jelet ha a gonosz győz, vagy a hüvelykujjat oldalra, ha egyik sem.",
+        "otherNightReminder": "Mutasd meg a Tábornoknak a hüvelykujj felfelé jelet ha a jó győz, a hüvelykujj lefelé jelet ha a gonosz győz, vagy a hüvelykujjat oldalra, ha egyik sem.",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "gnome",
+        "name": "Gnome",
+        "ability": "Minden játékos tudja egy, a te beállítottságodhoz tartozó játékos nevét. Eldöntheted, hogy megölsz-e bárkit, aki jelöli őket.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": [
+            "Amigo"
+        ]
+    },
+    {
+        "id": "goblin",
+        "name": "Kobold",
+        "ability": "Ha publikusan felvállalod, hogy a Kobold vagy amikor megjelölnek és kivégeznek azon a napon, a csapatod nyer.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": [
+            "Állítás"
+        ]
+    },
+    {
+        "id": "godfather",
+        "name": "Keresztapa",
+        "ability": "Megtudod, hogy melyik Kívülállók vannak játékban. Ha az egyik meghalt aznap, válassz egy játékost aznap éjjel: meghal. (-1 vagy +1 Kívülálló)",
+        "firstNightReminder": "Mutasd meg az összes játékban lévő Kívülálló jelét.",
+        "otherNightReminder": "Ha ma meghalt egy Kívülálló: A Keresztapa rámutat egy játékosra. Az a játékos meghal.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Halott",
+            "Meghalt ma"
+        ]
+    },
+    {
+        "id": "golem",
+        "name": "Gólem",
+        "ability": "A játék során csak egyszer gyanúsíthatsz. Amikor így teszel, akkor az általad meggyanúsított játékos meghal, kivéve, ha ő a Démon.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": [
+            "Nem jelölhető"
+        ]
+    },
+    {
+        "id": "goon",
+        "name": "Fajankó",
+        "ability": "Éjjelente az első játékos, aki kiválaszt a képességével, részeg lesz szürkületig. Átkerülsz a csapatába.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": [
+            "Részeg"
+        ]
+    },
+    {
+        "id": "gossip",
+        "name": "Pletykafészek",
+        "ability": "Mindennap tehetsz egy publikus kijelentést. Ha igaz volt, aznap éjjel egy játékos meghal.",
+        "firstNightReminder": "",
+        "otherNightReminder": "Ha a Pletykafészek nyilvános kijelentése igaz volt: Válassz egy játékost, aki nincs védve attól, hogy ma este meghaljon. Az a játékos meghal.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Halott"
+        ]
+    },
+    {
+        "id": "grandmother",
+        "name": "Nagymama",
+        "ability": "Megismersz egy Jó játékost és karakterét. Ha a Démon megöli, te is meghalsz.",
+        "firstNightReminder": "Mutasd meg a megjelölt karakter jelét. Mutass rá a megjelölt játékosra.",
+        "otherNightReminder": "Ha a Nagymama unokáját ma este megölte a Démon: A Nagymama meghal.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Unokatestvér"
+        ]
+    },
+    {
+        "id": "gunslinger",
+        "name": "Fegyveforgató",
+        "ability": "Minden nap az első szavazás után kiválaszthatsz egy játékost, aki szavazazott: meghal.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "harlot",
+        "name": "Szajha",
+        "ability": "Éjjelente* válassz egy élő játékost: ha beleegyezik megtudod a karakterét, de lehet, hogy mindketten meghaltok.",
+        "firstNightReminder": "",
+        "otherNightReminder": "A Csábító rámutat bármelyik játékosra. Ezután altasd el a Csábítót. Ébreszd fel a kiválasztott játékost, mutasd meg neki a 'Ez a karakter választott téged' jelet, majd a Csábító jelét. Az a játékos bólint, hogy igen, vagy megrázza a fejét, hogy nem. Ha bólintott, ébreszd fel a Csábítót, és mutasd meg neki a kiválasztott játékos karakterjelét. Ezután eldöntheted, hogy mindkét játékos meghal.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Halott"
+        ]
+    },
+    {
+        "id": "harpy",
+        "name": "Hárpia",
+        "ability": "Minden éjjel válassz 2 játékost: holnap az első játékos őrült lesz attól, hogy a második gonosz, vagy mindketten meghalhatnak.",
+        "firstNightReminder": "Ébreszd fel a Hárpiát; mutassanak rá egy játékosra, majd egy másikra. Ébreszd fel az első játékost, akire a Hárpia mutatott, mutasd meg neki az 'Ez a karakter választott téged' kártyát, mutasd meg neki a Hárpia jelét, majd mutass a második játékosra, akire a Hárpia mutatott.",
+        "otherNightReminder": "Ébreszd fel a Hárpiát; mutassanak rá egy játékosra, majd egy másikra. Ébreszd fel az első játékost, akire a Hárpia mutatott, mutasd meg neki az 'Ez a karakter választott téged' kártyát, mutasd meg neki a Hárpia jelét, majd mutass a második játékosra, akire a Hárpia mutatott.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Őrült",
+            "2"
+        ]
+    },
+    {
+        "id": "hatter",
+        "name": "Kalapos",
+        "ability": "Ha ma vagy ma éjjel meghaltál, akkor a csatlós és démon játékosok választhatnak új csatlós és démon karaktereket, hogy azok legyenek.",
+        "firstNightReminder": "",
+        "otherNightReminder": "Ha a Kalapos ma meghalt: Ébreszd fel a Csatlósokat és a Démont. Mutasd meg nekik az 'Ez a karakter választott téged' információs jelet, majd a Kalapos jelét. Minden játékos vagy megrázza a fejét, hogy nem, vagy rámutat egy másik karakterre, ami ugyanolyan típusú, mint a jelenlegi karakterük. Ha egy második játékosnak ugyanaz a karaktere lenne, mint egy másik játékosnak, rázd meg a fejed, hogy nem, és jelezd, hogy válasszanak újra. Altasd el őket. Változtasd meg minden játékost az általuk választott karakterre.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Tea Party Tonight"
+        ]
+    },
+    {
+        "id": "hellslibrarian",
+        "name": "Pokol könyvtárosa",
+        "ability": "Valami rossz történhet azzal, aki beszél amikor a Mesélő csendet kér.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": [
+            "Valami rossz"
+        ]
+    },
+    {
+        "id": "heretic",
+        "name": "Eretnek",
+        "ability": "Akárki is nyer, az veszít - akárki veszít, az nyer. Még akkor is, ha halott vagy.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "hermit",
+        "name": "Remete",
+        "ability": "Minden idegen képességed megvan. [-0 vagy -1 Idegen]",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": [
+            "1",
+            "2",
+            "3"
+        ]
+    },
+    {
+        "id": "highpriestess",
+        "name": "Főpapnő",
+        "ability": "Minden éjjel megtudod, melyik játékossal kellene a mesélő szerint a legtöbbet beszélned.",
+        "firstNightReminder": "Mutass egy játékosra.",
+        "otherNightReminder": "Mutass egy játékosra.",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "huntsman",
+        "name": "Vadász",
+        "ability": "Egyszer a játék során, éjjel, válassz egy élő játékost: ha a Leányt választod, akkor ő egy játékban nem lévő Városivá változik. [+ a Leány]",
+        "firstNightReminder": "A Vadász megrázza a fejét, hogy 'nem', vagy rámutat egy játékosra. Ha a Szűzre mutat, ébreszd fel azt a játékost, mutasd meg neki a 'Te vagy' kártyát és egy játékban nem lévő karakterjelzőt.",
+        "otherNightReminder": "A Vadász megrázza a fejét, hogy 'nem', vagy rámutat egy játékosra. Ha a Szűzre mutat, ébreszd fel azt a játékost, mutasd meg neki a 'Te vagy' kártyát és egy játékban nem lévő karakterjelzőt.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Nincs képesség"
+        ]
+    },
+    {
+        "id": "imp",
+        "name": "Pokolfajzat",
+        "ability": "Éjjelente* válassz egy játékost, aki meghal. Ha így magadat ölöd meg, az egyik Követőd lesz az új Démon.",
+        "firstNightReminder": "",
+        "otherNightReminder": "A Pokolfajzat rámutat egy játékosra. Az a játékos meghal. Ha a A Pokolfajzat magát választotta: Cseréld ki egy élő csatlós karakterét egy tartalék Pokolfajzat jelzőre. Mutasd meg a 'Te vagy' kártyát, majd a Pokolfajzat jelzőt.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Halott"
+        ]
+    },
+    {
+        "id": "innkeeper",
+        "name": "Fogadós",
+        "ability": "Éjjelente* válassz két játékost: Nem halhatnak meg aznap éjjel, de egyikük részeg lesz szürkületig.",
+        "firstNightReminder": "",
+        "otherNightReminder": "A korábban védett és részeg játékosok elveszítik ezeket a jelzőket. A Fogadós rámutat két játékosra. Azok a játékosok védettek. Az egyik részeg.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Részeg",
+            "Védett"
+        ]
+    },
+    {
+        "id": "investigator",
+        "name": "Nyomozó",
+        "ability": "Megtudod, hogy 2 játékos közül az egyik egy bizonyos Követő.",
+        "firstNightReminder": "Mutasd meg a játékban lévő Minion karakterjelét. Mutass két játékosra, közülük az egyik ez a karakter.",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": [
+            "Minion",
+            "Tévedés"
+        ]
+    },
+    {
+        "id": "judge",
+        "name": "Bíró",
+        "ability": "A játék során egyszer, ha egy másik játékost kijelölnek, eldöntheted (kényszerítheted), hogy az adott kivégzés sikeres, vagy sikertelen legyen.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": [
+            "Nincs képesség"
+        ]
+    },
+    {
+        "id": "juggler",
+        "name": "Zsonglőr",
+        "ability": "Az első napodon, publikusan jelöld meg maximum 5 játékos karakterét. Aznap éjjel megtudod mennyi volt helyes.",
+        "firstNightReminder": "",
+        "otherNightReminder": "Ha ma lenne a Juggler első napja: A \"Helyes\" markerek száma (0, 1, 2 stb.) a kézjel megjelenítése. Távolítsa el a markereket.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Helyes"
+        ]
+    },
+    {
+        "id": "kazali",
+        "name": "Kazali",
+        "ability": "Minden éjjel* válassz egy játékost: ők meghalnak. [Te választod ki, hogy melyik játékosok a csatlósok. -? és +? kívülállók]",
+        "firstNightReminder": "A Kazali egy játékosra és egy Miniumra mutat a karakterlapon. Cseréljék ki régi karakterüket a Minion szimbólumra, mutassák meg nekik a \"Te vagy\" infót, majd a Minion figurát, és tegyék le a hüvelykujjukat. Ismételje meg, amíg a normál számú Minion létezik. Altasd el a Kazalit.",
+        "otherNightReminder": "A Kazali egy játékosra mutat. Az a játékos meghal.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Halott"
+        ]
+    },
+    {
+        "id": "king",
+        "name": "Király",
+        "ability": "Éjjelente ha a halottak többen vannak, mint az élők, megtudsz 1 élő karaktert. A Démon tudja ki vagy.",
+        "firstNightReminder": "Ébreszd fel a démont, mutasd meg nekik a \"Ez a karakter választott ki\" kártyát, mutasd meg a király jelképét és mutass a király játékosra.",
+        "otherNightReminder": "Ha több Halott van, mint él, mutass a királynak egy élő játékos karakterjelét.",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "klutz",
+        "name": "Balfácán",
+        "ability": "Amikor megtudod hogy meghaltál, publikusan válassz egy élő játékost: ha ő Gonosz, a csapatod veszített.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "knight",
+        "name": "Lovag",
+        "ability": "Azzal kezded, hogy ismersz 2 játékost, akik nem a Démon.",
+        "firstNightReminder": "Mutass két nem-démon játékosra.",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": [
+            "Tudom",
+            "Tudom"
+        ]
+    },
+    {
+        "id": "legion",
+        "name": "Légió",
+        "ability": "Éjjelente* egy játékos meghalhat. Sikertelen a kivégzés, ha csak Gonoszak szavaznak. Követőnek látszol te is. (legtöbb játékos Légió)",
+        "firstNightReminder": "",
+        "otherNightReminder": "Válassz egy játékost, az meghal.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Meg fog halni",
+            "Halott"
+        ]
+    },
+    {
+        "id": "leviathan",
+        "name": "Leviatán",
+        "ability": "Ha több, mint 1 Jó játékos kivégzésre kerül, a Gonoszak nyernek. Minden játékos tudja, hogy játékban vagy. Az 5. nap után nyernek a Gonoszak.",
+        "firstNightReminder": "Helyezze el a Leviatán első napja jelölőt. \"A Leviatán játékban van, ez az első nap. '",
+        "otherNightReminder": "Változtasd meg a Leviatán napi emlékeztetőt a következő napra.",
+        "remindersGlobal": [],
+        "reminders": [
+            "1. nap",
+            "2. nap",
+            "3. nap",
+            "4. nap",
+            "5. nap",
+            "Jó játékos végrehajtva"
+        ]
+    },
+    {
+        "id": "librarian",
+        "name": "Könyvtáros",
+        "ability": "Megtudod, hogy 2 játékos közül az egyik egy bizonyos Kívülálló (vagy hogy nincs Kívülálló a játékban).",
+        "firstNightReminder": "Mutasd meg egy játékban lévő kívülálló karakterjelét. Mutass két játékosra, közülük az egyik ez a karakter.",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": [
+            "Külső",
+            "Tévedés"
+        ]
+    },
+    {
+        "id": "lilmonsta",
+        "name": "Szörnyecske",
+        "ability": "Éjjelente Követők döntenek, ki őrzi a Szörnyecskét és kapja meg a \"A Démon\" tokent. Egy játékos meghal éjszakánként. (+1 Követő)",
+        "firstNightReminder": "Ébresszétek fel a Minionokat, hadd szavazzanak úgy, hogy rámutattok, kire akarnak vigyázni Lil 'Monsta.",
+        "otherNightReminder": "Ébresszétek fel a Minionokat, hadd szavazzanak úgy, hogy rámutattok, kire akarnak vigyázni Lil 'Monsta. Válassz egy játékost, az meghal.",
+        "remindersGlobal": [
+            "Halott",
+            "A Démon"
+        ],
+        "reminders": []
+    },
+    {
+        "id": "lleech",
+        "name": "Lleech",
+        "ability": "Éjjelente* válassz egy játékost: meghal. Első éjjeleden válassz egy élő játékost: mérgezett lesz. Meghalsz, ha (és csak akkor ha) ő meghal.",
+        "firstNightReminder": "A Lleech egy játékosra mutat. Helyezze el a Mérgezett emlékeztető szimbólumot.",
+        "otherNightReminder": "A Lleech egy játékosra mutat. Az a játékos meghal.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Halott",
+            "Mérgezett"
+        ]
+    },
+    {
+        "id": "lordoftyphon",
+        "name": "Typhon ura",
+        "ability": "Minden éjjel* válassz egy játékost: ők meghalnak. [A gonosz karakterek egymás mellett vannak. Te vagy középen. +1 csatlós. -? és +? kívülállók]",
+        "firstNightReminder": "Ébreszd fel a Démon mindkét oldalát. Mutasd meg nekik a \"Te vagy\" kártyát, a Minion zálogát, és egy hüvelykujjal lefelé, hogy jelezze, hogy gonoszak.",
+        "otherNightReminder": "Typhon ura egy játékosra mutat. Az a játékos meghal.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Halott"
+        ]
+    },
+    {
+        "id": "lunatic",
+        "name": "Holdkóros",
+        "ability": "Azt hiszed, hogy te vagy a Démon, de nem. A Démon tudja ki vagy és kit választasz éjjel.",
+        "firstNightReminder": "Ha 7 vagy több játékos: Mutasd meg a holdkóros számos önkényes 'Minions', játékosok egyenlő száma Minions játszik. Jelölje 3 karakter zsetonok önkényes jó karakterek. Ha a holdkórostól kapott jelvény egy démon, aki ma éjjel felébredne: Hagyd, hogy a holdkóros cselekedjen. Helyezze el a \"támadás\" jelzéseket. Ébreszd fel a démont. Mutasd meg a Démon igazi karakterét. Mutasd meg nekik a holdkóros játékost. Ha a holdkóros megtámadta a játékosokat: Mutasd meg az igazi démon minden jelölt játékos. Távolítsa el a holdkóros \"támadás\" jelzőket.",
+        "otherNightReminder": "Hagyd, hogy a holdkóros tegye a démonok tetteit. Helyezze el a \"támadás\" jelzéseket. Ha a holdkóros kiválasztott játékosok: Ébressze fel a démon. Mutasd meg a \"támadás\" jelölőt, majd mutass minden egyes jelölt játékosra. Távolítsa el a holdkóros \"támadás\" jelzőket.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Támadás 1",
+            "Támadás 2",
+            "Támadás 3"
+        ]
+    },
+    {
+        "id": "lycanthrope",
+        "name": "Vérfarkas",
+        "ability": "Éjjelente* válassz egy élő játékost: ha az illető Jó, akkor meghal, de csak ő halhat meg aznap éjjel.",
+        "firstNightReminder": "",
+        "otherNightReminder": "A Likantróp egy élő játékosra mutat: ha jó, meghalnak, és senki más nem halhat meg ma este.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Halott"
+        ]
+    },
+    {
+        "id": "magician",
+        "name": "Bűvész",
+        "ability": "A Démon azt hiszi Követő vagy. A Követők azt hiszik Démon vagy.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "marionette",
+        "name": "Marionett",
+        "ability": "Azt hiszed egy Jó karakter vagy, de nem. A Démon tudja ki vagy. (Démon szomszédja vagy)",
+        "firstNightReminder": "Válassza ki az egyik jó játékos mellett a démon, és helyezze az Is a Marionette emlékeztető jel. Ébreszd fel a démont és mutasd meg nekik a Marionettet.",
+        "otherNightReminder": "",
+        "remindersGlobal": [
+            "A Marionette"
+        ],
+        "reminders": []
+    },
+    {
+        "id": "mastermind",
+        "name": "Lángész",
+        "ability": "Ha a Démon meghal kivégzés által (vége a játéknak), játsszatok még 1 napot. Ha egy játékost kivégeznek, a csapata veszít.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "mathematician",
+        "name": "Matematikus",
+        "ability": "Éjjelente, megtudod hány játékos képessége működik rendellenesen (virradat óta) egy másik karakter képessége miatt.",
+        "firstNightReminder": "Mutasd meg a kézjelet azoknak a játékosoknak a számára (0, 1, 2 stb.), akiknek a képessége más képességek miatt meghibásodott.",
+        "otherNightReminder": "Mutasd meg a kézjelet azoknak a játékosoknak a számára (0, 1, 2 stb.), akiknek a képessége más képességek miatt meghibásodott.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Kóros"
+        ]
+    },
+    {
+        "id": "matron",
+        "name": "Matróna",
+        "ability": "Minden nap választhatsz 3 pár játékost akik ülőhelyet cserélnek. A játékosok nem hagyhatják el az ülőhelyüket, hogy privátban beszélgessenek.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "mayor",
+        "name": "Polgármester",
+        "ability": "Ha 3 játékos van életben és nappal nem végeztek ki senkit, nyer a csapatod. Ha éjjel bármikor meghalnál lehet, hogy más hal meg helyetted.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "mezepheles",
+        "name": "Mezephelész",
+        "ability": "Megtudsz egy titkos szót. Az első Jó játékos, aki kimondja a szót, Gonosz lesz aznap éjjeltől.",
+        "firstNightReminder": "Mutasd meg a Mezepheles-nek a titkos szavukat.",
+        "otherNightReminder": "Ébreszd fel az első jó játékost, aki mondta a Mezephelék titkos szavát, és mutasd meg nekik a \"Te vagy\" kártyát és a hüvelykujjakat a gonosz jelre.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Nincs képesség",
+            "A gonosz"
+        ]
+    },
+    {
+        "id": "minstrel",
+        "name": "Vándorénekes",
+        "ability": "Amikor egy Követő meghal kivégzéssel, minden más játékos (Utazókon kívül) részeg lesz a következő szürkületig.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": [
+            "Mindenki részeg"
+        ]
+    },
+    {
+        "id": "monk",
+        "name": "Szerzetes",
+        "ability": "Éjjelente* válassz egy játékost (magadat nem lehet): Ő biztonságban van a Démontól aznap éjjel.",
+        "firstNightReminder": "",
+        "otherNightReminder": "A korábban védett játékos már nem védett. A Monk egy játékosra mutat, nem magára. Jelölje meg a \"Védett\" játékost.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Védett"
+        ]
+    },
+    {
+        "id": "moonchild",
+        "name": "Holdgyermek",
+        "ability": "Amikor megtudod hogy meghaltál, publikusan válassz egy élő játékost. Ha egy Jó játékos volt akkor aznap éjjel meghal.",
+        "firstNightReminder": "",
+        "otherNightReminder": "Ha a Holdgyermek ma egy játékost is célba vett: Ha az a játékos jó, meghalnak.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Halott"
+        ]
+    },
+    {
+        "id": "mutant",
+        "name": "Mutáns",
+        "ability": "Ha az a rögeszméd, hogy Kívülálló vagy, kivégezhetnek.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "nightwatchman",
+        "name": "Éjjeliőr",
+        "ability": "Egyszer a játék alatt éjjel válassz egy játékost: megtudja, hogy ki vagy.",
+        "firstNightReminder": "Az Éjjeliőr talán egy játékosra mutat. Ébreszd fel a játékost, mutasd meg a 'Ez a karakter választott ki' kártyát és az Éjjeli Őrség szimbólumot, majd mutass az Éjjeli Őrségre.",
+        "otherNightReminder": "Az Éjjeliőr talán egy játékosra mutat. Ébreszd fel a játékost, mutasd meg a 'Ez a karakter választott ki' kártyát és az Éjjeli Őrség szimbólumot, majd mutass az Éjjeli Őrségre.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Nincs képesség"
+        ]
+    },
+    {
+        "id": "noble",
+        "name": "No Dashii",
+        "ability": "Éjjelente* válassz egy játékost: meghal. 2 Városi szomszédod mérgezett.",
+        "firstNightReminder": "Pont 3 játékos, beleértve egy gonosz játékos, nem különösebben sorrendben.",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": [
+            "Látható"
+        ]
+    },
+    {
+        "id": "nodashii",
+        "name": "Nemes",
+        "ability": "Megtudsz 3 játékost, 1 és csak 1 közülük Gonosz.",
+        "firstNightReminder": "",
+        "otherNightReminder": "A No Dashii egy játékosra mutat. Az a játékos meghal.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Halott",
+            "Mérgezett"
+        ]
+    },
+    {
+        "id": "ogre",
+        "name": "Ogre",
+        "ability": "Az első éjszakádon válassz egy játékost (nem saját magadat): az ő beállítottságukat veszed fel (nem tudod, melyik ez), még akkor is, ha részeg vagy megmérgezett vagy.",
+        "firstNightReminder": "Az Ogre egy játékosra mutat (nem magára), és az összehangolódássá válik.",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "ojo",
+        "name": "Ojo",
+        "ability": "Minden éjjel* válassz egy karaktert: ők meghalnak. Ha nincsenek játékban, a mesélő választja ki, ki hal meg.",
+        "firstNightReminder": "",
+        "otherNightReminder": "Az Ojo rámutat egy karakter a lapon; ha a játék, hogy a játékos meghal. Ha nem játszik, a mesemondó dönti el, ki hal meg helyette.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Halott"
+        ]
+    },
+    {
+        "id": "oracle",
+        "name": "Orákulum",
+        "ability": "Éjjelente* megtudod, hogy hány halott játékos Gonosz.",
+        "firstNightReminder": "",
+        "otherNightReminder": "Mutasd meg a kézjelet a halott gonosz játékosok számához (0, 1, 2, stb.).",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "organgrinder",
+        "name": "Orgonacsiszoló",
+        "ability": "Minden játékos csukva tartja a szemét szavazáskor, és a szavazatok összesítése titkos. A rád leadott szavazatok csak akkor számítanak, ha te is szavazol.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": [
+            "Meg fog halni"
+        ]
+    },
+    {
+        "id": "pacifist",
+        "name": "Pacifista",
+        "ability": "Kivégzett Jó játékos talán nem hal meg.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "philosopher",
+        "name": "Filozófus",
+        "ability": "Egyszer a játék során, éjjel, válassz egy Jó karaktert: megkapod a képességét. Ha ez a karakter játékban van, részeg lesz.",
+        "firstNightReminder": "A Bölcsek vagy \"nem\" jelet mutatnak, vagy egy jó karaktert mutatnak a lepedőjükön. Ha kiválasztottak egy karaktert: Cserélje ki az out- of-play karakter zseton a Bölcsek zseton. Vagy, ha a karakter játszik, helyezze a részeg jelölőt a játékos, és a nem a Bölcsek jelképe a Bölcsek.",
+        "otherNightReminder": "Ha a Bölcsek nem használták a képességeiket: a Bölcsek vagy \"nem\" fejjelet mutatnak, vagy egy jó karaktert mutatnak a lapjukon. Ha kiválasztottak egy karaktert: Cserélje ki az out- of-play karakter zseton a Bölcsek zseton. Vagy, ha a karakter játszik, helyezze a részeg jelölőt a játékos, és a nem a Bölcsek jelképe a Bölcsek.",
+        "remindersGlobal": [
+            "Részeg",
+            "A Bölcsek"
+        ],
+        "reminders": []
+    },
+    {
+        "id": "pithag",
+        "name": "Banya",
+        "ability": "Éjjelente* válassz egy játékost és egy karaktert és azzá válik (ha nincs játékban). Ha egy Démon készül, a halálokról a Mesélő dönt azon az éjjelen.",
+        "firstNightReminder": "",
+        "otherNightReminder": "A Pit- banya egy játékosra és egy karakterre mutat a lapon. Ha ez a karakter nincs játékban, ébreszd fel a játékost, és mutasd meg nekik a 'Te vagy' kártyát és a megfelelő karakterszimbólumot. Ha a karakter játszik, semmi sem történik.",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "pixie",
+        "name": "Tünder",
+        "ability": "Megtudsz egy játékban lévő Városit. Ha rögeszméd, hogy az a karakter vagy, megkapod a képességét, hogyha meghal.",
+        "firstNightReminder": "Mutasd meg a Pixie 1 in-play Townsfolk karakter token.",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": [
+            "Rendelkezik képességgel",
+            "Rögeszmés"
+        ]
+    },
+    {
+        "id": "plaguedoctor",
+        "name": "Pestis Doktor",
+        "ability": "Ha meghalsz, a mesélő megszerez egy játékban nem lévő csatlós képességet.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": [
+            "Elemző képesség"
+        ]
+    },
+    {
+        "id": "po",
+        "name": "Po",
+        "ability": "Éjjelente* választhatsz egy játékost: meghal. Ha utolsó választásod senki nem volt, 3 játékost válassz aznap éjjel.",
+        "firstNightReminder": "",
+        "otherNightReminder": "Ha a Po nem választott egyet az előző este: A Po három játékosra mutat. Ellenkező esetben: A Po vagy a \"nem\" fejjelet mutatja, vagy egy játékosra mutat. A kiválasztott játékosok meghalnak",
+        "remindersGlobal": [],
+        "reminders": [
+            "3 támadás",
+            "Halott"
+        ]
+    },
+    {
+        "id": "poisoner",
+        "name": "Méregkészítő",
+        "ability": "Éjjelente válassz egy játékost. Ez a játékos mérgezett lesz aznap éjjel és holnap napközben is.",
+        "firstNightReminder": "A Méreg egy játékosra mutat. Az a játékos mérgezett.",
+        "otherNightReminder": "A korábban megmérgezett játékos már nem mérgezett. A Méreg egy játékosra mutat. Az a játékos mérgezett.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Mérgezett"
+        ]
+    },
+    {
+        "id": "politician",
+        "name": "Politikus",
+        "ability": "Ha te vagy a játékos, aki a legjobban felelős a csapatod vereségéért, csapatot cserélsz és nyersz, még ha halott is vagy.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "poppygrower",
+        "name": "Máktermesztő",
+        "ability": "Követők és Démonok nem ismerik egymást. Amikor meghalsz, megismerik egymást aznap éjjel.",
+        "firstNightReminder": "Ne tájékoztassák a Démon \/ Minionok, hogy kik egymás",
+        "otherNightReminder": "Ha a Poppy Grower meghalt, mutassátok meg a Minions \/ Démonnak, hogy kik a többiek.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Gonosz ébred"
+        ]
+    },
+    {
+        "id": "preacher",
+        "name": "Prédikátor",
+        "ability": "Éjjelente válasz egy játékost: Ha egy Követő akit választasz, megtudja. Minden kiválasztott Követő elveszti a képességét.",
+        "firstNightReminder": "A prédikátor egy játékost választ. Ha a Minion kiválasztásra kerül, ébreszd fel a Minion-t, és mutasd meg a \"Ez a karakter választott ki\" kártyát, majd a prédikátor szimbólumot.",
+        "otherNightReminder": "A prédikátor egy játékost választ. Ha a Minion kiválasztásra kerül, ébreszd fel a Minion-t, és mutasd meg a \"Ez a karakter választott ki\" kártyát, majd a prédikátor szimbólumot.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Egy prédikációban"
+        ]
+    },
+    {
+        "id": "princess",
+        "name": "Hercegnő",
+        "ability": "Az első napodon, ha jelöltél és kivégeztél egy játékost, a Démon nem öl ma este.",
+        "firstNightReminder": "",
+        "otherNightReminder": "Ha ma volt a hercegnő első napja, és jelöltek és kivégeztek egy játékost, a démon nem öl.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Nem öl"
+        ]
+    },
+    {
+        "id": "professor",
+        "name": "Professzor",
+        "ability": "Egyszer a játék során, éjjel, válassz egy halott játékost: ha Városi, feltáRögeszmés.",
+        "firstNightReminder": "",
+        "otherNightReminder": "Ha a professzor nem használta a képességét: A professzor vagy nem rázza a fejét, vagy egy játékosra mutat. Ha az a játékos Townsfolk, akkor most már életben vannak.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Élő",
+            "Nincs képesség"
+        ]
+    },
+    {
+        "id": "psychopath",
+        "name": "Pszihopata",
+        "ability": "Minden nap a jelölések elött publikusan választhatsz egy játékost: meghal. Ha kivégeznek, csak akkor halhatsz meg, ha elveszítesz egy kő-papír-olló-t.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "pukka",
+        "name": "Pukka",
+        "ability": "Éjjelente válassz egy játékost: mérgezett lesz. Az előzőleg megmérgezett játékos meghal és egészséges lesz.",
+        "firstNightReminder": "A Pukka egy játékosra mutat. Az a játékos mérgezett.",
+        "otherNightReminder": "A Pukka egy játékosra mutat. Az a játékos mérgezett. A korábban megmérgezett játékos meghal.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Halott",
+            "Mérgezett"
+        ]
+    },
+    {
+        "id": "puzzlemaster",
+        "name": "Puzzlemester",
+        "ability": "1 játékos részeg, akkor is ha halott vagy. Ha helyesen megtippeled ki az (1-szer), akkor megtudod ki a Démon, de ha rosszul tippelsz, akkor téves infót kapsz.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": [
+            "Részeg",
+            "Gondolom használt"
+        ]
+    },
+    {
+        "id": "ravenkeeper",
+        "name": "Hollónevelő",
+        "ability": "Ha éjjel halsz meg, felébredsz, hogy válassz egy játékost: megtudod a karakterét.",
+        "firstNightReminder": "",
+        "otherNightReminder": "Ha a Ravenmaker ma este meghal: A Ravenmaker egy játékosra mutat. Mutasd meg a játékos karakterét.",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "recluse",
+        "name": "Remete",
+        "ability": "Gonosznak (akár Démonnak vagy Követőnek) tűnhetsz mások számára, akár a halálod után is.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "revolutionary",
+        "name": "Forradalmár",
+        "ability": "2 szomszédos játékos tudja egymásról, hogy ugyanaz a csapatuk. Egyszer a játék során az egyikük hibásan látszódik.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": [
+            "Falsely?"
+        ]
+    },
+    {
+        "id": "riot",
+        "name": "Lázadó",
+        "ability": "Jelöltek meghalnak, de lehet jelölni újra azonnal (3. nap kötelező is). 3. után a Gonoszak nyernek. (minden Követő Lázadó)",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "sage",
+        "name": "Bölcs",
+        "ability": "Ha a démon megöl, két embert megtudsz akiből valamelyik Démon.",
+        "firstNightReminder": "",
+        "otherNightReminder": "Ha a Bölcset egy démon ölte meg, mutass két játékosra, az egyik a Démon.",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "sailor",
+        "name": "Tengerész",
+        "ability": "Éjjelente válassz egy élő játékost: Vagy te, vagy ő részeg lesz szürkületig. Nem halhatsz meg.",
+        "firstNightReminder": "A Sailor egy élő játékosra mutat. A Sailor vagy a kiválasztott játékos részeg.",
+        "otherNightReminder": "A korábban részeg játékos már nem részeg. A Sailor egy élő játékosra mutat. A Sailor vagy a kiválasztott játékos részeg.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Részeg"
+        ]
+    },
+    {
+        "id": "saint",
+        "name": "Szent",
+        "ability": "Ha kivégzés miatt halsz meg, a csapatod elveszíti a játékot.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "savant",
+        "name": "Tudós",
+        "ability": "Minden nap elmehetsz a Mesélővel, hogy kapj 2 információt privátban: 1 igaz, 1 hamis.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "scapegoat",
+        "name": "Bűnbak",
+        "ability": "Ha egy játékost a te csapatodból kivégeznek, lehet, hogy téged végeznek ki helyette.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "scarletwoman",
+        "name": "Romlott nő",
+        "ability": "Ha 5 vagy több játékos életben van , és ha a Démon meghal, te válsz a Démonná (Utazók nem számítanak).",
+        "firstNightReminder": "",
+        "otherNightReminder": "Ha a skarlát nő ma démonná válik: Mutasd meg a 'Te vagy' kártyát, aztán a démon szimbólumot.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Démon"
+        ]
+    },
+    {
+        "id": "seamstress",
+        "name": "Varrónő",
+        "ability": "Egyszer a játék során, éjjel, válassz 2 játékost (magadat nem lehet): megtudod, hogy azonos csapatban vannak-e.",
+        "firstNightReminder": "A Seamstressz vagy \"nem\" fejjelet mutat, vagy két másik játékosra mutat. Ha a Seamstress a játékosokat választotta, bólintson \"igen\" -nel, vagy rázza \"nem\" -mel, hogy egyformák-e.",
+        "otherNightReminder": "Ha a Seamstress még nem használta a képességét: a Seamstress vagy \"nem\" fejjelet mutat, vagy két másik játékosra mutat. Ha a Seamstress a játékosokat választotta, bólintson \"igen\" -nel, vagy rázza \"nem\" -mel, hogy egyformák-e.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Nincs képesség"
+        ]
+    },
+    {
+        "id": "sentinel",
+        "name": "Őrszem",
+        "ability": "Lehet 1-el több vagy kevesebb Kívülálló a játékban.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "shabaloth",
+        "name": "Shabaloth",
+        "ability": "Éjjelente* válassz 2 játékost: ők meghalnak. Lehet, hogy felöklendezel egy halott játékost, akit előző éjjel választottál.",
+        "firstNightReminder": "",
+        "otherNightReminder": "Egy játékos, akit a Shabaloth választott, talán feltámad. A Shabaloth két játékosra mutat. Azok a játékosok meghalnak.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Élő",
+            "Halott"
+        ]
+    },
+    {
+        "id": "shugenja",
+        "name": "Shugenja",
+        "ability": "Megtudod, hogy a legközelebbi gonosz játékos az óramutató járásával megegyező irányban vagy azzal ellentétesen van-e. Ha egyenlő távolságra vannak, ez az információ önkényes.",
+        "firstNightReminder": "Keltse fel a Shugenját, vízszintesen a legközelebbi gonosz játékos irányába. Ha a két legközelebbi gonosz játékos egyenlő távolságra van, mutasson vízszintesen mindkét irányba.",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "slayer",
+        "name": "Démonvadász",
+        "ability": "Egyszer a játék során, napközben, nyilvánosan válassz egy játékost. Ha ő a Démon, azonnal meghal.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": [
+            "Nincs képesség"
+        ]
+    },
+    {
+        "id": "snakecharmer",
+        "name": "Kigyóbűvölő",
+        "ability": "Éjjelente válassz egy élő játékost: Ha ő Démon, akkor karaktert és csapatot cserél veled, majd részeggé teszed.",
+        "firstNightReminder": "A Snake Charmer egy játékosra mutat. Ha ez a játékos a Démon: cserélje ki a Démon és Kígyó Charmer karakter és a beállítások. Ébressze fel a játékosokat, hogy tájékoztassák őket új szerepükről és összehangolásukról. Az új Kígyóvadász mérgezett.",
+        "otherNightReminder": "A Snake Charmer egy játékosra mutat. Ha ez a játékos a Démon: cserélje ki a Démon és Kígyó Charmer karakter és a beállítások. Ébressze fel a játékosokat, hogy tájékoztassák őket új szerepükről és összehangolásukról. Az új Kígyóvadász mérgezett.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Mérgezett"
+        ]
+    },
+    {
+        "id": "snitch",
+        "name": "Spicli",
+        "ability": "Követők megtudnak 3 karaktert, akik nincsenek játékban.",
+        "firstNightReminder": "Miután Minion info ébreszt minden Minion és mutasd meg nekik három nem-in-play karakter zseton. Ezek lehetnek azonosak vagy mások, mint a Démon.",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "soldier",
+        "name": "Katona",
+        "ability": "Védett vagy a Démonnal szemben.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "spiritofivory",
+        "name": "Elefántcsont szelleme",
+        "ability": "Legfeljebb 1 extra Gonosz játékos lehet játékban.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": [
+            "Nincs extra gonosz"
+        ]
+    },
+    {
+        "id": "spy",
+        "name": "Kém",
+        "ability": "Éjjelente megnézheted a Grimoárt. Jónak, Városinak és Kívülállónak is tűnhetsz a többi játékosnak, még akkor is, ha már meghaltál.",
+        "firstNightReminder": "Mutasd meg a Grimoire-t a kémnek, ameddig csak kell.",
+        "otherNightReminder": "Mutasd meg a Grimoire-t a kémnek, ameddig csak kell.",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "steward",
+        "name": "Ügyfél",
+        "ability": "Kezdéskor ismersz egy jó játékost.",
+        "firstNightReminder": "Pont 1 jó játékos.",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": [
+            "Tudom"
+        ]
+    },
+    {
+        "id": "stormcatcher",
+        "name": "Viharvadász",
+        "ability": "Nevezz meg egy Jó karaktert. Ha játékban van, csak kivégzéssel halhat meg, de a Gonoszak megtudják, hogy ki az.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": [
+            "Biztonságos"
+        ]
+    },
+    {
+        "id": "summoner",
+        "name": "Idéző",
+        "ability": "Kapsz 3 blöfföt. A 3. éjszaka válassz egy játékost: a választott játékos egy általad választott gonosz démonná válik. [Nincs démon]",
+        "firstNightReminder": "Mutasd meg a 'These characters are not in play' kártyát. 3 karakter zseton a jó karakterek nem játszik.",
+        "otherNightReminder": "Ha ez a harmadik éjszaka, ébreszd fel a Summonert. Rámutatnak egy játékosra és egy démonra a karakterlapon - ez a játékos lesz a Démon.",
+        "remindersGlobal": [],
+        "reminders": [
+            "1. éjszaka",
+            "2. éjszaka",
+            "3. éjszaka"
+        ]
+    },
+    {
+        "id": "sweetheart",
+        "name": "Édesem",
+        "ability": "Ha meghalsz, egy játékos részeg lesz ezután.",
+        "firstNightReminder": "",
+        "otherNightReminder": "Válassz egy részeg játékost.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Részeg"
+        ]
+    },
+    {
+        "id": "tealady",
+        "name": "Teakészítő",
+        "ability": "Ha mindkét élő szomszédja Jó, nem halhatnak meg.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": [
+            "Nem halhatsz meg"
+        ]
+    },
+    {
+        "id": "thief",
+        "name": "Tolvaj",
+        "ability": "Éjjelente válassz egy játékost (ne magadat): az ő szavazata negatívnak számít másnap.",
+        "firstNightReminder": "A tolvaj egy játékosra mutat. A Thief \"Negatív szavazat\" emlékeztető a kiválasztott játékos karakter jelképe.",
+        "otherNightReminder": "A tolvaj egy játékosra mutat. A Thief \"Negatív szavazat\" emlékeztető a kiválasztott játékos karakter jelképe.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Negatív szavazás"
+        ]
+    },
+    {
+        "id": "tinker",
+        "name": "Kontár",
+        "ability": "Meghalhatsz akármikor.",
+        "firstNightReminder": "",
+        "otherNightReminder": "A Csingiling meghalhat.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Halott"
+        ]
+    },
+    {
+        "id": "towncrier",
+        "name": "Kikiáltó",
+        "ability": "Éjjelente* megtudod, ha egy Követő jelölt aznap.",
+        "firstNightReminder": "",
+        "otherNightReminder": "Bólintson igennel, vagy rázza a fejét nemmel, akár egy Minion jelölte ma. Helyezze el a \"Minion not nominated\" jelölőt (távolítsa el a \"Minion nominated\" -t, ha van ilyen).",
+        "remindersGlobal": [],
+        "reminders": [
+            "Minion jelölt",
+            "Nem jelölt minionok"
+        ]
+    },
+    {
+        "id": "toymaker",
+        "name": "Játékkészítő",
+        "ability": "A Démon választhatja, hogy nem táRögeszmés és egyszer kötelező meg is tennie a játék során. Gonosz játékosok normálisan kapnak kezdő információt.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": [
+            "Nincs támadás"
+        ]
+    },
+    {
+        "id": "undertaker",
+        "name": "Sírásó",
+        "ability": "Éjjelente* megtudod, hogy nappal melyik karakter halt meg kivégzésben.",
+        "firstNightReminder": "",
+        "otherNightReminder": "Ha ma kivégeznek egy játékost: Mutasd meg a játékos karakterét.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Végrehajtva"
+        ]
+    },
+    {
+        "id": "vigormortis",
+        "name": "Vigormortis",
+        "ability": "Éjjelente* válassz egy játékost: meghal. Ha Követőt ölsz, akkor megtartja képességét és mérgezett lesz 1 szomszédos Városi. (-1 Kívülálló)",
+        "firstNightReminder": "",
+        "otherNightReminder": "A Vigormortis egy játékosra mutat. Az a játékos meghal. Ha egy Minion megtartja a képességét, és az egyik Townsfolk szomszédaikat megmérgezik.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Halott",
+            "Rendelkezik képességgel",
+            "Mérgezett"
+        ]
+    },
+    {
+        "id": "villageidiot",
+        "name": "Hülye falu",
+        "ability": "Minden éjszaka válassz egy játékost: megtudod, hogy melyik oldalon áll. [+0-tól +2 Falu Bolondokig. Az egyik extra részeg.]",
+        "firstNightReminder": "A falu idióta rámutat, hogy egy játékos; Adj egy hüvelykujj fel, ha a játékos jó, vagy hüvelykujj le, ha a játékos gonosz.",
+        "otherNightReminder": "A falu idióta rámutat, hogy egy játékos; Adj egy hüvelykujj fel, ha a játékos jó, vagy hüvelykujj le, ha a játékos gonosz.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Részeg"
+        ]
+    },
+    {
+        "id": "virgin",
+        "name": "Szűz",
+        "ability": "Amikor első alkalommal gyanusítanak, és a gyanusító Városi, őt végzik ki.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": [
+            "Nincs képesség"
+        ]
+    },
+    {
+        "id": "vizier",
+        "name": "Vizier",
+        "ability": "Minden játékos tudja, ki vagy. Nem halhatsz meg napközben. Ha jó játékos szavazott, azonnal kivégezhetsz valakit.",
+        "firstNightReminder": "Jelentse be, hogy a Vizier játszik, és hogy melyik játékos.",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "vortox",
+        "name": "Vortox",
+        "ability": "Éjjelente* válassz egy játékost: meghal. A Városiak képességei kötelezően hamis infót adnak. Ha senkit se végeznek ki nappal, a Gonoszak nyernek.",
+        "firstNightReminder": "",
+        "otherNightReminder": "A Vortox egy játékosra mutat. Az a játékos meghal.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Halott"
+        ]
+    },
+    {
+        "id": "voudon",
+        "name": "Voodoo pap",
+        "ability": "Csak te és a halott játékosok szavazhatnak: nincs szükségük szavazó tokenre és az 50%os többségre sem.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "washerwoman",
+        "name": "Mosónő",
+        "ability": "Megtudod, hogy 2 játékos közül az egyik egy bizonyos Városi.",
+        "firstNightReminder": "Mutasd meg a karakter jele egy Townsfolk játszik. Mutass két játékosra, közülük az egyik ez a karakter.",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": [
+            "Városiak",
+            "Tévedés"
+        ]
+    },
+    {
+        "id": "widow",
+        "name": "Fekete özvegy",
+        "ability": "Első éjszakádon nézd meg a Grimoárt és válassz egy játékost: megmérgezed. Valamelyik Jó játékos tudja, hogy Özvegy van a játékban.",
+        "firstNightReminder": "Mutasd meg a Grimoire-nak az Özvegynek, ameddig csak kell. Az Özvegy egy játékosra mutat. Az a játékos mérgezett. Ébressz fel egy jó játékost. Mutasd meg a 'These characters are in play' kártyát, majd az Özvegy karakter szimbólumot.",
+        "otherNightReminder": "",
+        "remindersGlobal": [
+            "Ismeretek"
+        ],
+        "reminders": [
+            "Mérgezett"
+        ]
+    },
+    {
+        "id": "witch",
+        "name": "Boszorkány",
+        "ability": "Éjjelente válassz egy játékost: ha jelöl másnap, meghal. Ha már csak 3 játékos él, elveszíted a képességed.",
+        "firstNightReminder": "A boszorkány egy játékosra mutat. Ha az a játékos holnap bejelenti, azonnal meghalnak.",
+        "otherNightReminder": "Ha 4 vagy több játékos él: A boszorkány egy játékosra mutat. Ha az a játékos holnap bejelenti, azonnal meghalnak.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Átkozott"
+        ]
+    },
+    {
+        "id": "wizard",
+        "name": "Varázsló",
+        "ability": "Egyszer egy játék, úgy dönt, hogy egy kívánság. Ha megadjuk, lehet ára és hagy nyomot a természetét.",
+        "firstNightReminder": "Futtasd le a Varázsló képességét, ha van.",
+        "otherNightReminder": "Futtasd le a Varázsló képességét, ha van.",
+        "remindersGlobal": [],
+        "reminders": [
+            "?"
+        ]
+    },
+    {
+        "id": "wraith",
+        "name": "Lidércek",
+        "ability": "Lehet, hogy este kinyitod a szemed. Akkor ébredsz, amikor más gonosz játékosok.",
+        "firstNightReminder": "Ébreszd fel a Wraith-et ma este, amikor más gonosz játékosok felébrednek.",
+        "otherNightReminder": "Ébreszd fel a Wraith-et ma este, amikor más gonosz játékosok felébrednek.",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "xaan",
+        "name": "Xaan",
+        "ability": "X éjszakáján minden városlakó meg van mérgezve alkonyatig. [X kívülálló]",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": [
+            "1. éjszaka",
+            "2. éjszaka",
+            "3. éjszaka",
+            "X"
+        ]
+    },
+    {
+        "id": "yaggababble",
+        "name": "Yaggababble",
+        "ability": "Kezdéskor ismersz egy titkos kifejezést. Minden alkalommal, amikor ezt nyilvánosan kimondod ma, egy játékos meghalhat.",
+        "firstNightReminder": "Mutasd meg a Yaggabble-nek a titkos mondatát.",
+        "otherNightReminder": "Válasszon ki több játékost az összes alkalommal a Yaggababble mondta a titkos kifejezést nyilvánosan, azok a játékosok meghalnak.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Halott"
+        ]
+    },
+    {
+        "id": "zealot",
+        "name": "Zealot",
+        "ability": "Ha 5 vagy több játékos él, minden jelölésre szavaznod kell.”",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "zombuul",
+        "name": "Zombuul",
+        "ability": "Éjjelente* ha nem halt meg senki aznap, válassz egy játékost: meghal. Első alkalommal amikor meghalsz, életben maradsz, de halottnak látszol.",
+        "firstNightReminder": "",
+        "otherNightReminder": "Ha senki sem hal meg nappal: A Zombuul egy játékosra mutat. Az a játékos meghal.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Halott",
+            "Meghalt ma"
+        ]
+    }
+]
