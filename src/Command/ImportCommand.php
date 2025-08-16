@@ -485,7 +485,13 @@ class ImportCommand extends Command
 
     private function getFileContents(string $file): array
     {
-        return json_decode(file_get_contents($file), true);
+
+        if (file_exists($file)) {
+            return json_decode(file_get_contents($file), true);
+        }
+
+        return [];
+
     }
 
     private function convertJinxes(array $rawJinxes): array
@@ -517,7 +523,7 @@ class ImportCommand extends Command
         $file = $this->getFileName($type, $locale);
         $contents = $this->getFileContents($file);
 
-        if (is_null($contents)) {
+        if (is_null($contents) || !count($contents)) {
             return "Unable to read file at location '{$file}'";
         }
 
