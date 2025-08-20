@@ -1,0 +1,33 @@
+[
+    {
+        "id": "nichen",
+        "name": "Scheming Minister",
+        "ability": "On your first night choose a player. If they die by execution first you turn evil and vise versa.",
+        "firstNightReminder": "Wake the scheming minister and let them choose a player. Place the 'No mutual Heaven' token next to them.",
+        "otherNightReminder": "If either the scheming minister or the player marked with the token 'No mutual Heaven' dies by execution first, wake up the other and tell them they are evil.",
+        "remindersGlobal": [],
+        "reminders": [
+            "No mutual Heaven"
+        ]
+    },
+    {
+        "id": "shaxing",
+        "name": "Menace",
+        "ability": "When you get die one of your alive neighbours may die tonight.",
+        "firstNightReminder": "",
+        "otherNightReminder": "If the menace died tonight or today: A living neighbour may die, mark them with the 'Dies tonight' token.",
+        "remindersGlobal": [],
+        "reminders": [
+            "Dies tonight"
+        ]
+    },
+    {
+        "id": "yinyangshi",
+        "name": "Yin-Yang Master",
+        "ability": "You start knowing two good and two evil characters. Amongst those exactly two must be in play.",
+        "firstNightReminder": "Wake the Yin-Yang Master and show them two good and two evil characters, exactly two of which must be play.",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": []
+    }
+]
