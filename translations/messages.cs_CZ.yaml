@@ -13,12 +13,12 @@ index:
     description: Virtuální grimoár pro hru Krvavá hodina odbila
 
 sheet:
-    title: Seznam postav
-    description: Seznam postav pro tuto edici hry Krvavá hodina odbila
+    title: Almanach postav
+    description: Almanach postav pro tuto edici hry Krvavá hodina odbila
     jinx: Kletby
     each_night: "* Každou noc kromě první noci."
-    get_qr_code: Získej QR kód pro tento seznam
-    get_sheet: Získej tento seznam
+    get_qr_code: Získej QR kód pro tento almanach
+    get_sheet: Získej tento almanach
     credit: <a href="https://bloodontheclocktower.com/" target="_blank" rel="noopener noreferrer">Blood on the Clocktower</a> je ochranná známka společností Steven Medway a <a href="https://www.thepandemoniuminstitute.com/" target="_blank" rel="noopener noreferrer">The Pandemonium Institute</a>
     breakdown: Čísla jednotlivých družstev udávají počet hráčů.
     count_plus: "%count%+"
@@ -33,14 +33,14 @@ groups:
     fabled: Legendy
 
 messages:
-    good_team: Dobrý tým
-    evil_team: Zlý tým
-    empty_character_ability: Toto je prázdný znak.
-    version_change_message: Tato aplikace aktualizovala svou verzi. Protože vaše data nemusí být správná, doporučujeme vám vymazat vše v dialogovém okně „Vymazat mezipaměť“. Stisknutím tlačítka „OK“ otevřete dialog nebo stisknutím tlačítka „Zrušit“ zavřete tuto zprávu.
+    good_team: Dobrá družina
+    evil_team: Zlá družina
+    empty_character_ability: Tento žeton je prázdný.
+    version_change_message: Tato aplikace byla aktualizována. Protože tvoje data nemusí být správná, doporučujeme ti vymazat vše v dialogovém okně pomocí „Vymaž mezipaměť“. Stisknutím tlačítka „OK“ otevřeš dialog nebo stisknutím tlačítka „Zrušit“ zavřeš tuto zprávu.
     invalid_script: Formát skriptu nebyl rozpoznán.
     no_characters: Skript neobsahuje žádné rozpoznané znaky.
-    player_name: Jak se jmenuje tento hráč?
-    custom_info_token: Co chcete, aby váš nový informační žeton říkal? Použijte **dvojité hvězdičky** pro zdůraznění textu.
+    player_name: Jméno hráče (volitelně)
+    custom_info_token: Co chceš, aby váš nový informační žeton říkal? Použijte **dvojité hvězdičky** pro zdůraznění textu.
     bag_disabled: "Tyto postavy nelze do sáčku přidat: {0}"
 
 setup:
@@ -48,82 +48,82 @@ setup:
     title: Nastavení
 
     buttons:
-        select_edition: Vybrat edici
-        select_characters: Vybrat postavy
-        qr_code_button: Seznam postav
-        clear_cache_button: Vymazat mezipaměť
+        select_edition: Vyber edici
+        select_characters: Vyber postavy
+        qr_code_button: Almanach postav
+        clear_cache_button: Vymaž mezipaměť
         language: Jazyk
-        set_language: Nastavit jazyk
+        set_language: Vyber jazyk
 
     editions:
-        title: Vybrat edici
+        title: Vyber edici
         trouble_brewing: Potíže přicházejí
         bad_moon_rising: Čas krvavého měsíce
         sects_and_violets: Sekty a fialky
         custom_script: Vlastní skript
         custom_note: Nahraj vlastní skript, zadej URL vlastního skriptu nebo vlož JSON přímo.
         custom_warning: Nahrávej vlastní soubory JSON pouze ze zdrojů, kterým důvěřuješ!
-        upload: Nahrát vlastní skript
-        url: Zadat URL
-        paste: Vložit ze schránky
+        upload: Nahraj vlastní skript
+        url: Zadej URL
+        paste: Vlož ze schránky
         unsupported: Upozorňujeme, že Kapesní Grimoár v současné době nepodporuje domácí ani lokalizované skripty.
-        select: Vybrat
+        select: Vyber
 
     character_select:
-        title: Vybrat postavy
+        title: Vyber postavy
         number_players: Počet hráčů
-        toggle_abilities: Zobrazit schopnosti postavy
-        toggle_duplicates: Povolit duplicitní postavy
-        highlight_random: Zvýraznit náhodně
-        draw_characters: Zobraz postavy
-        add_all: Přidat vše
-        layout: Rozvržení
-        ellipse: Elipsa
+        toggle_abilities: Zobraz schopnosti postav
+        toggle_duplicates: Povol duplicitní postavy
+        highlight_random: Vyber postavy náhodně
+        draw_characters: Připrav vybrané postavy k tajnému výběru
+        add_all: Přidej vybrané postavy přímo do Grimoáru
+        layout: Rozvržení žetonů postav v Grimoáru
+        ellipse: Do kruhu
         diagonal: Diagonálně
         horizontal: Vodorovně
         vertical: Vertikálně
 
     character_choice:
-        title: Vyber svou postavu
-        description: Klepnutím na kterýkoli z očíslovaných žetonů si vybeš svou postavu. Tmavší žetony již byly vybrány.
+        title: Vyber si postavu
+        description: Klepnutím na kterýkoli z očíslovaných žetonů si vybereš svou postavu. Tmavší žetony bez čísla již byly vybrány.
 
     character_decision:
         title: Zapamatuj si svou postavu
-        name: Pojmenuj se (volitelné)
-        return: Zpět na výběr postavy
+        name: Jméno hráče (volitelně)
+        return: Potvrď a zpět na výběr postav
 
     qr_code:
-        title: List postavy
-        intro: Naskenuj tento QR kód pro zobrazení listu postavy
-        include: "Zahrnout:"
-        travellers: Pocetní
+        title: Almanach postav
+        intro: Naskenuj tento QR kód pro zobrazení almanachu postavy
+        include: "Včetně:"
+        travellers: Pocestní
         fabled: Legendy
 
     clear_cache:
-        title: Vymazat mezipaměť
-        clear_all: Vymazat vše
+        title: Vymaž mezipaměť
+        clear_all: Vymaž vše
         clear_description: Vypnutím této možnosti budou vymazány jednotlivé části mezipaměti.
-        lookup_label: Vymazat data
+        lookup_label: Vymaž data
         lookup_note: Data o kletbách, rozpisu týmu a informacích o postavě.
-        characters_label: Vymazat edici
+        characters_label: Vymaž edici
         characters_note: Vybraná a načtená edice nebo skript.
-        tokens_label: Vymazat žetony
+        tokens_label: Vymaž žetony
         tokens_note: Pozice žetonů v grimoáru.
-        inputs_label: Vymazat vstupy
+        inputs_label: Vymaž vstupy
         inputs_note: Uživatelská nastavení pro tuto webovou stránku.
-        details_label: Vymazat otevřené/zavřené
+        details_label: Vymaž otevřené/zavřené
         details_note: Které sekce jsou otevřené nebo zavřené.
-        info_tokens_label: Vymazat vlastní informační žetony
+        info_tokens_label: Vymaž vlastní informační žetony
         info_tokens_note: Vlastní informační žetony, které byly přidány.
-        names_label: Vymazat jména
+        names_label: Vymaž jména
         names_note: Návrhy jmen hráčů.
-        height_label: Vymazat výšku podložky
+        height_label: Vymaž výšku podložky
         height_note: Výška podložky v grimoáru.
-        clear_refresh_label: Obnovit po aktualizaci
+        clear_refresh_label: Obnov po aktualizaci
         clear_refresh_note: Obnovením se načtou nová data pro vše, co bylo vymazáno.
         warning: "<strong>Varování:</strong> všechny žetony, které byly umístěny na grimoár, budou zapomenuty."
         info_token_warning: "<strong>Varování:</strong> všechny vlastní informační žetony budou zapomenuty."
-        clear_cache: Vymazat mezipaměť
+        clear_cache: Vymaž mezipaměť
 
 grimoire:
 
@@ -131,66 +131,66 @@ grimoire:
 
     grimoire:
         bluffs: Blufy Démona
-        show_bluffs: Zobrazit všechny blufy
-        add_bluffs: Přidat blufy
-        add_token: Přidat žeton
-        add_reminder: Přidat připomínku
-        add_traveller: Přidat Pocestného
-        add_fabled: Přidat Legendu
-        show_tokens: Zobrazit žetony
-        reset_height: Obnovit výšku podložky
-        clear_grimoire: Vymazat Grimoár
+        show_bluffs: Zobraz všechny blufy
+        add_bluffs: Přidej blufy
+        add_token: Přidej žetony
+        add_reminder: Přidej připomínku
+        add_traveller: Přidej Pocestného
+        add_fabled: Přidej Legendu
+        show_tokens: Zobraz žetony
+        reset_height: Obnov výšku podložky
+        clear_grimoire: Vymaž Grimoár
         clear_grimoire_warning: Jseš si jistý, že chceš vymazat všechny žetony?
-        show_night_order: Zobrazit pořadí v noci
+        show_night_order: Zobraz pořadí v noci
         character_size: Velikost žetonu postavy
         reminder_size: Velikost žetonu připomínky
         token_settings: Nastavení žetonu
 
     character_list:
-        title: Vybrat postavu
+        title: Vyber postavu
 
     reminder_list:
-        title: Vybrat připomínku
-        show: Zobrazit všechna připomínky
-        multiple: Přidat více
-        add_all: Přidat vše
+        title: Vyber připomínku
+        show: Zobraz všechny připomínky
+        multiple: Přidej více
+        add_all: Přidej vše
 
     character_show:
         title: Žeton
-        show: Zobrazit
+        show: Zobraz
         shroud: Rubáš
-        rotate: Otočit
+        rotate: Otoč
         reminder: Připomínka
-        replace: Nahradit
-        remove: Odebrat žeton
-        recent_reminders: Naposledy přidané připomínky:
-        player_name: Nastavit jméno hráče
+        replace: Nahraď
+        remove: Odeber žeton
+        recent_reminders: "Naposledy přidané připomínky:"
+        player_name: Ulož jméno hráče
         ghost_vote: Hlas ducha
         orphan: "Varování: tato postava není v aktuálním scénáři."
 
     reminder_show:
         title: Připomínka
-        remove: Odebrat
+        remove: Odeber
 
     bluff_show:
         title: Žeton
-        empty: Vyprázdnit
-        show: Zobrazit
-        change: Změnit
+        empty: Vyprázdni
+        show: Zobraz
+        change: Změň
 
     bluff_list:
-        title: Vybrat bluf
-        show_existing: Zobrazit existující postavy
-        show_travellers: Zobrazit Poutníky
-        show_evil: Zobrazit zlé postavy
+        title: Vyber bluf
+        show_existing: Zobraz existující postavy
+        show_travellers: Zobraz Poutníky
+        show_evil: Zobraz Zlé postavy
 
     token_list:
         title: Postavy
-        add: Přidat žeton
+        add: Přidej žeton
 
     traveller_list:
         title: Poutníci
-        show_all: Zobrazit všechny Poutníky
+        show_all: Zobraz všechny Poutníky
 
     fabled_list:
         title: Legendy
@@ -199,47 +199,47 @@ grimoire:
         title: Žeton
 
     export:
-        title: Exportovat hru
-        markup: Vygenerovat QR kód, aby bylo možné importovat herní data do <a href="https://the-grim.netlify.app/" target="_blank" rel="noopener noreferrer">The Grim</a>.
-        button: Generovat QR kód
+        title: Exportuj hru
+        markup: Vygeneruj QR kód, aby bylo možné importovat herní data pro The Grim.
+        button: Generuj QR kód
 
 jinxes:
     title: Kletby
     target: Cíl
     trick: Trik
     reason: Důvod
-    show: Zobrazit kletby, které nejsou ve hře
+    show: Zobraz kletby, které nejsou ve hře
 
 night_order:
     title: Pořadí noci
     first_night: První noc
     other_night: Ostatní noci
-    swipe_change: Přejetím prstem změníte noci.
-    show: Zobrazit postavy, které nejsou ve hře
-    show_dead: Zobrazit mrtvé postavy
+    swipe_change: Přejetím prstem přes obrazovku zleva doprava zobrazíš První noc / Ostatní noci.
+    show: Zobraz postavy, které nejsou ve hře
+    show_dead: Zobraz mrtvé postavy
 
 info_tokens:
     title: Informační žetony
     info_tokens:
         isdemon: Toto je <strong>Démon</strong>
-        isminion: Toto jsou vaši <strong>Přisluhovači</strong>
+        isminion: Toto jsou tví <strong>Přisluhovači</strong>
         notinplay: Tyto postavy <strong>nejsou ve hře</strong>
         nominatetoday: <strong>Nominoval</strong> jsi dnes?
         playeris: <strong>Tento hráč</strong> je
         votetoday: <strong>Hlasoval</strong> jsi dnes?
         youare: <strong>Ty</strong> jsi
-        selectedyou: Tato postava si vás <strong>vybrala</strong>
+        selectedyou: Tato postava si tě <strong>vybrala</strong>
         useability: Použiješ svou <strong>schopnost</strong>?
         makechoice: <strong>Vyber</strong> si
     custom: Vlastní informační žetony
-    add_custom: Přidat informační žeton
-    edit_custom: Upravit informační žeton
-    delete_custom: Smazat informační žeton
+    add_custom: Přidej informační žeton
+    edit_custom: Uprav informační žeton
+    delete_custom: Smaž informační žeton
 
 notes:
     title: Poznámky vypravěče
     label: Poznámky
-    clear: Vymazat poznámky
+    clear: Vymaž poznámky
     clear_warning: Jseš si jistý, že chceš vymazat poznámky?
 
 acknowledgements:
@@ -250,7 +250,7 @@ acknowledgements:
         - Ikony jsou převzaty z <a href="https://fontawesome.com/v5.15/icons" target="_blank" rel="noopener noreferrer">Font Awesome</a>.
         - Mnoho obrázků a dat je převzato z <a href="https://www.clocktower.online" target="_blank" rel="noopener noreferrer">Clocktower.online</a> a <a href="https://bloodontheclocktower.com/" target="_blank" rel="noopener noreferrer">webových stránek Blood on the Clocktower</a>.
         - Toto je neoficiální virtuální grimoár pro hru Blood on the Clocktower (Krvavá hodina odbila). Tento projekt je zdarma a zdrojový kód naleznete na <a href="https://github.com/Skateside/pocket-grimoire" target="_blank" rel="noopener noreferrer">GitHubu</a>. Tento projekt není spojen s Pandemonium Institute. Pokud rádi hrajete Blood on the Clocktower, <a href="https://bloodontheclocktower.com/buy" target="_blank" rel="noopener noreferrer">zvažte prosím koupi vlastního grimoáru</a> – kromě toho, že je flexibilnější než tato digitální verze, také podporuje tvůrce.
-        - Všimli jste si chyby nebo máte návrh na vylepšení? Dejte mi vědět v kanálu <a href="https://discord.gg/eU89j89" target="_blank" rel="noopener noreferrer">pocket-grimoire na neoficiálním Discord serveru</a> (moje jméno tam je „Skateside“) nebo <a href="https://github.com/Skateside/pocket-grimoire/issues" target="_blank" rel="noopener noreferrer">nahlaste problém na GitHubu</a>.
+        - Všimli jste si chyby nebo máte návrh na vylepšení? Dejte mi vědět v kanálu <a href="https://discord.gg/eU89j89" target="_blank" rel="noopener noreferrer">pocket-grimoire na neoficiálním Discord serveru</a> (moje jméno je „Skateside“) nebo <a href="https://github.com/Skateside/pocket-grimoire/issues" target="_blank" rel="noopener noreferrer">nahlaste problém na GitHubu</a>.
         - <small>Verze <span id="version"></span></small>
 
 errors:
