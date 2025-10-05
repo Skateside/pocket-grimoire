@@ -2,47 +2,47 @@
     {
         "target": "alchemist",
         "trick": "boffin",
-        "reason": "만약 연금술사가 연구광의 능력을 얻는다면, 연금술사는 악마가 가지게된 능력을 알 수 없습니다."
+        "reason": "만약 연금술사가 과학자의 능력을 얻는다면, 연금술사는 악마가 가지게 된 능력을 알 수 없습니다."
     },
     {
         "target": "alchemist",
         "trick": "marionette",
-        "reason": "Alchemist-Marionette에는 Marionette 능력이 없습니다. Marionette는 놀이에 있습니다."
+        "reason": "연금술사는 꼭두각시라면 능력이 없고, 꼭두각시는 게임에 등장합니다."
     },
     {
         "target": "alchemist",
         "trick": "mastermind",
-        "reason": "Alchemist-Mastermind에는 Mastermind 능력이 없으며 Mastermind는 재생되지 않습니다."
+        "reason": "연금술사는 배후인물이라면 능력이 없고, 배후인물은 게임에 등장하지 않습니다."
     },
     {
         "target": "alchemist",
         "trick": "organgrinder",
-        "reason": "Alchemist가 Organ Grinder 능력을 가지고 있다면 Organ Grinder는 Alchemist와 Organ Grinder 모두 소버이며 둘 다 술에 취합니다."
+        "reason": "연금술사가 풍각쟁이라면 풍각쟁이는 게임에 등장하고, 연금술사와 풍각쟁이가 모두 술에 취하지 않았다면 둘 다 술에 취합니다."
     },
     {
         "target": "alchemist",
         "trick": "spy",
-        "reason": "Alchemist가 스파이 능력을 가지고 있다면, 그들은하지 않습니다, 스파이는 재생에. 매일, 실행 단계 후, 생활 Alchemist는 Spy로 생활 선수를 공개적으로 추측 할 수 있습니다. 수정하면 악마는 Spy tonight를 선택해야합니다."
+        "reason": "연금술사가 스파이라면 능력은 없고, 스파이는 게임에 등장합니다. 매일, 처형 단계 후, 생존한 연금술사는 생존한 플레이어 한명을 스파이로 공개적으로 추측 할 수 있습니다. 맞다면 악마는 오늘 밤 스파이를 선택해야 합니다."
     },
     {
         "target": "alchemist",
         "trick": "summoner",
-        "reason": "Alchemist-Summoner는 bluffs를 얻지 않으며 Demon이 아닌 플레이어를 선택하십시오. 그들이이 일어나기 전에 죽을 경우, 악의 승리. [노 악마]"
+        "reason": "연금술사가 소환사라면 속임수를 얻지 않으며 후에 악마 캐릭터만 선택하십시오. 이 일어나기 전에 연금술사가 죽을 경우, 악의 승리. [악마 없음]"
     },
     {
         "target": "alchemist",
         "trick": "widow",
-        "reason": "Alchemist가 Widow 능력을 가지고 있다면, 그들은하지 않으며 Widow는 플레이에 있습니다. 매일, 실행 단계 후에, 살아있는 Alchemist는 Widow로 생활 선수를 공개적으로 추측할지도 모릅니다. 수정하면 악마는 Widow tonight를 선택해야합니다."
+        "reason": "연금술사가 과부라면 능력은 없고, 과부는 게임에 등장합니다. 매일, 처형 단계 후, 생존한 연금술사는 생존한 플레이어 한명을 과부로 공개적으로 추측 할 수 있습니다. 맞다면 악마는 오늘 밤 과부를 선택해야 합니다."
     },
     {
         "target": "alchemist",
         "trick": "wraith",
-        "reason": "Alchemist가 Wraith 능력을 가지고 있다면, 그들은하지 않으며, Wraith는 연극에 있습니다. 매일, 실행 단계 후, 살아있는 Alchemist는 Wraith로 생활 선수를 공개적으로 추측할 수 있습니다: 정확하면, 악마는 Wraith tonight를 선택해야합니다."
+        "reason": "연금술사가 레이스라면 능력은 없고, 레이스는 게임에 등장합니다. 매일, 처형 단계 후, 생존한 연금술사는 생존한 플레이어 한명을 레이스로 공개적으로 추측 할 수 있습니다. 맞다면 악마는 오늘 레이스를 선택해야 합니다."
     },
     {
         "target": "alhadikhia",
         "trick": "princess",
-        "reason": "공주가 지명 된 경우 1 일 플레이어를 실행하면 Al-Hadikhia 능력의 밤이 없습니다."
+        "reason": "공주가 첫날 누군가를 지명해서 처형한 경우, 다음 밤에 알하디키아의 능력으로 사람이 죽지 않습니다."
     },
     {
         "target": "boffin",
@@ -52,7 +52,7 @@
     {
         "target": "boffin",
         "trick": "drunk",
-        "reason": "만약 악마가 주정뱅이의 능력을 가진다면, 연구광은 마을주민플레이어 한명을 선택하고 그 능력을 대신 가집니다."
+        "reason": "만약 악마가 주정뱅이의 능력을 가진다면, 과학자는 마을 주민 플레이어 한명을 선택하여 주정뱅이로 만듭니다."
     },
     {
         "target": "boffin",
@@ -72,22 +72,22 @@
     {
         "target": "boffin",
         "trick": "villageidiot",
-        "reason": "만약 여분 토큰이 있다면, 연구광은 악마에게 동네바보의 능력을 줄 수 있습니다."
+        "reason": "만약 여분 토큰이 있다면, 과학자는 악마에게 동네바보의 능력을 줄 수 있습니다."
     },
     {
         "target": "bountyhunter",
         "trick": "kazali",
-        "reason": "악한 마을주민 오직 다음 경우에만 만들어 집니다. : 현상금 사냥꾼이 플레이중이고 카질리가 행동을 할 때"
+        "reason": "악한 마을주민은 오직 다음 경우에만 만들어 집니다. : 현상금 사냥꾼이 플레이 중이고 카질리가 행동을 할 때"
     },
     {
         "target": "bountyhunter",
         "trick": "philosopher",
-        "reason": "만약 철학자가 현상금 사냥꾼의 능력을 얻는다면, 한 마을주민은 악하게 변합니다."
+        "reason": "만약 철학자가 현상금 사냥꾼의 능력을 얻는다면, 선한 마을주민은 악하게 변합니다."
     },
     {
         "target": "butler",
         "trick": "organgrinder",
-        "reason": "만약 오르간 연주자가 눈을 감고 투표를 하게 하는 경우, 집사는 투표하기 위해 손을 들 수 있지만 그 투표는 마스터와 동일한 투표할때만 유효합니다."
+        "reason": "만약 풍각쟁이가 눈을 감고 투표를 하게 하는 경우, 집사는 투표하기 위해 손을 들 수 있지만 그 투표는 주인과 동일한 투표일 때만 유효합니다."
     },
     {
         "target": "cannibal",
@@ -97,17 +97,17 @@
     {
         "target": "cannibal",
         "trick": "juggler",
-        "reason": "Juggler가 첫날에 추측하고 실행에 의해 죽을 경우, 살아있는 Cannibal는 Juggler가 정확한 추측하는 방법을 배웁니다."
+        "reason": "저글러가 첫날에 추측하고 처형에 의해 죽을 경우, 살아있는 식인종은 저글러가 한 추측의 결과를 배웁니다."
     },
     {
         "target": "cannibal",
         "trick": "poppygrower",
-        "reason": "Cannibal가 Poppy Grower를 먹으면 Poppy Grower 능력을 잃거나 Poppy Grower 능력을 잃고 Demon과 Minions는 서로를 학습합니다."
+        "reason": "식인종이 양귀비 재배자를 먹은 뒤 죽거나 양귀비 재배자의 능력을 잃으면, 악마와 하수인은 서로를 알게됩니다."
     },
     {
         "target": "cannibal",
         "trick": "princess",
-        "reason": "Cannibal가 지명 된 경우, Demon은 오늘 공주를 실행하지 않습니다."
+        "reason": "식인종이 공주를 지명하고 처형한다면, 악마는 오늘 살인을 하지 않습니다."
     },
     {
         "target": "cannibal",
@@ -137,12 +137,12 @@
     {
         "target": "heretic",
         "trick": "lleech",
-        "reason": "만약 리치가 이교도를 중독시킨다면, 리치는 죽고 이교도는 중독된 상태로 남아있습니다."
+        "reason": "만약 리치가 이교도를 중독시킨다면, 리치가 죽어도 이교도는 중독된 상태로 남아있습니다."
     },
     {
         "target": "heretic",
         "trick": "pithag",
-        "reason": "피트해그는 이교도를 만들 수 없습니다."
+        "reason": "마귀할멈은 이교도를 만들 수 없습니다."
     },
     {
         "target": "heretic",
@@ -157,32 +157,32 @@
     {
         "target": "kazali",
         "trick": "choirboy",
-        "reason": "성가대원이 플레이중 이라면, 카질리는 왕을 하수인으로 선택할 수 없습니다."
+        "reason": "합창단 소년이 플레이 중 이라면, 카질리는 왕을 하수인으로 선택할 수 없습니다."
     },
     {
         "target": "kazali",
         "trick": "goon",
-        "reason": "Kazali는 Goon 플레이어가 악의 사역 중 하나임을 선택할 수 있습니다."
+        "reason": "카잘리는 깡패 플레이어를 하수인으로 선택할 수 있습니다."
     },
     {
         "target": "kazali",
         "trick": "huntsman",
-        "reason": "만약 카질리가 아가씨를 하수인으로 선택했고 헌츠맨이 플레이중 이라면 한 선한 플레이어가 아가씨가 됩니다."
+        "reason": "만약 카질리가 아가씨를 하수인으로 선택했고 사냥꾼이 플레이 중 이라면 한 선한 플레이어가 아가씨가 됩니다."
     },
     {
         "target": "kazali",
         "trick": "marionette",
-        "reason": "Kazali가 Marionette를 만들려면 이웃 중 하나를 선택해야합니다."
+        "reason": "카잘리가 꼭두각시를 만들려면 이웃 중 하나를 선택해야합니다."
     },
     {
         "target": "kazali",
         "trick": "soldier",
-        "reason": "Kazali는 군인 선수가 악의 사역 중 하나임을 선택할 수 있습니다."
+        "reason": "카잘리는 군인 플레이어를 하수인으로 선택할 수 있습니다."
     },
     {
         "target": "legion",
         "trick": "engineer",
-        "reason": "군단과 인지니어는 동시에 게임 시작시 플레이될 수 없습니다. 만약 엔지니어가 군단을 만든다면, 대부분의 플레이어는 군단이 됩니다.(악한플레이어를 포함하여)"
+        "reason": "군단과 기계공은 동시에 게임 시작시 플레이될 수 없습니다. 만약 기계공이 군단을 만든다면, 대부분의 플레이어는 군단이 됩니다.(악한플레이어를 포함하여)"
     },
     {
         "target": "legion",
@@ -197,32 +197,32 @@
     {
         "target": "legion",
         "trick": "preacher",
-        "reason": "만약 전도사가 군단을 선택한다면, 군단은 그들의 능력을 유지하지만 전도사는 자신이 군단임을 알게 될 수도 있습니다."
+        "reason": "만약 목사가 군단을 선택한다면, 군단은 그들의 능력을 유지하지만 목사는 자신이 군단임을 알게 될 수도 있습니다."
     },
     {
         "target": "legion",
         "trick": "zealot",
-        "reason": "Zealot는 Legion의 능력에 대한 악으로 등록 할 수 있습니다."
+        "reason": "광신도는 군단의 능력에 의해 악으로 등록될 수 있습니다."
     },
     {
         "target": "leviathan",
         "trick": "banshee",
-        "reason": "각 밤*, Leviathan는 살아있는 좋은 선수 (이전 밤에 다른)를 선택합니다: 선택된 Banshee는 죽고 그들의 능력을 얻습니다."
+        "reason": "매일 밤*, 레비아탄은 생존한 선한 플레이어를 (이전 밤과 다르게) 선택합니다: 선택된 밴시는 죽고 능력이 발동됩니다."
     },
     {
         "target": "leviathan",
         "trick": "exorcist",
-        "reason": "Evil은 1 개 이상의 좋은 플레이어가 실행되면 승리하지 않습니다. Exorcist가 살아있을 경우 Leviathan을 성공적으로 선택했습니다."
+        "reason": "생존한 퇴마사가 레비아탄을 선택한 적 있다면, 악은 1명 이상의 선한 플레이어가 처형되어도 승리하지 않습니다."
     },
     {
         "target": "leviathan",
         "trick": "farmer",
-        "reason": "각 밤*, Leviathan는 살아있는 좋은 선수 (이전 밤에 다른)를 선택합니다: 선택한 농부는 그들의 능력을 사용하지만 죽지 않습니다."
+        "reason": "매일 밤*, 레비아탄은 살아있는 선한 플레이어를 (이전 밤과 다르게) 선택합니다: 선택된 농부는 그들의 능력을 사용하지만 죽지 않습니다."
     },
     {
         "target": "leviathan",
         "trick": "grandmother",
-        "reason": "Leviathan이 재생중인 경우, Grandchild는 실행에 의해 죽고, 악의 승리."
+        "reason": "레비아탄이 플레이 중인 경우, 손자가 처형되면 악이 승리합니다."
     },
     {
         "target": "leviathan",
@@ -232,57 +232,57 @@
     {
         "target": "leviathan",
         "trick": "innkeeper",
-        "reason": "Leviathan이 재생중인 경우, Innkeeper-protected-players는 모든 악의 능력에서 안전합니다."
+        "reason": "레비아탄이 플레이 중인 경우, 여관주인이 보호하는 플레이어들은 모든 악의 능력에서 안전합니다."
     },
     {
         "target": "leviathan",
         "trick": "king",
-        "reason": "Leviathan이 재생중인 경우 적어도 1 플레이어가 죽을 때, 왕은 매일 밤 살아있는 캐릭터를 배웁니다."
+        "reason": "레비아탄이 플레이 중인 경우, 1명의 플레이어가 죽은 뒤부터, 왕은 매일 밤 살아있는 캐릭터를 배웁니다."
     },
     {
         "target": "leviathan",
         "trick": "mayor",
-        "reason": "Leviathan가 재생중인 경우 & 실행은 일 5, 좋은 승리에 발생하지 않습니다."
+        "reason": "레비아탄이 플레이 중인 경우, 5일차 낮에 처형이 진행되지 않으면 선이 승리합니다."
     },
     {
         "target": "leviathan",
         "trick": "monk",
-        "reason": "Leviathan이 재생중인 경우, Monk-protected-player는 모든 악의 능력에서 안전합니다."
+        "reason": "레비아탄이 플레이 중인 경우, 수도승이 보호하는 플레이어는 모든 악의 능력에서 안전합니다."
     },
     {
         "target": "leviathan",
         "trick": "pithag",
-        "reason": "5일 이후에, 피트해그는 레비아탄을 선택할 수 없습니다."
+        "reason": "5일 이후에, 마귀할멈은 레비아탄을 선택할 수 없습니다."
     },
     {
         "target": "leviathan",
         "trick": "ravenkeeper",
-        "reason": "각 밤*, Leviathan는 살아있는 선수 (이전 밤에 다른)를 선택합니다: 선택한 Ravenkeeper는 그들의 능력을 사용하지만 죽지 않습니다."
+        "reason": "매일 밤*, 레비아탄은 살아있는 선한 플레이어를 (이전 밤과 다르게) 선택합니다: 선택한 레이븐키퍼는 그들의 능력을 사용하지만 죽지 않습니다."
     },
     {
         "target": "leviathan",
         "trick": "sage",
-        "reason": "각 밤*, Leviathan는 살아있는 좋은 선수 (이전 밤에 다른)를 선택합니다: 선택된 Sage는 그들의 능력을 사용하지만 죽지 않습니다."
+        "reason": "매일 밤*, 레비아탄은 살아있는 선한 플레이어를 (이전 밤과 다르게) 선택합니다: 선택된 현자는 그들의 능력을 사용하지만 죽지 않습니다."
     },
     {
         "target": "leviathan",
         "trick": "soldier",
-        "reason": "Leviathan이 재생중인 경우, 군인은 모든 악의 능력에서 안전합니다."
+        "reason": "레비아탄이 플레이 중인 경우, 군인은 모든 악의 능력에서 안전합니다."
     },
     {
         "target": "lilmonsta",
         "trick": "hatter",
-        "reason": "만약 악마가 릴몬스타를 선택한다면, 그들은 변할 하수인 뿐 아니라 릴몬스타를 돌볼 사람도 선택됩니다."
+        "reason": "만약 악마가 릴몬스타를 선택한다면, 그들은 자신이 변할 하수인 뿐 아니라 릴몬스타를 돌볼 사람도 선택됩니다."
     },
     {
         "target": "lilmonsta",
         "trick": "poppygrower",
-        "reason": "만약 양귀비 재배자가 플레이중이라면, 하수인들은 같이 깨어나지 않습니다. 그들중 하나가 릴몬스타 토큰을 가져갈때까지, 한명씩 깨어납니다."
+        "reason": "만약 양귀비 재배자가 플레이 중이라면, 하수인들은 같이 깨어나지 않습니다. 그들 중 하나가 릴몬스타 토큰을 가져갈 때까지, 한명 씩 깨어납니다."
     },
     {
         "target": "lilmonsta",
         "trick": "scarletwoman",
-        "reason": "만약 5명 이상의 플레이어가 살아있고 릴몬스타 토큰을 가진 플레이어가 죽었다면, 부정한 여자는 릴몬스타 토큰을 오늘밤 받습니다."
+        "reason": "만약 5명 이상의 플레이어가 살아있고 릴몬스타 토큰을 가진 플레이어가 죽었다면, 부정한 여자는 릴몬스타 토큰을 오늘 밤 받습니다."
     },
     {
         "target": "lilmonsta",
@@ -302,7 +302,7 @@
     {
         "target": "magician",
         "trick": "wraith",
-        "reason": "각 일, 실행 단계 후, 살아있는 매디안은 Wraith로 생활 선수를 공개적으로 추측 할 수 있습니다 : 올바른 경우, 악마는 Wraith tonight를 선택해야합니다."
+        "reason": "매일 낮, 처형 단계 후, 생존한 마술사는 레이스를 공개적으로 추측 할 수 있습니다 : 맞다면, 악마는 오늘 밤 레이스를 선택해야 합니다."
     },
     {
         "target": "magician",
@@ -312,17 +312,17 @@
     {
         "target": "magician",
         "trick": "vizier",
-        "reason": "Vizier와 Magician이 모두 재생중인 경우 Demon은 Minions를 배우지 않습니다."
+        "reason": "장관과 마술사가 모두 재생중인 경우 악마는 하수인을 배우지 않습니다."
     },
     {
         "target": "magician",
         "trick": "widow",
-        "reason": "마녀가 그리모어를 볼 때, 악마와 마술사 캐릭터 토큰은 제거됩니다."
+        "reason": "과부가 그리모어를 볼 때, 악마와 마술사 캐릭터 토큰은 제거됩니다."
     },
     {
         "target": "magician",
         "trick": "lilmonsta",
-        "reason": "각 밤, 마술사 선택 Minion: 그 Minion & Lil' Monsta는 살아있다면, 그 Minion babysits Lil' Monsta."
+        "reason": "매일 밤, 마술사는 하수인을 선택합니다. 해당 하수인과 릴몬스타가 살아있다면, 그 하수인은 릴몬스타를 돌봅니다."
     },
     {
         "target": "marionette",
@@ -337,12 +337,12 @@
     {
         "target": "marionette",
         "trick": "huntsman",
-        "reason": "만약 꼭두각시가 자신을 헌츠맨이라고 생각한다면, 아가씨를 추가합니다."
+        "reason": "만약 꼭두각시가 자신을 사냥꾼이라고 생각한다면, 아가씨를 추가합니다."
     },
     {
         "target": "marionette",
         "trick": "lilmonsta",
-        "reason": "꼭두각시가 하수인(악마가 아닌)들과 이웃합니다., 꼭두각시는 릴몬스타를 가져갈 사람을 고르기 위해 깨어나지 않으면, 릴몬스타 토큰을 가지고 있는동안 스스로 꼭두각시인지 모릅니다."
+        "reason": "꼭두각시가 하수인(악마가 아닌)들과 이웃합니다. 꼭두각시는 릴몬스타를 가져갈 사람을 고르기 위해 깨어나지 않고, 릴몬스타 토큰을 가지고 있는동안 스스로 꼭두각시인지 모릅니다."
     },
     {
         "target": "marionette",
@@ -357,7 +357,7 @@
     {
         "target": "marionette",
         "trick": "wraith",
-        "reason": "Wraith는 Marionette와 함께 일어나지 않습니다."
+        "reason": "레이스는 꼭두각시와 함께 일어나지 않습니다."
     },
     {
         "target": "mastermind",
@@ -367,7 +367,7 @@
     {
         "target": "mathematician",
         "trick": "chambermaid",
-        "reason": "하녀는 수학자가 오늘밤 깨어나는지 여부를 알 수 있습니다.(하녀가 처음으로 깨어나더라도)"
+        "reason": "하녀는 수학자가 오늘밤 깨어나는지 여부를 알 수 있습니다.(하녀가 먼저 깨어나더라도)"
     },
     {
         "target": "mathematician",
@@ -382,92 +382,92 @@
     {
         "target": "pithag",
         "trick": "cultleader",
-        "reason": "만약 피트해그가 한 악한 플레이어를 교주로 바꾼다면, 그들은 그 자신의 능력으로 선하게 변할 수 없습니다."
+        "reason": "만약 마귀할멈이 한 악한 플레이어를 교주로 바꾼다면, 그들은 그 자신의 능력으로 선하게 변할 수 없습니다."
     },
     {
         "target": "pithag",
         "trick": "damsel",
-        "reason": "만약 피트해그가 아가씨를 만든다면, 이야기꾼은 어떤 플레이어가 아가씨인지 선택합니다."
+        "reason": "만약 마귀할멈이 아가씨를 만든다면, 이야기꾼은 어떤 플레이어가 아가씨인지 선택합니다."
     },
     {
         "target": "pithag",
         "trick": "goon",
-        "reason": "만약 피트해그가 한 악한 플레이어를 깡패로 바꾼다면, 그들은 그 자신의 능력으로 선하게 변할 수 없습니다. "
+        "reason": "만약 마귀할멈이 한 악한 플레이어를 깡패로 바꾼다면, 그들은 그 자신의 능력으로 선하게 변할 수 없습니다. "
     },
     {
         "target": "pithag",
         "trick": "ogre",
-        "reason": "Pit-Hag가 악한 플레이어를 Ogre로 돌리면, 그들은 자신의 능력으로 인해 좋은 전환 할 수 없습니다."
+        "reason": "마귀할멈이 악한 플레이어를 오우거로 만들면, 그들은 자신의 능력으로 인해 선으로 전환 할 수 없습니다."
     },
     {
         "target": "pithag",
         "trick": "politician",
-        "reason": "피트해그는 악한 정치가를 만들 수 없습니다."
+        "reason": "마귀할멈이 악한 정치가를 만들 수 없습니다."
     },
     {
         "target": "pithag",
         "trick": "villageidiot",
-        "reason": "만약 여분의 토큰이 있다면, 피트해그는 추가 동네바보를 만들수 있습니다. 이 경우 취한 동네바보가 변경될 수 있습니다."
+        "reason": "만약 여분의 토큰이 있다면, 마귀할멈이 추가 동네바보를 만들수 있습니다. 이 경우 취한 동네바보가 변경될 수 있습니다."
     },
     {
         "target": "plaguedoctor",
         "trick": "baron",
-        "reason": "Storyteller가 Baron 능력을 얻은 경우, 최대 두 명의 플레이어가 플레이 아우터가되지 않습니다."
+        "reason": "이야기꾼이 남작 능력을 얻은 경우, 최대 두 명의 플레이어가 플레이 중이지 않은 이방인이 됩니다."
     },
     {
         "target": "plaguedoctor",
         "trick": "boomdandy",
-        "reason": "만약 전염병 의사가 처형되고 이야기꾼이 봄버맨 능력을 가진다면, 봄버맨 능력은 즉시 발동합니다."
+        "reason": "만약 전염병 의사가 처형되고 이야기꾼이 폭탄광 능력을 가진다면, 폭탄광 능력은 즉시 발동합니다."
     },
     {
         "target": "plaguedoctor",
         "trick": "eviltwin",
-        "reason": "만약 전염병 의사가 죽었다면, 이야기꾼은 사악한 쌍둥이의 능력을 얻을수 었습니다."
+        "reason": "만약 전염병 의사가 죽는다면, 이야기꾼은 사악한 쌍둥이의 능력을 얻을수 없습니다."
     },
     {
         "target": "plaguedoctor",
         "trick": "fearmonger",
-        "reason": "만약 전염병 의사가 죽는다면, 살아있는 한 하수인은 공포조장자 능력을 얻고 추가로 그 자신의 능력을 지닙니다. 그리고 그 사실을 알게됩니다"
+        "reason": "만약 전염병 의사가 죽는다면, 살아있는 하수인은 공포조장자의 능력을 자신의 능력에 추가로 얻고, 그것을 알게됩니다"
     },
     {
         "target": "plaguedoctor",
         "trick": "goblin",
-        "reason": "만약 전염병의사가 죽는다면, 살아있는 하수인은 고블린의 효과를 그들 자신의 효과에 추가로 얻고, 그것을 알게 됩니다."
+        "reason": "만약 전염병의사가 죽는다면, 살아있는 하수인은 고블린의 능력을 자신의 능력에 추가로 얻고, 그것을 알게 됩니다."
     },
     {
         "target": "plaguedoctor",
         "trick": "marionette",
-        "reason": "악마가 살아있는 이웃과 플라그 닥터가 죽을 때 Townsfolk 또는 Outerr가있는 경우 플레이어는 악몽이됩니다. 이미 여분의 악 플레이어가 있다면, 이것은 일어나지 않습니다."
+        "reason": "만약 전염병의사가 죽는다면, 악마의 생존한 마을주민 혹은 이방인인 이웃은 악한 꼭두각시가 됩니다. 이미 여분의 악 플레이어가 있다면, 이것은 일어나지 않습니다."
     },
     {
         "target": "plaguedoctor",
         "trick": "scarletwoman",
-        "reason": "만약 전염병 의사가 죽는다면, 살아있는 한 하수인은 부정한 여자 능력을 얻고 추가로 그 자신의 능력을 지닙니다. 그리고 그 사실을 알게됩니다."
+        "reason": "만약 전염병의사가 죽는다면, 살아있는 하수인은 부정한 여인의 능력을 자신의 능력에 추가로 얻고, 그것을 알게 됩니다."
     },
     {
         "target": "plaguedoctor",
         "trick": "spy",
-        "reason": "만약 전염병 의사가 죽는다면, 살아있는 한 하수인은 스파이 능력을 얻고 추가로 그 자신의 능력을 지닙니다. 그리고 그 사실을 알게됩니다."
+        "reason": "만약 전염병의사가 죽는다면, 살아있는 하수인은 스파이의 능력을 자신의 능력에 추가로 얻고, 그것을 알게 됩니다."
     },
     {
         "target": "plaguedoctor",
         "trick": "wraith",
-        "reason": "Plague 의사가 죽을 경우, 살아있는 Minion은 자신의 능력 이외에 Wraith 능력을 얻고 이것을 배우십시오."
+        "reason": "만약 전염병의사가 죽는다면, 살아있는 하수인은 레이스의 능력을 자신의 능력에 추가로 얻고, 그것을 알게 됩니다."
     },
     {
         "target": "riot",
         "trick": "banshee",
-        "reason": "각 밤*, Riot는 살아있는 좋은 선수를 선택합니다 (이전 밤에 다른): 선택한 Banshee는 죽고 그들의 능력을 얻습니다."
+        "reason": "매일 밤*, 폭도는 생존한 선한 플레이어를 (이전 밤과 다르게) 선택합니다: 선택된 밴시는 죽고 능력이 발동됩니다."
     },
     {
         "target": "riot",
         "trick": "exorcist",
-        "reason": "Exorcist가 3rd 밤에 Riot를 선택하면, Minions는 Riot가되지 않습니다."
+        "reason": "퇴마사가 3rd 밤에 폭도를 선택하면, 하수인들은 폭도가 되지 않습니다."
     },
     {
         "target": "riot",
         "trick": "farmer",
-        "reason": "각 밤*, Riot는 살아있는 좋은 선수를 선택합니다 (이전 밤에 다른): 선택된 농부는 그들의 능력을 사용하지만 죽지 않습니다."
+        "reason": "매일 밤*, 폭도는 살아있는 선한 플레이어를 (이전 밤과 다르게) 선택합니다: 선택된 농부는 그들의 능력을 사용하지만 죽지 않습니다."
     },
     {
         "target": "riot",
@@ -477,37 +477,37 @@
     {
         "target": "riot",
         "trick": "innkeeper",
-        "reason": "Riot가 재생중인 경우 Innkeeper-protected 플레이어는 모든 악의 능력에서 안전합니다."
+        "reason": "레비아탄이 플레이 중인 경우, 여관주인이 보호하는 플레이어들은 모든 악의 능력에서 안전합니다."
     },
     {
         "target": "riot",
         "trick": "king",
-        "reason": "리오트가 연주 중이라면 적어도 1 플레이어가 죽을 것입니다. 왕은 매일 밤 살아있는 캐릭터를 배웁니다."
+        "reason": "폭도가 플레이 중인 경우, 적어도 1 플레이어가 죽은 때부터, 왕은 매일 밤 살아있는 캐릭터를 배웁니다."
     },
     {
         "target": "riot",
         "trick": "mayor",
-        "reason": "시장은 종료를 중지 할 수 있습니다. 그들은 단지 1 리오트가 살아있을 때, 좋은 승리. 그렇지 않으면 악의 승리."
+        "reason": "시장은 처형을 중지 할 수 있습니다. 폭도가 1명만 살아있을 때, 선의 승리. 그렇지 않으면 악의 승리."
     },
     {
         "target": "riot",
         "trick": "monk",
-        "reason": "Riot가 재생중인 경우, Monk-protected 플레이어는 모든 악의 능력에서 안전합니다."
+        "reason": "폭도가 플레이 중인 경우, 수도승이 보호하는 플레이어는 모든 악의 능력에서 안전합니다."
     },
     {
         "target": "riot",
         "trick": "ravenkeeper",
-        "reason": "각 밤*, Riot는 살아있는 좋은 선수 (이전 밤에 다른)를 선택합니다. 선택한 Ravenkeeper는 자신의 능력을 사용하지만 죽지 않습니다."
+        "reason": "매일 밤*, 폭도는 살아있는 선한 플레이어를 (이전 밤과 다르게) 선택합니다: 선택된 레이븐키퍼는 그들의 능력을 사용하지만 죽지 않습니다."
     },
     {
         "target": "riot",
         "trick": "sage",
-        "reason": "각 밤*, Riot는 살아있는 좋은 선수 (이전 밤에 다른)를 선택합니다. 선택한 Sage는 자신의 능력을 사용하지만 죽지 않습니다."
+        "reason": "매일 밤*, 폭도는 살아있는 선한 플레이어를 (이전 밤과 다르게) 선택합니다: 선택된 현자는 그들의 능력을 사용하지만 죽지 않습니다."
     },
     {
         "target": "riot",
         "trick": "soldier",
-        "reason": "리오트가 연주하는 경우, 군인은 모든 악의 능력에서 안전합니다."
+        "reason": "폭도가 플레이 중인 경우, 군인은 모든 악의 능력에서 안전합니다."
     },
     {
         "target": "scarletwoman",
@@ -522,42 +522,42 @@
     {
         "target": "spy",
         "trick": "damsel",
-        "reason": "만약 스파이가 플레이중이거나, 플레이되었었다면, 아가씨는 중독됩니다."
+        "reason": "만약 스파이가 플레이 중이거나, 플레이 되었었다면, 아가씨는 중독됩니다."
     },
     {
         "target": "spy",
         "trick": "ogre",
-        "reason": "스파이는 오우거에가 악으로 등록됩니다."
+        "reason": "스파이는 오우거에게 악으로 등록됩니다."
     },
     {
         "target": "spy",
         "trick": "poppygrower",
-        "reason": "만약 양귀비 재배자가 플레이중이라면, 스파이는 그리모어를 양귀비 재배자가 죽을때까지 볼 수 없습니다."
+        "reason": "만약 양귀비 재배자가 플레이 중이라면, 스파이는 그리모어를 양귀비 재배자가 죽을때까지 볼 수 없습니다."
     },
     {
         "target": "summoner",
         "trick": "clockmaker",
-        "reason": "만약 소환사가 플레이중 이라면, 시계공은 악마가 만들때까지 소환사의 정보를 얻지 못합니다."
+        "reason": "만약 소환사가 플레이 중 이라면, 시계공은 악마가 만들어질 때까지 정보를 얻지 못합니다."
     },
     {
         "target": "summoner",
         "trick": "courtier",
-        "reason": "만약 소환사가 3번째날에 취한다면, 소환사는 어떤악마인지 고르고 이야기꾼이 플레이어를 선택합니다."
+        "reason": "만약 소환사가 3번째날에 취한다면, 소환사는 어떤 악마인지 고르고 이야기꾼이 플레이어를 선택합니다."
     },
     {
         "target": "summoner",
         "trick": "engineer",
-        "reason": "만약 엔지니어가 소환사가 능력을 사용하기 전에 게임에서 제가한다면, 소환사는 능력을 즉시 사용합니다."
+        "reason": "만약 기계공이 소환사가 능력을 사용하기 전에 게임에서 제거한다면, 소환사는 능력을 즉시 사용합니다."
     },
     {
         "target": "summoner",
         "trick": "hatter",
-        "reason": "소환사는 플레이중인 악마를 만들수 없습니다. 만약 소환사가 플레이중이 아닌 악마를 만든다면, 오늘 밤 죽음은 무작위입니다."
+        "reason": "소환사는 플레이 중인 악마를 만들수 없습니다. 만약 소환사가 플레이 중이 아닌 악마를 만든다면, 오늘 밤 죽음은 무작위입니다."
     },
     {
         "target": "summoner",
         "trick": "kazali",
-        "reason": "소환사는 플레이중인 악마를 만들수 없습니다. 만약 소환사가 플레이중이 아닌 악마를 만든다면, 오늘 밤 죽음은 무작위입니다."
+        "reason": "소환사는 플레이 중인 악마를 만들수 없습니다. 만약 소환사가 플레이 중이 아닌 악마를 만든다면, 오늘 밤 죽음은 무작위입니다."
     },
     {
         "target": "summoner",
@@ -567,17 +567,17 @@
     {
         "target": "summoner",
         "trick": "lordoftyphon",
-        "reason": "만약 소환사가 타이폰의 군주를 만든다면, 그 타이폰의 군주는 하수인과 이웃해야 합니다. 다른 이웃은 비-플레이중인 악한 하수인이 됩니다."
+        "reason": "만약 소환사가 태풍의 군주를 만든다면, 그 태풍의 군주는 하수인과 이웃해야 합니다. 다른 이웃은 비-플레이 중인 악한 하수인이 됩니다."
     },
     {
         "target": "summoner",
         "trick": "marionette",
-        "reason": "Marionette 이웃 스모니어. 소문자는 Marionette가 누구인지 알고 있습니다."
+        "reason": "꼭두각시는 소환사와 이웃합니다. 소환사는 꼭두각시가 누구인지 알고 있습니다."
     },
     {
         "target": "summoner",
         "trick": "pithag",
-        "reason": "소환사는 플레이중인 악마를 만들수 없습니다. 만약 소환사가 플레이중이 아닌 악마를 만든다면, 오늘 밤 죽음은 무작위입니다."
+        "reason": "소환사는 플레이 중인 악마를 만들수 없습니다. 만약 소환사가 플레이 중이 아닌 악마를 만든다면, 오늘 밤 죽음은 무작위입니다."
     },
     {
         "target": "summoner",
@@ -587,12 +587,12 @@
     {
         "target": "summoner",
         "trick": "preacher",
-        "reason": "만약 전도사가 소환사를 3째날 밤 전에 선택한다면, 소환사는 악마를 선택하고, 이야기꾼은 플레이어를 고릅니다."
+        "reason": "만약 목사가 소환사를 3째날 밤 전에 선택한다면, 소환사는 악마를 선택하고, 이야기꾼은 플레이어를 고릅니다."
     },
     {
         "target": "summoner",
         "trick": "pukka",
-        "reason": "2일차에 밤에 소환사는 한 플레이어를 푸카가 되도록 할 수 있습니다. "
+        "reason": "소환사가 푸카를 만들고 싶다면 두번째 밤에 한 플레이어를 선택할 수 있습니다."
     },
     {
         "target": "summoner",
@@ -602,22 +602,22 @@
     {
         "target": "vizier",
         "trick": "alsaahir",
-        "reason": "만약 수상이 플레이중 이라면, 알사히르는 어떤 악마가 플레이중인지를 맞춰야만 합니다."
+        "reason": "만약 수상이 플레이 중이라면, 주술사는 어떤 악마가 플레이 중인지를 맞춰야만 합니다."
     },
     {
         "target": "vizier",
         "trick": "courtier",
-        "reason": "Vizier가 자신의 능력을 잃을 경우, 그들은 이것을 배웁니다. Vizier가 실행되는 경우, 그들은 그들의 능력을 가지고, 그들의 팀 승리."
+        "reason": "수상이 자신의 능력을 잃을 경우, 이 사실을 알게됩니다. 수상이 능력을 가진 채 처형되는 경우, 그들의 팀이 승리합니다."
     },
     {
         "target": "vizier",
         "trick": "fearmonger",
-        "reason": "Vizier는 Fearmonger와 함께 깨어 났으며, 선택한 학습자는 즉시 플레이어를 실행할 수 없습니다."
+        "reason": "수상은 공포조장자와 함께 일어나며, 선택된 플레이어를 알게됩니다. 단 해당 플레이어를 즉시 처형할 수 없습니다."
     },
     {
         "target": "vizier",
         "trick": "investigator",
-        "reason": "만약 조사관인 수상이 플레이중임을 알게된다면, 이야기꾼은 수상이 존재함을 알리지 않습니다."
+        "reason": "만약 조사관인 수상이 플레이 중임을 알게된다면, 이야기꾼은 수상이 존재함을 알리지 않습니다."
     },
     {
         "target": "vizier",
@@ -627,7 +627,7 @@
     {
         "target": "vizier",
         "trick": "preacher",
-        "reason": "Vizier가 자신의 능력을 잃을 경우, 그들은 이것을 배웁니다. Vizier가 실행되는 경우, 그들은 그들의 능력을 가지고, 그들의 팀 승리."
+        "reason": "수상이 자신의 능력을 잃을 경우, 이 사실을 알게됩니다. 수상이 능력을 가진 채 처형되는 경우, 그들의 팀이 승리합니다."
     },
     {
         "target": "vizier",
@@ -637,21 +637,21 @@
     {
         "target": "vortox",
         "trick": "banshee",
-        "reason": "만약 볼텍스가 플레이중이고 악마가 밴시를 죽인다면, 플레이어들은 밴시가 죽었음을 알게됩니다."
+        "reason": "만약 볼텍스가 플레이 중이고 악마가 밴시를 죽인다면, 플레이어들은 밴시가 죽었음을 알게됩니다."
     },
     {
         "target": "widow",
         "trick": "damsel",
-        "reason": "만약 마녀가 플레이중이거나 플레이되었다면, 아가씨는 중독됩니다."
+        "reason": "만약 과부가 플레이 중이거나 플레이되었다면, 아가씨는 중독됩니다."
     },
     {
         "target": "widow",
         "trick": "poppygrower",
-        "reason": "만약 양귀비 재배자가 플레이중이라면, 마녀는 양귀비 재배자가 죽을때 까지 그리모어를 볼 수 없습니다."
+        "reason": "만약 양귀비 재배자가 플레이 중이라면, 과부는 양귀비 재배자가 죽을때 까지 그리모어를 볼 수 없습니다."
     },
     {
         "target": "yaggababble",
         "trick": "exorcist",
-        "reason": "만약 엑소시스트가 야가보블을 선택한다면, 야가보블의 능력은 오늘 살해할수 없습니다."
+        "reason": "만약 퇴마사가 야가보블을 선택한다면, 야가보블의 능력은 오늘 살해할 수 없습니다."
     }
 ]
