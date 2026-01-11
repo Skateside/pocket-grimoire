@@ -2,77 +2,77 @@
     {
         "target": "alchemist",
         "trick": "boffin",
-        "reason": "Si el alquimista tiene la habilidad de Boffin, el alquimista no aprende qué habilidad tiene el Demonio."
+        "reason": "Si el Alquimista tiene la habilidad de Rata de laboratorio, el Alquimista no descubre qué habilidad tiene el Demonio."
     },
     {
         "target": "alchemist",
         "trick": "marionette",
-        "reason": "Un Alchemista-Marionette no tiene habilidad Marionette \" el Marionette está en juego."
+        "reason": "Un Alquimista-Marioneta no tiene la habilidad de Marioneta y la Marioneta está en juego."
     },
     {
         "target": "alchemist",
         "trick": "mastermind",
-        "reason": "Un Alquimista-Mastermind no tiene habilidad Mastermind \" el Mastermind no está en juego."
+        "reason": "Un Alquimista-Mente maestra no tiene la habilidad de Mente maestra y la Mente maestra no está en juego."
     },
     {
         "target": "alchemist",
         "trick": "organgrinder",
-        "reason": "Si el alquimista tiene la habilidad de los organizadores, el organizador Grinder está en juego \" si tanto el alquimista como el organizador Grinder son sobrios, ambos están borrachos."
+        "reason": "Si el Alquimista tiene la habilidad de Organillero, el Organillero está en juego. Si ambos están sobrios, ambos están borrachos."
     },
     {
         "target": "alchemist",
         "trick": "spy",
-        "reason": "Si el alquimista tiene la habilidad del espía, no lo hacen, y un espía está en juego. Cada día, después de la fase de ejecución, el Alquimista vivo puede adivinar públicamente a un jugador vivo como el espía. Si es correcto, el Demonio debe elegir al espía esta noche."
+        "reason": "Un Alquimista-Espía no tiene la habilidad de Espía y el Espía está en juego. Después de cada ejecución, el Alquimista vivo puede intentar adivinar públicamente qué jugador vivo es el Espía. Si acierta, el Demonio debe elegir al Espía esta noche."
     },
     {
         "target": "alchemist",
         "trick": "summoner",
-        "reason": "El Alchemist-Summoner no tiene faros, y elige qué Demon pero no qué jugador. Si mueren antes de que esto suceda, el mal gana. [No Demonio]"
+        "reason": "El Alquimista-Invocador no recibe faroles y elige qué Demonio pero no qué jugador. Si muere antes de que esto ocurra, ganan los malos. [Sin Demonio]"
     },
     {
         "target": "alchemist",
         "trick": "widow",
-        "reason": "Si el alquimista tiene la habilidad de la viuda, no lo hacen, y una viuda está en juego. Cada día, después de la fase de ejecución, el Alquimista vivo puede adivinar públicamente a un jugador vivo como la viuda. Si es correcto, el Demonio debe elegir la viuda esta noche."
+        "reason": "Un Alquimista-Viuda no tiene la habilidad de Viuda y la Viuda está en juego. Después de cada ejecución, el Alquimista vivo puede intentar adivinar públicamente qué jugador vivo es la Viuda. Si acierta, el Demonio debe elegir a la Viuda esta noche."
     },
     {
         "target": "alchemist",
         "trick": "wraith",
-        "reason": "Si el alquimista tiene la habilidad de los Espectros, no lo hacen, y un Espectro está en juego. Cada día, después de la fase de ejecución, el Alquimista vivo puede adivinar públicamente a un jugador vivo como el Espectro. Si es correcto, el Demonio debe elegir el Espectro esta noche."
+        "reason": "Un Alquimista-Espectro no tiene la habilidad de Espectro y el Espectro está en juego. Después de cada ejecución, el Alquimista vivo puede intentar adivinar públicamente qué jugador vivo es el Espectro. Si acierta, el Demonio debe elegir al Espectro esta noche."
     },
     {
         "target": "alhadikhia",
         "trick": "princess",
-        "reason": "Si la Princesa nominó \" ejecutó a un jugador en su primer día, nadie muere a la habilidad de Al-Hadikhia esta noche."
+        "reason": "Si la Princesa nomina y ejecuta a un jugador en su primer día, nadie muere esta noche por Al-Hadikhia."
     },
     {
         "target": "boffin",
         "trick": "cultleader",
-        "reason": "Si el Demonio tiene la habilidad Cult Leader, que no puede girar bien debido a esta habilidad."
+        "reason": "Si el Demonio tiene la habilidad de Líder de culto, no puede volverse bueno por esa habilidad."
     },
     {
         "target": "boffin",
         "trick": "drunk",
-        "reason": "Si el Demonio tendría la habilidad de Borracho, el Boffin elige un jugador de Townsfolk para tener esta habilidad en su lugar."
+        "reason": "El Demonio no puede tener la habilidad de Borracho."
     },
     {
         "target": "boffin",
         "trick": "goon",
-        "reason": "Si el Demonio tiene la habilidad Goon, no pueden girar bien debido a esta habilidad."
+        "reason": "Si el Demonio tiene la habilidad de Matón, no puede volverse bueno por esa habilidad."
     },
     {
         "target": "boffin",
         "trick": "ogre",
-        "reason": "El Demonio no puede tener la habilidad Ogre."
+        "reason": "El Demonio no puede tener la habilidad de Ogro."
     },
     {
         "target": "boffin",
         "trick": "politician",
-        "reason": "El Demonio no puede tener la habilidad Politica."
+        "reason": "El Demonio no puede tener la habilidad de Político."
     },
     {
         "target": "boffin",
         "trick": "villageidiot",
-        "reason": "Si hay un token de repuesto, el Boffin puede dar la habilidad de Demon the Village Idiot."
+        "reason": "Si hay una ficha extra, la Rata de laboratorio puede darle al Demonio la habilidad de Tonto del pueblo."
     },
     {
         "target": "bountyhunter",
@@ -107,12 +107,12 @@
     {
         "target": "cannibal",
         "trick": "princess",
-        "reason": "Si el Caníbal nominado ha ejecutado hoy a la Princesa, el Demonio no mata esta noche."
+        "reason": "Si el Caníbal nomina, ejecuta y mata a la Princesa hoy, el Demonio no mata esta noche."
     },
     {
         "target": "cannibal",
         "trick": "zealot",
-        "reason": "Si el Caníbal gana la habilidad de Zealot, el Caníbal aprende esto."
+        "reason": "Si el Caníbal gana la habilidad de Fanático, el Caníbal lo sabe."
     },
     {
         "target": "cerenovus",
@@ -127,7 +127,7 @@
     {
         "target": "heretic",
         "trick": "boffin",
-        "reason": "El Demonio no puede tener la habilidad Hereje."
+        "reason": "El Demonio no puede tener la habilidad de Hereje."
     },
     {
         "target": "heretic",
@@ -162,7 +162,7 @@
     {
         "target": "kazali",
         "trick": "goon",
-        "reason": "Los Kazali pueden elegir que el jugador Goon es uno de sus malvados Minions."
+        "reason": "No existe"
     },
     {
         "target": "kazali",
@@ -172,12 +172,12 @@
     {
         "target": "kazali",
         "trick": "marionette",
-        "reason": "Si los kazalí eligen crear un Marionette, deben elegir a uno de sus vecinos."
+        "reason": "Si hubiera una Marioneta en juego, entra después del Demonio y debe empezar como su vecina."
     },
     {
         "target": "kazali",
         "trick": "soldier",
-        "reason": "Los kazalí pueden elegir que el soldado es uno de sus malvados Minions."
+        "reason": "No existe"
     },
     {
         "target": "legion",
@@ -192,37 +192,37 @@
     {
         "target": "legion",
         "trick": "minstrel",
-        "reason": "Si Legión murió por ejecución hoy, Legión mantiene su capacidad, pero el Minstrel podría aprender que son Legión."
+        "reason": "Si un Legión muere por ejecución hoy, Legión conserva su habilidad pero el Juglar puede aprender que hay Legión."
     },
     {
         "target": "legion",
         "trick": "preacher",
-        "reason": "Si el Predicador elige Legión, Legión mantiene su capacidad, pero el Predicador podría aprender que son Legión."
+        "reason": "Si el Predicador elige a Legión, Legión conserva su habilidad pero el Predicador puede aprender que hay Legión."
     },
     {
         "target": "legion",
         "trick": "zealot",
-        "reason": "El Zealot podría inscribirse como mal a la habilidad de Legión."
+        "reason": "El Fanático puede aparecer como malo para Legión."
     },
     {
         "target": "leviathan",
         "trick": "banshee",
-        "reason": "Cada noche*, el Leviatán elige un buen jugador vivo (diferente a noches anteriores): un Banshee elegido muere \" gana su capacidad."
+        "reason": "Cada noche*, Leviatán elige a 1 jugador vivo (diferente a los de noches anteriores): una Banshee elegida muere y gana su habilidad."
     },
     {
         "target": "leviathan",
         "trick": "exorcist",
-        "reason": "El mal no gana cuando más de 1 buen jugador ha sido ejecutado, si el Exorcista está vivo y ha elegido con éxito el Leviatán."
+        "reason": "Si Leviatán nomina y ejecuta al elegido por el Exorcista, los buenos ganan."
     },
     {
         "target": "leviathan",
         "trick": "farmer",
-        "reason": "Cada noche*, el Leviatán elige un buen jugador vivo (diferente a noches anteriores): un Granjero elegido utiliza su habilidad pero no muere."
+        "reason": "Cada noche*, Leviatán elige a 1 jugador vivo (diferente a los de noches anteriores): un Granjero elegido usa su habilidad pero no muere."
     },
     {
         "target": "leviathan",
         "trick": "grandmother",
-        "reason": "Si Leviatán está en juego y el nieto muere por ejecución, el mal gana."
+        "reason": "Si Leviatán está en juego y el nieto muere por ejecución, los malos ganan."
     },
     {
         "target": "leviathan",
@@ -232,22 +232,22 @@
     {
         "target": "leviathan",
         "trick": "innkeeper",
-        "reason": "Si el Leviatán está en juego, los jugadores protegidos por Innkeeper están a salvo de todas las habilidades malvadas."
+        "reason": "Si Leviatán nomina y ejecuta a un protegido por el Posadero, los buenos ganan."
     },
     {
         "target": "leviathan",
         "trick": "king",
-        "reason": "Si el Leviatán está en juego, y al menos 1 jugador está muerto, el Rey aprende un personaje vivo cada noche."
+        "reason": "Si Leviatán está en juego y al menos 1 jugador está muerto, el Rey aprende 1 personaje vivo cada noche."
     },
     {
         "target": "leviathan",
         "trick": "mayor",
-        "reason": "Si el Leviatán está en juego \" ninguna ejecución ocurre el día 5, buenas ganancias."
+        "reason": "Si Leviatán y el Alcalde están vivos en el día 5 y no hay ejecuciones, los buenos ganan."
     },
     {
         "target": "leviathan",
         "trick": "monk",
-        "reason": "Si el Leviatán está en juego, el jugador protegido por Monk está a salvo de todas las habilidades malvadas."
+        "reason": "Si Leviatán nomina y ejecuta al protegido por el Monje, los buenos ganan."
     },
     {
         "target": "leviathan",
@@ -257,17 +257,17 @@
     {
         "target": "leviathan",
         "trick": "ravenkeeper",
-        "reason": "Cada noche*, el Leviatán elige un jugador vivo (diferente a noches anteriores): un Ravenkeeper elegido utiliza su habilidad pero no muere."
+        "reason": "Cada noche*, Leviatán elige a 1 jugador vivo (diferente a los de noches anteriores): un Guardián de cuervos elegido usa su habilidad pero no muere."
     },
     {
         "target": "leviathan",
         "trick": "sage",
-        "reason": "Cada noche*, el Leviatán elige un buen jugador vivo (diferente a noches anteriores): un sabio elegido utiliza su habilidad pero no muere."
+        "reason": "Cada noche*, Leviatán elige a 1 jugador vivo (diferente a los de noches anteriores): un Sabio elegido usa su habilidad pero no muere."
     },
     {
         "target": "leviathan",
         "trick": "soldier",
-        "reason": "Si el Leviatán está en juego, el soldado está a salvo de todas las habilidades malvadas."
+        "reason": "Si Leviatán nomina y ejecuta al Soldado, los buenos ganan."
     },
     {
         "target": "lilmonsta",
@@ -302,17 +302,17 @@
     {
         "target": "magician",
         "trick": "wraith",
-        "reason": "Cada día, después de la fase de ejecución, el Mago viviente puede adivinar públicamente a un jugador viviente como el Espectro: si es correcto, el Demonio debe elegir el Espectro esta noche."
+        "reason": "Después de cada ejecución, el Mago vivo puede intentar adivinar públicamente qué jugador vivo es el Espectro. Si acierta, el Demonio debe elegir al Espectro esta noche."
     },
     {
         "target": "magician",
         "trick": "spy",
-        "reason": "Cuando el espía ve el Grimoire, se eliminan las fichas de carácter del Demonio y el Mago."
+        "reason": "Cuando el Espía ve el Grimorio, las fichas de Demonio y Mago se quitan."
     },
     {
         "target": "magician",
         "trick": "vizier",
-        "reason": "Si el Vizier y el Mago están ambos en juego, el Demonio no aprende los Minions."
+        "reason": "Si el Visir está en juego, el Mago no tiene habilidad pero es inmune a la habilidad del Visir."
     },
     {
         "target": "magician",
@@ -322,7 +322,7 @@
     {
         "target": "magician",
         "trick": "lilmonsta",
-        "reason": "Cada noche, el Mago elige un Minion: si ese Minion & Lil' Monsta está vivo, ese Minion bebesits Lil’ Monsta."
+        "reason": "Si el Mago está vivo, el Narrador elige qué Esbirro cuida de Lil' Monsta."
     },
     {
         "target": "marionette",
@@ -357,12 +357,12 @@
     {
         "target": "marionette",
         "trick": "wraith",
-        "reason": "El Espectro no se despierta con el Marionette."
+        "reason": "La Espectro no se despierta con la Marioneta."
     },
     {
         "target": "mastermind",
         "trick": "alhadikhia",
-        "reason": "Si el Al-Hadikhia muere por ejecución, y el Mastermind está vivo, el Al-Hadikhia elige 3 buenos jugadores esta noche: si los 3 eligen vivir, el mal gana. De lo contrario, buenas victorias."
+        "reason": "Si Al-Hadikhia muere por ejecución y Mente maestra está vivo, Al-Hadikhia elige a 3 jugadores buenos esta noche: si los 3 eligen vivir, ganan los malos. Si no, ganan los buenos."
     },
     {
         "target": "mathematician",
@@ -377,12 +377,12 @@
     {
         "target": "ogre",
         "trick": "recluse",
-        "reason": "Si el Recluso se registra como malo para el Ogro, el Ogro aprende que son malvados."
+        "reason": "Si el Recluso aparece como malo para el Ogro, el Ogro sabe que es malo."
     },
     {
         "target": "pithag",
         "trick": "cultleader",
-        "reason": "Si el Pit-Hag convierte a un mal jugador en el Líder Culto, no pueden volverse buenos debido a su propia capacidad."
+        "reason": "Si Pit-Hag convierte a un jugador malo en Líder de culto, no puede volverse bueno por su habilidad."
     },
     {
         "target": "pithag",
@@ -392,12 +392,12 @@
     {
         "target": "pithag",
         "trick": "goon",
-        "reason": "Si el Pit-Hag convierte a un mal jugador en el Goon, no pueden volverse buenos debido a su propia capacidad."
+        "reason": "Si Pit-Hag convierte a un jugador malo en el Matón, no puede volverse bueno por su habilidad."
     },
     {
         "target": "pithag",
         "trick": "ogre",
-        "reason": "Si el Pit-Hag convierte a un mal jugador en el Ogre, no pueden volverse buenos debido a su propia capacidad."
+        "reason": "Si Pit-Hag convierte a un jugador malo en Ogro, no puede volverse bueno por su habilidad."
     },
     {
         "target": "pithag",
@@ -407,12 +407,12 @@
     {
         "target": "pithag",
         "trick": "villageidiot",
-        "reason": "Si hay un token de repuesto, el Pit-Hag puede crear un Idiota de pueblo extra. Si es así, el borracho Village Idiot podría cambiar."
+        "reason": "Si hay fichas suficientes, Pit-Hag puede crear a un Tonto del pueblo extra. Si lo hace, el Tonto del pueblo borracho puede cambiar."
     },
     {
         "target": "plaguedoctor",
         "trick": "baron",
-        "reason": "Si el Storyteller gana la habilidad del Barón, hasta dos jugadores se vuelven no-en-play Outrs."
+        "reason": "Si el Narrador gana la habilidad de Barón, hasta 2 jugadores se convierten en Forasteros."
     },
     {
         "target": "plaguedoctor",
@@ -437,7 +437,7 @@
     {
         "target": "plaguedoctor",
         "trick": "marionette",
-        "reason": "Si el Demonio tiene un vecino que está vivo y un Townsfolk o Outsider cuando el Doctor Plague muere, ese jugador se convierte en un mal Marionette. Si ya hay un jugador maligno extra, esto no sucede."
+        "reason": "Si el Narrador fuera a ganar la habilidad de Marioneta, un vecino bueno del Demonio se convierte en la Marioneta."
     },
     {
         "target": "plaguedoctor",
@@ -452,62 +452,62 @@
     {
         "target": "plaguedoctor",
         "trick": "wraith",
-        "reason": "Si el Doctor Plague muere, un Minion vivo gana la habilidad de los Espectros además de su propia capacidad, y aprende esto."
+        "reason": "Si el Narrador fuera a ganar la habilidad de Espectro, un Esbirro la gana y lo sabe."
     },
     {
         "target": "riot",
         "trick": "banshee",
-        "reason": "Cada noche*, Riot elige un buen jugador vivo (diferente a noches anteriores): un Banshee elegido muere \" gana su capacidad."
+        "reason": "Cada noche*, Riot elige a 1 jugador vivo bueno (diferente a los de noches anteriores): una Banshee elegido muere y gana su habilidad."
     },
     {
         "target": "riot",
         "trick": "exorcist",
-        "reason": "Si el Exorcista elige Riot en la tercera noche, los Minions no se convierten en Riot."
+        "reason": "Si Riot nomina y ejecuta al elegido por el Exorcista, los buenos ganan."
     },
     {
         "target": "riot",
         "trick": "farmer",
-        "reason": "Cada noche*, Riot elige un buen jugador vivo (diferente a noches anteriores): un Granjero elegido utiliza su habilidad pero no muere."
+        "reason": "Cada noche, Riot elige a 1 jugador vivo bueno (diferente a los de noches anteriores): un Granjero elegido usa su habilidad pero no muere."
     },
     {
         "target": "riot",
         "trick": "grandmother",
-        "reason": "Si Riot está en juego y el nieto muere durante el día, la abuela también muere."
+        "reason": "Si Riot está en juego y el nieto muere por ejecución, los malos ganan."
     },
     {
         "target": "riot",
         "trick": "innkeeper",
-        "reason": "Si Riot está en juego, el jugador protegido por Innkeeper está a salvo de todas las habilidades malvadas."
+        "reason": "Si Riot nomina y ejecuta a un protegido por el Posadero, los buenos ganan."
     },
     {
         "target": "riot",
         "trick": "king",
-        "reason": "Si Riot está en juego, y al menos 1 jugador está muerto, el Rey aprende un personaje vivo cada noche."
+        "reason": "Si Riot está en juego y al menos 1 jugador está muerto, el Rey aprende 1 personaje vivo cada noche."
     },
     {
         "target": "riot",
         "trick": "mayor",
-        "reason": "El alcalde puede decidir dejar de presentar candidaturas. Si lo hacen cuando sólo 1 Riot está vivo, buenas victorias. De lo contrario, el mal gana."
+        "reason": "El Alcalde puede elegir parar las nominaciones. Si lo hace cuando sólo quede 1 Riot vivo, los buenos ganan. Si no, ganan los malos."
     },
     {
         "target": "riot",
         "trick": "monk",
-        "reason": "Si Riot está en juego, el jugador protegido por Monk está a salvo de todas las habilidades malvadas."
+        "reason": "Si Riot nomina y ejecuta al protegido por el Monje, los buenos ganan."
     },
     {
         "target": "riot",
         "trick": "ravenkeeper",
-        "reason": "Cada noche*, Riot elige un buen jugador vivo (diferente a noches anteriores): un Ravenkeeper elegido utiliza su habilidad pero no muere."
+        "reason": "Cada noche*, Riot elige a 1 jugador vivo bueno (diferente a los de noches anteriores): un Guardián de cuervos elegido usa su habilidad pero no muere."
     },
     {
         "target": "riot",
         "trick": "sage",
-        "reason": "Cada noche*, Riot elige un buen jugador vivo (diferente a noches anteriores): un sabio elegido utiliza su habilidad pero no muere."
+        "reason": "Cada noche*, Riot elige a 1 jugador vivo bueno (diferente a los de noches anteriores): un Sabio elegido usa su habilidad pero no muere."
     },
     {
         "target": "riot",
         "trick": "soldier",
-        "reason": "Si Riot está en juego, el soldado está a salvo de todas las habilidades malvadas."
+        "reason": "Si Riot nomina y ejecuta al Soldado, los buenos ganan."
     },
     {
         "target": "scarletwoman",
@@ -522,12 +522,12 @@
     {
         "target": "spy",
         "trick": "damsel",
-        "reason": "Si el espía está (o ha estado) en juego, el Damsel está envenenado."
+        "reason": "Si el Espía está (o ha estado) en juego, la Damisela está envenenada."
     },
     {
         "target": "spy",
         "trick": "ogre",
-        "reason": "El espía se registra como malo para el Ogro."
+        "reason": "El Espía aparece como malo para el Ogro."
     },
     {
         "target": "spy",
@@ -537,82 +537,82 @@
     {
         "target": "summoner",
         "trick": "clockmaker",
-        "reason": "Si el Invocador está en juego, el Relojero no recibe su información hasta que se crea un Demonio."
+        "reason": "El Invocador aparece como Demonio para el Relojero."
     },
     {
         "target": "summoner",
         "trick": "courtier",
-        "reason": "Si el Invocador está borracho en la tercera noche, el Invocador elige qué Demonio, pero el Storyteller elige qué jugador."
+        "reason": "Si el Invocador vivo no tiene habilidad, el Narrador tiene la habilidad de Invocador."
     },
     {
         "target": "summoner",
         "trick": "engineer",
-        "reason": "Si el Ingeniero elimina un Invocador del juego antes de que Summoner utilice su habilidad, el Invocador utiliza su habilidad inmediatamente."
+        "reason": "Si el Invocador deja de estar en la partida, el Narrador tiene la habilidad de Invocador."
     },
     {
         "target": "summoner",
         "trick": "hatter",
-        "reason": "El Invocador no puede crear un Demonio en juego. Si el Invocador crea un Demonio no en juego, las muertes de esta noche son arbitrarias."
+        "reason": "Si el Invocador crea un segundo Demonio vivo, las muertes de esta noche son arbitrarias."
     },
     {
         "target": "summoner",
         "trick": "kazali",
-        "reason": "El Invocador no puede crear un Demonio en juego. Si el Invocador crea un Demonio no en juego, las muertes de esta noche son arbitrarias."
+        "reason": "Si el Invocador crea un segundo Demonio vivo, las muertes de esta noche son arbitrarias."
     },
     {
         "target": "summoner",
         "trick": "legion",
-        "reason": "Si el Invocador crea Legión, la mayoría de los jugadores (incluidos todos los malos jugadores) se convierten en malvado Legión."
+        "reason": "Si Legión es invocado, todos los jugadores malos se convierten en Legión."
     },
     {
         "target": "summoner",
         "trick": "lordoftyphon",
-        "reason": "Si el Invocador crea un Señor de Tifón, el Señor de Tifón debe tener un Minion. El otro vecino se convierte en un malvado Minion que no juega."
+        "reason": "Si Señor de Typhon es invocado, debe ser vecino de un Esbirro y su otro vecino se convierte en un Esbirro malo."
     },
     {
         "target": "summoner",
         "trick": "marionette",
-        "reason": "El Marionette ve al Invocador. El Invocador sabe quién es el Marionette."
+        "reason": "Si hubiera una Marioneta en juego, entra después del Demonio y debe empezar como su vecina."
     },
     {
         "target": "summoner",
         "trick": "pithag",
-        "reason": "El Invocador no puede crear un Demonio en juego. Si el Invocador crea un Demonio no en juego, las muertes de esta noche son arbitrarias."
+        "reason": "Si el Invocador crea un segundo Demonio vivo, las muertes de esta noche son arbitrarias."
     },
     {
         "target": "summoner",
         "trick": "poppygrower",
-        "reason": "Si el amapola está vivo cuando el Invocador actúa, el Invocador elige qué Demonio, pero el Storyteller elige qué jugador."
+        "reason": "Si el Cultivador de opio está vivo en la tercera noche, el Invocador elige qué Demonio, pero no qué jugador."
     },
     {
         "target": "summoner",
         "trick": "preacher",
-        "reason": "Si el Predicador eligió el Invocador en o antes de la tercera noche, el Invocador elige qué Demonio, pero el Storyteller elige a qué jugador."
+        "reason": "Si el Invocador vivo no tiene habilidad, el Narrador tiene la habilidad de Invocador."
     },
     {
         "target": "summoner",
         "trick": "pukka",
-        "reason": "El Invocador puede elegir un jugador para convertirse en el Pukka en la segunda noche."
+        "reason": "El Invocador puede invocar a Pukka en la segunda noche en vez de la tercera."
     },
     {
         "target": "summoner",
         "trick": "zombuul",
-        "reason": "Si el Summoner convierte a un jugador muerto en el Zombuul, el Storyteller trata a ese jugador como un Zombuul que ha muerto una vez."
+        "reason": "Si el Invocador invoca a un jugador muerto en Zombuul, Zombuul ya ha \"muerto una vez\"."
     },
     {
         "target": "vizier",
         "trick": "alsaahir",
-        "reason": "Si el Vizier está en juego, el Alsaahir también debe adivinar qué demonios están en juego."
+        "reason": "El Narrador no declara que el Visir está en juego."
     },
     {
         "target": "vizier",
         "trick": "courtier",
-        "reason": "Si el Vizier pierde su capacidad, aprenden esto. Si el Vizier es ejecutado mientras tienen su capacidad, su equipo gana."
+        "reason": "Si el Visir pierde su habilidad, lo sabe y no puede morir por el día."
     },
     {
         "target": "vizier",
         "trick": "fearmonger",
-        "reason": "El Vizier se despierta con el Tearmonger, aprende quién elige y no puede elegir ejecutar inmediatamente a ese jugador."
+        "reason": "El Visir se despierta con el Fearmonger, sabe a quién ha elegido y no puede forzar su ejecución."
     },
     {
         "target": "vizier",
@@ -622,27 +622,27 @@
     {
         "target": "vizier",
         "trick": "politician",
-        "reason": "El politico puede registrarse como malo para el Vizier."
+        "reason": "El Político puede aparecer como malo para el Visir."
     },
     {
         "target": "vizier",
         "trick": "preacher",
-        "reason": "Si el Vizier pierde su capacidad, aprenden esto. Si el Vizier es ejecutado mientras tienen su capacidad, su equipo gana."
+        "reason": "Si el Visir pierde su habilidad, lo sabe y no puede morir por el día."
     },
     {
         "target": "vizier",
         "trick": "zealot",
-        "reason": "Los Zealot pueden registrarse como malvados para el Vizier."
+        "reason": "El Fanático puede aparecer como malo para el Visir."
     },
     {
         "target": "vortox",
         "trick": "banshee",
-        "reason": "Si el Vortox está en juego y el Demonio mata a los Banshee, los jugadores todavía aprenden que la Banshee ha muerto."
+        "reason": "Si Vortox mata a la Banshee, todos los jugadores descubren que la Banshee ha muerto."
     },
     {
         "target": "widow",
         "trick": "damsel",
-        "reason": "Si la viuda está (o ha estado) en juego, el Damsel está envenenado."
+        "reason": "Si la Viuda está (o ha estado) en juego, la Damisela está envenenada."
     },
     {
         "target": "widow",
@@ -652,6 +652,6 @@
     {
         "target": "yaggababble",
         "trick": "exorcist",
-        "reason": "Si el Exorcista elige el Yaggababble, la habilidad Yaggababble no mata esta noche."
+        "reason": "Si el Exorcista elige a Yaggababble, Yaggababble no mata esta noche."
     }
 ]
