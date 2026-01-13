@@ -3,6 +3,12 @@
     background-image: url("../../img/background-img.webp");
     background-repeat: repeat;
     background-position: 0 0;
+
+    &:has(dialog[open]) {
+        // When a dialog is open, prevent awkward scrolling and
+        // page-refreshing issues of the body in the background.
+        overflow: hidden;
+    }
 }
 
 .body-sheet {
