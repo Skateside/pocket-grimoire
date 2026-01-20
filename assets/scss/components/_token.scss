@@ -52,6 +52,47 @@
     }
 }
 
+// Colorization of tokens based on rotated state.
+.colorize .token .character {
+    // Filter values for converting from one team color to the other.
+    --blue-to-red: hue-rotate(162deg) brightness(0.7) saturate(1.7);
+    --red-to-blue: hue-rotate(237deg) brightness(1.8);
+
+    // Travellers render two images for colorization.
+    // One we'll use for the left half, and one for the right half.
+    &:is([data-team=traveller i]) .character__icon {
+        &:first-of-type {
+            clip-path: inset(0 50% 0 0);
+        }
+        &:last-of-type {
+            clip-path: inset(0 0 0 50%);
+        }
+    }
+
+    &:not(.is-upside-down) {
+        // Colorize traveller tokens as fully blue if un-rotated (second image).
+        &:is([data-team=traveller i]) .character__icon:last-of-type {
+            filter: var(--red-to-blue);
+        }
+    }
+    &.is-upside-down {
+        // Colorize rotated townsfolk and outsiders as red.
+        &:is([data-team=townsfolk i], [data-team=outsider i]) .character__icon {
+            filter: var(--blue-to-red);
+        }
+
+        // Colorize rotated demons and minions as blue.
+        &:is([data-team=demon i], [data-team=minion i]) .character__icon {
+            filter: var(--red-to-blue);
+        }
+
+        // Colorize traveller tokens as fully red if rotated (first image).
+        &:is([data-team=traveller i]) .character__icon:first-of-type {
+            filter: var(--blue-to-red);
+        }
+    }
+}
+
 .token--movable {
     --left: 0;
     --top: 0;

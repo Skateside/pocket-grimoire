@@ -82,6 +82,14 @@ lookupOne("#show-night-order").addEventListener("change", ({ target }) => {
 
 });
 
+const colorizeToggle = lookupOne("#colorize-tokens");
+colorizeToggle.addEventListener("change", ({ target }) => {
+
+    padElement.classList.toggle('colorize', target.checked);
+
+});
+padElement.classList.toggle('colorize', colorizeToggle.checked);
+
 gameObserver.on("clear", () => pad.reset());
 
 // Character and Reminder token sizes.
