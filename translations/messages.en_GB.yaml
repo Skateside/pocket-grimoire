@@ -50,10 +50,10 @@ setup:
     title: Setup
 
     buttons:
-        select_edition: Select Edition
-        select_characters: Select Characters
-        qr_code_button: Character Sheet
-        clear_cache_button: Clear Cache
+        select_edition: Select Edition…
+        select_characters: Select Characters…
+        qr_code_button: Character Sheet…
+        clear_cache_button: Clear Cache…
         language: Language
         set_language: Set Language
 
@@ -76,7 +76,7 @@ setup:
         toggle_abilities: Show character abilities
         toggle_duplicates: Allow duplicate characters
         highlight_random: Highlight random
-        draw_characters: Draw Characters
+        draw_characters: Draw Characters…
         add_all: Add All
         layout: Layout
         ellipse: Ellipse
@@ -132,15 +132,15 @@ grimoire:
 
     grimoire:
         bluffs: Demon Bluffs
-        show_bluffs: Show all bluffs
+        show_bluffs: Show all bluffs…
         add_bluffs: Add bluffs
-        add_token: Add token
-        add_reminder: Add reminder
-        add_traveller: Add traveller
-        add_fabled: Add fabled
-        show_tokens: Show tokens
+        add_token: Add token…
+        add_reminder: Add reminder…
+        add_traveller: Add traveller…
+        add_fabled: Add fabled…
+        show_tokens: Show tokens…
         reset_height: Reset pad height
-        clear_grimoire: Clear Grimoire
+        clear_grimoire: Clear Grimoire…
         clear_grimoire_warning: Are you sure you want to clear all the tokens?
         show_night_order: Show night order
         character_size: Character token size
@@ -158,11 +158,11 @@ grimoire:
 
     character_show:
         title: Token
-        show: Show
+        show: Show…
         shroud: Shroud
         rotate: Rotate
-        replace: Replace
-        reminder: Reminder
+        replace: Replace…
+        reminder: Reminder…
         remove: Remove token
         recent_reminders: 'Most recently added reminders:'
         player_name: Set player name
@@ -176,8 +176,8 @@ grimoire:
     bluff_show:
         title: Token
         empty: Empty
-        show: Show
-        change: Change
+        show: Show…
+        change: Change…
 
     bluff_list:
         title: Select Bluff
@@ -187,7 +187,7 @@ grimoire:
 
     token_list:
         title: Characters
-        add: Add token
+        add: Add token…
 
     traveller_list:
         title: Travellers
@@ -233,8 +233,8 @@ info_tokens:
         useability: Use your <strong>ability</strong>?
         makechoice: Make a <strong>choice</strong>
     custom: Custom info tokens
-    add_custom: Add info token
-    edit_custom: Edit info token
+    add_custom: Add info token…
+    edit_custom: Edit info token…
     delete_custom: Delete info token
 
 notes:
