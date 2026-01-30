@@ -1014,9 +1014,9 @@
     {
         "id": "lycanthrope",
         "name": "Licántropo",
-        "ability": "Cada noche* elige 1 jugador vivo. Si es bueno, muere, pero no puede haber más muertes esta noche.",
+        "ability": "Cada noche*, elige un jugador vivo. Si es bueno, muere y el Demonio no mata esta noche. Un jugador bueno se registra como maligno.",
         "firstNightReminder": "",
-        "otherNightReminder": "El Licántropo señala a un jugador vivo: si es bueno, muere y nadie más puede morir esta noche.",
+        "otherNightReminder": "El Licántropo señala a un jugador vivo: si es bueno, el Demonio no mata esta noche.",
         "remindersGlobal": [],
         "reminders": [
             "Muerto"
