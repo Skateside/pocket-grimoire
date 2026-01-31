@@ -58,7 +58,8 @@ class GameModel extends YamlModel
             'minion',
             'demon',
             'traveller',
-            'fabled'
+            'fabled',
+            'loric'
         ];
         
         uksort($groups, function (string $keyA, string $keyB) use ($order) {

@@ -442,7 +442,7 @@ gameObserver.on("characters-selected", ({ detail }) => {
 
         pad.characters.forEach(({ character, token }) => {
 
-            if (["traveller", "fabled"].includes(character.getTeam())) {
+            if (["traveller", "fabled", "loric"].includes(character.getTeam())) {
                 return;
             }
 
@@ -458,7 +458,7 @@ gameObserver.on("characters-selected", ({ detail }) => {
 
             const character = store.getCharacter(reminder.getCharacterId());
 
-            if (["traveller", "fabled"].includes(character.getTeam())) {
+            if (["traveller", "fabled", "loric"].includes(character.getTeam())) {
                 return;
             }
 

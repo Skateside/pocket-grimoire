@@ -4,7 +4,8 @@
     &:not(.is-show-travellers) > [data-team="traveller"],
     &:not(.is-show-evil) > [data-team="minion"],
     &:not(.is-show-evil) > [data-team="demon"],
-    &:not(.is-show-fabled) > [data-team="fabled"] {
+    &:not(.is-show-fabled) > [data-team="fabled"],
+    &:not(.is-show-fabled) > [data-team="loric"] {
         display: none;
     }
 

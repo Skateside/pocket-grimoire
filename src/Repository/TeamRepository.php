@@ -30,7 +30,7 @@ class TeamRepository extends ServiceEntityRepository
         if (!$includeAll) {
 
             $ids = array_filter($ids, function ($id) {
-                return !in_array($id, ['traveller', 'fabled']);
+                return !in_array($id, ['traveller', 'fabled', 'loric']);
             });
 
         }

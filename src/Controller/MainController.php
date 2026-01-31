@@ -297,7 +297,7 @@ class MainController extends AbstractController
             }
 
             if ((int) $request->query->get('fabled', 0) !== 1) {
-                unset($groups['fabled']);
+                unset($groups['fabled'], $groups['loric']);
             }
 
             $homebrew->setAccessed(new \DateTime());

@@ -45,7 +45,7 @@ gameObserver.on("characters-selected", ({ detail }) => {
 
     const characters = detail.characters.filter((character) => {
         const team = character.getTeam();
-        return team !== "fabled" && team !== "traveller";
+        return team !== "traveller" && team !== "fabled" && team !== "loric";
     });
 
     replaceContentsMany(

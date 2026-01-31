@@ -51,7 +51,7 @@ function drawQRCode() {
         }
 
         if (includeFabled) {
-            teams.push("fabled");
+            teams.push("fabled", "loric");
         }
 
         const ids = characterStore[qrCode.dataset.characters]

@@ -20,7 +20,13 @@ gameObserver.on("characters-selected", ({ detail }) => {
     nightOrder.reset();
     nightOrder.setCharacters(
         detail.characters
-            .filter((character) => !["fabled", "traveller"].includes(character.getTeam()))
+            .filter((character) => {
+                return ![
+                    "traveller",
+                    "fabled",
+                    "loric"
+                ].includes(character.getTeam());
+            })
     );
     nightOrder.drawAllNightOrders();
 
@@ -34,8 +40,9 @@ gameObserver.on("clear", () => {
 // TODO: Travellers and Fabled should be unique, it should only be possible to
 // add 1 of each. Add that limitation so we don't need to count them anymore.
 const specialRoles = {
+    traveller: Object.create(null),
     fabled: Object.create(null),
-    traveller: Object.create(null)
+    loric: Object.create(null)
 }
 
 tokenObserver.on("character-add", ({ detail }) => {
