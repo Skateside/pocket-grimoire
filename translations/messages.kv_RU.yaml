@@ -25,7 +25,7 @@ sheet:
 
 groups:
     players: Игроки
-    townsfolk: Горожане
+    townsfolk: Горожане 
     outsider: Аутсайдеры
     minion: Приспешники (Миньоны)
     demon: Демоны
@@ -167,7 +167,7 @@ grimoire:
         recent_reminders: Последние добавленные напоминания
         player_name: Добавить имя игрока
         ghost_vote: Голос умершего
-        orphan: 'Висьталӧм: тайӧ персонажыс абу ӧнія скрипт вылын.'
+        orphan: 'Предупреждение: этой роли нет в загруженном сценарии.'
 
     reminder_show:
         title: Напоминание
@@ -200,9 +200,9 @@ grimoire:
         title: Токен
 
     export:
-        title: Экспортируйтны ворсӧм
-        markup: Генерируйтны QR-код, медым ворсӧм даннӧйяссӧ позис пыртны <a href="https://the-grim.netlify.app/" target="_blank" rel="noopener noreferrer">The Grim</a>.
-        button: Генерируйтны QR-код
+        title: Экспортировать игру
+        markup: Сгенерируйте QR код, чтобы данные игры могли быть импортированы в Гримоар.
+        button: Сгенерировать QR код
 
 jinxes:
     title: Правила Джинна (при конфликте ролей)
@@ -223,15 +223,15 @@ info_tokens:
     title: Информационные таблички
     info_tokens:
         isdemon: Этот игрок - <strong>Демон</strong>
-        isminion: Это - ваши <strong>Приспешники</strong>
-        notinplay: Эти роли <strong>не</strong> участвуют <strong>в игре</strong>
+        isminion: Это ваши <strong>Приспешники</strong>
+        notinplay: Эти роли <strong>не</strong> участвуют <strong>в</strong> игре
         nominatetoday: <strong>Вы</strong> сегодня номинировали?
         playeris: <strong>Роль</strong> этого игрока
         votetoday: Вы сегодня <strong>голосовали</strong>?
         youare: <strong>Ваша</strong> роль
-        selectedyou: <strong>Этот персонаж</strong> выбрал вас
-        useability: Асланыд <strong>способностьӧн</strong> вӧдитчыны?
-        makechoice: Вӧчны <strong>бӧрйӧм</strong>
+        selectedyou: <strong>Этот</strong> персонаж выбрал вас
+        useability: Будете использовать свою <strong>способность</strong>?
+        makechoice: Сделайте <strong>выбор</strong>.
     custom: Пользовательские токены
     add_custom: Добавить токен
     edit_custom: Изменить токен
@@ -239,7 +239,7 @@ info_tokens:
 
 notes:
     title: Заметки Рассказчика
-    label: Заметки
+    label: Заметки 
     clear: Очистить заметки
     clear_warning: Вы умерены, что хотите очистить заметки?
 
@@ -259,11 +259,11 @@ errors:
         not_homebrew: Не локализованная роль "%id%"
         unrecognised_team: Команда не опознана "%team%"
         not_find_id: ID не найден "%id%"
-        not_recognise_character: Неизвестный символ "%id%"
+        .not_recognise_character: Неизвестный символ "%id%"
         invalid_entry: 'Не верный ввод для "%id%": %reasons%'
         empty_teams: 'Пустые команды: %teams%'
         invalid_property: Свойство "%property%" должен лоны тип %expected% но вöлi тип %given% пыдди
     url:
-        no_url: Недействительнӧй либӧ тырмытӧм URL .
-        cannot_access: URL-адрес пырны оз позь .
-        not_json: Оз вермы анализируйтны JSON URL-адресысь .
+        no_url: Ссылка не корректна или отсутствует
+        cannot_access: Нет доступа по ссылке
+        not_json: JSON по ссылке не может быть обработан
