@@ -37,6 +37,7 @@ class ImportCommand extends Command
     private $teamRepo;
     private $roleRepo;
     private $editionRepo;
+    private $jinxRepo;
     private $cache = [];
     private $localeModel;
 

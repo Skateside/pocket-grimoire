@@ -1,0 +1,10 @@
+.community {
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 1em;
+    align-items: center;
+}
+
+.community__badge {
+    max-width: 150px;
+}
