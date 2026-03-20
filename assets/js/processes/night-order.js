@@ -109,6 +109,7 @@ tokenObserver.on("character-remove", ({ detail }) => {
         return;
     }
 
+    nightOrder.removePlayerName(character, detail.token);
     nightOrder.removeCharacter(character);
 
 });
@@ -121,6 +122,16 @@ tokenObserver.on("shroud-toggle", ({ detail }) => {
     }
 
     nightOrder.toggleDead(detail.character, detail.isDead);
+
+});
+
+tokenObserver.on("set-player-name", ({ detail }) => {
+
+    if (!nightOrder.hasCharacter(detail.character)) {
+        return;
+    }
+
+    nightOrder.setPlayerName(detail.character, detail.token, detail.name);
 
 });
 

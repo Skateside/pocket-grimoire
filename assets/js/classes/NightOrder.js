@@ -126,6 +126,7 @@ export default class NightOrder {
             character,
             alive: 0,
             inPlay: 0,
+            playerNames: new Map(),
         };
         const firstNight = character.getFirstNight();
         const otherNight = character.getOtherNight();
@@ -561,6 +562,88 @@ export default class NightOrder {
      */
     adjustInPlay(data, quantity) {
         data.inPlay = Math.max(0, data.inPlay + quantity);
+    }
+
+    /**
+     * Sets the player name for a given character's token in the night order.
+     *
+     * @param {CharacterToken} character
+     *        The character whose player name should be updated.
+     * @param {Element} token
+     *        The token element used as a key for tracking the name.
+     * @param {String} name
+     *        The player name to display.
+     */
+    setPlayerName(character, token, name) {
+
+        const index = this.getDataIndex(character);
+
+        if (index < 0) {
+            return;
+        }
+
+        const data = this.data[index];
+
+        if (name) {
+            data.playerNames.set(token, name);
+        } else {
+            data.playerNames.delete(token);
+        }
+
+        this.updatePlayerNameDisplay(data);
+
+    }
+
+    /**
+     * Removes the player name associated with a specific token element.
+     *
+     * @param {CharacterToken} character
+     *        The character whose player name should be removed.
+     * @param {Element} token
+     *        The token element whose name should be removed.
+     */
+    removePlayerName(character, token) {
+
+        const index = this.getDataIndex(character);
+
+        if (index < 0) {
+            return;
+        }
+
+        const data = this.data[index];
+        data.playerNames.delete(token);
+        this.updatePlayerNameDisplay(data);
+
+    }
+
+    /**
+     * Updates the player name display in both night order lists for the given
+     * data entry.
+     *
+     * @param {Object} data
+     *        The data entry to update.
+     */
+    updatePlayerNameDisplay(data) {
+
+        const names = [...data.playerNames.values()].filter(Boolean);
+        const display = names.join(", ");
+
+        ["first", "other"].forEach((property) => {
+
+            if (!data[property]) {
+                return;
+            }
+
+            const element = data[property].element.querySelector(
+                ".js--night-info--player-name"
+            );
+
+            if (element) {
+                element.textContent = display;
+            }
+
+        });
+
     }
 
 }
