@@ -35,3 +35,29 @@ export function rafThrottle(func) {
     };
 
 };
+
+/**
+ * Debounces a function such that the given function will only execute after it
+ * is no longer being called for the given delay.
+ *
+ * @param  {Function} func
+ *         Function to debounce.
+ * @param  {number} [delay=500]
+ *         Delay in milliseconds
+ * @return Debounced function.
+ */
+export function debounce(func, delay = 500) {
+
+    let context = this;
+    let timeout = 0;
+
+    return function (...args) {
+
+        window.clearTimeout(timeout);
+        timeout = window.setTimeout(() => {
+            func.apply(context, args);
+        }, delay);
+
+    };
+
+};
