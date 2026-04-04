@@ -21,7 +21,7 @@
         {% endfor %}
     </div>
     <div class="d-none">
-        <input type="checkbox" name="night-order" id="night-order-swiped" value="on" aria-label="Show other nights">
+        <input type="checkbox" name="night-order" id="night-order-swiped" value="on" aria-label="Show other nights" tabindex="-1">
     </div>
     <p><small>{{ 'night_order.swipe_change'|trans }}</small></p>
     {{ forms.switch({
