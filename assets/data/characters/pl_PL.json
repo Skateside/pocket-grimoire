@@ -26,7 +26,7 @@
         "name": "Al-Hadikhia",
         "ability": "Każdej nocy* wybierz 3 graczy (wszyscy gracze dowiadują się, kogo): każdy po cichu wybiera życie lub śmierć, ale jeśli wszyscy przeżyją, wszyscy umrą.",
         "firstNightReminder": "",
-        "otherNightReminder": "The Al-Hadikhia chooses 3 players. Announce the first player, wake them to nod yes to live or shake head no to die, kill or resurrect accordingly, then put to sleep and announce the next player. If all 3 are alive after this, all 3 die.",
+        "otherNightReminder": "Al-Hadikhia wybiera 3 graczy. Ogłoś pierwszego gracza i obudź go. Ten gracz kiwa głową \"na tak\" aby żyć lub wstrząss głową na nie aby umrzeć. Zabij gracza lub nie rób mu nic w zależności od jego wyboru, następnie uśpij go i ogłoś następnego gracza. Jeśli wszyscy trzej gracze wybrali życie, cała trójka umiera.",
         "remindersGlobal": [],
         "reminders": [
             "1",
@@ -39,7 +39,7 @@
     {
         "id": "alsaahir",
         "name": "Alsaahir",
-        "ability": "Once per day, if you publicly guess which players are Minion(s) and which are Demon(s), good wins.",
+        "ability": "Raz dziennie, jeśli publicznie odgadniesz którzy gracze są Sługusem/Sługusami i którzy są Demonem/Demonami, dobro zwycięża.",
         "firstNightReminder": "",
         "otherNightReminder": "",
         "remindersGlobal": [],
@@ -49,8 +49,8 @@
         "id": "amnesiac",
         "name": "Amnezjak",
         "ability": "Nie wiesz, jaką masz zdolność. Każdego dnia prywatnie zgaduj, co to jest: dowiesz się jak blisko jesteś.",
-        "firstNightReminder": "Decide the Amnesiac's entire ability. If the Amnesiac's ability causes them to wake tonight: Wake the Amnesiac and run their ability.",
-        "otherNightReminder": "If the Amnesiac's ability causes them to wake tonight: Wake the Amnesiac and run their ability.",
+        "firstNightReminder": "Zdecyduj o zdolności Amnezjaka. Jeśli zdolność Amnezjaka powoduje, że budzi się tej nocy: Obudź Amnezjaka i pozwól mu użyć jego zdolności.",
+        "otherNightReminder": "Jeśli zdolność Amnezjaka powoduje, że budzi się tej nocy: Obudź Amnezjaka i pozwól mu użyć jego zdolności.",
         "remindersGlobal": [],
         "reminders": [
             "?"
@@ -58,8 +58,8 @@
     },
     {
         "id": "angel",
-        "name": "Angel",
-        "ability": "Something bad might happen to whoever is most responsible for the death of a new player.",
+        "name": "Anioł",
+        "ability": "Coś złego może się stać temu, kto jest najbardziej odpowiedzialny za śmierć nowego gracza.",
         "firstNightReminder": "",
         "otherNightReminder": "",
         "remindersGlobal": [],
@@ -129,12 +129,12 @@
     {
         "id": "banshee",
         "name": "Banshee",
-        "ability": "If the Demon kills you, all players learn this. From now on, you may nominate twice per day and vote twice per nomination.",
+        "ability": "Jeśli Demon Cię zabił: wszyscy gracze dowiadują się o tym. Od teraz możesz nominować dwukrotnie w czasie dnia oraz głosować dwukrotnie per nominacja.",
         "firstNightReminder": "",
-        "otherNightReminder": "Announce that the Banshee has died.",
+        "otherNightReminder": "Ogłoś, że Banshee umarła.",
         "remindersGlobal": [],
         "reminders": [
-            "Has Ability"
+            "Ma Umiejętność"
         ]
     },
     {
@@ -142,7 +142,7 @@
         "name": "Balwierz",
         "ability": "Jeśli umrzesz dziś za dnia bądź tej nocy, Demon może wybrać 2 graczy (ale nie innego demona), którzy zamienią się postaciami.",
         "firstNightReminder": "",
-        "otherNightReminder": "Jeśli dziś umarł Balwierz - obudź demona. Pokaż mu kartę 'TA POSTAĆ CIĘ WYBRAŁA' i żeton Balwierza. Demon albo kręci głową na nie albo wskazuje 2 graczy. Jeśli wybrał graczy - zamień ich żetony postaci. Obudź każdego z nich. Pokaż kartę 'JESTEŚ' i ich nowy żeton postaci.",
+        "otherNightReminder": "Jeśli dziś umarł Balwierz - obudź demona. Pokaż mu kartę 'TA POSTAĆ CIĘ WYBRAŁA' i token Balwierza. Demon albo kręci głową na nie albo wskazuje 2 graczy. Jeśli wybrał graczy - zamień ich tokeny postaci. Obudź każdego z nich. Pokaż kartę 'JESTEŚ' i ich nowy token postaci.",
         "remindersGlobal": [],
         "reminders": [
             "Nocą Strzyżemy"
@@ -152,8 +152,8 @@
         "id": "barista",
         "name": "Barista",
         "ability": "Każdej nocy, aż do zmierzchu, 1) gracz trzeźwieje, zdrowieje i dostaje prawdziwe informacje, lub 2) ich zdolność działa dwa razy. Gracz dowiaduje się, która opcja na niego działa.",
-        "firstNightReminder": "Wybierz gracza, obudź go i powiedz, która moc Baristy ma na niego wpływ. Potraktuj go zgodnie z tą mocą (trzeźwy\/zdrowy\/prawdziwe informacle lub aktywuj ich zdolność dwa razy).",
-        "otherNightReminder": "Wybierz gracza, obudź go i powiedz, która moc Baristy ma na niego wpływ. Potraktuj go zgodnie z tą mocą (trzeźwy\/zdrowy\/prawdziwe informacle lub aktywuj ich zdolność dwa razy).",
+        "firstNightReminder": "Wybierz gracza, obudź go i powiedz, która moc Baristy ma na niego wpływ. Potraktuj go zgodnie z tą mocą (trzeźwy/zdrowy/prawdziwe informacle lub aktywuj ich zdolność dwa razy).",
+        "otherNightReminder": "Wybierz gracza, obudź go i powiedz, która moc Baristy ma na niego wpływ. Potraktuj go zgodnie z tą mocą (trzeźwy/zdrowy/prawdziwe informacle lub aktywuj ich zdolność dwa razy).",
         "remindersGlobal": [],
         "reminders": [
             "2x Zdolność",
@@ -180,8 +180,8 @@
     },
     {
         "id": "bishop",
-        "name": "Bishop",
-        "ability": "Only the Storyteller can nominate. At least 1 opposite player must be nominated each day.",
+        "name": "Biskup",
+        "ability": "Tylko Bajarz może nominować. Co najmniej jeden przeciwny gracz musi być nominowany każdego dnia.",
         "firstNightReminder": "",
         "otherNightReminder": "",
         "remindersGlobal": [],
@@ -204,7 +204,7 @@
         "name": "Kolekcjoner Kości",
         "ability": "Raz w trakcie gry, nocą, wybierz martwego gracza - odzyskuje on swoją zdolność postaci do zmierzchu.",
         "firstNightReminder": "",
-        "otherNightReminder": "Kolekcjoner kości albo kręci głową na nie albo wskazuje któregokolwiek martwego gracza. Jeśli wskazał martwego gracza, oznacz go żetonem Kolekcjonera 'ma zdolność' przy jego żetonie postaci. (Możliwe, że będziesz musiał obudzić tego gracza, żeby skorzystał ze swojej zdolności.)",
+        "otherNightReminder": "Kolekcjoner kości albo kręci głową na nie albo wskazuje któregokolwiek martwego gracza. Jeśli wskazał martwego gracza, oznacz go tokenem Kolekcjonera 'ma zdolność' przy jego tokenie postaci. (Możliwe, że będziesz musiał obudzić tego gracza, żeby skorzystał ze swojej zdolności.)",
         "remindersGlobal": [],
         "reminders": [
             "Brak zdolności",
@@ -222,9 +222,9 @@
     },
     {
         "id": "bootlegger",
-        "name": "Bootlegger",
-        "ability": "This script has homebrew characters or rules.",
-        "firstNightReminder": "Announce the Bootlegger is in play and inform the group of all homebrew characters and\/or rules you are using in this game.",
+        "name": "Bimbrownik",
+        "ability": "Ten skrypt ma postacie lub zasady homebrew.",
+        "firstNightReminder": "Ogłoś, że Bimbrownik jest w grze i poinformuj grupę o wszystkich własnych postaciach i / lub zasadach obowiązujących w tej grze.",
         "otherNightReminder": "",
         "remindersGlobal": [],
         "reminders": []
@@ -233,8 +233,8 @@
         "id": "bountyhunter",
         "name": "Łowczyni Nagród",
         "ability": "Zaczynasz znając 1 złego gracza. Jeśli gracz, którego znasz umrze, tej nocy poznasz innego złego gracza. [1 Mieszczanin jest zły]",
-        "firstNightReminder": "Point to 1 evil player. Wake the townsfolk who is evil and show them the 'You are' card and the thumbs down evil sign.",
-        "otherNightReminder": "If the known evil player has died, point to another evil player.",
+        "firstNightReminder": "Wskaż na jednego złego gracza. Obudź Mieszczanina, który jest zły i pokaż mu kartę \"Jesteś\" i znak zła kciukiem w dół.",
+        "otherNightReminder": "Jeśli znany zły gracz umarł, wskaż innego złego gracza.",
         "remindersGlobal": [],
         "reminders": [
             "Znany"
@@ -242,8 +242,8 @@
     },
     {
         "id": "buddhist",
-        "name": "Buddhist",
-        "ability": "For the first 2 minutes of each day, veteran players may not talk.",
+        "name": "Buddysta",
+        "ability": "Przez pierwsze 2 minuty każdego dnia, gracze-weterani nie mogą mówić.",
         "firstNightReminder": "",
         "otherNightReminder": "",
         "remindersGlobal": [],
@@ -272,9 +272,9 @@
     {
         "id": "butler",
         "name": "Lokaj",
-        "ability": "Każdej nocy wybierz gracza (nie siebie). Jutro możesz głosować tyklo, jeśli ten gracz zagłosuje.",
-        "firstNightReminder": "The Butler points to a player. Mark that player as 'MASTER'.",
-        "otherNightReminder": "The Butler points to a player. Mark that player as 'MASTER'.",
+        "ability": "Każdej nocy wybierz gracza (nie siebie). Jutro możesz głosować tylko, jeśli ten gracz zagłosuje.",
+        "firstNightReminder": "Lokaj wskazuje na gracza. Zaznacz go jako 'Mistrz'.",
+        "otherNightReminder": "Lokaj wskazuje na gracza. Zaznacz go jako 'Mistrz'.",
         "remindersGlobal": [],
         "reminders": [
             "Mistrz"
@@ -294,21 +294,21 @@
     {
         "id": "cannibal",
         "name": "Kanibal",
-        "ability": "Masz zdolność postaci ostatniego straconego gracza. Jeśli była zła, zostajesz otruty dopóki dobry gracz nie umrze w wyniku egzekucji.",
+        "ability": "Masz zdolność postaci ostatniego straconego gracza. Jeśli była zła, zostajesz zatruty dopóki dobry gracz nie umrze w wyniku egzekucji.",
         "firstNightReminder": "",
         "otherNightReminder": "",
         "remindersGlobal": [],
         "reminders": [
             "Zginął",
-            "Otruty"
+            "Zatruty"
         ]
     },
     {
         "id": "cerenovus",
         "name": "Cerenovus",
-        "ability": "Każdej nocy wybierz gracza i dobrą postać – ma jutro szaleć na punkcie bycia tą postacią, bo inaczej może zostać stracony.",
-        "firstNightReminder": "Cerenovus wskazuje gracza i postać na skrypcie. Obudź tego gracza. Pokaż mu kartę 'TA POSTAĆ CIĘ WYBRAŁA' i żeton Cerenovusa. Pokaż żeton wybranej postaci. Jeśli ten gracz nie będzie jutro szalał na punkcie bycia tą postacią, może zostać stracony.",
-        "otherNightReminder": "Cerenovus wskazuje gracza i postać na skrypcie. Obudź tego gracza. Pokaż mu kartę 'TA POSTAĆ CIĘ WYBRAŁA' i żeton Cerenovusa. Pokaż żeton wybranej postaci. Jeśli ten gracz nie będzie jutro szalał na punkcie bycia tą postacią, może zostać stracony.",
+        "ability": "Każdej nocy wybierz gracza i dobrą postać – ma jutro mieć „obsesję” na punkcie bycia tą postacią, w przeciwnym przypadku może zostać stracony.",
+        "firstNightReminder": "Cerenovus wskazuje gracza i postać na skrypcie. Obudź tego gracza. Pokaż mu kartę 'TA POSTAĆ CIĘ WYBRAŁA' i token Cerenovusa. Pokaż token wybranej postaci. Jeśli ten gracz nie będzie jutro szalał na punkcie bycia tą postacią, może zostać stracony.",
+        "otherNightReminder": "Cerenovus wskazuje gracza i postać na skrypcie. Obudź tego gracza. Pokaż mu kartę 'TA POSTAĆ CIĘ WYBRAŁA' i token Cerenovusa. Pokaż token wybranej postaci. Jeśli ten gracz nie będzie jutro szalał na punkcie bycia tą postacią, może zostać stracony.",
         "remindersGlobal": [],
         "reminders": [
             "Szaleje"
@@ -318,16 +318,16 @@
         "id": "chambermaid",
         "name": "Pokojówka",
         "ability": "Każdej nocy wybierz 2 żywych graczy (nie siebie). Dowiadujesz się, ilu z nich obudziło się ze względu na swoją zdolność.",
-        "firstNightReminder": "The Chambermaid points to two players. Show the number signal (0, 1, 2, …) for how many of those players wake tonight for their ability.",
-        "otherNightReminder": "The Chambermaid points to two players. Show the number signal (0, 1, 2, …) for how many of those players wake tonight for their ability.",
+        "firstNightReminder": "Pokojówka wskazuje na dwóch graczy. Pokaż na palcach (0, 1, 2,...) ilu z tych graczy budzi się dziś z powodu ich zdolności.",
+        "otherNightReminder": "Pokojówka wskazuje na dwóch graczy. Pokaż na palcach (0, 1, 2,...) ilu z tych graczy budzi się dziś z powodu ich zdolności.",
         "remindersGlobal": [],
         "reminders": []
     },
     {
         "id": "chef",
         "name": "Kucharz",
-        "ability": "Na początku gry dowiadujesz się, ile par żłych graczy siedzi obok siebie.",
-        "firstNightReminder": "Show the finger signal (0, 1, 2, …) for the number of pairs of neighbouring evil players.",
+        "ability": "Na początku gry dowiadujesz się, ile par złych graczy jest w grze.",
+        "firstNightReminder": "Pokaż na palcach (0, 1, 2,...) ile jest par sąsiadujących złych graczy.",
         "otherNightReminder": "",
         "remindersGlobal": [],
         "reminders": []
@@ -337,7 +337,7 @@
         "name": "Chórzysta",
         "ability": "Jeśli Demon zabije Króla, dowiadujesz się, który gracz jest Demonem. [+Król]",
         "firstNightReminder": "",
-        "otherNightReminder": "If the King was killed by the Demon, wake the Choirboy and point to the Demon player.",
+        "otherNightReminder": "Jeśli Król został zabity przez Demona, obudź Chórzystę i wskaż Demona.",
         "remindersGlobal": [],
         "reminders": []
     },
@@ -345,7 +345,7 @@
         "id": "clockmaker",
         "name": "Zegarmistrz",
         "ability": "Na początku gry dowiadujesz się, ile kroków dzieli Demona od jego najbliższego Sługusa.",
-        "firstNightReminder": "Pokaż na palcach liczbę (0, 1, 2,) siedzeń między demonem a jego najbliższym sługusem.",
+        "firstNightReminder": "Pokaż na palcach liczbę (0, 1, 2,) siedzeń między Demonem a jego najbliższym Sługusem.",
         "otherNightReminder": "",
         "remindersGlobal": [],
         "reminders": []
@@ -353,9 +353,9 @@
     {
         "id": "courtier",
         "name": "Dworzanin",
-        "ability": "Raz w trakcie gry, w nocy, wybierasz postać:, jest pijana przez 3 noce i 3 dni.",
-        "firstNightReminder": "Dworzanin albo kręci głową na 'nie', albo wskazuje tożsamość na karcie postaci. Jeśli Dworzanin użył swej zdolności: Jeśli ta tożsamość występuje w grze, ten gracz staje się pijany (na 3 dni i 3 noce).",
-        "otherNightReminder": "Zmniejsz licznik pozostałych dni 'pijaństwa' oznaczonego gracza. Jeśli Dworzanin jeszcze nie wykorzystał swej zdolności: Dworzanin albo kręci głową na 'nie', albo wskazuje tożsamość na karcie postaci. Jeśli ta tożsamość występuje w grze, ten gracz staje się pijany (na 3 dni i 3 noce).",
+        "ability": "Raz w trakcie gry, w nocy, wybierasz postać: jest pijana przez 3 noce i 3 dni.",
+        "firstNightReminder": "Dworzanin albo kręci głową na \"nie\" albo wskazuje na postać w rozpisce postaci. Jeśli Dworzanin użył swoich umiejętności: Jeśli ta postać jest w grze, ten gracz jest pijany.",
+        "otherNightReminder": "Jeśli Dworzanin nie wykorzystał jeszcze swojej umiejętności: Dworzanin albo kręci głową na \"nie\" albo wskazuje na postać w rozpisce postaci. Jeśli Dworzanin użył swoich umiejętności: Jeśli ta postać jest w grze, ten gracz jest pijany.",
         "remindersGlobal": [],
         "reminders": [
             "Pijany 1",
@@ -368,8 +368,8 @@
         "id": "cultleader",
         "name": "Przywódca Kultu",
         "ability": "Każdej nocy dołączasz do drużyny żywego sąsiada. Jeśli wszyscy dobrzy gracze dołączą do twojego kultu, twoja drużyna wygrywa.",
-        "firstNightReminder": "If the cult leader changed alignment, show them the thumbs up good signal of the thumbs down evil signal accordingly.",
-        "otherNightReminder": "If the cult leader changed alignment, show them the thumbs up good signal of the thumbs down evil signal accordingly.",
+        "firstNightReminder": "Jeśli przywódca kultu zmienił stronę, pokaż mu kciukiem w górę sygnał dobra lub kciukiem w dół sygnał zła w zależności od nowej strony.",
+        "otherNightReminder": "Jeśli przywódca kultu zmienił stronę, pokaż mu kciukim w górę sygnał dobra lub kciukiem w dół sygnał zła w zależności od nowej strony.",
         "remindersGlobal": [],
         "reminders": []
     },
@@ -377,8 +377,8 @@
         "id": "damsel",
         "name": "Panienka",
         "ability": "Wszyscy Sługusi wiedzą, że jesteś w grze. Jeśli Sługus publicznie cię odgadnie (raz), twoja drużyna przegrywa.",
-        "firstNightReminder": "Wake all the Minions, show them the 'This character selected you' card and the Damsel token.",
-        "otherNightReminder": "If selected by the Huntsman, wake the Damsel, show 'You are' card and a not-in-play Townsfolk token.",
+        "firstNightReminder": "Obudź wszystkich Sługusów, pokaż im kartę 'Ta postać wybrała ciebie' i token Panienki.",
+        "otherNightReminder": "Jeśli wybrana przez Łowczego, obudź Panienkę, pokaż kartę 'Jesteś' i token Mieszczanina nie biorącego udziału w grze.",
         "remindersGlobal": [],
         "reminders": [
             "Próbowano zgadnąć"
@@ -387,7 +387,7 @@
     {
         "id": "deusexfiasco",
         "name": "Deus ex Fiasco",
-        "ability": "Once per game, the Storyteller will make a \"mistake\", correct it and publicly admit to it.",
+        "ability": "Raz w grze Bajarz zrobi \"błąd\", popraw go i publicznie przyznaj się do niego.",
         "firstNightReminder": "",
         "otherNightReminder": "",
         "remindersGlobal": [],
@@ -408,8 +408,8 @@
         "id": "devilsadvocate",
         "name": "Adwokat Diabła",
         "ability": "Każdej nocy wybierz żywego gracza (innego niż poprzedniej nocy). Jeśli jutro zostanie stracony, nie umrze.",
-        "firstNightReminder": "The Devil’s Advocate points to a living player. That player survives execution tomorrow.",
-        "otherNightReminder": "The Devil’s Advocate points to a living player, different from the previous night. That player survives execution tomorrow.",
+        "firstNightReminder": "Adwokat Diabła wskazuje na żywego gracza, który jutro przeżyje egzekucję.",
+        "otherNightReminder": "Adwokat Diabła wskazuje na żywego gracza, innego niż poprzedniej nocy, który jutro przeżyje egzekucję.",
         "remindersGlobal": [],
         "reminders": [
             "Przeżywa stracenie"
@@ -417,8 +417,8 @@
     },
     {
         "id": "djinn",
-        "name": "Djinn",
-        "ability": "Use the Djinn's special rule. All players know what it is.",
+        "name": "Dżin",
+        "ability": "Użyj specjalnej zasady Dżina. Wszyscy gracze znają tę zasadę.",
         "firstNightReminder": "",
         "otherNightReminder": "",
         "remindersGlobal": [],
@@ -426,8 +426,8 @@
     },
     {
         "id": "doomsayer",
-        "name": "Doomsayer",
-        "ability": "If 4 or more players live, each living player may publicly choose (once per game) that a player of their own alignment dies.",
+        "name": "Prorok Zagłady",
+        "ability": "Jeśli 4 lub więcej graczy żyje, każdy żyjący gracz może publicznie wybrać (raz na grę), że gracz z jego drużyny umiera.",
         "firstNightReminder": "",
         "otherNightReminder": "",
         "remindersGlobal": [],
@@ -436,9 +436,9 @@
     {
         "id": "dreamer",
         "name": "Śniączka",
-        "ability": "Każdej nocy wybierz gracza (nie siebie, nie Wędrowca). Zobaczysz 1 dobrą i 1 złą postać, jedna z nich jest prawdziwa.",
-        "firstNightReminder": "Śniączka wskazuje gracza. Pokaż 1 żeton dobrej postaci i 1 złej; jeden z nich jest prawidłowy.",
-        "otherNightReminder": "Śniączka wskazuje gracza. Pokaż 1 żeton dobrej postaci i 1 złej; jeden z nich jest prawidłowy.",
+        "ability": "Każdej nocy wybierz gracza (nie siebie, nie Podróżnego). Zobaczysz 1 dobrą i 1 złą postać, jedna z nich jest prawdziwa.",
+        "firstNightReminder": "Śniączka wskazuje gracza. Pokaż 1 token dobrej postaci i 1 złej, jeden z nich jest prawidłowy.",
+        "otherNightReminder": "Śniączka wskazuje gracza. Pokaż 1 token dobrej postaci i 1 złej, jeden z nich jest prawidłowy.",
         "remindersGlobal": [],
         "reminders": []
     },
@@ -455,8 +455,8 @@
     },
     {
         "id": "duchess",
-        "name": "Duchess",
-        "ability": "Each day, 3 players may choose to visit you. At night*, each visitor learns how many visitors are evil, but 1 gets false info.",
+        "name": "Księżna",
+        "ability": "Każdego dnia, 3 graczy może wybrać się do Ciebie w odwiedziny. W nocy*, każdy odwiedzający dowiaduje się, ilu odwiedzających jest złych, ale jeden dostaje fałszywe informacje.",
         "firstNightReminder": "",
         "otherNightReminder": "",
         "remindersGlobal": [],
@@ -469,17 +469,17 @@
         "id": "empath",
         "name": "Empata",
         "ability": "Każdej nocy dowiadujesz się, ilu z Twoich żyjących sąsiadów jest złych.",
-        "firstNightReminder": "Show the finger signal (0, 1, 2) for the number of alive evil neighbours of the Empath.",
-        "otherNightReminder": "Show the finger signal (0, 1, 2) for the number of alive evil neighbours of the Empath.",
+        "firstNightReminder": "Pokaż na palcach liczbę żywych złych sąsiadów Empaty.",
+        "otherNightReminder": "Pokaż na palcach liczbę żywych złych sąsiadów Empaty.",
         "remindersGlobal": [],
         "reminders": []
     },
     {
         "id": "engineer",
         "name": "Inżynier",
-        "ability": "Raz na grę, w nocy, wybierz, jakcy Sługusi lub Demon będą w grze.",
-        "firstNightReminder": "The Engineer shows a 'no' head signal, or points to a Demon or points to the relevant number of Minions. If the Engineer chose characters, replace the Demon or Minions with the choices, then wake the relevant players and show them the You are card and the relevant character tokens.",
-        "otherNightReminder": "The Engineer shows a 'no' head signal, or points to a Demon or points to the relevant number of Minions. If the Engineer chose characters, replace the Demon or Minions with the choices, then wake the relevant players and show them the 'You are' card and the relevant character tokens.",
+        "ability": "Raz na grę, w nocy, wybierz, jacy Sługusi lub Demon będą w grze.",
+        "firstNightReminder": "Inżynier kręci głową na \"nie\" lub wskazuje na Demona lub wskazuje na odpowiednią liczbę Sługusów. Jeśli Inżynier wybrał postacie, zastąp Demona lub Sługusy zgodnie z wyborem, a następnie obudź odpowiednich graczy i pokaż im kartę \"Jesteś\" i odpowiednie tokeny postaci.",
+        "otherNightReminder": "Inżynier kręci głową na \"nie\" lub wskazuje na Demona lub wskazuje na odpowiednią liczbę Sługusów. Jeśli Inżynier wybrał postacie, zastąp Demona lub Sługusy zgodnie z wyborem, a następnie obudź odpowiednich graczy i pokaż im kartę \"Jesteś\" i odpowiednie tokeny postaci.",
         "remindersGlobal": [],
         "reminders": [
             "Brak zdolności"
@@ -488,8 +488,8 @@
     {
         "id": "eviltwin",
         "name": "Zły Bliźniak",
-        "ability": "Ty i gracz z przeciwnej drużyny wiecie, kim jesteście. Jeśli Dobry gracz zostanie stracony, Zło wygrywa. Dobro nie może wygrać, jeśli żyją obaj bliźniacy.",
-        "firstNightReminder": "Obudź Złego bliźniaka i jego bliźniaka. Potwierdź, że się zauważyli. Wskaż na Złego bliźniaka. Pokaż jego bliźniakowi żeton Złego bliźniaka. Wskaż na bliźniaka. Pokaż żeton jego postaci Złemu bliźniakowi.",
+        "ability": "Ty i gracz z przeciwnej drużyny wiecie, kim jesteście. Jeśli Dobry Bliźniak zostanie stracony, zło wygrywa. Dobro nie może wygrać, jeśli żyje oboje Bliźniaków.",
+        "firstNightReminder": "Obudź Złego i Dobrego Bliźniaka. Potwierdź, że się zauważyli. Wskaż na Złego Bliźniaka. Pokaż jego Bliźniakowi token Złego bliźniaka. Wskaż na Dobrego Bliźniaka. Pokaż token jego postaci Złemu bliźniakowi.",
         "otherNightReminder": "",
         "remindersGlobal": [],
         "reminders": [
@@ -510,9 +510,9 @@
     {
         "id": "fanggu",
         "name": "Fang Gu",
-        "ability": "Każdej nocy* wybierz gracza, który umiera. Pierwszy Outsider, którego tak zabijesz, zostaje złym Fang Gu, a Ty giniesz zamiast niego. [+1 Outsider].",
+        "ability": "Każdej nocy* wybierz gracza, który umiera. Pierwszy Outsider, którego zabijesz w ten sposób, zostaje złym Fang Gu, a Ty giniesz zamiast niego. [+1 Outsider].",
         "firstNightReminder": "",
-        "otherNightReminder": "Fang Gu wskazuje gracza. Gracz ten umiera. Lub, jeśli ten gracz jest outsiderem i nie ma w grze innego Fang Gu - demon ginie zamiast wybranego gracza. Wybrany gracz jest teraz złym Fang Gu. Obudź nowego Fang Gu. Pokaż mu kartę 'JESTEŚ' i żeton Fang Gu, potem pokaż kciukiem do dołu, że jest zły.",
+        "otherNightReminder": "Fang Gu wskazuje gracza. Gracz ten umiera. Lub, jeśli ten gracz jest Outsiderem i nie ma w grze innego Fang Gu - Demon ginie zamiast wybranego gracza. Wybrany gracz jest teraz złym Fang Gu. Obudź nowego Fang Gu. Pokaż mu kartę 'JESTEŚ' i token Fang Gu, potem pokaż kciukiem w dół, że jest zły.",
         "remindersGlobal": [],
         "reminders": [
             "Ginie"
@@ -540,8 +540,8 @@
     },
     {
         "id": "ferryman",
-        "name": "Ferryman",
-        "ability": "On the final day, all dead players regain their vote token.",
+        "name": "Przewoźnik",
+        "ability": "Ostatniego dnia wszyscy martwi gracze odzyskują token głosu.",
         "firstNightReminder": "",
         "otherNightReminder": "",
         "remindersGlobal": [],
@@ -549,8 +549,8 @@
     },
     {
         "id": "fibbin",
-        "name": "Fibbin",
-        "ability": "Once per game, 1 good player might get false information.",
+        "name": "Łgarz",
+        "ability": "Raz na grę, jeden dobry gracz może uzyskać fałszywe informacje.",
         "firstNightReminder": "",
         "otherNightReminder": "",
         "remindersGlobal": [],
@@ -560,8 +560,8 @@
     },
     {
         "id": "fiddler",
-        "name": "Fiddler",
-        "ability": "Once per game, the Demon secretly chooses an opposing player: all players choose which of these 2 players win.",
+        "name": "Skrzypek",
+        "ability": "Raz na grę, Demon potajemnie wybiera dobrego gracza: wszyscy gracze muszą wybrać, który z tych dwóch graczy wygrywa.",
         "firstNightReminder": "",
         "otherNightReminder": "",
         "remindersGlobal": [],
@@ -582,8 +582,8 @@
         "id": "flowergirl",
         "name": "Kwiaciarka",
         "ability": "Każdej nocy* dowiadujesz się, czy Demon dziś zagłosował.",
-        "firstNightReminder": "Umieść żeton 'Demon nie głosował'.",
-        "otherNightReminder": "Pokiwaj głową na tak lub pokręć na nie w zależności od tego, czy Demon dziś zagłosował. Umieść żeton 'Demon nie głosował' (zabierz żeton 'Demon głosował', jeśli tam jest).",
+        "firstNightReminder": "Umieść token 'Demon nie głosował'.",
+        "otherNightReminder": "Pokiwaj głową na tak lub pokręć na nie w zależności od tego, czy Demon dziś zagłosował. Umieść token 'Demon nie głosował' (zabierz token 'Demon głosował', jeśli tam jest).",
         "remindersGlobal": [],
         "reminders": [
             "Demon głosował",
@@ -604,9 +604,9 @@
     {
         "id": "fortuneteller",
         "name": "Wróżka",
-        "ability": "Każdej nocy wybierasz 2 graczy – dowiadujesz się, czy któryś z nich jest Demonem. Jeden z dobrych graczy pokazuje Ci się jako zły.",
-        "firstNightReminder": "The Fortune Teller points to two players. Give the head signal (nod yes, shake no) for whether one of those players is the Demon.",
-        "otherNightReminder": "The Fortune Teller points to two players. Show the head signal (nod 'yes', shake 'no') for whether one of those players is the Demon.",
+        "ability": "Każdej nocy wybierasz 2 graczy – dowiadujesz się, czy któryś z nich jest Demonem. Jeden z dobrych graczy jest przez Ciebie rejestrowany jako Demon.",
+        "firstNightReminder": "Wróżka wskazuje na dwóch graczy. Pokręć głową na \"\"tak\"\" lub \"\"nie\"\" w zależności od tego czy jeden z tych graczy jest Demonem.",
+        "otherNightReminder": "Wróżka wskazuje na dwóch graczy. Pokręć głową na \"\"tak\"\" lub \"\"nie\"\" w zależności od tego czy jeden z tych graczy jest Demonem.",
         "remindersGlobal": [],
         "reminders": [
             "Wabik"
@@ -634,8 +634,8 @@
     },
     {
         "id": "gardener",
-        "name": "Gardener",
-        "ability": "The Storyteller assigns 1 or more players' characters.",
+        "name": "Ogrodnik",
+        "ability": "Bajarz przydziela przynajmniej jedną postać graczom.",
         "firstNightReminder": "",
         "otherNightReminder": "",
         "remindersGlobal": [],
@@ -645,15 +645,15 @@
         "id": "general",
         "name": "Generał",
         "ability": "Każdej nocy dowiadujesz się, która drużyna według Bajarza wygrywa: dobra, zła czy żadna.",
-        "firstNightReminder": "Show the General thumbs up for good winning, thumbs down for evil winning or thumb to the side for neither.",
-        "otherNightReminder": "Show the General thumbs up for good winning, thumbs down for evil winning or thumb to the side for neither.",
+        "firstNightReminder": "Pokaż Generałowi kciuki w górę dla wygrywających Dobrych, kciuki w dół dla wygrywających Złych lub kciuk w bok dla remisu.",
+        "otherNightReminder": "Pokaż Generałowi kciuki w górę dla wygrywających Dobrych, kciuki w dół dla wygrywających Złych lub kciuk w bok dla remisu.",
         "remindersGlobal": [],
         "reminders": []
     },
     {
         "id": "gnome",
-        "name": "Gnome",
-        "ability": "All players start knowing a player of your alignment. You may choose to kill anyone who nominates them.",
+        "name": "Gnom",
+        "ability": "Na początku gry wszyscy gracze poznają jednego gracza z Twojej drużyny. Możesz zabić dowolną osobę, która ją nominuje.",
         "firstNightReminder": "",
         "otherNightReminder": "",
         "remindersGlobal": [],
@@ -675,9 +675,9 @@
     {
         "id": "godfather",
         "name": "Ojciec Chrzestny",
-        "ability": "Każdej nocy wybierz żywego gracza (innego niż poprzedniej nocy). Jeśli jutro zostanie stracony, nie umrze.",
-        "firstNightReminder": "Show each of the Outsider tokens in play.",
-        "otherNightReminder": "If an Outsider died today: The Godfather points to a player. That player dies.",
+        "ability": "Zaczynasz wiedząc jacy Outsiderzy są w grze. Jeśli dzisiaj któryś z nich umarł, dzisiejszą nocą wybierz gracza: ten gracz umiera. [-1 lub +1 Outsider]",
+        "firstNightReminder": "Pokaż tokeny wszystkich Outsiderów biorących udział w grze.",
+        "otherNightReminder": "Jeśli dzisiaj zmarł Outsider: Ojciec Chrzestny wskazuje na gracza. Ten gracz umiera.",
         "remindersGlobal": [],
         "reminders": [
             "Ginie",
@@ -699,8 +699,8 @@
         "id": "goon",
         "name": "Zbir",
         "ability": "Każdej nocy pierwszy gracz, który wybierze Cię swoją umiejętnością, będzie pijany aż do zmierzchu. Przechodzisz na jego stronę.",
-        "firstNightReminder": "Jeśli gracz użył swej umiejętności by wybrać Zbira: Ta zdolność nie działa. Umieść znacznik 'Pijany' na tym graczu. Zbir przechodzi na stronę tego gracza. Pokaż kartę 'JESTEŚ'. Pokaż aktualne stronnictwo Zbira: kciuk w górę (Dobry), kciuk w dół (Zły).",
-        "otherNightReminder": "Jeśli gracz użył swej umiejętności by wybrać Zbira: Ta zdolność nie działa. Umieść znacznik 'Pijany' na tym graczu. Zbir przechodzi na stronę tego gracza. Pokaż kartę 'JESTEŚ'. Pokaż aktualne stronnictwo Zbira: kciuk w górę (Dobry), kciuk w dół (Zły).",
+        "firstNightReminder": "Jeśli gracz użył swojej umiejętności do wyboru Zbira: umiejętność nie działa. Umieść token Pijany przy tym graczu. Zbir dołącza do drużyny wybranego gracza. Pokaż kartę 'Jesteś'. Pokaż Zbirowi nową drużynę za pomocą kciuków: w górę Dobro, w dół Zło.",
+        "otherNightReminder": "Jeśli gracz użył swojej umiejętności do wyboru Zbira: umiejętność nie działa. Umieść token Pijany przy tym graczu. Zbir dołącza do drużyny wybranego gracza. Pokaż kartę 'Jesteś'. Pokaż Zbirowi nową drużynę za pomocą kciuków: w górę Dobro, w dół Zło.",
         "remindersGlobal": [],
         "reminders": [
             "Pijany"
@@ -708,10 +708,10 @@
     },
     {
         "id": "gossip",
-        "name": "Plotkara",
+        "name": "Plotkarz",
         "ability": "Każdego dnia możesz wygłosić publiczne oświadczenie. Jeżeli było prawdziwe, jeden z graczy umrze w nocy.",
         "firstNightReminder": "",
-        "otherNightReminder": "If the Gossip’s public statement was true: Choose a player, that player dies.",
+        "otherNightReminder": "Jeśli publiczne oświadczenie Plotkarza było prawdziwe: Wybierz gracza, ten gracz umiera.",
         "remindersGlobal": [],
         "reminders": [
             "Ginie"
@@ -720,9 +720,9 @@
     {
         "id": "grandmother",
         "name": "Babcia",
-        "ability": "Na początku gry dowiadujesz się, jaką postacią jest jeden z dobrych graczy. Jeśli demon go zabije, umrzesz wraz z nim.",
-        "firstNightReminder": "Show the marked character token. Point to the marked player.",
-        "otherNightReminder": "If the Grandmother’s grandchild was killed by the Demon tonight: The Grandmother dies.",
+        "ability": "Na początku gry dowiadujesz się, jaką postacią jest jeden z dobrych graczy. Jeśli Demon go zabije, umrzesz wraz z nim.",
+        "firstNightReminder": "Pokaż token wybranego gracza. Wskaż wybranego gracza.",
+        "otherNightReminder": "Jeśli Wnuczek Babci został dziś zabity przez Demona: Babcia umiera.",
         "remindersGlobal": [],
         "reminders": [
             "Wnuczek"
@@ -730,8 +730,8 @@
     },
     {
         "id": "gunslinger",
-        "name": "Gunslinger",
-        "ability": "Each day, after the 1st vote has been tallied, you may choose a player that voted: they die.",
+        "name": "Rewolwerowiec",
+        "ability": "Każdego dnia, po podliczeniu pierwszego głosowania, możesz wybrać gracza, który głosował: ten gracz umiera.",
         "firstNightReminder": "",
         "otherNightReminder": "",
         "remindersGlobal": [],
@@ -742,7 +742,7 @@
         "name": "Ladacznica",
         "ability": "Każdej nocy* wybierz żywego gracza - jeśli się zgodzi, dowiadujesz się, jaką jest postacią, ale obydwoje możecie umrzeć.",
         "firstNightReminder": "",
-        "otherNightReminder": "Ladacznica wskazuje któregokolwiek gracza. Połóż Ladacznicę spać. Obudź wybranego przez nią gracza, pokaż mu kartę 'TA POSTAĆ CIĘ WYBRAŁA' i żeton Ladacznicy. Gracz ten albo kiwa głową na tak albo kręci na nie. Jeśli gracz pokiwał głową, obudź Ladacznicę i pokaż jej żeton postaci wybranego gracza. Potem możesz zdecydować, że obydwoje umrą.",
+        "otherNightReminder": "Ladacznica wskazuje któregokolwiek gracza. Połóż Ladacznicę spać. Obudź wybranego przez nią gracza, pokaż mu kartę 'TA POSTAĆ CIĘ WYBRAŁA' i token Ladacznicy. Gracz ten albo kiwa głową na tak albo kręci na nie. Jeśli gracz pokiwał głową, obudź Ladacznicę i pokaż jej token postaci wybranego gracza. Następnie możesz zdecydować, że obydwoje umrą.",
         "remindersGlobal": [],
         "reminders": [
             "Ginie"
@@ -752,8 +752,8 @@
         "id": "harpy",
         "name": "Harpia",
         "ability": "Każdej nocy, wybierz 2 graczy: jutro pierwszy będzie szalał, że drugi jest zły, albo obaj mogą zginąć.",
-        "firstNightReminder": "Wake the Harpy; they point at one player, then another. Wake the 1st player the Harpy pointed to, show them the 'This character has selected you' card, show them the Harpy token, then point at the 2nd player the Harpy pointed to.",
-        "otherNightReminder": "Wake the Harpy; they point at one player, then another. Wake the 1st player the Harpy pointed to, show them the 'This character has selected you' card, show them the Harpy token, then point at the 2nd player the Harpy pointed to.",
+        "firstNightReminder": "Obudź Harpię; wskazuje ona na jednego gracza, a następnie na drugiego. Obudź pierwszego gracza, którego wskazała Harpia, pokaż mu kartę 'Ta postać Cię wybrała', pokaż mu token Harpii, a następnie wskaż na drugiego gracza, na którego wskazała Harpia.",
+        "otherNightReminder": "Obudź Harpię; wskazuje ona na jednego gracza, a następnie na drugiego. Obudź pierwszego gracza, którego wskazała Harpia, pokaż mu kartę 'Ta postać Cię wybrała', pokaż mu token Harpii, a następnie wskaż na drugiego gracza, na który wskazała Harpia.",
         "remindersGlobal": [],
         "reminders": [
             "Szaleje",
@@ -763,18 +763,18 @@
     {
         "id": "hatter",
         "name": "Kapelusznik",
-        "ability": "If you died today or tonight, the Minion & Demon players may choose new Minion & Demon characters to be.",
+        "ability": "Jeśli umrzesz dzisiejszego dnia lub dzisiejszej nocy, gracze Sługusi i Demon mogą wybrać nowe postaci Sługusów i Demona, którymi się staną.",
         "firstNightReminder": "",
-        "otherNightReminder": "If the Hatter died today: Wake the Minions and Demon. Show them the 'This Character Selected You' info token, then the Hatter token. Each player either shakes their head no or points to another character of the same type as their current character.  If a second player would end up with the same character as another player, shake your head no and gesture for them to choose again. Put them to sleep. Change each player to the character they chose.",
+        "otherNightReminder": "Jeśli Kapelusznik zmarł dzisiaj: Obudź Sługusów i Demona. Pokaż im token informacji 'Ta Postać Cię wybrała', a następnie znak Kapelusznika. Każdy gracz albo potrząsa głową na nie albo wskazuje na inny token postaci tego samego typu, co ich obecna postać. Jeśli drugi gracz skończy z taką samą postacią jak inny gracz, potrząśnij głową na nie i przekaż mu gestami, aby wybrał ponownie. Ułóż je do snu. Zmień każdego gracza na wybrany przez niego token.",
         "remindersGlobal": [],
         "reminders": [
-            "Tea Party Tonight"
+            "Herbatka dziś wieczorem"
         ]
     },
     {
         "id": "hellslibrarian",
-        "name": "Hell's Librarian",
-        "ability": "Something bad might happen to whoever talks when the Storyteller has asked for silence.",
+        "name": "Piekielny Bibliotekarz",
+        "ability": "Coś złego może się stać temu, kto będzie mówił, gdy Bajarz poprosi o ciszę.",
         "firstNightReminder": "",
         "otherNightReminder": "",
         "remindersGlobal": [],
@@ -816,9 +816,9 @@
     {
         "id": "huntsman",
         "name": "Łowczy",
-        "ability": "Raz na grę, w nocy, wybierz żywego gracza: Panienka, jeśli zostanie wybrana, staje się nie będącym w grz Mieszczaninem. [+ Panienka]",
-        "firstNightReminder": "The Huntsman shakes their head 'no' or points to a player. If they point to the Damsel, wake that player, show the 'You are' card and a not-in-play character token.",
-        "otherNightReminder": "The Huntsman shakes their head 'no' or points to a player. If they point to the Damsel, wake that player, show the 'You are' card and a not-in-play character token.",
+        "ability": "Raz na grę, w nocy, wybierz żywego gracza: Panienka, jeśli zostanie wybrana, staje się nie będącym w grze Mieszczaninem. [+ Panienka]",
+        "firstNightReminder": "Łowczy potrząsa głową na 'nie' lub wskazuje na gracza. Jeśli wskazał na Panienkę, obudź tego gracza, pokaż kartę 'Jesteś' i token postaci nie będącej w grze.",
+        "otherNightReminder": "Łowczy potrząsa głową na 'nie' lub wskazuje na gracza. Jeśli wskazał na Panienkę, obudź tego gracza, pokaż kartę 'Jesteś' i token postaci nie będącej w grze.",
         "remindersGlobal": [],
         "reminders": [
             "Brak zdolności"
@@ -827,9 +827,9 @@
     {
         "id": "imp",
         "name": "Chochlik",
-        "ability": "Każdej nocy* wybierz gracza, który umiera. Jeśli zabijesz w ten sposób siebie, sługus zostaje Demonem.",
+        "ability": "Każdej nocy* wybierz gracza, który umiera. Jeśli zabijesz w ten sposób siebie, Sługus zostaje Demonem.",
         "firstNightReminder": "",
-        "otherNightReminder": "The Imp points to a player. That player dies. If the Imp chose themselves: Replace the character of 1 alive minion with a spare Imp token. Show the 'YOU ARE' card, then the Imp token.",
+        "otherNightReminder": "Chochlik wskazuje na gracza. Ten gracz umiera. Jeśli Chochlik wybrał siebie: Zastąp postać jednego żywego Sługusa tokenem Chochlika. Pokaż kartę 'Jesteś', a następnie token Chochlika.",
         "remindersGlobal": [],
         "reminders": [
             "Ginie"
@@ -851,7 +851,7 @@
         "id": "investigator",
         "name": "Śledcza",
         "ability": "Na początku gry dowiadujesz się, że jeden z dwóch graczy jest konkretnym Sługusem.",
-        "firstNightReminder": "Show the character token of a Minion in play. Point to two players, one of which is that character.",
+        "firstNightReminder": "Pokaż token postaci Sługusa w grze. Wskaż dwóch graczy, z których jeden jest tą postacią.",
         "otherNightReminder": "",
         "remindersGlobal": [],
         "reminders": [
@@ -861,8 +861,8 @@
     },
     {
         "id": "judge",
-        "name": "Judge",
-        "ability": "Once per game, if another player nominated, you may choose to force the current execution to pass or fail.",
+        "name": "Sędzia",
+        "ability": "Raz na grę, jeśli inny gracz został nominowany, możesz zdecydować się na wymuszenie wykonania lub niewykonania bieżącej egzekucji.",
         "firstNightReminder": "",
         "otherNightReminder": "",
         "remindersGlobal": [],
@@ -875,7 +875,7 @@
         "name": "Żongler",
         "ability": "Swojego pierwszego dnia publicznie zgadnij, jakimi postaciami jest 5 bądź mniej graczy. Następnej nocy dowiesz się, ilu zgadłeś poprawnie.",
         "firstNightReminder": "",
-        "otherNightReminder": "Jeśli dziś był pierwszy dzień Żonglera - Pokaż na palcach liczbę \"poprawnych\" żetonów (0, 1, 2 itd.). Odłóż te żetony.",
+        "otherNightReminder": "Jeśli dziś był pierwszy dzień Żonglera - Pokaż na palcach liczbę \"poprawnych\" tokenów (0, 1, 2 itd.). Odłóż te tokeny.",
         "remindersGlobal": [],
         "reminders": [
             "Poprawnie"
@@ -884,20 +884,20 @@
     {
         "id": "kazali",
         "name": "Kazali",
-        "ability": "Each night*, choose a player: they die. [You choose which players are Minions. -? to +? Outsiders]",
-        "firstNightReminder": "The Kazali points at a player and a Minion on the character sheet. Replace their old character token with the Minion token, show them the “You Are” info token then the Minion character token, and give a thumbs down. Repeat until the normal number of Minions exist. Put the Kazali to sleep.",
-        "otherNightReminder": "The Kazali points to a player. That player dies.",
+        "ability": "Każdej nocy*, wybierz gracza: ten gracz umiera. [Ty wybierasz, którzy gracze są Sługusami. -? to +? Outsiders]",
+        "firstNightReminder": "Kazali wskazuje na gracza i na Miniona na arkuszu postaci. Zastąp stary token postaci gracza nowym tokenem Sługusa, pokaż mu kartę \"Jesteś\", a następnie token Sługusa i daj kciuki w dół. Powtarzaj dopóki w grze nie ma poprawnej liczby Sługusów. Ułóż Kazali do snu.",
+        "otherNightReminder": "Kazali wskazuje na gracza, który umiera.",
         "remindersGlobal": [],
         "reminders": [
-            "Dead"
+            "Martwy"
         ]
     },
     {
         "id": "king",
         "name": "Król",
         "ability": "Każdej nocy, jeśli umarli przewyższają liczebnie żywych, dowiadujesz się 1 żywej postaci. Demon wie, kim jesteś.",
-        "firstNightReminder": "Wake the Demon, show them the 'This character selected you' card, show the King token and point to the King player.",
-        "otherNightReminder": "If there are more dead than living, show the King a character token of a living player.",
+        "firstNightReminder": "Obudź Demona, pokaż mu kartę 'Ten gracz jest', pokaż token Króla i wskaż gracza będącego Królem.",
+        "otherNightReminder": "Jeśli jest więcej martwych niż żywych, pokaż Królowi token postaci żywego gracza.",
         "remindersGlobal": [],
         "reminders": []
     },
@@ -914,7 +914,7 @@
         "id": "knight",
         "name": "Rycerz",
         "ability": "Zaczynasz znając 2 graczy, którzy nie są Demonem.",
-        "firstNightReminder": "Point to 2 non-Demon players.",
+        "firstNightReminder": "Wskaż 2 graczy nie-Demonów.",
         "otherNightReminder": "",
         "remindersGlobal": [],
         "reminders": [
@@ -925,9 +925,9 @@
     {
         "id": "legion",
         "name": "Legion",
-        "ability": "Każdej nocy* gracz może umrzeć. Egzekucje kończą się niepowodzeniem, jeśli tylko zło głosowało. Pokazujesz się również jako Sługus. [Większość graczy to Legion].",
+        "ability": "Każdej nocy* gracz może umrzeć. Egzekucje kończą się niepowodzeniem, jeśli tylko zło głosowało. Jesteś rejestrowany zarówno jako Demon jak i Sługus. [Większość graczy to Legion].",
         "firstNightReminder": "",
-        "otherNightReminder": "Choose a player, that player dies.",
+        "otherNightReminder": "Wybierz gracza, ten gracz umiera.",
         "remindersGlobal": [],
         "reminders": [
             "Zaraz zginie",
@@ -938,8 +938,8 @@
         "id": "leviathan",
         "name": "Lewiatan",
         "ability": "Jeśli więcej niż 1 dobry gracz zostanie stracony, wygrywasz. Wszyscy gracze wiedzą, że jesteś w grze. Po piątym dniu zło zwycięża.",
-        "firstNightReminder": "Place the Leviathan 'Day 1' marker. Announce 'The Leviathan is in play; this is Day 1.'",
-        "otherNightReminder": "Change the Leviathan Day reminder for the next day.",
+        "firstNightReminder": "Umieść znacznik 'Dzień 1'. Ogłoś: 'Lewiatan jest w grze. Dziś jest pierwszy dzień'",
+        "otherNightReminder": "Zmień token przypomnienia Dnia Lewiatana na następny dzień.",
         "remindersGlobal": [],
         "reminders": [
             "Dzień 1",
@@ -966,8 +966,8 @@
         "id": "lilmonsta",
         "name": "Małe Monstrum",
         "ability": "Każdej nocy Sługusi wybierają, kto opiekuje się tokenem Małego Monstrum i jest Demonem. Gracz umiera każdej nocy*. [+1 Sługus]",
-        "firstNightReminder": "Wake all Minions together, allow them to vote by pointing at who they want to babysit Lil' Monsta.",
-        "otherNightReminder": "Wake all Minions together, allow them to vote by pointing at who they want to babysit Lil' Monsta. Choose a player, that player dies.",
+        "firstNightReminder": "Obudź jednocześnie wszystkich Sługusów, pozwól im głosować, wskazując, kto ma niańczyć Małe Monstrum.",
+        "otherNightReminder": "Obudź jednocześnie wszystkich Sługusów, pozwól im głosować, wskazując, kto ma niańczyć Małe Monstrum. Wybierz gracza, ten gracz umiera.",
         "remindersGlobal": [
             "Ginie",
             "jest Demonem"
@@ -977,24 +977,24 @@
     {
         "id": "lleech",
         "name": "Pijawka",
-        "ability": "Każdej nocy* wybierz gracza, który umiera. Na początku gry wybierasz żywego gracza: jest on otruty - giniesz tylko wtedy, gdy on umrze.",
-        "firstNightReminder": "The Lleech points to a player. Place the Poisoned reminder token.",
-        "otherNightReminder": "The Lleech points to a player. That player dies.",
+        "ability": "Każdej nocy* wybierz gracza, który umiera. Na początku gry wybierasz żywego gracza: jest on zatruty - giniesz tylko wtedy, gdy on umrze.",
+        "firstNightReminder": "Pijawka wskazuje na gracza. Umieść token przypomnienia \"Zatruty\".",
+        "otherNightReminder": "Pijawka wskazuje na gracza, ten gracz umiera.",
         "remindersGlobal": [],
         "reminders": [
             "Ginie",
-            "Otruty"
+            "Zatruty"
         ]
     },
     {
         "id": "lordoftyphon",
-        "name": "Lord of Typhon",
-        "ability": "Each night*, choose a player: they die. [Evil characters are in a line. You are in the middle. +1 Minion. -? To +? Outsiders]",
-        "firstNightReminder": "Wake the players on either side of the Demon. Show them the 'You Are' card, the token of the Minion they now are, and a thumbs down to indicate they are evil.",
-        "otherNightReminder": "The Lord of Typhon points to a player. That player dies.",
+        "name": "Władca Tyfona",
+        "ability": "Każdej nocy* wybierz gracza, który umiera. [Złe postacie siedzą w rzędzie. Siedzisz w środku rzędu. +1 Sługus. -? do +? Outsiderów]",
+        "firstNightReminder": "Obudź graczy po obu stronach Demona. Pokaż każdemu kartę „Jesteś”, token Sługusa, którym teraz jest, i kciuk w dół, aby wskazać, że jest zły.",
+        "otherNightReminder": "Władca Tyfona wskazuje na gracza. Ten gracz umiera.",
         "remindersGlobal": [],
         "reminders": [
-            "Dead"
+            "Ginie"
         ]
     },
     {
@@ -1015,7 +1015,7 @@
         "name": "Likantrop",
         "ability": "Każdej nocy* wybierz żywego gracza. Jeśli jest dobry, umiera, ale jest jedynym graczem, który może zginąć tej nocy.",
         "firstNightReminder": "",
-        "otherNightReminder": "The Lycanthrope points to a living player: if good, they die and no one else can die tonight.",
+        "otherNightReminder": "Likantrop wskazuje na żywego gracza: jeśli ten gracz jest dobry, to umiera i nikt inny nie może umrzeć dzisiejszej nocy.",
         "remindersGlobal": [],
         "reminders": [
             "Ginie"
@@ -1034,7 +1034,7 @@
         "id": "marionette",
         "name": "Marionetka",
         "ability": "Myślisz, że jesteś dobrą postacią, ale tak nie jest. Demon wie, kim jesteś. [Sąsiadujesz z Demonem]",
-        "firstNightReminder": "Select one of the good players next to the Demon and place the Is the Marionette reminder token. Wake the Demon and show them the Marionette.",
+        "firstNightReminder": "Wybierz jednego z dobrych graczy sąsiadującego z Demonem i umieść token przypomnienia: \"Jest Marionetką\". Obudź Demona i pokaż mu Marionetkę.",
         "otherNightReminder": "",
         "remindersGlobal": [
             "jest Marionetką"
@@ -1063,8 +1063,8 @@
     },
     {
         "id": "matron",
-        "name": "Matron",
-        "ability": "Each day, you may choose up to 3 sets of 2 players to swap seats. Players may not leave their seats to talk in private.",
+        "name": "Matrona",
+        "ability": "Każdego dnia możesz wybrać do 3 zestawów 2 graczy do wymiany miejsc. Gracze nie mogą wstać ze swoich miejsc aby rozmawiać na osobności.",
         "firstNightReminder": "",
         "otherNightReminder": "",
         "remindersGlobal": [],
@@ -1083,8 +1083,8 @@
         "id": "mezepheles",
         "name": "Mezofeles",
         "ability": "Zaczynasz znając sekretne słowo. Pierwszy dobry gracz, który wypowie to słowo, tej nocy staje się zły.",
-        "firstNightReminder": "Show the Mezepheles their secret word.",
-        "otherNightReminder": "Wake the 1st good player that said the Mezepheles' secret word and show them the 'You are' card and the thumbs down evil signal.",
+        "firstNightReminder": "Pokaż Mezofelesowi jego sekretne słowo.",
+        "otherNightReminder": "Obudź pierwszego dobrego gracza, który wypowiedział sekretne słowo Mezofelesa i pokaż mu kartę 'Jesteś' oraz kciukiem w dół sygnał zła",
         "remindersGlobal": [],
         "reminders": [
             "Brak zdolności",
@@ -1094,9 +1094,9 @@
     {
         "id": "minstrel",
         "name": "Minstrel",
-        "ability": "Kiedy Sługus ginie przez egzekucję, wszyscy inni gracze (oprócz Podróżników) są pijani do jutrzejszego zmierzchu.",
+        "ability": "Kiedy Sługus ginie przez egzekucję, wszyscy inni gracze (oprócz Podróżnych) są pijani do jutrzejszego zmierzchu.",
         "firstNightReminder": "",
-        "otherNightReminder": "Usuń znacznik 'Wszyscy pijani'. Jeśli Sługus zmarł w ciągu dnia: Wszyscy gracze poza Minstrelem (i Wędrowcami) są pijani. Umieść znacznik 'Wszyscy pijani'",
+        "otherNightReminder": "Usuń token 'Wszyscy pijani'. Jeśli dzisiaj zmarł Sługus: Wszyscy gracze oprócz Minstrela są pijani. Umieść token 'Wszyscy pijani'.",
         "remindersGlobal": [],
         "reminders": [
             "Wszyscy pijani"
@@ -1105,9 +1105,9 @@
     {
         "id": "monk",
         "name": "Mnich",
-        "ability": "Każdej nocy* wybierz gracza (nie siebie) który tej nocy będzie chroniony przed Demonem.",
+        "ability": "Każdej nocy* wybierz gracza (nie siebie), który tej nocy będzie chroniony przed Demonem.",
         "firstNightReminder": "",
-        "otherNightReminder": "The previously protected player is no longer protected. The Monk points to a player (not themself). Mark that player as 'PROTECTED'.",
+        "otherNightReminder": "Uprzednio chroniony gracz nie jest już chroniony. Mnich wskazuje na gracza (nie na siebie). Zaznacz tego gracza jako 'Chroniony'.",
         "remindersGlobal": [],
         "reminders": [
             "Chroniony"
@@ -1118,7 +1118,7 @@
         "name": "Cyganka",
         "ability": "Kiedy dowiesz się, że nie żyjesz, publicznie wybierz jednego gracza. Jeśli był to dobry gracz, umrze tej nocy.",
         "firstNightReminder": "",
-        "otherNightReminder": "If the Moonchild used their ability to target a player today: If that player was good, they die.",
+        "otherNightReminder": "Jeśli Cyganka wykorzystała dzisiaj swoją zdolność i wybrała dobrego gracza: ten gracz umiera.",
         "remindersGlobal": [],
         "reminders": [
             "Ginie"
@@ -1127,7 +1127,7 @@
     {
         "id": "mutant",
         "name": "Mutantka",
-        "ability": "Jeśli \"szalejesz\" na punkcie bycia Outsiderem, możesz zostać stracona.",
+        "ability": "Jeśli masz „obsesję” na punkcie bycia Outsiderką, możesz zostać stracona.",
         "firstNightReminder": "",
         "otherNightReminder": "",
         "remindersGlobal": [],
@@ -1137,8 +1137,8 @@
         "id": "nightwatchman",
         "name": "Nocny Stróż",
         "ability": "Raz na grę, w nocy, wybierz gracza: dowiaduje się, kim jesteś.",
-        "firstNightReminder": "The Nightwatchman may point to a player. Wake that player, show the 'This character selected you' card and the Nightwatchman token, then point to the Nightwatchman player.",
-        "otherNightReminder": "The Nightwatchman may point to a player. Wake that player, show the 'This character selected you' card and the Nightwatchman token, then point to the Nightwatchman player.",
+        "firstNightReminder": "Nocny Stróż może wskazać na gracza. Obudź tego gracza, pokaż kartę 'Ta postać Cię wybrała' i token Nocnego Stróża, a następnie wskaż graczowi Nocnego Stróża.",
+        "otherNightReminder": "Nocny Stróż może wskazać na gracza. Obudź tego gracza, pokaż kartę 'Ta postać Cię wybrała' i token Nocnego Stróża, a następnie wskaż graczowi Nocnego Stróża.",
         "remindersGlobal": [],
         "reminders": [
             "Brak zdolności"
@@ -1148,7 +1148,7 @@
         "id": "noble",
         "name": "Szlachcianka",
         "ability": "Na początku gry dowiadujesz się o 3 graczach, z których 1 i tylko 1 jest zły.",
-        "firstNightReminder": "Point to 3 players including one evil player, in no particular order.",
+        "firstNightReminder": "Wskaż 3 graczy, w tym jednego złego gracza, kolejność nie ma znaczenia.",
         "otherNightReminder": "",
         "remindersGlobal": [],
         "reminders": [
@@ -1158,30 +1158,32 @@
     {
         "id": "nodashii",
         "name": "No Dashii",
-        "ability": "Każdej nocy* wybierz gracza, który umiera. Dwójka sąsiadujących z Tobą Mieszczan jest otruta.",
+        "ability": "Każdej nocy* wybierz gracza, który umiera. Dwójka sąsiadujących z Tobą Mieszczan jest zatruta.",
         "firstNightReminder": "",
-        "otherNightReminder": "No Dashii wskazuje gracza. Gracz ten umiera.",
+        "otherNightReminder": "No Dashii wskazuje gracza. Ten gracz umiera.",
         "remindersGlobal": [],
         "reminders": [
-            "Otruty",
+            "Zatruty",
             "Ginie"
         ]
     },
     {
         "id": "ogre",
-        "name": "Ogre",
-        "ability": "On your 1st night, choose a player (not yourself): you become their alignment (you don't know which) even if drunk or poisoned.",
-        "firstNightReminder": "The Ogre points to a player (not themselves) and becomes their alignment.",
+        "name": "Ogr",
+        "ability": "Podczas pierwszej nocy wybierz gracza (nie siebie): dołączasz do drużyny tego gracza (nie wiesz jakiej), nawet jeśli jesteś pijany lub zatruty.",
+        "firstNightReminder": "Ogr wskazuje na gracza (nie siebie) i dołącza do drużyny tego gracza.",
         "otherNightReminder": "",
         "remindersGlobal": [],
-        "reminders": []
+        "reminders": [
+            "Przyjaciel"
+        ]
     },
     {
         "id": "ojo",
         "name": "Ojo",
-        "ability": "Każdej nocy* wybierz postać która umiera. Jeśli nie jest ona w grze, Bajarz wybiera, kto umrze.",
+        "ability": "Każdej nocy* wybierz postać, która umiera. Jeśli nie ma jej w grze: Bajarz wybiera, kto umrze.",
         "firstNightReminder": "",
-        "otherNightReminder": "The Ojo points to a character on the sheet; if in play, that player dies. If it is not in play, the Storyteller chooses who dies instead.",
+        "otherNightReminder": "Ojo wskazuje postać na arkuszu; jeśli w grze, ten gracz umiera. Jeśli nie ma jej w grze, Bajarz wybiera, kto umiera w zamian.",
         "remindersGlobal": [],
         "reminders": [
             "Ginie"
@@ -1219,9 +1221,9 @@
     {
         "id": "philosopher",
         "name": "Filozof",
-        "ability": "Raz w trakcie gry, nocą, wybierz dobrą postać – uzyskujesz jej zdolność. Jeśli ta postać jest w grze, jest od teraz pijana.",
-        "firstNightReminder": "Filozof albo kręci głową na nie albo wskazuje dobrą postać na skrypcie. Jeśli wybrał postać - zamień żeton postaci, której nie ma w grze, z żetonem Filozofa i umieść przy nim żeton 'JEST FILOZOFEM'. Lub, jeśli postać jest w grze, umieść żeton 'PIJANY' przy tym graczu.",
-        "otherNightReminder": "Jeśli Filozof nie wykorzystał jeszcze swojej zdolności - Filozof albo kręci głową na nie albo wskazuje dobrą postać na skrypcie. Jeśli wybrał postać - zamień żeton postaci, której nie ma w grze, z żetonem Filozofa i umieść przy nim żeton 'JEST FILOZOFEM'. Lub, jeśli postać jest w grze, umieść żeton 'PIJANY' przy tym graczu.",
+        "ability": "Raz w trakcie gry, nocą, wybierz dobrą postać – zyskujesz jej zdolność. Jeśli ta postać jest w grze, jest od teraz pijana.",
+        "firstNightReminder": "Filozof albo kręci głową na \"nie\" albo wskazuje dobrą postać na arkuszu. Jeśli wybrał postać: zamień token Filozofa z tokenem wybranej postaci i umieść przy nim token przypomnienia 'Jest Filozofem'. Jeśli wybrana postać jest w grze: umieść token 'Pijany' przy tym graczu.",
+        "otherNightReminder": "Jeśli Filozof nie użył jeszcze swojej umiejętności: Filozof albo kręci głową na \"nie\" albo wskazuje dobrą postać na arkuszu. Jeśli wybrał postać: zamień token Filozofa z tokenem wybranej postaci i umieść przy nim token przypomnienia 'Jest Filozofem'. Jeśli wybrana postać jest w grze: umieść token 'Pijany' przy tym graczu.",
         "remindersGlobal": [
             "jest Filozofem",
             "Pijany"
@@ -1233,7 +1235,7 @@
         "name": "Jędza",
         "ability": "Każdej nocy*, wybierz gracza i postać, którą zostanie (jeśli nie ma jej w grze). Jeśli zostanie tak stworzony Demon, zgony tej nocy zależą od Bajarza.",
         "firstNightReminder": "",
-        "otherNightReminder": "Jędza wskazuje na gracza i postać na skrypcie. Jeśli tej postaci nie ma w grze, obudź tego gracza i pokaż mu kartę 'JESTEŚ' i odpowiedni żeton postaci. Jeśli postać jest w grze, nic się nie dzieje.",
+        "otherNightReminder": "Jędza wskazuje na gracza i postać na arkuszu. Jeśli tej postaci nie ma w grze: obudź wskazanego gracza i pokaż mu kartę 'Jesteś' i token wskazanej postaci. Jeśli postać jest w grze: nic się nie dzieje.",
         "remindersGlobal": [],
         "reminders": []
     },
@@ -1241,7 +1243,7 @@
         "id": "pixie",
         "name": "Pixi",
         "ability": "Zaczynasz znając 1 postać Mieszczanina w grze. Jeśli 'szalejesz', że jesteś tą postacią, zyskujesz jej zdolność, gdy umrze.",
-        "firstNightReminder": "Show the Pixie 1 in-play Townsfolk character token.",
+        "firstNightReminder": "Pokaż Pixi token 1 postaci Mieszczanina w grze.",
         "otherNightReminder": "",
         "remindersGlobal": [],
         "reminders": [
@@ -1252,7 +1254,7 @@
     {
         "id": "plaguedoctor",
         "name": "Doktor Plagi",
-        "ability": "Jeśli zginiesz, Bajarz zyskuje zdolność, nie będącego w grz Sługusa.",
+        "ability": "Jeśli zginiesz: Bajarz zyskuje zdolność Sługusa niebędącego w grze.",
         "firstNightReminder": "",
         "otherNightReminder": "",
         "remindersGlobal": [],
@@ -1263,9 +1265,9 @@
     {
         "id": "po",
         "name": "Po",
-        "ability": "Każdej nocy*, możesz wybrać gracza, który umrze. Jeśli poprzednio wstrzymałeś się przed wyborem, tej nocy wybierz 3 graczy.",
+        "ability": "Każdej nocy*, możesz wybrać gracza, który umrze. Jeśli ostatnim razem nie wybrałeś nikogo: tej nocy wybierz 3 graczy.",
         "firstNightReminder": "",
-        "otherNightReminder": "If the Po chose no-one the previous night: The Po points to three players. Otherwise: The Po either shows the 'no' head signal, or points to a player. Chosen players die.",
+        "otherNightReminder": "Jeśli Po nie wybrał nikogo poprzedniej nocy: Po wskazuje na trzech graczy. W przeciwnym razie: Po albo kręci głową na \"nie\" lub wskazuje na gracza. Wybrani gracze umierają.",
         "remindersGlobal": [],
         "reminders": [
             "3 Ataki",
@@ -1280,7 +1282,7 @@
         "otherNightReminder": "Ostatnio zatruty gracz nie jest już zatruty. Trucicielka wskazuje na gracza. Ten gracz jest zatruty",
         "remindersGlobal": [],
         "reminders": [
-            "Otruty"
+            "Zatruty"
         ]
     },
     {
@@ -1307,8 +1309,8 @@
         "id": "preacher",
         "name": "Kaznodzieja",
         "ability": "Każdej nocy wybierz gracza: Sługus, jeśli zostanie wybrany, dowie się tego. Wszyscy wybrani Sługusi nie mają żadnej zdolności.",
-        "firstNightReminder": "The Preacher chooses a player. If a Minion is chosen, wake the Minion and show the 'This character selected you' card and then the Preacher token.",
-        "otherNightReminder": "The Preacher chooses a player. If a Minion is chosen, wake the Minion and show the 'This character selected you' card and then the Preacher token.",
+        "firstNightReminder": "Kaznodzieja wybiera gracza. Jeśli wybrany został Sługus: przebudź Sługusa i pokaż kartę 'Ta postać Cię wybrała', a następnie token Kaznodziei.",
+        "otherNightReminder": "Kaznodzieja wybiera gracza. Jeśli wybrany został Sługus: przebudź Sługusa i pokaż kartę 'Ta postać Cię wybrała', a następnie token Kaznodziei.",
         "remindersGlobal": [],
         "reminders": [
             "Na kazaniu"
@@ -1322,7 +1324,7 @@
         "otherNightReminder": "Jeśli dzisiaj był pierwszy dzień Księżniczki i nominowała gracza, który umarł przez egzekucję, Demon nie zabija.",
         "remindersGlobal": [],
         "reminders": [
-            "Doesn't Kill"
+            "Nie zabija"
         ]
     },
     {
@@ -1330,7 +1332,7 @@
         "name": "Profesor",
         "ability": "Raz w trakcie gry, nocą*, wybierz martwego gracza. Jeśli jest Mieszczaninem, zostaje wskrzeszony.",
         "firstNightReminder": "",
-        "otherNightReminder": "If the Professor has not used their ability: The Professor either shakes their head 'no', or points to a player. If that player is a Townsfolk, they are now alive.",
+        "otherNightReminder": "Jeśli Profesor nie użył swoich umiejętności: Profesor albo potrząsa głową na 'nie' albo wskazuje na gracza. Jeśli ten gracz jest Mieszczaninem: zostaje wskrzeszony.",
         "remindersGlobal": [],
         "reminders": [
             "Żyje",
@@ -1349,13 +1351,13 @@
     {
         "id": "pukka",
         "name": "Pukka",
-        "ability": "Każdej nocy, wybierz gracza, który zostanie otruty. Poprzedni otruty gracz umiera, po czym zdrowieje.",
-        "firstNightReminder": "The Pukka points to a player. That player is poisoned.",
-        "otherNightReminder": "The Pukka points to a player. That player is poisoned. The poisoned player from last night dies.",
+        "ability": "Każdej nocy, wybierz gracza, który zostanie zatruty. Poprzedni zatruty gracz umiera, po czym zdrowieje.",
+        "firstNightReminder": "Pukka wskazuje na gracza, ten gracz zostaje zatruty.",
+        "otherNightReminder": "Pukka wskazuje na gracza, ten gracz zostaje zatruty. Gracz zatruty poprzedniej nocy umiera.",
         "remindersGlobal": [],
         "reminders": [
             "Ginie",
-            "Otruty"
+            "Zatruty"
         ]
     },
     {
@@ -1375,14 +1377,14 @@
         "name": "Hodowca Kruków",
         "ability": "Jeśli zginiesz nocą, budzisz się i wybierasz gracza – dowiadujesz się, jaką jest postacią.",
         "firstNightReminder": "",
-        "otherNightReminder": "If the Ravenkeeper died tonight: The Ravenkeeper points to a player. Show that player’s character token.",
+        "otherNightReminder": "Jeśli Hodowca Kruków zginął dziś w nocy: Hodowca Kruków wskazuje na gracza. Pokaż Hodocy token tego gracza.",
         "remindersGlobal": [],
         "reminders": []
     },
     {
         "id": "recluse",
         "name": "Odludek",
-        "ability": "Możesz pokazać się jako zły i jako Sługus alub Demon, nawet po śmierci.",
+        "ability": "Możesz być rejestrowany jako zły i jako Sługus lub Demon, nawet po śmierci.",
         "firstNightReminder": "",
         "otherNightReminder": "",
         "remindersGlobal": [],
@@ -1390,19 +1392,19 @@
     },
     {
         "id": "revolutionary",
-        "name": "Revolutionary",
-        "ability": "2 neighboring players are known to be the same alignment. Once per game, one of them registers falsely",
+        "name": "Rewolucjonista",
+        "ability": "Wiadomo, że 2 sąsiadujących graczy jest w tej samej drużynie. Raz na grę, jeden z nich jest rejestrowany niezgodnie z prawdą",
         "firstNightReminder": "",
         "otherNightReminder": "",
         "remindersGlobal": [],
         "reminders": [
-            "Fałszywie pokazywać się?"
+            "Jest rejestrowany nieprawdziwie?"
         ]
     },
     {
         "id": "riot",
-        "name": "Riot",
-        "ability": "Nominowani umierają, ale mogą natychmiast nominować ponownie (trzeciego dnia muszą). Po trzecim dniu zło zwycięża. [Wszyscy źli to Riot]",
+        "name": "Zamieszki",
+        "ability": "Nominowani umierają, ale mogą natychmiast nominować ponownie (trzeciego dnia muszą). Po trzecim dniu zło zwycięża. [Wszyscy Sługusi są Zamieszkami]",
         "firstNightReminder": "",
         "otherNightReminder": "",
         "remindersGlobal": [],
@@ -1420,7 +1422,7 @@
     {
         "id": "sailor",
         "name": "Żeglarka",
-        "ability": "Każdej nocy wybierz żywego gracza. Któreś z Was będzie pijane do zmierzchu. Nie możesz umrzeć.",
+        "ability": "Każdej nocy wybierz żywego gracza: któreś z Was będzie pijane do zmierzchu. Nie możesz umrzeć.",
         "firstNightReminder": "Żeglarka wskazuje na żywego gracza. Żeglarka lub wskazany gracz jest pijany.",
         "otherNightReminder": "Poprzednio pijany gracz nie jest już pijany. Żeglarka wskazuje na żywego gracza. Żeglarka lub wskazany gracz jest pijany.",
         "remindersGlobal": [],
@@ -1439,8 +1441,8 @@
     },
     {
         "id": "savant",
-        "name": "Uczony",
-        "ability": "Każdego dnia możesz odwiedzić Bajarza, żeby na osobności dowiedzieć się 2 rzeczy – jedna z nich to prawda, a jedna fałsz.",
+        "name": "Sawant",
+        "ability": "Każdego dnia możesz odwiedzić Bajarza, żeby na osobności dowiedzieć się 2 rzeczy – jedna z nich jest prawdziwa, a jedna fałszywa.",
         "firstNightReminder": "",
         "otherNightReminder": "",
         "remindersGlobal": [],
@@ -1448,8 +1450,8 @@
     },
     {
         "id": "scapegoat",
-        "name": "Scapegoat",
-        "ability": "If a player of your alignment is executed, you might be executed instead.",
+        "name": "Kozioł ofiarny",
+        "ability": "Jeśli gracz z twojej drużyny ginie przez egzekucję: możesz zostać poddany egzekucji zamiast niego.",
         "firstNightReminder": "",
         "otherNightReminder": "",
         "remindersGlobal": [],
@@ -1458,9 +1460,9 @@
     {
         "id": "scarletwoman",
         "name": "Kochanica Diabła",
-        "ability": "Jeśli przy życiu pozostaje 5 lub więcej graczy, a Demon zginie, zostajesz demonem.",
+        "ability": "Jeśli w grze jest 5 lub więcej żywych graczy i Demon ginie: zostajesz Demonem.",
         "firstNightReminder": "",
-        "otherNightReminder": "If the Scarlet Woman became the Demon today: Show the 'YOU ARE' card & then the demon token.",
+        "otherNightReminder": "Jeśli Kochanica Diabła stała się dzisiaj Demonem: Pokaż kartę 'Jesteś' i token Demona.",
         "remindersGlobal": [],
         "reminders": [
             "Demon"
@@ -1469,9 +1471,9 @@
     {
         "id": "seamstress",
         "name": "Szwaczka",
-        "ability": "Raz w trakcie gry, nocą, wybierz 2 graczy (nie siebie) - dowiadujesz się, czy są w tej samej drużynie",
-        "firstNightReminder": "Szwaczka albo kręci głową na nie albo wskazuje dwóch innych graczy. Jeśli Szwaczka wybrała dwóch graczy, pokiwaj bądź pokręć głową w zależności od tego czy są w tej samej drużynie.",
-        "otherNightReminder": "Jeśli Szwaczka nie wykorzystała jeszcze swojej zdolności - Szwaczka albo kręci głową na nie albo wskazuje dwóch innych graczy. Jeśli Szwaczka wybrała dwóch graczy, pokiwaj bądź pokręć głową w zależności od tego czy są w tej samej drużynie.",
+        "ability": "Raz w trakcie gry, nocą, wybierz 2 graczy (nie siebie) - dowiadujesz się, czy są w tej samej drużynie.",
+        "firstNightReminder": "Szwaczka albo kręci głową na \"nie\" albo wskazuje dwóch innych graczy. Jeśli Szwaczka wybrała dwóch graczy: pokiwaj bądź pokręć głową w zależności od tego czy są w tej samej drużynie.",
+        "otherNightReminder": "Jeśli Szwaczka nie wykorzystała jeszcze swojej umiejętności: Szwaczka albo kręci głową na \"nie\" albo wskazuje dwóch innych graczy. Jeśli Szwaczka wybrała dwóch graczy: pokiwaj bądź pokręć głową w zależności od tego czy są w tej samej drużynie.",
         "remindersGlobal": [],
         "reminders": [
             "Brak zdolności"
@@ -1479,8 +1481,8 @@
     },
     {
         "id": "sentinel",
-        "name": "Sentinel",
-        "ability": "There might be 1 extra or 1 fewer Outsider in-play.",
+        "name": "Wartownik",
+        "ability": "Może być 1 ekstra lub 1 mniej Outsiderów w grze.",
         "firstNightReminder": "",
         "otherNightReminder": "",
         "remindersGlobal": [],
@@ -1491,7 +1493,7 @@
         "name": "Shabaloth",
         "ability": "Każdej nocy* wybierz 2 graczy, którzy umrą. Martwy gracz wybrany poprzedniej nocy może zostać zwymiotowany.",
         "firstNightReminder": "",
-        "otherNightReminder": "One player that the Shabaloth chose the previous night might be resurrected. The Shabaloth points to two players. Those players die.",
+        "otherNightReminder": "Jeden gracz, którego Shabaloth wybrał poprzedniej nocy, może zostać wskrzeszony. Shabaloth wskazuje na dwóch graczy. Ci gracze umierają.",
         "remindersGlobal": [],
         "reminders": [
             "Żyje",
@@ -1501,8 +1503,8 @@
     {
         "id": "shugenja",
         "name": "Shugenja",
-        "ability": "Zaczynasz wiedząc, czy najbliższy zły gracz siedzi po Twojej prawej czy lewej stronienie. Jeśli są w równej odległości, ta informacja jest dowolna.",
-        "firstNightReminder": "Wake the Shugenja; point horizontally in the direction of the closest evil player. If the two closest evil players are equidistant, point your finger horizontally in either direction.",
+        "ability": "Zaczynasz wiedząc, czy najbliższy zły gracz siedzi po Twojej prawej czy lewej stronie. Jeśli są w równej odległości, ta informacja jest dowolna.",
+        "firstNightReminder": "Obudź Shugenja. Wskaż poziomo w kierunku najbliższego złego gracza. Jeśli dwóch najbliższych złych graczy jest równoodległych, wskaż palec poziomo w dowolnym kierunku.",
         "otherNightReminder": "",
         "remindersGlobal": [],
         "reminders": []
@@ -1521,19 +1523,19 @@
     {
         "id": "snakecharmer",
         "name": "Zaklinacz Węży",
-        "ability": "Każdej nocy wybierz żywego gracza – jeśli wybrałeś Demona, to zamieniacie się z nim postaciami i drużynami i zostaje on otruty.",
-        "firstNightReminder": "Zaklinacz węży wskazuje gracza. Jeśli ten gracz jest demonem - Zamień postaci i drużyny demona i Zaklinacza. Obudź każdego z nich, aby ich poinformować o nowej roli i drużynie. Nowy Zaklinacz węży jest otruty.",
-        "otherNightReminder": "Zaklinacz węży wskazuje gracza. Jeśli ten gracz jest demonem - Zamień postaci i drużyny demona i Zaklinacza. Obudź każdego z nich, aby ich poinformować o nowej robi i drużynie. Nowy Zaklinacz węży jest otruty.",
+        "ability": "Każdej nocy wybierz żywego gracza. Jeśli wybrałeś Demona: zamieniacie się z nim postaciami i drużynami i zostaje on zatruty.",
+        "firstNightReminder": "Zaklinacz Węży wskazuje gracza. Jeśli ten gracz jest Demonem: zamień postaci i drużyny Demona i Zaklinacza. Obudź każdego z nich, aby poinformować ich o nowej roli i drużynie. Nowy Zaklinacz węży jest zatruty.",
+        "otherNightReminder": "Zaklinacz Węży wskazuje gracza. Jeśli ten gracz jest Demonem: zamień postaci i drużyny Demona i Zaklinacza. Obudź każdego z nich, aby poinformować ich o nowej roli i drużynie. Nowy Zaklinacz węży jest zatruty.",
         "remindersGlobal": [],
         "reminders": [
-            "Otruty"
+            "Zatruty"
         ]
     },
     {
         "id": "snitch",
         "name": "Kapuś",
         "ability": "Sługusi zaczynają znając 3 postacie nie w grze.",
-        "firstNightReminder": "After Minion info wake each Minion and show them three not-in-play character tokens. These may be the same or different to each other and the ones shown to the Demon.",
+        "firstNightReminder": "Po Informacjach dla Sługusów obudź każdego Sługusa i pokaż każdemu trzy tokeny postaci niebędących w grze. Mogą one być takie same lub różnić się między Sługusami i/lub Demonem.",
         "otherNightReminder": "",
         "remindersGlobal": [],
         "reminders": []
@@ -1549,8 +1551,8 @@
     },
     {
         "id": "spiritofivory",
-        "name": "Spirit Of Ivory",
-        "ability": "There can't be more than 1 extra evil player.",
+        "name": "Duch Kości Słoniowej",
+        "ability": "Nie może być więcej niż 1 dodatkowego złego gracza.",
         "firstNightReminder": "",
         "otherNightReminder": "",
         "remindersGlobal": [],
@@ -1561,9 +1563,9 @@
     {
         "id": "spy",
         "name": "Szpieg",
-        "ability": "Każdej nocy zaglądasz do Grymuaru. Możesz pokazać się jako dobry i jako Mieszczanin lub Outsider, nawet po śmierci.",
-        "firstNightReminder": "Show the Grimoire to the Spy for as long as they need.",
-        "otherNightReminder": "Show the Grimoire to the Spy for as long as they need.",
+        "ability": "Każdej nocy zaglądasz do Grymuaru. Możesz być rejestrowany jako dobry i jako Mieszczanin lub Outsider, nawet po śmierci.",
+        "firstNightReminder": "Pokaż Grymuar Szpiegowi tak długo, jak gracz tego chce.",
+        "otherNightReminder": "Pokaż Grymuar Szpiegowi tak długo, jak gracz tego chce.",
         "remindersGlobal": [],
         "reminders": []
     },
@@ -1571,7 +1573,7 @@
         "id": "steward",
         "name": "Zarządca",
         "ability": "Na początku gry dowiadujesz się, że jeden z graczy jest dobry.",
-        "firstNightReminder": "Point to 1 good player.",
+        "firstNightReminder": "Wskaż jednego dobrego gracza.",
         "otherNightReminder": "",
         "remindersGlobal": [],
         "reminders": [
@@ -1580,8 +1582,8 @@
     },
     {
         "id": "stormcatcher",
-        "name": "Storm Catcher",
-        "ability": "Name a good character. If in play, they can only die by execution, but evil players learn which player it is.",
+        "name": "Łowca Burz",
+        "ability": "Wypowiedz nazwę dobrej postaci. Jeśli w grze: ta postać może umrzeć tylko przez egzekucję, ale źli gracze dowiadują się, który to gracz.",
         "firstNightReminder": "",
         "otherNightReminder": "",
         "remindersGlobal": [],
@@ -1591,15 +1593,15 @@
     },
     {
         "id": "summoner",
-        "name": "Summoner",
-        "ability": "You get 3 bluffs. On the 3rd night, choose a player: they become an evil Demon of your choice. [No Demon]",
-        "firstNightReminder": "Show the 'These characters are not in play' card. Show 3 character tokens of good characters not in play.",
-        "otherNightReminder": "If it is the 3rd night, wake the Summoner. They point to a player and a Demon on the character sheet - that player becomes that Demon.",
+        "name": "Przywoływacz",
+        "ability": "Masz 3 blefy. Podczas 3 nocy: wybierz gracza. Ten gracz staje się wybranym przez ciebie złym Demonem. [Brak Demona]",
+        "firstNightReminder": "Pokaż kartę \"Tych postaci nie ma w grze\". Pokaż 3 tokeny dobrych postaci niebędących w grze.",
+        "otherNightReminder": "Jeśli trwa 3 noc: obudź Przywoływacza. Przywoływacz wskazuje na gracza i na postać Demona na arkuszu. Wskazany gracz staje się wskazanym Demonem.",
         "remindersGlobal": [],
         "reminders": [
-            "Night 1",
-            "Night 2",
-            "Night 3"
+            "Noc 1",
+            "Noc 2",
+            "Noc 3"
         ]
     },
     {
@@ -1626,10 +1628,10 @@
     },
     {
         "id": "thief",
-        "name": "Thief",
-        "ability": "Each night, choose a player (not yourself): their vote counts negatively tomorrow.",
-        "firstNightReminder": "The Thief points to a player. Put the Thief's 'Negative vote' reminder by the chosen player's character token.",
-        "otherNightReminder": "The Thief points to a player. Put the Thief's 'Negative vote' reminder by the chosen player's character token.",
+        "name": "Złodziej",
+        "ability": "Każdej nocy wybierz gracza (nie siebie). Jutro jego głos liczy się ujemnie.",
+        "firstNightReminder": "Złodziej wskazuje na gracza. Umieść przypomnienie o \"Ujemnym głosie\" przy tokenie wybranego gracza.",
+        "otherNightReminder": "Złodziej wskazuje na gracza. Umieść przypomnienie o \"Ujemnym głosie\" przy tokenie wybranego gracza.",
         "remindersGlobal": [],
         "reminders": [
             "Ujemny głos"
@@ -1637,10 +1639,10 @@
     },
     {
         "id": "tinker",
-        "name": "Druciarz",
+        "name": "Majsterkowicz",
         "ability": "Możesz umrzeć w dowolnym momencie.",
-        "firstNightReminder": "The Tinker might die.",
-        "otherNightReminder": "The Tinker might die.",
+        "firstNightReminder": "Majsterkowicz może umrzeć.",
+        "otherNightReminder": "Majsterkowicz może umrzeć.",
         "remindersGlobal": [],
         "reminders": [
             "Ginie"
@@ -1649,9 +1651,9 @@
     {
         "id": "towncrier",
         "name": "Krzykacz Miejski",
-        "ability": "Każdej nocy* dowiadujesz się, czy sługus dziś nominował.",
-        "firstNightReminder": "Umieść żeton 'sługus nie nominował'.",
-        "otherNightReminder": "Pokiwaj głową na tak lub pokręć na nie w zależności od tego, czy sługus dziś nominował. Umieść żeton 'sługus nie nominował' (zabierz żeton 'sługus nominował', jeśli tam jest).",
+        "ability": "Każdej nocy* dowiadujesz się, czy Sługus dziś nominował.",
+        "firstNightReminder": "Umieść token 'Sługus nie nominował'.",
+        "otherNightReminder": "Pokiwaj głową na \"tak\" lub pokręć na \"nie\" w zależności od tego, czy sługus dziś nominował. Umieść token \"Sługus nie nominował\" (zabierz token \"Sługus nominował\", jeśli tam jest).",
         "remindersGlobal": [],
         "reminders": [
             "Sługus nie nominował",
@@ -1660,8 +1662,8 @@
     },
     {
         "id": "toymaker",
-        "name": "Toymaker",
-        "ability": "The Demon may choose not to attack & must do this at least once per game. Evil players get normal starting info.",
+        "name": "Zabawkarz",
+        "ability": "Demon może wybrać brak ataku i musi to zrobić przynajmniej raz w grze. Źli gracze uzyskują normalne informacje początkowe.",
         "firstNightReminder": "",
         "otherNightReminder": "",
         "remindersGlobal": [],
@@ -1672,9 +1674,9 @@
     {
         "id": "undertaker",
         "name": "Grabarz",
-        "ability": "Każdej nocy* dowiadujesz się, którą postać stracono dziś podczas egzekucji.",
+        "ability": "Każdej nocy* dowiadujesz się, jaką postać stracono dziś podczas egzekucji.",
         "firstNightReminder": "",
-        "otherNightReminder": "If a player was executed today: Show that player’s character token.",
+        "otherNightReminder": "Jeśli gracz został dzisiaj stracony przez egzekucję: Pokaż token tego gracza Grabarzowi.",
         "remindersGlobal": [],
         "reminders": [
             "Stracony"
@@ -1685,29 +1687,29 @@
         "name": "Vigormortis",
         "ability": "Każdej nocy* wybierz gracza, który umiera. Sługusi, których zabijesz, nadal posiadają swoją umiejętność i zatruwają 1 sąsiadującego Mieszczanina. [-1 Outsider].",
         "firstNightReminder": "",
-        "otherNightReminder": "Vigormortis wskazuje gracza. Gracz ten umiera. Jeśli był to sługus, to nadal może korzystać on ze swojej zdolności i jeden z jego sąsiadujących mieszczan zostaje na stałe otruty.",
+        "otherNightReminder": "Vigormortis wskazuje gracza. Gracz ten umiera. Jeśli był to sługus, to nadal może korzystać on ze swojej zdolności, a jeden z jego sąsiadujących Mieszczan zostaje na stałe zatruty.",
         "remindersGlobal": [],
         "reminders": [
             "Ma zdolność",
-            "Otruty",
+            "Zatruty",
             "Ginie"
         ]
     },
     {
         "id": "villageidiot",
-        "name": "Village Idiot",
-        "ability": "Each night, choose a player: you learn their alignment. [+0 to +2 Village Idiots. 1 of the extras is drunk]",
-        "firstNightReminder": "The Village Idiot points to a player; give a thumbs up if that player is good or a thumbs down if that player is evil.",
-        "otherNightReminder": "The Village Idiot points to a player; give a thumbs up if that player is good or a thumbs down if that player is evil.",
+        "name": "Głupek Wioskowy",
+        "ability": "Każdej nocy, wybierz gracza: dowiadujesz się do jakiej drużyny należy wybrany gracz. [+0 do +2 Głupków Wioskowych. 1 z dodatkowych Głupków jest pijany]",
+        "firstNightReminder": "Głupek Wioskowy wskazuje na gracza. Pokaż kciuki w górę, jeśli ten gracz jest dobry lub kciuki w dół, jeśli ten gracz jest zły.",
+        "otherNightReminder": "Głupek Wioskowy wskazuje na gracza. Pokaż kciuki w górę, jeśli ten gracz jest dobry lub kciuki w dół, jeśli ten gracz jest zły.",
         "remindersGlobal": [],
         "reminders": [
-            "Drunk"
+            "Pijany"
         ]
     },
     {
         "id": "virgin",
         "name": "Dziewica",
-        "ability": "Gdy zostaniesz nominowany po raz pierwszy w grze, a nominuje Cię Mieszczanin, zostaje on natychmiast stracony.",
+        "ability": "Gdy zostaniesz nominowana po raz pierwszy w grze, a nominuje Cię Mieszczanin, zostaje on natychmiast stracony.",
         "firstNightReminder": "",
         "otherNightReminder": "",
         "remindersGlobal": [],
@@ -1719,7 +1721,7 @@
         "id": "vizier",
         "name": "Wezyr",
         "ability": "Wszyscy gracze wiedzą, kim jesteś. Nie możesz umrzeć w ciągu dnia. Jeśli dobro głosowało, możesz zdecydować się na natychmiastową egzekucję.",
-        "firstNightReminder": "Announce 'The Vizier is in play' and state which player they are.",
+        "firstNightReminder": "Ogłoś \"Wezyr jest w grze\" i powiedz, który gracz nim jest.",
         "otherNightReminder": "",
         "remindersGlobal": [],
         "reminders": []
@@ -1727,9 +1729,9 @@
     {
         "id": "vortox",
         "name": "Vortox",
-        "ability": "Każdej nocy* wybierz gracza, który umiera. Zdolności Mieszczan zwracają fałszywe informacje. Każdego dnia, jeśli nikt nie został stracony, zło wygrywa.",
+        "ability": "Każdej nocy* wybierz gracza, który umiera. Zdolności Mieszczan dają fałszywe informacje. Każdego dnia, jeśli nikt nie został stracony, zło wygrywa.",
         "firstNightReminder": "",
-        "otherNightReminder": "Vortox wskazuje gracza. Gracz ten umiera.",
+        "otherNightReminder": "Vortox wskazuje gracza. Ten gracz umiera.",
         "remindersGlobal": [],
         "reminders": [
             "Ginie"
@@ -1738,7 +1740,7 @@
     {
         "id": "voudon",
         "name": "Voudon",
-        "ability": "Only you and the dead can vote. They don't need a vote token to do so. A 50% majority is not required.",
+        "ability": "Tylko ty i zmarli możecie głosować. Zmarli nie potrzebują tokenu głosu żeby głosować. 50% większość nie jest wymagana.",
         "firstNightReminder": "",
         "otherNightReminder": "",
         "remindersGlobal": [],
@@ -1748,7 +1750,7 @@
         "id": "washerwoman",
         "name": "Praczka",
         "ability": "Na początku gry dowiadujesz się, że jeden z dwóch graczy jest konkretnym Mieszczaninem.",
-        "firstNightReminder": "Show the character token of a Townsfolk in play. Point to two players, one of which is that character.",
+        "firstNightReminder": "Pokaż token postaci Mieszczanina w grze. Wskaż dwóch graczy, z których jeden jest pokazaną postacią.",
         "otherNightReminder": "",
         "remindersGlobal": [],
         "reminders": [
@@ -1759,22 +1761,22 @@
     {
         "id": "widow",
         "name": "Wdowa",
-        "ability": "Pierwszej nocy zajrzyj do Grymuaru i wybierz gracza: jest otruty. 1 dobry gracz wie, że w grze jest Wdowa.",
-        "firstNightReminder": "Show the Grimoire to the Widow for as long as they need. The Widow points to a player. That player is poisoned. Wake a good player. Show the 'These characters are in play' card, then the Widow character token.",
+        "ability": "Pierwszej nocy zajrzyj do Grymuaru i wybierz gracza: jest zatruty. 1 dobry gracz wie, że w grze jest Wdowa.",
+        "firstNightReminder": "Pokaż Grymuar Wdowie tak długo, jak sobie tego życzy. Wdowa wskazuje na gracza. Ten gracz jest zatruty. Obudź dobrego gracza. Pokaż kartę \"Te postacie są w grze\", a następnie token Wdowy.",
         "otherNightReminder": "",
         "remindersGlobal": [
             "Znany"
         ],
         "reminders": [
-            "Otruty"
+            "Zatruty"
         ]
     },
     {
         "id": "witch",
         "name": "Wiedźma",
         "ability": "Każdej nocy wybierz gracza - jeśli jutro nominuje, umrze. Tracisz tę zdolność przy trzech żywych graczach.",
-        "firstNightReminder": "The Witch points to a player. If that player nominates tomorrow they die immediately.",
-        "otherNightReminder": "Jeśli przy życiu pozostaje 4 lub więcej graczy - Wiedźma wskazuje gracza. Jeśli ten gracz jutro nominuje, natychmiast umiera.",
+        "firstNightReminder": "Wiedźma wskazuje gracza. Jeśli wskazany gracz jutro nominuje: natychmiast umiera.",
+        "otherNightReminder": "Jeśli przy życiu pozostaje 4 lub więcej graczy: Wiedźma wskazuje gracza. Jeśli wskazany gracz jutro nominuje: natychmiast umiera.",
         "remindersGlobal": [],
         "reminders": [
             "Przeklęty"
@@ -1803,26 +1805,26 @@
     {
         "id": "xaan",
         "name": "Xaan",
-        "ability": "On night X, all Townsfolk are poisoned until dusk. [X Outsiders]",
+        "ability": "Podczas X nocy wszyscy Mieszkańcy są zatruci aż do świtu. [X Outsiderów]",
         "firstNightReminder": "",
         "otherNightReminder": "",
         "remindersGlobal": [],
         "reminders": [
-            "Night 1",
-            "Night 2",
-            "Night 3",
+            "Noc 1",
+            "Noc 2",
+            "Noc 3",
             "X"
         ]
     },
     {
         "id": "yaggababble",
         "name": "Yaggababble",
-        "ability": "You start knowing a secret phrase. For each time you said it publicly today, a player might die.",
-        "firstNightReminder": "Show the Yaggababble their secret phrase.",
-        "otherNightReminder": "Choose a number of players up to the total number of times the Yaggababble said their secret phrase publicly, those players die.",
+        "ability": "Zaczynasz znając tajną frazę. Za każde publiczne wypowiedzenie tej frazy dzisiaj, gracz może umrzeć.",
+        "firstNightReminder": "Pokaż Yaggababble jego tajną frazę.",
+        "otherNightReminder": "Wybierz graczy, od zera do liczby publicznie wypowiedzianej dzisiaj tajnej frazy przez Yaggababble. Ci gracze umierają.",
         "remindersGlobal": [],
         "reminders": [
-            "Dead"
+            "Martwy"
         ]
     },
     {
@@ -1837,9 +1839,9 @@
     {
         "id": "zombuul",
         "name": "Zombuul",
-        "ability": "Każdej nocy*, jeśli dziś nikt nie zginął, wybierz gracza, który umrze. Kiedy umrzesz po raz pierwszy, będziesz nadal żyć, ale będziesz się pokazywać jako martwy.",
+        "ability": "Każdej nocy*, jeśli dziś nikt nie zginął: wybierz gracza, który umrze. Kiedy umrzesz po raz pierwszy, będziesz nadal żyć, ale będziesz rejestrowany jako martwy.",
         "firstNightReminder": "",
-        "otherNightReminder": "If no-one died during the day: The Zombuul points to a player. That player dies.",
+        "otherNightReminder": "Jeśli nikt nie umarł w ciągu dnia: Zombuul wskazuje na gracza. Ten gracz umiera.",
         "remindersGlobal": [],
         "reminders": [
             "Ginie",
