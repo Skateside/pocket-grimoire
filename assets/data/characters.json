@@ -313,6 +313,18 @@
         "image": "/build/img/icons/townsfolk/bianlianshi.webp"
     },
     {
+        "id": "bigwig",
+        "name": "Big Wig",
+        "edition": "",
+        "team": "loric",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "reminders": [],
+        "setup": false,
+        "ability": "Each nominee chooses a player: until voting, only they may speak & they are mad the nominee is good or they might die.",
+        "image": "/build/img/roles/bigwig.webp"
+    },
+    {
         "id": "bingbi",
         "name": "秉笔",
         "edition": "syyl",
@@ -396,7 +408,7 @@
         "reminders": [],
         "setup": false,
         "name": "Bootlegger",
-        "team": "fabled",
+        "team": "loric",
         "ability": "This script has homebrew characters or rules.",
         "image": "/build/img/roles/bootlegger.webp"
     },
@@ -1175,7 +1187,7 @@
         "reminders": [],
         "setup": false,
         "name": "Gardener",
-        "team": "fabled",
+        "team": "loric",
         "ability": "The Storyteller assigns 1 or more players' characters.",
         "image": "/build/img/roles/gardener.webp"
     },
@@ -1259,6 +1271,20 @@
         "setup": true,
         "ability": "You start knowing which Outsiders are in play. If 1 died today, choose a player tonight: they die. [-1 or +1 Outsider]",
         "image": "/build/img/roles/godfather_e.webp"
+    },
+    {
+        "id": "godofug",
+        "name": "God of Ug",
+        "edition": "",
+        "team": "loric",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "reminders": [
+            "Hat"
+        ],
+        "setup": false,
+        "ability": "One Ug hat. When wear Ug hat, must speak one sound at a time but vote twice. If fail, pass Ug hat.",
+        "image": "/build/img/roles/godofug.webp"
     },
     {
         "id": "golem",
@@ -1510,6 +1536,18 @@
         "setup": false,
         "ability": "Each night, learn which player the Storyteller believes you should talk to most.",
         "image": "/build/img/roles/highpriestess_g.webp"
+    },
+    {
+        "id": "hindu",
+        "name": "Hindu",
+        "edition": "",
+        "team": "loric",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "reminders": [],
+        "setup": false,
+        "ability": "The first 4 players to die are immediately reincarnated as Travellers of the same alignment.",
+        "image": "/build/img/roles/hindu.webp"
     },
     {
         "id": "huapi",
@@ -1800,6 +1838,18 @@
         "setup": false,
         "ability": "When you learn that you died, publicly choose 1 alive player: if they are evil, your team loses.",
         "image": "/build/img/roles/klutz_g.webp"
+    },
+    {
+        "id": "knaves",
+        "name": "Knaves",
+        "edition": "",
+        "team": "loric",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "reminders": [],
+        "setup": false,
+        "ability": "There are 2 Storytellers: one lies & one tells the truth. Once per game, at dusk, they might switch.",
+        "image": "/build/img/roles/knaves.webp"
     },
     {
         "id": "knight",
@@ -2506,6 +2556,18 @@
         "image": "/build/img/roles/politician_g.webp"
     },
     {
+        "id": "pope",
+        "name": "Pope",
+        "edition": "",
+        "team": "loric",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "reminders": [],
+        "setup": true,
+        "ability": "There are duplicate good characters in play. They might also be bluffs.",
+        "image": "/build/img/roles/pope.webp"
+    },
+    {
         "id": "poppygrower",
         "name": "Poppy Grower",
         "edition": "",
@@ -3142,7 +3204,7 @@
         ],
         "setup": false,
         "name": "Storm Catcher",
-        "team": "fabled",
+        "team": "loric",
         "ability": "Name a good character. If in play, they can only die by execution, but evil players learn which player it is.",
         "image": "/build/img/roles/stormcatcher.webp"
     },
@@ -3277,6 +3339,18 @@
         "image": "/build/img/icons/townsfolk/tixingguan.webp"
     },
     {
+        "id": "tor",
+        "name": "Tor",
+        "edition": "",
+        "team": "loric",
+        "firstNightReminder": "",
+        "otherNightReminder": "If a player died tonight, show the *YOU ARE* info token, their character token, & a thumbs up or thumbs down.",
+        "reminders": [],
+        "setup": true,
+        "ability": "Players don't know their character or alignment. They learn them when they die.",
+        "image": "/build/img/roles/tor.webp"
+    },
+    {
         "id": "towncrier",
         "name": "Town Crier",
         "edition": "snv",
@@ -3322,6 +3396,20 @@
         "setup": false,
         "ability": "Each night*, you learn which character died by execution today.",
         "image": "/build/img/roles/undertaker_g.webp"
+    },
+    {
+        "id": "ventriloquist",
+        "name": "Ventriloquist",
+        "edition": "",
+        "team": "loric",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "reminders": [
+            "Mad"
+        ],
+        "setup": false,
+        "ability": "If a player is mad as a fresh character during their nomination, they might not die if executed today.",
+        "image": "/build/img/roles/ventriloquist.webp"
     },
     {
         "id": "vigormortis",
@@ -3768,6 +3856,22 @@
         "setup": false,
         "ability": "If there are 5 or more players alive, you must vote for every nomination.",
         "image": "/build/img/roles/zealot_g.webp"
+    },
+    {
+        "id": "zenomancer",
+        "name": "Zenomancer",
+        "edition": "",
+        "team": "loric",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "reminders": [
+            "Goal",
+            "Goal",
+            "Goal"
+        ],
+        "setup": false,
+        "ability": "One or more players each have a goal. When achieved, that player learns a piece of true info.",
+        "image": "/build/img/roles/zenomancer.webp"
     },
     {
         "id": "zhen",

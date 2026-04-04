@@ -369,6 +369,7 @@ function run()
             'tab-map' => [
                 'de_DE' => 'de_DE (official)',
                 'id_ID' => 'id_ID (Official)',
+                'pl_PL' => 'pl_PL (fuine)',
             ],
             'translate' => [
                 'name',

@@ -37,22 +37,26 @@ function populateFabled() {
     }
 
     const contents = [
-        ...fabled.map((fable) => characterTemplate.draw({
-            ".js--character-list--item,.js--character-list--button"(element) {
-                element.dataset.tokenId = fable.getId();
-            },
-            ".js--character-list--token"(element) {
-                element.append(fable.drawToken());
-            }
-        })),
-        ...loric.map((lor) => characterTemplate.draw({
-            ".js--character-list--item,.js--character-list--button"(element) {
-                element.dataset.tokenId = lor.getId();
-            },
-            ".js--character-list--token"(element) {
-                element.append(lor.drawToken());
-            }
-        })),
+        ...fabled
+            .toSorted((a, b) => a.getName().localeCompare(b.getName()))
+            .map((fable) => characterTemplate.draw({
+                ".js--character-list--item,.js--character-list--button"(element) {
+                    element.dataset.tokenId = fable.getId();
+                },
+                ".js--character-list--token"(element) {
+                    element.append(fable.drawToken());
+                }
+            })),
+        ...loric
+            .toSorted((a, b) => a.getName().localeCompare(b.getName()))
+            .map((lor) => characterTemplate.draw({
+                ".js--character-list--item,.js--character-list--button"(element) {
+                    element.dataset.tokenId = lor.getId();
+                },
+                ".js--character-list--token"(element) {
+                    element.append(lor.drawToken());
+                }
+            })),
     ];
 
     replaceContentsMany(lookupOneCached("#fabled-list__list"), contents);

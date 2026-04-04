@@ -38,14 +38,16 @@ function populateTravellers() {
 
     replaceContentsMany(
         lookupOneCached("#traveller-list__list"),
-        travellers.map((traveller) => characterTemplate.draw({
-            ".js--character-list--item,.js--character-list--button"(element) {
-                element.dataset.tokenId = traveller.getId();
-            },
-            ".js--character-list--token"(element) {
-                element.append(traveller.drawToken());
-            }
-        }))
+        travellers
+            .toSorted((a, b) => a.getName().localeCompare(b.getName()))
+            .map((traveller) => characterTemplate.draw({
+                ".js--character-list--item,.js--character-list--button"(element) {
+                    element.dataset.tokenId = traveller.getId();
+                },
+                ".js--character-list--token"(element) {
+                    element.append(traveller.drawToken());
+                }
+            }))
     );
 
     lookupOneCached("#add-traveller").disabled = false;
