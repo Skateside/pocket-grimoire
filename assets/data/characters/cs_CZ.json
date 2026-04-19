@@ -179,6 +179,15 @@
         "reminders": []
     },
     {
+        "id": "bigwig",
+        "name": "Big Wig",
+        "ability": "Each nominee chooses a player: until voting, only they may speak & they are mad the nominee is good or they might die.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
         "id": "bishop",
         "name": "Biskup",
         "ability": "Nominovat může pouze Vypravěč. Každý den musí být nominován alespoň 1 protivník.",
@@ -614,15 +623,6 @@
         ]
     },
     {
-        "id": "gardener",
-        "name": "Zahradník",
-        "ability": "Vypravěč přidělí 1 nebo více postav hráčům.",
-        "firstNightReminder": "",
-        "otherNightReminder": "",
-        "remindersGlobal": [],
-        "reminders": []
-    },
-    {
         "id": "gambler",
         "name": "Gambler",
         "ability": "Každou noc (kromě první) vyber 1 hráče a uhádni jeho postavu: pokud se spleteš, zemřeš.",
@@ -637,6 +637,15 @@
         "id": "gangster",
         "name": "Gangster",
         "ability": "Jednou denně se můžeš rozhodnout zabít Živého souseda, pokud s tím souhlasí tvůj druhý Živý soused.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "gardener",
+        "name": "Zahradník",
+        "ability": "Vypravěč přidělí 1 nebo více postav hráčům.",
         "firstNightReminder": "",
         "otherNightReminder": "",
         "remindersGlobal": [],
@@ -683,6 +692,17 @@
         "reminders": [
             "Dnes zemřel",
             "Mrtvý"
+        ]
+    },
+    {
+        "id": "godofug",
+        "name": "God of Ug",
+        "ability": "One Ug hat. When wear Ug hat, must speak one sound at a time but vote twice. If fail, pass Ug hat.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": [
+            "Hat"
         ]
     },
     {
@@ -815,6 +835,15 @@
         "reminders": []
     },
     {
+        "id": "hindu",
+        "name": "Hindu",
+        "ability": "The first 4 players to die are immediately reincarnated as Travellers of the same alignment.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
         "id": "huntsman",
         "name": "Lovec",
         "ability": "Jednou za hru v noci, vyber 1 Živého hráče: pokud je vybrána Mladá dáma, stane se postavou Měšťana, která není ve hře. [+Mladá dáma]",
@@ -904,8 +933,17 @@
     },
     {
         "id": "klutz",
-        "name": "Klutz",
+        "name": "Nešika",
         "ability": "Když se dozvíš, že jsi zemřel, veřejně vyber 1 Živého hráče: pokud je Zlý, tvoje družina prohrává.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "knaves",
+        "name": "Knaves",
+        "ability": "There are 2 Storytellers: one lies & one tells the truth. Once per game, at dusk, they might switch.",
         "firstNightReminder": "",
         "otherNightReminder": "",
         "remindersGlobal": [],
@@ -1228,7 +1266,7 @@
     {
         "id": "pithag",
         "name": "Pit-Hag",
-        "ability": "Každou noc (kromě první) vyber 1 hráče a postavu, kterou se stane (pokud není ve hře). Pokud je vytvořen Démon, úmrtí v této noci jsou náhodná.",
+        "ability": "Každou noc (kromě první) vyber 1 hráče a postavu, kterou se stane (pokud je vybraná postava ve hře, nic se nestane). Pokud je vytvořen Démon, úmrtí v této noci jsou náhodná.",
         "firstNightReminder": "",
         "otherNightReminder": "Pit-Hag ukáže na hráče a postavu v almanachu. Pokud tato postava není ve hře, probudí se tento hráč a ukáže se mu karta „Ty jsi“ a příslušný žeton postavy. Pokud je postava ve hře, nic se neděje.",
         "remindersGlobal": [],
@@ -1284,6 +1322,15 @@
         "id": "politician",
         "name": "Politik",
         "ability": "Pokud jsi byl hráčem, který nejvíce přispěl k prohře tvé družiny, změníš stranu a vyhraješ, i když jsi Mrtvý.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
+        "id": "pope",
+        "name": "Pope",
+        "ability": "There are duplicate good characters in play. They might also be bluffs.",
         "firstNightReminder": "",
         "otherNightReminder": "",
         "remindersGlobal": [],
@@ -1559,8 +1606,8 @@
         "id": "spy",
         "name": "Špeh",
         "ability": "Každou noc nahlédneš do Grimoáru. Můžeš se jevit jako Dobrý, jako Měšťan nebo jako Podivín, i když jsi Mrtvý.",
-        "firstNightReminder": "Ukaž Grimoár Špionovi na tak dlouho, jak bude potřebovat.",
-        "otherNightReminder": "Ukaž Grimoár Špionovi na tak dlouho, jak bude potřebovat.",
+        "firstNightReminder": "Ukaž Grimoár Špehovi na tak dlouho, jak bude potřebovat.",
+        "otherNightReminder": "Ukaž Grimoár Špehovi na tak dlouho, jak bude potřebovat.",
         "remindersGlobal": [],
         "reminders": []
     },
@@ -1644,15 +1691,24 @@
         ]
     },
     {
+        "id": "tor",
+        "name": "Tor",
+        "ability": "Players don't know their character or alignment. They learn them when they die.",
+        "firstNightReminder": "",
+        "otherNightReminder": "If a player died tonight, show the *YOU ARE* info token, their character token, & a thumbs up or thumbs down.",
+        "remindersGlobal": [],
+        "reminders": []
+    },
+    {
         "id": "towncrier",
         "name": "Hlásný",
-        "ability": "Každou noc (kromě první) se dozvíš, zda byl dnes nominován Přisluhovač.",
+        "ability": "Každou noc (kromě první) se dozvíš, zda dnes nominoval Přisluhovač.",
         "firstNightReminder": "",
-        "otherNightReminder": "Přikývni „ano“ nebo zavrť hlavou „ne“ podle toho, zda byl dnes nominován Přisluhovač. Umísti značku „Přisluhovač nebyl nominován“ (odstraň značku „Přisluhovač byl nominován“, pokud tam je).",
+        "otherNightReminder": "Přikývni „ano“ nebo zavrť hlavou „ne“ podle toho, zda dnes nominoval Přisluhovač. Umísti značku „Přisluhovač nenominoval“ (odstraň značku „Přisluhovač nominoval“, pokud tam je).",
         "remindersGlobal": [],
         "reminders": [
-            "Přisluhovači nejsou nominováni",
-            "Přisluhovač nominován"
+            "Přisluhovač nominoval",
+            "Přisluhovač nenominoval"
         ]
     },
     {
@@ -1675,6 +1731,17 @@
         "remindersGlobal": [],
         "reminders": [
             "Popraven"
+        ]
+    },
+    {
+        "id": "ventriloquist",
+        "name": "Ventriloquist",
+        "ability": "If a player is mad as a fresh character during their nomination, they might not die if executed today.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": [
+            "Mad"
         ]
     },
     {
@@ -1828,6 +1895,19 @@
         "otherNightReminder": "",
         "remindersGlobal": [],
         "reminders": []
+    },
+    {
+        "id": "zenomancer",
+        "name": "Zenomancer",
+        "ability": "One or more players each have a goal. When achieved, that player learns a piece of true info.",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "remindersGlobal": [],
+        "reminders": [
+            "Goal",
+            "Goal",
+            "Goal"
+        ]
     },
     {
         "id": "zombuul",
