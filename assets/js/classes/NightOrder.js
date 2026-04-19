@@ -1,6 +1,7 @@
 import CharacterToken from "./CharacterToken";
 import {
-    empty
+    empty,
+    lookupOneCached,
 } from "../utils/elements.js";
 
 /**
@@ -34,7 +35,7 @@ export default class NightOrder {
         this.holders = {
             first: null,
             other: null,
-        }
+        };
 
     }
 
@@ -625,7 +626,11 @@ export default class NightOrder {
      */
     updatePlayerNameDisplay(data) {
 
-        const names = [...data.playerNames.values()].filter(Boolean);
+        const names = [...data.playerNames.values()]
+            .filter(Boolean)
+            .sort((a, b) => {
+                return a.localeCompare(b);
+            });
         const display = names.join(", ");
 
         ["first", "other"].forEach((property) => {
@@ -634,8 +639,9 @@ export default class NightOrder {
                 return;
             }
 
-            const element = data[property].element.querySelector(
-                ".js--night-info--player-name"
+            const element = lookupOneCached(
+                ".js--night-info--player-name",
+                data[property].element,
             );
 
             if (element) {

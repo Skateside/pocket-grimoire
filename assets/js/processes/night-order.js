@@ -9,6 +9,7 @@ import {
 const gameObserver = Observer.create("game");
 const tokenObserver = Observer.create("token");
 const nightOrder = new NightOrder();
+const pad = lookupOneCached(".js--pad").pad;
 
 nightOrder.setHolders({
     first: lookupOneCached("#first-night"),
@@ -123,11 +124,23 @@ tokenObserver.on("shroud-toggle", ({ detail }) => {
 
     nightOrder.toggleDead(detail.character, detail.isDead);
 
+    if (detail.isDead) {
+        nightOrder.removePlayerName(detail.character, detail.token);
+    } else {
+
+        nightOrder.setPlayerName(
+            detail.character,
+            detail.token,
+            pad.getPlayerName(detail.character)
+        );
+
+    }
+
 });
 
 tokenObserver.on("set-player-name", ({ detail }) => {
 
-    if (!nightOrder.hasCharacter(detail.character)) {
+    if (!nightOrder.hasCharacter(detail.character) || detail.character.isDead) {
         return;
     }
 
