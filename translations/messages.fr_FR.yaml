@@ -13,51 +13,51 @@ index:
     description: Un grimoire virtuel pour Blood on the Clocktower
 
 sheet:
-    title: Fiche de personnages
-    description: La fiche de personnages pour cette édition de Blood on the Clocktower
+    title: Fiche de rôles
+    description: La Fiche de rôles pour cette édition de Blood on the Clocktower
     jinx: Jinxs
     each_night: "* Chaque nuit, sauf la première"
     get_qr_code: Obtenir le QR code pour cette fiche
     get_sheet: Obtenir cette fiche
     credit: <a href="https://bloodontheclocktower.com/" target="_blank" rel="noopener noreferrer">Blood on the Clocktower</a> est une marque déposée de Steven Medway et <a href="https://www.thepandemoniuminstitute.com/" target="_blank" rel="noopener noreferrer">The Pandemonium Institute</a>
-    breakdown: Les nombres de chaque type de personnage pour le nombre de joueurs.
+    breakdown: Les nombres de chaque type de Rôle pour le nombre de joueurs.
     count_plus: "%count%+"
 
 groups:
     players: Joueurs
     townsfolk: Villageois
-    outsider: Étrangers
+    outsider: Marginaux
     minion: Sbires
     demon: Démons
     traveller: Voyageurs
-    fabled: Mythiques
+    fabled: Légendaires
     loric: Loric
 
 messages:
-    good_team: Équipe du bien
-    evil_team: Équipe maléfique
-    empty_character_ability: Ceci est un personnage vide
+    good_team: Équipe du Bien
+    evil_team: Équipe du Mal
+    empty_character_ability: Ceci est un Rôle vide
     version_change_message: Cette application a été mise à jour. Étant donné que vos données peuvent ne pas être correctes, nous recommandons de tout effacer dans la boîte de dialogue "Effacer le cache". Appuyes sur "OK" pour ouvrir la boîte de dialogue ou sur "Annuler" pour fermer ce message.
     invalid_script: Le format de ce script n'a pas été reconnu
-    no_characters: Ce script ne contient pas de personnages connus
+    no_characters: Ce script ne contient pas de Rôles connus
     player_name: Comment s'appelle ce joueur ?
     custom_info_token: Que veux-tu que ton nouveau jeton d'information dise ? Utilises des **doubles astérisques** pour mettre le texte en gras.
-    bag_disabled: "Impossible d'ajouter ces personnage dans le \"sac\" : {0}"
+    bag_disabled: "Impossible d'ajouter ces Rôle dans le \"sac\" : {0}"
 
 setup:
     
     title: Mise en place
 
     buttons:
-        select_edition: Choisir Édition
-        select_characters: Choisir Personnages
-        qr_code_button: Fiche de personnages
+        select_edition: Choisir le Script
+        select_characters: Choisir Rôles
+        qr_code_button: Fiche de rôles
         clear_cache_button: Effacer le cache
         language: Langue
         set_language: Choisir Langue
 
     editions:
-        title: Choisir Édition
+        title: Choisir Script
         trouble_brewing: Trouble Brewing
         bad_moon_rising: Bad Moon Rising
         sects_and_violets: Sects and Violets
@@ -71,12 +71,12 @@ setup:
         select: Choisir
 
     character_select:
-        title: Choisir Personnages
+        title: Choisir Rôles
         number_players: Nombre de joueurs
-        toggle_abilities: Monter les capacités des personnages
+        toggle_abilities: Monter les capacités des Rôles
         toggle_duplicates: Autoriser les doublons
         highlight_random: Choisir aléatoirement
-        draw_characters: Piocher Personnages
+        draw_characters: Piocher Rôles
         add_all: Tout Ajouter
         layout: Mise en page
         ellipse: Ellipse
@@ -85,17 +85,17 @@ setup:
         vertical: Verticale
 
     character_choice:
-        title: Sélectionne ton Personnage
-        description: Touches l'un des jetons numérotés pour choisir un personnage. Ceux qui sont assombries ont déjà été choisis.
+        title: Sélectionne ton Rôle
+        description: Touches l'un des jetons numérotés pour choisir un rôle. Ceux qui sont assombries ont déjà été choisis.
 
     character_decision:
-        title: Souviens-toi de ton Personnage
+        title: Souviens-toi de ton rôle
         name: Ecris ton nom (facultatif)
-        return: Retour à la Sélection de Personnage
+        return: Retour à la sélection de rôle
 
     qr_code:
-        title: Fiche de personnage
-        intro: Scanne ce QR code pour voir la fiche de personnage
+        title: Fiche de rôles
+        intro: Scanne ce QR code pour voir la Fiche de rôles
         include: "Inclure :"
         travellers: Voyageurs
         fabled: Légendaires
@@ -105,7 +105,7 @@ setup:
         clear_all: Tout Effacer
         clear_description: Désactiver cette option permettra d'effacer des parties individuelles du cache.
         lookup_label: Effacer données
-        lookup_note: Infos sur les jinxs, composition d'équipe, et personnages.
+        lookup_note: Infos sur les jinxs, composition d'équipe, et rôles.
         characters_label: Effacer édition
         characters_note: L'édition, ou le script, qui a été chargé
         tokens_label: Effacer jetons
@@ -137,7 +137,7 @@ grimoire:
         add_token: Ajouter jeton
         add_reminder: Ajouter rappel
         add_traveller: Ajouter voyageur
-        add_fabled: Ajouter mythiques
+        add_fabled: Ajouter légendaires
         show_tokens: Montrer jetons
         reset_height: Réinitialiser taille du bloc
         clear_grimoire: Effacer Grimoire
@@ -148,7 +148,7 @@ grimoire:
         token_settings: Paramètres des jetons
 
     character_list:
-        title: Choisir Personnage
+        title: Choisir Rôle
 
     reminder_list:
         title: Choisir Rappel
@@ -181,12 +181,12 @@ grimoire:
 
     bluff_list:
         title: Sélectionner Bluff
-        show_existing: Afficher personnages éxistants
+        show_existing: Afficher Rôles éxistants
         show_travellers: Afficher les voyageurs
-        show_evil: Afficher les personnages maléfiques
+        show_evil: Afficher les Rôles maléfiques
 
     token_list:
-        title: Personnages
+        title: Rôles
         add: Ajouter jeton
 
     traveller_list:
@@ -194,7 +194,7 @@ grimoire:
         show_all: Afficher tous les voyageurs
     
     fabled_list:
-        title: Mythiques
+        title: Légendaires
 
     token:
         title: Jetons
@@ -216,20 +216,20 @@ night_order:
     first_night: Première nuit
     other_night: Autres nuits
     swipe_change: Glisser de côté pour changer de nuit.
-    show: Afficher les personnages hors-jeu
-    show_dead: Afficher les personnages morts
+    show: Afficher les Rôles hors-jeu
+    show_dead: Afficher les Rôles morts
 
 info_tokens:
     title: Jetons info
     info_tokens:
         isdemon: Voici le <strong>Démon :</strong>
         isminion: Voici tes <strong>Sbires :</strong>
-        notinplay: Ces personnages ne sont <strong>pas en jeu :</strong>
+        notinplay: Ces Rôles ne sont <strong>pas en jeu :</strong>
         nominatetoday: As-tu <strong>nommé</strong> aujourd'hui ?
         playeris: "<strong>Ce joueur</strong> est :"
         votetoday: As-tu <strong>voté</strong> aujourd'hui ?
         youare: "<strong>Tu</strong> es :"
-        selectedyou: Ce personnage t'a <strong>sélectionné :</strong>
+        selectedyou: Ce Rôle t'a <strong>sélectionné :</strong>
         useability: Veux-tu utilisé <strong>ton pouvoir</strong>?
         makechoice: Fais un <strong>choix</strong>
     custom: Jetons d'infos personnalisés
@@ -241,7 +241,7 @@ notes:
     title: Notes du Conteur
     label: Notes
     clear: Effacer les notes
-    clear_warning: Es-tu sur de vouloir éffacer les notes?
+    clear_warning: Es-tu sur de vouloir effacer les notes?
 
 acknowledgements:
     title: Remerciements
@@ -260,10 +260,10 @@ community:
 
 errors:
     homebrew_json:
-        not_homebrew: "Votre personnage personnalisé a des donnés manquante : \"%id%\""
+        not_homebrew: "Votre Rôle personnalisé a des donnés manquante : \"%id%\""
         unrecognised_team: "Équipe non reconnu : \"%team%\""
         not_find_id: "Impossible de trouver l'ID : \"%id%\""
-        .not_recognise_character: Impossible de reconnaitre le personnage "%id%"
+        .not_recognise_character: Impossible de reconnaitre le Rôle "%id%"
         invalid_entry: "Donnée invalide pour \"%id%\": %reasons%"
         empty_teams: "Équipes vide : %teams%"
         invalid_property: La propriété "%property%" est du type %expected% mais devrait être du type %given% a la place
