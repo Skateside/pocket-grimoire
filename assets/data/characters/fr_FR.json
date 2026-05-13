@@ -303,28 +303,26 @@
         "id": "cerenovus",
         "name": "Cerenovus",
         "ability": "Chaque nuit, choisissez un joueur et un rôle bon : le lendemain, il doit être «fou» d’être ce rôle. Sinon, il pourrait être exécuté.",
-        "firstNightReminder": "Le Cerenovus choisit un joueur et un rôle. Le Cerenovus se rendort. Réveillez la cible.
-Montrez la tuile CE RÔLE VOUS A CHOISI, le jeton Cerenovus, puis le jeton de rôle
-pour lequel le joueur cible doit manifester sa folie.",
-        "otherNightReminder": "Il pointe un joueur et un rôle sur sa feuille. Ce joueur devient Dément et est obligé d’être ce rôle le jour suivant. Réveillez ce joueur. Montrez la carte verte « Ce rôle vous a sélectionné », puis le jeton Manipulateur. Montrez le jeton Dément, puis le jeton de rôle.",
+        "firstNightReminder": "Le Cerenovus choisit un joueur et un rôle. Le Cerenovus se rendort. Réveillez la cible. Montrez la tuile CE RÔLE VOUS A CHOISI, le jeton Cerenovus, puis le jeton de rôle pour lequel le joueur cible doit manifester sa folie.",
+        "otherNightReminder": "Le Cerenovus choisit un joueur et un rôle. Le Cerenovus se rendort. Réveillez la cible. Montrez la tuile CE RÔLE VOUS A CHOISI, le jeton Cerenovus, puis le jeton de rôle pour lequel le joueur cible doit manifester sa folie.",
         "remindersGlobal": [],
         "reminders": [
-            "Dément"
+            "Fou"
         ]
     },
     {
         "id": "chambermaid",
         "name": "Femme de chambre",
-        "ability": "Chaque nuit, choisissez 2 autres joueurs vivants : vous apprenez combien d’entre eux se sont réveillés en raison de leur capacité cette nuit.",
-        "firstNightReminder": "Elle pointe 2 autres joueurs vivants: indiquer combien d’entre eux se sont réveillés en raison de leur capacité cette nuit.",
-        "otherNightReminder": "Elle pointe 2 autres joueurs vivants: indiquer combien d’entre eux se sont réveillés en raison de leur capacité cette nuit.",
+        "ability": "Chaque nuit, choisissez 2 joueurs en vie (sauf vous-même) : vous apprenez combien d’entre eux se sont réveillés cette nuit à cause de leur capacité.",
+        "firstNightReminder": "La Femme de chambre choisit 2 joueurs en vie. Faites signe avec vos doigts.",
+        "otherNightReminder": "La Femme de chambre choisit 2 joueurs en vie. Faites signe avec vos doigts.",
         "remindersGlobal": [],
         "reminders": []
     },
     {
         "id": "chef",
-        "name": "Cuistot",
-        "ability": "Votre première nuit, le Conteur vous indique combien de paires de joueurs maléfiques il y a assis côte à côte.",
+        "name": "Cuisinier",
+        "ability": "Lors de votre première nuit, vous apprenez le nombre de paires de joueurs maléfiques.",
         "firstNightReminder": "Donner le nombre de paires de joueurs maléfiques assis côte à côte. Forte suggestion : inclure le Reclus et exclure l'Espion.",
         "otherNightReminder": "",
         "remindersGlobal": [],
@@ -342,24 +340,24 @@ pour lequel le joueur cible doit manifester sa folie.",
     {
         "id": "clockmaker",
         "name": "Horloger",
-        "ability": "La première nuit, le Conteur vous indique à quelle distance (en nombre de places, minimum 1) se trouve le Sbire le plus près du Démon.",
-        "firstNightReminder": "Indiquer à quelle distance (nombre de places, minimum une) se trouve le Sbire le plus près du Démon.",
+        "ability": "Lors de votre première nuit, vous apprenez à combien de places du Démon est assis son Sbire le plus proche.",
+        "firstNightReminder": "Faites signe avec vos doigts.",
         "otherNightReminder": "",
         "remindersGlobal": [],
         "reminders": []
     },
     {
         "id": "courtier",
-        "name": "Courtisane",
-        "ability": "Une fois par partie, pendant la nuit, choisissez un autre rôle. S’il est en jeu, il sera ivre pour trois nuits et trois jours.",
-        "firstNightReminder": "La Courtisane décide si elle utilise sa capacité. Une fois par partie, elle choisit un rôle, il sera ivre pour trois nuits et trois jours.",
-        "otherNightReminder": "Réduisez le nombre de jours restants pendant lesquels le joueur marqué est ivre. Si la Courtisane n'a pas encore utilisé sa capacité elle décide si elle l'utilise. Une fois par partie, elle choisit un rôle, il sera ivre pour 3 nuits et 3 jours.",
+        "name": "Courtisan",
+        "ability": "Une fois par partie, la nuit, choisissez un rôle :il devient ivre pendant 3 nuits et 3 jours.",
+        "firstNightReminder": "Le Courtisan peut choisir un rôle.",
+        "otherNightReminder": "Le Courtisan peut choisir un rôle.",
         "remindersGlobal": [],
         "reminders": [
-            "Inactif",
-            "Ivre J1",
-            "Ivre J2",
-            "Ivre J3"
+            "Sans capacité",
+            "Ivre 1",
+            "Ivre 2",
+            "Ivre 3"
         ]
     },
     {
@@ -396,7 +394,7 @@ pour lequel le joueur cible doit manifester sa folie.",
     {
         "id": "deviant",
         "name": "Déviant",
-        "ability": "Si vous étiez drôle aujourd'hui, vous pourriez ne pas être exilé.",
+        "ability": "Si vous avez été drôle ce jour, vous ne pouvez pas mourir par exil.",
         "firstNightReminder": "",
         "otherNightReminder": "",
         "remindersGlobal": [],
@@ -405,9 +403,9 @@ pour lequel le joueur cible doit manifester sa folie.",
     {
         "id": "devilsadvocate",
         "name": "Avocat du diable",
-        "ability": "Chaque nuit, choisissez un joueur vivant (différent de la nuit précédente): s'il est exécuté demain, il ne mourra pas.",
-        "firstNightReminder": "Il pointe vers un joueur vivant. Ce joueur survivra à l'exécution demain.",
-        "otherNightReminder": "Il pointe vers un joueur vivant différent de la nuit précédente. Ce joueur survivra à l'exécution demain.",
+        "ability": "Chaque nuit, choisissez un joueur en vie (différent de la nuit précédente) : s’il est exécuté le lendemain, il ne meurt pas.",
+        "firstNightReminder": "L’Avocat du diable choisit un joueur en vie.",
+        "otherNightReminder": "L’Avocat du diable choisit un joueur en vie.",
         "remindersGlobal": [],
         "reminders": [
             "Survit à l'exécution"
@@ -416,7 +414,7 @@ pour lequel le joueur cible doit manifester sa folie.",
     {
         "id": "djinn",
         "name": "Djinn",
-        "ability": "Utilisez la règle spéciale du Djinn. Tous les joueurs savent ce que c'est.",
+        "ability": "Utilisez la règle spéciale du Djinn. Tous les joueurs connaissent cette règle.",
         "firstNightReminder": "",
         "otherNightReminder": "",
         "remindersGlobal": [],
@@ -424,8 +422,8 @@ pour lequel le joueur cible doit manifester sa folie.",
     },
     {
         "id": "doomsayer",
-        "name": "Prêcheur de l'Apocalypse",
-        "ability": "Si 4 joueurs ou plus sont en vie, chaque joueur vivant peut décider publiquement (une fois par partie) qu'un joueur de son propre alignement meurt.",
+        "name": "Messager du malheur",
+        "ability": "Si au moins 4 joueurs sont en vie, chaque joueur en vie peut publiquement choisir (une fois par partie) qu’un joueur de son propre alignement meurt.",
         "firstNightReminder": "",
         "otherNightReminder": "",
         "remindersGlobal": [],
@@ -434,20 +432,20 @@ pour lequel le joueur cible doit manifester sa folie.",
     {
         "id": "dreamer",
         "name": "Rêveur",
-        "ability": "Chaque nuit, choisissez un autre joueur (pas un Voyageur), vous apprendrez son rôle et un rôle de l'alignement opposé.",
-        "firstNightReminder": "Il pointe vers un joueur. Montrez deux jetons de rôle, l'un est le rôle de ce joueur, l'autre est d'alignement opposé.",
-        "otherNightReminder": "Il pointe vers un joueur. Montrez deux jetons de rôle, l'un est le rôle de ce joueur, l'autre est d'alignement opposé.",
+        "ability": "Chaque nuit, choisissez un joueur (sauf vous-même, et sauf un Voyageur) : vous apprenez 1 rôle bon et 1 rôle maléfique. L’un des deux est correct.",
+        "firstNightReminder": "Le Rêveur désigne un joueur. Montrez 1 jeton de rôle bon et 1 jeton de rôle maléfique. L’un des deux doit être correct.",
+        "otherNightReminder": "Le Rêveur désigne un joueur. Montrez 1 jeton de rôle bon et 1 jeton de rôle maléfique. L’un des deux doit être correct.",
         "remindersGlobal": [],
         "reminders": []
     },
     {
         "id": "drunk",
-        "name": "Soûlard",
-        "ability": "Vous ne savez pas que vous êtes le Soûlard. Vous pensez que vous êtes un Villageois, mais vous ne l’êtes pas.",
+        "name": "Ivrogne",
+        "ability": "Vous ne savez pas que vous êtes l’Ivrogne. Vous pensez que vous êtes un Villageois.",
         "firstNightReminder": "",
         "otherNightReminder": "",
         "remindersGlobal": [
-            "Soûlard"
+            "Est l'Ivrogne"
         ],
         "reminders": []
     },
