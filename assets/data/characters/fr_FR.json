@@ -59,19 +59,19 @@
     {
         "id": "angel",
         "name": "Ange",
-        "ability": "Quelque chose de grave peut arriver à celui qui est le plus responsable de la mort d'un nouveau joueur.",
+        "ability": "Quelque chose de terrible pourrait arriver à quiconque est le plus responsable de la mort d’un nouveau joueur.",
         "firstNightReminder": "",
         "otherNightReminder": "",
         "remindersGlobal": [],
         "reminders": [
-            "A protégé",
-            "Quelquechose de mal"
+            "Protégé",
+            "Pénalité"
         ]
     },
     {
         "id": "apprentice",
         "name": "Apprenti",
-        "ability": "Votre première nuit, vous gagnez une capacité de Villageois si « bon » ou de Sbire si maléfique.",
+        "ability": "À votre 1re nuit, vous gagnez une capacité de Villageois (si bon) ou une capacité de Sbire (si maléfique).",
         "firstNightReminder": "Montrez-lui la carte violette « Vous êtes », puis un jeton Villageois ou Sbire.",
         "otherNightReminder": "",
         "remindersGlobal": [],
@@ -93,12 +93,12 @@
     {
         "id": "assassin",
         "name": "Assassin",
-        "ability": "Une fois par partie, pendant la nuit*, choisissez un joueur: il meurt, même si pour une raison quelconque, il ne le pourrait pas.",
+        "ability": "Une fois par partie, la nuit*, choisissez un joueur : il meurt, même s’il ne peut normalement pas mourir.",
         "firstNightReminder": "",
-        "otherNightReminder": "Si l'Assassin n'a pas encore utilisé sa capacité il décide s’il l'utilise. Si oui, il désigne un joueur. Ce joueur meurt (sans restriction).",
+        "otherNightReminder": "L’Assassin peut choisir un joueur.",
         "remindersGlobal": [],
         "reminders": [
-            "Inactif",
+            "Sans capacité",
             "Mort"
         ]
     },
@@ -136,12 +136,12 @@
     {
         "id": "barber",
         "name": "Barbier",
-        "ability": "Si vous êtes mort aujourd’hui ou cette nuit, le Démon peut choisir 2 joueurs (pas un autre Démon) et échanger leurs rôles (pas leur alignement) cette nuit.",
+        "ability": "Si vous êtes mort dans la journée ou cette nuit,le Démon peut choisir 2 joueurs (mais pas un autre Démon) qui échangent alors leur rôle",
         "firstNightReminder": "",
-        "otherNightReminder": "S’il est mort aujourd'hui réveillez le Démon. Montrez la carte verte « Ce rôle vous a sélectionné » et le jeton Barbier. Le Démon indique « non » ou pointe 2 joueurs. S'il choisit deux joueurs: Échangez leurs jetons rôle. Réveillez chaque joueur, montrez la carte violette « Vous êtes » et leur nouveau jeton de rôle.",
+        "otherNightReminder": "Si le Barbier est mort dans la journée ou cette nuit, montrez au Démon la tuile CE RÔLE VOUS A CHOISI et le jeton Barbier. Si le Démon a choisi 2 joueurs, réveillez-les un par un. Montrez à chacun la tuile VOUS ÊTES et leur nouveau jeton de rôle.",
         "remindersGlobal": [],
         "reminders": [
-            "Coupe de cheveux"
+            "Cette nuit, on rase gratis"
         ]
     },
     {
@@ -159,7 +159,7 @@
     {
         "id": "baron",
         "name": "Baron",
-        "ability": "Il y a des Étrangers supplémentaires en jeu. [+2 Étrangers]",
+        "ability": "Il y a deux Marginaux supplémentaires en jeu.[+2 Marginaux]",
         "firstNightReminder": "",
         "otherNightReminder": "",
         "remindersGlobal": [],
@@ -198,13 +198,13 @@
     {
         "id": "bonecollector",
         "name": "Collecteur d'os",
-        "ability": "Une fois par partie, la nuit, choisissez un joueur mort: il retrouve ses capacités jusqu'au crépuscule suivant.",
+        "ability": "Une fois par partie, la nuit*, choisissez un joueur mort : il regagne sa capacité jusqu’au crépuscule.",
         "firstNightReminder": "",
         "otherNightReminder": "Il secoue la tête ou désigne un joueur mort. Ce joueur retrouve ses capacités jusqu'au crépuscule.",
         "remindersGlobal": [],
         "reminders": [
-            "Capacité active",
-            "Inactif"
+            "A une capacité",
+            "Sans capacité"
         ]
     },
     {
@@ -239,7 +239,7 @@
     {
         "id": "buddhist",
         "name": "Bouddhiste",
-        "ability": "Pendant les 2 premières minutes de chaque journée, les joueurs vétérans ne peuvent pas parler.",
+        "ability": "Pendant les 2 premières minutes de chaque jour, les vétérans ne peuvent pas parler.",
         "firstNightReminder": "",
         "otherNightReminder": "",
         "remindersGlobal": [],
@@ -248,12 +248,12 @@
     {
         "id": "bureaucrat",
         "name": "Bureaucrate",
-        "ability": "Chaque nuit, choisissez un autre joueur: son vote comptera pour 3 votes le jour suivant.",
+        "ability": "Chaque nuit, choisissez un joueur (sauf vous-même) : son vote compte comme 3 votes le lendemain.",
         "firstNightReminder": "Choisit un autre joueur (lui assigner le jeton « Vote 3x ») qui aura trois votes le jour suivant.",
         "otherNightReminder": "Choisit un autre joueur (lui assigner le jeton « Vote 3x ») qui aura trois votes le jour suivant.",
         "remindersGlobal": [],
         "reminders": [
-            "Vote x3"
+            "3 votes"
         ]
     },
     {
@@ -268,9 +268,9 @@
     {
         "id": "butler",
         "name": "Majordome",
-        "ability": "Chaque nuit, choisissez un autre joueur qui devient votre maître. Demain, vous ne pourrez voter que lorsque votre maître votera.",
-        "firstNightReminder": "Choisit un joueur qui sera son prochain maître.",
-        "otherNightReminder": "Choisit un joueur qui sera son prochain maître.",
+        "ability": "Chaque nuit, choisissez un joueur (sauf vous-même). Le lendemain, vous pouvez voter uniquement si ce joueur vote.",
+        "firstNightReminder": "Le Majordome choisit un joueur.",
+        "otherNightReminder": "Le Majordome choisit un joueur.",
         "remindersGlobal": [],
         "reminders": [
             "Maître"
@@ -302,8 +302,10 @@
     {
         "id": "cerenovus",
         "name": "Cerenovus",
-        "ability": "Chaque nuit, choisissez un joueur et un rôle « bon » de la partie : il est Dément d’être ce rôle le jour suivant ou pourrait être exécuté.",
-        "firstNightReminder": "Il pointe un joueur et un rôle sur sa feuille. Ce joueur devient Dément et est obligé d’être ce rôle le jour suivant. Réveillez ce joueur. Montrez la carte verte « Ce rôle vous a sélectionné », puis le jeton Manipulateur. Montrez le jeton Dément, puis le jeton de rôle.",
+        "ability": "Chaque nuit, choisissez un joueur et un rôle bon : le lendemain, il doit être «fou» d’être ce rôle. Sinon, il pourrait être exécuté.",
+        "firstNightReminder": "Le Cerenovus choisit un joueur et un rôle. Le Cerenovus se rendort. Réveillez la cible.
+Montrez la tuile CE RÔLE VOUS A CHOISI, le jeton Cerenovus, puis le jeton de rôle
+pour lequel le joueur cible doit manifester sa folie.",
         "otherNightReminder": "Il pointe un joueur et un rôle sur sa feuille. Ce joueur devient Dément et est obligé d’être ce rôle le jour suivant. Réveillez ce joueur. Montrez la carte verte « Ce rôle vous a sélectionné », puis le jeton Manipulateur. Montrez le jeton Dément, puis le jeton de rôle.",
         "remindersGlobal": [],
         "reminders": [
