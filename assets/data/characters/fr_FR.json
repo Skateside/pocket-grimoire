@@ -1347,10 +1347,10 @@
     },
     {
         "id": "pukka",
-        "name": "Pooka",
-        "ability": "Chaque nuit, choisissez un joueur: il est empoisonné. Le joueur précédemment empoisonné meurt, puis devient sain.",
-        "firstNightReminder": "Le Pooka pointe un joueur. Ce joueur est empoisonné.",
-        "otherNightReminder": "Le Pooka pointe un joueur. Ce joueur est empoisonné. Le joueur précédemment empoisonné meurt.",
+        "name": "Pukka",
+        "ability": "Chaque nuit, choisissez un joueur : il devient empoisonné. Le joueur précédemment empoisonné meurt, puis devient sain.",
+        "firstNightReminder": "Le Pukkka choisit un joueur.",
+        "otherNightReminder": "Le Pukka choisit un joueur. Le joueur précédemment empoisonné meurt, puis devient sain.",
         "remindersGlobal": [],
         "reminders": [
             "Empoisonné",
@@ -1371,17 +1371,17 @@
     },
     {
         "id": "ravenkeeper",
-        "name": "Gardien",
-        "ability": "Si vous mourez pendant la nuit, vous choisissez un joueur et apprenez son rôle.",
+        "name": "Corneille",
+        "ability": "Si vous mourez la nuit, vous êtes réveillée pour choisir un joueur et apprendre son rôle",
         "firstNightReminder": "",
-        "otherNightReminder": "S’il meurt cette nuit, réveillez-le. Il pointe un joueur de son choix. Montrer lui le jeton rôle de ce joueur.",
+        "otherNightReminder": "Si la Corneille est morte cette nuit, la Corneille choisit un joueur. Montrez-lui le jeton de rôle de ce joueur.",
         "remindersGlobal": [],
         "reminders": []
     },
     {
         "id": "recluse",
-        "name": "Reclus",
-        "ability": "Vous pourriez être reconnu comme étant maléfique, et comme un Sbire ou un Démon, même si vous êtes mort.",
+        "name": "Recluse",
+        "ability": "Vous pourriez apparaître comme maléfique et comme Sbire ou Démon, même morte.",
         "firstNightReminder": "",
         "otherNightReminder": "",
         "remindersGlobal": [],
@@ -1390,13 +1390,12 @@
     {
         "id": "revolutionary",
         "name": "Révolutionnaire",
-        "ability": "2 joueurs voisins sont connus pour être du même alignement. Une fois par partie, 1 d'entre eux sera reconnu comme quelque chose qu'il n'est pas.",
+        "ability": "Les joueurs savent que 2 joueurs voisins sont du même alignement. Une fois par partie, l’un d’eux apparaît sous une fausse identité.",
         "firstNightReminder": "",
         "otherNightReminder": "",
         "remindersGlobal": [],
         "reminders": [
-            "Révolutionnaire",
-            "Reconnu faussement"
+            "Fausse apparence"
         ]
     },
     {
@@ -1413,25 +1412,24 @@
         "name": "Sage",
         "ability": "Si le Démon vous tue, vous apprenez qu'il est parmi 2 joueurs.",
         "firstNightReminder": "",
-        "otherNightReminder": "S’il a été tué par le Démon, pointez deux joueurs (dont le Démon).",
+        "otherNightReminder": "Si le Démon a tué le Sage, réveillez le Sage et désignez 2 joueurs. L’un d’entre eux doit être le Démon",
         "remindersGlobal": [],
         "reminders": []
     },
     {
         "id": "sailor",
         "name": "Marin",
-        "ability": "Chaque nuit, choisissez un joueur vivant : un de vous est ivre jusqu’au crépuscule. Si vous êtes sobre, vous ne pouvez pas mourir.",
-        "firstNightReminder": "Il choisit 1 joueur vivant : un des deux est ivre jusqu’au crépuscule (nuit et jour suivant). Le marin sobre ne peut pas mourir.",
-        "otherNightReminder": "Il choisit 1 joueur vivant : un des deux est ivre jusqu’au crépuscule (nuit et jour suivant). Le marin sobre ne peut pas mourir.",
+        "ability": "Chaque nuit, choisissez un joueur en vie : lui ou vous être ivre jusqu’au crépuscule. Vous ne pouvez pas mourir.",
+        "firstNightReminder": "Le Marin choisit un joueur en vie.",
+        "otherNightReminder": "Le Marin choisit un joueur en vie.",
         "remindersGlobal": [],
         "reminders": [
-            "Ivre",
-            "Protégé"
+            "Ivre"
         ]
     },
     {
         "id": "saint",
-        "name": "Vertueux",
+        "name": "Saint",
         "ability": "Si vous mourez par exécution, votre équipe perd.",
         "firstNightReminder": "",
         "otherNightReminder": "",
@@ -1441,7 +1439,7 @@
     {
         "id": "savant",
         "name": "Savant",
-        "ability": "Chaque jour, visitez le Conteur pour apprendre une vérité et un mensonge.",
+        "ability": "Chaque jour, vous pouvez rendre visite au Conteur pour apprendre 2 informations en privé : 1 est vraie et 1 est fausse",
         "firstNightReminder": "",
         "otherNightReminder": "",
         "remindersGlobal": [],
@@ -1449,7 +1447,7 @@
     },
     {
         "id": "scapegoat",
-        "name": "Bouc Émissaire",
+        "name": "Bouc émissaire",
         "ability": "Si un joueur de votre alignement est exécuté, vous pourriez être exécuté à sa place.",
         "firstNightReminder": "",
         "otherNightReminder": "",
@@ -1458,30 +1456,30 @@
     },
     {
         "id": "scarletwoman",
-        "name": "Croqueuse d'Homme",
-        "ability": "S'il y a 5 joueurs vivants ou plus (Voyageurs exclus) et que le Démon meurt, vous devenez le nouveau Démon.",
+        "name": "Femme écarlate",
+        "ability": "S’il y a au moins 5 joueurs en vie et que le Démon meurt, vous devenez le Démon. (Les Voyageurs ne comptent pas.)",
         "firstNightReminder": "",
-        "otherNightReminder": "S'il y a 5 joueurs vivants ou plus (voyageurs exclus) et que le Démon meurt, la Croqueuse d'homme devient le Démon. Réveillez-la, indiquez-lui la carte \"Vous êtes\", suivi du jeton du Démon, et du signe maléfique.",
+        "otherNightReminder": "Si la Femme écarlate est devenue le Diablotin dans la journée, montrez-lui la tuile VOUS ÊTES, puis le jeton Diablotin.",
         "remindersGlobal": [],
         "reminders": [
-            "Démon"
+            "Est le Démon"
         ]
     },
     {
         "id": "seamstress",
         "name": "Couturière",
-        "ability": "Une fois par partie, pendant la nuit, choisissez deux autres joueurs: vous apprenez s'ils sont du même alignement.",
-        "firstNightReminder": "Elle décide si elle utilise sa capacité. Si oui, elle pointe deux joueurs. Indiquez-lui s'ils sont du même alignement.",
-        "otherNightReminder": "Si elle n'a pas encore utilisé sa capacité, elle décide si elle utilise sa capacité. Si oui, elle pointe deux joueurs. Indiquez-lui s'ils sont du même alignement.",
+        "ability": "Une fois par partie, la nuit, choisissez 2 joueurs (sauf vous même) : vous apprenez s’ils sont du même alignement.",
+        "firstNightReminder": "La Couturière peut choisir 2 joueurs. Faites oui ou non de la tête.",
+        "otherNightReminder": "La Couturière peut choisir 2 joueurs. Faites oui ou non de la tête.",
         "remindersGlobal": [],
         "reminders": [
-            "Inactif"
+            "Sans capacité"
         ]
     },
     {
         "id": "sentinel",
         "name": "Sentinelle",
-        "ability": "Il peut y avoir 1 Étranger de plus ou de moins en jeu.",
+        "ability": "Il pourrait y avoir 1 Marginal supplémentaire ou 1 de moins en jeu.",
         "firstNightReminder": "",
         "otherNightReminder": "",
         "remindersGlobal": [],
@@ -1490,14 +1488,13 @@
     {
         "id": "shabaloth",
         "name": "Shabaloth",
-        "ability": "Chaque nuit*, choisissez 2 joueurs: ils meurent. Un joueur mort que vous avez choisi la nuit précédente pourrait être régurgité.",
+        "ability": "Chaque nuit*, choisissez 2 joueurs : ils meurent. Un joueur mort que vous avez choisi lors de la nuit précédente pourrait être recraché",
         "firstNightReminder": "",
-        "otherNightReminder": "Un joueur qui a été dévoré la nuit précédente pourrait revenir à la vie. Désigne deux joueurs. Ces joueurs meurent.",
+        "otherNightReminder": "Un joueur précédemment choisi pourrait être recraché. Le Shabaloth choisit 2 joueurs.",
         "remindersGlobal": [],
         "reminders": [
-            "Dévoré 1",
-            "Dévoré 2",
-            "Vivant"
+            "Mort",
+            "En vie"
         ]
     },
     {
@@ -1511,13 +1508,13 @@
     },
     {
         "id": "slayer",
-        "name": "Mercenaire",
-        "ability": "Une fois par partie, pendant la journée, choisissez publiquement un joueur : si un Démon est choisi, il meurt.",
+        "name": "Pourfendeuse",
+        "ability": "Une fois par partie, dans la journée, choisissez publiquement un joueur : s’il est le Démon, il meurt.",
         "firstNightReminder": "",
         "otherNightReminder": "",
         "remindersGlobal": [],
         "reminders": [
-            "Inactif"
+            "Sans capacité"
         ]
     },
     {
