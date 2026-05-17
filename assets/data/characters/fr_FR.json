@@ -1647,36 +1647,36 @@
     },
     {
         "id": "towncrier",
-        "name": "Crieur",
-        "ability": "Chaque nuit*, vous apprenez si un Sbire a nommé aujourd'hui.",
-        "firstNightReminder": "Placez le jeton « Aucune nomination ».",
-        "otherNightReminder": "Indiquer d'un signal de tête (hocher oui, secouer non) pour indiquer si un Sbire a nommé aujourd'hui. Remplacer le jeton « Nomination » par le « Aucune nomination » (le cas échéant).",
+        "name": "Crieur public",
+        "ability": "Chaque nuit*, vous apprenez si un Sbire a nommé quelqu’un dans la journée.",
+        "firstNightReminder": "",
+        "otherNightReminder": "Faites oui ou non de la tête.",
         "remindersGlobal": [],
         "reminders": [
-            "Sbire n'a pas nominé",
-            "Sbire a nominé"
+            "Les Sbires n'ont pas nommé",
+            "Les Sbires ont nommé"
         ]
     },
     {
         "id": "toymaker",
-        "name": "Fabricant de Jouets",
-        "ability": "Le Démon peut choisir de ne pas attaquer et doit le faire au moins une fois par partie. Les joueurs maléfiques obtiennent des informations de départ normales.",
+        "name": "Bibelotier",
+        "ability": "Le Démon peut choisir de ne pas attaquer et doit faire cela au moins une fois par partie. Les joueurs maléfiques reçoivent normalement leurs infos de départ.",
         "firstNightReminder": "",
         "otherNightReminder": "",
         "remindersGlobal": [],
         "reminders": [
-            "Pas attaqué"
+            "Dernière nuit : Aucune attaque"
         ]
     },
     {
         "id": "undertaker",
-        "name": "Croque-mort",
-        "ability": "Chaque nuit*, vous apprenez quel est le rôle du joueur qui est mort par exécution le jour dernier.",
+        "name": "Fossoyeur",
+        "ability": "Chaque nuit*, vous apprenez quel rôle est mort par exécution dans la journée.",
         "firstNightReminder": "",
-        "otherNightReminder": "Si un joueur est mort par exécution aujourd'hui, montrer lui le jeton rôle de ce joueur.",
+        "otherNightReminder": "Si un joueur est mort par éxécution dans la journée, montrez son jeton de rôle au Fossoyeur.",
         "remindersGlobal": [],
         "reminders": [
-            "Exécuté"
+            "Mort aujourd'hui"
         ]
     },
     {
@@ -1684,11 +1684,11 @@
         "name": "Vigormortis",
         "ability": "Chaque nuit*, choisissez un joueur : il meurt. Les Sbires que vous tuez gardent leur capacité et empoisonnent un de leurs voisins Villageois (mort ou vif). [-1 Étranger]",
         "firstNightReminder": "",
-        "otherNightReminder": "Il pointe un joueur : il meurt. Un Sbire tué garde sa capacité et un de ses voisins Villageois (mort ou vif) est empoisonné.",
+        "otherNightReminder": "Le Vigormortis choisit un joueur.  Si ce joueur est un Sbire, empoisonnez un Villageois voisin du Sbire. ",
         "remindersGlobal": [],
         "reminders": [
             "Mort",
-            "Capacité Active",
+            "A une capacité",
             "Empoisonné"
         ]
     },
@@ -1705,13 +1705,13 @@
     },
     {
         "id": "virgin",
-        "name": "Vierge",
-        "ability": "La première fois que vous êtes nominé, si le nominateur est un Villageois, il est exécuté immédiatement.",
+        "name": "Immaculée",
+        "ability": "La première fois qu’un joueur vous nomme, il est exécuté immédiatement s’il s’agit d’un Villageois.",
         "firstNightReminder": "",
         "otherNightReminder": "",
         "remindersGlobal": [],
         "reminders": [
-            "Inactif"
+            "Sans capacité"
         ]
     },
     {
@@ -1726,9 +1726,9 @@
     {
         "id": "vortox",
         "name": "Vortox",
-        "ability": "Chaque nuit*, choisissez un joueur ; il meurt. Les capacités des Villageois produisent de fausses informations. Si pas d’exécution, le mal gagne.",
+        "ability": "Chaque nuit*, choisissez un joueur : il meurt. Les capacités des Villageois donnent de fausses informations. Chaque jour, si personne n’est exécuté, le Mal gagne",
         "firstNightReminder": "",
-        "otherNightReminder": "Il pointe un joueur : il meurt. Si personne n'est exécuté à chaque jour, les maléfiques l'emportent.",
+        "otherNightReminder": "Le Vortox choisit un joueur.",
         "remindersGlobal": [],
         "reminders": [
             "Mort"
@@ -1736,8 +1736,8 @@
     },
     {
         "id": "voudon",
-        "name": "Nécromant",
-        "ability": "Seuls vous et les morts peuvent voter. Pas besoin de jeton, ni d'une majorité de minimum 50%.",
+        "name": "Voudon",
+        "ability": "Seul vous et les morts pouvez voter. Ils n’ont pas besoin de jeton de vote pour cela. La majorité n’est pas requise.",
         "firstNightReminder": "",
         "otherNightReminder": "",
         "remindersGlobal": [],
@@ -1746,12 +1746,12 @@
     {
         "id": "washerwoman",
         "name": "Lavandière",
-        "ability": "Votre première nuit, le Conteur vous montre 2 joueurs: vous apprenez le rôle de Villageois de l’un des deux.",
-        "firstNightReminder": "Désigner 2 joueurs et présenter le jeton rôle Villageois de l'un d'eux.",
+        "ability": "Lors de votre première nuit, vous apprenez un rôle de Villageois en jeu parmi 2 joueurs.",
+        "firstNightReminder": "Montrez le jeton de rôle du Villageois. Désignez le joueur Villageois et le joueur Fausse piste.",
         "otherNightReminder": "",
         "remindersGlobal": [],
         "reminders": [
-            "Autre",
+            "Fausse piste",
             "Villageois"
         ]
     },
@@ -1771,9 +1771,9 @@
     {
         "id": "witch",
         "name": "Sorcière",
-        "ability": "Chaque nuit, choisissez un joueur: s'il nomine le jour suivant, il meurt aussitôt. Si seulement 3 joueurs sont vivants, vous perdez cette capacité.",
-        "firstNightReminder": "Elle désigne un joueur. Ce joueur est maudit pour le lendemain.",
-        "otherNightReminder": "Elle désigne un joueur. Ce joueur est maudit pour le lendemain.",
+        "ability": "Chaque nuit, choisissez un joueur : s’il nomme quelqu’un le lendemain, il meurt. S’il ne reste que 3 joueurs en vie, vous perdez cette capacité",
+        "firstNightReminder": "La sorcière choisit un joueur",
+        "otherNightReminder": "La sorcière choisit un joueur.",
         "remindersGlobal": [],
         "reminders": [
             "Maudit"
@@ -1836,13 +1836,13 @@
     {
         "id": "zombuul",
         "name": "Zombuul",
-        "ability": "Chaque nuit*, si personne n’est mort aujourd'hui, choisissez un joueur: il meurt. La première fois que vous mourez, vous restez en vie mais êtes reconnu comme mort.",
+        "ability": "Chaque nuit*, si personne n’est mort dans la journée, choisissez un joueur : il meurt. La première fois que vous mourez, vous restez en vie, mais apparaissez comme mort.",
         "firstNightReminder": "",
-        "otherNightReminder": "Si personne n’est mort aujourd'hui, choisit un joueur, il meurt.",
+        "otherNightReminder": "Si personne n’est mort dans la journée, le Zombuul choisit un joueur.",
         "remindersGlobal": [],
         "reminders": [
             "Mort",
-            "Aucun Mort"
+            "Mort aujourd'hui"
         ]
     }
 ]
