@@ -14,7 +14,7 @@ index:
 
 sheet:
     title: Fiche de personnages
-    description: La fiche de personnages pour cette édition de Blood on the Clocktower
+    description: La fiche de rôles pour cette édition de Blood on the Clocktower
     jinx: Jinxs
     each_night: "* Chaque nuit, sauf la première"
     get_qr_code: Obtenir le QR code pour cette fiche
@@ -26,16 +26,16 @@ sheet:
 groups:
     players: Joueurs
     townsfolk: Villageois
-    outsider: Étrangers
+    outsider: Marginaux
     minion: Sbires
     demon: Démons
     traveller: Voyageurs
-    fabled: Mythiques
+    fabled: Légendaires
     loric: Loric
 
 messages:
     good_team: Équipe du bien
-    evil_team: Équipe maléfique
+    evil_team: Équipe du mal
     empty_character_ability: Ceci est un personnage vide
     version_change_message: Cette application a été mise à jour. Étant donné que vos données peuvent ne pas être correctes, nous recommandons de tout effacer dans la boîte de dialogue "Effacer le cache". Appuyes sur "OK" pour ouvrir la boîte de dialogue ou sur "Annuler" pour fermer ce message.
     invalid_script: Le format de ce script n'a pas été reconnu
@@ -49,7 +49,7 @@ setup:
     title: Mise en place
 
     buttons:
-        select_edition: Choisir Édition
+        select_edition: Choisir Script
         select_characters: Choisir Personnages
         qr_code_button: Fiche de personnages
         clear_cache_button: Effacer le cache
@@ -57,7 +57,7 @@ setup:
         set_language: Choisir Langue
 
     editions:
-        title: Choisir Édition
+        title: Choisir Script
         trouble_brewing: Trouble Brewing
         bad_moon_rising: Bad Moon Rising
         sects_and_violets: Sects and Violets
@@ -106,7 +106,7 @@ setup:
         clear_description: Désactiver cette option permettra d'effacer des parties individuelles du cache.
         lookup_label: Effacer données
         lookup_note: Infos sur les jinxs, composition d'équipe, et personnages.
-        characters_label: Effacer édition
+        characters_label: Effacer script
         characters_note: L'édition, ou le script, qui a été chargé
         tokens_label: Effacer jetons
         tokens_note: La position des jetons dans le grimoire.
@@ -137,7 +137,7 @@ grimoire:
         add_token: Ajouter jeton
         add_reminder: Ajouter rappel
         add_traveller: Ajouter voyageur
-        add_fabled: Ajouter mythiques
+        add_fabled: Ajouter légendaires
         show_tokens: Montrer jetons
         reset_height: Réinitialiser taille du bloc
         clear_grimoire: Effacer Grimoire
@@ -181,7 +181,7 @@ grimoire:
 
     bluff_list:
         title: Sélectionner Bluff
-        show_existing: Afficher personnages éxistants
+        show_existing: Afficher personnages existants
         show_travellers: Afficher les voyageurs
         show_evil: Afficher les personnages maléfiques
 
@@ -194,7 +194,7 @@ grimoire:
         show_all: Afficher tous les voyageurs
     
     fabled_list:
-        title: Mythiques
+        title: Légendaires
 
     token:
         title: Jetons
@@ -241,7 +241,7 @@ notes:
     title: Notes du Conteur
     label: Notes
     clear: Effacer les notes
-    clear_warning: Es-tu sur de vouloir éffacer les notes?
+    clear_warning: Es-tu sur de vouloir effacer les notes?
 
 acknowledgements:
     title: Remerciements
