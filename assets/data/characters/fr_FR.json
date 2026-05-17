@@ -1519,10 +1519,10 @@
     },
     {
         "id": "snakecharmer",
-        "name": "Charmeur de serpent",
-        "ability": "Chaque nuit, choisissez un joueur vivant: si c'est un Démon, vous échangez de rôle et d'alignement avec lui et il devient empoisonné.",
-        "firstNightReminder": "Il pointe un joueur. Si ce joueur est le Démon: Échangez leurs jetons rôle. Lui Indiquer qu'il est le nouveau Démon. Montrez-lui la carte violette « Vous êtes » et le jeton Démon. Réveillez l'ancien Démon et montrez-lui la carte violette « Vous êtes », le jeton Charmeur de serpent et un pouce vers le haut et il est maintenant empoisonné.",
-        "otherNightReminder": "Il pointe un joueur. Si ce joueur est le Démon: Échangez leurs jetons rôle. Lui Indiquer qu'il est le nouveau Démon. Montrez-lui la carte violette « Vous êtes » et le jeton Démon. Réveillez l'ancien Démon et montrez-lui la carte violette « Vous êtes », le jeton Charmeur de serpent et un pouce vers le haut et il est maintenant empoisonné.",
+        "name": "Charmeur de serpents",
+        "ability": "Chaque nuit, choisissez un joueur en vie : si c’est un Démon, il échange de rôle et d’alignement avec vous, puis est empoisonné.",
+        "firstNightReminder": "Le Charmeur de serpents choisit un joueur. S’il choisit le Démon : Montrez-lui la tuile VOUS ÊTES et le jeton Démon. Pointez le pouce vers le bas. Échangez les jetons Charmeur de serpents et Démon. L’ancien Charmeur de serpents se rendort. Réveillez l’ancien Démon. Montrez la tuile VOUS ÊTES et le jeton Charmeur de serpents, et pointez le pouce vers le haut.",
+        "otherNightReminder": "Le Charmeur de serpents choisit un joueur. S’il choisit le Démon : Montrez-lui la tuile VOUS ÊTES et le jeton Démon. Pointez le pouce vers le bas. Échangez les jetons Charmeur de serpents et Démon. L’ancien Charmeur de serpents se rendort. Réveillez l’ancien Démon. Montrez la tuile VOUS ÊTES et le jeton Charmeur de serpents, et pointez le pouce vers le haut.",
         "remindersGlobal": [],
         "reminders": [
             "Empoisonné"
@@ -1540,7 +1540,7 @@
     {
         "id": "soldier",
         "name": "Soldat",
-        "ability": "Vous êtes à l'abri des effets négatifs du Démon.",
+        "ability": "Vous êtes protégé du Démon.",
         "firstNightReminder": "",
         "otherNightReminder": "",
         "remindersGlobal": [],
@@ -1548,21 +1548,21 @@
     },
     {
         "id": "spiritofivory",
-        "name": "Esprit d'Ivoire",
-        "ability": "Il ne peut pas y avoir plus d'un joueur maléfique supplémentaire.",
+        "name": "Esprit d'ivoire",
+        "ability": "Il ne peut pas y avoir plus d’un joueur maléfique supplémentaire.",
         "firstNightReminder": "",
         "otherNightReminder": "",
         "remindersGlobal": [],
         "reminders": [
-            "Seul Maléfique en plus"
+            "Maléfiques au maximum"
         ]
     },
     {
         "id": "spy",
-        "name": "Espion",
-        "ability": "Chaque nuit, vous voyez le grimoire. Vous pourriez être reconnu comme étant « bon », et comme un Villageois ou un Étranger, même si vous êtes mort.",
-        "firstNightReminder": "Se réveille et peut regarder le grimoire.",
-        "otherNightReminder": "Se réveille et peut regarder le grimoire.",
+        "name": "Espionne",
+        "ability": "Chaque nuit, vous voyez le Grimoire. Vous pourriez apparaître comme bonne et comme Villageois ou Marginal, même morte.",
+        "firstNightReminder": "Montrez le Grimoire aussi longtemps que nécessaire.",
+        "otherNightReminder": "Montrez le Grimoire aussi longtemps que nécessaire.",
         "remindersGlobal": [],
         "reminders": []
     },
@@ -1604,9 +1604,9 @@
     {
         "id": "sweetheart",
         "name": "Dulcinée",
-        "ability": "Si vous mourez, un autre joueur devient ivre pour le reste de la partie.",
+        "ability": "Lorsque vous mourez, 1 joueur est désormais ivre.",
         "firstNightReminder": "",
-        "otherNightReminder": "Choisissez un joueur. Il devient ivre.",
+        "otherNightReminder": "Si la Dulcinée est morte, un joueur est devenu immédiatement ivre. Si vous n’avez pas encore rendu ce joueur ivre, faites-le maintenant.",
         "remindersGlobal": [],
         "reminders": [
             "Ivre"
@@ -1614,19 +1614,19 @@
     },
     {
         "id": "tealady",
-        "name": "Serveuse de Thé",
-        "ability": "Si vos deux voisins vivants sont « bons », ils ne peuvent pas mourir.",
+        "name": "Tisanière",
+        "ability": "Si vos deux voisins en vie sont bons, ils ne peuvent pas mourir.",
         "firstNightReminder": "",
         "otherNightReminder": "",
         "remindersGlobal": [],
         "reminders": [
-            "Protégé"
+            "Ne peut pas mourir"
         ]
     },
     {
         "id": "thief",
-        "name": "Voleur",
-        "ability": "Chaque nuit, choisissez un autre joueur: son vote compte négativement le jour suivant.",
+        "name": "Voleuse",
+        "ability": "Chaque nuit, choisissez un joueur (sauf vous-même) : son vote compte en négatif le lendemain.",
         "firstNightReminder": "Choisit un autre joueur (lui assigner le jeton « Vote négatif ») qui aura un vote négatif le jour suivant.",
         "otherNightReminder": "Choisit un autre joueur (lui assigner le jeton « Vote négatif ») qui aura un vote négatif le jour suivant.",
         "remindersGlobal": [],
@@ -1637,9 +1637,9 @@
     {
         "id": "tinker",
         "name": "Bricoleur",
-        "ability": "Vous pouvez mourir... à tout moment.",
+        "ability": "Vous pourriez mourir à tout moment.",
         "firstNightReminder": "",
-        "otherNightReminder": "L'Inventeur pourrait mourir.",
+        "otherNightReminder": "Le bricoleur pourrait mourir",
         "remindersGlobal": [],
         "reminders": [
             "Mort"
