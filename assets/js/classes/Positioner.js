@@ -49,6 +49,26 @@ export default class Positioner {
 
         },
 
+        ellipseInverted(data) {
+            const { total } = data;
+
+            const tempData = {
+                ...data,
+                total: 2*total
+            };
+
+            const ellipseCoordsX2 = Positioner.layouts.ellipse(tempData);
+
+            const coordinates = [];
+
+            times(total, (index) => {
+                coordinates.push(ellipseCoordsX2[(total+1+2*index) % (2*total)])
+            });
+            
+            return coordinates;
+
+        },
+
         diagonal(data) {
 
             const {
