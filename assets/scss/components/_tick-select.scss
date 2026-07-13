@@ -11,9 +11,10 @@
                 top: 50%;
                 z-index: 1;
                 transform: translate(-50%, -50%);
-                font-size: 4em;
-                color: #fff;
+                font-size: 8em;
+                color: lch(from var(--green) calc(l + -25) c h);
                 text-shadow: 0 0 0.25em #000;
+                opacity: 0.8;
             }
 
             > .tick-select__icon {
