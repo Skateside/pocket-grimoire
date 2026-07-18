@@ -317,33 +317,21 @@ class TPIResourcesModel
         switch ($team) {
         case 'fabled':
         case 'loric':
-            $images = [
-                $id,
-            ];
+            $images = [$id];
             break;
 
         case 'townsfolk':
         case 'outsider':
-            $images = [
-                "{$id}_g",
-                "{$id}_e",
-            ];
+            $images = ["{$id}_g", "{$id}_e"];
             break;
 
         case 'minion':
         case 'demon':
-            $images = [
-                "{$id}_e",
-                "{$id}_g",
-            ];
+            $images = ["{$id}_e", "{$id}_g"];
             break;
 
         case 'traveller':
-            $images = [
-                $id,
-                "{$id}_g",
-                "{$id}_e",
-            ];
+            $images = [$id, "{$id}_g", "{$id}_e"];
             break;
         }
 

@@ -24,9 +24,11 @@ class Fetch
      * returning an array with a "success" key and a "body" key.
      *
      * @param string $source Source of the contents to get and parse.
+     * @param bool isAssoc Whether to parse the JSON as an associative array or
+     *        an object. Defaults to array.
      * @return array Results of parsing the contents (if possible).
      */
-    public function getJson(string $source): array
+    public function getJson(string $source, bool $isAssoc = true): array
     {
         $contents = file_get_contents($source);
 
@@ -38,7 +40,7 @@ class Fetch
             return $this->failure("'{$source}' not valid JSON");
         }
 
-        $decoded = json_decode($contents, true);
+        $decoded = json_decode($contents, $isAssoc);
 
         if (!is_array($decoded)) {
             return $this->failure('JSON not an array');
