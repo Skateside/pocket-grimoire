@@ -4,55 +4,43 @@ namespace App\Model;
 
 class TPIResourcesModel
 {
-    const URL_ROLES = 'https://release.botc.app/resources/data/roles.json';
-    const URL_JINXES = 'https://release.botc.app/resources/data/jinxes.json';
-    const URL_NIGHTSHEET = 'https://release.botc.app/resources/data/nightsheet.json';
+    /**
+     * @var string Location wrapper for the images.
+     */
+    const LOCATION_IMAGES = '/build/img/roles/%s.webp';
 
     /**
-     * Gets the special roles from the JSON file.
+     * Combines the data.
      *
-     * @return array Success status and the body of the results.
+     * @param array $roles Raw roles to modify.
+     * @param array $nightsheet Night sheet for the first and other nightrs.
+     * @return array Combined data.
      */
-    public function getLocal(string $filename): array
-    {
-        // $file = $this->dataDirectory . DIRECTORY_SEPARATOR . $filename;
-        $file = $filename;
-
-        if (!file_exists($file)) {
-            return ['success' => false, 'body' => "'{$file}' not found"];
-        }
-
-        return $this->getContentsAsJson($file);
-    }
-
-    /**
-     * Gets the JSON from the given URL.
-     *
-     * @param string $url URL to find the JSON.
-     * @return array The success status body of the results.
-     */
-    public function getRemote(string $url): array
-    {
-        return $this->getContentsAsJson($url);
-    }
-
-    public function getImages(): array
-    {
-        $path = '/../../assets/img/roles';
-        $realpath = realpath(dirname(__FILE__) . $path);
-        $files = scandir($realpath);
-
-        return array_filter($files, function ($item) {
-            return pathinfo($item, PATHINFO_EXTENSION) === 'webp';
-        });
-    }
-
     public function combineRoles(
         array $roles,
         array $nightsheet,
-        array $images,
     ): array {
         $combined = [];
+
+        $firstNight = $nightsheet['firstNight'];
+        $otherNight = $nightsheet['otherNight'];
+
+        foreach ($roles as $role) {
+            $role['firstNight'] = 0;
+            $role['otherNight'] = 0;
+
+            if (($firstIndex = array_search($role['id'], $firstNight)) !== false) {
+                $role['firstNight'] = $firstIndex;
+            }
+
+            if (($otherIndex = array_search($role['id'], $otherNight)) !== false) {
+                $role['otherNight'] = $otherIndex;
+            }
+
+            $role['image'] = $this->generateImages($role['id'], $role['team']);
+
+            $combined[] = $role;
+        }
 
         usort($combined, function ($a, $b) {
             return $a['id'] <=> $b['id'];
@@ -81,30 +69,51 @@ class TPIResourcesModel
     }
 
     /**
-     * Gets the contents of the given source and attempts to parse it as JSON,
-     * returning an array with a "success" key and a "body" key.
+     * Generates the images for the given role.
      *
-     * @param string $source Source of the contents to get and parse.
-     * @return array Results of parsing the contents (if possible).
+     * @param string $id Role ID.
+     * @param string $team Role's team.
+     * @return array Array of image locations.
      */
-    protected function getContentsAsJson(string $source): array
+    protected function generateImages(string $id, string $team): array
     {
-        $contents = file_get_contents($source);
+        $images = [];
 
-        if ($contents === false) {
-            return ['success' => false, 'body' => "'{$source}' not found"];
+        switch ($team) {
+        case 'fabled':
+        case 'loric':
+            $images = [
+                $id,
+            ];
+            break;
+
+        case 'townsfolk':
+        case 'outsider':
+            $images = [
+                "{$id}_g",
+                "{$id}_e",
+            ];
+            break;
+
+        case 'minion':
+        case 'demon':
+            $images = [
+                "{$id}_e",
+                "{$id}_g",
+            ];
+            break;
+
+        case 'traveller':
+            $images = [
+                $id,
+                "{$id}_g",
+                "{$id}_e",
+            ];
+            break;
         }
 
-        if (!json_validate($contents)) {
-            return ['success' => false, 'body' => "'{$source}' not valid JSON"];
-        }
-
-        $decoded = json_decode($contents, true);
-
-        if (!is_array($decoded)) {
-            return ['success' => false, 'body' => 'JSON not an array'];
-        }
-
-        return ['success' => true, 'body' => $decoded];
+        return array_map(function ($image) {
+            return sprintf(static::LOCATION_IMAGES, $image);
+        }, $images);
     }
 }
