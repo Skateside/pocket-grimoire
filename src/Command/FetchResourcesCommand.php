@@ -34,37 +34,86 @@ class FetchResourcesCommand extends Command
     protected function execute(InputInterface $input, OutputInterface $output): int
     {
         $this->io = new SymfonyStyle($input, $output);
+        $bar = null; // Created in verbose mode.
 
-        $bar = $this->io->createProgressBar(3);
-        $bar->start();
+        if ($output->isVerbose()) {
+            $this->io->title('Fetching Resources');
+            $this->io->section('Downloading');
+
+            $bar = $this->io->createProgressBar(3);
+            $bar->start();
+        }
+
+        $rawJinxes = $this->fetch->getJson(Fetch::URL_TPI_JINXES);
+
+        if ($output->isVerbose()) {
+            $bar->advance();
+        }
+
+        $rawNightsheet = $this->fetch->getJson(Fetch::URL_TPI_NIGHTSHEET);
+
+        if ($output->isVerbose()) {
+            $bar->advance();
+        }
 
         $rawRoles = $this->fetch->getJson(Fetch::URL_TPI_ROLES);
-        $bar->advance();
-        $rawJinxes = $this->fetch->getJson(Fetch::URL_TPI_JINXES);
-        $bar->advance();
-        $rawNightsheet = $this->fetch->getJson(Fetch::URL_TPI_NIGHTSHEET);
-        $bar->advance();
 
-        $bar->finish();
+        if ($output->isVerbose()) {
+            $bar->advance();
+            $bar->finish();
+        }
+
         $this->io->writeln('');
 
         if (
-            !$rawRoles['success']
-            || !$rawJinxes['success']
+            !$rawJinxes['success']
             || !$rawNightsheet['success']
+            || !$rawRoles['success']
         ) {
             $this->io->error('Data not valid');
             return Command::FAILURE;
         }
 
-        $this->storage->writeJson('jinxes.json', Storage::LOCATION_DATA, $rawJinxes['body']);
+        $jinxes = $this->model->filterJinxes($rawJinxes['body']);
+        $nightsheet = $this->model->filterNightsheet($rawNightsheet['body']);
+        $roles = $this->model->filterRoles($rawRoles['body']);
 
-        $roles = $this->model->combineRoles(
-            $rawRoles['body'],
-            $rawNightsheet['body'],
-        );
+        if ($output->isVerbose()) {
+            $this->io->section('Results');
+            $this->io->table(
+                ['Type', 'Raw entries', 'Filtered entries'],
+                [
+                    ['Jinxes', count($rawJinxes['body']), count($jinxes)],
+                    ['Nightsheet', count($rawNightsheet['body']), count($nightsheet)],
+                    ['Roles', count($rawRoles['body']), count($roles)],
+                ],
+            );
+        }
+        
 
-        $this->storage->writeJson('characters.json', Storage::LOCATION_DATA, $roles);
+        if (
+            count($rawJinxes['body']) !== count($jinxes)
+            || count($rawNightsheet['body']) !== count($nightsheet)
+            || count($rawRoles['body']) !== count($roles)
+        ) {
+            $this->io->warning('Some filtering occurred');
+        }
+
+        $writtenJinxes = $this->storage->writeJson('jinxes.json', Storage::LOCATION_DATA, $jinxes);
+
+        if ($writtenJinxes === false) {
+            $this->io->error('Failed to write jinxes');
+            return Command::FAILURE;
+        }
+
+        $combined = $this->model->combineRoles($roles, $nightsheet);
+
+        $writtenRoles = $this->storage->writeJson('characters.json', Storage::LOCATION_DATA, $combined);
+
+        if ($writtenRoles === false) {
+            $this->io->error('Failed to write characters');
+            return Command::FAILURE;
+        }
 
         $this->io->success('Characters and Jinxes files written');
 

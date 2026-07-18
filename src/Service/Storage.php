@@ -99,16 +99,18 @@ class Storage
      * @param string $filename Name of the file to write.
      * @param string $locationId ID of the location to write to.
      * @param mixed $data JSON to encode and write.
-     * @param int $flags Optional flags.
+     * @param int $jsonFlags Optional flags for writing JSON.
+     * @param int $flags Optional flags for writing the file.
      * @return int|false Either the number of bytes written or false on an error.
      */
     public function writeJson(
         string $filename,
         string $locationId,
         mixed $data,
+        int $jsonFlags = 0,
         int $flags = 0,
     ): mixed {
-        return $this->write($filename, $locationId, json_encode($data), $flags);
+        return $this->write($filename, $locationId, json_encode($data, $jsonFlags), $flags);
     }
 
     /**
