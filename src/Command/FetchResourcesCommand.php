@@ -113,7 +113,7 @@ class FetchResourcesCommand extends Command
 
         $writtenJinxes = $this->storage->writeJson(
             'jinxes.json',
-            Storage::LOCATION_DATA,
+            Storage::LOCATION_RAW,
             $jinxes,
             $output->isVeryVerbose() ? JSON_PRETTY_PRINT : 0,
         );
@@ -131,7 +131,7 @@ class FetchResourcesCommand extends Command
 
         $writtenReminders = $this->storage->writeJson(
             'reminders.json',
-            Storage::LOCATION_DATA,
+            Storage::LOCATION_RAW,
             $reminders,
             $output->isVeryVerbose() ? JSON_PRETTY_PRINT : 0,
         );
@@ -143,7 +143,7 @@ class FetchResourcesCommand extends Command
 
         $writtenRoles = $this->storage->writeJson(
             'characters.json',
-            Storage::LOCATION_DATA,
+            Storage::LOCATION_RAW,
             $combined,
             $output->isVeryVerbose() ? JSON_PRETTY_PRINT : 0,
         );

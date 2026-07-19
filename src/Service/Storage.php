@@ -4,10 +4,8 @@ namespace App\Service;
 
 class Storage
 {
-    const LOCATION_CHARACTERS = 'characters';
-    const LOCATION_DATA = 'data';
-    const LOCATION_IMAGES = 'images';
-    const LOCATION_JINXES = 'jinxes';
+    const LOCATION_COMPILED = 'compiled';
+    const LOCATION_RAW = 'raw';
 
     protected $locations = [];
 
@@ -15,17 +13,13 @@ class Storage
     {
         /*
         $this->locations = [
-            static::LOCATION_CHARACTERS => '/assets/data/characters',
-            static::LOCATION_DATA => '/assets/data',
-            static::LOCATION_IMAGES => '/assets/data/images',
-            static::LOCATION_JINXES => '/assets/data/jinxes',
+            static::LOCATION_COMPILED => '/assets/data/compiled',
+            static::LOCATION_RAW => '/assets/data/raw',
         ];
         /*/
         $this->locations = [
-            static::LOCATION_CHARACTERS => '/ideas/data/characters',
-            static::LOCATION_DATA => '/ideas/data',
-            static::LOCATION_IMAGES => '/ideas/data/images',
-            static::LOCATION_JINXES => '/ideas/data/jinxes',
+            static::LOCATION_COMPILED => '/ideas/data/compiled',
+            static::LOCATION_RAW => '/ideas/data/raw',
         ];
         //*/
     }

@@ -53,14 +53,14 @@ class TranslateResourcesCommand extends Command
             $locales[$this->model->asTPILocale($code)] = $code;
         }
 
-        $rawReminders = $this->storage->readJson('reminders.json', Storage::LOCATION_DATA);
+        $rawReminders = $this->storage->readJson('reminders.json', Storage::LOCATION_RAW);
         $reminders = $this->resourcesModel->filterReminders($rawReminders);
 
         if (count($rawReminders) !== count($reminders)) {
             $io->warning('Some reminders have been filtered out.');
         }
 
-        $rawCharacters = $this->storage->readJson('characters.json', Storage::LOCATION_DATA);
+        $rawCharacters = $this->storage->readJson('characters.json', Storage::LOCATION_RAW);
         $characters = array_filter($rawCharacters, function ($item) {
             return $this->resourcesModel->isValidRoleEntry($item);
         });
@@ -69,7 +69,7 @@ class TranslateResourcesCommand extends Command
             $io->warning('Some characters have been filtered out.');
         }
 
-        $rawJinxes = $this->storage->readJson('jinxes.json', Storage::LOCATION_DATA);
+        $rawJinxes = $this->storage->readJson('jinxes.json', Storage::LOCATION_RAW);
         $jinxes = $this->resourcesModel->filterJinxes($rawJinxes);
 
         if (count($rawJinxes) !== count($jinxes)) {
@@ -95,7 +95,7 @@ class TranslateResourcesCommand extends Command
                 $characters,
                 $reminders,
                 $jinxes,
-                "{$pgCode}.json",
+                "{$pgCode}.js",
                 $output->isVeryVerbose(),
             );
 
@@ -103,8 +103,7 @@ class TranslateResourcesCommand extends Command
                 $pgCode,
                 $tpiCode,
                 (string) $results['fetch'],
-                (string) $results['roles'],
-                (string) $results['jinxes'],
+                (string) $results['write'],
             ];
 
             if ($output->isVerbose()) {
@@ -117,12 +116,12 @@ class TranslateResourcesCommand extends Command
             $io->writeln('');
             $io->section('Results');
             $io->table(
-                ['Locale', 'TPI Locale', 'Fetch', 'Roles', 'Jinxes'],
+                ['Locale', 'TPI Locale', 'Fetch', 'Write'],
                 $tableBody,
             );
         }
 
-        $io->success('Characters and Jinxes translations written');
+        $io->success('Translations written');
 
         return Command::SUCCESS;
     }
@@ -149,8 +148,7 @@ class TranslateResourcesCommand extends Command
         $raw = $this->fetch->getJson(sprintf(TPIURLEnum::GAME, $locale));
         $results = [
             'fetch' => true,
-            'roles' => true,
-            'jinxes' => true,
+            'write' => true,
         ];
         $body = [];
 
@@ -160,34 +158,30 @@ class TranslateResourcesCommand extends Command
             $results['fetch'] = "Unable to fetch: {$raw['body']}";
         }
 
-        $roles = $this->storage->writeJson(
-            $filename,
-            Storage::LOCATION_CHARACTERS,
-            $this->model->combineRoles(
+        $data = [
+            'roles' => $this->model->combineRoles(
                 $characters,
                 $reminders,
                 $body['roles'] ?? [],
                 $body['reminders'] ?? [],
             ),
-            $isPretty ? JSON_PRETTY_PRINT : 0,
-        );
-
-        if ($roles === false) {
-            $results['roles'] = 'Failed to write';
-        }
-
-        $theJinxes = $this->storage->writeJson(
-            $filename,
-            Storage::LOCATION_JINXES,
-            $this->model->combineJinxes(
+            'jinxes' => $this->model->combineJinxes(
                 $jinxes,
                 $body['jinxes'] ?? [],
             ),
+        ];
+        $contents = 'var PG = ' . json_encode(
+            $data,
             $isPretty ? JSON_PRETTY_PRINT : 0,
+        ) . ';';
+        $file = $this->storage->write(
+            $filename,
+            Storage::LOCATION_COMPILED,
+            $contents,
         );
 
-        if ($theJinxes === false) {
-            $results['jinxes'] = 'Failed to write';
+        if ($file === false) {
+            $results['write'] = 'Failed to write';
         }
 
         return $results;
