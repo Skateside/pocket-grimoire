@@ -111,7 +111,12 @@ class FetchResourcesCommand extends Command
             $io->warning('Some filtering occurred');
         }
 
-        $writtenJinxes = $this->storage->writeJson('jinxes.json', Storage::LOCATION_DATA, $jinxes);
+        $writtenJinxes = $this->storage->writeJson(
+            'jinxes.json',
+            Storage::LOCATION_DATA,
+            $jinxes,
+            $output->isVeryVerbose() ? JSON_PRETTY_PRINT : 0,
+        );
 
         if ($writtenJinxes === false) {
             $io->error('Failed to write jinxes');
@@ -124,14 +129,24 @@ class FetchResourcesCommand extends Command
             $nightsheet,
         );
 
-        $writtenReminders = $this->storage->writeJson('reminders.json', Storage::LOCATION_DATA, $reminders);
+        $writtenReminders = $this->storage->writeJson(
+            'reminders.json',
+            Storage::LOCATION_DATA,
+            $reminders,
+            $output->isVeryVerbose() ? JSON_PRETTY_PRINT : 0,
+        );
 
         if ($writtenReminders === false) {
             $io->error('Failed to write reminders');
             return Command::FAILURE;
         }
 
-        $writtenRoles = $this->storage->writeJson('characters.json', Storage::LOCATION_DATA, $combined);
+        $writtenRoles = $this->storage->writeJson(
+            'characters.json',
+            Storage::LOCATION_DATA,
+            $combined,
+            $output->isVeryVerbose() ? JSON_PRETTY_PRINT : 0,
+        );
 
         if ($writtenRoles === false) {
             $io->error('Failed to write characters');

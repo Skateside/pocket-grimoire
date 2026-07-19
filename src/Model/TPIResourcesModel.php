@@ -202,7 +202,7 @@ class TPIResourcesModel
                 && in_array($role['id'], $nightsheet['firstNight'])
             ) {
                 $cleanRole['firstNight'] = array_search($role['id'], $nightsheet['firstNight']) + 1;
-                $cleanRole['firstNightReminder'] = $this->cleanNightReminder($role['firstNightReminder']);
+                $cleanRole['firstNightReminder'] = static::cleanNightReminder($role['firstNightReminder']);
             }
 
             if (
@@ -210,7 +210,7 @@ class TPIResourcesModel
                 && in_array($role['id'], $nightsheet['otherNight'])
             ) {
                 $cleanRole['otherNight'] = array_search($role['id'], $nightsheet['otherNight']) + 1;
-                $cleanRole['otherNightReminder'] = $this->cleanNightReminder($role['otherNightReminder']);
+                $cleanRole['otherNightReminder'] = static::cleanNightReminder($role['otherNightReminder']);
             }
 
             $cleanRole['image'] = $this->generateImages($role['id'], $role['team']);
@@ -232,7 +232,7 @@ class TPIResourcesModel
      * @param string $nightReminder Night reminder to clean.
      * @return string Cleaned night reminder.
      */
-    public function cleanNightReminder(string $nightReminder)
+    public static function cleanNightReminder(string $nightReminder)
     {
         $removed = str_replace(':reminder:', '', $nightReminder);
         $unspaced = preg_replace('/\s+/', ' ', $removed);

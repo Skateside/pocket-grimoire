@@ -124,11 +124,11 @@ class TPITranslationModel
             }
 
             if (array_key_exists('first', $translatedRole)) {
-                $role['firstNightReminder'] = $translatedRole['first'];
+                $role['firstNightReminder'] = TPIResourcesModel::cleanNightReminder($translatedRole['first']);
             }
 
             if (array_key_exists('other', $translatedRole)) {
-                $role['otherNightReminder'] = $translatedRole['other'];
+                $role['otherNightReminder'] = TPIResourcesModel::cleanNightReminder($translatedRole['other']);
             }
 
             if (array_key_exists('reminders', $role)) {
@@ -149,11 +149,36 @@ class TPITranslationModel
         return $combined;
     }
 
+    /**
+     * Combines the jinxes.
+     *
+     * @param array $baseJinxes Base (English) jinxes.
+     * @param array $translatedJinxes Translated jinxes.
+     * @return array Combined, translated jinxes.
+     */
     public function combineJinxes(
         array $baseJinxes,
         array $translatedJinxes,
     ): array {
-        return [];
+        $combined = [];
+
+        foreach ($baseJinxes as $baseJinx) {
+            $jinx = [
+                'id' => $baseJinx['id'],
+                'jinx' => [],
+            ];
+
+            foreach ($baseJinx['jinx'] as $innerJinx) {
+                $jinx['jinx'][] = [
+                    'id' => $innerJinx['id'],
+                    'reason' => $translatedJinxes["{$baseJinx['id']}-{$innerJinx['id']}"] ?? $translatedJinxes["{$innerJinx['id']}-{$baseJinx['id']}"] ?? $innerJinx['reason'],
+                ];
+            }
+
+            $combined[] = $jinx;
+        }
+
+        return $combined;
     }
 
     /**

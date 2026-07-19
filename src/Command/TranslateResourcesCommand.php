@@ -43,6 +43,11 @@ class TranslateResourcesCommand extends Command
     {
         $io = new SymfonyStyle($input, $output);
 
+        if ($output->isVerbose()) {
+            $io->title('Translating resources');
+            $io->section('Reading local files');
+        }
+
         $locales = [];
         foreach ($this->localeModel->getLocaleCodes() as $code) {
             $locales[$this->model->asTPILocale($code)] = $code;
@@ -71,9 +76,18 @@ class TranslateResourcesCommand extends Command
             $io->warning('Some jinxes have been filtered out.');
         }
 
-        $bar = $io->createProgressBar(count($locales));
-        $bar->start();
+        if ($output->isVerbose()) {
+            $io->writeln('Done');
+            $io->section('Downloading translations and writing files');
+        }
+
+        $bar = null; // Created in verbose mode.
         $tableBody = [];
+
+        if ($output->isVerbose()) {
+            $bar = $io->createProgressBar(count($locales));
+            $bar->start();
+        }
 
         foreach ($locales as $tpiCode => $pgCode) {
             $results = $this->generateLocale(
@@ -82,6 +96,7 @@ class TranslateResourcesCommand extends Command
                 $reminders,
                 $jinxes,
                 "{$pgCode}.json",
+                $output->isVeryVerbose(),
             );
 
             $tableBody[] = [
@@ -91,15 +106,22 @@ class TranslateResourcesCommand extends Command
                 (string) $results['jinxes'],
             ];
 
-            $bar->advance();
+            if ($output->isVerbose()) {
+                $bar->advance();
+            }
         }
 
-        $bar->finish();
+        if ($output->isVerbose()) {
+            $bar->finish();
+            $io->writeln('');
+            $io->section('Results');
+            $io->table(
+                ['Locale', 'Fetch', 'Roles', 'Jinxes'],
+                $tableBody,
+            );
+        }
 
-        $io->table(
-            ['Locale', 'Fetch', 'Roles', 'Jinxes'],
-            $tableBody,
-        );
+        $io->success('Characters and Jinxes translations written');
 
         return Command::SUCCESS;
     }
@@ -112,8 +134,8 @@ class TranslateResourcesCommand extends Command
      * @param array $reminders Base reminder translations.
      * @param array $jinxes Base jinx translations.
      * @param string $filename Name of the file to generate.
-     * @return string|true Either true on success or a string with an error on
-     *         failure.
+     * @param bool $isPretty If true, the generated file will be formatted.
+     * @return string|true Either true on success or a string with an error on failure.
      */
     protected function generateLocale(
         string $locale,
@@ -121,6 +143,7 @@ class TranslateResourcesCommand extends Command
         array $reminders,
         array $jinxes,
         string $filename,
+        bool $isPretty = false,
     ): mixed {
         $raw = $this->fetch->getJson(sprintf(TPIURLEnum::GAME, $locale));
         $results = [
@@ -145,10 +168,25 @@ class TranslateResourcesCommand extends Command
                 $body['roles'] ?? [],
                 $body['reminders'] ?? [],
             ),
+            $isPretty ? JSON_PRETTY_PRINT : 0,
         );
 
         if ($roles === false) {
             $results['roles'] = 'Failed to write';
+        }
+
+        $theJinxes = $this->storage->writeJson(
+            $filename,
+            Storage::LOCATION_JINXES,
+            $this->model->combineJinxes(
+                $jinxes,
+                $body['jinxes'] ?? [],
+            ),
+            $isPretty ? JSON_PRETTY_PRINT : 0,
+        );
+
+        if ($theJinxes === false) {
+            $results['jinxes'] = 'Failed to write';
         }
 
         return $results;
