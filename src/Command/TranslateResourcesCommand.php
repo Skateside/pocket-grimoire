@@ -100,6 +100,7 @@ class TranslateResourcesCommand extends Command
             );
 
             $tableBody[] = [
+                $pgCode,
                 $tpiCode,
                 (string) $results['fetch'],
                 (string) $results['roles'],
@@ -116,7 +117,7 @@ class TranslateResourcesCommand extends Command
             $io->writeln('');
             $io->section('Results');
             $io->table(
-                ['Locale', 'Fetch', 'Roles', 'Jinxes'],
+                ['Locale', 'TPI Locale', 'Fetch', 'Roles', 'Jinxes'],
                 $tableBody,
             );
         }
