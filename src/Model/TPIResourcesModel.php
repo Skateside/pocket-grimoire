@@ -116,14 +116,29 @@ class TPIResourcesModel
     }
 
     /**
+     * Filters the reminders.
+     *
+     * @param array $reminders Reminders to filter.
+     * @return array Filtered reminders.
+     */
+    public function filterReminders(array $reminders): array
+    {
+        return array_filter($reminders, function ($item) {
+            return is_string($item) && strlen($item) > 0;
+        });
+    }
+
+    /**
      * Combines the data.
      *
      * @param array $roles Raw roles to modify.
+     * @param array $reminders Reminder conversions.
      * @param array $nightsheet Night sheet for the first and other nightrs.
      * @return array Combined data.
      */
     public function combineRoles(
         array $roles,
+        array $reminders,
         array $nightsheet,
     ): array {
         $combined = [];
@@ -142,12 +157,44 @@ class TPIResourcesModel
                 'flavor' => $role['flavor'],
             ];
             
-            if (array_key_exists('reminders', $role)) {
-                $cleanRole['reminders'] = $role['reminders'];
-            }
+            if (
+                array_key_exists('reminders', $role)
+                && is_array($role['reminders'])
+            ) {
+                $mappedReminders = array_map(function ($item) use ($reminders) {
+                    if (array_key_exists($item, $reminders)) {
+                        return $reminders[$item];
+                    }
 
-            if (array_key_exists('remindersGlobal', $role)) {
-                $cleanRole['remindersGlobal'] = $role['remindersGlobal'];
+                    return '';
+                }, $role['reminders']);
+                $roleReminders = array_filter($mappedReminders, function ($item) {
+                    return strlen($item) > 0;
+                });
+
+                if (count($roleReminders)) {
+                    $cleanRole['reminders'] = $roleReminders;
+                }
+            }
+            
+            if (
+                array_key_exists('remindersGlobal', $role)
+                && is_array($role['remindersGlobal'])
+            ) {
+                $mappedReminders = array_map(function ($item) use ($reminders) {
+                    if (array_key_exists($item, $reminders)) {
+                        return $reminders[$item];
+                    }
+
+                    return '';
+                }, $role['remindersGlobal']);
+                $roleReminders = array_filter($mappedReminders, function ($item) {
+                    return strlen($item) > 0;
+                });
+
+                if (count($roleReminders)) {
+                    $cleanRole['remindersGlobal'] = $roleReminders;
+                }
             }
 
             if (

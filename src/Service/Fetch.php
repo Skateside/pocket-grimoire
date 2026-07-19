@@ -5,21 +5,6 @@ namespace App\Service;
 class Fetch
 {
     /**
-     * @var string Location of the TPI jinxes data.
-     */
-    const URL_TPI_JINXES = 'https://release.botc.app/resources/data/jinxes.json';
-    
-    /**
-     * @var string Location of the TPI night sheet data.
-     */
-    const URL_TPI_NIGHTSHEET = 'https://release.botc.app/resources/data/nightsheet.json';
-    
-    /**
-     * @var string Location of the TPI roles data.
-     */
-    const URL_TPI_ROLES = 'https://release.botc.app/resources/data/roles.json';
-
-    /**
      * Gets the contents of the given source and attempts to parse it as JSON,
      * returning an array with a "success" key and a "body" key.
      *
@@ -30,6 +15,18 @@ class Fetch
      */
     public function getJson(string $source, bool $isAssoc = true): array
     {
+        $headers = get_headers($source);
+        $matches = [];
+        preg_match('/(\d{3})/', $headers[0], $matches);
+
+        if (
+            !count($matches)
+            || (int) $matches[0] < 200
+            || ((int) $matches[0] >= 300 && (int) $matches[0] !== 302)
+        ) {
+            return $this->failure("'{$source}' response: {$headers[0]}");
+        }
+
         $contents = file_get_contents($source);
 
         if ($contents === false) {
