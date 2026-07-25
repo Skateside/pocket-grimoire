@@ -34,3 +34,6 @@ services:
         bind:
             string $configDir: '%kernel.project_dir%/config'
             string $fileName: 'locales.yaml'
+    App\Service\Storage:
+        bind:
+            string $projectDir: '%kernel.project_dir%'

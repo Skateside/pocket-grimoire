@@ -78,6 +78,10 @@ Encore
         from: "./assets/img",
         to: "img/[path][name].[ext]"
     })
+    .copyFiles({
+        from: "./assets/data/compiled",
+        to: "data/[name].[ext]",
+    })
     // .copyFiles({
     //     from: "./assets/data",
     //     to: "data/[path][name].[ext]"

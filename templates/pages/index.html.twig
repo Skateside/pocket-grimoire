@@ -46,5 +46,6 @@ var I18N = {
 
 var ENVIRONMENT = "{{ app.environment|e('js') }}";
 </script>
+<script src="/build/data/{{ app.request.locale }}.js"></script>
 {{ encore_entry_script_tags('js/main') }}
 {% endblock %}

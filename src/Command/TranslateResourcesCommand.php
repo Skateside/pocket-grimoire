@@ -8,6 +8,7 @@ use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
 use Symfony\Component\Console\Style\SymfonyStyle;
 use App\Enums\TPIURLEnum;
+use App\Model\GameModel;
 use App\Model\LocaleModel;
 use App\Model\TPIResourcesModel;
 use App\Model\TPITranslationModel;
@@ -18,6 +19,7 @@ class TranslateResourcesCommand extends Command
 {
     protected static $defaultName = 'pocket-grimoire:translate';
     protected $model;
+    protected $gameModel;
     protected $localeModel;
     protected $resourcesModel;
     protected $fetch;
@@ -25,12 +27,14 @@ class TranslateResourcesCommand extends Command
 
     public function __construct(
         TPITranslationModel $model,
+        GameModel $gameModel,
         LocaleModel $localeModel,
         TPIResourcesModel $resourcedModel,
         Fetch $fetch,
         Storage $storage,
     ) {
         $this->model = $model;
+        $this->gameModel = $gameModel;
         $this->localeModel = $localeModel;
         $this->resourcesModel = $resourcedModel;
         $this->fetch = $fetch;
@@ -169,6 +173,7 @@ class TranslateResourcesCommand extends Command
                 $jinxes,
                 $body['jinxes'] ?? [],
             ),
+            'game' => $this->gameModel->getFeed(),
         ];
         $contents = 'var PG = ' . json_encode(
             $data,

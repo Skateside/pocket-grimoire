@@ -58,7 +58,7 @@ export default class ReminderToken extends Token {
         // Provide some default values so that .get() methods don't worry about
         // missing data and instead worry about typos.
 
-        return {
+        const processed = {
             id: "",
             text: "",
             image: "",
@@ -67,6 +67,21 @@ export default class ReminderToken extends Token {
             isGlobal: false,
             ...data
         };
+
+        // The data now has an array of images. This is a quick workaround to
+        // get that working.
+        // TODO: allow the role to have an array of images.
+        if (Array.isArray(processed.image)) {
+
+            processed.image = (
+                typeof processed.image[0] === "string"
+                ? processed.image[0]
+                : ""
+            );
+
+        }
+
+        return processed;
 
     }
 

@@ -7,21 +7,20 @@ class Storage
     const LOCATION_COMPILED = 'compiled';
     const LOCATION_RAW = 'raw';
 
+    protected $projectDir;
     protected $locations = [];
 
-    public function __construct()
+    public function __construct(string $projectDir)
     {
-        /*
+        $this->projectDir = $projectDir;
         $this->locations = [
             static::LOCATION_COMPILED => '/assets/data/compiled',
             static::LOCATION_RAW => '/assets/data/raw',
         ];
-        /*/
-        $this->locations = [
-            static::LOCATION_COMPILED => '/ideas/data/compiled',
-            static::LOCATION_RAW => '/ideas/data/raw',
-        ];
-        //*/
+
+        foreach ($this->locations as $id => $path) {
+            $this->locations[$id] = implode(DIRECTORY_SEPARATOR, explode('/', $path));
+        }
     }
 
     /**
@@ -37,8 +36,22 @@ class Storage
         }
 
         $path = $this->locations[$id];
-        $realpath = realpath(dirname(__FILE__) . '/../..' . $path);
+        $realpath = $this->projectDir . $path;
+
         return $realpath;
+    }
+
+    /**
+     * Helper function for getting the full file name for the file in the given
+     * location.
+     *
+     * @param string $id ID of the location.
+     * @param string $filename Filename.
+     * @return string Full file name.
+     */
+    public function getFilename(string $id, string $filename): string
+    {
+        return $this->getRealpath($id) . DIRECTORY_SEPARATOR . $filename;
     }
 
     /**
@@ -50,9 +63,7 @@ class Storage
      */
     public function read(string $filename, string $locationId): mixed
     {
-        $path = $this->getRealpath($locationId) . '/' . $filename;
-
-        return file_get_contents($path);
+        return file_get_contents($this->getFilename($locationId, $filename));
     }
 
     /**
@@ -65,6 +76,27 @@ class Storage
     public function readJson(string $filename, string $locationId): mixed
     {
         return json_decode($this->read($filename, $locationId), true);
+    }
+
+    /**
+     * Makes the directory at the given location ID. Optionally, the directory
+     * permissions can be set.
+     *
+     * @param string $locationId ID of the location to create.
+     * @param int $permissions Permissions for the directory.
+     * @return bool true if the directory was created (or already exists),
+     *         false on an error.
+     */ 
+    public function mkdir(string $locationId, int $permissions = 0664): bool
+    {
+        $fullPath = $this->getRealpath($locationId);
+        $done = true;
+
+        if (!is_dir($fullPath)) {
+            $done = mkdir($fullPath, $permissions, true);
+        }
+
+        return $done;
     }
 
     /**
@@ -82,7 +114,11 @@ class Storage
         string $data,
         int $flags = 0,
     ): mixed {
-        $path = $this->getRealpath($locationId) . '/' . $filename;
+        if ($this->mkdir($locationId, 0775) === false) {
+            throw new \Exception("Can't create '{$locationId}' directory");
+        }
+
+        $path = $this->getFilename($locationId, $filename);
 
         return file_put_contents($path, $data, $flags);
     }
@@ -116,8 +152,6 @@ class Storage
      */
     public function exists(string $filename, string $locationId): bool
     {
-        $path = $this->getRealpath($locationId) . '/' . $filename;
-
-        return file_exists($path);
+        return file_exists($this->getFilename($locationId, $filename));
     }
 }
