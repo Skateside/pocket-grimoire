@@ -172,6 +172,12 @@ Fires whenever the height of the pad is changed by the user. The height is passe
 
 The number of players that have been selected.
 
+#### `scripts-loaded'
+
+- `detail.scripts` -> `Object`
+
+The IDs of the characters in the official scripts, set in the order in which they should appear.
+
 #### `team-breakdown-loaded`
 
 - `detail.breakdown` -> `Array.<Object>`

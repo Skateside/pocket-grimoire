@@ -94,9 +94,7 @@ gameObserver.on("team-breakdown-loaded", ({ detail }) => {
 
     function getBreakdown() {
 
-        const {
-            breakdown
-        } = detail;
+        const breakdown = detail.breakdown.map(({ breakdown }) => breakdown);
 
         return breakdown[clamp(0, playerCount.value - 5, breakdown.length - 1)];
 

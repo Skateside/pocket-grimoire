@@ -474,14 +474,7 @@ form.addEventListener("submit", (e) => {
             }
 
         } else {
-
-            announceScript(
-                getLabelText(radio),
-                tokenStore
-                    .getAllCharacters()
-                    .filter((character) => character.getEdition() === edition)
-            );
-
+            announceScript(getLabelText(radio), tokenStore.getScript(edition));
         }
 
     });

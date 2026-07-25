@@ -112,11 +112,14 @@ export default class TokenStore {
      *        Data for reminders that aren't attached to any character.
      * @param {Array.<Object>} data.jinxes
      *        Jinx data.
+     * @param {Object} data.scripts
+     *        Official scripts.
      */
     constructor({
         characters,
         reminders,
-        jinxes
+        jinxes,
+        scripts,
     }) {
 
         /**
@@ -126,10 +129,16 @@ export default class TokenStore {
         this.characters = Object.create(null);
 
         /**
-        * A list of all the {@link ReminderToken} instances.
-        * @type {Object}
+         * A list of all the {@link ReminderToken} instances.
+         * @type {Object}
          */
         this.reminders = Object.create(null);
+
+        /**
+         * All the official scripts and the characters in them.
+         * @type {Object}
+         */
+        this.scripts = scripts;
 
         characters.forEach((character) => this.createCharacter(character));
         reminders?.forEach((reminder, index) => {
@@ -332,6 +341,40 @@ export default class TokenStore {
      */
     getAllCharacters() {
         return Object.values(this.characters);
+    }
+
+    /**
+     * Gets an array of the characters for the given script, in the order that
+     * they're in the script.
+     *
+     * @return {Array<CharacterToken>}
+     *         Collection of the script's characters.
+     */
+    getScript(scriptId) {
+
+        const { scripts } = this;
+
+        if (
+            !Object.prototype.hasOwnProperty.call(scripts, scriptId)
+            || !Array.isArray(scripts[scriptId])
+        ) {
+            return [];
+        }
+
+        const script = [];
+
+        scripts[scriptId].forEach((id) => {
+
+            if (typeof id !== "string") {
+                return; // Ignore the meta entry.
+            }
+
+            script.push(this.getCharacter(id));
+
+        });
+
+        return script;
+
     }
 
     /**

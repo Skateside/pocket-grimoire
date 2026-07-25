@@ -2,8 +2,11 @@
 
 namespace App\Service;
 
+use Symfony\Component\Yaml\Yaml;
+
 class Storage
 {
+    const LOCATION_CONFIG = 'config';
     const LOCATION_COMPILED = 'compiled';
     const LOCATION_RAW = 'raw';
 
@@ -14,6 +17,7 @@ class Storage
     {
         $this->projectDir = $projectDir;
         $this->locations = [
+            static::LOCATION_CONFIG => '/config',
             static::LOCATION_COMPILED => '/assets/data/compiled',
             static::LOCATION_RAW => '/assets/data/raw',
         ];
@@ -57,11 +61,11 @@ class Storage
     /**
      * Reads the contents of the file at the given location.
      *
-     * @param string $filename Name of the file to read.
      * @param string $locationId ID of the location where the file is located.
+     * @param string $filename Name of the file to read.
      * @return string|false The contents of the file or false on an error.
      */
-    public function read(string $filename, string $locationId): mixed
+    public function read(string $locationId, string $filename): mixed
     {
         return file_get_contents($this->getFilename($locationId, $filename));
     }
@@ -69,13 +73,18 @@ class Storage
     /**
      * Reads the contents of the file at the given location as JSON.
      *
-     * @param string $filename Name of the file to read.
      * @param string $locationId ID of the location where the file is located.
+     * @param string $filename Name of the file to read.
      * @return mixed JSON data.
      */
-    public function readJson(string $filename, string $locationId): mixed
+    public function readJson(string $locationId, string $filename): mixed
     {
-        return json_decode($this->read($filename, $locationId), true);
+        return json_decode($this->read($locationId, $filename), true);
+    }
+
+    public function readYaml(string $locationId, string $filename): mixed
+    {
+        return Yaml::parse($this->read($locationId, $filename));
     }
 
     /**
@@ -102,15 +111,15 @@ class Storage
     /**
      * Wrapper for file_put_contents()
      *
-     * @param string $filename Name of the file to write.
      * @param string $locationId ID of the location to write to.
+     * @param string $filename Name of the file to write.
      * @param string $data Contents of the file to write.
      * @param int $flags Optional flags.
      * @return int|false Either the number of bytes written or false on an error.
      */
     public function write(
-        string $filename,
         string $locationId,
+        string $filename,
         string $data,
         int $flags = 0,
     ): mixed {
@@ -126,31 +135,31 @@ class Storage
     /**
      * Helper function for writing JSON to a file.
      *
-     * @param string $filename Name of the file to write.
      * @param string $locationId ID of the location to write to.
+     * @param string $filename Name of the file to write.
      * @param mixed $data JSON to encode and write.
      * @param int $jsonFlags Optional flags for writing JSON.
      * @param int $flags Optional flags for writing the file.
      * @return int|false Either the number of bytes written or false on an error.
      */
     public function writeJson(
-        string $filename,
         string $locationId,
+        string $filename,
         mixed $data,
         int $jsonFlags = 0,
         int $flags = 0,
     ): mixed {
-        return $this->write($filename, $locationId, json_encode($data, $jsonFlags), $flags);
+        return $this->write($locationId, $filename, json_encode($data, $jsonFlags), $flags);
     }
 
     /**
      * Checks to see if the given file exists.
      *
-     * @param string $filename Name of the file.
      * @param string $locationId ID of the location of the file.
+     * @param string $filename Name of the file.
      * @return bool true if the file exists, false if it doesn't.
      */
-    public function exists(string $filename, string $locationId): bool
+    public function exists(string $locationId, string $filename): bool
     {
         return file_exists($this->getFilename($locationId, $filename));
     }

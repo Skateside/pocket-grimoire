@@ -1,4 +1,3 @@
-//import Store from "../../classes/Store.js";
 import Observer from "../../classes/Observer.js";
 import Template from "../../classes/Template.js";
 import CharacterToken from "../../classes/CharacterToken.js";
@@ -6,32 +5,13 @@ import ReminderToken from "../../classes/ReminderToken.js";
 import TokenStore from "../../classes/TokenStore.js";
 import Dialog from "../../classes/Dialog.js";
 import Names from "../../classes/Names.js";
-/*import {
-    fetchFromStore
-} from "../../utils/fetch.js";*/
 import {
     lookup,
     lookupOne,
     lookupOneCached
 } from "../../utils/elements.js";
-/*import {
-    LANGUAGE
-} from "../../constants/language.js";*/
 
-//const store = Store.create("pocket-grimoire");
 const gameObserver = Observer.create("game");
-
-/*fetchFromStore(`characters_${LANGUAGE}`, URLS.characters, store).then((characters) => {
-    gameObserver.trigger("characters-loaded", { characters });
-});
-
-fetchFromStore(`jinxes_${LANGUAGE}`, URLS.jinxes, store).then((jinxes) => {
-    gameObserver.trigger("jinxes-loaded", { jinxes });
-});
-
-fetchFromStore("game", URLS.game, store).then((breakdown) => {
-    gameObserver.trigger("team-breakdown-loaded", { breakdown });
-});*/
 
 CharacterToken.setTemplates({
     token: Template.create(lookupOne("#character-template")),
@@ -57,8 +37,13 @@ Promise.all([
         gameObserver.on("jinxes-loaded", ({ detail }) => {
             resolve(detail.jinxes);
         });
-    })
-]).then(([ characters, jinxes ]) => {
+    }),
+    new Promise((resolve) => {
+        gameObserver.on("scripts-loaded", ({ detail }) => {
+            resolve(detail.scripts);
+        });
+    }),
+]).then(([ characters, jinxes, scripts ]) => {
 
     TokenStore.create({
         characters: [
@@ -87,18 +72,11 @@ Promise.all([
                 isGlobal: true
             }
         ],
-        jinxes
+        jinxes,
+        scripts,
     });
 
 });
-
-if (!window.PG) {
-    throw new ReferenceError("Unable to find the PG object");
-}
-
-gameObserver.trigger("characters-loaded", { characters: PG.roles });
-gameObserver.trigger("jinxes-loaded", { jinxes: PG.jinxes });
-gameObserver.trigger("team-breakdown-loaded", { breakdown: PG.game });
 
 // Delegate this event for two reasons:
 // 1. We can add dialogs dynamically and they'll still work.

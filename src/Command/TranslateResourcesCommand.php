@@ -4,11 +4,9 @@ namespace App\Command;
 
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputInterface;
-// use Symfony\Component\Console\Input\InputOption;
 use Symfony\Component\Console\Output\OutputInterface;
 use Symfony\Component\Console\Style\SymfonyStyle;
 use App\Enums\TPIURLEnum;
-use App\Model\GameModel;
 use App\Model\LocaleModel;
 use App\Model\TPIResourcesModel;
 use App\Model\TPITranslationModel;
@@ -19,7 +17,6 @@ class TranslateResourcesCommand extends Command
 {
     protected static $defaultName = 'pocket-grimoire:translate';
     protected $model;
-    protected $gameModel;
     protected $localeModel;
     protected $resourcesModel;
     protected $fetch;
@@ -27,14 +24,12 @@ class TranslateResourcesCommand extends Command
 
     public function __construct(
         TPITranslationModel $model,
-        GameModel $gameModel,
         LocaleModel $localeModel,
         TPIResourcesModel $resourcedModel,
         Fetch $fetch,
         Storage $storage,
     ) {
         $this->model = $model;
-        $this->gameModel = $gameModel;
         $this->localeModel = $localeModel;
         $this->resourcesModel = $resourcedModel;
         $this->fetch = $fetch;
@@ -57,14 +52,14 @@ class TranslateResourcesCommand extends Command
             $locales[$this->model->asTPILocale($code)] = $code;
         }
 
-        $rawReminders = $this->storage->readJson('reminders.json', Storage::LOCATION_RAW);
+        $rawReminders = $this->storage->readJson(Storage::LOCATION_RAW, 'reminders.json');
         $reminders = $this->resourcesModel->filterReminders($rawReminders);
 
         if (count($rawReminders) !== count($reminders)) {
             $io->warning('Some reminders have been filtered out.');
         }
 
-        $rawCharacters = $this->storage->readJson('characters.json', Storage::LOCATION_RAW);
+        $rawCharacters = $this->storage->readJson(Storage::LOCATION_RAW, 'characters.json');
         $characters = array_filter($rawCharacters, function ($item) {
             return $this->resourcesModel->isValidRoleEntry($item);
         });
@@ -73,7 +68,7 @@ class TranslateResourcesCommand extends Command
             $io->warning('Some characters have been filtered out.');
         }
 
-        $rawJinxes = $this->storage->readJson('jinxes.json', Storage::LOCATION_RAW);
+        $rawJinxes = $this->storage->readJson(Storage::LOCATION_RAW, 'jinxes.json');
         $jinxes = $this->resourcesModel->filterJinxes($rawJinxes);
 
         if (count($rawJinxes) !== count($jinxes)) {
@@ -173,15 +168,16 @@ class TranslateResourcesCommand extends Command
                 $jinxes,
                 $body['jinxes'] ?? [],
             ),
-            'game' => $this->gameModel->getFeed(),
+            'game' => $this->storage->readYaml(Storage::LOCATION_CONFIG, 'game.yaml'),
+            'scripts' => $this->storage->readYaml(Storage::LOCATION_CONFIG, 'scripts.yaml'),
         ];
         $contents = 'var PG = ' . json_encode(
             $data,
             $isPretty ? JSON_PRETTY_PRINT : 0,
         ) . ';';
         $file = $this->storage->write(
-            $filename,
             Storage::LOCATION_COMPILED,
+            $filename,
             $contents,
         );
 
