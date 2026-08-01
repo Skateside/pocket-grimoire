@@ -2,7 +2,6 @@ import Observer from "../../classes/Observer.js";
 import Template from "../../classes/Template.js";
 import CharacterToken from "../../classes/CharacterToken.js";
 import ReminderToken from "../../classes/ReminderToken.js";
-import TokenStore from "../../classes/TokenStore.js";
 import Dialog from "../../classes/Dialog.js";
 import Names from "../../classes/Names.js";
 import {
@@ -10,8 +9,6 @@ import {
     lookupOne,
     lookupOneCached
 } from "../../utils/elements.js";
-
-const gameObserver = Observer.create("game");
 
 CharacterToken.setTemplates({
     token: Template.create(lookupOne("#character-template")),
@@ -26,57 +23,6 @@ ReminderToken.setTemplates({
 Names.create()
     .setTemplate(Template.create(lookupOne("#player-name-template")))
     .setObserver(new Observer());
-
-Promise.all([
-    new Promise((resolve) => {
-        gameObserver.on("characters-loaded", ({ detail }) => {
-            resolve(detail.characters);
-        });
-    }),
-    new Promise((resolve) => {
-        gameObserver.on("jinxes-loaded", ({ detail }) => {
-            resolve(detail.jinxes);
-        });
-    }),
-    new Promise((resolve) => {
-        gameObserver.on("scripts-loaded", ({ detail }) => {
-            resolve(detail.scripts);
-        });
-    }),
-]).then(([ characters, jinxes, scripts ]) => {
-
-    TokenStore.create({
-        characters: [
-            // Create an empty character which we can use as a token placeholder.
-            {
-                id: TokenStore.EMPTY,
-                image: "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
-                ability: I18N.emptyCharacterAbility,
-                [CharacterToken.empty]: true,
-            },
-            ...characters
-        ],
-        reminders: [
-            {
-                id: TokenStore.EMPTY,
-                name: "",
-                text: I18N.goodTeam,
-                image: "/build/img/icons/townsfolk.webp",
-                isGlobal: true
-            },
-            {
-                id: TokenStore.EMPTY,
-                name: "",
-                text: I18N.evilTeam,
-                image: "/build/img/icons/demon.webp",
-                isGlobal: true
-            }
-        ],
-        jinxes,
-        scripts,
-    });
-
-});
 
 // Delegate this event for two reasons:
 // 1. We can add dialogs dynamically and they'll still work.

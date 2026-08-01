@@ -617,4 +617,29 @@ export default class CharacterToken extends Token {
 
     }
 
+    drawSheetEntry() {
+
+        const {
+            name,
+            image,
+            ability,
+        } = this.data;
+
+        return this.constructor.templates.entry.draw({
+            ".js--sheet-entry--name"(element) {
+                element.textContent = name;
+            },
+            ".js--sheet-entry--image"(element) {
+                element.src = image;
+            },
+            ".js--sheet-entry--ability"(element) {
+                element.textContent = ability;
+            },
+        });
+    
+    }
+
+    drawSheetEntryJinx() {
+    }
+
 }
