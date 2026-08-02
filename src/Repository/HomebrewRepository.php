@@ -20,6 +20,11 @@ class HomebrewRepository extends ServiceEntityRepository
         parent::__construct($registry, Homebrew::class);
     }
 
+    public function isValidUUID(string $uuid): bool
+    {
+        return preg_match('/^[0-9a-f]{64}$/', $uuid) === 1;
+    }
+
     /**
      * Finds all the {@link App\Entity\Homebrew} entities that haven't been
      * accessed for more than 10 days.

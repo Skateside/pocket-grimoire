@@ -81,11 +81,11 @@ class MainController extends AbstractController
     ): Response {
 
 
-        $groups = [];
+        // $groups = [];
         $jinxes = [];
         $name = '';
 
-        if ($characters = $request->query->get('characters')) {
+        /* if ($characters = $request->query->get('characters')) {
 
             $ids = array_map(function (string $id) {
                 return $this->homebrewModel->normaliseId($id);
@@ -306,13 +306,13 @@ class MainController extends AbstractController
 
         }
 
-        $gameModel->sortGroups($groups);
+        $gameModel->sortGroups($groups); */
 
         return $this->render('pages/sheet.html.twig', [
             'name' => $name,
-            'groups' => $groups,
+            // 'groups' => $groups,
             'jinxes' => $jinxes,
-            'breakdown' => $gameModel->getTransposedFeed(),
+            // 'breakdown' => $gameModel->getTransposedFeed(),
         ]);
 
     }

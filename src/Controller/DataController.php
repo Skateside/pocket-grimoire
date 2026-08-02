@@ -9,9 +9,10 @@ use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Contracts\Translation\TranslatorInterface;
 
-use App\Repository\RoleRepository;
+/* use App\Repository\RoleRepository;
 use App\Repository\JinxRepository;
-use App\Model\GameModel;
+use App\Model\GameModel; */
+use App\Repository\HomebrewRepository;
 
 /**
  * @Route("/{_locale}/data", name="data_")
@@ -19,43 +20,46 @@ use App\Model\GameModel;
 class DataController extends AbstractController
 {
 
-    private $roleRepo;
+    /* private $roleRepo;
     private $jinxRepo;
-    private $gameModel;
+    private $gameModel; */
+    private $homebrewRepo;
 
     public function __construct(
-        RoleRepository $roleRepo,
+        /* RoleRepository $roleRepo,
         JinxRepository $jinxRepo,
-        GameModel $gameModel
+        GameModel $gameModel */
+        HomebrewRepository $homebrewRepo,
     ) {
-        $this->roleRepo = $roleRepo;
+        /* $this->roleRepo = $roleRepo;
         $this->jinxRepo = $jinxRepo;
-        $this->gameModel = $gameModel;
+        $this->gameModel = $gameModel; */
+        $this->homebrewRepo = $homebrewRepo;
     }
 
     /**
-     * @Route("/characters", name="characters")
+     * @ Route("/characters", name="characters")
      */
-    public function charactersAction(): Response
+    /* public function charactersAction(): Response
     {
         return new JsonResponse($this->roleRepo->getFeed());
-    }
+    }*/
 
     /**
-     * @Route("/jinx", name="jinx")
+     * @ Route("/jinx", name="jinx")
      */
-    public function jinxAction(): Response
+    /* public function jinxAction(): Response
     {
         return new JsonResponse($this->jinxRepo->getFeed());
-    }
+    } */
 
     /**
-     * @Route("/game", name="game")
+     * @ Route("/game", name="game")
      */
-    public function gameAction(): Response
+    /*public function gameAction(): Response
     {
         return new JsonResponse($this->gameModel->getFeed());
-    }
+    }*/
 
     /**
      * @Route("/url", name="url")
@@ -107,6 +111,37 @@ class DataController extends AbstractController
         return new JsonResponse([
             'success' => true,
             'data' => $json
+        ]);
+
+    }
+
+    /**
+     * @Route("/get-game", name="get_game")
+     */
+    public function getGameAction(Request $request): Response
+    {
+
+        $game = $request->query->get('game', '');
+
+        if ($game === '' || !$this->homebrewRepo->isValidUUID($game)) {
+            return new JsonResponse([
+                'success' => false,
+                'message' => 'Invalid game UUID', // TODO: i18n
+            ]);
+        }
+
+        $entry = $this->homebrewRepo->findOneBy(['uuid' => $game]);
+
+        if (!$entry) {
+            return new JsonResponse([
+                'success' => false,
+                'message' => 'Unrecognised UUID', // TODO: i18n
+            ]);
+        }
+
+        return new JsonResponse([
+            'success' => true,
+            'data' => $entry->getJson(),
         ]);
 
     }

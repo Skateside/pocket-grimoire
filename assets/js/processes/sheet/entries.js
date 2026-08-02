@@ -5,6 +5,9 @@ import {
     lookupOne,
     lookupOneCached,
 } from "../../utils/elements.js";
+import {
+    get,
+} from "../../utils/fetch.js";
 
 CharacterToken.setTemplates({
     entry: Template.create(lookupOne("#sheet-entry")),
@@ -12,14 +15,21 @@ CharacterToken.setTemplates({
 });
 
 TokenStore.ready((tokenStore) => {
-    console.log({ tokenStore });
+
+console.log({ tokenStore });
 
     const url = new URL(window.location.href);
     const characters = url.searchParams.get("characters");
+    const game = url.searchParams.get("game");
 
     if (characters) {
         drawCharacters(tokenStore, characters.split(","));
+    } else if (game) {
+        get(window.URLS.getGame, { game }).then((json) => {
+            console.log({ json });
+        });
     }
+
 });
 
 function drawCharacters(tokenStore, ids) {
@@ -34,6 +44,7 @@ function drawCharacters(tokenStore, ids) {
         ["fabled"],
         ["loric"],
     ];
+    const renders = {};
 
     ids.forEach((id) => {
 
@@ -65,9 +76,11 @@ function drawCharacters(tokenStore, ids) {
 
         }
 
+        renders[id] = character.drawSheetEntry();
+
         const contents = lookupOneCached(".js--sheet-group--contents", group[1]);
 
-        contents.append(character.drawSheetEntry());
+        contents.append(renders[id]);
 
     });
 

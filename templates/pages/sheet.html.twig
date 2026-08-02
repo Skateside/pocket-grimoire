@@ -76,24 +76,23 @@
 
 <p><small>{{ 'sheet.each_night'|trans }}</small></p>
 
+<template id="breakdown-player">
+    <tr class="breakdown__row breakdown__row--[id] js--breakdown--row">
+        <th scope="row" class="breakdown__heading js--breakdown--heading"></th>
+        <th scope="col" class="breakdown__cell js--breakdown--cell"></th>
+    </tr>
+</template>
+<template id="breakdown-team">
+    <tr class="breakdown__row breakdown__row--[id] js--breakdown--row">
+        <th scope="row" class="breakdown__heading js--breakdown--heading"></th>
+        <td class="breakdown__cell js--breakdown--cell"></td>
+    </tr>
+</template>
+
 <div class="breakdown no-print">
     <table class="breakdown__table">
         <caption class="sr-only">{{ 'sheet.breakdown'|trans }}</caption>
-        <tbody>
-            {% for group, count in breakdown %}
-                {% set isPlayers = loop.first %}
-                <tr class="breakdown__row breakdown__row--{{ group }}">
-                    <th scope="row" class="breakdown__heading">{{ ('groups.' ~ group)|trans }}</th>
-                    {% for count in count %}
-                        {% if isPlayers %}
-                            <th scope="col" class="breakdown__cell">{{ loop.last ? 'sheet.count_plus'|trans({ '%count%': count }) : count }}</th>
-                        {% else %}
-                            <td class="breakdown__cell">{{ count }}</td>
-                        {% endif %}
-                    {% endfor %}
-                </tr>
-            {% endfor %}
-        </tbody>
+        <tbody id="breakdown-body"></tbody>
     </table>
 </div>
 
@@ -143,7 +142,12 @@
 
 {% block javascript %}
 <script>
+var URLS = {
+    getGame: "{{ path('data_get_game', { game: '{game}' })|e('js') }}"
+};
+
 var I18N = {
+    players: "{{ 'groups.players'|trans|e('js') }}",
     townsfolk: "{{ 'groups.townsfolk'|trans|e('js') }}",
     outsider: "{{ 'groups.outsider'|trans|e('js') }}",
     minion: "{{ 'groups.minion'|trans|e('js') }}",

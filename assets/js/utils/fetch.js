@@ -1,3 +1,5 @@
+import { supplant } from "./strings.js";
+
 /**
  * Fetches information from the given URL and stores it in the given store. The
  * URL is checked against the store to see if the data already exists and only
@@ -57,6 +59,23 @@ export function post(url, data) {
         redirect: "follow",
         referrerPolicy: "no-referrer",
         body: JSON.stringify(data)
+    }).then((response) => response.json());
+
+}
+
+export function get(url, data) {
+    
+    return fetch(supplant(window.decodeURIComponent(url), data), {
+        method: "GET",
+        mode: "cors",
+        cache: "no-cache",
+        credentials: "same-origin",
+        headers: {
+            "Accept": "application/json",
+            "Content-type": "application/json"
+        },
+        redirect: "follow",
+        referrerPolicy: "no-referrer",
     }).then((response) => response.json());
 
 }
