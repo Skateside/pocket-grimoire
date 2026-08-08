@@ -10,10 +10,13 @@ import {
 const gameObserver = Observer.create("game");
 const tokenObserver = Observer.create("token");
 
+Jinx.setTemplates({
+    main: Template.create(lookupOne("#jinx-table-template")),
+});
+
 TokenStore.ready((tokenStore) => {
 
     const trickToTarget = Object.create(null);
-    const jinxTemplate = Template.create(lookupOne("#jinx-table-template"));
 
     /**
      * Registers a jinx in the {@link trickToTarget} map.
@@ -76,7 +79,6 @@ TokenStore.ready((tokenStore) => {
     function activateJinx(jinx) {
 
         jinx.setObserver(tokenObserver);
-        jinx.setTemplate(jinxTemplate);
         registerJinx(jinx);
 
     }
@@ -171,7 +173,7 @@ TokenStore.ready((tokenStore) => {
 
         replaceContentsMany(
             jinxTable,
-            jinxes.map((jinx) => jinx.draw())
+            jinxes.map((jinx) => jinx.drawMain())
         );
 
     });

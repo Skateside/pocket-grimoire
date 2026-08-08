@@ -29,7 +29,7 @@
 </template>
 
 <template id="sheet-entry">
-    <div class="edition__role">
+    <div class="edition__role js--sheet-entry--wrapper">
         <p class="edition__name js--sheet-entry--name"></p>
         <div class="edition__icon">
             <img src="" alt="" class="edition__image js--sheet-entry--image" width="177" height="124" aria-hidden="true" loading="lazy">
@@ -42,6 +42,18 @@
 <template id="sheet-entry-jinx">
     <div class="edition__jinx">
         <img src="" alt="" title="" width="177" height="124" loading="lazy" class="js--sheet-entry-jinx--image">
+    </div>
+</template>
+
+<template id="sheet-jinx">
+    <div class="edition__role edition__role--jinx">
+        <div class="edition__icon edition__icon--target">
+            <img src="" alt="" width="177" height="124" loading="lazy" class="js--sheet-jinx--target">
+        </div>
+        <div class="edition__icon edition__icon--trick">
+            <img src="" alt="" width="177" height="124" loading="lazy" class="js--sheet-jinx--trick">
+        </div>
+        <div class="edition__ability js--sheet-jinx--ability"></div>
     </div>
 </template>
 
@@ -155,6 +167,8 @@ var I18N = {
     traveller: "{{ 'groups.traveller'|trans|e('js') }}",
     fabled: "{{ 'groups.fabled'|trans|e('js') }}",
     loric: "{{ 'groups.loric'|trans|e('js') }}",
+    jinx: "{{ 'sheet.jinx'|trans|e('js') }}",
+    jinxes: "{{ 'jinxes.title'|trans|e('js') }}",
 };
 </script>
 <script src="/build/data/{{ app.request.locale }}.js"></script>

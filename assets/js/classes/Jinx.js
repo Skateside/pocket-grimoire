@@ -38,6 +38,22 @@ import Observer from "./Observer";
 export default class Jinx {
 
     /**
+     * Sets the templates that will be access when drawing views.
+     *
+     * @param {Object} templates
+     *        A map of keys to {@link Template} instances.
+     */
+    static setTemplates(templates) {
+
+        /**
+         * The templates that all instances will access.
+         * @type {Object}
+         */
+        this.templates = templates;
+
+    }
+
+    /**
      * @param {CharacterToken|undefined} trick
      *        The character that the source character will be jinxed with. If
      *        the jinx is between 2 homebrew characters and only one is defined
@@ -305,22 +321,6 @@ export default class Jinx {
     }
 
     /**
-     * Sets the template that can be used to draw the jinx.
-     *
-     * @param {Template} template
-     *        The template that will draw the jinx.
-     */
-    setTemplate(template) {
-
-        /**
-         * The template to draw the jinx.
-         * @type {Template}
-         */
-        this.template = template;
-
-    }
-
-    /**
      * Helper function for drawing the jinx character icon.
      *
      * @param {Element} element
@@ -356,23 +356,19 @@ export default class Jinx {
      * @return {DocumentFragment}
      *         The jinx markup.
      */
-    draw() {
+    drawMain() {
 
         const {
             target,
             trick,
             reason,
-            template,
             constructor: {
-                drawImg
+                drawImg,
+                templates,
             }
         } = this;
 
-        // if (!template) {
-        //     throw new Error("Jinx template has not been set.");
-        // }
-
-        return template.draw({
+        return templates.main.draw({
             ".js--jinx-table--jinx": (element) => {
                 element.id = this.getId();
             },
@@ -391,6 +387,58 @@ export default class Jinx {
             ".js--jinx-table--reason"(element) {
                 element.textContent = reason;
             }
+        });
+
+    }
+
+    /**
+     * Draws the jinx entry for the character sheet.
+     *
+     * @return {DocumentFragment}
+     *         The jinx markup.
+     */
+    drawEntry() {
+
+        const {
+            trick,
+            reason,
+            constructor: {
+                templates,
+            },
+        } = this;
+
+        return templates.entry.draw({
+            ".js--sheet-entry-jinx--image"(element) {
+                element.alt = `${window.I18N.jinx}: ${trick.getName()}`;
+                element.title = reason;
+                element.src = trick.getImage();
+            },
+        });
+
+    }
+
+    drawSheet() {
+
+        const {
+            target,
+            trick,
+            reason,
+            constructor: {
+                drawImg,
+                templates,
+            },
+        } = this;
+
+        return templates.sheet.draw({
+            ".js--sheet-jinx--target"(element) {
+                drawImg(element, target);
+            },
+            ".js--sheet-jinx--trick"(element) {
+                drawImg(element, trick);
+            },
+            ".js--sheet-jinx--ability"(element) {
+                element.textContent = reason;
+            },
         });
 
     }

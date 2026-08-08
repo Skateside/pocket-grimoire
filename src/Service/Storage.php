@@ -82,6 +82,13 @@ class Storage
         return json_decode($this->read($locationId, $filename), true);
     }
 
+    /**
+     * Reads the contents of the file at the given location as YAML.
+     *
+     * @param string $locationId ID of the location where the file is located.
+     * @param string $filename Name of the file to read.
+     * @return mixed YAML data.
+     */
     public function readYaml(string $locationId, string $filename): mixed
     {
         return Yaml::parse($this->read($locationId, $filename));

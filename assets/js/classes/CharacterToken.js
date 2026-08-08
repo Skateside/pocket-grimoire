@@ -620,12 +620,16 @@ export default class CharacterToken extends Token {
     drawSheetEntry() {
 
         const {
+            id,
             name,
             image,
             ability,
         } = this.data;
 
         return this.constructor.templates.entry.draw({
+            ".js--sheet-entry--wrapper"(element) {
+                element.id = `entry--${id}`;
+            },
             ".js--sheet-entry--name"(element) {
                 element.textContent = name;
             },
@@ -637,9 +641,6 @@ export default class CharacterToken extends Token {
             },
         });
     
-    }
-
-    drawSheetEntryJinx() {
     }
 
 }
