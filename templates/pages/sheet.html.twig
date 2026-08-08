@@ -59,33 +59,6 @@
 
 <div id="sheet-groups"></div>
 
-{% if jinxes|length %}
-    {% embed 'includes/details.html.twig' with {
-        open: true,
-        id: 'wrapper-jinx',
-        class: 'edition edition--jinx'
-    } %}
-        {% block summary %}
-        <span class="edition__heading-text">{{ 'jinxes.title'|trans }}</span>
-        {% endblock %}
-        {% block body %}
-            <div id="team-jinx" class="edition__team">
-                {% for jinx in jinxes %}
-                    <div class="edition__role edition__role--jinx">
-                        <div class="edition__icon edition__icon--target">
-                            <img src="{{ jinx.target.image }}" alt="{{ jinx.target.name }}" width="177" height="124" loading="lazy">
-                        </div>
-                        <div class="edition__icon edition__icon--trick">
-                            <img src="{{ jinx.trick.image }}" alt="{{ jinx.trick.name }}" width="177" height="124" loading="lazy">
-                        </div>
-                        <div class="edition__ability">{{ jinx.reason }}</div>
-                    </div>
-                {% endfor %}
-            </div>
-        {% endblock %}
-    {% endembed %}
-{% endif %}
-
 <p><small>{{ 'sheet.each_night'|trans }}</small></p>
 
 <template id="breakdown-player">
