@@ -430,7 +430,7 @@ function highlightBreakdown(number) {
 
     const index = lookupCached("[data-count]", breakdownTable)
         .findIndex((cell) => cell.dataset.count === number);
-console.log({ breakdownTable, "[data-count]": lookupCached("[data-count]", breakdownTable), index, ".is-count": lookup(".is-count", breakdownTable), "tbody>tr": lookupCached("tbody>tr", breakdownTable), "querySelectorAll(\"[data-count]\")": breakdownTable.querySelectorAll("[data-count]") });
+
     lookup(".is-count", breakdownTable)
         .forEach((cell) => cell.classList.remove("is-count"));
 
