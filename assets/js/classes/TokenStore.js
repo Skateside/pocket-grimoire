@@ -278,6 +278,38 @@ export default class TokenStore {
     }
 
     /**
+     * Checks to see if the given ID relates to anything that the token store
+     * understands. i.e. if the ID looks like a character ID, is that character
+     * known?
+     *
+     * @param  {string} id
+     *         ID of the character/reminder to check for.
+     * @return {Boolean}
+     *         `true` if the character/reminder is recognised, `false`
+     *         otherwise.
+     */
+    characterExists(id) {
+
+        const {
+            constructor,
+            characters,
+            reminders,
+        } = this;
+
+        const normal = constructor.normaliseId(id);
+
+        return Object.hasOwn(
+            (
+                constructor.isCharacterId(normal)
+                ? characters
+                : reminders
+            ),
+            normal,
+        );
+
+    }
+
+    /**
      * Gets the character for the given ID.
      *
      * @param  {String} id

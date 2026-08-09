@@ -216,6 +216,10 @@ TokenStore.ready((tokenStore) => {
         ghostVote
     }) => {
 
+        if (!tokenStore.characterExists(id)) {
+            return console.warn(`Unable to find character/reminder with ID '${id}'`);
+        }
+
         const isCharacter = TokenStore.isCharacterId(id);
         const info = (
             isCharacter
