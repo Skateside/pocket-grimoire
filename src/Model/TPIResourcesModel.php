@@ -269,10 +269,17 @@ class TPIResourcesModel
             || !is_string($item['edition'] ?? null)
             || !is_bool($item['setup'] ?? null)
             || !is_string($item['ability'] ?? null)
-            || !is_string($item['flavor'] ?? null)
         ) {
             $this->message = "'{$item['id']}' missing required key";
             return false;
+        }
+
+        // If a flavor (US-spelling) exists, make sure it's a string.
+        if (
+            array_key_exists('flavor', $item)
+            && !is_string($item['flavor'])
+        ) {
+            $this->message = "'{$item['id']}' invalid flavor";
         }
 
         // If a first night reminder exists, make sure it's a string.

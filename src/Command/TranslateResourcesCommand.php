@@ -89,11 +89,12 @@ class TranslateResourcesCommand extends Command
         }
 
         foreach ($locales as $tpiCode => $pgCode) {
+            $augmented = $this->augmentData($pgCode, $characters, $jinxes);
             $results = $this->generateLocale(
                 $tpiCode,
-                $characters,
+                $augmented['characters'],
                 $reminders,
-                $jinxes,
+                $augmented['jinxes'],
                 "{$pgCode}.js",
                 $output->isVeryVerbose(),
             );
@@ -102,6 +103,7 @@ class TranslateResourcesCommand extends Command
                 $pgCode,
                 $tpiCode,
                 (string) $results['fetch'],
+                implode(' ', $augmented['notes']),
                 (string) $results['write'],
             ];
 
@@ -115,7 +117,7 @@ class TranslateResourcesCommand extends Command
             $io->writeln('');
             $io->section('Results');
             $io->table(
-                ['Locale', 'TPI Locale', 'Fetch', 'Write'],
+                ['Locale', 'TPI Locale', 'Fetch', 'Augment', 'Write'],
                 $tableBody,
             );
         }
@@ -123,6 +125,55 @@ class TranslateResourcesCommand extends Command
         $io->success('Translations written');
 
         return Command::SUCCESS;
+    }
+
+    /**
+     * Augments the given characers and jinxes with locale-specific data, if it
+     * exists.
+     *
+     * @param string $locale Locale (in the format lc_CC) to check.
+     * @param array<array<mixed>> $characters Base characters.
+     * @param array<array<mixed>> $jinxes Base jinxes.
+     * @return array<string, array<array<mixed>>> Augmented data.
+     */
+    protected function augmentData(
+        string $locale,
+        array $characters,
+        array $jinxes,
+    ): array {
+        $augmented = [
+            'characters' => $characters,
+            'jinxes' => $jinxes,
+            'notes' => [],
+        ];
+
+        if (!$this->storage->exists(Storage::LOCATION_RAW, $locale)) {
+            return $augmented;
+        }
+
+        if ($this->storage->exists(Storage::LOCATION_RAW, $locale, 'characters.json')) {
+            $rawLocaleCharacters = $this->storage->readJson(Storage::LOCATION_RAW, $locale, 'characters.json');
+            $localeCharacters = array_filter($rawLocaleCharacters, function ($item) {
+                return $this->resourcesModel->isValidRoleEntry($item);
+            });
+            $augmented['characters'] = array_merge($augmented['characters'], $localeCharacters);
+
+            $countRaw = count($rawLocaleCharacters);
+            $count = count($localeCharacters);
+            $augmented['notes'][] = "{$count}/{$countRaw} character(s) added.";
+        }
+        
+        if ($this->storage->exists(Storage::LOCATION_RAW, $locale, 'jinxes.json')) {
+            $rawLocaleJinxes = $this->storage->readJson(Storage::LOCATION_RAW, $locale, 'jinxes.json');
+            $localeJinxes = $this->resourcesModel->filterJinxes($rawLocaleJinxes);
+            $augmented['jinxes'] = array_merge($augmented['jinxes'], $localeJinxes);
+
+            $countRaw = count($rawLocaleJinxes);
+            $count = count($localeJinxes);
+            $augmented['notes'][] = "{$count}/{$countRaw} jinxes(s) added.";
+        }
+
+        return $augmented;
     }
 
     /**
@@ -154,7 +205,7 @@ class TranslateResourcesCommand extends Command
         if ($raw['success']) {
             $body = $raw['body'];
         } else {
-            $results['fetch'] = "Unable to fetch: {$raw['body']}";
+            $results['fetch'] = $raw['body'];
         }
 
         $data = [

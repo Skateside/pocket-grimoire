@@ -66,9 +66,8 @@ class FetchResourcesCommand extends Command
         if ($output->isVerbose()) {
             $bar->advance();
             $bar->finish();
+            $io->writeln('');
         }
-
-        $io->writeln('');
 
         if (
             !$rawGame['success']
