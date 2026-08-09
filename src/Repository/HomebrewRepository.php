@@ -20,6 +20,11 @@ class HomebrewRepository extends ServiceEntityRepository
         parent::__construct($registry, Homebrew::class);
     }
 
+    /**
+     * Checks to see if the given UUID looks valid.
+     *
+     * @return bool
+     */
     public function isValidUUID(string $uuid): bool
     {
         return preg_match('/^[0-9a-f]{64}$/', $uuid) === 1;
