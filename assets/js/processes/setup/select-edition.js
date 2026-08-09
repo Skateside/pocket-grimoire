@@ -59,18 +59,18 @@ function containsHomebrew(json) {
 /**
  * Announces that a script has been added to the grimoire.
  *
- * @param {String} name
- *        Name of the script. This may be an empty string.
+ * @param {Object} meta
+ *        Meta entry for the script. This might be null.
  * @param {Array.<Object>} characters
  *        Characters in the script.
  * @param {String|null} [game=null]
  *        The ID of the homebrew script that was uploaded. This will be null for
  *        a game that only consists of recognised characters.
  */
-function announceScript(name, characters, game = null) {
+function announceScript(meta, characters, game = null) {
 
     Observer.create("game").trigger("characters-selected", {
-        name,
+        meta,
         characters,
         game
     });
@@ -150,17 +150,17 @@ function normaliseHomebrew(json) {
  */
 function extractMetaEntry(json) {
 
-    let name = "";
+    let meta = null; 
     const metaIndex = json.findIndex(({ id }) => id === "_meta");
 
     if (metaIndex > -1) {
 
-        name = json[metaIndex].name;
+        meta = json[metaIndex];
         json.splice(metaIndex, 1);
 
     }
 
-    return name;
+    return meta;
 
 }
 
@@ -289,7 +289,7 @@ function processJSON({
 
     }
 
-    const name = extractMetaEntry(json);
+    const meta = extractMetaEntry(json);
     const characters = json
         .map((item) => store.getCharacter(convertCharacterId(item)))
         .filter(Boolean);
@@ -301,7 +301,7 @@ function processJSON({
 
     }
 
-    announceScript(name, characters);
+    announceScript(meta, characters);
     return Promise.resolve();
 
 }
@@ -474,7 +474,14 @@ form.addEventListener("submit", (e) => {
             }
 
         } else {
-            announceScript(getLabelText(radio), tokenStore.getScript(edition));
+            const meta = { name: getLabelText(radio) };
+            const rawMeta = window.PG.scripts[edition]?.find(({ id }) => id === "_meta");
+
+            if (rawMeta) {
+                Object.assign(meta, rawMeta);
+            }
+
+            announceScript(meta, tokenStore.getScript(edition));
         }
 
     });

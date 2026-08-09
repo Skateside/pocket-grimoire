@@ -30,6 +30,15 @@ export default class NightOrder {
         this.data = [];
 
         /**
+         * Custom night order, based on the script.
+         * @type {Object}
+         */
+        this.customOrder = {
+            first: [],
+            other: [],
+        };
+
+        /**
          * Holders for the night order elements.
          */
         this.holders = {
@@ -76,7 +85,24 @@ export default class NightOrder {
         });
 
         data.length = 0;
+        this.setCustomOrder({ first: [], other: [] });
 
+    }
+
+    /**
+     * Sets the custom order for the characters, based on the script.
+     *
+     * @param {Object} order Custom order, with "firstNight" and "otherNight"
+     *        properties.
+     */
+    setCustomOrder(order) {
+        if (order.firstNight) {
+            this.customOrder.first = order.firstNight;
+        }
+
+        if (order.otherNight) {
+            this.customOrder.other = order.otherNight;
+        }
     }
 
     /**
@@ -129,8 +155,18 @@ export default class NightOrder {
             inPlay: 0,
             playerNames: new Map(),
         };
-        const firstNight = character.getFirstNight();
-        const otherNight = character.getOtherNight();
+        const {
+            first,
+            other,
+        } = this.customOrder;
+        const firstNight = (
+            (first.indexOf(character.getId()) + 1)
+            || character.getFirstNight()
+        );
+        const otherNight = (
+            (other.indexOf(character.getId()) + 1)
+            || character.getOtherNight()
+        );
         const id = character.getId();
 
         if (firstNight) {

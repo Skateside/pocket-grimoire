@@ -31,7 +31,7 @@ const names = Names.create();
 gameObserver.on("characters-selected", ({ detail }) => {
 
     store.setCharacters(
-        detail.name,
+        detail.meta,
         detail.characters.map((character) => (
             character.isCustom()
             ? character.getAllData()
@@ -185,7 +185,7 @@ TokenStore.ready((tokenStore) => {
     if (info && info.characters && info.characters.length) {
 
         gameObserver.trigger("characters-selected", {
-            name: info.name,
+            meta: info.meta,
             characters: info.characters
                 .map((item) => (
                     tokenStore.getCharacter(

@@ -216,22 +216,22 @@ export default class Store {
     /**
      * Stores the character list and the name of the script.
      *
-     * @param {String|undefined} name
-     *        Name of the script, which may be blank.
+     * @param {Object} meta
+     *        Meta entry for the script, which might be null.
      * @param {Array.<String>} characters
      *        Array of all the character IDs that are in this script.
      * @param {String|null} game
      *        The ID of the homebrew game being used. This will be null for any
      *        game that only consists of recognised characters.
      */
-    setCharacters(name, characters, game) {
+    setCharacters(meta, characters, game) {
 
         const data = {
             characters
         };
 
-        if (name) {
-            data.name = name;
+        if (meta) {
+            data.meta = meta;
         }
 
         if (game) {

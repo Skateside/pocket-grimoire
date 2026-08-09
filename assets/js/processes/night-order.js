@@ -20,8 +20,9 @@ nightOrder.setHolders({
 });
 
 gameObserver.on("characters-selected", ({ detail }) => {
-
+console.log({ detail });
     nightOrder.reset();
+    nightOrder.setCustomOrder(detail.meta);
     nightOrder.setCharacters(
         detail.characters
             .filter((character) => {
