@@ -9,9 +9,6 @@ use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Contracts\Translation\TranslatorInterface;
 
-/* use App\Repository\RoleRepository;
-use App\Repository\JinxRepository;
-use App\Model\GameModel; */
 use App\Repository\HomebrewRepository;
 
 /**
@@ -20,46 +17,13 @@ use App\Repository\HomebrewRepository;
 class DataController extends AbstractController
 {
 
-    /* private $roleRepo;
-    private $jinxRepo;
-    private $gameModel; */
     private $homebrewRepo;
 
     public function __construct(
-        /* RoleRepository $roleRepo,
-        JinxRepository $jinxRepo,
-        GameModel $gameModel */
         HomebrewRepository $homebrewRepo,
     ) {
-        /* $this->roleRepo = $roleRepo;
-        $this->jinxRepo = $jinxRepo;
-        $this->gameModel = $gameModel; */
         $this->homebrewRepo = $homebrewRepo;
     }
-
-    /**
-     * @ Route("/characters", name="characters")
-     */
-    /* public function charactersAction(): Response
-    {
-        return new JsonResponse($this->roleRepo->getFeed());
-    }*/
-
-    /**
-     * @ Route("/jinx", name="jinx")
-     */
-    /* public function jinxAction(): Response
-    {
-        return new JsonResponse($this->jinxRepo->getFeed());
-    } */
-
-    /**
-     * @ Route("/game", name="game")
-     */
-    /*public function gameAction(): Response
-    {
-        return new JsonResponse($this->gameModel->getFeed());
-    }*/
 
     /**
      * @Route("/url", name="url")
