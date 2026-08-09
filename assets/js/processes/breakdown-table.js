@@ -1,9 +1,9 @@
-import Observer from "../../classes/Observer.js";
-import Template from "../../classes/Template.js";
+import Observer from "../classes/Observer.js";
+import Template from "../classes/Template.js";
 import {
     lookupOne,
     lookupOneCached,
-} from "../../utils/elements.js";
+} from "../utils/elements.js";
 
 const gameObserver = Observer.create("game");
 const breakdownPlayer = Template.create(lookupOne("#breakdown-player"));
@@ -48,6 +48,11 @@ gameObserver.on("team-breakdown-loaded", ({ detail }) => {
         row.data.forEach((datum) => {
             const clone = cell.cloneNode();
             clone.textContent = datum;
+
+            if (clone.hasAttribute("data-count")) {
+                clone.dataset.count = String(Number.parseInt(datum, 10));
+            }
+
             parent.append(clone);
         });
 

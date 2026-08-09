@@ -9,24 +9,23 @@
     {% block body %}
     <form id="player-select">
 
-        <div class="breakdown">
+        <template id="breakdown-player">
+            <tr class="breakdown__row breakdown__row--[id] js--breakdown--row">
+                <th scope="row" class="breakdown__heading js--breakdown--heading"></th>
+                <th scope="col" class="breakdown__cell js--breakdown--cell" data-count=""></th>
+            </tr>
+        </template>
+        <template id="breakdown-team">
+            <tr class="breakdown__row breakdown__row--[id] js--breakdown--row">
+                <th scope="row" class="breakdown__heading js--breakdown--heading"></th>
+                <td class="breakdown__cell js--breakdown--cell"></td>
+            </tr>
+        </template>
+
+        <div class="breakdown no-print">
             <table class="breakdown__table breakdown__table--highlighted" id="breakdown-table">
                 <caption class="sr-only">{{ 'sheet.breakdown'|trans }}</caption>
-                <tbody>
-                    {% for group, count in breakdown %}
-                        {% set isPlayers = loop.first %}
-                        <tr class="breakdown__row breakdown__row--{{ group }}">
-                            <th scope="row" class="breakdown__heading">{{ ('groups.' ~ group)|trans }}</th>
-                            {% for count in count %}
-                                {% if isPlayers %}
-                                    <th scope="col" class="breakdown__cell js--breakdown--cell" data-count="{{ count }}">{{ loop.last ? 'sheet.count_plus'|trans({ '%count%': count }) : count }}</th>
-                                {% else %}
-                                    <td class="breakdown__cell js--breakdown--cell">{{ count }}</td>
-                                {% endif %}
-                            {% endfor %}
-                        </tr>
-                    {% endfor %}
-                </tbody>
+                <tbody id="breakdown-body"></tbody>
             </table>
         </div>
 

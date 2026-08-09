@@ -1,6 +1,7 @@
 // import "./processes/errors.js";
 
 import "./processes/data.js";
+import "./processes/breakdown-table.js";
 
 import "./processes/setup/general.js";
 import "./processes/setup/select-edition.js";

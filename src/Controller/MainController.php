@@ -64,11 +64,7 @@ class MainController extends AbstractController
     public function indexAction(
         GameModel $gameModel
     ): Response {
-
-        return $this->render('pages/index.html.twig', [
-            'breakdown' => $gameModel->getTransposedFeed(),
-        ]);
-
+        return $this->render('pages/index.html.twig');
     }
 
     /**
@@ -154,7 +150,7 @@ class MainController extends AbstractController
         RoleRepository $roleRepo,
         TeamRepository $teamRepo,
         TranslatorInterface $translator
-    ) {
+    ): Response {
 
         $feed = $roleRepo->getFeed();
         $roles = [];
