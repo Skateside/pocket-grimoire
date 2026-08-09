@@ -4,13 +4,12 @@ namespace App\Model;
 
 use Symfony\Contracts\Translation\TranslatorInterface;
 use App\Repository\RoleRepository;
-use App\Repository\TeamRepository;
 
 class HomebrewModel
 {
 
-    protected $teamRepo;
     protected $roleRepo;
+    protected $translator;
     protected $requiredKeys = [
         'id',
         'name',
@@ -34,12 +33,10 @@ class HomebrewModel
     ];
 
     public function __construct(
-        TeamRepository $teamRepo,
         RoleRepository $roleRepo,
         TranslatorInterface $translator
     ) {
 
-        $this->teamRepo = $teamRepo;
         $this->roleRepo = $roleRepo;
         $this->translator = $translator;
 
@@ -68,7 +65,7 @@ class HomebrewModel
     /**
      * Checks to see if the given entry is a homebrew entry.
      *
-     * @param  array
+     * @param  array $entry
      * @return bool
      */
     public function isHomebrewEntry(array $entry): bool
@@ -125,6 +122,7 @@ class HomebrewModel
      * and that it's part of a recognised team.
      *
      * @param  array $entry
+     * @param  array $reason
      * @return bool
      */
     public function validateEntry(array $entry, array &$reason = []): bool
@@ -138,19 +136,6 @@ class HomebrewModel
             $reason[] = $this->translator->trans(
                 'errors.homebrew_json.not_homebrew',
                 ['%id%' => $entry['id']]
-            );
-            $isValid = false;
-
-        }
-
-        if (
-            $isValid
-            && !$this->teamRepo->findOneBy(['identifier' => $entry['team']])
-        ) {
-
-            $reason[] = $this->translator->trans(
-                'errors.homebrew_json.unrecognised_team',
-                ['%team%' => $entry['team']]
             );
             $isValid = false;
 
