@@ -100,18 +100,15 @@ Optionally, you can include a name for the script. To do this, include an entry 
 
 ## Translations and Typos
 
-If you've noticed a typo, or you have a better translation or would like to add a new language, there are 3 files that will need to be updated:
+> [!WARNING]
+> Since version 0.12.0, the translations have changed. The Community translations for the characters and the jinxes are no longer being used - only the official translations. This will result in English text appearing in places where the translation has not been confirmed.
 
-1.  [The Community BotC Translations](https://docs.google.com/spreadsheets/d/1aAJdqSTafHnw01w-WZ94UPx1Me70Kz-EG1NFfBht2tA/edit#gid=923580658)
-    <br>This file contains translations for the tokens, reminders, and abilities.
-    <br>Since this file wasn't created by me, you'll need to let me know of any updates.
-    <br>This file has many more translations than the Pocket Grimoire has.
+If you've noticed a typo, or you have a better translation or would like to add a new language, there are 2 places that will need to be updated:
 
-2.  [The Jinxes](https://docs.google.com/spreadsheets/d/193DMlJzVSzArj1hV1DF6jcr-NsGRaecAy1ahLflu-Qo/edit?usp=sharing)
-    <br>This file contains translations for the jinxes.
-    <br>It was created as a separate file so that it could be easily used in other projects.
+1.  [The Official Translations](https://translation.botc.app/)
+    <br>The official translations for the characters and jinxes.
 
-3.  [The Pocket Grimoire](https://docs.google.com/spreadsheets/d/1YjI3LcLnLbuONbjbniZTZa1BIT8MKBb8TuIprtmkjAw/edit#gid=19211044)
+2.  [The Pocket Grimoire](https://docs.google.com/spreadsheets/d/1YjI3LcLnLbuONbjbniZTZa1BIT8MKBb8TuIprtmkjAw/edit#gid=19211044)
     <br>This file contains translations for anything that's specific for the Pocket Grimoire.
 
-As soon as a translation exists in all 3 documents, I can add it to the Pocket Grimoire 🙂
+As soon as a translation exists in the Pocket Grimoire document, I can add it to the app. Please be aware that the characters and jinxes might still be in English if an official translation has not been added and confirmed.
