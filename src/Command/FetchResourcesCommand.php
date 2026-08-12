@@ -21,7 +21,7 @@ class FetchResourcesCommand extends Command
     public function __construct(
         TPIResourcesModel $model,
         Fetch $fetch,
-        Storage $storage,
+        Storage $storage
     ) {
         $this->model = $model;
         $this->fetch = $fetch;

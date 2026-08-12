@@ -139,7 +139,7 @@ class TPIResourcesModel
     public function combineRoles(
         array $roles,
         array $reminders,
-        array $nightsheet,
+        array $nightsheet
     ): array {
         $combined = [];
 
@@ -250,7 +250,7 @@ class TPIResourcesModel
      * @param mixed $item Item to check.
      * @return bool `true` if the item is a valid role, `false` otherwise.
      */
-    public function isValidRoleEntry(mixed $item): bool
+    public function isValidRoleEntry($item): bool
     {
         $this->message = '';
 
@@ -310,7 +310,7 @@ class TPIResourcesModel
      * @return bool `true` if the item is a valid role special entry, `false`
      * otherwise.
      */
-    protected function isValidSpecialEntry(mixed $item): bool
+    protected function isValidSpecialEntry($item): bool
     {
         return (
             is_array($item)
@@ -332,7 +332,7 @@ class TPIResourcesModel
      * @param mixed $item Item to check.
      * @return bool `true` if the item is a valid jinx entry, `false` otherwise.
      */
-    protected function isValidJinxEntry(mixed $item): bool
+    protected function isValidJinxEntry($item): bool
     {
         return (
             is_array($item)
@@ -348,7 +348,7 @@ class TPIResourcesModel
      * @return bool `true` if the item is a valid "jinx" item in a jinx entry,
      * `false` otherwise.
      */
-    protected function isValidJinxJinxEntry(mixed $item): bool
+    protected function isValidJinxJinxEntry($item): bool
     {
         return (
             is_array($item)

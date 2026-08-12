@@ -20,7 +20,7 @@ class UpdateImagesCommand extends Command
 
     public function __construct(
         EntityManagerInterface $em,
-        RoleRepository $roleRepo,
+        RoleRepository $roleRepo
     ) {
 
         $this->em = $em;

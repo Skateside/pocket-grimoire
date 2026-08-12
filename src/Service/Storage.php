@@ -76,7 +76,7 @@ class Storage
      * @param string ...$parts Directories/filename to read.
      * @return string|false The contents of the file or false on an error.
      */
-    public function read(string $locationId, string ...$parts): mixed
+    public function read(string $locationId, string ...$parts): string
     {
         return file_get_contents(static::concat($this->getRealpath($locationId), ...$parts));
     }
@@ -88,7 +88,7 @@ class Storage
      * @param string ...$parts Directories/filename to read.
      * @return mixed JSON data.
      */
-    public function readJson(string $locationId, string ...$parts): mixed
+    public function readJson(string $locationId, string ...$parts): array
     {
         return json_decode($this->read($locationId, ...$parts), true);
     }
@@ -100,7 +100,7 @@ class Storage
      * @param string ...$parts Directories/filename to read.
      * @return mixed YAML data.
      */
-    public function readYaml(string $locationId, string ...$parts): mixed
+    public function readYaml(string $locationId, string ...$parts): array
     {
         return Yaml::parse($this->read($locationId, ...$parts));
     }
@@ -139,8 +139,8 @@ class Storage
         string $locationId,
         string $filename,
         string $data,
-        int $flags = 0,
-    ): mixed {
+        int $flags = 0
+    ): int {
         if ($this->mkdir($locationId, 0775) === false) {
             throw new \Exception("Can't create '{$locationId}' directory");
         }
@@ -165,8 +165,8 @@ class Storage
         string $filename,
         mixed $data,
         int $jsonFlags = 0,
-        int $flags = 0,
-    ): mixed {
+        int $flags = 0
+    ): int {
         return $this->write($locationId, $filename, json_encode($data, $jsonFlags), $flags);
     }
 

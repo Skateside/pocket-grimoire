@@ -27,7 +27,7 @@ class TranslateResourcesCommand extends Command
         LocaleModel $localeModel,
         TPIResourcesModel $resourcedModel,
         Fetch $fetch,
-        Storage $storage,
+        Storage $storage
     ) {
         $this->model = $model;
         $this->localeModel = $localeModel;
@@ -139,7 +139,7 @@ class TranslateResourcesCommand extends Command
     protected function augmentData(
         string $locale,
         array $characters,
-        array $jinxes,
+        array $jinxes
     ): array {
         $augmented = [
             'characters' => $characters,
@@ -193,7 +193,7 @@ class TranslateResourcesCommand extends Command
         array $reminders,
         array $jinxes,
         string $filename,
-        bool $isPretty = false,
+        bool $isPretty = false
     ): mixed {
         $raw = $this->fetch->getJson(sprintf(TPIURLEnum::GAME, $locale));
         $results = [

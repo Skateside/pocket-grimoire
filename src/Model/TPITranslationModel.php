@@ -103,7 +103,7 @@ class TPITranslationModel
         array $baseRoles,
         array $baseReminders,
         array $translatedRoles,
-        array $translatedReminders,
+        array $translatedReminders
     ): array {
         $combined = [];
 
@@ -158,7 +158,7 @@ class TPITranslationModel
      */
     public function combineJinxes(
         array $baseJinxes,
-        array $translatedJinxes,
+        array $translatedJinxes
     ): array {
         $combined = [];
 

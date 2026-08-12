@@ -100,7 +100,7 @@ class HomebrewModel
      * @return bool true if the entry looks like an official character, false
      *         otherwise.
      */
-    public function looksOfficial(mixed $entry): bool
+    public function looksOfficial($entry): bool
     {
         if (is_string($entry)) {
             return true;

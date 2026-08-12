@@ -10,6 +10,7 @@ use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Contracts\Translation\TranslatorInterface;
 
 use App\Repository\HomebrewRepository;
+use App\Service\Fetch;
 
 /**
  * @Route("/{_locale}/data", name="data_")
@@ -18,11 +19,14 @@ class DataController extends AbstractController
 {
 
     private $homebrewRepo;
+    private $fetch;
 
     public function __construct(
         HomebrewRepository $homebrewRepo,
+        Fetch $fetch
     ) {
         $this->homebrewRepo = $homebrewRepo;
+        $this->fetch = $fetch;
     }
 
     /**
@@ -44,39 +48,22 @@ class DataController extends AbstractController
 
         }
 
-        try {
-            $contents = file_get_contents($url);
-        } catch (\Exception $ignore) {
-            // file_get_contents() returns `false` on failure, so set $contents
-            // to `false` on error for a simple check.
-            $contents = false;
-        }
+        $fetch = $this->fetch->getJson($url);
 
-        if ($contents === false) {
+        if ($fetch['success']) {
 
             return new JsonResponse([
-                'success' => false,
-                'message' => $translator->trans('errors.url.cannot_access')
-            ]);
-
-        }
-
-        $json = json_decode($contents);
-
-        if ($json === null) {
-
-            return new JsonResponse([
-                'success' => false,
-                'message' => $translator->trans('errors.url.not_json')
+                'success' => true,
+                'data' => $fetch['body'],
             ]);
 
         }
 
         return new JsonResponse([
-            'success' => true,
-            'data' => $json
+            'success' => false,
+            'message' => $fetch['body'] ?? '(unknown fetch error)',
         ]);
-
+    
     }
 
     /**

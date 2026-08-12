@@ -86,7 +86,7 @@ class Fetch
      * @param mixed $data Body for the success response.
      * @return array Success response.
      */
-    protected function success(mixed $data): array
+    protected function success($data): array
     {
         return ['success' => true, 'body' => $data];
     }
@@ -97,7 +97,7 @@ class Fetch
      * @param mixed $data Body for the failure response.
      * @return array Failure response.
      */
-    protected function failure(mixed $data): array
+    protected function failure($data): array
     {
         return ['success' => false, 'body' => $data];
     }
