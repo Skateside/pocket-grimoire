@@ -1,7 +1,8 @@
 .switch {
+    align-items: center;
     display: flex;
     flex-flow: row nowrap;
-    gap: 0.5em;
+    gap: 1em;
 }
 
 .switch__label {

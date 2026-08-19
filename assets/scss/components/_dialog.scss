@@ -3,6 +3,7 @@
     border: none;
     margin: auto;
     padding: 0;
+    overscroll-behavior: contain;
 }
 
 .dialog--blur-background::backdrop {
@@ -26,14 +27,15 @@
 }
 
 .dialog__content {
-    border: 0.2em solid #000;
     background-color: #fff;
-    position: relative;
-    width: min(80vw, 30em);
-    max-width: 100%;
     background-image: url("../../img/background-img.webp");
+    border: 0.2em solid #000;
     margin-left: auto;
     margin-right: auto;
+    max-width: 90vw;
+    min-width: 30em;
+    position: relative;
+    width: 100%;
 
     @at-root {
         .dialog--polyfilled > #{&} {
@@ -62,7 +64,7 @@
 .dialog__hide {
     @extend %no-btn;
     cursor: pointer;
-    font-size: 2em;
+    font-size: 3em;
     line-height: 1;
     text-shadow:
         -0.05em -0.05em 0.1em rgb(255 255 255 / 80%),

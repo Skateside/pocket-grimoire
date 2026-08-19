@@ -105,13 +105,27 @@
 }
 
 .character-select__character {
+    border-radius: 1em;
+    padding: 1em;
     position: relative;
+
+    label {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+    }
+
+    &.is-selected {
+        background: lch(from var(--green) calc(l + 50) c h);
+    }
 }
 
 .character-select__duplicate {
     display: none;
+    left: 0;
     position: absolute;
-    top: -1em;
+    top: 0;
+    width: 100%;
     z-index: 1;
 
     @at-root {
@@ -140,7 +154,8 @@
 
 .character-select__button {
     @extend %no-btn;
-    padding: 0.5em;
+    height: 100%;
+    padding: 0.5em 1em;
     position: absolute;
     top: 0;
 
@@ -159,7 +174,7 @@
 }
 
 .character-select__icon {
-    width: 1em;
+    width: 1.25em;
     color: inherit;
     display: block;
 }
