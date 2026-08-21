@@ -2,46 +2,18 @@
 
 namespace App\Service;
 
+use Symfony\Contracts\HttpClient\HttpClientInterface;
+
 class Fetch
 {
     /**
-     * Gets the status code from the given URL.
-     *
-     * @param string $source URL whose HTTP status code should be returned.
-     * @return int Status code.
+     * @var string $lastError The last error message that occurred.
      */
-    public function getStatusCode(string $source): int
-    {
-        $curl = curl_init();
-        curl_setopt_array($curl, [
-            CURLOPT_RETURNTRANSFER => true,
-            CURLOPT_URL => $source,
-        ]);
-        curl_exec($curl);
-        $response_code = curl_getinfo($curl, CURLINFO_HTTP_CODE);
-        curl_close($curl);
+    protected string $lastError = '';
 
-        return $response_code;
-    }
-
-    /**
-     * Gets the contents of the given URL.
-     *
-     * @param string $source URL whose contents should be returned.
-     * @return string Contents from the given URL.
-     */
-    public function getContents(string $source): string
-    {
-        $curl = curl_init();
-        curl_setopt_array($curl, [
-            CURLOPT_URL => $source,
-            CURLOPT_RETURNTRANSFER => true,
-            CURLOPT_HEADER => false,
-        ]);
-        $contents = curl_exec($curl);
-        curl_close($curl);
-
-        return $contents;
+    public function __construct(
+        private HttpClientInterface $client,
+    ) {
     }
 
     /**
@@ -49,85 +21,82 @@ class Fetch
      * returning an array with a "success" key and a "body" key.
      *
      * @param string $source Source of the contents to get and parse.
-     * @param bool isAssoc Whether to parse the JSON as an associative array or
+     * @param bool $isAssoc Whether to parse the JSON as an associative array or
      *        an object. Defaults to array.
-     * @return array Results of parsing the contents (if possible).
+     * @return ?array<mixed> Either the parsed array or null if an error
+     *         occurred.
      */
-    public function getJson(string $source, bool $isAssoc = true): array
+    public function getJson(string $source, bool $isAssoc = true): ?array
     {
-        $status = $this->getStatusCode($source);
+        $this->resetLastError();
 
-        if ($status < 200 || ($status >= 300 && $status !== 302)) {
-            return $this->failure("'{$source}' status code response: {$status}");
+        try {
+            $response = $this->client->request('GET', $source, [
+                'max_redirects' => 3,
+                'timeout' => 5,
+                'max_duration' => 10,
+            ]);
+
+            $status = $response->getStatusCode();
+
+            if ($status < 200 || ($status >= 300 && $status !== 302)) {
+                return $this->setLastError("Status code response {$status}");
+            }
+
+            return $response->toArray();
+        } catch (\Throwable $error) {
+            return $this->setLastError($error->getMessage());
         }
-
-        $contents = $this->getContents($source);
-
-        if ($contents === false) {
-            return $this->failure("'{$source}' not found");
-        }
-
-        if (!$this->json_validate($contents)) {
-            return $this->failure("'{$source}' not valid JSON");
-        }
-
-        $decoded = json_decode($contents, $isAssoc);
-
-        if (!is_array($decoded)) {
-            return $this->failure('JSON not an array');
-        }
-
-        return $this->success($decoded);
     }
 
     /**
-     * Returns a success.
+     * Gets the last error message, which will be an empty string if no error
+     * has occured.
      *
-     * @param mixed $data Body for the success response.
-     * @return array Success response.
+     * @return string Last error message.
      */
-    protected function success($data): array
+    public function getLastError(): string
     {
-        return ['success' => true, 'body' => $data];
+        return $this->lastError;
     }
 
     /**
-     * Returns a failure.
+     * Helper function for setting the last error message and returning null.
      *
-     * @param mixed $data Body for the failure response.
-     * @return array Failure response.
+     * @param string $lastError Last error message.
+     * @param mixed $return The value to return.
+     * @return mixed Whatever was passed as the return value.
      */
-    protected function failure($data): array
+    protected function setLastError(string $lastError, mixed $return = null): mixed
     {
-        return ['success' => false, 'body' => $data];
+        $this->lastError = $lastError;
+        return $return;
     }
 
     /**
-     * Fallback for json_validate() for PHP before 8.3
-     *
-     * @param string $json JSON string to test.
-     * @param int $depth Maximum depth of the JSON.
-     * @param int $flags Settings flags.
-     * @return bool true if the JSON is valid, false otherwise.
-     * @see https://php.watch/versions/8.3/json_validate
-     * @see https://www.php.net/manual/en/function.json-validate.php
+     * Helper function for resetting the last error message.
      */
-    protected function json_validate(string $json, int $depth = 512, int $flags = 0): bool
+    protected function resetLastError(): void
     {
-        if (function_exists('json_validate')) {
-            return \json_validate($json, $depth, $flags);
+        $this->setLastError('');
+    }
+
+    /**
+     * Converts a number of bytes into a human-readable format.
+     *
+     * @param int $bytes Bytes to convert.
+     * @param int $decimals Optional number of decimals, defaults to 2.
+     * @return string Human-readable bytes.
+     */
+    public static function formatBytes(int $bytes, int $decimals = 2): string
+    {
+        $size = ['B', 'KB', 'MB', 'GB', 'TB', 'PB', 'EB', 'ZB', 'YB'];
+        $factor = intval(floor((strlen((string) $bytes) - 1) / 3));
+
+        if ($factor === 0) {
+            $decimals = 0;
         }
 
-        if ($flags !== 0 && $flags !== \JSON_INVALID_UTF8_IGNORE) {
-            throw new \ValueError('json_validate(): Argument #3 ($flags) must be a valid flag (allowed flags: JSON_INVALID_UTF8_IGNORE)');
-        }
-
-        if ($depth <= 0) {
-            throw new \ValueError('json_validate(): Argument #2 ($depth) must be greater than 0');
-        }
-
-        \json_decode($json, null, $depth, $flags);
-
-        return \json_last_error() === \JSON_ERROR_NONE;
+        return sprintf("%.{$decimals}f %s", $bytes / (1024 ** $factor), $size[$factor]);
     }
 }

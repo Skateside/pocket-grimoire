@@ -45,11 +45,21 @@ class FetchResourcesCommand extends Command
 
         $rawGame = $this->fetch->getJson(sprintf(TPIURLEnum::GAME, 'en'));
 
+        if (($error = $this->fetch->getLastError()) !== '') {
+            $io->error($error);
+            return Command::FAILURE;
+        }
+
         if ($output->isVerbose()) {
             $bar->advance();
         }
 
         $rawJinxes = $this->fetch->getJson(TPIURLEnum::JINXES);
+
+        if (($error = $this->fetch->getLastError()) !== '') {
+            $io->error($error);
+            return Command::FAILURE;
+        }
 
         if ($output->isVerbose()) {
             $bar->advance();
@@ -57,11 +67,21 @@ class FetchResourcesCommand extends Command
 
         $rawNightsheet = $this->fetch->getJson(TPIURLEnum::NIGHTSHEET);
 
+        if (($error = $this->fetch->getLastError()) !== '') {
+            $io->error($error);
+            return Command::FAILURE;
+        }
+
         if ($output->isVerbose()) {
             $bar->advance();
         }
 
         $rawRoles = $this->fetch->getJson(TPIURLEnum::ROLES);
+
+        if (($error = $this->fetch->getLastError()) !== '') {
+            $io->error($error);
+            return Command::FAILURE;
+        }
 
         if ($output->isVerbose()) {
             $bar->advance();
@@ -69,21 +89,11 @@ class FetchResourcesCommand extends Command
             $io->writeln('');
         }
 
-        if (
-            !$rawGame['success']
-            || !$rawJinxes['success']
-            || !$rawNightsheet['success']
-            || !$rawRoles['success']
-        ) {
-            $io->error('Data not valid');
-            return Command::FAILURE;
-        }
+        $jinxes = $this->model->filterJinxes($rawJinxes);
+        $nightsheet = $this->model->filterNightsheet($rawNightsheet);
+        $roles = $this->model->filterRoles($rawRoles);
 
-        $jinxes = $this->model->filterJinxes($rawJinxes['body']);
-        $nightsheet = $this->model->filterNightsheet($rawNightsheet['body']);
-        $roles = $this->model->filterRoles($rawRoles['body']);
-
-        $rawReminders = $rawGame['body']['reminders'] ?? [];
+        $rawReminders = $rawGame['reminders'] ?? [];
         $reminders = $this->model->filterReminders($rawReminders);
 
         if ($output->isVerbose()) {
@@ -91,9 +101,9 @@ class FetchResourcesCommand extends Command
             $io->table(
                 ['Type', 'Raw entries', 'Filtered entries'],
                 [
-                    ['Jinxes', count($rawJinxes['body']), count($jinxes)],
-                    ['Nightsheet', count($rawNightsheet['body']), count($nightsheet)],
-                    ['Roles', count($rawRoles['body']), count($roles)],
+                    ['Jinxes', count($rawJinxes), count($jinxes)],
+                    ['Nightsheet', count($rawNightsheet), count($nightsheet)],
+                    ['Roles', count($rawRoles), count($roles)],
                     ['Reminders', count($rawReminders), count($reminders)],
                 ],
             );
@@ -101,9 +111,9 @@ class FetchResourcesCommand extends Command
         
 
         if (
-            count($rawJinxes['body']) !== count($jinxes)
-            || count($rawNightsheet['body']) !== count($nightsheet)
-            || count($rawRoles['body']) !== count($roles)
+            count($rawJinxes) !== count($jinxes)
+            || count($rawNightsheet) !== count($nightsheet)
+            || count($rawRoles) !== count($roles)
             || count($rawReminders) !== count($reminders)
         ) {
             $io->warning('Some filtering occurred');

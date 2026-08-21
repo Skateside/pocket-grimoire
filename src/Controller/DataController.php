@@ -36,7 +36,6 @@ class DataController extends AbstractController
         Request $request,
         TranslatorInterface $translator
     ): Response {
-
         $url = $request->query->get('url', '');
 
         if ($url === '' || filter_var($url, FILTER_VALIDATE_URL) === false) {
@@ -48,22 +47,22 @@ class DataController extends AbstractController
 
         }
 
-        $fetch = $this->fetch->getJson($url);
+        $json = $this->fetch->getJson($url);
+        $error = $this->fetch->getLastError();
 
-        if ($fetch['success']) {
+        if (!empty($error)) {
 
             return new JsonResponse([
-                'success' => true,
-                'data' => $fetch['body'],
+                'success' => false,
+                'message' => $error,
             ]);
 
         }
 
         return new JsonResponse([
-            'success' => false,
-            'message' => $fetch['body'] ?? '(unknown fetch error)',
-        ]);
-    
+            'success' => true,
+            'data' => $json,
+        ]);    
     }
 
     /**
