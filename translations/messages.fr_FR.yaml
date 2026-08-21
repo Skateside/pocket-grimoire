@@ -66,14 +66,14 @@ setup:
         custom_warning: Faites attention à utiliser des fichiers JSON provenant d'une source de confiance !
         upload: Uploader un script personnalisé
         url: Entrer une URL
-        paste: Collé du presse-papier
+        paste: Coller du presse-papier
         unsupported: "Note : Le Grimoire de Poche ne gère pas encore les scripts faits maison ou traduits"
         select: Choisir
 
     character_select:
         title: Choisir Personnages
         number_players: Nombre de joueurs
-        toggle_abilities: Monter les capacités des personnages
+        toggle_abilities: Montrer les capacités des personnages
         toggle_duplicates: Autoriser les doublons
         highlight_random: Choisir aléatoirement
         draw_characters: Piocher Personnages
@@ -86,7 +86,7 @@ setup:
 
     character_choice:
         title: Sélectionne ton Personnage
-        description: Touches l'un des jetons numérotés pour choisir un personnage. Ceux qui sont assombries ont déjà été choisis.
+        description: Touches l'un des jetons numérotés pour choisir un personnage. Ceux qui sont assombris ont déjà été choisis.
 
     character_decision:
         title: Souviens-toi de ton Personnage
@@ -141,7 +141,7 @@ grimoire:
         show_tokens: Montrer jetons
         reset_height: Réinitialiser taille du bloc
         clear_grimoire: Effacer Grimoire
-        clear_grimoire_warning: Es-tu sûr de vouloir éffacer tous les jetons ?
+        clear_grimoire_warning: Es-tu sûr de vouloir effacer tous les jetons ?
         show_night_order: Montrer l'ordre de nuit sur les jetons
         character_size: Taille des jetons
         reminder_size: Taille des rappels
@@ -164,7 +164,7 @@ grimoire:
         reminder: Rappel
         replace: Remplacer
         remove: Enlever jeton
-        recent_reminders: "Jetons rappel les plus récemment ajouté :"
+        recent_reminders: "Jetons rappel les plus récemment ajoutés :"
         player_name: Définir le nom du joueur
         ghost_vote: Vote fantôme
         orphan: "Attention: ce rôle n'est pas dans le script actuel"
@@ -215,7 +215,7 @@ night_order:
     title: Ordre de nuit
     first_night: Première nuit
     other_night: Autres nuits
-    swipe_change: Glisser de côté pour changer de nuit.
+    swipe_change: Faire défiler sur le côté pour changer de nuit
     show: Afficher les personnages hors-jeu
     show_dead: Afficher les personnages morts
 
@@ -230,7 +230,7 @@ info_tokens:
         votetoday: As-tu <strong>voté</strong> aujourd'hui ?
         youare: "<strong>Tu</strong> es :"
         selectedyou: Ce personnage t'a <strong>sélectionné :</strong>
-        useability: Veux-tu utilisé <strong>ton pouvoir</strong>?
+        useability: Veux-tu utiliser <strong>ton pouvoir</strong>?
         makechoice: Fais un <strong>choix</strong>
     custom: Jetons d'infos personnalisés
     add_custom: Ajouter un jeton info
@@ -241,7 +241,7 @@ notes:
     title: Notes du Conteur
     label: Notes
     clear: Effacer les notes
-    clear_warning: Es-tu sur de vouloir effacer les notes?
+    clear_warning: Es-tu sûr de vouloir effacer les notes ?
 
 acknowledgements:
     title: Remerciements
@@ -261,13 +261,13 @@ community:
 errors:
     homebrew_json:
         not_homebrew: "Votre personnage personnalisé a des donnés manquante : \"%id%\""
-        unrecognised_team: "Équipe non reconnu : \"%team%\""
+        unrecognised_team: "Équipe non reconnue : \"%team%\""
         not_find_id: "Impossible de trouver l'ID : \"%id%\""
         .not_recognise_character: Impossible de reconnaitre le personnage "%id%"
         invalid_entry: "Donnée invalide pour \"%id%\": %reasons%"
         empty_teams: "Équipes vide : %teams%"
         invalid_property: La propriété "%property%" est du type %expected% mais devrait être du type %given% a la place
     url:
-        no_url: URL manquant ou invalide
+        no_url: URL manquante ou invalide
         cannot_access: Impossible d'accéder a l'URL
         not_json: Impossible d'analyser le JSON depuis l'URL
