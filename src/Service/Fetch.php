@@ -11,9 +11,12 @@ class Fetch
      */
     protected string $lastError = '';
 
+    private HttpClientInterface $client;
+
     public function __construct(
-        private HttpClientInterface $client
+        HttpClientInterface $client
     ) {
+        $this->client = $client;
     }
 
     /**
@@ -67,7 +70,7 @@ class Fetch
      * @param mixed $return The value to return.
      * @return mixed Whatever was passed as the return value.
      */
-    protected function setLastError(string $lastError, mixed $return = null): mixed
+    protected function setLastError(string $lastError, $return = null)
     {
         $this->lastError = $lastError;
         return $return;
