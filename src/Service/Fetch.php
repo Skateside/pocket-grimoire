@@ -12,7 +12,7 @@ class Fetch
     protected string $lastError = '';
 
     public function __construct(
-        private HttpClientInterface $client,
+        private HttpClientInterface $client
     ) {
     }
 
