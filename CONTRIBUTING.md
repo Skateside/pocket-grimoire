@@ -81,16 +81,13 @@ $ bin/console doctrine:database:create
 $ bin/console doctrine:migrations:migrate
 ```
 
-### Step 3: Populate the database
+### Step 3: Populate the data
 
 ```sh
 # Import initial data
 # WARNING: The order is important
-$ bin/console pocket-grimoire:populate-editions -f ./assets/data/editions.json
-$ bin/console pocket-grimoire:populate-teams -f ./assets/data/teams.json
-$ bin/console pocket-grimoire:populate-roles -f ./assets/data/characters.json
-# Import everything else
-$ bin/console pocket-grimoire:import
+$ bin/console pocket-grimoire:fetch -v
+$ bin/console pocket-grimoire:translate -v
 ```
 
 ### Step 4: Create the assets
@@ -107,7 +104,7 @@ $ symfony server:start
 
 Go to the URL that this command gives you and you should see a version of the Pocket Grimoire running locally.
 
-Process should take 1-2 minutes.
+Process should take about a minute.
 
 ## Events
 

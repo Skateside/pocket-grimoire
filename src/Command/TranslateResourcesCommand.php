@@ -196,16 +196,17 @@ class TranslateResourcesCommand extends Command
         bool $isPretty = false
     ): mixed {
         $raw = $this->fetch->getJson(sprintf(TPIURLEnum::GAME, $locale));
+        $error = $this->fetch->getLastError();
         $results = [
             'fetch' => true,
             'write' => true,
         ];
         $body = [];
 
-        if ($raw['success']) {
-            $body = $raw['body'];
+        if (empty($error)) {
+            $body = $raw;
         } else {
-            $results['fetch'] = $raw['body'];
+            $results['fetch'] = $error;
         }
 
         $data = [
