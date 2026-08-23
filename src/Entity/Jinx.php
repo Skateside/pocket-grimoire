@@ -2,42 +2,28 @@
 
 namespace App\Entity;
 
-use App\Repository\JinxRepository;
 use Doctrine\ORM\Mapping as ORM;
-use Gedmo\Mapping\Annotation as Gedmo;
 
-/**
- * @ORM\Table(name="jinxes")
- * @ORM\Entity(repositoryClass=JinxRepository::class)
- */
+#[ORM\Table(name: "jinxes")]
+#[ORM\Entity(repositoryClass: "App\Repository\JinxRepository")]
 class Jinx
 {
 
-    /**
-     * @ORM\Id()
-     * @ORM\GeneratedValue()
-     * @ORM\Column(type="integer")
-     */
+    #[ORM\Id()]
+    #[ORM\GeneratedValue()]
+    #[ORM\Column(type: "integer")]
     private $id;
 
-    /**
-     * @ORM\ManyToOne(targetEntity="App\Entity\Role", inversedBy="jinxes")
-     */
+    #[ORM\ManyToOne(targetEntity: "App\Entity\Role", inversedBy: "jinxes")]
     private $target;
 
-    /**
-     * @ORM\ManyToOne(targetEntity="App\Entity\Role", inversedBy="tricks")
-     */
+    #[ORM\ManyToOne(targetEntity: "App\Entity\Role", inversedBy: "tricks")]
     private $trick;
 
-    /**
-     * @Gedmo\Translatable
-     * @ORM\Column(name="reason", type="text", options={"default": ""})
-     */
+    #[ORM\Column(name: "reason", type: "text", options: ["default" => ""])]
     private $reason = '';
 
     /**
-     * @Gedmo\Locale
      * Used locale to override Translation listener`s locale.
      * This is not a mapped field of entity metadata, just a simple property.
      */

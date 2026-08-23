@@ -2,7 +2,6 @@
 
 namespace App\Entity;
 
-use App\Repository\HomebrewRepository;
 use Doctrine\ORM\Mapping as ORM;
 
 /*
@@ -26,38 +25,27 @@ will become:
 /sheet?game=XXX
  */
 
- /**
-  * @ORM\Table(name="homebrew", indexes={@ORM\Index(name="uuid_idx", columns={"uuid"})})
-  * @ORM\Entity(repositoryClass=HomebrewRepository::class)
-  */
+#[ORM\Table(name: "homebrew")]
+#[ORM\Index(name: "uuid_idx", columns: ["uuid"])]
+#[ORM\Entity(repositoryClass: "App\Repository\HomebrewRepository")]
 class Homebrew
 {
 
-    /**
-     * @ORM\Id()
-     * @ORM\GeneratedValue()
-     * @ORM\Column(type="integer")
-     */
+    #[ORM\Id()]
+    #[ORM\GeneratedValue()]
+    #[ORM\Column(type: "integer")]
     private $id;
 
-    /**
-     * @ORM\Column(name="uuid", type="string", length=255)
-     */
+    #[ORM\Column(name: "uuid", type: "string", length: 255)]
     private $uuid;
 
-    /**
-     * @ORM\Column(name="created", type="datetime")
-     */
+    #[ORM\Column(name: "created", type: "datetime")]
     private $created;
 
-    /**
-     * @ORM\Column(name="accessed", type="datetime")
-     */
+    #[ORM\Column(name: "accessed", type: "datetime")]
     private $accessed;
 
-    /**
-     * @ORM\Column(name="json", type="json")
-     */
+    #[ORM\Column(name: "json", type: "json")]
     private $json;
 
     /**

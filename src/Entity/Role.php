@@ -2,117 +2,73 @@
 
 namespace App\Entity;
 
-use App\Repository\RoleRepository;
 use Doctrine\ORM\Mapping as ORM;
-use Gedmo\Mapping\Annotation as Gedmo;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 
-/**
- * @ORM\Table(name="roles", indexes={@ORM\Index(name="roles_identifier_idx", columns={"identifier"})})
- * @ORM\Entity(repositoryClass=RoleRepository::class)
- */
+#[ORM\Table(name: "roles")]
+#[ORM\Index(name: "roles_identifier_idx", columns: ["identifier"])]
+#[ORM\Entity(repositoryClass: "App\Repository\RoleRepository")]
 class Role
 {
 
-    /**
-     * @ORM\Id()
-     * @ORM\GeneratedValue()
-     * @ORM\Column(type="integer")
-     */
+    #[ORM\Id()]
+    #[ORM\GeneratedValue()]
+    #[ORM\Column(type: "integer")]
     private $id;
 
-    /**
-     * @ORM\Column(name="identifier", type="string", length=255)
-     */
+    #[ORM\Column(name: "identifier", type: "string", length: 255)]
     private $identifier;
 
-    /**
-     * @Gedmo\Translatable
-     * @ORM\Column(name="name", type="string", length=255, options={"default": ""})
-     */
+    #[ORM\Column(name: "name", type: "string", length: 255, options: ["default" => ""])]
     private $name = '';
 
-    /**
-     * @ORM\ManyToOne(targetEntity="App\Entity\Edition", inversedBy="roles")
-     */
+    #[ORM\ManyToOne(targetEntity: "App\Entity\Edition", inversedBy: "roles")]
     private $edition = null;
 
-    /**
-     * @ORM\ManyToOne(targetEntity="App\Entity\Team", inversedBy="roles")
-     */
+    #[ORM\ManyToOne(targetEntity: "App\Entity\Team", inversedBy: "roles")]
     private $team = null;
 
-    /**
-     * @ORM\Column(name="first_night", type="integer", options={"default": 0})
-     */
+    #[ORM\Column(name: "first_night", type: "integer", options: ["default" => 0])]
     private $firstNight = 0;
 
-    /**
-     * @Gedmo\Translatable
-     * @ORM\Column(name="first_night_reminder", type="text", options={"default": ""})
-     */
+    #[ORM\Column(name: "first_night_reminder", type: "text", options: ["default" => ""])]
     private $firstNightReminder = '';
 
-    /**
-     * @ORM\Column(name="other_night", type="integer", options={"default": 0})
-     */
+    #[ORM\Column(name: "other_night", type: "integer", options: ["default" => 0])]
     private $otherNight = 0;
 
-    /**
-     * @Gedmo\Translatable
-     * @ORM\Column(name="other_night_reminder", type="text", options={"default": ""})
-     */
+    #[ORM\Column(name: "other_night_reminder", type: "text", options: ["default" => ""])]
     private $otherNightReminder = '';
 
-    /**
-     * @Gedmo\Translatable
-     * @ORM\Column(name="reminders", type="array")
-     */
+    #[ORM\Column(name: "reminders", type: "array")]
     private $reminders = [];
 
-    /**
-     * @Gedmo\Translatable
-     * @ORM\Column(name="reminders_global", type="array")
-     */
+    #[ORM\Column(name: "reminders_global", type: "array")]
     private $remindersGlobal = [];
 
-    /**
-     * @ORM\Column(name="setup", type="boolean", options={"default": false})
-     */
+    #[ORM\Column(name: "setup", type: "boolean", options: ["default" => false])]
     private $setup = false;
 
-    /**
-     * @Gedmo\Translatable
-     * @ORM\Column(name="ability", type="text", options={"default": ""})
-     */
+    #[ORM\Column(name: "ability", type: "text", options: ["default" => ""])]
     private $ability = '';
 
-    /**
-     * @ORM\Column(name="image", type="string", length=255, options={"default": ""})
-     */
+    #[ORM\Column(name: "image", type: "string", length: 255, options: ["default" => ""])]
     private $image = '';
 
     /**
-     * @Gedmo\Locale
      * Used locale to override Translation listener`s locale.
      * This is not a mapped field of entity metadata, just a simple property.
      */
     private $locale;
 
-    /**
-     * @ORM\OneToMany(targetEntity="App\Entity\Jinx", mappedBy="target")
-     */
+    #[ORM\OneToMany(targetEntity: "App\Entity\Jinx", mappedBy: "target")]
     private $jinxes;
 
-    /**
-     * @ORM\OneToMany(targetEntity="App\Entity\Jinx", mappedBy="trick")
-     */
+    #[ORM\OneToMany(targetEntity: "App\Entity\Jinx", mappedBy: "trick")]
     private $tricks;
 
-    /**
-     * @ORM\Column(name="special", type="json")
-     */
+    #[ORM\Column(name: "special", type: "json")]
     private $special = [];
 
     public function __construct()

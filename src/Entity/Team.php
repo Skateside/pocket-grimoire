@@ -2,47 +2,34 @@
 
 namespace App\Entity;
 
-use App\Repository\TeamRepository;
 use Doctrine\ORM\Mapping as ORM;
-use Gedmo\Mapping\Annotation as Gedmo;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 
-/**
- * @ORM\Table(name="teams", indexes={@ORM\Index(name="teams_identifier_idx", columns={"identifier"})})
- * @ORM\Entity(repositoryClass=TeamRepository::class)
- */
+#[ORM\Table(name: "teams")]
+#[ORM\Index(name: "teams_identifier_idx", columns: ["identifier"])]
+#[ORM\Entity(repositoryClass: "App\Repository\TeamRepository")]
 class Team
 {
 
-    /**
-     * @ORM\Id()
-     * @ORM\GeneratedValue()
-     * @ORM\Column(type="integer")
-     */
+    #[ORM\Id()]
+    #[ORM\GeneratedValue()]
+    #[ORM\Column(type: "integer")]
     private $id;
 
-    /**
-     * @ORM\Column(name="identifier", type="string", length=255)
-     */
+    #[ORM\Column(name: "identifier", type: "string", length: 255)]
     private $identifier;
 
-    /**
-     * @Gedmo\Translatable
-     * @ORM\Column(name="name", type="string", length=255)
-     */
+    #[ORM\Column(name: "name", type: "string", length: 255)]
     private $name;
 
     /**
-     * @Gedmo\Locale
      * Used locale to override Translation listener`s locale.
      * This is not a mapped field of entity metadata, just a simple property.
      */
     private $locale;
 
-    /**
-     * @ORM\OneToMany(targetEntity="App\Entity\Role", mappedBy="team")
-     */
+    #[ORM\OneToMany(targetEntity: "App\Entity\Role", mappedBy: "team")]
     private $roles;
 
     public function __construct()
