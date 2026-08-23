@@ -66,11 +66,10 @@
             </div>
         </details>
         <details name="select-edition" class="edition-details" data-id="botc">
-            <summary class="edition-details__summary">BotcScripts</summary>
+            <summary class="edition-details__summary">BotC Scripts</summary>
             <div class="edition-details__body">
-                <p>Load a script from <a href="https://www.botcscripts.com/" target="_blank">BotC Scripts</a>.</p>
                 <p>
-                    <label for="botc-scripts">Search</label>
+                    <label for="botc-scripts">Look up script</label>
                     <input type="text" name="botc-scripts" id="botc-scripts" class="input" required data-no-store>
                 </p>
                 <div id="botc-scripts">
@@ -82,14 +81,21 @@
         </details>
 
         <template id="botc-scripts-entry">
-            <li class="edition-details__entry">
-                <strong class="edition-details__name js--botc-scripts--name"></strong>
-                <small class="edition-details__author js--botc-scripts--author"></small>
-                <span class="edition-details__button">
-                    <button type="button" class="button js--botc-scripts--trigger">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" aria-labelledby="tick-icon" class="locale-form__icon"><!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><title id="tick-icon">{{ 'setup.editions.select'|trans }}</title><path style="fill: currentColor;" d="M438.6 105.4C451.1 117.9 451.1 138.1 438.6 150.6L182.6 406.6C170.1 419.1 149.9 419.1 137.4 406.6L9.372 278.6C-3.124 266.1-3.124 245.9 9.372 233.4C21.87 220.9 42.13 220.9 54.63 233.4L159.1 338.7L393.4 105.4C405.9 92.88 426.1 92.88 438.6 105.4H438.6z"/></svg>
-                    </button>
-                </span>
+            <li>
+                <label class="radio edition-details__radio js--botc-scripts--label">
+                    <span class="radio__wrapper">
+                        <input
+                            type="radio"
+                            name="botc-script"
+                            class="radio__input js--botc-scripts--input"
+                        >
+                        <span class="radio__render"></span>
+                    </span>
+                    <span class="radio__label">
+                        <strong class="edition-details__name js--botc-scripts--name"></strong>
+                        <small class="edition-details__author js--botc-scripts--author"></small>
+                    </span>
+                </label>
             </li>
         </template>
 

@@ -482,7 +482,7 @@ form.addEventListener("submit", (event) => {
             }
 
             case "botc": {
-                // Do nothing - process handled through the buttons.
+                // TODO: select the script from the selected radio button.
                 break;
             }
         }
@@ -490,14 +490,12 @@ form.addEventListener("submit", (event) => {
 });
 
 const botcInput = lookupOne("#botc-scripts");
-// const botcLoader = lookupOne("#botc-scripts-loader");
 const botcEmpty = lookupOne("#botc-scripts-empty");
 const botcResults = lookupOne("#botc-scripts-results");
 const botcTemplate = Template.create(lookupOne("#botc-scripts-entry"));
 
 botcInput.addEventListener("input", () => {
     setFormLoadingState(form, botcInput.value.trim() !== "");
-    //botcLoader.hidden = false;
     botcEmpty.hidden = true;
     botcResults.hidden = true;
 });
@@ -540,9 +538,17 @@ botcInput.addEventListener("input", debounce(() => {
 
             replaceContentsMany(
                 botcResults,
-                json.data.slice(0, 10).map((data) => botcTemplate.draw({
-                    ".js--botc-scripts--trigger"(element) {
-                        element.dataset.id = data.id;
+                json.data.slice(0, 10).map((data, index) => botcTemplate.draw({
+                    ".js--botc-scripts--label"(element) {
+                        element.htmlFor = `botc-script-${data.id}`;
+                    },
+                    ".js--botc-scripts--input"(element) {
+                        element.value = data.id;
+                        element.id = `botc-script-${data.id}`;
+
+                        if (index === 0) {
+                            element.required = true;
+                        }
                     },
                     ".js--botc-scripts--name"(element) {
                         element.textContent = data.name;
@@ -556,200 +562,3 @@ botcInput.addEventListener("input", debounce(() => {
         });
 
 }, 500));
-
-/*const form = lookupOne("#select-edition-form");
-const fileInput = lookupOne("#custom-script-upload");
-const fileInputRender = fileInput.nextElementSibling;
-const urlInput = lookupOne("#custom-script-url");
-const pasteInput = lookupOne("#custom-script-paste");
-const uploader = lookupOne("#custom-script");
-const radios = lookup("[name=\"edition\"]", form);
-const botcInput = lookupOne("#botc-script");
-const customInputs = [fileInput, urlInput, pasteInput, botcInput];
-
-radios.forEach((radio) => {
-
-    radio.addEventListener("input", ({ target }) => {
-
-        const isCustom = target.value === "custom";
-
-        uploader.hidden = !isCustom;
-        setFieldsValidity(customInputs, isCustom);
-
-    });
-
-});
-
-customInputs.forEach((input) => {
-
-    input.addEventListener("input", () => {
-
-        input.setCustomValidity("");
-        setFieldsValidity(customInputs, true);
-
-    });
-
-});
-
-form.addEventListener("submit", (e) => {
-
-    e.preventDefault();
-
-    if (form.dataset.isLoading === "true") {
-        return;
-    }
-
-    const radio = radios.find(({ checked }) => checked);
-    const edition = radio?.value;
-
-    if (!edition) {
-        return;
-    }
-
-    TokenStore.ready((tokenStore) => {
-
-        if (edition === "custom") {
-
-            if (urlInput.value) {
-
-                setFormLoadingState(form, true);
-
-                const myURL = supplant(window.decodeURIComponent(URLS.url), {
-                    url: window.encodeURIComponent(urlInput.value)
-                });
-
-                fetch(myURL)
-                    .catch((error) => {
-                        showInputError(urlInput, error.message);
-                        setFormLoadingState(form, false);
-                    })
-                    .then((response) => response.json())
-                    .catch(() => {
-                        showInputError(urlInput, I18N.invalidScript);
-                        setFormLoadingState(form, false);
-                        return null;
-                    })
-                    .then((json) => {
-
-                        if (json === null) {
-                            return;
-                        }
-
-                        if (!json.success) {
-                            showInputError(urlInput, json.message);
-                            setFormLoadingState(form, false);
-                            return;
-                        }
-
-                        processJSON({
-                            form,
-                            json: json.data,
-                            input: urlInput,
-                            store: tokenStore
-                        }).then(() => setFormLoadingState(form, false));
-
-                    });
-
-            } else if (fileInput.files.length) {
-
-                const reader = new FileReader();
-
-                reader.addEventListener("load", ({ target }) => {
-
-                    let json = [];
-
-                    try {
-                        json = JSON.parse(target.result);
-                    } catch (error) {
-                        return showInputError(fileInput, I18N.invalidScript);
-                    }
-
-                    processJSON({
-                        form,
-                        json,
-                        input: fileInput,
-                        store: tokenStore
-                    })
-
-                });
-
-                reader.readAsText(fileInput.files[0]);
-
-            } else if (pasteInput.value) {
-
-                let json = [];
-
-                try {
-                    json = JSON.parse(pasteInput.value);
-                } catch (error) {
-                    return showInputError(pasteInput, I18N.invalidScript);
-                }
-
-                processJSON({
-                    form,
-                    json,
-                    input: pasteInput,
-                    store: tokenStore
-                })
-
-            }
-
-        } else {
-            const meta = { name: getLabelText(radio) };
-            const rawMeta = window.PG.scripts[edition]?.find(({ id }) => id === "_meta");
-
-            if (rawMeta) {
-                Object.assign(meta, rawMeta);
-            }
-
-            announceScript(meta, tokenStore.getScript(edition));
-        }
-
-    });
-
-});*/
-
-/*fileInput.addEventListener("input", () => {
-
-    const {
-        value
-    } = fileInput;
-
-    fileInput.setCustomValidity("");
-    fileInputRender.dataset.value = (
-        value
-        ? value.slice(value.lastIndexOf("\\") + 1)
-        : fileInputRender.dataset.placeholder
-    );
-
-    if (value && urlInput.value) {
-
-        urlInput.value = "";
-        announceInput(urlInput);
-
-    }
-
-});
-
-urlInput.addEventListener("input", () => {
-
-    urlInput.setCustomValidity("");
-
-    if (urlInput.value && fileInput.value) {
-
-        fileInput.value = "";
-        announceInput(fileInput);
-
-    }
-
-});
-
-Dialog.create(lookupOne("#edition-list")).on(Dialog.HIDE, () => {
-
-    fileInput.value = "";
-    announceInput(fileInput);
-    urlInput.value = "";
-    announceInput(urlInput);
-
-});*/
-

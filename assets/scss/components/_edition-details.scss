@@ -34,16 +34,12 @@
     background-color: rgb(0 0 0 / 0.25);
 }
 
-.edition-details__entry {
-    display: grid;
-    grid-template-rows: 1fr 1fr;
-    grid-template-columns: 1fr auto;
-    grid-template-areas:
-        "name button"
-        "author button";
-    gap: 0 0.5em;
+.edition-details__radio {
+    align-items: start;
 }
-.edition-details__name { grid-area: name; }
-.edition-details__author { grid-area: author; }
-.edition-details__button { grid-area: button; }
+
+.edition-details__name,
+.edition-details__author {
+    display: block;
+}
 
