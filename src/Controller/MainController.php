@@ -10,66 +10,41 @@ use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Contracts\Translation\TranslatorInterface;
 use Doctrine\ORM\EntityManagerInterface;
 
-use App\Repository\RoleRepository;
-use App\Repository\JinxRepository;
-use App\Repository\TeamRepository;
-use App\Repository\HomebrewRepository;
 use App\Entity\Homebrew;
-use App\Entity\Jinx;
 use App\Model\HomebrewModel;
 use App\Model\GameModel;
 
 class MainController extends AbstractController
 {
 
-    private $roleRepo;
-    private $jinxRepo;
-    private $teamRepo;
-    private $homebrewRepo;
     private $homebrewModel;
 
     public function __construct(
-        RoleRepository $roleRepo,
-        JinxRepository $jinxRepo,
-        TeamRepository $teamRepo,
-        HomebrewRepository $homebrewRepo,
         HomebrewModel $homebrewModel
     ) {
-        $this->roleRepo = $roleRepo;
-        $this->jinxRepo = $jinxRepo;
-        $this->teamRepo = $teamRepo;
-        $this->homebrewRepo = $homebrewRepo;
         $this->homebrewModel = $homebrewModel;
     }
 
-    /**
-     * @Route("/", name="index_stub")
-     */
+    #[Route("/", name: "index_stub")]
     public function indexStubAction(Request $request): Response
     {
         return $this->redirectToRoute('index', $request->query->all(), 301);
     }
 
-    /**
-     * @Route("/sheet", name="sheet_stub")
-     */
+    #[Route("/sheet", name: "sheet_stub")]
     public function sheetStubAction(Request $request): Response
     {
         return $this->redirectToRoute('sheet', $request->query->all(), 301);
     }
 
-    /**
-     * @Route("/{_locale}/", name="index")
-     */
+    #[Route("/{_locale}/", name: "index")]
     public function indexAction(
         GameModel $gameModel
     ): Response {
         return $this->render('pages/index.html.twig');
     }
 
-    /**
-     * @Route("/{_locale}/sheet", name="sheet")
-     */
+    #[Route("/{_locale}/sheet", name: "sheet")]
     public function sheetAction(
         Request $request,
         GameModel $gameModel,
@@ -84,9 +59,7 @@ class MainController extends AbstractController
 
     }
 
-    /**
-     * @Route("/{_locale}/homebrew", name="homebrew")
-     */
+    #[Route("/{_locale}/homebrew", name: "homebrew")]
     public function homebrewAction(
         Request $request,
         EntityManagerInterface $em,
@@ -134,18 +107,14 @@ class MainController extends AbstractController
 
     }
 
-    /**
-     * @Route("/tokens", name="tokens_stub")
-     */
+    #[Route("/tokens", name: "tokens_stub")]
     public function tokensStubAction(Request $request): Response
     {
         return $this->redirectToRoute('tokens', $request->query->all(), 301);
     }
 
-    /**
-     * @Route("/{_locale}/tokens", name="tokens")
-     */
-    public function tokensAction(
+    # [Route("/{_locale}/tokens", name: "tokens")]
+    /*public function tokensAction(
         Request $request,
         RoleRepository $roleRepo,
         TeamRepository $teamRepo,
@@ -186,6 +155,6 @@ class MainController extends AbstractController
             'roles' => $roles
         ]);
 
-    }
+    }*/
 
 }

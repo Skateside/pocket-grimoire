@@ -12,9 +12,7 @@ use Symfony\Contracts\Translation\TranslatorInterface;
 use App\Repository\HomebrewRepository;
 use App\Service\Fetch;
 
-/**
- * @Route("/{_locale}/data", name="data_")
- */
+#[Route("/{_locale}/data", name: "data_")]
 class DataController extends AbstractController
 {
 
@@ -29,9 +27,7 @@ class DataController extends AbstractController
         $this->fetch = $fetch;
     }
 
-    /**
-     * @Route("/url", name="url")
-     */
+    #[Route("/url", name: "url")]
     public function urlAction(
         Request $request,
         TranslatorInterface $translator
@@ -65,9 +61,7 @@ class DataController extends AbstractController
         ]);    
     }
 
-    /**
-     * @Route("/get-game", name="get_game")
-     */
+    #[Route("/get-game", name: "get_game")]
     public function getGameAction(Request $request): Response
     {
 

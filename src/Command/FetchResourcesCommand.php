@@ -2,6 +2,7 @@
 
 namespace App\Command;
 
+use Symfony\Component\Console\Attribute\AsCommand;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
@@ -11,9 +12,9 @@ use App\Model\TPIResourcesModel;
 use App\Service\Fetch;
 use App\Service\Storage;
 
+#[AsCommand(name: 'pocket-grimoire:fetch')]
 class FetchResourcesCommand extends Command
 {
-    protected static $defaultName = 'pocket-grimoire:fetch';
     protected $model;
     protected $fetch;
     protected $storage;
