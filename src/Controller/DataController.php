@@ -8,9 +8,12 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Contracts\Translation\TranslatorInterface;
+use Symfony\Contracts\Cache\CacheInterface;
+use Symfony\Contracts\Cache\ItemInterface;
 
 use App\Repository\HomebrewRepository;
 use App\Service\Fetch;
+use App\Model\BotcScriptModel;
 
 #[Route("/{_locale}/data", name: "data_")]
 class DataController extends AbstractController
@@ -88,6 +91,69 @@ class DataController extends AbstractController
             'data' => $entry->getJson(),
         ]);
 
+    }
+
+    #[Route("/get-botc", name: "get_botc")]
+    public function lookupAction(
+        Request $request,
+        CacheInterface $cache,
+        BotcScriptModel $model,
+    ): Response {
+        $query = []; 
+
+        if (
+            ($term = $request->query->get('term', ''))
+            && strlen(trim($term)) > 0
+        ) { 
+            $lowercase = strtolower($term);
+            $trimmed = trim(str_replace('  ', ' ', $lowercase));
+            $query['search'] = substr($trimmed, 0, 100);
+        }
+
+        if (empty($query)) {
+            return new JsonResponse([
+                'success' => false,
+                'message' => 'Invalid search term',
+            ]);
+        }
+
+        $query['ordering'] = '-score';
+
+        $url = sprintf(
+            'https://botcscripts.com/api/scripts/?%s',
+            http_build_query($query),
+        );
+
+        return $cache->get(
+            hash('sha256', $url),
+            function (ItemInterface $item) use ($url, $model) {
+                $item->expiresAfter(600); // 10 minutes
+
+                if (
+                    ($json = $this->fetch->getJson($url)) === null
+                    && (($lastError = $this->fetch->getLastError()) !== '')
+                ) {
+                    return new JsonResponse([
+                        'success' => false,
+                        'message' => $lastError,
+                    ]);
+                }
+
+                $converted = $model->convert($json);
+
+                if (!$converted['success']) {
+                    return new JsonResponse([
+                        'success' => false,
+                        'message' => $converted['body'],
+                    ]);
+                }
+
+                return new JsonResponse([
+                    'success' => true,
+                    'data' => $converted['body'],
+                ]);
+            },
+        );
     }
 
 }

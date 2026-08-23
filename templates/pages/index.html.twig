@@ -27,7 +27,8 @@
 <script>
 var URLS = {
     homebrew: "{{ path('homebrew')|e('js') }}",
-    url: "{{ path('data_url', { url: '{url}' })|e('js') }}"
+    url: "{{ path('data_url', { url: '{url}' })|e('js') }}",
+    botc: "{{ path('data_get_botc', { term: '{term}' })|e('js') }}",
 };
 
 var I18N = {

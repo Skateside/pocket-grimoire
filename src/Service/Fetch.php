@@ -3,6 +3,11 @@
 namespace App\Service;
 
 use Symfony\Contracts\HttpClient\HttpClientInterface;
+use Symfony\Component\HttpClient\{
+    HttpClient,
+    NoPrivateNetworkHttpClient,
+};
+use League\Uri\Uri;
 
 class Fetch
 {
@@ -16,7 +21,43 @@ class Fetch
     public function __construct(
         HttpClientInterface $client
     ) {
-        $this->client = $client;
+        $this->client = new NoPrivateNetworkHttpClient(HttpClient::create());
+    }
+
+    /**
+     * Since we have to deal with arbitrary URLs sometimes, this checks to see
+     * whether or not the given URL is something that we would consider "safe".
+     *
+     * @param string $url URL to check.
+     * @return bool|string If the URL is safe then true is returned, if the URL
+     *         is not safe then a string explaining why the URL is not safe is
+     *         returned.
+     */
+    public function isSafeUrl(string $url): bool|string
+    {
+        $parts = parse_url($url);
+
+        if ($parts === false || !filter_var($url, FILTER_VALIDATE_URL)) {
+            return 'error.url_not_valid';
+        }
+
+        if (($parts['scheme'] ?? '') !== 'https') {
+            return 'error.url_https_only';
+        }
+
+        if (empty($parts['host'])) {
+            return 'error.url_no_hostname';
+        }
+
+        if (isset($parts['user']) || isset($parts['pass'])) {
+            return 'error.url_has_credentials';
+        }
+
+        if (isset($parts['port']) && $parts['port'] !== 443) {
+            return 'error.url_port_not_443';
+        }
+
+        return true;
     }
 
     /**
@@ -29,7 +70,7 @@ class Fetch
      * @return ?array<mixed> Either the parsed array or null if an error
      *         occurred.
      */
-    public function getJson(string $source, bool $isAssoc = true): ?array
+    /*public function getJson(string $source, bool $isAssoc = true): ?array
     {
         $this->resetLastError();
 
@@ -50,6 +91,57 @@ class Fetch
         } catch (\Throwable $error) {
             return $this->setLastError($error->getMessage());
         }
+    }*/
+
+    /**
+     * Gets the contents of the given source and attempts to parse it as JSON,
+     * returning an array with a "success" key and a "body" key.
+     *
+     * @param string $url URL of the contents to get and parse.
+     * @return ?array<mixed> Either the parsed array or null if an error
+     *         occurred.
+     */
+    public function getJson(string $url): ?array
+    {
+        $this->resetLastError();
+
+        if (($reason = $this->isSafeUrl($url)) !== true) {
+            return $this->setLastError($reason);
+        }
+
+        for ($redirects = 0; $redirects <= 3; $redirects += 1) {
+            $response = $this->client->request('GET', $url, [
+                'max_redirects' => 0,
+                'timeout' => 5,
+                'max_duration' => 10,
+            ]);
+
+            $status = $response->getStatusCode();
+
+            if ($status >= 300 && $status < 400) {
+                $headers = $response->getHeaders(false);
+
+                if (!isset($headers['location'][0])) {
+                    return $this->setLastError('error.redirect_no_location');
+                }
+
+                $url = $this->resolveRedirectUrl($url, $headers['location'][0]);
+
+                if (($reason = $this->isSafeUrl($url)) !== true) {
+                    return $this->setLastError($reason);
+                }
+
+                continue;
+            }
+
+            if ($status !== 200) {
+                return $this->setLastError(sprintf('error.http_status %d', $status));
+            }
+
+            return $response->toArray();
+        }
+
+        return $this->setLastError('error.too_many_redirects');
     }
 
     /**
@@ -85,21 +177,19 @@ class Fetch
     }
 
     /**
-     * Converts a number of bytes into a human-readable format.
+     * Resolves a redirect URL, since it could be a relative or an absolute URL.
      *
-     * @param int $bytes Bytes to convert.
-     * @param int $decimals Optional number of decimals, defaults to 2.
-     * @return string Human-readable bytes.
+     * @param string $currentUrl The current URL.
+     * @param string $location The location given, which might be relative.
+     * @return string The full redirect URL.
      */
-    public static function formatBytes(int $bytes, int $decimals = 2): string
-    {
-        $size = ['B', 'KB', 'MB', 'GB', 'TB', 'PB', 'EB', 'ZB', 'YB'];
-        $factor = intval(floor((strlen((string) $bytes) - 1) / 3));
+    protected function resolveRedirectUrl(
+        string $currentUrl,
+        string $location,
+    ): string {
+        $base = Uri::new($currentUrl);
+        $target = $base->resolve($location);
 
-        if ($factor === 0) {
-            $decimals = 0;
-        }
-
-        return sprintf("%.{$decimals}f %s", $bytes / (1024 ** $factor), $size[$factor]);
+        return (string) $target;
     }
 }
