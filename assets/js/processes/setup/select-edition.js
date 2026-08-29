@@ -317,6 +317,12 @@ const botcResults = lookupOne("#botc-scripts-results");
 const botcTemplate = Template.create(lookupOne("#botc-scripts-entry"));
 const botcScripts = Object.create(null);
 
+/**
+ * Sets the BotC Script results.
+ *
+ * @param {Array} scripts Collection of BotC Script results that can be stored
+ *        and referenced.
+ */
 function setBotcScripts(scripts) {
     Object.keys(botcScripts).forEach((key) => {
         delete botcScripts[key];
@@ -448,7 +454,6 @@ form.addEventListener("submit", (event) => {
 
             case "upload": {
                 const fileInput = lookupOneCached("#custom-script-upload");
-                // const fileInputRender = fileInput.nextElementSibling;
                 const reader = new FileReader();
 
                 reader.addEventListener("load", ({ target }) => {

@@ -268,7 +268,19 @@ errors:
         invalid_entry: 'Entri tidak valid untuk "%id%": %reasons%'
         empty_teams: 'Tim kosong: %teams%'
         invalid_property: Properti "%property%" seharusnya bertipe %expected% tetapi bertipe %given%
+        invalid_uuid: Invalid game UUID
+        unrecognised_uuid: Unrecognised UUID
     url:
         no_url: URL tidak valid atau hilang
         cannot_access: Tidak dapat mengakses URL
         not_json: Tidak dapat mengurai JSON dari URL
+        https_only: URL not https
+        no_hostname: No hostname
+        has_credentials: URL has credentials
+        port_not_443: Port not 443
+        redirect_no_location: No redirect location
+        http_status: HTTP status %code%
+        too_many_redirects: Too many redirects
+    botc_scripts:
+        invalid_search: Invalid or empty search term
+

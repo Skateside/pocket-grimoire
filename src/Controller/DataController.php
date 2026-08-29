@@ -36,18 +36,8 @@ class DataController extends AbstractController
         TranslatorInterface $translator
     ): Response {
         $url = $request->query->get('url', '');
-
-        if ($url === '' || filter_var($url, FILTER_VALIDATE_URL) === false) {
-
-            return new JsonResponse([
-                'success' => false,
-                'message' => $translator->trans('errors.url.no_url')
-            ]);
-
-        }
-
         $json = $this->fetch->getJson($url);
-        $error = $this->fetch->getLastError();
+        $error = $this->fetch->getLastError($translator);
 
         if (!empty($error)) {
 
@@ -65,7 +55,10 @@ class DataController extends AbstractController
     }
 
     #[Route("/get-game", name: "get_game")]
-    public function getGameAction(Request $request): Response
+    public function getGameAction(
+        Request $request,
+        TranslatorInterface $translator,
+    ): Response
     {
 
         $game = $request->query->get('game', '');
@@ -73,7 +66,7 @@ class DataController extends AbstractController
         if ($game === '' || !$this->homebrewRepo->isValidUUID($game)) {
             return new JsonResponse([
                 'success' => false,
-                'message' => 'Invalid game UUID', // TODO: i18n
+                'message' => $translator->trans('errors.homebrew_json.invalid_uuid'),
             ]);
         }
 
@@ -82,7 +75,7 @@ class DataController extends AbstractController
         if (!$entry) {
             return new JsonResponse([
                 'success' => false,
-                'message' => 'Unrecognised UUID', // TODO: i18n
+                'message' => $translator->trans('errors.homebrew_json.unrecognised_uuid'),
             ]);
         }
 
@@ -98,6 +91,7 @@ class DataController extends AbstractController
         Request $request,
         CacheInterface $cache,
         BotcScriptModel $model,
+        TranslatorInterface $translator,
     ): Response {
         $query = []; 
 
@@ -113,7 +107,7 @@ class DataController extends AbstractController
         if (empty($query)) {
             return new JsonResponse([
                 'success' => false,
-                'message' => 'Invalid search term',
+                'message' => $translator->trans('errors.botc_scripts.invalid_search'),
             ]);
         }
 
@@ -126,12 +120,12 @@ class DataController extends AbstractController
 
         return $cache->get(
             hash('sha256', $url),
-            function (ItemInterface $item) use ($url, $model) {
+            function (ItemInterface $item) use ($url, $model, $translator) {
                 $item->expiresAfter(600); // 10 minutes
 
                 if (
                     ($json = $this->fetch->getJson($url)) === null
-                    && (($lastError = $this->fetch->getLastError()) !== '')
+                    && (($lastError = $this->fetch->getLastError($translator)) !== '')
                 ) {
                     return new JsonResponse([
                         'success' => false,

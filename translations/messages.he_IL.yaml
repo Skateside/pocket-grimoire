@@ -267,7 +267,19 @@ errors:
         invalid_entry: 'ערך לא חוקי עבור "%id%": %reasons%'
         empty_teams: 'צוותים ריקים: %teams%'
         invalid_property: המאפיין "%property%" צריך להיות מסוג %expected% אך היה מסוג %given% במקום זאת
+        invalid_uuid: Invalid game UUID
+        unrecognised_uuid: Unrecognised UUID
     url:
         no_url: כתובת אתר לא חוקית או חסרה
         cannot_access: לא ניתן לגשת לכתובת האתר
         not_json: לא ניתן לנתח JSON מ-URL
+        https_only: URL not https
+        no_hostname: No hostname
+        has_credentials: URL has credentials
+        port_not_443: Port not 443
+        redirect_no_location: No redirect location
+        http_status: HTTP status %code%
+        too_many_redirects: Too many redirects
+    botc_scripts:
+        invalid_search: Invalid or empty search term
+

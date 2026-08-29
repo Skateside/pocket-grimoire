@@ -267,7 +267,19 @@ errors:
         invalid_entry: 'Ugyldig input for "%id%": %reasons%'
         empty_teams: 'Tomme lag: %teams%'
         invalid_property: Egenskapen "%property%" skal være av typen %expected%, men var typen %given% i stedet
+        invalid_uuid: Invalid game UUID
+        unrecognised_uuid: Unrecognised UUID
     url:
         no_url: Ugyldig eller manglende URL
         cannot_access: Får ikke tilgang til URL
         not_json: Kan ikke analysere JSON fra URL
+        https_only: URL not https
+        no_hostname: No hostname
+        has_credentials: URL has credentials
+        port_not_443: Port not 443
+        redirect_no_location: No redirect location
+        http_status: HTTP status %code%
+        too_many_redirects: Too many redirects
+    botc_scripts:
+        invalid_search: Invalid or empty search term
+

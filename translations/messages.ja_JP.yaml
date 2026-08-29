@@ -268,7 +268,19 @@ errors:
         invalid_entry: '「%id%」のエントリが無効です: %reasons%'
         empty_teams: '空のチーム: %teams%'
         invalid_property: プロパティ「%property%」はタイプ %expected% である必要がありますが、タイプ %given% でした
+        invalid_uuid: Invalid game UUID
+        unrecognised_uuid: Unrecognised UUID
     url:
         no_url: URL が無効または見つかりません
         cannot_access: URL にアクセスできません
         not_json: URL から JSON を解析できません
+        https_only: URL not https
+        no_hostname: No hostname
+        has_credentials: URL has credentials
+        port_not_443: Port not 443
+        redirect_no_location: No redirect location
+        http_status: HTTP status %code%
+        too_many_redirects: Too many redirects
+    botc_scripts:
+        invalid_search: Invalid or empty search term
+

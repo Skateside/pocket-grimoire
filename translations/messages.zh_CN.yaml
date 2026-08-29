@@ -267,7 +267,19 @@ errors:
         invalid_entry: 无效输入“%id%”：%reasons%
         empty_teams: 空阵营：%teams%
         invalid_property: 属性“%property%”应为类型 %expected%，但实际为类型 %given%
+        invalid_uuid: Invalid game UUID
+        unrecognised_uuid: Unrecognised UUID
     url:
         no_url: URL 无效或缺失
         cannot_access: 无法访问 URL
         not_json: 无法从 URL 解析 JSON
+        https_only: URL not https
+        no_hostname: No hostname
+        has_credentials: URL has credentials
+        port_not_443: Port not 443
+        redirect_no_location: No redirect location
+        http_status: HTTP status %code%
+        too_many_redirects: Too many redirects
+    botc_scripts:
+        invalid_search: Invalid or empty search term
+

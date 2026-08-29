@@ -268,6 +268,18 @@ errors:
         empty_teams: "Squadre vuote: %teams%"
         invalid_property: La proprietà "%property%" dovrebbe essere di tipo %expected% ma era di tipo %given%
     url:
+        invalid_uuid: Invalid game UUID
+        unrecognised_uuid: Unrecognised UUID
         no_url: URL non valido o mancante
         cannot_access: Impossibile accedere all'URL
         not_json: Impossibile analizzare JSON dall'URL
+        https_only: URL not https
+        no_hostname: No hostname
+        has_credentials: URL has credentials
+        port_not_443: Port not 443
+        redirect_no_location: No redirect location
+        http_status: HTTP status %code%
+        too_many_redirects: Too many redirects
+    botc_scripts:
+        invalid_search: Invalid or empty search term
+

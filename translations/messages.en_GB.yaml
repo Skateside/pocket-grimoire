@@ -268,7 +268,19 @@ errors:
         invalid_entry: 'Invalid entry for "%id%": %reasons%'
         empty_teams: 'Empty teams: %teams%'
         invalid_property: 'Property "%property%" should be of type %expected% but was type %given% instead'
+        invalid_uuid: Invalid game UUID
+        unrecognised_uuid: Unrecognised UUID
     url:
         no_url: Invalid or missing URL
         cannot_access: Unable to access URL
         not_json: Cannot parse JSON from URL
+        https_only: URL not https
+        no_hostname: No hostname
+        has_credentials: URL has credentials
+        port_not_443: Port not 443
+        redirect_no_location: No redirect location
+        http_status: HTTP status %code%
+        too_many_redirects: Too many redirects
+    botc_scripts:
+        invalid_search: Invalid or empty search term
+

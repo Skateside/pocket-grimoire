@@ -268,7 +268,19 @@ errors:
         invalid_entry: 'Неверная запись для «%id%»: %reasons%'
         empty_teams: 'Пустые команды: %teams%'
         invalid_property: Свойство "%property%" должно было быть типа %expected%, но вместо этого имело тип %given%
+        invalid_uuid: Invalid game UUID
+        unrecognised_uuid: Unrecognised UUID
     url:
         no_url: Недействительный или отсутствующий URL
         cannot_access: Невозможно получить доступ к URL
         not_json: Невозможно проанализировать JSON из URL
+        https_only: URL not https
+        no_hostname: No hostname
+        has_credentials: URL has credentials
+        port_not_443: Port not 443
+        redirect_no_location: No redirect location
+        http_status: HTTP status %code%
+        too_many_redirects: Too many redirects
+    botc_scripts:
+        invalid_search: Invalid or empty search term
+

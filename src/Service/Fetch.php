@@ -3,6 +3,7 @@
 namespace App\Service;
 
 use Symfony\Contracts\HttpClient\HttpClientInterface;
+use Symfony\Contracts\Translation\TranslatorInterface;
 use Symfony\Component\HttpClient\{
     HttpClient,
     NoPrivateNetworkHttpClient,
@@ -12,9 +13,9 @@ use League\Uri\Uri;
 class Fetch
 {
     /**
-     * @var string $lastError The last error message that occurred.
+     * @var array{0: string, 1: array<string, string>} $lastError The last error that occurred.
      */
-    protected string $lastError = '';
+    protected string $lastError;
 
     private HttpClientInterface $client;
 
@@ -22,6 +23,7 @@ class Fetch
         HttpClientInterface $client
     ) {
         $this->client = new NoPrivateNetworkHttpClient(HttpClient::create());
+        $this->lastError = [''];
     }
 
     /**
@@ -38,60 +40,27 @@ class Fetch
         $parts = parse_url($url);
 
         if ($parts === false || !filter_var($url, FILTER_VALIDATE_URL)) {
-            return 'error.url_not_valid';
+            return 'errors.url.no_url';
         }
 
         if (($parts['scheme'] ?? '') !== 'https') {
-            return 'error.url_https_only';
+            return 'errors.url.https_only';
         }
 
         if (empty($parts['host'])) {
-            return 'error.url_no_hostname';
+            return 'errors.url.no_hostname';
         }
 
         if (isset($parts['user']) || isset($parts['pass'])) {
-            return 'error.url_has_credentials';
+            return 'errors.url.has_credentials';
         }
 
         if (isset($parts['port']) && $parts['port'] !== 443) {
-            return 'error.url_port_not_443';
+            return 'errors.url.port_not_443';
         }
 
         return true;
     }
-
-    /**
-     * Gets the contents of the given source and attempts to parse it as JSON,
-     * returning an array with a "success" key and a "body" key.
-     *
-     * @param string $source Source of the contents to get and parse.
-     * @param bool $isAssoc Whether to parse the JSON as an associative array or
-     *        an object. Defaults to array.
-     * @return ?array<mixed> Either the parsed array or null if an error
-     *         occurred.
-     */
-    /*public function getJson(string $source, bool $isAssoc = true): ?array
-    {
-        $this->resetLastError();
-
-        try {
-            $response = $this->client->request('GET', $source, [
-                'max_redirects' => 3,
-                'timeout' => 5,
-                'max_duration' => 10,
-            ]);
-
-            $status = $response->getStatusCode();
-
-            if ($status < 200 || ($status >= 300 && $status !== 302)) {
-                return $this->setLastError("Status code response {$status}");
-            }
-
-            return $response->toArray();
-        } catch (\Throwable $error) {
-            return $this->setLastError($error->getMessage());
-        }
-    }*/
 
     /**
      * Gets the contents of the given source and attempts to parse it as JSON,
@@ -106,7 +75,8 @@ class Fetch
         $this->resetLastError();
 
         if (($reason = $this->isSafeUrl($url)) !== true) {
-            return $this->setLastError($reason);
+            $this->setLastError($reason);
+            return null;
         }
 
         for ($redirects = 0; $redirects <= 3; $redirects += 1) {
@@ -122,26 +92,30 @@ class Fetch
                 $headers = $response->getHeaders(false);
 
                 if (!isset($headers['location'][0])) {
-                    return $this->setLastError('error.redirect_no_location');
+                    $this->setLastError('errors.url.redirect_no_location');
+                    return null;
                 }
 
                 $url = $this->resolveRedirectUrl($url, $headers['location'][0]);
 
                 if (($reason = $this->isSafeUrl($url)) !== true) {
-                    return $this->setLastError($reason);
+                    $this->setLastError($reason);
+                    return null;
                 }
 
                 continue;
             }
 
             if ($status !== 200) {
-                return $this->setLastError(sprintf('error.http_status %d', $status));
+                $this->setLastError('errors.url.http_status', ['%code%' => $status]);
+                return null;
             }
 
             return $response->toArray();
         }
 
-        return $this->setLastError('error.too_many_redirects');
+        $this->setLastError('errors.url.too_many_redirects');
+        return null;
     }
 
     /**
@@ -150,22 +124,27 @@ class Fetch
      *
      * @return string Last error message.
      */
-    public function getLastError(): string
+    public function getLastError(?TranslatorInterface $translator): string
     {
-        return $this->lastError;
+        $error = $this->lastError[0];
+
+        if (!is_null($translator)) {
+            $error = $translator->trans($error, $this->lastError[1]);
+        }
+
+        return $error;
     }
 
     /**
      * Helper function for setting the last error message and returning null.
      *
      * @param string $lastError Last error message.
-     * @param mixed $return The value to return.
+     * @param array<string, string> $placeholders Contents for placeholders.
      * @return mixed Whatever was passed as the return value.
      */
-    protected function setLastError(string $lastError, $return = null)
+    protected function setLastError(string $lastError, array $placeholders = []): void
     {
-        $this->lastError = $lastError;
-        return $return;
+        $this->lastError = [$lastError, $placeholders];
     }
 
     /**

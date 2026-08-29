@@ -267,7 +267,19 @@ errors:
         invalid_entry: '"%id%": %reasons% için geçersiz giriş'
         empty_teams: 'Boş Takımlar: %teams%'
         invalid_property: '"%property%" özelliği %expected% türünde olmalıydı ancak bunun yerine %given% türündeydi'
+        invalid_uuid: Invalid game UUID
+        unrecognised_uuid: Unrecognised UUID
     url:
         no_url: Geçersiz veya eksik URL
         cannot_access: URL'ye erişilemiyor
         not_json: URL'den JSON ayrıştırılamıyor
+        https_only: URL not https
+        no_hostname: No hostname
+        has_credentials: URL has credentials
+        port_not_443: Port not 443
+        redirect_no_location: No redirect location
+        http_status: HTTP status %code%
+        too_many_redirects: Too many redirects
+    botc_scripts:
+        invalid_search: Invalid or empty search term
+
