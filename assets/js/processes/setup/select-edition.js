@@ -311,36 +311,91 @@ function processJSON({
 
 }
 
-/**
- * Sets the validation on the given fields.
- *
- * @param {Array.<Element>} fields
- *        Input fields that should have their validity set.
- * @param {Boolean} isVisible
- *        true if the fields are visible and their validity should be set, false
- *        if they're not visible and their validity should be removed.
- */
-/*function setFieldsValidity(fields, isVisible) {
+const botcInput = lookupOne("#botc-scripts");
+const botcEmpty = lookupOne("#botc-scripts-empty");
+const botcResults = lookupOne("#botc-scripts-results");
+const botcTemplate = Template.create(lookupOne("#botc-scripts-entry"));
+const botcScripts = Object.create(null);
 
-    if (isVisible) {
+function setBotcScripts(scripts) {
+    Object.keys(botcScripts).forEach((key) => {
+        delete botcScripts[key];
+    });
 
-        const inputted = fields.find((field) => field.value);
-        fields.forEach((field) => {
-            field.required = !inputted || field === inputted;
-        });
+    scripts.forEach(({ id, script }) => {
+        botcScripts[id] = script;
+    });
+}
 
-    } else {
+botcInput.addEventListener("input", () => {
+    setFormLoadingState(form, botcInput.value.trim() !== "");
+    botcEmpty.hidden = true;
+    botcResults.hidden = true;
+});
 
-        fields.forEach((field) => {
+botcInput.addEventListener("input", debounce(() => {
+    const term = botcInput.value.trim();
 
-            field.setCustomValidity("");
-            field.required = false;
-
-        });
-
+    if (term === "") {
+        return;
     }
 
-}*/
+    const myURL = supplant(window.decodeURIComponent(URLS.botc), { term });
+    setFormLoadingState(form, false);
+    fetch(myURL)
+        .catch((error) => {
+            showInputError(urlInput, error.message);
+            setFormLoadingState(form, false);
+        })
+        .then((response) => response.json())
+        .catch(() => {
+            showInputError(urlInput, I18N.invalidScript);
+            setFormLoadingState(form, false);
+            return null;
+        })
+        .then((json) => {
+            if (json === null) {
+                return;
+            }
+
+            if (!json.success) {
+                showInputError(urlInput, json.message);
+                setFormLoadingState(form, false);
+                return;
+            }
+
+            if (!json.data.length) {
+                botcEmpty.hidden = false;
+                return;
+            }
+
+            setBotcScripts(json.data);
+            replaceContentsMany(
+                botcResults,
+                json.data.map((data, index) => botcTemplate.draw({
+                    ".js--botc-scripts--label"(element) {
+                        element.htmlFor = `botc-script-${data.id}`;
+                    },
+                    ".js--botc-scripts--input"(element) {
+                        element.value = data.id;
+                        element.id = `botc-script-${data.id}`;
+
+                        if (index === 0) {
+                            element.required = true;
+                        }
+                    },
+                    ".js--botc-scripts--name"(element) {
+                        element.textContent = data.name;
+                    },
+                    ".js--botc-scripts--author"(element) {
+                        element.textContent = `${data.author} (${data.version})`;
+                    },
+                })),
+            );
+            botcResults.hidden = false;
+        });
+
+}, 500));
 
 const form = lookupOne("#select-edition-form");
 const sections = form.querySelectorAll(".edition-details[data-id]");
@@ -366,6 +421,7 @@ form.addEventListener("submit", (event) => {
 
     const openSection = Array.prototype.find.call(sections, ({ open }) => open);
     const mode = openSection?.dataset.id;
+    const data = new FormData(form);
 
     if (!mode) {
         throw new Error("Unable to detect open section");
@@ -374,6 +430,8 @@ form.addEventListener("submit", (event) => {
     TokenStore.ready((tokenStore) => {
         switch (mode) {
             case "official": {
+                const edition = data.get("edition");
+                const radio = lookupOneCached(`input[name="edition"][value="${edition}"]`, form);
                 const meta = { name: getLabelText(radio) };
                 const rawMeta = window.PG.scripts[edition]?.find(({ id }) => {
                     return id === "_meta";
@@ -482,83 +540,22 @@ form.addEventListener("submit", (event) => {
             }
 
             case "botc": {
-                // TODO: select the script from the selected radio button.
+                const scriptId = data.get("botc-script");
+                const json = botcScripts[scriptId];
+
+                if (!json) {
+                    return showInputError(botcInput, "Unrecognised script");
+                }
+
+                processJSON({
+                    form,
+                    json,
+                    input: botcInput,
+                    store: tokenStore,
+                });
+
                 break;
             }
         }
     });
 });
-
-const botcInput = lookupOne("#botc-scripts");
-const botcEmpty = lookupOne("#botc-scripts-empty");
-const botcResults = lookupOne("#botc-scripts-results");
-const botcTemplate = Template.create(lookupOne("#botc-scripts-entry"));
-
-botcInput.addEventListener("input", () => {
-    setFormLoadingState(form, botcInput.value.trim() !== "");
-    botcEmpty.hidden = true;
-    botcResults.hidden = true;
-});
-
-botcInput.addEventListener("input", debounce(() => {
-    const term = botcInput.value.trim();
-
-    if (term === "") {
-        return;
-    }
-
-    const myURL = supplant(window.decodeURIComponent(URLS.botc), { term });
-    setFormLoadingState(form, false);
-    fetch(myURL)
-        .catch((error) => {
-            showInputError(urlInput, error.message);
-            setFormLoadingState(form, false);
-        })
-        .then((response) => response.json())
-        .catch(() => {
-            showInputError(urlInput, I18N.invalidScript);
-            setFormLoadingState(form, false);
-            return null;
-        })
-        .then((json) => {
-            if (json === null) {
-                return;
-            }
-
-            if (!json.success) {
-                showInputError(urlInput, json.message);
-                setFormLoadingState(form, false);
-                return;
-            }
-
-            if (!json.data.length) {
-                botcEmpty.hidden = false;
-                return;
-            }
-
-            replaceContentsMany(
-                botcResults,
-                json.data.slice(0, 10).map((data, index) => botcTemplate.draw({
-                    ".js--botc-scripts--label"(element) {
-                        element.htmlFor = `botc-script-${data.id}`;
-                    },
-                    ".js--botc-scripts--input"(element) {
-                        element.value = data.id;
-                        element.id = `botc-script-${data.id}`;
-
-                        if (index === 0) {
-                            element.required = true;
-                        }
-                    },
-                    ".js--botc-scripts--name"(element) {
-                        element.textContent = data.name;
-                    },
-                    ".js--botc-scripts--author"(element) {
-                        element.textContent = `${data.author} (${data.version})`;
-                    },
-                })),
-            );
-            botcResults.hidden = false;
-        });
-
-}, 500));

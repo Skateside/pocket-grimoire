@@ -5,6 +5,11 @@ namespace App\Model;
 class BotcScriptModel
 {
     /**
+     * @var int MAX_RESULTS Maximum number of results to return.
+     */
+    const MAX_RESULTS = 10;
+
+    /**
      * @param ?array{results?: array<mixed>} $json Either the data to
      *        convert or null.
      * @return array{success: bool, body: array<string, string>[]|string}
@@ -40,6 +45,9 @@ class BotcScriptModel
         });
 
         foreach ($results as $result) {
+            if (count($response['body']) >= static::MAX_RESULTS) {
+                break;
+            }
 
             $response['body'][] = [
                 'id' => $result['script_id'] ?? '',
@@ -49,7 +57,6 @@ class BotcScriptModel
                 'version' => $result['version'] ?? '',
                 'type' => strtolower($result['script_type'] ?? ''),
             ];
-
         }
 
         return $response;
