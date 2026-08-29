@@ -124,7 +124,7 @@ class Fetch
      *
      * @return string Last error message.
      */
-    public function getLastError(?TranslatorInterface $translator): string
+    public function getLastError(?TranslatorInterface $translator = null): string
     {
         $error = $this->lastError[0];
 

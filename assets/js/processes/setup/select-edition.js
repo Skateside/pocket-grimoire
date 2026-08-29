@@ -3,11 +3,9 @@ import TokenStore from "../../classes/TokenStore.js";
 import Dialog from "../../classes/Dialog.js";
 import Template from "../../classes/Template.js";
 import {
-    // lookup,
     lookupOne,
     lookupOneCached,
     getLabelText,
-    // announceInput
     replaceContentsMany,
 } from "../../utils/elements.js";
 import {
@@ -134,7 +132,7 @@ function normaliseHomebrew(json) {
         }
 
         if (entry.team && !entry.image) {
-            entry.image = `/build/img/icons/${entry.team}.png`;
+            entry.image = `/build/img/roles/generic/${entry.team}.png`;
         }
 
         return entry;
@@ -229,6 +227,33 @@ function convertCharacterId(item) {
 }
 
 /**
+ * Removes the "Randomizer" loric that random-botc-script.com adds. The loric
+ * makes the script look like homebrew, filling up the database for no benefit.
+ *
+ * @param  {Array} json
+ *         Items to look through to potentially remove the Randomizer loric.
+ * @return {Array}
+ *         Previous items but without the Randomizer loric.
+ */
+function removeRandomizer(json) {
+    return json.filter((role) => {
+        if (typeof role !== "object" || typeof role.ability !== "string") {
+            return true;
+        }
+
+        if (
+            role.id === "randomizer"
+            && role.team === "loric"
+            && role.ability.includes("https://random-botc-script.com")
+        ) {
+            return false;
+        }
+
+        return true;
+    });
+}
+
+/**
  * Processes the JSON to set up the game.
  *
  * @param  {Object} json
@@ -250,27 +275,23 @@ function processJSON({
     input,
     store
 }) {
-
     if (!isScriptJson(json)) {
-
         showInputError(input, I18N.invalidScript);
         return Promise.resolve();
-
     }
 
-    if (containsHomebrew(json)) {
+    json = removeRandomizer(json);
 
+    if (containsHomebrew(json)) {
         const normalised = normaliseHomebrew(json);
 
         setFormLoadingState(form, true);
 
         return post(URLS.homebrew, normalised)
             .then(({ success, game, message, reasons }) => {
-
                 setFormLoadingState(form, false);
 
                 if (success) {
-
                     announceScript(
                         extractMetaEntry(normalised),
                         normalised.map((item) => (
@@ -280,19 +301,14 @@ function processJSON({
                         game
                     );
                     Dialog.create(lookupOneCached("#edition-list")).hide();
-
                 } else {
-
                     if (reasons && reasons.length) {
                         message += "\n\n" + reasons.join("\n");
                     }
 
                     showInputError(input, message);
-
                 }
-
         });
-
     }
 
     const meta = extractMetaEntry(json);
@@ -301,15 +317,14 @@ function processJSON({
         .filter(Boolean);
 
     if (!characters.length) {
-
         showInputError(input, I18N.noCharacters);
-        return Promise.resolve();
 
+        return Promise.resolve();
     }
 
     announceScript(meta, characters);
-    return Promise.resolve();
 
+    return Promise.resolve();
 }
 
 const botcInput = lookupOne("#botc-scripts");

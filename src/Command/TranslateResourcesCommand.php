@@ -7,6 +7,7 @@ use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
 use Symfony\Component\Console\Style\SymfonyStyle;
+use Symfony\Contracts\Translation\TranslatorInterface;
 use App\Enums\TPIURLEnum;
 use App\Model\LocaleModel;
 use App\Model\TPIResourcesModel;
@@ -22,19 +23,22 @@ class TranslateResourcesCommand extends Command
     protected $resourcesModel;
     protected $fetch;
     protected $storage;
+    protected $translate;
 
     public function __construct(
         TPITranslationModel $model,
         LocaleModel $localeModel,
         TPIResourcesModel $resourcedModel,
         Fetch $fetch,
-        Storage $storage
+        Storage $storage,
+        TranslatorInterface $translate,
     ) {
         $this->model = $model;
         $this->localeModel = $localeModel;
         $this->resourcesModel = $resourcedModel;
         $this->fetch = $fetch;
         $this->storage = $storage;
+        $this->translate = $translate;
 
         return parent::__construct();
     }
@@ -89,28 +93,64 @@ class TranslateResourcesCommand extends Command
             $bar->start();
         }
 
-        foreach ($locales as $tpiCode => $pgCode) {
-            $augmented = $this->augmentData($pgCode, $characters, $jinxes);
-            $results = $this->generateLocale(
-                $tpiCode,
-                $augmented['characters'],
-                $reminders,
-                $augmented['jinxes'],
-                "{$pgCode}.js",
-                $output->isVeryVerbose(),
-            );
+        $game = $this->storage->readYaml(Storage::LOCATION_CONFIG, 'game.yaml');
+        $scripts = $this->storage->readYaml(Storage::LOCATION_CONFIG, 'scripts.yaml');
 
-            $tableBody[] = [
-                $pgCode,
-                $tpiCode,
-                (string) $results['fetch'],
-                implode(' ', $augmented['notes']),
-                (string) $results['write'],
+        foreach ($locales as $tpiCode => $pgCode) {
+            $index = count($tableBody);
+            $tableBody[$index] = [
+                'locale' => $pgCode,
+                'tpi_locale' => $tpiCode,
+                'fetch' => '',
+                'augment' => '',
+                'write' => '',
             ];
 
             if ($output->isVerbose()) {
                 $bar->advance();
             }
+
+            $raw = $this->fetch->getJson(sprintf(TPIURLEnum::GAME, $tpiCode));
+            $error = $this->fetch->getLastError($this->translate);
+
+            if (empty($error)) {
+                $tableBody[$index]['fetch'] = 'Done';
+            } else {
+                $tableBody[$index]['fetch'] = $error;
+                continue;
+            }
+
+            $augmented = $this->augmentData($pgCode, $characters, $jinxes);
+
+            if (count($augmented['notes'])) {
+                $tableBody[$index]['augment'] = implode(' ', $augmented['notes']);
+            }
+
+            $contents = $this->createContents(
+                $augmented['characters'],
+                $reminders,
+                $augmented['jinxes'],
+                $raw,
+                $game,
+                $scripts,
+                $output->isVeryVerbose(),
+            );
+            $files = [];
+
+            foreach ($this->model->asPGLocales($tpiCode, $pgCode) as $locale) {
+                $filename = "{$locale}.js";
+                $written = $this->storage->write(
+                    Storage::LOCATION_COMPILED,
+                    $filename,
+                    $contents,
+                );
+
+                if ($written !== false) {
+                    $files[] = $filename;
+                }
+            }
+
+            $tableBody[$index]['write'] = implode(', ', $files);
         }
 
         if ($output->isVerbose()) {
@@ -178,66 +218,45 @@ class TranslateResourcesCommand extends Command
     }
 
     /**
-     * Generates the translated locale.
+     * Creates the contents that will be written to the file.
      *
-     * @param string $locale TPI locale for the translations.
      * @param array $characters Base character data.
      * @param array $reminders Base reminder translations.
      * @param array $jinxes Base jinx translations.
-     * @param string $filename Name of the file to generate.
+     * @param array $translations Translations for the data. 
+     * @param array $game Role type breakdown per number of players.
+     * @param array $scripts Roles that are in each official script.
      * @param bool $isPretty If true, the generated file will be formatted.
-     * @return string|true Either true on success or a string with an error on failure.
+     * @return string Contents to be written.
      */
-    protected function generateLocale(
-        string $locale,
+    protected function createContents(
         array $characters,
         array $reminders,
         array $jinxes,
-        string $filename,
-        bool $isPretty = false
-    ): mixed {
-        $raw = $this->fetch->getJson(sprintf(TPIURLEnum::GAME, $locale));
-        $error = $this->fetch->getLastError();
-        $results = [
-            'fetch' => true,
-            'write' => true,
-        ];
-        $body = [];
-
-        if (empty($error)) {
-            $body = $raw;
-        } else {
-            $results['fetch'] = $error;
-        }
-
+        array $translations,
+        array $game,
+        array $scripts,
+        bool $isPretty = false,
+    ): string {
         $data = [
             'roles' => $this->model->combineRoles(
                 $characters,
                 $reminders,
-                $body['roles'] ?? [],
-                $body['reminders'] ?? [],
+                $translations['roles'] ?? [],
+                $translations['reminders'] ?? [],
             ),
             'jinxes' => $this->model->combineJinxes(
                 $jinxes,
-                $body['jinxes'] ?? [],
+                $translations['jinxes'] ?? [],
             ),
-            'game' => $this->storage->readYaml(Storage::LOCATION_CONFIG, 'game.yaml'),
-            'scripts' => $this->storage->readYaml(Storage::LOCATION_CONFIG, 'scripts.yaml'),
+            'game' => $game,
+            'scripts' => $scripts,
         ];
         $contents = 'var PG = ' . json_encode(
             $data,
             $isPretty ? JSON_PRETTY_PRINT : 0,
         ) . ';';
-        $file = $this->storage->write(
-            Storage::LOCATION_COMPILED,
-            $filename,
-            $contents,
-        );
 
-        if ($file === false) {
-            $results['write'] = 'Failed to write';
-        }
-
-        return $results;
+        return $contents;
     }
 }
