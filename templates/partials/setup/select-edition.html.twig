@@ -11,7 +11,7 @@
     <form id="select-edition-form" enctype="multipart/form-data">
 
         <details name="select-edition" class="edition-details" data-id="official" open>
-            <summary class="edition-details__summary">Official scripts</summary>
+            <summary class="edition-details__summary">{{ 'setup.editions.official'|trans }}</summary>
             <div class="edition-details__body">
                 <ul class="no-list">
                     <li>
@@ -66,15 +66,15 @@
             </div>
         </details>
         <details name="select-edition" class="edition-details" data-id="botc">
-            <summary class="edition-details__summary">BotC Scripts</summary>
+            <summary class="edition-details__summary">{{ 'setup.editions.botc'|trans }}</summary>
             <div class="edition-details__body">
                 <p>
-                    <label for="botc-scripts">Look up script</label>
+                    <label for="botc-scripts">{{ 'setup.editions.lookup'|trans }}</label>
                     <input type="text" name="botc-scripts" id="botc-scripts" class="input" required data-no-store>
                 </p>
                 <div id="botc-scripts">
                     <span id="botc-scripts-loader" class="loader" aria-hidden="true" hidden></span>
-                    <p id="botc-scripts-empty" hidden>No results could be found</p>
+                    <p id="botc-scripts-empty" hidden>{{ 'setup.editions.no_results'|trans }}</p>
                     <ul id="botc-scripts-results" class="no-list edition-details__entries" hidden></ul>
                 </div>
             </div>
