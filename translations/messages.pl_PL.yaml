@@ -267,7 +267,19 @@ errors:
         invalid_entry: 'Niepoprawny wpis dla "%id%": %reasons%'
         empty_teams: 'Puste zespoły: %teams%'
         invalid_property: Właściwość "%property%" powinna być typu %expected% ale jest typu %given%
+        invalid_uuid: Invalid game UUID
+        unrecognised_uuid: Unrecognised UUID
     url:
         no_url: Nieprawidłowy lub brakujący adres URL
         cannot_access: Nie można uzyskać dostępu do adresu URL
         not_json: Nie można sparsować JSONa z adresu URL
+        https_only: URL not https
+        no_hostname: No hostname
+        has_credentials: URL has credentials
+        port_not_443: Port not 443
+        redirect_no_location: No redirect location
+        http_status: HTTP status %code%
+        too_many_redirects: Too many redirects
+    botc_scripts:
+        invalid_search: Invalid or empty search term
+

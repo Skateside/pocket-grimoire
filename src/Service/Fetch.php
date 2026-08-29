@@ -15,7 +15,7 @@ class Fetch
     /**
      * @var array{0: string, 1: array<string, string>} $lastError The last error that occurred.
      */
-    protected string $lastError;
+    protected array $lastError;
 
     private HttpClientInterface $client;
 

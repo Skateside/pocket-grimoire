@@ -17,6 +17,7 @@ import {
     supplant
 } from "../../utils/strings.js";
 import {
+    get,
     post
 } from "../../utils/fetch.js";
 
@@ -348,12 +349,7 @@ botcInput.addEventListener("input", debounce(() => {
 
     const myURL = supplant(window.decodeURIComponent(URLS.botc), { term });
     setFormLoadingState(form, false);
-    fetch(myURL)
-        .catch((error) => {
-            showInputError(urlInput, error.message);
-            setFormLoadingState(form, false);
-        })
-        .then((response) => response.json())
+    get(myURL)
         .catch(() => {
             showInputError(urlInput, I18N.invalidScript);
             setFormLoadingState(form, false);
@@ -489,12 +485,7 @@ form.addEventListener("submit", (event) => {
                     url: window.encodeURIComponent(urlInput.value)
                 });
 
-                fetch(myURL)
-                    .catch((error) => {
-                        showInputError(urlInput, error.message);
-                        setFormLoadingState(form, false);
-                    })
-                    .then((response) => response.json())
+                get(myURL)
                     .catch(() => {
                         showInputError(urlInput, I18N.invalidScript);
                         setFormLoadingState(form, false);
