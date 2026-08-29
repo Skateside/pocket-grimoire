@@ -149,5 +149,4 @@ class DataController extends AbstractController
             },
         );
     }
-
 }

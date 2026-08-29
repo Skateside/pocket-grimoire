@@ -17,7 +17,7 @@ class Fetch
      */
     protected array $lastError;
 
-    private HttpClientInterface $client;
+    protected HttpClientInterface $client;
 
     public function __construct(
         HttpClientInterface $client
