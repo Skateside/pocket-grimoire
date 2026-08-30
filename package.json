@@ -19,5 +19,7 @@
         "watch": "encore dev --watch",
         "build": "encore production --progress"
     },
-    "dependencies": {}
+    "dependencies": {
+        "source-map": "^0.8.0"
+    }
 }

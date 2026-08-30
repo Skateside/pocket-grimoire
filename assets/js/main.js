@@ -1,4 +1,5 @@
 // import "./processes/errors.js";
+import "./processes/debug.js";
 
 import "./processes/data.js";
 import "./processes/breakdown-table.js";

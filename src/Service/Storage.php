@@ -9,6 +9,8 @@ class Storage
     const LOCATION_CONFIG = 'config';
     const LOCATION_COMPILED = 'compiled';
     const LOCATION_RAW = 'raw';
+    const LOCATION_PUBLIC_JS = 'public_js';
+    const LOCATION_TOOLS = 'tools';
 
     protected $projectDir;
     protected $locations = [];
@@ -20,6 +22,8 @@ class Storage
             static::LOCATION_CONFIG => '/config',
             static::LOCATION_COMPILED => '/assets/data/compiled',
             static::LOCATION_RAW => '/assets/data/raw',
+            static::LOCATION_PUBLIC_JS => '/public/build/js',
+            static::LOCATION_TOOLS => '/tools',
         ];
 
         foreach ($this->locations as $id => $path) {
