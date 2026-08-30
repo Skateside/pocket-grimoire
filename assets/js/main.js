@@ -30,3 +30,5 @@ import "./processes/notes.js";
 import "./processes/acknowledgements.js";
 
 import "./processes/store.js";
+
+import "./details.js";
