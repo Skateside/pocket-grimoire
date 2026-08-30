@@ -446,8 +446,9 @@ gameObserver.on("characters-selected", ({ detail }) => {
                 return;
             }
 
+            const id = character.getId();
             const index = detail.characters.findIndex((char) => {
-                return char.getId() === character.getId();
+                return char.getId() === id;
             });
 
             token.classList.toggle("is-orphan", index < 0);
@@ -457,13 +458,17 @@ gameObserver.on("characters-selected", ({ detail }) => {
         pad.reminders.forEach(({ reminder, token }) => {
 
             const character = store.getCharacter(reminder.getCharacterId());
+            const id = character.getId();
 
-            if (["traveller", "fabled", "loric"].includes(character.getTeam())) {
+            if (
+                id === "" // Ignore the empty ID - it's a generic character.
+                || ["traveller", "fabled", "loric"].includes(character.getTeam())
+            ) {
                 return;
             }
 
             const index = detail.characters.findIndex((char) => {
-                return char.getId() === character.getId();
+                return char.getId() === id;
             });
 
             token.classList.toggle("is-orphan", index < 0);
