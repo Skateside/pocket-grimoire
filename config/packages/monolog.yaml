@@ -60,8 +60,13 @@ when@prod:
             console:
                 type: console
                 process_psr_3_messages: false
-                channels: ["!event", "!doctrine"]
+                channels: ["!event", "!doctrine", "!js"]
             deprecation:
                 type: stream
                 channels: [deprecation]
                 path: php://stderr
+            js:
+                type: stream
+                level: debug
+                path: "%kernel.logs_dir%/js.log"
+                channels: ["js"]
