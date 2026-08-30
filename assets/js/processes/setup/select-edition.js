@@ -366,7 +366,7 @@ botcLookup.addEventListener("click", () => {
     setFormLoadingState(form, false);
     get(myURL)
         .catch(() => {
-            showInputError(urlInput, I18N.invalidScript);
+            showInputError(botcInput, I18N.invalidScript);
             setFormLoadingState(form, false);
             return null;
         })
@@ -378,7 +378,7 @@ botcLookup.addEventListener("click", () => {
             }
 
             if (!json.success) {
-                showInputError(urlInput, json.message);
+                showInputError(botcInput, json.message);
                 setFormLoadingState(form, false);
                 return;
             }
