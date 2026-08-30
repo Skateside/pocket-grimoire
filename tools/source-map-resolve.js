@@ -15,7 +15,7 @@ async function main() {
     }
 
     if (!fs.existsSync(mapFile)) {
-        process.strout.write(JSON.stringify({
+        process.stdout.write(JSON.stringify({
             error: "Source map not found",
         }));
         process.exit(2);
