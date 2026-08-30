@@ -5,7 +5,7 @@ if (!("name" in document.createElement("details"))) {
     document.addEventListener("toggle", (event) => {
         const details = event.target?.closest("details[name]");
         
-        if (!details || event.newState !== "open") {
+        if (!details || !details.open) {
             return; // Not a <details name> or not opening - ignore
         }
 
