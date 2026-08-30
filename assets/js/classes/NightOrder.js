@@ -96,6 +96,10 @@ export default class NightOrder {
      *        properties.
      */
     setCustomOrder(order) {
+        if (!order || typeof order !== "object") {
+            return; // Prevent errors if the given order isn't an object.
+        }
+
         if (order.firstNight) {
             this.customOrder.first = order.firstNight;
         }
