@@ -328,6 +328,8 @@ function processJSON({
 }
 
 const botcInput = lookupOne("#botc-scripts");
+const botcLookup = lookupOne("#botc-scripts-lookup");
+const botcLoader = lookupOne("#botc-scripts-loader");
 const botcEmpty = lookupOne("#botc-scripts-empty");
 const botcResults = lookupOne("#botc-scripts-results");
 const botcTemplate = Template.create(lookupOne("#botc-scripts-entry"));
@@ -349,18 +351,16 @@ function setBotcScripts(scripts) {
     });
 }
 
-botcInput.addEventListener("input", () => {
-    setFormLoadingState(form, botcInput.value.trim() !== "");
-    botcEmpty.hidden = true;
+botcLookup.addEventListener("click", () => {
     botcResults.hidden = true;
-});
 
-botcInput.addEventListener("input", debounce(() => {
     const term = botcInput.value.trim();
 
     if (term === "") {
         return;
     }
+
+    botcLoader.hidden = false;
 
     const myURL = supplant(window.decodeURIComponent(URLS.botc), { term });
     setFormLoadingState(form, false);
@@ -371,6 +371,8 @@ botcInput.addEventListener("input", debounce(() => {
             return null;
         })
         .then((json) => {
+            botcLoader.hidden = true;
+
             if (json === null) {
                 return;
             }
@@ -411,8 +413,7 @@ botcInput.addEventListener("input", debounce(() => {
             );
             botcResults.hidden = false;
         });
-
-}, 500));
+});
 
 const form = lookupOne("#select-edition-form");
 const sections = form.querySelectorAll(".edition-details[data-id]");
