@@ -163,10 +163,9 @@ class JavaScriptSourceMapper
     protected function runResolver(string $mapFile, int $line, int $column): ?array
     {
         $process = new Process([
-            'node',
             $this->storage->getFilename(
                 Storage::LOCATION_TOOLS,
-                'source-map-resolve.js',
+                'source-map-resolve',
             ),
         ]);
 
