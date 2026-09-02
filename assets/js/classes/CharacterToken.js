@@ -469,6 +469,7 @@ export default class CharacterToken extends Token {
 
         const {
             name,
+            team,
             image,
             reminders = [],
             remindersGlobal = [],
@@ -478,6 +479,9 @@ export default class CharacterToken extends Token {
         } = this.data;
 
         return this.constructor.templates.token.draw({
+            ".js--character"(element) {
+                element.dataset.team = team;
+            },
             ".js--character--leaves"(element) {
 
                 element.classList.toggle("character--setup", setup);
@@ -488,7 +492,15 @@ export default class CharacterToken extends Token {
 
             },
             ".js--character--image"(element) {
+
                 element.src = image;
+
+                // For colorization purposes, duplicate traveller images on character icons.
+                // They are positioned absolute, so they'll render on top of each other.
+                if (team === 'traveller') {
+                    element.parentNode.appendChild(element.cloneNode());
+                }
+
             },
             ".js--character--name"(element) {
                 element.textContent = name;
