@@ -24,6 +24,7 @@ import {
 
 const gameObserver = Observer.create("game");
 const tokenObserver = Observer.create("token");
+let selectedScript = null;
 
 /**
  * Sets the totals for each team based on the breakdown that's given.
@@ -121,6 +122,8 @@ gameObserver.on("team-breakdown-loaded", ({ detail }) => {
 });
 
 gameObserver.on("characters-selected", ({ detail }) => {
+
+    selectedScript = detail;
 
     const {
         characters
@@ -378,7 +381,18 @@ lookupOne("#player-select").addEventListener("submit", (e) => {
 
             validationInput.setCustomValidity("");
 
+            const isPlayerDraw = Boolean(e.submitter?.id === "player-select-qr");
             const isShowAll = Boolean(e.submitter?.id === "player-select-all");
+
+            if (isPlayerDraw) {
+
+                gameObserver.trigger("player-draw-start", {
+                    characters: filtered,
+                    script: selectedScript
+                });
+                return;
+
+            }
 
             gameObserver.trigger("character-draw", {
                 isShowAll,
