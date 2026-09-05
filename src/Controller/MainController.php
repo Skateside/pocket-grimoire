@@ -12,7 +12,6 @@ use Doctrine\ORM\EntityManagerInterface;
 
 use App\Entity\Homebrew;
 use App\Model\HomebrewModel;
-use App\Model\GameModel;
 
 class MainController extends AbstractController
 {
@@ -39,7 +38,6 @@ class MainController extends AbstractController
 
     #[Route("/{_locale}/", name: "index")]
     public function indexAction(
-        GameModel $gameModel
     ): Response {
         return $this->render('pages/index.html.twig');
     }
@@ -47,7 +45,6 @@ class MainController extends AbstractController
     #[Route("/{_locale}/sheet", name: "sheet")]
     public function sheetAction(
         Request $request,
-        GameModel $gameModel,
         EntityManagerInterface $em
     ): Response {
 

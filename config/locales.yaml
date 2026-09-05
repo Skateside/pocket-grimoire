@@ -1,26 +1,26 @@
-- { code: cs_CZ, text: Čeština }
-- { code: de_DE, text: Deutsch }
-- { code: en_GB, text: English }
-- { code: es_ES, text: Español }
-- { code: es_AR, text: Español argentino }
-- { code: fr_FR, text: Français }
-- { code: id_ID, text: Bahasa Indonesia }
-- { code: it_IT, text: Italiana }
-- { code: hu_HU, text: Magyar }
-- { code: kv_RU, text: коми кыв }
-- { code: nb_NO, text: Norsk bokmål }
-- { code: nn_NO, text: Norsk nynorsk }
-- { code: pl_PL, text: Polski }
-- { code: pt_BR, text: Português brasileiro }
-- { code: ru_RU, text: Русский }
-- { code: th_TH, text: ภาษาไทย }
-- { code: tr_TR, text: Türkçe }
-- { code: sl_SI, text: Slovenščina }
-- { code: sv_SE, text: Svenska }
-- { code: uk_UA, text: українська }
-- { code: vi_VN, text: Tiếng việt }
-- { code: ja_JP, text: 日本語 }
-- { code: ko_KR, text: 한국어 }
-- { code: zh_CN, text: 简体中文 }
-- { code: zh_TW, text: 繁體中文 }
-- { code: he_IL, text: עִברִית }
+- { code: cs_CZ, text: Čeština, tpi: cs, community: { roles: cs_CZ, jinxes: cs_CZ } }
+- { code: de_DE, text: Deutsch, tpi: de, community: { roles: de_DE (official), jinxes: de_DE } }
+- { code: en_GB, text: English, tpi: en, community: { roles: en_GB, jinxes: en_GB } }
+- { code: es_ES, text: Español, tpi: es, community: { roles: es_ES, jinxes: es_ES } }
+- { code: es_AR, text: Español argentino, tpi: es_419, community: { roles: es_AR, jinxes: es_AR } }
+- { code: fr_FR, text: Français, tpi: fr, community: { roles: fr_FR, jinxes: fr_FR } }
+- { code: id_ID, text: Bahasa Indonesia, tpi: id, community: { roles: id_ID (Official), jinxes: id_ID } }
+- { code: it_IT, text: Italiana, tpi: it, community: { roles: it_IT, jinxes: it_IT } }
+- { code: hu_HU, text: Magyar, tpi: hu, community: { roles: hu_HU, jinxes: hu_HU } }
+- { code: kv_RU, text: коми кыв, tpi: kv, community: { roles: kv_RU, jinxes: kv_RU } }
+- { code: nb_NO, text: Norsk bokmål, tpi: nb_NO, community: { roles: nb_NO, jinxes: nb_NO } }
+- { code: nn_NO, text: Norsk nynorsk, tpi: nb_NO, community: { roles: nn_NO, jinxes: nn_NO } }
+- { code: pl_PL, text: Polski, tpi: pl, community: { roles: pl_PL (fuine), jinxes: pl_PL } }
+- { code: pt_BR, text: Português brasileiro, tpi: pt_BR, community: { roles: pt_BR, jinxes: pt_BR } }
+- { code: ru_RU, text: Русский, tpi: ru, community: { roles: ru_RU, jinxes: ru_RU } }
+- { code: th_TH, text: ภาษาไทย, tpi: th, community: { roles: th_TH, jinxes: th_TH } }
+- { code: tr_TR, text: Türkçe, tpi: tr, community: { roles: tr_TR, jinxes: tr_TR } }
+- { code: sl_SI, text: Slovenščina, tpi: sl, community: { roles: sl_SI, jinxes: sl_SI } }
+- { code: sv_SE, text: Svenska, tpi: sv, community: { roles: sv_SE, jinxes: sv_SE } }
+- { code: uk_UA, text: українська, tpi: uk, community: { roles: uk_UA, jinxes: uk_UA } }
+- { code: vi_VN, text: Tiếng việt, tpi: vi, community: { roles: vi_VN, jinxes: vi_VN } }
+- { code: ja_JP, text: 日本語, tpi: ja, community: { roles: ja_JP, jinxes: ja_JP } }
+- { code: ko_KR, text: 한국어, tpi: ko, community: { roles: ko_KR, jinxes: ko_KR } }
+- { code: zh_CN, text: 简体中文, tpi: zh_Hans, community: { roles: zh_CN, jinxes: zh_CN } }
+- { code: zh_TW, text: 繁體中文, tpi: zh, community: { roles: zh_TW, jinxes: zh_TW } }
+- { code: he_IL, text: עִברִית, tpi: he, community: { roles: he_IL, jinxes: he_IL } }

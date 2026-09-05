@@ -9,38 +9,40 @@ use Symfony\Component\Console\Output\OutputInterface;
 use Symfony\Component\Console\Style\SymfonyStyle;
 use Symfony\Contracts\Translation\TranslatorInterface;
 use App\Enums\TPIURLEnum;
-use App\Model\LocaleModel;
-use App\Model\TPIResourcesModel;
-use App\Model\TPITranslationModel;
+use App\Model\{
+    LocalesModel,
+    TPIResourcesModel,
+    TPITranslationModel,
+};
 use App\Service\Fetch;
 use App\Service\Storage;
 
 #[AsCommand(name: 'pocket-grimoire:translate')]
 class TranslateResourcesCommand extends Command
 {
-    protected $model;
-    protected $localeModel;
-    protected $resourcesModel;
-    protected $fetch;
-    protected $storage;
-    protected $translate;
+    protected TPITranslationModel $model;
+    protected LocalesModel $localesModel;
+    protected TPIResourcesModel $resourcesModel;
+    protected Fetch $fetch;
+    protected Storage $storage;
+    protected TranslatorInterface $translate;
 
     public function __construct(
         TPITranslationModel $model,
-        LocaleModel $localeModel,
+        LocalesModel $localesModel,
         TPIResourcesModel $resourcedModel,
         Fetch $fetch,
         Storage $storage,
         TranslatorInterface $translate,
     ) {
         $this->model = $model;
-        $this->localeModel = $localeModel;
+        $this->localesModel = $localesModel;
         $this->resourcesModel = $resourcedModel;
         $this->fetch = $fetch;
         $this->storage = $storage;
         $this->translate = $translate;
 
-        return parent::__construct();
+        parent::__construct();
     }
 
     protected function execute(InputInterface $input, OutputInterface $output): int
@@ -52,10 +54,7 @@ class TranslateResourcesCommand extends Command
             $io->section('Reading local files');
         }
 
-        $locales = [];
-        foreach ($this->localeModel->getLocaleCodes() as $code) {
-            $locales[$this->model->asTPILocale($code)] = $code;
-        }
+        $locales = $this->localesModel->getTpiToCode();
 
         $rawReminders = $this->storage->readJson(Storage::LOCATION_RAW, 'reminders.json');
         $reminders = $this->resourcesModel->filterReminders($rawReminders);
@@ -137,7 +136,7 @@ class TranslateResourcesCommand extends Command
             );
             $files = [];
 
-            foreach ($this->model->asPGLocales($tpiCode, $pgCode) as $locale) {
+            foreach ($this->localesModel->tpiToCodes($tpiCode) as $locale) {
                 $filename = "{$locale}.js";
                 $written = $this->storage->write(
                     Storage::LOCATION_COMPILED,

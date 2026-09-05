@@ -4,61 +4,6 @@ namespace App\Model;
 
 class TPITranslationModel
 {
-    protected array $map;
-
-    public function __construct()
-    {
-        $this->map = [
-            'es_AR' => 'es_419',
-            'nb_NO' => 'nb_NO',
-            'nn_NO' => 'nb_NO',
-            'pt_BR' => 'pt_BR',
-            'zh_CN' => 'zh_Hans',
-        ];
-    }
-
-    /**
-     * Converts the Pocket Grimoire locale code into the locale code that TPI
-     * uses.
-     *
-     * @param string $locale Pocket Grimoire locale code.
-     * @return string TPI locale code.
-     */
-    public function asTPILocale(string $locale): string
-    {
-        if (array_key_exists($locale, $this->map)) {
-            return $this->map[$locale];
-        }
-
-        return substr($locale, 0, 2);
-    }
-
-    /**
-     * Converts the TPI locale into the Pocket Grimoire locale code(s). The
-     * Pocket Grimoire locale code will be used if there are no maps or
-     * duplications that occur.
-     *
-     * @param string $locale TPI locale code.
-     * @param string $pgCode The Pocket Grimoire locale code.
-     * @return array<string> Pocket Grimoire locale code(s).
-     */
-    public function asPGLocales(string $locale, string $pgCode): array
-    {
-        $locales = [];
-
-        if (in_array($locale, $this->map)) {
-            foreach ($this->map as $pgLocale => $tpiLocale) {
-                if ($tpiLocale === $locale) {
-                    $locales[] = $pgLocale;
-                }
-            }
-        } else {
-            $locales[] = $pgCode;
-        }
-
-        return $locales;
-    }
-
     /**
      * Filters the raw jinxes so that only valid entries remain.
      *

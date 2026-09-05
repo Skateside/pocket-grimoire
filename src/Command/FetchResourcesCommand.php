@@ -15,9 +15,9 @@ use App\Service\Storage;
 #[AsCommand(name: 'pocket-grimoire:fetch')]
 class FetchResourcesCommand extends Command
 {
-    protected $model;
-    protected $fetch;
-    protected $storage;
+    protected TPIResourcesModel $model;
+    protected Fetch $fetch;
+    protected Storage $storage;
 
     public function __construct(
         TPIResourcesModel $model,
@@ -28,7 +28,7 @@ class FetchResourcesCommand extends Command
         $this->fetch = $fetch;
         $this->storage = $storage;
 
-        return parent::__construct();
+        parent::__construct();
     }
 
     protected function execute(InputInterface $input, OutputInterface $output): int
