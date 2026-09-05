@@ -23,7 +23,7 @@ class JavaScriptLogController extends AbstractController
         Request $request,
         JavaScriptSourceMapper $sourceMapper,
     ): JsonResponse {
-        if ($request->headers->get('Content-Length', 0) > 16 * 1024) {
+        if (((int) $request->headers->get('Content-Length', '0')) > 16 * 1024) {
             return new JsonResponse([
                 'success' => false,
                 'message' => 'Payload too large',
@@ -60,6 +60,7 @@ class JavaScriptLogController extends AbstractController
             'stack' => $this->limitString($data['stack'] ?? '', 8192),
             'mapped_stack' => $sourceMapper->mapStack($data['stack'] ?? ''),
             'user_agent' => $request->headers->get('User-Agent'),
+            'pathname' => $data['pathname'] ?? '',
         ];
         $message = $this->limitString($data['message'] ?? ('JavaScript ' . $data['level']), 4096);
 

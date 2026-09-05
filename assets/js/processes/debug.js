@@ -6,6 +6,12 @@ function sendLog(level, data) {
     });
 }
 
+function getPathname() {
+    const url = new URL(window.location.href);
+
+    return url.pathname;
+}
+
 window.addEventListener("error", (event) => {
     sendLog("error", {
         message: event.message,
@@ -13,13 +19,15 @@ window.addEventListener("error", (event) => {
         line: event.lineno,
         column: event.colno,
         stack: event.error?.stack ?? null,
+        pathname: getPathname(),
     });
 });
 
 window.addEventListener("unhandledrejection", (event) => {
     sendLog("error", {
         message: String(event.reason),
-        stack: event.reason?.stack ?? null,
+        stack: event.reason?.stak ?? null,
+        pathname: getPathname(),
     });
 });
 
