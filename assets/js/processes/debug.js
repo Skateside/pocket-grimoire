@@ -7,9 +7,14 @@ function sendLog(level, data) {
 }
 
 function getPathname() {
-    const url = new URL(window.location.href);
+    try {
+        const url = new URL(window.location.href);
 
-    return url.pathname;
+        return url.pathname ?? '';
+    } catch (ignore) {
+    }
+
+    return '';
 }
 
 window.addEventListener("error", (event) => {
