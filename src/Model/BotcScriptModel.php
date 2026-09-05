@@ -27,12 +27,8 @@ class BotcScriptModel
             || !array_key_exists('results', $json)
             || count($json['results']) === 0
         ) {
-
-            return [
-                'success' => false,
-                'body' => 'error.no_results',
-            ];
-
+            // #191 - valid response, just nothing to do.
+            return $response;
         }
 
         $results = $json['results'];

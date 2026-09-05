@@ -8,7 +8,6 @@ import {
     lookupOneCached,
     replaceContentsMany,
     announceInput,
-    getIndex,
 } from "../../utils/elements.js";
 import {
     shuffle,

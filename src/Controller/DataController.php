@@ -129,7 +129,7 @@ class DataController extends AbstractController
                 ) {
                     return new JsonResponse([
                         'success' => false,
-                        'message' => $lastError,
+                        'message' => $translator->trans($lastError),
                     ]);
                 }
 

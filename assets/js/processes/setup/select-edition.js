@@ -3,6 +3,7 @@ import TokenStore from "../../classes/TokenStore.js";
 import Dialog from "../../classes/Dialog.js";
 import Template from "../../classes/Template.js";
 import {
+    empty,
     lookupOne,
     lookupOneCached,
     getLabelText,
@@ -358,6 +359,8 @@ botcLookup.addEventListener("click", () => {
     }
 
     botcLoader.hidden = false;
+    botcEmpty.hidden = true;
+    empty(botcResults);
 
     const myURL = supplant(window.decodeURIComponent(URLS.botc), { term });
     setFormLoadingState(form, false);
