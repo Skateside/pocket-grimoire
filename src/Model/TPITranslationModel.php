@@ -34,8 +34,19 @@ class TPITranslationModel
      */
     public function filterReminders(array $reminders): array
     {
+        /*
         return array_filter($reminders, function ($item) {
             return is_string($item);
+        });
+         */
+        return array_filter($reminders, function ($item) {
+            return (
+                is_array($item)
+                && array_key_exists('text', $item)
+                && is_string($item['text'])
+                && array_key_exists('examples', $item)
+                && is_array($item['examples'])
+            );
         });
     }
 
@@ -109,13 +120,13 @@ class TPITranslationModel
 
             if (array_key_exists('reminders', $role)) {
                 $role['reminders'] = array_map(function ($item) use ($baseReminders, $translatedReminders) {
-                    return $translatedReminders[$item] ?? $baseReminders[$item] ?? $item;
+                    return $translatedReminders[$item] ?? $baseReminders[$item]['text'] ?? $item;
                 }, $role['reminders']);
             }
 
             if (array_key_exists('remindersGlobal', $role)) {
                 $role['remindersGlobal'] = array_map(function ($item) use ($baseReminders, $translatedReminders) {
-                    return $translatedReminders[$item] ?? $baseReminders[$item] ?? $item;
+                    return $translatedReminders[$item] ?? $baseReminders[$item]['text'] ?? $item;
                 }, $role['remindersGlobal']);
             }
 

@@ -129,6 +129,41 @@ class TPIResourcesModel
     }
 
     /**
+     * Expands the reminders to include examples of the reminder text, allowing
+     * us to get that information from the community translations.
+     *
+     * @param array<string, string> $reminders Reminders to expand.
+     * @param array<array<string, string|string[]>> $roles Roles that have
+     * the reminder texts in them.
+     * @return array<string, array{text: string, examples: string[]}> Expanded
+     * reminders.
+     */
+    public function expandReminders(array $reminders, array $roles): array
+    {
+        $expanded = [];
+
+        foreach ($reminders as $key => $text) {
+            $entry = [
+                'text' => $text,
+                'examples' => [],
+            ];
+
+            foreach ($roles as $role) {
+                if (($index = array_search($text, $role['reminders'] ?? [])) !== false) {
+                    $entry['examples'][] = "{$role['id']}.r.{$index}";
+                }
+                if (($index = array_search($text, $role['remindersGlobal'] ?? [])) !== false) {
+                    $entry['examples'][] = "{$role['id']}.g.{$index}";
+                }
+            }
+
+            $expanded[$key] = $entry;
+        }
+
+        return $expanded;
+    }
+
+    /**
      * Combines the data.
      *
      * @param array $roles Raw roles to modify.

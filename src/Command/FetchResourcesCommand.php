@@ -137,11 +137,13 @@ class FetchResourcesCommand extends Command
             array_flip($reminders),
             $nightsheet,
         );
+        $expanded = $this->model->expandReminders($reminders, $roles);
 
         $writtenReminders = $this->storage->writeJson(
             Storage::LOCATION_RAW,
             'reminders.json',
-            $reminders,
+            // $reminders,
+            $expanded,
             $output->isVeryVerbose() ? JSON_PRETTY_PRINT : 0,
         );
 

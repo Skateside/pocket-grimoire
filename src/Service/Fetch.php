@@ -34,8 +34,7 @@ class Fetch
      *
      * @param string $url URL to check.
      * @return bool|string If the URL is safe then true is returned, if the URL
-     *         is not safe then a string explaining why the URL is not safe is
-     *         returned.
+     * is not safe then a string explaining why the URL is not safe is returned.
      */
     public function isSafeUrl(string $url): bool|string
     {
@@ -69,7 +68,7 @@ class Fetch
      *
      * @param string $url URL of the contents to get.
      * @return ?ResponseInterface Either the response or null if there was an
-     *         error.
+     * error.
      */
     public function get(string $url, int $maxRedirects = 3): ?ResponseInterface
     {
@@ -125,7 +124,8 @@ class Fetch
      *
      * @param string $url URL of the contents to get and parse.
      * @return ?array<mixed> Either the parsed array or null if an error
-     *         occurred.
+     * occurred.
+     * @phpstan-impure
      */
     public function getJson(string $url): ?array
     {
@@ -143,6 +143,7 @@ class Fetch
      *
      * @param string $url URL of the contents to get.
      * @return ?string Either the contents or null if an error occurred.
+     * @phpstan-impure
      */
     public function getContents(string $url): ?string
     {
@@ -160,6 +161,7 @@ class Fetch
      * has occured.
      *
      * @return string Last error message.
+     * @phpstan-impure
      */
     public function getLastError(?TranslatorInterface $translator = null): string
     {

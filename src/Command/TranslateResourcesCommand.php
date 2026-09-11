@@ -57,7 +57,7 @@ class TranslateResourcesCommand extends Command
         $locales = $this->localesModel->getTpiToCode();
 
         $rawReminders = $this->storage->readJson(Storage::LOCATION_RAW, 'reminders.json');
-        $reminders = $this->resourcesModel->filterReminders($rawReminders);
+        $reminders = $this->model->filterReminders($rawReminders);
 
         if (count($rawReminders) !== count($reminders)) {
             $io->warning('Some reminders have been filtered out.');
