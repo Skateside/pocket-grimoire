@@ -6,6 +6,9 @@ import {
 import {
     empty,
 } from "../../utils/objects.js";
+import {
+    makeUUID,
+} from "../../utils/strings.js";
 
 const gameData = Object.create(null);
 
@@ -23,7 +26,7 @@ Store.create("pocket-grimoire").addListener(({ detail }) => {
                 name: token.playerName,
                 me: false,
                 dead: token.isDead,
-                id: window.crypto.randomUUID(),
+                id: makeUUID(),
                 suspectedRole: {
                     id: token.id
                 }

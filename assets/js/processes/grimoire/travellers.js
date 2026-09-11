@@ -38,8 +38,8 @@ function populateTravellers() {
 
     replaceContentsMany(
         lookupOneCached("#traveller-list__list"),
-        travellers
-            .toSorted((a, b) => a.getName().localeCompare(b.getName()))
+        [...travellers]
+            .sort((a, b) => a.getName().localeCompare(b.getName()))
             .map((traveller) => characterTemplate.draw({
                 ".js--character-list--item,.js--character-list--button"(element) {
                     element.dataset.tokenId = traveller.getId();

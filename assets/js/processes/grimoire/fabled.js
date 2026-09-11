@@ -37,8 +37,8 @@ function populateFabled() {
     }
 
     const contents = [
-        ...fabled
-            .toSorted((a, b) => a.getName().localeCompare(b.getName()))
+        ...[...fabled]
+            .sort((a, b) => a.getName().localeCompare(b.getName()))
             .map((fable) => characterTemplate.draw({
                 ".js--character-list--item,.js--character-list--button"(element) {
                     element.dataset.tokenId = fable.getId();
@@ -47,8 +47,8 @@ function populateFabled() {
                     element.append(fable.drawToken());
                 }
             })),
-        ...loric
-            .toSorted((a, b) => a.getName().localeCompare(b.getName()))
+        ...[...loric]
+            .sort((a, b) => a.getName().localeCompare(b.getName()))
             .map((lor) => characterTemplate.draw({
                 ".js--character-list--item,.js--character-list--button"(element) {
                     element.dataset.tokenId = lor.getId();
