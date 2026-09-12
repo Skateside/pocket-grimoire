@@ -7,8 +7,8 @@ class TPITranslationModel
     /**
      * Filters the raw jinxes so that only valid entries remain.
      *
-     * @param array $jinxes Jinxes to filter.
-     * @return array Filtered jinxes.
+     * @param array<mixed> $jinxes Jinxes to filter.
+     * @return array<string, string> Filtered jinxes.
      */
     public function filterJinxes(array $jinxes): array
     {
@@ -29,8 +29,8 @@ class TPITranslationModel
     /**
      * Filters the raw reminders so that only valid entries remain.
      *
-     * @param array $reminders Reminders to filter.
-     * @return array Filtered reminders.
+     * @param array<mixed> $reminders Reminders to filter.
+     * @return array<string, array{text: string, examples: string[]}> Filtered reminders.
      */
     public function filterReminders(array $reminders): array
     {
@@ -56,6 +56,7 @@ class TPITranslationModel
      * @param array $roles Roles to filter.
      * @return array Filtered roles.
      */
+    /*
     public function filterRoles(array $roles): array
     {
         $filtered = [];
@@ -76,6 +77,7 @@ class TPITranslationModel
 
         return $filtered;
     }
+     */
 
     /**
      * Combines the roles with the translations.
@@ -169,11 +171,11 @@ class TPITranslationModel
     }
 
     /**
-     * Equivalent of array_all() for PHP < 8.
+     * Equivalent of array_all() for PHP < 8.4.
      *
-     * @param array $array Array to check.
-     * @param callable $callback Callback for checking.
-     * @return true if all values and keys match the callback, false otherwise.
+     * @param array<mixed> $array Array to check.
+     * @param callable(mixed, int|string): bool $callback Callback for checking.
+     * @return bool true if all values and keys match the callback, false otherwise.
      */
     protected function arrayAll(array $array, callable $callback): bool
     {

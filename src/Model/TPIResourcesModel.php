@@ -2,6 +2,9 @@
 
 namespace App\Model;
 
+/**
+ * @phpstan-import-type Jinxes from \App\Types\RawFilesTypes
+ */
 class TPIResourcesModel
 {
     /**
@@ -74,8 +77,8 @@ class TPIResourcesModel
     /**
      * Filter the jinxes so that only valid jinxes are included.
      *
-     * @param array $jinxes Jinxes to filter.
-     * @return array Filtered jinxes.
+     * @param array<mixed> $jinxes Jinxes to filter.
+     * @return Jinxes Filtered jinxes.
      */
     public function filterJinxes(array $jinxes): array
     {

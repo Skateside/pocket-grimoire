@@ -7,26 +7,33 @@ use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
 use Symfony\Component\Console\Style\SymfonyStyle;
+use Symfony\Component\Validator\Validator\ValidatorInterface;
 use App\Enums\TPIURLEnum;
 use App\Model\TPIResourcesModel;
-use App\Service\Fetch;
-use App\Service\Storage;
+use App\Service\{
+    Fetch,
+    Storage,
+};
+use App\Dto\JinxesDto;
 
 #[AsCommand(name: 'pocket-grimoire:fetch')]
 class FetchResourcesCommand extends Command
 {
-    protected TPIResourcesModel $model;
+    protected TPIResourcesModel $resourcesModel;
     protected Fetch $fetch;
     protected Storage $storage;
+    protected ValidatorInterface $validator;
 
     public function __construct(
-        TPIResourcesModel $model,
+        TPIResourcesModel $resourcesModel,
         Fetch $fetch,
-        Storage $storage
+        Storage $storage,
+        ValidatorInterface $validator,
     ) {
-        $this->model = $model;
+        $this->resourcesModel = $resourcesModel;
         $this->fetch = $fetch;
         $this->storage = $storage;
+        $this->validator = $validator;
 
         parent::__construct();
     }
@@ -44,7 +51,7 @@ class FetchResourcesCommand extends Command
             $bar->start();
         }
 
-        $rawGame = $this->fetch->getJson(sprintf(TPIURLEnum::GAME, 'en'));
+        $rawGame = $this->fetch->getJson(sprintf(TPIURLEnum::GAME->value, 'en'));
 
         if (($error = $this->fetch->getLastError()) !== '') {
             $io->error($error);
@@ -55,7 +62,7 @@ class FetchResourcesCommand extends Command
             $bar->advance();
         }
 
-        $rawJinxes = $this->fetch->getJson(TPIURLEnum::JINXES);
+        $rawJinxes = $this->fetch->getJson(TPIURLEnum::JINXES->value);
 
         if (($error = $this->fetch->getLastError()) !== '') {
             $io->error($error);
@@ -66,7 +73,7 @@ class FetchResourcesCommand extends Command
             $bar->advance();
         }
 
-        $rawNightsheet = $this->fetch->getJson(TPIURLEnum::NIGHTSHEET);
+        $rawNightsheet = $this->fetch->getJson(TPIURLEnum::NIGHTSHEET->value);
 
         if (($error = $this->fetch->getLastError()) !== '') {
             $io->error($error);
@@ -77,7 +84,7 @@ class FetchResourcesCommand extends Command
             $bar->advance();
         }
 
-        $rawRoles = $this->fetch->getJson(TPIURLEnum::ROLES);
+        $rawRoles = $this->fetch->getJson(TPIURLEnum::ROLES->value);
 
         if (($error = $this->fetch->getLastError()) !== '') {
             $io->error($error);
@@ -90,19 +97,30 @@ class FetchResourcesCommand extends Command
             $io->writeln('');
         }
 
-        $jinxes = $this->model->filterJinxes($rawJinxes);
-        $nightsheet = $this->model->filterNightsheet($rawNightsheet);
-        $roles = $this->model->filterRoles($rawRoles);
+        $jinxes = JinxesDto::from($rawJinxes);
+        $nightsheet = $this->resourcesModel->filterNightsheet($rawNightsheet);
+        $roles = $this->resourcesModel->filterRoles($rawRoles);
+
+        $jinxViolations = $this->validator->validate($jinxes);
+
+        if (count($jinxViolations)) {
+            $errors = [];
+            foreach ($jinxViolations as $violation) {
+                $errors[$violation->getPropertyPath()][] = $violation->getMessage();
+            }
+
+            $io->writeln(json_encode($errors));
+        }
 
         $rawReminders = $rawGame['reminders'] ?? [];
-        $reminders = $this->model->filterReminders($rawReminders);
+        $reminders = $this->resourcesModel->filterReminders($rawReminders);
 
         if ($output->isVerbose()) {
             $io->section('Results');
             $io->table(
                 ['Type', 'Raw entries', 'Filtered entries'],
                 [
-                    ['Jinxes', count($rawJinxes), count($jinxes)],
+                    ['Jinxes', count($rawJinxes), count($rawJinxes)],
                     ['Nightsheet', count($rawNightsheet), count($nightsheet)],
                     ['Roles', count($rawRoles), count($roles)],
                     ['Reminders', count($rawReminders), count($reminders)],
@@ -112,8 +130,7 @@ class FetchResourcesCommand extends Command
         
 
         if (
-            count($rawJinxes) !== count($jinxes)
-            || count($rawNightsheet) !== count($nightsheet)
+            count($rawNightsheet) !== count($nightsheet)
             || count($rawRoles) !== count($roles)
             || count($rawReminders) !== count($reminders)
         ) {
@@ -123,7 +140,7 @@ class FetchResourcesCommand extends Command
         $writtenJinxes = $this->storage->writeJson(
             Storage::LOCATION_RAW,
             'jinxes.json',
-            $jinxes,
+            $jinxes->toArray(),
             $output->isVeryVerbose() ? JSON_PRETTY_PRINT : 0,
         );
 
@@ -132,12 +149,12 @@ class FetchResourcesCommand extends Command
             return Command::FAILURE;
         }
 
-        $combined = $this->model->combineRoles(
+        $combined = $this->resourcesModel->combineRoles(
             $roles,
             array_flip($reminders),
             $nightsheet,
         );
-        $expanded = $this->model->expandReminders($reminders, $roles);
+        $expanded = $this->resourcesModel->expandReminders($reminders, $roles);
 
         $writtenReminders = $this->storage->writeJson(
             Storage::LOCATION_RAW,

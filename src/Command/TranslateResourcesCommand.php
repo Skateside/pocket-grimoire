@@ -8,39 +8,44 @@ use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
 use Symfony\Component\Console\Style\SymfonyStyle;
 use Symfony\Contracts\Translation\TranslatorInterface;
-use App\Enums\TPIURLEnum;
+use App\Enums\{
+    CommunityTranslationEnum,
+    TPIURLEnum,
+};
 use App\Model\{
     LocalesModel,
     TPIResourcesModel,
     TPITranslationModel,
 };
-use App\Service\Fetch;
-use App\Service\Storage;
+use App\Service\{
+    Fetch,
+    Storage,
+};
 
 #[AsCommand(name: 'pocket-grimoire:translate')]
 class TranslateResourcesCommand extends Command
 {
-    protected TPITranslationModel $model;
+    protected TPITranslationModel $translationModel;
     protected LocalesModel $localesModel;
     protected TPIResourcesModel $resourcesModel;
     protected Fetch $fetch;
     protected Storage $storage;
-    protected TranslatorInterface $translate;
+    protected TranslatorInterface $translator;
 
     public function __construct(
-        TPITranslationModel $model,
+        TPITranslationModel $translationModel,
         LocalesModel $localesModel,
-        TPIResourcesModel $resourcedModel,
+        TPIResourcesModel $resourcesModel,
         Fetch $fetch,
         Storage $storage,
-        TranslatorInterface $translate,
+        TranslatorInterface $translator,
     ) {
-        $this->model = $model;
+        $this->translationModel = $translationModel;
         $this->localesModel = $localesModel;
-        $this->resourcesModel = $resourcedModel;
+        $this->resourcesModel = $resourcesModel;
         $this->fetch = $fetch;
         $this->storage = $storage;
-        $this->translate = $translate;
+        $this->translator = $translator;
 
         parent::__construct();
     }
@@ -54,10 +59,18 @@ class TranslateResourcesCommand extends Command
             $io->section('Reading local files');
         }
 
+
+        if ($output->isVerbose()) {
+            $io->writeln('Done');
+            $io->section('Downloading translations and writing files');
+        }
+
+        return Command::SUCCESS;
+        /*
         $locales = $this->localesModel->getTpiToCode();
 
         $rawReminders = $this->storage->readJson(Storage::LOCATION_RAW, 'reminders.json');
-        $reminders = $this->model->filterReminders($rawReminders);
+        $reminders = $this->translationModel->filterReminders($rawReminders);
 
         if (count($rawReminders) !== count($reminders)) {
             $io->warning('Some reminders have been filtered out.');
@@ -109,8 +122,8 @@ class TranslateResourcesCommand extends Command
                 $bar->advance();
             }
 
-            $raw = $this->fetch->getJson(sprintf(TPIURLEnum::GAME, $tpiCode));
-            $error = $this->fetch->getLastError($this->translate);
+            $raw = $this->fetch->getJson(sprintf(TPIURLEnum::GAME->value, $tpiCode));
+            $error = $this->fetch->getLastError($this->translator);
 
             if (empty($error)) {
                 $tableBody[$index]['fetch'] = 'Done';
@@ -165,6 +178,42 @@ class TranslateResourcesCommand extends Command
         $io->success('Translations written');
 
         return Command::SUCCESS;
+         */
+    }
+
+    /**
+     * Fetches the local files, parses and filters them.
+     *
+     * @return array{
+     *  reminders: array<string, array{text: string, examples: string[]}>,
+     *  characters: array<mixed>,
+     *  jinxes: array<mixed>,
+     *  count: array{reminders: int, characters: int, jinxes: int},
+     * }
+     */
+    protected function fetchLocalData(): array
+    {
+        $rawReminders = $this->storage->readJson(Storage::LOCATION_RAW, 'reminders.json');
+        $reminders = $this->translationModel->filterReminders($rawReminders);
+
+        $rawCharacters = $this->storage->readJson(Storage::LOCATION_RAW, 'characters.json');
+        $characters = array_filter($rawCharacters, function ($item) {
+            return $this->resourcesModel->isValidRoleEntry($item);
+        });
+
+        $rawJinxes = $this->storage->readJson(Storage::LOCATION_RAW, 'jinxes.json');
+        $jinxes = $this->resourcesModel->filterJinxes($rawJinxes);
+
+        return [
+            'reminders' => $reminders,
+            'characters' => $characters,
+            'jinxes' => $jinxes,
+            'counts' => [
+                'reminders' => count($rawReminders),
+                'characters' => count($rawCharacters),
+                'jinxes' => count($rawJinxes),
+            ],
+        ];
     }
 
     /**
@@ -176,6 +225,7 @@ class TranslateResourcesCommand extends Command
      * @param array<array<mixed>> $jinxes Base jinxes.
      * @return array<string, array<array<mixed>>> Augmented data.
      */
+    /*
     protected function augmentData(
         string $locale,
         array $characters,
@@ -215,6 +265,7 @@ class TranslateResourcesCommand extends Command
 
         return $augmented;
     }
+     */
 
     /**
      * Creates the contents that will be written to the file.
@@ -228,6 +279,7 @@ class TranslateResourcesCommand extends Command
      * @param bool $isPretty If true, the generated file will be formatted.
      * @return string Contents to be written.
      */
+    /*
     protected function createContents(
         array $characters,
         array $reminders,
@@ -238,13 +290,13 @@ class TranslateResourcesCommand extends Command
         bool $isPretty = false,
     ): string {
         $data = [
-            'roles' => $this->model->combineRoles(
+            'roles' => $this->translationModel->combineRoles(
                 $characters,
                 $reminders,
                 $translations['roles'] ?? [],
                 $translations['reminders'] ?? [],
             ),
-            'jinxes' => $this->model->combineJinxes(
+            'jinxes' => $this->translationModel->combineJinxes(
                 $jinxes,
                 $translations['jinxes'] ?? [],
             ),
@@ -258,4 +310,5 @@ class TranslateResourcesCommand extends Command
 
         return $contents;
     }
+     */
 }
