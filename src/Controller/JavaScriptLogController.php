@@ -65,6 +65,11 @@ class JavaScriptLogController extends AbstractController
         $message = $this->limitString($data['message'] ?? ('JavaScript ' . $data['level']), 4096);
 
         switch ($data['level'] ?? 'error') {
+        case 'log':
+            $this->logger->debug($message, $context);
+            break;
+
+        case 'warn':
         case 'warning':
             $this->logger->warning($message, $context);
             break;

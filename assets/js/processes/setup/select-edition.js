@@ -442,6 +442,7 @@ form.addEventListener("submit", (event) => {
     const data = new FormData(form);
 
     if (!mode) {
+        console.log(sections);
         throw new Error("Unable to detect open section");
     }
 

@@ -1,4 +1,5 @@
 import { post } from "../utils/fetch.js";
+import { stringify } from "../utils/elements.js";
 
 function sendLog(level, data) {
     post("/_js-log", { level, ...data }).catch(() => {
@@ -36,3 +37,24 @@ window.addEventListener("unhandledrejection", (event) => {
     });
 });
 
+for (const method of ["log", "warn", "error", "info"]) {
+    const original = console[method];
+
+    console[method] = (...args) => {
+        sendLog(method, {
+            message: JSON.stringify(args, (key, value) => {
+                if (value instanceof NodeList) {
+                    return Array.from(value);
+                }
+
+                if (value instanceof HTMLElement) {
+                    return stringify(value);
+                }
+
+                return value;
+            }),
+        });
+
+        return original.apply(console, args);
+    };
+}

@@ -270,3 +270,35 @@ export function getIndex(element) {
     );
 
 }
+
+/**
+ * Converts an HTML element into a string so that it can be stored in a log.
+ *
+ * @param  {Element} element
+ *         Element to convert into a string.
+ * @return {String}
+ *         A string describing the given HTML element.
+ */
+export function stringify(element) {
+    const nodeName = element.nodeName.toLowerCase();
+    const attributes = Array.from(element.attributes, ({ name, value }) => {
+        if (value === "") {
+            return name;
+        }
+
+        return `${name}="${value}"`;
+    });
+    const attributesPrefix = (
+        attributes.length
+        ? " "
+        : ""
+    );
+    const hasChildren = (element.children?.length || 0) > 0;
+    const suffix = (
+        hasChildren
+        ? ""
+        : " /"
+    );
+
+    return `<${nodeName}${attributesPrefix}${attributes.join(" ")}${suffix}>`;
+}
