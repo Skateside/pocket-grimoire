@@ -4,6 +4,12 @@ namespace App\Dto;
 
 use Symfony\Component\Validator\Constraints as Assert;
 
+/**
+ * @phpstan-type Data array{
+ *  id: string,
+ *  reason: string,
+ * }
+ */
 class JinxEntryDto implements DtoInterface
 {
     public function __construct(
@@ -18,7 +24,7 @@ class JinxEntryDto implements DtoInterface
     }
 
     /**
-     * @return array{id: string, reason: string}
+     * @return Data
      */
     public function toArray(): array
     {
@@ -29,7 +35,7 @@ class JinxEntryDto implements DtoInterface
     }
 
     /**
-     * @param array{id: string, reason: string} $jinx
+     * @param Data $jinx
      */
     public static function from(array $jinx): self
     {

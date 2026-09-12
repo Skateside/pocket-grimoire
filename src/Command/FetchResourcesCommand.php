@@ -8,13 +8,20 @@ use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
 use Symfony\Component\Console\Style\SymfonyStyle;
 use Symfony\Component\Validator\Validator\ValidatorInterface;
+use Symfony\Component\Validator\ConstraintViolationListInterface;
 use App\Enums\TPIURLEnum;
 use App\Model\TPIResourcesModel;
 use App\Service\{
     Fetch,
     Storage,
 };
-use App\Dto\JinxesDto;
+use App\Dto\{
+    DtoInterface,
+    JinxesDto,
+    NightsheetDto,
+    TPIRemindersDto,
+    TPIRolesDto,
+};
 
 #[AsCommand(name: 'pocket-grimoire:fetch')]
 class FetchResourcesCommand extends Command
@@ -51,84 +58,74 @@ class FetchResourcesCommand extends Command
             $bar->start();
         }
 
-        $rawGame = $this->fetch->getJson(sprintf(TPIURLEnum::GAME->value, 'en'));
-
-        if (($error = $this->fetch->getLastError()) !== '') {
-            $io->error($error);
-            return Command::FAILURE;
-        }
+        $roles = $this->getJson(TPIURLEnum::ROLES->value, TPIRolesDto::class);
 
         if ($output->isVerbose()) {
             $bar->advance();
         }
 
-        $rawJinxes = $this->fetch->getJson(TPIURLEnum::JINXES->value);
-
-        if (($error = $this->fetch->getLastError()) !== '') {
-            $io->error($error);
-            return Command::FAILURE;
-        }
+        $jinxes = $this->getJson(TPIURLEnum::JINXES->value, JinxesDto::class);
 
         if ($output->isVerbose()) {
             $bar->advance();
         }
 
-        $rawNightsheet = $this->fetch->getJson(TPIURLEnum::NIGHTSHEET->value);
-
-        if (($error = $this->fetch->getLastError()) !== '') {
-            $io->error($error);
-            return Command::FAILURE;
-        }
+        $nightsheet = $this->getJson(TPIURLEnum::NIGHTSHEET->value, NightsheetDto::class);
 
         if ($output->isVerbose()) {
             $bar->advance();
         }
 
-        $rawRoles = $this->fetch->getJson(TPIURLEnum::ROLES->value);
-
-        if (($error = $this->fetch->getLastError()) !== '') {
-            $io->error($error);
-            return Command::FAILURE;
-        }
+        $reminders = $this->getJson(
+            sprintf(TPIURLEnum::GAME->value, 'en'),
+            function (array $fetched) {
+                return TPIRemindersDto::from($fetched['reminders']);
+            },
+        );
 
         if ($output->isVerbose()) {
             $bar->advance();
+        }
+
+        $data = [
+            'Roles' => $roles,
+            'Nightsheet' => $nightsheet,
+            'Jinxes' => $jinxes,
+            'Reminders' => $reminders,
+        ];
+
+        foreach ($data as $results) {
+            if (!is_null($results['error'])) {
+                $io->error($results['error']);
+                return Command::FAILURE;
+            }
+        }
+
+        if ($output->isVerbose()) {
             $bar->finish();
             $io->writeln('');
-        }
+            $io->writeln('');
+            $io->section('Results');
 
-        $jinxes = JinxesDto::from($rawJinxes);
-        $nightsheet = $this->resourcesModel->filterNightsheet($rawNightsheet);
-        $roles = $this->resourcesModel->filterRoles($rawRoles);
+            $tableHeaders = ['Type', 'Count', 'Validation errors'];
+            $tableBody = [];
 
-        $jinxViolations = $this->validator->validate($jinxes);
+            foreach ($data as $type => $results) {
+                $body = [
+                    $type,
+                    is_null($results['dto']) ? 0 : count($results['dto']->toArray()),
+                    count($results['violations']) ? $this->stringifyViolations($results['violations']): 'None ✓',
+                ];
 
-        if (count($jinxViolations)) {
-            $errors = [];
-            foreach ($jinxViolations as $violation) {
-                $errors[$violation->getPropertyPath()][] = $violation->getMessage();
+                $tableBody[] = $body;
             }
 
-            $io->writeln(json_encode($errors));
+            $io->table($tableHeaders, $tableBody);
         }
 
-        $rawReminders = $rawGame['reminders'] ?? [];
-        $reminders = $this->resourcesModel->filterReminders($rawReminders);
-
-        if ($output->isVerbose()) {
-            $io->section('Results');
-            $io->table(
-                ['Type', 'Raw entries', 'Filtered entries'],
-                [
-                    ['Jinxes', count($rawJinxes), count($rawJinxes)],
-                    ['Nightsheet', count($rawNightsheet), count($nightsheet)],
-                    ['Roles', count($rawRoles), count($roles)],
-                    ['Reminders', count($rawReminders), count($reminders)],
-                ],
-            );
-        }
         
 
+        /*
         if (
             count($rawNightsheet) !== count($nightsheet)
             || count($rawRoles) !== count($roles)
@@ -136,7 +133,9 @@ class FetchResourcesCommand extends Command
         ) {
             $io->warning('Some filtering occurred');
         }
+         */
 
+        /*
         $writtenJinxes = $this->storage->writeJson(
             Storage::LOCATION_RAW,
             'jinxes.json',
@@ -150,11 +149,11 @@ class FetchResourcesCommand extends Command
         }
 
         $combined = $this->resourcesModel->combineRoles(
-            $roles,
+            $roles->toArray(),
             array_flip($reminders),
-            $nightsheet,
+            $nightsheet->toArray(),
         );
-        $expanded = $this->resourcesModel->expandReminders($reminders, $roles);
+        $expanded = $this->resourcesModel->expandReminders($reminders, $roles->toArray());
 
         $writtenReminders = $this->storage->writeJson(
             Storage::LOCATION_RAW,
@@ -182,7 +181,100 @@ class FetchResourcesCommand extends Command
         }
 
         $io->success('Characters and Jinxes files written');
+         */
 
         return Command::SUCCESS;
+    }
+
+    /**
+     * Logs any violations found.
+     *
+     * @param ConstraintViolationListInterface $violations Violations that
+     * should be logged.
+     * @param callable(array<string, string[]>): void $log Function that logs the
+     * given violations.
+     */
+    /*
+    protected function logViolations(
+        ConstraintViolationListInterface $violations,
+        callable $log,
+    ): void {
+        if (!count($violations)) {
+            return;
+        }
+
+        $errors = [];
+        foreach ($violations as $violation) {
+            $errors[$violation->getPropertyPath()][] = (string) $violation->getMessage();
+        }
+
+        $log($errors);
+    }
+     */
+
+    /**
+     * Gets the JSON from the remote source, passes the data into a DTO class,
+     * and returns an array detailing the results.
+     *
+     * @param string $url URL where the JSON is located.
+     * @param (callable(array<mixed>): DtoInterface)|string $dtoClass Class string for the DTO class.
+     * @return array{dto: ?DtoInterface, error: ?string, violations: array<string, string[]>}
+     * Results of the JSON being parsed and validated.
+     */
+    protected function getJson(
+        string $url,
+        callable|string $dtoClass,
+    ): array
+    {
+        $response = [
+            'dto' => null,
+            'error' => null,
+            'violations' => [],
+        ];
+
+        $fetched = $this->fetch->getJson($url);
+
+        if (($error = $this->fetch->getLastError()) !== '') {
+            $response['error'] = $error;
+            return $response;
+        }
+
+        $response['dto'] = is_callable($dtoClass) ? $dtoClass($fetched) : $dtoClass::from($fetched);
+        $violations = $this->validator->validate($response['dto']);
+
+        if (count($violations)) {
+            $errors = [];
+
+            foreach ($violations as $violation) {
+                $errors[$violation->getPropertyPath()][] = (string) $violation->getMessage();
+            }
+
+            $response['violations'] = $errors;
+        }
+
+        return $response;
+    }
+
+    /**
+     * Converts the violations into a string.
+     *
+     * @param array<string, string[]> $violations
+     * @return string A string containing any violations.
+     */
+    protected function stringifyViolations(array $violations): string
+    {
+        $strings = [];
+
+        foreach ($violations as $path => $messages) {
+            $inner = [$path];
+
+            foreach ($messages as $message) {
+                $inner[] = "\t" . $message;
+            }
+
+            $strings[] = implode(PHP_EOL, $inner);
+        }
+
+        return implode(PHP_EOL, $strings);
     }
 }

@@ -2,15 +2,18 @@
 
 namespace App\Dto;
 
+/**
+ * @phpstan-type Data array<int|string, mixed>
+ */
 interface DtoInterface
 {
     /**
-     * @return array<string, mixed>
+     * @return Data
      */
     public function toArray(): array;
 
     /**
-     * @param array<string, mixed> $rawData
+     * @param Data $rawData
      * @return self
      */
     public static function from(array $rawData): self;

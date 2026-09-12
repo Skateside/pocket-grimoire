@@ -144,7 +144,7 @@ class Storage
         string $filename,
         string $data,
         int $flags = 0
-    ): int {
+    ): int|false {
         if ($this->mkdir($locationId, 0775) === false) {
             throw new \Exception("Can't create '{$locationId}' directory");
         }
@@ -170,7 +170,7 @@ class Storage
         mixed $data,
         int $jsonFlags = 0,
         int $flags = 0
-    ): int {
+    ): int|false {
         return $this->write($locationId, $filename, json_encode($data, $jsonFlags), $flags);
     }
 

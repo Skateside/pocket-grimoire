@@ -15,17 +15,19 @@ class TPIResourcesModel
     /**
      * An error message generated when validating a role.
      */
-    private string $message = '';
+    // private string $message = '';
 
     /**
      * Gets the latest role validation error message.
      *
      * @return string Latest role validation error message.
      */
+    /*
     public function getMessage()
     {
         return $this->message;
     }
+     */
 
     /**
      * Filter the roles so that only valid roles are included.
@@ -33,6 +35,7 @@ class TPIResourcesModel
      * @param array $roles Roles to filter.
      * @return array Filtered roles.
      */
+    /*
     public function filterRoles(array $roles): array
     {
         $filtered = array_filter($roles, [$this, 'isValidRoleEntry']);
@@ -73,6 +76,7 @@ class TPIResourcesModel
 
         return $filtered;
     }
+     */
 
     /**
      * Filter the jinxes so that only valid jinxes are included.
@@ -80,6 +84,7 @@ class TPIResourcesModel
      * @param array<mixed> $jinxes Jinxes to filter.
      * @return Jinxes Filtered jinxes.
      */
+    /*
     public function filterJinxes(array $jinxes): array
     {
         $filtered = array_filter($jinxes, [$this, 'isValidJinxEntry']);
@@ -96,6 +101,7 @@ class TPIResourcesModel
 
         return $filtered;
     }
+     */
 
     /**
      * Filter the night sheet so that only valid entries are included.
@@ -103,6 +109,7 @@ class TPIResourcesModel
      * @param array $nightsheet Night sheet to filter.
      * @return array Filtered sheet.
      */
+    /*
     public function filterNightsheet(array $nightsheet): array
     {
         $filtered = array_filter($nightsheet, function ($item) {
@@ -117,6 +124,7 @@ class TPIResourcesModel
 
         return $filtered;
     }
+     */
 
     /**
      * Filters the reminders.
@@ -124,12 +132,14 @@ class TPIResourcesModel
      * @param array $reminders Reminders to filter.
      * @return array Filtered reminders.
      */
+    /*
     public function filterReminders(array $reminders): array
     {
         return array_filter($reminders, function ($item) {
             return is_string($item) && strlen($item) > 0;
         });
     }
+     */
 
     /**
      * Expands the reminders to include examples of the reminder text, allowing
@@ -288,6 +298,7 @@ class TPIResourcesModel
      * @param mixed $item Item to check.
      * @return bool `true` if the item is a valid role, `false` otherwise.
      */
+    /*
     public function isValidRoleEntry($item): bool
     {
         $this->message = '';
@@ -340,6 +351,7 @@ class TPIResourcesModel
 
         return true;
     }
+     */
 
     /**
      * Checks to see if the given item is a valid role special entry.
@@ -348,6 +360,7 @@ class TPIResourcesModel
      * @return bool `true` if the item is a valid role special entry, `false`
      * otherwise.
      */
+    /*
     protected function isValidSpecialEntry($item): bool
     {
         return (
@@ -363,6 +376,7 @@ class TPIResourcesModel
             )
         );
     }
+     */
 
     /**
      * Checks to see if the given item is a valid jinx entry.
@@ -370,6 +384,7 @@ class TPIResourcesModel
      * @param mixed $item Item to check.
      * @return bool `true` if the item is a valid jinx entry, `false` otherwise.
      */
+    /*
     protected function isValidJinxEntry($item): bool
     {
         return (
@@ -378,6 +393,7 @@ class TPIResourcesModel
             && is_array($item['jinx'] ?? null)
         );
     }
+     */
 
     /**
      * Checks to see if the given item is a valid "jinx" item in a jinx entry.
@@ -386,6 +402,7 @@ class TPIResourcesModel
      * @return bool `true` if the item is a valid "jinx" item in a jinx entry,
      * `false` otherwise.
      */
+    /*
     protected function isValidJinxJinxEntry($item): bool
     {
         return (
@@ -394,13 +411,14 @@ class TPIResourcesModel
             && is_string($item['reason'] ?? null)
         );
     }
+     */
 
     /**
      * Generates the images for the given role.
      *
      * @param string $id Role ID.
      * @param string $team Role's team.
-     * @return array Array of image locations.
+     * @return array<string> Array of image locations.
      */
     protected function generateImages(string $id, string $team): array
     {
