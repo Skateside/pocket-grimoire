@@ -11,9 +11,7 @@ use Symfony\Component\Validator\Constraints as Assert;
 class JinxesDto implements DtoInterface
 {
     public function __construct(
-        /**
-         * @var JinxDto[] $jinxes
-         */
+        /** @var JinxDto[] $jinxes */
         #[Assert\Valid]
         public readonly array $jinxes,
     ) {

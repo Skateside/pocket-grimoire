@@ -3,7 +3,11 @@
 namespace App\Model;
 
 /**
- * @phpstan-import-type Jinxes from \App\Types\RawFilesTypes
+ * @phpstan-import-type Data from \App\Dto\NightsheetDto as Nightsheet
+ * @phpstan-import-type Data from \App\Dto\TPIRemindersDto as TPIReminders
+ * @phpstan-import-type Data from \App\Dto\TPIRemindersExpandedDto as TPIRemindersExpanded
+ * @phpstan-import-type Data from \App\Dto\TPIRolesDto as TPIRoles
+ * @phpstan-import-type Data from \App\Dto\TPIRolesExpandedDto as TPIRolesExpanded
  */
 class TPIResourcesModel
 {
@@ -13,143 +17,12 @@ class TPIResourcesModel
     const LOCATION_IMAGES = '/build/img/roles/%s.webp';
 
     /**
-     * An error message generated when validating a role.
-     */
-    // private string $message = '';
-
-    /**
-     * Gets the latest role validation error message.
-     *
-     * @return string Latest role validation error message.
-     */
-    /*
-    public function getMessage()
-    {
-        return $this->message;
-    }
-     */
-
-    /**
-     * Filter the roles so that only valid roles are included.
-     *
-     * @param array $roles Roles to filter.
-     * @return array Filtered roles.
-     */
-    /*
-    public function filterRoles(array $roles): array
-    {
-        $filtered = array_filter($roles, [$this, 'isValidRoleEntry']);
-
-        foreach ($filtered as $role) {
-
-            if (is_array($role['reminders'] ?? null)) {
-                $role['reminders'] = array_filter($role['reminders'], function ($item) {
-                    return is_string($item);
-                });
-
-                if (!count($role['reminders'])) {
-                    unset($role['reminders']);
-                }
-            }
-
-            if (is_array($role['remindersGlobal'] ?? null)) {
-                $role['remindersGlobal'] = array_filter($role['remindersGlobal'], function ($item) {
-                    return is_string($item);
-                });
-
-                if (!count($role['remindersGlobal'])) {
-                    unset($role['remindersGlobal']);
-                }
-            }
-
-            if (is_array($role['special'] ?? null)) {
-                $role['special'] = array_filter($role['special'], function ($item) {
-                    return $this->isValidSpecialEntry($item);
-                });
-
-                if (!count($role['special'])) {
-                    unset($role['special']);
-                }
-            }
-
-        }
-
-        return $filtered;
-    }
-     */
-
-    /**
-     * Filter the jinxes so that only valid jinxes are included.
-     *
-     * @param array<mixed> $jinxes Jinxes to filter.
-     * @return Jinxes Filtered jinxes.
-     */
-    /*
-    public function filterJinxes(array $jinxes): array
-    {
-        $filtered = array_filter($jinxes, [$this, 'isValidJinxEntry']);
-
-        foreach ($filtered as $index => $jinx) {
-            $jinx['jinx'] = array_filter($jinx['jinx'], function ($item) {
-                return $this->isValidJinxJinxEntry($item);
-            });
-
-            if (!count($jinx['jinx'])) {
-                array_splice($filtered, $index, 1);
-            }
-        }
-
-        return $filtered;
-    }
-     */
-
-    /**
-     * Filter the night sheet so that only valid entries are included.
-     *
-     * @param array $nightsheet Night sheet to filter.
-     * @return array Filtered sheet.
-     */
-    /*
-    public function filterNightsheet(array $nightsheet): array
-    {
-        $filtered = array_filter($nightsheet, function ($item) {
-            return is_array($item);
-        });
-
-        foreach ($filtered as $key => $night) {
-            $filtered[$key] = array_filter($night, function ($id) {
-                return is_string($id);
-            });
-        }
-
-        return $filtered;
-    }
-     */
-
-    /**
-     * Filters the reminders.
-     *
-     * @param array $reminders Reminders to filter.
-     * @return array Filtered reminders.
-     */
-    /*
-    public function filterReminders(array $reminders): array
-    {
-        return array_filter($reminders, function ($item) {
-            return is_string($item) && strlen($item) > 0;
-        });
-    }
-     */
-
-    /**
      * Expands the reminders to include examples of the reminder text, allowing
      * us to get that information from the community translations.
      *
-     * @param array<string, string> $reminders Reminders to expand.
-     * @param array<array<string, string|string[]>> $roles Roles that have
-     * the reminder texts in them.
-     * @return array<string, array{text: string, examples: string[]}> Expanded
-     * reminders.
+     * @param TPIReminders $reminders Reminders to expand.
+     * @param TPIRoles $roles Roles that have the reminder texts in them.
+     * @return TPIRemindersExpanded Expanded reminders.
      */
     public function expandReminders(array $reminders, array $roles): array
     {
@@ -177,20 +50,19 @@ class TPIResourcesModel
     }
 
     /**
-     * Combines the data.
+     * Expand the roles data into something that can be used.
      *
-     * @param array $roles Raw roles to modify.
-     * @param array $reminders Reminder conversions.
-     * @param array $nightsheet Night sheet for the first and other nightrs.
-     * @return array Combined data.
+     * @param TPIRoles $roles Roles to expand.
+     * @param Nightsheet $nightsheet Nightsheet for the roles.
+     * @param TPIReminders $reminders Reversed reminders.
+     * @return TPIRolesExpanded Expanded roles.
      */
-    public function combineRoles(
+    public function expandRoles(
         array $roles,
+        array $nightsheet,
         array $reminders,
-        array $nightsheet
     ): array {
-        $combined = [];
-
+        $expanded = [];
         $firstNight = $nightsheet['firstNight'];
         $otherNight = $nightsheet['otherNight'];
 
@@ -250,7 +122,7 @@ class TPIResourcesModel
                 && in_array($role['id'], $nightsheet['firstNight'])
             ) {
                 $cleanRole['firstNight'] = array_search($role['id'], $nightsheet['firstNight']) + 1;
-                $cleanRole['firstNightReminder'] = static::cleanNightReminder($role['firstNightReminder']);
+                $cleanRole['firstNightReminder'] = $this->cleanNightReminder($role['firstNightReminder']);
             }
 
             if (
@@ -258,19 +130,26 @@ class TPIResourcesModel
                 && in_array($role['id'], $nightsheet['otherNight'])
             ) {
                 $cleanRole['otherNight'] = array_search($role['id'], $nightsheet['otherNight']) + 1;
-                $cleanRole['otherNightReminder'] = static::cleanNightReminder($role['otherNightReminder']);
+                $cleanRole['otherNightReminder'] = $this->cleanNightReminder($role['otherNightReminder']);
             }
 
             $cleanRole['image'] = $this->generateImages($role['id'], $role['team']);
 
-            $combined[] = $cleanRole;
+            $expanded[] = $cleanRole;
         }
 
-        usort($combined, function ($a, $b) {
-            return $a['id'] <=> $b['id'];
-        });
+        // I don't know why PHPStan is struggling with understanding these lines
+        // even if I explicitly define $expanded. Ignore for now.
+        usort(
+            // @phpstan-ignore argument.unresolvableType
+            $expanded,
+            // @phpstan-ignore argument.unresolvableType
+            function (array $a, array $b) {
+                return $a['id'] <=> $b['id'];
+            },
+        );
 
-        return $combined;
+        return $expanded;
     }
 
     /**
@@ -280,7 +159,7 @@ class TPIResourcesModel
      * @param string $nightReminder Night reminder to clean.
      * @return string Cleaned night reminder.
      */
-    public static function cleanNightReminder(string $nightReminder)
+    public function cleanNightReminder(string $nightReminder): string
     {
         $removed = str_replace(':reminder:', '', $nightReminder);
         $unspaced = preg_replace('/\s+/', ' ', $removed);
@@ -291,127 +170,6 @@ class TPIResourcesModel
 
         return (string) $despaced;
     }
-
-    /**
-     * Checks to see if the given item is a valid role.
-     *
-     * @param mixed $item Item to check.
-     * @return bool `true` if the item is a valid role, `false` otherwise.
-     */
-    /*
-    public function isValidRoleEntry($item): bool
-    {
-        $this->message = '';
-
-        // Check that we can even debug this entry.
-        if (!is_array($item) || !is_string($item['id'] ?? null)) {
-            $this->message = 'Not an array or missing ID';
-            return false;
-        }
-
-        // Check the basic structure and make sure that all required keys exist
-        // in a format that we're expecting.
-        // ("required" based on the keys that appear in all entries in roles.json)
-        if (
-            !is_string($item['name'] ?? null)
-            || !is_string($item['team'] ?? null)
-            || !is_string($item['edition'] ?? null)
-            || !is_bool($item['setup'] ?? null)
-            || !is_string($item['ability'] ?? null)
-        ) {
-            $this->message = "'{$item['id']}' missing required key";
-            return false;
-        }
-
-        // If a flavor (US-spelling) exists, make sure it's a string.
-        if (
-            array_key_exists('flavor', $item)
-            && !is_string($item['flavor'])
-        ) {
-            $this->message = "'{$item['id']}' invalid flavor";
-        }
-
-        // If a first night reminder exists, make sure it's a string.
-        if (
-            array_key_exists('firstNightReminder', $item)
-            && !is_string($item['firstNightReminder'])
-        ) {
-            $this->message = "'{$item['id']}' invalid first night reminder";
-            return false;
-        }
-
-        // If an other night reminder exists, make sure it's a string.
-        if (
-            array_key_exists('otherNightReminder', $item)
-            && !is_string($item['otherNightReminder'])
-        ) {
-            $this->message = "'{$item['id']}' invalid other night reminder";
-            return false;
-        }
-
-        return true;
-    }
-     */
-
-    /**
-     * Checks to see if the given item is a valid role special entry.
-     *
-     * @param mixed $item Item to check.
-     * @return bool `true` if the item is a valid role special entry, `false`
-     * otherwise.
-     */
-    /*
-    protected function isValidSpecialEntry($item): bool
-    {
-        return (
-            is_array($item)
-            && is_string($item['type'] ?? null)
-            && is_string($item['name'] ?? null)
-            && (!array_key_exists('time', $item) || is_string($item['time']))
-            && (!array_key_exists('global', $item) || is_string($item['global']))
-            && (
-                !array_key_exists('value', $item)
-                || is_string($item['value'])
-                || is_int($item['value'])
-            )
-        );
-    }
-     */
-
-    /**
-     * Checks to see if the given item is a valid jinx entry.
-     *
-     * @param mixed $item Item to check.
-     * @return bool `true` if the item is a valid jinx entry, `false` otherwise.
-     */
-    /*
-    protected function isValidJinxEntry($item): bool
-    {
-        return (
-            is_array($item)
-            && is_string($item['id'] ?? null)
-            && is_array($item['jinx'] ?? null)
-        );
-    }
-     */
-
-    /**
-     * Checks to see if the given item is a valid "jinx" item in a jinx entry.
-     *
-     * @param mixed $item Item to check.
-     * @return bool `true` if the item is a valid "jinx" item in a jinx entry,
-     * `false` otherwise.
-     */
-    /*
-    protected function isValidJinxJinxEntry($item): bool
-    {
-        return (
-            is_array($item)
-            && is_string($item['id'] ?? null)
-            && is_string($item['reason'] ?? null)
-        );
-    }
-     */
 
     /**
      * Generates the images for the given role.

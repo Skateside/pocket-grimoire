@@ -20,7 +20,9 @@ use App\Dto\{
     JinxesDto,
     NightsheetDto,
     TPIRemindersDto,
+    TPIRemindersExpandedDto,
     TPIRolesDto,
+    TPIRolesExpandedDto,
 };
 
 #[AsCommand(name: 'pocket-grimoire:fetch')]
@@ -114,7 +116,7 @@ class FetchResourcesCommand extends Command
                 $body = [
                     $type,
                     is_null($results['dto']) ? 0 : count($results['dto']->toArray()),
-                    count($results['violations']) ? $this->stringifyViolations($results['violations']): 'None ✓',
+                    count($results['violations']) ? $this->stringifyViolations($results['violations']) : 'None ✓',
                 ];
 
                 $tableBody[] = $body;
@@ -123,17 +125,70 @@ class FetchResourcesCommand extends Command
             $io->table($tableHeaders, $tableBody);
         }
 
-        
+        $writing = [
+            'jinxes.json' => [
+                'data' => $jinxes['dto']->toArray(),
+                'dto' => JinxesDto::class,
+            ],
+            'reminders.json' => [
+                'data' => $this->resourcesModel->expandReminders(
+                    $reminders['dto']->toArray(),
+                    $roles['dto']->toArray(),
+                ),
+                'dto' => TPIRemindersExpandedDto::class,
+            ],
+            'characters.json' => [
+                'data' => $this->resourcesModel->expandRoles(
+                    $roles['dto']->toArray(),
+                    $nightsheet['dto']->toArray(),
+                    array_flip($reminders['dto']->toArray()),
+                ),
+                'dto' => TPIRolesExpandedDto::class,
+            ],
+        ];
 
-        /*
-        if (
-            count($rawNightsheet) !== count($nightsheet)
-            || count($rawRoles) !== count($roles)
-            || count($rawReminders) !== count($reminders)
-        ) {
-            $io->warning('Some filtering occurred');
+        if ($output->isVerbose()) {
+            $io->section('Writing');
+            $bar = $io->createProgressBar(count($writing));
+            $bar->start();
+
+            $tableHeaders = ['Filename', 'Validation errors'];
+            $tableBody = [];
         }
-         */
+
+        foreach ($writing as $filename => $data) {
+            $written = $this->storage->writeJson(
+                Storage::LOCATION_RAW,
+                $filename,
+                $data['data'],
+                $output->isVeryVerbose() ? JSON_PRETTY_PRINT : 0,
+            );
+
+            if ($written === false) {
+                $io->error("Failed to write {$filename}");
+                return Command::FAILURE;
+            }
+
+            if ($output->isVerbose()) {
+                $dto = $data['dto']::from($data['data']);
+                $violations = $this->validator->validate($dto);
+
+                $tableBody[] = [
+                    $filename,
+                    count($violations) ? $this->stringifyViolations($this->convertViolations($violations)) : 'None ✓',
+                ];
+
+                $bar->advance();
+            }
+        }
+
+        if ($output->isVerbose()) {
+            $bar->finish();
+            $io->writeln('');
+            $io->writeln('');
+            $io->section('Results');
+            $io->table($tableHeaders, $tableBody);
+        }
 
         /*
         $writtenJinxes = $this->storage->writeJson(
@@ -183,6 +238,7 @@ class FetchResourcesCommand extends Command
         $io->success('Characters and Jinxes files written');
          */
 
+        $io->success('Resources fetched and stored');
         return Command::SUCCESS;
     }
 
@@ -243,16 +299,28 @@ class FetchResourcesCommand extends Command
         $violations = $this->validator->validate($response['dto']);
 
         if (count($violations)) {
-            $errors = [];
-
-            foreach ($violations as $violation) {
-                $errors[$violation->getPropertyPath()][] = (string) $violation->getMessage();
-            }
-
-            $response['violations'] = $errors;
+            $response['violations'] = $this->convertViolations($violations);
         }
 
         return $response;
+    }
+
+    /**
+     * Converts the violations into a more human-readable format.
+     *
+     * @param ConstraintViolationListInterface $violations Violations that
+     * should be logged.
+     * @return array<string, string[]> Human-readable violations.
+     */
+    protected function convertViolations(ConstraintViolationListInterface $violations): array
+    {
+        $converted = [];
+
+        foreach ($violations as $violation) {
+            $converted[$violation->getPropertyPath()][] = (string) $violation->getMessage();
+        }
+
+        return $converted;
     }
 
     /**

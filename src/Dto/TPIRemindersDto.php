@@ -11,9 +11,7 @@ use Symfony\Component\Validator\Constraints as Assert;
 class TPIRemindersDto implements DtoInterface
 {
     public function __construct(
-        /**
-         * @var TPIReminderDto[] $reminders
-         */
+        /** @var TPIReminderDto[] $reminders */
         #[Assert\Valid]
         public readonly array $reminders,
     ) {
