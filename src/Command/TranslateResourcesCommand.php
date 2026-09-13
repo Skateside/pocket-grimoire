@@ -7,15 +7,23 @@ use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
 use Symfony\Component\Console\Style\SymfonyStyle;
-use Symfony\Contracts\Translation\TranslatorInterface;
-use App\Enums\{
-    CommunityTranslationEnum,
-    TPIURLEnum,
+// use Symfony\Contracts\Translation\TranslatorInterface;
+use Symfony\Component\Validator\Validator\ValidatorInterface;
+use Symfony\Component\Validator\ConstraintViolationListInterface;
+use App\Dto\{
+    DtoInterface,
+    JinxesDto,
+    TPIRemindersExpandedDto,
+    TPIRolesExpandedDto,
 };
+// use App\Enums\{
+//     CommunityTranslationEnum,
+//     TPIURLEnum,
+// };
 use App\Model\{
     LocalesModel,
-    TPIResourcesModel,
-    TPITranslationModel,
+//     TPIResourcesModel,
+//     TPITranslationModel,
 };
 use App\Service\{
     Fetch,
@@ -25,27 +33,30 @@ use App\Service\{
 #[AsCommand(name: 'pocket-grimoire:translate')]
 class TranslateResourcesCommand extends Command
 {
-    protected TPITranslationModel $translationModel;
+    // protected TPITranslationModel $translationModel;
     protected LocalesModel $localesModel;
-    protected TPIResourcesModel $resourcesModel;
+    // protected TPIResourcesModel $resourcesModel;
     protected Fetch $fetch;
     protected Storage $storage;
-    protected TranslatorInterface $translator;
+    // protected TranslatorInterface $translator;
+    protected ValidatorInterface $validator;
 
     public function __construct(
-        TPITranslationModel $translationModel,
+        // TPITranslationModel $translationModel,
         LocalesModel $localesModel,
-        TPIResourcesModel $resourcesModel,
+        // TPIResourcesModel $resourcesModel,
         Fetch $fetch,
         Storage $storage,
-        TranslatorInterface $translator,
+        // TranslatorInterface $translator,
+        ValidatorInterface $validator,
     ) {
-        $this->translationModel = $translationModel;
+        // $this->translationModel = $translationModel;
         $this->localesModel = $localesModel;
-        $this->resourcesModel = $resourcesModel;
+        // $this->resourcesModel = $resourcesModel;
         $this->fetch = $fetch;
         $this->storage = $storage;
-        $this->translator = $translator;
+        // $this->translator = $translator;
+        $this->validator = $validator;
 
         parent::__construct();
     }
@@ -59,10 +70,36 @@ class TranslateResourcesCommand extends Command
             $io->section('Reading local files');
         }
 
+        $characters = $this->getLocalJson('characters.json', TPIRolesExpandedDto::class);
+        $reminders = $this->getLocalJson('reminders.json', TPIRemindersExpandedDto::class);
+        $jinxes = $this->getLocalJson('jinxes.json', JinxesDto::class);
+
+        if (
+            !is_null($characters['error'])
+            || !is_null($reminders['error'])
+            || !is_null($jinxes['error'])
+        ) {
+            $io->error($characters['error'] ?? $reminders['error'] ?? $jinxes['error']);
+            return Command::FAILURE;
+        }
+
+        $locales = $this->localesModel->getLocales();
+        $bar = null; // Created in verbose mode.
 
         if ($output->isVerbose()) {
             $io->writeln('Done');
             $io->section('Downloading translations and writing files');
+            $bar = $io->createProgressBar(count($locales));
+            $bar->start();
+        }
+
+        foreach ($locales as $locale) {
+            // TODO: Get the official remote JSON translations.
+            // TODO: Get the community JSON translations.
+
+            if ($output->isVerbose()) {
+                $bar->advance();
+            }
         }
 
         return Command::SUCCESS;
@@ -182,6 +219,60 @@ class TranslateResourcesCommand extends Command
     }
 
     /**
+     * Reads the JSON from the given file name and passes it into the given DTO,
+     * allowing it to be validated.
+     *
+     * @param string $filename Name of the file to parse.
+     * @param (callable(array<mixed>): DtoInterface)|string $dtoClass Class string for the DTO class.
+     * @return array{dto: ?DtoInterface, error: ?string, violations: array<string, string[]>}
+     * Results of the JSON being parsed and validated.
+     */
+    protected function getLocalJson(
+        string $filename,
+        callable|string $dtoClass,
+    ): array {
+        $response = [
+            'dto' => null,
+            'error' => null,
+            'violations' => [],
+        ];
+
+        $data = $this->storage->readJson(Storage::LOCATION_RAW, $filename);
+
+        if (is_null($data)) {
+            $response['error'] = 'Cannot read JSON';
+            return $response;
+        }
+
+        $response['dto'] = is_callable($dtoClass) ? $dtoClass($data) : $dtoClass::from($data);
+        $violations = $this->validator->validate($response['dto']);
+
+        if (count($violations)) {
+            $response['violations'] = $this->convertViolations($violations);
+        }
+
+        return $response;
+    }
+
+    /**
+     * Converts the violations into a more human-readable format.
+     *
+     * @param ConstraintViolationListInterface $violations Violations that
+     * should be logged.
+     * @return array<string, string[]> Human-readable violations.
+     */
+    protected function convertViolations(ConstraintViolationListInterface $violations): array
+    {
+        $converted = [];
+
+        foreach ($violations as $violation) {
+            $converted[$violation->getPropertyPath()][] = (string) $violation->getMessage();
+        }
+
+        return $converted;
+    }
+
+    /**
      * Fetches the local files, parses and filters them.
      *
      * @return array{
@@ -191,6 +282,7 @@ class TranslateResourcesCommand extends Command
      *  count: array{reminders: int, characters: int, jinxes: int},
      * }
      */
+    /*
     protected function fetchLocalData(): array
     {
         $rawReminders = $this->storage->readJson(Storage::LOCATION_RAW, 'reminders.json');
@@ -215,6 +307,7 @@ class TranslateResourcesCommand extends Command
             ],
         ];
     }
+     */
 
     /**
      * Augments the given characers and jinxes with locale-specific data, if it

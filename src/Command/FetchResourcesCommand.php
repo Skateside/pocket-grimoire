@@ -190,83 +190,9 @@ class FetchResourcesCommand extends Command
             $io->table($tableHeaders, $tableBody);
         }
 
-        /*
-        $writtenJinxes = $this->storage->writeJson(
-            Storage::LOCATION_RAW,
-            'jinxes.json',
-            $jinxes->toArray(),
-            $output->isVeryVerbose() ? JSON_PRETTY_PRINT : 0,
-        );
-
-        if ($writtenJinxes === false) {
-            $io->error('Failed to write jinxes');
-            return Command::FAILURE;
-        }
-
-        $combined = $this->resourcesModel->combineRoles(
-            $roles->toArray(),
-            array_flip($reminders),
-            $nightsheet->toArray(),
-        );
-        $expanded = $this->resourcesModel->expandReminders($reminders, $roles->toArray());
-
-        $writtenReminders = $this->storage->writeJson(
-            Storage::LOCATION_RAW,
-            'reminders.json',
-            // $reminders,
-            $expanded,
-            $output->isVeryVerbose() ? JSON_PRETTY_PRINT : 0,
-        );
-
-        if ($writtenReminders === false) {
-            $io->error('Failed to write reminders');
-            return Command::FAILURE;
-        }
-
-        $writtenRoles = $this->storage->writeJson(
-            Storage::LOCATION_RAW,
-            'characters.json',
-            $combined,
-            $output->isVeryVerbose() ? JSON_PRETTY_PRINT : 0,
-        );
-
-        if ($writtenRoles === false) {
-            $io->error('Failed to write characters');
-            return Command::FAILURE;
-        }
-
-        $io->success('Characters and Jinxes files written');
-         */
-
         $io->success('Resources fetched and stored');
         return Command::SUCCESS;
     }
-
-    /**
-     * Logs any violations found.
-     *
-     * @param ConstraintViolationListInterface $violations Violations that
-     * should be logged.
-     * @param callable(array<string, string[]>): void $log Function that logs the
-     * given violations.
-     */
-    /*
-    protected function logViolations(
-        ConstraintViolationListInterface $violations,
-        callable $log,
-    ): void {
-        if (!count($violations)) {
-            return;
-        }
-
-        $errors = [];
-        foreach ($violations as $violation) {
-            $errors[$violation->getPropertyPath()][] = (string) $violation->getMessage();
-        }
-
-        $log($errors);
-    }
-     */
 
     /**
      * Gets the JSON from the remote source, passes the data into a DTO class,

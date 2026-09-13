@@ -5,7 +5,15 @@ namespace App\Model;
 use App\Service\Storage;
 
 /**
- * @phpstan-type StanLocale array{code: string, text: string, tpi: string, community: array{roles: string, jinxes: string}}
+ * @phpstan-type StanLocale array{
+ *  code: string,
+ *  text: string,
+ *  tpi: string,
+ *  community: array{
+ *      roles: string,
+ *      jinxes: string,
+ *  },
+ * }
  */
 class LocalesModel
 {
@@ -25,9 +33,9 @@ class LocalesModel
      *
      * @template T
      * @param (callable(StanLocale): T)|null $map Optional map function to
-     *        convert the results before returning them.
+     * convert the results before returning them.
      * @return ($map is null ? StanLocale[] : T[]) The locales, optionally
-     *         converted with the map function.
+     * converted with the map function.
      */
     public function getLocales(?callable $map = null): array
     {

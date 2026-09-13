@@ -12,11 +12,11 @@ class Storage
     const LOCATION_PUBLIC_JS = 'public_js';
     const LOCATION_TOOLS = 'tools';
 
-    protected $projectDir;
-    protected $locations = [];
-
-    public function __construct(string $projectDir)
-    {
+    public function __construct(
+        protected string $projectDir,
+        /** @var array<string, string> $locations */
+        protected array $locations = [],
+    ) {
         $this->projectDir = $projectDir;
         $this->locations = [
             static::LOCATION_CONFIG => '/config',
@@ -80,7 +80,7 @@ class Storage
      * @param string ...$parts Directories/filename to read.
      * @return string|false The contents of the file or false on an error.
      */
-    public function read(string $locationId, string ...$parts): string
+    public function read(string $locationId, string ...$parts): string|false
     {
         return file_get_contents(static::concat($this->getRealpath($locationId), ...$parts));
     }
@@ -92,7 +92,7 @@ class Storage
      * @param string ...$parts Directories/filename to read.
      * @return mixed JSON data.
      */
-    public function readJson(string $locationId, string ...$parts): array
+    public function readJson(string $locationId, string ...$parts): mixed
     {
         return json_decode($this->read($locationId, ...$parts), true);
     }
@@ -104,7 +104,7 @@ class Storage
      * @param string ...$parts Directories/filename to read.
      * @return mixed YAML data.
      */
-    public function readYaml(string $locationId, string ...$parts): array
+    public function readYaml(string $locationId, string ...$parts): mixed
     {
         return Yaml::parse($this->read($locationId, ...$parts));
     }

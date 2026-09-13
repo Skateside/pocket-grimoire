@@ -10,6 +10,7 @@ class TPITranslationModel
      * @param array<mixed> $jinxes Jinxes to filter.
      * @return array<string, string> Filtered jinxes.
      */
+    /*
     public function filterJinxes(array $jinxes): array
     {
         $filtered = [];
@@ -25,6 +26,7 @@ class TPITranslationModel
 
         return $filtered;
     }
+     */
 
     /**
      * Filters the raw reminders so that only valid entries remain.
@@ -32,13 +34,14 @@ class TPITranslationModel
      * @param array<mixed> $reminders Reminders to filter.
      * @return array<string, array{text: string, examples: string[]}> Filtered reminders.
      */
+    /*
     public function filterReminders(array $reminders): array
     {
         /*
         return array_filter($reminders, function ($item) {
             return is_string($item);
         });
-         */
+         * /
         return array_filter($reminders, function ($item) {
             return (
                 is_array($item)
@@ -49,6 +52,7 @@ class TPITranslationModel
             );
         });
     }
+     */
 
     /**
      * Filters the raw roles so that only valid entries remain.
@@ -88,6 +92,7 @@ class TPITranslationModel
      * @param array $translatedReminders The translated reminders.
      * @return array The combined, translated roles.
      */
+    /*
     public function combineRoles(
         array $baseRoles,
         array $baseReminders,
@@ -137,6 +142,7 @@ class TPITranslationModel
 
         return $combined;
     }
+     */
 
     /**
      * Combines the jinxes.
@@ -145,6 +151,7 @@ class TPITranslationModel
      * @param array $translatedJinxes Translated jinxes.
      * @return array Combined, translated jinxes.
      */
+    /*
     public function combineJinxes(
         array $baseJinxes,
         array $translatedJinxes
@@ -169,12 +176,14 @@ class TPITranslationModel
 
         return $combined;
     }
+     */
 
     /**
      * Equivalent of array_all() for PHP < 8.4.
      *
-     * @param array<mixed> $array Array to check.
-     * @param callable(mixed, int|string): bool $callback Callback for checking.
+     * @template T
+     * @param array<T> $array Array to check.
+     * @param callable(T, int|string): bool $callback Callback for checking.
      * @return bool true if all values and keys match the callback, false otherwise.
      */
     protected function arrayAll(array $array, callable $callback): bool
