@@ -1,8 +1,12 @@
 .qr {
     display: block;
+    width: 100%;
 
     > svg {
         display: block;
+        width: 100%;
+        max-width: 256px;
+        height: auto;
         background-color: #fff;
         margin: 0 auto;
     }

@@ -7,6 +7,7 @@ import "./processes/breakdown-table.js";
 import "./processes/setup/general.js";
 import "./processes/setup/select-edition.js";
 import "./processes/setup/select-characters.js";
+import "./processes/setup/player-draw.js";
 import "./processes/setup/select-your-character.js";
 import "./processes/setup/character-sheet.js";
 import "./processes/setup/clear-cache.js";

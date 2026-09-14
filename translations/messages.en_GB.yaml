@@ -12,6 +12,22 @@ index:
     title: Game
     description: A virtual grimoire for Blood on the Clocktower
 
+draw:
+    title: Player Draw
+    description: Draw a Blood on the Clocktower character
+    claiming: Claiming your character...
+    claimed: Character claimed
+    ready_to_reveal: Your character is ready. Make sure nobody else can see your screen before revealing it.
+    reveal: Reveal my character
+    player_number: "You are player #%number%"
+    name: Your name
+    submit: Save name
+    registered: Registered - once you've remembered your character, press here to see the script
+    saving: Saving...
+    saved: Name saved
+    draft_saved: Name shared with the Storyteller
+    claim_error: This draw could not be opened.
+
 sheet:
     title: Character Sheet
     description: The character sheet for this edition of Blood on the Clocktower
@@ -82,6 +98,7 @@ setup:
         toggle_duplicates: Allow duplicate characters
         highlight_random: Highlight random
         draw_characters: Draw Characters
+        player_draw_qr: Player draw QR
         add_all: Add All
         layout: Layout
         ellipse: Ellipse
@@ -104,6 +121,20 @@ setup:
         include: 'Include:'
         travellers: Travellers
         fabled: Fabled
+
+    player_draw:
+        title: Player draw QR
+        intro: Scan this QR code to draw characters on players' own devices.
+        submitted: names submitted
+        copy_link: Copy draw link
+        link_copied: Link copied
+        copy_error: Could not copy link
+        waiting: Waiting
+        claimed: Choosing name
+        typing: Typing
+        ready: Ready
+        no_name: No name yet
+        create_error: The player draw could not be created. Please try again.
 
     clear_cache:
         title: Clear Cache

@@ -27,6 +27,7 @@
 <script>
 var URLS = {
     homebrew: "{{ path('homebrew')|e('js') }}",
+    drawCreate: "{{ path('draw_create')|e('js') }}",
     url: "{{ path('data_url', { url: '{url}' })|e('js') }}",
     botc: "{{ path('data_get_botc', { term: '{term}' })|e('js') }}",
 };
@@ -40,6 +41,15 @@ var I18N = {
     noCharacters: "{{ 'messages.no_characters'|trans|e('js') }}",
     customInfoToken: "{{ 'messages.custom_info_token'|trans|e('js') }}",
     bagDisabled: "{{ 'messages.bag_disabled'|trans|e('js') }}",
+    playerDrawWaiting: "{{ 'setup.player_draw.waiting'|trans|e('js') }}",
+    playerDrawClaimed: "{{ 'setup.player_draw.claimed'|trans|e('js') }}",
+    playerDrawTyping: "{{ 'setup.player_draw.typing'|trans|e('js') }}",
+    playerDrawReady: "{{ 'setup.player_draw.ready'|trans|e('js') }}",
+    playerDrawNoName: "{{ 'setup.player_draw.no_name'|trans|e('js') }}",
+    playerDrawCreateError: "{{ 'setup.player_draw.create_error'|trans|e('js') }}",
+    playerDrawCopyLink: "{{ 'setup.player_draw.copy_link'|trans|e('js') }}",
+    playerDrawLinkCopied: "{{ 'setup.player_draw.link_copied'|trans|e('js') }}",
+    playerDrawCopyError: "{{ 'setup.player_draw.copy_error'|trans|e('js') }}",
     players: "{{ 'groups.players'|trans|e('js') }}",
     townsfolk: "{{ 'groups.townsfolk'|trans|e('js') }}",
     outsider: "{{ 'groups.outsider'|trans|e('js') }}",

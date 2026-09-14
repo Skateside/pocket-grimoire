@@ -1,0 +1,78 @@
+{% extends "base.html.twig" %}
+
+{% block title %}{{ 'draw.title'|trans }}{% endblock %}
+{% set meta_description = 'draw.description'|trans %}
+
+{% block styles %}{{ encore_entry_link_tags('css/main') }}{% endblock %}
+
+{% set body_class = 'body-grimoire' %}
+
+{% block body %}
+
+<h1 class="title">{{ 'draw.title'|trans }}</h1>
+
+<section class="player-draw-page">
+    <p id="draw-status" class="player-draw-page__status">{{ 'draw.claiming'|trans }}</p>
+    <p id="draw-number" class="player-draw-page__number" hidden></p>
+    <p id="draw-reveal-wrapper" hidden>
+        <button type="button" class="button" id="draw-reveal">{{ 'draw.reveal'|trans }}</button>
+    </p>
+    <div id="draw-token" class="player-draw-page__token" hidden></div>
+    <p id="draw-ability" class="player-draw-page__ability" hidden></p>
+
+    <form id="draw-name-form" class="player-draw-page__form" hidden>
+        <p>
+            <label for="draw-name" class="d-block text-small">{{ 'draw.name'|trans }}</label>
+            <input type="text" class="input" name="draw-name" id="draw-name" autocomplete="name" required>
+        </p>
+        <p><button type="submit" class="button" id="draw-submit">{{ 'draw.submit'|trans }}</button></p>
+    </form>
+</section>
+
+<template id="character-template">
+    <span class="character js--character js--character--leaves">
+        <span class="character__image">
+            <img src="" alt="" class="character__icon js--character--image" width="177" height="124" loading="lazy">
+        </span>
+        <svg viewBox="0 0 150 150" class="character__text">
+            <path d="M 13 75 C 13 160, 138 160, 138 75" id="curve" fill="transparent"></path>
+            <text width="150" x="66.6%" text-anchor="middle" class="character__name">
+                <textPath xlink:href="#curve" style="fill: currentColor;" class="js--character--name"></textPath>
+            </text>
+        </svg>
+        <span class="character__shroud">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" class="character__ghost-vote"><path fill="currentColor" d="M96 80c0-26.5 21.5-48 48-48H432c26.5 0 48 21.5 48 48V384H96V80zm313 47c-9.4-9.4-24.6-9.4-33.9 0l-111 111-47-47c-9.4-9.4-24.6-9.4-33.9 0s-9.4 24.6 0 33.9l64 64c9.4 9.4 24.6 9.4 33.9 0L409 161c9.4-9.4 9.4-24.6 0-33.9zM0 336c0-26.5 21.5-48 48-48H64V416H512V288h16c26.5 0 48 21.5 48 48v96c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V336z"/></svg>
+        </span>
+        <span class="character__player-name js--character--player-name"></span>
+    </span>
+</template>
+
+{% endblock %}
+
+{% block javascript %}
+<script>
+var DRAW_SESSION = {
+    id: "{{ session.uuid|e('js') }}"
+};
+
+var URLS = {
+    claim: "{{ path('draw_claim', { uuid: session.uuid })|e('js') }}",
+    name: "{{ path('draw_name', { uuid: session.uuid })|e('js') }}",
+    sheet: "{{ sheetUrl|e('js') }}"
+};
+
+var I18N = {
+    drawClaiming: "{{ 'draw.claiming'|trans|e('js') }}",
+    drawClaimed: "{{ 'draw.claimed'|trans|e('js') }}",
+    drawReadyToReveal: "{{ 'draw.ready_to_reveal'|trans|e('js') }}",
+    drawPlayerNumber: "{{ 'draw.player_number'|trans|e('js') }}",
+    drawSubmit: "{{ 'draw.submit'|trans|e('js') }}",
+    drawSaving: "{{ 'draw.saving'|trans|e('js') }}",
+    drawSaved: "{{ 'draw.saved'|trans|e('js') }}",
+    drawRegistered: "{{ 'draw.registered'|trans|e('js') }}",
+    drawDraftSaved: "{{ 'draw.draft_saved'|trans|e('js') }}",
+    drawClaimError: "{{ 'draw.claim_error'|trans|e('js') }}"
+};
+</script>
+{{ encore_entry_script_tags('js/draw') }}
+{% endblock %}

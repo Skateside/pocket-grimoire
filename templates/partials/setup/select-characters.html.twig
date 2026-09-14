@@ -101,12 +101,47 @@
 
         <ul class="button-list">
             <li><button type="submit" class="button button--full-height">{{ 'setup.character_select.draw_characters'|trans }}</button></li>
+            <li>
+                <button type="submit" class="button button--full-height" id="player-select-qr">
+                    <span class="button__text">{{ 'setup.character_select.player_draw_qr'|trans }}</span>
+                    <span class="button__loader" role="progressbar" aria-valuetext="Loading" aria-busy="false" aria-live="assertive" aria-valuemin="0" aria-valuemax="1">
+                        <span class="loader" aria-hidden="true"></span>
+                    </span>
+                </button>
+            </li>
             <li><button type="submit" class="button button--full-height" id="player-select-all">{{ 'setup.character_select.add_all'|trans }}</button></li>
         </ul>
 
     </form>
     {% endblock %}
 {% endembed %}
+
+{% embed 'includes/dialog.html.twig' with {
+    id: 'player-draw-qr-dialog',
+    background: 'hide',
+    title: 'setup.player_draw.title'|trans
+} %}
+    {% block body %}
+        <p>{{ 'setup.player_draw.intro'|trans }}</p>
+        <a href="" target="_blank" rel="noopener noreferrer" id="player-draw-qr-link" class="d-block">
+            <span id="player-draw-qr" class="qr"></span>
+        </a>
+        <p class="mt-4 player-draw__summary">
+            <strong><span id="player-draw-submitted-count">0</span>/<span id="player-draw-total-count">0</span></strong>
+            {{ 'setup.player_draw.submitted'|trans }}
+        </p>
+        <ol id="player-draw-slots" class="player-draw__slots"></ol>
+        <p class="mt-4"><button type="button" class="button player-draw__link" id="player-draw-copy-link">{{ 'setup.player_draw.copy_link'|trans }}</button></p>
+    {% endblock %}
+{% endembed %}
+
+<template id="player-draw-slot-template">
+    <li class="player-draw__slot">
+        <span class="player-draw__number js--player-draw--number"></span>
+        <span class="player-draw__name js--player-draw--name"></span>
+        <span class="player-draw__status js--player-draw--status"></span>
+    </li>
+</template>
 
 {% embed 'includes/dialog.html.twig' with {
     id: 'character-choice',
