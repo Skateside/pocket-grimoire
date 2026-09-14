@@ -2,11 +2,14 @@
 
 namespace App\Model;
 
+use App\Dto\{
+    NightsheetDto,
+    TPIRemindersDto,
+    TPIRolesDto,
+};
+
 /**
- * @phpstan-import-type Data from \App\Dto\NightsheetDto as Nightsheet
- * @phpstan-import-type Data from \App\Dto\TPIRemindersDto as TPIReminders
  * @phpstan-import-type Data from \App\Dto\TPIRemindersExpandedDto as TPIRemindersExpanded
- * @phpstan-import-type Data from \App\Dto\TPIRolesDto as TPIRoles
  * @phpstan-import-type Data from \App\Dto\TPIRolesExpandedDto as TPIRolesExpanded
  */
 class TPIResourcesModel
@@ -20,30 +23,33 @@ class TPIResourcesModel
      * Expands the reminders to include examples of the reminder text, allowing
      * us to get that information from the community translations.
      *
-     * @param TPIReminders $reminders Reminders to expand.
-     * @param TPIRoles $roles Roles that have the reminder texts in them.
+     * @param TPIRemindersDto $reminders Reminders to expand.
+     * @param TPIRolesDto $roles Roles that have the reminder texts in them.
      * @return TPIRemindersExpanded Expanded reminders.
      */
-    public function expandReminders(array $reminders, array $roles): array
-    {
+    public function expandReminders(
+        TPIRemindersDto $reminders,
+        TPIRolesDto $roles
+    ): array {
         $expanded = [];
 
-        foreach ($reminders as $key => $text) {
+        foreach ($reminders->reminders as $reminder) {
+            $text = $reminder->value;
             $entry = [
                 'text' => $text,
                 'examples' => [],
             ];
 
-            foreach ($roles as $role) {
-                if (($index = array_search($text, $role['reminders'] ?? [])) !== false) {
-                    $entry['examples'][] = "{$role['id']}.r.{$index}";
+            foreach ($roles->roles as $role) {
+                if (($index = array_search($text, $role->reminders ?? [])) !== false) {
+                    $entry['examples'][] = "{$role->id}.r.{$index}";
                 }
-                if (($index = array_search($text, $role['remindersGlobal'] ?? [])) !== false) {
-                    $entry['examples'][] = "{$role['id']}.g.{$index}";
+                if (($index = array_search($text, $role->remindersGlobal ?? [])) !== false) {
+                    $entry['examples'][] = "{$role->id}.g.{$index}";
                 }
             }
 
-            $expanded[$key] = $entry;
+            $expanded[$reminder->key] = $entry;
         }
 
         return $expanded;
@@ -52,43 +58,39 @@ class TPIResourcesModel
     /**
      * Expand the roles data into something that can be used.
      *
-     * @param TPIRoles $roles Roles to expand.
-     * @param Nightsheet $nightsheet Nightsheet for the roles.
-     * @param TPIReminders $reminders Reversed reminders.
+     * @param TPIRolesDto $roles Roles to expand.
+     * @param NightsheetDto $nightsheet Nightsheet for the roles.
+     * @param TPIRemindersDto $reminders Reversed reminders.
      * @return TPIRolesExpanded Expanded roles.
      */
     public function expandRoles(
-        array $roles,
-        array $nightsheet,
-        array $reminders,
+        TPIRolesDto $roles,
+        NightsheetDto $nightsheet,
+        TPIRemindersDto $reminders,
     ): array {
         $expanded = [];
-        $firstNight = $nightsheet['firstNight'];
-        $otherNight = $nightsheet['otherNight'];
+        $mappedReminders = $this->mapReminders($reminders);
 
-        foreach ($roles as $role) {
+        foreach ($roles->roles as $role) {
             $cleanRole = [
-                'id' => $role['id'],
-                'name' => $role['name'],
-                'team' => $role['team'],
-                'edition' => $role['edition'],
-                'setup' => $role['setup'],
-                'ability' => $role['ability'],
-                'flavor' => $role['flavor'],
+                'id' => $role->id,
+                'name' => $role->name,
+                'team' => $role->team,
+                'edition' => $role->edition,
+                'setup' => $role->setup,
+                'ability' => $role->ability,
+                'flavor' => $role->flavor,
             ];
             
-            if (
-                array_key_exists('reminders', $role)
-                && is_array($role['reminders'])
-            ) {
-                $mappedReminders = array_map(function ($item) use ($reminders) {
-                    if (array_key_exists($item, $reminders)) {
-                        return $reminders[$item];
+            if (is_array($role->reminders)) {
+                $mapped = array_map(function ($item) use ($mappedReminders) {
+                    if (array_key_exists($item, $mappedReminders)) {
+                        return $mappedReminders[$item];
                     }
 
                     return '';
-                }, $role['reminders']);
-                $roleReminders = array_filter($mappedReminders, function ($item) {
+                }, $role->reminders);
+                $roleReminders = array_filter($mapped, function ($item) {
                     return strlen($item) > 0;
                 });
 
@@ -97,18 +99,15 @@ class TPIResourcesModel
                 }
             }
             
-            if (
-                array_key_exists('remindersGlobal', $role)
-                && is_array($role['remindersGlobal'])
-            ) {
-                $mappedReminders = array_map(function ($item) use ($reminders) {
-                    if (array_key_exists($item, $reminders)) {
-                        return $reminders[$item];
+            if (is_array($role->remindersGlobal)) {
+                $mapped = array_map(function ($item) use ($mappedReminders) {
+                    if (array_key_exists($item, $mappedReminders)) {
+                        return $mappedReminders[$item];
                     }
 
                     return '';
-                }, $role['remindersGlobal']);
-                $roleReminders = array_filter($mappedReminders, function ($item) {
+                }, $role->remindersGlobal);
+                $roleReminders = array_filter($mapped, function ($item) {
                     return strlen($item) > 0;
                 });
 
@@ -118,22 +117,22 @@ class TPIResourcesModel
             }
 
             if (
-                array_key_exists('firstNightReminder', $role)
-                && in_array($role['id'], $nightsheet['firstNight'])
+                !is_null($role->firstNightReminder)
+                && in_array($role->id, $nightsheet->firstNight)
             ) {
-                $cleanRole['firstNight'] = array_search($role['id'], $nightsheet['firstNight']) + 1;
-                $cleanRole['firstNightReminder'] = $this->cleanNightReminder($role['firstNightReminder']);
+                $cleanRole['firstNight'] = array_search($role->id, $nightsheet->firstNight) + 1;
+                $cleanRole['firstNightReminder'] = $this->cleanNightReminder($role->firstNightReminder);
             }
 
             if (
-                array_key_exists('otherNightReminder', $role)
-                && in_array($role['id'], $nightsheet['otherNight'])
+                !is_null($role->otherNightReminder)
+                && in_array($role->id, $nightsheet->otherNight)
             ) {
-                $cleanRole['otherNight'] = array_search($role['id'], $nightsheet['otherNight']) + 1;
-                $cleanRole['otherNightReminder'] = $this->cleanNightReminder($role['otherNightReminder']);
+                $cleanRole['otherNight'] = array_search($role->id, $nightsheet->otherNight) + 1;
+                $cleanRole['otherNightReminder'] = $this->cleanNightReminder($role->otherNightReminder);
             }
 
-            $cleanRole['image'] = $this->generateImages($role['id'], $role['team']);
+            $cleanRole['image'] = $this->generateImages($role->id, $role->team);
 
             $expanded[] = $cleanRole;
         }
@@ -159,7 +158,7 @@ class TPIResourcesModel
      * @param string $nightReminder Night reminder to clean.
      * @return string Cleaned night reminder.
      */
-    public function cleanNightReminder(string $nightReminder): string
+    protected function cleanNightReminder(string $nightReminder): string
     {
         $removed = str_replace(':reminder:', '', $nightReminder);
         $unspaced = preg_replace('/\s+/', ' ', $removed);
@@ -169,6 +168,23 @@ class TPIResourcesModel
         $despaced = preg_replace('/\s+/', ' ', $unorred);
 
         return (string) $despaced;
+    }
+
+    /**
+     * Converts the reminders into a map of the translations to the keys.
+     *
+     * @param TPIRemindersDto $reminders Reminders.
+     * @return array<string, string> Mapped reminders.
+     */
+    protected function mapReminders(TPIRemindersDto $reminders): array
+    {
+        $mapped = [];
+
+        foreach ($reminders->reminders as $reminder) {
+            $mapped[$reminder->value] = $reminder->key;
+        }
+
+        return $mapped;
     }
 
     /**

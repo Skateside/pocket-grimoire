@@ -96,9 +96,24 @@ class FetchResourcesCommand extends Command
             'Reminders' => $reminders,
         ];
 
-        foreach ($data as $results) {
+        foreach ($data as $type => $results) {
             if (!is_null($results['error'])) {
                 $io->error($results['error']);
+                return Command::FAILURE;
+            }
+
+            if (
+                count($results['violations'])
+                && !$io->ask(
+                    "{$type} has validation errors. Continue?",
+                    '(n)o',
+                    function (string $input) {
+                        $lower = strtolower($input);
+
+                        return $lower === 'y' || $lower === 'yes';
+                    },
+                )
+            ) {
                 return Command::FAILURE;
             }
         }
@@ -125,6 +140,12 @@ class FetchResourcesCommand extends Command
             $io->table($tableHeaders, $tableBody);
         }
 
+        // Keep PHPStan happy.
+        assert($jinxes['dto'] !== null && is_a($jinxes['dto'], JinxesDto::class));
+        assert($nightsheet['dto'] !== null && is_a($nightsheet['dto'], NightsheetDto::class));
+        assert($reminders['dto'] !== null && is_a($reminders['dto'], TPIRemindersDto::class));
+        assert($roles['dto'] !== null && is_a($roles['dto'], TPIRolesDto::class));
+
         $writing = [
             'jinxes.json' => [
                 'data' => $jinxes['dto']->toArray(),
@@ -132,16 +153,16 @@ class FetchResourcesCommand extends Command
             ],
             'reminders.json' => [
                 'data' => $this->resourcesModel->expandReminders(
-                    $reminders['dto']->toArray(),
-                    $roles['dto']->toArray(),
+                    $reminders['dto'],
+                    $roles['dto'],
                 ),
                 'dto' => TPIRemindersExpandedDto::class,
             ],
             'characters.json' => [
                 'data' => $this->resourcesModel->expandRoles(
-                    $roles['dto']->toArray(),
-                    $nightsheet['dto']->toArray(),
-                    array_flip($reminders['dto']->toArray()),
+                    $roles['dto'],
+                    $nightsheet['dto'],
+                    $reminders['dto'],
                 ),
                 'dto' => TPIRolesExpandedDto::class,
             ],
