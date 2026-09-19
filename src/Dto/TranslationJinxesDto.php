@@ -5,13 +5,13 @@ namespace App\Dto;
 use Symfony\Component\Validator\Constraints as Assert;
 
 /**
- * @phpstan-import-type Data from TPIReminderDto as Reminder
- * @phpstan-type Data Reminder
+ * @phpstan-import-type Data from TranslationJinxDto as Jinx
+ * @phpstan-type Data Jinx
  */
-class TPIRemindersDto implements DtoInterface
+class TranslationJinxesDto implements DtoInterface
 {
     public function __construct(
-        /** @var TPIReminderDto[] $reminders */
+        /** @var TranslationJinxDto[] $reminders */
         #[Assert\Valid]
         public readonly array $reminders,
     ) {}
@@ -27,12 +27,13 @@ class TPIRemindersDto implements DtoInterface
     }
 
     /**
-     * @param Data $reminders
+     * @param Data $jinxes
      */
-    public static function from(array $reminders): self
+    public static function from(array $jinxes): self
     {
         return new self(array_map(function ($key, $value) {
-            return TPIReminderDto::from([$key => $value]); 
-        }, array_keys($reminders), array_values($reminders)));
+            return TranslationJinxDto::from([$key => $value]); 
+        }, array_keys($jinxes), array_values($jinxes)));
     }
 }
+

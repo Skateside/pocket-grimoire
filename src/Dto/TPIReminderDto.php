@@ -15,8 +15,7 @@ class TPIReminderDto implements DtoInterface
 
         #[Assert\NotBlank]
         public readonly string $value,
-    ) {
-    }
+    ) {}
 
     /**
      * @return Data
@@ -32,6 +31,10 @@ class TPIReminderDto implements DtoInterface
     public static function from(array $reminder): self
     {
         $key = array_key_first($reminder);
+
+        if ($key === null) {
+            throw new \RuntimeException('TPI Reminder missing key');
+        }
 
         return new self($key, $reminder[$key]);
     }

@@ -13,13 +13,15 @@ use Symfony\Component\Validator\ConstraintViolationListInterface;
 use App\Dto\{
     DtoInterface,
     JinxesDto,
+    TPIRemindersDto,
     TPIRemindersExpandedDto,
     TPIRolesExpandedDto,
+    TranslationJinxesDto,
 };
-// use App\Enums\{
+use App\Enums\{
 //     CommunityTranslationEnum,
-//     TPIURLEnum,
-// };
+    TPIURLEnum,
+};
 use App\Model\{
     LocalesModel,
 //     TPIResourcesModel,
@@ -95,6 +97,35 @@ class TranslateResourcesCommand extends Command
 
         foreach ($locales as $locale) {
             // TODO: Get the official remote JSON translations.
+
+            $official = $this->getOfficial($locale['tpi']);
+
+            if (!empty($official['error'])) {
+                $io->writeln("Error with '{$locale['code']} -> {$locale['tpi']}' locale");
+                $io->error($official['error']);
+                return Command::FAILURE;
+            }
+
+            if (
+                (
+                    !empty($official['jinxes']['errors'])
+                    || !empty($official['reminders']['errors'])
+                    // || !empty($official['roles']['errors'])
+                )
+                && !$io->ask(
+                    "{$locale['code']} has validation errors. Include it?",
+                    '(n)o',
+                    function (string $input) {
+                        $lower = strtolower($input);
+
+                        return $lower === 'y' || $lower === 'yes';
+                    },
+                )
+            ) {
+                continue;
+            }
+
+            // $this->getCommunity($locale['community']['roles'], $locale['community']['jinxes']);
             // TODO: Get the community JSON translations.
 
             if ($output->isVerbose()) {
@@ -102,6 +133,13 @@ class TranslateResourcesCommand extends Command
             }
         }
 
+        if ($output->isVerbose()) {
+            $bar->finish();
+            $io->writeln('');
+            $io->writeln('');
+        }
+
+        $io->success('Translations downloaded and written');
         return Command::SUCCESS;
         /*
         $locales = $this->localesModel->getTpiToCode();
@@ -270,6 +308,87 @@ class TranslateResourcesCommand extends Command
         }
 
         return $converted;
+    }
+
+    /**
+     * @param ?string $tpiCode The TPI locale code, which might be null.
+     * @return array{
+     *  error: ?string,
+     *  jinxes: array{
+     *      errors: array<string, string[]>,
+     *      dto: ?TranslationJinxesDto,
+     *  },
+     *  reminders: array{
+     *      errors: array<string, string[]>,
+     *      dto: ?TPIRemindersDto,
+     *  },
+     * } Response from access the official translations.
+     */
+    protected function getOfficial(?string $tpiCode): array
+    {
+        $response = [
+            'error' => null,
+            'jinxes' => [
+                'errors' => [],
+                'dto' => null,
+            ],
+            'reminders' => [
+                'errors' => [],
+                'dto' => null,
+            ],
+            /*
+            'roles' => [
+                'errors' => [],
+                'dto' => null,
+            ],
+             */
+        ];
+
+        if ($tpiCode === null) {
+            return $response;
+        }
+
+        $raw = $this->fetch->getJson(sprintf(TPIURLEnum::GAME->value, $tpiCode));
+
+        if (($error = $this->fetch->getLastError()) !== '') {
+            $response['error'] = $error;
+            return $response;
+        }
+
+        $data = [
+            'jinxes' => TranslationJinxesDto::class,
+            'reminders' => TPIRemindersDto::class,
+        ];
+
+        foreach ($data as $key => $dtoClass) {
+            if (array_key_exists($key, $raw)) {
+                $dto = $dtoClass::from($raw[$key]);
+                $errors = $this->validator->validate($dto);
+
+                if (count($errors)) {
+                    $response[$key]['errors'] = $errors;
+                }
+
+                $response[$key]['dto'] = $dto;
+            }
+        }
+
+        /*
+        if (array_key_exists('jinxes', $raw)) {
+            $jinxes = TranslationJinxesDto::from($raw['jinxes']);
+            $violations = $this->validator->validate($jinxes);
+
+            if (count($violations)) {
+                $response['
+            }
+        } 
+         */
+
+        return $response;
+    }
+
+    protected function getCommunity(string $roles, string $jinxes)
+    {
     }
 
     /**

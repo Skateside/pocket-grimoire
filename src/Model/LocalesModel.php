@@ -8,7 +8,7 @@ use App\Service\Storage;
  * @phpstan-type StanLocale array{
  *  code: string,
  *  text: string,
- *  tpi: string,
+ *  tpi: ?string,
  *  community: array{
  *      roles: string,
  *      jinxes: string,
@@ -56,7 +56,9 @@ class LocalesModel
         $locales = [];
 
         foreach ($this->locales as $locale) {
-            $locales[$locale['tpi']] = $locale['code'];
+            if (is_string($locale['tpi'])) {
+                $locales[$locale['tpi']] = $locale['code'];
+            }
         }
 
         return $locales;
@@ -71,7 +73,7 @@ class LocalesModel
     public function codeToTpi(string $code): string
     {
         foreach ($this->locales as $locale) {
-            if ($locale['code'] === $code) {
+            if ($locale['code'] === $code && $locale['tpi'] !== null) {
                 return $locale['tpi'];
             }
         }
