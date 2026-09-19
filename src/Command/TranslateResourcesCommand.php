@@ -175,9 +175,9 @@ class TranslateResourcesCommand extends Command
             assert($characters['dto'] !== null);
             assert($reminders['dto'] !== null);
             assert($jinxes['dto'] !== null);
-            assert($official['jinxes']['dto'] !== null);
-            assert($official['reminders']['dto'] !== null);
             assert($official['roles']['dto'] !== null);
+            assert($official['reminders']['dto'] !== null);
+            assert($official['jinxes']['dto'] !== null);
             assert($community['jinxes']['dto'] !== null);
             assert($community['roles']['dto'] !== null);
 
