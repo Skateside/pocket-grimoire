@@ -11,15 +11,18 @@ use Symfony\Component\Console\Style\SymfonyStyle;
 use Symfony\Component\Validator\Validator\ValidatorInterface;
 use Symfony\Component\Validator\ConstraintViolationListInterface;
 use App\Dto\{
+    CommunityJinxesDto,
+    CommunityRolesDto,
     DtoInterface,
     JinxesDto,
     TPIRemindersDto,
     TPIRemindersExpandedDto,
     TPIRolesExpandedDto,
     TranslationJinxesDto,
+    TranslationRolesDto,
 };
 use App\Enums\{
-//     CommunityTranslationEnum,
+    CommunityTranslationEnum,
     TPIURLEnum,
 };
 use App\Model\{
@@ -28,7 +31,9 @@ use App\Model\{
 //     TPITranslationModel,
 };
 use App\Service\{
+    Csv,
     Fetch,
+    Misc,
     Storage,
 };
 
@@ -38,7 +43,9 @@ class TranslateResourcesCommand extends Command
     // protected TPITranslationModel $translationModel;
     protected LocalesModel $localesModel;
     // protected TPIResourcesModel $resourcesModel;
+    protected Csv $csv;
     protected Fetch $fetch;
+    protected Misc $misc;
     protected Storage $storage;
     // protected TranslatorInterface $translator;
     protected ValidatorInterface $validator;
@@ -47,7 +54,9 @@ class TranslateResourcesCommand extends Command
         // TPITranslationModel $translationModel,
         LocalesModel $localesModel,
         // TPIResourcesModel $resourcesModel,
+        Csv $csv,
         Fetch $fetch,
+        Misc $misc,
         Storage $storage,
         // TranslatorInterface $translator,
         ValidatorInterface $validator,
@@ -55,7 +64,9 @@ class TranslateResourcesCommand extends Command
         // $this->translationModel = $translationModel;
         $this->localesModel = $localesModel;
         // $this->resourcesModel = $resourcesModel;
+        $this->csv = $csv;
         $this->fetch = $fetch;
+        $this->misc = $misc;
         $this->storage = $storage;
         // $this->translator = $translator;
         $this->validator = $validator;
@@ -96,24 +107,21 @@ class TranslateResourcesCommand extends Command
         }
 
         foreach ($locales as $locale) {
-            // TODO: Get the official remote JSON translations.
-
             $official = $this->getOfficial($locale['tpi']);
 
             if (!empty($official['error'])) {
-                $io->writeln("Error with '{$locale['code']} -> {$locale['tpi']}' locale");
                 $io->error($official['error']);
                 return Command::FAILURE;
             }
 
             if (
                 (
-                    !empty($official['jinxes']['errors'])
-                    || !empty($official['reminders']['errors'])
-                    // || !empty($official['roles']['errors'])
+                    !empty($official['jinxes']['violations'])
+                    || !empty($official['reminders']['violations'])
+                    || !empty($official['roles']['violations'])
                 )
                 && !$io->ask(
-                    "{$locale['code']} has validation errors. Include it?",
+                    "{$locale['code']} official has validation errors. Include it?",
                     '(n)o',
                     function (string $input) {
                         $lower = strtolower($input);
@@ -125,8 +133,41 @@ class TranslateResourcesCommand extends Command
                 continue;
             }
 
-            // $this->getCommunity($locale['community']['roles'], $locale['community']['jinxes']);
-            // TODO: Get the community JSON translations.
+            #$io->writeln($locale['code']);
+            #$io->writeln(sprintf(CommunityTranslationEnum::JINXES->value, $locale['community']['jinxes']));
+            #$io->writeln(sprintf(CommunityTranslationEnum::ROLES->value, $locale['community']['roles']));
+            
+            $community = $this->getCommunity(
+                $locale['community']['jinxes'],
+                $locale['community']['roles'],
+            );
+
+            if (
+                !empty($community['jinxes']['error'])
+                || !empty($community['roles']['error'])
+            ) {
+                $io->error($community['jinxes']['error'] ?? $community['roles']['error']);
+                return Command::FAILURE;
+            }
+            
+            if (
+                (
+                    !empty($community['jinxes']['violations'])
+                    || !empty($community['roles']['violations'])
+                )
+                && !$io->ask(
+                    "{$locale['code']} community has validation errors. Include it?",
+                    '(n)o',
+                    function (string $input) {
+                        $lower = strtolower($input);
+
+                        return $lower === 'y' || $lower === 'yes';
+                    },
+                )
+            ) {
+                continue;
+            }
+
 
             if ($output->isVerbose()) {
                 $bar->advance();
@@ -309,18 +350,21 @@ class TranslateResourcesCommand extends Command
 
         return $converted;
     }
-
     /**
      * @param ?string $tpiCode The TPI locale code, which might be null.
      * @return array{
      *  error: ?string,
      *  jinxes: array{
-     *      errors: array<string, string[]>,
+     *      violations: array<string, string[]>,
      *      dto: ?TranslationJinxesDto,
      *  },
      *  reminders: array{
-     *      errors: array<string, string[]>,
+     *      violations: array<string, string[]>,
      *      dto: ?TPIRemindersDto,
+     *  },
+     *  roles: array{
+     *      violations: array<string, string[]>,
+     *      dto: ?TranslationRolesDto,
      *  },
      * } Response from access the official translations.
      */
@@ -329,19 +373,17 @@ class TranslateResourcesCommand extends Command
         $response = [
             'error' => null,
             'jinxes' => [
-                'errors' => [],
+                'violations' => [],
                 'dto' => null,
             ],
             'reminders' => [
-                'errors' => [],
+                'violations' => [],
                 'dto' => null,
             ],
-            /*
             'roles' => [
-                'errors' => [],
+                'violations' => [],
                 'dto' => null,
             ],
-             */
         ];
 
         if ($tpiCode === null) {
@@ -358,37 +400,93 @@ class TranslateResourcesCommand extends Command
         $data = [
             'jinxes' => TranslationJinxesDto::class,
             'reminders' => TPIRemindersDto::class,
+            'roles' => TranslationRolesDto::class,
         ];
 
         foreach ($data as $key => $dtoClass) {
             if (array_key_exists($key, $raw)) {
                 $dto = $dtoClass::from($raw[$key]);
-                $errors = $this->validator->validate($dto);
+                $violations = $this->validator->validate($dto);
 
-                if (count($errors)) {
-                    $response[$key]['errors'] = $errors;
+                if (count($violations)) {
+                    $response[$key]['violations'] = $this->convertViolations($violations);
                 }
 
                 $response[$key]['dto'] = $dto;
             }
         }
 
-        /*
-        if (array_key_exists('jinxes', $raw)) {
-            $jinxes = TranslationJinxesDto::from($raw['jinxes']);
-            $violations = $this->validator->validate($jinxes);
-
-            if (count($violations)) {
-                $response['
-            }
-        } 
-         */
-
         return $response;
     }
 
-    protected function getCommunity(string $roles, string $jinxes)
+    /**
+     * @param string $jinxes Tab name for the jinxes.
+     * @param string $roles Tab name for the roles.
+     * @return array{
+     *  jinxes: array{
+     *      error: ?string,
+     *      violations: array<string, string[]>,
+     *      dto: ?CommunityJinxesDto,
+     *  },
+     *  roles: array{
+     *      error: ?string,
+     *      violations: array<string, string[]>,
+     *      dto: ?CommunityRolesDto,
+     *  },
+     * } Response data.
+     */
+    protected function getCommunity(string $jinxes, string $roles): array
     {
+        $response = [
+            'jinxes' => [
+                'error' => null,
+                'violations' => [],
+                'dto' => null,
+            ],
+            'roles' => [
+                'error' => null,
+                'violations' => [],
+                'dto' => null,
+            ],
+        ];
+
+        $dto = [
+            'jinxes' => [
+                'dto' => CommunityJinxesDto::class,
+                'url' => sprintf(
+                    CommunityTranslationEnum::JINXES->value,
+                    rawurlencode($jinxes),
+                ),
+            ],
+            'roles' => [
+                'dto' => CommunityRolesDto::class,
+                'url' => sprintf(
+                    CommunityTranslationEnum::ROLES->value,
+                    rawurlencode($roles),
+                ),
+            ],
+        ];
+
+        foreach ($dto as $type => $info) {
+            $contents = $this->fetch->getContents($info['url']);
+
+            if (($error = $this->fetch->getLastError()) !== '') {
+                $response[$type]['error'] = $error;
+                continue;
+            }
+
+            $stripped = $this->misc->removeMarkup($contents);
+            $csv = $this->csv->parseArray($stripped);
+            $response[$type]['dto'] = $info['dto']::from($csv);
+            $violations = $this->validator->validate($response[$type]['dto']);
+
+            if (count($violations)) {
+                $response[$type]['violations'] = $this->convertViolations($violations);
+            }
+        }
+
+
+        return $response;
     }
 
     /**

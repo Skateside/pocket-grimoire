@@ -17,7 +17,7 @@ class Csv
         fseek($temp, 0);
 
         $data = [];
-        while (($line = fgetcsv($temp)) !== false) {
+        while (($line = fgetcsv($temp, escape: '\\')) !== false) {
             $data[] = $line;
         }
 

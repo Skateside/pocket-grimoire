@@ -12,6 +12,7 @@ class Misc
      */
     public function removeMarkup(string $string): string
     {
+        /*
         $document = \Dom\HTMLDocument::createFromString($string);
 
         foreach ($document->querySelectorAll('*') as $element) {
@@ -19,5 +20,14 @@ class Misc
         }
 
         return $document->saveHtml();
+         */
+        $document = new \DOMDocument();
+        $document->loadHTML($string, LIBXML_NOERROR | LIBXML_NOWARNING);
+
+        while ($element = $document->documentElement->firstChild) {
+            $document->documentElement->removeChild($element);
+        }
+
+        return trim($document->textContent);
     }
 }
