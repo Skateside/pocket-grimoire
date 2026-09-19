@@ -28,7 +28,7 @@ use App\Enums\{
 use App\Model\{
     LocalesModel,
 //     TPIResourcesModel,
-//     TPITranslationModel,
+    TPITranslationModel,
 };
 use App\Service\{
     Csv,
@@ -40,7 +40,7 @@ use App\Service\{
 #[AsCommand(name: 'pocket-grimoire:translate')]
 class TranslateResourcesCommand extends Command
 {
-    // protected TPITranslationModel $translationModel;
+    protected TPITranslationModel $translationModel;
     protected LocalesModel $localesModel;
     // protected TPIResourcesModel $resourcesModel;
     protected Csv $csv;
@@ -51,7 +51,7 @@ class TranslateResourcesCommand extends Command
     protected ValidatorInterface $validator;
 
     public function __construct(
-        // TPITranslationModel $translationModel,
+        TPITranslationModel $translationModel,
         LocalesModel $localesModel,
         // TPIResourcesModel $resourcesModel,
         Csv $csv,
@@ -61,7 +61,7 @@ class TranslateResourcesCommand extends Command
         // TranslatorInterface $translator,
         ValidatorInterface $validator,
     ) {
-        // $this->translationModel = $translationModel;
+        $this->translationModel = $translationModel;
         $this->localesModel = $localesModel;
         // $this->resourcesModel = $resourcesModel;
         $this->csv = $csv;
@@ -86,6 +86,9 @@ class TranslateResourcesCommand extends Command
         $characters = $this->getLocalJson('characters.json', TPIRolesExpandedDto::class);
         $reminders = $this->getLocalJson('reminders.json', TPIRemindersExpandedDto::class);
         $jinxes = $this->getLocalJson('jinxes.json', JinxesDto::class);
+        // TODO: get the scripts and the game
+        // $game = $this->storage->readYaml(Storage::LOCATION_CONFIG, 'game.yaml');
+        // $scripts = $this->storage->readYaml(Storage::LOCATION_CONFIG, 'scripts.yaml');
 
         if (
             !is_null($characters['error'])
@@ -167,6 +170,22 @@ class TranslateResourcesCommand extends Command
             ) {
                 continue;
             }
+
+            // Keep PHPStan happy.
+            assert($characters['dto'] !== null);
+            assert($reminders['dto'] !== null);
+            assert($jinxes['dto'] !== null);
+            assert($official['jinxes']['dto'] !== null);
+            assert($official['reminders']['dto'] !== null);
+            assert($official['roles']['dto'] !== null);
+            assert($community['jinxes']['dto'] !== null);
+            assert($community['roles']['dto'] !== null);
+
+            $translatedReminder = $this->translationModel->translateReminders(
+                $reminders['dto'],
+                $official['reminders']['dto'],
+                $community['roles']['dto'],
+            );
 
 
             if ($output->isVerbose()) {
@@ -301,9 +320,10 @@ class TranslateResourcesCommand extends Command
      * Reads the JSON from the given file name and passes it into the given DTO,
      * allowing it to be validated.
      *
+     * @template DtoType
      * @param string $filename Name of the file to parse.
-     * @param (callable(array<mixed>): DtoInterface)|string $dtoClass Class string for the DTO class.
-     * @return array{dto: ?DtoInterface, error: ?string, violations: array<string, string[]>}
+     * @param (callable(array<mixed>): DtoType)|class-string<DtoType> $dtoClass Class string for the DTO class.
+     * @return array{dto: ?DtoType, error: ?string, violations: array<string, string[]>}
      * Results of the JSON being parsed and validated.
      */
     protected function getLocalJson(

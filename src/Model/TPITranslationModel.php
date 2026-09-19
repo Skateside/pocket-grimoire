@@ -2,8 +2,97 @@
 
 namespace App\Model;
 
+use App\Dto\{
+    CommunityRolesDto,
+    TPIRemindersDto,
+    TPIRemindersExpandedDto,
+};
+use App\Service\Misc;
+
+/**
+ * @phpstan-import-type Data from TPIRemindersDto as Reminders
+ */
 class TPITranslationModel
 {
+    public function __construct(
+        protected Misc $misc,
+    ) {}
+
+    /**
+     * @param TPIRemindersExpandedDto $reminders Expanded reminders to
+     * translate.
+     * @param TPIRemindersDto $officialReminders Official translations of the
+     * reminders.
+     * @param CommunityRolesDto $communityRoles Community translations of the
+     * roles.
+     * @return Reminders
+     */
+    public function translateReminders(
+        TPIRemindersExpandedDto $reminders,
+        TPIRemindersDto $officialReminders,
+        CommunityRolesDto $communityRoles,
+    ): array {
+        $translatedReminders = [];
+
+        foreach ($reminders->reminders as $reminder) {
+            // Assume the default translation, see if we can better it.
+            $translatedReminders[$reminder->key] = $reminder->text;
+
+            // If we can find the official translation, use it.
+            $officialReminder = $this->misc->arrayFind(
+                $officialReminders->reminders,
+                function ($officialReminder) use ($reminder) {
+                    return $officialReminder->key === $reminder->key;
+                },
+            );
+
+            if ($officialReminder !== null) {
+                $translatedReminders[$reminder->key] = $officialReminder->value;
+                continue;
+            }
+
+            // If we couldn't find an official translation, loop through the
+            // examples until we find something that matches and use it.
+            foreach ($reminder->examples as $example) {
+                list($roleId, $type, $index) = explode('.', $example); 
+
+                $role = $this->misc->arrayFind(
+                    $communityRoles->roles,
+                    function ($role) use ($roleId) {
+                        return $role->id === $roleId;
+                    },
+                );
+
+                if ($role === null) {
+                    continue;
+                }
+
+                if (
+                    $type === 'r'
+                    && is_array($role->reminders)
+                    && array_key_exists($index, $role->reminders)
+                ) {
+                    $translatedReminders[$reminder->key] = $role->reminders[$index];
+                    break 1;
+                } else if (
+                    $type === 'g'
+                    && is_array($role->remindersGlobal)
+                    && array_key_exists($index, $role->remindersGlobal)
+                ) {
+                    $translatedReminders[$reminder->key] = $role->remindersGlobal[$index];
+                    break 1;
+                }
+            }
+        }
+
+        return $translatedReminders;
+    }
+
+    // TODO
+    public function translateJinxes(
+    ) {
+    }
+
     /**
      * Filters the raw jinxes so that only valid entries remain.
      *
@@ -186,6 +275,7 @@ class TPITranslationModel
      * @param callable(T, int|string): bool $callback Callback for checking.
      * @return bool true if all values and keys match the callback, false otherwise.
      */
+    /*
     protected function arrayAll(array $array, callable $callback): bool
     {
         foreach ($array as $key => $value) {
@@ -196,4 +286,5 @@ class TPITranslationModel
 
         return true;
     }
+     */
 }
