@@ -83,7 +83,7 @@ class TranslateResourcesCommand extends Command
             $io->section('Reading local files');
         }
 
-        $characters = $this->getLocalJson('characters.json', TPIRolesExpandedDto::class);
+        $roles = $this->getLocalJson('roles.json', TPIRolesExpandedDto::class);
         $reminders = $this->getLocalJson('reminders.json', TPIRemindersExpandedDto::class);
         $jinxes = $this->getLocalJson('jinxes.json', JinxesDto::class);
         // TODO: get the scripts and the game
@@ -91,11 +91,11 @@ class TranslateResourcesCommand extends Command
         // $scripts = $this->storage->readYaml(Storage::LOCATION_CONFIG, 'scripts.yaml');
 
         if (
-            !is_null($characters['error'])
+            !is_null($roles['error'])
             || !is_null($reminders['error'])
             || !is_null($jinxes['error'])
         ) {
-            $io->error($characters['error'] ?? $reminders['error'] ?? $jinxes['error']);
+            $io->error($roles['error'] ?? $reminders['error'] ?? $jinxes['error']);
             return Command::FAILURE;
         }
 
@@ -172,7 +172,7 @@ class TranslateResourcesCommand extends Command
             }
 
             // Keep PHPStan happy.
-            assert($characters['dto'] !== null);
+            assert($roles['dto'] !== null);
             assert($reminders['dto'] !== null);
             assert($jinxes['dto'] !== null);
             assert($official['roles']['dto'] !== null);
@@ -181,12 +181,22 @@ class TranslateResourcesCommand extends Command
             assert($community['jinxes']['dto'] !== null);
             assert($community['roles']['dto'] !== null);
 
-            $translatedReminder = $this->translationModel->translateReminders(
+            $translatedReminders = $this->translationModel->translateReminders(
                 $reminders['dto'],
                 $official['reminders']['dto'],
                 $community['roles']['dto'],
             );
-
+            $translatedJinxes = $this->translationModel->translateJinxes(
+                $jinxes['dto'],
+                $official['jinxes']['dto'],
+                $community['jinxes']['dto'],
+            );
+            $translatedRoles = $this->translationModel->translateRoles(
+                $roles['dto'],
+                $official['roles']['dto'],
+                $community['roles']['dto'],
+                $translatedReminders,
+            );
 
             if ($output->isVerbose()) {
                 $bar->advance();

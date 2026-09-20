@@ -158,7 +158,7 @@ class FetchResourcesCommand extends Command
                 ),
                 'dto' => TPIRemindersExpandedDto::class,
             ],
-            'characters.json' => [
+            'roles.json' => [
                 'data' => $this->resourcesModel->expandRoles(
                     $roles['dto'],
                     $nightsheet['dto'],

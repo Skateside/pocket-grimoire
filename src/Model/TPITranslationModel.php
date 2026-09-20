@@ -3,14 +3,21 @@
 namespace App\Model;
 
 use App\Dto\{
+    CommunityJinxesDto,
     CommunityRolesDto,
+    JinxesDto,
     TPIRemindersDto,
     TPIRemindersExpandedDto,
+    TPIRolesExpandedDto,
+    TranslationJinxesDto,
+    TranslationRolesDto,
 };
 use App\Service\Misc;
 
 /**
- * @phpstan-import-type Data from TPIRemindersDto as Reminders
+ * @phpstan-import-type Data from TPIRemindersDto as RemindersArray
+ * @phpstan-import-type Data from JinxesDto as JinxesArray
+ * @phpstan-import-type Data from TPIRolesExpandedDto as RolesArray
  */
 class TPITranslationModel
 {
@@ -19,13 +26,15 @@ class TPITranslationModel
     ) {}
 
     /**
+     * Translates the reminders.
+     *
      * @param TPIRemindersExpandedDto $reminders Expanded reminders to
      * translate.
      * @param TPIRemindersDto $officialReminders Official translations of the
      * reminders.
      * @param CommunityRolesDto $communityRoles Community translations of the
      * roles.
-     * @return Reminders
+     * @return RemindersArray
      */
     public function translateReminders(
         TPIRemindersExpandedDto $reminders,
@@ -88,9 +97,103 @@ class TPITranslationModel
         return $translatedReminders;
     }
 
-    // TODO
+    /**
+     * Translates the jinxes.
+     *
+     * @param JinxesDto $jinxes Raw jinx information.
+     * @param TranslationJinxesDto $officialJinxes Official jinx translations.
+     * @param CommunityJinxesDto $communityJinxes Community jinx translations.
+     * @return JinxesArray Translated jinxes.
+     */
     public function translateJinxes(
-    ) {
+        JinxesDto $jinxes,
+        TranslationJinxesDto $officialJinxes,    
+        CommunityJinxesDto $communityJinxes,
+    ): array {
+        $translatedJinxes = [];
+
+        foreach ($jinxes->items as $jinx) {
+            $translatedJinx = [
+                'id' => $jinx->id,
+                'jinx' => [],
+            ];
+
+            foreach ($jinx->jinx as $jinxEntry) {
+                $translatedJinxEntry = [
+                    'id' => $jinxEntry->id,
+                    'reason' => $jinxEntry->reason,
+                ];
+
+                $community = null; // Created later if $official is null.
+                $official = $this->misc->arrayFind(
+                    $officialJinxes->items,
+                    function ($item) use ($jinx, $jinxEntry) {
+                        return $item->key === "{$jinx->id}-{$jinxEntry->id}";
+                    },
+                );
+
+                if ($official === null) {
+                    $official = $this->misc->arrayFind(
+                        $officialJinxes->items,
+                        function ($item) use ($jinx, $jinxEntry) {
+                            return $item->key === "{$jinxEntry->id}-{$jinx->id}";
+                        },
+                    );
+                }
+
+                if ($official === null) {
+                    $community = $this->misc->arrayFind(
+                        $communityJinxes->items,
+                        function ($item) use ($jinx, $jinxEntry) {
+                            return (
+                                (
+                                    $item->target === $jinx->id
+                                    && $item->trick === $jinxEntry->id
+                                )
+                                || (
+                                    $item->target === $jinxEntry->id
+                                    && $item->trick === $jinx->id
+                                )
+                            );
+                        },
+                    );
+                }
+
+                if ($official !== null) {
+                    $translatedJinxEntry['reason'] = $official->reason;
+                } elseif ($community !== null) {
+                    $translatedJinxEntry['reason'] = $community->reason;
+                }
+
+                $translatedJinx['jinx'][] = $translatedJinxEntry;
+            }
+
+            $translatedJinxes[] = $translatedJinx;
+        }
+
+        return $translatedJinxes;
+    }
+
+    /**
+     * Translates the character roles.
+     *
+     * @param TPIRolesExpandedDto $roles
+     * @param TranslationRolesDto $officialRoles
+     * @param CommunityRolesDto $communityRoles
+     * @param RemindersArray $reminders
+     * @return RolesArray
+     */
+    public function translateRoles(
+        TPIRolesExpandedDto $roles,
+        TranslationRolesDto $officialRoles,
+        CommunityRolesDto $communityRoles,
+        array $reminders,
+    ): array {
+        $translatedRoles = [];
+
+        // TODO
+
+        return $translatedRoles;
     }
 
     /**
