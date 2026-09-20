@@ -13,7 +13,7 @@ use Symfony\Component\Validator\ConstraintViolationListInterface;
 use App\Dto\{
     CommunityJinxesDto,
     CommunityRolesDto,
-    DtoInterface,
+    // DtoInterface,
     JinxesDto,
     TPIRemindersDto,
     TPIRemindersExpandedDto,
@@ -186,16 +186,16 @@ class TranslateResourcesCommand extends Command
                 $official['reminders']['dto'],
                 $community['roles']['dto'],
             );
-            $translatedJinxes = $this->translationModel->translateJinxes(
-                $jinxes['dto'],
-                $official['jinxes']['dto'],
-                $community['jinxes']['dto'],
-            );
             $translatedRoles = $this->translationModel->translateRoles(
                 $roles['dto'],
                 $official['roles']['dto'],
                 $community['roles']['dto'],
                 $translatedReminders,
+            );
+            $translatedJinxes = $this->translationModel->translateJinxes(
+                $jinxes['dto'],
+                $official['jinxes']['dto'],
+                $community['jinxes']['dto'],
             );
 
             if ($output->isVerbose()) {

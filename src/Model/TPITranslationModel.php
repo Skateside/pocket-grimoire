@@ -190,8 +190,120 @@ class TPITranslationModel
         array $reminders,
     ): array {
         $translatedRoles = [];
+        $keys = [
+            [
+                'role' => 'name',
+                'official' => 'name',
+                'community' => 'name',
+            ],
+            [
+                'role' => 'ability',
+                'official' => '',
+                'community' => 'ability',
+            ],
+            [
+                'role' => 'flavor',
+                'official' => 'flavor',
+                'community' => 'flavor',
+            ],
+            [
+                'role' => 'firstNightReminder',
+                'official' => 'first',
+                'community' => 'firstNightReminder',
+            ],
+            [
+                'role' => 'otherNightReminder',
+                'official' => 'other',
+                'community' => 'otherNightReminder',
+            ],
+        ];
 
-        // TODO
+        foreach ($roles->items as $role) {
+            $localKeys = array_filter($keys, function ($key) use ($role) {
+                return property_exists($role, $key['role']);
+            });
+            $translatedRole = $role->toArray();
+
+            if (is_array($role->reminders)) {
+                $translatedRole['reminders'] = array_map(
+                    function ($text) use ($reminders) {
+                        return array_key_exists($text, $reminders) ? $reminders[$text] : $text;
+                    },
+                    $role->reminders,
+                );
+            }
+
+            if (is_array($role->remindersGlobal)) {
+                $translatedRole['remindersGlobal'] = array_map(
+                    function ($text) use ($reminders) {
+                        return array_key_exists($text, $reminders) ? $reminders[$text] : $text;
+                    },
+                    $role->remindersGlobal,
+                );
+            }
+
+            if (!count($localKeys)) {
+                $translatedRoles[] = $translatedRole;
+                continue;
+            }
+
+            $officialRole = $this->misc->arrayFind(
+                $officialRoles->items,
+                function ($item) use ($role) {
+                    return $item->id === $role->id;
+                },
+            );
+
+            if ($officialRole !== null) {
+                $index = count($localKeys);
+
+                while ($index > 0) {
+                    $index -= 1;
+                    $key = $localKeys[$index]['official'];
+
+                    if (
+                        property_exists($officialRole, $key)
+                        && $officialRole->{$key} !== null
+                    ) {
+                        $translatedRole[$localKeys[$index]['role']] = $officialRole->{$key};
+                        array_splice($localKeys, $index, 1);
+                        continue;
+                    }
+                }
+            }
+
+            if (!count($localKeys)) {
+                $translatedRoles[] = $translatedRole;
+                continue;
+            }
+
+            $communityRole = $this->misc->arrayFind(
+                $communityRoles->items,
+                function ($item) use ($role) {
+                    return $item->id === $role->id;
+                },
+            );
+
+            if ($communityRole !== null) {
+                $index = count($localKeys);
+
+                while ($index > 0) {
+                    $index -= 1;
+                    $key = $localKeys[$index]['community'];
+
+                    if (
+                        property_exists($communityRole, $key)
+                        && $communityRole->{$key} !== null
+                    ) {
+                        $translatedRole[$localKeys[$index]['role']] = $communityRole->{$key};
+                        array_splice($localKeys, $index, 1);
+                        continue;
+                    }
+                }
+            }
+
+            $translatedRoles[] = $translatedRole;
+        }
 
         return $translatedRoles;
     }
