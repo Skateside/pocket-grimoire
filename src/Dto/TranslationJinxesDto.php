@@ -11,9 +11,9 @@ use Symfony\Component\Validator\Constraints as Assert;
 class TranslationJinxesDto implements DtoInterface
 {
     public function __construct(
-        /** @var TranslationJinxDto[] $reminders */
+        /** @var TranslationJinxDto[] $items */
         #[Assert\Valid]
-        public readonly array $reminders,
+        public readonly array $items,
     ) {}
 
     /**
@@ -21,19 +21,19 @@ class TranslationJinxesDto implements DtoInterface
      */
     public function toArray(): array
     {
-        return array_merge(...array_map(function ($reminder) {
-            return $reminder->toArray();
-        }, $this->reminders));
+        return array_merge(...array_map(function ($item) {
+            return $item->toArray();
+        }, $this->items));
     }
 
     /**
-     * @param Data $jinxes
+     * @param Data $items
      */
-    public static function from(array $jinxes): self
+    public static function from(array $items): self
     {
         return new self(array_map(function ($key, $value) {
             return TranslationJinxDto::from([$key => $value]); 
-        }, array_keys($jinxes), array_values($jinxes)));
+        }, array_keys($items), array_values($items)));
     }
 }
 

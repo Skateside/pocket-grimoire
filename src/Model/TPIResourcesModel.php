@@ -33,14 +33,14 @@ class TPIResourcesModel
     ): array {
         $expanded = [];
 
-        foreach ($reminders->reminders as $reminder) {
-            $text = $reminder->value;
+        foreach ($reminders->items as $reminder) {
+            $text = $reminder->text;
             $entry = [
                 'text' => $text,
                 'examples' => [],
             ];
 
-            foreach ($roles->roles as $role) {
+            foreach ($roles->items as $role) {
                 if (($index = array_search($text, $role->reminders ?? [])) !== false) {
                     $entry['examples'][] = "{$role->id}.r.{$index}";
                 }
@@ -71,7 +71,7 @@ class TPIResourcesModel
         $expanded = [];
         $mappedReminders = $this->mapReminders($reminders);
 
-        foreach ($roles->roles as $role) {
+        foreach ($roles->items as $role) {
             $cleanRole = [
                 'id' => $role->id,
                 'name' => $role->name,
@@ -180,8 +180,8 @@ class TPIResourcesModel
     {
         $mapped = [];
 
-        foreach ($reminders->reminders as $reminder) {
-            $mapped[$reminder->value] = $reminder->key;
+        foreach ($reminders->items as $reminder) {
+            $mapped[$reminder->text] = $reminder->key;
         }
 
         return $mapped;

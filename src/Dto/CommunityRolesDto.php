@@ -11,9 +11,9 @@ use Symfony\Component\Validator\Constraints as Assert;
 class CommunityRolesDto implements DtoInterface
 {
     public function __construct(
-        /** @var CommunityRoleDto[] $roles */
+        /** @var CommunityRoleDto[] $items */
         #[Assert\Valid]
-        public readonly array $roles,
+        public readonly array $items,
     ) {
     }
 
@@ -22,19 +22,19 @@ class CommunityRolesDto implements DtoInterface
      */
     public function toArray(): array
     {
-        return array_map(function ($role) {
-            return $role->toArray();
-        }, $this->roles);
+        return array_map(function ($item) {
+            return $item->toArray();
+        }, $this->items);
     }
 
     /**
-     * @param Data $roles
+     * @param Data $items
      */
-    public static function from(array $roles): self
+    public static function from(array $items): self
     {
-        return new self(array_map(function ($role) {
-            return CommunityRoleDto::from($role);
-        }, $roles));
+        return new self(array_map(function ($item) {
+            return CommunityRoleDto::from($item);
+        }, $items));
     }
 }
 

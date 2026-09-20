@@ -11,9 +11,9 @@ use Symfony\Component\Validator\Constraints as Assert;
 class CommunityJinxesDto implements DtoInterface
 {
     public function __construct(
-        /** @var CommunityJinxDto[] $jinxes */
+        /** @var CommunityJinxDto[] $items */
         #[Assert\Valid]
-        public readonly array $jinxes,
+        public readonly array $items,
     ) {
     }
 
@@ -22,18 +22,18 @@ class CommunityJinxesDto implements DtoInterface
      */
     public function toArray(): array
     {
-        return array_map(function ($jinx) {
-            return $jinx->toArray();
-        }, $this->jinxes);
+        return array_map(function ($item) {
+            return $item->toArray();
+        }, $this->items);
     }
 
     /**
-     * @param Data $jinxes
+     * @param Data $items
      */
-    public static function from(array $jinxes): self
+    public static function from(array $items): self
     {
-        return new self(array_map(function ($jinx) {
-            return CommunityJinxDto::from($jinx);
-        }, $jinxes));
+        return new self(array_map(function ($item) {
+            return CommunityJinxDto::from($item);
+        }, $items));
     }
 }

@@ -14,7 +14,7 @@ class TPIReminderDto implements DtoInterface
         public readonly string $key,
 
         #[Assert\NotBlank]
-        public readonly string $value,
+        public readonly string $text,
     ) {}
 
     /**
@@ -22,7 +22,7 @@ class TPIReminderDto implements DtoInterface
      */
     public function toArray(): array
     {
-        return [$this->key => $this->value];
+        return [$this->key => $this->text];
     }
 
     /**

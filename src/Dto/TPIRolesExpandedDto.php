@@ -12,10 +12,10 @@ class TPIRolesExpandedDto implements DtoInterface
 {
     public function __construct(
         /**
-         * @var TPIRoleExpandedDto[] $roles
+         * @var TPIRoleExpandedDto[] $items
          */
         #[Assert\Valid]
-        public readonly array $roles,
+        public readonly array $items,
     ) {
     }
 
@@ -24,19 +24,19 @@ class TPIRolesExpandedDto implements DtoInterface
      */
     public function toArray(): array
     {
-        return array_map(function ($role) {
-            return $role->toArray();
-        }, $this->roles);
+        return array_map(function ($item) {
+            return $item->toArray();
+        }, $this->items);
     }
 
     /**
-     * @param Data $tpiRoles
+     * @param Data $items
      */
-    public static function from(array $tpiRoles): self
+    public static function from(array $items): self
     {
-        return new self(array_map(function ($tpiRole) {
-            return TPIRoleExpandedDto::from($tpiRole);
-        }, $tpiRoles));
+        return new self(array_map(function ($item) {
+            return TPIRoleExpandedDto::from($item);
+        }, $items));
     }
 }
 

@@ -11,9 +11,9 @@ use Symfony\Component\Validator\Constraints as Assert;
 class TranslationRolesDto implements DtoInterface
 {
     public function __construct(
-        /** @var TranslationRoleDto[] $roles */
+        /** @var TranslationRoleDto[] $items */
         #[Assert\Valid]
-        public readonly array $roles,
+        public readonly array $items,
     ) {}
 
     /**
@@ -21,19 +21,19 @@ class TranslationRolesDto implements DtoInterface
      */
     public function toArray(): array
     {
-        return array_merge(...array_map(function ($role) {
-            return $role->toArray();
-        }, $this->roles));
+        return array_merge(...array_map(function ($item) {
+            return $item->toArray();
+        }, $this->items));
     }
 
     /**
-     * @param Data $roles
+     * @param Data $items
      */
-    public static function from(array $roles): self
+    public static function from(array $items): self
     {
         return new self(array_map(function ($key, $value) {
             return TranslationRoleDto::from([$key => $value]); 
-        }, array_keys($roles), array_values($roles)));
+        }, array_keys($items), array_values($items)));
     }
 }
 

@@ -34,20 +34,20 @@ class TPITranslationModel
     ): array {
         $translatedReminders = [];
 
-        foreach ($reminders->reminders as $reminder) {
+        foreach ($reminders->items as $reminder) {
             // Assume the default translation, see if we can better it.
             $translatedReminders[$reminder->key] = $reminder->text;
 
             // If we can find the official translation, use it.
             $officialReminder = $this->misc->arrayFind(
-                $officialReminders->reminders,
+                $officialReminders->items,
                 function ($officialReminder) use ($reminder) {
                     return $officialReminder->key === $reminder->key;
                 },
             );
 
             if ($officialReminder !== null) {
-                $translatedReminders[$reminder->key] = $officialReminder->value;
+                $translatedReminders[$reminder->key] = $officialReminder->text;
                 continue;
             }
 
@@ -57,7 +57,7 @@ class TPITranslationModel
                 list($roleId, $type, $index) = explode('.', $example); 
 
                 $role = $this->misc->arrayFind(
-                    $communityRoles->roles,
+                    $communityRoles->items,
                     function ($role) use ($roleId) {
                         return $role->id === $roleId;
                     },
