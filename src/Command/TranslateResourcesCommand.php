@@ -14,7 +14,9 @@ use App\Dto\{
     CommunityJinxesDto,
     CommunityRolesDto,
     // DtoInterface,
+    GamesDto,
     JinxesDto,
+    ScriptsDto,
     TPIRemindersDto,
     TPIRemindersExpandedDto,
     TPIRolesExpandedDto,
@@ -37,6 +39,12 @@ use App\Service\{
     Storage,
 };
 
+/**
+ * @phpstan-import-type Data from TPIRolesExpandedDto as RolesArray
+ * @phpstan-import-type Data from JinxesDto as JinxesArray
+ * @phpstan-import-type Data from GamesDto as GamesArray
+ * @phpstan-import-type Data from ScriptsDto as ScriptsArray
+ */
 #[AsCommand(name: 'pocket-grimoire:translate')]
 class TranslateResourcesCommand extends Command
 {
@@ -83,22 +91,32 @@ class TranslateResourcesCommand extends Command
             $io->section('Reading local files');
         }
 
-        $roles = $this->getLocalJson('roles.json', TPIRolesExpandedDto::class);
-        $reminders = $this->getLocalJson('reminders.json', TPIRemindersExpandedDto::class);
-        $jinxes = $this->getLocalJson('jinxes.json', JinxesDto::class);
-        // TODO: get the scripts and the game
-        // $game = $this->storage->readYaml(Storage::LOCATION_CONFIG, 'game.yaml');
-        // $scripts = $this->storage->readYaml(Storage::LOCATION_CONFIG, 'scripts.yaml');
+        $roles = $this->getLocal('roles.json', TPIRolesExpandedDto::class);
+        $reminders = $this->getLocal('reminders.json', TPIRemindersExpandedDto::class);
+        $jinxes = $this->getLocal('jinxes.json', JinxesDto::class);
+        $games = $this->getLocal('game.yaml', GamesDto::class);
+        $scripts = $this->getLocal('scripts.yaml', ScriptsDto::class);
 
         if (
             !is_null($roles['error'])
             || !is_null($reminders['error'])
             || !is_null($jinxes['error'])
+            || !is_null($games['error'])
+            || !is_null($scripts['error'])
         ) {
-            $io->error($roles['error'] ?? $reminders['error'] ?? $jinxes['error']);
+            $io->error($roles['error'] ?? $reminders['error'] ?? $jinxes['error'] ?? $games['error'] ?? $scripts['error']);
             return Command::FAILURE;
         }
 
+        // Keep PHPStan happy.
+        assert($roles['dto'] !== null);
+        assert($reminders['dto'] !== null);
+        assert($jinxes['dto'] !== null);
+        assert($games['dto'] !== null);
+        assert($scripts['dto'] !== null);
+
+        $gamesArray = $games['dto']->toArray();
+        $scriptsArray = $scripts['dto']->toArray();
         $locales = $this->localesModel->getLocales();
         $bar = null; // Created in verbose mode.
 
@@ -136,10 +154,6 @@ class TranslateResourcesCommand extends Command
                 continue;
             }
 
-            #$io->writeln($locale['code']);
-            #$io->writeln(sprintf(CommunityTranslationEnum::JINXES->value, $locale['community']['jinxes']));
-            #$io->writeln(sprintf(CommunityTranslationEnum::ROLES->value, $locale['community']['roles']));
-            
             $community = $this->getCommunity(
                 $locale['community']['jinxes'],
                 $locale['community']['roles'],
@@ -172,12 +186,7 @@ class TranslateResourcesCommand extends Command
             }
 
             // Keep PHPStan happy.
-            assert($roles['dto'] !== null);
-            assert($reminders['dto'] !== null);
-            assert($jinxes['dto'] !== null);
-            assert($official['roles']['dto'] !== null);
-            assert($official['reminders']['dto'] !== null);
-            assert($official['jinxes']['dto'] !== null);
+            // Note: the official translation for this locale might be null.
             assert($community['jinxes']['dto'] !== null);
             assert($community['roles']['dto'] !== null);
 
@@ -197,6 +206,27 @@ class TranslateResourcesCommand extends Command
                 $official['jinxes']['dto'],
                 $community['jinxes']['dto'],
             );
+
+            $contents = $this->createContents(
+                $translatedRoles,
+                $translatedJinxes,
+                $gamesArray,
+                $scriptsArray,
+                $output->isVeryVerbose(),
+            );
+
+            if ($this->storage->write(
+                Storage::LOCATION_COMPILED,
+                "aa__{$locale['code']}.js",
+                $contents,
+            ) === false) {
+                $io->error("Unable to write {$locale['code']}.js");
+                return Command::FAILURE;
+            }
+
+            // TODO: Output the results in a table.
+            // TODO: Check the translations - a lot of English text :(
+            // TODO: Remove the prefix from the filename.
 
             if ($output->isVerbose()) {
                 $bar->advance();
@@ -327,8 +357,8 @@ class TranslateResourcesCommand extends Command
     }
 
     /**
-     * Reads the JSON from the given file name and passes it into the given DTO,
-     * allowing it to be validated.
+     * Reads the JSON or Yaml from the given file name and passes it into the
+     * given DTO, allowing it to be validated.
      *
      * @template DtoType
      * @param string $filename Name of the file to parse.
@@ -336,7 +366,7 @@ class TranslateResourcesCommand extends Command
      * @return array{dto: ?DtoType, error: ?string, violations: array<string, string[]>}
      * Results of the JSON being parsed and validated.
      */
-    protected function getLocalJson(
+    protected function getLocal(
         string $filename,
         callable|string $dtoClass,
     ): array {
@@ -345,11 +375,21 @@ class TranslateResourcesCommand extends Command
             'error' => null,
             'violations' => [],
         ];
-
-        $data = $this->storage->readJson(Storage::LOCATION_RAW, $filename);
+        $data = null;
+        
+        switch (strtolower(pathinfo($filename, PATHINFO_EXTENSION))) {
+        case 'json':
+            $data = $this->storage->readJson(Storage::LOCATION_RAW, $filename);
+            break;
+        case 'yaml':
+            $data = $this->storage->readYaml(Storage::LOCATION_CONFIG, $filename);
+            break;
+        default:
+            throw new \ValueError('Unrecognised file extension');
+        }
 
         if (is_null($data)) {
-            $response['error'] = 'Cannot read JSON';
+            $response['error'] = "Cannot read '{$filename}'";
             return $response;
         }
 
@@ -517,6 +557,37 @@ class TranslateResourcesCommand extends Command
 
 
         return $response;
+    }
+
+    /**
+     * Creates the contents that will be saved to a file.
+     *
+     * @param RolesArray $roles
+     * @param JinxesArray $jinxes
+     * @param GamesArray $game
+     * @param ScriptsArray $scripts
+     * @param bool $isPretty If true, the generated file will be formatted.
+     * @return string Contents to be written.
+     */
+    protected function createContents(
+        array $roles,
+        array $jinxes,
+        array $game,
+        array $scripts,
+        bool $isPretty = false,
+    ): string {
+        $data = [
+            'roles' => $roles,
+            'jinxes' => $jinxes,
+            'game' => $game,
+            'scripts' => $scripts,
+        ];
+        $contents = 'var PG=' . json_encode(
+            $data,
+            $isPretty ? JSON_PRETTY_PRINT : 0,
+        ) . ';';
+
+        return $contents;
     }
 
     /**

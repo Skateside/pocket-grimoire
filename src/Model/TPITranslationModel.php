@@ -30,7 +30,7 @@ class TPITranslationModel
      *
      * @param TPIRemindersExpandedDto $reminders Expanded reminders to
      * translate.
-     * @param TPIRemindersDto $officialReminders Official translations of the
+     * @param ?TPIRemindersDto $officialReminders Official translations of the
      * reminders.
      * @param CommunityRolesDto $communityRoles Community translations of the
      * roles.
@@ -38,7 +38,7 @@ class TPITranslationModel
      */
     public function translateReminders(
         TPIRemindersExpandedDto $reminders,
-        TPIRemindersDto $officialReminders,
+        ?TPIRemindersDto $officialReminders,
         CommunityRolesDto $communityRoles,
     ): array {
         $translatedReminders = [];
@@ -48,16 +48,18 @@ class TPITranslationModel
             $translatedReminders[$reminder->key] = $reminder->text;
 
             // If we can find the official translation, use it.
-            $officialReminder = $this->misc->arrayFind(
-                $officialReminders->items,
-                function ($officialReminder) use ($reminder) {
-                    return $officialReminder->key === $reminder->key;
-                },
-            );
+            if ($officialReminders !== null) {
+                $officialReminder = $this->misc->arrayFind(
+                    $officialReminders->items,
+                    function ($officialReminder) use ($reminder) {
+                        return $officialReminder->key === $reminder->key;
+                    },
+                );
 
-            if ($officialReminder !== null) {
-                $translatedReminders[$reminder->key] = $officialReminder->text;
-                continue;
+                if ($officialReminder !== null) {
+                    $translatedReminders[$reminder->key] = $officialReminder->text;
+                    continue;
+                }
             }
 
             // If we couldn't find an official translation, loop through the
@@ -101,13 +103,13 @@ class TPITranslationModel
      * Translates the jinxes.
      *
      * @param JinxesDto $jinxes Raw jinx information.
-     * @param TranslationJinxesDto $officialJinxes Official jinx translations.
+     * @param ?TranslationJinxesDto $officialJinxes Official jinx translations.
      * @param CommunityJinxesDto $communityJinxes Community jinx translations.
      * @return JinxesArray Translated jinxes.
      */
     public function translateJinxes(
         JinxesDto $jinxes,
-        TranslationJinxesDto $officialJinxes,    
+        ?TranslationJinxesDto $officialJinxes,    
         CommunityJinxesDto $communityJinxes,
     ): array {
         $translatedJinxes = [];
@@ -124,21 +126,25 @@ class TPITranslationModel
                     'reason' => $jinxEntry->reason,
                 ];
 
-                $community = null; // Created later if $official is null.
-                $official = $this->misc->arrayFind(
-                    $officialJinxes->items,
-                    function ($item) use ($jinx, $jinxEntry) {
-                        return $item->key === "{$jinx->id}-{$jinxEntry->id}";
-                    },
-                );
+                $official = null;
+                $community = null;
 
-                if ($official === null) {
+                if ($officialJinxes !== null) {
                     $official = $this->misc->arrayFind(
                         $officialJinxes->items,
                         function ($item) use ($jinx, $jinxEntry) {
-                            return $item->key === "{$jinxEntry->id}-{$jinx->id}";
+                            return $item->key === "{$jinx->id}-{$jinxEntry->id}";
                         },
                     );
+
+                    if ($official === null) {
+                        $official = $this->misc->arrayFind(
+                            $officialJinxes->items,
+                            function ($item) use ($jinx, $jinxEntry) {
+                                return $item->key === "{$jinxEntry->id}-{$jinx->id}";
+                            },
+                        );
+                    }
                 }
 
                 if ($official === null) {
@@ -178,14 +184,14 @@ class TPITranslationModel
      * Translates the character roles.
      *
      * @param TPIRolesExpandedDto $roles
-     * @param TranslationRolesDto $officialRoles
+     * @param ?TranslationRolesDto $officialRoles
      * @param CommunityRolesDto $communityRoles
      * @param RemindersArray $reminders
      * @return RolesArray
      */
     public function translateRoles(
         TPIRolesExpandedDto $roles,
-        TranslationRolesDto $officialRoles,
+        ?TranslationRolesDto $officialRoles,
         CommunityRolesDto $communityRoles,
         array $reminders,
     ): array {
@@ -247,12 +253,16 @@ class TPITranslationModel
                 continue;
             }
 
-            $officialRole = $this->misc->arrayFind(
-                $officialRoles->items,
-                function ($item) use ($role) {
-                    return $item->id === $role->id;
-                },
-            );
+            $officialRole = null;
+
+            if ($officialRoles !== null) {
+                $officialRole = $this->misc->arrayFind(
+                    $officialRoles->items,
+                    function ($item) use ($role) {
+                        return $item->id === $role->id;
+                    },
+                );
+            }
 
             if ($officialRole !== null) {
                 $index = count($localKeys);
