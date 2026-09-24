@@ -68,7 +68,8 @@ when@prod:
                 channels: [deprecation]
                 path: php://stderr
             js:
-                type: stream
+                type: rotating_file
                 level: debug
                 path: "%kernel.logs_dir%/js.log"
                 channels: ["js"]
+                max_files: 21
