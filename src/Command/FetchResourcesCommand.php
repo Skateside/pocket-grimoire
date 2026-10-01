@@ -9,6 +9,8 @@ use Symfony\Component\Console\Output\OutputInterface;
 use Symfony\Component\Console\Style\SymfonyStyle;
 use Symfony\Component\Validator\Validator\ValidatorInterface;
 use Symfony\Component\Validator\ConstraintViolationListInterface;
+use Symfony\Component\Serializer\SerializerInterface;
+use Symfony\Component\Serializer\Encoder\JsonEncode;
 use App\Enums\TPIURLEnum;
 use App\Model\TPIResourcesModel;
 use App\Service\{
@@ -16,13 +18,12 @@ use App\Service\{
     Storage,
 };
 use App\Dto\{
-    DtoInterface,
-    JinxesDto,
+    JinxDto,
     NightsheetDto,
-    TPIRemindersDto,
-    TPIRemindersExpandedDto,
-    TPIRolesDto,
-    TPIRolesExpandedDto,
+    TPIReminderDto,
+    TPIReminderExpandedDto,
+    TPIRoleDto,
+    TPIRoleExpandedDto,
 };
 
 #[AsCommand(name: 'pocket-grimoire:fetch')]
@@ -32,17 +33,20 @@ class FetchResourcesCommand extends Command
     protected Fetch $fetch;
     protected Storage $storage;
     protected ValidatorInterface $validator;
+    protected SerializerInterface $serializer;
 
     public function __construct(
         TPIResourcesModel $resourcesModel,
         Fetch $fetch,
         Storage $storage,
         ValidatorInterface $validator,
+        SerializerInterface $serializer,
     ) {
         $this->resourcesModel = $resourcesModel;
         $this->fetch = $fetch;
         $this->storage = $storage;
         $this->validator = $validator;
+        $this->serializer = $serializer;
 
         parent::__construct();
     }
@@ -60,28 +64,42 @@ class FetchResourcesCommand extends Command
             $bar->start();
         }
 
-        $roles = $this->getJson(TPIURLEnum::ROLES->value, TPIRolesDto::class);
+        $roles = $this->getData(TPIURLEnum::ROLES->value, TPIRoleDto::class, true);
 
         if ($output->isVerbose()) {
             $bar->advance();
         }
 
-        $jinxes = $this->getJson(TPIURLEnum::JINXES->value, JinxesDto::class);
+        $jinxes = $this->getData(TPIURLEnum::JINXES->value, JinxDto::class, true);
 
         if ($output->isVerbose()) {
             $bar->advance();
         }
 
-        $nightsheet = $this->getJson(TPIURLEnum::NIGHTSHEET->value, NightsheetDto::class);
+        $nightsheet = $this->getData(TPIURLEnum::NIGHTSHEET->value, NightsheetDto::class);
 
         if ($output->isVerbose()) {
             $bar->advance();
         }
 
-        $reminders = $this->getJson(
+        $reminders = $this->getData(
             sprintf(TPIURLEnum::GAME->value, 'en'),
-            function (array $fetched) {
-                return TPIRemindersDto::from($fetched['reminders']);
+            TPIReminderDto::class,
+            true,
+            function (string $contents, string $type) {
+                $data = [];
+                $json = json_decode($contents, true);
+
+                foreach (($json['reminders'] ?? []) as $key => $text) {
+                    $array = [
+                        'key' => $key,
+                        'text' => $text,
+                    ];
+
+                    $data[] = new $type(key: $key, text: $text);
+                }
+
+                return $data;
             },
         );
 
@@ -130,7 +148,7 @@ class FetchResourcesCommand extends Command
             foreach ($data as $type => $results) {
                 $body = [
                     $type,
-                    is_null($results['dto']) ? 0 : count($results['dto']->toArray()),
+                    is_null($results['data']) ? 0 : (is_array($results['data']) ? count($results['data']) : 1),
                     count($results['violations']) ? $this->stringifyViolations($results['violations']) : 'None ✓',
                 ];
 
@@ -140,31 +158,25 @@ class FetchResourcesCommand extends Command
             $io->table($tableHeaders, $tableBody);
         }
 
-        // Keep PHPStan happy.
-        assert($jinxes['dto'] !== null && is_a($jinxes['dto'], JinxesDto::class));
-        assert($nightsheet['dto'] !== null && is_a($nightsheet['dto'], NightsheetDto::class));
-        assert($reminders['dto'] !== null && is_a($reminders['dto'], TPIRemindersDto::class));
-        assert($roles['dto'] !== null && is_a($roles['dto'], TPIRolesDto::class));
-
         $writing = [
             'jinxes.json' => [
-                'data' => $jinxes['dto']->toArray(),
-                'dto' => JinxesDto::class,
+                'data' => $jinxes['data'],
+                'type' => JinxDto::class . '[]',
             ],
             'reminders.json' => [
                 'data' => $this->resourcesModel->expandReminders(
-                    $reminders['dto'],
-                    $roles['dto'],
+                    reminders: $reminders['data'],
+                    roles: $roles['data'],
                 ),
-                'dto' => TPIRemindersExpandedDto::class,
+                'type' => TPIReminderExpandedDto::class . '[]',
             ],
             'roles.json' => [
                 'data' => $this->resourcesModel->expandRoles(
-                    $roles['dto'],
-                    $nightsheet['dto'],
-                    $reminders['dto'],
+                    roles: $roles['data'],
+                    nightsheet: $nightsheet['data'],
+                    reminders: $reminders['data'],
                 ),
-                'dto' => TPIRolesExpandedDto::class,
+                'type' => TPIRoleExpandedDto::class . '[]',
             ],
         ];
 
@@ -178,11 +190,33 @@ class FetchResourcesCommand extends Command
         }
 
         foreach ($writing as $filename => $data) {
-            $written = $this->storage->writeJson(
+            $violations = $this->getViolations($data['data'], $data['type']);
+
+            if (
+                count($violations)
+                && !$io->ask(
+                    "{$filename} has validation errors. Continue?",
+                    '(n)o',
+                    function (string $input) {
+                        $lower = strtolower($input);
+
+                        return $lower === 'y' || $lower === 'yes';
+                    },
+                )
+            ) {
+                return Command::FAILURE;
+            }
+
+            $context = [];
+
+            if ($output->isVeryVerbose()) {
+                $context[JsonEncode::OPTIONS] = JSON_PRETTY_PRINT;
+            }
+
+            $written = $this->storage->write(
                 Storage::LOCATION_RAW,
                 $filename,
-                $data['data'],
-                $output->isVeryVerbose() ? JSON_PRETTY_PRINT : 0,
+                $this->serializer->serialize($data['data'], 'json', $context),
             );
 
             if ($written === false) {
@@ -191,12 +225,9 @@ class FetchResourcesCommand extends Command
             }
 
             if ($output->isVerbose()) {
-                $dto = $data['dto']::from($data['data']);
-                $violations = $this->validator->validate($dto);
-
                 $tableBody[] = [
                     $filename,
-                    count($violations) ? $this->stringifyViolations($this->convertViolations($violations)) : 'None ✓',
+                    count($violations) ? $this->stringifyViolations($violations) : 'None ✓',
                 ];
 
                 $bar->advance();
@@ -216,40 +247,68 @@ class FetchResourcesCommand extends Command
     }
 
     /**
-     * Gets the JSON from the remote source, passes the data into a DTO class,
-     * and returns an array detailing the results.
+     * Fetches the data from the given URL, serialises it into the format given,
+     * and validates it. An array of the results is returned.
      *
-     * @param string $url URL where the JSON is located.
-     * @param (callable(array<mixed>): DtoInterface)|string $dtoClass Class string for the DTO class.
-     * @return array{dto: ?DtoInterface, error: ?string, violations: array<string, string[]>}
-     * Results of the JSON being parsed and validated.
+     * @template Type of object
+     *
+     * @param string $url URL where the raw data is located.
+     * @param class-string<Type> $type Data type to serialise the given data.
+     * @param bool $isArray Whether or not the data should be an array of the given type.
+     * @param ?(callable(string, string, bool): (Type|array<Type>)) $map Optional map to convert the data from the URL.
+     * @return ($isArray is true ? array{data: ?array<Type>, error: ?string, violations: array<string, string[]>} : array{data: ?Type, error: ?string, violations: array<string, string[]>})
+     * Results of the data being parsed and validated.
      */
-    protected function getJson(
+    protected function getData(
         string $url,
-        callable|string $dtoClass,
-    ): array
-    {
+        string $type,
+        bool $isArray = false,
+        ?callable $map = null,
+    ): array {
         $response = [
-            'dto' => null,
+            'data' => null,
             'error' => null,
             'violations' => [],
         ];
-
-        $fetched = $this->fetch->getJson($url);
+        $contents = $this->fetch->getContents($url);
 
         if (($error = $this->fetch->getLastError()) !== '') {
             $response['error'] = $error;
             return $response;
         }
 
-        $response['dto'] = is_callable($dtoClass) ? $dtoClass($fetched) : $dtoClass::from($fetched);
-        $violations = $this->validator->validate($response['dto']);
-
-        if (count($violations)) {
-            $response['violations'] = $this->convertViolations($violations);
+        if (is_callable($map)) {
+            $response['data'] = $map($contents, $type, $isArray);
+        } else {
+            $response['data'] = $this->serializer->deserialize(
+                $contents,
+                $isArray ? "{$type}[]" : $type,
+                'json',
+            );
         }
+        $response['violations'] = $this->getViolations($response['data']);
 
         return $response;
+    }
+
+    /**
+     * Validates that the given data would be valid if converted into the given
+     * type.
+     *
+     * @param mixed $data Data to validate.
+     * @param string $type Data type to validate against. Only needed if the
+     * given data needs conversion.
+     * @return array<string, string[]> Human-readable violations.
+     */
+    protected function getViolations(mixed $data, string $type = ''): array
+    {
+        if (is_string($data)) {
+            $data = $this->serializer->deserialize($data, $type, 'json');
+        }
+
+        $violations = $this->validator->validate($data);
+
+        return $this->convertViolations($violations);
     }
 
     /**

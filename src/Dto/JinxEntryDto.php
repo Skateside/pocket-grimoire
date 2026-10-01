@@ -10,7 +10,7 @@ use Symfony\Component\Validator\Constraints as Assert;
  *  reason: string,
  * }
  */
-class JinxEntryDto implements DtoInterface
+class JinxEntryDto
 {
     public function __construct(
         #[Assert\NotBlank]
@@ -21,27 +21,5 @@ class JinxEntryDto implements DtoInterface
         #[Assert\Length(min: 1)]
         public readonly string $reason,
     ) {
-    }
-
-    /**
-     * @return Data
-     */
-    public function toArray(): array
-    {
-        return [
-            'id' => $this->id,
-            'reason' => $this->reason,
-        ];
-    }
-
-    /**
-     * @param Data $jinx
-     */
-    public static function from(array $jinx): self
-    {
-        return new self(
-            $jinx['id'],
-            $jinx['reason'],
-        );
     }
 }

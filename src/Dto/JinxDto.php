@@ -11,7 +11,7 @@ use Symfony\Component\Validator\Constraints as Assert;
  *  jinx: JinxEntry[]
  * }
  */
-class JinxDto implements DtoInterface
+class JinxDto
 {
     public function __construct(
         #[Assert\NotBlank]
@@ -24,31 +24,5 @@ class JinxDto implements DtoInterface
         #[Assert\Valid]
         public readonly array $jinx,
     ) {
-    }
-
-    /**
-     * @return Data
-     */
-    public function toArray(): array
-    {
-        return [
-            'id' => $this->id,
-            'jinx' => array_map(function ($jinx) {
-                return $jinx->toArray();
-            }, $this->jinx),
-        ];
-    }
-
-    /**
-     * @param Data $jinx
-     */
-    public static function from(array $jinx): self
-    {
-        return new self(
-            $jinx['id'],
-            array_map(function ($jinx) {
-                return JinxEntryDto::from($jinx);
-            }, $jinx['jinx']),
-        );
     }
 }

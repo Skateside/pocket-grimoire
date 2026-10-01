@@ -5,12 +5,13 @@ namespace App\Dto;
 use Symfony\Component\Validator\Constraints as Assert;
 
 /**
- * @phpstan-type Data array<string, array{
+ * @phpstan-type Data array{
+ *  key: string,
  *  text: string,
  *  examples: string[],
- * }>
+ * }
  */
-class TPIReminderExpandedDto implements DtoInterface
+class TPIReminderExpandedDto
 {
     public function __construct(
         #[Assert\NotBlank]
@@ -27,32 +28,5 @@ class TPIReminderExpandedDto implements DtoInterface
         )]
         public readonly array $examples,
     ) {
-    }
-
-    /**
-     * @return Data
-     */
-    public function toArray(): array
-    {
-        return [
-            $this->key => [
-                'text' => $this->text,
-                'examples' => $this->examples,
-            ],
-        ];
-    }
-
-    /**
-     * @param Data $reminder
-     */
-    public static function from(array $reminder): self
-    {
-        $key = array_key_first($reminder);
-
-        return new self(
-            $key,
-            $reminder[$key]['text'],
-            $reminder[$key]['examples'],
-        );
     }
 }

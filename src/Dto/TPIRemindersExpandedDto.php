@@ -7,6 +7,7 @@ use Symfony\Component\Validator\Constraints as Assert;
 /**
  * @phpstan-import-type Data from TPIReminderExpandedDto as Reminder
  * @phpstan-type Data Reminder
+ * @deprecated Use TPIReminderExpandedDto and SerializerInterface instead.
  */
 class TPIRemindersExpandedDto implements DtoInterface
 {

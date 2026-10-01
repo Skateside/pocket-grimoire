@@ -7,6 +7,7 @@ use Symfony\Component\Validator\Constraints as Assert;
 /**
  * @phpstan-import-type Data from TPIRoleExpandedDto as Role
  * @phpstan-type Data Role[]
+ * @deprecated Use TPIRoleExpandedDto and SerializerInterface instead.
  */
 class TPIRolesExpandedDto implements DtoInterface
 {

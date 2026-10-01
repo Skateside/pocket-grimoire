@@ -10,7 +10,7 @@ use Symfony\Component\Validator\Constraints as Assert;
  *  otherNight: string[],
  * }
  */
-class NightsheetDto implements DtoInterface
+class NightsheetDto
 {
     public function __construct(
         /**
@@ -31,27 +31,5 @@ class NightsheetDto implements DtoInterface
         ])]
         public readonly array $otherNight,
     ) {
-    }
-
-    /**
-     * @return Data
-     */
-    public function toArray(): array
-    {
-        return [
-            'firstNight' => $this->firstNight,
-            'otherNight' => $this->otherNight,
-        ];
-    }
-
-    /**
-     * @param Data $nightsheet
-     */
-    public static function from(array $nightsheet): self
-    {
-        return new self(
-            $nightsheet['firstNight'],
-            $nightsheet['otherNight'],
-        );
     }
 }

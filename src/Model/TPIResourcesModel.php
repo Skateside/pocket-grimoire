@@ -4,13 +4,13 @@ namespace App\Model;
 
 use App\Dto\{
     NightsheetDto,
-    TPIRemindersDto,
-    TPIRolesDto,
+    TPIReminderDto,
+    TPIRoleDto,
 };
 
 /**
- * @phpstan-import-type Data from \App\Dto\TPIRemindersExpandedDto as TPIRemindersExpanded
- * @phpstan-import-type Data from \App\Dto\TPIRolesExpandedDto as TPIRolesExpanded
+ * @phpstan-import-type Data from \App\Dto\TPIReminderExpandedDto as TPIReminderExpanded
+ * @phpstan-import-type Data from \App\Dto\TPIRoleExpandedDto as TPIRoleExpanded
  */
 class TPIResourcesModel
 {
@@ -23,24 +23,25 @@ class TPIResourcesModel
      * Expands the reminders to include examples of the reminder text, allowing
      * us to get that information from the community translations.
      *
-     * @param TPIRemindersDto $reminders Reminders to expand.
-     * @param TPIRolesDto $roles Roles that have the reminder texts in them.
-     * @return TPIRemindersExpanded Expanded reminders.
+     * @param array<TPIReminderDto> $reminders Reminders to expand.
+     * @param array<TPIRoleDto> $roles Roles that have the reminder texts in them.
+     * @return array<TPIReminderExpanded> Expanded reminders.
      */
     public function expandReminders(
-        TPIRemindersDto $reminders,
-        TPIRolesDto $roles
+        array $reminders,
+        array $roles
     ): array {
         $expanded = [];
 
-        foreach ($reminders->items as $reminder) {
+        foreach ($reminders as $reminder) {
             $text = $reminder->text;
             $entry = [
+                'key' => $reminder->key,
                 'text' => $text,
                 'examples' => [],
             ];
 
-            foreach ($roles->items as $role) {
+            foreach ($roles as $role) {
                 if (($index = array_search($text, $role->reminders ?? [])) !== false) {
                     $entry['examples'][] = "{$role->id}.r.{$index}";
                 }
@@ -49,7 +50,7 @@ class TPIResourcesModel
                 }
             }
 
-            $expanded[$reminder->key] = $entry;
+            $expanded[] = $entry;
         }
 
         return $expanded;
@@ -58,20 +59,20 @@ class TPIResourcesModel
     /**
      * Expand the roles data into something that can be used.
      *
-     * @param TPIRolesDto $roles Roles to expand.
+     * @param array<TPIRoleDto> $roles Roles to expand.
      * @param NightsheetDto $nightsheet Nightsheet for the roles.
-     * @param TPIRemindersDto $reminders Reversed reminders.
-     * @return TPIRolesExpanded Expanded roles.
+     * @param array<TPIReminderDto> $reminders Reversed reminders.
+     * @return array<TPIRoleExpanded> Expanded roles.
      */
     public function expandRoles(
-        TPIRolesDto $roles,
+        array $roles,
         NightsheetDto $nightsheet,
-        TPIRemindersDto $reminders,
+        array $reminders,
     ): array {
         $expanded = [];
         $mappedReminders = $this->mapReminders($reminders);
 
-        foreach ($roles->items as $role) {
+        foreach ($roles as $role) {
             $cleanRole = [
                 'id' => $role->id,
                 'name' => $role->name,
@@ -173,14 +174,14 @@ class TPIResourcesModel
     /**
      * Converts the reminders into a map of the translations to the keys.
      *
-     * @param TPIRemindersDto $reminders Reminders.
+     * @param array<TPIReminderDto> $reminders Reminders.
      * @return array<string, string> Mapped reminders.
      */
-    protected function mapReminders(TPIRemindersDto $reminders): array
+    protected function mapReminders(array $reminders): array
     {
         $mapped = [];
 
-        foreach ($reminders->items as $reminder) {
+        foreach ($reminders as $reminder) {
             $mapped[$reminder->text] = $reminder->key;
         }
 
