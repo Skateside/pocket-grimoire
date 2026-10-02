@@ -15,7 +15,7 @@ use Symfony\Component\Validator\Constraints as Assert;
  *  },
  * }
  */
-class GameDto implements DtoInterface
+class GameDto
 {
     public function __construct(
         #[Assert\NotBlank]
@@ -28,27 +28,4 @@ class GameDto implements DtoInterface
         ])]
         public readonly array $breakdown,
     ) {}
-
-    /**
-     * @return Data
-     */
-    public function toArray(): array
-    {
-        return [
-            'players' => $this->players,
-            'breakdown' => $this->breakdown,
-        ];
-    }
-
-    /**
-     * @param Data $game
-     * @return self
-     */
-    public static function from(array $game): self
-    {
-        return new self(
-            $game['players'],
-            $game['breakdown'],
-        );
-    }
 }

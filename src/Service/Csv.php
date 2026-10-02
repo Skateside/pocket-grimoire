@@ -30,11 +30,12 @@ class Csv
      * Parses a string as if it's a CSV and returns an associative array.
      *
      * @param string $contents String to parse.
+     * @param array<string, string> $map Map for converting headers.
      * @return array<array<string, string>> Parsed data.
      */
-    public function parseArray(string $contents): array
+    public function parseArray(string $contents, array $map = []): array
     {
-        return $this->makeAssocArray($this->parse($contents));
+        return $this->makeAssocArray($this->parse($contents), $map);
     }
 
     /**
@@ -42,11 +43,15 @@ class Csv
      * that the first row contains headers.
      *
      * @param array<string[]> $array Parsed CSV data.
+     * @param array<string, string> $map Map for converting headers.
      * @return array<array<string, string>> Associative array.
      */
-    protected function makeAssocArray(array $array): array
+    protected function makeAssocArray(array $array, array $map = []): array
     {
         $headers = array_shift($array);
+        $headers = array_map(function ($header) use ($map) {
+            return $map[$header] ?? $header;
+        }, $headers ?? []);
 
         return array_map(function (array $line) use ($headers) {
             return array_combine($headers, $line);

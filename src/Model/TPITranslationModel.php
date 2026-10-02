@@ -3,13 +3,21 @@
 namespace App\Model;
 
 use App\Dto\{
+    CommunityJinxDto,
     CommunityJinxesDto,
+    CommunityRoleDto,
     CommunityRolesDto,
+    JinxDto,
     JinxesDto,
+    TPIReminderDto,
     TPIRemindersDto,
+    TPIReminderExpandedDto,
     TPIRemindersExpandedDto,
+    TPIRoleExpandedDto,
     TPIRolesExpandedDto,
+    TranslationJinxDto,
     TranslationJinxesDto,
+    TranslationRoleDto,
     TranslationRolesDto,
 };
 use App\Service\Misc;
@@ -28,29 +36,29 @@ class TPITranslationModel
     /**
      * Translates the reminders.
      *
-     * @param TPIRemindersExpandedDto $reminders Expanded reminders to
+     * @param array<TPIReminderExpandedDto> $reminders Expanded reminders to
      * translate.
-     * @param ?TPIRemindersDto $officialReminders Official translations of the
-     * reminders.
-     * @param CommunityRolesDto $communityRoles Community translations of the
-     * roles.
+     * @param ?array<TPIReminderDto> $officialReminders Official translations
+     * of the reminders.
+     * @param array<CommunityRoleDto> $communityRoles Community translations of
+     * the roles.
      * @return RemindersArray
      */
     public function translateReminders(
-        TPIRemindersExpandedDto $reminders,
-        ?TPIRemindersDto $officialReminders,
-        CommunityRolesDto $communityRoles,
+        array $reminders,
+        ?array $officialReminders,
+        array $communityRoles,
     ): array {
         $translatedReminders = [];
 
-        foreach ($reminders->items as $reminder) {
+        foreach ($reminders as $reminder) {
             // Assume the default translation, see if we can better it.
             $translatedReminders[$reminder->key] = $reminder->text;
 
             // If we can find the official translation, use it.
             if ($officialReminders !== null) {
                 $officialReminder = $this->misc->arrayFind(
-                    $officialReminders->items,
+                    $officialReminders,
                     function ($officialReminder) use ($reminder) {
                         return $officialReminder->key === $reminder->key;
                     },
@@ -68,7 +76,7 @@ class TPITranslationModel
                 list($roleId, $type, $index) = explode('.', $example); 
 
                 $role = $this->misc->arrayFind(
-                    $communityRoles->items,
+                    $communityRoles,
                     function ($role) use ($roleId) {
                         return $role->id === $roleId;
                     },

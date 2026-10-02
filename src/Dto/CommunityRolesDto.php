@@ -7,6 +7,7 @@ use Symfony\Component\Validator\Constraints as Assert;
 /**
  * @phpstan-import-type Data from CommunityRoleDto as Role
  * @phpstan-type Data Role[]
+ * @deprecated Use CommunityRole and SerializerInterface instead.
  */
 class CommunityRolesDto implements DtoInterface
 {

@@ -7,6 +7,7 @@ use Symfony\Component\Validator\Constraints as Assert;
 /**
  * @phpstan-import-type Data from ScriptDto as Reminder
  * @phpstan-type Data Reminder
+ * @deprecated use ScriptDto and SerializerInterface instead.
  */
 class ScriptsDto implements DtoInterface
 {

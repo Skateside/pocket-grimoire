@@ -14,14 +14,29 @@ class Misc
      */
     public function removeMarkup(string $string): string
     {
-        $document = new \DOMDocument();
-        $document->loadHTML($string, LIBXML_NOERROR | LIBXML_NOWARNING);
-
-        while ($element = $document->documentElement->firstChild) {
-            $document->documentElement->removeChild($element);
+        if (empty(trim($string))) {
+            return '';
         }
 
-        return trim($document->textContent);
+        $document = new \DOMDocument();
+        $document->loadHTML(
+            "<html><head><meta charset=\"utf-8\"></head><body>{$string}</body></html>",
+            LIBXML_HTML_NOIMPLIED | LIBXML_HTML_NODEFDTD | LIBXML_NOERROR | LIBXML_NOWARNING,
+        );
+
+        $body = $document->getElementsByTagName('body')->item(0);
+
+        if (!$body) {
+            return '';
+        }
+
+        foreach ($body->getElementsByTagName('*') as $node) {
+            if ($node->parentNode) {
+                $node->parentNode->removeChild($node);
+            }
+        }
+
+        return trim($body->textContent);
     }
 
     /**

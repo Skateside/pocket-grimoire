@@ -7,13 +7,12 @@ use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
 use Symfony\Component\Console\Style\SymfonyStyle;
-use Symfony\Component\Validator\Validator\ValidatorInterface;
-use Symfony\Component\Validator\ConstraintViolationListInterface;
 use Symfony\Component\Serializer\SerializerInterface;
 use Symfony\Component\Serializer\Encoder\JsonEncode;
 use App\Enums\TPIURLEnum;
 use App\Model\TPIResourcesModel;
 use App\Service\{
+    DataValidator,
     Fetch,
     Storage,
 };
@@ -30,22 +29,22 @@ use App\Dto\{
 class FetchResourcesCommand extends Command
 {
     protected TPIResourcesModel $resourcesModel;
+    protected DataValidator $dataValidator;
     protected Fetch $fetch;
     protected Storage $storage;
-    protected ValidatorInterface $validator;
     protected SerializerInterface $serializer;
 
     public function __construct(
         TPIResourcesModel $resourcesModel,
+        DataValidator $dataValidator,
         Fetch $fetch,
         Storage $storage,
-        ValidatorInterface $validator,
         SerializerInterface $serializer,
     ) {
         $this->resourcesModel = $resourcesModel;
+        $this->dataValidator = $dataValidator;
         $this->fetch = $fetch;
         $this->storage = $storage;
-        $this->validator = $validator;
         $this->serializer = $serializer;
 
         parent::__construct();
@@ -91,11 +90,6 @@ class FetchResourcesCommand extends Command
                 $json = json_decode($contents, true);
 
                 foreach (($json['reminders'] ?? []) as $key => $text) {
-                    $array = [
-                        'key' => $key,
-                        'text' => $text,
-                    ];
-
                     $data[] = new $type(key: $key, text: $text);
                 }
 
@@ -149,7 +143,7 @@ class FetchResourcesCommand extends Command
                 $body = [
                     $type,
                     is_null($results['data']) ? 0 : (is_array($results['data']) ? count($results['data']) : 1),
-                    count($results['violations']) ? $this->stringifyViolations($results['violations']) : 'None ✓',
+                    count($results['violations']) ? $this->dataValidator->stringifyViolations($results['violations']) : 'None ✓',
                 ];
 
                 $tableBody[] = $body;
@@ -190,7 +184,7 @@ class FetchResourcesCommand extends Command
         }
 
         foreach ($writing as $filename => $data) {
-            $violations = $this->getViolations($data['data'], $data['type']);
+            $violations = $this->dataValidator->validate($data['data']);
 
             if (
                 count($violations)
@@ -227,7 +221,7 @@ class FetchResourcesCommand extends Command
             if ($output->isVerbose()) {
                 $tableBody[] = [
                     $filename,
-                    count($violations) ? $this->stringifyViolations($violations) : 'None ✓',
+                    count($violations) ? $this->dataValidator->stringifyViolations($violations) : 'None ✓',
                 ];
 
                 $bar->advance();
@@ -277,78 +271,23 @@ class FetchResourcesCommand extends Command
             return $response;
         }
 
-        if (is_callable($map)) {
-            $response['data'] = $map($contents, $type, $isArray);
-        } else {
-            $response['data'] = $this->serializer->deserialize(
-                $contents,
-                $isArray ? "{$type}[]" : $type,
-                'json',
-            );
+        try {
+            if (is_callable($map)) {
+                $response['data'] = $map($contents, $type, $isArray);
+            } else {
+                $response['data'] = $this->serializer->deserialize(
+                    $contents,
+                    $isArray ? "{$type}[]" : $type,
+                    'json',
+                );
+            }
+        } catch (\Exception $e) {
+            $response['error'] = $e->getMessage();
+            return $response;
         }
-        $response['violations'] = $this->getViolations($response['data']);
+
+        $response['violations'] = $this->dataValidator->validate($response['data']);
 
         return $response;
-    }
-
-    /**
-     * Validates that the given data would be valid if converted into the given
-     * type.
-     *
-     * @param mixed $data Data to validate.
-     * @param string $type Data type to validate against. Only needed if the
-     * given data needs conversion.
-     * @return array<string, string[]> Human-readable violations.
-     */
-    protected function getViolations(mixed $data, string $type = ''): array
-    {
-        if (is_string($data)) {
-            $data = $this->serializer->deserialize($data, $type, 'json');
-        }
-
-        $violations = $this->validator->validate($data);
-
-        return $this->convertViolations($violations);
-    }
-
-    /**
-     * Converts the violations into a more human-readable format.
-     *
-     * @param ConstraintViolationListInterface $violations Violations that
-     * should be logged.
-     * @return array<string, string[]> Human-readable violations.
-     */
-    protected function convertViolations(ConstraintViolationListInterface $violations): array
-    {
-        $converted = [];
-
-        foreach ($violations as $violation) {
-            $converted[$violation->getPropertyPath()][] = (string) $violation->getMessage();
-        }
-
-        return $converted;
-    }
-
-    /**
-     * Converts the violations into a string.
-     *
-     * @param array<string, string[]> $violations
-     * @return string A string containing any violations.
-     */
-    protected function stringifyViolations(array $violations): string
-    {
-        $strings = [];
-
-        foreach ($violations as $path => $messages) {
-            $inner = [$path];
-
-            foreach ($messages as $message) {
-                $inner[] = "\t" . $message;
-            }
-
-            $strings[] = implode(PHP_EOL, $inner);
-        }
-
-        return implode(PHP_EOL, $strings);
     }
 }

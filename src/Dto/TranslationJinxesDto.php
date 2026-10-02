@@ -7,6 +7,7 @@ use Symfony\Component\Validator\Constraints as Assert;
 /**
  * @phpstan-import-type Data from TranslationJinxDto as Jinx
  * @phpstan-type Data Jinx
+ * @deprecated Use TranslationJinxDto and SerializerInterface instead.
  */
 class TranslationJinxesDto implements DtoInterface
 {

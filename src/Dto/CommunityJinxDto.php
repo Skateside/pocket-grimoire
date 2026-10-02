@@ -11,7 +11,7 @@ use Symfony\Component\Validator\Constraints as Assert;
  *  reason: string
  * }
  */
-class CommunityJinxDto implements DtoInterface
+class CommunityJinxDto
 {
     public function __construct(
         #[Assert\NotBlank]
@@ -25,30 +25,5 @@ class CommunityJinxDto implements DtoInterface
         #[Assert\NotBlank]
         #[Assert\Length(min: 1)]
         public readonly string $reason,
-    ) {
-    }
-
-    /**
-     * @return Data
-     */
-    public function toArray(): array
-    {
-        return [
-            'target' => $this->target,
-            'trick' => $this->trick,
-            'reason' => $this->reason,
-        ];
-    }
-
-    /**
-     * @param Data $jinx
-     */
-    public static function from(array $jinx): self
-    {
-        return new self(
-            $jinx['target'],
-            $jinx['trick'],
-            $jinx['reason'],
-        );
-    }
+    ) {}
 }

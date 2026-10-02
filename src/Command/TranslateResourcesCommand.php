@@ -2,25 +2,41 @@
 
 namespace App\Command;
 
+use Symfony\Component\Yaml\Yaml;
 use Symfony\Component\Console\Attribute\AsCommand;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
 use Symfony\Component\Console\Style\SymfonyStyle;
+use Symfony\Component\Serializer\SerializerInterface;
+use Symfony\Component\Serializer\Normalizer\{
+    DenormalizerInterface,
+    NormalizerInterface,
+};
 // use Symfony\Contracts\Translation\TranslatorInterface;
 use Symfony\Component\Validator\Validator\ValidatorInterface;
 use Symfony\Component\Validator\ConstraintViolationListInterface;
 use App\Dto\{
+    CommunityJinxDto,
     CommunityJinxesDto,
+    CommunityRoleDto,
     CommunityRolesDto,
     // DtoInterface,
+    GameDto,
     GamesDto,
+    JinxDto,
     JinxesDto,
+    ScriptDto,
     ScriptsDto,
+    TPIReminderDto,
     TPIRemindersDto,
+    TPIReminderExpandedDto,
     TPIRemindersExpandedDto,
+    TPIRoleExpandedDto,
     TPIRolesExpandedDto,
+    TranslationJinxDto,
     TranslationJinxesDto,
+    TranslationRoleDto,
     TranslationRolesDto,
 };
 use App\Enums\{
@@ -34,6 +50,7 @@ use App\Model\{
 };
 use App\Service\{
     Csv,
+    DataValidator,
     Fetch,
     Misc,
     Storage,
@@ -52,32 +69,41 @@ class TranslateResourcesCommand extends Command
     protected LocalesModel $localesModel;
     // protected TPIResourcesModel $resourcesModel;
     protected Csv $csv;
+    protected DataValidator $dataValidator;
     protected Fetch $fetch;
     protected Misc $misc;
     protected Storage $storage;
     // protected TranslatorInterface $translator;
     protected ValidatorInterface $validator;
+    protected SerializerInterface $serializer;
+    protected DenormalizerInterface&NormalizerInterface $normalizer;
 
     public function __construct(
         TPITranslationModel $translationModel,
         LocalesModel $localesModel,
         // TPIResourcesModel $resourcesModel,
         Csv $csv,
+        DataValidator $dataValidator,
         Fetch $fetch,
         Misc $misc,
         Storage $storage,
         // TranslatorInterface $translator,
         ValidatorInterface $validator,
+        SerializerInterface $serializer,
+        DenormalizerInterface&NormalizerInterface $normalizer,
     ) {
         $this->translationModel = $translationModel;
         $this->localesModel = $localesModel;
         // $this->resourcesModel = $resourcesModel;
         $this->csv = $csv;
+        $this->dataValidator = $dataValidator;
         $this->fetch = $fetch;
         $this->misc = $misc;
         $this->storage = $storage;
         // $this->translator = $translator;
         $this->validator = $validator;
+        $this->serializer = $serializer;
+        $this->normalizer = $normalizer;
 
         parent::__construct();
     }
@@ -91,11 +117,27 @@ class TranslateResourcesCommand extends Command
             $io->section('Reading local files');
         }
 
-        $roles = $this->getLocal('roles.json', TPIRolesExpandedDto::class);
-        $reminders = $this->getLocal('reminders.json', TPIRemindersExpandedDto::class);
-        $jinxes = $this->getLocal('jinxes.json', JinxesDto::class);
-        $games = $this->getLocal('game.yaml', GamesDto::class);
-        $scripts = $this->getLocal('scripts.yaml', ScriptsDto::class);
+        $roles = $this->getLocal('roles.json', TPIRoleExpandedDto::class, true);
+        $reminders = $this->getLocal('reminders.json', TPIReminderExpandedDto::class, true);
+        $jinxes = $this->getLocal('jinxes.json', JinxDto::class, true);
+        $games = $this->getLocal('game.yaml', GameDto::class, true);
+        $scripts = $this->getLocal(
+            'scripts.yaml',
+            ScriptDto::class,
+            true,
+            function (string $contents, string $type) {
+                $data = [];
+                $json = Yaml::parse($contents);
+
+                foreach ($json as $key => $value) {
+                    $roles = array_filter($value, 'is_string');
+                    $meta = $this->misc->arrayFind($value, fn($item) => is_array($item));
+                    $data[] = new $type(key: $key, roles: $roles, meta: $meta);
+                }
+
+                return $data;
+            },
+        );
 
         if (
             !is_null($roles['error'])
@@ -104,10 +146,140 @@ class TranslateResourcesCommand extends Command
             || !is_null($games['error'])
             || !is_null($scripts['error'])
         ) {
-            $io->error($roles['error'] ?? $reminders['error'] ?? $jinxes['error'] ?? $games['error'] ?? $scripts['error']);
+            $io->error(
+                $roles['error']
+                ?? $reminders['error']
+                ?? $jinxes['error']
+                ?? $games['error']
+                ?? $scripts['error']
+            );
             return Command::FAILURE;
         }
 
+        $locales = $this->localesModel->getLocales();
+        /* TEMP */ $locales = array_slice($locales, 0, 1);
+        $bar = null; // Created in verbose mode.
+
+        if ($output->isVerbose()) {
+            $io->writeln('Done');
+            $io->section('Downloading translations and writing files');
+            $bar = $io->createProgressBar(count($locales));
+            $bar->start();
+        }
+
+        $tableHeaders = [
+            'Locale',
+            'Official jinxes',
+            'Official reminders',
+            'Official roles',
+            'Community jinxes',
+            'Community roles',
+        ];
+        $tableBody = [];
+
+        foreach ($locales as $locale) {
+            if ($output->isVerbose()) {
+                $bar->advance();
+            }
+
+            $bodyIndex = count($tableBody);
+            $tableBody[$bodyIndex] = [
+                'code' => $locale['code'],
+                'o_jinxes' => '',
+                'o_reminders' => '',
+                'o_roles' => '',
+                'c_jinxes' => '',
+                'c_roles' => '',
+            ];
+            $official = $this->getOfficial($locale['tpi']);
+
+            if (!empty($official['error'])) {
+                $io->error($official['error']);
+                return Command::FAILURE;
+            }
+
+            $tableBody[$bodyIndex]['o_jinxes'] = $this->dataValidator->stringifyViolations($official['jinxes']['violations']) ?: 'Valid ✓';
+            $tableBody[$bodyIndex]['o_reminders'] = $this->dataValidator->stringifyViolations($official['reminders']['violations']) ?: 'Valid ✓';
+            $tableBody[$bodyIndex]['o_roles'] = $this->dataValidator->stringifyViolations($official['roles']['violations']) ?: 'Valid ✓';
+
+            if (
+                (
+                    !empty($official['jinxes']['violations'])
+                    || !empty($official['reminders']['violations'])
+                    || !empty($official['roles']['violations'])
+                )
+                && !$io->ask(
+                    "{$locale['code']} official has validation errors. Include it?",
+                    '(n)o',
+                    function (string $input) {
+                        $lower = strtolower($input);
+
+                        return $lower === 'y' || $lower === 'yes';
+                    },
+                )
+            ) {
+                continue;
+            }
+
+            $community = $this->getCommunity(
+                $locale['community']['jinxes'],
+                $locale['community']['roles'],
+            );
+
+            $tableBody[$bodyIndex]['c_jinxes'] = $this->dataValidator->stringifyViolations($community['jinxes']['violations']) ?: 'Valid ✓';
+            $tableBody[$bodyIndex]['c_roles'] = $this->dataValidator->stringifyViolations($community['roles']['violations']) ?: 'Valid ✓';
+
+            if (
+                !empty($community['jinxes']['error'])
+                || !empty($community['roles']['error'])
+            ) {
+                $io->error($community['jinxes']['error'] ?? $community['roles']['error']);
+                return Command::FAILURE;
+            }
+            
+            if (
+                (
+                    !empty($community['jinxes']['violations'])
+                    || !empty($community['roles']['violations'])
+                )
+                && !$io->ask(
+                    "{$locale['code']} community has validation errors. Include it?",
+                    '(n)o',
+                    function (string $input) {
+                        $lower = strtolower($input);
+
+                        return $lower === 'y' || $lower === 'yes';
+                    },
+                )
+            ) {
+                continue;
+            }
+
+            $translatedReminders = $this->translationModel->translateReminders(
+                $reminders['data'],
+                $official['reminders']['data'],
+                $community['roles']['data'],
+            );
+            /*$translatedRoles = $this->translationModel->translateRoles(
+                $roles['dto'],
+                $official['roles']['dto'],
+                $community['roles']['dto'],
+                $translatedReminders,
+            );*/
+            /*$translatedJinxes = $this->translationModel->translateJinxes(
+                $jinxes['dto'],
+                $official['jinxes']['dto'],
+                $community['jinxes']['dto'],
+            );*/
+            /*var_export([
+                '$locale[\'code\']' => $locale['code'],
+                '$reminders[\'data\']' => $reminders['data'],
+                '$official[\'reminders\'][\'data\']' => $official['reminders']['data'],
+                '$community[\'roles\'][\'data\']' => $community['roles']['data'],
+                '$translatedReminders' => $translatedReminders,
+            ]);*/
+        }
+        /*
         // Keep PHPStan happy.
         assert($roles['dto'] !== null);
         assert($reminders['dto'] !== null);
@@ -232,11 +404,14 @@ class TranslateResourcesCommand extends Command
                 $bar->advance();
             }
         }
+        */
 
         if ($output->isVerbose()) {
             $bar->finish();
             $io->writeln('');
             $io->writeln('');
+            $io->section('Results');
+            $io->table($tableHeaders, $tableBody);
         }
 
         $io->success('Translations downloaded and written');
@@ -360,81 +535,73 @@ class TranslateResourcesCommand extends Command
      * Reads the JSON or Yaml from the given file name and passes it into the
      * given DTO, allowing it to be validated.
      *
-     * @template DtoType
+     * @template Type
      * @param string $filename Name of the file to parse.
-     * @param (callable(array<mixed>): DtoType)|class-string<DtoType> $dtoClass Class string for the DTO class.
-     * @return array{dto: ?DtoType, error: ?string, violations: array<string, string[]>}
-     * Results of the JSON being parsed and validated.
+     * @param class-string<Type> $type Class string for the DTO class.
+     * @param bool $isArray Whether or not the DTO is an array.
+     * @param ?(callable(string, string, bool): (Type|array<Type>)) $map Optional map to convert the data from the file contents.
+     * @return ($isArray is true ? array{data: ?Type[], error: ?string, violations: array<string, string[]>} : array{data: ?Type, error: ?string, violations: array<string, string[]>})
+     * Results of the data being parsed and validated.
      */
     protected function getLocal(
         string $filename,
-        callable|string $dtoClass,
+        string $type,
+        bool $isArray = false,
+        ?callable $map = null,
     ): array {
         $response = [
-            'dto' => null,
+            'data' => null,
             'error' => null,
             'violations' => [],
         ];
         $data = null;
         
-        switch (strtolower(pathinfo($filename, PATHINFO_EXTENSION))) {
-        case 'json':
-            $data = $this->storage->readJson(Storage::LOCATION_RAW, $filename);
-            break;
-        case 'yaml':
-            $data = $this->storage->readYaml(Storage::LOCATION_CONFIG, $filename);
-            break;
-        default:
-            throw new \ValueError('Unrecognised file extension');
-        }
+        $extension = strtolower(pathinfo($filename, PATHINFO_EXTENSION));
+        $contents = $this->storage->read(
+            $extension === 'yaml' ? Storage::LOCATION_CONFIG : Storage::LOCATION_RAW,
+            $filename,
+        );
 
-        if (is_null($data)) {
+        if ($contents === false) {
             $response['error'] = "Cannot read '{$filename}'";
             return $response;
         }
 
-        $response['dto'] = is_callable($dtoClass) ? $dtoClass($data) : $dtoClass::from($data);
-        $violations = $this->validator->validate($response['dto']);
-
-        if (count($violations)) {
-            $response['violations'] = $this->convertViolations($violations);
+        try {
+            if (is_callable($map)) {
+                $response['data'] = $map($contents, $type, $isArray);
+            } else {
+                $response['data'] = $this->serializer->deserialize(
+                    $contents,
+                    $isArray ? "{$type}[]" : $type,
+                    $extension,
+                );
+            }
+        } catch (\Exception $e) {
+            $response['error'] = "{$filename}: {$e->getMessage()}";
+            return $response;
         }
+
+        $response['violations'] = $this->dataValidator->validate($response['data']);
 
         return $response;
     }
 
-    /**
-     * Converts the violations into a more human-readable format.
-     *
-     * @param ConstraintViolationListInterface $violations Violations that
-     * should be logged.
-     * @return array<string, string[]> Human-readable violations.
-     */
-    protected function convertViolations(ConstraintViolationListInterface $violations): array
-    {
-        $converted = [];
-
-        foreach ($violations as $violation) {
-            $converted[$violation->getPropertyPath()][] = (string) $violation->getMessage();
-        }
-
-        return $converted;
-    }
     /**
      * @param ?string $tpiCode The TPI locale code, which might be null.
      * @return array{
      *  error: ?string,
      *  jinxes: array{
      *      violations: array<string, string[]>,
-     *      dto: ?TranslationJinxesDto,
+     *      data: ?array<TranslationJinxDto>,
      *  },
      *  reminders: array{
      *      violations: array<string, string[]>,
-     *      dto: ?TPIRemindersDto,
+     *      data: ?array<TPIReminderDto>,
      *  },
      *  roles: array{
      *      violations: array<string, string[]>,
-     *      dto: ?TranslationRolesDto,
+     *      data: ?array<TranslationRoleDto>,
      *  },
      * } Response from access the official translations.
      */
@@ -444,15 +611,15 @@ class TranslateResourcesCommand extends Command
             'error' => null,
             'jinxes' => [
                 'violations' => [],
-                'dto' => null,
+                'data' => null,
             ],
             'reminders' => [
                 'violations' => [],
-                'dto' => null,
+                'data' => null,
             ],
             'roles' => [
                 'violations' => [],
-                'dto' => null,
+                'data' => null,
             ],
         ];
 
@@ -468,22 +635,45 @@ class TranslateResourcesCommand extends Command
         }
 
         $data = [
-            'jinxes' => TranslationJinxesDto::class,
-            'reminders' => TPIRemindersDto::class,
-            'roles' => TranslationRolesDto::class,
-        ];
+            'jinxes' => function (array $items): array {
+                $data = [];
 
-        foreach ($data as $key => $dtoClass) {
-            if (array_key_exists($key, $raw)) {
-                $dto = $dtoClass::from($raw[$key]);
-                $violations = $this->validator->validate($dto);
-
-                if (count($violations)) {
-                    $response[$key]['violations'] = $this->convertViolations($violations);
+                foreach ($items as $key => $reason) {
+                    $array = ['key' => $key, 'reason' => $reason];
+                    $data[] = $this->normalizer->denormalize($array, TranslationJinxDto::class);
                 }
 
-                $response[$key]['dto'] = $dto;
+                return $data;
+            },
+            'reminders' => function (array $items): array {
+                $data = [];
+
+                foreach ($items as $key => $text) {
+                    $array = ['key' => $key, 'text' => $text];
+                    $data[] = $this->normalizer->denormalize($array, TPIReminderDto::class);
+                }
+
+                return $data;
+            },
+            'roles' => function (array $items): array {
+                $data = [];
+
+                foreach ($items as $key => $role) {
+                    $role['key'] = $key;
+                    $data[] = $this->normalizer->denormalize($role, TranslationRoleDto::class);
+                }
+
+                return $data;
+            },
+        ];
+
+        foreach ($data as $key => $processor) {
+            if (!array_key_exists($key, $raw)) {
+                continue;
             }
+
+            $response[$key]['data'] = $processor($raw[$key]);
+            $response[$key]['violations'] = $this->dataValidator->validate($response[$key]['data']);
         }
 
         return $response;
@@ -496,12 +686,12 @@ class TranslateResourcesCommand extends Command
      *  jinxes: array{
      *      error: ?string,
      *      violations: array<string, string[]>,
-     *      dto: ?CommunityJinxesDto,
+     *      data: ?array<CommunityJinxDto>,
      *  },
      *  roles: array{
      *      error: ?string,
      *      violations: array<string, string[]>,
-     *      dto: ?CommunityRolesDto,
+     *      data: ?array<CommunityRoleDto>,
      *  },
      * } Response data.
      */
@@ -511,29 +701,54 @@ class TranslateResourcesCommand extends Command
             'jinxes' => [
                 'error' => null,
                 'violations' => [],
-                'dto' => null,
+                'data' => null,
             ],
             'roles' => [
                 'error' => null,
                 'violations' => [],
-                'dto' => null,
+                'data' => null,
             ],
         ];
 
         $dto = [
             'jinxes' => [
-                'dto' => CommunityJinxesDto::class,
                 'url' => sprintf(
                     CommunityTranslationEnum::JINXES->value,
                     rawurlencode($jinxes),
                 ),
+                'map' => [
+                    'Target' => 'target',
+                    'Trick' => 'trick',
+                    'Reason' => 'reason',
+                ],
+                'processor' => function (array $items): array {
+                    return array_map(function ($item) {
+                        return $this->normalizer->denormalize($item, CommunityJinxDto::class);
+                    }, $items);
+                },
             ],
             'roles' => [
-                'dto' => CommunityRolesDto::class,
                 'url' => sprintf(
                     CommunityTranslationEnum::ROLES->value,
                     rawurlencode($roles),
                 ),
+                'processor' => function (array $items): array {
+                    return array_map(function ($item) {
+                        foreach ($item as $key => $value) {
+                            if (trim($value) === '') {
+                                $item[$key] = null;
+                            }
+
+                            if ($key === 'reminders' || $key === 'remindersGlobal') {
+                                $value = array_filter(array_map('trim', explode(',', trim($value))));
+
+                                $item[$key] = count($value) ? $value : null;
+                            }
+                        }
+
+                        return $this->normalizer->denormalize($item, CommunityRoleDto::class);
+                    }, $items);
+                },
             ],
         ];
 
@@ -545,14 +760,36 @@ class TranslateResourcesCommand extends Command
                 continue;
             }
 
-            $stripped = $this->misc->removeMarkup($contents);
-            $csv = $this->csv->parseArray($stripped);
-            $response[$type]['dto'] = $info['dto']::from($csv);
-            $violations = $this->validator->validate($response[$type]['dto']);
+            $csv = [];
+            
+            foreach ($this->csv->parseArray($contents, $info['map'] ?? []) as $row) {
+                $safe = [];
 
-            if (count($violations)) {
-                $response[$type]['violations'] = $this->convertViolations($violations);
+                foreach ($row as $header => $cell) {
+                    $safe[$header] = $this->misc->removeMarkup($cell);
+                }
+
+                $csv[] = $safe;
             }
+
+            $response[$type]['data'] = $info['processor']($csv);
+            $response[$type]['violations'] = $this->dataValidator->validate($response[$type]['data']);
+
+            /*
+            $stripped = $this->misc->removeMarkup($contents);
+            $csv = $this->csv->parseArray($stripped, $info['map'] ?? []);
+            $response[$type]['data'] = $info['processor']($csv);
+            $response[$type]['violations'] = $this->dataValidator->validate($response[$type]['data']);
+
+            var_export([
+                '$type' => $type,
+                '$info[\'url\']' => $info['url'],
+                '$info[\'map\']' => $info['map'] ?? null,
+                '$contents' => $contents,
+                '$stripped' => $stripped,
+                '$csv' => $csv,
+            ]);
+             */
         }
 
 

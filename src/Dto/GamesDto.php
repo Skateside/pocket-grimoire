@@ -7,6 +7,7 @@ use Symfony\Component\Validator\Constraints as Assert;
 /**
  * @phpstan-import-type Data from GameDto as Game
  * @phpstan-type Data Game[]
+ * @deprecated use GameDto and SerializerInterface instead.
  */
 class GamesDto implements DtoInterface
 {

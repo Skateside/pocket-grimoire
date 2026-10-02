@@ -7,6 +7,7 @@ use Symfony\Component\Validator\Constraints as Assert;
 /**
  * @phpstan-import-type Data from CommunityJinxDto as Jinx
  * @phpstan-type Data Jinx[]
+ * @deprecated Use CommunityJinx and SerializerInterface instead.
  */
 class CommunityJinxesDto implements DtoInterface
 {

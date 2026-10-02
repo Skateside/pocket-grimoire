@@ -7,6 +7,7 @@ use Symfony\Component\Validator\Constraints as Assert;
 /**
  * @phpstan-import-type Data from TranslationRoleDto as Role
  * @phpstan-type Data Role
+ * @deprecated Use TranslationRoleDto and SerializerInterface instead.
  */
 class TranslationRolesDto implements DtoInterface
 {
