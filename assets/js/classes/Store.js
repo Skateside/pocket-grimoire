@@ -20,7 +20,6 @@ export default class Store {
      * @type {Object}
      */
     static defaults = {
-        lookup: {},
         characters: {},
         bluffs: {},
         tokens: [],
@@ -184,33 +183,6 @@ export default class Store {
      */
     get() {
         return deepFreeze(deepClone(this.data));
-    }
-
-    /**
-     * Gets the results from a lookup.
-     *
-     * @param  {String} url
-     *         URL for the lookup.
-     * @return {?}
-     *         The data from the URL.
-     */
-    getLookup(url) {
-        return this.data.lookup[url];
-    }
-
-    /**
-     * Saves the given results for the given lookup.
-     *
-     * @param {String} url
-     *        URL that fetches information.
-     * @param {?} results
-     *        Results from the lookup.
-     */
-    setLookup(url, results) {
-
-        this.data.lookup[url] = results;
-        this.write();
-
     }
 
     /**
