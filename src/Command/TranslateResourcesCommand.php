@@ -278,10 +278,9 @@ class TranslateResourcesCommand extends Command
                 $output->isVeryVerbose(),
             );
 
-            // TODO: Remove prefix.
             if ($this->storage->write(
                 Storage::LOCATION_COMPILED,
-                "aa__{$locale['code']}.js",
+                "{$locale['code']}.js",
                 $contents,
             ) === false) {
                 $io->error("Unable to write {$locale['code']}.js");
