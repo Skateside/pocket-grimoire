@@ -5,13 +5,14 @@ namespace App\Dto;
 use Symfony\Component\Validator\Constraints as Assert;
 
 /**
+ * @phpstan-type MetaEntry array{
+ *  id: '_meta',
+ *  firstNight?: ?string[],
+ *  otherNight?: ?string[],
+ * }
  * @phpstan-type Data array{
  *  key: string,
- *  item: string|array{
- *      id: '_meta',
- *      firstNight?: ?string[],
- *      otherNight?: ?string[],
- *  }
+ *  item: (string|MetaEntry)[]
  * }
  */
 class ScriptDto
@@ -23,7 +24,7 @@ class ScriptDto
         /** @var string[] $roles */
         #[Assert\All([
             new Assert\NotBlank,
-            new Assert\Regex(pattern: '/$[a-z]+$/'),
+            new Assert\Regex(pattern: '/^[a-z]+$/'),
         ])]
         public readonly array $roles,
 

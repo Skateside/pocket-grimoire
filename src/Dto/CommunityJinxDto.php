@@ -24,6 +24,6 @@ class CommunityJinxDto
 
         #[Assert\NotBlank]
         #[Assert\Length(min: 1)]
-        public readonly string $reason,
+        public readonly ?string $reason,
     ) {}
 }

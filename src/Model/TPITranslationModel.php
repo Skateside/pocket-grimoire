@@ -2,35 +2,35 @@
 
 namespace App\Model;
 
+use Symfony\Component\Serializer\Normalizer\{
+    DenormalizerInterface,
+    NormalizerInterface,
+};
 use App\Dto\{
     CommunityJinxDto,
-    CommunityJinxesDto,
     CommunityRoleDto,
-    CommunityRolesDto,
+    GameDto,
     JinxDto,
-    JinxesDto,
+    ScriptDto,
     TPIReminderDto,
-    TPIRemindersDto,
     TPIReminderExpandedDto,
-    TPIRemindersExpandedDto,
     TPIRoleExpandedDto,
-    TPIRolesExpandedDto,
     TranslationJinxDto,
-    TranslationJinxesDto,
     TranslationRoleDto,
-    TranslationRolesDto,
 };
 use App\Service\Misc;
 
 /**
- * @phpstan-import-type Data from TPIRemindersDto as RemindersArray
- * @phpstan-import-type Data from JinxesDto as JinxesArray
- * @phpstan-import-type Data from TPIRolesExpandedDto as RolesArray
+ * @phpstan-import-type Data from JinxDto as JinxArray
+ * @phpstan-import-type Data from TPIRoleExpandedDto as RoleArray
+ * @phpstan-import-type Data from GameDto as GameArray
+ * @phpstan-import-type MetaEntry from ScriptDto as ScriptMetaEntry
  */
 class TPITranslationModel
 {
     public function __construct(
         protected Misc $misc,
+        protected DenormalizerInterface&NormalizerInterface $normalizer,
     ) {}
 
     /**
@@ -42,7 +42,7 @@ class TPITranslationModel
      * of the reminders.
      * @param array<CommunityRoleDto> $communityRoles Community translations of
      * the roles.
-     * @return RemindersArray
+     * @return array<string, string>
      */
     public function translateReminders(
         array $reminders,
@@ -110,19 +110,19 @@ class TPITranslationModel
     /**
      * Translates the jinxes.
      *
-     * @param JinxesDto $jinxes Raw jinx information.
-     * @param ?TranslationJinxesDto $officialJinxes Official jinx translations.
-     * @param CommunityJinxesDto $communityJinxes Community jinx translations.
-     * @return JinxesArray Translated jinxes.
+     * @param array<JinxDto> $jinxes Raw jinx information.
+     * @param ?array<TranslationJinxDto> $officialJinxes Official jinx translations.
+     * @param array<CommunityJinxDto> $communityJinxes Community jinx translations.
+     * @return array<JinxArray> Translated jinxes.
      */
     public function translateJinxes(
-        JinxesDto $jinxes,
-        ?TranslationJinxesDto $officialJinxes,    
-        CommunityJinxesDto $communityJinxes,
+        array $jinxes,
+        ?array $officialJinxes,    
+        array $communityJinxes,
     ): array {
         $translatedJinxes = [];
 
-        foreach ($jinxes->items as $jinx) {
+        foreach ($jinxes as $jinx) {
             $translatedJinx = [
                 'id' => $jinx->id,
                 'jinx' => [],
@@ -139,7 +139,7 @@ class TPITranslationModel
 
                 if ($officialJinxes !== null) {
                     $official = $this->misc->arrayFind(
-                        $officialJinxes->items,
+                        $officialJinxes,
                         function ($item) use ($jinx, $jinxEntry) {
                             return $item->key === "{$jinx->id}-{$jinxEntry->id}";
                         },
@@ -147,7 +147,7 @@ class TPITranslationModel
 
                     if ($official === null) {
                         $official = $this->misc->arrayFind(
-                            $officialJinxes->items,
+                            $officialJinxes,
                             function ($item) use ($jinx, $jinxEntry) {
                                 return $item->key === "{$jinxEntry->id}-{$jinx->id}";
                             },
@@ -157,7 +157,7 @@ class TPITranslationModel
 
                 if ($official === null) {
                     $community = $this->misc->arrayFind(
-                        $communityJinxes->items,
+                        $communityJinxes,
                         function ($item) use ($jinx, $jinxEntry) {
                             return (
                                 (
@@ -191,16 +191,16 @@ class TPITranslationModel
     /**
      * Translates the character roles.
      *
-     * @param TPIRolesExpandedDto $roles
-     * @param ?TranslationRolesDto $officialRoles
-     * @param CommunityRolesDto $communityRoles
-     * @param RemindersArray $reminders
-     * @return RolesArray
+     * @param array<TPIRoleExpandedDto> $roles
+     * @param ?array<TranslationRoleDto> $officialRoles
+     * @param array<CommunityRoleDto> $communityRoles
+     * @param array<string, string> $reminders
+     * @return array<RoleArray>
      */
     public function translateRoles(
-        TPIRolesExpandedDto $roles,
-        ?TranslationRolesDto $officialRoles,
-        CommunityRolesDto $communityRoles,
+        array $roles,
+        ?array $officialRoles,
+        array $communityRoles,
         array $reminders,
     ): array {
         $translatedRoles = [];
@@ -232,11 +232,11 @@ class TPITranslationModel
             ],
         ];
 
-        foreach ($roles->items as $role) {
+        foreach ($roles as $role) {
             $localKeys = array_filter($keys, function ($key) use ($role) {
                 return property_exists($role, $key['role']);
             });
-            $translatedRole = $role->toArray();
+            $translatedRole = $this->normalizer->normalize($role, 'json');
 
             if (is_array($role->reminders)) {
                 $translatedRole['reminders'] = array_map(
@@ -265,7 +265,7 @@ class TPITranslationModel
 
             if ($officialRoles !== null) {
                 $officialRole = $this->misc->arrayFind(
-                    $officialRoles->items,
+                    $officialRoles,
                     function ($item) use ($role) {
                         return $item->id === $role->id;
                     },
@@ -296,7 +296,7 @@ class TPITranslationModel
             }
 
             $communityRole = $this->misc->arrayFind(
-                $communityRoles->items,
+                $communityRoles,
                 function ($item) use ($role) {
                     return $item->id === $role->id;
                 },
@@ -320,204 +320,57 @@ class TPITranslationModel
                 }
             }
 
-            $translatedRoles[] = $translatedRole;
+            $translatedRoles[] = array_filter(
+                $translatedRole,
+                fn($item) => !is_null($item),
+            );
         }
 
         return $translatedRoles;
     }
 
     /**
-     * Filters the raw jinxes so that only valid entries remain.
+     * Normalizes the games, converting them into an array.
      *
-     * @param array<mixed> $jinxes Jinxes to filter.
-     * @return array<string, string> Filtered jinxes.
+     * @param array<GameDto> $games Games to normalize.
+     * @return array<GameArray> Normalized games.
      */
-    /*
-    public function filterJinxes(array $jinxes): array
+    public function normalizeGames(array $games): array
     {
-        $filtered = [];
-
-        foreach ($jinxes as $key => $value) {
-            if (
-                preg_match('/^[a-z]+\-[a-z]+$/', $key) === 1
-                && is_string($value)
-            ) {
-                $filtered[$key] = $value;
-            }
-        }
-
-        return $filtered;
+        return array_map(
+            fn($game) => $this->normalizer->normalize($game),
+            $games,
+        );
     }
-     */
 
     /**
-     * Filters the raw reminders so that only valid entries remain.
+     * Normalizes the scripts, converting them into an array.
      *
-     * @param array<mixed> $reminders Reminders to filter.
-     * @return array<string, array{text: string, examples: string[]}> Filtered reminders.
+     * @param array<ScriptDto> $scripts Scripts to normalize.
+     * @return array<string, array<string|ScriptMetaEntry>> Normalized scripts.
      */
-    /*
-    public function filterReminders(array $reminders): array
+    public function normalizeScripts(array $scripts): array
     {
-        /*
-        return array_filter($reminders, function ($item) {
-            return is_string($item);
-        });
-         * /
-        return array_filter($reminders, function ($item) {
-            return (
-                is_array($item)
-                && array_key_exists('text', $item)
-                && is_string($item['text'])
-                && array_key_exists('examples', $item)
-                && is_array($item['examples'])
-            );
-        });
-    }
-     */
+        $normal = [];
 
-    /**
-     * Filters the raw roles so that only valid entries remain.
-     *
-     * @param array $roles Roles to filter.
-     * @return array Filtered roles.
-     */
-    /*
-    public function filterRoles(array $roles): array
-    {
-        $filtered = [];
+        foreach ($scripts as $script) {
+            $normalizedScript = $this->normalizer->normalize($script);
+            $normalScript = [];
 
-        foreach ($roles as $id => $translations) {
-            if (!is_array($translations)) {
-                continue;
+            if ($script->meta !== null) {
+                $normalScript[] = array_filter(
+                    $normalizedScript['meta'],
+                    fn($item) => !is_null($item),
+                );
             }
 
-            if (!$this->arrayAll($translations, function ($value) {
-                return is_string($value);
-            })) {
-                continue;
+            foreach ($script->roles as $role) {
+                $normalScript[] = $role;
             }
 
-            $filtered[$id] = $translations;
+            $normal[$script->key] = $normalScript;
         }
 
-        return $filtered;
+        return $normal;
     }
-     */
-
-    /**
-     * Combines the roles with the translations.
-     *
-     * @param array $baseRoles The base (English) roles.
-     * @param array $baseReminders The base (English) reminders.
-     * @param array $translatedRoles The translated roles.
-     * @param array $translatedReminders The translated reminders.
-     * @return array The combined, translated roles.
-     */
-    /*
-    public function combineRoles(
-        array $baseRoles,
-        array $baseReminders,
-        array $translatedRoles,
-        array $translatedReminders
-    ): array {
-        $combined = [];
-
-        foreach ($baseRoles as $baseRole) {
-            $role = $baseRole;
-            $translatedRole = $translatedRoles[$baseRole['id']] ?? [];
-
-            if (array_key_exists('ability', $translatedRole)) {
-                $role['ability'] = $translatedRole['ability'];
-            }
-
-            if (array_key_exists('flavor', $translatedRole)) {
-                $role['flavor'] = $translatedRole['flavor'];
-            }
-
-            if (array_key_exists('name', $translatedRole)) {
-                $role['name'] = $translatedRole['name'];
-            }
-
-            if (array_key_exists('first', $translatedRole)) {
-                $role['firstNightReminder'] = TPIResourcesModel::cleanNightReminder($translatedRole['first']);
-            }
-
-            if (array_key_exists('other', $translatedRole)) {
-                $role['otherNightReminder'] = TPIResourcesModel::cleanNightReminder($translatedRole['other']);
-            }
-
-            if (array_key_exists('reminders', $role)) {
-                $role['reminders'] = array_map(function ($item) use ($baseReminders, $translatedReminders) {
-                    return $translatedReminders[$item] ?? $baseReminders[$item]['text'] ?? $item;
-                }, $role['reminders']);
-            }
-
-            if (array_key_exists('remindersGlobal', $role)) {
-                $role['remindersGlobal'] = array_map(function ($item) use ($baseReminders, $translatedReminders) {
-                    return $translatedReminders[$item] ?? $baseReminders[$item]['text'] ?? $item;
-                }, $role['remindersGlobal']);
-            }
-
-            $combined[] = $role;
-        }
-
-        return $combined;
-    }
-     */
-
-    /**
-     * Combines the jinxes.
-     *
-     * @param array $baseJinxes Base (English) jinxes.
-     * @param array $translatedJinxes Translated jinxes.
-     * @return array Combined, translated jinxes.
-     */
-    /*
-    public function combineJinxes(
-        array $baseJinxes,
-        array $translatedJinxes
-    ): array {
-        $combined = [];
-
-        foreach ($baseJinxes as $baseJinx) {
-            $jinx = [
-                'id' => $baseJinx['id'],
-                'jinx' => [],
-            ];
-
-            foreach ($baseJinx['jinx'] as $innerJinx) {
-                $jinx['jinx'][] = [
-                    'id' => $innerJinx['id'],
-                    'reason' => $translatedJinxes["{$baseJinx['id']}-{$innerJinx['id']}"] ?? $translatedJinxes["{$innerJinx['id']}-{$baseJinx['id']}"] ?? $innerJinx['reason'],
-                ];
-            }
-
-            $combined[] = $jinx;
-        }
-
-        return $combined;
-    }
-     */
-
-    /**
-     * Equivalent of array_all() for PHP < 8.4.
-     *
-     * @template T
-     * @param array<T> $array Array to check.
-     * @param callable(T, int|string): bool $callback Callback for checking.
-     * @return bool true if all values and keys match the callback, false otherwise.
-     */
-    /*
-    protected function arrayAll(array $array, callable $callback): bool
-    {
-        foreach ($array as $key => $value) {
-            if ($callback($value, $key) !== true) {
-                return false;
-            }
-        }
-
-        return true;
-    }
-     */
 }

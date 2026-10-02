@@ -26,6 +26,20 @@ class DataValidator
     }
 
     /**
+     * Filters out any invalid entries from the given array.
+     *
+     * @template Type of array<mixed>
+     * @param Type $data Data to filter.
+     * @return Type Valid entries.
+     */
+    public function filterValid(array $data): array
+    {
+        return array_filter($data, function ($item) {
+            return count($this->validator->validate($item)) === 0;
+        });
+    }
+
+    /**
      * Converts the violations into a more human-readable format.
      *
      * @param ConstraintViolationListInterface $violations Violations that

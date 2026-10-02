@@ -18,7 +18,7 @@ class TranslationRoleDto
 {
     public function __construct(
         #[Assert\NotBlank]
-        public readonly string $key,
+        public readonly string $id,
 
         public readonly ?string $ability,
 

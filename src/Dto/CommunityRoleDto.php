@@ -26,7 +26,7 @@ class CommunityRoleDto
         public readonly string $name,
 
         #[Assert\NotBlank]
-        public readonly string $ability,
+        public readonly ?string $ability,
 
         public readonly ?string $flavor,
 
