@@ -6,6 +6,25 @@ use Symfony\Component\Process\Process;
 use Symfony\Contracts\Cache\CacheInterface;
 use Symfony\Contracts\Cache\ItemInterface;
 
+/**
+ * @phpstan-type Result array<string, string|null|int>
+ * @phpstan-type StackItem array{
+ *  function: string,
+ *  generated: array{
+ *      url: string,
+ *      line: int,
+ *      column: int,
+ *  },
+ *  original: ?Result,
+ * }
+ * @phpstan-type Frame array{
+ *  raw: string,
+ *  function: ?string,
+ *  url: string,
+ *  line: int,
+ *  column: int
+ * }
+ */
 class JavaScriptSourceMapper
 {
     public function __construct(
@@ -21,7 +40,7 @@ class JavaScriptSourceMapper
      * @param string $url URL that should be resolved.
      * @param int $line Minified line.
      * @param int $column Minified column.
-     * @return ?array<string, string|null|int> Resolved information.
+     * @return ?Result Resolved information.
      */
     public function resolve(string $url, int $line, int $column): ?array
     {
@@ -64,7 +83,7 @@ class JavaScriptSourceMapper
      * information.
      *
      * @param string $stack JavaScript stack to convert.
-     * @return array<string, string|array<string, string>> Converted stack.
+     * @return StackItem[] Converted stack.
      */
     public function mapStack(string $stack): array
     {
@@ -84,8 +103,8 @@ class JavaScriptSourceMapper
                 'function' => $frame['function'],
                 'generated' => [
                     'url' => $frame['url'],
-                    'line' => $frame['line'],
-                    'column' => $frame['column'],
+                    'line' => (int) $frame['line'],
+                    'column' => (int) $frame['column'],
                 ],
                 'original' => $original,
             ];
@@ -98,7 +117,7 @@ class JavaScriptSourceMapper
      * only browsers handled.
      *
      * @param string $stack Raw stack to parse.
-     * @return array<string, ?string> Parsed information.
+     * @return Frame[] Parsed information.
      */
     protected function parseStack(string $stack): array
     {
@@ -142,8 +161,8 @@ class JavaScriptSourceMapper
                     'raw' => $line,
                     'function' => $matches[1] === '' ? null : $matches[1],
                     'url' => $matches[2],
-                    'line' => $matches[3],
-                    'column' => $matches[4],
+                    'line' => (int) $matches[3],
+                    'column' => (int) $matches[4],
                 ];
             }
         }
@@ -158,7 +177,7 @@ class JavaScriptSourceMapper
      * @param string $mapFile Source map file.
      * @param int $line Minified line.
      * @param int $column Minified column.
-     * @return ?array<string, string|null|int> Resolved information.
+     * @return ?Result Resolved information.
      */
     protected function runResolver(string $mapFile, int $line, int $column): ?array
     {

@@ -9,7 +9,7 @@ A digital version of the [Blood on the Clocktower](https://bloodontheclocktower.
 - [Getting Started](#getting-started)
 - [Custom Scripts](#custom-scripts)
 - [Homebrew Characters](homebrew.md)
-- [Translations and Typos](#translations-and-typos)
+- [Translations](#translations)
 - [Contributing](CONTRIBUTING.md)
 
 ## Getting Started
@@ -98,17 +98,15 @@ Optionally, you can include a name for the script. To do this, include an entry 
 ]
 ```
 
-## Translations and Typos
+## Translations
 
-> [!WARNING]
-> Since version 0.12.0, the translations have changed. The Community translations for the characters and the jinxes are no longer being used - only the official translations. This will result in English text appearing in places where the translation has not been confirmed.
+The Pocket Grimoire tries to use the [Official Translations](https://translation.botc.app/) for all roles and jinxes. If the translation doesn't exist (or isn't approved) in the official translations, the Pocket Grimoire will get the translations from the community resources:
 
-If you've noticed a typo, or you have a better translation or would like to add a new language, there are 2 places that will need to be updated:
+- [The Community BotC Translations](https://docs.google.com/spreadsheets/d/1aAJdqSTafHnw01w-WZ94UPx1Me70Kz-EG1NFfBht2tA/edit#gid=923580658)
+- [The Community Jinxes](https://docs.google.com/spreadsheets/d/193DMlJzVSzArj1hV1DF6jcr-NsGRaecAy1ahLflu-Qo/edit?usp=sharing)
 
-1.  [The Official Translations](https://translation.botc.app/)
-    <br>The official translations for the characters and jinxes.
+If the translation is in neither the official nor community translations then the text will be in English.
 
-2.  [The Pocket Grimoire](https://docs.google.com/spreadsheets/d/1YjI3LcLnLbuONbjbniZTZa1BIT8MKBb8TuIprtmkjAw/edit#gid=19211044)
-    <br>This file contains translations for anything that's specific for the Pocket Grimoire.
+The app itself uses the [Pocket Grimoire Translations](https://docs.google.com/spreadsheets/d/1YjI3LcLnLbuONbjbniZTZa1BIT8MKBb8TuIprtmkjAw/edit#gid=19211044).
 
-As soon as a translation exists in the Pocket Grimoire document, I can add it to the app. Please be aware that the characters and jinxes might still be in English if an official translation has not been added and confirmed.
+If you have added a new locale, please let me know so that I can add it to the app.

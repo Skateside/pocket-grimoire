@@ -2,7 +2,10 @@
 
 namespace App\Service;
 
-use Symfony\Contracts\HttpClient\HttpClientInterface;
+use Symfony\Contracts\HttpClient\{
+    HttpClientInterface,
+    ResponseInterface
+};
 use Symfony\Contracts\Translation\TranslatorInterface;
 use Symfony\Component\HttpClient\{
     HttpClient,
@@ -19,11 +22,10 @@ class Fetch
 
     protected HttpClientInterface $client;
 
-    public function __construct(
-        HttpClientInterface $client
-    ) {
+    public function __construct()
+    {
         $this->client = new NoPrivateNetworkHttpClient(HttpClient::create());
-        $this->lastError = [''];
+        $this->lastError = ['', []];
     }
 
     /**
@@ -32,8 +34,7 @@ class Fetch
      *
      * @param string $url URL to check.
      * @return bool|string If the URL is safe then true is returned, if the URL
-     *         is not safe then a string explaining why the URL is not safe is
-     *         returned.
+     * is not safe then a string explaining why the URL is not safe is returned.
      */
     public function isSafeUrl(string $url): bool|string
     {
@@ -63,14 +64,13 @@ class Fetch
     }
 
     /**
-     * Gets the contents of the given source and attempts to parse it as JSON,
-     * returning an array with a "success" key and a "body" key.
+     * Gets the response from attempting to access the given URL.
      *
-     * @param string $url URL of the contents to get and parse.
-     * @return ?array<mixed> Either the parsed array or null if an error
-     *         occurred.
+     * @param string $url URL of the contents to get.
+     * @return ?ResponseInterface Either the response or null if there was an
+     * error.
      */
-    public function getJson(string $url): ?array
+    public function get(string $url, int $maxRedirects = 3): ?ResponseInterface
     {
         $this->resetLastError();
 
@@ -111,7 +111,8 @@ class Fetch
                 return null;
             }
 
-            return $response->toArray();
+            #return $response->toArray();
+            return $response;
         }
 
         $this->setLastError('errors.url.too_many_redirects');
@@ -119,10 +120,48 @@ class Fetch
     }
 
     /**
+     * Gets the contents of the given source and attempts to parse it as JSON.
+     *
+     * @param string $url URL of the contents to get and parse.
+     * @return ?array<mixed> Either the parsed array or null if an error
+     * occurred.
+     * @phpstan-impure
+     */
+    public function getJson(string $url): ?array
+    {
+        $response = $this->get($url);
+
+        if (is_null($response)) {
+            return null;
+        }
+
+        return $response->toArray();
+    }
+
+    /**
+     * Gets the contents of the given source.
+     *
+     * @param string $url URL of the contents to get.
+     * @return ?string Either the contents or null if an error occurred.
+     * @phpstan-impure
+     */
+    public function getContents(string $url): ?string
+    {
+        $response = $this->get($url);
+
+        if (is_null($response)) {
+            return null;
+        }
+
+        return $response->getContent();
+    }
+
+    /**
      * Gets the last error message, which will be an empty string if no error
      * has occured.
      *
      * @return string Last error message.
+     * @phpstan-impure
      */
     public function getLastError(?TranslatorInterface $translator = null): string
     {
@@ -139,8 +178,7 @@ class Fetch
      * Helper function for setting the last error message and returning null.
      *
      * @param string $lastError Last error message.
-     * @param array<string, string> $placeholders Contents for placeholders.
-     * @return mixed Whatever was passed as the return value.
+     * @param array<string, mixed> $placeholders Contents for placeholders.
      */
     protected function setLastError(string $lastError, array $placeholders = []): void
     {

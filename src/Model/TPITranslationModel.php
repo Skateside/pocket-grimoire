@@ -2,231 +2,413 @@
 
 namespace App\Model;
 
+use Symfony\Component\Serializer\Normalizer\{
+    DenormalizerInterface,
+    NormalizerInterface,
+};
+use App\Dto\{
+    CommunityJinxDto,
+    CommunityRoleDto,
+    GameDto,
+    JinxDto,
+    ScriptDto,
+    TPIReminderDto,
+    TPIReminderExpandedDto,
+    TPIRoleExpandedDto,
+    TranslationJinxDto,
+    TranslationRoleDto,
+};
+use App\Service\Misc;
+
+/**
+ * @phpstan-import-type Data from JinxDto as JinxArray
+ * @phpstan-import-type Data from TPIRoleExpandedDto as RoleArray
+ * @phpstan-import-type Data from GameDto as GameArray
+ * @phpstan-import-type MetaEntry from ScriptDto as ScriptMetaEntry
+ */
 class TPITranslationModel
 {
-    protected array $map;
-
-    public function __construct()
-    {
-        $this->map = [
-            'es_AR' => 'es_419',
-            'nb_NO' => 'nb_NO',
-            'nn_NO' => 'nb_NO',
-            'pt_BR' => 'pt_BR',
-            'zh_CN' => 'zh_Hans',
-        ];
-    }
+    public function __construct(
+        protected Misc $misc,
+        protected DenormalizerInterface&NormalizerInterface $normalizer,
+    ) {}
 
     /**
-     * Converts the Pocket Grimoire locale code into the locale code that TPI
-     * uses.
+     * Translates the reminders.
      *
-     * @param string $locale Pocket Grimoire locale code.
-     * @return string TPI locale code.
+     * @param array<TPIReminderExpandedDto> $reminders Expanded reminders to
+     * translate.
+     * @param ?array<TPIReminderDto> $officialReminders Official translations
+     * of the reminders.
+     * @param array<CommunityRoleDto> $communityRoles Community translations of
+     * the roles.
+     * @return array<string, string>
      */
-    public function asTPILocale(string $locale): string
-    {
-        if (array_key_exists($locale, $this->map)) {
-            return $this->map[$locale];
-        }
+    public function translateReminders(
+        array $reminders,
+        ?array $officialReminders,
+        array $communityRoles,
+    ): array {
+        $translatedReminders = [];
 
-        return substr($locale, 0, 2);
-    }
+        foreach ($reminders as $reminder) {
+            // Assume the default translation, see if we can better it.
+            $translatedReminders[$reminder->key] = $reminder->text;
 
-    /**
-     * Converts the TPI locale into the Pocket Grimoire locale code(s). The
-     * Pocket Grimoire locale code will be used if there are no maps or
-     * duplications that occur.
-     *
-     * @param string $locale TPI locale code.
-     * @param string $pgCode The Pocket Grimoire locale code.
-     * @return array<string> Pocket Grimoire locale code(s).
-     */
-    public function asPGLocales(string $locale, string $pgCode): array
-    {
-        $locales = [];
+            // If we can find the official translation, use it.
+            if ($officialReminders !== null) {
+                $officialReminder = $this->misc->arrayFind(
+                    $officialReminders,
+                    function ($officialReminder) use ($reminder) {
+                        return $officialReminder->key === $reminder->key;
+                    },
+                );
 
-        if (in_array($locale, $this->map)) {
-            foreach ($this->map as $pgLocale => $tpiLocale) {
-                if ($tpiLocale === $locale) {
-                    $locales[] = $pgLocale;
+                if ($officialReminder !== null) {
+                    $translatedReminders[$reminder->key] = $officialReminder->text;
+                    continue;
                 }
             }
-        } else {
-            $locales[] = $pgCode;
-        }
 
-        return $locales;
-    }
+            // If we couldn't find an official translation, loop through the
+            // examples until we find something that matches and use it.
+            foreach ($reminder->examples as $example) {
+                list($roleId, $type, $index) = explode('.', $example); 
 
-    /**
-     * Filters the raw jinxes so that only valid entries remain.
-     *
-     * @param array $jinxes Jinxes to filter.
-     * @return array Filtered jinxes.
-     */
-    public function filterJinxes(array $jinxes): array
-    {
-        $filtered = [];
+                $role = $this->misc->arrayFind(
+                    $communityRoles,
+                    function ($role) use ($roleId) {
+                        return $role->id === $roleId;
+                    },
+                );
 
-        foreach ($jinxes as $key => $value) {
-            if (
-                preg_match('/^[a-z]+\-[a-z]+$/', $key) === 1
-                && is_string($value)
-            ) {
-                $filtered[$key] = $value;
+                if ($role === null) {
+                    continue;
+                }
+
+                if (
+                    $type === 'r'
+                    && is_array($role->reminders)
+                    && array_key_exists($index, $role->reminders)
+                ) {
+                    $translatedReminders[$reminder->key] = $role->reminders[$index];
+                    break 1;
+                } else if (
+                    $type === 'g'
+                    && is_array($role->remindersGlobal)
+                    && array_key_exists($index, $role->remindersGlobal)
+                ) {
+                    $translatedReminders[$reminder->key] = $role->remindersGlobal[$index];
+                    break 1;
+                }
             }
         }
 
-        return $filtered;
+        return $translatedReminders;
     }
 
     /**
-     * Filters the raw reminders so that only valid entries remain.
+     * Translates the jinxes.
      *
-     * @param array $reminders Reminders to filter.
-     * @return array Filtered reminders.
+     * @param array<JinxDto> $jinxes Raw jinx information.
+     * @param ?array<TranslationJinxDto> $officialJinxes Official jinx translations.
+     * @param array<CommunityJinxDto> $communityJinxes Community jinx translations.
+     * @param ?array<JinxDto> $extraJinxes Extra jinxes for this locale.
+     * @return array<JinxArray> Translated jinxes.
      */
-    public function filterReminders(array $reminders): array
-    {
-        return array_filter($reminders, function ($item) {
-            return is_string($item);
-        });
-    }
-
-    /**
-     * Filters the raw roles so that only valid entries remain.
-     *
-     * @param array $roles Roles to filter.
-     * @return array Filtered roles.
-     */
-    public function filterRoles(array $roles): array
-    {
-        $filtered = [];
-
-        foreach ($roles as $id => $translations) {
-            if (!is_array($translations)) {
-                continue;
-            }
-
-            if (!$this->arrayAll($translations, function ($value) {
-                return is_string($value);
-            })) {
-                continue;
-            }
-
-            $filtered[$id] = $translations;
-        }
-
-        return $filtered;
-    }
-
-    /**
-     * Combines the roles with the translations.
-     *
-     * @param array $baseRoles The base (English) roles.
-     * @param array $baseReminders The base (English) reminders.
-     * @param array $translatedRoles The translated roles.
-     * @param array $translatedReminders The translated reminders.
-     * @return array The combined, translated roles.
-     */
-    public function combineRoles(
-        array $baseRoles,
-        array $baseReminders,
-        array $translatedRoles,
-        array $translatedReminders
+    public function translateJinxes(
+        array $jinxes,
+        ?array $officialJinxes,    
+        array $communityJinxes,
+        ?array $extraJinxes,
     ): array {
-        $combined = [];
+        $translatedJinxes = [];
 
-        foreach ($baseRoles as $baseRole) {
-            $role = $baseRole;
-            $translatedRole = $translatedRoles[$baseRole['id']] ?? [];
-
-            if (array_key_exists('ability', $translatedRole)) {
-                $role['ability'] = $translatedRole['ability'];
-            }
-
-            if (array_key_exists('flavor', $translatedRole)) {
-                $role['flavor'] = $translatedRole['flavor'];
-            }
-
-            if (array_key_exists('name', $translatedRole)) {
-                $role['name'] = $translatedRole['name'];
-            }
-
-            if (array_key_exists('first', $translatedRole)) {
-                $role['firstNightReminder'] = TPIResourcesModel::cleanNightReminder($translatedRole['first']);
-            }
-
-            if (array_key_exists('other', $translatedRole)) {
-                $role['otherNightReminder'] = TPIResourcesModel::cleanNightReminder($translatedRole['other']);
-            }
-
-            if (array_key_exists('reminders', $role)) {
-                $role['reminders'] = array_map(function ($item) use ($baseReminders, $translatedReminders) {
-                    return $translatedReminders[$item] ?? $baseReminders[$item] ?? $item;
-                }, $role['reminders']);
-            }
-
-            if (array_key_exists('remindersGlobal', $role)) {
-                $role['remindersGlobal'] = array_map(function ($item) use ($baseReminders, $translatedReminders) {
-                    return $translatedReminders[$item] ?? $baseReminders[$item] ?? $item;
-                }, $role['remindersGlobal']);
-            }
-
-            $combined[] = $role;
-        }
-
-        return $combined;
-    }
-
-    /**
-     * Combines the jinxes.
-     *
-     * @param array $baseJinxes Base (English) jinxes.
-     * @param array $translatedJinxes Translated jinxes.
-     * @return array Combined, translated jinxes.
-     */
-    public function combineJinxes(
-        array $baseJinxes,
-        array $translatedJinxes
-    ): array {
-        $combined = [];
-
-        foreach ($baseJinxes as $baseJinx) {
-            $jinx = [
-                'id' => $baseJinx['id'],
+        foreach ($jinxes as $jinx) {
+            $translatedJinx = [
+                'id' => $jinx->id,
                 'jinx' => [],
             ];
 
-            foreach ($baseJinx['jinx'] as $innerJinx) {
-                $jinx['jinx'][] = [
-                    'id' => $innerJinx['id'],
-                    'reason' => $translatedJinxes["{$baseJinx['id']}-{$innerJinx['id']}"] ?? $translatedJinxes["{$innerJinx['id']}-{$baseJinx['id']}"] ?? $innerJinx['reason'],
+            foreach ($jinx->jinx as $jinxEntry) {
+                $translatedJinxEntry = [
+                    'id' => $jinxEntry->id,
+                    'reason' => $jinxEntry->reason,
+                ];
+
+                $official = null;
+                $community = null;
+
+                if ($officialJinxes !== null) {
+                    $official = $this->misc->arrayFind(
+                        $officialJinxes,
+                        function ($item) use ($jinx, $jinxEntry) {
+                            return $item->key === "{$jinx->id}-{$jinxEntry->id}";
+                        },
+                    );
+
+                    if ($official === null) {
+                        $official = $this->misc->arrayFind(
+                            $officialJinxes,
+                            function ($item) use ($jinx, $jinxEntry) {
+                                return $item->key === "{$jinxEntry->id}-{$jinx->id}";
+                            },
+                        );
+                    }
+                }
+
+                if ($official === null) {
+                    $community = $this->misc->arrayFind(
+                        $communityJinxes,
+                        function ($item) use ($jinx, $jinxEntry) {
+                            return (
+                                (
+                                    $item->target === $jinx->id
+                                    && $item->trick === $jinxEntry->id
+                                )
+                                || (
+                                    $item->target === $jinxEntry->id
+                                    && $item->trick === $jinx->id
+                                )
+                            );
+                        },
+                    );
+                }
+
+                if ($official !== null) {
+                    $translatedJinxEntry['reason'] = $official->reason;
+                } elseif ($community !== null) {
+                    $translatedJinxEntry['reason'] = $community->reason;
+                }
+
+                $translatedJinx['jinx'][] = $translatedJinxEntry;
+            }
+
+            $translatedJinxes[] = $translatedJinx;
+        }
+
+        if (is_null($extraJinxes)) {
+            return $translatedJinxes;
+        }
+
+        foreach ($extraJinxes as $extraJinx) {
+            $index = $this->misc->arrayFindKey(
+                $translatedJinxes,
+                fn($value, $key) => $value['id'] === $extraJinx->id,
+            );
+
+            if ($index === null) {
+                $index = count($translatedJinxes);
+                $translatedJinxes[$index] = [
+                    'id' => $extraJinx->id,
+                    'jinx' => [],
                 ];
             }
 
-            $combined[] = $jinx;
-        }
-
-        return $combined;
-    }
-
-    /**
-     * Equivalent of array_all() for PHP < 8.
-     *
-     * @param array $array Array to check.
-     * @param callable $callback Callback for checking.
-     * @return true if all values and keys match the callback, false otherwise.
-     */
-    protected function arrayAll(array $array, callable $callback): bool
-    {
-        foreach ($array as $key => $value) {
-            if ($callback($value, $key) !== true) {
-                return false;
+            foreach ($extraJinx->jinx as $jinx) {
+                $translatedJinxes[$index]['jinx'][] = [
+                    'id' => $jinx->id,
+                    'reason' => $jinx->reason,
+                ];
             }
         }
 
-        return true;
+        return $translatedJinxes;
+    }
+
+    /**
+     * Translates the character roles.
+     *
+     * @param array<TPIRoleExpandedDto> $roles Roles data.
+     * @param ?array<TranslationRoleDto> $officialRoles Official translations.
+     * @param array<CommunityRoleDto> $communityRoles Community translations.
+     * @param ?array<TPIRoleExpandedDto> $extraRoles Extra roles for this locale.
+     * @param array<string, string> $reminders Translated reminders.
+     * @return array<RoleArray> Fully translated roles.
+     */
+    public function translateRoles(
+        array $roles,
+        ?array $officialRoles,
+        array $communityRoles,
+        ?array $extraRoles,
+        array $reminders,
+    ): array {
+        $translatedRoles = [];
+        $keys = [
+            [
+                'role' => 'name',
+                'official' => 'name',
+                'community' => 'name',
+            ],
+            [
+                'role' => 'ability',
+                'official' => '',
+                'community' => 'ability',
+            ],
+            [
+                'role' => 'flavor',
+                'official' => 'flavor',
+                'community' => 'flavor',
+            ],
+            [
+                'role' => 'firstNightReminder',
+                'official' => 'first',
+                'community' => 'firstNightReminder',
+            ],
+            [
+                'role' => 'otherNightReminder',
+                'official' => 'other',
+                'community' => 'otherNightReminder',
+            ],
+        ];
+
+        foreach ($roles as $role) {
+            $localKeys = array_filter($keys, function ($key) use ($role) {
+                return property_exists($role, $key['role']);
+            });
+            $translatedRole = $this->normalizer->normalize($role, 'json');
+
+            if (is_array($role->reminders)) {
+                $translatedRole['reminders'] = array_map(
+                    function ($text) use ($reminders) {
+                        return array_key_exists($text, $reminders) ? $reminders[$text] : $text;
+                    },
+                    $role->reminders,
+                );
+            }
+
+            if (is_array($role->remindersGlobal)) {
+                $translatedRole['remindersGlobal'] = array_map(
+                    function ($text) use ($reminders) {
+                        return array_key_exists($text, $reminders) ? $reminders[$text] : $text;
+                    },
+                    $role->remindersGlobal,
+                );
+            }
+
+            if (!count($localKeys)) {
+                $translatedRoles[] = $translatedRole;
+                continue;
+            }
+
+            $officialRole = null;
+
+            if ($officialRoles !== null) {
+                $officialRole = $this->misc->arrayFind(
+                    $officialRoles,
+                    function ($item) use ($role) {
+                        return $item->id === $role->id;
+                    },
+                );
+            }
+
+            if ($officialRole !== null) {
+                $index = count($localKeys);
+
+                while ($index > 0) {
+                    $index -= 1;
+                    $key = $localKeys[$index]['official'];
+
+                    if (
+                        property_exists($officialRole, $key)
+                        && $officialRole->{$key} !== null
+                    ) {
+                        $translatedRole[$localKeys[$index]['role']] = $officialRole->{$key};
+                        array_splice($localKeys, $index, 1);
+                        continue;
+                    }
+                }
+            }
+
+            if (!count($localKeys)) {
+                $translatedRoles[] = $translatedRole;
+                continue;
+            }
+
+            $communityRole = $this->misc->arrayFind(
+                $communityRoles,
+                function ($item) use ($role) {
+                    return $item->id === $role->id;
+                },
+            );
+
+            if ($communityRole !== null) {
+                $index = count($localKeys);
+
+                while ($index > 0) {
+                    $index -= 1;
+                    $key = $localKeys[$index]['community'];
+
+                    if (
+                        property_exists($communityRole, $key)
+                        && $communityRole->{$key} !== null
+                    ) {
+                        $translatedRole[$localKeys[$index]['role']] = $communityRole->{$key};
+                        array_splice($localKeys, $index, 1);
+                        continue;
+                    }
+                }
+            }
+
+            $translatedRoles[] = array_filter(
+                $translatedRole,
+                fn($item) => !is_null($item),
+            );
+        }
+
+        $extra = array_map(
+            fn($role) => array_filter(
+                $this->normalizer->normalize($role, 'json'),
+                fn($item) => !is_null($item),
+            ),
+            $extraRoles ?? [],
+        );
+
+        return array_merge($translatedRoles, $extra);
+    }
+
+    /**
+     * Normalizes the games, converting them into an array.
+     *
+     * @param array<GameDto> $games Games to normalize.
+     * @return array<GameArray> Normalized games.
+     */
+    public function normalizeGames(array $games): array
+    {
+        return array_map(
+            fn($game) => $this->normalizer->normalize($game),
+            $games,
+        );
+    }
+
+    /**
+     * Normalizes the scripts, converting them into an array.
+     *
+     * @param array<ScriptDto> $scripts Scripts to normalize.
+     * @return array<string, array<string|ScriptMetaEntry>> Normalized scripts.
+     */
+    public function normalizeScripts(array $scripts): array
+    {
+        $normal = [];
+
+        foreach ($scripts as $script) {
+            $normalizedScript = $this->normalizer->normalize($script);
+            $normalScript = [];
+
+            if ($script->meta !== null) {
+                $normalScript[] = array_filter(
+                    $normalizedScript['meta'],
+                    fn($item) => !is_null($item),
+                );
+            }
+
+            foreach ($script->roles as $role) {
+                $normalScript[] = $role;
+            }
+
+            $normal[$script->key] = $normalScript;
+        }
+
+        return $normal;
     }
 }

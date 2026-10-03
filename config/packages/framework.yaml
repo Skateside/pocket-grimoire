@@ -21,6 +21,11 @@ framework:
     # messenger:
     #     reset_on_message: true
 
+    http_client:
+        default_options:
+            headers:
+                'User-Agent': 'Pocket Grimoire 1.0'
+
 when@test:
     framework:
         test: true

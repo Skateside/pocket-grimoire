@@ -7,28 +7,47 @@ use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
 use Symfony\Component\Console\Style\SymfonyStyle;
+use Symfony\Component\Serializer\SerializerInterface;
+use Symfony\Component\Serializer\Encoder\JsonEncode;
 use App\Enums\TPIURLEnum;
 use App\Model\TPIResourcesModel;
-use App\Service\Fetch;
-use App\Service\Storage;
+use App\Service\{
+    DataValidator,
+    Fetch,
+    Storage,
+};
+use App\Dto\{
+    JinxDto,
+    NightsheetDto,
+    TPIReminderDto,
+    TPIReminderExpandedDto,
+    TPIRoleDto,
+    TPIRoleExpandedDto,
+};
 
 #[AsCommand(name: 'pocket-grimoire:fetch')]
 class FetchResourcesCommand extends Command
 {
-    protected $model;
-    protected $fetch;
-    protected $storage;
+    protected TPIResourcesModel $resourcesModel;
+    protected DataValidator $dataValidator;
+    protected Fetch $fetch;
+    protected Storage $storage;
+    protected SerializerInterface $serializer;
 
     public function __construct(
-        TPIResourcesModel $model,
+        TPIResourcesModel $resourcesModel,
+        DataValidator $dataValidator,
         Fetch $fetch,
-        Storage $storage
+        Storage $storage,
+        SerializerInterface $serializer,
     ) {
-        $this->model = $model;
+        $this->resourcesModel = $resourcesModel;
+        $this->dataValidator = $dataValidator;
         $this->fetch = $fetch;
         $this->storage = $storage;
+        $this->serializer = $serializer;
 
-        return parent::__construct();
+        parent::__construct();
     }
 
     protected function execute(InputInterface $input, OutputInterface $output): int
@@ -44,126 +63,231 @@ class FetchResourcesCommand extends Command
             $bar->start();
         }
 
-        $rawGame = $this->fetch->getJson(sprintf(TPIURLEnum::GAME, 'en'));
-
-        if (($error = $this->fetch->getLastError()) !== '') {
-            $io->error($error);
-            return Command::FAILURE;
-        }
+        $roles = $this->getData(TPIURLEnum::ROLES->value, TPIRoleDto::class, true);
 
         if ($output->isVerbose()) {
             $bar->advance();
         }
 
-        $rawJinxes = $this->fetch->getJson(TPIURLEnum::JINXES);
-
-        if (($error = $this->fetch->getLastError()) !== '') {
-            $io->error($error);
-            return Command::FAILURE;
-        }
+        $jinxes = $this->getData(TPIURLEnum::JINXES->value, JinxDto::class, true);
 
         if ($output->isVerbose()) {
             $bar->advance();
         }
 
-        $rawNightsheet = $this->fetch->getJson(TPIURLEnum::NIGHTSHEET);
-
-        if (($error = $this->fetch->getLastError()) !== '') {
-            $io->error($error);
-            return Command::FAILURE;
-        }
+        $nightsheet = $this->getData(TPIURLEnum::NIGHTSHEET->value, NightsheetDto::class);
 
         if ($output->isVerbose()) {
             $bar->advance();
         }
 
-        $rawRoles = $this->fetch->getJson(TPIURLEnum::ROLES);
+        $reminders = $this->getData(
+            sprintf(TPIURLEnum::GAME->value, 'en'),
+            TPIReminderDto::class,
+            true,
+            function (string $contents, string $type) {
+                $data = [];
+                $json = json_decode($contents, true);
 
-        if (($error = $this->fetch->getLastError()) !== '') {
-            $io->error($error);
-            return Command::FAILURE;
-        }
+                foreach (($json['reminders'] ?? []) as $key => $text) {
+                    $data[] = new $type(key: $key, text: $text);
+                }
+
+                return $data;
+            },
+        );
 
         if ($output->isVerbose()) {
             $bar->advance();
+        }
+
+        $data = [
+            'Roles' => $roles,
+            'Nightsheet' => $nightsheet,
+            'Jinxes' => $jinxes,
+            'Reminders' => $reminders,
+        ];
+
+        foreach ($data as $type => $results) {
+            if (!is_null($results['error'])) {
+                $io->error($results['error']);
+                return Command::FAILURE;
+            }
+
+            if (
+                count($results['violations'])
+                && !$io->ask(
+                    "{$type} has validation errors. Continue?",
+                    '(n)o',
+                    function (string $input) {
+                        $lower = strtolower($input);
+
+                        return $lower === 'y' || $lower === 'yes';
+                    },
+                )
+            ) {
+                return Command::FAILURE;
+            }
+        }
+
+        if ($output->isVerbose()) {
             $bar->finish();
             $io->writeln('');
+            $io->writeln('');
+            $io->section('Results');
+
+            $tableHeaders = ['Type', 'Count', 'Validation errors'];
+            $tableBody = [];
+
+            foreach ($data as $type => $results) {
+                $body = [
+                    $type,
+                    is_null($results['data']) ? 0 : (is_array($results['data']) ? count($results['data']) : 1),
+                    count($results['violations']) ? $this->dataValidator->stringifyViolations($results['violations']) : 'None ✓',
+                ];
+
+                $tableBody[] = $body;
+            }
+
+            $io->table($tableHeaders, $tableBody);
         }
 
-        $jinxes = $this->model->filterJinxes($rawJinxes);
-        $nightsheet = $this->model->filterNightsheet($rawNightsheet);
-        $roles = $this->model->filterRoles($rawRoles);
-
-        $rawReminders = $rawGame['reminders'] ?? [];
-        $reminders = $this->model->filterReminders($rawReminders);
+        $writing = [
+            'jinxes.json' => [
+                'data' => $jinxes['data'],
+                'type' => JinxDto::class . '[]',
+            ],
+            'reminders.json' => [
+                'data' => $this->resourcesModel->expandReminders(
+                    reminders: $reminders['data'],
+                    roles: $roles['data'],
+                ),
+                'type' => TPIReminderExpandedDto::class . '[]',
+            ],
+            'roles.json' => [
+                'data' => $this->resourcesModel->expandRoles(
+                    roles: $roles['data'],
+                    nightsheet: $nightsheet['data'],
+                    reminders: $reminders['data'],
+                ),
+                'type' => TPIRoleExpandedDto::class . '[]',
+            ],
+        ];
 
         if ($output->isVerbose()) {
-            $io->section('Results');
-            $io->table(
-                ['Type', 'Raw entries', 'Filtered entries'],
-                [
-                    ['Jinxes', count($rawJinxes), count($jinxes)],
-                    ['Nightsheet', count($rawNightsheet), count($nightsheet)],
-                    ['Roles', count($rawRoles), count($roles)],
-                    ['Reminders', count($rawReminders), count($reminders)],
-                ],
+            $io->section('Writing');
+            $bar = $io->createProgressBar(count($writing));
+            $bar->start();
+
+            $tableHeaders = ['Filename', 'Validation errors'];
+            $tableBody = [];
+        }
+
+        foreach ($writing as $filename => $data) {
+            $violations = $this->dataValidator->validate($data['data']);
+
+            if (
+                count($violations)
+                && !$io->ask(
+                    "{$filename} has validation errors. Continue?",
+                    '(n)o',
+                    function (string $input) {
+                        $lower = strtolower($input);
+
+                        return $lower === 'y' || $lower === 'yes';
+                    },
+                )
+            ) {
+                return Command::FAILURE;
+            }
+
+            $context = [];
+
+            if ($output->isVeryVerbose()) {
+                $context[JsonEncode::OPTIONS] = JSON_PRETTY_PRINT;
+            }
+
+            $written = $this->storage->write(
+                Storage::LOCATION_RAW,
+                $filename,
+                $this->serializer->serialize($data['data'], 'json', $context),
             );
-        }
-        
 
-        if (
-            count($rawJinxes) !== count($jinxes)
-            || count($rawNightsheet) !== count($nightsheet)
-            || count($rawRoles) !== count($roles)
-            || count($rawReminders) !== count($reminders)
-        ) {
-            $io->warning('Some filtering occurred');
-        }
+            if ($written === false) {
+                $io->error("Failed to write {$filename}");
+                return Command::FAILURE;
+            }
 
-        $writtenJinxes = $this->storage->writeJson(
-            Storage::LOCATION_RAW,
-            'jinxes.json',
-            $jinxes,
-            $output->isVeryVerbose() ? JSON_PRETTY_PRINT : 0,
-        );
+            if ($output->isVerbose()) {
+                $tableBody[] = [
+                    $filename,
+                    count($violations) ? $this->dataValidator->stringifyViolations($violations) : 'None ✓',
+                ];
 
-        if ($writtenJinxes === false) {
-            $io->error('Failed to write jinxes');
-            return Command::FAILURE;
+                $bar->advance();
+            }
         }
 
-        $combined = $this->model->combineRoles(
-            $roles,
-            array_flip($reminders),
-            $nightsheet,
-        );
-
-        $writtenReminders = $this->storage->writeJson(
-            Storage::LOCATION_RAW,
-            'reminders.json',
-            $reminders,
-            $output->isVeryVerbose() ? JSON_PRETTY_PRINT : 0,
-        );
-
-        if ($writtenReminders === false) {
-            $io->error('Failed to write reminders');
-            return Command::FAILURE;
+        if ($output->isVerbose()) {
+            $bar->finish();
+            $io->writeln('');
+            $io->writeln('');
+            $io->section('Results');
+            $io->table($tableHeaders, $tableBody);
         }
 
-        $writtenRoles = $this->storage->writeJson(
-            Storage::LOCATION_RAW,
-            'characters.json',
-            $combined,
-            $output->isVeryVerbose() ? JSON_PRETTY_PRINT : 0,
-        );
-
-        if ($writtenRoles === false) {
-            $io->error('Failed to write characters');
-            return Command::FAILURE;
-        }
-
-        $io->success('Characters and Jinxes files written');
-
+        $io->success('Resources fetched and stored');
         return Command::SUCCESS;
+    }
+
+    /**
+     * Fetches the data from the given URL, serialises it into the format given,
+     * and validates it. An array of the results is returned.
+     *
+     * @template Type of object
+     *
+     * @param string $url URL where the raw data is located.
+     * @param class-string<Type> $type Data type to serialise the given data.
+     * @param bool $isArray Whether or not the data should be an array of the given type.
+     * @param ?(callable(string, string, bool): (Type|array<Type>)) $map Optional map to convert the data from the URL.
+     * @return ($isArray is true ? array{data: ?array<Type>, error: ?string, violations: array<string, string[]>} : array{data: ?Type, error: ?string, violations: array<string, string[]>})
+     * Results of the data being parsed and validated.
+     */
+    protected function getData(
+        string $url,
+        string $type,
+        bool $isArray = false,
+        ?callable $map = null,
+    ): array {
+        $response = [
+            'data' => null,
+            'error' => null,
+            'violations' => [],
+        ];
+        $contents = $this->fetch->getContents($url);
+
+        if (($error = $this->fetch->getLastError()) !== '') {
+            $response['error'] = $error;
+            return $response;
+        }
+
+        try {
+            if (is_callable($map)) {
+                $response['data'] = $map($contents, $type, $isArray);
+            } else {
+                $response['data'] = $this->serializer->deserialize(
+                    $contents,
+                    $isArray ? "{$type}[]" : $type,
+                    'json',
+                );
+            }
+        } catch (\Exception $e) {
+            $response['error'] = $e->getMessage();
+            return $response;
+        }
+
+        $response['violations'] = $this->dataValidator->validate($response['data']);
+
+        return $response;
     }
 }
