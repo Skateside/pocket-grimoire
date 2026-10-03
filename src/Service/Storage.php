@@ -9,8 +9,11 @@ class Storage
     const LOCATION_CONFIG = 'config';
     const LOCATION_COMPILED = 'compiled';
     const LOCATION_RAW = 'raw';
+    const LOCATION_PUBLIC = 'public';
+    const LOCATION_PUBLIC_DATA = 'public_data';
     const LOCATION_PUBLIC_JS = 'public_js';
     const LOCATION_TOOLS = 'tools';
+    #const LOCATION_PROJECT_DIR = 'project_dir';
 
     public function __construct(
         protected string $projectDir,
@@ -22,8 +25,11 @@ class Storage
             static::LOCATION_CONFIG => '/config',
             static::LOCATION_COMPILED => '/assets/data/compiled',
             static::LOCATION_RAW => '/assets/data/raw',
+            static::LOCATION_PUBLIC => '/public/build',
+            static::LOCATION_PUBLIC_DATA => '/public/build/data',
             static::LOCATION_PUBLIC_JS => '/public/build/js',
             static::LOCATION_TOOLS => '/tools',
+            #static::LOCATION_PROJECT_DIR => '',
         ];
 
         foreach ($this->locations as $id => $path) {
@@ -184,5 +190,21 @@ class Storage
     public function exists(string $locationId, string ...$parts): bool
     {
         return file_exists(static::concat($this->getRealpath($locationId), ...$parts));
+    }
+
+    /**
+     * Copies the file from the $from location to the $to location, returning
+     * true on success and false on failure.
+     *
+     * @param string[] $from Location ID and directories/filename to copy from.
+     * @param string[] $to Location ID and directories/filename to copy to.
+     * @return bool true on success, false on failure.
+     */
+    public function copy(array $from, array $to): bool
+    {
+        $fullFrom = static::concat($this->getRealpath(array_shift($from)), ...$from);
+        $fullTo = static::concat($this->getRealpath(array_shift($to)), ...$to);
+
+        return copy($fullFrom, $fullTo);
     }
 }

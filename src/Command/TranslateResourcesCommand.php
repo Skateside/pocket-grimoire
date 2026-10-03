@@ -193,8 +193,10 @@ class TranslateResourcesCommand extends Command
             'Community roles',
             'Extra jinxes',
             'Extra roles',
+            'Copied',
         ];
         $tableBody = [];
+        $hashes = [];
 
         foreach ($locales as $locale) {
             if ($output->isVerbose()) {
@@ -211,6 +213,7 @@ class TranslateResourcesCommand extends Command
                 'c_roles' => '',
                 'e_jinxes' => '',
                 'e_roles' => '',
+                'copied' => 'No',
             ];
             $official = $this->getOfficial($locale['tpi']);
 
@@ -306,13 +309,26 @@ class TranslateResourcesCommand extends Command
                 $output->isVeryVerbose(),
             );
 
+            $filename = "{$locale['code']}.js";
+
             if ($this->storage->write(
                 Storage::LOCATION_COMPILED,
-                "{$locale['code']}.js",
+                $filename,
                 $contents,
             ) === false) {
                 $io->error("Unable to write {$locale['code']}.js");
                 return Command::FAILURE;
+            }
+
+            $hash = hash('crc32b', $contents);
+            $hashedFilename = "{$locale['code']}.{$hash}.js";
+            $hashes[$filename] = $hashedFilename;
+
+            if ($this->storage->copy(
+                [Storage::LOCATION_COMPILED, $filename],
+                [Storage::LOCATION_PUBLIC_DATA, $hashedFilename],
+            )) {
+                $tableBody[$bodyIndex]['copied'] = 'Yes';
             }
         }
 
@@ -322,6 +338,13 @@ class TranslateResourcesCommand extends Command
             $io->writeln('');
             $io->section('Results');
             $io->table($tableHeaders, $tableBody);
+        }
+
+        if ($this->updateManifest($hashes) === false) {
+            $io->writeln('');
+            $io->warning('Unable to update manifest');
+        } elseif ($output->isVerbose()) {
+            $io->writeln('Manifest updated');
         }
 
         $io->success('Translations downloaded and written');
@@ -707,5 +730,45 @@ class TranslateResourcesCommand extends Command
         }
 
         return $this->dataValidator->stringifyViolations($violations);
+    }
+
+    /**
+     * Updates the manifest with the location of the copied files.
+     *
+     * @param array<string, string> $hashes
+     * @return bool true if the writing was successful, false otherwise.
+     */
+    protected function updateManifest(array $hashes): bool
+    {
+        $manifest = $this->storage->readJson(
+            Storage::LOCATION_PUBLIC,
+            'manifest.json',
+        );
+
+        if ($manifest === false) {
+            return false;
+        }
+
+        foreach ($manifest as $source => $path) {
+            foreach ($hashes as $unhashed => $hashed) {
+                if (strpos($source, $unhashed) === false) {
+                    continue;
+                }
+
+                $manifest[$source] = str_replace($unhashed, $hashed, $source);
+                unset($hashes[$unhashed]);
+            }
+        }
+
+        if ($this->storage->writeJson(
+            Storage::LOCATION_PUBLIC,
+            'manifest.json',
+            $manifest,
+            JSON_PRETTY_PRINT,
+        ) === false) {
+            return false;
+        }
+
+        return true;
     }
 }

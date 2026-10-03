@@ -23,7 +23,6 @@
 {% endblock %}
 
 {% block javascript %}
-{% set version = hash(4) %}
 <script>
 var URLS = {
     homebrew: "{{ path('homebrew')|e('js') }}",
@@ -49,6 +48,6 @@ var I18N = {
 
 var ENVIRONMENT = "{{ app.environment|e('js') }}";
 </script>
-<script src="/build/data/{{ app.request.locale }}.js"></script>
+<script src="{{ asset('build/data/' ~ app.request.locale ~ '.js') }}"></script>
 {{ encore_entry_script_tags('js/main') }}
 {% endblock %}
