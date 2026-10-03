@@ -12,7 +12,7 @@ use Symfony\Component\Validator\Constraints as Assert;
  *  team: string,
  *  setup: bool,
  *  ability: string,
- *  flavor: string,
+ *  flavor?: ?string,
  *  image: string[],
  *  firstNight?: ?int,
  *  firstNightReminder?: ?string,
@@ -26,20 +26,13 @@ class TPIRoleExpandedDto
 {
     public function __construct(
         #[Assert\NotBlank]
-        #[Assert\Regex(pattern: '/^[a-z]+$/')]
+        #[Assert\Regex(pattern: '/^[a-z0-9]+$/')]
         public readonly string $id,
 
         #[Assert\NotBlank]
         public readonly string $name,
 
-        #[Assert\Choice(choices: [
-            'tb',
-            'snv',
-            'bmr',
-            'carousel',
-            'fabled',
-            'loric',
-        ])]
+        #[Assert\Regex(pattern: '/^[a-z]+$/')]
         public readonly string $edition,
 
         #[Assert\Choice(choices: [
@@ -58,12 +51,12 @@ class TPIRoleExpandedDto
         #[Assert\NotBlank]
         public readonly string $ability,
 
-        public readonly string $flavor,
+        public readonly ?string $flavor,
 
         /** @var string[] $image */
         #[Assert\All([
             new Assert\NotBlank,
-            new Assert\Regex(pattern: '/[a-z]+(?:_[ge])?\.webp$/'),
+            new Assert\Regex(pattern: '/[a-z0-9]+(?:_[ge])?\.webp$/'),
         ])]
         public readonly array $image,
 

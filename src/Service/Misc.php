@@ -61,6 +61,27 @@ class Misc
     }
 
     /**
+     * Equivalent of array_find_key() for PHP < 8.4.
+     *
+     * @template Value
+     * @template Key
+     * @param array<Key, Value> $array Array to search through.
+     * @param callable(Value, Key): bool $callback Callback for checking.
+     * @return ?Key The key matching the callback's search or null if no match
+     * was found.
+     */
+    public function arrayFindKey(array $array, callable $callback): mixed
+    {
+        foreach ($array as $key => $value) {
+            if ($callback($value, $key) === true) {
+                return $key;
+            }
+        }
+
+        return null;
+    }
+
+    /**
      * Equivalent of array_find() for PHP < 8.4.
      *
      * @template Value
@@ -72,10 +93,8 @@ class Misc
      */
     public function arrayFind(array $array, callable $callback): mixed
     {
-        foreach ($array as $key => $value) {
-            if ($callback($value, $key) === true) {
-                return $value;
-            }
+        if (($key = $this->arrayFindKey($array, $callback)) !== null) {
+            return $array[$key];
         }
 
         return null;

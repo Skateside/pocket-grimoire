@@ -191,6 +191,8 @@ class TranslateResourcesCommand extends Command
             'Official roles',
             'Community jinxes',
             'Community roles',
+            'Extra jinxes',
+            'Extra roles',
         ];
         $tableBody = [];
 
@@ -207,6 +209,8 @@ class TranslateResourcesCommand extends Command
                 'o_roles' => '',
                 'c_jinxes' => '',
                 'c_roles' => '',
+                'e_jinxes' => '',
+                'e_roles' => '',
             ];
             $official = $this->getOfficial($locale['tpi']);
 
@@ -253,6 +257,28 @@ class TranslateResourcesCommand extends Command
                 $io->warning("Filtering occurred in the community translations for {$locale['code']}");
             }
 
+            $extra = $this->getExtra($locale['code']);
+
+            $tableBody[$bodyIndex]['e_jinxes'] = $this->writeViolations($extra['jinxes']['violations']);
+            $tableBody[$bodyIndex]['e_roles'] = $this->writeViolations($extra['roles']['violations']);
+
+            if (
+                !empty($extra['jinxes']['error'])
+                || !empty($extra['roles']['error'])
+            ) {
+                $error = $extra['jinxes']['error'] ?? $extra['roles']['error'];
+                $io->error("Error in {$locale['code']} extra: {$error}");
+                return Command::FAILURE;
+            }
+            
+            if (
+                !empty($extra['jinxes']['violations'])
+                || !empty($extra['roles']['violations'])
+            ) {
+                $io->writeln('');
+                $io->warning("Filtering occurred in the extra translations for {$locale['code']}");
+            }
+
             $translatedReminders = $this->translationModel->translateReminders(
                 $reminders['data'],
                 $official['reminders']['data'],
@@ -262,12 +288,14 @@ class TranslateResourcesCommand extends Command
                 $roles['data'],
                 $official['roles']['data'],
                 $community['roles']['data'],
+                $extra['roles']['data'],
                 $translatedReminders,
             );
             $translatedJinxes = $this->translationModel->translateJinxes(
                 $jinxes['data'],
                 $official['jinxes']['data'],
                 $community['jinxes']['data'],
+                $extra['jinxes']['data'],
             );
 
             $contents = $this->createContents(
@@ -563,6 +591,73 @@ class TranslateResourcesCommand extends Command
 
 
         return $response;
+    }
+
+    /**
+     * @param string $locale Locale for the extra jinxes and/or roles.
+     * @return array{
+     *  jinxes: array{
+     *      all: ?JinxDto[],
+     *      data: ?JinxDto[],
+     *      error: ?string,
+     *      violations: array<string, string[]>,
+     *  },
+     *  roles: array{
+     *      all: ?TPIRoleExpandedDto[],
+     *      data: ?TPIRoleExpandedDto[],
+     *      error: ?string,
+     *      violations: array<string, string[]>,
+     *  }
+     * } Extra jinxes and/or roles.
+     */
+    protected function getExtra(string $locale): array
+    {
+        $extra = [
+            'jinxes' => [
+                'all' => null,
+                'data' => null,
+                'error' => null,
+                'violations' => [],
+            ],
+            'roles' => [
+                'all' => null,
+                'data' => null,
+                'error' => null,
+                'violations' => [],
+            ],
+        ];
+        $formats = [
+            'jinxes' => JinxDto::class . '[]',
+            'roles' => TPIRoleExpandedDto::class . '[]',
+        ];
+
+        foreach ($extra as $key => &$results) {
+            if (!$this->storage->exists(Storage::LOCATION_RAW, $locale, "{$key}.json")) {
+                continue;
+            }
+
+            $contents = $this->storage->read(Storage::LOCATION_RAW, $locale, "{$key}.json");
+
+            if ($contents === false) {
+                $results['error'] = "Cannot read '{$locale}/{$key}.json'";
+                continue;
+            }
+
+            try {
+                $data = $this->serializer->deserialize($contents, $formats[$key], 'json');
+            } catch (\Exception $e) {
+                $results['error'] = "{$locale}/{$key}.json: {$e->getMessage()}";
+                continue;
+            }
+
+            $results['all'] = $data;
+            $results['violations'] = $this->dataValidator->validate($data);
+            $results['data'] = array_filter($data, function ($item) {
+                return count($this->dataValidator->validate($item)) === 0;
+            });
+        }
+
+        return $extra;
     }
 
     /**

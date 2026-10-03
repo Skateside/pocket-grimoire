@@ -113,12 +113,14 @@ class TPITranslationModel
      * @param array<JinxDto> $jinxes Raw jinx information.
      * @param ?array<TranslationJinxDto> $officialJinxes Official jinx translations.
      * @param array<CommunityJinxDto> $communityJinxes Community jinx translations.
+     * @param ?array<JinxDto> $extraJinxes Extra jinxes for this locale.
      * @return array<JinxArray> Translated jinxes.
      */
     public function translateJinxes(
         array $jinxes,
         ?array $officialJinxes,    
         array $communityJinxes,
+        ?array $extraJinxes,
     ): array {
         $translatedJinxes = [];
 
@@ -185,22 +187,50 @@ class TPITranslationModel
             $translatedJinxes[] = $translatedJinx;
         }
 
+        if (is_null($extraJinxes)) {
+            return $translatedJinxes;
+        }
+
+        foreach ($extraJinxes as $extraJinx) {
+            $index = $this->misc->arrayFindKey(
+                $translatedJinxes,
+                fn($value, $key) => $value['id'] === $extraJinx->id,
+            );
+
+            if ($index === null) {
+                $index = count($translatedJinxes);
+                $translatedJinxes[$index] = [
+                    'id' => $extraJinx->id,
+                    'jinx' => [],
+                ];
+            }
+
+            foreach ($extraJinx->jinx as $jinx) {
+                $translatedJinxes[$index]['jinx'][] = [
+                    'id' => $jinx->id,
+                    'reason' => $jinx->reason,
+                ];
+            }
+        }
+
         return $translatedJinxes;
     }
 
     /**
      * Translates the character roles.
      *
-     * @param array<TPIRoleExpandedDto> $roles
-     * @param ?array<TranslationRoleDto> $officialRoles
-     * @param array<CommunityRoleDto> $communityRoles
-     * @param array<string, string> $reminders
-     * @return array<RoleArray>
+     * @param array<TPIRoleExpandedDto> $roles Roles data.
+     * @param ?array<TranslationRoleDto> $officialRoles Official translations.
+     * @param array<CommunityRoleDto> $communityRoles Community translations.
+     * @param ?array<TPIRoleExpandedDto> $extraRoles Extra roles for this locale.
+     * @param array<string, string> $reminders Translated reminders.
+     * @return array<RoleArray> Fully translated roles.
      */
     public function translateRoles(
         array $roles,
         ?array $officialRoles,
         array $communityRoles,
+        ?array $extraRoles,
         array $reminders,
     ): array {
         $translatedRoles = [];
@@ -326,7 +356,15 @@ class TPITranslationModel
             );
         }
 
-        return $translatedRoles;
+        $extra = array_map(
+            fn($role) => array_filter(
+                $this->normalizer->normalize($role, 'json'),
+                fn($item) => !is_null($item),
+            ),
+            $extraRoles ?? [],
+        );
+
+        return array_merge($translatedRoles, $extra);
     }
 
     /**
