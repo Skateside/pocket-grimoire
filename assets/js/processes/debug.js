@@ -32,7 +32,7 @@ window.addEventListener("error", (event) => {
 window.addEventListener("unhandledrejection", (event) => {
     sendLog("error", {
         message: String(event.reason),
-        stack: event.reason?.stak ?? null,
+        stack: event.reason?.stack ?? null,
         pathname: getPathname(),
     });
 });
