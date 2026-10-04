@@ -9,6 +9,7 @@ doctrine:
     orm:
         enable_lazy_ghost_objects: true
         auto_generate_proxy_classes: true
+        report_fields_where_declared: true
         naming_strategy: doctrine.orm.naming_strategy.underscore_number_aware
         auto_mapping: true
         mappings:
@@ -17,12 +18,6 @@ doctrine:
                 dir: '%kernel.project_dir%/src/Entity'
                 prefix: 'App\Entity'
                 alias: App
-            gedmo_translatable:
-                type: annotation
-                prefix: Gedmo\Translatable\Entity
-                dir: "%kernel.project_dir%/vendor/gedmo/doctrine-extensions/src/Translatable/Entity"
-                alias: GedmoTranslatable
-                is_bundle: false
 
 when@test:
     doctrine:

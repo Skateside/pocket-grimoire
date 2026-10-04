@@ -101,9 +101,6 @@
     "friendsofphp/proxy-manager-lts": {
         "version": "v1.0.7"
     },
-    "gedmo/doctrine-extensions": {
-        "version": "v3.6.0"
-    },
     "laminas/laminas-code": {
         "version": "4.5.1"
     },
@@ -151,30 +148,6 @@
     },
     "psr/log": {
         "version": "1.1.4"
-    },
-    "sensio/framework-extra-bundle": {
-        "version": "6.2",
-        "recipe": {
-            "repo": "github.com/symfony/recipes",
-            "branch": "master",
-            "version": "5.2",
-            "ref": "fb7e19da7f013d0d422fa9bce16f5c510e27609b"
-        },
-        "files": [
-            "config/packages/sensio_framework_extra.yaml"
-        ]
-    },
-    "stof/doctrine-extensions-bundle": {
-        "version": "1.7",
-        "recipe": {
-            "repo": "github.com/symfony/recipes-contrib",
-            "branch": "master",
-            "version": "1.2",
-            "ref": "e805aba9eff5372e2d149a9ff56566769e22819d"
-        },
-        "files": [
-            "config/packages/stof_doctrine_extensions.yaml"
-        ]
     },
     "symfony/asset": {
         "version": "v5.4.7"
