@@ -23,6 +23,7 @@ Encore
     .addEntry("js/main", "./assets/js/main.js")
     .addEntry("js/sheet", "./assets/js/sheet.js")
     .addEntry("js/dialog", "./assets/js/dialog.js")
+    .addEntry("js/draw", "./assets/js/draw.js")
 
     .addStyleEntry("css/main", "./assets/scss/main.scss")
     .addStyleEntry("css/sheet", "./assets/scss/sheet.scss")
