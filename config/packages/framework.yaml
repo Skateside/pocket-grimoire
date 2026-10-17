@@ -26,6 +26,9 @@ framework:
             headers:
                 'User-Agent': 'Pocket Grimoire 1.0'
 
+    annotations:
+        enabled: false
+
 when@test:
     framework:
         test: true
