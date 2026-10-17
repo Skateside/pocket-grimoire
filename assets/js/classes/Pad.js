@@ -329,6 +329,18 @@ export default class Pad {
     }
 
     /**
+     * Gets any information about a character with the given ID.
+     *
+     * @param  {String} characterId
+     *         ID of the character.
+     * @return {Array}
+     *         Any information about any matching characters.
+     */
+    getInfosByCharacterId(characterId) {
+        return this.characters.filter((info) => info.character.getId() === characterId);
+    }
+
+    /**
      * Toggles the dead state for the character that's been given.
      *
      * @param {CharacterToken} character

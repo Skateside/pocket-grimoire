@@ -13,6 +13,9 @@ import {
     lookupOneCached,
     replaceContentsMany
 } from "../../utils/elements.js";
+import {
+    empty,
+} from "../../utils/objects.js";
 
 const gameObserver = Observer.create("game");
 const tokenObserver = Observer.create("token");
@@ -314,18 +317,54 @@ function updateTokens() {
 
 }
 
-tokenObserver.on("character-add", ({ detail }) => {
+function resetTokens(characters) {
+    empty(nightOrder.first);
+    empty(nightOrder.other);
+    metaOrder.firstNight.length = 0;
+    metaOrder.otherNight.length = 0;
 
-    const {
-        character,
-        token
-    } = detail;
+    characters.forEach((character) => {
+        const infos = pad.getInfosByCharacterId(character.getId());
+
+        infos.forEach(({ character, token }) => {
+            identifyCharacterNightOrder(character, token);
+        });
+    });
+
+    updateTokens();
+}
+
+const metaOrder = {
+    firstNight: [],
+    otherNight: [],
+};
+
+gameObserver.on("characters-selected", ({ detail }) => {
+    resetTokens(detail.characters);
+
+    const { firstNight, otherNight } = (detail.meta || {});
+
+    if (Array.isArray(firstNight)) {
+        metaOrder.firstNight.push(...firstNight.filter((id) => typeof id === "string"));
+    }
+
+    if (Array.isArray(otherNight)) {
+        metaOrder.otherNight.push(...otherNight.filter((id) => typeof id === "string"));
+    }
+});
+
+function identifyCharacterNightOrder(character, token) {
     const {
         first,
         other
     } = nightOrder;
+    const {
+        firstNight: metaFirst,
+        otherNight: metaOther,
+    } = metaOrder;
+    const id = character.getId();
 
-    const firstNight = character.getFirstNight();
+    const firstNight = (metaFirst.indexOf(id) + 1) || character.getFirstNight();
 
     if (firstNight) {
 
@@ -340,7 +379,7 @@ tokenObserver.on("character-add", ({ detail }) => {
 
     }
 
-    const otherNight = character.getOtherNight();
+    const otherNight = (metaOther.indexOf(id) + 1) || character.getOtherNight();
 
     if (otherNight) {
 
@@ -354,9 +393,11 @@ tokenObserver.on("character-add", ({ detail }) => {
         });
 
     }
+}
 
+tokenObserver.on("character-add", ({ detail }) => {
+    identifyCharacterNightOrder(detail.character, detail.token);
     updateTokens();
-
 });
 
 tokenObserver.on("character-remove", ({ detail }) => {
