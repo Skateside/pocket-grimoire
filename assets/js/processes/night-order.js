@@ -1,5 +1,6 @@
 import Observer from "../classes/Observer.js";
 import NightOrder from "../classes/NightOrder.js";
+import Template from "../classes/Template.js";
 import {
     lookupOne,
     lookupOneCached,
@@ -13,6 +14,74 @@ const gameObserver = Observer.create("game");
 const tokenObserver = Observer.create("token");
 const nightOrder = new NightOrder();
 const pad = lookupOneCached(".js--pad").pad;
+const nightInfoTemplate = Template.create(
+    lookupOneCached("#night-info-template")
+);
+const firstNightHolder = lookupOneCached("#first-night");
+const playerCount = lookupOneCached("#player-count");
+
+const infoEntries = [
+    {
+        id: "minioninfo",
+        name: I18N.minionInfo,
+        reminder: I18N.minionInfoReminder,
+        fallbackOrder: 0.5,
+    },
+    {
+        id: "demoninfo",
+        name: I18N.demonInfo,
+        reminder: I18N.demonInfoReminder,
+        fallbackOrder: 0.75,
+    },
+];
+
+/**
+ * Draws the first-night information entries used during games with seven or
+ * more players.
+ */
+function drawInfoEntries() {
+
+    firstNightHolder
+        .querySelectorAll(".night-order__item--info")
+        .forEach((element) => element.remove());
+
+    if (Number(playerCount.value) < 7) {
+        return;
+    }
+
+    const fragment = document.createDocumentFragment();
+
+    infoEntries.forEach((entry) => {
+
+        const orderIndex = nightOrder.customOrder.first.indexOf(entry.id);
+        const order = orderIndex > -1
+            ? orderIndex + 1
+            : entry.fallbackOrder;
+        const row = nightInfoTemplate.draw({
+            ".js--night-info--wrapper"(element) {
+                element.classList.add("night-order__item--info");
+                element.dataset.id = entry.id;
+                element.dataset.order = order;
+            },
+            ".js--night-info--icon"(element) {
+                element.src = "/build/img/roles/generic/evil.webp";
+                element.alt = "";
+            },
+            ".js--night-info--role"(element) {
+                element.textContent = entry.name;
+            },
+            ".js--night-info--ability"(element) {
+                element.textContent = entry.reminder;
+            },
+        });
+
+        fragment.append(row);
+
+    });
+
+    firstNightHolder.prepend(fragment);
+
+}
 
 nightOrder.setHolders({
     first: lookupOneCached("#first-night"),
@@ -34,8 +103,11 @@ gameObserver.on("characters-selected", ({ detail }) => {
             })
     );
     nightOrder.drawAllNightOrders();
+    drawInfoEntries();
 
 });
+
+gameObserver.on("player-count", drawInfoEntries);
 
 // #145 - Show the "First Night" order after clearing the grimoire.
 gameObserver.on("clear", () => {
