@@ -7,7 +7,7 @@ class BotcScriptModel
     /**
      * @var int MAX_RESULTS Maximum number of results to return.
      */
-    const MAX_RESULTS = 10;
+    const MAX_RESULTS = 50;
 
     /**
      * @param ?array{results?: array<mixed>} $json Either the data to
